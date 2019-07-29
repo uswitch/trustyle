@@ -1,6 +1,6 @@
 {
 	"name": "@uswitch/trustyle.bullet-list-highlight",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"license": "UNLICENSED",
 	"main": "lib/index.js",
 	"dependencies": {
@@ -35,8 +35,8 @@
 		"prettier": "^1.18.2",
 		"typescript": "^3.5.3"
 	},
-  "gitHead": "c758df237e8a813137a3e6afeb9280d3cd4d1cc2",
-  "publishConfig": {
-    "access": "public"
-  }
+	"gitHead": "c758df237e8a813137a3e6afeb9280d3cd4d1cc2",
+	"publishConfig": {
+		"access": "public"
+	}
 }
