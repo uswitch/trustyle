@@ -34,5 +34,9 @@
 		"lerna": "^3.16.4",
 		"prettier": "^1.18.2",
 		"typescript": "^3.5.3"
-	}
+	},
+  "gitHead": "c758df237e8a813137a3e6afeb9280d3cd4d1cc2",
+  "publishConfig": {
+    "access": "public"
+  }
 }
