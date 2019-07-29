@@ -1,0 +1,64 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jest/globals": true
+  },
+  "extends": [
+    "plugin:jest/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "standard",
+    "standard-jsx",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/react",
+    "prettier/standard"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "jest"
+  ],
+  "rules": {
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_.*$",
+        "varsIgnorePattern": "^React$"
+      }
+    ],
+
+
+    "@typescript-eslint/explicit-function-return-type": [
+      "ignore"
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_.*$",
+        "varsIgnorePattern": "^React$"
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": [
+      "ignore"
+    ],
+    "react/prop-types": false,
+    "react/display-name": false,
+
+    "sort-imports": ["error", {
+      "ignoreCase": true,
+      "ignoreDeclarationSort": true
+    }],
+    "import/order": ["error", {
+      "newlines-between": "always"
+    }],
+    "import/newline-after-import": "error"
+
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

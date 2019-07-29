@@ -1,0 +1,40 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: energy-journey-storybook
+  namespace: energy-front-office
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0%
+      maxSurge: 100%
+  selector:
+    matchLabels:
+      app: energy-journey-storybook
+      team: energy-front-office
+  template:
+    metadata:
+      labels:
+        app: energy-journey-storybook
+        team: energy-front-office
+    spec:
+      containers:
+      - image: 'registry.usw.co/uswitch/energy-journey-storybook:{{ printf "%.8s" .Env.DRONE_COMMIT }}'
+        name: server
+        ports:
+          - containerPort: 80
+        resources:
+          requests:
+            memory: 256Mi
+            cpu: 0.1
+          limits:
+            memory: 1024Mi
+            cpu: 0.5
+        readinessProbe:
+          initialDelaySeconds: 30
+          httpGet:
+            port: 80
+            path: /
