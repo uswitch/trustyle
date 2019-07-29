@@ -2,7 +2,7 @@
   "lerna": "3.16.4",
   "packages": [
     "src/elements/**/*",
-    "styles",
+    "src/styles/",
     "./"
   ],
   "version": "independent",
