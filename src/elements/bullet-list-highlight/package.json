@@ -1,8 +1,7 @@
 {
 	"name": "@uswitch/trustyle.bullet-list-highlight",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"license": "UNLICENSED",
-	"private": true,
 	"main": "lib/index.js",
 	"dependencies": {
 		"@emotion/core": "^10.0.10",
