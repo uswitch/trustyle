@@ -11,7 +11,7 @@ storiesOf('Elements|Bullet List Highlight', module).add('Example', () => (
       </span>,
       <span key="example2">
         Your first payment will be taken on or shortly after your supply start
-        date.
+        date. Bump.
       </span>
     ]}
   />
