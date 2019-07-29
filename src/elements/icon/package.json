@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.icon",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "UNLICENSED",
   "main": "lib/index.js",
   "scripts": {
@@ -40,7 +40,7 @@
     "prettier": "^1.18.2",
     "typescript": "^3.5.3"
   },
-	"publishConfig": {
-		"access": "public"
-	}
+  "publishConfig": {
+    "access": "public"
+  }
 }
