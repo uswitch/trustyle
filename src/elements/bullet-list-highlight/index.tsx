@@ -3,8 +3,8 @@
 import React from 'react'
 import { jsx } from '@emotion/core'
 
-import * as colors from '../../styles/colors'
-import { Icon } from '../icon'
+import * as colors from '@uswitch/trustyle.styles/lib/colors'
+import { Icon } from '@uswitch/trustyle.icon'
 
 import * as st from './styles'
 

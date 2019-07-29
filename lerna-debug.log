@@ -1,6 +1,0 @@
-45 warn complete Waiting for 1 child process to exit. CTRL-C to exit immediately.
-46 error Error: Command failed: git tag @uswitch/trustyle.bullet-list-highlight@0.0.5 -m @uswitch/trustyle.bullet-list-highlight@0.0.5
-46 error fatal: tag '@uswitch/trustyle.bullet-list-highlight@0.0.5' already exists
-46 error
-46 error     at makeError (/home/michael/dev/trustyle/node_modules/@lerna/child-process/node_modules/execa/index.js:174:9)
-46 error     at Promise.all.then.arr (/home/michael/dev/trustyle/node_modules/@lerna/child-process/node_modules/execa/index.js:278:16)

@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { select } from '@storybook/addon-knobs'
 
-import * as colors from '../../styles/colors'
+import * as colors from '@uswitch/trustyle.styles/lib/colors'
 
 import { Direction, Glyph, Icon } from './'
 

@@ -1,8 +1,8 @@
 import { css } from '@emotion/core'
 
-import { azure } from '../../styles/colors'
-import { text } from '../../styles/typography'
-import { pxToRem, spacers } from '../../styles/helpers'
+import { azure } from '@uswitch/trustyle.styles/lib/colors'
+import { text } from '@uswitch/trustyle.styles/lib/typography'
+import { pxToRem, spacers } from '@uswitch/trustyle.styles/lib/helpers'
 
 export const highlights = css({
   padding: pxToRem(0, spacers.green),

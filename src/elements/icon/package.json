@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
+    "@uswitch/trustyle.styles": "^0.0.10",
     "react": "^16.7.0",
     "react-imgix": "^8.6.1"
   },
