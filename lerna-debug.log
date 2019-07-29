@@ -1,10 +1,6 @@
-41 error Error: Command failed: git commit -F /tmp/3ac408d4-a981-4e62-9e4e-68c8d207fe48/lerna-commit.txt
-41 error husky > pre-commit (node v11.15.0)
-41 error npm ERR! missing script: lint:check
-41 error
-41 error npm ERR! A complete log of this run can be found in:
-41 error npm ERR!     /home/michael/.npm/_logs/2019-07-29T14_04_44_253Z-debug.log
-41 error husky > pre-commit hook failed (add --no-verify to bypass)
-41 error
-41 error     at makeError (/home/michael/dev/trustyle/node_modules/@lerna/child-process/node_modules/execa/index.js:174:9)
-41 error     at Promise.all.then.arr (/home/michael/dev/trustyle/node_modules/@lerna/child-process/node_modules/execa/index.js:278:16)
+45 warn complete Waiting for 1 child process to exit. CTRL-C to exit immediately.
+46 error Error: Command failed: git tag @uswitch/trustyle.bullet-list-highlight@0.0.5 -m @uswitch/trustyle.bullet-list-highlight@0.0.5
+46 error fatal: tag '@uswitch/trustyle.bullet-list-highlight@0.0.5' already exists
+46 error
+46 error     at makeError (/home/michael/dev/trustyle/node_modules/@lerna/child-process/node_modules/execa/index.js:174:9)
+46 error     at Promise.all.then.arr (/home/michael/dev/trustyle/node_modules/@lerna/child-process/node_modules/execa/index.js:278:16)
