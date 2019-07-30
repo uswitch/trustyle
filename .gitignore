@@ -1,5 +1,7 @@
+## Development Artifacts
 npm-debug.log*
 storybook-static/
 
-src/**/lib/
+## Output
+**/lib/
 **/node_modules/
