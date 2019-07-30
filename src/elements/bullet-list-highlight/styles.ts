@@ -1,19 +1,19 @@
-import { css } from '@emotion/core'
-import { azure } from '@uswitch/trustyle.styles/lib/colors'
-import { text } from '@uswitch/trustyle.styles/lib/typography'
-import { pxToRem, spacers } from '@uswitch/trustyle.styles/lib/helpers'
+import { css, SerializedStyles } from '@emotion/core'
+import { colors, helpers, typography } from '@uswitch/trustyle.styles'
 
-export const highlights = css({
+const { pxToRem, spacers } = helpers
+
+export const highlights: SerializedStyles = css({
   padding: pxToRem(0, spacers.green),
   listStyle: 'none'
 })
 
-export const highlightBulletContent = css({
+export const highlightBulletContent: SerializedStyles = css({
   paddingLeft: pxToRem(spacers.green)
 })
 
-export const highlightBullet = css({
-  backgroundColor: azure,
+export const highlightBullet: SerializedStyles = css({
+  backgroundColor: colors.azure,
   width: pxToRem(28),
   height: pxToRem(28),
   padding: pxToRem(spacers.pink),
@@ -23,8 +23,8 @@ export const highlightBullet = css({
   marginTop: pxToRem(5)
 })
 
-export const highlight = css([
-  text,
+export const highlight: SerializedStyles = css([
+  typography.text,
   {
     paddingBottom: pxToRem(spacers.teal),
     display: 'flex'

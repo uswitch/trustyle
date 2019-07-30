@@ -3,7 +3,9 @@ npm-debug.log*
 storybook-static/
 
 ## Output
-**/lib/*
+src/**/lib
 **/node_modules/
 
+lib/*
+!lib/.npmignore
 !lib/package.json
