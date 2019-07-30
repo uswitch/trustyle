@@ -1,5 +1,5 @@
-storybook-static/
-.*
-**/node_modules
-**/tsconfig.json
-**/webpack.config.js
+**/*
+!lib/
+!package.json
+!README.md
+!LICENSE
