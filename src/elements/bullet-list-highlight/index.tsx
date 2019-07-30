@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { jsx } from '@emotion/core'
-import { colors } from '@uswitch/trustyle.styles/colors'
+import { colors } from '@uswitch/trustyle.styles'
 import { Icon } from '@uswitch/trustyle.icon'
 
 import * as st from './styles'
