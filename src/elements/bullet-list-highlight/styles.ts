@@ -1,5 +1,4 @@
 import { css } from '@emotion/core'
-
 import { azure } from '@uswitch/trustyle.styles/lib/colors'
 import { text } from '@uswitch/trustyle.styles/lib/typography'
 import { pxToRem, spacers } from '@uswitch/trustyle.styles/lib/helpers'
