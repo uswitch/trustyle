@@ -2,7 +2,7 @@
   "name": "@uswitch/trustyle",
   "version": "0.0.3",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "lib/",
   "publishConfig": {
     "access": "public"
   },
@@ -13,8 +13,9 @@
     "--------------- RUNNING": "-----------------------",
     "start": "start-storybook -p 6006",
     "--------------- BUILDING": "----------------------",
-    "clean": "rm -rf dist",
-    "build": "npm run clean && tsc",
+    "clean": "rm -rf lib",
+    "flatten": "mv lib/elements/* lib/ && rm -r lib/elements",
+    "build": "npm run clean && tsc && npm run flatten",
     "build-storybook": "build-storybook",
     "--------------- LINTING": "-----------------------",
     "lint:fix": "npm run typescript:check && npm run prettier:fix && npm run eslint:fix",
