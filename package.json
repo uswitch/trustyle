@@ -1,11 +1,7 @@
 {
-  "name": "@uswitch/trustyle",
+  "name": "@uswitch/trustyle-lib",
   "version": "0.0.6",
   "license": "MIT",
-  "main": "lib/index.js",
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "--------------- TESTING": "-----------------------",
     "test": "jest",

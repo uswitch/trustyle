@@ -1,9 +1,9 @@
 {
   "lerna": "3.16.4",
   "packages": [
+    "lib/",
     "src/elements/**/*",
-    "src/styles/",
-    "./"
+    "src/styles/"
   ],
   "version": "independent",
   "ignoreChanges": [
