@@ -1,7 +1,7 @@
 import { css, SerializedStyles } from '@emotion/core'
-import { colors, helpers, typography } from '@uswitch/trustyle.styles'
-
-const { pxToRem, spacers } = helpers
+import { azure } from '@uswitch/trustyle.styles/colors'
+import { pxToRem, spacers } from '@uswitch/trustyle.styles/helpers'
+import { text } from '@uswitch/trustyle.styles/typography'
 
 export const highlights: SerializedStyles = css({
   padding: pxToRem(0, spacers.green),
@@ -13,7 +13,7 @@ export const highlightBulletContent: SerializedStyles = css({
 })
 
 export const highlightBullet: SerializedStyles = css({
-  backgroundColor: colors.azure,
+  backgroundColor: azure,
   width: pxToRem(28),
   height: pxToRem(28),
   padding: pxToRem(spacers.pink),
@@ -24,7 +24,7 @@ export const highlightBullet: SerializedStyles = css({
 })
 
 export const highlight: SerializedStyles = css([
-  typography.text,
+  text,
   {
     paddingBottom: pxToRem(spacers.teal),
     display: 'flex'
