@@ -1,7 +1,15 @@
 {
-  "extends": "./base-tsconfig.json",
   "compilerOptions": {
-    "outDir": "./lib"
-  },
-  "exclude": ["./**/stories.tsx"]
+    "allowSyntheticDefaultImports": true,
+    "checkJs": false,
+    "declaration": true,
+    "jsx": "react",
+    "lib": ["es2015", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "lib",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es5"
+  }
 }

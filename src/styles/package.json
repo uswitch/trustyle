@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
+    "@uswitch/trustyle.bullet-list-highlight": "^0.0.10",
     "@uswitch/trustyle.icon": "^0.0.10"
   },
   "devDependencies": {

@@ -2,7 +2,7 @@
   "name": "@uswitch/trustyle",
   "version": "0.0.4",
   "license": "MIT",
-  "main": "lib/",
+  "main": "lib/index.js",
   "publishConfig": {
     "access": "public"
   },
@@ -14,8 +14,7 @@
     "start": "start-storybook -p 6006",
     "--------------- BUILDING": "----------------------",
     "clean": "rm -rf lib",
-    "flatten": "mv lib/elements/* lib/ && rm -r lib/elements",
-    "build": "npm run clean && tsc && npm run flatten",
+    "build": "tsc",
     "build-storybook": "build-storybook",
     "--------------- LINTING": "-----------------------",
     "lint:fix": "npm run typescript:check && npm run prettier:fix && npm run eslint:fix",
@@ -29,6 +28,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
+    "@uswitch/trustyle.bullet-list-highlight": "^0.0.10",
     "@uswitch/trustyle.icon": "^0.0.10",
     "@uswitch/trustyle.styles": "^0.0.11",
     "react": "^16.7.0",

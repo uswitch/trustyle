@@ -1,5 +1,5 @@
 npm-debug.log*
 storybook-static/
 
-**/lib/
+src/**/lib/
 **/node_modules/
