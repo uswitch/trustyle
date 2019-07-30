@@ -12,18 +12,6 @@
     "build": "npm run clean && tsc"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.10",
-    "@uswitch/trustyle.bullet-list-highlight": "^0.0.11",
-    "@uswitch/trustyle.icon": "^0.0.11"
-  },
-  "devDependencies": {
-    "@types/react": "^16.8.21",
-    "@types/storybook__addon-actions": "^3.4.3",
-    "@types/storybook__addon-knobs": "^5.0.1",
-    "@types/storybook__react": "^4.0.2",
-    "@typescript-eslint/eslint-plugin": "^1.10.2",
-    "@typescript-eslint/parser": "^1.10.2",
-    "csstype": "^2.6.5",
-    "typescript": "^3.5.3"
+    "@emotion/core": "^10.0.10"
   }
 }
