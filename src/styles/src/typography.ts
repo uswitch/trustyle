@@ -1,7 +1,7 @@
 import { css } from '@emotion/core'
 
 import { battleshipGrey, black, cerulean, white } from './colors'
-import { pxToRem } from './helpers'
+import { pxToRem } from './utils'
 
 export const defaultFontFamily =
   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif'

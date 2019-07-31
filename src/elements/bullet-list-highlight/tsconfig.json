@@ -8,5 +8,5 @@
       "@lib/trustyle/styles": ["node_modules/@uswitch/trustyle.styles"]
     }
   },
-  "include": ["./index.tsx"]
+  "include": ["./src/index.tsx"]
 }
