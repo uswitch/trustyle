@@ -1,11 +1,7 @@
 ## Development Artifacts
 npm-debug.log*
-storybook-static/
+**/node_modules/
 
 ## Output
 src/**/lib
-**/node_modules/
-
-lib/*
-!lib/.npmignore
-!lib/package.json
+storybook-static/

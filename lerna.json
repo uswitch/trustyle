@@ -1,7 +1,6 @@
 {
   "lerna": "3.16.4",
   "packages": [
-    "lib/",
     "src/elements/**/*",
     "src/styles/"
   ],

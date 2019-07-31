@@ -1,6 +1,6 @@
 
 ## Deploying
-Run `npx run build-all` to build all of the packages as well as the collected library. Then `npx lerna publish` to upload to NPM.
+Run `npx lerna run build` to build all of the packages, then `npx lerna publish` to upload to NPM.
 
 ## Development
 Run `npm install` at the project root. It is not necessary at any time to descend into individual packages to install modules, lint or build — it is all done from the root.
