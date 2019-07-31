@@ -1,0 +1,38 @@
+import { css } from '@emotion/core'
+import { colors, pxToRem, spacers, typography } from '@uswitch/trustyle.styles'
+
+export const root = css([
+  typography.small,
+  {
+    alignItems: 'center',
+    backgroundColor: colors.offWhite,
+    borderRadius: '3px',
+    display: 'flex',
+    height: pxToRem(64),
+    justifyContent: 'space-between'
+  }
+])
+
+const editIconWidth = pxToRem(spacers.teal * 2 + 21)
+
+export const value = css({
+  color: colors.black,
+  overflow: 'hidden',
+  padding: pxToRem(0, spacers.teal),
+  textOverflow: 'ellipsis',
+  width: `calc(100% - ${editIconWidth})`
+})
+
+export const edit = css({
+  background: 'none',
+  border: 'none',
+  borderLeft: `1px solid ${colors.slateGrey}`,
+  cursor: 'pointer',
+  height: pxToRem(28),
+  padding: pxToRem(0, spacers.teal),
+  width: editIconWidth
+})
+
+export const hidden = css({
+  display: 'none'
+})

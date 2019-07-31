@@ -1,0 +1,19 @@
+{
+  "name": "@uswitch/trustyle.input-alert",
+  "version": "0.0.15",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "--------------- BUILDING": "----------------------",
+    "clean": "rm -rf lib",
+    "build": "npm run clean && tsc"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@uswitch/trustyle.styles": "^0.0.16",
+    "react": "^16.7.0"
+  }
+}

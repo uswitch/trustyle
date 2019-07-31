@@ -1,0 +1,12 @@
+{
+  "lerna": "3.16.4",
+  "packages": [
+    "src/elements/**/*",
+    "src/styles/"
+  ],
+  "version": "independent",
+  "ignoreChanges": [
+    "**/package-lock.json",
+    "**/*.stories.tsx"
+  ]
+}
