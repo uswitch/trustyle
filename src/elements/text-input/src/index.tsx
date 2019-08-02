@@ -44,3 +44,7 @@ export const DateInput: React.FC<DateProps> = props => (
 export const EmailInput: React.FC<EmailProps> = props => (
   <Input {...props} type="email" />
 )
+
+export const TelInput: React.FC<TextProps> = props => (
+  <Input {...props} type="tel" />
+)

@@ -12,7 +12,7 @@ storiesOf('Elements|Text Input', module).add('example', () => (
       value="Cascat"
     />
     <TextInput
-      hasError={true}
+      hasError
       onBlur={() => {}}
       onChange={() => {}}
       name="example"
