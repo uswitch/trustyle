@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React from 'react'
+import * as React from 'react'
 import Imgix from 'react-imgix'
 import './react-imgix'
 import { css, jsx } from '@emotion/core'

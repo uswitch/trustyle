@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React from 'react'
+import * as React from 'react'
 import { jsx } from '@emotion/core'
 import { colors } from '@uswitch/trustyle.styles'
 import { Icon } from '@uswitch/trustyle.icon'

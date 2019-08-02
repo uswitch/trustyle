@@ -1,18 +1,19 @@
-import React from 'react'
+import * as React from 'react'
 
 import { Input, Width } from './common'
 
-interface TextProps {
+export interface TextInputProps {
   hasError?: boolean
   name: string
   maxLength?: number
   onBlur: () => void
   onChange: (value: string) => void
+  placeholder?: string
   value: string
   width?: Width
 }
 
-interface DateProps {
+export interface DateInputProps {
   hasError?: boolean
   name: string
   maxDate?: string
@@ -23,7 +24,7 @@ interface DateProps {
   width?: Width
 }
 
-interface EmailProps {
+export interface EmailInputProps {
   freezable?: boolean
   hasError?: boolean
   name: string
@@ -33,18 +34,18 @@ interface EmailProps {
   width?: Width
 }
 
-export const TextInput: React.FC<TextProps> = props => (
+export const TextInput: React.FC<TextInputProps> = props => (
   <Input {...props} type="text" />
 )
 
-export const DateInput: React.FC<DateProps> = props => (
+export const DateInput: React.FC<DateInputProps> = props => (
   <Input {...props} type="date" />
 )
 
-export const EmailInput: React.FC<EmailProps> = props => (
+export const EmailInput: React.FC<EmailInputProps> = props => (
   <Input {...props} type="email" />
 )
 
-export const TelInput: React.FC<TextProps> = props => (
+export const TelInput: React.FC<TextInputProps> = props => (
   <Input {...props} type="tel" />
 )

@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import { TextInput } from './.'
@@ -10,6 +10,13 @@ storiesOf('Elements|Text Input', module).add('example', () => (
       onChange={() => {}}
       name="example"
       value="Cascat"
+    />
+    <TextInput
+      onBlur={() => {}}
+      onChange={() => {}}
+      name="example"
+      placeholder="Placeholder"
+      value=""
     />
     <TextInput
       hasError

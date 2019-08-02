@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React from 'react'
+import { useState } from 'react'
 import { jsx } from '@emotion/core'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
 import { inputs } from '@uswitch/trustyle.styles'
@@ -20,6 +20,7 @@ interface Props {
   maxLength?: number
   onBlur: () => void
   onChange: (value: string) => void
+  placeholder?: string
   type?: InputType
   value: string
   width?: Width
@@ -35,11 +36,12 @@ export const Input: React.FC<Props> = ({
   maxLength,
   onBlur,
   onChange,
+  placeholder,
   type,
   value,
   width = 'full'
 }) => {
-  const [hasFocus, setHasFocus] = React.useState(false)
+  const [hasFocus, setHasFocus] = useState(false)
   return (
     <FrozenInput fieldLabel={label} text={value} freezable={freezable}>
       <label
@@ -49,14 +51,15 @@ export const Input: React.FC<Props> = ({
         <input
           css={inputs.keyboardInput}
           name={name}
-          type={type}
-          value={value === null ? '' : value}
           onFocus={() => setHasFocus(true)}
           onBlur={() => {
             setHasFocus(false)
             onBlur()
           }}
           onChange={event => onChange(event.currentTarget.value)}
+          placeholder={placeholder}
+          type={type}
+          value={value === null ? '' : value}
           {...(type === 'date' ? { max: maxDate, min: minDate } : {})}
           {...(type === 'text' ? { maxLength } : {})}
         />
