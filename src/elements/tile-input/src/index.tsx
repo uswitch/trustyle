@@ -15,7 +15,7 @@ interface Props {
   value: string
 }
 
-const TileInput: React.FC<Props> = ({
+export const TileInput: React.FC<Props> = ({
   children,
   label,
   onBlur,
@@ -45,5 +45,3 @@ const TileInput: React.FC<Props> = ({
     </label>
   )
 }
-
-export default TileInput
