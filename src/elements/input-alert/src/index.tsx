@@ -10,7 +10,7 @@ export type ErrorMessages = string | { [index: string]: ErrorMessages }
 
 interface Props {
   type: Type
-  children: string
+  children: React.ReactNode
 }
 
 export const InputAlert: React.FC<Props> = ({ type, children }) => (
