@@ -57,10 +57,5 @@
     "react-imgix": "^8.6.1",
     "typescript": "^3.5.3"
   },
-  "dependencies": {
-    "@types/ramda": "^0.26.19",
-    "@types/react-input-mask": "^2.0.3",
-    "ramda": "^0.26.1",
-    "react-input-mask": "^2.0.4"
-  }
+  "dependencies": {}
 }

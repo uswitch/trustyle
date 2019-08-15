@@ -5,7 +5,6 @@ import { jsx } from '@emotion/core'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
 import { inputs } from '@uswitch/trustyle.styles'
 import InputMask from 'react-input-mask'
-import { compose, fromPairs, map, toPairs } from 'ramda'
 
 import * as st from './styles'
 
@@ -13,7 +12,7 @@ export type InputType = 'text' | 'email' | 'tel' | 'date'
 export type Width = 'half' | 'full'
 
 export interface DataProps {
-  [key: string]: any
+  [key: string]: boolean | number | string | null
 }
 interface Props {
   dataProps?: DataProps
@@ -33,15 +32,11 @@ interface Props {
   width?: Width
 }
 
-interface Tuple {
-  [key: string]: string
-}
-
-const prependDataProps = compose<DataProps, Array<[string, string]>, Array<[string, string]>, DataProps>(
-  fromPairs,
-  map(([key, value]) => [`data-${key}`, value]),
-  toPairs
-)
+const prependDataProps = (dataProps: DataProps) => Object.keys(dataProps)
+  .reduce((props, key) => ({
+    ...props,
+    [`data-${key}`]: dataProps[key]
+  }), {})
 
 export const Input: React.FC<Props> = ({
   dataProps = {},
