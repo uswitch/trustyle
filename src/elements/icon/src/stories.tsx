@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { select } from '@storybook/addon-knobs'
-import { colors } from '@uswitch/trustyle.styles'
 
+import { colors } from '../../../styles'
 import { Direction, Glyph, Icon } from './'
 
 const glyphChoices = [
