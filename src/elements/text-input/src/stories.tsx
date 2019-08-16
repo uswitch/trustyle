@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { TextInput } from './.'
+import { TextInput, TelInput } from './.'
 
 storiesOf('Elements|Text Input', module).add('example', () => (
   <div>
@@ -24,6 +24,24 @@ storiesOf('Elements|Text Input', module).add('example', () => (
       onChange={() => {}}
       name="example"
       value="Error!"
+    />
+    <TelInput
+      mask="99-99-99"
+      name="example"
+      onBlur={() => {}}
+      onChange={() => {}}
+      value="Masked input"
+    />
+    <TelInput
+      name="example"
+      onBlur={() => {}}
+      onChange={() => {}}
+      dataProps={{
+        pii: true,
+        text: 'some-text',
+        nullable: null
+      }}
+      value="Data props"
     />
   </div>
 ))

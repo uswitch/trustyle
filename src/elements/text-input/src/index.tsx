@@ -1,38 +1,29 @@
 import * as React from 'react'
 
-import { Input, Width } from './common'
+import { DataProps, Input, Width } from './common'
 
-export interface TextInputProps {
+export interface CommonInputProps {
+  dataProps?: DataProps
+  freezable?: boolean
   hasError?: boolean
   name: string
-  maxLength?: number
   onBlur: () => void
   onChange: (value: string) => void
   placeholder?: string
   value: string
   width?: Width
 }
+export interface TextInputProps extends CommonInputProps {
+  mask?: string
+  maxLength?: number
+}
 
-export interface DateInputProps {
-  hasError?: boolean
-  name: string
+export interface DateInputProps extends CommonInputProps {
   maxDate?: string
   minDate?: string
-  onBlur: () => void
-  onChange: (value: string) => void
-  value: string
-  width?: Width
 }
 
-export interface EmailInputProps {
-  freezable?: boolean
-  hasError?: boolean
-  name: string
-  onBlur: () => void
-  onChange: (value: string) => void
-  value: string
-  width?: Width
-}
+export interface EmailInputProps extends CommonInputProps {}
 
 export const TextInput: React.FC<TextInputProps> = props => (
   <Input {...props} type="text" />

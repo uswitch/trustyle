@@ -4,19 +4,25 @@ import { useState } from 'react'
 import { jsx } from '@emotion/core'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
 import { inputs } from '@uswitch/trustyle.styles'
+import InputMask from 'react-input-mask'
 
 import * as st from './styles'
 
-export type Width = 'half' | 'full'
 export type InputType = 'text' | 'email' | 'tel' | 'date'
+export type Width = 'half' | 'full'
 
+export interface DataProps {
+  [key: string]: boolean | number | string | null
+}
 interface Props {
+  dataProps?: DataProps
   freezable?: boolean
   hasError?: boolean
   label?: string
   name: string
   maxDate?: string
   minDate?: string
+  mask?: string
   maxLength?: number
   onBlur: () => void
   onChange: (value: string) => void
@@ -26,13 +32,21 @@ interface Props {
   width?: Width
 }
 
+const prependDataProps = (dataProps: DataProps) => Object.keys(dataProps)
+  .reduce((props, key) => ({
+    ...props,
+    [`data-${key}`]: dataProps[key]
+  }), {})
+
 export const Input: React.FC<Props> = ({
+  dataProps = {},
   freezable,
   hasError = false,
   label,
   name,
   maxDate,
   minDate,
+  mask,
   maxLength,
   onBlur,
   onChange,
@@ -42,27 +56,34 @@ export const Input: React.FC<Props> = ({
   width = 'full'
 }) => {
   const [hasFocus, setHasFocus] = useState(false)
+  const inputProps = {
+    css: inputs.keyboardInput,
+    name,
+    onBlur: () => {
+      setHasFocus(false)
+      onBlur()
+    },
+    onChange: (event: React.FormEvent<HTMLInputElement>) => onChange(event.currentTarget.value),
+    onFocus: () => setHasFocus(true),
+    placeholder,
+    type,
+    value: value === null ? '' : value,
+    ...(type === 'date' ? { max: maxDate, min: minDate } : {}),
+    ...(type === 'text' ? { maxLength } : {}),
+    ...prependDataProps(dataProps)
+  }
+
   return (
     <FrozenInput fieldLabel={label} text={value} freezable={freezable}>
       <label
         css={[inputs.keyboardInputContainer(hasError, hasFocus), st[width]]}
         htmlFor={name}
       >
-        <input
-          css={inputs.keyboardInput}
-          name={name}
-          onFocus={() => setHasFocus(true)}
-          onBlur={() => {
-            setHasFocus(false)
-            onBlur()
-          }}
-          onChange={event => onChange(event.currentTarget.value)}
-          placeholder={placeholder}
-          type={type}
-          value={value === null ? '' : value}
-          {...(type === 'date' ? { max: maxDate, min: minDate } : {})}
-          {...(type === 'text' ? { maxLength } : {})}
-        />
+        { mask
+          ? <InputMask mask={mask} {...inputProps } />
+          : <input {...inputProps } />
+        }
+        <input {...inputProps} />
       </label>
     </FrozenInput>
   )
