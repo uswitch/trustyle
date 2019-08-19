@@ -8,18 +8,14 @@ import * as st from './styles'
 
 type Parser = 'float' | 'integer' | 'string'
 
-type Value = number | string | null
-
-interface Props {
+interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   hasError?: boolean
-  onBlur: () => void
-  onChange: (value: Value) => void
+  hideInFullstory?: boolean
   name: string
+  onChange: (value: any) => void
   parser?: Parser
-  placeholder?: string
   prefix?: string
   suffix?: string
-  value: Value
 }
 
 const parseValue = (parser: Parser, value: string) => {
@@ -39,14 +35,15 @@ const parseValue = (parser: Parser, value: string) => {
 
 export const NumberInput: React.FC<Props> = ({
   hasError = false,
+  hideInFullstory = false,
+  name,
   onBlur,
   onChange,
-  name,
   parser = 'float',
-  placeholder,
   prefix,
   suffix,
-  value
+  value,
+  ...inputProps
 }) => {
   const [hasFocus, setHasFocus] = useState(false)
 
@@ -58,19 +55,20 @@ export const NumberInput: React.FC<Props> = ({
       {prefix && <span css={st.prefix(hasError, hasFocus)}>{prefix}</span>}
       <input
         css={inputs.keyboardInput}
+        data-pii={hideInFullstory || undefined}
         name={name}
         type="tel"
         value={value === null ? '' : value}
         onFocus={() => setHasFocus(true)}
-        onBlur={() => {
+        onBlur={(event) => {
           setHasFocus(false)
-          onBlur()
+          onBlur && onBlur(event)
         }}
-        placeholder={placeholder}
         onChange={event => {
           const { value } = event.currentTarget
-          onChange(parseValue(parser, value))
+          onChange && onChange(parseValue(parser, value))
         }}
+        {...inputProps}
       />
       {suffix && <span css={st.suffix(hasError, hasFocus)}>{suffix}</span>}
     </label>
