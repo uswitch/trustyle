@@ -7,25 +7,24 @@ export interface CommonInputProps {
   freezable?: boolean
   hasError?: boolean
   label?: string
-  name: string
-  onBlur: () => void
-  onChange: (value: string) => void
-  onFocus?: () => void
-  placeholder?: string
-  value: string
-  width?: Width
 }
-export interface TextInputProps extends CommonInputProps {
+export interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement>, CommonInputProps {
   mask?: string
   maxLength?: number
+  name: string
+  value?: string
+  width?: Width
 }
 
 export interface DateInputProps extends CommonInputProps {
   maxDate?: string
   minDate?: string
+  name: string
 }
 
-export interface EmailInputProps extends CommonInputProps {}
+export interface EmailInputProps extends CommonInputProps {
+  name: string
+}
 
 export const TextInput: React.FC<TextInputProps> = props => (
   <Input {...props} type="text" />

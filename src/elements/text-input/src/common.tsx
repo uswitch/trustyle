@@ -14,68 +14,47 @@ export type Width = 'half' | 'full'
 export interface DataProps {
   [key: string]: boolean | number | string | null
 }
-interface Props {
-  dataProps?: DataProps
+interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   freezable?: boolean
   hasError?: boolean
   label?: string
-  name: string
-  maxDate?: string
-  minDate?: string
   mask?: string
-  maxLength?: number
-  onBlur: () => void
-  onChange: (value: string) => void
-  onFocus?: () => void
-  placeholder?: string
-  type?: InputType
-  value: string
+  name: string
+  value?: string
   width?: Width
 }
 
-const prependDataProps = (dataProps: DataProps) => Object.keys(dataProps)
-  .reduce((props, key) => ({
-    ...props,
-    [`data-${key}`]: dataProps[key]
-  }), {})
-
 export const Input: React.FC<Props> = ({
-  dataProps = {},
   freezable,
   hasError = false,
   label,
-  name,
-  maxDate,
-  minDate,
   mask,
-  maxLength,
-  onBlur,
-  onChange,
-  onFocus = () => {},
-  placeholder,
-  type,
   value,
-  width = 'full'
+  width = 'full',
+  ...inputProps
 }) => {
   const [hasFocus, setHasFocus] = useState(false)
-  const inputProps = {
+  const onBlur = (event: React.FocusEvent<HTMLInputElement>) => {
+    setHasFocus(false)
+
+    if (inputProps.onBlur) {
+      inputProps.onBlur(event)
+    }
+  }
+  const onFocus = (event: React.FocusEvent<HTMLInputElement>) => {
+    setHasFocus(true)
+
+    if (inputProps.onFocus) {
+      inputProps.onFocus(event)
+    }
+  }
+
+  const props = {
     css: inputs.keyboardInput,
-    name,
-    onBlur: () => {
-      setHasFocus(false)
-      onBlur()
-    },
-    onChange: (event: React.FormEvent<HTMLInputElement>) => onChange(event.currentTarget.value),
-    onFocus: () => {
-      setHasFocus(true)
-      onFocus()
-    },
-    placeholder,
-    type,
-    value: value === null ? '' : value,
-    ...(type === 'date' ? { max: maxDate, min: minDate } : {}),
-    ...(type === 'text' ? { maxLength } : {}),
-    ...prependDataProps(dataProps)
+    onBlur,
+    onFocus,
+    value,
+    ...inputProps,
   }
 
   return (
@@ -85,8 +64,8 @@ export const Input: React.FC<Props> = ({
         htmlFor={name}
       >
         { mask
-          ? <InputMask mask={mask} {...inputProps } />
-          : <input {...inputProps } />
+          ? <InputMask mask={mask} {...props } />
+          : <input {...props } />
         }
       </label>
     </FrozenInput>
