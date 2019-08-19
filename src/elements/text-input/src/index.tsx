@@ -6,6 +6,7 @@ export interface CommonInputProps {
   dataProps?: DataProps
   freezable?: boolean
   hasError?: boolean
+  label?: string
   name: string
   onBlur: () => void
   onChange: (value: string) => void
