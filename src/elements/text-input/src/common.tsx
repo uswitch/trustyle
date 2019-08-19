@@ -88,7 +88,6 @@ export const Input: React.FC<Props> = ({
           ? <InputMask mask={mask} {...inputProps } />
           : <input {...inputProps } />
         }
-        <input {...inputProps} />
       </label>
     </FrozenInput>
   )
