@@ -11,9 +11,6 @@ import * as st from './styles'
 export type InputType = 'text' | 'email' | 'tel' | 'date'
 export type Width = 'half' | 'full'
 
-export interface DataProps {
-  [key: string]: boolean | number | string | null
-}
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   freezable?: boolean
   hasError?: boolean

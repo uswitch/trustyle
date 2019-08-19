@@ -1,9 +1,8 @@
 import * as React from 'react'
 
-import { DataProps, Input, Width } from './common'
+import { Input, Width } from './common'
 
 export interface CommonInputProps {
-  dataProps?: DataProps
   freezable?: boolean
   hasError?: boolean
   label?: string
