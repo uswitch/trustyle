@@ -26,6 +26,7 @@ interface Props {
   maxLength?: number
   onBlur: () => void
   onChange: (value: string) => void
+  onFocus: () => void
   placeholder?: string
   type?: InputType
   value: string
@@ -50,6 +51,7 @@ export const Input: React.FC<Props> = ({
   maxLength,
   onBlur,
   onChange,
+  onFocus,
   placeholder,
   type,
   value,
@@ -64,7 +66,10 @@ export const Input: React.FC<Props> = ({
       onBlur()
     },
     onChange: (event: React.FormEvent<HTMLInputElement>) => onChange(event.currentTarget.value),
-    onFocus: () => setHasFocus(true),
+    onFocus: () => {
+      setHasFocus(true)
+      onFocus()
+    },
     placeholder,
     type,
     value: value === null ? '' : value,

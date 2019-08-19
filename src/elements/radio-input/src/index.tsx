@@ -17,6 +17,7 @@ interface Props {
   name: string
   onBlur: () => void
   onChange: (value: Value) => void
+  onFocus: () => void
   selected: Value
   width?: Width
   value: Value
@@ -36,6 +37,7 @@ export const RadioInput: React.FC<Props> = ({
   name,
   onBlur,
   onChange,
+  onFocus,
   selected,
   value,
   width = 'full'
@@ -56,6 +58,7 @@ export const RadioInput: React.FC<Props> = ({
           const isBoolean = value === 'true' || value === 'false'
           onChange(isBoolean ? value === 'true' : value)
         }}
+        onFocus={onFocus}
         {...prependDataProps(dataProps)}
       />
       <span css={st.span}>{label}</span>

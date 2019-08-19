@@ -9,6 +9,7 @@ export interface CommonInputProps {
   name: string
   onBlur: () => void
   onChange: (value: string) => void
+  onFocus: () => void
   placeholder?: string
   value: string
   width?: Width

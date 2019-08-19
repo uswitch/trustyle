@@ -14,6 +14,7 @@ interface Props<V = any> {
   label?: string
   onBlur: () => void
   onChange: (value: V) => void
+  onFocus: () => void
   name: string
   options: Option[]
   placeholder?: string
@@ -31,6 +32,7 @@ export const DropDown: React.FC<Props> = ({
   label,
   onBlur,
   onChange,
+  onFocus,
   name,
   options,
   placeholder,
@@ -43,7 +45,10 @@ export const DropDown: React.FC<Props> = ({
     <FrozenInput fieldLabel={label} text={frozenText} freezable={freezable}>
       <div css={container}>
         <select
-          onFocus={() => setHasFocus(true)}
+          onFocus={() => {
+            setHasFocus(true)
+            onFocus()
+          }}
           onBlur={() => {
             setHasFocus(false)
             onBlur()
