@@ -7,7 +7,12 @@ import * as st from './styles'
 
 type Value = string | number | boolean
 
+export interface DataProps {
+  [key: string]: boolean | number | string | null
+}
+
 interface Props {
+  dataProps?: DataProps
   label: string
   name: string
   onBlur: () => void
@@ -17,9 +22,16 @@ interface Props {
   value: Value
 }
 
+const prependDataProps = (dataProps: DataProps) => Object.keys(dataProps)
+  .reduce((props, key) => ({
+    ...props,
+    [`data-${key}`]: dataProps[key]
+  }), {})
+
 export type Width = 'half' | 'full'
 
 export const RadioInput: React.FC<Props> = ({
+  dataProps = {},
   label,
   name,
   onBlur,
@@ -44,6 +56,7 @@ export const RadioInput: React.FC<Props> = ({
           const isBoolean = value === 'true' || value === 'false'
           onChange(isBoolean ? value === 'true' : value)
         }}
+        {...prependDataProps(dataProps)}
       />
       <span css={st.span}>{label}</span>
     </label>
