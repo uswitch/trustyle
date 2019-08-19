@@ -59,7 +59,7 @@ export const NumberInput: React.FC<Props> = ({
       <input
         css={inputs.keyboardInput}
         name={name}
-        type="number"
+        type="tel"
         value={value === null ? '' : value}
         onFocus={() => setHasFocus(true)}
         onBlur={() => {
