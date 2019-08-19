@@ -17,7 +17,7 @@ interface Props {
   name: string
   onBlur: () => void
   onChange: (value: Value) => void
-  onFocus: () => void
+  onFocus?: () => void
   selected: Value
   width?: Width
   value: Value
@@ -37,7 +37,7 @@ export const RadioInput: React.FC<Props> = ({
   name,
   onBlur,
   onChange,
-  onFocus,
+  onFocus = () => {},
   selected,
   value,
   width = 'full'

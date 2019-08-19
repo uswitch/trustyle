@@ -14,7 +14,7 @@ interface Props<V = any> {
   label?: string
   onBlur: () => void
   onChange: (value: V) => void
-  onFocus: () => void
+  onFocus?: () => void
   name: string
   options: Option[]
   placeholder?: string
@@ -32,7 +32,7 @@ export const DropDown: React.FC<Props> = ({
   label,
   onBlur,
   onChange,
-  onFocus,
+  onFocus = () => {},
   name,
   options,
   placeholder,

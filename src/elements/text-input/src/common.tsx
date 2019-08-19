@@ -26,7 +26,7 @@ interface Props {
   maxLength?: number
   onBlur: () => void
   onChange: (value: string) => void
-  onFocus: () => void
+  onFocus?: () => void
   placeholder?: string
   type?: InputType
   value: string
@@ -51,7 +51,7 @@ export const Input: React.FC<Props> = ({
   maxLength,
   onBlur,
   onChange,
-  onFocus,
+  onFocus = () => {},
   placeholder,
   type,
   value,
