@@ -8,7 +8,11 @@ import { FrozenInput } from '@uswitch/trustyle.frozen-input'
 
 import { container, icon, root } from './styles'
 
+export interface DataProps {
+  [key: string]: boolean | number | string | null
+}
 interface Props<V = any> {
+  dataProps?: DataProps
   freezable?: boolean
   hasError?: boolean
   label?: string
@@ -21,12 +25,19 @@ interface Props<V = any> {
   value: V
 }
 
+const prependDataProps = (dataProps: DataProps) => Object.keys(dataProps)
+  .reduce((props, key) => ({
+    ...props,
+    [`data-${key}`]: dataProps[key]
+  }), {})
+
 export interface Option {
   value: string
   text: string
 }
 
 export const DropDown: React.FC<Props> = ({
+  dataProps = {},
   freezable,
   hasError = false,
   label,
@@ -58,6 +69,7 @@ export const DropDown: React.FC<Props> = ({
           id={name}
           name={name}
           value={!value ? '' : value}
+          {...prependDataProps(dataProps)}
         >
           {placeholder && (
             <option value="" disabled>
