@@ -1,6 +1,6 @@
+/** @jsx jsx */
 import React from 'react'
-import { Global } from '@emotion/core'
-import { global } from '../src/styles'
+import { Global, css, jsx } from '@emotion/core'
 import { addDecorator, configure, addParameters } from '@storybook/react'
 import { withA11y } from '@storybook/addon-a11y'
 import { withKnobs } from '@storybook/addon-knobs'
@@ -11,7 +11,14 @@ const loadStories = () => req.keys().forEach(filename => req(filename))
 
 const withGlobal = story => (
   <React.Fragment>
-    <Global styles={global} />
+    <Global
+      styles={css({
+        '*': {
+          margin: 0,
+          padding: 0
+        }
+      })}
+    />
     {story()}
   </React.Fragment>
 )
@@ -43,7 +50,7 @@ addParameters({
     defaultViewport: 'iPhone'
   },
   options: {
-    name: 'Energy Journey Storybook',
+    name: 'TruStyle Storybook',
     showStoriesPanel: true,
     showAddonPanel: true,
     showSearchBox: true,

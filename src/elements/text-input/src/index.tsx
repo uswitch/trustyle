@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { jsx } from '@emotion/core'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
 import { inputs } from '@uswitch/trustyle.styles'
-import InputMask from 'react-input-mask'
+const InputMask = require('react-input-mask')
 
 import * as st from './styles'
 
@@ -12,11 +12,14 @@ export type InputType = 'text' | 'email' | 'tel' | 'date'
 export type Width = 'half' | 'full'
 
 export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+  defaultValue?: string | undefined
   freezable?: boolean
   hasError?: boolean
   mask?: string
   name: string
-  value: string | undefined
+  prefix?: string
+  suffix?: string
+  value?: string | undefined
   width?: Width
 }
 
@@ -24,10 +27,11 @@ export const Input: React.FC<Props> = ({
   freezable,
   hasError = false,
   mask,
+  prefix,
+  suffix,
   width = 'full',
   ...inputProps
 }) => {
-  const stringValue = inputProps.value || ''
   const [hasFocus, setHasFocus] = useState(false)
   const onBlur = (event: React.FocusEvent<HTMLInputElement>) => {
     setHasFocus(false)
@@ -52,13 +56,20 @@ export const Input: React.FC<Props> = ({
   }
 
   return (
-    <FrozenInput text={stringValue} freezable={freezable}>
+    <FrozenInput
+      text={inputProps.value || inputProps.defaultValue || ''}
+      freezable={freezable}
+    >
       <div css={[inputs.keyboardInputContainer(hasError, hasFocus), st[width]]}>
+        {prefix && <span css={st.prefix(hasError, hasFocus)}>{prefix}</span>}
+
         {mask ? (
-          <InputMask mask={mask} {...childProps} value={stringValue} />
+          <InputMask mask={mask} {...childProps} />
         ) : (
-          <input {...childProps} value={stringValue} />
+          <input {...childProps} />
         )}
+
+        {suffix && <span css={st.suffix(hasError, hasFocus)}>{suffix}</span>}
       </div>
     </FrozenInput>
   )

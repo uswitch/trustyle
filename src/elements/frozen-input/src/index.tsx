@@ -12,11 +12,7 @@ interface Props {
   freezable?: boolean
 }
 
-export const FrozenInput: React.FC<Props> = ({
-  text,
-  freezable,
-  children
-}) => {
+export const FrozenInput: React.FC<Props> = ({ text, freezable, children }) => {
   const [frozen, setFrozen] = useState(freezable && !!text)
 
   if (!frozen) {

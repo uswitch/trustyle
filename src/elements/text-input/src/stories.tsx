@@ -1,35 +1,35 @@
+/** @jsx jsx */
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import { number } from '@storybook/addon-knobs'
 
-import { TextInput, TelInput } from './.'
+import { TelInput, TextInput } from './.'
+import { css, jsx } from '@emotion/core'
 
-storiesOf('Elements|Text Input', module).add('example', () => (
-  <div>
-    <TextInput
-      name="example"
-      value="Cascat"
-    />
-    <TextInput
-      onBlur={() => {}}
-      onChange={() => {}}
-      name="example"
-      placeholder="Placeholder"
-      value=""
-    />
-    <TextInput
-      hasError
-      name="example"
-      value="Error!"
-    />
-    <TelInput
-      mask="99-99-99"
-      name="example"
-      value="Masked input"
-    />
-    <TelInput
-      name="example"
-      data-pii
-      value="Data props"
-    />
-  </div>
-))
+const Spacer = ({ height }: { height: number }) => (
+  <div css={css({ minHeight: height })} />
+)
+
+storiesOf('Elements|Text Input', module).add('example', () => {
+  const spaceBetween = number("Space Between", 10)
+  return (
+    <div css={css({ padding: number('Padding', 10) })}>
+      <TextInput name="example" defaultValue="Cascat" />
+      <Spacer height={spaceBetween} />
+      <TextInput
+        name="example"
+        placeholder="Placeholder"
+      />
+      <Spacer height={spaceBetween} />
+      <TextInput hasError name="example" defaultValue="Error!" />
+      <Spacer height={spaceBetween} />
+      <TelInput mask="99-99-99" name="example" placeholder="XX-XX-XX" />
+      <Spacer height={spaceBetween} />
+      <TextInput name="example" freezable defaultValue="Prefilled" />
+      <Spacer height={spaceBetween} />
+      <TextInput name="example" prefix="£" type="tel" />
+      <Spacer height={spaceBetween} />
+      <TextInput name="example" suffix=".00" type="tel" />
+    </div>
+  )
+})
