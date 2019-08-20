@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { jsx } from '@emotion/core'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
 import { inputs } from '@uswitch/trustyle.styles'
-import InputMask from 'react-input-mask'
+const InputMask = require("react-input-mask") // Workaround for known issue: https://github.com/sanniassin/react-input-mask/issues/144
 
 import * as st from './styles'
 
