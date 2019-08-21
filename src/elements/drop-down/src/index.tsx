@@ -15,7 +15,6 @@ interface Props<V = any> {
   dataProps?: DataProps
   freezable?: boolean
   hasError?: boolean
-  label?: string
   onBlur: () => void
   onChange: (value: V) => void
   onFocus?: () => void
@@ -25,11 +24,14 @@ interface Props<V = any> {
   value: V
 }
 
-const prependDataProps = (dataProps: DataProps) => Object.keys(dataProps)
-  .reduce((props, key) => ({
-    ...props,
-    [`data-${key}`]: dataProps[key]
-  }), {})
+const prependDataProps = (dataProps: DataProps) =>
+  Object.keys(dataProps).reduce(
+    (props, key) => ({
+      ...props,
+      [`data-${key}`]: dataProps[key]
+    }),
+    {}
+  )
 
 export interface Option {
   value: string
@@ -40,7 +42,6 @@ export const DropDown: React.FC<Props> = ({
   dataProps = {},
   freezable,
   hasError = false,
-  label,
   onBlur,
   onChange,
   onFocus = () => {},
@@ -53,7 +54,7 @@ export const DropDown: React.FC<Props> = ({
   const option = options.find(_ => _.value === value)
   const frozenText = option && option.text
   return (
-    <FrozenInput fieldLabel={label} text={frozenText} freezable={freezable}>
+    <FrozenInput text={frozenText} freezable={freezable}>
       <div css={container}>
         <select
           onFocus={() => {

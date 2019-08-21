@@ -1,5 +1,4 @@
 import * as colors from './colors'
-import * as global from './global'
 import * as inputs from './inputs'
 import * as utils from './utils'
 import * as typography from './typography'
@@ -9,4 +8,4 @@ const helpers = {
   insetBorder: utils.insetBorder
 }
 
-export { colors, global, helpers, inputs, pxToRem, spacers, typography }
+export { colors, helpers, inputs, pxToRem, spacers, typography }

@@ -1,12 +1,12 @@
 import { css } from '@emotion/core'
-import { colors, pxToRem, spacers, typography } from '@uswitch/trustyle.styles'
+import { colors, pxToRem, typography } from '@uswitch/trustyle.styles'
+import { JustifyContentProperty } from 'csstype'
 
 import { Variant } from '.'
 
 const primary = css({
   backgroundColor: colors.copper,
-  color: colors.white,
-  textAlign: 'center'
+  color: colors.white
 })
 
 const secondaryFocus = css({
@@ -25,7 +25,11 @@ const disabledStyle = css({
   cursor: 'not-allowed'
 })
 
-export const button = (variant: Variant, disabled: boolean) =>
+export const button = (
+  variant: Variant,
+  disabled: boolean,
+  justifyContent: JustifyContentProperty = 'center'
+) =>
   css([
     typography.buttonText,
     {
@@ -41,7 +45,8 @@ export const button = (variant: Variant, disabled: boolean) =>
       border: 0,
       borderRadius: '4px',
       display: 'flex',
-      padding: pxToRem(16, 16, 16, spacers.teal),
+      justifyContent,
+      padding: pxToRem(16),
       width: '100%'
     },
     variant === 'primary' && primary,

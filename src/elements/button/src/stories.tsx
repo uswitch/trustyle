@@ -1,18 +1,46 @@
+/** @jsx jsx */
 import * as React from 'react'
+import { css, jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
-import { text } from '@storybook/addon-knobs'
+import { number, text } from '@storybook/addon-knobs'
+import { colors } from '@uswitch/trustyle.styles'
+
+import { Icon } from '../../icon/src'
 
 import { Button } from './'
 
-storiesOf('Elements|Button', module)
-  .add('primary variant', () => (
-    <Button variant="primary">{text('label', 'Find cheaper deals')}</Button>
-  ))
-  .add('secondary variant', () => (
-    <Button variant="secondary">{text('label', 'Continue')} </Button>
-  ))
-  .add('disabled variant', () => (
+const Spacer = () => <div css={css({ minHeight: 20 })} />
+
+storiesOf('Elements|Button', module).add('primary variant', () => (
+  <div css={css({ padding: number('Padding', 10) })}>
+    <Button variant="primary">{text('Primary Label', 'Primary Button')}</Button>
+
+    <Spacer />
+
+    <Button variant="secondary">{text('Secondary Label', 'Secondary')} </Button>
+
+    <Spacer />
+
     <Button disabled variant="secondary">
-      {text('label', 'Loading...')}
+      {text('Disabled Label', 'Loading...')}
     </Button>
-  ))
+
+    <Spacer />
+
+    <Button variant="primary" justifyContent="align-left">
+      {text('Left Label', 'Left Aligned')}
+    </Button>
+
+    <Spacer />
+
+    <Button variant="secondary" justifyContent="space-between">
+      {text('Spaced Label', 'Space Between')}
+      <Icon
+        color={colors.cobaltBlue}
+        direction="right"
+        glyph="caret"
+        size={20}
+      />
+    </Button>
+  </div>
+))

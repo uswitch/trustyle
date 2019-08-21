@@ -23,11 +23,14 @@ interface Props {
   value: Value
 }
 
-const prependDataProps = (dataProps: DataProps) => Object.keys(dataProps)
-  .reduce((props, key) => ({
-    ...props,
-    [`data-${key}`]: dataProps[key]
-  }), {})
+const prependDataProps = (dataProps: DataProps) =>
+  Object.keys(dataProps).reduce(
+    (props, key) => ({
+      ...props,
+      [`data-${key}`]: dataProps[key]
+    }),
+    {}
+  )
 
 export type Width = 'half' | 'full'
 

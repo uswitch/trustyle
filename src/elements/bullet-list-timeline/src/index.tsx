@@ -44,19 +44,7 @@ const CalSVG = () => (
         y="-61.5%"
         filterUnits="objectBoundingBox"
       >
-        <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1" />
-        <feGaussianBlur
-          in="shadowOffsetOuter1"
-          result="shadowBlurOuter1"
-          stdDeviation="1.5"
-        />
-        <feColorMatrix
-          in="shadowBlurOuter1"
-          result="shadowMatrixOuter1"
-          values="0 0 0 0 0.626602474 0 0 0 0 0.737179331 0 0 0 0 0.807546422 0 0 0 1 0"
-        />
         <feMerge>
-          <feMergeNode in="shadowMatrixOuter1" />
           <feMergeNode in="SourceGraphic" />
         </feMerge>
       </filter>
@@ -81,19 +69,7 @@ const CheckSVG = () => (
         y="-53%"
         filterUnits="objectBoundingBox"
       >
-        <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1" />
-        <feGaussianBlur
-          in="shadowOffsetOuter1"
-          result="shadowBlurOuter1"
-          stdDeviation="1.5"
-        />
-        <feColorMatrix
-          in="shadowBlurOuter1"
-          result="shadowMatrixOuter1"
-          values="0 0 0 0 0.626602474 0 0 0 0 0.737179331 0 0 0 0 0.807546422 0 0 0 1 0"
-        />
         <feMerge>
-          <feMergeNode in="shadowMatrixOuter1" />
           <feMergeNode in="SourceGraphic" />
         </feMerge>
       </filter>

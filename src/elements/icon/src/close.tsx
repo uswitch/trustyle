@@ -7,9 +7,10 @@ import * as st from './styles'
 
 interface Props {
   color: string
+  size?: number
 }
 
-export const Close: React.FC<Props> = ({ color }) => (
+export const Close: React.FC<Props> = ({ color, size }) => (
   <svg
     css={[
       st.icon,
@@ -19,7 +20,8 @@ export const Close: React.FC<Props> = ({ color }) => (
         stroke: color,
         strokeLinecap: 'square',
         strokeWidth: 2
-      }
+      },
+      st.size(size)
     ]}
     viewBox="0 0 18 18"
   >

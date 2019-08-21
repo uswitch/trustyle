@@ -7,6 +7,14 @@ import {
   typography
 } from '@uswitch/trustyle.styles'
 
+export const half = css({
+  width: '50%'
+})
+
+export const full = css({
+  width: '100%'
+})
+
 const affix = css([
   typography.input,
   {

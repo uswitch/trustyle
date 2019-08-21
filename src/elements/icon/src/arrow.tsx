@@ -10,11 +10,12 @@ import { Direction } from '.'
 interface Props {
   direction: Direction
   color: string
+  size?: number
 }
 
-export const Arrow: React.FC<Props> = ({ color, direction = 'up' }) => (
+export const Arrow: React.FC<Props> = ({ color, direction = 'up', size }) => (
   <svg
-    css={css([st.icon, st.rotate(direction), { fill: color }])}
+    css={css([st.icon, st.rotate(direction), st.size(size), { fill: color }])}
     viewBox="0 0 120 120"
   >
     <path

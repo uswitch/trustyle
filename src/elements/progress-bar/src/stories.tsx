@@ -1,4 +1,6 @@
+/** @jsx jsx */
 import * as React from 'react'
+import { css, jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
 import { number } from '@storybook/addon-knobs'
 
@@ -18,7 +20,7 @@ const options = {
 storiesOf('Elements|Progress Bar', module).add('Example', () => {
   const current = number(label, defaultValue, options)
   return (
-    <div>
+    <div css={css({ padding: number('Padding', 10) })}>
       <ProgressBar current={current} max={max} />
     </div>
   )

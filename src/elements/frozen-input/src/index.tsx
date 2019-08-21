@@ -8,17 +8,11 @@ import { colors } from '@uswitch/trustyle.styles'
 import * as st from './styles'
 
 interface Props {
-  fieldLabel?: string
   text?: string
   freezable?: boolean
 }
 
-export const FrozenInput: React.FC<Props> = ({
-  fieldLabel,
-  text,
-  freezable,
-  children
-}) => {
+export const FrozenInput: React.FC<Props> = ({ text, freezable, children }) => {
   const [frozen, setFrozen] = useState(freezable && !!text)
 
   if (!frozen) {
@@ -30,7 +24,7 @@ export const FrozenInput: React.FC<Props> = ({
       <div css={st.root}>
         <p css={st.value}>{text}</p>
         <button
-          aria-label={`Edit ${fieldLabel}`}
+          aria-label="Edit Value"
           css={st.edit}
           onClick={() => setFrozen(false)}
         >

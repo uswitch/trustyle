@@ -1,4 +1,5 @@
 import { css } from '@emotion/core'
+import { pxToRem } from '@uswitch/trustyle.styles'
 
 import { Direction } from '.'
 
@@ -18,3 +19,11 @@ export const rotate = (direction: Direction) => {
       return {}
   }
 }
+
+export const size = (size: number | undefined) =>
+  size
+    ? css({
+        height: pxToRem(size),
+        width: pxToRem(size)
+      })
+    : {}
