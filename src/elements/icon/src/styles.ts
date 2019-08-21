@@ -1,7 +1,8 @@
 import { css } from '@emotion/core'
 
-import { Direction } from '.'
 import { pxToRem } from '../../../styles/lib'
+
+import { Direction } from '.'
 
 export const icon = css({
   display: 'block'

@@ -19,7 +19,12 @@ interface Props {
   size?: number
 }
 
-export const Icon: React.FC<Props> = ({ color, direction = 'up', glyph, size }) => {
+export const Icon: React.FC<Props> = ({
+  color,
+  direction = 'up',
+  glyph,
+  size
+}) => {
   if (glyph === 'arrow') {
     return <Arrow color={color} direction={direction} size={size} />
   }

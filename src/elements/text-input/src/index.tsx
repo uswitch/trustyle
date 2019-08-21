@@ -4,9 +4,12 @@ import { useState } from 'react'
 import { jsx } from '@emotion/core'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
 import { inputs } from '@uswitch/trustyle.styles'
-const InputMask = require('react-input-mask')
+import * as ReactInputMask from 'react-input-mask'
 
 import * as st from './styles'
+
+
+const MaskedInput: any = ReactInputMask
 
 export type InputType = 'text' | 'email' | 'tel' | 'date'
 export type Width = 'half' | 'full'
@@ -64,7 +67,7 @@ export const Input: React.FC<Props> = ({
         {prefix && <span css={st.prefix(hasError, hasFocus)}>{prefix}</span>}
 
         {mask ? (
-          <InputMask mask={mask} {...childProps} />
+          <MaskedInput mask={mask} {...childProps} />
         ) : (
           <input {...childProps} />
         )}

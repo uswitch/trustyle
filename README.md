@@ -9,4 +9,4 @@ To run storybook: run `npx lerna bootstrap` to install dependencies for each pac
 To add a new element, copy the template to the src/elements directory, update the package.json with the name and add your source code.
 
 ### Imports
-Because we are not using Webpack + Babel to transpile the source code, only TypeScript, you *cannot use default imports*. For React, you can use `import * as React`, otherwise just use a `require`.
+Because we are not using Webpack + Babel to transpile the source code, only TypeScript, you *cannot use default imports*. For React, you can use `import * as React`.

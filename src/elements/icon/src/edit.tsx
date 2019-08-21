@@ -18,7 +18,8 @@ export const Edit: React.FC<Props> = ({ color, size }) => (
         fill: color,
         stroke: color,
         strokeWidth: 0.1
-      }, st.size(size)
+      },
+      st.size(size)
     ]}
     viewBox="0 0 21 21"
   >

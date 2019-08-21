@@ -28,7 +28,7 @@ storiesOf('Elements|Icon', module).add(
       glyph={select('glyph', glyphChoices, 'arrow' as Glyph)}
       color={select('color', colors, colors.battleshipGrey)}
       direction={select('direction', directionChoices, 'up' as Direction)}
-      size={number("Size", 0)}
+      size={number('Size', 0)}
     />
   )
 )
