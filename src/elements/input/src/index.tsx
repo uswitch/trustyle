@@ -10,7 +10,7 @@ import * as st from './styles'
 
 const MaskedInput: any = ReactInputMask
 
-export type InputType = 'text' | 'email' | 'tel' | 'date'
+export type InputType = 'text' | 'email' | 'tel' | 'password'
 export type Width = 'half' | 'full'
 
 export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -21,6 +21,7 @@ export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   name: string
   prefix?: string
   suffix?: string
+  type: InputType
   value?: string | undefined
   width?: Width
 }
@@ -31,6 +32,7 @@ export const Input: React.FC<Props> = ({
   mask,
   prefix,
   suffix,
+  type,
   width = 'full',
   ...inputProps
 }) => {
@@ -54,7 +56,8 @@ export const Input: React.FC<Props> = ({
     ...inputProps,
     css: inputs.keyboardInput,
     onBlur,
-    onFocus
+    onFocus,
+    type
   }
 
   return (
@@ -76,15 +79,3 @@ export const Input: React.FC<Props> = ({
     </FrozenInput>
   )
 }
-
-export const TextInput: React.FC<Props> = props => (
-  <Input {...props} type="text" />
-)
-
-export const EmailInput: React.FC<Props> = props => (
-  <Input {...props} type="email" />
-)
-
-export const TelInput: React.FC<Props> = props => (
-  <Input {...props} type="tel" />
-)

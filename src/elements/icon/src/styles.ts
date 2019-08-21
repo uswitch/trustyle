@@ -1,5 +1,4 @@
 import { css } from '@emotion/core'
-
 import { pxToRem } from '@uswitch/trustyle.styles'
 
 import { Direction } from '.'

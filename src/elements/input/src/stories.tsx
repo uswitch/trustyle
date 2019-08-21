@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { number } from '@storybook/addon-knobs'
 import { css, jsx } from '@emotion/core'
 
-import { TelInput, TextInput } from './.'
+import { Input } from './.'
 
 const Spacer = ({ height }: { height: number }) => (
   <div css={css({ minHeight: height })} />
@@ -14,19 +14,21 @@ storiesOf('Elements|Text Input', module).add('example', () => {
   const spaceBetween = number('Space Between', 10)
   return (
     <div css={css({ padding: number('Padding', 10) })}>
-      <TextInput name="example" defaultValue="Cascat" />
+      <Input name="example" defaultValue="Cascat" type="text" />
       <Spacer height={spaceBetween} />
-      <TextInput name="example" placeholder="Placeholder" />
+      <Input name="example" placeholder="Placeholder" type="text" />
       <Spacer height={spaceBetween} />
-      <TextInput hasError name="example" defaultValue="Error!" />
+      <Input hasError name="example" defaultValue="Error!" type="text" />
       <Spacer height={spaceBetween} />
-      <TelInput mask="99-99-99" name="example" placeholder="XX-XX-XX" />
+      <Input mask="99-99-99" name="example" placeholder="XX-XX-XX" type="tel" />
       <Spacer height={spaceBetween} />
-      <TextInput name="example" freezable defaultValue="Prefilled" />
+      <Input name="example" freezable defaultValue="Prefilled" type="text" />
       <Spacer height={spaceBetween} />
-      <TextInput name="example" prefix="£" type="tel" />
+      <Input name="example" prefix="£" type="tel" />
       <Spacer height={spaceBetween} />
-      <TextInput name="example" suffix=".00" type="tel" />
+      <Input name="example" suffix=".00" type="tel" />
+      <Spacer height={spaceBetween} />
+      <Input name="password" type="password" defaultValue="swordfish" />
     </div>
   )
 })
