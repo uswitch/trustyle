@@ -8,7 +8,6 @@ import * as ReactInputMask from 'react-input-mask'
 
 import * as st from './styles'
 
-
 const MaskedInput: any = ReactInputMask
 
 export type InputType = 'text' | 'email' | 'tel' | 'date'
