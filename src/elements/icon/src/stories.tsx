@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import { select } from '@storybook/addon-knobs'
+import { number, select } from '@storybook/addon-knobs'
 
 import { colors } from '../../../styles'
 
@@ -28,6 +28,7 @@ storiesOf('Elements|Icon', module).add(
       glyph={select('glyph', glyphChoices, 'arrow' as Glyph)}
       color={select('color', colors, colors.battleshipGrey)}
       direction={select('direction', directionChoices, 'up' as Direction)}
+      size={number("Size", 0)}
     />
   )
 )

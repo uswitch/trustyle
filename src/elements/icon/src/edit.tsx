@@ -7,9 +7,10 @@ import * as st from './styles'
 
 interface Props {
   color: string
+  size?: number
 }
 
-export const Edit: React.FC<Props> = ({ color }) => (
+export const Edit: React.FC<Props> = ({ color, size }) => (
   <svg
     css={[
       st.icon,
@@ -17,7 +18,7 @@ export const Edit: React.FC<Props> = ({ color }) => (
         fill: color,
         stroke: color,
         strokeWidth: 0.1
-      }
+      }, st.size(size)
     ]}
     viewBox="0 0 21 21"
   >

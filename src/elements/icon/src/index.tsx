@@ -16,23 +16,24 @@ interface Props {
   color: string
   direction?: Direction
   glyph: Glyph
+  size?: number
 }
 
-export const Icon: React.FC<Props> = ({ color, direction = 'up', glyph }) => {
+export const Icon: React.FC<Props> = ({ color, direction = 'up', glyph, size }) => {
   if (glyph === 'arrow') {
-    return <Arrow color={color} direction={direction} />
+    return <Arrow color={color} direction={direction} size={size} />
   }
   if (glyph === 'caret') {
-    return <Caret color={color} direction={direction} />
+    return <Caret color={color} direction={direction} size={size} />
   }
   if (glyph === 'phone') {
-    return <Phone color={color} />
+    return <Phone color={color} size={size} />
   }
   if (glyph === 'close') {
-    return <Close color={color} />
+    return <Close color={color} size={size} />
   }
   if (glyph === 'edit') {
-    return <Edit color={color} />
+    return <Edit color={color} size={size} />
   }
   return null
 }

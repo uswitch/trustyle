@@ -1,6 +1,7 @@
 import { css } from '@emotion/core'
 
 import { Direction } from '.'
+import { pxToRem } from '../../../styles/lib'
 
 export const icon = css({
   display: 'block'
@@ -18,3 +19,11 @@ export const rotate = (direction: Direction) => {
       return {}
   }
 }
+
+export const size = (size: number | undefined) =>
+  size
+    ? css({
+        height: pxToRem(size),
+        width: pxToRem(size)
+      })
+    : {}
