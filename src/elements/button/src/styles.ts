@@ -45,6 +45,7 @@ export const button = (
       border: 0,
       borderRadius: '4px',
       display: 'flex',
+      height: pxToRem(50),
       justifyContent,
       padding: pxToRem(16),
       width: '100%'
