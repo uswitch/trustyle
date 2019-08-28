@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.styles",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -12,6 +12,6 @@
     "build": "npm run clean && tsc"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.10"
+    "@emotion/core": "^10.0.16"
   }
 }
