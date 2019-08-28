@@ -7,6 +7,7 @@ export const pxToRem = (...blocks: number[]) =>
 export const spacers = {
   pink: 8,
   green: 12,
+  purple: 16,
   teal: 24,
   blue: 32,
   orange: 48,
