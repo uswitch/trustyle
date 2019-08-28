@@ -36,6 +36,7 @@ export const button = (
       /* cross-browser styling resets */
       backgroundImage: 'none',
       cursor: 'pointer',
+      lineHeight: 1,
       textDecoration: 'none',
       transition: 'none',
       verticalAlign: 'middle',
