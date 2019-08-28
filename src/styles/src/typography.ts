@@ -74,14 +74,6 @@ export const small = css({
   color: battleshipGrey
 })
 
-export const buttonText = css({
-  fontFamily: defaultFontFamily,
-  fontSize: pxToRem(16),
-  fontWeight: 600,
-  lineHeight: '1.43',
-  letterSpacing: 'normal'
-})
-
 export const linkText = css({
   fontFamily: defaultFontFamily,
   color: cerulean,

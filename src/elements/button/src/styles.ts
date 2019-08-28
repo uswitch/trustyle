@@ -31,16 +31,20 @@ export const button = (
   justifyContent: JustifyContentProperty = 'center'
 ) =>
   css([
-    typography.buttonText,
     {
       /* cross-browser styling resets */
       backgroundImage: 'none',
       cursor: 'pointer',
-      lineHeight: 1,
       textDecoration: 'none',
       transition: 'none',
       verticalAlign: 'middle',
       whiteSpace: 'nowrap',
+
+      /* text */
+      fontFamily: typography.defaultFontFamily,
+      fontSize: pxToRem(16),
+      fontWeight: 600,
+      letterSpacing: 'normal',
 
       /* layout */
       border: 0,
