@@ -49,7 +49,7 @@ const ExampleDrawer = () => {
         <h2>Still stuck?</h2>
         <p>Call uSwitch free on</p>
         <p>
-          <a href="tel:0800 6888 244">0800 6888 244</a>
+          <a href="tel:0800 1234 123">0800 1234 123</a>
         </p>
       </Padding>
     </Drawer>

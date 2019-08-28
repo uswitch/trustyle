@@ -2,7 +2,7 @@
 
 import { createRef, Fragment, useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { TransitionGroup, Transition } from 'react-transition-group'
+import { Transition, TransitionGroup } from 'react-transition-group'
 import FocusTrap from 'focus-trap-react'
 import { css, jsx } from '@emotion/core'
 import { Icon } from '@uswitch/trustyle.icon'
@@ -16,10 +16,7 @@ interface ModalProps {
   mobile: boolean
   side: 'left' | 'right'
   triggerElement: React.ReactNode
-  triggerEvent?: {
-    action: string
-    label: string
-  }
+  triggerProps?: object
 }
 
 const lockBackground = () => {
@@ -44,7 +41,7 @@ export const Drawer: React.FC<ModalProps> = ({
   mobile,
   side,
   triggerElement,
-  triggerEvent
+  triggerProps
 }) => {
   const triggerRef: React.RefObject<HTMLButtonElement> = createRef()
   const backgroundRef: React.RefObject<HTMLElement> = createRef()
@@ -82,10 +79,7 @@ export const Drawer: React.FC<ModalProps> = ({
         css={st.trigger}
         onClick={openModal}
         ref={triggerRef}
-        data-event={!!triggerEvent}
-        data-event-category={triggerEvent && 'gas-electricity'}
-        data-event-action={triggerEvent && triggerEvent.action}
-        data-event-label={triggerEvent && triggerEvent.label}
+        {...triggerProps}
       >
         {triggerElement}
       </button>
@@ -103,7 +97,12 @@ export const Drawer: React.FC<ModalProps> = ({
                 role="dialog"
               >
                 <FocusTrap focusTrapOptions={{ clickOutsideDeactivates: true }}>
-                  <div css={css([st.drawer, st.transitionPositions[side][transitionState]])}>
+                  <div
+                    css={css([
+                      st.drawer,
+                      st.transitionPositions[side][transitionState]
+                    ])}
+                  >
                     <div css={st.closeRow}>
                       <button
                         aria-label="Close Modal"
