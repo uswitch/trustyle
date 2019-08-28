@@ -1,0 +1,23 @@
+{
+  "name": "@uswitch/trustyle.side-drawer",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "--------------- BUILDING": "----------------------",
+    "clean": "rm -rf lib",
+    "build": "npm run clean && tsc"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@uswitch/trustyle.icon": "^0.1.7",
+    "@uswitch/trustyle.styles": "^0.2.1",
+    "focus-trap-react": "^6.0.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-transition-group": "^4.2.2"
+  }
+}
