@@ -21,6 +21,11 @@ const secondary = (disabled: boolean) =>
     ':hover, :focus': disabled ? {} : secondaryFocus
   })
 
+const tertiary = css({
+  color: colors.cerulean,
+  textDecoration: 'underline'
+})
+
 const disabledStyle = css({
   cursor: 'not-allowed'
 })
@@ -57,6 +62,7 @@ export const button = (
     },
     variant === 'primary' && primary,
     variant === 'secondary' && secondary(disabled),
+    variant === 'tertiary' && tertiary,
     disabled && disabledStyle
   ])
 
