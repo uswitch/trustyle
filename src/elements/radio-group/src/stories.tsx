@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import { array, radios } from '@storybook/addon-knobs'
+import { radios, optionsKnob as options } from '@storybook/addon-knobs'
 
 import { RadioInput, Width } from '../../radio-input'
 
@@ -11,24 +11,28 @@ const widthOptions: Record<string, Width> = {
   Half: 'half'
 }
 
-const defaultChoices = ['A', 'B', 'C', 'D']
+const valuesRadio = {
+  A: 'A',
+  B: 'B',
+  C: 'C',
+  D: 'D',
+  E: 'E'
+}
 
 storiesOf('Elements|RadioGroup', module)
   .add('consistent width', () => {
     const width = radios('Width', widthOptions, 'full')
-    const choices = array('Choices', defaultChoices)
+    const optionSelect = options('Radio', valuesRadio, 'A', { display: 'radio' });
 
     return (
       <RadioGroup>
-        {choices.map(choice => (
+        {Object.keys(valuesRadio).map(radioValue => (
           <RadioInput
-            key={choice}
+            key={radioValue}
             name="example"
-            label={choice}
-            onBlur={() => {}}
-            onChange={() => {}}
-            selected={choices[0]}
-            value={choice}
+            label={radioValue}
+            checked={radioValue === optionSelect}
+            value={optionSelect}
             width={width}
           />
         ))}
@@ -41,45 +45,31 @@ storiesOf('Elements|RadioGroup', module)
         <RadioInput
           label="A"
           name="example"
-          onBlur={() => {}}
-          onChange={() => {}}
-          selected="d"
           value="a"
           width="half"
         />
         <RadioInput
           label="B"
           name="example"
-          onBlur={() => {}}
-          onChange={() => {}}
-          selected="d"
           value="b"
           width="half"
         />
         <RadioInput
           label="C"
           name="example"
-          onBlur={() => {}}
-          onChange={() => {}}
-          selected="d"
           value="c"
           width="half"
         />
         <RadioInput
           label="D"
           name="example"
-          onBlur={() => {}}
-          onChange={() => {}}
-          selected="d"
+          checked
           value="d"
           width="half"
         />
         <RadioInput
           label="E"
           name="example"
-          onBlur={() => {}}
-          onChange={() => {}}
-          selected="d"
           value="e"
           width="full"
         />

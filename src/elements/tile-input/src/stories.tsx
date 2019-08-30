@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import { array } from '@storybook/addon-knobs'
+import { array, radios } from '@storybook/addon-knobs'
 import { jsx } from '@emotion/core'
 
 import { TileInput } from './.'
@@ -18,7 +18,12 @@ storiesOf('Elements|Tile Inputs', module)
         flexWrap: 'wrap'
       }}>
         {choices.map(choice => (
-          <TileInput name={choice} selected="B" value={choice} label={choice}>
+          <TileInput
+            name={choice}
+            checked={choice === choices[0]}
+            value={choice}
+            label={choice}
+          >
             Test
           </TileInput>
         ))}
