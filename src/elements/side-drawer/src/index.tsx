@@ -3,7 +3,7 @@
 import { createRef, Fragment, useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Transition, TransitionGroup } from 'react-transition-group'
-import FocusTrap from 'focus-trap-react'
+import * as FocusTrap from 'focus-trap-react'
 import { css, jsx } from '@emotion/core'
 import { Icon } from '@uswitch/trustyle.icon'
 import { colors } from '@uswitch/trustyle.styles'
@@ -116,7 +116,6 @@ export const Drawer: React.FC<ModalProps> = ({
                     <div css={st.drawerBody}>{children}</div>
                   </div>
                 </FocusTrap>
-                )
               </aside>,
               document.body
             )
