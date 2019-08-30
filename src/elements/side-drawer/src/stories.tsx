@@ -32,7 +32,7 @@ const ExampleDrawer = () => {
   return (
     <Drawer
       ariaLabel="An example modal element"
-      mobile={boolean('Is mobile?', true)}
+      disableScrolling={boolean('Is mobile?', true)}
       side={radios('Side', { Left: 'left', Right: 'right' }, 'right', 'side')}
       triggerElement={trigger}
     >

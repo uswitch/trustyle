@@ -13,7 +13,7 @@ import * as st from './styles'
 interface ModalProps {
   ariaLabel: string // a description of the modal’s content
   children: React.ReactNode
-  mobile: boolean
+  disableScrolling: boolean
   side: 'left' | 'right'
   triggerElement: React.ReactNode
   triggerProps?: object
@@ -38,7 +38,7 @@ const unlockBackground = () => {
 export const Drawer: React.FC<ModalProps> = ({
   ariaLabel,
   children,
-  mobile,
+  disableScrolling,
   side,
   triggerElement,
   triggerProps
@@ -51,12 +51,12 @@ export const Drawer: React.FC<ModalProps> = ({
 
   const openModal = () => {
     setIsOpen(true)
-    if (mobile) lockBackground()
+    if (disableScrolling) lockBackground()
   }
 
   const closeModal = () => {
     setIsOpen(false)
-    if (mobile) unlockBackground()
+    if (disableScrolling) unlockBackground()
     // Focuses on the trigger element when the modal closes.
     const triggerNode = triggerRef.current
     if (triggerNode) triggerNode.focus()
