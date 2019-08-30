@@ -1,28 +1,35 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import { array, radios } from '@storybook/addon-knobs'
+import { radios, optionsKnob as options } from '@storybook/addon-knobs'
 import { jsx } from '@emotion/core'
 
 import { TileInput } from './.'
 
-const defaultChoices = ['A', 'B', 'C', 'D', 'E']
+const valuesRadio = {
+  A: 'A',
+  B: 'B',
+  C: 'C',
+  D: 'D',
+  E: 'E'
+}
 
 storiesOf('Elements|Tile Inputs', module)
   .add('example', () => {
-    const choices = array('Choices', defaultChoices)
+    const optionSelect = options('Radio', valuesRadio, 'A', { display: 'radio' })
     return (
       <div css={{
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap'
       }}>
-        {choices.map(choice => (
+        {Object.keys(valuesRadio).map(radioValue => (
           <TileInput
-            name={choice}
-            checked={choice === choices[0]}
-            value={choice}
-            label={choice}
+            key={radioValue}
+            name={radioValue}
+            checked={radioValue === optionSelect}
+            value={optionSelect}
+            label={radioValue}
           >
             Test
           </TileInput>
