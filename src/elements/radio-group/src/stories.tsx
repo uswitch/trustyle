@@ -22,7 +22,7 @@ const valuesRadio = {
 storiesOf('Elements|RadioGroup', module)
   .add('consistent width', () => {
     const width = radios('Width', widthOptions, 'full')
-    const optionSelect = options('Radio', valuesRadio, 'A', { display: 'radio' });
+    const optionSelect = options('Radio', valuesRadio, 'A', { display: 'radio' })
 
     return (
       <RadioGroup>
