@@ -43,7 +43,8 @@ export const input = css({
     '&::before': {
       backgroundColor: colors.azure,
       borderColor: colors.azure,
-      transition: 'background-color 200ms, border-color 200ms'
+      transition: 'background-color 200ms, border-color 200ms',
+      boxShadow: 'inset 0 0 0 2px white'
     }
   },
   '&:focus + span': {
@@ -68,7 +69,6 @@ export const span = css([
     minHeight: '50px',
     width: '100%',
     '&:before': {
-      backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="-1 -2 14 12"><path d="M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z" /></svg>')`,
       borderColor: colors.lightGreyBlue,
       borderRadius: '50%',
       borderStyle: 'solid',
