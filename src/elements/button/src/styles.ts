@@ -26,6 +26,7 @@ const outlineFocus = css({
 })
 
 const outline = (disabled: boolean) => css({
+  backgroundColor: colors.white,
   borderColor: colors.lightGreyBlue,
   ':hover, :focus': disabled ? {} : outlineFocus
 })
