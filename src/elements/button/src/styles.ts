@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { colors, pxToRem, typography } from '@uswitch/trustyle.styles'
+import { colors, helpers, pxToRem, typography } from '@uswitch/trustyle.styles'
 import { JustifyContentProperty } from 'csstype'
 
 import { Variant } from '.'
@@ -22,7 +22,8 @@ const secondary = (disabled: boolean) =>
   })
 
 const outlineFocus = css({
-  borderColor: colors.azure
+  borderColor: colors.azure,
+  boxShadow: helpers.insetBorder(colors.azure)
 })
 
 const outline = (disabled: boolean) => css({
