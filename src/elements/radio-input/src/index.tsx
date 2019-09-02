@@ -15,7 +15,6 @@ export type Width = 'half' | 'full'
 
 export const RadioInput: React.FC<Props> = ({
   label,
-  value,
   width = 'full',
   ...inputProps
 }) => (
