@@ -2,7 +2,7 @@ import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { radios, optionsKnob as options } from '@storybook/addon-knobs'
 
-import { RadioInput, Width } from '../../radio-input'
+import { RadioInput, Width } from '../../radio-input/src'
 
 import { RadioGroup } from './'
 
