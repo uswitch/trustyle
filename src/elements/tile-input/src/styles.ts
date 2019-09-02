@@ -35,7 +35,8 @@ export const input = css({
     color: colors.black,
     '&::before': {
       backgroundColor: colors.azure,
-      borderColor: colors.azure
+      borderColor: colors.azure,
+      boxShadow: `inset 0 0 0 2px ${colors.white}`
     }
   },
   '&:focus': {
@@ -59,7 +60,6 @@ export const container = css([
     position: 'relative',
     width: '100%',
     '&:before': {
-      backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="-1 -2 14 12"><path d="M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z" /></svg>')`,
       borderColor: colors.lightGreyBlue,
       borderRadius: '50%',
       borderStyle: 'solid',
