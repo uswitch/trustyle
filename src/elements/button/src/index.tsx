@@ -6,7 +6,7 @@ import { JustifyContentProperty } from 'csstype'
 
 import * as st from './styles'
 
-export type Variant = 'primary' | 'secondary'
+export type Variant = 'primary' | 'secondary' | 'outline'
 
 interface Props {
   children: React.ReactNode

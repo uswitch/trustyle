@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { colors, pxToRem, typography } from '@uswitch/trustyle.styles'
+import { colors, helpers, pxToRem, typography } from '@uswitch/trustyle.styles'
 import { JustifyContentProperty } from 'csstype'
 
 import { Variant } from '.'
@@ -20,6 +20,17 @@ const secondary = (disabled: boolean) =>
     textAlign: 'left',
     ':hover, :focus': disabled ? {} : secondaryFocus
   })
+
+const outlineFocus = css({
+  borderColor: colors.azure,
+  boxShadow: helpers.insetBorder(colors.azure)
+})
+
+const outline = (disabled: boolean) => css({
+  backgroundColor: colors.white,
+  borderColor: colors.lightGreyBlue,
+  ':hover, :focus': disabled ? {} : outlineFocus
+})
 
 const disabledStyle = css({
   cursor: 'not-allowed'
@@ -47,16 +58,17 @@ export const button = (
       letterSpacing: 'normal',
 
       /* layout */
-      border: 0,
+      border: '1px solid transparent',
       borderRadius: '4px',
       display: 'flex',
       height: pxToRem(50),
       justifyContent,
-      padding: pxToRem(16),
+      padding: pxToRem(15),
       width: '100%'
     },
     variant === 'primary' && primary,
     variant === 'secondary' && secondary(disabled),
+    variant === 'outline' && outline(disabled),
     disabled && disabledStyle
   ])
 

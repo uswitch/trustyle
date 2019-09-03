@@ -21,6 +21,14 @@ storiesOf('Elements|Button', module).add('primary variant', () => (
 
     <Spacer />
 
+    <Button variant="outline">{text('Outline Label', 'Outline')}</Button>
+
+    <Spacer />
+
+    <Button disabled variant="outline">{text('Disabled Outline Label', 'Outline')}</Button>
+
+    <Spacer />
+
     <Button disabled variant="secondary">
       {text('Disabled Label', 'Loading...')}
     </Button>
