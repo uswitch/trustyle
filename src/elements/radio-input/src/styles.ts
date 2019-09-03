@@ -44,7 +44,7 @@ export const input = css({
       backgroundColor: colors.azure,
       borderColor: colors.azure,
       transition: 'background-color 200ms, border-color 200ms',
-      boxShadow: 'inset 0 0 0 2px white'
+      boxShadow: `inset 0 0 0 2px ${colors.white}`
     }
   },
   '&:focus + span': {
