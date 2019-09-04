@@ -5,6 +5,7 @@ import { jsx } from '@emotion/core'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
 import { inputs } from '@uswitch/trustyle.styles'
 import * as ReactInputMask from 'react-input-mask'
+import debounce from 'lodash.debounce'
 
 import * as st from './styles'
 
@@ -38,7 +39,7 @@ const useScrollIntoView = (
   const [isResizing, setIsResizing] = useState(false)
 
   useEffect(() => {
-    const handleResize = () => setIsResizing(true)
+    const handleResize = debounce(() => setIsResizing(true), 50)
     window.addEventListener('resize', handleResize)
 
     return () => {
