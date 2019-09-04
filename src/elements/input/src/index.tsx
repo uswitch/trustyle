@@ -1,10 +1,11 @@
 /** @jsx jsx */
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { jsx } from '@emotion/core'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
 import { inputs } from '@uswitch/trustyle.styles'
 import * as ReactInputMask from 'react-input-mask'
+import debounce from 'lodash.debounce'
 
 import * as st from './styles'
 
@@ -26,6 +27,40 @@ export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   width?: Width
 }
 
+// On Android, there is a behaviour where the keyboard may sometimes open ON TOP of a focused input.
+// This effect fixes the problem by calling scrollIntoView on a window resize event - this event
+// is fired when the keyboard opens and pushes up the viewport.
+//
+// Related: https://stackoverflow.com/questions/23757345/android-does-not-correctly-scroll-on-input-focus-if-not-body-element?noredirect=1&lq=1
+const useScrollIntoView = (
+  inputRef: React.RefObject<HTMLInputElement>,
+  hasFocus: boolean
+) => {
+  const [isResizing, setIsResizing] = useState(false)
+
+  useEffect(() => {
+    const handleResize = debounce(() => setIsResizing(true), 50)
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (hasFocus && isResizing) {
+      const inputEl = inputRef.current
+      inputEl &&
+        inputEl.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        })
+    }
+
+    isResizing && setIsResizing(false)
+  }, [hasFocus, isResizing])
+}
+
 export const Input: React.FC<Props> = ({
   freezable,
   hasError = false,
@@ -36,6 +71,7 @@ export const Input: React.FC<Props> = ({
   width = 'full',
   ...inputProps
 }) => {
+  const inputRef: React.RefObject<HTMLInputElement> = useRef(null)
   const [hasFocus, setHasFocus] = useState(false)
   const onBlur = (event: React.FocusEvent<HTMLInputElement>) => {
     setHasFocus(false)
@@ -51,6 +87,8 @@ export const Input: React.FC<Props> = ({
       inputProps.onFocus(event)
     }
   }
+
+  useScrollIntoView(inputRef, hasFocus)
 
   const childProps = {
     ...inputProps,
@@ -69,9 +107,9 @@ export const Input: React.FC<Props> = ({
         {prefix && <span css={st.prefix(hasError, hasFocus)}>{prefix}</span>}
 
         {mask ? (
-          <MaskedInput mask={mask} {...childProps} />
+          <MaskedInput inputRef={inputRef} mask={mask} {...childProps} />
         ) : (
-          <input {...childProps} />
+          <input ref={inputRef} {...childProps} />
         )}
 
         {suffix && <span css={st.suffix(hasError, hasFocus)}>{suffix}</span>}
