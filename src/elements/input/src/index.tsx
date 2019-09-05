@@ -4,12 +4,10 @@ import { useEffect, useRef, useState } from 'react'
 import { jsx } from '@emotion/core'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
 import { inputs } from '@uswitch/trustyle.styles'
-import * as ReactInputMask from 'react-input-mask'
+import InputMask from 'react-input-mask'
 import debounce from 'lodash.debounce'
 
 import * as st from './styles'
-
-const MaskedInput: any = ReactInputMask
 
 export type InputType = 'text' | 'email' | 'tel' | 'password'
 export type Width = 'half' | 'full'
@@ -107,7 +105,7 @@ export const Input: React.FC<Props> = ({
         {prefix && <span css={st.prefix(hasError, hasFocus)}>{prefix}</span>}
 
         {mask ? (
-          <MaskedInput inputRef={inputRef} mask={mask} {...childProps} />
+          <InputMask inputRef={inputRef} mask={mask} {...childProps} />
         ) : (
           <input ref={inputRef} {...childProps} />
         )}

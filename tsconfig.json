@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
     "checkJs": false,
     "declaration": true,
+    "esModuleInterop": true,
     "jsx": "react",
     "lib": ["es2015", "dom"],
     "module": "commonjs",
@@ -10,7 +10,6 @@
     "outDir": "lib",
     "sourceMap": true,
     "strict": true,
-    "target": "es5",
-    "esModuleInterop": true
+    "target": "es5"
   }
 }
