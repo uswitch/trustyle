@@ -13,5 +13,8 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.16"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.2"
   }
 }
