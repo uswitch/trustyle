@@ -4,13 +4,17 @@ import { JustifyContentProperty } from 'csstype'
 
 import { Variant } from '.'
 
+const focusBorder = {
+  borderColor: colors.azure,
+  boxShadow: helpers.insetBorder(colors.azure),
+  outline: 0,
+  '&::-moz-focus-inner': { border: 0 }
+}
+
 const primary = css({
   backgroundColor: colors.copper,
-  color: colors.white
-})
-
-const secondaryFocus = css({
-  backgroundColor: colors.robinsEggBlue
+  color: colors.white,
+  ':focus': focusBorder
 })
 
 const secondary = (disabled: boolean) =>
@@ -18,19 +22,20 @@ const secondary = (disabled: boolean) =>
     backgroundColor: colors.lightSkyBlue,
     color: colors.cobaltBlue,
     textAlign: 'left',
-    ':hover, :focus': disabled ? {} : secondaryFocus
+    ':hover': disabled
+      ? {}
+      : {
+          backgroundColor: colors.robinsEggBlue
+        },
+    ':focus': focusBorder
   })
 
-const outlineFocus = css({
-  borderColor: colors.azure,
-  boxShadow: helpers.insetBorder(colors.azure)
-})
-
-const outline = (disabled: boolean) => css({
-  backgroundColor: colors.white,
-  borderColor: colors.lightGreyBlue,
-  ':hover, :focus': disabled ? {} : outlineFocus
-})
+const outline = (disabled: boolean) =>
+  css({
+    backgroundColor: colors.white,
+    borderColor: colors.lightGreyBlue,
+    ':hover, :focus': disabled ? {} : focusBorder
+  })
 
 const disabledStyle = css({
   cursor: 'not-allowed'
@@ -55,7 +60,6 @@ export const button = (
       fontFamily: typography.defaultFontFamily,
       fontSize: pxToRem(16),
       fontWeight: 600,
-      letterSpacing: 'normal',
 
       /* layout */
       border: '1px solid transparent',
