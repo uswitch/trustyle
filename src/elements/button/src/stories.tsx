@@ -50,5 +50,7 @@ storiesOf('Elements|Button', module).add('primary variant', () => (
         size={20}
       />
     </Button>
+
+    <Spacer />
   </div>
 ))

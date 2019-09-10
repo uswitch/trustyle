@@ -18,14 +18,20 @@ export const root = (hasError: boolean, hasFocus: boolean) =>
   css([
     typography.input,
     {
-      width: '100%',
-      padding: pxToRem(16, spacers.orange, 16, 16),
-      borderRadius: '3px',
-      border: `solid 1px ${colors.lightGreyBlue}`,
+      appearance: 'none',
       backgroundColor: colors.white,
-      verticalAlign: 'middle',
+      border: `solid 1px ${colors.lightGreyBlue}`,
+      borderRadius: '3px',
       boxSizing: 'border-box',
-      appearance: 'none'
+      color: 'transparent', // rm FF default focus
+      outline: 'none', // rm Chrome mobile default focus
+      padding: pxToRem(16, spacers.orange, 16, 16),
+      verticalAlign: 'middle',
+      width: '100%',
+      textShadow: `0 0 0 ${colors.black}`, // FF compensate for color
+      '& option': {
+        color: colors.black // Chrome compensate for color
+      }
     },
     inputs.emphasis(hasError, hasFocus)
   ])
