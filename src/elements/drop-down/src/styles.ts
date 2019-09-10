@@ -18,14 +18,19 @@ export const root = (hasError: boolean, hasFocus: boolean) =>
   css([
     typography.input,
     {
-      width: '100%',
-      padding: pxToRem(16, spacers.orange, 16, 16),
-      borderRadius: '3px',
-      border: `solid 1px ${colors.lightGreyBlue}`,
+      appearance: 'none',
       backgroundColor: colors.white,
-      verticalAlign: 'middle',
+      border: `solid 1px ${colors.lightGreyBlue}`,
+      borderRadius: '3px',
       boxSizing: 'border-box',
-      appearance: 'none'
+      color: 'transparent',
+      padding: pxToRem(16, spacers.orange, 16, 16),
+      verticalAlign: 'middle',
+      width: '100%',
+      textShadow: `0 0 0 ${colors.black}`,
+      '& option': {
+        color: colors.black
+      }
     },
     inputs.emphasis(hasError, hasFocus)
   ])
