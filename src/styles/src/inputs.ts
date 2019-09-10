@@ -52,6 +52,9 @@ export const keyboardInput = css([
     height: pxToRem(
       inputLineHeight * inputFontSize + inputPadding + inputPadding
     ),
-    width: '100%'
+    width: '100%',
+    '&:focus': {
+      outline: 'none'
+    }
   }
 ])

@@ -30,7 +30,11 @@ export const edit = css({
   cursor: 'pointer',
   height: pxToRem(28),
   padding: pxToRem(0, spacers.teal),
-  width: editIconWidth
+  width: editIconWidth,
+  ':focus': {
+    outline: `2px solid ${colors.azure}`,
+  },
+  '&::-moz-focus-inner': { border: 0 }
 })
 
 export const hidden = css({
