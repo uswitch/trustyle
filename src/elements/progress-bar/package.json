@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.progress-bar",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
-    "@uswitch/trustyle.styles": "^0.3.7",
+    "@uswitch/trustyle.styles": "^0.3.8",
     "react": "^16.7.0"
   },
   "devDependencies": {
