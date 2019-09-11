@@ -19,11 +19,7 @@ export const RadioInput: React.FC<Props> = ({
   ...inputProps
 }) => (
   <label css={[st.label, st[width]]}>
-    <input
-      css={st.input}
-      type="radio"
-      {...inputProps}
-    />
+    <input css={st.input} type="radio" {...inputProps} />
     <span css={st.span}>{label}</span>
   </label>
 )
