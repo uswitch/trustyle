@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.loading-spinner",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
-    "@uswitch/trustyle.styles": "^0.3.9",
+    "@uswitch/trustyle.styles": "^0.3.10",
     "react": "^16.7.0"
   },
   "devDependencies": {
