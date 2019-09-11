@@ -1,6 +1,8 @@
-import * as React from 'react'
+/** @jsx jsx */
+import { useState, ChangeEvent } from 'react'
+import { css, jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
-import { radios, optionsKnob as options } from '@storybook/addon-knobs'
+import { number, radios } from '@storybook/addon-knobs'
 
 import { RadioInput, Width } from '../../radio-input/src'
 
@@ -15,64 +17,42 @@ const valuesRadio = {
   A: 'A',
   B: 'B',
   C: 'C',
-  D: 'D',
-  E: 'E'
+  D: 'D'
 }
 
-storiesOf('Elements|RadioGroup', module)
-  .add('consistent width', () => {
-    const width = radios('Width', widthOptions, 'full')
-    const optionSelect = options('Radio', valuesRadio, 'A', { display: 'radio' })
-
-    return (
+const Form = () => {
+  const [val, setVal] = useState('')
+  const onChange = (event: ChangeEvent<HTMLInputElement>): void => {
+    setVal(event.target.value)
+  }
+  const width = radios('Width', widthOptions, 'full')
+  return (
+    <div css={css({ padding: number('Padding', 10) })}>
       <RadioGroup>
         {Object.keys(valuesRadio).map(radioValue => (
           <RadioInput
             key={radioValue}
             name="example"
             label={radioValue}
-            checked={radioValue === optionSelect}
-            value={optionSelect}
+            checked={radioValue === val}
+            onChange={onChange}
+            value={radioValue}
             width={width}
           />
         ))}
-      </RadioGroup>
-    )
-  })
-  .add('mixed widths', () => {
-    return (
-      <RadioGroup>
         <RadioInput
-          label="A"
           name="example"
-          value="a"
-          width="half"
-        />
-        <RadioInput
-          label="B"
-          name="example"
-          value="b"
-          width="half"
-        />
-        <RadioInput
-          label="C"
-          name="example"
-          value="c"
-          width="half"
-        />
-        <RadioInput
-          label="D"
-          name="example"
-          checked
-          value="d"
-          width="half"
-        />
-        <RadioInput
-          label="E"
-          name="example"
-          value="e"
+          label="E (Full Width)"
+          checked={val === 'E'}
+          onChange={onChange}
+          value="E"
           width="full"
         />
       </RadioGroup>
-    )
-  })
+    </div>
+  )
+}
+
+storiesOf('Elements|RadioGroup', module).add('Example', () => {
+  return <Form />
+})

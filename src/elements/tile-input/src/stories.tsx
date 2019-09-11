@@ -1,39 +1,46 @@
 /** @jsx jsx */
-import * as React from 'react'
+import { useState, ChangeEvent } from 'react'
+import { css, jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
-import { radios, optionsKnob as options } from '@storybook/addon-knobs'
-import { jsx } from '@emotion/core'
+import { number } from '@storybook/addon-knobs'
 
 import { TileInput } from './.'
+
+import { RadioGroup } from '../../radio-group/src'
 
 const valuesRadio = {
   A: 'A',
   B: 'B',
   C: 'C',
-  D: 'D',
-  E: 'E'
+  D: 'D'
 }
 
-storiesOf('Elements|Tile Inputs', module)
-  .add('example', () => {
-    const optionSelect = options('Radio', valuesRadio, 'A', { display: 'radio' })
-    return (
-      <div css={{
-        display: 'flex',
-        flexDirection: 'row',
-        flexWrap: 'wrap'
-      }}>
+const Form = () => {
+  const [val, setVal] = useState('')
+  const onChange = (event: ChangeEvent<HTMLInputElement>): void => {
+    console.log(event.target.value)
+    setVal(event.target.value)
+  }
+  return (
+    <div css={css({ padding: number('Padding', 10) })}>
+      <RadioGroup>
         {Object.keys(valuesRadio).map(radioValue => (
           <TileInput
             key={radioValue}
-            name={radioValue}
-            checked={radioValue === optionSelect}
-            value={optionSelect}
+            name="example"
+            checked={radioValue === val}
+            onChange={onChange}
+            value={radioValue}
             label={radioValue}
           >
-            Test
+            🐱
           </TileInput>
         ))}
-      </div>
-    )
-  })
+      </RadioGroup>
+    </div>
+  )
+}
+
+storiesOf('Elements|TileInputs', module).add('Example', () => {
+  return <Form />
+})
