@@ -32,7 +32,7 @@ export const edit = css({
   padding: pxToRem(0, spacers.teal),
   width: editIconWidth,
   ':focus': {
-    outline: `2px solid ${colors.azure}`,
+    outline: `2px solid ${colors.azure}`
   },
   '&::-moz-focus-inner': { border: 0 }
 })

@@ -5,4 +5,6 @@ import { jsx } from '@emotion/core'
 
 import * as st from './styles'
 
-export const LoadingSpinner: React.FC = () => <div css={st.rotate}>loading...</div>
+export const LoadingSpinner: React.FC = () => (
+  <div css={st.rotate}>loading...</div>
+)

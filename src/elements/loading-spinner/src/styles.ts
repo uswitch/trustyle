@@ -43,5 +43,5 @@ export const rotate = css({
   margin: `${pxToRem(72)} auto`,
   position: 'relative',
   transform: 'translateZ(0)',
-  animation: `${load} 1.7s infinite ease, ${round} 1.7s infinite ease`,
+  animation: `${load} 1.7s infinite ease, ${round} 1.7s infinite ease`
 })

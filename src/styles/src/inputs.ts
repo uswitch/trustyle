@@ -24,12 +24,12 @@ export const keyboardInputContainer = (hasError: boolean, hasFocus: boolean) =>
   css([
     {
       boxShadow: inputInnerShadow,
-      display: 'flex',
-      position: 'relative',
       backgroundColor: white,
       border: `solid 1px ${lightGreyBlue}`,
       borderRadius: '3px',
-      boxSizing: 'border-box'
+      boxSizing: 'border-box',
+      display: 'flex',
+      position: 'relative'
     },
     emphasis(hasError, hasFocus)
   ])
@@ -46,12 +46,12 @@ export const keyboardInput = css([
     boxSizing: 'border-box',
     display: 'flex',
     flex: 1,
-    position: 'relative',
-    verticalAlign: 'middle',
-    padding: pxToRem(inputPadding),
     height: pxToRem(
       inputLineHeight * inputFontSize + inputPadding + inputPadding
     ),
+    padding: pxToRem(inputPadding),
+    position: 'relative',
+    verticalAlign: 'middle',
     width: '100%',
     '&:focus': {
       outline: 'none'

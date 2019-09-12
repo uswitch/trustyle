@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useState, ChangeEvent } from 'react'
+import { ChangeEvent, useState } from 'react'
 import { css, jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
 import { number, radios } from '@storybook/addon-knobs'

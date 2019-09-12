@@ -1,12 +1,13 @@
 /** @jsx jsx */
-import { useState, ChangeEvent } from 'react'
+import { ChangeEvent, useState } from 'react'
 import { css, jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
 import { number } from '@storybook/addon-knobs'
 
+import { RadioGroup } from '../../radio-group/src'
+
 import { TileInput } from './.'
 
-import { RadioGroup } from '../../radio-group/src'
 
 const valuesRadio = {
   A: 'A',
