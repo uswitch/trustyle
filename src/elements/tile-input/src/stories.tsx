@@ -8,7 +8,6 @@ import { RadioGroup } from '../../radio-group/src'
 
 import { TileInput } from './.'
 
-
 const valuesRadio = {
   A: 'A',
   B: 'B',

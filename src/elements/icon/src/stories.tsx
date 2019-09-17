@@ -6,28 +6,24 @@ import { colors } from '../../../styles'
 
 import { Direction, Glyph, Icon } from './'
 
-const glyphChoices = [
-  'arrow' as Glyph,
-  'caret' as Glyph,
-  'close' as Glyph,
-  'edit' as Glyph,
-  'phone' as Glyph
+const glyphChoices: Glyph[] = [
+  'arrow',
+  'caret',
+  'close',
+  'edit',
+  'filters',
+  'phone'
 ]
 
-const directionChoices = [
-  'up' as Direction,
-  'down' as Direction,
-  'right' as Direction,
-  'left' as Direction
-]
+const directionChoices: Direction[] = ['up', 'down', 'right', 'left']
 
 storiesOf('Elements|Icon', module).add(
   'With selectable glyph and color',
   () => (
     <Icon
-      glyph={select('glyph', glyphChoices, 'arrow' as Glyph)}
+      glyph={select('glyph', glyphChoices, 'arrow')}
       color={select('color', colors, colors.battleshipGrey)}
-      direction={select('direction', directionChoices, 'up' as Direction)}
+      direction={select('direction', directionChoices, 'up')}
       size={number('Size', 0)}
     />
   )
