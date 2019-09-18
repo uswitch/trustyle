@@ -62,6 +62,7 @@ export const button = (
       fontWeight: 600,
 
       /* layout */
+      alignItems: 'center',
       border: '1px solid transparent',
       borderRadius: '4px',
       display: 'flex',
