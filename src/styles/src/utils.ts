@@ -5,13 +5,13 @@ export const pxToRem = (...blocks: number[]) =>
 // these will change with viewpoints
 // all figures in px so they can be used for maths
 export const spacers = {
-  pink: 8,
-  green: 12,
-  purple: 16,
-  teal: 24,
-  blue: 32,
-  orange: 48,
-  red: 56
+  pink: 8 as const,
+  green: 12 as const,
+  purple: 16 as const,
+  teal: 24 as const,
+  blue: 32 as const,
+  orange: 48 as const,
+  red: 56 as const
 }
 
 // Add an additional 1px of border, but superimposed on the interior of an
