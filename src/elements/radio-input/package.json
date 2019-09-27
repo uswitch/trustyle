@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.radio-input",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
-    "@uswitch/trustyle.styles": "^0.3.11",
+    "@uswitch/trustyle.styles": "^0.3.12",
     "react": "^16.7.0"
   },
   "devDependencies": {
