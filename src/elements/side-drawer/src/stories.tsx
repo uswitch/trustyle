@@ -23,12 +23,18 @@ const Padding = ({ children }: { children: React.ReactNode }) => (
   <div css={css({ padding: 20 })}>{children}</div>
 )
 
+const triggerButton = css({
+  appearance: 'none',
+  backgroundColor: 'transparent',
+  border: 'none',
+  color: colors.cerulean,
+  cursor: 'pointer',
+  textAlign: 'left',
+  textDecoration: 'underline'
+})
+
 const ExampleDrawer = () => {
-  const trigger = (
-    <span style={{ color: colors.cerulean, textDecoration: 'underline' }}>
-      Click to learn more
-    </span>
-  )
+  const trigger = <button css={triggerButton}>Click to learn more</button>
   return (
     <Drawer
       ariaLabel="An example modal element"
@@ -42,14 +48,6 @@ const ExampleDrawer = () => {
           This space will be used to give help to users. We’ll try to explain
           solutions to most common problems users encounter when trying to
           complete a comparison.
-        </p>
-      </Padding>
-      <hr />
-      <Padding>
-        <h2>Still stuck?</h2>
-        <p>Call uSwitch free on</p>
-        <p>
-          <a href="tel:0800 1234 123">0800 1234 123</a>
         </p>
       </Padding>
     </Drawer>

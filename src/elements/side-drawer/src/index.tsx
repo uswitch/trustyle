@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { createRef, Fragment, useEffect, useState } from 'react'
+import { cloneElement, createRef, Fragment, useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Transition, TransitionGroup } from 'react-transition-group'
 import FocusTrap from 'focus-trap-react'
@@ -15,8 +15,7 @@ interface ModalProps {
   children: React.ReactNode
   disableScrolling: boolean
   side: 'left' | 'right'
-  triggerElement: React.ReactNode
-  triggerProps?: object
+  triggerElement: React.ReactElement
 }
 
 const lockBackground = () => {
@@ -40,8 +39,7 @@ export const Drawer: React.FC<ModalProps> = ({
   children,
   disableScrolling,
   side,
-  triggerElement,
-  triggerProps
+  triggerElement
 }) => {
   const triggerRef: React.RefObject<HTMLButtonElement> = createRef()
   const backgroundRef: React.RefObject<HTMLElement> = createRef()
@@ -49,7 +47,8 @@ export const Drawer: React.FC<ModalProps> = ({
 
   const [isOpen, setIsOpen] = useState(false)
 
-  const openModal = () => {
+  const openModal = (event: React.MouseEvent<HTMLHtmlElement>) => {
+    event.preventDefault()
     setIsOpen(true)
     if (disableScrolling) lockBackground()
   }
@@ -74,15 +73,7 @@ export const Drawer: React.FC<ModalProps> = ({
 
   return (
     <Fragment>
-      <button
-        type="button"
-        css={st.trigger}
-        onClick={openModal}
-        ref={triggerRef}
-        {...triggerProps}
-      >
-        {triggerElement}
-      </button>
+      {cloneElement(triggerElement, { onClick: openModal, ref: triggerRef })}
       <TransitionGroup component={null}>
         <Transition timeout={st.transitionDuration} key={isOpen.toString()}>
           {transitionState =>
