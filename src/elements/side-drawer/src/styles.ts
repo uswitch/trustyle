@@ -7,14 +7,6 @@ import { colors, pxToRem, spacers } from '@uswitch/trustyle.styles'
 
 export const transitionDuration = 400
 
-export const trigger = css({
-  appearance: 'none',
-  backgroundColor: 'transparent',
-  border: 'none',
-  cursor: 'pointer',
-  textAlign: 'left'
-})
-
 export const background = css({
   left: 0,
   height: '100%',
