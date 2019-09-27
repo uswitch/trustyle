@@ -47,7 +47,8 @@ export const Drawer: React.FC<ModalProps> = ({
 
   const [isOpen, setIsOpen] = useState(false)
 
-  const openModal = () => {
+  const openModal = (event: React.MouseEvent<HTMLHtmlElement>) => {
+    event.preventDefault()
     setIsOpen(true)
     if (disableScrolling) lockBackground()
   }
