@@ -9,8 +9,9 @@ import { Close } from './close'
 import { Edit } from './edit'
 import { Filters } from './filters'
 import { Phone } from './phone'
+import { Plus } from './plus'
 
-export type Glyph = 'arrow' | 'caret' | 'close' | 'edit' | 'filters' | 'phone'
+export type Glyph = 'arrow' | 'caret' | 'close' | 'edit' | 'filters' | 'phone' | 'plus'
 export type Direction = 'up' | 'down' | 'left' | 'right'
 
 interface Props {
@@ -43,6 +44,9 @@ export const Icon: React.FC<Props> = ({
   }
   if (glyph === 'phone') {
     return <Phone color={color} size={size} />
+  }
+  if (glyph === 'plus') {
+    return <Plus color={color} size={size} />
   }
   return null
 }
