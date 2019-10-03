@@ -69,7 +69,9 @@ export const Input: React.FC<Props> = ({
   width = 'full',
   ...inputProps
 }) => {
-  const inputRef: React.RefObject<HTMLInputElement> = useRef(null)
+  const inputRef: React.MutableRefObject<HTMLInputElement | null> = useRef<HTMLInputElement | null>(
+    null
+  )
   const [hasFocus, setHasFocus] = useState(false)
   const onBlur = (event: React.FocusEvent<HTMLInputElement>) => {
     setHasFocus(false)
@@ -105,7 +107,14 @@ export const Input: React.FC<Props> = ({
         {prefix && <span css={st.prefix(hasError, hasFocus)}>{prefix}</span>}
 
         {mask ? (
-          <InputMask inputRef={inputRef} mask={mask} {...childProps} />
+          <InputMask
+            inputRef={ref => {
+              // react-input-mask only supports a callback-style ref
+              inputRef.current = ref
+            }}
+            mask={mask}
+            {...childProps}
+          />
         ) : (
           <input ref={inputRef} {...childProps} />
         )}
