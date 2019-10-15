@@ -54,5 +54,11 @@ storiesOf('Elements|Button', module).add('primary variant', () => (
     </Button>
 
     <Spacer />
+
+    <Button data-stuff="button-stuff" variant="outline">
+      With extra attributes
+    </Button>
+
+    <Spacer />
   </div>
 ))
