@@ -8,11 +8,8 @@ import * as st from './styles'
 
 export type Variant = 'primary' | 'secondary' | 'outline'
 
-interface Props {
-  children: React.ReactNode
-  disabled?: boolean
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   justifyContent?: JustifyContentProperty
-  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
   variant: Variant
 }
 
@@ -21,13 +18,15 @@ export const Button: React.FC<Props> = ({
   disabled = false,
   justifyContent,
   variant,
-  onClick
+  onClick,
+  ...props
 }) => (
   <button
     css={css(st.button(variant, disabled, justifyContent))}
     disabled={disabled}
     type={onClick ? 'button' : 'submit'}
     onClick={onClick}
+    {...props}
   >
     {children}
   </button>

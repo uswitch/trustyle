@@ -11,7 +11,14 @@ import { Filters } from './filters'
 import { Phone } from './phone'
 import { Plus } from './plus'
 
-export type Glyph = 'arrow' | 'caret' | 'close' | 'edit' | 'filters' | 'phone' | 'plus'
+export type Glyph =
+  | 'arrow'
+  | 'caret'
+  | 'close'
+  | 'edit'
+  | 'filters'
+  | 'phone'
+  | 'plus'
 export type Direction = 'up' | 'down' | 'left' | 'right'
 
 interface Props {

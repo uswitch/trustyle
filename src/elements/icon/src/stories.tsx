@@ -13,7 +13,7 @@ const glyphChoices: Glyph[] = [
   'edit',
   'filters',
   'phone',
-  'plus',
+  'plus'
 ]
 
 const directionChoices: Direction[] = ['up', 'down', 'right', 'left']
