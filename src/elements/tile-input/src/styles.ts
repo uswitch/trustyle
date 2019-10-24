@@ -25,53 +25,63 @@ export const label = css({
   }
 })
 
-export const input = css({
-  marginLeft: '-1000px',
-  appearance: 'none',
-  position: 'absolute',
-  '&:checked + span': {
-    borderColor: colors.azure,
-    boxShadow: helpers.insetBorder(colors.azure),
-    color: colors.black,
-    '&::before': {
-      backgroundColor: colors.azure,
+export const input = (type: 'radio' | 'checkbox') =>
+  css({
+    marginLeft: '-1000px',
+    appearance: 'none',
+    position: 'absolute',
+    '&:checked + span': {
       borderColor: colors.azure,
-      boxShadow: `inset 0 0 0 2px ${colors.white}`
+      boxShadow: helpers.insetBorder(colors.azure),
+      color: colors.black,
+      '&::before': {
+        backgroundImage:
+          type === 'radio'
+            ? undefined
+            : `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="${colors.azure.replace(
+                '#',
+                '%23'
+              )}" viewBox="-1 -2 14 12"><path d="M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z" /></svg>')`,
+        backgroundColor: type === 'radio' ? colors.azure : colors.white,
+        borderColor: colors.azure,
+        boxShadow:
+          type === 'radio' ? `inset 0 0 0 2px ${colors.white}` : undefined
+      }
+    },
+    '&:focus': {
+      outline: 0
     }
-  },
-  '&:focus': {
-    outline: 0
-  }
-})
+  })
 
-export const container = css([
-  typography.label,
-  {
-    borderColor: colors.lightGreyBlue,
-    borderRadius: '3px',
-    borderStyle: 'solid',
-    borderWidth: '1px',
-    boxSizing: 'border-box',
-    color: colors.slateGrey,
-    cursor: 'pointer',
-    display: 'block',
-    fontWeight: 'normal',
-    minHeight: '130px',
-    position: 'relative',
-    width: '100%',
-    '&:before': {
+export const container = (type: 'radio' | 'checkbox') =>
+  css([
+    typography.label,
+    {
       borderColor: colors.lightGreyBlue,
-      borderRadius: '50%',
+      borderRadius: '3px',
       borderStyle: 'solid',
-      borderWidth: '2px',
-      content: '" "',
+      borderWidth: '1px',
+      boxSizing: 'border-box',
+      color: colors.slateGrey,
+      cursor: 'pointer',
       display: 'block',
-      height: '17px',
-      margin: pxToRem(11, 0, 0, 11),
-      width: '17px'
+      fontWeight: 'normal',
+      minHeight: '130px',
+      position: 'relative',
+      width: '100%',
+      '&:before': {
+        borderColor: colors.lightGreyBlue,
+        borderRadius: type === 'radio' ? '50%' : 4,
+        borderStyle: 'solid',
+        borderWidth: '2px',
+        content: '" "',
+        display: 'block',
+        height: '17px',
+        margin: pxToRem(11, 0, 0, 11),
+        width: '17px'
+      }
     }
-  }
-])
+  ])
 
 export const content = css({
   position: 'absolute',
