@@ -8,32 +8,36 @@ import { RadioGroup } from '../../radio-group/src'
 
 import { TileInput } from './.'
 
-const valuesRadio = {
-  A: 'A',
-  B: 'B',
-  C: 'C',
-  D: 'D'
+const initialValues = {
+  a: false,
+  b: false,
+  c: false,
+  d: false
 }
 
-const Form = () => {
-  const [val, setVal] = useState('')
-  const onChange = (event: ChangeEvent<HTMLInputElement>): void => {
+const Form = ({ type }: { type: 'radio' | 'checkbox' }) => {
+  const [values, setValues] = useState(initialValues)
+
+  const changeHandler = (event: ChangeEvent<HTMLInputElement>): void => {
     console.log(event.target.value)
-    setVal(event.target.value)
+    const rest = type === 'radio' ? initialValues : values
+    setValues({ ...rest, [event.target.value]: event.target.checked })
   }
+
   return (
     <div css={css({ padding: number('Padding', 10) })}>
       <RadioGroup>
-        {Object.keys(valuesRadio).map(radioValue => (
+        {Object.entries(values).map(([value, checked]) => (
           <TileInput
-            key={radioValue}
+            key={value}
             name="example"
-            checked={radioValue === val}
-            onChange={onChange}
-            value={radioValue}
-            label={radioValue}
+            type={type}
+            checked={checked}
+            onChange={changeHandler}
+            value={value}
+            label={value.toUpperCase()}
           >
-            🐱
+            {checked ? '🙉' : '🙈'}
           </TileInput>
         ))}
       </RadioGroup>
@@ -41,6 +45,10 @@ const Form = () => {
   )
 }
 
-storiesOf('Elements|TileInputs', module).add('Example', () => {
-  return <Form />
-})
+storiesOf('Elements|TileInput', module)
+  .add('Radio', () => {
+    return <Form type="radio" />
+  })
+  .add('Checkbox', () => {
+    return <Form type="checkbox" />
+  })

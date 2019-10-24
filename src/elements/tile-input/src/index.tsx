@@ -9,16 +9,18 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   children: React.ReactNode
   label: string
   name: string
+  type?: 'radio' | 'checkbox'
 }
 
 export const TileInput: React.FC<Props> = ({
   children,
   label,
+  type = 'radio',
   ...inputProps
 }) => (
   <label css={st.label}>
-    <input css={st.input} type="radio" {...inputProps} />
-    <span css={st.container}>
+    <input css={st.input(type)} type={type} {...inputProps} />
+    <span css={st.container(type)}>
       <span css={st.content}>
         <span />
         <span css={st.childrenWrapper}>{children}</span>
