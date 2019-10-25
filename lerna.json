@@ -12,6 +12,9 @@
   "command": {
     "changed": {
       "includeMergedTags": true
+    },
+    "publish": {
+      "includeMergedTags": true
     }
   }
 }
