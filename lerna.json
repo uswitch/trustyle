@@ -8,5 +8,10 @@
   "ignoreChanges": [
     "**/package-lock.json",
     "**/*.stories.tsx"
-  ]
+  ],
+  "command": {
+    "version": {
+      "includeMergedTags": true
+    }
+  }
 }
