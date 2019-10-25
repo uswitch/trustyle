@@ -78,7 +78,9 @@ export const span = css([
       height: '17px',
       marginLeft: pxToRem(16),
       marginRight: pxToRem(16),
-      width: '17px'
+      width: '17px',
+      flexGrow: 0,
+      flexShrink: 0
     }
   }
 ])
