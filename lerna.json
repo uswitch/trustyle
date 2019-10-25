@@ -10,7 +10,7 @@
     "**/*.stories.tsx"
   ],
   "command": {
-    "version": {
+    "changed": {
       "includeMergedTags": true
     }
   }
