@@ -11,6 +11,7 @@ export type Variant = 'primary' | 'secondary' | 'outline'
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   justifyContent?: JustifyContentProperty
   variant: Variant
+  href?: string
 }
 
 export const Button: React.FC<Props> = ({
@@ -18,9 +19,16 @@ export const Button: React.FC<Props> = ({
   disabled = false,
   justifyContent,
   variant,
+  href,
   onClick,
   ...props
-}) => (
+}) => href ? 
+  <a
+    css={css(st.button(variant, disabled, justifyContent))}
+    href={href}
+  >
+  {children}
+  </a> :
   <button
     css={css(st.button(variant, disabled, justifyContent))}
     disabled={disabled}
@@ -28,6 +36,5 @@ export const Button: React.FC<Props> = ({
     onClick={onClick}
     {...props}
   >
-    {children}
-  </button>
-)
+  {children}
+</button>
