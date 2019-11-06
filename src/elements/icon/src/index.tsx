@@ -19,6 +19,7 @@ export type Glyph =
   | 'filters'
   | 'phone'
   | 'plus'
+
 export type Direction = 'up' | 'down' | 'left' | 'right'
 
 interface Props {
@@ -28,32 +29,32 @@ interface Props {
   size?: number
 }
 
+const assertNever = (name: string, value: never): never => {
+  throw new Error(`Unexpected ${name} '${value}'`)
+}
+
 export const Icon: React.FC<Props> = ({
   color,
   direction = 'up',
   glyph,
   size
 }) => {
-  if (glyph === 'arrow') {
-    return <Arrow color={color} direction={direction} size={size} />
+  switch (glyph) {
+    case 'arrow':
+      return <Arrow color={color} direction={direction} size={size} />
+    case 'caret':
+      return <Caret color={color} direction={direction} size={size} />
+    case 'close':
+      return <Close color={color} size={size} />
+    case 'edit':
+      return <Edit color={color} size={size} />
+    case 'filters':
+      return <Filters color={color} size={size} />
+    case 'phone':
+      return <Phone color={color} size={size} />
+    case 'plus':
+      return <Plus color={color} size={size} />
+    default:
+      return assertNever('glyph', glyph)
   }
-  if (glyph === 'caret') {
-    return <Caret color={color} direction={direction} size={size} />
-  }
-  if (glyph === 'close') {
-    return <Close color={color} size={size} />
-  }
-  if (glyph === 'edit') {
-    return <Edit color={color} size={size} />
-  }
-  if (glyph === 'filters') {
-    return <Filters color={color} size={size} />
-  }
-  if (glyph === 'phone') {
-    return <Phone color={color} size={size} />
-  }
-  if (glyph === 'plus') {
-    return <Plus color={color} size={size} />
-  }
-  return null
 }
