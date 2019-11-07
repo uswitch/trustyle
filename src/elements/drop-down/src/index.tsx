@@ -42,7 +42,7 @@ export const DropDown: React.FC<Props> = ({
   dataProps = {},
   freezable,
   hasError = false,
-  onBlur,
+  onBlur = () => {},
   onChange,
   onFocus = () => {},
   name,
