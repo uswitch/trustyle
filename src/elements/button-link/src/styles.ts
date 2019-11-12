@@ -33,10 +33,6 @@ const outline = () =>
     ':hover, :focus': focusBorder
   })
 
-const disabledStyle = css({
-  cursor: 'not-allowed'
-})
-
 export const buttonLink = (
   variant: Variant,
   justifyContent: JustifyContentProperty = 'center'
