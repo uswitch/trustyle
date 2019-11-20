@@ -1,0 +1,15 @@
+{
+  "name": "@uswitch/trustyle.themes-test",
+  "version": "0.0.15",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "--------------- BUILDING": "----------------------",
+    "clean": "rm -rf lib",
+    "build": "npm run clean && tsc"
+  },
+  "dependencies": {}
+}
