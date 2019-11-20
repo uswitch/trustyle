@@ -1,14 +1,8 @@
 {
   "lerna": "3.16.4",
-  "packages": [
-    "src/elements/**/*",
-    "src/styles/"
-  ],
+  "packages": ["src/elements/**/*", "src/styles/", "src/themes/**/*"],
   "version": "independent",
-  "ignoreChanges": [
-    "**/package-lock.json",
-    "**/*.stories.tsx"
-  ],
+  "ignoreChanges": ["**/package-lock.json", "**/*.stories.tsx"],
   "command": {
     "changed": {
       "includeMergedTags": true

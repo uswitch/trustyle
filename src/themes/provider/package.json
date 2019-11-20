@@ -1,0 +1,21 @@
+{
+  "name": "@uswitch/trustyle.themes-provider",
+  "version": "0.0.15",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "--------------- BUILDING": "----------------------",
+    "clean": "rm -rf lib",
+    "build": "npm run clean && tsc"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@mdx-js/react": "^1.5.1",
+    "@styled-system/css": "^5.0.23",
+    "react": "^16.7.0",
+    "theme-ui": "^0.2.49"
+  }
+}
