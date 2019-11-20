@@ -1,13 +1,28 @@
 /** @jsx jsx */
 import React from 'react'
-import { Global, css, jsx } from '@emotion/core'
-import { addDecorator, configure, addParameters } from '@storybook/react'
+import { css, Global, jsx } from '@emotion/core'
+import { addDecorator, addParameters, configure } from '@storybook/react'
 import { withA11y } from '@storybook/addon-a11y'
-import { withKnobs } from '@storybook/addon-knobs'
+import { select, withKnobs } from '@storybook/addon-knobs'
+
+import { ThemeProvider } from '../src/themes/themes'
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /stories\.tsx$/)
 const loadStories = () => req.keys().forEach(filename => req(filename))
+
+// themes
+const reqThemes = require.context('../src/themes', true, /index\.tsx$/)
+const themes = reqThemes
+  .keys()
+  .filter(key => key.indexOf('themes') === -1)
+  .reduce(
+    (themes, filename) => ({
+      ...themes,
+      [filename]: reqThemes(filename).default
+    }),
+    {}
+  )
 
 const withGlobal = story => (
   <React.Fragment>
@@ -23,9 +38,20 @@ const withGlobal = story => (
   </React.Fragment>
 )
 
+const withGlobalThemeKnob = story => {
+  const theme = select(
+    'Trustyle Theme',
+    Object.keys(themes),
+    Object.keys(themes)[0]
+  )
+
+  return <ThemeProvider theme={themes[theme]}>{story()}</ThemeProvider>
+}
+
 addDecorator(withGlobal)
 addDecorator(withA11y)
 addDecorator(withKnobs)
+addDecorator(withGlobalThemeKnob)
 
 const newViewports = {
   tamagochi: {

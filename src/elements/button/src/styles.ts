@@ -1,6 +1,7 @@
 import { css } from '@emotion/core'
 import { colors, helpers, pxToRem, typography } from '@uswitch/trustyle.styles'
 import { JustifyContentProperty } from 'csstype'
+import { Theme } from '@uswitch/trustyle.themes'
 
 import { Variant } from '.'
 
@@ -11,11 +12,12 @@ const focusBorder = {
   '&::-moz-focus-inner': { border: 0 }
 }
 
-const primary = css({
-  backgroundColor: colors.copper,
-  color: colors.white,
-  ':focus': focusBorder
-})
+const primary = (theme: Theme) =>
+  css({
+    backgroundColor: theme.colors.primary,
+    color: colors.white,
+    ':focus': focusBorder
+  })
 
 const secondary = (disabled: boolean) =>
   css({
@@ -44,7 +46,8 @@ const disabledStyle = css({
 export const button = (
   variant: Variant,
   disabled: boolean,
-  justifyContent: JustifyContentProperty = 'center'
+  justifyContent: JustifyContentProperty = 'center',
+  theme: Theme
 ) =>
   css([
     {
@@ -72,7 +75,7 @@ export const button = (
       padding: pxToRem(15),
       width: '100%'
     },
-    variant === 'primary' && primary,
+    variant === 'primary' && primary(theme),
     variant === 'secondary' && secondary(disabled),
     variant === 'outline' && outline(disabled),
     disabled && disabledStyle

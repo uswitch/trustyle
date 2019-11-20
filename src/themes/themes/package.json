@@ -1,6 +1,6 @@
 {
-  "name": "@uswitch/trustyle.button",
-  "version": "0.5.10",
+  "name": "@uswitch/trustyle.themes",
+  "version": "0.0.15",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -13,11 +13,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
-    "@uswitch/trustyle.styles": "^0.4.9",
-    "@uswitch/trustyle.themes": "^0.0.15",
+    "emotion-theming": "^10.0.19",
     "react": "^16.7.0"
-  },
-  "devDependencies": {
-    "typescript": "^3.6.2"
   }
 }

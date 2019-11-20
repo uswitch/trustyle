@@ -3,6 +3,7 @@
 import * as React from 'react'
 import { css, jsx } from '@emotion/core'
 import { JustifyContentProperty } from 'csstype'
+import { useTheme } from '@uswitch/trustyle.themes'
 
 import * as st from './styles'
 
@@ -22,19 +23,24 @@ export const Button: React.FC<Props> = ({
   href,
   onClick,
   ...props
-}) => href ? 
-  <a
-    css={css(st.button(variant, disabled, justifyContent))}
-    href={href}
-  >
-  {children}
-  </a> :
-  <button
-    css={css(st.button(variant, disabled, justifyContent))}
-    disabled={disabled}
-    type={onClick ? 'button' : 'submit'}
-    onClick={onClick}
-    {...props}
-  >
-  {children}
-</button>
+}) => {
+  const theme = useTheme()
+  return href ? (
+    <a
+      css={css(st.button(variant, disabled, justifyContent, theme))}
+      href={href}
+    >
+      {children}
+    </a>
+  ) : (
+    <button
+      css={css(st.button(variant, disabled, justifyContent, theme))}
+      disabled={disabled}
+      type={onClick ? 'button' : 'submit'}
+      onClick={onClick}
+      {...props}
+    >
+      {children}
+    </button>
+  )
+}
