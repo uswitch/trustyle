@@ -35,6 +35,13 @@ const newViewports = {
       height: '667px'
     }
   },
+  tablet: {
+    name: 'iPad', // iPad
+    styles: {
+      width: '768px',
+      height: '1024px'
+    }
+  },
   desktop: {
     name: 'Desktop',
     styles: {
