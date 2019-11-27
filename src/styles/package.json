@@ -13,10 +13,10 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.16",
-    "@types/facepaint": "^1.2.1",
     "facepaint": "^1.2.1"
   },
   "devDependencies": {
-    "typescript": "^3.6.2"
+    "typescript": "^3.6.2",
+    "@types/facepaint": "^1.2.1"
   }
 }

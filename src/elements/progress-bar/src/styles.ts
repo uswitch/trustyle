@@ -1,8 +1,9 @@
 import { colors, mq } from '@uswitch/trustyle.styles'
+import { DynamicStyle } from 'facepaint'
 
-export const progress = mq({
+export const progress: DynamicStyle[] = mq({
   display: 'block',
-  height: ['3px', '7.4px'],
+  height: ['3px', '3px', '7.4px'],
   width: '100%',
 
   /* Webkit */

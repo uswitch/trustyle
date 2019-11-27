@@ -1,7 +1,7 @@
 import facepaint from 'facepaint'
 
-const breakpoints = [576, 768, 992, 1200]
+const breakpoints = [320, 640, 1150]
 
 export default facepaint(
-    breakpoints.map(bp => `@media (min-width: ${bp}px)`)
+    breakpoints.map((bp: number) => `@media (min-width: ${bp}px)`)
 )
