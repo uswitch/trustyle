@@ -1,9 +1,8 @@
-import { css } from '@emotion/core'
-import { colors } from '@uswitch/trustyle.styles'
+import { colors, mq } from '@uswitch/trustyle.styles'
 
-export const progress = css({
+export const progress = mq({
   display: 'block',
-  height: '3px',
+  height: ['3px', '7.4px'],
   width: '100%',
 
   /* Webkit */
