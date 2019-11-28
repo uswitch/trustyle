@@ -60,5 +60,6 @@
     "react": "^16.8.6",
     "react-imgix": "^8.6.1",
     "typescript": "^3.5.3"
-  }
+  },
+  "dependencies": {}
 }

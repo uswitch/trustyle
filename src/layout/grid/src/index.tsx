@@ -9,8 +9,8 @@ interface Props {
   children: any;
 }
 
-export const Container: React.FC<Props> = ({ children }) => (
-  <div css={st.container}>
+export const Container: React.FC<Props> = ({ children, ...props }) => (
+  <div css={st.container} {...props}>
     { children }
   </div>
 )
@@ -20,8 +20,8 @@ interface ColumnProps {
   sizes?: number[];
 }
 
-export const Column: React.FC<ColumnProps> = ({ children, sizes }) => (
-  <div css={st.column(sizes)}>
+export const Column: React.FC<ColumnProps> = ({ children, sizes, ...props }) => (
+  <div css={st.column(sizes)} {...props}>
     { children }
   </div>
 )
@@ -30,8 +30,8 @@ interface RowProps {
   children: any;
 }
 
-export const Row: React.FC<RowProps> = ({ children }) => (
-  <div css={st.row()}>
+export const Row: React.FC<RowProps> = ({ children, ...props }) => (
+  <div css={st.row()} {...props}>
     { children }
   </div>
 )

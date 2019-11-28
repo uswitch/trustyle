@@ -28,6 +28,13 @@ addDecorator(withA11y)
 addDecorator(withKnobs)
 
 const newViewports = {
+  tamagochi: {
+    name: 'tamagochi',
+    styles: {
+      width: '300px',
+      height: '667px'
+    }
+  },
   iPhone: {
     name: 'iPhone', // iPhone 6/7/8 dimensions
     styles: {
