@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.16",
+    "@uswitch/trustyle.styles": "^0.3.17",
     "facepaint": "^1.2.1"
   },
   "devDependencies": {
