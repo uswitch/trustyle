@@ -1,0 +1,23 @@
+{
+  "name": "@uswitch/trustyle.grid",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "--------------- BUILDING": "----------------------",
+    "clean": "rm -rf lib",
+    "build": "npm run clean && tsc"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.16",
+    "@uswitch/trustyle.styles": "^0.3.17",
+    "facepaint": "^1.2.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.2",
+    "@types/facepaint": "^1.2.1"
+  }
+}
