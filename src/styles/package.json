@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.styles",
-  "version": "0.3.17",
+  "version": "0.4.0",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -16,7 +16,7 @@
     "facepaint": "^1.2.1"
   },
   "devDependencies": {
-    "typescript": "^3.6.2",
-    "@types/facepaint": "^1.2.1"
+    "@types/facepaint": "^1.2.1",
+    "typescript": "^3.6.2"
   }
 }
