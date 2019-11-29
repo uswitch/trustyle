@@ -20,19 +20,23 @@ export const container: DynamicStyle[] = mq({
   maxWidth: containerWidths
 })
 
-export const row = (): DynamicStyle[] => mq({
+const getWidthPercentageFromSizes = (sizes: number[]) =>
+  sizes.map((size, idx) =>  `${(100 / numberOfColumnss[idx]) * size}%`)
+
+export const row = (centerX: boolean = false): DynamicStyle[] => mq({
   boxSizing: 'border-box',
   display: 'flex',
   overflow: 'hidden',
   flexDirection: 'row',
   width: '100%',
+  justifyContent: centerX ? 'center' : 'flex-start',
   flexWrap: 'wrap',
 })
 
-const getColumnWidthPercentageFromSizes = (sizes: number[]) =>
-  sizes.map((size, idx) =>  `${(100 / numberOfColumnss[idx]) * size}%`)
-
 const paddings = gutterWidths.map((gw) => `${gw / 2}px`)
+
+const getDisplayFromSizes = (sizes: number[] = [1]) =>
+  sizes.map(size => size === 0 ? 'none' : 'block')
 
 export const column = (sizes: number[] = []): DynamicStyle[] => mq({
   boxSizing: 'border-box',
@@ -41,7 +45,7 @@ export const column = (sizes: number[] = []): DynamicStyle[] => mq({
   flexDirection: 'row',
   paddingRight: paddings,
   paddingLeft: paddings,
-  display: sizes.map(size => size === 0 ? 'none' : 'block'),
-  flexBasis: getColumnWidthPercentageFromSizes(sizes),
-  maxWidth: getColumnWidthPercentageFromSizes(sizes)
+  display: getDisplayFromSizes(sizes),
+  flexBasis: getWidthPercentageFromSizes(sizes),
+  maxWidth: getWidthPercentageFromSizes(sizes)
 })

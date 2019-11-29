@@ -28,10 +28,11 @@ export const Column: React.FC<ColumnProps> = ({ children, sizes, ...props }) => 
 
 interface RowProps {
   children: any;
+  centerX?: boolean;
 }
 
-export const Row: React.FC<RowProps> = ({ children, ...props }) => (
-  <div css={st.row()} {...props}>
+export const Row: React.FC<RowProps> = ({ children, centerX, ...props }) => (
+  <div css={st.row(centerX)} {...props}>
     { children }
   </div>
 )

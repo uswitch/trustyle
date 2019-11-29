@@ -22,7 +22,7 @@ const exampleRowStyle = css({
   fontFamily: typography.defaultFontFamily
 })
 
-storiesOf('Layout|Grid', module).add('Example 1', () => (
+storiesOf('Layout|Grid', module).add('Example 1 - basics', () => (
   <Container css={{ backgroundColor: colors.offWhite }}>
     <Row css={exampleRowStyle}>
       <Column>
@@ -42,6 +42,16 @@ storiesOf('Layout|Grid', module).add('Example 1', () => (
     <Row css={exampleRowStyle}>
       <Column css={exampleColumnStyle} sizes={[2,2,4,6]}>.us-col-md-2</Column>
       <Column css={exampleColumnStyle} sizes={[2,2,4,6]}>.us-col-md-4</Column>
+    </Row>
+  </Container>
+))
+
+storiesOf('Layout|Grid', module).add('Example 2 - center', () => (
+  <Container css={{ backgroundColor: colors.offWhite }}>
+    <Row css={exampleRowStyle} centerX centerY>
+      <Column sizes={[4,4,4,6]}>
+        <p>Here is an example of a grid which will turn into 100% width columns on mobile.</p>
+      </Column>
     </Row>
   </Container>
 ))
