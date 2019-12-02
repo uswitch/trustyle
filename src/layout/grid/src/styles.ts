@@ -20,7 +20,9 @@ export const container: DynamicStyle[] = mq({
   position: 'relative',
   margin: '0 auto',
   maxWidth: containerWidths,
-  overflow:'hidden'
+  overflow:'hidden',
+  paddingLeft: paddings,
+  paddingRight: paddings
 })
 
 const getWidthPercentageFromSizes = (sizes: number[]) =>
@@ -28,9 +30,6 @@ const getWidthPercentageFromSizes = (sizes: number[]) =>
 
 export const column = (sizes: number[] = [], display: string[] = ['block']): DynamicStyle[] => mq({
   boxSizing: 'border-box',
-  flex: '1 0 auto',
-  width: '100%',
-  flexDirection: 'row',
   display,
   paddingLeft: paddings,
   paddingRight: paddings,
@@ -44,7 +43,6 @@ export const row = (centerX: boolean = false): DynamicStyle[] => mq({
   flexDirection: 'row',
   marginLeft: paddings.map(padding => `-${padding}`),
   marginRight: paddings.map(padding => `-${padding}`),
-  width: '100%',
   justifyContent: centerX ? 'center' : 'flex-start',
   flexWrap: 'wrap'
 })
