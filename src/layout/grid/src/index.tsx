@@ -22,6 +22,19 @@ interface ColumnProps {
   padding?: boolean;
 }
 
+const parseDisplay = (props: any): string[] => {
+  // TODO: pull out into function
+  const display = (
+    Object.entries(breakpoints).map(
+      ([key, _]) => (
+        props[`hide-${key}`] ? 'none' : 'block'
+      )
+    )
+  )
+
+  return [display[0], ...display]
+}
+
 const parseSizes = (props: any): number[] => {
   const sizes = (
     Object.entries(breakpoints).map(
@@ -36,9 +49,10 @@ const parseSizes = (props: any): number[] => {
 
 export const Column: React.FC<ColumnProps> = ({ children, padding, ...props }) => {
   const sizes = parseSizes(props)
+  const display = parseDisplay(props)
 
   return (
-    <div css={st.column(sizes, padding)} {...props}>
+    <div css={st.column(sizes, padding, display)} {...props}>
       { children }
     </div>
   )

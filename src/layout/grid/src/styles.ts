@@ -38,17 +38,14 @@ export const row = (centerX: boolean = false, padding: boolean = false): Dynamic
   flexWrap: 'wrap'
 })
 
-const getDisplayFromSizes = (sizes: number[] = [1]) =>
-  sizes.map(size => size === 0 ? 'none' : 'block')
-
-export const column = (sizes: number[] = [], padding: boolean = false): DynamicStyle[] => mq({
+export const column = (sizes: number[] = [], padding: boolean = false, display: string[] = ['block']): DynamicStyle[] => mq({
   boxSizing: 'border-box',
   flex: '1 0 auto',
   width: '100%',
   flexDirection: 'row',
   paddingLeft: padding ? paddings : [],
   paddingRight: padding ? paddings : [],
-  display: getDisplayFromSizes(sizes),
+  display,
   flexBasis: getWidthPercentageFromSizes(sizes),
   maxWidth: getWidthPercentageFromSizes(sizes)
 })

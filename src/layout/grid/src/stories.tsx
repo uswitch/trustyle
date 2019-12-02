@@ -30,7 +30,7 @@ storiesOf('Layout|Grid', module).add('Example 1 - basics', () => (
       </Column>
     </Row>
     <Row css={exampleRowStyle}>
-      <Column m={1/2} l={1/6} css={exampleColumnStyle}>.us-col-md-2</Column>
+      <Column hide-s m={1/4} l={1/6} css={exampleColumnStyle}>.us-col-md-2</Column>
       <Column m={1/4} l={1/6} css={exampleColumnStyle}>.us-col-md-2</Column>
       <Column m={1/4} l={1/3} css={exampleColumnStyle}>.us-col-md-4</Column>
       <Column m={1/4} l={1/3} css={exampleColumnStyle}>.us-col-md-4</Column>
@@ -40,8 +40,8 @@ storiesOf('Layout|Grid', module).add('Example 1 - basics', () => (
       <Column m={1/2} l={1/3} css={exampleColumnStyle}>.us-col-md-4</Column>
     </Row>
     <Row css={exampleRowStyle}>
-      <Column css={exampleColumnStyle} s={1/2} m={1/2} l={1/2}>.us-col-md-2</Column>
-      <Column css={exampleColumnStyle} s={1/2} m={1/2} l={1/2}>.us-col-md-4</Column>
+      <Column s={1/2} m={1/2} l={1/2} css={exampleColumnStyle}>.us-col-md-2</Column>
+      <Column s={1/2} m={1/2} l={1/2} css={exampleColumnStyle}>.us-col-md-4</Column>
     </Row>
   </Container>
 ))
