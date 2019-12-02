@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import { jsx } from '@emotion/core'
+import { breakpoints } from '@uswitch/trustyle.styles'
 
 import * as st from './styles'
 
@@ -17,18 +18,46 @@ export const Container: React.FC<Props> = ({ children, ...props }) => (
 
 interface ColumnProps {
   children: any;
-  sizes?: number[];
+  [key: string]: string;
 }
 
-export const Column: React.FC<ColumnProps> = ({ children, sizes, ...props }) => (
-  <div css={st.column(sizes)} {...props}>
-    { children }
-  </div>
-)
+const parseSizeFromProps = (fn : (breakpoint: [string, any]) => any) => Object.entries(breakpoints).map(fn)
+
+const parseDisplay = (props: { [key: string]: string }): string[] => {
+  const display = parseSizeFromProps(
+    ([key, _]) => (
+      props[`hide-${key}`] ? 'none' : 'block'
+    )
+  )
+
+  return [display[0], ...display]
+}
+
+const parseSizes = (props: { [key: string]: string }): number[] => {
+  const sizes = parseSizeFromProps(
+    ([key, _]) => (
+      parseFloat(props[key]) || 1
+    )
+  )
+
+  return [sizes[0], ...sizes]
+}
+
+export const Column: React.FC<ColumnProps> = ({ children, padding, ...props }) => {
+  const sizes = parseSizes(props)
+  const display = parseDisplay(props)
+
+  return (
+    <div css={st.column(sizes, display)} {...props}>
+      { children }
+    </div>
+  )
+}
 
 interface RowProps {
   children: any;
   centerX?: boolean;
+  padding?: boolean;
 }
 
 export const Row: React.FC<RowProps> = ({ children, centerX, ...props }) => (

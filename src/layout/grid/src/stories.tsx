@@ -12,7 +12,6 @@ const exampleColumnStyle = css({
   backgroundColor: colors.battleshipGrey,
   border: `${colors.lightGreyBlue} 1px solid`,
   fontFamily: typography.defaultFontFamily,
-  padding: '8px',
   borderRadius: '1px',
   color: colors.offWhite
 })
@@ -30,27 +29,53 @@ storiesOf('Layout|Grid', module).add('Example 1 - basics', () => (
       </Column>
     </Row>
     <Row css={exampleRowStyle}>
-      <Column css={exampleColumnStyle} sizes={[4,4,2,2]}>.us-col-md-2</Column>
-      <Column css={exampleColumnStyle} sizes={[4,4,2,2]}>.us-col-md-2</Column>
-      <Column css={exampleColumnStyle} sizes={[4,4,2,4]}>.us-col-md-4</Column>
-      <Column css={exampleColumnStyle} sizes={[4,4,2,4]}>.us-col-md-4</Column>
+      <Column hide-s m={1/4} l={1/6} css={exampleColumnStyle}>.us-col-md-2</Column>
+      <Column m={1/4} l={1/6} css={exampleColumnStyle}>.us-col-md-2</Column>
+      <Column m={1/4} l={1/3} css={exampleColumnStyle}>.us-col-md-4</Column>
+      <Column m={1/4} l={1/3} css={exampleColumnStyle}>.us-col-md-4</Column>
     </Row>
     <Row css={exampleRowStyle}>
-      <Column css={exampleColumnStyle} sizes={[4,4,4,8]}>.us-col-md-2</Column>
-      <Column css={exampleColumnStyle} sizes={[4,4,4,4]}>.us-col-md-4</Column>
+      <Column m={1/2} l={2/3} css={exampleColumnStyle}>.us-col-md-2</Column>
+      <Column m={1/2} l={1/3} css={exampleColumnStyle}>.us-col-md-4</Column>
     </Row>
     <Row css={exampleRowStyle}>
-      <Column css={exampleColumnStyle} sizes={[2,2,4,6]}>.us-col-md-2</Column>
-      <Column css={exampleColumnStyle} sizes={[2,2,4,6]}>.us-col-md-4</Column>
+      <Column s={1/2} m={1/2} l={1/2} css={exampleColumnStyle}>.us-col-md-2</Column>
+      <Column s={1/2} m={1/2} l={1/2} css={exampleColumnStyle}>.us-col-md-4</Column>
     </Row>
   </Container>
 ))
 
 storiesOf('Layout|Grid', module).add('Example 2 - center', () => (
   <Container css={{ backgroundColor: colors.offWhite }}>
-    <Row css={exampleRowStyle} centerX centerY>
-      <Column sizes={[4,4,4,6]}>
+    <Row css={exampleRowStyle} centerX>
+      <Column m={1/2} l={1/2}>
         <p>Here is an example of a grid which will turn into 100% width columns on mobile.</p>
+      </Column>
+    </Row>
+  </Container>
+))
+
+storiesOf('Layout|Grid', module).add('Example 3 - nested grids', () => (
+  <Container css={{ backgroundColor: colors.offWhite }}>
+    <Row css={exampleRowStyle} padding>
+      <Column>
+        <Row>
+          <Column m={6/8} l={8/12}>
+            <h2>A little header</h2>
+          </Column>
+        </Row>
+        <Row>
+          <Column s={1/2} m={1/2} l={1/2}>
+            <div css={exampleColumnStyle}>
+              Something
+            </div>
+          </Column>
+          <Column s={1/2} m={1/2} l={1/2}>
+            <div css={exampleColumnStyle}>
+              Something else
+            </div>
+          </Column>
+        </Row>
       </Column>
     </Row>
   </Container>
