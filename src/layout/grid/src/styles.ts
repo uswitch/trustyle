@@ -26,26 +26,25 @@ export const container: DynamicStyle[] = mq({
 const getWidthPercentageFromSizes = (sizes: number[]) =>
   sizes.map((size) =>  `${100 * size}%`)
 
-export const row = (centerX: boolean = false, padding: boolean = false): DynamicStyle[] => mq({
-  boxSizing: 'border-box',
-  display: 'flex',
-  overflow: 'hidden',
-  flexDirection: 'row',
-  paddingLeft: padding ? paddings : [],
-  paddingRight: padding ? paddings : [],
-  width: '100%',
-  justifyContent: centerX ? 'center' : 'flex-start',
-  flexWrap: 'wrap'
-})
-
-export const column = (sizes: number[] = [], padding: boolean = false, display: string[] = ['block']): DynamicStyle[] => mq({
+export const column = (sizes: number[] = [], display: string[] = ['block']): DynamicStyle[] => mq({
   boxSizing: 'border-box',
   flex: '1 0 auto',
   width: '100%',
   flexDirection: 'row',
-  paddingLeft: padding ? paddings : [],
-  paddingRight: padding ? paddings : [],
   display,
-  flexBasis: getWidthPercentageFromSizes(sizes),
-  maxWidth: getWidthPercentageFromSizes(sizes)
+  paddingLeft: paddings,
+  paddingRight: paddings,
+  flexBasis: getWidthPercentageFromSizes(sizes)
+})
+
+export const row = (centerX: boolean = false): DynamicStyle[] => mq({
+  boxSizing: 'border-box',
+  display: 'flex',
+  overflow: 'hidden',
+  flexDirection: 'row',
+  marginLeft: paddings.map(padding => `-${padding}`),
+  marginRight: paddings.map(padding => `-${padding}`),
+  width: '100%',
+  justifyContent: centerX ? 'center' : 'flex-start',
+  flexWrap: 'wrap'
 })

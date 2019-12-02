@@ -22,25 +22,22 @@ interface ColumnProps {
   padding?: boolean;
 }
 
+const parseSizeFromProps = (fn : (breakpoint: [string, any]) => any) => Object.entries(breakpoints).map(fn)
+
 const parseDisplay = (props: any): string[] => {
-  // TODO: pull out into function
-  const display = (
-    Object.entries(breakpoints).map(
-      ([key, _]) => (
-        props[`hide-${key}`] ? 'none' : 'block'
-      )
+  const display = parseSizeFromProps(
+    ([key, _]) => (
+      props[`hide-${key}`] ? 'none' : 'block'
     )
   )
 
   return [display[0], ...display]
 }
 
-const parseSizes = (props: any): number[] => {
-  const sizes = (
-    Object.entries(breakpoints).map(
-      ([key, _]) => (
-        parseFloat(props[key]) || 1
-      )
+const parseSizes = (props: object): number[] => {
+  const sizes = parseSizeFromProps(
+    ([key, _]) => (
+      parseFloat(props[key]) || 1
     )
   )
 

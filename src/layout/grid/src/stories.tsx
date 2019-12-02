@@ -12,7 +12,6 @@ const exampleColumnStyle = css({
   backgroundColor: colors.battleshipGrey,
   border: `${colors.lightGreyBlue} 1px solid`,
   fontFamily: typography.defaultFontFamily,
-  padding: '8px',
   borderRadius: '1px',
   color: colors.offWhite
 })
@@ -66,11 +65,15 @@ storiesOf('Layout|Grid', module).add('Example 3 - nested grids', () => (
           </Column>
         </Row>
         <Row>
-          <Column css={exampleColumnStyle} s={1/2} m={1/2} l={1/2}>
-            Something
+          <Column s={1/2} m={1/2} l={1/2}>
+            <div css={exampleColumnStyle}>
+              Something
+            </div>
           </Column>
-          <Column css={exampleColumnStyle} s={1/2} m={1/2} l={1/2}>
-            Something else
+          <Column s={1/2} m={1/2} l={1/2}>
+            <div css={exampleColumnStyle}>
+              Something else
+            </div>
           </Column>
         </Row>
       </Column>
