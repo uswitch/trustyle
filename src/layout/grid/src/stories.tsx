@@ -17,6 +17,7 @@ const exampleColumnStyle = css({
 })
 
 const exampleRowStyle = css({
+  padding: '8px 0',
   fontFamily: typography.defaultFontFamily
 })
 
