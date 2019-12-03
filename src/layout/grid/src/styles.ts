@@ -20,6 +20,7 @@ export const container: DynamicStyle[] = mq({
   position: 'relative',
   margin: '0 auto',
   maxWidth: containerWidths,
+  width: containerWidths,
   overflow:'hidden',
   paddingLeft: paddings,
   paddingRight: paddings
