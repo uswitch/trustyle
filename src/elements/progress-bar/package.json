@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.progress-bar",
-  "version": "0.2.22",
+  "version": "0.2.23",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
