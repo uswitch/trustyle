@@ -1,13 +1,13 @@
 import { mq, breakpoints } from '@uswitch/trustyle.styles'
 import { DynamicStyle } from 'facepaint'
 
-const numberOfColumnss = [4, 4, 8, 12]
-const colWidths = [32, 32, 64, 72]
-const gutterWidths = [8, 8, 16, 24]
+const numberOfColumnss = [4, 8, 12]
+const colWidths = [32, 64, 72]
+const gutterWidths = [8, 16, 24]
 
 const containerWidths = numberOfColumnss.map((n, idx) => {
   const val = n * colWidths[idx] + n * gutterWidths[idx]
-  if (val < Object.values(breakpoints)[0]) {
+  if (val < Object.values(breakpoints)[1]) {
     return '100%'
   } else {
     return val
