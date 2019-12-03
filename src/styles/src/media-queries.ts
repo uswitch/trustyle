@@ -7,9 +7,9 @@ export const breakpoints = {
 }
 
 export interface Breakpoints {
-  s: number,
-  m: number,
-  l: number
+  s?: number,
+  m?: number,
+  l?: number
 }
 
 export const mq = facepaint(
