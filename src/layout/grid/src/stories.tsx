@@ -57,7 +57,7 @@ storiesOf('Layout|Grid', module).add('Example 2 - center', () => (
 
 storiesOf('Layout|Grid', module).add('Example 3 - nested grids', () => (
   <Container css={{ backgroundColor: colors.offWhite }}>
-    <Row css={exampleRowStyle} padding>
+    <Row css={exampleRowStyle}>
       <Column>
         <Row>
           <Column m={6/8} l={8/12}>
