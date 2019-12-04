@@ -22,7 +22,7 @@ const exampleRowStyle = css({
 })
 
 storiesOf('Layout|Grid', module).add('Example 1 - basics', () => (
-  <Container css={{ backgroundColor: colors.offWhite }}>
+  <Container outerMargin={['0 8px', '0 auto']} css={{ backgroundColor: colors.offWhite }}>
     <Row css={exampleRowStyle}>
       <Column>
         <p>Here is an example of a grid which will turn into 100% width columns on mobile.</p>
