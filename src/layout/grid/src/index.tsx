@@ -8,10 +8,11 @@ import * as st from './styles'
 
 interface Props {
   children: any;
+  outerMargin?: string[]
 }
 
-export const Container: React.FC<Props> = ({ children, ...props }) => (
-  <div css={st.container} {...props}>
+export const Container: React.FC<Props> = ({ children, outerMargin, ...props }) => (
+  <div css={st.container(outerMargin)} {...props}>
     { children }
   </div>
 )

@@ -6,22 +6,22 @@ const colWidths = [32, 64, 72]
 const gutterWidths = [8, 16, 24]
 
 const containerWidths = numberOfColumnss.map((n, idx) => {
-  const val = n * colWidths[idx] + n * gutterWidths[idx]
-  if (val < Object.values(breakpoints)[1]) {
-    return '100%'
-  } else {
-    return val
-  }
+    const val = n * colWidths[idx] + n * gutterWidths[idx]
+    if (val < Object.values(breakpoints)[1]) {
+        return '100%'
+    } else {
+        return val
+    }
 })
 
 const paddings = gutterWidths.map((gw) => `${gw / 2}px`)
 
-export const container: DynamicStyle[] = mq({
+export const container = (outerMargin: string[] = ['0 auto']): DynamicStyle[] => mq({
   position: 'relative',
-  margin: '0 auto',
+  margin: outerMargin,
   maxWidth: containerWidths,
-  width: containerWidths,
-  overflow:'hidden',
+  width: ['auto', ...containerWidths.slice(1)],
+  overflow: 'hidden',
   paddingLeft: paddings,
   paddingRight: paddings
 })
@@ -29,7 +29,7 @@ export const container: DynamicStyle[] = mq({
 const getWidthPercentageFromSizes = (sizes: number[]) =>
   sizes.map((size) =>  `${100 * size}%`)
 
-export const column = (sizes: number[] = [], display: string[] = ['block']): DynamicStyle[] => mq({
+export const column = (sizes: number[] = [], display: string[] = []): DynamicStyle[] => mq({
   boxSizing: 'border-box',
   display,
   paddingLeft: paddings,
