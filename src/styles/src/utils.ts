@@ -11,7 +11,12 @@ export const spacers = {
   teal: 24 as const,
   blue: 32 as const,
   orange: 48 as const,
-  red: 56 as const
+  red: 56 as const,
+  white: 64 as const,
+  turquoise: 72 as const,
+  aqua: 80 as const,
+  darkPink: 88 as const,
+  // Next one should be darkGreen, keep the convention
 }
 
 // Add an additional 1px of border, but superimposed on the interior of an
