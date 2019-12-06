@@ -1,0 +1,8 @@
+pipeline:
+
+  build:
+    image: node:11.15-alpine
+      commands:
+        - npx lerna bootstrap
+        - npm run lint:check
+        - npx lerna run build
