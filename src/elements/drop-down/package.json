@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.drop-down",
-  "version": "0.4.28",
+  "version": "0.4.29",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
-    "@uswitch/trustyle.frozen-input": "^0.3.27",
-    "@uswitch/trustyle.icon": "^0.2.27",
-    "@uswitch/trustyle.styles": "^0.4.5",
+    "@uswitch/trustyle.frozen-input": "^0.3.28",
+    "@uswitch/trustyle.icon": "^0.2.28",
+    "@uswitch/trustyle.styles": "^0.4.6",
     "react": "^16.7.0"
   },
   "devDependencies": {
