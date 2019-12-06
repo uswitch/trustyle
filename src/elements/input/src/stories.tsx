@@ -29,6 +29,8 @@ storiesOf('Elements|Text Input', module).add('example', () => {
       <Input name="example" suffix=".00" type="tel" />
       <Spacer height={spaceBetween} />
       <Input name="password" type="password" defaultValue="swordfish" />
+      <Spacer height={spaceBetween} />
+      <Input name="example" disabled value="Disabled" type="text" />
     </div>
   )
 })
