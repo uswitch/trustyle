@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { useState } from 'react'
+import { useState, forwardRef } from 'react'
 import { jsx } from '@emotion/core'
 import { colors, inputs } from '@uswitch/trustyle.styles'
 import { Icon } from '@uswitch/trustyle.icon'
@@ -38,7 +38,7 @@ export interface Option {
   text: string
 }
 
-export const DropDown: React.FC<Props> = ({
+export const DropDown = forwardRef(({
   dataProps = {},
   freezable,
   hasError = false,
@@ -49,7 +49,7 @@ export const DropDown: React.FC<Props> = ({
   options,
   placeholder,
   value
-}) => {
+}: Props, ref: React.Ref<HTMLSelectElement>) => {
   const [hasFocus, setHasFocus] = useState(false)
   const option = options.find(_ => _.value === value)
   const frozenText = option && option.text
@@ -57,6 +57,7 @@ export const DropDown: React.FC<Props> = ({
     <FrozenInput text={frozenText} freezable={freezable}>
       <div css={container}>
         <select
+          ref={ref}
           onFocus={() => {
             setHasFocus(true)
             onFocus()
@@ -95,4 +96,4 @@ export const DropDown: React.FC<Props> = ({
       </div>
     </FrozenInput>
   )
-}
+})
