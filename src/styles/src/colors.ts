@@ -1,3 +1,4 @@
+// because colors are fun
 export const azure = '#008fe9'
 export const battleshipGrey = '#65717b'
 export const black = '#000000'

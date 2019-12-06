@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.styles",
-  "version": "0.4.4",
+  "version": "0.4.8",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
