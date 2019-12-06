@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react'
 
 import { Container, Column, Row } from '@uswitch/trustyle.grid'
 
-import { RadioGroup } from '../../radio-group/src'
+import { Fieldset } from '../../fieldset/src'
 
 import { TileInput } from './.'
 
@@ -27,7 +27,7 @@ const Form = ({ type }: { type: 'radio' | 'checkbox' }) => {
 
   return (
     <Container css={{marginTop: '4px'}}>
-      <RadioGroup>
+      <Fieldset label="Example tiles">
         <Row centerX>
           {Object.entries(values).map(([value, checked]) => (
             <Column s={1/2} m={1/2} l={1/2} paddingBottom paddingTop>
@@ -45,7 +45,7 @@ const Form = ({ type }: { type: 'radio' | 'checkbox' }) => {
             </Column>
           ))}
         </Row>
-      </RadioGroup>
+      </Fieldset>
     </Container>
   )
 }

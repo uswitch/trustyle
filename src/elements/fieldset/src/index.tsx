@@ -7,10 +7,12 @@ import * as st from './styles'
 
 interface Props {
   children: React.ReactNode
+  label?: string
 }
 
-export const RadioGroup: React.FC<Props> = ({ children }) => (
-  <div role="radiogroup">
+export const Fieldset: React.FC<Props> = ({ children, label }) => (
+  <fieldset css={st.root}>
+    {label && <legend css={st.label}>{label}</legend>}
     {children}
-  </div>
+  </fieldset>
 )

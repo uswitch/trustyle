@@ -7,6 +7,8 @@ import {
   typography
 } from '@uswitch/trustyle.styles'
 
+const svgSafeAzure = colors.azure.replace('#', '%23')
+
 export const input = (type: 'radio' | 'checkbox') =>
   css({
     marginLeft: '-1000px',
@@ -20,10 +22,7 @@ export const input = (type: 'radio' | 'checkbox') =>
         backgroundImage:
           type === 'radio'
             ? undefined
-            : `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="${colors.azure.replace(
-                '#',
-                '%23'
-              )}" viewBox="-1 -2 14 12"><path d="M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z" /></svg>')`,
+            : `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="${svgSafeAzure}" viewBox="-1 -2 14 12"><path d="M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z" /></svg>')`,
         backgroundColor: type === 'radio' ? colors.azure : colors.white,
         borderColor: colors.azure,
         boxShadow:
