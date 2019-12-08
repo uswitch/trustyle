@@ -10,7 +10,7 @@ interface Props {
 }
 
 export const RadioGroup: React.FC<Props> = ({ children }) => (
-  <div css={st.root} role="radiogroup">
+  <div role="radiogroup">
     {children}
   </div>
 )

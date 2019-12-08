@@ -23,22 +23,22 @@ const Form = () => {
 
   return (
     <Container>
-      <Row>
-        <RadioGroup>
-          {Object.keys(valuesRadio).map(radioValue => (
-            <Column s={1/2} m={1/4} l={1/4}>
-              <RadioInput
-                key={radioValue}
-                name="example"
-                label={radioValue}
-                checked={radioValue === val}
-                onChange={onChange}
-                value={radioValue}
-              />
-            </Column>
-          ))}
-        </RadioGroup>
-      </Row>
+      <RadioGroup>
+        <Row>
+        {Object.keys(valuesRadio).map(radioValue => (
+          <Column s={1/2} m={1/4} l={1/4}>
+            <RadioInput
+              key={radioValue}
+              name="example"
+              label={radioValue}
+              checked={radioValue === val}
+              onChange={onChange}
+              value={radioValue}
+            />
+          </Column>
+        ))}
+        </Row>
+      </RadioGroup>
     </Container>
   )
 }
