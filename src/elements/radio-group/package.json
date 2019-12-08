@@ -16,6 +16,7 @@
     "react": "^16.7.0"
   },
   "devDependencies": {
-    "typescript": "^3.6.2"
+    "typescript": "^3.6.2",
+    "@uswitch/trustyle.grid": "0.2.9"
   }
 }

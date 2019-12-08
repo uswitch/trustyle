@@ -1,17 +1,12 @@
 /** @jsx jsx */
 import { ChangeEvent, useState } from 'react'
-import { css, jsx } from '@emotion/core'
+import { jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
-import { number, radios } from '@storybook/addon-knobs'
+import { Container, Row, Column } from '@uswitch/trustyle.grid'
 
-import { RadioInput, Width } from '../../radio-input/src'
+import { RadioInput } from '../../radio-input/src'
 
 import { RadioGroup } from './'
-
-const widthOptions: Record<string, Width> = {
-  Full: 'full',
-  Half: 'half'
-}
 
 const valuesRadio = {
   A: 'A',
@@ -25,31 +20,26 @@ const Form = () => {
   const onChange = (event: ChangeEvent<HTMLInputElement>): void => {
     setVal(event.target.value)
   }
-  const width = radios('Width', widthOptions, 'full')
+
   return (
-    <div css={css({ padding: number('Padding', 10) })}>
-      <RadioGroup>
-        {Object.keys(valuesRadio).map(radioValue => (
-          <RadioInput
-            key={radioValue}
-            name="example"
-            label={radioValue}
-            checked={radioValue === val}
-            onChange={onChange}
-            value={radioValue}
-            width={width}
-          />
-        ))}
-        <RadioInput
-          name="example"
-          label="E (Full Width)"
-          checked={val === 'E'}
-          onChange={onChange}
-          value="E"
-          width="full"
-        />
-      </RadioGroup>
-    </div>
+    <Container>
+      <Row>
+        <RadioGroup>
+          {Object.keys(valuesRadio).map(radioValue => (
+            <Column s={1/2} m={1/4} l={1/4}>
+              <RadioInput
+                key={radioValue}
+                name="example"
+                label={radioValue}
+                checked={radioValue === val}
+                onChange={onChange}
+                value={radioValue}
+              />
+            </Column>
+          ))}
+        </RadioGroup>
+      </Row>
+    </Container>
   )
 }
 
