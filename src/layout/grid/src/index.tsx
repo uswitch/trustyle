@@ -48,10 +48,12 @@ export const Column: React.FC<ColumnProps> = ({ children, paddingTop, paddingBot
 interface RowProps {
   children: any;
   centerX?: boolean;
+  paddingTop?: number[];
+  paddingBottom?: number[];
 }
 
-export const Row: React.FC<RowProps> = ({ children, centerX, ...props }) => (
-  <div css={st.row(centerX)} {...props}>
+export const Row: React.FC<RowProps> = ({ children, centerX, paddingTop, paddingBottom, ...props }) => (
+  <div css={st.row(centerX, paddingTop, paddingBottom)} {...props}>
     { children }
   </div>
 )

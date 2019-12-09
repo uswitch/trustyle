@@ -46,7 +46,7 @@ export const column = (
     flexBasis: getWidthPercentageFromSizes(sizes)
   })
 
-export const row = (centerX: boolean = false): DynamicStyle[] =>
+export const row = (centerX: boolean = false, paddingTop: number[] = [], paddingBottom: number[] = []): DynamicStyle[] =>
   mq({
     boxSizing: 'border-box',
     display: 'flex',
@@ -54,6 +54,8 @@ export const row = (centerX: boolean = false): DynamicStyle[] =>
     flexDirection: 'row',
     marginLeft: paddings.map(padding => `-${padding}`),
     marginRight: paddings.map(padding => `-${padding}`),
+    marginTop: paddingTop,
+    marginBottom: paddingBottom,
     justifyContent: centerX ? 'center' : 'flex-start',
     flexWrap: 'wrap'
   })
