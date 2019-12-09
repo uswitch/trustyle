@@ -26,7 +26,7 @@ const Form = ({ type }: { type: 'radio' | 'checkbox' }) => {
   }
 
   return (
-    <Container>
+    <Container css={{marginTop: '4px'}}>
       <RadioGroup>
         <Row centerX>
           {Object.entries(values).map(([value, checked]) => (

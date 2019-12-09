@@ -22,11 +22,11 @@ const Form = () => {
   }
 
   return (
-    <Container>
+    <Container css={{marginTop: '8px'}}>
       <RadioGroup>
         <Row>
         {Object.keys(valuesRadio).map(radioValue => (
-          <Column s={1/2} m={1/4} l={1/4}>
+          <Column s={1/2} m={1/4} l={1/4} paddingTop paddingBottom>
             <RadioInput
               key={radioValue}
               name="example"
