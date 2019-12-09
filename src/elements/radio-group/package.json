@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.radio-group",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -16,7 +16,7 @@
     "react": "^16.7.0"
   },
   "devDependencies": {
-    "typescript": "^3.6.2",
-    "@uswitch/trustyle.grid": "0.2.9"
+    "@uswitch/trustyle.grid": "^0.2.10",
+    "typescript": "^3.6.2"
   }
 }
