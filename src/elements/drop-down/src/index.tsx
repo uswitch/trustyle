@@ -13,6 +13,7 @@ export interface DataProps {
 }
 interface Props<V = any> {
   dataProps?: DataProps
+  disabled?: boolean
   freezable?: boolean
   hasError?: boolean
   onBlur: () => void
@@ -40,6 +41,7 @@ export interface Option {
 
 export const DropDown = forwardRef(({
   dataProps = {},
+  disabled,
   freezable,
   hasError = false,
   onBlur = () => {},
@@ -71,6 +73,7 @@ export const DropDown = forwardRef(({
           id={name}
           name={name}
           value={!value ? '' : value}
+          disabled={disabled}
           {...prependDataProps(dataProps)}
         >
           {placeholder && (
