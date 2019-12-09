@@ -19,6 +19,8 @@ export const Container: React.FC<Props> = ({ children, outerMargin, ...props }) 
 
 interface ColumnProps extends Breakpoints {
   children: any;
+  paddingTop?: boolean;
+  paddingBottom?: boolean;
 }
 
 const parseSizeFromProps = (fn : (breakpoint: [string, any]) => any) => Object.entries(breakpoints).map(fn)
@@ -33,11 +35,11 @@ const parseSizes = (props: any): number[] =>
     ([key, _]) => parseFloat(props[key]) || 1
   )
 
-export const Column: React.FC<ColumnProps> = ({ children, ...props }) => {
+export const Column: React.FC<ColumnProps> = ({ children, paddingTop, paddingBottom, ...props }) => {
   const sizes = parseSizes(props)
   const display = parseDisplay(props)
   return (
-    <div css={st.column(sizes, display)} {...props}>
+    <div css={st.column(sizes, display, paddingTop, paddingBottom)} {...props}>
       { children }
     </div>
   )

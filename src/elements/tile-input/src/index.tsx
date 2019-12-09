@@ -18,7 +18,7 @@ export const TileInput: React.FC<Props> = ({
   type = 'radio',
   ...inputProps
 }) => (
-  <label css={st.label}>
+  <label>
     <input css={st.input(type)} type={type} {...inputProps} />
     <span css={st.container(type)}>
       <span css={st.content}>

@@ -7,24 +7,6 @@ import {
   typography
 } from '@uswitch/trustyle.styles'
 
-export const label = css({
-  width: `calc(50% - ${pxToRem(4)})`,
-  marginTop: pxToRem(4),
-  marginBottom: pxToRem(4),
-  '&:nth-of-type(1), &:nth-of-type(2)': {
-    marginTop: 0
-  },
-  '&:nth-last-of-type(1), &:nth-last-of-type(2)': {
-    marginBottom: 0
-  },
-  '&:nth-of-type(odd)': {
-    marginRight: pxToRem(4)
-  },
-  '&:nth-of-type(even)': {
-    marginLeft: pxToRem(4)
-  }
-})
-
 export const input = (type: 'radio' | 'checkbox') =>
   css({
     marginLeft: '-1000px',

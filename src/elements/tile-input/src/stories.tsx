@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { ChangeEvent, useState } from 'react'
-import { css, jsx } from '@emotion/core'
+import { jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
-import { number } from '@storybook/addon-knobs'
+
+import { Container, Column, Row } from '@uswitch/trustyle.grid'
 
 import { RadioGroup } from '../../radio-group/src'
 
@@ -25,23 +26,27 @@ const Form = ({ type }: { type: 'radio' | 'checkbox' }) => {
   }
 
   return (
-    <div css={css({ padding: number('Padding', 10) })}>
+    <Container css={{marginTop: '4px'}}>
       <RadioGroup>
-        {Object.entries(values).map(([value, checked]) => (
-          <TileInput
-            key={value}
-            name="example"
-            type={type}
-            checked={checked}
-            onChange={changeHandler}
-            value={value}
-            label={value.toUpperCase()}
-          >
-            {checked ? '🙉' : '🙈'}
-          </TileInput>
-        ))}
+        <Row centerX>
+          {Object.entries(values).map(([value, checked]) => (
+            <Column s={1/2} m={1/2} l={1/2} paddingBottom paddingTop>
+              <TileInput
+                key={value}
+                name="example"
+                type={type}
+                checked={checked}
+                onChange={changeHandler}
+                value={value}
+                label={value.toUpperCase()}
+              >
+                {checked ? '🙉' : '🙈'}
+              </TileInput>
+            </Column>
+          ))}
+        </Row>
       </RadioGroup>
-    </div>
+    </Container>
   )
 }
 

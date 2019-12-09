@@ -6,32 +6,6 @@ export const label = css({
   marginBottom: pxToRem(4)
 })
 
-export const half = css({
-  width: `calc(50% - ${pxToRem(4)})`,
-  '&:nth-of-type(1), &:nth-of-type(2)': {
-    marginTop: 0
-  },
-  '&:nth-last-of-type(1), &:nth-last-of-type(2)': {
-    marginBottom: 0
-  },
-  '&:nth-of-type(odd)': {
-    marginRight: pxToRem(4)
-  },
-  '&:nth-of-type(even)': {
-    marginLeft: pxToRem(4)
-  }
-})
-
-export const full = css({
-  width: '100%',
-  '&:nth-of-type(1)': {
-    marginTop: 0
-  },
-  '&:nth-last-of-type(1)': {
-    marginBottom: 0
-  }
-})
-
 export const input = css({
   marginLeft: '-1000px',
   appearance: 'none',
