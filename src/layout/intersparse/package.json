@@ -1,5 +1,5 @@
 {
-  "name": "@uswitch/trustyle.intersparse",
+  "name": "@uswitch/trustyle.arrangement",
   "version": "0.0.1",
   "license": "MIT",
   "main": "lib/index.js",

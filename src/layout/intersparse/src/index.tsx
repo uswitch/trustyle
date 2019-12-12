@@ -8,11 +8,22 @@ interface Props {
   spacing: number[]
 }
 
-export const Intersparse: React.FC<Props> = styled.div(({ spacing }) => mq({
-  '& > div': {
+export const Stack: React.FC<Props> = styled.div(({ spacing }) => mq({
+  '& > *': {
     marginBottom: spacing.map((space) => pxToRem(space))
   },
-  '& > div:last-child': {
+  '& > *:last-child': {
     marginBottom: 0
+  }
+}))
+
+export const Inline: React.FC<Props> = styled.div(({ spacing }) => mq({
+  '& > *': {
+    display: 'inline',
+    whiteSpace: 'nowrap',
+    marginRight: spacing.map((space) => pxToRem(space))
+  },
+  '& > *:last-child': {
+    marginRight: 0
   }
 }))
