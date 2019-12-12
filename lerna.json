@@ -3,7 +3,7 @@
   "packages": [
     "src/elements/**/*",
     "src/styles/",
-    "src/layout/grid/"
+    "src/layout/**/*"
   ],
   "version": "independent",
   "ignoreChanges": [
