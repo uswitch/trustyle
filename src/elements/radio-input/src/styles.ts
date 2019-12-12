@@ -41,6 +41,7 @@ export const span = css([
     display: 'flex',
     fontWeight: 'normal',
     minHeight: '50px',
+    padding: pxToRem(14, 12, 16, 0),
     width: '100%',
     '&:before': {
       borderColor: colors.lightGreyBlue,
