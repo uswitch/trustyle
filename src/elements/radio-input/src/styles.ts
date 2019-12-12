@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { colors, helpers, pxToRem, typography } from '@uswitch/trustyle.styles'
+import { colors, helpers, pxToRem, typography, spacers } from '@uswitch/trustyle.styles'
 
 export const label = css({
   marginTop: pxToRem(4),
@@ -27,7 +27,7 @@ export const input = css({
   }
 })
 
-export const span = css([
+export const span = (large: boolean) => css([
   typography.label,
   {
     alignItems: 'center',
@@ -55,6 +55,7 @@ export const span = css([
       width: '17px',
       flexGrow: 0,
       flexShrink: 0
-    }
+    },
+    ...(large && { padding: pxToRem(18, 12, 18, 0) })
   }
 ])
