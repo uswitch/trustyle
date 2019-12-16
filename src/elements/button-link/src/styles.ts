@@ -22,7 +22,7 @@ const secondary = () =>
     backgroundColor: colors.lightSkyBlue,
     color: colors.cobaltBlue,
     textAlign: 'left',
-    ':hover': {backgroundColor: colors.robinsEggBlue},
+    ':hover': { backgroundColor: colors.robinsEggBlue },
     ':focus': focusBorder
   })
 
@@ -65,7 +65,7 @@ export const buttonLink = (
     },
     variant === 'primary' && primary,
     variant === 'secondary' && secondary(),
-    variant === 'outline' && outline(),
+    variant === 'outline' && outline()
   ])
 
 export const text = css({

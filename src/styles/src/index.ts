@@ -10,4 +10,14 @@ const helpers = {
   insetBorder: utils.insetBorder
 }
 
-export { colors, helpers, inputs, pxToRem, spacers, typography, mq, breakpoints, Breakpoints }
+export {
+  colors,
+  helpers,
+  inputs,
+  pxToRem,
+  spacers,
+  typography,
+  mq,
+  breakpoints,
+  Breakpoints
+}

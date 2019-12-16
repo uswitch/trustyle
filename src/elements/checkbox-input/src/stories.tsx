@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { ChangeEvent, useState } from 'react'
-import { css, jsx } from '@emotion/core'
+import { jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
 import { boolean } from '@storybook/addon-knobs'
+import { Column, Container, Row } from '@uswitch/trustyle.grid'
 
-import { Container, Column, Row } from '@uswitch/trustyle.grid'
 import { Fieldset } from '../../fieldset/src'
 
 import { CheckboxInput } from './.'

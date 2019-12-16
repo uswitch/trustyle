@@ -1,12 +1,11 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx } from '@emotion/core'
+import { css, jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
-import { Stack, Inline } from './index'
 import { colors, typography } from '@uswitch/trustyle.styles'
 
-import { css } from '@emotion/core'
+import { Inline, Stack } from './index'
 
 const exampleRow = css({
   backgroundColor: colors.battleshipGrey,

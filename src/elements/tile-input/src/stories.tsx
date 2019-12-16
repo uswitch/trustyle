@@ -2,8 +2,7 @@
 import { ChangeEvent, useState } from 'react'
 import { jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
-
-import { Container, Column, Row } from '@uswitch/trustyle.grid'
+import { Column, Container, Row } from '@uswitch/trustyle.grid'
 
 import { Fieldset } from '../../fieldset/src'
 
@@ -26,11 +25,11 @@ const Form = ({ type }: { type: 'radio' | 'checkbox' }) => {
   }
 
   return (
-    <Container css={{marginTop: '4px'}}>
+    <Container css={{ marginTop: '4px' }}>
       <Fieldset label="Example tiles">
         <Row centerX>
           {Object.entries(values).map(([value, checked]) => (
-            <Column s={1/2} m={1/2} l={1/2}>
+            <Column key={value} s={1 / 2} m={1 / 2} l={1 / 2}>
               <TileInput
                 key={value}
                 name="example"

@@ -22,19 +22,19 @@ export const Button: React.FC<Props> = ({
   href,
   onClick,
   ...props
-}) => href ? 
-  <a
-    css={css(st.button(variant, disabled, justifyContent))}
-    href={href}
-  >
-  {children}
-  </a> :
-  <button
-    css={css(st.button(variant, disabled, justifyContent))}
-    disabled={disabled}
-    type={onClick ? 'button' : 'submit'}
-    onClick={onClick}
-    {...props}
-  >
-  {children}
-</button>
+}) =>
+  href ? (
+    <a css={css(st.button(variant, disabled, justifyContent))} href={href}>
+      {children}
+    </a>
+  ) : (
+    <button
+      css={css(st.button(variant, disabled, justifyContent))}
+      disabled={disabled}
+      type={onClick ? 'button' : 'submit'}
+      onClick={onClick}
+      {...props}
+    >
+      {children}
+    </button>
+  )

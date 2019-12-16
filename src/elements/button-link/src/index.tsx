@@ -21,12 +21,13 @@ export const ButtonLink: React.FC<Props> = ({
   href,
   onClick,
   ...props
-}) => 
+}) => (
   <a
     css={css(st.buttonLink(variant, justifyContent))}
     href={href}
     onClick={onClick}
     {...props}
   >
-  {children}
-</a>
+    {children}
+  </a>
+)
