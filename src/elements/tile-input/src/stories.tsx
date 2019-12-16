@@ -30,7 +30,7 @@ const Form = ({ type }: { type: 'radio' | 'checkbox' }) => {
       <Fieldset label="Example tiles">
         <Row centerX>
           {Object.entries(values).map(([value, checked]) => (
-            <Column s={1/2} m={1/2} l={1/2} paddingBottom paddingTop>
+            <Column s={1/2} m={1/2} l={1/2}>
               <TileInput
                 key={value}
                 name="example"

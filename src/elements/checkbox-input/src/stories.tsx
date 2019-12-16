@@ -29,7 +29,7 @@ const Form = () => {
       <Fieldset label="Example checkboxes">
         <Row>
           {Object.entries(values).map(([value, checked]) => (
-            <Column paddingTop paddingBottom key={value}>
+            <Column key={value}>
               <CheckboxInput
                 name="example"
                 checked={checked}

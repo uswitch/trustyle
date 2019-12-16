@@ -26,7 +26,7 @@ const Form = () => {
       <Fieldset label="Example radio buttons">
         <Row>
           {Object.keys(valuesRadio).map(radioValue => (
-            <Column s={1 / 2} m={1 / 4} l={1 / 4} paddingTop paddingBottom>
+            <Column s={1 / 2} m={1 / 4} l={1 / 4}>
               <RadioInput
                 key={radioValue}
                 name="example"
