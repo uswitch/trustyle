@@ -21,4 +21,4 @@ export const spacers = {
 
 // Add an additional 1px of border, but superimposed on the interior of an
 // element, so that it doesn’t affect its position or size.
-export const insetBorder = (color: string) => `0 0 0 1px ${color}`
+export const insetBorder = (color: string) => `inset 0 0 0 1px ${color}`

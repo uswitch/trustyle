@@ -2,7 +2,7 @@ import * as colors from './colors'
 import * as inputs from './inputs'
 import * as utils from './utils'
 import * as typography from './typography'
-import { mq, breakpoints, Breakpoints } from './media-queries'
+import { breakpoints, Breakpoints, mq } from './media-queries'
 
 const { pxToRem, spacers } = utils
 
