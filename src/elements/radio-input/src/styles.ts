@@ -2,8 +2,7 @@ import { css } from '@emotion/core'
 import { colors, helpers, pxToRem, typography } from '@uswitch/trustyle.styles'
 
 export const label = css({
-  marginTop: pxToRem(4),
-  marginBottom: pxToRem(4)
+  display: 'block'
 })
 
 export const input = css({
