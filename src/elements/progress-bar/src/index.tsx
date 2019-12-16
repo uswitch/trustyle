@@ -8,7 +8,7 @@ import * as st from './styles'
 interface Props {
   current: number
   max: number
-  startFilled: boolean
+  startFilled?: boolean
 }
 
 export const ProgressBar: React.FC<Props> = ({
