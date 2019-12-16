@@ -5,7 +5,7 @@ import { addDecorator, addParameters, configure } from '@storybook/react'
 import { withA11y } from '@storybook/addon-a11y'
 import { select, withKnobs } from '@storybook/addon-knobs'
 
-import { ThemeProvider } from '../src/themes/themes'
+import { ThemeProvider } from '../src/themes/theme-utils'
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /stories\.tsx$/)
@@ -15,7 +15,7 @@ const loadStories = () => req.keys().forEach(filename => req(filename))
 const reqThemes = require.context('../src/themes', true, /index\.tsx$/)
 const themes = reqThemes
   .keys()
-  .filter(key => key.indexOf('themes') === -1)
+  .filter(key => key.indexOf('theme-utils') === -1)
   .reduce(
     (themes, filename) => ({
       ...themes,
@@ -44,6 +44,8 @@ const withGlobalThemeKnob = story => {
     Object.keys(themes),
     Object.keys(themes)[0]
   )
+
+  console.log(themes[theme], theme)
 
   return <ThemeProvider theme={themes[theme]}>{story()}</ThemeProvider>
 }

@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { css, jsx } from '@emotion/core'
 import { JustifyContentProperty } from 'csstype'
-import { useTheme } from '@uswitch/trustyle.themes'
+import { useTheme } from '@uswitch/trustyle.theme-utils'
 
 import * as st from './styles'
 

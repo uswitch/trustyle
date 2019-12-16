@@ -1,5 +1,5 @@
 {
-  "name": "@uswitch/trustyle.themes-uswitch",
+  "name": "@uswitch/trustyle.theme-utils",
   "version": "0.0.15",
   "license": "MIT",
   "main": "lib/index.js",
@@ -11,5 +11,10 @@
     "clean": "rm -rf lib",
     "build": "npm run clean && tsc"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "emotion-theming": "^10.0.19",
+    "lodash": "^4.17.15",
+    "react": "^16.7.0"
+  }
 }

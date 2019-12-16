@@ -1,7 +1,7 @@
 import { css } from '@emotion/core'
 import { colors, helpers, pxToRem, typography } from '@uswitch/trustyle.styles'
 import { JustifyContentProperty } from 'csstype'
-import { Theme } from '@uswitch/trustyle.themes'
+import { Theme } from '@uswitch/trustyle.theme-utils'
 
 import { Variant } from '.'
 
@@ -12,12 +12,13 @@ const focusBorder = {
   '&::-moz-focus-inner': { border: 0 }
 }
 
-const primary = (theme: Theme) =>
-  css({
-    backgroundColor: theme.colors.primary,
-    color: colors.white,
+const primary = (theme: Theme) => {
+  return css({
+    background: theme.button.primary.background,
+    color: theme.button.primary.color,
     ':focus': focusBorder
   })
+}
 
 const secondary = (disabled: boolean) =>
   css({
