@@ -3,6 +3,7 @@
 git checkout master
 git pull origin --rebase
 npx lerna exec npm install
+npx lerna bootstrap
 npx lerna run build
 
 v=$(git rev-parse --short HEAD)
