@@ -2,6 +2,7 @@
 All commands can be run from individual packages, but it is not necessary to do so.
 
 Run `npm install` at the project root to install the dev dependencies.
+Run `npx lerna exec 'npm install'` to install each package’s dependencies.
 Run `npx lerna bootstrap` to install each package’s dependencies.
 Run `npx lerna run build` to run each package’s build script.
 
