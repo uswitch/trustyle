@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.fieldset",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -13,11 +13,11 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.22",
-    "@uswitch/trustyle.styles": "^0.4.10",
+    "@uswitch/trustyle.styles": "^0.4.11",
     "react": "^16.7.0"
   },
   "devDependencies": {
-    "@uswitch/trustyle.grid": "^1.0.3",
+    "@uswitch/trustyle.grid": "^1.0.4",
     "typescript": "^3.6.2"
   }
 }
