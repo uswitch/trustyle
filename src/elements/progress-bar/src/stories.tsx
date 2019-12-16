@@ -12,7 +12,7 @@ const label = 'Current Value'
 const defaultValue = 7
 const options = {
   range: true,
-  min: 1,
+  min: 0,
   max,
   step: 1
 }

@@ -11,5 +11,5 @@ interface Props {
 }
 
 export const ProgressBar: React.FC<Props> = ({ current, max }) => (
-  <progress css={st.progress} value={current} max={max} />
+  <progress css={st.progress} value={current + 1} max={max + 1} />
 )
