@@ -10,10 +10,7 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   name: string
 }
 
-export const RadioInput: React.FC<Props> = ({
-  label,
-  ...inputProps
-}) => (
+export const RadioInput: React.FC<Props> = ({ label, ...inputProps }) => (
   <label css={st.label}>
     <input css={st.input} type="radio" {...inputProps} />
     <span css={st.span}>{label}</span>

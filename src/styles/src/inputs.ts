@@ -1,7 +1,14 @@
 import { css } from '@emotion/core'
 
 import { input, inputFontSize, inputLineHeight } from './typography'
-import { azure, battleshipGrey, lightGreyBlue, tomato, veryLightGrey, white } from './colors'
+import {
+  azure,
+  battleshipGrey,
+  lightGreyBlue,
+  tomato,
+  veryLightGrey,
+  white
+} from './colors'
 import { insetBorder, pxToRem } from './utils'
 
 export const inputInnerShadow = 'inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)'

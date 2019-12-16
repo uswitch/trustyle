@@ -5,6 +5,4 @@ export const root = css({
   border: 0
 })
 
-export const label = css([
-  typography.label,
-])
+export const label = css([typography.label])

@@ -7,8 +7,8 @@ export const breakpoints = {
 }
 
 export interface Breakpoints {
-  s?: number,
-  m?: number,
+  s?: number
+  m?: number
   l?: number
 }
 

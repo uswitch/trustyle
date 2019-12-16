@@ -61,7 +61,11 @@ storiesOf('Elements|Button', module).add('primary variant', () => (
 
     <Spacer />
 
-    <Button variant="primary" justifyContent="space-between" href="http://www.uswitch.com">
+    <Button
+      variant="primary"
+      justifyContent="space-between"
+      href="http://www.uswitch.com"
+    >
       Styled Anchor
       <Icon
         color={colors.cobaltBlue}

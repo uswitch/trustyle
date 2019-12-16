@@ -12,7 +12,7 @@
     "build": "npm run clean && tsc"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.10",
+    "@emotion/core": "^10.0.22",
     "@uswitch/trustyle.frozen-input": "^0.3.32",
     "@uswitch/trustyle.icon": "^0.2.32",
     "@uswitch/trustyle.styles": "^0.4.9",

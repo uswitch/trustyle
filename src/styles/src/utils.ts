@@ -15,7 +15,7 @@ export const spacers = {
   white: 64 as const,
   turquoise: 72 as const,
   aqua: 80 as const,
-  darkPink: 88 as const,
+  darkPink: 88 as const
   // Next one should be darkGreen, keep the convention
 }
 
