@@ -12,7 +12,6 @@ export const container = (outerMargin: string[] = ['0 auto']): DynamicStyle[] =>
     margin: outerMargin,
     maxWidth: containerWidths,
     width: ['auto', ...containerWidths.slice(1)],
-    overflow: 'hidden',
     paddingLeft: paddings,
     paddingRight: paddings
   })
@@ -44,7 +43,6 @@ export const row = (
   mq({
     boxSizing: 'border-box',
     display: 'flex',
-    overflow: 'hidden',
     flexDirection: 'row',
     marginLeft: paddings.map(padding => `-${padding}`),
     marginRight: paddings.map(padding => `-${padding}`),
