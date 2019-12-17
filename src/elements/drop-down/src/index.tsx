@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { forwardRef, useState } from 'react'
+import { forwardRef, useState, useRef, useEffect } from 'react'
 import { jsx } from '@emotion/core'
 import { colors, inputs } from '@uswitch/trustyle.styles'
 import { Icon } from '@uswitch/trustyle.icon'
@@ -39,6 +39,21 @@ export interface Option {
   text: string
 }
 
+const useEnsureRef = (otherRef: React.Ref<HTMLSelectElement>) => {
+  const targetRef: React.MutableRefObject<HTMLSelectElement | null> = useRef<HTMLSelectElement | null>(null)
+
+  useEffect(() => {
+      if (!otherRef) return
+
+      if (typeof otherRef === 'function') {
+        otherRef(targetRef.current)
+      } else {
+        targetRef.current = otherRef.current
+      }
+  },[targetRef, otherRef])
+  return targetRef
+}
+
 export const DropDown = forwardRef(
   (
     {
@@ -59,11 +74,17 @@ export const DropDown = forwardRef(
     const [hasFocus, setHasFocus] = useState(false)
     const option = options.find(_ => _.value === value)
     const frozenText = option && option.text
+    const combinedRef = useEnsureRef(ref)
+
     return (
-      <FrozenInput text={frozenText} freezable={freezable}>
+      <FrozenInput
+        text={frozenText}
+        freezable={freezable}
+        inputRef={combinedRef}
+      >
         <div css={container}>
           <select
-            ref={ref}
+            ref={combinedRef}
             onFocus={() => {
               setHasFocus(true)
               onFocus()

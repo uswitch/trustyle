@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { Fragment, useState, useEffect, createRef } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { jsx } from '@emotion/core'
 import { Icon } from '@uswitch/trustyle.icon'
 import { colors } from '@uswitch/trustyle.styles'
@@ -10,7 +10,7 @@ import * as st from './styles'
 interface Props {
   text?: string
   freezable?: boolean
-  inputRef?: React.RefObject<HTMLInputElement>
+  inputRef?: React.RefObject<HTMLElement | HTMLElement>
 }
 
 export const FrozenInput: React.FC<Props> = ({ text, freezable, inputRef, children }) => {
