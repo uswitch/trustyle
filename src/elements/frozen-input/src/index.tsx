@@ -17,7 +17,7 @@ export const FrozenInput: React.FC<Props> = ({ text, freezable, inputRef, childr
   const [frozen, setFrozen] = useState(freezable && !!text)
 
   useEffect(() => {
-    if (freezable && !frozen && inputRef && inputRef.current) {
+    if (freezable && !frozen && !!text && inputRef && inputRef.current) {
       inputRef.current.focus()
     }
   }, [frozen])
