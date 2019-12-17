@@ -102,6 +102,7 @@ export const Input: React.FC<Props> = ({
     <FrozenInput
       text={inputProps.value || inputProps.defaultValue || ''}
       freezable={freezable}
+      inputRef={inputRef}
     >
       <div css={[inputs.keyboardInputContainer(hasError, hasFocus), st[width]]}>
         {prefix && <span css={st.prefix(hasError, hasFocus)}>{prefix}</span>}
