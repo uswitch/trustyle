@@ -27,9 +27,27 @@ const ColourSelect = () => {
   )
 }
 
+const FrozenColourSelect = () => {
+  const [val, setVal] = useState('red')
+  return (
+    <DropDown
+      freezable
+      name="frozen-example"
+      onBlur={() => {}}
+      onChange={setVal}
+      options={options}
+      value={val}
+    />
+  )
+}
+
 storiesOf('Elements|DropDown', module).add('example', () => (
   <div css={css({ padding: number('Padding', 10) })}>
     <ColourSelect />
+
+    <Spacer />
+
+    <FrozenColourSelect />
 
     <Spacer />
 
