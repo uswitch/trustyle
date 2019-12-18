@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.input",
-  "version": "0.3.34",
+  "version": "0.3.35",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.22",
-    "@uswitch/trustyle.frozen-input": "^0.3.34",
+    "@uswitch/trustyle.frozen-input": "^0.3.35",
     "@uswitch/trustyle.styles": "^0.4.11",
     "lodash.debounce": "^4.0.8",
     "react-input-mask": "^2.0.4"
