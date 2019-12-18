@@ -25,6 +25,7 @@ export const highlight: SerializedStyles = css([
   typography.text,
   {
     paddingBottom: pxToRem(spacers.teal),
-    display: 'flex'
+    display: 'flex',
+    alignItems: 'center'
   }
 ])
