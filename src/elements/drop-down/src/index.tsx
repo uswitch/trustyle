@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { forwardRef, useState, useRef, useEffect } from 'react'
+import { forwardRef, useImperativeHandle, useRef, useState } from 'react'
 import { jsx } from '@emotion/core'
 import { colors, inputs } from '@uswitch/trustyle.styles'
 import { Icon } from '@uswitch/trustyle.icon'
@@ -39,20 +39,10 @@ export interface Option {
   text: string
 }
 
-const useEnsureRef = (otherRef: React.Ref<HTMLSelectElement>) => {
-  const targetRef: React.MutableRefObject<HTMLSelectElement | null> = useRef<HTMLSelectElement | null>(null)
-
-  useEffect(() => {
-      if (!otherRef) return
-
-      if (typeof otherRef === 'function') {
-        otherRef(targetRef.current)
-      } else {
-        targetRef.current = otherRef.current
-      }
-  },[targetRef, otherRef])
-  return targetRef
-}
+export type DropDownElement = Pick<
+  HTMLSelectElement,
+  'focus' | 'scrollIntoView'
+>
 
 export const DropDown = forwardRef(
   (
@@ -69,22 +59,26 @@ export const DropDown = forwardRef(
       placeholder,
       value
     }: Props,
-    ref: React.Ref<HTMLSelectElement>
+    ref: React.Ref<DropDownElement>
   ) => {
     const [hasFocus, setHasFocus] = useState(false)
     const option = options.find(_ => _.value === value)
     const frozenText = option && option.text
-    const combinedRef = useEnsureRef(ref)
+    const inputRef: React.MutableRefObject<HTMLSelectElement | null> = useRef(
+      null
+    )
+
+    useImperativeHandle(ref, () => ({
+      focus: () => inputRef.current && inputRef.current.focus(),
+      scrollIntoView: (...args) =>
+        inputRef.current && inputRef.current.scrollIntoView(...args)
+    }))
 
     return (
-      <FrozenInput
-        text={frozenText}
-        freezable={freezable}
-        inputRef={combinedRef}
-      >
+      <FrozenInput text={frozenText} freezable={freezable} inputRef={inputRef}>
         <div css={container}>
           <select
-            ref={combinedRef}
+            ref={inputRef}
             onFocus={() => {
               setHasFocus(true)
               onFocus()
