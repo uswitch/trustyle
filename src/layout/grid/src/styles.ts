@@ -19,6 +19,13 @@ export const container = (outerMargin: string[] = ['0 auto']): DynamicStyle[] =>
 const getWidthPercentageFromSizes = (sizes: number[]) =>
   sizes.map(size => `${100 * size}%`)
 
+const getMsFlexPreferredSizes = (sizes: number[], paddings: string[]) =>
+  sizes.map((size, ind) => {
+    const padding = paddings[Math.min(ind, paddings.length - 1)]
+
+    return `calc(${100 * size}% - ${padding} * 2)`
+  })
+
 export const column = (
   sizes: number[] = [],
   display: string[] = [],
@@ -32,7 +39,10 @@ export const column = (
     paddingRight: paddings,
     paddingTop: hasPaddingTop ? paddings : [],
     paddingBottom: hasPaddingBottom ? paddings : [],
-    flexBasis: getWidthPercentageFromSizes(sizes)
+    flexBasis: getWidthPercentageFromSizes(sizes),
+
+    // IE 11 does not correctly take the padding into account when using border-box
+    '-ms-flex-preferred-size': getMsFlexPreferredSizes(sizes, paddings)
   })
 
 export const row = (
