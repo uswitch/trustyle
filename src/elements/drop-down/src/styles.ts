@@ -9,6 +9,7 @@ import {
 
 export const icon = css({
   width: '15px',
+  pointerEvents: 'none',
   position: 'absolute',
   right: pxToRem(16),
   top: 'calc(50% - 15px / 2)'
