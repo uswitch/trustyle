@@ -23,14 +23,14 @@ export const root = (hasError: boolean, hasFocus: boolean) =>
       border: `solid 1px ${colors.lightGreyBlue}`,
       borderRadius: '3px',
       boxSizing: 'border-box',
-      color: 'transparent', // rm FF default focus
+      color: colors.black,
       outline: 'none', // rm Chrome mobile default focus
       padding: pxToRem(16, spacers.orange, 16, 16),
       verticalAlign: 'middle',
       width: '100%',
-      textShadow: `0 0 0 ${colors.black}`, // FF compensate for color
-      '& option': {
-        color: colors.black // Chrome compensate for color
+      '&:-moz-focusring': {
+        color: 'transparent',
+        textShadow: `0 0 0 ${colors.black}`
       }
     },
     inputs.emphasis(hasError, hasFocus)
