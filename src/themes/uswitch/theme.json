@@ -297,7 +297,9 @@
         "backgroundColor": "primary-hover"
       },
       ":disabled": {
-        "opacity": "0.6"
+        "backgroundColor": "primary",
+        "opacity": "0.6",
+        "cursor": "not-allowed"
       }
     },
 
@@ -306,6 +308,11 @@
       "backgroundColor": "light-blue",
       ":hover": {
         "backgroundColor": "secondary-hover"
+      },
+      ":disabled": {
+        "backgroundColor": "light-blue",
+        "opacity": "0.6",
+        "cursor": "not-allowed"
       }
     },
 
@@ -317,6 +324,11 @@
       ":hover": {
         "backgroundColor": "light-1",
         "borderColor": "link"
+      },
+      ":disabled": {
+        "borderColor": "black",
+        "opacity": "0.6",
+        "cursor": "not-allowed"
       }
     },
 
@@ -330,9 +342,6 @@
       "justifyContent": "space-between",
       ":hover": {
         "backgroundColor": "primary-hover"
-      },
-      ":disabled": {
-        "opacity": "0.6"
       }
     },
 
@@ -346,7 +355,9 @@
         "backgroundColor": "secondary-hover"
       },
       ":disabled": {
-        "opacity": "0.6"
+        "backgroundColor": "light-blue",
+        "opacity": "0.6",
+        "cursor": "not-allowed"
       }
     }
   },
