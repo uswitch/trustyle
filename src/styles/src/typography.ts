@@ -26,7 +26,7 @@ export const heading3 = css({
 
 export const label = css({
   fontFamily: defaultFontFamily,
-  fontSize: pxToRem(17),
+  fontSize: pxToRem(16),
   fontWeight: 600,
   lineHeight: '1.33',
   letterSpacing: 'normal',
@@ -44,7 +44,7 @@ export const subheading = css({
   color: battleshipGrey
 })
 
-export const inputFontSize = 17
+export const inputFontSize = 16
 export const inputLineHeight = 1.33
 
 export const input = css({
