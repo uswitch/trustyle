@@ -105,7 +105,9 @@
 
   "colors": {
     "primary": "#d64226",
+    "primary-hover": "#ab351e",
     "secondary": "#1c1f4e",
+    "secondary-hover": "#99e2ff",
     "heading": "#2f353a",
     "link": "#008fe9",
     "link-2": "#002396",
@@ -292,7 +294,7 @@
       "fontWeight": "bold",
       "borderRadius": "sm",
       ":hover": {
-        "backgroundColor": "primary"
+        "backgroundColor": "primary-hover"
       },
       ":disabled": {
         "opacity": "0.6"
@@ -303,18 +305,19 @@
       "color": "brand",
       "backgroundColor": "light-blue",
       ":hover": {
-        "backgroundColor": "primary"
-      },
-      ":disabled": {
-        "opacity": "0.6"
+        "backgroundColor": "secondary-hover"
       }
     },
 
     "outline": {
-      "color": "brand",
+      "color": "black",
       "fontWeight": "normal",
       "backgroundColor": "light-1",
-      "border": "1px solid black"
+      "border": "1px solid black",
+      ":hover": {
+        "backgroundColor": "light-1",
+        "borderColor": "link"
+      }
     },
 
     "primary-left": {
