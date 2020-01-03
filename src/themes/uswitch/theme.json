@@ -320,13 +320,34 @@
       }
     },
 
-    "primary-left": {
+    "primary-icon": {
       "color": "light-1",
       "border": "none",
       "borderRadius": "sm",
       "backgroundColor": "primary",
       "textAlign": "left",
-      ":disabled": { "opacity": "0.6" }
+      "display": "flex",
+      "justifyContent": "space-between",
+      ":hover": {
+        "backgroundColor": "primary-hover"
+      },
+      ":disabled": {
+        "opacity": "0.6"
+      }
+    },
+
+    "secondary-icon": {
+      "color": "brand",
+      "backgroundColor": "light-blue",
+      "textAlign": "left",
+      "display": "flex",
+      "justifyContent": "space-between",
+      ":hover": {
+        "backgroundColor": "secondary-hover"
+      },
+      ":disabled": {
+        "opacity": "0.6"
+      }
     }
   },
 

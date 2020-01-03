@@ -18,8 +18,16 @@ storiesOf('Elements|Button', module).addDecorator(Story => {
 }).add('primary variant', () => (
   <div css={css({ padding: number('Padding', 10) })}>
     {theme() && Object.keys(theme().buttons).map((key, index) => (
-      <React.Fragment>
-        <Button key={index} variant={key} disabled={boolean("Disabled", false)}>{text(`${key} label`, `${key} button`)}</Button>
+      <React.Fragment key={index}>
+        <Button variant={key} disabled={boolean("Disabled", false)}>
+          {text(`${key} label`, `${key} button`)}
+          {key.match('icon') && <Icon	
+            color={colors.cobaltBlue}	
+            direction="right"	
+            glyph="caret"	
+            size={20}	
+          />}
+        </Button>
         <Spacer />
       </React.Fragment>
     ))}

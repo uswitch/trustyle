@@ -3,10 +3,8 @@
 import * as React from 'react'
 import { jsx , useThemeUI } from 'theme-ui'
 
-export type Variant = 'primary' | 'secondary' | 'outline'
-
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant: Variant
+  variant: string
   href?: string
 }
 
@@ -28,7 +26,7 @@ export const Button: React.FC<Props> = ({
         fontSize: 'base',
         paddingX: 'sm',
         paddingY: 'base',
-        variant: `buttons.${variant}`,
+        variant: `buttons.${variant}`
       }}
       disabled={disabled}
       type={onClick ? 'button' : 'submit'}
