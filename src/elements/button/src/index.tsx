@@ -21,6 +21,7 @@ export const Button: React.FC<Props> = ({
     <button
       sx={{
         ...theme.buttons.base,
+        cursor: 'pointer',
         backgroundImage: 'none',
         fontFamily: 'base',
         fontSize: 'base',
