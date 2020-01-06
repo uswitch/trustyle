@@ -15,7 +15,7 @@ export const Button: React.FC<Props> = ({
   onClick,
   ...props
 }) => {
-  const { theme } = useThemeUI();
+  const { theme } : any = useThemeUI();
   
   return (
     <button
