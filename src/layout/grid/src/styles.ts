@@ -42,7 +42,7 @@ export const column = (
     flexBasis: getWidthPercentageFromSizes(sizes),
 
     // IE 11 does not correctly take the padding into account when using border-box
-    '-ms-flex-preferred-size': getMsFlexPreferredSizes(sizes, paddings)
+    msFlexPreferredSize: getMsFlexPreferredSizes(sizes, paddings)
   })
 
 export const row = (
