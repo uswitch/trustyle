@@ -1,11 +1,10 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx , useThemeUI } from 'theme-ui'
+import { jsx, useThemeUI } from 'theme-ui'
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant: string
-  href?: string
 }
 
 export const Button: React.FC<Props> = ({
@@ -15,8 +14,8 @@ export const Button: React.FC<Props> = ({
   onClick,
   ...props
 }) => {
-  const { theme } : any = useThemeUI();
-  
+  const { theme }: any = useThemeUI()
+
   return (
     <button
       sx={{
