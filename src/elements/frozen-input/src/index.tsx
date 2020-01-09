@@ -13,7 +13,12 @@ interface Props {
   inputRef?: React.RefObject<HTMLElement | HTMLElement>
 }
 
-export const FrozenInput: React.FC<Props> = ({ text, freezable, inputRef, children }) => {
+export const FrozenInput: React.FC<Props> = ({
+  text,
+  freezable,
+  inputRef,
+  children
+}) => {
   const [frozen, setFrozen] = useState(freezable && !!text)
 
   useEffect(() => {

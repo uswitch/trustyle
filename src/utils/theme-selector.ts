@@ -20,5 +20,5 @@ export default () => {
     Object.keys(themes)[0]
   )
 
-  return themes[theme];
+  return themes[theme]
 }
