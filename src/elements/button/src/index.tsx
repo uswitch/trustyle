@@ -5,7 +5,6 @@ import { jsx, useThemeUI } from 'theme-ui'
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant: string
-  href?: string
 }
 
 export const Button: React.FC<Props> = ({

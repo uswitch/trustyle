@@ -1,33 +1,39 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { css, jsx } from '@emotion/core'
-import { JustifyContentProperty } from 'csstype'
-
-import * as st from './styles'
-
-export type Variant = 'primary' | 'secondary' | 'outline'
+import { jsx, useThemeUI } from 'theme-ui'
 
 interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-  justifyContent?: JustifyContentProperty
-  variant: Variant
-  href: string
+  variant: string
+  href?: string
 }
 
 export const ButtonLink: React.FC<Props> = ({
   children,
-  justifyContent,
   variant,
   href,
-  onClick,
   ...props
-}) => (
-  <a
-    css={css(st.buttonLink(variant, justifyContent))}
-    href={href}
-    onClick={onClick}
-    {...props}
-  >
-    {children}
-  </a>
-)
+}) => {
+  const { theme }: any = useThemeUI()
+
+  return (
+    <a
+      sx={{
+        ...theme.buttons.base,
+        cursor: 'pointer',
+        backgroundImage: 'none',
+        fontFamily: 'base',
+        fontSize: 'base',
+        paddingX: 'sm',
+        paddingY: 'base',
+        display: 'inline-block',
+        textDecoration: 'none',
+        variant: `buttons.${variant}`
+      }}
+      href={href}
+      {...props}
+    >
+      {children}
+    </a>
+  )
+}
