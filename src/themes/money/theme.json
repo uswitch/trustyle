@@ -127,7 +127,9 @@
 
     "cannon-pink": "#924A8B",
     "cannon-pink--light": "#B95CB0",
-    "cannon-pink--dark": "#4B255E"
+    "cannon-pink--dark": "#4B255E",
+
+    "jaffa": "#F4793B"
   },
 
   "radii": {
@@ -333,6 +335,15 @@
       }
     }
 
+  },
+
+  "list": {
+    "bullet": {
+      "color": "jaffa"
+    },
+    "numeric": {
+      "color": "jaffa"
+    }
   },
 
   "styles": {
