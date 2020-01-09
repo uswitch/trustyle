@@ -210,7 +210,7 @@
   },
 
   "styles": {
-    "root": {
+    "body": {
       "fontFamily": "base",
       "fontSize": "base",
       "fontWeight": "base",
