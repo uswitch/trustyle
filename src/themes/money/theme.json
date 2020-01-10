@@ -19,8 +19,8 @@
   },
 
   "lineHeights": {
-    "base": "1.4em",
-    "heading": "1.2em"
+    "base": "1.4",
+    "heading": "1.2"
   },
 
   "fontSizes": {
