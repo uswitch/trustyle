@@ -2,16 +2,12 @@
 import * as React from 'react'
 import { css, jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
-import { boolean, number, text } from '@storybook/addon-knobs'
-import { colors } from '@uswitch/trustyle.styles'
+import { number } from '@storybook/addon-knobs'
 import { ThemeProvider } from 'theme-ui'
 
 import theme from '../../../utils/theme-selector'
-import { Icon } from '../../icon/src'
 
 import { List, ListItem } from './'
-
-const Spacer = () => <div css={css({ minHeight: 20 })} />
 
 storiesOf('Elements|List', module)
   .addDecorator(Story => {
