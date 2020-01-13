@@ -7,7 +7,7 @@ pipeline:
     commands:
       - npm install
       - npx lerna bootstrap
-      - npm run prettier:check
+      - npm run eslint:check
 
   prettier:
     group: pr
