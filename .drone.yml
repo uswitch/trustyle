@@ -1,0 +1,9 @@
+pipeline:
+  build:
+    when:
+      event: [pull_request, push]
+    image: node:11.15.0
+    commands:
+      - npm install
+      - npx lerna bootstrap
+      - npx lerna run build
