@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { Fragment, useState, useEffect } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { jsx } from '@emotion/core'
 import { Icon } from '@uswitch/trustyle.icon'
 import { colors } from '@uswitch/trustyle.styles'
