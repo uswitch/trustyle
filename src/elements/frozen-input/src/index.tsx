@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { Fragment, useState, useEffect } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { jsx } from '@emotion/core'
 import { Icon } from '@uswitch/trustyle.icon'
 import { colors } from '@uswitch/trustyle.styles'
@@ -13,7 +13,12 @@ interface Props {
   inputRef?: React.RefObject<HTMLElement | HTMLElement>
 }
 
-export const FrozenInput: React.FC<Props> = ({ text, freezable, inputRef, children }) => {
+export const FrozenInput: React.FC<Props> = ({
+  text,
+  freezable,
+  inputRef,
+  children
+}) => {
   const [frozen, setFrozen] = useState(freezable && !!text)
 
   useEffect(() => {

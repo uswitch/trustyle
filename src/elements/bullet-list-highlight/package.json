@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.bullet-list-highlight",
-  "version": "0.2.35",
+  "version": "0.2.36",
   "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.22",
-    "@uswitch/trustyle.icon": "^0.2.34",
-    "@uswitch/trustyle.styles": "^0.4.11",
+    "@uswitch/trustyle.icon": "^0.2.35",
+    "@uswitch/trustyle.styles": "^0.4.12",
     "react": "^16.7.0"
   },
   "devDependencies": {

@@ -1,14 +1,34 @@
 /** @jsx jsx */
+import * as React from 'react'
 import { css, jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
-import { number } from '@storybook/addon-knobs'
+import { number, text } from '@storybook/addon-knobs'
+import { ThemeProvider } from 'theme-ui'
+
+import theme from '../../../utils/theme-selector'
 
 import { ButtonLink } from './'
 
-storiesOf('Elements|ButtonLink', module).add('primary variant', () => (
-  <div css={css({ padding: number('Padding', 10) })}>
-    <ButtonLink href="https://www.uswitch.com" variant="primary">
-      This is a Button Link
-    </ButtonLink>
-  </div>
-))
+const Spacer = () => <div css={css({ minHeight: 20 })} />
+
+storiesOf('Elements|ButtonLink', module)
+  .addDecorator(Story => {
+    return <ThemeProvider theme={theme()}>{Story()}</ThemeProvider>
+  })
+  .add('all variants', () => (
+    <div css={css({ padding: number('Padding', 10) })}>
+      {theme() &&
+        Object.keys(theme().buttons).map((key, index) => (
+          <React.Fragment key={index}>
+            <ButtonLink
+              variant={key}
+              href="https://www.uswitch.com"
+              target="_blank"
+            >
+              {text(`${key} label`, `${key} link button`)}
+            </ButtonLink>
+            <Spacer />
+          </React.Fragment>
+        ))}
+    </div>
+  ))

@@ -1,35 +1,33 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { css, jsx } from '@emotion/core'
-import { JustifyContentProperty } from 'csstype'
-
-import * as st from './styles'
-
-export type Variant = 'primary' | 'secondary' | 'outline'
+import { jsx, useThemeUI } from 'theme-ui'
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  justifyContent?: JustifyContentProperty
-  variant: Variant
-  href?: string
+  variant: string
 }
 
 export const Button: React.FC<Props> = ({
   children,
   disabled = false,
-  justifyContent,
   variant,
-  href,
   onClick,
   ...props
-}) =>
-  href ? (
-    <a css={css(st.button(variant, disabled, justifyContent))} href={href}>
-      {children}
-    </a>
-  ) : (
+}) => {
+  const { theme }: any = useThemeUI()
+
+  return (
     <button
-      css={css(st.button(variant, disabled, justifyContent))}
+      sx={{
+        ...theme.buttons.base,
+        cursor: 'pointer',
+        backgroundImage: 'none',
+        fontFamily: 'base',
+        fontSize: 'base',
+        paddingX: 'sm',
+        paddingY: 'base',
+        variant: `buttons.${variant}`
+      }}
       disabled={disabled}
       type={onClick ? 'button' : 'submit'}
       onClick={onClick}
@@ -38,3 +36,4 @@ export const Button: React.FC<Props> = ({
       {children}
     </button>
   )
+}
