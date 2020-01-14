@@ -1,8 +1,8 @@
-import { css } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/core'
 import { typography } from '@uswitch/trustyle.styles'
 
-export const root = css({
+export const root: SerializedStyles = css({
   border: 0
 })
 
-export const label = css([typography.label])
+export const label: SerializedStyles = css([typography.label])

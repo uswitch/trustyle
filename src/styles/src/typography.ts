@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/core'
 
 import { battleshipGrey, black, cerulean, white } from './colors'
 import { pxToRem } from './utils'
@@ -6,7 +6,7 @@ import { pxToRem } from './utils'
 export const defaultFontFamily =
   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif'
 
-export const heading2 = css({
+export const heading2: SerializedStyles = css({
   fontFamily: defaultFontFamily,
   fontSize: pxToRem(24),
   fontWeight: 600,
@@ -15,7 +15,7 @@ export const heading2 = css({
   color: black
 })
 
-export const heading3 = css({
+export const heading3: SerializedStyles = css({
   fontFamily: defaultFontFamily,
   fontSize: pxToRem(18),
   fontWeight: 600,
@@ -24,7 +24,7 @@ export const heading3 = css({
   color: black
 })
 
-export const label = css({
+export const label: SerializedStyles = css({
   fontFamily: defaultFontFamily,
   fontSize: pxToRem(16),
   fontWeight: 600,
@@ -33,7 +33,7 @@ export const label = css({
   color: black
 })
 
-export const subheading = css({
+export const subheading: SerializedStyles = css({
   fontFamily: defaultFontFamily,
   fontSize: pxToRem(17),
   fontWeight: 500,
@@ -47,7 +47,7 @@ export const subheading = css({
 export const inputFontSize = 16
 export const inputLineHeight = 1.33
 
-export const input = css({
+export const input: SerializedStyles = css({
   fontFamily: defaultFontFamily,
   fontSize: pxToRem(inputFontSize),
   fontWeight: 'normal',
@@ -56,7 +56,7 @@ export const input = css({
   color: black
 })
 
-export const text = css({
+export const text: SerializedStyles = css({
   fontFamily: defaultFontFamily,
   fontSize: pxToRem(16),
   fontWeight: 'normal',
@@ -65,7 +65,7 @@ export const text = css({
   color: battleshipGrey
 })
 
-export const small = css({
+export const small: SerializedStyles = css({
   fontFamily: defaultFontFamily,
   fontSize: pxToRem(14),
   fontWeight: 'normal',
@@ -74,7 +74,7 @@ export const small = css({
   color: battleshipGrey
 })
 
-export const linkText = css({
+export const linkText: SerializedStyles = css({
   fontFamily: defaultFontFamily,
   color: cerulean,
   fontSize: pxToRem(16),
@@ -82,7 +82,7 @@ export const linkText = css({
   textDecoration: 'underline'
 })
 
-export const alertText = css({
+export const alertText: SerializedStyles = css({
   fontFamily: defaultFontFamily,
   fontSize: pxToRem(16),
   lineHeight: 1.38,
@@ -90,6 +90,6 @@ export const alertText = css({
   color: white
 })
 
-export const noWrap = css({
+export const noWrap: SerializedStyles = css({
   whiteSpace: 'nowrap'
 })

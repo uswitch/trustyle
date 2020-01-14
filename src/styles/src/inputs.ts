@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/core'
 
 import { input, inputFontSize, inputLineHeight } from './typography'
 import {
@@ -18,7 +18,10 @@ export const matchCircumstance = (hasError: boolean, hasFocus: boolean) => {
   if (hasFocus) return azure
 }
 
-export const emphasis = (hasError: boolean, hasFocus: boolean) => {
+export const emphasis = (
+  hasError: boolean,
+  hasFocus: boolean
+): SerializedStyles | null => {
   const color = matchCircumstance(hasError, hasFocus)
   if (!color) return null
   return css({
@@ -27,7 +30,10 @@ export const emphasis = (hasError: boolean, hasFocus: boolean) => {
   })
 }
 
-export const keyboardInputContainer = (hasError: boolean, hasFocus: boolean) =>
+export const keyboardInputContainer = (
+  hasError: boolean,
+  hasFocus: boolean
+): SerializedStyles =>
   css([
     {
       boxShadow: inputInnerShadow,
@@ -43,7 +49,7 @@ export const keyboardInputContainer = (hasError: boolean, hasFocus: boolean) =>
 
 const inputPadding = 16
 
-export const keyboardInput = css([
+export const keyboardInput: SerializedStyles = css([
   input,
   {
     appearance: 'none',

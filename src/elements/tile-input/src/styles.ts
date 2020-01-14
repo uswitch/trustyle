@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/core'
 import {
   colors,
   helpers,
@@ -9,7 +9,7 @@ import {
 
 const svgSafeAzure = colors.azure.replace('#', '%23')
 
-export const input = (type: 'radio' | 'checkbox') =>
+export const input = (type: 'radio' | 'checkbox'): SerializedStyles =>
   css({
     marginLeft: '-1000px',
     appearance: 'none',
@@ -34,7 +34,7 @@ export const input = (type: 'radio' | 'checkbox') =>
     }
   })
 
-export const container = (type: 'radio' | 'checkbox') =>
+export const container = (type: 'radio' | 'checkbox'): SerializedStyles =>
   css([
     typography.label,
     {
@@ -64,7 +64,7 @@ export const container = (type: 'radio' | 'checkbox') =>
     }
   ])
 
-export const content = css({
+export const content: SerializedStyles = css({
   position: 'absolute',
   top: 0,
   left: 0,
@@ -82,7 +82,7 @@ export const content = css({
 })
 
 // Wrapper to prevent flexbox from stretching images with a percentage width
-export const childrenWrapper = css({
+export const childrenWrapper: SerializedStyles = css({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',

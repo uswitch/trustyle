@@ -1,19 +1,19 @@
-import { css } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/core'
 import { colors, pxToRem, spacers, typography } from '@uswitch/trustyle.styles'
 
 const iconWidth = 36
 
-export const highlights = css({
+export const highlights: SerializedStyles = css({
   padding: pxToRem(0, spacers.green, spacers.blue, spacers.green),
   listStyle: 'none',
   borderBottom: `1px solid ${colors.blueGrey}`
 })
 
-export const highlightBulletContent = css({
+export const highlightBulletContent: SerializedStyles = css({
   paddingLeft: pxToRem(spacers.green)
 })
 
-export const highlightBulletIconContainer = css({
+export const highlightBulletIconContainer: SerializedStyles = css({
   display: 'flex',
   boxSizing: 'border-box',
   alignItems: 'center',
@@ -21,12 +21,12 @@ export const highlightBulletIconContainer = css({
   backgroundColor: colors.white
 })
 
-export const highlightBullet = css({
+export const highlightBullet: SerializedStyles = css({
   width: pxToRem(iconWidth),
   height: pxToRem(iconWidth)
 })
 
-export const highlight = css([
+export const highlight: SerializedStyles = css([
   typography.text,
   {
     display: 'flex',
@@ -45,21 +45,21 @@ export const highlight = css([
 
 const timelineBorder = `2px solid ${colors.blueGrey}`
 
-export const first = css({
+export const first: SerializedStyles = css({
   '&:before': {
     border: timelineBorder,
     top: '50%',
     bottom: 0
   }
 })
-export const middle = css({
+export const middle: SerializedStyles = css({
   '&:before': {
     border: timelineBorder,
     top: 0,
     bottom: 0
   }
 })
-export const last = css({
+export const last: SerializedStyles = css({
   '&:before': {
     border: timelineBorder,
     top: 0,

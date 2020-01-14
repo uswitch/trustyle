@@ -1,9 +1,9 @@
-import { css } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/core'
 import { colors, pxToRem, spacers, typography } from '@uswitch/trustyle.styles'
 
 const arrowSize = 8
 
-export const root = css([
+export const root: SerializedStyles = css([
   typography.alertText,
   {
     padding: spacers.green,
@@ -24,14 +24,14 @@ export const root = css([
   }
 ])
 
-export const notification = css({
+export const notification: SerializedStyles = css({
   backgroundColor: colors.battleshipGrey,
   '&:before': {
     borderBottomColor: colors.battleshipGrey
   }
 })
 
-export const alert = css({
+export const alert: SerializedStyles = css({
   backgroundColor: colors.tomato,
   '&:before': {
     borderBottomColor: colors.tomato
