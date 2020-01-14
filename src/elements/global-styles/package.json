@@ -1,0 +1,22 @@
+{
+	"name": "@uswitch/trustyle.global-styles",
+	"version": "0.1.0",
+	"license": "MIT",
+	"main": "lib/index.js",
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"--------------- BUILDING": "----------------------",
+		"clean": "rm -rf lib",
+		"build": "npm run clean && tsc"
+	},
+	"dependencies": {
+		"@emotion/core": "^10.0.27",
+		"@mdx-js/react": "^1.5.3",
+		"normalize.css": "^8.0.1"
+	},
+	"peerDependencies": {
+		"theme-ui": "^0.2.52"
+	}
+}

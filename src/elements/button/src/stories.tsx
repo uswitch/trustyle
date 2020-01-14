@@ -5,7 +5,6 @@ import { storiesOf } from '@storybook/react'
 import { boolean, number, text } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { colors } from '@uswitch/trustyle.styles'
-import { ThemeProvider } from 'theme-ui'
 
 import theme from '../../../utils/theme-selector'
 import { Icon } from '../../icon/src'
@@ -15,9 +14,6 @@ import { Button } from './'
 const Spacer = () => <div css={css({ minHeight: 20 })} />
 
 storiesOf('Elements|Button', module)
-  .addDecorator(Story => {
-    return <ThemeProvider theme={theme()}>{Story()}</ThemeProvider>
-  })
   .add('primary variant', () => (
     <div css={css({ padding: number('Padding', 10) })}>
       {theme() &&

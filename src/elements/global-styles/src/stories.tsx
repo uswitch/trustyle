@@ -7,7 +7,7 @@ import { jsx } from 'theme-ui'
 import { css } from '@emotion/core'
 import { Interpolation } from '@emotion/serialize'
 
-import theme from './theme-selector'
+import theme from '../../../utils/theme-selector'
 
 const swatch: Interpolation = {
   padding: '10px',
