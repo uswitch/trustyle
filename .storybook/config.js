@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import React from 'react'
+import { Styled } from 'theme-ui'
 import { Global, jsx } from '@emotion/core'
 import { addDecorator, configure, addParameters } from '@storybook/react'
 import { withA11y } from '@storybook/addon-a11y'
@@ -13,8 +14,10 @@ const loadStories = () => req.keys().forEach(filename => req(filename))
 
 const withTheme = story => (
   <ThemeProvider theme={selectTheme()}>
-    <Global styles={theme => css(theme.styles)(theme)} />
-    {story()}
+    <Styled.root>
+      <Global styles={theme => css(theme.styles)(theme)} />
+      {story()}
+    </Styled.root>
   </ThemeProvider>
 )
 

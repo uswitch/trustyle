@@ -364,7 +364,7 @@
 
   "styles": {
 
-    "body": {
+    "root": {
       "fontFamily": "base",
       "fontSize": "base",
       "fontWeight": "base",
