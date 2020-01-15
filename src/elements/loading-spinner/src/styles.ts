@@ -1,4 +1,4 @@
-import { css, keyframes } from '@emotion/core'
+import { css, keyframes, SerializedStyles } from '@emotion/core'
 import { colors, pxToRem, spacers } from '@uswitch/trustyle.styles'
 
 const load = keyframes`
@@ -32,7 +32,7 @@ const round = keyframes`
   }
 `
 
-export const rotate = css({
+export const rotate: SerializedStyles = css({
   color: colors.azure,
   fontSize: pxToRem(spacers.orange),
   textIndent: '-9999rem',

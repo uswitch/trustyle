@@ -1,7 +1,7 @@
-import { css } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/core'
 import { colors, helpers, pxToRem, typography } from '@uswitch/trustyle.styles'
 
-export const label = (slim: boolean) =>
+export const label = (slim: boolean): SerializedStyles =>
   css({
     marginBottom: pxToRem(slim ? 16 : 8),
     width: '100%',
@@ -12,7 +12,7 @@ export const label = (slim: boolean) =>
 
 const svgSafeAzure = colors.azure.replace('#', '%23')
 
-export const input = (slim: boolean) =>
+export const input = (slim: boolean): SerializedStyles =>
   css({
     marginLeft: '-1000px',
     appearance: 'none',
@@ -32,7 +32,7 @@ export const input = (slim: boolean) =>
     }
   })
 
-export const span = (slim: boolean) =>
+export const span = (slim: boolean): SerializedStyles =>
   css([
     typography.label,
     {

@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/core'
 import {
   colors,
   inputs,
@@ -7,7 +7,7 @@ import {
   typography
 } from '@uswitch/trustyle.styles'
 
-export const icon = css({
+export const icon: SerializedStyles = css({
   width: '15px',
   pointerEvents: 'none',
   position: 'absolute',
@@ -15,7 +15,7 @@ export const icon = css({
   top: 'calc(50% - 15px / 2)'
 })
 
-export const root = (hasError: boolean, hasFocus: boolean) =>
+export const root = (hasError: boolean, hasFocus: boolean): SerializedStyles =>
   css([
     typography.input,
     {
