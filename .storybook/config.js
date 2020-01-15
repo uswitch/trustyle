@@ -1,29 +1,27 @@
 /** @jsx jsx */
 import React from 'react'
-import { Global, css, jsx } from '@emotion/core'
+import { Styled } from 'theme-ui'
+import { Global, jsx } from '@emotion/core'
 import { addDecorator, configure, addParameters } from '@storybook/react'
 import { withA11y } from '@storybook/addon-a11y'
 import { withKnobs } from '@storybook/addon-knobs'
+import selectTheme from '../src/utils/theme-selector'
+import { ThemeProvider, css } from 'theme-ui'
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /stories\.tsx$/)
 const loadStories = () => req.keys().forEach(filename => req(filename))
 
-const withGlobal = story => (
-  <React.Fragment>
-    <Global
-      styles={css({
-        '*': {
-          margin: 0,
-          padding: 0
-        }
-      })}
-    />
-    {story()}
-  </React.Fragment>
+const withTheme = story => (
+  <ThemeProvider theme={selectTheme()}>
+    <Styled.root>
+      <Global styles={theme => css(theme.styles)(theme)} />
+      {story()}
+    </Styled.root>
+  </ThemeProvider>
 )
 
-addDecorator(withGlobal)
+addDecorator(withTheme)
 addDecorator(withA11y)
 addDecorator(withKnobs)
 

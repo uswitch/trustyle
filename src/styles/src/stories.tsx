@@ -13,7 +13,7 @@ const swatch = css({
   fontFamily: 'monospace'
 })
 
-storiesOf('Styles|Colours', module).add('Swatches', () =>
+storiesOf('Legacy Styles|Colours', module).add('Swatches', () =>
   Object.entries(colors).map(([key, value]) => (
     <div key={key} css={swatch}>
       <div
@@ -28,7 +28,7 @@ storiesOf('Styles|Colours', module).add('Swatches', () =>
   ))
 )
 
-storiesOf('Styles|Typography', module).add('Types', () =>
+storiesOf('Legacy Styles|Typography', module).add('Types', () =>
   Object.entries(types).map(([key, value]) => (
     <p key={key} css={value}>
       {key}
