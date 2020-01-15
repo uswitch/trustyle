@@ -3,7 +3,7 @@ import React from 'react'
 import { addDecorator, configure, addParameters } from '@storybook/react'
 import { withA11y } from '@storybook/addon-a11y'
 import { withKnobs } from '@storybook/addon-knobs'
-import { jsx, ThemeProvider } from 'theme-ui'
+import { Styled, jsx, ThemeProvider } from 'theme-ui'
 import { Global } from '@emotion/core'
 import theme from '../src/utils/theme-selector'
 import { GlobalStyles } from '../src/elements/global-styles/src';
@@ -15,14 +15,16 @@ const loadStories = () => req.keys().forEach(filename => req(filename))
 const withTheme = story => (
   <ThemeProvider theme={theme()}>
     <GlobalStyles />
-    <Global
-      styles={{
-        body: {
-          margin: 10
-        }
-      }}
-    />
-    {story()}
+    <Styled.root>
+      <Global
+        styles={{
+          body: {
+            margin: 10
+          }
+        }}
+      />
+      {story()}
+    </Styled.root>
   </ThemeProvider>
 )
 
