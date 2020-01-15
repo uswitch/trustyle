@@ -1,7 +1,7 @@
 {
   "name": "uSwitch",
 
-  "breakpoints": [ "768px", "990px" ],
+  "breakpoints": ["768px", "990px"],
 
   "zIndices": {
     "min": 0,
@@ -9,7 +9,8 @@
   },
 
   "shadows": {
-    "box": "2px 2px 25px #0004"
+    "box": "2px 2px 25px #0004",
+    "linkInset": "inset 0 0 0 1px #008fe9"
   },
 
   "fonts": {
@@ -123,6 +124,7 @@
     "light-3": "#e6e6e6",
     "hero": "#99e2ff",
     "light-blue": "#caefff",
+    "light-grey-blue": "#b0b8bf",
     "anakiwa": "#99e2ff"
   },
 
@@ -135,7 +137,6 @@
 
   "----------------------------- Variants": "-----------------------------",
   "modules": {
-
     "content-hero-module": {
       "h1": {
         "mb": "sm",
@@ -158,7 +159,6 @@
         "textDecoration": "underline"
       },
 
-
       "content": {
         "display": "flex",
         "alignItems": "flex-end",
@@ -177,11 +177,9 @@
         }
       }
     }
-
   },
 
   "compounds": {
-
     "card": {
       "display": "flex",
       "width": ["100%", "49%", "grid.lg.3"],
@@ -227,7 +225,6 @@
       "my": "sm",
       "mx": 0
     }
-
   },
 
   "container": {
@@ -273,7 +270,6 @@
   },
 
   "card": {
-
     "sm": {
       "image": { "width": "100%", "height": "auto" }
     },
@@ -281,7 +277,6 @@
     "lg": {
       "image": { "width": 278, "height": 230 }
     }
-
   },
 
   "buttons": {
@@ -289,12 +284,13 @@
       "backgroundColor": "primary",
       "color": "light-1",
       "textAlign": "center",
-      "width": [ "100%", "grid.md.3", "grid.lg.2" ],
+      "width": ["100%"],
       "border": "none",
       "fontWeight": "bold",
       "borderRadius": "sm",
       ":hover": {
-        "backgroundColor": "primary-hover"
+        "backgroundColor": "primary-hover",
+        "boxShadow": "inset 0 0 0 1px ${color}"
       },
       ":disabled": {
         "backgroundColor": "primary",
@@ -303,8 +299,8 @@
       }
     },
 
-    "secondary": {
-      "color": "brand",
+    "continue": {
+      "color": "link-2",
       "backgroundColor": "light-blue",
       ":hover": {
         "backgroundColor": "secondary-hover"
@@ -316,54 +312,26 @@
       }
     },
 
-    "outline": {
+    "secondary": {
       "color": "black",
-      "fontWeight": "normal",
       "backgroundColor": "light-1",
-      "border": "1px solid black",
+      "border": "1px solid",
+      "borderColor": "light-grey-blue",
       ":hover": {
         "backgroundColor": "light-1",
-        "borderColor": "link"
+        "borderColor": "link",
+        "boxShadow": "linkInset"
       },
       ":disabled": {
-        "borderColor": "black",
+        "borderColor": "light-grey-blue",
         "opacity": "0.6",
-        "cursor": "not-allowed"
-      }
-    },
-
-    "primary-icon": {
-      "color": "light-1",
-      "border": "none",
-      "borderRadius": "sm",
-      "backgroundColor": "primary",
-      "textAlign": "left",
-      "display": "flex",
-      "justifyContent": "space-between",
-      ":hover": {
-        "backgroundColor": "primary-hover"
-      }
-    },
-
-    "secondary-icon": {
-      "color": "brand",
-      "backgroundColor": "light-blue",
-      "textAlign": "left",
-      "display": "flex",
-      "justifyContent": "space-between",
-      ":hover": {
-        "backgroundColor": "secondary-hover"
-      },
-      ":disabled": {
-        "backgroundColor": "light-blue",
-        "opacity": "0.6",
-        "cursor": "not-allowed"
+        "cursor": "not-allowed",
+        "boxShadow": "none"
       }
     }
   },
 
   "styles": {
-
     "root": {
       "fontFamily": "base",
       "fontSize": "base",
@@ -404,13 +372,12 @@
     },
 
     "a": {
-      "color": "link-2",
-      "stroke": "link-2",
+      "color": "link",
+      "stroke": "link",
       "transition": "all 0.2s ease",
-      ":visited": { "color": "link-2", "stroke": "link-2" },
+      ":visited": { "color": "link", "stroke": "link" },
       ":hover": { "color": "link", "stroke": "link" },
       "> *": { "transition": "all 0.2s ease" }
     }
-
   }
 }
