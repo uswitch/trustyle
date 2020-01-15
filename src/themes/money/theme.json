@@ -296,7 +296,7 @@
       "backgroundColor": "cranberry",
       "borderRadius": "50vh",
       "paddingX": "lg",
-      ":hover": {
+      ":hover:not(:disabled)": {
         "backgroundColor": "cranberry--light"
       },
       ":focus": {
@@ -317,7 +317,7 @@
       "backgroundColor": "cannon-pink",
       "borderRadius": "50vh",
       "paddingX": "lg",
-      ":hover": {
+      ":hover:not(:disabled)": {
         "backgroundColor": "cannon-pink--light"
       },
       ":focus": {
