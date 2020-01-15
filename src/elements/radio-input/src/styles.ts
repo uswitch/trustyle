@@ -1,11 +1,11 @@
-import { css } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/core'
 import { colors, helpers, pxToRem, typography } from '@uswitch/trustyle.styles'
 
-export const label = css({
+export const label: SerializedStyles = css({
   display: 'block'
 })
 
-export const input = css({
+export const input: SerializedStyles = css({
   marginLeft: '-1000px',
   appearance: 'none',
   position: 'absolute',
@@ -26,7 +26,7 @@ export const input = css({
   }
 })
 
-export const span = css([
+export const span: SerializedStyles = css([
   typography.label,
   {
     alignItems: 'center',

@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/core'
 import {
   colors,
   inputs,
@@ -7,15 +7,15 @@ import {
   typography
 } from '@uswitch/trustyle.styles'
 
-export const half = css({
+export const half: SerializedStyles = css({
   width: '50%'
 })
 
-export const full = css({
+export const full: SerializedStyles = css({
   width: '100%'
 })
 
-const affix = css([
+const affix: SerializedStyles = css([
   typography.input,
   {
     margin: pxToRem(8, 0),
@@ -25,7 +25,10 @@ const affix = css([
   }
 ])
 
-export const prefix = (hasError: boolean, hasFocus: boolean) =>
+export const prefix = (
+  hasError: boolean,
+  hasFocus: boolean
+): SerializedStyles =>
   css([
     affix,
     {
@@ -36,7 +39,10 @@ export const prefix = (hasError: boolean, hasFocus: boolean) =>
     }
   ])
 
-export const suffix = (hasError: boolean, hasFocus: boolean) =>
+export const suffix = (
+  hasError: boolean,
+  hasFocus: boolean
+): SerializedStyles =>
   css([
     affix,
     {

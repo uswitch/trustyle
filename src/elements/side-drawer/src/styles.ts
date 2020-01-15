@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/core'
 import { colors, pxToRem, spacers } from '@uswitch/trustyle.styles'
 
 /* To Do
@@ -7,7 +7,7 @@ import { colors, pxToRem, spacers } from '@uswitch/trustyle.styles'
 
 export const transitionDuration = 400
 
-export const background = css({
+export const background: SerializedStyles = css({
   left: 0,
   height: '100%',
   position: 'fixed',
@@ -17,7 +17,15 @@ export const background = css({
   zIndex: 1002 // header from includes is 1001
 })
 
-const fromLeft = {
+interface TransitionStates {
+  entering: SerializedStyles
+  entered: SerializedStyles
+  exiting: SerializedStyles
+  exited: SerializedStyles
+  unmounted: SerializedStyles
+}
+
+const fromLeft: TransitionStates = {
   entering: css({ transform: 'translateX(0%)' }),
   entered: css({ transform: 'translateX(0%)' }),
   exiting: css({ transform: 'translateX(-100%)' }),
@@ -25,7 +33,7 @@ const fromLeft = {
   unmounted: css({ transform: 'translateX(0%)' })
 }
 
-const fromRight = {
+const fromRight: TransitionStates = {
   entering: css({ transform: 'translateX(0%)' }),
   entered: css({ transform: 'translateX(0%)' }),
   exiting: css({ transform: 'translateX(100%)' }),
@@ -39,7 +47,7 @@ export const transitionPositions = {
 }
 
 // mobile only!
-export const drawer = css({
+export const drawer: SerializedStyles = css({
   backgroundColor: colors.white,
   boxShadow: '0 0 10px 3px rgba(0, 0, 0, 0.1)',
   height: '100%',
@@ -51,12 +59,12 @@ export const drawer = css({
   width: '100%'
 })
 
-export const closeRow = css({
+export const closeRow: SerializedStyles = css({
   display: 'flex',
   justifyContent: 'flex-end'
 })
 
-export const closeBtn = css({
+export const closeBtn: SerializedStyles = css({
   backgroundColor: colors.white,
   border: 0,
   cursor: 'pointer',
@@ -67,6 +75,6 @@ export const closeBtn = css({
 const iconHeight = pxToRem(20)
 const iconPaddingHeight = pxToRem(2 * spacers.teal)
 
-export const drawerBody = css({
+export const drawerBody: SerializedStyles = css({
   height: `calc(100% - ${iconHeight} - ${iconPaddingHeight})`
 })

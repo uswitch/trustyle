@@ -1,7 +1,7 @@
-import { css } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/core'
 import { colors, pxToRem, spacers, typography } from '@uswitch/trustyle.styles'
 
-export const root = css([
+export const root: SerializedStyles = css([
   typography.small,
   {
     alignItems: 'center',
@@ -15,7 +15,7 @@ export const root = css([
 
 const editIconWidth = pxToRem(spacers.teal * 2 + 21)
 
-export const value = css({
+export const value: SerializedStyles = css({
   color: colors.black,
   overflow: 'hidden',
   padding: pxToRem(0, spacers.teal),
@@ -23,7 +23,7 @@ export const value = css({
   width: `calc(100% - ${editIconWidth})`
 })
 
-export const edit = css({
+export const edit: SerializedStyles = css({
   background: 'none',
   border: 'none',
   borderLeft: `1px solid ${colors.slateGrey}`,
@@ -37,6 +37,6 @@ export const edit = css({
   '&::-moz-focus-inner': { border: 0 }
 })
 
-export const hidden = css({
+export const hidden: SerializedStyles = css({
   display: 'none'
 })
