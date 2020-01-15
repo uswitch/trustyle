@@ -4,7 +4,6 @@ import { css, jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
 import { boolean, number, text } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
-import { colors } from '@uswitch/trustyle.styles'
 
 import theme from '../../../utils/theme-selector'
 import { Icon } from '../../icon/src'
@@ -26,7 +25,7 @@ storiesOf('Elements|Button', module).add('primary variant', () => (
             {text(`${key} label`, `${key} button`)}
             {key.match('icon') && (
               <Icon
-                color={colors.cobaltBlue}
+                color={theme().colors.primary}
                 direction="right"
                 glyph="caret"
                 size={20}
