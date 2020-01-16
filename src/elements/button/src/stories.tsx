@@ -8,7 +8,7 @@ import { action } from '@storybook/addon-actions'
 import theme from '../../../utils/theme-selector'
 import { Icon } from '../../icon/src'
 
-import { Button } from './'
+import { Button, Variant } from './'
 
 const Spacer = () => <div css={css({ minHeight: 20 })} />
 
@@ -18,7 +18,7 @@ storiesOf('Elements|Button', module).add('primary variant', () => (
       Object.keys(theme().buttons).map((key, index) => (
         <React.Fragment key={index}>
           <Button
-            variant={key}
+            variant={key as Variant}
             disabled={boolean('Disabled', false)}
             onClick={action(`${key}-click`)}
           >
@@ -31,6 +31,37 @@ storiesOf('Elements|Button', module).add('primary variant', () => (
                 size={20}
               />
             )}
+          </Button>
+          <Spacer />
+          <Button
+            variant={key as Variant}
+            disabled={boolean('Disabled', false)}
+            onClick={action(`${key}-click`)}
+            iconPosition="right"
+          >
+            {text(`${key} label`, `${key} button`)}
+
+            <Icon
+              color={theme().colors.primary}
+              direction="right"
+              glyph="caret"
+              size={20}
+            />
+          </Button>
+          <Spacer />
+          <Button
+            variant={key as Variant}
+            disabled={boolean('Disabled', false)}
+            onClick={action(`${key}-click`)}
+            iconPosition="left"
+          >
+            <Icon
+              color={theme().colors.primary}
+              direction="right"
+              glyph="caret"
+              size={20}
+            />
+            {text(`${key} label`, `${key} button`)}
           </Button>
           <Spacer />
         </React.Fragment>
