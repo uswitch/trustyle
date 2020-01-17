@@ -12,12 +12,14 @@
     "access": "public"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.22",
     "@uswitch/trustyle.icon": "^0.2.38",
-    "@uswitch/trustyle.styles": "^0.4.15",
-    "react": "^16.7.0"
+    "@uswitch/trustyle.styles": "^0.4.15"
   },
   "devDependencies": {
     "typescript": "^3.6.2"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.22",
+    "react": "^16.7.0"
   }
 }
