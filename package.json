@@ -10,7 +10,6 @@
     "start": "start-storybook -p 6006",
     "--------------- BUILDING": "----------------------",
     "build-storybook": "build-storybook",
-    "version": "lerna exec \"npm install --ignore-scripts --package-lock-only\" && git add .",
     "--------------- LINTING": "-----------------------",
     "lint:fix": "npm run typescript:check && npm run prettier:fix && npm run eslint:fix",
     "lint:check": "npm run typescript:check && npm run prettier:check && npm run eslint:check",
