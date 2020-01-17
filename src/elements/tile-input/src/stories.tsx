@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { ChangeEvent, useState } from 'react'
 import { jsx } from '@emotion/core'
-import { storiesOf } from '@storybook/react'
 import { Column, Container, Row } from '@uswitch/trustyle.grid'
 
 import { Fieldset } from '../../fieldset/src'
@@ -49,10 +48,9 @@ const Form = ({ type }: { type: 'radio' | 'checkbox' }) => {
   )
 }
 
-storiesOf('Elements|TileInput', module)
-  .add('Radio', () => {
-    return <Form type="radio" />
-  })
-  .add('Checkbox', () => {
-    return <Form type="checkbox" />
-  })
+export default {
+  title: 'Elements|TileInput'
+}
+
+export const Radio = () => <Form type="radio" />
+export const Checkbox = () => <Form type="checkbox" />

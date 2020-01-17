@@ -7,6 +7,9 @@ module.exports = api => {
     env: {
       test: {
         plugins: ['@babel/plugin-transform-modules-commonjs', 'require-context-hook']
+      },
+      development: {
+        plugins: ['@babel/plugin-transform-modules-commonjs']
       }
     },
     presets
