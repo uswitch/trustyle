@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Elements|Radio Input example 1`] = `
+<div
+  className="css-m9xbk1"
+>
+  <div
+    className="css-fknz1v"
+  >
+    <label
+      className="css-1hmki3o-RadioInput"
+    >
+      <input
+        className="css-odsoy9-RadioInput"
+        name="radio-name"
+        type="radio"
+      />
+      <span
+        className="css-1qe8mmn-RadioInput"
+      >
+        Radio input field
+      </span>
+    </label>
+  </div>
+  <div
+    className="css-fknz1v"
+  >
+    <label
+      className="css-1hmki3o-RadioInput"
+    >
+      <input
+        className="css-odsoy9-RadioInput"
+        name="radio-name"
+        type="radio"
+      />
+      <span
+        className="css-1qe8mmn-RadioInput"
+      >
+        Radio input field with a bit of extra text making it span across two lines
+      </span>
+    </label>
+  </div>
+</div>
+`;

@@ -21,6 +21,9 @@
     "typescript:watch": "tsc --noEmit --watch"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
     "@emotion/core": "^10.0.10",
     "@mdx-js/react": "^1.5.3",
     "@storybook/addon-a11y": "^5.1.9",
@@ -29,6 +32,7 @@
     "@storybook/addon-knobs": "^5.1.9",
     "@storybook/addon-links": "^5.1.9",
     "@storybook/addon-options": "^5.1.9",
+    "@storybook/addon-storyshots": "^5.3.4",
     "@storybook/addon-viewport": "^5.1.9",
     "@storybook/addons": "^5.1.9",
     "@storybook/react": "^5.1.9",
@@ -44,7 +48,9 @@
     "@types/theme-ui": "^0.2.6",
     "@typescript-eslint/eslint-plugin": "^1.10.2",
     "@typescript-eslint/parser": "^1.10.2",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "babel-plugin-require-context-hook": "^1.0.0",
     "csstype": "^2.6.5",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
@@ -58,10 +64,12 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-standard": "^4.0.0",
+    "jest": "^24.9.0",
     "lerna": "^3.16.4",
     "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-imgix": "^8.6.1",
+    "react-test-renderer": "^16.8.6",
     "theme-ui": "^0.2.52",
     "typescript": "^3.5.3"
   }
