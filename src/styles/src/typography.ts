@@ -79,7 +79,10 @@ export const linkText: SerializedStyles = css({
   color: cerulean,
   fontSize: pxToRem(16),
   fontWeight: 600,
-  textDecoration: 'underline'
+  textDecoration: 'underline',
+  '&:visited': {
+    color: cerulean
+  }
 })
 
 export const alertText: SerializedStyles = css({
