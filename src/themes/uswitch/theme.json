@@ -296,6 +296,9 @@
         "backgroundColor": "primary",
         "opacity": "0.6",
         "cursor": "not-allowed"
+      },
+      ":visited": {
+        "color": "light-1"
       }
     },
 
@@ -309,6 +312,9 @@
         "backgroundColor": "light-blue",
         "opacity": "0.6",
         "cursor": "not-allowed"
+      },
+      ":visited": {
+        "color": "link-2"
       }
     },
 
@@ -327,6 +333,9 @@
         "opacity": "0.6",
         "cursor": "not-allowed",
         "boxShadow": "none"
+      },
+      ":visited": {
+        "color": "black"
       }
     }
   },
