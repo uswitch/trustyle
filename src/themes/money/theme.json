@@ -383,6 +383,10 @@
     }
   },
 
+  "categoryTitle": {
+    "background": "linear-gradient(90deg, #924A8B 0.42%, #DB4D75 116.16%)"
+  },
+
   "styles": {
 
     "h1": {

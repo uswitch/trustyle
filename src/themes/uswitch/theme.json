@@ -106,6 +106,8 @@
   "useCustomProperties": false,
 
   "colors": {
+    "periwinkle": "#C1D3FF",
+
     "primary": "#d64226",
     "primary-hover": "#ab351e",
     "secondary": "#1c1f4e",
@@ -383,6 +385,10 @@
       "opacity": 0.5,
       "fontSize": "xxs"
     }
+  },
+
+  "categoryTitle": {
+    "backgroundColor": "periwinkle"
   },
 
   "styles": {
