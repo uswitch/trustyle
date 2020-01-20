@@ -22,4 +22,5 @@ npx lerna exec "npm install --ignore-scripts --package-lock-only"
 git commit --all --amend -m "(With package-lock.json changes) ${message}"
 echo "$tags" | xargs -L 1 git tag -d
 echo "$tags" | xargs -L 1 git tag
-git push --follow-tags
+git push origin $publish_branch
+git push origin $publish_branch --tags
