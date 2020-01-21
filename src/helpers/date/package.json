@@ -1,0 +1,17 @@
+{
+  "name": "@uswitch/trustyle.date",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "--------------- BUILDING": "----------------------",
+    "clean": "rm -rf lib",
+    "build": "npm run clean && tsc"
+  },
+  "dependencies": {
+    "dayjs": "^1.8.19"
+  }
+}
