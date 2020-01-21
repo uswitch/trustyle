@@ -14,8 +14,16 @@ const CategoryTitle: React.FC<ListProps> = ({ level = 2, children }) => {
   const Heading = Styled[headingElement]
 
   return (
-    <div sx={{ paddingX: 'md', paddingY: 'sm', ...theme.categoryTitle }}>
-      <Heading sx={{ color: 'light-1' }}>{children}</Heading>
+    <div
+      sx={{
+        paddingX: ['sm', 'md'],
+        paddingY: ['md', 'lg'],
+        ...theme.categoryTitle
+      }}
+    >
+      <Heading sx={{ color: 'light-1', padding: 0, margin: 0 }}>
+        {children}
+      </Heading>
     </div>
   )
 }
