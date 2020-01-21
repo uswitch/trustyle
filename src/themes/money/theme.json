@@ -384,7 +384,12 @@
   },
 
   "categoryTitle": {
-    "background": "linear-gradient(90deg, #924A8B 0.42%, #DB4D75 116.16%)"
+    "main": {
+      "background": "linear-gradient(90deg, #924A8B 0.42%, #DB4D75 116.16%)"
+    },
+    "heading": {
+      "color": "light-1"
+    }
   },
 
   "styles": {

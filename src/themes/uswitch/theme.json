@@ -388,7 +388,12 @@
   },
 
   "categoryTitle": {
-    "backgroundColor": "periwinkle"
+    "main": {
+      "backgroundColor": "periwinkle"
+    },
+    "heading": {
+      "color": "dark-1"
+    }
   },
 
   "styles": {

@@ -18,10 +18,16 @@ const CategoryTitle: React.FC<ListProps> = ({ level = 2, children }) => {
       sx={{
         paddingX: ['sm', 'md'],
         paddingY: ['md', 'lg'],
-        ...theme.categoryTitle
+        ...(theme.categoryTitle && theme.categoryTitle.main)
       }}
     >
-      <Heading sx={{ color: 'light-1', padding: 0, margin: 0 }}>
+      <Heading
+        sx={{
+          padding: 0,
+          margin: 0,
+          ...(theme.categoryTitle && theme.categoryTitle.heading)
+        }}
+      >
         {children}
       </Heading>
     </div>
