@@ -18,6 +18,7 @@ export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   hasError?: boolean
   mask?: string
   name: string
+  postprocess?: (x: string) => string
   prefix?: string
   suffix?: string
   type: InputType
@@ -60,9 +61,14 @@ const useScrollIntoView = (
 }
 
 export const Input: React.FC<Props> = ({
+  defaultValue,
   freezable,
   hasError = false,
   mask,
+  onBlur,
+  onChange,
+  onFocus,
+  postprocess = x => x,
   prefix,
   suffix,
   type,
@@ -73,46 +79,57 @@ export const Input: React.FC<Props> = ({
     null
   )
   const [hasFocus, setHasFocus] = useState(false)
-  const onBlur = (event: React.FocusEvent<HTMLInputElement>) => {
-    setHasFocus(false)
-
-    if (inputProps.onBlur) {
-      inputProps.onBlur(event)
-    }
-  }
-  const onFocus = (event: React.FocusEvent<HTMLInputElement>) => {
-    setHasFocus(true)
-
-    if (inputProps.onFocus) {
-      inputProps.onFocus(event)
-    }
-  }
-
   useScrollIntoView(inputRef, hasFocus)
+  const [interiorValue, setInteriorValue] = useState(
+    inputProps.value || defaultValue || ''
+  )
+
+  const blurHandler = (event: React.FocusEvent<HTMLInputElement>) => {
+    setHasFocus(false)
+    if (onBlur) onBlur(event)
+  }
+
+  const focusHandler = (event: React.FocusEvent<HTMLInputElement>) => {
+    setHasFocus(true)
+    if (onFocus) onFocus(event)
+  }
+
+  const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.currentTarget
+    const postprocessed = postprocess(value)
+    setInteriorValue(value)
+    if (onChange)
+      onChange({
+        ...event,
+        currentTarget: { ...event.currentTarget, value: postprocessed }
+      })
+  }
+
+  const value =
+    inputProps.value !== undefined &&
+    postprocess(interiorValue) !== inputProps.value
+      ? inputProps.value
+      : interiorValue
 
   const childProps = {
     ...inputProps,
     css: inputs.keyboardInput,
-    onBlur,
-    onFocus,
-    type
+    onBlur: blurHandler,
+    onChange: changeHandler,
+    onFocus: focusHandler,
+    type,
+    value
   }
 
   return (
-    <FrozenInput
-      text={inputProps.value || inputProps.defaultValue || ''}
-      freezable={freezable}
-      inputRef={inputRef}
-    >
+    <FrozenInput text={interiorValue} freezable={freezable} inputRef={inputRef}>
       <div css={[inputs.keyboardInputContainer(hasError, hasFocus), st[width]]}>
         {prefix && <span css={st.prefix(hasError, hasFocus)}>{prefix}</span>}
 
         {mask ? (
           <InputMask
-            inputRef={ref => {
-              // react-input-mask only supports a callback-style ref
-              inputRef.current = ref
-            }}
+            // react-input-mask only supports a callback-style ref
+            inputRef={ref => (inputRef.current = ref)}
             mask={mask}
             {...childProps}
           />
