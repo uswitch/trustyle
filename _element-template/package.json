@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.template",
-  "version": "0.0.15",
+  "version": "0.0.0",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -11,7 +11,7 @@
     "clean": "rm -rf lib",
     "build": "npm run clean && tsc"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@emotion/core": "^10.0.10",
     "react": "^16.7.0"
   }
