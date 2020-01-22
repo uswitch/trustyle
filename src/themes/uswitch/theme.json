@@ -29,13 +29,14 @@
 
   "fontSizes": {
     "base": 16,
-    "xxs": 16,
-    "xs": 16,
+    "xxs": 12,
+    "xs": 14,
     "sm": 16,
     "md": 18,
-    "lg": 24,
-    "xl": 30,
-    "xxl": 36
+    "lg": 20,
+    "xl": 24,
+    "xxl": 30,
+    "xxxl": 36
   },
 
   "fontWeights": {
@@ -364,6 +365,23 @@
     "button": {
       "variant": "primary",
       "width": "auto"
+    }
+  },
+
+  "pagination": {
+    "arrow": {
+      "color": "#84A6FF"
+    },
+    "arrowDisabled": {
+      "opacity": 0.5
+    },
+    "currentPage": {
+      "color": "dark-1",
+      "fontSize": "sm"
+    },
+    "nonCurrentPage": {
+      "opacity": 0.5,
+      "fontSize": "xxs"
     }
   },
 
