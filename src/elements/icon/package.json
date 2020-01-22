@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.icon",
-  "version": "0.2.37",
+  "version": "0.2.38",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.22",
-    "@uswitch/trustyle.styles": "^0.4.14",
+    "@uswitch/trustyle.styles": "^0.4.15",
     "react": "^16.7.0"
   },
   "devDependencies": {
