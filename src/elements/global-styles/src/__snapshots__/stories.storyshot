@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Global Styles|Colours Swatches 1`] = `
+exports[`Storyshots Global Styles|Colours SwatchesAndSnapshot 1`] = `
 <div
   className="css-m9xbk1"
 >
@@ -62,6 +62,30 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
         className="css-w8xdwj"
       />
       jaffa
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
+        className="css-10cj7lp"
+      />
+      light-1
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
+        className="css-pz5kyb"
+      />
+      light-2
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
+        className="css-1fyxyn9"
+      />
+      light-3
     </div>
     <div
       className="css-wxtmah"
@@ -163,30 +187,6 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       className="css-wxtmah"
     >
       <div
-        className="css-10cj7lp"
-      />
-      light-1
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-14ucscp"
-      />
-      light-2
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-zitzxr"
-      />
-      light-3
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
         className="css-12gzcs5"
       />
       hero
@@ -195,7 +195,7 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
 </div>
 `;
 
-exports[`Storyshots Global Styles|Typography Types 1`] = `
+exports[`Storyshots Global Styles|Typography TypesAndSnapshot 1`] = `
 <div
   className="css-m9xbk1"
 >
@@ -227,5 +227,10 @@ exports[`Storyshots Global Styles|Typography Types 1`] = `
   <a>
     Anchor
   </a>
+  <blockquote>
+    <p>
+      blockquote
+    </p>
+  </blockquote>
 </div>
 `;

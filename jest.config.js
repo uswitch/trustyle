@@ -1,5 +1,6 @@
 module.exports = {
   transform: {
+    '^.+\\.?stories\\.[jt]sx?$': '@storybook/addon-storyshots/injectFileName',
     '^.+\\.[t|j]sx?$': 'babel-jest'
   },
   moduleNameMapper: {

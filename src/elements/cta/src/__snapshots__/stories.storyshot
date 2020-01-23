@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Elements|CTA Example And Snapshot 1`] = `
+<div
+  className="css-m9xbk1"
+>
+  <div
+    className="css-1tym0rk-ExampleAndSnapshot"
+  >
+    <div
+      className="css-p34cs2"
+    >
+      <h3
+        className="css-1e66v9c"
+      >
+        Find the best credit card for your needs
+      </h3>
+      <p
+        className="css-0"
+      >
+        Find the best credit card for you, whether you're looking for a 0% card for balance transfers or purchases or day to day spending and rewards.
+      </p>
+      <a
+        className="css-u32c6s"
+        href="https://google.com"
+      >
+        Compare credit cards
+      </a>
+    </div>
+  </div>
+</div>
+`;

@@ -1,110 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Elements|Button primary variant 1`] = `
+exports[`Storyshots Elements|Button Primary Disabled Variant Snapshot 1`] = `
 <div
   className="css-m9xbk1"
 >
-  <div
-    className="css-nk32ej"
+  <button
+    className="css-7zijx9"
+    disabled={true}
+    type="submit"
   >
-    <button
-      className="css-7zijx9"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      primary button
-    </button>
-    <div
-      className="css-1jlq266-Spacer"
-    />
-    <button
-      className="css-qdz5zt"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      primary button
-      <svg
-        className="css-u2qp86-Caret"
-        viewBox="0 0 120 120"
-      >
-        <path
-          d="M 5.067303,79.355139 55.218287,26.773283 c 2.186148,-2.194309 3.091615,-2.969251 4.60071,-2.969251 1.509096,-0.0081 2.316669,0.774942 4.600711,3.018196 l 50.828042,53.348639 c 6.84396,7.227354 -3.27925,17.831823 -10.17214,10.661571 L 59.810835,43.21837 15.247593,89.98408 C 7.857094,97.733499 -2.2660959,87.120873 5.067303,79.338823 Z"
-        />
-      </svg>
-    </button>
-    <div
-      className="css-1jlq266-Spacer"
-    />
-    <button
-      className="css-gbql58"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <svg
-        className="css-u2qp86-Caret"
-        viewBox="0 0 120 120"
-      >
-        <path
-          d="M 5.067303,79.355139 55.218287,26.773283 c 2.186148,-2.194309 3.091615,-2.969251 4.60071,-2.969251 1.509096,-0.0081 2.316669,0.774942 4.600711,3.018196 l 50.828042,53.348639 c 6.84396,7.227354 -3.27925,17.831823 -10.17214,10.661571 L 59.810835,43.21837 15.247593,89.98408 C 7.857094,97.733499 -2.2660959,87.120873 5.067303,79.338823 Z"
-        />
-      </svg>
-      primary button
-    </button>
-    <div
-      className="css-1jlq266-Spacer"
-    />
-    <button
-      className="css-1cu7wal"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      secondary button
-    </button>
-    <div
-      className="css-1jlq266-Spacer"
-    />
-    <button
-      className="css-1hvrvvk"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      secondary button
-      <svg
-        className="css-u2qp86-Caret"
-        viewBox="0 0 120 120"
-      >
-        <path
-          d="M 5.067303,79.355139 55.218287,26.773283 c 2.186148,-2.194309 3.091615,-2.969251 4.60071,-2.969251 1.509096,-0.0081 2.316669,0.774942 4.600711,3.018196 l 50.828042,53.348639 c 6.84396,7.227354 -3.27925,17.831823 -10.17214,10.661571 L 59.810835,43.21837 15.247593,89.98408 C 7.857094,97.733499 -2.2660959,87.120873 5.067303,79.338823 Z"
-        />
-      </svg>
-    </button>
-    <div
-      className="css-1jlq266-Spacer"
-    />
-    <button
-      className="css-n9wii6"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <svg
-        className="css-u2qp86-Caret"
-        viewBox="0 0 120 120"
-      >
-        <path
-          d="M 5.067303,79.355139 55.218287,26.773283 c 2.186148,-2.194309 3.091615,-2.969251 4.60071,-2.969251 1.509096,-0.0081 2.316669,0.774942 4.600711,3.018196 l 50.828042,53.348639 c 6.84396,7.227354 -3.27925,17.831823 -10.17214,10.661571 L 59.810835,43.21837 15.247593,89.98408 C 7.857094,97.733499 -2.2660959,87.120873 5.067303,79.338823 Z"
-        />
-      </svg>
-      secondary button
-    </button>
-    <div
-      className="css-1jlq266-Spacer"
-    />
-  </div>
+    Primary button
+  </button>
+</div>
+`;
+
+exports[`Storyshots Elements|Button Primary Variant Snapshot 1`] = `
+<div
+  className="css-m9xbk1"
+>
+  <button
+    className="css-7zijx9"
+    disabled={false}
+    type="submit"
+  >
+    Primary button
+  </button>
+</div>
+`;
+
+exports[`Storyshots Elements|Button Secondary Disabled Variant Snapshot 1`] = `
+<div
+  className="css-m9xbk1"
+>
+  <button
+    className="css-1cu7wal"
+    disabled={true}
+    type="submit"
+  >
+    Primary button
+  </button>
+</div>
+`;
+
+exports[`Storyshots Elements|Button Secondary Variant Snapshot 1`] = `
+<div
+  className="css-m9xbk1"
+>
+  <button
+    className="css-1cu7wal"
+    disabled={false}
+    type="submit"
+  >
+    Primary button
+  </button>
 </div>
 `;
