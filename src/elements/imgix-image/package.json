@@ -12,11 +12,13 @@
     "build": "npm run clean && tsc"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.22",
-    "react": "^16.7.0",
     "react-imgix": "^8.6.1"
   },
   "devDependencies": {
     "typescript": "^3.6.2"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.22",
+    "react": "^16.7.0"
   }
 }

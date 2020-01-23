@@ -5,6 +5,7 @@ pipeline:
     image: node:11.15.0
     commands:
       - npm install
+      - npx lerna exec npm install
       - npx lerna bootstrap
       - npm run eslint:check
 
@@ -14,6 +15,7 @@ pipeline:
     image: node:11.15.0
     commands:
       - npm install
+      - npx lerna exec npm install
       - npx lerna bootstrap
       - npm run prettier:check
 
@@ -23,5 +25,6 @@ pipeline:
     image: node:11.15.0
     commands:
       - npm install
+      - npx lerna exec npm install
       - npx lerna bootstrap
       - npx lerna run build
