@@ -120,7 +120,7 @@
     "dark-1": "#000000",
     "dark-2": "#3d3d3d",
     "light-1": "#fffffe",
-    "light-2": "#f9f9f9",
+    "light-2": "#ECECEE",
     "light-3": "#e6e6e6",
     "hero": "#99e2ff",
     "light-blue": "#caefff",
@@ -337,6 +337,18 @@
       ":visited": {
         "color": "black"
       }
+    }
+  },
+
+  "callOut": {
+    "main": {
+      "backgroundColor": "light-2"
+    },
+    "heading": {
+      "marginTop": "-5px"
+    },
+    "icon": {
+      "backgroundColor": "dark-1"
     }
   },
 
