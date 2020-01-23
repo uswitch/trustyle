@@ -1,21 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Elements|Progress Bar Example 1`] = `
-<div
-  className="css-m9xbk1"
->
-  <div
-    className="css-nk32ej"
-  >
-    <progress
-      className="css-1bb68qz-ProgressBar"
-      max={11}
-      value={8}
-    />
-  </div>
-</div>
-`;
-
 exports[`Storyshots Elements|Progress Bar ExampleAndSnapshot 1`] = `
 <div
   className="css-m9xbk1"

@@ -1,17 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Elements|Loading Spinner Example 1`] = `
-<div
-  className="css-m9xbk1"
->
-  <div
-    className="css-1a4893g-LoadingSpinner"
-  >
-    loading...
-  </div>
-</div>
-`;
-
 exports[`Storyshots Elements|Loading Spinner ExampleAndSnapshot 1`] = `
 <div
   className="css-m9xbk1"

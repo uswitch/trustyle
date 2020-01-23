@@ -1,98 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Layout|Grid Example 1 - basics 1`] = `
-<div
-  className="css-m9xbk1"
->
-  <div
-    className="css-1a324er-Container"
-  >
-    <div
-      className="css-do3p8q-Row"
-    >
-      <div
-        className="css-19ky1et-Column"
-      >
-        <p>
-          Here is an example of a grid which will turn into 100% width columns on mobile.
-        </p>
-      </div>
-    </div>
-    <div
-      className="css-do3p8q-Row"
-    >
-      <div
-        className="css-130q022-Column"
-        hide-s={true}
-        l={0.16666666666666666}
-        m={0.25}
-      >
-        .us-col-md-2
-      </div>
-      <div
-        className="css-16bemub-Column"
-        l={0.16666666666666666}
-        m={0.25}
-      >
-        .us-col-md-2
-      </div>
-      <div
-        className="css-1chhvxv-Column"
-        l={0.3333333333333333}
-        m={0.25}
-      >
-        .us-col-md-4
-      </div>
-      <div
-        className="css-1chhvxv-Column"
-        l={0.3333333333333333}
-        m={0.25}
-      >
-        .us-col-md-4
-      </div>
-    </div>
-    <div
-      className="css-do3p8q-Row"
-    >
-      <div
-        className="css-xnjhud-Column"
-        l={0.6666666666666666}
-        m={0.5}
-      >
-        .us-col-md-2
-      </div>
-      <div
-        className="css-6szu5h-Column"
-        l={0.3333333333333333}
-        m={0.5}
-      >
-        .us-col-md-4
-      </div>
-    </div>
-    <div
-      className="css-do3p8q-Row"
-    >
-      <div
-        className="css-18racwc-Column"
-        l={0.5}
-        m={0.5}
-        s={0.5}
-      >
-        .us-col-md-2
-      </div>
-      <div
-        className="css-18racwc-Column"
-        l={0.5}
-        m={0.5}
-        s={0.5}
-      >
-        .us-col-md-4
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Layout|Grid Example 1 - basics with snapshot 1`] = `
 <div
   className="css-m9xbk1"
@@ -186,30 +93,6 @@ exports[`Storyshots Layout|Grid Example 1 - basics with snapshot 1`] = `
 </div>
 `;
 
-exports[`Storyshots Layout|Grid Example 2 - center 1`] = `
-<div
-  className="css-m9xbk1"
->
-  <div
-    className="css-16irgbw-Container"
-  >
-    <div
-      className="css-18w6h30-Row"
-    >
-      <div
-        className="css-aqq89b-Column"
-        l={0.5}
-        m={0.5}
-      >
-        <p>
-          Here is an example of a grid which will turn into 100% width columns on mobile.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Layout|Grid Example 2 - center with snapshot 1`] = `
 <div
   className="css-m9xbk1"
@@ -228,66 +111,6 @@ exports[`Storyshots Layout|Grid Example 2 - center with snapshot 1`] = `
         <p>
           Here is an example of a grid which will turn into 100% width columns on mobile.
         </p>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Layout|Grid Example 3 - nested grids 1`] = `
-<div
-  className="css-m9xbk1"
->
-  <div
-    className="css-16irgbw-Container"
-  >
-    <div
-      className="css-whczoy-Row"
-    >
-      <div
-        className="css-19ky1et-Column"
-      >
-        <div
-          className="css-pet7hm-Row"
-        >
-          <div
-            className="css-1wg6k75-Column"
-            l={0.6666666666666666}
-            m={0.75}
-          >
-            <h2>
-              A little header
-            </h2>
-          </div>
-        </div>
-        <div
-          className="css-pet7hm-Row"
-        >
-          <div
-            className="css-1m79w5l-Column"
-            l={0.5}
-            m={0.5}
-            s={0.5}
-          >
-            <div
-              className="css-bimd0u"
-            >
-              Something
-            </div>
-          </div>
-          <div
-            className="css-1m79w5l-Column"
-            l={0.5}
-            m={0.5}
-            s={0.5}
-          >
-            <div
-              className="css-bimd0u"
-            >
-              Something else
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
