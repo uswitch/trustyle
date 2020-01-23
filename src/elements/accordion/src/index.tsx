@@ -5,16 +5,18 @@ import { jsx, useThemeUI } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  title: string
+  title: string,
+  isInitiallyOpen: boolean
 }
 
 const Accordion: React.FC<Props> = ({
   title,
+  isInitiallyOpen,
   children
 }) => {
   const { theme }: any = useThemeUI()
   const { colors = {} }  = theme
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(!!isInitiallyOpen)
 
   return <div sx={{ marginBottom: 'xxs' }}>
     <button 
