@@ -19,7 +19,7 @@ const exampleRowStyle = css({
   fontFamily: typography.defaultFontFamily
 })
 
-storiesOf('Layout|Grid', module).add('Example 1 - basics', () => (
+storiesOf('Layout|Grid', module).add('Example 1 - basics with snapshot', () => (
   <Container
     outerMargin={['0 8px', '0 auto']}
     css={{ backgroundColor: colors.offWhite }}
@@ -65,7 +65,7 @@ storiesOf('Layout|Grid', module).add('Example 1 - basics', () => (
   </Container>
 ))
 
-storiesOf('Layout|Grid', module).add('Example 2 - center', () => (
+storiesOf('Layout|Grid', module).add('Example 2 - center with snapshot', () => (
   <Container css={{ backgroundColor: colors.offWhite }}>
     <Row css={exampleRowStyle} centerX>
       <Column m={1 / 2} l={1 / 2}>
@@ -78,7 +78,7 @@ storiesOf('Layout|Grid', module).add('Example 2 - center', () => (
   </Container>
 ))
 
-storiesOf('Layout|Grid', module).add('Example 3 - nested grids', () => (
+storiesOf('Layout|Grid', module).add('Example 3 - nested grids with snapshot', () => (
   <Container css={{ backgroundColor: colors.offWhite }}>
     <Row css={exampleRowStyle}>
       <Column>

@@ -22,7 +22,7 @@ const glyphChoices: Glyph[] = [
 const directionChoices: Direction[] = ['up', 'down', 'right', 'left']
 
 storiesOf('Elements|Icon', module).add(
-  'With selectable glyph and color',
+  'With selectable glyph and color and Snapshot',
   () => (
     <Icon
       glyph={select('glyph', glyphChoices, 'arrow')}

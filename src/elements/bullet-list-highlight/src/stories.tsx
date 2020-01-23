@@ -6,7 +6,7 @@ export default {
   title: 'Elements|Bullet List Highlight'
 }
 
-export const Example = () => (
+export const ExampleAndSnapshot = () => (
   <BulletListHighlight
     highlights={[
       <span key="example">

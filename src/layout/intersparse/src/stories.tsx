@@ -14,7 +14,7 @@ const exampleRow = css({
   borderRadius: '1px'
 })
 
-storiesOf('Layout|Arrangement', module).add('Stacking elements', () => (
+storiesOf('Layout|Arrangement', module).add('Stacking elements with snapshot', () => (
   <Stack spacing={[8, 16]}>
     <div css={exampleRow}>full width row 1</div>
     <div css={exampleRow}>full width row 2</div>
@@ -25,7 +25,7 @@ storiesOf('Layout|Arrangement', module).add('Stacking elements', () => (
   </Stack>
 ))
 
-storiesOf('Layout|Arrangement', module).add('Stacking inlines', () => (
+storiesOf('Layout|Arrangement', module).add('Stacking inlines with snapshot', () => (
   <Stack spacing={[8, 16]}>
     <span css={exampleRow}>full width row 1</span>
     <span css={exampleRow}>full width row 2</span>
@@ -36,7 +36,7 @@ storiesOf('Layout|Arrangement', module).add('Stacking inlines', () => (
   </Stack>
 ))
 
-storiesOf('Layout|Arrangement', module).add('Inlining elements', () => (
+storiesOf('Layout|Arrangement', module).add('Inlining elements with snapshot', () => (
   <Inline spacing={[8, 16]}>
     <div css={exampleRow}>full width row 1</div>
     <div css={exampleRow}>full width row 2</div>

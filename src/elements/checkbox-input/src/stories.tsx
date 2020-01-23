@@ -46,6 +46,6 @@ const Form = () => {
   )
 }
 
-storiesOf('Elements|CheckboxInput', module).add('Example', () => {
+storiesOf('Elements|CheckboxInput', module).add('ExampleAndSnapshot', () => {
   return <Form />
 })

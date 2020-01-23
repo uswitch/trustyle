@@ -1,6 +1,6 @@
 import initStoryshots, { multiSnapshotWithOptions } from '@storybook/addon-storyshots';
 
 initStoryshots({
-  storyNameRegex: /Snapshot/,
+  storyNameRegex: /Snapshot/i,
   test: multiSnapshotWithOptions()
 });
