@@ -11,9 +11,11 @@ interface Waypoint {
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   waypoints:  Waypoint[];
+  activeId: string
 }
 
 const SideNav: React.FC<Props> = ({
+  activeId,
   waypoints = [
     {
       title: 'Put money aside for a deposit',
@@ -30,7 +32,7 @@ const SideNav: React.FC<Props> = ({
   ]
 }) => {
   const { theme }: any = useThemeUI()
-
+  const activeIndex: number = waypoints.findIndex(({ anchor }) => anchor === activeId) || 0
   return <section>
     <Accordion 
       title='In this guide'
@@ -59,7 +61,7 @@ const SideNav: React.FC<Props> = ({
                 left: 6,
                 borderRadius: 16,
                 backgroundColor: 'white',
-                border: '2px solid grey'
+                border: activeIndex === index ? '2px solid red' : '2px solid grey'
               },
               '::before': {
                 content: '""',
