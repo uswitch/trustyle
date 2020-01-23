@@ -78,24 +78,27 @@ storiesOf('Layout|Grid', module).add('Example 2 - center with snapshot', () => (
   </Container>
 ))
 
-storiesOf('Layout|Grid', module).add('Example 3 - nested grids with snapshot', () => (
-  <Container css={{ backgroundColor: colors.offWhite }}>
-    <Row css={exampleRowStyle}>
-      <Column>
-        <Row>
-          <Column m={6 / 8} l={8 / 12}>
-            <h2>A little header</h2>
-          </Column>
-        </Row>
-        <Row>
-          <Column s={1 / 2} m={1 / 2} l={1 / 2}>
-            <div css={exampleColumnStyle}>Something</div>
-          </Column>
-          <Column s={1 / 2} m={1 / 2} l={1 / 2}>
-            <div css={exampleColumnStyle}>Something else</div>
-          </Column>
-        </Row>
-      </Column>
-    </Row>
-  </Container>
-))
+storiesOf('Layout|Grid', module).add(
+  'Example 3 - nested grids with snapshot',
+  () => (
+    <Container css={{ backgroundColor: colors.offWhite }}>
+      <Row css={exampleRowStyle}>
+        <Column>
+          <Row>
+            <Column m={6 / 8} l={8 / 12}>
+              <h2>A little header</h2>
+            </Column>
+          </Row>
+          <Row>
+            <Column s={1 / 2} m={1 / 2} l={1 / 2}>
+              <div css={exampleColumnStyle}>Something</div>
+            </Column>
+            <Column s={1 / 2} m={1 / 2} l={1 / 2}>
+              <div css={exampleColumnStyle}>Something else</div>
+            </Column>
+          </Row>
+        </Column>
+      </Row>
+    </Container>
+  )
+)

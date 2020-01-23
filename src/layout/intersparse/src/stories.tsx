@@ -14,35 +14,44 @@ const exampleRow = css({
   borderRadius: '1px'
 })
 
-storiesOf('Layout|Arrangement', module).add('Stacking elements with snapshot', () => (
-  <Stack spacing={[8, 16]}>
-    <div css={exampleRow}>full width row 1</div>
-    <div css={exampleRow}>full width row 2</div>
-    <div css={exampleRow}>full width row 3</div>
-    <div css={exampleRow}>full width row 4</div>
-    <div css={exampleRow}>full width row 5</div>
-    <div css={exampleRow}>full width row 6</div>
-  </Stack>
-))
+storiesOf('Layout|Arrangement', module).add(
+  'Stacking elements with snapshot',
+  () => (
+    <Stack spacing={[8, 16]}>
+      <div css={exampleRow}>full width row 1</div>
+      <div css={exampleRow}>full width row 2</div>
+      <div css={exampleRow}>full width row 3</div>
+      <div css={exampleRow}>full width row 4</div>
+      <div css={exampleRow}>full width row 5</div>
+      <div css={exampleRow}>full width row 6</div>
+    </Stack>
+  )
+)
 
-storiesOf('Layout|Arrangement', module).add('Stacking inlines with snapshot', () => (
-  <Stack spacing={[8, 16]}>
-    <span css={exampleRow}>full width row 1</span>
-    <span css={exampleRow}>full width row 2</span>
-    <span css={exampleRow}>full width row 3</span>
-    <span css={exampleRow}>full width row 4</span>
-    <span css={exampleRow}>full width row 5</span>
-    <span css={exampleRow}>full width row 6</span>
-  </Stack>
-))
+storiesOf('Layout|Arrangement', module).add(
+  'Stacking inlines with snapshot',
+  () => (
+    <Stack spacing={[8, 16]}>
+      <span css={exampleRow}>full width row 1</span>
+      <span css={exampleRow}>full width row 2</span>
+      <span css={exampleRow}>full width row 3</span>
+      <span css={exampleRow}>full width row 4</span>
+      <span css={exampleRow}>full width row 5</span>
+      <span css={exampleRow}>full width row 6</span>
+    </Stack>
+  )
+)
 
-storiesOf('Layout|Arrangement', module).add('Inlining elements with snapshot', () => (
-  <Inline spacing={[8, 16]}>
-    <div css={exampleRow}>full width row 1</div>
-    <div css={exampleRow}>full width row 2</div>
-    <div css={exampleRow}>full width row 3</div>
-    <div css={exampleRow}>full width row 4</div>
-    <div css={exampleRow}>full width row 5</div>
-    <div css={exampleRow}>full width row 6</div>
-  </Inline>
-))
+storiesOf('Layout|Arrangement', module).add(
+  'Inlining elements with snapshot',
+  () => (
+    <Inline spacing={[8, 16]}>
+      <div css={exampleRow}>full width row 1</div>
+      <div css={exampleRow}>full width row 2</div>
+      <div css={exampleRow}>full width row 3</div>
+      <div css={exampleRow}>full width row 4</div>
+      <div css={exampleRow}>full width row 5</div>
+      <div css={exampleRow}>full width row 6</div>
+    </Inline>
+  )
+)
