@@ -414,6 +414,31 @@
       ":visited": { "color": "link", "stroke": "link" },
       ":hover": { "color": "link", "stroke": "link" },
       "> *": { "transition": "all 0.2s ease" }
+    },
+
+    "blockquote": {
+      "backgroundColor": "light-2",
+      "paddingX": "md",
+      "paddingY": "sm",
+      "marginX": 0,
+      "borderLeft": "none",
+
+      "p": {
+        "paddingLeft": "sm",
+        "paddingY": "xs",
+        "marginY": 0,
+        "borderLeft": "2px solid",
+        "borderLeftColor": "#84A6FF",
+        "fontWeight": "bold",
+
+        "::before": {
+          "content": "\"“\""
+        },
+
+        "::after": {
+          "content": "\"“\""
+        }
+      }
     }
   }
 }

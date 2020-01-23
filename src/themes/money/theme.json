@@ -423,6 +423,31 @@
       "transition": "opacity 0.2s ease",
       ":hover": { "opacity": 0.8 },
       "> *": { "transition": "opacity 0.2s ease" }
+    },
+
+    "blockquote": {
+      "backgroundColor": "light-2",
+      "paddingX": "md",
+      "paddingY": "sm",
+      "marginX": 0,
+      "borderLeft": "none",
+
+      "p": {
+        "paddingLeft": "sm",
+        "paddingY": "xs",
+        "marginY": 0,
+        "borderLeft": "2px solid",
+        "borderLeftColor": "cannon-pink",
+        "fontWeight": "bold",
+
+        "::before": {
+          "content": "\"“\""
+        },
+
+        "::after": {
+          "content": "\"“\""
+        }
+      }
     }
 
   }

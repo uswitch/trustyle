@@ -45,17 +45,23 @@ const typeNames: { [tag: string]: string } = {
   a: 'Anchor'
 }
 
-storiesOf('Global Styles|Typography', module).add('Types', () =>
-  Object.keys(theme().styles).map((key: string) => {
-    const Tag = /^\.|body|root/.test(key)
-      ? 'p'
-      : (key as (keyof JSX.IntrinsicElements))
-
-    const className = key.startsWith('.') ? key.slice(1) : undefined
-    return (
-      <Tag key={key} className={className}>
-        {text(`Text ${key}`, typeNames[key] || key)}
-      </Tag>
+storiesOf('Global Styles|Typography', module).add('Types', () => {
+  const overrides: { [key: string]: React.ReactNode } = {
+    root: ({ children }: any) => <p>{children}</p>,
+    '.medium': ({ children }: any) => <p className="medium">{children}</p>,
+    '.small': ({ children }: any) => <p className="small">{children}</p>,
+    blockquote: ({ children }: any) => (
+      <blockquote>
+        <p>{children}</p>
+      </blockquote>
     )
+  }
+
+  return Object.keys(theme().styles).map((key: string) => {
+    const textValue = text(`Text ${key}`, typeNames[key] || key)
+
+    const Comp = overrides[key] ? overrides[key] : key
+    // @ts-ignore
+    return <Comp key={key}>{textValue}</Comp>
   })
-)
+})
