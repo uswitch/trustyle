@@ -15,7 +15,7 @@ const Accordion: React.FC<Props> = ({
   // const { theme }: any = useThemeUI()
   const [isOpen, setIsOpen] = useState(false)
 
-  return <div>
+  return <div sx={{ marginBottom: 'xxs' }}>
     <button 
       sx={{
         cursor: 'pointer',
@@ -24,6 +24,7 @@ const Accordion: React.FC<Props> = ({
         fontSize: 'base',
         background: 'none',
         border: 0,
+        padding: 0,
         display: 'flex',
         flexDirection: 'row',
         width: '100%'
@@ -46,7 +47,8 @@ const Accordion: React.FC<Props> = ({
     </button>        
     <div sx={{
       overflow: 'hidden',
-      height: isOpen ? 'auto' : '0'
+      height: isOpen ? 'auto' : '0',
+      paddingTop: 'xxs'
     }}>
       {children}
     </div>
