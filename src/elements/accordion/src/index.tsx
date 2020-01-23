@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import React, { useState } from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, useThemeUI } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
@@ -12,7 +12,8 @@ const Accordion: React.FC<Props> = ({
   title,
   children
 }) => {
-  // const { theme }: any = useThemeUI()
+  const { theme }: any = useThemeUI()
+  const { colors = {} }  = theme
   const [isOpen, setIsOpen] = useState(false)
 
   return <div sx={{ marginBottom: 'xxs' }}>
@@ -39,9 +40,9 @@ const Accordion: React.FC<Props> = ({
         {title}
       </div>
       <Icon 
-        color='black'
+        color={isOpen ? colors[theme.accordion.caret.activeColor] : colors[theme.accordion.caret.color]}
         glyph='caret'
-        direction={isOpen ? 'down' : 'right'}
+        direction={isOpen ? 'up' : 'down'}
         size={16}
       />
     </button>        

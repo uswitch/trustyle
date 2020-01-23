@@ -335,6 +335,13 @@
 
   },
 
+  "accordion": {
+    "caret": {
+      "color": "cannon-pink",
+      "activeColor": "cranberry"
+    }
+  },
+
   "list": {
     "bullet": {
       "color": "jaffa"

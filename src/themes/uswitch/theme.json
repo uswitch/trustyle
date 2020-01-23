@@ -248,6 +248,12 @@
     "lg": { "minHeight": 438, "pb": 82 }
   },
 
+  "accordion": {
+    "caret": {
+      "color": "primary"
+    }
+  },
+
   "imageCalloutContent": {
     "sm": { "pt": "xl" },
     "lg": { "pt": "xl" }
