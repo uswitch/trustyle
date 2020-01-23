@@ -21,8 +21,8 @@ const Category: React.FC<ListProps> = ({ title, text }) => {
         ...getTheme('main')
       }}
     >
-      <Styled.h2
-        as={text ? 'h2' : 'p'}
+      <Styled.h1
+        as={text ? 'h1' : 'p'}
         sx={{
           padding: 0,
           margin: 0,
@@ -30,7 +30,7 @@ const Category: React.FC<ListProps> = ({ title, text }) => {
         }}
       >
         {title}
-      </Styled.h2>
+      </Styled.h1>
       {text && (
         <Styled.p sx={{ marginBottom: 0, ...getTheme('text') }}>
           {text}
