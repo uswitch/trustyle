@@ -6,7 +6,7 @@ import { withKnobs } from '@storybook/addon-knobs'
 import { Styled, jsx, ThemeProvider } from 'theme-ui'
 import { Global } from '@emotion/core'
 import theme from '../src/utils/theme-selector'
-import { GlobalStyles } from '../src/elements/global-styles/src';
+import { GlobalStyles } from '../src/elements/global-styles/src'
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /stories\.tsx$/)
@@ -30,7 +30,11 @@ const withTheme = story => (
 
 addDecorator(withTheme)
 addDecorator(withA11y)
-addDecorator(withKnobs)
+addDecorator(
+  withKnobs({
+    escapeHTML: false
+  })
+)
 
 const newViewports = {
   tamagochi: {

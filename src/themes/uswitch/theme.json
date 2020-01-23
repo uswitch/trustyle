@@ -352,6 +352,21 @@
     }
   },
 
+  "cta": {
+    "main": {
+      "borderWidth": 1,
+      "borderStyle": "solid",
+      "borderColor": "light-3",
+      "borderLeftWidth": 10,
+      "borderLeftColor": "#A3BCFF",
+      "padding": "sm"
+    },
+    "button": {
+      "variant": "primary",
+      "width": "auto"
+    }
+  },
+
   "styles": {
     "root": {
       "fontFamily": "base",
