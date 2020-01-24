@@ -29,6 +29,42 @@ const SideNav: React.FC<Props> = ({
       title: 'Get a mortgage agreed in principle',
       anchor: 'heading3'
     }
+  ],
+  additionalLinks = [
+    {
+      title: 'Related articles',
+      links: [
+        {
+          text: 'This is a link',
+          url: '/'
+        },
+        {
+          text: 'This is a link 2',
+          url: '/'
+        },
+        {
+          text: 'This is a link 3',
+          url: '/'
+        }
+      ]
+    },
+    {
+      title: 'Compare',
+      links: [
+        {
+          text: 'This is a link',
+          url: '/'
+        },
+        {
+          text: 'This is a link 2',
+          url: '/'
+        },
+        {
+          text: 'This is a link 3',
+          url: '/'
+        }
+      ]
+    }
   ]
 }) => {
   const { theme: { sideNav: sideNavTheme = {} } = {} }: any = useThemeUI()
@@ -94,16 +130,22 @@ const SideNav: React.FC<Props> = ({
         })}
       </ul>
     </Accordion>
-    <Accordion 
-      title='Related articles'
-    >
-      This is a link
-    </Accordion>
-    <Accordion 
-      title='Compare'
-    >
-      This is a link
-    </Accordion>
+    {additionalLinks.map(({ title, links = [] }, index) =>
+      <Accordion
+        key={index}
+        title={title}
+      >
+        <ul>
+          {
+            links.map(({ text, url }, index) =>
+              <li key={index}>
+                <a href={url}>{text}</a>
+              </li>
+            )
+          }
+        </ul>
+      </Accordion>  
+    )}
   </nav>
 }
 
