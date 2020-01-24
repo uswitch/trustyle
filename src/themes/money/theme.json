@@ -127,7 +127,14 @@
     "text": "#000000",
     "dark-1": "#000000",
     "dark-2": "#3d3d3d",
-    "hero": "#99e2ff"
+    "hero": "#99e2ff",
+
+    "grey-05": "#F7F7F7",
+    "grey-30": "#C2C4C8",
+    "grey-60": "#6F7175",
+    "grey-80": "#24262A",
+
+    "experimental-text": "#29335C"
   },
 
   "radii": {
@@ -138,101 +145,23 @@
   },
 
   "----------------------------- Variants": "-----------------------------",
-  "modules": {
 
-    "content-hero-module": {
-      "h1": {
-        "mb": "sm",
-        "mt": 0,
-        "pt": ["sm", "sm", "lg"]
-      },
-
-      "h4": { "fontSize": "md", "fontWeight": "normal" },
-
-      "p": {
-        "width": ["auto", "grid.md.5", "grid.lg.5"],
-        "textAlign": ["left", "left", "center"],
-        "my": [0, 0, "xxs"],
-        "px": [0, 0, "md"],
-        "display": ["inline", "inline", "block"]
-      },
-
-      "a": {
-        "fontSize": ["base", "base", "lg"],
-        "textDecoration": "underline"
-      },
-
-
-      "content": {
-        "display": "flex",
-        "alignItems": "flex-end",
-
-        "modules": {
-          "width": ["100%", "50%", "50%"],
-          "mb": "lg"
-        },
-
-        "image": {
-          "height": [0, 0, 320],
-          "width": [0, 0, "50%"],
-          "mx": "auto",
-          "backgroundSize": 500,
-          "backgroundPosition": "bottom"
-        }
-      }
+  
+  "accordion": {
+    "textColor": "grey-80",
+    "caret": {
+      "color": "cannon-pink",
+      "activeColor": "cranberry"
     }
-
   },
 
-  "compounds": {
-
-    "card": {
-      "display": "flex",
-      "width": ["100%", "49%", "grid.lg.3"],
-      "flexDirection": "column",
-      "borderRadius": "sm",
-      "borderStyle": "solid",
-      "borderColor": "dark-2",
-      "borderWidth": "1px",
-      "mb": "sm",
-      "img": {
-        "sm": { "width": "100%", "height": 230 },
-        "md": { "width": "100%", "height": 230 },
-        "lg": { "maxWidth": "grid.lg.3", "height": 230 }
-      },
-      "p": { "fontSize": 14 },
-      "h4": { "fontSize": 18, "minHeight": 0 },
-      "content": {
-        "height": "100%",
-        "p": "sm",
-        "a": {
-          "pb": "xs"
-        }
-      }
-    },
-
-    "click-out-form": {
-      "flexDirection": "column",
-      "width": ["auto", "grid.md.5", "grid.lg.5"],
-      "backgroundColor": "light-1",
-      "p": ["sm", "sm", "lg"],
-      "borderRadius": [0, "md", "md"],
-      "mx": [-20, 0],
-      "& input, & button": {
-        "fontSize": "md",
-        "width": "100%"
-      },
-      "& button": {
-        "textAlign": "center"
-      }
-    },
-
-    "breadcrumb": {
-      "my": "sm",
-      "mx": 0
-    }
-
+  "sideNav": {
+    "outlineColor": "grey-30",
+    "activeOutlineColor": "cranberry",
+    "textColor": "grey-60",
+    "activeTextColor": "experimental-text"
   },
+
 
   "container": {
     "sm": { "px": 20 },
@@ -247,45 +176,6 @@
       }
     },
     "hero": { "maxWidth": 1280, "mx": "auto", "px": 60 }
-  },
-
-  "hero": {
-    "sm": { "minHeight": 360, "pb": 34 },
-    "md": { "minHeight": 280, "pb": 56 },
-    "lg": { "minHeight": 438, "pb": 82 }
-  },
-
-  "imageCalloutContent": {
-    "sm": { "pt": "xl" },
-    "lg": { "pt": "xl" }
-  },
-
-  "imageCallout": {
-    "imageSize": { "height": 337, "width": 477 },
-    "sm": { "display": "flex", "width": 320, "mx": "auto" },
-    "md": { "display": "flex", "width": 768, "mx": "auto" },
-    "lg": {
-      "display": "flex",
-      "justifyContent": "space-between",
-      "width": 1280,
-      "px": 158,
-      "mx": "auto"
-    },
-    "right": { "flexDirection": "row-reverse", "alignItems": "flex-start" },
-    "left": { "flexDirection": "row", "alignItems": "flex-start" },
-    "column": { "flexDirection": "column", "alignItems": "center" }
-  },
-
-  "card": {
-
-    "sm": {
-      "image": { "width": "100%", "height": "auto" }
-    },
-
-    "lg": {
-      "image": { "width": 278, "height": 230 }
-    }
-
   },
 
   "buttons": {
@@ -333,13 +223,6 @@
       }
     }
 
-  },
-
-  "accordion": {
-    "caret": {
-      "color": "cannon-pink",
-      "activeColor": "cranberry"
-    }
   },
 
   "list": {

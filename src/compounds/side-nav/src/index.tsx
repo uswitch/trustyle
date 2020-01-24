@@ -19,32 +19,41 @@ const SideNav: React.FC<Props> = ({
   waypoints = [
     {
       title: 'Put money aside for a deposit',
-      anchor: '#heading1'
+      anchor: 'heading1'
     },
     {
       title: 'Work out your budget',
-      anchor: '#heading2'
+      anchor: 'heading2'
     },
     {
       title: 'Get a mortgage agreed in principle',
-      anchor: '#heading3'
+      anchor: 'heading3'
     }
   ]
 }) => {
-  const { theme }: any = useThemeUI()
-  const activeIndex: number = waypoints.findIndex(({ anchor }) => anchor === activeId) || 0
-  return <section>
+  const { theme: { sideNav: sideNavTheme = {} } = {} }: any = useThemeUI()
+  let activeIndex: number = Math.max(0, waypoints.findIndex(({ anchor }) => anchor === activeId))
+
+  return <section
+    sx={{
+      padding: 'sm',
+      paddingTop: 'xs',
+      bg: ['grey-05', 'transparent']
+    }}
+  >
     <Accordion 
       title='In this guide'
       isInitiallyOpen
     >
       <ul sx={{
         listStyle: 'none',
-        padding: 0
+        padding: 0,
+        margin: 0
       }}>
         {waypoints.map(({ title, anchor }, index) => {
           const isFirst = index === 0;
           const isLast = index === waypoints.length - 1
+          const isActive = activeIndex === index
           return <li 
             key={anchor}
             sx={{
@@ -59,9 +68,11 @@ const SideNav: React.FC<Props> = ({
                 width: 12,
                 height: 12,
                 left: 6,
-                borderRadius: 16,
+                borderRadius: 12,
                 backgroundColor: 'white',
-                border: activeIndex === index ? '2px solid red' : '2px solid grey'
+                borderWidth: 2,
+                borderStyle: 'solid',
+                borderColor: isActive ? sideNavTheme.activeOutlineColor : sideNavTheme.outlineColor
               },
               '::before': {
                 content: '""',
@@ -70,11 +81,19 @@ const SideNav: React.FC<Props> = ({
                 left: 13,
                 width: 2,
                 height: isFirst || isLast ? '50%' : '100%',
-                backgroundColor: 'grey'
+                backgroundColor: sideNavTheme.outlineColor
               }
             }}
           >
-            <a href={`#${anchor}`}>
+            <a 
+              href={`#${anchor}`}
+              sx={{
+                color: isActive ? sideNavTheme.activeTextColor : sideNavTheme.textColor,
+                textDecoration: 'none',
+                fontSize: 'xs',
+                fontWeight: isActive ? 'bold' : 'base'
+              }}
+            >
               {title}
             </a>
           </li>

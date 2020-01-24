@@ -14,8 +14,7 @@ const Accordion: React.FC<Props> = ({
   isInitiallyOpen,
   children
 }) => {
-  const { theme }: any = useThemeUI()
-  const { colors = {} }  = theme
+  const { theme: { accordionTheme = {}, colors = {} } }: any = useThemeUI()
   const [isOpen, setIsOpen] = useState(!!isInitiallyOpen)
 
   return <div sx={{ marginBottom: 'xxs' }}>
@@ -27,10 +26,13 @@ const Accordion: React.FC<Props> = ({
         fontSize: 'base',
         background: 'none',
         border: 0,
-        padding: 0,
+        padding: '5px 0',
         display: 'flex',
         flexDirection: 'row',
-        width: '100%'
+        width: '100%',
+        fontWeight: 'bold',
+        color: accordionTheme.textColor,
+        alignItems: 'center'
       }}
       onClick={() => setIsOpen(!isOpen)}
     >
@@ -42,7 +44,7 @@ const Accordion: React.FC<Props> = ({
         {title}
       </div>
       <Icon 
-        color={isOpen ? colors[theme.accordion.caret.activeColor] : colors[theme.accordion.caret.color]}
+        color={isOpen ? colors[accordionTheme.caret.activeColor] : colors[accordionTheme.caret.color]}
         glyph='caret'
         direction={isOpen ? 'up' : 'down'}
         size={16}
@@ -51,7 +53,6 @@ const Accordion: React.FC<Props> = ({
     <div sx={{
       overflow: 'hidden',
       height: isOpen ? 'auto' : '0',
-      paddingTop: 'xxs'
     }}>
       {children}
     </div>
