@@ -6,7 +6,7 @@ import { Icon } from '@uswitch/trustyle.icon'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string,
-  isInitiallyOpen: boolean
+  isInitiallyOpen?: boolean
 }
 
 const Accordion: React.FC<Props> = ({
@@ -14,10 +14,10 @@ const Accordion: React.FC<Props> = ({
   isInitiallyOpen,
   children
 }) => {
-  const { theme: { accordionTheme = {}, colors = {} } }: any = useThemeUI()
+  const { theme: { accordion: accordionTheme = {}, colors = {} } }: any = useThemeUI()
   const [isOpen, setIsOpen] = useState(!!isInitiallyOpen)
 
-  return <div sx={{ marginBottom: 'xxs' }}>
+  return <div sx={accordionTheme.wrapper}>
     <button 
       sx={{
         cursor: 'pointer',
@@ -53,6 +53,7 @@ const Accordion: React.FC<Props> = ({
     <div sx={{
       overflow: 'hidden',
       height: isOpen ? 'auto' : '0',
+      paddingTop: isOpen ? 'xxs' : '0',
     }}>
       {children}
     </div>

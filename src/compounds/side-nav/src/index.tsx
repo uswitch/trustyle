@@ -34,13 +34,7 @@ const SideNav: React.FC<Props> = ({
   const { theme: { sideNav: sideNavTheme = {} } = {} }: any = useThemeUI()
   let activeIndex: number = Math.max(0, waypoints.findIndex(({ anchor }) => anchor === activeId))
 
-  return <section
-    sx={{
-      padding: 'sm',
-      paddingTop: 'xs',
-      bg: ['grey-05', 'transparent']
-    }}
-  >
+  return <nav>
     <Accordion 
       title='In this guide'
       isInitiallyOpen
@@ -100,7 +94,17 @@ const SideNav: React.FC<Props> = ({
         })}
       </ul>
     </Accordion>
-  </section>
+    <Accordion 
+      title='Related articles'
+    >
+      This is a link
+    </Accordion>
+    <Accordion 
+      title='Compare'
+    >
+      This is a link
+    </Accordion>
+  </nav>
 }
 
 export default SideNav

@@ -130,6 +130,7 @@
     "hero": "#99e2ff",
 
     "grey-05": "#F7F7F7",
+    "grey-20": "#DFDFE1",
     "grey-30": "#C2C4C8",
     "grey-60": "#6F7175",
     "grey-80": "#24262A",
@@ -148,6 +149,14 @@
 
   
   "accordion": {
+    "wrapper": {
+      "padding": "sm",
+      "paddingTop": "xs",
+      "bg":["grey-05", "transparent"],
+      "borderWidth": "0 0 1px 0",
+      "borderStyle": "solid",
+      "borderColor": "grey-20"
+    },
     "textColor": "grey-80",
     "caret": {
       "color": "cannon-pink",
