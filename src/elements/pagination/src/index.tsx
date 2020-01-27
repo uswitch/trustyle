@@ -64,7 +64,7 @@ const InlineIcon = ({ direction }: { direction: Direction }) => {
   let color = 'black'
   if (theme.pagination) {
     // This step is necessary as the icon component doesn't support themes yet
-    const processedTheme = css(theme.pagination)(theme)
+    const processedTheme: any = css(theme.pagination)(theme)
     if (processedTheme.arrow && processedTheme.arrow.color) {
       color = processedTheme.arrow.color
     }
