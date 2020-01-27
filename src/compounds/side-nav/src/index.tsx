@@ -22,13 +22,27 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 
 const SideNav: React.FC<Props> = ({
   internalLinks,
-  additionalLinks
+  additionalLinks = []
 }) => {
   const { theme: { sideNav: sideNavTheme = {} } = {} }: any = useThemeUI()
+  const { 
+    internalLink: { 
+      padding = 0,
+      color = '',
+      after = {}, 
+      before = {} 
+    } = {} ,
+    activeInternalLink: { 
+      color: activeInternalLinkColor = '',
+      after: activeInternalLinkAfter = {},
+      before: activeInternalLinkBefore = {},
+    } = {} 
+  } = sideNavTheme
 
   return <nav>
-    <Accordion 
+    <Accordion
       title={internalLinks.title}
+      isInitiallyOpen
     >
       <ul sx={{
         listStyle: 'none',
@@ -41,41 +55,30 @@ const SideNav: React.FC<Props> = ({
           return <li 
             key={url}
             sx={{
-              padding: '5px 0 5px 35px',
+              padding,
               position: 'relative',
               '::after': {
-                content: '""',
-                position: 'absolute',
-                top: '50%',
-                transform: 'translateY(-50%)', 
-                display: 'block',
-                width: 12,
-                height: 12,
-                left: 6,
-                borderRadius: 12,
-                backgroundColor: 'white',
-                borderWidth: 2,
-                borderStyle: 'solid',
-                borderColor: isActive ? sideNavTheme.activeOutlineColor : sideNavTheme.outlineColor
+                ...after,
+                ...(isActive ? activeInternalLinkAfter : {})
               },
               '::before': {
-                content: '""',
-                position: 'absolute',
+                ...before,
+                ...(isActive ? activeInternalLinkBefore : {}),
                 top: isFirst ? '50%' : 0,
-                left: 13,
-                width: 2,
                 height: isFirst || isLast ? '50%' : '100%',
-                backgroundColor: sideNavTheme.outlineColor
               }
             }}
           >
             <a 
               href={url}
               sx={{
-                color: isActive ? sideNavTheme.activeTextColor : sideNavTheme.textColor,
+                color: isActive ? activeInternalLinkColor : color,
                 textDecoration: 'none',
                 fontSize: 'xs',
-                fontWeight: isActive ? 'bold' : 'base'
+                fontWeight: isActive ? 'bold' : 'base',
+                ':visited': {
+                  color: isActive ? activeInternalLinkColor : color,
+                }
               }}
             >
               {text}

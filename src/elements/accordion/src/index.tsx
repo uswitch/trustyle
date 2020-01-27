@@ -17,22 +17,16 @@ const Accordion: React.FC<Props> = ({
   const { theme: { accordion: accordionTheme = {}, colors = {} } }: any = useThemeUI()
   const [isOpen, setIsOpen] = useState(!!isInitiallyOpen)
 
-  return <div sx={accordionTheme.wrapper}>
+  return <div>
     <button 
       sx={{
         cursor: 'pointer',
-        backgroundImage: 'none',
-        fontFamily: 'base',
-        fontSize: 'base',
-        background: 'none',
         border: 0,
-        padding: '5px 0',
         display: 'flex',
         flexDirection: 'row',
         width: '100%',
-        fontWeight: 'bold',
-        color: accordionTheme.textColor,
-        alignItems: 'center'
+        ...accordionTheme.button,
+        ...(isOpen ? accordionTheme.isActive.button : {})
       }}
       onClick={() => setIsOpen(!isOpen)}
     >
@@ -44,7 +38,7 @@ const Accordion: React.FC<Props> = ({
         {title}
       </div>
       <Icon 
-        color={isOpen ? colors[accordionTheme.caret.activeColor] : colors[accordionTheme.caret.color]}
+        color={isOpen ? colors[accordionTheme.isActive.caret.color] : colors[accordionTheme.caret.color]}
         glyph='caret'
         direction={isOpen ? 'up' : 'down'}
         size={16}
