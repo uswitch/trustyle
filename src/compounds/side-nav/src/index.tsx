@@ -36,7 +36,8 @@ const SideNav: React.FC<Props> = ({
       color: activeInternalLinkColor = '',
       after: activeInternalLinkAfter = {},
       before: activeInternalLinkBefore = {},
-    } = {} 
+    } = {},
+    additionalLink = {}
   } = sideNavTheme
 
   return <nav>
@@ -46,7 +47,9 @@ const SideNav: React.FC<Props> = ({
     >
       <ul sx={{
         listStyle: 'none',
-        padding: 0,
+        paddingLeft: 0,
+        paddingTop: 'xxs',
+        paddingBottom: 'xxs',
         margin: 0
       }}>
         {internalLinks.links.map(({ text, url, isActive }, index) => {
@@ -97,16 +100,12 @@ const SideNav: React.FC<Props> = ({
             links.map(({ text, url }, index) =>
               <li
                 key={index}
-                sx={{
-                  marginBottom: 'xxs'
-                }}
               >
                 <a
                   href={url}
                   sx={{
-                    color: 'grey-80',
-                    padding: '5px 0',
-                    textDecoration: 'none'
+                    display: 'block',
+                    ...additionalLink,
                   }}
                 >
                   {text}

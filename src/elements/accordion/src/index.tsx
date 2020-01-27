@@ -47,7 +47,6 @@ const Accordion: React.FC<Props> = ({
     <div sx={{
       overflow: 'hidden',
       height: isOpen ? 'auto' : '0',
-      paddingTop: isOpen ? 'xxs' : '0',
     }}>
       {children}
     </div>

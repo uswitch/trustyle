@@ -205,6 +205,16 @@
         "borderColor": "cranberry"
       },
       "before": {}
+    },
+    "additionalLink": {
+      "color": "grey-80",
+      "paddingTop": "xxs",
+      "paddingBottom": "xxs",
+      "textDecoration": "none",
+      "borderWidth": "0 0 1px 0",
+      "borderStyle": "solid",
+      "borderColor": "grey-20",
+      "fontSize": "xs"
     }
   },
 

@@ -208,7 +208,7 @@
 
     "isActive": {
       "caret": {
-        "color": "#FF0000"
+        "color": "light-1"
       }
     }
   },
@@ -233,6 +233,13 @@
         "backgroundColor": "primary"
       },
       "before": {}
+    },
+    "additionalLink": {
+      "marginBottom": "xxs",
+      "color": "grey-80",
+      "paddingTop": "xxs",
+      "paddingBottom": "xxs",
+      "textDecoration": "none"
     }
   },
 
