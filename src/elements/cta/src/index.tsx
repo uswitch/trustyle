@@ -13,17 +13,15 @@ interface CTAProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const CTA: React.FC<CTAProps> = ({ title, text, buttonLink, buttonText }) => {
   const { theme }: any = useThemeUI()
-  const getTheme = (key: string) => theme.cta && theme.cta[key]
-  const buttonTheme = getTheme('button')
 
   return (
-    <div sx={getTheme('main')}>
-      <Styled.h3 sx={getTheme('title')}>{title}</Styled.h3>
-      <Styled.p sx={getTheme('text')}>{text}</Styled.p>
+    <div sx={theme.cta?.main}>
+      <Styled.h3 sx={theme.cta?.title}>{title}</Styled.h3>
+      <Styled.p sx={theme.cta?.text}>{text}</Styled.p>
       <ButtonLink
         href={buttonLink}
-        variant={(buttonTheme && buttonTheme.variant) || 'primary'}
-        sx={buttonTheme}
+        variant={theme.cta?.button?.variant || 'primary'}
+        sx={theme.cta?.button}
       >
         {buttonText}
       </ButtonLink>
