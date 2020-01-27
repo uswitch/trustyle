@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Layout|Grid Example 1 - basics with snapshot 1`] = `
+exports[`Storyshots Layout|Grid Example 1 - basics 1`] = `
 <div
   className="css-m9xbk1"
 >
@@ -93,7 +93,7 @@ exports[`Storyshots Layout|Grid Example 1 - basics with snapshot 1`] = `
 </div>
 `;
 
-exports[`Storyshots Layout|Grid Example 2 - center with snapshot 1`] = `
+exports[`Storyshots Layout|Grid Example 2 - center 1`] = `
 <div
   className="css-m9xbk1"
 >
@@ -117,7 +117,7 @@ exports[`Storyshots Layout|Grid Example 2 - center with snapshot 1`] = `
 </div>
 `;
 
-exports[`Storyshots Layout|Grid Example 3 - nested grids with snapshot 1`] = `
+exports[`Storyshots Layout|Grid Example 3 - nested grids 1`] = `
 <div
   className="css-m9xbk1"
 >
