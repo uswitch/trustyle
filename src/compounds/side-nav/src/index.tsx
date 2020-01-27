@@ -4,88 +4,42 @@ import * as React from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
 import Accordion from '@uswitch/trustyle.accordion'
 
-interface Waypoint {
+interface Link {
+  text: string;
+  url: string;
+  isActive?: boolean;
+}
+
+interface LinkGroup {
   title: string;
-  anchor: string;
+  links: Link[];
 }
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  waypoints:  Waypoint[];
-  activeId: string
+  internalLinks: LinkGroup;
+  additionalLinks? : LinkGroup[];
 }
 
 const SideNav: React.FC<Props> = ({
-  activeId,
-  waypoints = [
-    {
-      title: 'Put money aside for a deposit',
-      anchor: 'heading1'
-    },
-    {
-      title: 'Work out your budget',
-      anchor: 'heading2'
-    },
-    {
-      title: 'Get a mortgage agreed in principle',
-      anchor: 'heading3'
-    }
-  ],
-  additionalLinks = [
-    {
-      title: 'Related articles',
-      links: [
-        {
-          text: 'This is a link',
-          url: '/'
-        },
-        {
-          text: 'This is a link 2',
-          url: '/'
-        },
-        {
-          text: 'This is a link 3',
-          url: '/'
-        }
-      ]
-    },
-    {
-      title: 'Compare',
-      links: [
-        {
-          text: 'This is a link',
-          url: '/'
-        },
-        {
-          text: 'This is a link 2',
-          url: '/'
-        },
-        {
-          text: 'This is a link 3',
-          url: '/'
-        }
-      ]
-    }
-  ]
+  internalLinks,
+  additionalLinks
 }) => {
   const { theme: { sideNav: sideNavTheme = {} } = {} }: any = useThemeUI()
-  let activeIndex: number = Math.max(0, waypoints.findIndex(({ anchor }) => anchor === activeId))
 
   return <nav>
     <Accordion 
-      title='In this guide'
-      isInitiallyOpen
+      title={internalLinks.title}
     >
       <ul sx={{
         listStyle: 'none',
         padding: 0,
         margin: 0
       }}>
-        {waypoints.map(({ title, anchor }, index) => {
+        {internalLinks.links.map(({ text, url, isActive }, index) => {
           const isFirst = index === 0;
-          const isLast = index === waypoints.length - 1
-          const isActive = activeIndex === index
+          const isLast = index === internalLinks.links.length - 1
           return <li 
-            key={anchor}
+            key={url}
             sx={{
               padding: '5px 0 5px 35px',
               position: 'relative',
@@ -116,7 +70,7 @@ const SideNav: React.FC<Props> = ({
             }}
           >
             <a 
-              href={`#${anchor}`}
+              href={url}
               sx={{
                 color: isActive ? sideNavTheme.activeTextColor : sideNavTheme.textColor,
                 textDecoration: 'none',
@@ -124,7 +78,7 @@ const SideNav: React.FC<Props> = ({
                 fontWeight: isActive ? 'bold' : 'base'
               }}
             >
-              {title}
+              {text}
             </a>
           </li>
         })}
@@ -135,11 +89,25 @@ const SideNav: React.FC<Props> = ({
         key={index}
         title={title}
       >
-        <ul>
+        <ul sx={{ padding: 0, margin: 0 }}>
           {
             links.map(({ text, url }, index) =>
-              <li key={index}>
-                <a href={url}>{text}</a>
+              <li
+                key={index}
+                sx={{
+                  marginBottom: 'xxs'
+                }}
+              >
+                <a
+                  href={url}
+                  sx={{
+                    color: 'grey-80',
+                    padding: '5px 0',
+                    textDecoration: 'none'
+                  }}
+                >
+                  {text}
+                </a>
               </li>
             )
           }
