@@ -210,6 +210,7 @@
       "color": "grey-80",
       "paddingTop": "xxs",
       "paddingBottom": "xxs",
+      "paddingLeft": "xs",
       "textDecoration": "none",
       "borderWidth": "0 0 1px 0",
       "borderStyle": "solid",
@@ -312,6 +313,35 @@
     }
   },
 
+  "pagination": {
+    "arrow": {
+      "color": "dark-1"
+    },
+    "arrowDisabled": {
+      "opacity": 0.5
+    },
+    "currentPage": {
+      "color": "cannon-pink",
+      "fontSize": "sm"
+    },
+    "nonCurrentPage": {
+      "opacity": 0.5,
+      "fontSize": "xs"
+    }
+  },
+
+  "categoryTitle": {
+    "main": {
+      "background": "linear-gradient(90deg, #924A8B 0.42%, #DB4D75 116.16%)"
+    },
+    "heading": {
+      "color": "light-1"
+    },
+    "text": {
+      "color": "light-1"
+    }
+  },
+
   "styles": {
 
     "h1": {
@@ -369,6 +399,31 @@
       "transition": "opacity 0.2s ease",
       ":hover": { "opacity": 0.8 },
       "> *": { "transition": "opacity 0.2s ease" }
+    },
+
+    "blockquote": {
+      "backgroundColor": "light-2",
+      "paddingX": "md",
+      "paddingY": "sm",
+      "marginX": 0,
+      "borderLeft": "none",
+
+      "p": {
+        "paddingLeft": "sm",
+        "paddingY": "xs",
+        "marginY": 0,
+        "borderLeft": "2px solid",
+        "borderLeftColor": "cannon-pink",
+        "fontWeight": "bold",
+
+        "::before": {
+          "content": "\"“\""
+        },
+
+        "::after": {
+          "content": "\"“\""
+        }
+      }
     }
 
   }

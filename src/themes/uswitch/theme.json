@@ -29,13 +29,14 @@
 
   "fontSizes": {
     "base": 16,
-    "xxs": 16,
-    "xs": 16,
+    "xxs": 12,
+    "xs": 14,
     "sm": 16,
     "md": 18,
-    "lg": 24,
-    "xl": 30,
-    "xxl": 36
+    "lg": 20,
+    "xl": 24,
+    "xxl": 30,
+    "xxxl": 36
   },
 
   "fontWeights": {
@@ -105,7 +106,8 @@
   "useCustomProperties": false,
 
   "colors": {
-    "primary": "#141424",
+    "periwinkle": "#C1D3FF",
+    "primary": "#d64226",
     "primary-hover": "#ab351e",
     "secondary": "#1c1f4e",
     "secondary-hover": "#99e2ff",
@@ -138,60 +140,8 @@
     "xl": 30
   },
 
-  "styles": {
-    "root": {
-      "fontFamily": "base",
-      "fontSize": "base",
-      "fontWeight": "base",
-      "lineHeight": "base",
-      "color": "text"
-    },
-
-    "h1": {
-      "fontFamily": "heading",
-      "color": "secondary",
-      "fontSize": ["md", "xxl", "xxl"],
-      "fontWeight": "bold"
-    },
-
-    "h2": {
-      "fontFamily": "heading",
-      "color": "heading",
-      "fontSize": "lg",
-      "fontWeight": "medium",
-      "pb": "base"
-    },
-
-    "h3": {
-      "margin": 0,
-      "fontFamily": "heading",
-      "fontSize": "md",
-      "fontWeight": "medium",
-      "color": "brand"
-    },
-
-    "h4": {
-      "margin": 0,
-      "fontFamily": "heading",
-      "fontSize": "md",
-      "fontWeight": "medium",
-      "color": "brand"
-    },
-
-    "a": {
-      "color": "link",
-      "stroke": "link",
-      "transition": "all 0.2s ease",
-      ":visited": { "color": "link", "stroke": "link" },
-      ":hover": { "color": "link", "stroke": "link" },
-      "> *": { "transition": "all 0.2s ease" }
-    }
-  },
-
-
   "----------------------------- Variants": "-----------------------------",
 
-   
   "accordion": {
     "button": {
       "padding": "sm",
@@ -429,6 +379,110 @@
     "button": {
       "variant": "primary",
       "width": "auto"
+    }
+  },
+
+  "pagination": {
+    "arrow": {
+      "color": "#84A6FF"
+    },
+    "arrowDisabled": {
+      "opacity": 0.5
+    },
+    "currentPage": {
+      "color": "dark-1",
+      "fontSize": "sm"
+    },
+    "nonCurrentPage": {
+      "opacity": 0.5,
+      "fontSize": "xxs"
+    }
+  },
+
+  "categoryTitle": {
+    "main": {
+      "backgroundColor": "periwinkle"
+    },
+    "heading": {
+      "color": "dark-1"
+    },
+    "text": {
+      "color": "dark-1"
+    }
+  },
+
+  "styles": {
+    "root": {
+      "fontFamily": "base",
+      "fontSize": "base",
+      "fontWeight": "base",
+      "lineHeight": "base",
+      "color": "text"
+    },
+
+    "h1": {
+      "fontFamily": "heading",
+      "color": "secondary",
+      "fontSize": ["md", "xxl", "xxl"],
+      "fontWeight": "bold"
+    },
+
+    "h2": {
+      "fontFamily": "heading",
+      "color": "heading",
+      "fontSize": "lg",
+      "fontWeight": "medium",
+      "pb": "base"
+    },
+
+    "h3": {
+      "margin": 0,
+      "fontFamily": "heading",
+      "fontSize": "md",
+      "fontWeight": "medium",
+      "color": "brand"
+    },
+
+    "h4": {
+      "margin": 0,
+      "fontFamily": "heading",
+      "fontSize": "md",
+      "fontWeight": "medium",
+      "color": "brand"
+    },
+
+    "a": {
+      "color": "link",
+      "stroke": "link",
+      "transition": "all 0.2s ease",
+      ":visited": { "color": "link", "stroke": "link" },
+      ":hover": { "color": "link", "stroke": "link" },
+      "> *": { "transition": "all 0.2s ease" }
+    },
+
+    "blockquote": {
+      "backgroundColor": "light-2",
+      "paddingX": "md",
+      "paddingY": "sm",
+      "marginX": 0,
+      "borderLeft": "none",
+
+      "p": {
+        "paddingLeft": "sm",
+        "paddingY": "xs",
+        "marginY": 0,
+        "borderLeft": "2px solid",
+        "borderLeftColor": "#84A6FF",
+        "fontWeight": "bold",
+
+        "::before": {
+          "content": "\"“\""
+        },
+
+        "::after": {
+          "content": "\"“\""
+        }
+      }
     }
   }
 }
