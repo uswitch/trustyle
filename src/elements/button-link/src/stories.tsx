@@ -31,10 +31,10 @@ export const AllVariants = () => (
   </div>
 )
 
-export const PrimaryVariantSnapshot = () => (
+export const PrimaryVariant = () => (
   <ButtonLink variant="primary">Primary link button</ButtonLink>
 )
 
-export const SecondaryVariantSnapshot = () => (
+export const SecondaryVariant = () => (
   <ButtonLink variant="secondary">Primary link button</ButtonLink>
 )

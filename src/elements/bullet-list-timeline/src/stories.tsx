@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { BulletListTimeline } from './'
 
 storiesOf('Elements|Bullet List Timeline', module).add(
-  'ExampleAndSnapshot',
+  'Example',
   () => (
     <BulletListTimeline
       stages={[

@@ -17,7 +17,7 @@ const options = {
   step: 1
 }
 
-storiesOf('Elements|Progress Bar', module).add('ExampleAndSnapshot', () => {
+storiesOf('Elements|Progress Bar', module).add('Example', () => {
   const current = number(label, defaultValue, options)
   return (
     <div css={css({ padding: number('Padding', 10) })}>

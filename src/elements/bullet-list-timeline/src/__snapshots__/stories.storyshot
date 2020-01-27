@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Elements|Bullet List Timeline ExampleAndSnapshot 1`] = `
+exports[`Storyshots Elements|Bullet List Timeline Example 1`] = `
 <div
   className="css-m9xbk1"
 >

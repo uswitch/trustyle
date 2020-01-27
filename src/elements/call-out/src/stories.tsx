@@ -9,7 +9,7 @@ export default {
   title: 'Elements|Call Out'
 }
 
-export const ExampleAndSnapshot = () => {
+export const Example = () => {
   const padding = number('Padding', 10)
   const titleText = text(`Call out title`, `This is a call out`)
   const textText = text(

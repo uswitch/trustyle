@@ -72,5 +72,5 @@ export default {
 export const Radio = () => <Form type="radio" />
 export const Checkbox = () => <Form type="checkbox" />
 
-export const RadioSnapshot = () => <Form type="radio" useHooks={false} />
-export const CheckboxSnapshot = () => <Form type="checkbox" useHooks={false} />
+export const RadioSelected = () => <Form type="radio" useHooks={false} />
+export const CheckboxSelected = () => <Form type="checkbox" useHooks={false} />

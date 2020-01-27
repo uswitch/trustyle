@@ -1,6 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Elements|Button Link Primary Variant Snapshot 1`] = `
+exports[`Storyshots Elements|Button Link All Variants 1`] = `
+<div
+  className="css-m9xbk1"
+>
+  <div
+    className="css-1qboakw-AllVariants"
+  >
+    <a
+      className="css-izi4pz"
+      href="https://www.uswitch.com"
+      target="_blank"
+    >
+      primary link button
+    </a>
+    <div
+      className="css-1jlq266-Spacer"
+    />
+    <a
+      className="css-u32c6s"
+      href="https://www.uswitch.com"
+      target="_blank"
+    >
+      secondary link button
+    </a>
+    <div
+      className="css-1jlq266-Spacer"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Elements|Button Link Primary Variant 1`] = `
 <div
   className="css-m9xbk1"
 >
@@ -12,7 +43,7 @@ exports[`Storyshots Elements|Button Link Primary Variant Snapshot 1`] = `
 </div>
 `;
 
-exports[`Storyshots Elements|Button Link Secondary Variant Snapshot 1`] = `
+exports[`Storyshots Elements|Button Link Secondary Variant 1`] = `
 <div
   className="css-m9xbk1"
 >

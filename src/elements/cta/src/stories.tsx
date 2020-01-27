@@ -9,7 +9,7 @@ export default {
   title: 'Elements|CTA'
 }
 
-export const ExampleAndSnapshot = () => {
+export const Example = () => {
   const titleText = text(
     'CTA title',
     'Find the best credit card for your needs'

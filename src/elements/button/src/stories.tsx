@@ -72,21 +72,21 @@ export const AllVariants = () => (
   </div>
 )
 
-export const PrimaryVariantSnapshot = () => (
+export const PrimaryVariant = () => (
   <Button variant="primary">Primary button</Button>
 )
 
-export const SecondaryVariantSnapshot = () => (
+export const SecondaryVariant = () => (
   <Button variant="secondary">Primary button</Button>
 )
 
-export const PrimaryDisabledVariantSnapshot = () => (
+export const PrimaryDisabledVariant = () => (
   <Button variant="primary" disabled>
     Primary button
   </Button>
 )
 
-export const SecondaryDisabledVariantSnapshot = () => (
+export const SecondaryDisabledVariant = () => (
   <Button variant="secondary" disabled>
     Primary button
   </Button>

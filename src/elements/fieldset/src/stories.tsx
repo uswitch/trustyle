@@ -43,6 +43,6 @@ const Form = () => {
   )
 }
 
-storiesOf('Elements|Fieldset', module).add('ExampleAndSnapshot', () => {
+storiesOf('Elements|Fieldset', module).add('Example', () => {
   return <Form />
 })

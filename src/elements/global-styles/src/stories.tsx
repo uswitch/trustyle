@@ -17,7 +17,7 @@ const swatch: Interpolation = {
   verticalAlign: 'top'
 }
 
-storiesOf('Global Styles|Colours', module).add('SwatchesAndSnapshot', () => (
+storiesOf('Global Styles|Colours', module).add('Swatches', () => (
   <div css={css({ margin: '-10px' })}>
     {Object.entries(theme().colors).map(([key, value]) => {
       const swatchBlock: Interpolation = {
@@ -45,7 +45,7 @@ const typeNames: { [tag: string]: string } = {
   a: 'Anchor'
 }
 
-storiesOf('Global Styles|Typography', module).add('TypesAndSnapshot', () => {
+storiesOf('Global Styles|Typography', module).add('Types', () => {
   const overrides: { [key: string]: React.ReactNode } = {
     root: ({ children }: any) => <p>{children}</p>,
     '.medium': ({ children }: any) => <p className="medium">{children}</p>,

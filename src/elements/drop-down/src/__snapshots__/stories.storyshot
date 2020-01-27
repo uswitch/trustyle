@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Elements|DropDown example 1`] = `
+<div
+  className="css-m9xbk1"
+>
+  <div
+    className="css-nk32ej"
+  >
+    <div
+      className="css-79elbk"
+    >
+      <select
+        className="css-19btvpa"
+        id="example"
+        name="example"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value="red"
+      >
+        <option
+          value="red"
+        >
+          Red
+        </option>
+        <option
+          value="blue"
+        >
+          Blue
+        </option>
+        <option
+          value="yellow"
+        >
+          Yellow
+        </option>
+      </select>
+      <span
+        className="css-u9m3vf"
+      >
+        <svg
+          className="css-15ys0jb"
+          viewBox="0 0 120 120"
+        >
+          <path
+            d="M 5.067303,79.355139 55.218287,26.773283 c 2.186148,-2.194309 3.091615,-2.969251 4.60071,-2.969251 1.509096,-0.0081 2.316669,0.774942 4.600711,3.018196 l 50.828042,53.348639 c 6.84396,7.227354 -3.27925,17.831823 -10.17214,10.661571 L 59.810835,43.21837 15.247593,89.98408 C 7.857094,97.733499 -2.2660959,87.120873 5.067303,79.338823 Z"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      className="css-1dy3vsl-Spacer"
+    />
+    <div
+      className="css-nmnybf"
+    >
+      <p
+        className="css-swqejw"
+      >
+        Red
+      </p>
+      <button
+        aria-label="Edit Value"
+        className="css-m2y9em"
+        onClick={[Function]}
+      >
+        <svg
+          className="css-1t22998"
+          viewBox="0 0 21 21"
+        >
+          <path
+            d="M7.579 10.958l-.245 2.968a.74.74 0 0 0 .245.574c.14.142.33.222.53.222h.039l2.995-.143a.708.708 0 0 0 .49-.213l8.154-8.255a.752.752 0 0 0 0-1.049l-2.775-2.8a.755.755 0 0 0-1.04 0L7.81 10.499a.74.74 0 0 0-.23.46zm1.441.396l7.453-7.513 1.73 1.746-7.418 7.508-1.897.099.132-1.84z"
+          />
+          <path
+            d="M18.551 11.534v6.514c0 .27-.217.488-.486.488H2.945a.487.487 0 0 1-.486-.488V2.952c0-.27.217-.488.486-.488h8.557V1H2.945A1.948 1.948 0 0 0 1 2.952v15.096C1 19.126 1.87 20 2.945 20h15.11A1.948 1.948 0 0 0 20 18.048v-6.514h-1.449z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      className="css-1hyfx7x"
+    >
+      <div
+        className="css-79elbk"
+      >
+        <select
+          className="css-19btvpa"
+          id="frozen-example"
+          name="frozen-example"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          value="red"
+        >
+          <option
+            value="red"
+          >
+            Red
+          </option>
+          <option
+            value="blue"
+          >
+            Blue
+          </option>
+          <option
+            value="yellow"
+          >
+            Yellow
+          </option>
+        </select>
+        <span
+          className="css-u9m3vf"
+        >
+          <svg
+            className="css-15ys0jb"
+            viewBox="0 0 120 120"
+          >
+            <path
+              d="M 5.067303,79.355139 55.218287,26.773283 c 2.186148,-2.194309 3.091615,-2.969251 4.60071,-2.969251 1.509096,-0.0081 2.316669,0.774942 4.600711,3.018196 l 50.828042,53.348639 c 6.84396,7.227354 -3.27925,17.831823 -10.17214,10.661571 L 59.810835,43.21837 15.247593,89.98408 C 7.857094,97.733499 -2.2660959,87.120873 5.067303,79.338823 Z"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div
+      className="css-1dy3vsl-Spacer"
+    />
+    <div
+      className="css-79elbk"
+    >
+      <select
+        className="css-1icpkxt"
+        id="withError"
+        name="withError"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value=""
+      >
+        <option
+          value=""
+        >
+          Incorrect
+        </option>
+      </select>
+      <span
+        className="css-u9m3vf"
+      >
+        <svg
+          className="css-1j7c9yt"
+          viewBox="0 0 120 120"
+        >
+          <path
+            d="M 5.067303,79.355139 55.218287,26.773283 c 2.186148,-2.194309 3.091615,-2.969251 4.60071,-2.969251 1.509096,-0.0081 2.316669,0.774942 4.600711,3.018196 l 50.828042,53.348639 c 6.84396,7.227354 -3.27925,17.831823 -10.17214,10.661571 L 59.810835,43.21837 15.247593,89.98408 C 7.857094,97.733499 -2.2660959,87.120873 5.067303,79.338823 Z"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+</div>
+`;
