@@ -1,32 +1,32 @@
 pipeline:
-  eslint:
+  install:
     when:
-      event: [pull_request, push]
+      event: [push]
     image: node:11.15.0
     commands:
       - npm install
       - npx lerna exec npm install
       - npx lerna bootstrap
+
+  eslint:
+    when:
+      event: [push]
+    image: node:11.15.0
+    commands:
       - npm run eslint:check
 
   prettier:
     when:
-      event: [pull_request, push]
+      event: [push]
     image: node:11.15.0
     commands:
-      - npm install
-      - npx lerna exec npm install
-      - npx lerna bootstrap
       - npm run prettier:check
 
   build:
     when:
-      event: [pull_request, push]
+      event: [push]
     image: node:11.15.0
     commands:
-      - npm install
-      - npx lerna exec npm install
-      - npx lerna bootstrap
       - npx lerna run build
 
   test:
@@ -34,8 +34,4 @@ pipeline:
       event: [pull_request, push]
     image: node:11.15.0
     commands:
-      - npm install
-      - npx lerna exec npm install
-      - npx lerna bootstrap
-      - npx lerna run build
       - npm test
