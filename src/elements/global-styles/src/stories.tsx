@@ -57,11 +57,15 @@ storiesOf('Global Styles|Typography', module).add('Types', () => {
     )
   }
 
-  return Object.keys(theme().styles).map((key: string) => {
-    const textValue = text(`Text ${key}`, typeNames[key] || key)
+  return (
+    <React.Fragment>
+      {Object.keys(theme().styles).map((key: string) => {
+        const textValue = text(`Text ${key}`, typeNames[key] || key)
 
-    const Comp = overrides[key] ? overrides[key] : key
-    // @ts-ignore
-    return <Comp key={key}>{textValue}</Comp>
-  })
+        const Comp = overrides[key] ? overrides[key] : key
+        // @ts-ignore
+        return <Comp key={key}>{textValue}</Comp>
+      })}
+    </React.Fragment>
+  )
 })
