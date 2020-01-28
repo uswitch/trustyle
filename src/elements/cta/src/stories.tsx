@@ -1,15 +1,12 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { css, jsx } from '@emotion/core'
+import { storiesOf } from '@storybook/react'
 import { text } from '@storybook/addon-knobs'
 
 import CTA from './'
 
-export default {
-  title: 'Elements|CTA'
-}
-
-export const Example = () => {
+storiesOf('Elements|CTA', module).add('example', () => {
   const titleText = text(
     'CTA title',
     'Find the best credit card for your needs'
@@ -30,4 +27,4 @@ export const Example = () => {
       />
     </div>
   )
-}
+})

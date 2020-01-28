@@ -1,15 +1,12 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { css, jsx } from '@emotion/core'
+import { storiesOf } from '@storybook/react'
 import { boolean, number, select, text } from '@storybook/addon-knobs'
 
 import CallOut from './'
 
-export default {
-  title: 'Elements|Call Out'
-}
-
-export const Example = () => {
+storiesOf('Elements|CallOut', module).add('example', () => {
   const padding = number('Padding', 10)
   const titleText = text(`Call out title`, `This is a call out`)
   const textText = text(
@@ -32,4 +29,4 @@ export const Example = () => {
       />
     </div>
   )
-}
+})

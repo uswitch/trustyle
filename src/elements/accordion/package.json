@@ -20,6 +20,6 @@
     "theme-ui": "^0.2.52"
   },
   "dependencies": {
-    "@uswitch/trustyle.icon": "^0.2.39"
+    "@uswitch/trustyle.icon": "^0.2.38"
   }
 }

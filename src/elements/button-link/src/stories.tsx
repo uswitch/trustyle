@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { css, jsx } from '@emotion/core'
+import { storiesOf } from '@storybook/react'
 import { number, text } from '@storybook/addon-knobs'
 
 import theme from '../../../utils/theme-selector'
@@ -9,11 +10,7 @@ import { ButtonLink } from './'
 
 const Spacer = () => <div css={css({ minHeight: 20 })} />
 
-export default {
-  title: 'Elements|Button Link'
-}
-
-export const AllVariants = () => (
+storiesOf('Elements|ButtonLink', module).add('all variants', () => (
   <div css={css({ padding: number('Padding', 10) })}>
     {theme() &&
       Object.keys(theme().buttons).map((key, index) => (
@@ -29,12 +26,4 @@ export const AllVariants = () => (
         </React.Fragment>
       ))}
   </div>
-)
-
-export const PrimaryVariant = () => (
-  <ButtonLink variant="primary">Primary link button</ButtonLink>
-)
-
-export const SecondaryVariant = () => (
-  <ButtonLink variant="secondary">Primary link button</ButtonLink>
-)
+))

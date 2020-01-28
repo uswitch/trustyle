@@ -1,12 +1,16 @@
 /** @jsx jsx */
 import React from 'react'
-import { addDecorator, addParameters } from '@storybook/react'
+import { addDecorator, configure, addParameters } from '@storybook/react'
 import { withA11y } from '@storybook/addon-a11y'
 import { withKnobs } from '@storybook/addon-knobs'
 import { Styled, jsx, ThemeProvider } from 'theme-ui'
 import { Global } from '@emotion/core'
 import theme from '../src/utils/theme-selector'
 import { GlobalStyles } from '../src/elements/global-styles/src'
+
+// automatically import all files ending in *.stories.js
+const req = require.context('../src', true, /stories\.tsx$/)
+const loadStories = () => req.keys().forEach(filename => req(filename))
 
 const withTheme = story => (
   <ThemeProvider theme={theme()}>
@@ -80,3 +84,5 @@ addParameters({
     hierarchySeparator: /\/|\./
   }
 })
+
+configure(loadStories, module)

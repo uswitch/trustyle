@@ -8,7 +8,7 @@ import { RadioInput } from './.'
 
 const wrapper = css({ padding: number('Padding', 10), 'margin-top': 5 })
 
-storiesOf('Elements|Radio Input', module).add('Example', () => (
+storiesOf('Elements|Radio Input', module).add('example', () => (
   <React.Fragment>
     <div css={wrapper}>
       <RadioInput label="Radio input field" name="radio-name" />
