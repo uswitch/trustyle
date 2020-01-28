@@ -184,6 +184,30 @@
 
   },
 
+  "accordion": {
+    "button": {
+      "padding": "sm",
+      "bg": ["grey-05", "transparent"],
+      "fontFamily": "base",
+      "fontSize": "base",
+      "fontWeight": "bold",
+      "color": "textColor",
+      "alignItems": "center",
+      "borderWidth": "0 0 1px 0",
+      "borderStyle": "solid",
+      "borderColor": "grey-20"
+    },
+    "caret": {
+      "color": "cannon-pink"
+    },
+
+    "isActive": {
+      "caret": {
+        "color": "cranberry"
+      }
+    }
+  },
+
   "compounds": {
 
     "card": {
