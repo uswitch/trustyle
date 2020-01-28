@@ -5,7 +5,6 @@ import { jsx, useThemeUI } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-
   title: string
   isInitiallyOpen?: boolean
 }

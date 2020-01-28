@@ -22,7 +22,7 @@ storiesOf('Compounds|Side Nav', module).add('Side Nav', () => {
       text: 'Get a mortgage agreed in principle',
       url: '#heading3'
     }
-  ]);
+  ])
   const additionalLinks = object('Aditional links', [
     {
       title: 'Related articles',
@@ -59,11 +59,13 @@ storiesOf('Compounds|Side Nav', module).add('Side Nav', () => {
       ]
     }
   ])
-  return <SideNav 
-    internalLinks={{
-      title: internalLinksTitle,
-      links: internalLinks
-    }}
-    additionalLinks={additionalLinks}
-  />
+  return (
+    <SideNav
+      internalLinks={{
+        title: internalLinksTitle,
+        links: internalLinks
+      }}
+      additionalLinks={additionalLinks}
+    />
+  )
 })
