@@ -16,6 +16,6 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.accordion": "^0.0.0"
+    "@uswitch/trustyle.accordion": "^0.1.0"
   }
 }
