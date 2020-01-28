@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.pagination",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -16,6 +16,6 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.icon": "^0.2.37"
+    "@uswitch/trustyle.icon": "^0.2.39"
   }
 }
