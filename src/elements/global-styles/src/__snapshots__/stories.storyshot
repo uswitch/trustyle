@@ -191,6 +191,54 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       />
       hero
     </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
+        className="css-1rttqhl"
+      />
+      grey-05
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
+        className="css-1fyxyn9"
+      />
+      grey-20
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
+        className="css-14csw05"
+      />
+      grey-30
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
+        className="css-1xqe2o6"
+      />
+      grey-60
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
+        className="css-55qb8t"
+      />
+      grey-80
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
+        className="css-blj7j4"
+      />
+      experimental-text
+    </div>
   </div>
 </div>
 `;
