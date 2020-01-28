@@ -1,9 +1,12 @@
 import * as React from 'react'
-import { storiesOf } from '@storybook/react'
 
 import { BulletListHighlight } from './'
 
-storiesOf('Elements|Bullet List Highlight', module).add('Example', () => (
+export default {
+  title: 'Elements|Bullet List Highlight'
+}
+
+export const Example = () => (
   <BulletListHighlight
     highlights={[
       <span key="example">
@@ -15,4 +18,4 @@ storiesOf('Elements|Bullet List Highlight', module).add('Example', () => (
       </span>
     ]}
   />
-))
+)

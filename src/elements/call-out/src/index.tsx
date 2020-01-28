@@ -12,7 +12,6 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 
 const CallOut: React.FC<Props> = ({ title, text, icon }) => {
   const { theme }: any = useThemeUI()
-  const getTheme = (key: string) => theme.callOut && theme.callOut[key]
 
   const mainText = (
     <React.Fragment>
@@ -21,13 +20,13 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
           sx={{
             marginTop: '-3px',
             marginBottom: 'xxs',
-            ...getTheme('heading')
+            ...theme.callOut?.heading
           }}
         >
           {title}
         </Styled.h3>
       )}
-      <Styled.p sx={{ marginY: 0, ...getTheme('text') }}>{text}</Styled.p>
+      <Styled.p sx={{ marginY: 0, ...theme.callOut?.text }}>{text}</Styled.p>
     </React.Fragment>
   )
 
@@ -37,7 +36,7 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
         borderRadius: 4,
         paddingX: 'sm',
         paddingY: 'sm',
-        ...getTheme('main')
+        ...theme.callOut?.main
       }}
     >
       {icon ? (
@@ -48,7 +47,7 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
                 backgroundColor: 'primary',
                 borderRadius: '50%',
                 padding: '20%',
-                ...getTheme('icon')
+                ...theme.callOut?.icon
               }}
             >
               <Icon color="white" glyph={icon} />

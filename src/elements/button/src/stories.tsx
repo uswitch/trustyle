@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { css, jsx } from '@emotion/core'
-import { storiesOf } from '@storybook/react'
 import { boolean, number, text } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
@@ -12,7 +11,11 @@ import { Button, Variant } from './'
 
 const Spacer = () => <div css={css({ minHeight: 20 })} />
 
-storiesOf('Elements|Button', module).add('primary variant', () => (
+export default {
+  title: 'Elements|Button'
+}
+
+export const AllVariants = () => (
   <div css={css({ padding: number('Padding', 10) })}>
     {theme() &&
       Object.keys(theme().buttons).map((key, index) => (
@@ -67,4 +70,24 @@ storiesOf('Elements|Button', module).add('primary variant', () => (
         </React.Fragment>
       ))}
   </div>
-))
+)
+
+export const PrimaryVariant = () => (
+  <Button variant="primary">Primary button</Button>
+)
+
+export const SecondaryVariant = () => (
+  <Button variant="secondary">Primary button</Button>
+)
+
+export const PrimaryDisabledVariant = () => (
+  <Button variant="primary" disabled>
+    Primary button
+  </Button>
+)
+
+export const SecondaryDisabledVariant = () => (
+  <Button variant="secondary" disabled>
+    Primary button
+  </Button>
+)

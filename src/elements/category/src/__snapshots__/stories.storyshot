@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Elements|Category example with text 1`] = `
+<div
+  className="css-m9xbk1"
+>
+  <div
+    className="css-kp49sz"
+  >
+    <h1
+      className="css-yzkzpf"
+    >
+      Title goes here
+    </h1>
+    <p
+      className="css-n94qh2"
+    >
+      Text goes here
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Elements|Category example without text 1`] = `
+<div
+  className="css-m9xbk1"
+>
+  <div
+    className="css-kp49sz"
+  >
+    <p
+      className="css-yzkzpf"
+    >
+      Title goes here
+    </p>
+  </div>
+</div>
+`;

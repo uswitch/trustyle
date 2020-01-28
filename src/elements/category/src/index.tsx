@@ -10,15 +10,13 @@ interface ListProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Category: React.FC<ListProps> = ({ title, text }) => {
   const { theme }: any = useThemeUI()
-  const getTheme = (key: string) =>
-    theme.categoryTitle && theme.categoryTitle[key]
 
   return (
     <div
       sx={{
         paddingX: ['sm', 'md'],
         paddingY: ['md', 'lg'],
-        ...getTheme('main')
+        ...theme.categoryTitle?.main
       }}
     >
       <Styled.h1
@@ -26,13 +24,13 @@ const Category: React.FC<ListProps> = ({ title, text }) => {
         sx={{
           padding: 0,
           margin: 0,
-          ...getTheme('heading')
+          ...theme.categoryTitle?.heading
         }}
       >
         {title}
       </Styled.h1>
       {text && (
-        <Styled.p sx={{ marginBottom: 0, ...getTheme('text') }}>
+        <Styled.p sx={{ marginBottom: 0, ...theme.categoryTitle?.text }}>
           {text}
         </Styled.p>
       )}

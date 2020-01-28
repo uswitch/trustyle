@@ -1,0 +1,25 @@
+{
+  "name": "@uswitch/trustyle.accordion",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "--------------- BUILDING": "----------------------",
+    "clean": "rm -rf lib",
+    "build": "npm run clean && tsc"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.2"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.22",
+    "react": "^16.7.0",
+    "theme-ui": "^0.2.52"
+  },
+  "dependencies": {
+    "@uswitch/trustyle.icon": "^0.2.39"
+  }
+}

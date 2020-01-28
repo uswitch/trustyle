@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { ChangeEvent, useState } from 'react'
 import { jsx } from '@emotion/core'
-import { storiesOf } from '@storybook/react'
 import { Column, Container, Row } from '@uswitch/trustyle.grid'
 
 import { Fieldset } from '../../fieldset/src'
@@ -15,13 +14,30 @@ const initialValues = {
   d: false
 }
 
-const Form = ({ type }: { type: 'radio' | 'checkbox' }) => {
-  const [values, setValues] = useState(initialValues)
+const Form = ({
+  type,
+  useHooks = false
+}: {
+  type: 'radio' | 'checkbox'
+  useHooks?: boolean
+}) => {
+  let values: any, changeHandler: any
 
-  const changeHandler = (event: ChangeEvent<HTMLInputElement>): void => {
-    console.log(event.target.value)
-    const rest = type === 'radio' ? initialValues : values
-    setValues({ ...rest, [event.target.value]: event.target.checked })
+  if (useHooks) {
+    let setValues: any
+    ;[values, setValues] = useState(initialValues)
+
+    changeHandler = (event: ChangeEvent<HTMLInputElement>): void => {
+      console.log(event.target.value)
+      const rest = type === 'radio' ? initialValues : values
+      setValues({ ...rest, [event.target.value]: event.target.checked })
+    }
+  } else {
+    values = {
+      ...initialValues,
+      b: true
+    }
+    changeHandler = () => {}
   }
 
   return (
@@ -34,7 +50,7 @@ const Form = ({ type }: { type: 'radio' | 'checkbox' }) => {
                 key={value}
                 name="example"
                 type={type}
-                checked={checked}
+                checked={checked as boolean}
                 onChange={changeHandler}
                 value={value}
                 label={value.toUpperCase()}
@@ -49,10 +65,12 @@ const Form = ({ type }: { type: 'radio' | 'checkbox' }) => {
   )
 }
 
-storiesOf('Elements|TileInput', module)
-  .add('Radio', () => {
-    return <Form type="radio" />
-  })
-  .add('Checkbox', () => {
-    return <Form type="checkbox" />
-  })
+export default {
+  title: 'Elements|TileInput'
+}
+
+export const Radio = () => <Form type="radio" />
+export const Checkbox = () => <Form type="checkbox" />
+
+export const RadioSelected = () => <Form type="radio" useHooks={false} />
+export const CheckboxSelected = () => <Form type="checkbox" useHooks={false} />

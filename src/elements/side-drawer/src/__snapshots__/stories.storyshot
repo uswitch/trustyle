@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Elements|Drawer Example 1`] = `
+<div
+  className="css-m9xbk1"
+>
+  <div
+    className="css-1tuyjsj-Padding"
+  >
+    <section>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <p>
+        Aenean vel arcu non magna varius sagittis vel at elit.
+      </p>
+      <p>
+        Vivamus et orci pretium, commodo eros vitae, tincidunt purus.
+      </p>
+      <p>
+        Nunc consequat condimentum porttitor.
+      </p>
+      <p>
+        Cras at mi sed quam hendrerit bibendum ac a lorem.
+      </p>
+      <p>
+        Mauris a sapien vitae massa lacinia malesuada.
+      </p>
+    </section>
+    <br />
+    <br />
+    <br />
+    <p>
+      Modal trigger is in the middle 
+      <button
+        className="css-6uw0qg-ExampleDrawer"
+        onClick={[Function]}
+      >
+        Click to learn more
+      </button>
+       of some text.
+    </p>
+    <br />
+    <br />
+    <br />
+    <section>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <p>
+        Aenean vel arcu non magna varius sagittis vel at elit.
+      </p>
+      <p>
+        Vivamus et orci pretium, commodo eros vitae, tincidunt purus.
+      </p>
+      <p>
+        Nunc consequat condimentum porttitor.
+      </p>
+      <p>
+        Cras at mi sed quam hendrerit bibendum ac a lorem.
+      </p>
+      <p>
+        Mauris a sapien vitae massa lacinia malesuada.
+      </p>
+    </section>
+    <br />
+    <br />
+    <br />
+    <section>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <p>
+        Aenean vel arcu non magna varius sagittis vel at elit.
+      </p>
+      <p>
+        Vivamus et orci pretium, commodo eros vitae, tincidunt purus.
+      </p>
+      <p>
+        Nunc consequat condimentum porttitor.
+      </p>
+      <p>
+        Cras at mi sed quam hendrerit bibendum ac a lorem.
+      </p>
+      <p>
+        Mauris a sapien vitae massa lacinia malesuada.
+      </p>
+    </section>
+  </div>
+</div>
+`;
