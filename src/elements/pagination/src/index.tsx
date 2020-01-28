@@ -91,14 +91,13 @@ const Pagination: React.FC<Props> = ({
   numberToLink
 }) => {
   const { theme }: any = useThemeUI()
-  const getTheme = (key: string) => theme.pagination && theme.pagination[key]
 
   const numbers = getNumbers(currentPage, totalPages)
 
   const liStyling = {
     display: 'inline-block',
     padding: 'xs',
-    ...getTheme('li')
+    ...theme.pagination?.li
   }
 
   const anchorStyling = {
@@ -113,12 +112,12 @@ const Pagination: React.FC<Props> = ({
         listStyleType: 'none',
         marginLeft: 0,
         paddingLeft: 0,
-        ...getTheme('main')
+        ...theme.pagination?.main
       }}
     >
       <li
         sx={{
-          ...(currentPage === 1 && getTheme('arrowDisabled')),
+          ...(currentPage === 1 && theme.pagination?.arrowDisabled),
           ...liStyling
         }}
       >
@@ -138,9 +137,9 @@ const Pagination: React.FC<Props> = ({
         <li
           key={i}
           sx={{
-            ...getTheme(
-              number === currentPage ? 'currentPage' : 'nonCurrentPage'
-            ),
+            ...(number === currentPage
+              ? theme.pagination?.currentPage
+              : theme.pagination?.nonCurrentPage),
             ...liStyling
           }}
         >
@@ -159,7 +158,7 @@ const Pagination: React.FC<Props> = ({
       ))}
       <li
         sx={{
-          ...(currentPage === totalPages && getTheme('arrowDisabled')),
+          ...(currentPage === totalPages && theme.pagination?.arrowDisabled),
           ...liStyling
         }}
       >
