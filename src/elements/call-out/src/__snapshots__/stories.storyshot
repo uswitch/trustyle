@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Elements|Call Out Example 1`] = `
+<div
+  className="css-m9xbk1"
+>
+  <div
+    className="css-1jiwptm-Example"
+  >
+    <div
+      className="css-c6gwov"
+    >
+      <div
+        className="css-k008qs"
+      >
+        <div
+          className="css-sol4xc"
+        >
+          <div
+            className="css-vk6eq1"
+          >
+            <svg
+              className="css-jrkchm"
+              viewBox="0 0 18 18"
+            >
+              <path
+                d="M9 8.795L16.6 1 9 8.795 1.4 1 9 8.795zm0 0L1 17l8-8.205L17 17 9 8.795z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div>
+          <h3
+            className="css-yf5h7x"
+          >
+            This is a call out
+          </h3>
+          <p
+            className="css-1qd1r5f"
+          >
+            Tempor incididunt ut labore et dolore magna aliqua. Sint id est dolor laborum. Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolores est unt.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
