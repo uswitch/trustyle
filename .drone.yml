@@ -25,7 +25,7 @@ pipeline:
 
   test:
     when:
-      event: [pull_request, push]
+      event: [push]
     image: node:11.15.0
     commands:
       - npm test
