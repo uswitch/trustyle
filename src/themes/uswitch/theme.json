@@ -107,7 +107,6 @@
 
   "colors": {
     "periwinkle": "#C1D3FF",
-
     "primary": "#d64226",
     "primary-hover": "#ab351e",
     "secondary": "#1c1f4e",
@@ -128,7 +127,10 @@
     "hero": "#99e2ff",
     "light-blue": "#caefff",
     "light-grey-blue": "#b0b8bf",
-    "anakiwa": "#99e2ff"
+    "anakiwa": "#99e2ff",
+        
+    "uswitch-navy": "#141424",
+    "grey-70": "#575761"
   },
 
   "radii": {
@@ -178,6 +180,27 @@
           "backgroundSize": 500,
           "backgroundPosition": "bottom"
         }
+      }
+    }
+  },
+
+  "accordion": {
+    "button": {
+      "padding": "sm",
+      "bg": "uswitch-navy",
+      "fontFamily": "base",
+      "fontSize": "base",
+      "fontWeight": "bold",
+      "color": "light-1",
+      "alignItems": "center"
+    },
+    "caret": {
+      "color": "light-1"
+    },
+
+    "isActive": {
+      "caret": {
+        "color": "light-1"
       }
     }
   },
