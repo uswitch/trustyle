@@ -2,7 +2,6 @@
 
 import * as React from 'react'
 import { jsx } from '@emotion/core'
-import { useThemeUI } from 'theme-ui'
 
 import { Arrow } from './arrow'
 import { Caret } from './caret'
