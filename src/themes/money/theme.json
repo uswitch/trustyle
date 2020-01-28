@@ -127,7 +127,15 @@
     "text": "#000000",
     "dark-1": "#000000",
     "dark-2": "#3d3d3d",
-    "hero": "#99e2ff"
+    "hero": "#99e2ff",
+    
+    "grey-05": "#F7F7F7",
+    "grey-20": "#DFDFE1",
+    "grey-30": "#C2C4C8",
+    "grey-60": "#6F7175",
+    "grey-80": "#24262A",
+
+    "experimental-text": "#29335C"
   },
 
   "radii": {
