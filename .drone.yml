@@ -8,18 +8,12 @@ pipeline:
       - npx lerna exec npm install
       - npx lerna bootstrap
 
-  eslint:
+  code_checks:
     when:
       event: [push]
     image: node:11.15.0
     commands:
       - npm run eslint:check
-
-  prettier:
-    when:
-      event: [push]
-    image: node:11.15.0
-    commands:
       - npm run prettier:check
 
   build:
