@@ -127,7 +127,10 @@
     "hero": "#99e2ff",
     "light-blue": "#caefff",
     "light-grey-blue": "#b0b8bf",
-    "anakiwa": "#99e2ff"
+    "anakiwa": "#99e2ff",
+        
+    "uswitch-navy": "#141424",
+    "grey-70": "#575761"
   },
 
   "radii": {
