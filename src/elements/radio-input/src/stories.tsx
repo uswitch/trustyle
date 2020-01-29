@@ -6,7 +6,7 @@ import { css, jsx } from '@emotion/core'
 
 import { RadioInput } from './.'
 
-const wrapper = css({ padding: number('Padding', 10), 'margin-top': 5 })
+const wrapper = css({ padding: number('Padding', 10), marginTop: 5 })
 
 storiesOf('Elements|Radio Input', module).add('Example', () => (
   <React.Fragment>
