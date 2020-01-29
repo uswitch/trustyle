@@ -1,11 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Elements|Loading Spinner Example 1`] = `
+@keyframes animation-0 {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em,0 -0.83em 0 -0.44em,0 -0.83em 0 -0.477em;
+  }
+
+  5%, 95% {
+    box-shadow: 0 -0.83em 0 -0.4em,0 -0.83em 0 -0.44em,0 -0.83em 0 -0.477em;
+  }
+
+  10%, 59% {
+    box-shadow: 0 -0.83em 0 -0.4em,-0.173em -0.812em 0 -0.44em,-0.297em -0.775em 0 -0.477em;
+  }
+
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em,-0.555em -0.617em 0 -0.44em,-0.749em -0.34em 0 -0.477em;
+  }
+
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em,-0.645em -0.522em 0 -0.44em,-0.82em -0.09em 0 -0.477em;
+  }
+
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em,0 -0.83em 0 -0.44em,0 -0.83em 0 -0.477em;
+  }
+}
+
+@keyframes animation-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-1 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-0 {
+  color: #008fe9;
+  font-size: 3rem;
+  text-indent: -9999rem;
+  overflow: hidden;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin: 4.5rem auto;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: animation-0 1.7s infinite ease,animation-1 1.7s infinite ease;
+  animation: animation-0 1.7s infinite ease,animation-1 1.7s infinite ease;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-1"
 >
   <div
-    className="css-1a4893g-LoadingSpinner"
+    className="emotion-0"
   >
     loading...
   </div>

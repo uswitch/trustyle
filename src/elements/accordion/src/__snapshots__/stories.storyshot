@@ -1,21 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Elements|Accordion Example 1`] = `
+.emotion-4 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-2 {
+  cursor: pointer;
+  border: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  padding: 16px;
+  background-color: #F7F7F7;
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: textColor;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #DFDFE1;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-2 {
+    background-color: transparent;
+  }
+}
+
+.emotion-0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: left;
+}
+
+.emotion-3 {
+  overflow: hidden;
+  height: 0;
+}
+
+.emotion-1 {
+  display: block;
+  -webkit-transform: rotate(0.5turn);
+  -ms-transform: rotate(0.5turn);
+  transform: rotate(0.5turn);
+  height: 1rem;
+  width: 1rem;
+  fill: #924A8B;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-4"
 >
   <div>
     <button
-      className="css-lrsp0c"
+      className="emotion-2"
       onClick={[Function]}
     >
       <div
-        className="css-1eziwv"
+        className="emotion-0"
       >
         This is an example title
       </div>
       <svg
-        className="css-1mc96jq"
+        className="emotion-1"
         viewBox="0 0 120 120"
       >
         <path
@@ -24,7 +86,7 @@ exports[`Storyshots Elements|Accordion Example 1`] = `
       </svg>
     </button>
     <div
-      className="css-zaa1hl"
+      className="emotion-3"
     >
       This is some example content
     </div>

@@ -1,102 +1,296 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Elements|CheckboxInput Example 1`] = `
+.emotion-20 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-19 {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  width: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 4px;
+}
+
+@media (min-width:640px) {
+  .emotion-19 {
+    max-width: 640px;
+    width: 640px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-19 {
+    max-width: 1152px;
+    width: 1152px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-left: -4px;
+  margin-right: -4px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media (min-width:640px) {
+  .emotion-17 {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-17 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  display: block;
+  padding-left: 4px;
+  padding-right: 4px;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -ms-flex-preferred-size: calc(100% - 4px * 2);
+}
+
+@media (min-width:640px) {
+  .emotion-4 {
+    display: block;
+    padding-left: 8px;
+    padding-right: 8px;
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-preferred-size: calc(100% - 8px * 2);
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-4 {
+    display: block;
+    padding-left: 12px;
+    padding-right: 12px;
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-preferred-size: calc(100% - 12px * 2);
+  }
+}
+
+.emotion-3 {
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.emotion-3:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.emotion-1 {
+  margin-left: -1000px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.emotion-1:checked + span {
+  color: #000000;
+  border: 1px solid #008fe9;
+  box-shadow: inset 0 0 0 1px #008fe9;
+}
+
+.emotion-1:checked + span::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23008fe9" viewBox="-1 -2 14 12"><path d="M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z" /></svg>');
+  background-color: #ffffff;
+  border-color: #008fe9;
+  box-shadow: inset 0 0 0 1px #008fe9;
+}
+
+.emotion-2 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+  color: #59646d;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: normal;
+  border-radius: 3px;
+  border: 1px solid #b0b8bf;
+  padding: 0.8125rem 1rem;
+  -webkit-transition: background-color 200ms,border-color 200ms;
+  transition: background-color 200ms,border-color 200ms;
+}
+
+.emotion-2:before {
+  border-color: #b0b8bf;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  content: " ";
+  display: block;
+  height: 16px;
+  margin: 0.125rem 1rem 0.125rem 0rem;
+  width: 16px;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-18 {
+  border: 0;
+}
+
+.emotion-0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-20"
 >
   <div
-    className="css-fzcm1c-Form css-fpyx25"
+    className="emotion-19"
   >
     <fieldset
-      className="css-hh72o5-Fieldset"
+      className="emotion-18"
     >
       <legend
-        className="css-fodz0p-Fieldset"
+        className="emotion-0"
       >
         Example checkboxes
       </legend>
       <div
-        className="css-193htz4"
+        className="emotion-17"
       >
         <div
-          className="css-1si81tt"
+          className="emotion-4"
         >
           <label
-            className="css-4dxcli-CheckboxInput"
+            className="emotion-3"
           >
             <input
               checked={false}
-              className="css-5jsged-CheckboxInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="checkbox"
               value="a"
             />
             <span
-              className="css-1w65v42-CheckboxInput"
+              className="emotion-2"
             >
               A
             </span>
           </label>
         </div>
         <div
-          className="css-1si81tt"
+          className="emotion-4"
         >
           <label
-            className="css-4dxcli-CheckboxInput"
+            className="emotion-3"
           >
             <input
               checked={false}
-              className="css-5jsged-CheckboxInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="checkbox"
               value="b"
             />
             <span
-              className="css-1w65v42-CheckboxInput"
+              className="emotion-2"
             >
               B
             </span>
           </label>
         </div>
         <div
-          className="css-1si81tt"
+          className="emotion-4"
         >
           <label
-            className="css-4dxcli-CheckboxInput"
+            className="emotion-3"
           >
             <input
               checked={false}
-              className="css-5jsged-CheckboxInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="checkbox"
               value="c"
             />
             <span
-              className="css-1w65v42-CheckboxInput"
+              className="emotion-2"
             >
               C
             </span>
           </label>
         </div>
         <div
-          className="css-1si81tt"
+          className="emotion-4"
         >
           <label
-            className="css-4dxcli-CheckboxInput"
+            className="emotion-3"
           >
             <input
               checked={false}
-              className="css-5jsged-CheckboxInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="checkbox"
               value="d"
             />
             <span
-              className="css-1w65v42-CheckboxInput"
+              className="emotion-2"
             >
               D
             </span>

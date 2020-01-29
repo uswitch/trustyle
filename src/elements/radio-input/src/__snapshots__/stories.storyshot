@@ -1,40 +1,135 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Elements|Radio Input Example 1`] = `
+.emotion-8 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-2 {
+  display: block;
+}
+
+.emotion-0 {
+  margin-left: -1000px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.emotion-0:checked + span {
+  border-color: #008fe9;
+  box-shadow: inset 0 0 0 1px #008fe9;
+  color: #000000;
+}
+
+.emotion-0:checked + span::before {
+  background-color: #008fe9;
+  border-color: #008fe9;
+  -webkit-transition: background-color 200ms,border-color 200ms;
+  transition: background-color 200ms,border-color 200ms;
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.emotion-0:focus + span {
+  border-color: #008fe9;
+  box-shadow: inset 0 0 0 1px #008fe9;
+}
+
+.emotion-1 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-color: #b0b8bf;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  color: #59646d;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: normal;
+  min-height: 50px;
+  padding: 0.875rem 0.75rem 1rem 0rem;
+  width: 100%;
+}
+
+.emotion-1:before {
+  border-color: #b0b8bf;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  content: " ";
+  display: block;
+  height: 17px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 17px;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-3 {
+  padding: 10px;
+  margin-top: 5px;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-8"
 >
   <div
-    className="css-fknz1v"
+    className="emotion-3"
   >
     <label
-      className="css-1hmki3o-RadioInput"
+      className="emotion-2"
     >
       <input
-        className="css-odsoy9-RadioInput"
+        className="emotion-0"
         name="radio-name"
         type="radio"
       />
       <span
-        className="css-1qe8mmn-RadioInput"
+        className="emotion-1"
       >
         Radio input field
       </span>
     </label>
   </div>
   <div
-    className="css-fknz1v"
+    className="emotion-3"
   >
     <label
-      className="css-1hmki3o-RadioInput"
+      className="emotion-2"
     >
       <input
-        className="css-odsoy9-RadioInput"
+        className="emotion-0"
         name="radio-name"
         type="radio"
       />
       <span
-        className="css-1qe8mmn-RadioInput"
+        className="emotion-1"
       >
         Radio input field with a bit of extra text making it span across two lines
       </span>

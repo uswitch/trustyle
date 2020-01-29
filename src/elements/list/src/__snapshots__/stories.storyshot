@@ -1,65 +1,117 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Elements|List primary variant 1`] = `
+.emotion-13 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-12 {
+  padding: 10px;
+}
+
+.emotion-3 {
+  list-style: none;
+}
+
+.emotion-0 {
+  margin-bottom: 20px;
+  counter-increment: li;
+  position: relative;
+  padding-left: 20px;
+}
+
+.emotion-0::before {
+  position: absolute;
+  left: 0px;
+  content: counter(li);
+  color: #F4793B;
+}
+
+.emotion-4 {
+  margin-bottom: 20px;
+  counter-increment: li;
+  position: relative;
+  padding-left: 20px;
+}
+
+.emotion-4::before {
+  position: absolute;
+  left: 0px;
+  content: "• ";
+  color: #F4793B;
+}
+
+.emotion-12 {
+  padding: 10px;
+}
+
+.emotion-12 {
+  padding: 10px;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-13"
 >
   <div
-    className="css-nk32ej"
+    className="emotion-12"
   >
     <ol
-      className="css-o9b79t"
+      className="emotion-3"
     >
       <li
-        className="css-winuj2"
+        className="emotion-0"
       >
         First item
       </li>
       <li
-        className="css-winuj2"
+        className="emotion-0"
       >
         Second item
       </li>
       <li
-        className="css-winuj2"
+        className="emotion-0"
       >
         Third item
       </li>
     </ol>
     <ul
-      className="css-o9b79t"
+      className="emotion-3"
     >
       <li
-        className="css-11rw2vo"
+        className="emotion-4"
       >
         First item
       </li>
       <li
-        className="css-11rw2vo"
+        className="emotion-4"
       >
         Second item
       </li>
       <li
-        className="css-11rw2vo"
+        className="emotion-4"
       >
         Third item
       </li>
     </ul>
     <ul
-      className="css-o9b79t"
+      className="emotion-3"
     >
       <li
-        className="css-11rw2vo"
+        className="emotion-4"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </li>
       <li
-        className="css-11rw2vo"
+        className="emotion-4"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </li>
       <li
-        className="css-11rw2vo"
+        className="emotion-4"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </li>

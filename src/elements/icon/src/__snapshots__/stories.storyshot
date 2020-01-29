@@ -1,11 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Elements|Icon With selectable glyph and color 1`] = `
+.emotion-1 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-0 {
+  display: block;
+  fill: #65717b;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-1"
 >
   <svg
-    className="css-mo0z9n-Arrow"
+    className="emotion-0"
     viewBox="0 0 120 120"
   >
     <path

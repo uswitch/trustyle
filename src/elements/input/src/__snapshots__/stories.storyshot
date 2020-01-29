@@ -1,17 +1,273 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Elements|Text Input example 1`] = `
+.emotion-34 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-33 {
+  padding: 10px;
+}
+
+.emotion-15 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.29;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #65717b;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-12 {
+  color: #000000;
+  overflow: hidden;
+  padding: 0rem 1.5rem;
+  text-overflow: ellipsis;
+  width: calc(100% - 4.3125rem);
+}
+
+.emotion-14 {
+  background: none;
+  border: none;
+  border-left: 1px solid #59646d;
+  cursor: pointer;
+  height: 1.75rem;
+  padding: 0rem 1.5rem;
+  width: 4.3125rem;
+}
+
+.emotion-14:focus {
+  outline: 2px solid #008fe9;
+}
+
+.emotion-14::-moz-focus-inner {
+  border: 0;
+}
+
+.emotion-13 {
+  display: block;
+  fill: #008fe9;
+  stroke: #008fe9;
+  stroke-width: 0.1;
+}
+
+.emotion-18 {
+  display: none;
+}
+
+.emotion-33 {
+  padding: 10px;
+}
+
+.emotion-1 {
+  box-shadow: inset 0 2px 5px 0 rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  border: solid 1px #b0b8bf;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 3.33rem;
+  padding: 1rem;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.emotion-0:focus {
+  outline: none;
+}
+
+.emotion-0:disabled {
+  outline: none;
+  border: none;
+  color: #65717b;
+  background: #e9ebed;
+}
+
+.emotion-2 {
+  min-height: 10px;
+}
+
+.emotion-7 {
+  box-shadow: inset 0 2px 5px 0 rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  border: solid 1px #b0b8bf;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  border-color: #db1818;
+  box-shadow: inset 0 0 0 1px #db1818;
+  width: 100%;
+}
+
+.emotion-15 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.29;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #65717b;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-12 {
+  color: #000000;
+  overflow: hidden;
+  padding: 0rem 1.5rem;
+  text-overflow: ellipsis;
+  width: calc(100% - 4.3125rem);
+}
+
+.emotion-14 {
+  background: none;
+  border: none;
+  border-left: 1px solid #59646d;
+  cursor: pointer;
+  height: 1.75rem;
+  padding: 0rem 1.5rem;
+  width: 4.3125rem;
+}
+
+.emotion-14:focus {
+  outline: 2px solid #008fe9;
+}
+
+.emotion-14::-moz-focus-inner {
+  border: 0;
+}
+
+.emotion-13 {
+  display: block;
+  fill: #008fe9;
+  stroke: #008fe9;
+  stroke-width: 0.1;
+}
+
+.emotion-18 {
+  display: none;
+}
+
+.emotion-20 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+  margin: 0.5rem 0rem;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  box-sizing: border-box;
+  color: #b0b8bf;
+  border-right: solid 1px #d1d1d1;
+}
+
+.emotion-25 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+  margin: 0.5rem 0rem;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  box-sizing: border-box;
+  color: #b0b8bf;
+  border-left: solid 1px #d1d1d1;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-34"
 >
   <div
-    className="css-nk32ej"
+    className="emotion-33"
   >
     <div
-      className="css-vsrnn2-Input"
+      className="emotion-1"
     >
       <input
-        className="css-19txn7e-Input"
+        className="emotion-0"
         name="example"
         onBlur={[Function]}
         onChange={[Function]}
@@ -21,13 +277,13 @@ exports[`Storyshots Elements|Text Input example 1`] = `
       />
     </div>
     <div
-      className="css-1m8tkhz-Spacer"
+      className="emotion-2"
     />
     <div
-      className="css-vsrnn2-Input"
+      className="emotion-1"
     >
       <input
-        className="css-19txn7e-Input"
+        className="emotion-0"
         name="example"
         onBlur={[Function]}
         onChange={[Function]}
@@ -38,13 +294,13 @@ exports[`Storyshots Elements|Text Input example 1`] = `
       />
     </div>
     <div
-      className="css-1m8tkhz-Spacer"
+      className="emotion-2"
     />
     <div
-      className="css-7jyc5j-Input"
+      className="emotion-7"
     >
       <input
-        className="css-19txn7e-Input"
+        className="emotion-0"
         name="example"
         onBlur={[Function]}
         onChange={[Function]}
@@ -54,13 +310,13 @@ exports[`Storyshots Elements|Text Input example 1`] = `
       />
     </div>
     <div
-      className="css-1m8tkhz-Spacer"
+      className="emotion-2"
     />
     <div
-      className="css-vsrnn2-Input"
+      className="emotion-1"
     >
       <input
-        className="css-19txn7e-Input"
+        className="emotion-0"
         name="example"
         onBlur={[Function]}
         onChange={[Function]}
@@ -73,23 +329,23 @@ exports[`Storyshots Elements|Text Input example 1`] = `
       />
     </div>
     <div
-      className="css-1m8tkhz-Spacer"
+      className="emotion-2"
     />
     <div
-      className="css-nmnybf"
+      className="emotion-15"
     >
       <p
-        className="css-swqejw"
+        className="emotion-12"
       >
         Prefilled
       </p>
       <button
         aria-label="Edit Value"
-        className="css-m2y9em"
+        className="emotion-14"
         onClick={[Function]}
       >
         <svg
-          className="css-1t22998"
+          className="emotion-13"
           viewBox="0 0 21 21"
         >
           <path
@@ -102,13 +358,13 @@ exports[`Storyshots Elements|Text Input example 1`] = `
       </button>
     </div>
     <div
-      className="css-1hyfx7x"
+      className="emotion-18"
     >
       <div
-        className="css-vsrnn2-Input"
+        className="emotion-1"
       >
         <input
-          className="css-19txn7e-Input"
+          className="emotion-0"
           name="example"
           onBlur={[Function]}
           onChange={[Function]}
@@ -119,18 +375,18 @@ exports[`Storyshots Elements|Text Input example 1`] = `
       </div>
     </div>
     <div
-      className="css-1m8tkhz-Spacer"
+      className="emotion-2"
     />
     <div
-      className="css-vsrnn2-Input"
+      className="emotion-1"
     >
       <span
-        className="css-n9iwr5-Input"
+        className="emotion-20"
       >
         £
       </span>
       <input
-        className="css-19txn7e-Input"
+        className="emotion-0"
         name="example"
         onBlur={[Function]}
         onChange={[Function]}
@@ -140,13 +396,13 @@ exports[`Storyshots Elements|Text Input example 1`] = `
       />
     </div>
     <div
-      className="css-1m8tkhz-Spacer"
+      className="emotion-2"
     />
     <div
-      className="css-vsrnn2-Input"
+      className="emotion-1"
     >
       <input
-        className="css-19txn7e-Input"
+        className="emotion-0"
         name="example"
         onBlur={[Function]}
         onChange={[Function]}
@@ -155,19 +411,19 @@ exports[`Storyshots Elements|Text Input example 1`] = `
         value=""
       />
       <span
-        className="css-aogwmx-Input"
+        className="emotion-25"
       >
         .00
       </span>
     </div>
     <div
-      className="css-1m8tkhz-Spacer"
+      className="emotion-2"
     />
     <div
-      className="css-vsrnn2-Input"
+      className="emotion-1"
     >
       <input
-        className="css-19txn7e-Input"
+        className="emotion-0"
         name="password"
         onBlur={[Function]}
         onChange={[Function]}
@@ -177,13 +433,13 @@ exports[`Storyshots Elements|Text Input example 1`] = `
       />
     </div>
     <div
-      className="css-1m8tkhz-Spacer"
+      className="emotion-2"
     />
     <div
-      className="css-vsrnn2-Input"
+      className="emotion-1"
     >
       <input
-        className="css-19txn7e-Input"
+        className="emotion-0"
         disabled={true}
         name="example"
         onBlur={[Function]}
@@ -198,11 +454,83 @@ exports[`Storyshots Elements|Text Input example 1`] = `
 `;
 
 exports[`Storyshots Elements|Text Input postprocess 1`] = `
+.emotion-7 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-1 {
+  box-shadow: inset 0 2px 5px 0 rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  border: solid 1px #b0b8bf;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 3.33rem;
+  padding: 1rem;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.emotion-0:focus {
+  outline: none;
+}
+
+.emotion-0:disabled {
+  outline: none;
+  border: none;
+  color: #65717b;
+  background: #e9ebed;
+}
+
+.emotion-6 {
+  padding: 10px;
+}
+
+.emotion-2 {
+  background-color: papayawhip;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-7"
 >
   <div
-    className="css-7idzuw-PostprocessStory"
+    className="emotion-6"
   >
     <label
       htmlFor="example-1"
@@ -210,10 +538,10 @@ exports[`Storyshots Elements|Text Input postprocess 1`] = `
       Trim whitespace from beginning / end
     </label>
     <div
-      className="css-vsrnn2-Input"
+      className="emotion-1"
     >
       <input
-        className="css-19txn7e-Input"
+        className="emotion-0"
         id="example-1"
         name="example"
         onBlur={[Function]}
@@ -227,7 +555,7 @@ exports[`Storyshots Elements|Text Input postprocess 1`] = `
       Value:
        
       <span
-        className="css-snmij9-DebugValue"
+        className="emotion-2"
       >
         EMPTY
       </span>
@@ -238,10 +566,10 @@ exports[`Storyshots Elements|Text Input postprocess 1`] = `
       Strip all whitespace
     </label>
     <div
-      className="css-vsrnn2-Input"
+      className="emotion-1"
     >
       <input
-        className="css-19txn7e-Input"
+        className="emotion-0"
         id="example-2"
         name="example"
         onBlur={[Function]}
@@ -255,7 +583,7 @@ exports[`Storyshots Elements|Text Input postprocess 1`] = `
       Value:
        
       <span
-        className="css-snmij9-DebugValue"
+        className="emotion-2"
       >
         EMPTY
       </span>

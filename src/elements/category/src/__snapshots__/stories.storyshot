@@ -1,19 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Elements|Category example with text 1`] = `
+.emotion-3 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-2 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background: linear-gradient(90deg,#924A8B 0.42%,#DB4D75 116.16%);
+}
+
+@media screen and (min-width:768px) {
+  .emotion-2 {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
+
+.emotion-0 {
+  font-family: Nunito,-apple-system,sans-serif;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 16px;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+}
+
+.emotion-1 {
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-3"
 >
   <div
-    className="css-kp49sz"
+    className="emotion-2"
   >
     <h1
-      className="css-yzkzpf"
+      className="emotion-0"
     >
       Title goes here
     </h1>
     <p
-      className="css-n94qh2"
+      className="emotion-1"
     >
       Text goes here
     </p>
@@ -22,14 +63,50 @@ exports[`Storyshots Elements|Category example with text 1`] = `
 `;
 
 exports[`Storyshots Elements|Category example without text 1`] = `
+.emotion-2 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-1 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background: linear-gradient(90deg,#924A8B 0.42%,#DB4D75 116.16%);
+}
+
+@media screen and (min-width:768px) {
+  .emotion-1 {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
+
+.emotion-0 {
+  font-family: Nunito,-apple-system,sans-serif;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 16px;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-2"
 >
   <div
-    className="css-kp49sz"
+    className="emotion-1"
   >
     <p
-      className="css-yzkzpf"
+      className="emotion-0"
     >
       Title goes here
     </p>

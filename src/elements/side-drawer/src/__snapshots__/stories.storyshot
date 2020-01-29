@@ -1,11 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Elements|Drawer Example 1`] = `
+.emotion-2 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-1 {
+  padding: 20px;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  color: #0982ce;
+  cursor: pointer;
+  text-align: left;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-2"
 >
   <div
-    className="css-1tuyjsj-Padding"
+    className="emotion-1"
   >
     <section>
       <p>
@@ -33,7 +58,7 @@ exports[`Storyshots Elements|Drawer Example 1`] = `
     <p>
       Modal trigger is in the middle 
       <button
-        className="css-6uw0qg-ExampleDrawer"
+        className="emotion-0"
         onClick={[Function]}
       >
         Click to learn more

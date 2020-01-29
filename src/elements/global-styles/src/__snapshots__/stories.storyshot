@@ -1,241 +1,443 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Global Styles|Colours Swatches 1`] = `
+.emotion-59 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-58 {
+  margin: -10px;
+}
+
+.emotion-1 {
+  padding: 10px;
+  display: inline-block;
+  font-family: Menlo,monospace;
+  width: 100px;
+  vertical-align: top;
+}
+
+.emotion-0 {
+  background-color: #DB4D75;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-2 {
+  background-color: #FD5081;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-4 {
+  background-color: #A00938;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-6 {
+  background-color: #924A8B;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-8 {
+  background-color: #B95CB0;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-10 {
+  background-color: #4B255E;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-12 {
+  background-color: #F4793B;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-14 {
+  background-color: #ffffff;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-16 {
+  background-color: #ECECEE;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-18 {
+  background-color: #DFDFE1;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-20 {
+  background-color: #d64226;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-22 {
+  background-color: #1c1f4e;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-24 {
+  background-color: #2f353a;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-26 {
+  background-color: #008fe9;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-28 {
+  background-color: #002396;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-32 {
+  background-color: #00aa4e;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-34 {
+  background-color: #6abd45;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-36 {
+  background-color: #00b9d9;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-38 {
+  background-color: #000000;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-42 {
+  background-color: #3d3d3d;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-44 {
+  background-color: #99e2ff;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-46 {
+  background-color: #F7F7F7;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-50 {
+  background-color: #C2C4C8;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-52 {
+  background-color: #6F7175;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-54 {
+  background-color: #24262A;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-56 {
+  background-color: #29335C;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-59"
 >
   <div
-    className="css-1pfokny"
+    className="emotion-58"
   >
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-fx1j7a"
+        className="emotion-0"
       />
       cranberry
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-pv1rd5"
+        className="emotion-2"
       />
       cranberry--light
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-1vlhy9u"
+        className="emotion-4"
       />
       cranberry--dark
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-l3o5kw"
+        className="emotion-6"
       />
       cannon-pink
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-1gmgq0v"
+        className="emotion-8"
       />
       cannon-pink--light
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-qjggsf"
+        className="emotion-10"
       />
       cannon-pink--dark
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-w8xdwj"
+        className="emotion-12"
       />
       jaffa
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-10cj7lp"
+        className="emotion-14"
       />
       light-1
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-pz5kyb"
+        className="emotion-16"
       />
       light-2
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-1fyxyn9"
+        className="emotion-18"
       />
       light-3
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-18u2hib"
+        className="emotion-20"
       />
       primary
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-fad71b"
+        className="emotion-22"
       />
       secondary
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-1od1an3"
+        className="emotion-24"
       />
       heading
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-1lyuzwk"
+        className="emotion-26"
       />
       link
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-88fj4i"
+        className="emotion-28"
       />
       link-2
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-fad71b"
+        className="emotion-22"
       />
       brand
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-15z5bww"
+        className="emotion-32"
       />
       accent-1
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-1oiwjec"
+        className="emotion-34"
       />
       accent-2
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-vbxzlt"
+        className="emotion-36"
       />
       accent-3
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-om6dm5"
+        className="emotion-38"
       />
       text
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-om6dm5"
+        className="emotion-38"
       />
       dark-1
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-i1zqee"
+        className="emotion-42"
       />
       dark-2
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-12gzcs5"
+        className="emotion-44"
       />
       hero
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-1rttqhl"
+        className="emotion-46"
       />
       grey-05
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-1fyxyn9"
+        className="emotion-18"
       />
       grey-20
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-14csw05"
+        className="emotion-50"
       />
       grey-30
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-1xqe2o6"
+        className="emotion-52"
       />
       grey-60
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-55qb8t"
+        className="emotion-54"
       />
       grey-80
     </div>
     <div
-      className="css-wxtmah"
+      className="emotion-1"
     >
       <div
-        className="css-blj7j4"
+        className="emotion-56"
       />
       experimental-text
     </div>
@@ -244,8 +446,16 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
 `;
 
 exports[`Storyshots Global Styles|Typography Types 1`] = `
+.emotion-0 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-0"
 >
   <h1>
     Heading level 1

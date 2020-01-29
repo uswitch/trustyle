@@ -1,20 +1,165 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Elements|Bullet List Timeline Example 1`] = `
+.emotion-21 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-20 {
+  padding: 0rem 0.75rem 2rem 0.75rem;
+  list-style: none;
+  border-bottom: 1px solid #84909a;
+}
+
+.emotion-3 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.43;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #65717b;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  position: relative;
+}
+
+.emotion-3:before {
+  display: block;
+  content: '';
+  position: absolute;
+  z-index: -10;
+  left: 1.0625rem;
+}
+
+.emotion-3:before {
+  border: 2px solid #84909a;
+  top: 50%;
+  bottom: 0;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5rem 0rem;
+  background-color: #ffffff;
+}
+
+.emotion-0 {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.emotion-2 {
+  padding-left: 0.75rem;
+}
+
+.emotion-7 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.43;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #65717b;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  position: relative;
+}
+
+.emotion-7:before {
+  display: block;
+  content: '';
+  position: absolute;
+  z-index: -10;
+  left: 1.0625rem;
+}
+
+.emotion-7:before {
+  border: 2px solid #84909a;
+  top: 0;
+  bottom: 0;
+}
+
+.emotion-19 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.43;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #65717b;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  position: relative;
+}
+
+.emotion-19:before {
+  display: block;
+  content: '';
+  position: absolute;
+  z-index: -10;
+  left: 1.0625rem;
+}
+
+.emotion-19:before {
+  border: 2px solid #84909a;
+  top: 0;
+  bottom: 50%;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-21"
 >
   <ul
-    className="css-1z3ciy-BulletListTimeline"
+    className="emotion-20"
   >
     <li
-      className="css-9b75kt-Bullet"
+      className="emotion-3"
     >
       <div
-        className="css-do9qks-Bullet"
+        className="emotion-1"
       >
         <i
-          className="css-1018nys-Bullet"
+          className="emotion-0"
         >
           <svg
             viewBox="0 0 36 36"
@@ -44,7 +189,7 @@ exports[`Storyshots Elements|Bullet List Timeline Example 1`] = `
         </i>
       </div>
       <div
-        className="css-82y2bi-Bullet"
+        className="emotion-2"
       >
         <span>
           This is an example of a time line bullet point, these are used to show progress. It’s annoying because it wraps, it wraps, it wraps
@@ -52,13 +197,13 @@ exports[`Storyshots Elements|Bullet List Timeline Example 1`] = `
       </div>
     </li>
     <li
-      className="css-r3kbwk-Bullet"
+      className="emotion-7"
     >
       <div
-        className="css-do9qks-Bullet"
+        className="emotion-1"
       >
         <i
-          className="css-1018nys-Bullet"
+          className="emotion-0"
         >
           <svg
             viewBox="0 0 36 36"
@@ -104,7 +249,7 @@ exports[`Storyshots Elements|Bullet List Timeline Example 1`] = `
         </i>
       </div>
       <div
-        className="css-82y2bi-Bullet"
+        className="emotion-2"
       >
         <span>
           This is an example of a time line bullet point, these are used to show progress.
@@ -112,13 +257,13 @@ exports[`Storyshots Elements|Bullet List Timeline Example 1`] = `
       </div>
     </li>
     <li
-      className="css-r3kbwk-Bullet"
+      className="emotion-7"
     >
       <div
-        className="css-do9qks-Bullet"
+        className="emotion-1"
       >
         <i
-          className="css-1018nys-Bullet"
+          className="emotion-0"
         >
           <svg
             viewBox="0 0 36 36"
@@ -164,7 +309,7 @@ exports[`Storyshots Elements|Bullet List Timeline Example 1`] = `
         </i>
       </div>
       <div
-        className="css-82y2bi-Bullet"
+        className="emotion-2"
       >
         <span>
           This is an example of a time line bullet point, these are used to show progress.
@@ -172,13 +317,13 @@ exports[`Storyshots Elements|Bullet List Timeline Example 1`] = `
       </div>
     </li>
     <li
-      className="css-r3kbwk-Bullet"
+      className="emotion-7"
     >
       <div
-        className="css-do9qks-Bullet"
+        className="emotion-1"
       >
         <i
-          className="css-1018nys-Bullet"
+          className="emotion-0"
         >
           <svg
             viewBox="0 0 36 36"
@@ -224,7 +369,7 @@ exports[`Storyshots Elements|Bullet List Timeline Example 1`] = `
         </i>
       </div>
       <div
-        className="css-82y2bi-Bullet"
+        className="emotion-2"
       >
         <span>
           This is an example of a time line bullet point, these are used to show progress.
@@ -232,13 +377,13 @@ exports[`Storyshots Elements|Bullet List Timeline Example 1`] = `
       </div>
     </li>
     <li
-      className="css-39crko-Bullet"
+      className="emotion-19"
     >
       <div
-        className="css-do9qks-Bullet"
+        className="emotion-1"
       >
         <i
-          className="css-1018nys-Bullet"
+          className="emotion-0"
         >
           <svg
             viewBox="0 0 36 36"
@@ -291,7 +436,7 @@ exports[`Storyshots Elements|Bullet List Timeline Example 1`] = `
         </i>
       </div>
       <div
-        className="css-82y2bi-Bullet"
+        className="emotion-2"
       >
         <span>
           This is an example of a time line bullet point, these are used to show progress. It’s annoying because it wraps

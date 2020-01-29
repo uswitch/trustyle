@@ -1,25 +1,282 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Elements|TileInput Checkbox 1`] = `
+.emotion-24 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-23 {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  width: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 4px;
+}
+
+@media (min-width:640px) {
+  .emotion-23 {
+    max-width: 640px;
+    width: 640px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-23 {
+    max-width: 1152px;
+    width: 1152px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.emotion-22 {
+  border: 0;
+}
+
+.emotion-0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.emotion-23 {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  width: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 4px;
+}
+
+@media (min-width:640px) {
+  .emotion-23 {
+    max-width: 640px;
+    width: 640px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-23 {
+    max-width: 1152px;
+    width: 1152px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-left: -4px;
+  margin-right: -4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media (min-width:640px) {
+  .emotion-21 {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-21 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  display: block;
+  padding-left: 4px;
+  padding-right: 4px;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -ms-flex-preferred-size: calc(50% - 4px * 2);
+}
+
+@media (min-width:640px) {
+  .emotion-5 {
+    display: block;
+    padding-left: 8px;
+    padding-right: 8px;
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -ms-flex-preferred-size: calc(50% - 8px * 2);
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-5 {
+    display: block;
+    padding-left: 12px;
+    padding-right: 12px;
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -ms-flex-preferred-size: calc(50% - 12px * 2);
+  }
+}
+
+.emotion-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-3 > * {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-2 > * {
+  max-width: 80%;
+}
+
+.emotion-1 {
+  margin-left: -1000px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.emotion-1:checked + span {
+  border-color: #008fe9;
+  box-shadow: inset 0 0 0 1px #008fe9;
+  color: #000000;
+}
+
+.emotion-1:checked + span::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23008fe9" viewBox="-1 -2 14 12"><path d="M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z" /></svg>');
+  background-color: #ffffff;
+  border-color: #008fe9;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-4 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+  border-color: #b0b8bf;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  color: #59646d;
+  cursor: pointer;
+  display: block;
+  font-weight: normal;
+  min-height: 130px;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-4:before {
+  border-color: #b0b8bf;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 2px;
+  content: " ";
+  display: block;
+  height: 17px;
+  margin: 0.6875rem 0rem 0rem 0.6875rem;
+  width: 17px;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-24"
 >
   <div
-    className="css-fzcm1c-Form css-fpyx25"
+    className="emotion-23"
   >
     <fieldset
-      className="css-hh72o5-Fieldset"
+      className="emotion-22"
     >
       <legend
-        className="css-fodz0p-Fieldset"
+        className="emotion-0"
       >
         Example tiles
       </legend>
       <div
-        className="css-qzrkkg"
+        className="emotion-21"
       >
         <div
-          className="css-10auc9b"
+          className="emotion-5"
           l={0.5}
           m={0.5}
           s={0.5}
@@ -27,21 +284,21 @@ exports[`Storyshots Elements|TileInput Checkbox 1`] = `
           <label>
             <input
               checked={false}
-              className="css-homqlj-TileInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="checkbox"
               value="a"
             />
             <span
-              className="css-alzmg1-TileInput"
+              className="emotion-4"
             >
               <span
-                className="css-3s09t2-TileInput"
+                className="emotion-3"
               >
                 <span />
                 <span
-                  className="css-1dvl16g-TileInput"
+                  className="emotion-2"
                 >
                   🙈
                 </span>
@@ -51,7 +308,7 @@ exports[`Storyshots Elements|TileInput Checkbox 1`] = `
           </label>
         </div>
         <div
-          className="css-10auc9b"
+          className="emotion-5"
           l={0.5}
           m={0.5}
           s={0.5}
@@ -59,21 +316,21 @@ exports[`Storyshots Elements|TileInput Checkbox 1`] = `
           <label>
             <input
               checked={true}
-              className="css-homqlj-TileInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="checkbox"
               value="b"
             />
             <span
-              className="css-alzmg1-TileInput"
+              className="emotion-4"
             >
               <span
-                className="css-3s09t2-TileInput"
+                className="emotion-3"
               >
                 <span />
                 <span
-                  className="css-1dvl16g-TileInput"
+                  className="emotion-2"
                 >
                   🙉
                 </span>
@@ -83,7 +340,7 @@ exports[`Storyshots Elements|TileInput Checkbox 1`] = `
           </label>
         </div>
         <div
-          className="css-10auc9b"
+          className="emotion-5"
           l={0.5}
           m={0.5}
           s={0.5}
@@ -91,21 +348,21 @@ exports[`Storyshots Elements|TileInput Checkbox 1`] = `
           <label>
             <input
               checked={false}
-              className="css-homqlj-TileInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="checkbox"
               value="c"
             />
             <span
-              className="css-alzmg1-TileInput"
+              className="emotion-4"
             >
               <span
-                className="css-3s09t2-TileInput"
+                className="emotion-3"
               >
                 <span />
                 <span
-                  className="css-1dvl16g-TileInput"
+                  className="emotion-2"
                 >
                   🙈
                 </span>
@@ -115,7 +372,7 @@ exports[`Storyshots Elements|TileInput Checkbox 1`] = `
           </label>
         </div>
         <div
-          className="css-10auc9b"
+          className="emotion-5"
           l={0.5}
           m={0.5}
           s={0.5}
@@ -123,21 +380,21 @@ exports[`Storyshots Elements|TileInput Checkbox 1`] = `
           <label>
             <input
               checked={false}
-              className="css-homqlj-TileInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="checkbox"
               value="d"
             />
             <span
-              className="css-alzmg1-TileInput"
+              className="emotion-4"
             >
               <span
-                className="css-3s09t2-TileInput"
+                className="emotion-3"
               >
                 <span />
                 <span
-                  className="css-1dvl16g-TileInput"
+                  className="emotion-2"
                 >
                   🙈
                 </span>
@@ -153,25 +410,282 @@ exports[`Storyshots Elements|TileInput Checkbox 1`] = `
 `;
 
 exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
+.emotion-24 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-23 {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  width: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 4px;
+}
+
+@media (min-width:640px) {
+  .emotion-23 {
+    max-width: 640px;
+    width: 640px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-23 {
+    max-width: 1152px;
+    width: 1152px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.emotion-22 {
+  border: 0;
+}
+
+.emotion-0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.emotion-23 {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  width: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 4px;
+}
+
+@media (min-width:640px) {
+  .emotion-23 {
+    max-width: 640px;
+    width: 640px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-23 {
+    max-width: 1152px;
+    width: 1152px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-left: -4px;
+  margin-right: -4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media (min-width:640px) {
+  .emotion-21 {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-21 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  display: block;
+  padding-left: 4px;
+  padding-right: 4px;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -ms-flex-preferred-size: calc(50% - 4px * 2);
+}
+
+@media (min-width:640px) {
+  .emotion-5 {
+    display: block;
+    padding-left: 8px;
+    padding-right: 8px;
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -ms-flex-preferred-size: calc(50% - 8px * 2);
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-5 {
+    display: block;
+    padding-left: 12px;
+    padding-right: 12px;
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -ms-flex-preferred-size: calc(50% - 12px * 2);
+  }
+}
+
+.emotion-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-3 > * {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-2 > * {
+  max-width: 80%;
+}
+
+.emotion-1 {
+  margin-left: -1000px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.emotion-1:checked + span {
+  border-color: #008fe9;
+  box-shadow: inset 0 0 0 1px #008fe9;
+  color: #000000;
+}
+
+.emotion-1:checked + span::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23008fe9" viewBox="-1 -2 14 12"><path d="M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z" /></svg>');
+  background-color: #ffffff;
+  border-color: #008fe9;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-4 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+  border-color: #b0b8bf;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  color: #59646d;
+  cursor: pointer;
+  display: block;
+  font-weight: normal;
+  min-height: 130px;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-4:before {
+  border-color: #b0b8bf;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 2px;
+  content: " ";
+  display: block;
+  height: 17px;
+  margin: 0.6875rem 0rem 0rem 0.6875rem;
+  width: 17px;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-24"
 >
   <div
-    className="css-fzcm1c-Form css-fpyx25"
+    className="emotion-23"
   >
     <fieldset
-      className="css-hh72o5-Fieldset"
+      className="emotion-22"
     >
       <legend
-        className="css-fodz0p-Fieldset"
+        className="emotion-0"
       >
         Example tiles
       </legend>
       <div
-        className="css-qzrkkg"
+        className="emotion-21"
       >
         <div
-          className="css-10auc9b"
+          className="emotion-5"
           l={0.5}
           m={0.5}
           s={0.5}
@@ -179,21 +693,21 @@ exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
           <label>
             <input
               checked={false}
-              className="css-homqlj-TileInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="checkbox"
               value="a"
             />
             <span
-              className="css-alzmg1-TileInput"
+              className="emotion-4"
             >
               <span
-                className="css-3s09t2-TileInput"
+                className="emotion-3"
               >
                 <span />
                 <span
-                  className="css-1dvl16g-TileInput"
+                  className="emotion-2"
                 >
                   🙈
                 </span>
@@ -203,7 +717,7 @@ exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
           </label>
         </div>
         <div
-          className="css-10auc9b"
+          className="emotion-5"
           l={0.5}
           m={0.5}
           s={0.5}
@@ -211,21 +725,21 @@ exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
           <label>
             <input
               checked={true}
-              className="css-homqlj-TileInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="checkbox"
               value="b"
             />
             <span
-              className="css-alzmg1-TileInput"
+              className="emotion-4"
             >
               <span
-                className="css-3s09t2-TileInput"
+                className="emotion-3"
               >
                 <span />
                 <span
-                  className="css-1dvl16g-TileInput"
+                  className="emotion-2"
                 >
                   🙉
                 </span>
@@ -235,7 +749,7 @@ exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
           </label>
         </div>
         <div
-          className="css-10auc9b"
+          className="emotion-5"
           l={0.5}
           m={0.5}
           s={0.5}
@@ -243,21 +757,21 @@ exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
           <label>
             <input
               checked={false}
-              className="css-homqlj-TileInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="checkbox"
               value="c"
             />
             <span
-              className="css-alzmg1-TileInput"
+              className="emotion-4"
             >
               <span
-                className="css-3s09t2-TileInput"
+                className="emotion-3"
               >
                 <span />
                 <span
-                  className="css-1dvl16g-TileInput"
+                  className="emotion-2"
                 >
                   🙈
                 </span>
@@ -267,7 +781,7 @@ exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
           </label>
         </div>
         <div
-          className="css-10auc9b"
+          className="emotion-5"
           l={0.5}
           m={0.5}
           s={0.5}
@@ -275,21 +789,21 @@ exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
           <label>
             <input
               checked={false}
-              className="css-homqlj-TileInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="checkbox"
               value="d"
             />
             <span
-              className="css-alzmg1-TileInput"
+              className="emotion-4"
             >
               <span
-                className="css-3s09t2-TileInput"
+                className="emotion-3"
               >
                 <span />
                 <span
-                  className="css-1dvl16g-TileInput"
+                  className="emotion-2"
                 >
                   🙈
                 </span>
@@ -305,25 +819,282 @@ exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
 `;
 
 exports[`Storyshots Elements|TileInput Radio 1`] = `
+.emotion-24 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-23 {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  width: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 4px;
+}
+
+@media (min-width:640px) {
+  .emotion-23 {
+    max-width: 640px;
+    width: 640px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-23 {
+    max-width: 1152px;
+    width: 1152px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.emotion-22 {
+  border: 0;
+}
+
+.emotion-0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.emotion-23 {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  width: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 4px;
+}
+
+@media (min-width:640px) {
+  .emotion-23 {
+    max-width: 640px;
+    width: 640px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-23 {
+    max-width: 1152px;
+    width: 1152px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-left: -4px;
+  margin-right: -4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media (min-width:640px) {
+  .emotion-21 {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-21 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  display: block;
+  padding-left: 4px;
+  padding-right: 4px;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -ms-flex-preferred-size: calc(50% - 4px * 2);
+}
+
+@media (min-width:640px) {
+  .emotion-5 {
+    display: block;
+    padding-left: 8px;
+    padding-right: 8px;
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -ms-flex-preferred-size: calc(50% - 8px * 2);
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-5 {
+    display: block;
+    padding-left: 12px;
+    padding-right: 12px;
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -ms-flex-preferred-size: calc(50% - 12px * 2);
+  }
+}
+
+.emotion-1 {
+  margin-left: -1000px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.emotion-1:checked + span {
+  border-color: #008fe9;
+  box-shadow: inset 0 0 0 1px #008fe9;
+  color: #000000;
+}
+
+.emotion-1:checked + span::before {
+  background-color: #008fe9;
+  border-color: #008fe9;
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-4 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+  border-color: #b0b8bf;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  color: #59646d;
+  cursor: pointer;
+  display: block;
+  font-weight: normal;
+  min-height: 130px;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-4:before {
+  border-color: #b0b8bf;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  content: " ";
+  display: block;
+  height: 17px;
+  margin: 0.6875rem 0rem 0rem 0.6875rem;
+  width: 17px;
+}
+
+.emotion-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-3 > * {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-2 > * {
+  max-width: 80%;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-24"
 >
   <div
-    className="css-fzcm1c-Form css-fpyx25"
+    className="emotion-23"
   >
     <fieldset
-      className="css-hh72o5-Fieldset"
+      className="emotion-22"
     >
       <legend
-        className="css-fodz0p-Fieldset"
+        className="emotion-0"
       >
         Example tiles
       </legend>
       <div
-        className="css-qzrkkg"
+        className="emotion-21"
       >
         <div
-          className="css-10auc9b"
+          className="emotion-5"
           l={0.5}
           m={0.5}
           s={0.5}
@@ -331,21 +1102,21 @@ exports[`Storyshots Elements|TileInput Radio 1`] = `
           <label>
             <input
               checked={false}
-              className="css-707sx8-TileInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="radio"
               value="a"
             />
             <span
-              className="css-8qrdc6-TileInput"
+              className="emotion-4"
             >
               <span
-                className="css-3s09t2-TileInput"
+                className="emotion-3"
               >
                 <span />
                 <span
-                  className="css-1dvl16g-TileInput"
+                  className="emotion-2"
                 >
                   🙈
                 </span>
@@ -355,7 +1126,7 @@ exports[`Storyshots Elements|TileInput Radio 1`] = `
           </label>
         </div>
         <div
-          className="css-10auc9b"
+          className="emotion-5"
           l={0.5}
           m={0.5}
           s={0.5}
@@ -363,21 +1134,21 @@ exports[`Storyshots Elements|TileInput Radio 1`] = `
           <label>
             <input
               checked={true}
-              className="css-707sx8-TileInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="radio"
               value="b"
             />
             <span
-              className="css-8qrdc6-TileInput"
+              className="emotion-4"
             >
               <span
-                className="css-3s09t2-TileInput"
+                className="emotion-3"
               >
                 <span />
                 <span
-                  className="css-1dvl16g-TileInput"
+                  className="emotion-2"
                 >
                   🙉
                 </span>
@@ -387,7 +1158,7 @@ exports[`Storyshots Elements|TileInput Radio 1`] = `
           </label>
         </div>
         <div
-          className="css-10auc9b"
+          className="emotion-5"
           l={0.5}
           m={0.5}
           s={0.5}
@@ -395,21 +1166,21 @@ exports[`Storyshots Elements|TileInput Radio 1`] = `
           <label>
             <input
               checked={false}
-              className="css-707sx8-TileInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="radio"
               value="c"
             />
             <span
-              className="css-8qrdc6-TileInput"
+              className="emotion-4"
             >
               <span
-                className="css-3s09t2-TileInput"
+                className="emotion-3"
               >
                 <span />
                 <span
-                  className="css-1dvl16g-TileInput"
+                  className="emotion-2"
                 >
                   🙈
                 </span>
@@ -419,7 +1190,7 @@ exports[`Storyshots Elements|TileInput Radio 1`] = `
           </label>
         </div>
         <div
-          className="css-10auc9b"
+          className="emotion-5"
           l={0.5}
           m={0.5}
           s={0.5}
@@ -427,21 +1198,21 @@ exports[`Storyshots Elements|TileInput Radio 1`] = `
           <label>
             <input
               checked={false}
-              className="css-707sx8-TileInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="radio"
               value="d"
             />
             <span
-              className="css-8qrdc6-TileInput"
+              className="emotion-4"
             >
               <span
-                className="css-3s09t2-TileInput"
+                className="emotion-3"
               >
                 <span />
                 <span
-                  className="css-1dvl16g-TileInput"
+                  className="emotion-2"
                 >
                   🙈
                 </span>
@@ -457,25 +1228,282 @@ exports[`Storyshots Elements|TileInput Radio 1`] = `
 `;
 
 exports[`Storyshots Elements|TileInput Radio Selected 1`] = `
+.emotion-24 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-23 {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  width: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 4px;
+}
+
+@media (min-width:640px) {
+  .emotion-23 {
+    max-width: 640px;
+    width: 640px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-23 {
+    max-width: 1152px;
+    width: 1152px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.emotion-22 {
+  border: 0;
+}
+
+.emotion-0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.emotion-23 {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  width: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 4px;
+}
+
+@media (min-width:640px) {
+  .emotion-23 {
+    max-width: 640px;
+    width: 640px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-23 {
+    max-width: 1152px;
+    width: 1152px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-left: -4px;
+  margin-right: -4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media (min-width:640px) {
+  .emotion-21 {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-21 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  display: block;
+  padding-left: 4px;
+  padding-right: 4px;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -ms-flex-preferred-size: calc(50% - 4px * 2);
+}
+
+@media (min-width:640px) {
+  .emotion-5 {
+    display: block;
+    padding-left: 8px;
+    padding-right: 8px;
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -ms-flex-preferred-size: calc(50% - 8px * 2);
+  }
+}
+
+@media (min-width:1150px) {
+  .emotion-5 {
+    display: block;
+    padding-left: 12px;
+    padding-right: 12px;
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    -ms-flex-preferred-size: calc(50% - 12px * 2);
+  }
+}
+
+.emotion-1 {
+  margin-left: -1000px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.emotion-1:checked + span {
+  border-color: #008fe9;
+  box-shadow: inset 0 0 0 1px #008fe9;
+  color: #000000;
+}
+
+.emotion-1:checked + span::before {
+  background-color: #008fe9;
+  border-color: #008fe9;
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-4 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+  border-color: #b0b8bf;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  color: #59646d;
+  cursor: pointer;
+  display: block;
+  font-weight: normal;
+  min-height: 130px;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-4:before {
+  border-color: #b0b8bf;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  content: " ";
+  display: block;
+  height: 17px;
+  margin: 0.6875rem 0rem 0rem 0.6875rem;
+  width: 17px;
+}
+
+.emotion-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-3 > * {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-2 > * {
+  max-width: 80%;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-24"
 >
   <div
-    className="css-fzcm1c-Form css-fpyx25"
+    className="emotion-23"
   >
     <fieldset
-      className="css-hh72o5-Fieldset"
+      className="emotion-22"
     >
       <legend
-        className="css-fodz0p-Fieldset"
+        className="emotion-0"
       >
         Example tiles
       </legend>
       <div
-        className="css-qzrkkg"
+        className="emotion-21"
       >
         <div
-          className="css-10auc9b"
+          className="emotion-5"
           l={0.5}
           m={0.5}
           s={0.5}
@@ -483,21 +1511,21 @@ exports[`Storyshots Elements|TileInput Radio Selected 1`] = `
           <label>
             <input
               checked={false}
-              className="css-707sx8-TileInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="radio"
               value="a"
             />
             <span
-              className="css-8qrdc6-TileInput"
+              className="emotion-4"
             >
               <span
-                className="css-3s09t2-TileInput"
+                className="emotion-3"
               >
                 <span />
                 <span
-                  className="css-1dvl16g-TileInput"
+                  className="emotion-2"
                 >
                   🙈
                 </span>
@@ -507,7 +1535,7 @@ exports[`Storyshots Elements|TileInput Radio Selected 1`] = `
           </label>
         </div>
         <div
-          className="css-10auc9b"
+          className="emotion-5"
           l={0.5}
           m={0.5}
           s={0.5}
@@ -515,21 +1543,21 @@ exports[`Storyshots Elements|TileInput Radio Selected 1`] = `
           <label>
             <input
               checked={true}
-              className="css-707sx8-TileInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="radio"
               value="b"
             />
             <span
-              className="css-8qrdc6-TileInput"
+              className="emotion-4"
             >
               <span
-                className="css-3s09t2-TileInput"
+                className="emotion-3"
               >
                 <span />
                 <span
-                  className="css-1dvl16g-TileInput"
+                  className="emotion-2"
                 >
                   🙉
                 </span>
@@ -539,7 +1567,7 @@ exports[`Storyshots Elements|TileInput Radio Selected 1`] = `
           </label>
         </div>
         <div
-          className="css-10auc9b"
+          className="emotion-5"
           l={0.5}
           m={0.5}
           s={0.5}
@@ -547,21 +1575,21 @@ exports[`Storyshots Elements|TileInput Radio Selected 1`] = `
           <label>
             <input
               checked={false}
-              className="css-707sx8-TileInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="radio"
               value="c"
             />
             <span
-              className="css-8qrdc6-TileInput"
+              className="emotion-4"
             >
               <span
-                className="css-3s09t2-TileInput"
+                className="emotion-3"
               >
                 <span />
                 <span
-                  className="css-1dvl16g-TileInput"
+                  className="emotion-2"
                 >
                   🙈
                 </span>
@@ -571,7 +1599,7 @@ exports[`Storyshots Elements|TileInput Radio Selected 1`] = `
           </label>
         </div>
         <div
-          className="css-10auc9b"
+          className="emotion-5"
           l={0.5}
           m={0.5}
           s={0.5}
@@ -579,21 +1607,21 @@ exports[`Storyshots Elements|TileInput Radio Selected 1`] = `
           <label>
             <input
               checked={false}
-              className="css-707sx8-TileInput"
+              className="emotion-1"
               name="example"
               onChange={[Function]}
               type="radio"
               value="d"
             />
             <span
-              className="css-8qrdc6-TileInput"
+              className="emotion-4"
             >
               <span
-                className="css-3s09t2-TileInput"
+                className="emotion-3"
               >
                 <span />
                 <span
-                  className="css-1dvl16g-TileInput"
+                  className="emotion-2"
                 >
                   🙈
                 </span>

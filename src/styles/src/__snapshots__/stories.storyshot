@@ -1,240 +1,302 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Legacy Styles|Colours Swatches 1`] = `
+.emotion-40 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-1 {
+  padding: 10px;
+  display: inline-block;
+  font-family: monospace;
+}
+
+.emotion-0 {
+  background-color: #008fe9;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-2 {
+  background-color: #65717b;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-4 {
+  background-color: #000000;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-6 {
+  background-color: #84909a;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-8 {
+  background-color: #71a572;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-10 {
+  background-color: #0982ce;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-12 {
+  background-color: #002396;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-14 {
+  background-color: #d64226;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-16 {
+  background-color: #1c1f4e;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-18 {
+  background-color: #d1d1d1;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-20 {
+  background-color: #b0b8bf;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-22 {
+  background-color: #caefff;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-24 {
+  background-color: #f6f6f6;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-26 {
+  background-color: #99e2ff;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-28 {
+  background-color: #c5371c;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-30 {
+  background-color: #59646d;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-32 {
+  background-color: #db1818;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-34 {
+  background-color: #dfebff;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-36 {
+  background-color: #e9ebed;
+  width: 100px;
+  height: 100px;
+}
+
+.emotion-38 {
+  background-color: #ffffff;
+  width: 100px;
+  height: 100px;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-40"
 >
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-66hqxc"
+      className="emotion-0"
     />
     azure
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-xtcw8s"
+      className="emotion-2"
     />
     battleshipGrey
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-nnsr39"
+      className="emotion-4"
     />
     black
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-13vjedc"
+      className="emotion-6"
     />
     blueGrey
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-4w1ldc"
+      className="emotion-8"
     />
     britishRacingGreen
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-1auogzy"
+      className="emotion-10"
     />
     cerulean
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-s3pkpo"
+      className="emotion-12"
     />
     cobaltBlue
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-f6l0uc"
+      className="emotion-14"
     />
     copper
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-zxl6bj"
+      className="emotion-16"
     />
     darkBlueGrey
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-1psxtl5"
+      className="emotion-18"
     />
     lightGrey
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-1i3x4nn"
+      className="emotion-20"
     />
     lightGreyBlue
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-1y1lqwc"
+      className="emotion-22"
     />
     lightSkyBlue
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-ml6epo"
+      className="emotion-24"
     />
     offWhite
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-1rjw7uv"
+      className="emotion-26"
     />
     robinsEggBlue
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-58f9u1"
+      className="emotion-28"
     />
     sienna
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-1i8xhj9"
+      className="emotion-30"
     />
     slateGrey
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-ty2v1l"
+      className="emotion-32"
     />
     tomato
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-140r9mm"
+      className="emotion-34"
     />
     veryLightBlue
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-1opgq7v"
+      className="emotion-36"
     />
     veryLightGrey
   </div>
   <div
-    className="css-1qpm7zh"
+    className="emotion-1"
   >
     <div
-      className="css-179dbck"
+      className="emotion-38"
     />
     white
   </div>
-</div>
-`;
-
-exports[`Storyshots Legacy Styles|Typography Types 1`] = `
-<div
-  className="css-m9xbk1"
->
-  <p
-    className="css-9uvnq4"
-  >
-    defaultFontFamily
-  </p>
-  <p
-    className="css-1d0tn03"
-  >
-    heading2
-  </p>
-  <p
-    className="css-soshk7"
-  >
-    heading3
-  </p>
-  <p
-    className="css-1ghqxv1"
-  >
-    label
-  </p>
-  <p
-    className="css-nvk094"
-  >
-    subheading
-  </p>
-  <p
-    className="css-xl21qw"
-  >
-    inputFontSize
-  </p>
-  <p
-    className="css-9by7a8"
-  >
-    inputLineHeight
-  </p>
-  <p
-    className="css-1vpb669"
-  >
-    input
-  </p>
-  <p
-    className="css-1abwp2k"
-  >
-    text
-  </p>
-  <p
-    className="css-12d8zh2"
-  >
-    small
-  </p>
-  <p
-    className="css-qugyff"
-  >
-    linkText
-  </p>
-  <p
-    className="css-8uqnov"
-  >
-    alertText
-  </p>
-  <p
-    className="css-epvm6"
-  >
-    noWrap
-  </p>
 </div>
 `;

@@ -1,26 +1,98 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Elements|Call Out Example 1`] = `
+.emotion-8 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-6 {
+  border-radius: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: #ECECEE;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-6 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  -webkit-flex: 0 0 16px;
+  -ms-flex: 0 0 16px;
+  flex: 0 0 16px;
+  margin-right: 8px;
+}
+
+.emotion-1 {
+  background-color: #924A8B;
+  border-radius: 50%;
+  padding: 20%;
+}
+
+.emotion-3 {
+  font-family: Nunito,-apple-system,sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 16px;
+  margin-top: -3px;
+  margin-bottom: 8px;
+}
+
+.emotion-4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.emotion-7 {
+  padding: 10px;
+}
+
+.emotion-0 {
+  display: block;
+  fill: none;
+  fill-rule: evenodd;
+  stroke: white;
+  stroke-linecap: square;
+  stroke-width: 2;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-8"
 >
   <div
-    className="css-1jiwptm-Example"
+    className="emotion-7"
   >
     <div
-      className="css-c6gwov"
+      className="emotion-6"
     >
       <div
-        className="css-k008qs"
+        className="emotion-5"
       >
         <div
-          className="css-sol4xc"
+          className="emotion-2"
         >
           <div
-            className="css-vk6eq1"
+            className="emotion-1"
           >
             <svg
-              className="css-jrkchm"
+              className="emotion-0"
               viewBox="0 0 18 18"
             >
               <path
@@ -31,12 +103,12 @@ exports[`Storyshots Elements|Call Out Example 1`] = `
         </div>
         <div>
           <h3
-            className="css-yf5h7x"
+            className="emotion-3"
           >
             This is a call out
           </h3>
           <p
-            className="css-1qd1r5f"
+            className="emotion-4"
           >
             Tempor incididunt ut labore et dolore magna aliqua. Sint id est dolor laborum. Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolores est unt.
           </p>

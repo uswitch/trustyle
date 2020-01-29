@@ -1,42 +1,170 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Elements|Button Link All Variants 1`] = `
+.emotion-5 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-4 {
+  padding: 10px;
+}
+
+.emotion-1 {
+  min-height: 20px;
+}
+
+.emotion-0 {
+  cursor: pointer;
+  background-image: none;
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 18px;
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  border: none;
+  background-color: #DB4D75;
+  border-radius: 50vh;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #FD5081;
+}
+
+.emotion-0:focus {
+  background-color: #FD5081;
+}
+
+.emotion-0:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.emotion-0:active {
+  background-color: #A00938;
+}
+
+.emotion-2 {
+  cursor: pointer;
+  background-image: none;
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 18px;
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #924A8B;
+  border-radius: 50vh;
+}
+
+.emotion-2:hover:not(:disabled) {
+  background-color: #B95CB0;
+}
+
+.emotion-2:focus {
+  background-color: #B95CB0;
+}
+
+.emotion-2:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.emotion-2:active {
+  background-color: #4B255E;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-5"
 >
   <div
-    className="css-1qboakw-AllVariants"
+    className="emotion-4"
   >
     <a
-      className="css-izi4pz"
+      className="emotion-0"
       href="https://www.uswitch.com"
       target="_blank"
     >
       primary link button
     </a>
     <div
-      className="css-1jlq266-Spacer"
+      className="emotion-1"
     />
     <a
-      className="css-u32c6s"
+      className="emotion-2"
       href="https://www.uswitch.com"
       target="_blank"
     >
       secondary link button
     </a>
     <div
-      className="css-1jlq266-Spacer"
+      className="emotion-1"
     />
   </div>
 </div>
 `;
 
 exports[`Storyshots Elements|Button Link Primary Variant 1`] = `
+.emotion-1 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-0 {
+  cursor: pointer;
+  background-image: none;
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 18px;
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  border: none;
+  background-color: #DB4D75;
+  border-radius: 50vh;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #FD5081;
+}
+
+.emotion-0:focus {
+  background-color: #FD5081;
+}
+
+.emotion-0:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.emotion-0:active {
+  background-color: #A00938;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-1"
 >
   <a
-    className="css-izi4pz"
+    className="emotion-0"
   >
     Primary link button
   </a>
@@ -44,11 +172,53 @@ exports[`Storyshots Elements|Button Link Primary Variant 1`] = `
 `;
 
 exports[`Storyshots Elements|Button Link Secondary Variant 1`] = `
+.emotion-1 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.emotion-0 {
+  cursor: pointer;
+  background-image: none;
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 18px;
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #924A8B;
+  border-radius: 50vh;
+}
+
+.emotion-0:hover:not(:disabled) {
+  background-color: #B95CB0;
+}
+
+.emotion-0:focus {
+  background-color: #B95CB0;
+}
+
+.emotion-0:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.emotion-0:active {
+  background-color: #4B255E;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-1"
 >
   <a
-    className="css-u32c6s"
+    className="emotion-0"
   >
     Primary link button
   </a>
