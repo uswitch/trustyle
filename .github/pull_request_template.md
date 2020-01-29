@@ -6,12 +6,14 @@ Pull request contains:
 
 This is a:
 
+- [ ] A new component
 - [ ] Small non-breaking change: patch version
 - [ ] Larger non-breaking change: minor version
 - [ ] Breaking change: major version
 
 Definition of done:
 
+- [ ] Includes theme changes for both Uswitch and money
 - [ ] Work has been tested in multiple browsers
 - [ ] PR description includes description of change
 - [ ] PR description includes screenshot of change
