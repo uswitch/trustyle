@@ -46,7 +46,12 @@ exports[`Storyshots Elements|DropDown example 1`] = `
   text-shadow: 0 0 0 #000000;
 }
 
+.emotion-0::-ms-expand {
+  display: none;
+}
+
 .emotion-2 {
+  height: 15px;
   width: 15px;
   pointer-events: none;
   position: absolute;
@@ -159,6 +164,10 @@ exports[`Storyshots Elements|DropDown example 1`] = `
 .emotion-15:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000000;
+}
+
+.emotion-15::-ms-expand {
+  display: none;
 }
 
 .emotion-16 {
