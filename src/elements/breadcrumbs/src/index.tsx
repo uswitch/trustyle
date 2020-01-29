@@ -28,7 +28,6 @@ const Breadcrumbs: React.FC<Props> = ({
         display: 'inline-block',
         width: '1.25em',
         height: '1em',
-        verticalAlign: 'top',
         variant: 'breadcrumbs.homeIcon'
       }}
     >

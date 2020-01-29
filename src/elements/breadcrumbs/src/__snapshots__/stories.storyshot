@@ -15,7 +15,7 @@ exports[`Storyshots Elements|Breadcrumbs All With Custom Separator 1`] = `
         href="/"
       >
         <div
-          className="css-1ymmpqd"
+          className="css-1xz46z6"
         >
           <svg
             className="css-h6t2h7"
@@ -121,7 +121,7 @@ exports[`Storyshots Elements|Breadcrumbs Example With Title 1`] = `
         href="/"
       >
         <div
-          className="css-1ymmpqd"
+          className="css-1xz46z6"
         >
           <svg
             className="css-h6t2h7"
@@ -194,7 +194,7 @@ exports[`Storyshots Elements|Breadcrumbs Example Without Title 1`] = `
         href="/"
       >
         <div
-          className="css-1ymmpqd"
+          className="css-1xz46z6"
         >
           <svg
             className="css-h6t2h7"
@@ -257,7 +257,7 @@ exports[`Storyshots Elements|Breadcrumbs No Crumbs And No Title 1`] = `
         href="/"
       >
         <div
-          className="css-1ymmpqd"
+          className="css-1xz46z6"
         >
           <svg
             className="css-h6t2h7"
@@ -290,7 +290,7 @@ exports[`Storyshots Elements|Breadcrumbs No Crumbs And Title 1`] = `
         href="/"
       >
         <div
-          className="css-1ymmpqd"
+          className="css-1xz46z6"
         >
           <svg
             className="css-h6t2h7"
@@ -333,7 +333,7 @@ exports[`Storyshots Elements|Breadcrumbs Nothing With Custom Separator 1`] = `
         href="/"
       >
         <div
-          className="css-1ymmpqd"
+          className="css-1xz46z6"
         >
           <svg
             className="css-h6t2h7"
