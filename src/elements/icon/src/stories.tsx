@@ -13,6 +13,7 @@ const glyphChoices: Glyph[] = [
   'edit',
   'email',
   'filters',
+  'home',
   'letter',
   'phone',
   'plus',
