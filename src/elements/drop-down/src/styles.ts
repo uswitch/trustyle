@@ -8,6 +8,7 @@ import {
 } from '@uswitch/trustyle.styles'
 
 export const icon: SerializedStyles = css({
+  height: '15px',
   width: '15px',
   pointerEvents: 'none',
   position: 'absolute',
@@ -32,6 +33,9 @@ export const root = (hasError: boolean, hasFocus: boolean): SerializedStyles =>
       '&:-moz-focusring': {
         color: 'transparent',
         textShadow: `0 0 0 ${colors.black}`
+      },
+      '&::-ms-expand': {
+        display: 'none'
       }
     },
     inputs.emphasis(hasError, hasFocus)
