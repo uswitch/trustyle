@@ -9,20 +9,22 @@ import useWindowSize from './hook-window-size'
 interface Props extends React.HTMLAttributes<HTMLUListElement> {
   crumbs: { fields: any; [key: string]: any }[]
   title?: string
-  separator?: React.ReactNode | (() => React.ReactNode)
-  backIcon?: React.ReactNode | (() => React.ReactNode)
+  customSeparator?: React.ReactNode | (() => React.ReactNode)
+  customBackIcon?: React.ReactNode | (() => React.ReactNode)
+  customHomeIcon?: React.ReactNode | (() => React.ReactNode)
 }
 
 const Breadcrumbs: React.FC<Props> = ({
   crumbs,
   title,
-  separator = '>',
-  backIcon = '<'
+  customSeparator = '>',
+  customBackIcon = '<',
+  customHomeIcon
 }) => {
   const { theme }: any = useThemeUI()
   const windowSize = useWindowSize()
 
-  const homeIcon = (
+  const homeIcon = customHomeIcon || (
     <div
       sx={{
         display: 'inline-block',
@@ -40,7 +42,10 @@ const Breadcrumbs: React.FC<Props> = ({
 
   const isMobile = windowSize.innerWidth < parseInt(theme.breakpoints[0])
   if (isMobile) {
-    const BackIcon = typeof backIcon === 'function' ? backIcon : () => backIcon
+    const BackIcon =
+      typeof customBackIcon === 'function'
+        ? customBackIcon
+        : () => customBackIcon
 
     let href, backTo
 
@@ -64,7 +69,12 @@ const Breadcrumbs: React.FC<Props> = ({
         }}
         href={href}
       >
-        <span sx={{ marginRight: 'xxs', verticalAlign: 'middle' }}>
+        <span
+          sx={{
+            marginRight: 'xxs',
+            verticalAlign: customBackIcon === 'function' ? 'middle' : undefined
+          }}
+        >
           <BackIcon />
         </span>
 
@@ -77,16 +87,28 @@ const Breadcrumbs: React.FC<Props> = ({
     display: 'inline'
   }
 
+  const anchorStyling = {
+    color: 'inherit',
+    stroke: 'inherit',
+    textDecoration: 'none',
+    variant: 'breadcrumbs.a',
+    ':visited': {
+      color: 'inherit'
+    }
+  }
+
   const Separator = () => {
     const InnerSeparator =
-      typeof separator === 'function' ? separator : () => separator
+      typeof customSeparator === 'function'
+        ? customSeparator
+        : () => customSeparator
 
     return (
       <span
         sx={{
           display: 'inline-block',
           marginX: 'xxs',
-          verticalAlign: 'middle'
+          verticalAlign: customSeparator === 'function' ? 'middle' : undefined
         }}
       >
         <InnerSeparator />
@@ -104,15 +126,7 @@ const Breadcrumbs: React.FC<Props> = ({
       }}
     >
       <li sx={liStyling}>
-        <Styled.a
-          sx={{
-            color: 'inherit',
-            stroke: 'inherit',
-            textDecoration: 'none',
-            variant: 'breadcrumbs.a'
-          }}
-          href="/"
-        >
+        <Styled.a sx={anchorStyling} href="/">
           {homeIcon}
         </Styled.a>
 
@@ -121,14 +135,7 @@ const Breadcrumbs: React.FC<Props> = ({
 
       {crumbs.map((crumb, i) => (
         <li sx={liStyling} key={i}>
-          <Styled.a
-            sx={{
-              color: 'inherit',
-              textDecoration: 'none',
-              variant: 'breadcrumbs.a'
-            }}
-            href={crumb.fields.path}
-          >
+          <Styled.a sx={anchorStyling} href={crumb.fields.path}>
             {crumb.fields.displayText}
           </Styled.a>
 

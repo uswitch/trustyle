@@ -9,22 +9,22 @@ export default {
   title: 'Elements|Breadcrumbs'
 }
 
-export const ExampleWithTitle = () => {
-  const crumbs = [
-    {
-      fields: {
-        path: '/gas-electricity/',
-        displayText: 'Gas & Electricity'
-      }
-    },
-    {
-      fields: {
-        path: '/gas-electricity/guides',
-        displayText: 'Guides'
-      }
+const crumbs = [
+  {
+    fields: {
+      path: '/gas-electricity/',
+      displayText: 'Gas & Electricity'
     }
-  ]
+  },
+  {
+    fields: {
+      path: '/gas-electricity/guides',
+      displayText: 'Guides'
+    }
+  }
+]
 
+export const ExampleWithTitle = () => {
   return (
     <Breadcrumbs
       crumbs={crumbs}
@@ -34,21 +34,6 @@ export const ExampleWithTitle = () => {
 }
 
 export const ExampleWithoutTitle = () => {
-  const crumbs = [
-    {
-      fields: {
-        path: '/gas-electricity/',
-        displayText: 'Gas & Electricity'
-      }
-    },
-    {
-      fields: {
-        path: '/gas-electricity/guides',
-        displayText: 'Guides'
-      }
-    }
-  ]
-
   return <Breadcrumbs crumbs={crumbs} />
 }
 
@@ -66,21 +51,6 @@ export const NoCrumbsAndNoTitle = () => {
 }
 
 export const AllWithCustomSeparator = () => {
-  const crumbs = [
-    {
-      fields: {
-        path: '/gas-electricity/',
-        displayText: 'Gas & Electricity'
-      }
-    },
-    {
-      fields: {
-        path: '/gas-electricity/guides',
-        displayText: 'Guides'
-      }
-    }
-  ]
-
   const separator = (
     <span
       sx={{
@@ -107,8 +77,8 @@ export const AllWithCustomSeparator = () => {
     <Breadcrumbs
       crumbs={crumbs}
       title="Understanding energy bills and electricity bills - FAQs and more"
-      separator={separator}
-      backIcon={backIcon}
+      customSeparator={separator}
+      customBackIcon={backIcon}
     />
   )
 }
@@ -136,5 +106,23 @@ export const NothingWithCustomSeparator = () => {
     </span>
   )
 
-  return <Breadcrumbs crumbs={[]} separator={separator} backIcon={backIcon} />
+  return (
+    <Breadcrumbs
+      crumbs={[]}
+      customSeparator={separator}
+      customBackIcon={backIcon}
+    />
+  )
+}
+
+export const CustomHomeIcon = () => {
+  const homeIcon = 'Uswitch.com'
+
+  return (
+    <Breadcrumbs
+      crumbs={crumbs}
+      title="Understanding energy bills and electricity bills - FAQs and more"
+      customHomeIcon={homeIcon}
+    />
+  )
 }
