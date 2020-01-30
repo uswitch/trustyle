@@ -4,8 +4,6 @@ import * as React from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
 
-import useWindowSize from './hook-window-size'
-
 const HomeIcon: React.FC = () => {
   const { theme }: any = useThemeUI()
 
@@ -34,59 +32,56 @@ interface Props extends React.HTMLAttributes<HTMLUListElement> {
   customHomeIcon?: React.ReactNode | (() => React.ReactNode)
 }
 
-const Breadcrumbs: React.FC<Props> = ({
+const MobileBreadcrumbs: React.FC<Props> = ({
   crumbs,
-  title,
-  customSeparator = '>',
   customBackIcon = '<',
   customHomeIcon
 }) => {
-  const { theme }: any = useThemeUI()
-  const windowSize = useWindowSize()
+  const BackIcon =
+    typeof customBackIcon === 'function' ? customBackIcon : () => customBackIcon
 
-  const isMobile = windowSize.innerWidth < parseInt(theme.breakpoints[0])
-  if (isMobile) {
-    const BackIcon =
-      typeof customBackIcon === 'function'
-        ? customBackIcon
-        : () => customBackIcon
+  let href, backTo
 
-    let href, backTo
-
-    if (crumbs.length) {
-      const lastCrumb = crumbs[crumbs.length - 1]
-      href = lastCrumb.fields.path
-      backTo = lastCrumb.fields.displayText
-    } else {
-      href = '/'
-      backTo = customHomeIcon || <HomeIcon />
-    }
-
-    return (
-      <Styled.a
-        sx={{
-          display: 'inline-block',
-          color: 'inherit',
-          textDecoration: 'none',
-          fontSize: 'xxs',
-          variant: 'breadcrumbs.mobileLink'
-        }}
-        href={href}
-      >
-        <span
-          sx={{
-            marginRight: 'xxs',
-            verticalAlign: customBackIcon === 'function' ? 'middle' : undefined
-          }}
-        >
-          <BackIcon />
-        </span>
-
-        {backTo}
-      </Styled.a>
-    )
+  if (crumbs.length) {
+    const lastCrumb = crumbs[crumbs.length - 1]
+    href = lastCrumb.fields.path
+    backTo = lastCrumb.fields.displayText
+  } else {
+    href = '/'
+    backTo = customHomeIcon || <HomeIcon />
   }
 
+  return (
+    <Styled.a
+      sx={{
+        display: 'inline-block',
+        color: 'inherit',
+        textDecoration: 'none',
+        fontSize: 'xxs',
+        variant: 'breadcrumbs.mobileLink'
+      }}
+      href={href}
+    >
+      <span
+        sx={{
+          marginRight: 'xxs',
+          verticalAlign: customBackIcon === 'function' ? 'middle' : undefined
+        }}
+      >
+        <BackIcon />
+      </span>
+
+      {backTo}
+    </Styled.a>
+  )
+}
+
+const DesktopBreadcrumbs: React.FC<Props> = ({
+  crumbs,
+  title,
+  customSeparator = '>',
+  customHomeIcon
+}) => {
   const liStyling = {
     display: 'inline'
   }
@@ -151,6 +146,34 @@ const Breadcrumbs: React.FC<Props> = ({
         <li sx={{ ...liStyling, variant: 'breadcrumbs.title' }}>{title}</li>
       )}
     </ul>
+  )
+}
+
+const Breadcrumbs: React.FC<Props> = ({
+  crumbs,
+  title,
+  customSeparator = '>',
+  customBackIcon = '<',
+  customHomeIcon
+}) => {
+  return (
+    <React.Fragment>
+      <div sx={{ display: ['block', 'none'] }}>
+        <MobileBreadcrumbs
+          crumbs={crumbs}
+          customBackIcon={customBackIcon}
+          customHomeIcon={customHomeIcon}
+        />
+      </div>
+      <div sx={{ display: ['none', 'block'] }}>
+        <DesktopBreadcrumbs
+          crumbs={crumbs}
+          title={title}
+          customSeparator={customSeparator}
+          customHomeIcon={customHomeIcon}
+        />
+      </div>
+    </React.Fragment>
   )
 }
 
