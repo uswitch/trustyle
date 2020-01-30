@@ -2,13 +2,13 @@
 
 exports[`Storyshots Elements|Button All Variants 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-1qboakw-AllVariants"
   >
     <button
-      className="css-7zijx9"
+      className="css-7qca1n"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -19,14 +19,14 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
       className="css-1jlq266-Spacer"
     />
     <button
-      className="css-qdz5zt"
+      className="css-h1k4i8"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       primary button
       <svg
-        className="css-u2qp86-Caret"
+        className="css-3h3k4c-Caret"
         viewBox="0 0 120 120"
       >
         <path
@@ -38,13 +38,13 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
       className="css-1jlq266-Spacer"
     />
     <button
-      className="css-gbql58"
+      className="css-cpykqa"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-u2qp86-Caret"
+        className="css-3h3k4c-Caret"
         viewBox="0 0 120 120"
       >
         <path
@@ -57,7 +57,7 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
       className="css-1jlq266-Spacer"
     />
     <button
-      className="css-1cu7wal"
+      className="css-iorx3c"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -68,14 +68,14 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
       className="css-1jlq266-Spacer"
     />
     <button
-      className="css-1hvrvvk"
+      className="css-1nqu66z"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       secondary button
       <svg
-        className="css-u2qp86-Caret"
+        className="css-3h3k4c-Caret"
         viewBox="0 0 120 120"
       >
         <path
@@ -87,13 +87,13 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
       className="css-1jlq266-Spacer"
     />
     <button
-      className="css-n9wii6"
+      className="css-1udgn1i"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-u2qp86-Caret"
+        className="css-3h3k4c-Caret"
         viewBox="0 0 120 120"
       >
         <path
@@ -111,10 +111,10 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
 
 exports[`Storyshots Elements|Button Primary Disabled Variant 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <button
-    className="css-7zijx9"
+    className="css-7qca1n"
     disabled={true}
     type="submit"
   >
@@ -125,10 +125,10 @@ exports[`Storyshots Elements|Button Primary Disabled Variant 1`] = `
 
 exports[`Storyshots Elements|Button Primary Variant 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <button
-    className="css-7zijx9"
+    className="css-7qca1n"
     disabled={false}
     type="submit"
   >
@@ -139,10 +139,10 @@ exports[`Storyshots Elements|Button Primary Variant 1`] = `
 
 exports[`Storyshots Elements|Button Secondary Disabled Variant 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <button
-    className="css-1cu7wal"
+    className="css-iorx3c"
     disabled={true}
     type="submit"
   >
@@ -153,10 +153,10 @@ exports[`Storyshots Elements|Button Secondary Disabled Variant 1`] = `
 
 exports[`Storyshots Elements|Button Secondary Variant 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <button
-    className="css-1cu7wal"
+    className="css-iorx3c"
     disabled={false}
     type="submit"
   >

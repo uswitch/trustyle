@@ -2,18 +2,18 @@
 
 exports[`Storyshots Elements|Category example with text 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
-    className="css-kp49sz"
+    className="css-mcxz16"
   >
     <h1
-      className="css-yzkzpf"
+      className="css-8jec5u"
     >
       Title goes here
     </h1>
     <p
-      className="css-n94qh2"
+      className="css-1vldmzr"
     >
       Text goes here
     </p>
@@ -23,13 +23,13 @@ exports[`Storyshots Elements|Category example with text 1`] = `
 
 exports[`Storyshots Elements|Category example without text 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
-    className="css-kp49sz"
+    className="css-mcxz16"
   >
     <p
-      className="css-yzkzpf"
+      className="css-8jec5u"
     >
       Title goes here
     </p>

@@ -2,13 +2,13 @@
 
 exports[`Storyshots Elements|Button Link All Variants 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-1qboakw-AllVariants"
   >
     <a
-      className="css-izi4pz"
+      className="css-8obxqn"
       href="https://www.uswitch.com"
       target="_blank"
     >
@@ -18,7 +18,7 @@ exports[`Storyshots Elements|Button Link All Variants 1`] = `
       className="css-1jlq266-Spacer"
     />
     <a
-      className="css-u32c6s"
+      className="css-2j1mil"
       href="https://www.uswitch.com"
       target="_blank"
     >
@@ -33,10 +33,10 @@ exports[`Storyshots Elements|Button Link All Variants 1`] = `
 
 exports[`Storyshots Elements|Button Link Primary Variant 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <a
-    className="css-izi4pz"
+    className="css-8obxqn"
   >
     Primary link button
   </a>
@@ -45,10 +45,10 @@ exports[`Storyshots Elements|Button Link Primary Variant 1`] = `
 
 exports[`Storyshots Elements|Button Link Secondary Variant 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <a
-    className="css-u32c6s"
+    className="css-2j1mil"
   >
     Primary link button
   </a>

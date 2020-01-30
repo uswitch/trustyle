@@ -2,7 +2,7 @@
 
 exports[`Storyshots Layout|Arrangement Inlining elements 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-1qxtczr"
@@ -49,7 +49,7 @@ exports[`Storyshots Layout|Arrangement Inlining elements 1`] = `
 
 exports[`Storyshots Layout|Arrangement Stacking elements 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-1a9y87q"
@@ -96,7 +96,7 @@ exports[`Storyshots Layout|Arrangement Stacking elements 1`] = `
 
 exports[`Storyshots Layout|Arrangement Stacking inlines 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-1a9y87q"
