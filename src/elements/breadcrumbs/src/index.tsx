@@ -6,6 +6,26 @@ import { Icon } from '@uswitch/trustyle.icon'
 
 import useWindowSize from './hook-window-size'
 
+const HomeIcon: React.FC = () => {
+  const { theme }: any = useThemeUI()
+
+  return (
+    <div
+      sx={{
+        display: 'inline-block',
+        width: '1.25em',
+        height: '1em',
+        variant: 'breadcrumbs.homeIcon'
+      }}
+    >
+      <Icon
+        glyph="home"
+        color={theme.colors[theme.breadcrumbs?.homeIcon?.color]}
+      />
+    </div>
+  )
+}
+
 interface Props extends React.HTMLAttributes<HTMLUListElement> {
   crumbs: { fields: any; [key: string]: any }[]
   title?: string
@@ -24,22 +44,6 @@ const Breadcrumbs: React.FC<Props> = ({
   const { theme }: any = useThemeUI()
   const windowSize = useWindowSize()
 
-  const homeIcon = customHomeIcon || (
-    <div
-      sx={{
-        display: 'inline-block',
-        width: '1.25em',
-        height: '1em',
-        variant: 'breadcrumbs.homeIcon'
-      }}
-    >
-      <Icon
-        glyph="home"
-        color={theme.colors[theme.breadcrumbs?.homeIcon?.color]}
-      />
-    </div>
-  )
-
   const isMobile = windowSize.innerWidth < parseInt(theme.breakpoints[0])
   if (isMobile) {
     const BackIcon =
@@ -55,7 +59,7 @@ const Breadcrumbs: React.FC<Props> = ({
       backTo = lastCrumb.fields.displayText
     } else {
       href = '/'
-      backTo = homeIcon
+      backTo = customHomeIcon || <HomeIcon />
     }
 
     return (
@@ -97,23 +101,15 @@ const Breadcrumbs: React.FC<Props> = ({
     }
   }
 
-  const Separator = () => {
-    const InnerSeparator =
-      typeof customSeparator === 'function'
-        ? customSeparator
-        : () => customSeparator
+  const Separator =
+    typeof customSeparator === 'function'
+      ? customSeparator
+      : () => customSeparator
 
-    return (
-      <span
-        sx={{
-          display: 'inline-block',
-          marginX: 'xxs',
-          verticalAlign: customSeparator === 'function' ? 'middle' : undefined
-        }}
-      >
-        <InnerSeparator />
-      </span>
-    )
+  const separatorStyling = {
+    display: 'inline-block',
+    marginX: 'xxs',
+    verticalAlign: customSeparator === 'function' ? 'middle' : undefined
   }
 
   return (
@@ -127,10 +123,14 @@ const Breadcrumbs: React.FC<Props> = ({
     >
       <li sx={liStyling}>
         <Styled.a sx={anchorStyling} href="/">
-          {homeIcon}
+          {customHomeIcon || <HomeIcon />}
         </Styled.a>
 
-        {(crumbs.length || title) && <Separator />}
+        {(crumbs.length || title) && (
+          <span sx={separatorStyling}>
+            <Separator />
+          </span>
+        )}
       </li>
 
       {crumbs.map((crumb, i) => (
@@ -139,7 +139,11 @@ const Breadcrumbs: React.FC<Props> = ({
             {crumb.fields.displayText}
           </Styled.a>
 
-          {(i !== crumbs.length - 1 || title) && <Separator />}
+          {(i !== crumbs.length - 1 || title) && (
+            <span sx={separatorStyling}>
+              <Separator />
+            </span>
+          )}
         </li>
       ))}
 
