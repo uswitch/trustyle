@@ -11,7 +11,7 @@ exports[`Storyshots Elements|DropDown example 1`] = `
       className="css-79elbk"
     >
       <select
-        className="css-19btvpa"
+        className="css-e5hklv"
         id="example"
         name="example"
         onBlur={[Function]}
@@ -36,7 +36,7 @@ exports[`Storyshots Elements|DropDown example 1`] = `
         </option>
       </select>
       <span
-        className="css-u9m3vf"
+        className="css-6lgsak"
       >
         <svg
           className="css-15ys0jb"
@@ -84,7 +84,7 @@ exports[`Storyshots Elements|DropDown example 1`] = `
         className="css-79elbk"
       >
         <select
-          className="css-19btvpa"
+          className="css-e5hklv"
           id="frozen-example"
           name="frozen-example"
           onBlur={[Function]}
@@ -109,7 +109,7 @@ exports[`Storyshots Elements|DropDown example 1`] = `
           </option>
         </select>
         <span
-          className="css-u9m3vf"
+          className="css-6lgsak"
         >
           <svg
             className="css-15ys0jb"
@@ -129,7 +129,7 @@ exports[`Storyshots Elements|DropDown example 1`] = `
       className="css-79elbk"
     >
       <select
-        className="css-1icpkxt"
+        className="css-11oapk0"
         id="withError"
         name="withError"
         onBlur={[Function]}
@@ -144,7 +144,7 @@ exports[`Storyshots Elements|DropDown example 1`] = `
         </option>
       </select>
       <span
-        className="css-u9m3vf"
+        className="css-6lgsak"
       >
         <svg
           className="css-1j7c9yt"
