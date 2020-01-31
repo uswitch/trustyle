@@ -24,8 +24,9 @@ export const input = (slim: boolean): SerializedStyles =>
         boxShadow: helpers.insetBorder(colors.azure)
       }),
       '&::before': {
-        backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="${svgSafeAzure}" viewBox="-1 -2 14 12"><path d="M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z" /></svg>')`,
+        backgroundImage: `url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='${svgSafeAzure}' viewBox='-1 -2 14 12'%3E%3Cpath d='M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z' /%3E%3C/svg%3E")`,
         backgroundColor: colors.white,
+        backgroundSize: pxToRem(16, 16),
         borderColor: colors.azure,
         boxShadow: helpers.insetBorder(colors.azure)
       }
