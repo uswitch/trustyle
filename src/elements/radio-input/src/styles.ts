@@ -6,7 +6,7 @@ export const label: SerializedStyles = css({
 })
 
 export const input: SerializedStyles = css({
-  marginLeft: '-1000px',
+  marginLeft: '-9000px',
   appearance: 'none',
   position: 'absolute',
   '&:checked + span': {
@@ -23,9 +23,6 @@ export const input: SerializedStyles = css({
   '&:focus + span': {
     borderColor: colors.azure,
     boxShadow: helpers.insetBorder(colors.azure)
-  },
-  '&::-ms-check': {
-    display: 'none'
   }
 })
 
