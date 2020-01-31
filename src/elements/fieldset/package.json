@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.fieldset",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -12,10 +12,10 @@
     "build": "npm run clean && tsc"
   },
   "dependencies": {
-    "@uswitch/trustyle.styles": "^0.4.16"
+    "@uswitch/trustyle.styles": "^0.4.17"
   },
   "devDependencies": {
-    "@uswitch/trustyle.grid": "^1.0.12",
+    "@uswitch/trustyle.grid": "^1.0.13",
     "typescript": "^3.6.2"
   },
   "peerDependencies": {
