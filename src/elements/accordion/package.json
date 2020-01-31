@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.accordion",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -20,6 +20,6 @@
     "theme-ui": "^0.2.52"
   },
   "dependencies": {
-    "@uswitch/trustyle.icon": "^0.2.41"
+    "@uswitch/trustyle.icon": "^0.2.43"
   }
 }
