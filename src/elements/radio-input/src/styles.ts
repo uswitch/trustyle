@@ -23,6 +23,9 @@ export const input: SerializedStyles = css({
   '&:focus + span': {
     borderColor: colors.azure,
     boxShadow: helpers.insetBorder(colors.azure)
+  },
+  '&::-ms-check': {
+    display: 'none'
   }
 })
 

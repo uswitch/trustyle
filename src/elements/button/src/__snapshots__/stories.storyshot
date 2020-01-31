@@ -5,7 +5,7 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
   className="css-6s6wkd"
 >
   <div
-    className="css-1qboakw-AllVariants"
+    className="css-1o3vjwm-AllVariants"
   >
     <button
       className="css-7qca1n"
@@ -16,7 +16,7 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
       primary button
     </button>
     <div
-      className="css-1jlq266-Spacer"
+      className="css-1dy3vsl-Spacer"
     />
     <button
       className="css-h1k4i8"
@@ -35,7 +35,7 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
       </svg>
     </button>
     <div
-      className="css-1jlq266-Spacer"
+      className="css-1dy3vsl-Spacer"
     />
     <button
       className="css-cpykqa"
@@ -54,7 +54,7 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
       primary button
     </button>
     <div
-      className="css-1jlq266-Spacer"
+      className="css-1dy3vsl-Spacer"
     />
     <button
       className="css-iorx3c"
@@ -65,7 +65,7 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
       secondary button
     </button>
     <div
-      className="css-1jlq266-Spacer"
+      className="css-1dy3vsl-Spacer"
     />
     <button
       className="css-1nqu66z"
@@ -84,7 +84,7 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
       </svg>
     </button>
     <div
-      className="css-1jlq266-Spacer"
+      className="css-1dy3vsl-Spacer"
     />
     <button
       className="css-1udgn1i"
@@ -103,7 +103,7 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
       secondary button
     </button>
     <div
-      className="css-1jlq266-Spacer"
+      className="css-1dy3vsl-Spacer"
     />
   </div>
 </div>
