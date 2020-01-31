@@ -2,7 +2,7 @@
 
 exports[`Storyshots Layout|Grid Example 1 - basics 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-1a324er-Container"
@@ -95,7 +95,7 @@ exports[`Storyshots Layout|Grid Example 1 - basics 1`] = `
 
 exports[`Storyshots Layout|Grid Example 2 - center 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-16irgbw-Container"
@@ -119,7 +119,7 @@ exports[`Storyshots Layout|Grid Example 2 - center 1`] = `
 
 exports[`Storyshots Layout|Grid Example 3 - nested grids 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-16irgbw-Container"

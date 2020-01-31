@@ -2,7 +2,7 @@
 
 exports[`Storyshots Elements|Loading Spinner Example 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-1a4893g-LoadingSpinner"
