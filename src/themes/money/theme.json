@@ -371,12 +371,6 @@
     }
   },
 
-  "author": {
-    "main": {
-      "backgroundColor": "light-2"
-    }
-  },
-
   "callOut": {
     "main": {
       "backgroundColor": "grey-10",
