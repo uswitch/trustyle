@@ -2,17 +2,17 @@
 
 exports[`Storyshots Elements|Breadcrumbs All With Custom Separator 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-16r3kt5"
   >
     <a
-      className="css-3stguh"
+      className="css-wswg7u"
       href="/gas-electricity/guides"
     >
       <span
-        className="css-12z0wuy"
+        className="css-15ro776"
       >
         <span
           className="css-mg3idc"
@@ -40,7 +40,7 @@ exports[`Storyshots Elements|Breadcrumbs All With Custom Separator 1`] = `
         className="css-6n7j50"
       >
         <a
-          className="css-bi8hhh"
+          className="css-216vp6"
           href="/"
         >
           <div
@@ -58,7 +58,7 @@ exports[`Storyshots Elements|Breadcrumbs All With Custom Separator 1`] = `
           </div>
         </a>
         <span
-          className="css-18fk3ag"
+          className="css-mt4569"
         >
           <span
             className="css-mg3idc"
@@ -78,13 +78,13 @@ exports[`Storyshots Elements|Breadcrumbs All With Custom Separator 1`] = `
         className="css-6n7j50"
       >
         <a
-          className="css-bi8hhh"
+          className="css-216vp6"
           href="/gas-electricity/"
         >
           Gas & Electricity
         </a>
         <span
-          className="css-18fk3ag"
+          className="css-mt4569"
         >
           <span
             className="css-mg3idc"
@@ -104,13 +104,13 @@ exports[`Storyshots Elements|Breadcrumbs All With Custom Separator 1`] = `
         className="css-6n7j50"
       >
         <a
-          className="css-bi8hhh"
+          className="css-216vp6"
           href="/gas-electricity/guides"
         >
           Guides
         </a>
         <span
-          className="css-18fk3ag"
+          className="css-mt4569"
         >
           <span
             className="css-mg3idc"
@@ -138,17 +138,17 @@ exports[`Storyshots Elements|Breadcrumbs All With Custom Separator 1`] = `
 
 exports[`Storyshots Elements|Breadcrumbs Custom Home Icon 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-16r3kt5"
   >
     <a
-      className="css-3stguh"
+      className="css-wswg7u"
       href="/gas-electricity/guides"
     >
       <span
-        className="css-12z0wuy"
+        className="css-15ro776"
       >
         &lt;
       </span>
@@ -165,13 +165,13 @@ exports[`Storyshots Elements|Breadcrumbs Custom Home Icon 1`] = `
         className="css-6n7j50"
       >
         <a
-          className="css-bi8hhh"
+          className="css-216vp6"
           href="/"
         >
           Uswitch.com
         </a>
         <span
-          className="css-18fk3ag"
+          className="css-mt4569"
         >
           &gt;
         </span>
@@ -180,13 +180,13 @@ exports[`Storyshots Elements|Breadcrumbs Custom Home Icon 1`] = `
         className="css-6n7j50"
       >
         <a
-          className="css-bi8hhh"
+          className="css-216vp6"
           href="/gas-electricity/"
         >
           Gas & Electricity
         </a>
         <span
-          className="css-18fk3ag"
+          className="css-mt4569"
         >
           &gt;
         </span>
@@ -195,13 +195,13 @@ exports[`Storyshots Elements|Breadcrumbs Custom Home Icon 1`] = `
         className="css-6n7j50"
       >
         <a
-          className="css-bi8hhh"
+          className="css-216vp6"
           href="/gas-electricity/guides"
         >
           Guides
         </a>
         <span
-          className="css-18fk3ag"
+          className="css-mt4569"
         >
           &gt;
         </span>
@@ -218,17 +218,17 @@ exports[`Storyshots Elements|Breadcrumbs Custom Home Icon 1`] = `
 
 exports[`Storyshots Elements|Breadcrumbs Example With Title 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-16r3kt5"
   >
     <a
-      className="css-3stguh"
+      className="css-wswg7u"
       href="/gas-electricity/guides"
     >
       <span
-        className="css-12z0wuy"
+        className="css-15ro776"
       >
         &lt;
       </span>
@@ -245,7 +245,7 @@ exports[`Storyshots Elements|Breadcrumbs Example With Title 1`] = `
         className="css-6n7j50"
       >
         <a
-          className="css-bi8hhh"
+          className="css-216vp6"
           href="/"
         >
           <div
@@ -263,7 +263,7 @@ exports[`Storyshots Elements|Breadcrumbs Example With Title 1`] = `
           </div>
         </a>
         <span
-          className="css-18fk3ag"
+          className="css-mt4569"
         >
           &gt;
         </span>
@@ -272,13 +272,13 @@ exports[`Storyshots Elements|Breadcrumbs Example With Title 1`] = `
         className="css-6n7j50"
       >
         <a
-          className="css-bi8hhh"
+          className="css-216vp6"
           href="/gas-electricity/"
         >
           Gas & Electricity
         </a>
         <span
-          className="css-18fk3ag"
+          className="css-mt4569"
         >
           &gt;
         </span>
@@ -287,13 +287,13 @@ exports[`Storyshots Elements|Breadcrumbs Example With Title 1`] = `
         className="css-6n7j50"
       >
         <a
-          className="css-bi8hhh"
+          className="css-216vp6"
           href="/gas-electricity/guides"
         >
           Guides
         </a>
         <span
-          className="css-18fk3ag"
+          className="css-mt4569"
         >
           &gt;
         </span>
@@ -310,17 +310,17 @@ exports[`Storyshots Elements|Breadcrumbs Example With Title 1`] = `
 
 exports[`Storyshots Elements|Breadcrumbs Example Without Title 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-16r3kt5"
   >
     <a
-      className="css-3stguh"
+      className="css-wswg7u"
       href="/gas-electricity/guides"
     >
       <span
-        className="css-12z0wuy"
+        className="css-15ro776"
       >
         &lt;
       </span>
@@ -337,7 +337,7 @@ exports[`Storyshots Elements|Breadcrumbs Example Without Title 1`] = `
         className="css-6n7j50"
       >
         <a
-          className="css-bi8hhh"
+          className="css-216vp6"
           href="/"
         >
           <div
@@ -355,7 +355,7 @@ exports[`Storyshots Elements|Breadcrumbs Example Without Title 1`] = `
           </div>
         </a>
         <span
-          className="css-18fk3ag"
+          className="css-mt4569"
         >
           &gt;
         </span>
@@ -364,13 +364,13 @@ exports[`Storyshots Elements|Breadcrumbs Example Without Title 1`] = `
         className="css-6n7j50"
       >
         <a
-          className="css-bi8hhh"
+          className="css-216vp6"
           href="/gas-electricity/"
         >
           Gas & Electricity
         </a>
         <span
-          className="css-18fk3ag"
+          className="css-mt4569"
         >
           &gt;
         </span>
@@ -379,7 +379,7 @@ exports[`Storyshots Elements|Breadcrumbs Example Without Title 1`] = `
         className="css-6n7j50"
       >
         <a
-          className="css-bi8hhh"
+          className="css-216vp6"
           href="/gas-electricity/guides"
         >
           Guides
@@ -392,17 +392,17 @@ exports[`Storyshots Elements|Breadcrumbs Example Without Title 1`] = `
 
 exports[`Storyshots Elements|Breadcrumbs No Crumbs And No Title 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-16r3kt5"
   >
     <a
-      className="css-3stguh"
+      className="css-wswg7u"
       href="/"
     >
       <span
-        className="css-12z0wuy"
+        className="css-15ro776"
       >
         &lt;
       </span>
@@ -431,7 +431,7 @@ exports[`Storyshots Elements|Breadcrumbs No Crumbs And No Title 1`] = `
         className="css-6n7j50"
       >
         <a
-          className="css-bi8hhh"
+          className="css-216vp6"
           href="/"
         >
           <div
@@ -456,17 +456,17 @@ exports[`Storyshots Elements|Breadcrumbs No Crumbs And No Title 1`] = `
 
 exports[`Storyshots Elements|Breadcrumbs No Crumbs And Title 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-16r3kt5"
   >
     <a
-      className="css-3stguh"
+      className="css-wswg7u"
       href="/"
     >
       <span
-        className="css-12z0wuy"
+        className="css-15ro776"
       >
         &lt;
       </span>
@@ -495,7 +495,7 @@ exports[`Storyshots Elements|Breadcrumbs No Crumbs And Title 1`] = `
         className="css-6n7j50"
       >
         <a
-          className="css-bi8hhh"
+          className="css-216vp6"
           href="/"
         >
           <div
@@ -513,7 +513,7 @@ exports[`Storyshots Elements|Breadcrumbs No Crumbs And Title 1`] = `
           </div>
         </a>
         <span
-          className="css-18fk3ag"
+          className="css-mt4569"
         >
           &gt;
         </span>
@@ -530,17 +530,17 @@ exports[`Storyshots Elements|Breadcrumbs No Crumbs And Title 1`] = `
 
 exports[`Storyshots Elements|Breadcrumbs Nothing With Custom Separator 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-16r3kt5"
   >
     <a
-      className="css-3stguh"
+      className="css-wswg7u"
       href="/"
     >
       <span
-        className="css-12z0wuy"
+        className="css-15ro776"
       >
         <span
           className="css-mg3idc"
@@ -580,7 +580,7 @@ exports[`Storyshots Elements|Breadcrumbs Nothing With Custom Separator 1`] = `
         className="css-6n7j50"
       >
         <a
-          className="css-bi8hhh"
+          className="css-216vp6"
           href="/"
         >
           <div

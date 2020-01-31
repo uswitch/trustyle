@@ -2,7 +2,7 @@
 
 exports[`Storyshots Global Styles|Colours Swatches 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-maohlb"
@@ -11,49 +11,17 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       className="css-wxtmah"
     >
       <div
-        className="css-fx1j7a"
+        className="css-1p1ob9f"
       />
-      cranberry
+      sunshine
     </div>
     <div
       className="css-wxtmah"
     >
       <div
-        className="css-pv1rd5"
+        className="css-1cu8qjw"
       />
-      cranberry--light
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-1vlhy9u"
-      />
-      cranberry--dark
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-l3o5kw"
-      />
-      cannon-pink
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-1gmgq0v"
-      />
-      cannon-pink--light
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-qjggsf"
-      />
-      cannon-pink--dark
+      burnt
     </div>
     <div
       className="css-wxtmah"
@@ -67,129 +35,33 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       className="css-wxtmah"
     >
       <div
-        className="css-10cj7lp"
+        className="css-fx1j7a"
       />
-      light-1
+      fuschia
     </div>
     <div
       className="css-wxtmah"
     >
       <div
-        className="css-pz5kyb"
+        className="css-vxsf0t"
       />
-      light-2
+      berry
     </div>
     <div
       className="css-wxtmah"
     >
       <div
-        className="css-1fyxyn9"
+        className="css-l3o5kw"
       />
-      light-3
+      plum
     </div>
     <div
       className="css-wxtmah"
     >
       <div
-        className="css-18u2hib"
+        className="css-e2uw7g"
       />
-      primary
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-fad71b"
-      />
-      secondary
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-1od1an3"
-      />
-      heading
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-1lyuzwk"
-      />
-      link
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-88fj4i"
-      />
-      link-2
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-fad71b"
-      />
-      brand
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-15z5bww"
-      />
-      accent-1
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-1oiwjec"
-      />
-      accent-2
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-vbxzlt"
-      />
-      accent-3
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-om6dm5"
-      />
-      text
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-om6dm5"
-      />
-      dark-1
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-i1zqee"
-      />
-      dark-2
-    </div>
-    <div
-      className="css-wxtmah"
-    >
-      <div
-        className="css-12gzcs5"
-      />
-      hero
+      grey-0
     </div>
     <div
       className="css-wxtmah"
@@ -198,6 +70,14 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
         className="css-1rttqhl"
       />
       grey-05
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
+        className="css-1dr71bs"
+      />
+      grey-10
     </div>
     <div
       className="css-wxtmah"
@@ -219,6 +99,22 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       className="css-wxtmah"
     >
       <div
+        className="css-7liklf"
+      />
+      grey-40
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
+        className="css-11qf8k2"
+      />
+      grey-50
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
         className="css-1xqe2o6"
       />
       grey-60
@@ -227,9 +123,65 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       className="css-wxtmah"
     >
       <div
+        className="css-1o4458o"
+      />
+      grey-70
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
         className="css-55qb8t"
       />
       grey-80
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
+        className="css-1ilt0fn"
+      />
+      grey-90
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
+        className="css-om6dm5"
+      />
+      grey-100
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
+        className="css-1p1ob9f"
+      />
+      primary
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
+        className="css-ywp3t0"
+      />
+      primary--dark
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
+        className="css-l3o5kw"
+      />
+      secondary
+    </div>
+    <div
+      className="css-wxtmah"
+    >
+      <div
+        className="css-5pw1u9"
+      />
+      secondary--dark
     </div>
     <div
       className="css-wxtmah"
@@ -245,7 +197,7 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
 
 exports[`Storyshots Global Styles|Typography Types 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <h1>
     Heading level 1
@@ -259,18 +211,14 @@ exports[`Storyshots Global Styles|Typography Types 1`] = `
   <h4>
     Heading level 4
   </h4>
+  <h5>
+    Heading level 5
+  </h5>
+  <h6>
+    Heading level 6
+  </h6>
   <p>
     root
-  </p>
-  <p
-    className="medium"
-  >
-    .medium
-  </p>
-  <p
-    className="small"
-  >
-    .small
   </p>
   <a>
     Anchor
