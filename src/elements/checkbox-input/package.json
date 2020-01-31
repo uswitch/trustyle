@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.checkbox-input",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -12,8 +12,8 @@
     "build": "npm run clean && tsc"
   },
   "dependencies": {
-    "@uswitch/trustyle.grid": "^1.0.13",
-    "@uswitch/trustyle.styles": "^0.4.17"
+    "@uswitch/trustyle.grid": "^1.0.14",
+    "@uswitch/trustyle.styles": "^0.4.18"
   },
   "devDependencies": {
     "typescript": "^3.6.2"
