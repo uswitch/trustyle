@@ -5,7 +5,7 @@ exports[`Storyshots Elements|Button Link All Variants 1`] = `
   className="css-m9xbk1"
 >
   <div
-    className="css-1qboakw-AllVariants"
+    className="css-1o3vjwm-AllVariants"
   >
     <a
       className="css-izi4pz"
@@ -15,7 +15,7 @@ exports[`Storyshots Elements|Button Link All Variants 1`] = `
       primary link button
     </a>
     <div
-      className="css-1jlq266-Spacer"
+      className="css-1dy3vsl-Spacer"
     />
     <a
       className="css-u32c6s"
@@ -25,7 +25,7 @@ exports[`Storyshots Elements|Button Link All Variants 1`] = `
       secondary link button
     </a>
     <div
-      className="css-1jlq266-Spacer"
+      className="css-1dy3vsl-Spacer"
     />
   </div>
 </div>

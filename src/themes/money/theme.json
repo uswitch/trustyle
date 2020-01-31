@@ -128,7 +128,7 @@
     "dark-1": "#000000",
     "dark-2": "#3d3d3d",
     "hero": "#99e2ff",
-    
+
     "grey-05": "#F7F7F7",
     "grey-20": "#DFDFE1",
     "grey-30": "#C2C4C8",
@@ -424,6 +424,18 @@
     },
     "text": {
       "color": "light-1"
+    }
+  },
+
+  "breadcrumbs": {
+    "main": {
+      "color": "grey-60"
+    },
+    "homeIcon": {
+      "color": "grey-60"
+    },
+    "title": {
+      "color": "dark-1"
     }
   },
 
