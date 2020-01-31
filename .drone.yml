@@ -28,4 +28,4 @@ pipeline:
       event: [push]
     image: node:11.15.0
     commands:
-      - npm test
+      - npm test -- --ci

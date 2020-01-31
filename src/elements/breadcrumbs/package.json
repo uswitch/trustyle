@@ -1,6 +1,6 @@
 {
-  "name": "@uswitch/trustyle.template",
-  "version": "0.0.0",
+  "name": "@uswitch/trustyle.breadcrumbs",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -14,5 +14,8 @@
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
+  },
+  "dependencies": {
+    "@uswitch/trustyle.icon": "^0.2.41"
   }
 }
