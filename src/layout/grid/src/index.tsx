@@ -9,14 +9,18 @@ import * as st from './styles'
 interface Props {
   children: any
   outerMargin?: string[]
+  containerWidths?: (string | number)[]
+  gutterWidths?: number[]
 }
 
 export const Container: React.FC<Props> = ({
   children,
   outerMargin,
+  containerWidths,
+  gutterWidths,
   ...props
 }) => (
-  <div css={st.container(outerMargin)} {...props}>
+  <div css={st.container(outerMargin, containerWidths, gutterWidths)} {...props}>
     {children}
   </div>
 )
@@ -25,6 +29,7 @@ interface ColumnProps extends Breakpoints {
   children: any
   hasPaddingTop?: boolean
   hasPaddingBottom?: boolean
+  gutterWidths?: number[]
 }
 
 const parseSizeFromProps = (fn: (breakpoint: [string, any]) => any) =>
@@ -40,13 +45,14 @@ export const Column: React.FC<ColumnProps> = ({
   children,
   hasPaddingTop,
   hasPaddingBottom,
+  gutterWidths,
   ...props
 }) => {
   const sizes = parseSizes(props)
   const display = parseDisplay(props)
   return (
     <div
-      css={st.column(sizes, display, hasPaddingTop, hasPaddingBottom)}
+      css={st.column(sizes, display, hasPaddingTop, hasPaddingBottom, gutterWidths)}
       {...props}
     >
       {children}
@@ -59,6 +65,7 @@ interface RowProps {
   centerX?: boolean
   topSpacing?: number[]
   bottomSpacing?: number[]
+  gutterWidths?: number[]
 }
 
 export const Row: React.FC<RowProps> = ({
@@ -66,9 +73,10 @@ export const Row: React.FC<RowProps> = ({
   centerX,
   topSpacing,
   bottomSpacing,
+  gutterWidths,
   ...props
 }) => (
-  <div css={st.row(centerX, topSpacing, bottomSpacing)} {...props}>
+  <div css={st.row(centerX, topSpacing, bottomSpacing, gutterWidths)} {...props}>
     {children}
   </div>
 )
