@@ -22,7 +22,7 @@
     "typescript": "^3.6.2"
   },
   "peerDependencies": {
-    "@emotion/core": "^10.0.22",
+    "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
   }
 }
