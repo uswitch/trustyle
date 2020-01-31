@@ -20,7 +20,10 @@ export const Container: React.FC<Props> = ({
   gutterWidths,
   ...props
 }) => (
-  <div css={st.container(outerMargin, containerWidths, gutterWidths)} {...props}>
+  <div
+    css={st.container(outerMargin, containerWidths, gutterWidths)}
+    {...props}
+  >
     {children}
   </div>
 )
@@ -52,7 +55,13 @@ export const Column: React.FC<ColumnProps> = ({
   const display = parseDisplay(props)
   return (
     <div
-      css={st.column(sizes, display, hasPaddingTop, hasPaddingBottom, gutterWidths)}
+      css={st.column(
+        sizes,
+        display,
+        hasPaddingTop,
+        hasPaddingBottom,
+        gutterWidths
+      )}
       {...props}
     >
       {children}
@@ -76,7 +85,10 @@ export const Row: React.FC<RowProps> = ({
   gutterWidths,
   ...props
 }) => (
-  <div css={st.row(centerX, topSpacing, bottomSpacing, gutterWidths)} {...props}>
+  <div
+    css={st.row(centerX, topSpacing, bottomSpacing, gutterWidths)}
+    {...props}
+  >
     {children}
   </div>
 )

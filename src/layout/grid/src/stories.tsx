@@ -101,7 +101,11 @@ storiesOf('Layout|Grid', module).add('Example 3 - nested grids', () => (
 ))
 
 storiesOf('Layout|Grid', module).add('Example 4 - passing screen sizes', () => (
-  <Container css={{ backgroundColor: colors.offWhite }} containerWidths={['100%', 740, 990]} gutterWidths={[8, 8, 8]}>
+  <Container
+    css={{ backgroundColor: colors.offWhite }}
+    containerWidths={['100%', 740, 990]}
+    gutterWidths={[8, 8, 8]}
+  >
     <Row css={exampleRowStyle} gutterWidths={[8, 8, 8]}>
       <Column gutterWidths={[8, 8, 8]}>
         <Row gutterWidths={[8, 8, 8]}>
