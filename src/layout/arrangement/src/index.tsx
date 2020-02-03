@@ -11,7 +11,6 @@ interface Props {
 export const Stack: React.FC<Props> = styled.div(({ spacing }) =>
   mq({
     '& > *': {
-      display: 'block',
       marginBottom: spacing.map(space => pxToRem(space))
     },
     '& > *:last-child': {

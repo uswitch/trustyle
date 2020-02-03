@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.bullet-list-timeline",
-  "version": "0.2.34",
+  "version": "0.2.37",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -12,13 +12,13 @@
     "build": "npm run clean && tsc"
   },
   "dependencies": {
-    "@uswitch/trustyle.styles": "^0.4.16"
+    "@uswitch/trustyle.styles": "^0.4.19"
   },
   "devDependencies": {
     "typescript": "^3.6.2"
   },
   "peerDependencies": {
-    "@emotion/core": "^10.0.22",
+    "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
   }
 }

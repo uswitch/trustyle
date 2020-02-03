@@ -2,7 +2,7 @@
 
 exports[`Storyshots Elements|CheckboxInput Example 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-fzcm1c-Form css-fpyx25"
@@ -26,7 +26,7 @@ exports[`Storyshots Elements|CheckboxInput Example 1`] = `
           >
             <input
               checked={false}
-              className="css-5jsged-CheckboxInput"
+              className="css-1i2rc8p-CheckboxInput"
               name="example"
               onChange={[Function]}
               type="checkbox"
@@ -47,7 +47,7 @@ exports[`Storyshots Elements|CheckboxInput Example 1`] = `
           >
             <input
               checked={false}
-              className="css-5jsged-CheckboxInput"
+              className="css-1i2rc8p-CheckboxInput"
               name="example"
               onChange={[Function]}
               type="checkbox"
@@ -68,7 +68,7 @@ exports[`Storyshots Elements|CheckboxInput Example 1`] = `
           >
             <input
               checked={false}
-              className="css-5jsged-CheckboxInput"
+              className="css-1i2rc8p-CheckboxInput"
               name="example"
               onChange={[Function]}
               type="checkbox"
@@ -89,7 +89,7 @@ exports[`Storyshots Elements|CheckboxInput Example 1`] = `
           >
             <input
               checked={false}
-              className="css-5jsged-CheckboxInput"
+              className="css-1i2rc8p-CheckboxInput"
               name="example"
               onChange={[Function]}
               type="checkbox"

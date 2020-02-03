@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.frozen-input",
-  "version": "0.3.40",
+  "version": "0.3.43",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -12,14 +12,14 @@
     "build": "npm run clean && tsc"
   },
   "dependencies": {
-    "@uswitch/trustyle.icon": "^0.2.39",
-    "@uswitch/trustyle.styles": "^0.4.16"
+    "@uswitch/trustyle.icon": "^0.2.42",
+    "@uswitch/trustyle.styles": "^0.4.19"
   },
   "devDependencies": {
     "typescript": "^3.6.2"
   },
   "peerDependencies": {
-    "@emotion/core": "^10.0.22",
+    "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
   }
 }

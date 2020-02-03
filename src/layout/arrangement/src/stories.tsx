@@ -25,17 +25,6 @@ storiesOf('Layout|Arrangement', module).add('Stacking elements', () => (
   </Stack>
 ))
 
-storiesOf('Layout|Arrangement', module).add('Stacking inlines', () => (
-  <Stack spacing={[8, 16]}>
-    <span css={exampleRow}>full width row 1</span>
-    <span css={exampleRow}>full width row 2</span>
-    <span css={exampleRow}>full width row 3</span>
-    <span css={exampleRow}>full width row 4</span>
-    <span css={exampleRow}>full width row 5</span>
-    <span css={exampleRow}>full width row 6</span>
-  </Stack>
-))
-
 storiesOf('Layout|Arrangement', module).add('Inlining elements', () => (
   <Inline spacing={[8, 16]}>
     <div css={exampleRow}>full width row 1</div>
