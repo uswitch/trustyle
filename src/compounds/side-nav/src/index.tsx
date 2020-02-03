@@ -44,7 +44,7 @@ const SideNav: React.FC<Props> = ({ internalLinks, additionalLinks = [] }) => {
             margin: 0
           }}
         >
-          {internalLinks.links.map(({ text, url, isActive }, index) => {
+          {internalLinks?.links?.map(({ text, url, isActive }, index) => {
             const isFirst = index === 0
             const isLast = index === internalLinks.links.length - 1
             return (
