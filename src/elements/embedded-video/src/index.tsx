@@ -7,14 +7,18 @@ import Accordion from '../../accordion/src'
 
 interface Props {
   source: string
-  frameborder?: number
   allowFullScreen?: boolean
+  hasAccordion?: boolean
+  accordionTitle?: string
+  accordionContent?: string
 }
 
 export const EmbeddedVideo: React.FC<Props> = ({
   source,
-  frameborder = 0,
-  allowFullScreen = true
+  allowFullScreen = true,
+  hasAccordion = true,
+  accordionTitle = '',
+  accordionContent = ''
 }) => (
   <div>
     <div
@@ -36,10 +40,12 @@ export const EmbeddedVideo: React.FC<Props> = ({
           height: '100%'
         }}
         src={source}
-        frameBorder={frameborder}
+        frameBorder="0"
         allowFullScreen={allowFullScreen}
       />
     </div>
-    <Accordion title="accordion title">accordion content</Accordion>
+    {hasAccordion && (
+      <Accordion title={accordionTitle}>{accordionContent}</Accordion>
+    )}
   </div>
 )
