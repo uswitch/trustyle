@@ -6,7 +6,7 @@ import { ThemeProvider } from 'theme-ui'
 
 import theme from '../../../utils/theme-selector'
 
-import { EmbeddedVideo } from './'
+import EmbeddedVideo from './'
 
 const UswitchAdvert = 'https://www.youtube.com/embed/1cy0Buice_0'
 

@@ -13,7 +13,7 @@ interface Props {
   accordionContent?: string
 }
 
-export const EmbeddedVideo: React.FC<Props> = ({
+const EmbeddedVideo: React.FC<Props> = ({
   source,
   allowFullScreen = true,
   hasAccordion = true,
@@ -49,3 +49,5 @@ export const EmbeddedVideo: React.FC<Props> = ({
     )}
   </div>
 )
+
+export default EmbeddedVideo
