@@ -2,7 +2,7 @@
 
 exports[`Storyshots Elements|InputAlert error 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-120ouxk-InputAlert"
@@ -16,7 +16,7 @@ exports[`Storyshots Elements|InputAlert error 1`] = `
 
 exports[`Storyshots Elements|InputAlert notification 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
     className="css-1emmr4e-InputAlert"

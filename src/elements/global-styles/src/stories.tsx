@@ -42,14 +42,14 @@ const typeNames: { [tag: string]: string } = {
   h2: 'Heading level 2',
   h3: 'Heading level 3',
   h4: 'Heading level 4',
+  h5: 'Heading level 5',
+  h6: 'Heading level 6',
   a: 'Anchor'
 }
 
 storiesOf('Global Styles|Typography', module).add('Types', () => {
   const overrides: { [key: string]: React.ReactNode } = {
     root: ({ children }: any) => <p>{children}</p>,
-    '.medium': ({ children }: any) => <p className="medium">{children}</p>,
-    '.small': ({ children }: any) => <p className="small">{children}</p>,
     blockquote: ({ children }: any) => (
       <blockquote>
         <p>{children}</p>
