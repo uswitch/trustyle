@@ -204,20 +204,30 @@
   },
 
   "accordion": {
-    "button": {
-      "padding": "sm",
-      "bg": "uswitch-navy",
-      "fontFamily": "base",
-      "fontSize": "base",
-      "fontWeight": "bold",
-      "color": "white",
-      "alignItems": "center"
+    "base": {
+      "button": {
+        "padding": "sm",
+        "bg": "grey-05",
+        "fontFamily": "base",
+        "fontSize": "base",
+        "fontWeight": "bold",
+        "color": "uswitch-navy",
+        "alignItems": "center",
+        "border": 0,
+        "display": "flex",
+        "flexDirection": "row",
+        "width": "100%"
+      },
+      "caret": {
+        "color": "black"
+      }
     },
-    "caret": {
-      "color": "white"
-    },
-
     "isActive": {
+      "button": {
+        "variant": "accordion.base.button",
+        "bg": "uswitch-navy",
+        "color": "white"
+      },
       "caret": {
         "color": "white"
       }

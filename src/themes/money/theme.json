@@ -186,28 +186,36 @@
   },
 
   "accordion": {
-    "button": {
-      "padding": "sm",
-      "bg": ["grey-05", "transparent"],
-      "fontFamily": "base",
-      "fontSize": "base",
-      "fontWeight": "bold",
-      "color": "textColor",
-      "alignItems": "center",
-      "borderWidth": "0 0 1px 0",
-      "borderStyle": "solid",
-      "borderColor": "grey-20"
+    "base": {
+      "button": {
+        "padding": "sm",
+        "bg": ["grey-05", "transparent"],
+        "fontFamily": "base",
+        "fontSize": "base",
+        "fontWeight": "bold",
+        "color": "textColor",
+        "alignItems": "center",
+        "borderWidth": "0 0 1px 0",
+        "borderStyle": "solid",
+        "borderColor": "grey-20",
+        "display": "flex",
+        "flexDirection": "row",
+        "width": "100%"
+      },
+      "caret": {
+        "color": "plum"
+      }
     },
-    "caret": {
-      "color": "plum"
-    },
-
     "isActive": {
+      "button": {
+        "variant": "accordion.base.button"
+      },
       "caret": {
         "color": "fuschia"
       }
     }
   },
+
 
   "sideNav": {
     "internalLinkList": {
