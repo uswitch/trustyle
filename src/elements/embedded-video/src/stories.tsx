@@ -7,7 +7,7 @@ import EmbeddedVideo from './'
 
 const UswitchAdvert = 'https://www.youtube.com/embed/1cy0Buice_0'
 
-storiesOf('Elements|embedded-video', module)
+storiesOf('Elements|Embedded-video', module)
   .add('primary variant', () => (
     <EmbeddedVideo
       source={UswitchAdvert}

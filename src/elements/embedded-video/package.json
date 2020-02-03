@@ -19,5 +19,8 @@
     "@mdx-js/react": "^1.5.3",
     "react": "^16.7.0",
     "theme-ui": "^0.2.52"
+  },
+  "dependencies": {
+    "@uswitch/trustyle.accordion": "^0.1.3"
   }
 }

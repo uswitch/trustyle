@@ -2,8 +2,7 @@
 
 import * as React from 'react'
 import { jsx } from 'theme-ui'
-
-import Accordion from '../../accordion/src'
+import Accordion from '@uswitch/trustyle.accordion'
 
 interface Props {
   source: string
