@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.author",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -16,6 +16,6 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.date": "0.0.1"
+    "@uswitch/trustyle.date": "^0.0.2"
   }
 }
