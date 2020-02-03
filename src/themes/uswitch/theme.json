@@ -210,7 +210,6 @@
         "bg": "grey-05",
         "fontFamily": "base",
         "fontSize": "base",
-        "fontWeight": "bold",
         "color": "uswitch-navy",
         "alignItems": "center",
         "border": 0,
@@ -224,12 +223,10 @@
     },
     "isActive": {
       "button": {
-        "variant": "accordion.base.button",
-        "bg": "uswitch-navy",
-        "color": "white"
+        "variant": "accordion.base.button"
       },
       "caret": {
-        "color": "white"
+        "variant": "accordion.base.caret"
       }
     }
   },
