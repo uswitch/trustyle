@@ -5,7 +5,8 @@
     "src/elements/**/*",
     "src/styles/",
     "src/layout/**/*",
-    "src/themes/**/*"
+    "src/themes/**/*",
+    "src/helpers/**/*"
   ],
   "version": "independent",
   "ignoreChanges": [

@@ -1,6 +1,6 @@
 {
-  "name": "@uswitch/trustyle.global-styles",
-  "version": "0.3.3",
+  "name": "@uswitch/trustyle.date",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -12,11 +12,7 @@
     "build": "npm run clean && tsc"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "dayjs": "^1.8.19"
   },
-  "peerDependencies": {
-    "@emotion/core": "^10.0.27",
-    "@mdx-js/react": "^1.5.3",
-    "theme-ui": "^0.2.52"
-  }
+  "gitHead": "d144c163c6fb277e9a7e41cc7d0d3722cae59a02"
 }
