@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.grid",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.27",
-    "@uswitch/trustyle.styles": "^0.4.19",
+    "@uswitch/trustyle.styles": "^0.4.20",
     "facepaint": "^1.2.1"
   },
   "devDependencies": {
