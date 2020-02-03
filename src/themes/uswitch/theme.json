@@ -225,27 +225,61 @@
   },
 
   "sideNav": {
-    "internalLink": {
-      "color": "grey-70",
-      "padding": "12px 16px",
-      "after": {},
-      "before": {}
+    "internalLinkList": {
+      "listStyle": "none",
+      "paddingLeft": 0,
+      "paddingTop": "xxs",
+      "paddingBottom": "xxs",
+      "margin": 0
     },
-    "activeInternalLink": {
-      "color": "uswitch-navy",
-      "after": {
-        "content": "\"\"",
-        "position": "absolute",
-        "top": "0",
-        "left": "0",
-        "display": "block",
-        "width": 4,
-        "height": "100%",
-        "backgroundColor": "uswitch-navy"
+    "internalLinkListItem": {
+      "base": {
+        "padding": "8px 0 8px 35px",
+        "mb": 0,
+        "position": "relative",
+        "::after": {
+
+        },
+        "::before": {
+
+        },
+        ":first-child::before": {
+
+        },
+        ":last-child::before": {
+        },
+        ">a": {
+          "color": "grey-60",
+          "textDecoration": "none",
+          "fontSize": "xs",
+          ":visited": {
+            "color": "grey-60"
+          }
+        }
       },
-      "before": {}
+      "isActive": {
+        "variant": "sideNav.internalLinkListItem.base",
+        "color": "uswitch-navy",
+        "::after": {
+          "variant": "sideNav.internalLinkListItem.base.::after",
+          "content": "\"\"",
+          "position": "absolute",
+          "top": "0",
+          "left": "0",
+          "display": "block",
+          "width": 4,
+          "height": "100%",
+          "backgroundColor": "uswitch-navy"
+        },
+        ">a": {
+          "variant": "sideNav.internalLinkListItem.base.>a",
+          "color": "grey-70",
+          "padding": "12px 16px"
+        }
+      }
     },
     "additionalLink": {
+      "display": "block",
       "marginBottom": "xxs",
       "color": "grey-80",
       "paddingTop": "xxs",

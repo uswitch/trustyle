@@ -21,63 +21,23 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const SideNav: React.FC<Props> = ({ internalLinks, additionalLinks = [] }) => {
-  const { theme: { sideNav: sideNavTheme = {} } = {} }: any = useThemeUI()
-  const {
-    internalLink: { padding = 0, color = '', after = {}, before = {} } = {},
-    activeInternalLink: {
-      color: activeInternalLinkColor = '',
-      after: activeInternalLinkAfter = {},
-      before: activeInternalLinkBefore = {}
-    } = {},
-    additionalLink = {}
-  } = sideNavTheme
-
   return (
     <nav>
       <Accordion title={internalLinks.title} isInitiallyOpen>
         <ul
           sx={{
-            listStyle: 'none',
-            paddingLeft: 0,
-            paddingTop: 'xxs',
-            paddingBottom: 'xxs',
-            margin: 0
+            variant: 'sideNav.internalLinkList'
           }}
         >
-          {internalLinks?.links?.map(({ text, url, isActive }, index) => {
-            const isFirst = index === 0
-            const isLast = index === internalLinks.links.length - 1
+          {internalLinks?.links?.map(({ text, url, isActive }) => {
             return (
               <li
                 key={url}
                 sx={{
-                  padding,
-                  marginBottom: 0,
-                  position: 'relative',
-                  '::after': {
-                    ...after,
-                    ...(isActive ? activeInternalLinkAfter : {})
-                  },
-                  '::before': {
-                    ...before,
-                    ...(isActive ? activeInternalLinkBefore : {}),
-                    top: isFirst ? '50%' : 0,
-                    height: isFirst || isLast ? '50%' : '100%'
-                  }
+                  variant: `sideNav.internalLinkListItem.${isActive ? 'isActive' : 'base'}`
                 }}
               >
-                <a
-                  href={url}
-                  sx={{
-                    color: isActive ? activeInternalLinkColor : color,
-                    textDecoration: 'none',
-                    fontSize: 'xs',
-                    fontWeight: isActive ? 'bold' : 'base',
-                    ':visited': {
-                      color: isActive ? activeInternalLinkColor : color
-                    }
-                  }}
-                >
+                <a href={url}>
                   {text}
                 </a>
               </li>
@@ -93,8 +53,7 @@ const SideNav: React.FC<Props> = ({ internalLinks, additionalLinks = [] }) => {
                 <a
                   href={url}
                   sx={{
-                    display: 'block',
-                    ...additionalLink
+                    variant: "sideNav.additionalLink"
                   }}
                 >
                   {text}
