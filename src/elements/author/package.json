@@ -11,11 +11,11 @@
     "clean": "rm -rf lib",
     "build": "npm run clean && tsc"
   },
-  "deepDependencies": {
+  "peerDependencies": {
     "@emotion/core": "^10.0.10",
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.date": "^0.0.0"
+    "@uswitch/trustyle.date": "0.0.1"
   }
 }
