@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.accordion",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -15,11 +15,11 @@
     "typescript": "^3.6.2"
   },
   "peerDependencies": {
-    "@emotion/core": "^10.0.22",
+    "@emotion/core": "^10.0.27",
     "react": "^16.7.0",
     "theme-ui": "^0.2.52"
   },
   "dependencies": {
-    "@uswitch/trustyle.icon": "^0.2.39"
+    "@uswitch/trustyle.icon": "^0.2.42"
   }
 }
