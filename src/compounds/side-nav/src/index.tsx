@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, useThemeUI } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import Accordion from '@uswitch/trustyle.accordion'
 
 interface Link {
@@ -34,12 +34,12 @@ const SideNav: React.FC<Props> = ({ internalLinks, additionalLinks = [] }) => {
               <li
                 key={url}
                 sx={{
-                  variant: `sideNav.internalLinkListItem.${isActive ? 'isActive' : 'base'}`
+                  variant: `sideNav.internalLinkListItem.${
+                    isActive ? 'isActive' : 'base'
+                  }`
                 }}
               >
-                <a href={url}>
-                  {text}
-                </a>
+                <a href={url}>{text}</a>
               </li>
             )
           })}
@@ -53,7 +53,7 @@ const SideNav: React.FC<Props> = ({ internalLinks, additionalLinks = [] }) => {
                 <a
                   href={url}
                   sx={{
-                    variant: "sideNav.additionalLink"
+                    variant: 'sideNav.additionalLink'
                   }}
                 >
                   {text}
