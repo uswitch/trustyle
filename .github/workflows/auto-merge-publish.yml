@@ -1,0 +1,15 @@
+name: Auto approve publish PRs
+on:
+  pull_request:
+    branches: 
+      - publish_*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: "contains(github.event.head_commit.message, '(With package-lock.json changes) Publish')"
+    steps:
+    - name: autoapprove
+      uses: hmarr/auto-approve-action@v2.0.0
+      with:
+        github-token: "${{ secrets.GITHUB_TOKEN }}"
