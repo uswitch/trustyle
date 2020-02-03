@@ -1,0 +1,26 @@
+{
+  "name": "@uswitch/trustyle.embedded-video",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "--------------- BUILDING": "----------------------",
+    "clean": "rm -rf lib",
+    "build": "npm run clean && tsc"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.2"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.22",
+    "@mdx-js/react": "^1.5.3",
+    "react": "^16.7.0",
+    "theme-ui": "^0.2.52"
+  },
+  "dependencies": {
+    "@uswitch/trustyle.accordion": "^0.1.3"
+  }
+}
