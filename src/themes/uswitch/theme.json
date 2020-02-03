@@ -213,6 +213,9 @@
         "color": "uswitch-navy",
         "alignItems": "center",
         "border": 0,
+        "borderBottomWidth": 1,
+        "borderBottomStyle": "solid",
+        "borderBottomColor": "grey-10",
         "display": "flex",
         "flexDirection": "row",
         "width": "100%"
