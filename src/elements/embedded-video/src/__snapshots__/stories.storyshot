@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Elements|List primary variant 1`] = `
+<div
+  className="css-m9xbk1"
+>
+  <div
+    className="css-nk32ej"
+  >
+    <ol
+      className="css-o9b79t"
+    >
+      <li
+        className="css-winuj2"
+      >
+        First item
+      </li>
+      <li
+        className="css-winuj2"
+      >
+        Second item
+      </li>
+      <li
+        className="css-winuj2"
+      >
+        Third item
+      </li>
+    </ol>
+    <ul
+      className="css-o9b79t"
+    >
+      <li
+        className="css-11rw2vo"
+      >
+        First item
+      </li>
+      <li
+        className="css-11rw2vo"
+      >
+        Second item
+      </li>
+      <li
+        className="css-11rw2vo"
+      >
+        Third item
+      </li>
+    </ul>
+    <ul
+      className="css-o9b79t"
+    >
+      <li
+        className="css-11rw2vo"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </li>
+      <li
+        className="css-11rw2vo"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </li>
+      <li
+        className="css-11rw2vo"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </li>
+    </ul>
+  </div>
+</div>
+`;
