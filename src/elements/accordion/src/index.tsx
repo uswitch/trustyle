@@ -24,7 +24,9 @@ const Accordion: React.FC<Props> = ({
       <button
         sx={{
           cursor: 'pointer',
-          variant: !isOpen ? 'accordion.base.button' : 'accordion.isActive.button'
+          variant: !isOpen
+            ? 'accordion.base.button'
+            : 'accordion.isActive.button'
         }}
         onClick={() => setIsOpen(!isOpen)}
       >
@@ -39,8 +41,8 @@ const Accordion: React.FC<Props> = ({
         <Icon
           color={
             isOpen
-              ? colors[accordionTheme.isActive.caret.color]
-              : colors[accordionTheme.base.caret.color]
+              ? colors[accordionTheme?.isActive?.caret?.color]
+              : colors[accordionTheme?.base?.caret?.color]
           }
           glyph="caret"
           direction={isOpen ? 'up' : 'down'}
