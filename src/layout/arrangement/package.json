@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.arrangement",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.27",
-    "@uswitch/trustyle.styles": "^0.4.20",
+    "@uswitch/trustyle.styles": "^0.4.21",
     "facepaint": "^1.2.1"
   },
   "devDependencies": {
