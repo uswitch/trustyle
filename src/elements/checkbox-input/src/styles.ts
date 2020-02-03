@@ -14,7 +14,7 @@ const svgSafeAzure = colors.azure.replace('#', '%23')
 
 export const input = (slim: boolean): SerializedStyles =>
   css({
-    marginLeft: '-1000px',
+    marginLeft: '-9000px',
     appearance: 'none',
     position: 'absolute',
     '&:checked + span': {
