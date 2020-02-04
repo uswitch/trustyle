@@ -1,0 +1,21 @@
+{
+  "name": "@uswitch/trustyle.faqs",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "--------------- BUILDING": "----------------------",
+    "clean": "rm -rf lib",
+    "build": "npm run clean && tsc"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.27",
+    "react": "^16.7.0"
+  },
+  "dependencies": {
+    "@uswitch/trustyle.accordion": "^0.1.6"
+  }
+}
