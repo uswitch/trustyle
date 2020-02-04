@@ -204,23 +204,89 @@
   },
 
   "accordion": {
-    "button": {
-      "padding": "sm",
-      "bg": "uswitch-navy",
-      "fontFamily": "base",
-      "fontSize": "base",
-      "fontWeight": "bold",
-      "color": "white",
-      "alignItems": "center"
-    },
-    "caret": {
-      "color": "white"
-    },
-
-    "isActive": {
+    "base": {
+      "button": {
+        "padding": "sm",
+        "bg": "grey-05",
+        "fontFamily": "base",
+        "fontSize": "base",
+        "color": "uswitch-navy",
+        "alignItems": "center",
+        "border": 0,
+        "borderBottomWidth": 1,
+        "borderBottomStyle": "solid",
+        "borderBottomColor": "grey-10",
+        "display": "flex",
+        "flexDirection": "row",
+        "width": "100%"
+      },
       "caret": {
-        "color": "white"
+        "color": "black"
       }
+    },
+    "isActive": {
+      "button": {
+        "variant": "accordion.base.button"
+      },
+      "caret": {
+        "variant": "accordion.base.caret"
+      }
+    }
+  },
+
+  "sideNav": {
+    "internalLinkList": {
+      "listStyle": "none",
+      "paddingLeft": 0,
+      "paddingTop": "xxs",
+      "paddingBottom": "xxs",
+      "margin": 0
+    },
+    "internalLinkListItem": {
+      "base": {
+        "mb": 0,
+        "position": "relative",
+        ">a": {
+          "display": "block",
+          "color": "grey-70",
+          "textDecoration": "none",
+          "fontSize": "sm",
+          "padding": "12px 16px",
+          ":visited": {
+            "color": "grey-70"
+          }
+        }
+      },
+      "isActive": {
+        "variant": "sideNav.internalLinkListItem.base",
+        "color": "uswitch-navy",
+        "::after": {
+          "variant": "sideNav.internalLinkListItem.base.::after",
+          "content": "\"\"",
+          "position": "absolute",
+          "top": "0",
+          "left": "0",
+          "display": "block",
+          "width": 4,
+          "height": "100%",
+          "backgroundColor": "uswitch-navy"
+        },
+        ">a": {
+          "variant": "sideNav.internalLinkListItem.base.>a",
+          "color": "uswitch-navy",
+          ":visited": {
+            "color":  "uswitch-navy"
+          }
+        }
+      }
+    },
+    "additionalLink": {
+      "display": "block",
+      "marginBottom": "xxs",
+      "color": "grey-80",
+      "paddingTop": "xxs",
+      "paddingBottom": "xxs",
+      "textDecoration": "none"
     }
   },
 
