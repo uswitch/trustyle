@@ -466,13 +466,23 @@
 
   "cta": {
     "main": {
+      "position": "relative",
       "borderWidth": 1,
       "borderStyle": "solid",
       "borderColor": "grey-10",
-      "borderLeftWidth": 8,
-      "borderLeftColor": "blue-75",
-      "paddingX": ["md", "lg"],
-      "paddingY": "md"
+      "paddingRight": ["md", "lg"],
+      "paddingLeft": [34, 42],
+      "paddingY": "md",
+      "::before": {
+        "position": "absolute",
+        "top": "0",
+        "left": "0",
+        "content": "\" \"",
+        "display": "block",
+        "width": 8,
+        "height": "100%",
+        "backgroundColor": "blue-75"
+      }
     },
     "button": {
       "variant": "primary",
