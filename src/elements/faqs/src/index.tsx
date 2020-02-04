@@ -14,17 +14,15 @@ interface Props {
   faqContents: FaqContent[]
 }
 
-const Faqs: React.FC<Props> = ({ faqTitle, faqContents = [] }) => {
-  return (
-    <div>
-      <h3 sx={{ margin: '8px 0' }}>{faqTitle}</h3>
-      {faqContents.map(({ title, content }, i) => (
-        <Accordion title={title} key={i}>
-          {content}
-        </Accordion>
-      ))}
-    </div>
-  )
-}
+const Faqs: React.FC<Props> = ({ faqTitle, faqContents = [] }) => (
+  <div>
+    <h3 sx={{ margin: '8px 0' }}>{faqTitle}</h3>
+    {faqContents.map(({ title, content }, i) => (
+      <Accordion title={title} key={i}>
+        {content}
+      </Accordion>
+    ))}
+  </div>
+)
 
 export default Faqs
