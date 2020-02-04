@@ -17,13 +17,16 @@ export const ExampleCards = () => {
   )
   return (
     <div>
+      {/* single card */}
       <Card
         imgSrc="https://placekitten.com/200/200"
         title={title}
         content={content}
         linkHref="https://www.uswitch.com"
       />
-      <div sx={{ display: 'flex', justifyContent: 'space-evenly' }}>
+
+      {/* Multiple cards */}
+      <div sx={{ display: 'flex' }}>
         <Card
           imgSrc="https://placekitten.com/200/200"
           title={title}
@@ -44,6 +47,12 @@ export const ExampleCards = () => {
           content={content}
           linkHref="https://www.uswitch.com"
           linkText="read about turtles"
+        />
+        <Card
+          imgSrc="https://placekitten.com/200/200"
+          title={title}
+          content={content}
+          linkHref="https://www.uswitch.com"
         />
       </div>
     </div>
