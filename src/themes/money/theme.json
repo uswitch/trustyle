@@ -14,6 +14,7 @@
 
   "fonts": {
     "base": "'Open Sans', -apple-system, sans-serif",
+    "body": "'Open Sans', -apple-system, sans-serif",
     "heading": "Nunito, -apple-system, sans-serif",
     "monospace": "Menlo, monospace",
     "link": "'Open Sans', -apple-system, sans-serif"
@@ -104,6 +105,7 @@
   "useCustomProperties": false,
 
   "colors": {
+    "text": "#4c4c4c",
     "sunshine": "#FEC340",
     "burnt": "#FAA73F",
     "jaffa": "#F4793B",
