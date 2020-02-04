@@ -478,11 +478,17 @@
 
   "cta": {
     "main": {
-      "textAlign": "center",
       "backgroundColor": "grey-10"
     },
+    "title": {
+      "color": "experimental-text",
+      "fontWeight": "bold"
+    },
+    "text": {
+      "marginBottom": [null, 0]
+    },
     "button": {
-      "variant": "secondary"
+      "marginLeft": [null, "md"]
     }
   },
 

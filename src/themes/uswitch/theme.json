@@ -469,9 +469,10 @@
       "borderWidth": 1,
       "borderStyle": "solid",
       "borderColor": "grey-10",
-      "borderLeftWidth": 10,
-      "borderLeftColor": "#A3BCFF",
-      "padding": "sm"
+      "borderLeftWidth": 8,
+      "borderLeftColor": "blue-75",
+      "paddingX": ["md", "lg"],
+      "paddingY": "md"
     },
     "button": {
       "variant": "primary",
