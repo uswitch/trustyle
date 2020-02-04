@@ -22,10 +22,3 @@ pipeline:
     image: node:11.15.0
     commands:
       - npx lerna run build
-
-  test:
-    when:
-      event: [push]
-    image: node:11.15.0
-    commands:
-      - npm test -- --ci

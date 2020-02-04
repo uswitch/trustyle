@@ -2,13 +2,13 @@
 
 exports[`Storyshots Elements|Pagination Example with both 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <ul
     className="css-a0kj0k"
   >
     <li
-      className="css-1k6dbkp"
+      className="css-h0x65k"
     >
       <a
         className="css-8dcm3f"
@@ -30,7 +30,7 @@ exports[`Storyshots Elements|Pagination Example with both 1`] = `
       </a>
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       <a
         className="css-8dcm3f"
@@ -41,12 +41,12 @@ exports[`Storyshots Elements|Pagination Example with both 1`] = `
       </a>
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       ...
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       <a
         className="css-8dcm3f"
@@ -57,7 +57,7 @@ exports[`Storyshots Elements|Pagination Example with both 1`] = `
       </a>
     </li>
     <li
-      className="css-8fg597"
+      className="css-e41l1n"
     >
       <a
         className="css-8dcm3f"
@@ -68,7 +68,7 @@ exports[`Storyshots Elements|Pagination Example with both 1`] = `
       </a>
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       <a
         className="css-8dcm3f"
@@ -79,12 +79,12 @@ exports[`Storyshots Elements|Pagination Example with both 1`] = `
       </a>
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       ...
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       <a
         className="css-8dcm3f"
@@ -95,7 +95,7 @@ exports[`Storyshots Elements|Pagination Example with both 1`] = `
       </a>
     </li>
     <li
-      className="css-1k6dbkp"
+      className="css-h0x65k"
     >
       <a
         className="css-8dcm3f"
@@ -122,13 +122,13 @@ exports[`Storyshots Elements|Pagination Example with both 1`] = `
 
 exports[`Storyshots Elements|Pagination Example with href 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <ul
     className="css-a0kj0k"
   >
     <li
-      className="css-1k6dbkp"
+      className="css-h0x65k"
     >
       <a
         className="css-8dcm3f"
@@ -150,7 +150,7 @@ exports[`Storyshots Elements|Pagination Example with href 1`] = `
       </a>
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       <a
         className="css-8dcm3f"
@@ -161,12 +161,12 @@ exports[`Storyshots Elements|Pagination Example with href 1`] = `
       </a>
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       ...
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       <a
         className="css-8dcm3f"
@@ -177,7 +177,7 @@ exports[`Storyshots Elements|Pagination Example with href 1`] = `
       </a>
     </li>
     <li
-      className="css-8fg597"
+      className="css-e41l1n"
     >
       <a
         className="css-8dcm3f"
@@ -188,7 +188,7 @@ exports[`Storyshots Elements|Pagination Example with href 1`] = `
       </a>
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       <a
         className="css-8dcm3f"
@@ -199,12 +199,12 @@ exports[`Storyshots Elements|Pagination Example with href 1`] = `
       </a>
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       ...
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       <a
         className="css-8dcm3f"
@@ -215,7 +215,7 @@ exports[`Storyshots Elements|Pagination Example with href 1`] = `
       </a>
     </li>
     <li
-      className="css-1k6dbkp"
+      className="css-h0x65k"
     >
       <a
         className="css-8dcm3f"
@@ -242,13 +242,13 @@ exports[`Storyshots Elements|Pagination Example with href 1`] = `
 
 exports[`Storyshots Elements|Pagination Example with onClick 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <ul
     className="css-a0kj0k"
   >
     <li
-      className="css-1k6dbkp"
+      className="css-h0x65k"
     >
       <a
         className="css-8dcm3f"
@@ -269,7 +269,7 @@ exports[`Storyshots Elements|Pagination Example with onClick 1`] = `
       </a>
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       <a
         className="css-8dcm3f"
@@ -279,12 +279,12 @@ exports[`Storyshots Elements|Pagination Example with onClick 1`] = `
       </a>
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       ...
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       <a
         className="css-8dcm3f"
@@ -294,7 +294,7 @@ exports[`Storyshots Elements|Pagination Example with onClick 1`] = `
       </a>
     </li>
     <li
-      className="css-8fg597"
+      className="css-e41l1n"
     >
       <a
         className="css-8dcm3f"
@@ -304,7 +304,7 @@ exports[`Storyshots Elements|Pagination Example with onClick 1`] = `
       </a>
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       <a
         className="css-8dcm3f"
@@ -314,12 +314,12 @@ exports[`Storyshots Elements|Pagination Example with onClick 1`] = `
       </a>
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       ...
     </li>
     <li
-      className="css-1d291pr"
+      className="css-q30qyt"
     >
       <a
         className="css-8dcm3f"
@@ -329,7 +329,7 @@ exports[`Storyshots Elements|Pagination Example with onClick 1`] = `
       </a>
     </li>
     <li
-      className="css-1k6dbkp"
+      className="css-h0x65k"
     >
       <a
         className="css-8dcm3f"

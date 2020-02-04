@@ -2,10 +2,10 @@
 
 exports[`Storyshots Elements|TileInput Checkbox 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
-    className="css-fzcm1c-Form css-fpyx25"
+    className="css-14poqco-Form"
   >
     <fieldset
       className="css-hh72o5-Fieldset"
@@ -154,10 +154,10 @@ exports[`Storyshots Elements|TileInput Checkbox 1`] = `
 
 exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
-    className="css-fzcm1c-Form css-fpyx25"
+    className="css-14poqco-Form"
   >
     <fieldset
       className="css-hh72o5-Fieldset"
@@ -306,10 +306,10 @@ exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
 
 exports[`Storyshots Elements|TileInput Radio 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
-    className="css-fzcm1c-Form css-fpyx25"
+    className="css-14poqco-Form"
   >
     <fieldset
       className="css-hh72o5-Fieldset"
@@ -458,10 +458,10 @@ exports[`Storyshots Elements|TileInput Radio 1`] = `
 
 exports[`Storyshots Elements|TileInput Radio Selected 1`] = `
 <div
-  className="css-m9xbk1"
+  className="css-6s6wkd"
 >
   <div
-    className="css-fzcm1c-Form css-fpyx25"
+    className="css-14poqco-Form"
   >
     <fieldset
       className="css-hh72o5-Fieldset"
