@@ -97,7 +97,7 @@ const Pagination: React.FC<Props> = ({
   const liStyling = {
     display: 'inline-block',
     padding: 'xs',
-    ...theme.pagination?.li
+    variant: 'pagination.li'
   }
 
   const anchorStyling = {
@@ -112,7 +112,7 @@ const Pagination: React.FC<Props> = ({
         listStyleType: 'none',
         marginLeft: 0,
         paddingLeft: 0,
-        ...theme.pagination?.main
+        variant: 'pagination.main'
       }}
     >
       <li
