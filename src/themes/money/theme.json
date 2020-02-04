@@ -209,12 +209,14 @@
         "color": "plum"
       }
     },
-    "isActive": {
-      "button": {
-        "variant": "accordion.base.button"
-      },
-      "caret": {
-        "color": "fuschia"
+    "variants": {
+      "isActive": {
+        "button": {
+          "variant": "accordion.base.button"
+        },
+        "caret": {
+          "color": "fuschia"
+        }
       }
     }
   },
@@ -410,48 +412,47 @@
 
   "buttons": {
 
-    "primary": {
-      "color": "experimental-text",
+    "base": {
       "fontSize": "md",
       "fontWeight": "bold",
       "border": "none",
-      "backgroundColor": "primary",
       "borderRadius": "50vh",
       "paddingX": "lg",
-      ":hover:not(:disabled)": {
-        "backgroundColor": "primary--dark"
-      },
-      ":focus": {
-        "backgroundColor": "primary--dark"
-      },
       ":disabled": {
         "opacity": "0.3",
         "cursor": "not-allowed"
-      },
-      ":active": {
-        "backgroundColor": "primary--dark"
       }
     },
 
-    "secondary": {
-      "color": "grey-0",
-      "fontSize": "md",
-      "fontWeight": "bold",
-      "backgroundColor": "secondary",
-      "borderRadius": "50vh",
-      "paddingX": "lg",
-      ":hover:not(:disabled)": {
-        "backgroundColor": "secondary--dark"
+    "variants": {
+      "primary": {
+        "variant": "buttons.base",
+        "color": "experimental-text",
+        "backgroundColor": "primary",
+        ":hover:not(:disabled)": {
+          "backgroundColor": "primary--dark"
+        },
+        ":focus": {
+          "backgroundColor": "primary--dark"
+        },
+        ":active": {
+          "backgroundColor": "primary--dark"
+        }
       },
-      ":focus": {
-        "backgroundColor": "secondary--dark"
-      },
-      ":disabled": {
-        "opacity": "0.3",
-        "cursor": "not-allowed"
-      },
-      ":active": {
-        "backgroundColor": "secondary--dark"
+
+      "secondary": {
+        "variant": "buttons.base",
+        "color": "grey-0",
+        "backgroundColor": "secondary",
+        ":hover:not(:disabled)": {
+          "backgroundColor": "secondary--dark"
+        },
+        ":focus": {
+          "backgroundColor": "secondary--dark"
+        },
+        ":active": {
+          "backgroundColor": "secondary--dark"
+        }
       }
     }
 

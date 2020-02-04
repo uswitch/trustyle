@@ -391,63 +391,66 @@
   },
 
   "buttons": {
-    "primary": {
-      "backgroundColor": "uswitch-navy",
-      "color": "white",
+    "base": {
+      "paddingX": "lg",
       "textAlign": "center",
-      "width": ["100%"],
-      "paddingX": "lg",
-      "border": "none",
-      "fontWeight": "bold",
-      ":hover": {
-        "backgroundColor": "grey-70"
-      },
-      ":disabled": {
-        "backgroundColor": "grey-20",
-        "cursor": "not-allowed"
-      },
-      ":visited": {
-        "color": "white"
-      }
+      "fontWeight": "bold"
     },
-
-    "secondary": {
-      "color": "uswitch-navy",
-      "background": "none",
-      "border": "2px solid",
-      "borderColor": "uswitch-navy",
-      "paddingX": "lg",
-      ":hover": {
-        "backgroundColor": "grey-10"
+    "variants": {
+      "primary": {
+        "variant": "buttons.base",
+        "backgroundColor": "uswitch-navy",
+        "color": "white",
+        "width": [
+          "100%"
+        ],
+        "border": "none",
+        ":hover": {
+          "backgroundColor": "grey-70"
+        },
+        ":disabled": {
+          "backgroundColor": "grey-20",
+          "cursor": "not-allowed"
+        },
+        ":visited": {
+          "color": "white"
+        }
       },
-      ":disabled": {
-        "color": "grey-40",
-        "borderColor": "grey-20",
-        "cursor": "not-allowed"
+      "secondary": {
+        "variant": "buttons.base",
+        "color": "uswitch-navy",
+        "background": "none",
+        "border": "2px solid",
+        "borderColor": "uswitch-navy",
+        ":hover": {
+          "backgroundColor": "grey-10"
+        },
+        ":disabled": {
+          "color": "grey-40",
+          "borderColor": "grey-20",
+          "cursor": "not-allowed"
+        },
+        ":visited": {
+          "color": "uswitch-navy"
+        }
       },
-      ":visited": {
-        "color": "uswitch-navy"
-      }
-    },
-
-    "reversed": {
-      "color": "white",
-      "backgroundColor": "uswitch-navy",
-      "paddingX": "lg",
-      "border": "2px solid",
-      "borderColor": "white",
-      "textAlign": "center",
-      "fontWeight": "bold",
-      ":hover": {
-        "backgroundColor": "grey-80"
-      },
-      ":disabled": {
-        "borderColor": "grey-60",
-        "color": "grey-60",
-        "cursor": "not-allowed"
-      },
-      ":visited": {
-        "color": "white"
+      "reversed": {
+        "variant": "buttons.base",
+        "color": "white",
+        "backgroundColor": "uswitch-navy",
+        "border": "2px solid",
+        "borderColor": "white",
+        ":hover": {
+          "backgroundColor": "grey-80"
+        },
+        ":disabled": {
+          "borderColor": "grey-60",
+          "color": "grey-60",
+          "cursor": "not-allowed"
+        },
+        ":visited": {
+          "color": "white"
+        }
       }
     }
   },

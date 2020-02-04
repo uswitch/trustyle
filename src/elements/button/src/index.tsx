@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, useThemeUI } from 'theme-ui'
+import { jsx } from 'theme-ui'
 
 export type Variant = 'primary' | 'secondary' | 'continue'
 type IconPosition = 'left' | 'center' | 'right' | null
@@ -19,19 +19,16 @@ export const Button: React.FC<Props> = ({
   onClick,
   ...props
 }) => {
-  const { theme }: any = useThemeUI()
-
   return (
     <button
       sx={{
-        ...theme.buttons.base,
         cursor: 'pointer',
         backgroundImage: 'none',
         fontFamily: 'base',
         fontSize: 'base',
         paddingX: 'sm',
         paddingY: 'base',
-        variant: `buttons.${variant}`,
+        variant: `buttons.variants.${variant}`,
 
         ...(iconPosition
           ? {
