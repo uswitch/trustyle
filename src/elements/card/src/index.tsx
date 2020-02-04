@@ -7,22 +7,44 @@ interface Props {
   imgSrc: string
   title: string
   content: string
+  linkHref: string
+  linkText?: string
 }
 
-const Card: React.FC<Props> = ({ imgSrc, title, content }) => (
-  <div sx={{ border: 'solid 1px #E5E5E5', padding: '6px', height: '300px' }}>
+const Card: React.FC<Props> = ({
+  imgSrc,
+  title,
+  content,
+  linkHref,
+  linkText = 'Read more'
+}) => (
+  <div
+    sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      border: 'solid 1px #E5E5E5',
+      padding: '6px',
+      margin: '6px'
+    }}
+  >
     <div
       sx={{
         backgroundImage: `url(${imgSrc})`,
         backgroundSize: 'cover',
-        height: '150px',
-        width: '100%'
+        height: '150px'
       }}
     />
-    <div sx={{ padding: '8px' }}>
-      <h1 sx={{ margin: '0' }}>{title}</h1>
-      <p sx={{ marginTop: '0' }}>{content}</p>
-      <a href="/foo">Read More</a>
+    <div
+      sx={{
+        padding: '8px',
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'hidden'
+      }}
+    >
+      <h3 sx={{ margin: '0' }}>{title}</h3>
+      <p>{content}</p>
+      <a href={linkHref}>{linkText}</a>
     </div>
   </div>
 )
