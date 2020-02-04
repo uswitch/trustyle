@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled, useThemeUI } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
@@ -11,8 +11,6 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const CallOut: React.FC<Props> = ({ title, text, icon }) => {
-  const { theme }: any = useThemeUI()
-
   const mainText = (
     <React.Fragment>
       {title && (
@@ -20,13 +18,13 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
           sx={{
             marginTop: '-3px',
             marginBottom: 'xxs',
-            ...theme.callOut?.heading
+            variant: 'callOut.heading'
           }}
         >
           {title}
         </Styled.h3>
       )}
-      <Styled.p sx={{ marginY: 0, ...theme.callOut?.text }}>{text}</Styled.p>
+      <Styled.p sx={{ marginY: 0, variant: 'callOut.text' }}>{text}</Styled.p>
     </React.Fragment>
   )
 
@@ -36,7 +34,7 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
         borderRadius: 4,
         paddingX: 'sm',
         paddingY: 'sm',
-        ...theme.callOut?.main
+        variant: 'callOut.main'
       }}
     >
       {icon ? (
@@ -47,7 +45,7 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
                 backgroundColor: 'primary',
                 borderRadius: '50%',
                 padding: '20%',
-                ...theme.callOut?.icon
+                variant: 'callOut.icon'
               }}
             >
               <Icon color="white" glyph={icon} />
