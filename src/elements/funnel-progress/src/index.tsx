@@ -1,9 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, useThemeUI } from 'theme-ui'
-
-import * as st from './styles'
+import { jsx } from 'theme-ui'
 
 type PhaseIconVariant = 'open' | 'complete' | 'incomplete'
 
@@ -32,45 +30,51 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const PhaseIcon: React.FC<PhaseIconProps> = ({ variant, step }) => (
-  <div css={st.phaseIcon(variant)}>{step}</div>
+  <div sx={{ variant: `funnelProgress.base.phaseIcon.variants.${variant}` }}>
+    {step}
+  </div>
 )
 
 const FunnelPhase: React.FC<FunnelPhaseProps> = ({
   step,
   phase: { open, complete, title, progress }
 }) => (
-  <div css={st.phaseWrap(open)}>
+  <div
+    sx={{
+      variant: !open
+        ? 'funnelProgress.base.phase.base'
+        : 'funnelProgress.base.phase.variants.open'
+    }}
+  >
     <div
-      css={st.phaseProgress}
+      sx={{ variant: 'funnelProgress.base.progress.base' }}
       style={{
         width: `${STARTING_PROGRESS * 100 +
           progress * (1 - STARTING_PROGRESS) * 100}%`
       }}
     />
-    <div css={st.phaseLabel}>
-      <div css={st.phasePart}>
+    <div sx={{ variant: 'funnelProgress.base.phaseLabel.base' }}>
+      <div sx={{ variant: 'funnelProgress.base.phaseLabelPart.base' }}>
         <PhaseIcon
           step={step}
           variant={open ? 'open' : complete ? 'complete' : 'incomplete'}
         />
       </div>
-      {open && <div css={st.phasePart}>{title}</div>}
+      {open && (
+        <div sx={{ variant: 'funnelProgress.base.phaseLabelPart.base' }}>
+          {title}
+        </div>
+      )}
     </div>
   </div>
 )
 
-const FunnelProgress: React.FC<Props> = ({ phases, ...rest }) => {
-  const { theme }: any = useThemeUI()
-
-  console.log(theme)
-
-  return (
-    <div {...rest} css={st.funnelProgress}>
-      {phases.map((phase, ind) => (
-        <FunnelPhase key={ind} step={ind + 1} phase={phase} />
-      ))}
-    </div>
-  )
-}
+const FunnelProgress: React.FC<Props> = ({ phases, ...rest }) => (
+  <div {...rest} sx={{ variant: 'funnelProgress.base' }}>
+    {phases.map((phase, ind) => (
+      <FunnelPhase key={ind} step={ind + 1} phase={phase} />
+    ))}
+  </div>
+)
 
 export default FunnelProgress
