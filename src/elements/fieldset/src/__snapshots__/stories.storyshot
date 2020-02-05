@@ -1,159 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Elements|Fieldset Example 1`] = `
-.emotion-20 {
+.emotion-21 {
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
-}
-
-.emotion-17 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  margin-left: -4px;
-  margin-right: -4px;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-@media (min-width:640px) {
-  .emotion-17 {
-    margin-left: -8px;
-    margin-right: -8px;
-  }
-}
-
-@media (min-width:1150px) {
-  .emotion-17 {
-    margin-left: -12px;
-    margin-right: -12px;
-  }
-}
-
-.emotion-18 {
-  border: 0;
-}
-
-.emotion-0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.33;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #000000;
-}
-
-.emotion-19 {
-  position: relative;
-  margin: 0 auto;
-  max-width: 100%;
-  width: auto;
-  padding-left: 4px;
-  padding-right: 4px;
-  margin-top: 8px;
-}
-
-@media (min-width:640px) {
-  .emotion-19 {
-    max-width: 640px;
-    width: 640px;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-}
-
-@media (min-width:1150px) {
-  .emotion-19 {
-    max-width: 1152px;
-    width: 1152px;
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-}
-
-.emotion-17 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  margin-left: -4px;
-  margin-right: -4px;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-@media (min-width:640px) {
-  .emotion-17 {
-    margin-left: -8px;
-    margin-right: -8px;
-  }
-}
-
-@media (min-width:1150px) {
-  .emotion-17 {
-    margin-left: -12px;
-    margin-right: -12px;
-  }
-}
-
-.emotion-4 {
-  box-sizing: border-box;
-  display: block;
-  padding-left: 4px;
-  padding-right: 4px;
-  -webkit-flex-basis: 50%;
-  -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
-  -ms-flex-preferred-size: calc(50% - 4px * 2);
-}
-
-@media (min-width:640px) {
-  .emotion-4 {
-    display: block;
-    padding-left: 8px;
-    padding-right: 8px;
-    -webkit-flex-basis: 25%;
-    -ms-flex-preferred-size: 25%;
-    flex-basis: 25%;
-    -ms-flex-preferred-size: calc(25% - 8px * 2);
-  }
-}
-
-@media (min-width:1150px) {
-  .emotion-4 {
-    display: block;
-    padding-left: 12px;
-    padding-right: 12px;
-    -webkit-flex-basis: 25%;
-    -ms-flex-preferred-size: 25%;
-    flex-basis: 25%;
-    -ms-flex-preferred-size: calc(25% - 12px * 2);
-  }
 }
 
 .emotion-3 {
@@ -161,7 +14,7 @@ exports[`Storyshots Elements|Fieldset Example 1`] = `
 }
 
 .emotion-1 {
-  margin-left: -1000px;
+  margin-left: -9000px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -238,11 +91,127 @@ exports[`Storyshots Elements|Fieldset Example 1`] = `
   flex-shrink: 0;
 }
 
+.emotion-20 {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  width: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+@media (min-width:768px) {
+  .emotion-20 {
+    max-width: 640px;
+    width: 640px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (min-width:990px) {
+  .emotion-20 {
+    max-width: 1152px;
+    width: 1152px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-left: -4px;
+  margin-right: -4px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media (min-width:768px) {
+  .emotion-17 {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+}
+
+@media (min-width:990px) {
+  .emotion-17 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  display: block;
+  padding-left: 4px;
+  padding-right: 4px;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -ms-flex-preferred-size: calc(50% - 4px * 2);
+}
+
+@media (min-width:768px) {
+  .emotion-4 {
+    display: block;
+    padding-left: 8px;
+    padding-right: 8px;
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    -ms-flex-preferred-size: calc(25% - 8px * 2);
+  }
+}
+
+@media (min-width:990px) {
+  .emotion-4 {
+    display: block;
+    padding-left: 12px;
+    padding-right: 12px;
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    -ms-flex-preferred-size: calc(25% - 12px * 2);
+  }
+}
+
+.emotion-18 {
+  border: 0;
+}
+
+.emotion-0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.emotion-19 {
+  margin-top: 8px;
+}
+
 <div
-  className="emotion-20"
+  className="emotion-21"
 >
   <div
-    className="emotion-19"
+    className="emotion-19 emotion-20"
   >
     <fieldset
       className="emotion-18"

@@ -5,7 +5,7 @@ exports[`Storyshots Elements|Bullet List Highlight Example 1`] = `
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
 }
 
@@ -56,10 +56,6 @@ exports[`Storyshots Elements|Bullet List Highlight Example 1`] = `
   -ms-transform: rotate(0.25turn);
   transform: rotate(0.25turn);
   fill: #ffffff;
-}
-
-.emotion-2 {
-  padding-left: 0.75rem;
 }
 
 <div

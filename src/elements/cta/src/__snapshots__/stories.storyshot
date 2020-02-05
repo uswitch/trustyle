@@ -5,7 +5,7 @@ exports[`Storyshots Elements|CTA Example 1`] = `
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
 }
 
@@ -14,24 +14,25 @@ exports[`Storyshots Elements|CTA Example 1`] = `
   background-image: none;
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 18px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 32px;
+  padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
   display: inline-block;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #ffffff;
+  color: #FFFFFF;
+  font-weight: 600;
   background-color: #924A8B;
   border-radius: 50vh;
 }
 
 .emotion-2:hover:not(:disabled) {
-  background-color: #B95CB0;
+  background-color: #7A3E74;
 }
 
 .emotion-2:focus {
-  background-color: #B95CB0;
+  background-color: #7A3E74;
 }
 
 .emotion-2:disabled {
@@ -40,7 +41,7 @@ exports[`Storyshots Elements|CTA Example 1`] = `
 }
 
 .emotion-2:active {
-  background-color: #4B255E;
+  background-color: #7A3E74;
 }
 
 .emotion-4 {
@@ -49,17 +50,16 @@ exports[`Storyshots Elements|CTA Example 1`] = `
 
 .emotion-3 {
   text-align: center;
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: #DFDFE1;
+  background-color: #F2F2F3;
 }
 
 .emotion-0 {
   font-family: Nunito,-apple-system,sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.2;
   font-weight: 400;
-  margin-bottom: 16px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 <div

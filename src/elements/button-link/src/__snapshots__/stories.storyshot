@@ -5,16 +5,16 @@ exports[`Storyshots Elements|Button Link All Variants 1`] = `
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
-}
-
-.emotion-4 {
-  padding: 10px;
 }
 
 .emotion-1 {
   min-height: 20px;
+}
+
+.emotion-4 {
+  padding: 10px;
 }
 
 .emotion-0 {
@@ -22,25 +22,26 @@ exports[`Storyshots Elements|Button Link All Variants 1`] = `
   background-image: none;
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 18px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 32px;
+  padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
   display: inline-block;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #ffffff;
+  color: #29335C;
+  font-weight: 600;
   border: none;
-  background-color: #DB4D75;
+  background-color: #FEC340;
   border-radius: 50vh;
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: #FD5081;
+  background-color: #F8B31B;
 }
 
 .emotion-0:focus {
-  background-color: #FD5081;
+  background-color: #F8B31B;
 }
 
 .emotion-0:disabled {
@@ -49,7 +50,7 @@ exports[`Storyshots Elements|Button Link All Variants 1`] = `
 }
 
 .emotion-0:active {
-  background-color: #A00938;
+  background-color: #F8B31B;
 }
 
 .emotion-2 {
@@ -57,24 +58,25 @@ exports[`Storyshots Elements|Button Link All Variants 1`] = `
   background-image: none;
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 18px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 32px;
+  padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
   display: inline-block;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #ffffff;
+  color: #FFFFFF;
+  font-weight: 600;
   background-color: #924A8B;
   border-radius: 50vh;
 }
 
 .emotion-2:hover:not(:disabled) {
-  background-color: #B95CB0;
+  background-color: #7A3E74;
 }
 
 .emotion-2:focus {
-  background-color: #B95CB0;
+  background-color: #7A3E74;
 }
 
 .emotion-2:disabled {
@@ -83,7 +85,7 @@ exports[`Storyshots Elements|Button Link All Variants 1`] = `
 }
 
 .emotion-2:active {
-  background-color: #4B255E;
+  background-color: #7A3E74;
 }
 
 <div
@@ -121,7 +123,7 @@ exports[`Storyshots Elements|Button Link Primary Variant 1`] = `
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
 }
 
@@ -130,25 +132,26 @@ exports[`Storyshots Elements|Button Link Primary Variant 1`] = `
   background-image: none;
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 18px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 32px;
+  padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
   display: inline-block;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #ffffff;
+  color: #29335C;
+  font-weight: 600;
   border: none;
-  background-color: #DB4D75;
+  background-color: #FEC340;
   border-radius: 50vh;
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: #FD5081;
+  background-color: #F8B31B;
 }
 
 .emotion-0:focus {
-  background-color: #FD5081;
+  background-color: #F8B31B;
 }
 
 .emotion-0:disabled {
@@ -157,7 +160,7 @@ exports[`Storyshots Elements|Button Link Primary Variant 1`] = `
 }
 
 .emotion-0:active {
-  background-color: #A00938;
+  background-color: #F8B31B;
 }
 
 <div
@@ -176,7 +179,7 @@ exports[`Storyshots Elements|Button Link Secondary Variant 1`] = `
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
 }
 
@@ -185,24 +188,25 @@ exports[`Storyshots Elements|Button Link Secondary Variant 1`] = `
   background-image: none;
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 18px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 32px;
+  padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
   display: inline-block;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #ffffff;
+  color: #FFFFFF;
+  font-weight: 600;
   background-color: #924A8B;
   border-radius: 50vh;
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: #B95CB0;
+  background-color: #7A3E74;
 }
 
 .emotion-0:focus {
-  background-color: #B95CB0;
+  background-color: #7A3E74;
 }
 
 .emotion-0:disabled {
@@ -211,7 +215,7 @@ exports[`Storyshots Elements|Button Link Secondary Variant 1`] = `
 }
 
 .emotion-0:active {
-  background-color: #4B255E;
+  background-color: #7A3E74;
 }
 
 <div

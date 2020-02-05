@@ -1,24 +1,151 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Elements|Breadcrumbs All With Custom Separator 1`] = `
+.emotion-25 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.emotion-4 {
+  display: block;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-4 {
+    display: none;
+  }
+}
+
+.emotion-3 {
+  color: inherit;
+  stroke: currentColor;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  display: inline-block;
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.emotion-3:hover {
+  opacity: 0.8;
+}
+
+.emotion-2 {
+  margin-right: 4px;
+}
+
+.emotion-24 {
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-24 {
+    display: block;
+  }
+}
+
+.emotion-23 {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 12px;
+  color: #6F7175;
+}
+
+.emotion-11 {
+  display: inline;
+}
+
+.emotion-7 {
+  color: inherit;
+  stroke: currentColor;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  color: inherit;
+  stroke: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-7:hover {
+  opacity: 0.8;
+}
+
+.emotion-7:visited {
+  color: inherit;
+}
+
+.emotion-6 {
+  display: inline-block;
+  width: 1.25em;
+  height: 1em;
+  color: #6F7175;
+}
+
+.emotion-5 {
+  display: block;
+  fill: #6F7175;
+  stroke: #6F7175;
+}
+
+.emotion-10 {
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.emotion-22 {
+  display: inline;
+  color: #000000;
+}
+
+.emotion-1 {
+  display: inline-block;
+  width: 0.9em;
+}
+
+.emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0.75turn);
+  -ms-transform: rotate(0.75turn);
+  transform: rotate(0.75turn);
+  fill: #000000;
+}
+
+.emotion-8 {
+  display: block;
+  -webkit-transform: rotate(0.25turn);
+  -ms-transform: rotate(0.25turn);
+  transform: rotate(0.25turn);
+  fill: #6F7175;
+}
+
 <div
-  className="css-6s6wkd"
+  className="emotion-25"
 >
   <div
-    className="css-16r3kt5"
+    className="emotion-4"
   >
     <a
-      className="css-wswg7u"
+      className="emotion-3"
       href="/gas-electricity/guides"
     >
       <span
-        className="css-15ro776"
+        className="emotion-2"
       >
         <span
-          className="css-mg3idc"
+          className="emotion-1"
         >
           <svg
-            className="css-1wse4t7"
+            className="emotion-0"
             viewBox="0 0 120 120"
           >
             <path
@@ -31,23 +158,23 @@ exports[`Storyshots Elements|Breadcrumbs All With Custom Separator 1`] = `
     </a>
   </div>
   <div
-    className="css-7ok821"
+    className="emotion-24"
   >
     <ul
-      className="css-3sfm5d"
+      className="emotion-23"
     >
       <li
-        className="css-6n7j50"
+        className="emotion-11"
       >
         <a
-          className="css-216vp6"
+          className="emotion-7"
           href="/"
         >
           <div
-            className="css-1xz46z6"
+            className="emotion-6"
           >
             <svg
-              className="css-h6t2h7"
+              className="emotion-5"
               viewBox="0 0 14 14"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -58,13 +185,13 @@ exports[`Storyshots Elements|Breadcrumbs All With Custom Separator 1`] = `
           </div>
         </a>
         <span
-          className="css-mt4569"
+          className="emotion-10"
         >
           <span
-            className="css-mg3idc"
+            className="emotion-1"
           >
             <svg
-              className="css-1f0g1kv"
+              className="emotion-8"
               viewBox="0 0 120 120"
             >
               <path
@@ -75,22 +202,22 @@ exports[`Storyshots Elements|Breadcrumbs All With Custom Separator 1`] = `
         </span>
       </li>
       <li
-        className="css-6n7j50"
+        className="emotion-11"
       >
         <a
-          className="css-216vp6"
+          className="emotion-7"
           href="/gas-electricity/"
         >
           Gas & Electricity
         </a>
         <span
-          className="css-mt4569"
+          className="emotion-10"
         >
           <span
-            className="css-mg3idc"
+            className="emotion-1"
           >
             <svg
-              className="css-1f0g1kv"
+              className="emotion-8"
               viewBox="0 0 120 120"
             >
               <path
@@ -101,22 +228,22 @@ exports[`Storyshots Elements|Breadcrumbs All With Custom Separator 1`] = `
         </span>
       </li>
       <li
-        className="css-6n7j50"
+        className="emotion-11"
       >
         <a
-          className="css-216vp6"
+          className="emotion-7"
           href="/gas-electricity/guides"
         >
           Guides
         </a>
         <span
-          className="css-mt4569"
+          className="emotion-10"
         >
           <span
-            className="css-mg3idc"
+            className="emotion-1"
           >
             <svg
-              className="css-1f0g1kv"
+              className="emotion-8"
               viewBox="0 0 120 120"
             >
               <path
@@ -127,7 +254,7 @@ exports[`Storyshots Elements|Breadcrumbs All With Custom Separator 1`] = `
         </span>
       </li>
       <li
-        className="css-17eecus"
+        className="emotion-22"
       >
         Understanding energy bills and electricity bills - FAQs and more
       </li>
@@ -137,18 +264,111 @@ exports[`Storyshots Elements|Breadcrumbs All With Custom Separator 1`] = `
 `;
 
 exports[`Storyshots Elements|Breadcrumbs Custom Home Icon 1`] = `
+.emotion-15 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.emotion-2 {
+  display: block;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-2 {
+    display: none;
+  }
+}
+
+.emotion-1 {
+  color: inherit;
+  stroke: currentColor;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  display: inline-block;
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.emotion-1:hover {
+  opacity: 0.8;
+}
+
+.emotion-0 {
+  margin-right: 4px;
+}
+
+.emotion-14 {
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-14 {
+    display: block;
+  }
+}
+
+.emotion-13 {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 12px;
+  color: #6F7175;
+}
+
+.emotion-5 {
+  display: inline;
+}
+
+.emotion-3 {
+  color: inherit;
+  stroke: currentColor;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  color: inherit;
+  stroke: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-3:hover {
+  opacity: 0.8;
+}
+
+.emotion-3:visited {
+  color: inherit;
+}
+
+.emotion-4 {
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.emotion-12 {
+  display: inline;
+  color: #000000;
+}
+
 <div
-  className="css-6s6wkd"
+  className="emotion-15"
 >
   <div
-    className="css-16r3kt5"
+    className="emotion-2"
   >
     <a
-      className="css-wswg7u"
+      className="emotion-1"
       href="/gas-electricity/guides"
     >
       <span
-        className="css-15ro776"
+        className="emotion-0"
       >
         &lt;
       </span>
@@ -156,58 +376,58 @@ exports[`Storyshots Elements|Breadcrumbs Custom Home Icon 1`] = `
     </a>
   </div>
   <div
-    className="css-7ok821"
+    className="emotion-14"
   >
     <ul
-      className="css-3sfm5d"
+      className="emotion-13"
     >
       <li
-        className="css-6n7j50"
+        className="emotion-5"
       >
         <a
-          className="css-216vp6"
+          className="emotion-3"
           href="/"
         >
           Uswitch.com
         </a>
         <span
-          className="css-mt4569"
+          className="emotion-4"
         >
           &gt;
         </span>
       </li>
       <li
-        className="css-6n7j50"
+        className="emotion-5"
       >
         <a
-          className="css-216vp6"
+          className="emotion-3"
           href="/gas-electricity/"
         >
           Gas & Electricity
         </a>
         <span
-          className="css-mt4569"
+          className="emotion-4"
         >
           &gt;
         </span>
       </li>
       <li
-        className="css-6n7j50"
+        className="emotion-5"
       >
         <a
-          className="css-216vp6"
+          className="emotion-3"
           href="/gas-electricity/guides"
         >
           Guides
         </a>
         <span
-          className="css-mt4569"
+          className="emotion-4"
         >
           &gt;
         </span>
       </li>
       <li
-        className="css-17eecus"
+        className="emotion-12"
       >
         Understanding energy bills and electricity bills - FAQs and more
       </li>
@@ -217,18 +437,124 @@ exports[`Storyshots Elements|Breadcrumbs Custom Home Icon 1`] = `
 `;
 
 exports[`Storyshots Elements|Breadcrumbs Example With Title 1`] = `
+.emotion-17 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.emotion-2 {
+  display: block;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-2 {
+    display: none;
+  }
+}
+
+.emotion-1 {
+  color: inherit;
+  stroke: currentColor;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  display: inline-block;
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.emotion-1:hover {
+  opacity: 0.8;
+}
+
+.emotion-0 {
+  margin-right: 4px;
+}
+
+.emotion-16 {
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-16 {
+    display: block;
+  }
+}
+
+.emotion-15 {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 12px;
+  color: #6F7175;
+}
+
+.emotion-7 {
+  display: inline;
+}
+
+.emotion-5 {
+  color: inherit;
+  stroke: currentColor;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  color: inherit;
+  stroke: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-5:hover {
+  opacity: 0.8;
+}
+
+.emotion-5:visited {
+  color: inherit;
+}
+
+.emotion-4 {
+  display: inline-block;
+  width: 1.25em;
+  height: 1em;
+  color: #6F7175;
+}
+
+.emotion-3 {
+  display: block;
+  fill: #6F7175;
+  stroke: #6F7175;
+}
+
+.emotion-6 {
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.emotion-14 {
+  display: inline;
+  color: #000000;
+}
+
 <div
-  className="css-6s6wkd"
+  className="emotion-17"
 >
   <div
-    className="css-16r3kt5"
+    className="emotion-2"
   >
     <a
-      className="css-wswg7u"
+      className="emotion-1"
       href="/gas-electricity/guides"
     >
       <span
-        className="css-15ro776"
+        className="emotion-0"
       >
         &lt;
       </span>
@@ -236,23 +562,23 @@ exports[`Storyshots Elements|Breadcrumbs Example With Title 1`] = `
     </a>
   </div>
   <div
-    className="css-7ok821"
+    className="emotion-16"
   >
     <ul
-      className="css-3sfm5d"
+      className="emotion-15"
     >
       <li
-        className="css-6n7j50"
+        className="emotion-7"
       >
         <a
-          className="css-216vp6"
+          className="emotion-5"
           href="/"
         >
           <div
-            className="css-1xz46z6"
+            className="emotion-4"
           >
             <svg
-              className="css-h6t2h7"
+              className="emotion-3"
               viewBox="0 0 14 14"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -263,43 +589,43 @@ exports[`Storyshots Elements|Breadcrumbs Example With Title 1`] = `
           </div>
         </a>
         <span
-          className="css-mt4569"
+          className="emotion-6"
         >
           &gt;
         </span>
       </li>
       <li
-        className="css-6n7j50"
+        className="emotion-7"
       >
         <a
-          className="css-216vp6"
+          className="emotion-5"
           href="/gas-electricity/"
         >
           Gas & Electricity
         </a>
         <span
-          className="css-mt4569"
+          className="emotion-6"
         >
           &gt;
         </span>
       </li>
       <li
-        className="css-6n7j50"
+        className="emotion-7"
       >
         <a
-          className="css-216vp6"
+          className="emotion-5"
           href="/gas-electricity/guides"
         >
           Guides
         </a>
         <span
-          className="css-mt4569"
+          className="emotion-6"
         >
           &gt;
         </span>
       </li>
       <li
-        className="css-17eecus"
+        className="emotion-14"
       >
         Understanding energy bills and electricity bills - FAQs and more
       </li>
@@ -309,18 +635,119 @@ exports[`Storyshots Elements|Breadcrumbs Example With Title 1`] = `
 `;
 
 exports[`Storyshots Elements|Breadcrumbs Example Without Title 1`] = `
+.emotion-15 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.emotion-2 {
+  display: block;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-2 {
+    display: none;
+  }
+}
+
+.emotion-1 {
+  color: inherit;
+  stroke: currentColor;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  display: inline-block;
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.emotion-1:hover {
+  opacity: 0.8;
+}
+
+.emotion-0 {
+  margin-right: 4px;
+}
+
+.emotion-14 {
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-14 {
+    display: block;
+  }
+}
+
+.emotion-13 {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 12px;
+  color: #6F7175;
+}
+
+.emotion-7 {
+  display: inline;
+}
+
+.emotion-5 {
+  color: inherit;
+  stroke: currentColor;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  color: inherit;
+  stroke: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-5:hover {
+  opacity: 0.8;
+}
+
+.emotion-5:visited {
+  color: inherit;
+}
+
+.emotion-4 {
+  display: inline-block;
+  width: 1.25em;
+  height: 1em;
+  color: #6F7175;
+}
+
+.emotion-3 {
+  display: block;
+  fill: #6F7175;
+  stroke: #6F7175;
+}
+
+.emotion-6 {
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
 <div
-  className="css-6s6wkd"
+  className="emotion-15"
 >
   <div
-    className="css-16r3kt5"
+    className="emotion-2"
   >
     <a
-      className="css-wswg7u"
+      className="emotion-1"
       href="/gas-electricity/guides"
     >
       <span
-        className="css-15ro776"
+        className="emotion-0"
       >
         &lt;
       </span>
@@ -328,23 +755,23 @@ exports[`Storyshots Elements|Breadcrumbs Example Without Title 1`] = `
     </a>
   </div>
   <div
-    className="css-7ok821"
+    className="emotion-14"
   >
     <ul
-      className="css-3sfm5d"
+      className="emotion-13"
     >
       <li
-        className="css-6n7j50"
+        className="emotion-7"
       >
         <a
-          className="css-216vp6"
+          className="emotion-5"
           href="/"
         >
           <div
-            className="css-1xz46z6"
+            className="emotion-4"
           >
             <svg
-              className="css-h6t2h7"
+              className="emotion-3"
               viewBox="0 0 14 14"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -355,31 +782,31 @@ exports[`Storyshots Elements|Breadcrumbs Example Without Title 1`] = `
           </div>
         </a>
         <span
-          className="css-mt4569"
+          className="emotion-6"
         >
           &gt;
         </span>
       </li>
       <li
-        className="css-6n7j50"
+        className="emotion-7"
       >
         <a
-          className="css-216vp6"
+          className="emotion-5"
           href="/gas-electricity/"
         >
           Gas & Electricity
         </a>
         <span
-          className="css-mt4569"
+          className="emotion-6"
         >
           &gt;
         </span>
       </li>
       <li
-        className="css-6n7j50"
+        className="emotion-7"
       >
         <a
-          className="css-216vp6"
+          className="emotion-5"
           href="/gas-electricity/guides"
         >
           Guides
@@ -391,26 +818,121 @@ exports[`Storyshots Elements|Breadcrumbs Example Without Title 1`] = `
 `;
 
 exports[`Storyshots Elements|Breadcrumbs No Crumbs And No Title 1`] = `
+.emotion-11 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.emotion-4 {
+  display: block;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-4 {
+    display: none;
+  }
+}
+
+.emotion-3 {
+  color: inherit;
+  stroke: currentColor;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  display: inline-block;
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.emotion-3:hover {
+  opacity: 0.8;
+}
+
+.emotion-0 {
+  margin-right: 4px;
+}
+
+.emotion-10 {
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-10 {
+    display: block;
+  }
+}
+
+.emotion-9 {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 12px;
+  color: #6F7175;
+}
+
+.emotion-8 {
+  display: inline;
+}
+
+.emotion-7 {
+  color: inherit;
+  stroke: currentColor;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  color: inherit;
+  stroke: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-7:hover {
+  opacity: 0.8;
+}
+
+.emotion-7:visited {
+  color: inherit;
+}
+
+.emotion-2 {
+  display: inline-block;
+  width: 1.25em;
+  height: 1em;
+  color: #6F7175;
+}
+
+.emotion-1 {
+  display: block;
+  fill: #6F7175;
+  stroke: #6F7175;
+}
+
 <div
-  className="css-6s6wkd"
+  className="emotion-11"
 >
   <div
-    className="css-16r3kt5"
+    className="emotion-4"
   >
     <a
-      className="css-wswg7u"
+      className="emotion-3"
       href="/"
     >
       <span
-        className="css-15ro776"
+        className="emotion-0"
       >
         &lt;
       </span>
       <div
-        className="css-1xz46z6"
+        className="emotion-2"
       >
         <svg
-          className="css-h6t2h7"
+          className="emotion-1"
           viewBox="0 0 14 14"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -422,23 +944,23 @@ exports[`Storyshots Elements|Breadcrumbs No Crumbs And No Title 1`] = `
     </a>
   </div>
   <div
-    className="css-7ok821"
+    className="emotion-10"
   >
     <ul
-      className="css-3sfm5d"
+      className="emotion-9"
     >
       <li
-        className="css-6n7j50"
+        className="emotion-8"
       >
         <a
-          className="css-216vp6"
+          className="emotion-7"
           href="/"
         >
           <div
-            className="css-1xz46z6"
+            className="emotion-2"
           >
             <svg
-              className="css-h6t2h7"
+              className="emotion-1"
               viewBox="0 0 14 14"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -455,26 +977,132 @@ exports[`Storyshots Elements|Breadcrumbs No Crumbs And No Title 1`] = `
 `;
 
 exports[`Storyshots Elements|Breadcrumbs No Crumbs And Title 1`] = `
+.emotion-13 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.emotion-4 {
+  display: block;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-4 {
+    display: none;
+  }
+}
+
+.emotion-3 {
+  color: inherit;
+  stroke: currentColor;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  display: inline-block;
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.emotion-3:hover {
+  opacity: 0.8;
+}
+
+.emotion-0 {
+  margin-right: 4px;
+}
+
+.emotion-12 {
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-12 {
+    display: block;
+  }
+}
+
+.emotion-11 {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 12px;
+  color: #6F7175;
+}
+
+.emotion-9 {
+  display: inline;
+}
+
+.emotion-7 {
+  color: inherit;
+  stroke: currentColor;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  color: inherit;
+  stroke: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-7:hover {
+  opacity: 0.8;
+}
+
+.emotion-7:visited {
+  color: inherit;
+}
+
+.emotion-2 {
+  display: inline-block;
+  width: 1.25em;
+  height: 1em;
+  color: #6F7175;
+}
+
+.emotion-1 {
+  display: block;
+  fill: #6F7175;
+  stroke: #6F7175;
+}
+
+.emotion-8 {
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.emotion-10 {
+  display: inline;
+  color: #000000;
+}
+
 <div
-  className="css-6s6wkd"
+  className="emotion-13"
 >
   <div
-    className="css-16r3kt5"
+    className="emotion-4"
   >
     <a
-      className="css-wswg7u"
+      className="emotion-3"
       href="/"
     >
       <span
-        className="css-15ro776"
+        className="emotion-0"
       >
         &lt;
       </span>
       <div
-        className="css-1xz46z6"
+        className="emotion-2"
       >
         <svg
-          className="css-h6t2h7"
+          className="emotion-1"
           viewBox="0 0 14 14"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -486,23 +1114,23 @@ exports[`Storyshots Elements|Breadcrumbs No Crumbs And Title 1`] = `
     </a>
   </div>
   <div
-    className="css-7ok821"
+    className="emotion-12"
   >
     <ul
-      className="css-3sfm5d"
+      className="emotion-11"
     >
       <li
-        className="css-6n7j50"
+        className="emotion-9"
       >
         <a
-          className="css-216vp6"
+          className="emotion-7"
           href="/"
         >
           <div
-            className="css-1xz46z6"
+            className="emotion-2"
           >
             <svg
-              className="css-h6t2h7"
+              className="emotion-1"
               viewBox="0 0 14 14"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -513,13 +1141,13 @@ exports[`Storyshots Elements|Breadcrumbs No Crumbs And Title 1`] = `
           </div>
         </a>
         <span
-          className="css-mt4569"
+          className="emotion-8"
         >
           &gt;
         </span>
       </li>
       <li
-        className="css-17eecus"
+        className="emotion-10"
       >
         Understanding energy bills and electricity bills - FAQs and more
       </li>
@@ -529,24 +1157,132 @@ exports[`Storyshots Elements|Breadcrumbs No Crumbs And Title 1`] = `
 `;
 
 exports[`Storyshots Elements|Breadcrumbs Nothing With Custom Separator 1`] = `
+.emotion-13 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.emotion-6 {
+  display: block;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-6 {
+    display: none;
+  }
+}
+
+.emotion-5 {
+  color: inherit;
+  stroke: currentColor;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  display: inline-block;
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.emotion-5:hover {
+  opacity: 0.8;
+}
+
+.emotion-2 {
+  margin-right: 4px;
+}
+
+.emotion-12 {
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-12 {
+    display: block;
+  }
+}
+
+.emotion-11 {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 12px;
+  color: #6F7175;
+}
+
+.emotion-10 {
+  display: inline;
+}
+
+.emotion-9 {
+  color: inherit;
+  stroke: currentColor;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  color: inherit;
+  stroke: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-9:hover {
+  opacity: 0.8;
+}
+
+.emotion-9:visited {
+  color: inherit;
+}
+
+.emotion-4 {
+  display: inline-block;
+  width: 1.25em;
+  height: 1em;
+  color: #6F7175;
+}
+
+.emotion-3 {
+  display: block;
+  fill: #6F7175;
+  stroke: #6F7175;
+}
+
+.emotion-1 {
+  display: inline-block;
+  width: 0.9em;
+}
+
+.emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0.75turn);
+  -ms-transform: rotate(0.75turn);
+  transform: rotate(0.75turn);
+  fill: #000000;
+}
+
 <div
-  className="css-6s6wkd"
+  className="emotion-13"
 >
   <div
-    className="css-16r3kt5"
+    className="emotion-6"
   >
     <a
-      className="css-wswg7u"
+      className="emotion-5"
       href="/"
     >
       <span
-        className="css-15ro776"
+        className="emotion-2"
       >
         <span
-          className="css-mg3idc"
+          className="emotion-1"
         >
           <svg
-            className="css-1wse4t7"
+            className="emotion-0"
             viewBox="0 0 120 120"
           >
             <path
@@ -556,10 +1292,10 @@ exports[`Storyshots Elements|Breadcrumbs Nothing With Custom Separator 1`] = `
         </span>
       </span>
       <div
-        className="css-1xz46z6"
+        className="emotion-4"
       >
         <svg
-          className="css-h6t2h7"
+          className="emotion-3"
           viewBox="0 0 14 14"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -571,23 +1307,23 @@ exports[`Storyshots Elements|Breadcrumbs Nothing With Custom Separator 1`] = `
     </a>
   </div>
   <div
-    className="css-7ok821"
+    className="emotion-12"
   >
     <ul
-      className="css-3sfm5d"
+      className="emotion-11"
     >
       <li
-        className="css-6n7j50"
+        className="emotion-10"
       >
         <a
-          className="css-216vp6"
+          className="emotion-9"
           href="/"
         >
           <div
-            className="css-1xz46z6"
+            className="emotion-4"
           >
             <svg
-              className="css-h6t2h7"
+              className="emotion-3"
               viewBox="0 0 14 14"
               xmlns="http://www.w3.org/2000/svg"
             >

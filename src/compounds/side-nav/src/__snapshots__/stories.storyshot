@@ -1,22 +1,236 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Compounds|Side Nav Side Nav 1`] = `
+.emotion-30 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.emotion-2 {
+  cursor: pointer;
+  padding: 16px;
+  background-color: #F7F7F7;
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: textColor;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #DFDFE1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-2 {
+    background-color: transparent;
+  }
+}
+
+.emotion-0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: left;
+}
+
+.emotion-1 {
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  fill: #DB4D75;
+}
+
+.emotion-7 {
+  overflow: hidden;
+  height: auto;
+}
+
+.emotion-6 {
+  list-style: none;
+  padding-left: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin: 0;
+}
+
+.emotion-3 {
+  padding: 8px 0 8px 35px;
+  margin-bottom: 0;
+  position: relative;
+  color: #29335C;
+}
+
+.emotion-3::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: block;
+  width: 12px;
+  height: 12px;
+  left: 6px;
+  border-radius: 12px;
+  background-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #DB4D75;
+}
+
+.emotion-3::before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  width: 2px;
+  background-color: #C2C4C8;
+  top: 0;
+  height: 100%;
+}
+
+.emotion-3:first-child::before {
+  top: 50%;
+  height: 50%;
+}
+
+.emotion-3:last-child::before {
+  height: 50%;
+}
+
+.emotion-3 >a {
+  color: #29335C;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.emotion-3 >a:visited {
+  color: #29335C;
+}
+
+.emotion-4 {
+  padding: 8px 0 8px 35px;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.emotion-4::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: block;
+  width: 12px;
+  height: 12px;
+  left: 6px;
+  border-radius: 12px;
+  background-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #C2C4C8;
+}
+
+.emotion-4::before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  width: 2px;
+  background-color: #C2C4C8;
+  top: 0;
+  height: 100%;
+}
+
+.emotion-4:first-child::before {
+  top: 50%;
+  height: 50%;
+}
+
+.emotion-4:last-child::before {
+  height: 50%;
+}
+
+.emotion-4 >a {
+  color: #6F7175;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.emotion-4 >a:visited {
+  color: #6F7175;
+}
+
+.emotion-9 {
+  display: block;
+  -webkit-transform: rotate(0.5turn);
+  -ms-transform: rotate(0.5turn);
+  transform: rotate(0.5turn);
+  height: 1rem;
+  width: 1rem;
+  fill: #924A8B;
+}
+
+.emotion-18 {
+  overflow: hidden;
+  height: 0;
+}
+
+.emotion-17 {
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-12 {
+  margin-bottom: 0;
+}
+
+.emotion-11 {
+  display: block;
+  color: #24262A;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #DFDFE1;
+  font-size: 14px;
+}
+
 <div
-  className="css-m9xbk1"
+  className="emotion-30"
 >
   <nav>
     <div>
       <button
-        className="css-lrsp0c"
+        className="emotion-2"
         onClick={[Function]}
       >
         <div
-          className="css-1eziwv"
+          className="emotion-0"
         >
           In this guide
         </div>
         <svg
-          className="css-1cbqw23"
+          className="emotion-1"
           viewBox="0 0 120 120"
         >
           <path
@@ -25,36 +239,33 @@ exports[`Storyshots Compounds|Side Nav Side Nav 1`] = `
         </svg>
       </button>
       <div
-        className="css-18jm5dn"
+        className="emotion-7"
       >
         <ul
-          className="css-kjuxtr"
+          className="emotion-6"
         >
           <li
-            className="css-cy3aej"
+            className="emotion-3"
           >
             <a
-              className="css-1jqamki"
               href="#heading1"
             >
               Put money aside for a deposit
             </a>
           </li>
           <li
-            className="css-1mnj2cs"
+            className="emotion-4"
           >
             <a
-              className="css-bodpy"
               href="#heading2"
             >
               Work out your budget
             </a>
           </li>
           <li
-            className="css-1lj1od5"
+            className="emotion-4"
           >
             <a
-              className="css-bodpy"
               href="#heading3"
             >
               Get a mortgage agreed in principle
@@ -65,16 +276,16 @@ exports[`Storyshots Compounds|Side Nav Side Nav 1`] = `
     </div>
     <div>
       <button
-        className="css-lrsp0c"
+        className="emotion-2"
         onClick={[Function]}
       >
         <div
-          className="css-1eziwv"
+          className="emotion-0"
         >
           Related articles
         </div>
         <svg
-          className="css-1mc96jq"
+          className="emotion-9"
           viewBox="0 0 120 120"
         >
           <path
@@ -83,36 +294,36 @@ exports[`Storyshots Compounds|Side Nav Side Nav 1`] = `
         </svg>
       </button>
       <div
-        className="css-zaa1hl"
+        className="emotion-18"
       >
         <ul
-          className="css-ntfpy7"
+          className="emotion-17"
         >
           <li
-            className="css-gx0lhm"
+            className="emotion-12"
           >
             <a
-              className="css-1a7lkpv"
+              className="emotion-11"
               href="/"
             >
               This is a link
             </a>
           </li>
           <li
-            className="css-gx0lhm"
+            className="emotion-12"
           >
             <a
-              className="css-1a7lkpv"
+              className="emotion-11"
               href="/"
             >
               This is a link 2
             </a>
           </li>
           <li
-            className="css-gx0lhm"
+            className="emotion-12"
           >
             <a
-              className="css-1a7lkpv"
+              className="emotion-11"
               href="/"
             >
               This is a link 3
@@ -123,16 +334,16 @@ exports[`Storyshots Compounds|Side Nav Side Nav 1`] = `
     </div>
     <div>
       <button
-        className="css-lrsp0c"
+        className="emotion-2"
         onClick={[Function]}
       >
         <div
-          className="css-1eziwv"
+          className="emotion-0"
         >
           Compare
         </div>
         <svg
-          className="css-1mc96jq"
+          className="emotion-9"
           viewBox="0 0 120 120"
         >
           <path
@@ -141,36 +352,36 @@ exports[`Storyshots Compounds|Side Nav Side Nav 1`] = `
         </svg>
       </button>
       <div
-        className="css-zaa1hl"
+        className="emotion-18"
       >
         <ul
-          className="css-ntfpy7"
+          className="emotion-17"
         >
           <li
-            className="css-gx0lhm"
+            className="emotion-12"
           >
             <a
-              className="css-1a7lkpv"
+              className="emotion-11"
               href="/"
             >
               This is a link
             </a>
           </li>
           <li
-            className="css-gx0lhm"
+            className="emotion-12"
           >
             <a
-              className="css-1a7lkpv"
+              className="emotion-11"
               href="/"
             >
               This is a link 2
             </a>
           </li>
           <li
-            className="css-gx0lhm"
+            className="emotion-12"
           >
             <a
-              className="css-1a7lkpv"
+              className="emotion-11"
               href="/"
             >
               This is a link 3

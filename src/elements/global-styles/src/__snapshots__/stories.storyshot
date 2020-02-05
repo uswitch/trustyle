@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Global Styles|Colours Swatches 1`] = `
-.emotion-59 {
+.emotion-49 {
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
 }
 
-.emotion-58 {
+.emotion-48 {
   margin: -10px;
 }
 
@@ -22,181 +22,153 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
 }
 
 .emotion-0 {
-  background-color: #DB4D75;
+  background-color: #4c4c4c;
   width: 100px;
   height: 100px;
   border: 1px #e2e2e2 solid;
 }
 
 .emotion-2 {
-  background-color: #FD5081;
+  background-color: #FEC340;
   width: 100px;
   height: 100px;
   border: 1px #e2e2e2 solid;
 }
 
 .emotion-4 {
-  background-color: #A00938;
+  background-color: #FAA73F;
   width: 100px;
   height: 100px;
   border: 1px #e2e2e2 solid;
 }
 
 .emotion-6 {
-  background-color: #924A8B;
-  width: 100px;
-  height: 100px;
-  border: 1px #e2e2e2 solid;
-}
-
-.emotion-8 {
-  background-color: #B95CB0;
-  width: 100px;
-  height: 100px;
-  border: 1px #e2e2e2 solid;
-}
-
-.emotion-10 {
-  background-color: #4B255E;
-  width: 100px;
-  height: 100px;
-  border: 1px #e2e2e2 solid;
-}
-
-.emotion-12 {
   background-color: #F4793B;
   width: 100px;
   height: 100px;
   border: 1px #e2e2e2 solid;
 }
 
+.emotion-8 {
+  background-color: #DB4D75;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-10 {
+  background-color: #A64470;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-12 {
+  background-color: #924A8B;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
 .emotion-14 {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   width: 100px;
   height: 100px;
   border: 1px #e2e2e2 solid;
 }
 
 .emotion-16 {
-  background-color: #ECECEE;
-  width: 100px;
-  height: 100px;
-  border: 1px #e2e2e2 solid;
-}
-
-.emotion-18 {
-  background-color: #DFDFE1;
-  width: 100px;
-  height: 100px;
-  border: 1px #e2e2e2 solid;
-}
-
-.emotion-20 {
-  background-color: #d64226;
-  width: 100px;
-  height: 100px;
-  border: 1px #e2e2e2 solid;
-}
-
-.emotion-22 {
-  background-color: #1c1f4e;
-  width: 100px;
-  height: 100px;
-  border: 1px #e2e2e2 solid;
-}
-
-.emotion-24 {
-  background-color: #2f353a;
-  width: 100px;
-  height: 100px;
-  border: 1px #e2e2e2 solid;
-}
-
-.emotion-26 {
-  background-color: #008fe9;
-  width: 100px;
-  height: 100px;
-  border: 1px #e2e2e2 solid;
-}
-
-.emotion-28 {
-  background-color: #002396;
-  width: 100px;
-  height: 100px;
-  border: 1px #e2e2e2 solid;
-}
-
-.emotion-32 {
-  background-color: #00aa4e;
-  width: 100px;
-  height: 100px;
-  border: 1px #e2e2e2 solid;
-}
-
-.emotion-34 {
-  background-color: #6abd45;
-  width: 100px;
-  height: 100px;
-  border: 1px #e2e2e2 solid;
-}
-
-.emotion-36 {
-  background-color: #00b9d9;
-  width: 100px;
-  height: 100px;
-  border: 1px #e2e2e2 solid;
-}
-
-.emotion-38 {
-  background-color: #000000;
-  width: 100px;
-  height: 100px;
-  border: 1px #e2e2e2 solid;
-}
-
-.emotion-42 {
-  background-color: #3d3d3d;
-  width: 100px;
-  height: 100px;
-  border: 1px #e2e2e2 solid;
-}
-
-.emotion-44 {
-  background-color: #99e2ff;
-  width: 100px;
-  height: 100px;
-  border: 1px #e2e2e2 solid;
-}
-
-.emotion-46 {
   background-color: #F7F7F7;
   width: 100px;
   height: 100px;
   border: 1px #e2e2e2 solid;
 }
 
-.emotion-50 {
+.emotion-18 {
+  background-color: #F2F2F3;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-20 {
+  background-color: #DFDFE1;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-22 {
   background-color: #C2C4C8;
   width: 100px;
   height: 100px;
   border: 1px #e2e2e2 solid;
 }
 
-.emotion-52 {
+.emotion-24 {
+  background-color: #ADAFB3;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-26 {
+  background-color: #A0A2A6;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-28 {
   background-color: #6F7175;
   width: 100px;
   height: 100px;
   border: 1px #e2e2e2 solid;
 }
 
-.emotion-54 {
+.emotion-30 {
+  background-color: #393B3F;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-32 {
   background-color: #24262A;
   width: 100px;
   height: 100px;
   border: 1px #e2e2e2 solid;
 }
 
-.emotion-56 {
+.emotion-34 {
+  background-color: #111317;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-36 {
+  background-color: #000000;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-40 {
+  background-color: #F8B31B;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-44 {
+  background-color: #7A3E74;
+  width: 100px;
+  height: 100px;
+  border: 1px #e2e2e2 solid;
+}
+
+.emotion-46 {
   background-color: #29335C;
   width: 100px;
   height: 100px;
@@ -204,10 +176,10 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
 }
 
 <div
-  className="emotion-59"
+  className="emotion-49"
 >
   <div
-    className="emotion-58"
+    className="emotion-48"
   >
     <div
       className="emotion-1"
@@ -215,7 +187,7 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       <div
         className="emotion-0"
       />
-      cranberry
+      text
     </div>
     <div
       className="emotion-1"
@@ -223,7 +195,7 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       <div
         className="emotion-2"
       />
-      cranberry--light
+      sunshine
     </div>
     <div
       className="emotion-1"
@@ -231,7 +203,7 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       <div
         className="emotion-4"
       />
-      cranberry--dark
+      burnt
     </div>
     <div
       className="emotion-1"
@@ -239,7 +211,7 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       <div
         className="emotion-6"
       />
-      cannon-pink
+      jaffa
     </div>
     <div
       className="emotion-1"
@@ -247,7 +219,7 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       <div
         className="emotion-8"
       />
-      cannon-pink--light
+      fuschia
     </div>
     <div
       className="emotion-1"
@@ -255,7 +227,7 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       <div
         className="emotion-10"
       />
-      cannon-pink--dark
+      berry
     </div>
     <div
       className="emotion-1"
@@ -263,7 +235,7 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       <div
         className="emotion-12"
       />
-      jaffa
+      plum
     </div>
     <div
       className="emotion-1"
@@ -271,133 +243,13 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       <div
         className="emotion-14"
       />
-      light-1
+      grey-0
     </div>
     <div
       className="emotion-1"
     >
       <div
         className="emotion-16"
-      />
-      light-2
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        className="emotion-18"
-      />
-      light-3
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        className="emotion-20"
-      />
-      primary
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        className="emotion-22"
-      />
-      secondary
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        className="emotion-24"
-      />
-      heading
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        className="emotion-26"
-      />
-      link
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        className="emotion-28"
-      />
-      link-2
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        className="emotion-22"
-      />
-      brand
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        className="emotion-32"
-      />
-      accent-1
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        className="emotion-34"
-      />
-      accent-2
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        className="emotion-36"
-      />
-      accent-3
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        className="emotion-38"
-      />
-      text
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        className="emotion-38"
-      />
-      dark-1
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        className="emotion-42"
-      />
-      dark-2
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        className="emotion-44"
-      />
-      hero
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        className="emotion-46"
       />
       grey-05
     </div>
@@ -407,13 +259,21 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       <div
         className="emotion-18"
       />
+      grey-10
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        className="emotion-20"
+      />
       grey-20
     </div>
     <div
       className="emotion-1"
     >
       <div
-        className="emotion-50"
+        className="emotion-22"
       />
       grey-30
     </div>
@@ -421,7 +281,23 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       className="emotion-1"
     >
       <div
-        className="emotion-52"
+        className="emotion-24"
+      />
+      grey-40
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        className="emotion-26"
+      />
+      grey-50
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        className="emotion-28"
       />
       grey-60
     </div>
@@ -429,7 +305,15 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       className="emotion-1"
     >
       <div
-        className="emotion-54"
+        className="emotion-30"
+      />
+      grey-70
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        className="emotion-32"
       />
       grey-80
     </div>
@@ -437,7 +321,55 @@ exports[`Storyshots Global Styles|Colours Swatches 1`] = `
       className="emotion-1"
     >
       <div
-        className="emotion-56"
+        className="emotion-34"
+      />
+      grey-90
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        className="emotion-36"
+      />
+      grey-100
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        className="emotion-2"
+      />
+      primary
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        className="emotion-40"
+      />
+      primary--dark
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        className="emotion-12"
+      />
+      secondary
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        className="emotion-44"
+      />
+      secondary--dark
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        className="emotion-46"
       />
       experimental-text
     </div>
@@ -450,7 +382,7 @@ exports[`Storyshots Global Styles|Typography Types 1`] = `
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
 }
 
@@ -469,18 +401,14 @@ exports[`Storyshots Global Styles|Typography Types 1`] = `
   <h4>
     Heading level 4
   </h4>
+  <h5>
+    Heading level 5
+  </h5>
+  <h6>
+    Heading level 6
+  </h6>
   <p>
     root
-  </p>
-  <p
-    className="medium"
-  >
-    .medium
-  </p>
-  <p
-    className="small"
-  >
-    .small
   </p>
   <a>
     Anchor

@@ -1,26 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Elements|TileInput Checkbox 1`] = `
-.emotion-24 {
+.emotion-25 {
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
 }
 
 .emotion-23 {
+  margin-top: 4px;
+}
+
+.emotion-24 {
   position: relative;
   margin: 0 auto;
   max-width: 100%;
   width: auto;
   padding-left: 4px;
   padding-right: 4px;
-  margin-top: 4px;
 }
 
-@media (min-width:640px) {
-  .emotion-23 {
+@media (min-width:768px) {
+  .emotion-24 {
     max-width: 640px;
     width: 640px;
     padding-left: 8px;
@@ -28,52 +31,8 @@ exports[`Storyshots Elements|TileInput Checkbox 1`] = `
   }
 }
 
-@media (min-width:1150px) {
-  .emotion-23 {
-    max-width: 1152px;
-    width: 1152px;
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-}
-
-.emotion-22 {
-  border: 0;
-}
-
-.emotion-0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.33;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #000000;
-}
-
-.emotion-23 {
-  position: relative;
-  margin: 0 auto;
-  max-width: 100%;
-  width: auto;
-  padding-left: 4px;
-  padding-right: 4px;
-  margin-top: 4px;
-}
-
-@media (min-width:640px) {
-  .emotion-23 {
-    max-width: 640px;
-    width: 640px;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-}
-
-@media (min-width:1150px) {
-  .emotion-23 {
+@media (min-width:990px) {
+  .emotion-24 {
     max-width: 1152px;
     width: 1152px;
     padding-left: 12px;
@@ -101,14 +60,14 @@ exports[`Storyshots Elements|TileInput Checkbox 1`] = `
   flex-wrap: wrap;
 }
 
-@media (min-width:640px) {
+@media (min-width:768px) {
   .emotion-21 {
     margin-left: -8px;
     margin-right: -8px;
   }
 }
 
-@media (min-width:1150px) {
+@media (min-width:990px) {
   .emotion-21 {
     margin-left: -12px;
     margin-right: -12px;
@@ -126,7 +85,7 @@ exports[`Storyshots Elements|TileInput Checkbox 1`] = `
   -ms-flex-preferred-size: calc(50% - 4px * 2);
 }
 
-@media (min-width:640px) {
+@media (min-width:768px) {
   .emotion-5 {
     display: block;
     padding-left: 8px;
@@ -138,7 +97,7 @@ exports[`Storyshots Elements|TileInput Checkbox 1`] = `
   }
 }
 
-@media (min-width:1150px) {
+@media (min-width:990px) {
   .emotion-5 {
     display: block;
     padding-left: 12px;
@@ -148,6 +107,26 @@ exports[`Storyshots Elements|TileInput Checkbox 1`] = `
     flex-basis: 50%;
     -ms-flex-preferred-size: calc(50% - 12px * 2);
   }
+}
+
+.emotion-22 {
+  border: 0;
+}
+
+.emotion-0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.emotion-23 {
+  margin-top: 4px;
 }
 
 .emotion-3 {
@@ -199,7 +178,7 @@ exports[`Storyshots Elements|TileInput Checkbox 1`] = `
 }
 
 .emotion-1 {
-  margin-left: -1000px;
+  margin-left: -9000px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -259,10 +238,10 @@ exports[`Storyshots Elements|TileInput Checkbox 1`] = `
 }
 
 <div
-  className="emotion-24"
+  className="emotion-25"
 >
   <div
-    className="emotion-23"
+    className="emotion-23 emotion-24"
   >
     <fieldset
       className="emotion-22"
@@ -410,26 +389,29 @@ exports[`Storyshots Elements|TileInput Checkbox 1`] = `
 `;
 
 exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
-.emotion-24 {
+.emotion-25 {
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
 }
 
 .emotion-23 {
+  margin-top: 4px;
+}
+
+.emotion-24 {
   position: relative;
   margin: 0 auto;
   max-width: 100%;
   width: auto;
   padding-left: 4px;
   padding-right: 4px;
-  margin-top: 4px;
 }
 
-@media (min-width:640px) {
-  .emotion-23 {
+@media (min-width:768px) {
+  .emotion-24 {
     max-width: 640px;
     width: 640px;
     padding-left: 8px;
@@ -437,52 +419,8 @@ exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
   }
 }
 
-@media (min-width:1150px) {
-  .emotion-23 {
-    max-width: 1152px;
-    width: 1152px;
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-}
-
-.emotion-22 {
-  border: 0;
-}
-
-.emotion-0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.33;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #000000;
-}
-
-.emotion-23 {
-  position: relative;
-  margin: 0 auto;
-  max-width: 100%;
-  width: auto;
-  padding-left: 4px;
-  padding-right: 4px;
-  margin-top: 4px;
-}
-
-@media (min-width:640px) {
-  .emotion-23 {
-    max-width: 640px;
-    width: 640px;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-}
-
-@media (min-width:1150px) {
-  .emotion-23 {
+@media (min-width:990px) {
+  .emotion-24 {
     max-width: 1152px;
     width: 1152px;
     padding-left: 12px;
@@ -510,14 +448,14 @@ exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
   flex-wrap: wrap;
 }
 
-@media (min-width:640px) {
+@media (min-width:768px) {
   .emotion-21 {
     margin-left: -8px;
     margin-right: -8px;
   }
 }
 
-@media (min-width:1150px) {
+@media (min-width:990px) {
   .emotion-21 {
     margin-left: -12px;
     margin-right: -12px;
@@ -535,7 +473,7 @@ exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
   -ms-flex-preferred-size: calc(50% - 4px * 2);
 }
 
-@media (min-width:640px) {
+@media (min-width:768px) {
   .emotion-5 {
     display: block;
     padding-left: 8px;
@@ -547,7 +485,7 @@ exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
   }
 }
 
-@media (min-width:1150px) {
+@media (min-width:990px) {
   .emotion-5 {
     display: block;
     padding-left: 12px;
@@ -557,6 +495,26 @@ exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
     flex-basis: 50%;
     -ms-flex-preferred-size: calc(50% - 12px * 2);
   }
+}
+
+.emotion-22 {
+  border: 0;
+}
+
+.emotion-0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.emotion-23 {
+  margin-top: 4px;
 }
 
 .emotion-3 {
@@ -608,7 +566,7 @@ exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
 }
 
 .emotion-1 {
-  margin-left: -1000px;
+  margin-left: -9000px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -668,10 +626,10 @@ exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
 }
 
 <div
-  className="emotion-24"
+  className="emotion-25"
 >
   <div
-    className="emotion-23"
+    className="emotion-23 emotion-24"
   >
     <fieldset
       className="emotion-22"
@@ -819,26 +777,29 @@ exports[`Storyshots Elements|TileInput Checkbox Selected 1`] = `
 `;
 
 exports[`Storyshots Elements|TileInput Radio 1`] = `
-.emotion-24 {
+.emotion-25 {
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
 }
 
 .emotion-23 {
+  margin-top: 4px;
+}
+
+.emotion-24 {
   position: relative;
   margin: 0 auto;
   max-width: 100%;
   width: auto;
   padding-left: 4px;
   padding-right: 4px;
-  margin-top: 4px;
 }
 
-@media (min-width:640px) {
-  .emotion-23 {
+@media (min-width:768px) {
+  .emotion-24 {
     max-width: 640px;
     width: 640px;
     padding-left: 8px;
@@ -846,52 +807,8 @@ exports[`Storyshots Elements|TileInput Radio 1`] = `
   }
 }
 
-@media (min-width:1150px) {
-  .emotion-23 {
-    max-width: 1152px;
-    width: 1152px;
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-}
-
-.emotion-22 {
-  border: 0;
-}
-
-.emotion-0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.33;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #000000;
-}
-
-.emotion-23 {
-  position: relative;
-  margin: 0 auto;
-  max-width: 100%;
-  width: auto;
-  padding-left: 4px;
-  padding-right: 4px;
-  margin-top: 4px;
-}
-
-@media (min-width:640px) {
-  .emotion-23 {
-    max-width: 640px;
-    width: 640px;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-}
-
-@media (min-width:1150px) {
-  .emotion-23 {
+@media (min-width:990px) {
+  .emotion-24 {
     max-width: 1152px;
     width: 1152px;
     padding-left: 12px;
@@ -919,14 +836,14 @@ exports[`Storyshots Elements|TileInput Radio 1`] = `
   flex-wrap: wrap;
 }
 
-@media (min-width:640px) {
+@media (min-width:768px) {
   .emotion-21 {
     margin-left: -8px;
     margin-right: -8px;
   }
 }
 
-@media (min-width:1150px) {
+@media (min-width:990px) {
   .emotion-21 {
     margin-left: -12px;
     margin-right: -12px;
@@ -944,7 +861,7 @@ exports[`Storyshots Elements|TileInput Radio 1`] = `
   -ms-flex-preferred-size: calc(50% - 4px * 2);
 }
 
-@media (min-width:640px) {
+@media (min-width:768px) {
   .emotion-5 {
     display: block;
     padding-left: 8px;
@@ -956,7 +873,7 @@ exports[`Storyshots Elements|TileInput Radio 1`] = `
   }
 }
 
-@media (min-width:1150px) {
+@media (min-width:990px) {
   .emotion-5 {
     display: block;
     padding-left: 12px;
@@ -968,8 +885,28 @@ exports[`Storyshots Elements|TileInput Radio 1`] = `
   }
 }
 
+.emotion-22 {
+  border: 0;
+}
+
+.emotion-0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.emotion-23 {
+  margin-top: 4px;
+}
+
 .emotion-1 {
-  margin-left: -1000px;
+  margin-left: -9000px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1077,10 +1014,10 @@ exports[`Storyshots Elements|TileInput Radio 1`] = `
 }
 
 <div
-  className="emotion-24"
+  className="emotion-25"
 >
   <div
-    className="emotion-23"
+    className="emotion-23 emotion-24"
   >
     <fieldset
       className="emotion-22"
@@ -1228,26 +1165,29 @@ exports[`Storyshots Elements|TileInput Radio 1`] = `
 `;
 
 exports[`Storyshots Elements|TileInput Radio Selected 1`] = `
-.emotion-24 {
+.emotion-25 {
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
 }
 
 .emotion-23 {
+  margin-top: 4px;
+}
+
+.emotion-24 {
   position: relative;
   margin: 0 auto;
   max-width: 100%;
   width: auto;
   padding-left: 4px;
   padding-right: 4px;
-  margin-top: 4px;
 }
 
-@media (min-width:640px) {
-  .emotion-23 {
+@media (min-width:768px) {
+  .emotion-24 {
     max-width: 640px;
     width: 640px;
     padding-left: 8px;
@@ -1255,52 +1195,8 @@ exports[`Storyshots Elements|TileInput Radio Selected 1`] = `
   }
 }
 
-@media (min-width:1150px) {
-  .emotion-23 {
-    max-width: 1152px;
-    width: 1152px;
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-}
-
-.emotion-22 {
-  border: 0;
-}
-
-.emotion-0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.33;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #000000;
-}
-
-.emotion-23 {
-  position: relative;
-  margin: 0 auto;
-  max-width: 100%;
-  width: auto;
-  padding-left: 4px;
-  padding-right: 4px;
-  margin-top: 4px;
-}
-
-@media (min-width:640px) {
-  .emotion-23 {
-    max-width: 640px;
-    width: 640px;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-}
-
-@media (min-width:1150px) {
-  .emotion-23 {
+@media (min-width:990px) {
+  .emotion-24 {
     max-width: 1152px;
     width: 1152px;
     padding-left: 12px;
@@ -1328,14 +1224,14 @@ exports[`Storyshots Elements|TileInput Radio Selected 1`] = `
   flex-wrap: wrap;
 }
 
-@media (min-width:640px) {
+@media (min-width:768px) {
   .emotion-21 {
     margin-left: -8px;
     margin-right: -8px;
   }
 }
 
-@media (min-width:1150px) {
+@media (min-width:990px) {
   .emotion-21 {
     margin-left: -12px;
     margin-right: -12px;
@@ -1353,7 +1249,7 @@ exports[`Storyshots Elements|TileInput Radio Selected 1`] = `
   -ms-flex-preferred-size: calc(50% - 4px * 2);
 }
 
-@media (min-width:640px) {
+@media (min-width:768px) {
   .emotion-5 {
     display: block;
     padding-left: 8px;
@@ -1365,7 +1261,7 @@ exports[`Storyshots Elements|TileInput Radio Selected 1`] = `
   }
 }
 
-@media (min-width:1150px) {
+@media (min-width:990px) {
   .emotion-5 {
     display: block;
     padding-left: 12px;
@@ -1377,8 +1273,28 @@ exports[`Storyshots Elements|TileInput Radio Selected 1`] = `
   }
 }
 
+.emotion-22 {
+  border: 0;
+}
+
+.emotion-0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.33;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.emotion-23 {
+  margin-top: 4px;
+}
+
 .emotion-1 {
-  margin-left: -1000px;
+  margin-left: -9000px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1486,10 +1402,10 @@ exports[`Storyshots Elements|TileInput Radio Selected 1`] = `
 }
 
 <div
-  className="emotion-24"
+  className="emotion-25"
 >
   <div
-    className="emotion-23"
+    className="emotion-23 emotion-24"
   >
     <fieldset
       className="emotion-22"

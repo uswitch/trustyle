@@ -5,8 +5,12 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
+}
+
+.emotion-1 {
+  min-height: 20px;
 }
 
 .emotion-16 {
@@ -18,22 +22,23 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
   background-image: none;
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 18px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 32px;
+  padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
-  color: #ffffff;
+  color: #29335C;
+  font-weight: 600;
   border: none;
-  background-color: #DB4D75;
+  background-color: #FEC340;
   border-radius: 50vh;
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: #FD5081;
+  background-color: #F8B31B;
 }
 
 .emotion-0:focus {
-  background-color: #FD5081;
+  background-color: #F8B31B;
 }
 
 .emotion-0:disabled {
@@ -42,11 +47,7 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
 }
 
 .emotion-0:active {
-  background-color: #A00938;
-}
-
-.emotion-1 {
-  min-height: 20px;
+  background-color: #F8B31B;
 }
 
 .emotion-3 {
@@ -54,13 +55,14 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
   background-image: none;
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 18px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 32px;
+  padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
-  color: #ffffff;
+  color: #29335C;
+  font-weight: 600;
   border: none;
-  background-color: #DB4D75;
+  background-color: #FEC340;
   border-radius: 50vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -73,11 +75,11 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
 }
 
 .emotion-3:hover:not(:disabled) {
-  background-color: #FD5081;
+  background-color: #F8B31B;
 }
 
 .emotion-3:focus {
-  background-color: #FD5081;
+  background-color: #F8B31B;
 }
 
 .emotion-3:disabled {
@@ -86,7 +88,17 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
 }
 
 .emotion-3:active {
-  background-color: #A00938;
+  background-color: #F8B31B;
+}
+
+.emotion-2 {
+  display: block;
+  -webkit-transform: rotate(0.25turn);
+  -ms-transform: rotate(0.25turn);
+  transform: rotate(0.25turn);
+  height: 1.25rem;
+  width: 1.25rem;
+  fill: #FEC340;
 }
 
 .emotion-6 {
@@ -94,13 +106,14 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
   background-image: none;
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 18px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 32px;
+  padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
-  color: #ffffff;
+  color: #29335C;
+  font-weight: 600;
   border: none;
-  background-color: #DB4D75;
+  background-color: #FEC340;
   border-radius: 50vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -113,11 +126,11 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
 }
 
 .emotion-6:hover:not(:disabled) {
-  background-color: #FD5081;
+  background-color: #F8B31B;
 }
 
 .emotion-6:focus {
-  background-color: #FD5081;
+  background-color: #F8B31B;
 }
 
 .emotion-6:disabled {
@@ -126,7 +139,7 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
 }
 
 .emotion-6:active {
-  background-color: #A00938;
+  background-color: #F8B31B;
 }
 
 .emotion-8 {
@@ -134,21 +147,22 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
   background-image: none;
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 18px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 32px;
+  padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
-  color: #ffffff;
+  color: #FFFFFF;
+  font-weight: 600;
   background-color: #924A8B;
   border-radius: 50vh;
 }
 
 .emotion-8:hover:not(:disabled) {
-  background-color: #B95CB0;
+  background-color: #7A3E74;
 }
 
 .emotion-8:focus {
-  background-color: #B95CB0;
+  background-color: #7A3E74;
 }
 
 .emotion-8:disabled {
@@ -157,7 +171,7 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
 }
 
 .emotion-8:active {
-  background-color: #4B255E;
+  background-color: #7A3E74;
 }
 
 .emotion-11 {
@@ -165,11 +179,12 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
   background-image: none;
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 18px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 32px;
+  padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
-  color: #ffffff;
+  color: #FFFFFF;
+  font-weight: 600;
   background-color: #924A8B;
   border-radius: 50vh;
   display: -webkit-box;
@@ -183,11 +198,11 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
 }
 
 .emotion-11:hover:not(:disabled) {
-  background-color: #B95CB0;
+  background-color: #7A3E74;
 }
 
 .emotion-11:focus {
-  background-color: #B95CB0;
+  background-color: #7A3E74;
 }
 
 .emotion-11:disabled {
@@ -196,7 +211,7 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
 }
 
 .emotion-11:active {
-  background-color: #4B255E;
+  background-color: #7A3E74;
 }
 
 .emotion-14 {
@@ -204,11 +219,12 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
   background-image: none;
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 18px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 32px;
+  padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
-  color: #ffffff;
+  color: #FFFFFF;
+  font-weight: 600;
   background-color: #924A8B;
   border-radius: 50vh;
   display: -webkit-box;
@@ -222,11 +238,11 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
 }
 
 .emotion-14:hover:not(:disabled) {
-  background-color: #B95CB0;
+  background-color: #7A3E74;
 }
 
 .emotion-14:focus {
-  background-color: #B95CB0;
+  background-color: #7A3E74;
 }
 
 .emotion-14:disabled {
@@ -235,17 +251,7 @@ exports[`Storyshots Elements|Button All Variants 1`] = `
 }
 
 .emotion-14:active {
-  background-color: #4B255E;
-}
-
-.emotion-2 {
-  display: block;
-  -webkit-transform: rotate(0.25turn);
-  -ms-transform: rotate(0.25turn);
-  transform: rotate(0.25turn);
-  height: 1.25rem;
-  width: 1.25rem;
-  fill: #d64226;
+  background-color: #7A3E74;
 }
 
 <div
@@ -361,7 +367,7 @@ exports[`Storyshots Elements|Button Primary Disabled Variant 1`] = `
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
 }
 
@@ -370,22 +376,23 @@ exports[`Storyshots Elements|Button Primary Disabled Variant 1`] = `
   background-image: none;
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 18px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 32px;
+  padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
-  color: #ffffff;
+  color: #29335C;
+  font-weight: 600;
   border: none;
-  background-color: #DB4D75;
+  background-color: #FEC340;
   border-radius: 50vh;
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: #FD5081;
+  background-color: #F8B31B;
 }
 
 .emotion-0:focus {
-  background-color: #FD5081;
+  background-color: #F8B31B;
 }
 
 .emotion-0:disabled {
@@ -394,7 +401,7 @@ exports[`Storyshots Elements|Button Primary Disabled Variant 1`] = `
 }
 
 .emotion-0:active {
-  background-color: #A00938;
+  background-color: #F8B31B;
 }
 
 <div
@@ -415,7 +422,7 @@ exports[`Storyshots Elements|Button Primary Variant 1`] = `
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
 }
 
@@ -424,22 +431,23 @@ exports[`Storyshots Elements|Button Primary Variant 1`] = `
   background-image: none;
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 18px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 32px;
+  padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
-  color: #ffffff;
+  color: #29335C;
+  font-weight: 600;
   border: none;
-  background-color: #DB4D75;
+  background-color: #FEC340;
   border-radius: 50vh;
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: #FD5081;
+  background-color: #F8B31B;
 }
 
 .emotion-0:focus {
-  background-color: #FD5081;
+  background-color: #F8B31B;
 }
 
 .emotion-0:disabled {
@@ -448,7 +456,7 @@ exports[`Storyshots Elements|Button Primary Variant 1`] = `
 }
 
 .emotion-0:active {
-  background-color: #A00938;
+  background-color: #F8B31B;
 }
 
 <div
@@ -469,7 +477,7 @@ exports[`Storyshots Elements|Button Secondary Disabled Variant 1`] = `
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
 }
 
@@ -478,21 +486,22 @@ exports[`Storyshots Elements|Button Secondary Disabled Variant 1`] = `
   background-image: none;
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 18px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 32px;
+  padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
-  color: #ffffff;
+  color: #FFFFFF;
+  font-weight: 600;
   background-color: #924A8B;
   border-radius: 50vh;
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: #B95CB0;
+  background-color: #7A3E74;
 }
 
 .emotion-0:focus {
-  background-color: #B95CB0;
+  background-color: #7A3E74;
 }
 
 .emotion-0:disabled {
@@ -501,7 +510,7 @@ exports[`Storyshots Elements|Button Secondary Disabled Variant 1`] = `
 }
 
 .emotion-0:active {
-  background-color: #4B255E;
+  background-color: #7A3E74;
 }
 
 <div
@@ -522,7 +531,7 @@ exports[`Storyshots Elements|Button Secondary Variant 1`] = `
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
 }
 
@@ -531,21 +540,22 @@ exports[`Storyshots Elements|Button Secondary Variant 1`] = `
   background-image: none;
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 18px;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 32px;
+  padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
-  color: #ffffff;
+  color: #FFFFFF;
+  font-weight: 600;
   background-color: #924A8B;
   border-radius: 50vh;
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: #B95CB0;
+  background-color: #7A3E74;
 }
 
 .emotion-0:focus {
-  background-color: #B95CB0;
+  background-color: #7A3E74;
 }
 
 .emotion-0:disabled {
@@ -554,7 +564,7 @@ exports[`Storyshots Elements|Button Secondary Variant 1`] = `
 }
 
 .emotion-0:active {
-  background-color: #4B255E;
+  background-color: #7A3E74;
 }
 
 <div

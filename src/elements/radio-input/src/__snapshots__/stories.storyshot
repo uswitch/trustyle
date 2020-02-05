@@ -5,7 +5,7 @@ exports[`Storyshots Elements|Radio Input Example 1`] = `
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
 }
 
@@ -14,7 +14,7 @@ exports[`Storyshots Elements|Radio Input Example 1`] = `
 }
 
 .emotion-0 {
-  margin-left: -1000px;
+  margin-left: -9000px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

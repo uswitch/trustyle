@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Elements|Embedded-video Video without accordion 1`] = `
+.emotion-2 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.emotion-1 {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.emotion-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+<div
+  className="emotion-2"
+>
+  <div>
+    <div
+      className="emotion-1"
+    >
+      <iframe
+        allowFullScreen={true}
+        className="emotion-0"
+        frameBorder="0"
+        src="https://www.youtube.com/embed/1cy0Buice_0"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Elements|Embedded-video primary variant 1`] = `
+.emotion-6 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.emotion-4 {
+  cursor: pointer;
+  padding: 16px;
+  background-color: #F7F7F7;
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: textColor;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #DFDFE1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-4 {
+    background-color: transparent;
+  }
+}
+
+.emotion-2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: left;
+}
+
+.emotion-3 {
+  display: block;
+  -webkit-transform: rotate(0.5turn);
+  -ms-transform: rotate(0.5turn);
+  transform: rotate(0.5turn);
+  height: 1rem;
+  width: 1rem;
+  fill: #924A8B;
+}
+
+.emotion-5 {
+  overflow: hidden;
+  height: 0;
+}
+
+.emotion-1 {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.emotion-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+<div
+  className="emotion-6"
+>
+  <div>
+    <div
+      className="emotion-1"
+    >
+      <iframe
+        allowFullScreen={true}
+        className="emotion-0"
+        frameBorder="0"
+        src="https://www.youtube.com/embed/1cy0Buice_0"
+      />
+    </div>
+    <div>
+      <button
+        className="emotion-4"
+        onClick={[Function]}
+      >
+        <div
+          className="emotion-2"
+        >
+          Accordion Title
+        </div>
+        <svg
+          className="emotion-3"
+          viewBox="0 0 120 120"
+        >
+          <path
+            d="M 5.067303,79.355139 55.218287,26.773283 c 2.186148,-2.194309 3.091615,-2.969251 4.60071,-2.969251 1.509096,-0.0081 2.316669,0.774942 4.600711,3.018196 l 50.828042,53.348639 c 6.84396,7.227354 -3.27925,17.831823 -10.17214,10.661571 L 59.810835,43.21837 15.247593,89.98408 C 7.857094,97.733499 -2.2660959,87.120873 5.067303,79.338823 Z"
+          />
+        </svg>
+      </button>
+      <div
+        className="emotion-5"
+      >
+        Accordion content
+      </div>
+    </div>
+  </div>
+</div>
+`;

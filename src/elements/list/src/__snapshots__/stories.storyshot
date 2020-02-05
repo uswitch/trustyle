@@ -5,7 +5,7 @@ exports[`Storyshots Elements|List primary variant 1`] = `
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
 }
 
@@ -43,14 +43,6 @@ exports[`Storyshots Elements|List primary variant 1`] = `
   left: 0px;
   content: "• ";
   color: #F4793B;
-}
-
-.emotion-12 {
-  padding: 10px;
-}
-
-.emotion-12 {
-  padding: 10px;
 }
 
 <div

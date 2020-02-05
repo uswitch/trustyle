@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Elements|Author Example 1`] = `
+.emotion-5 {
+  font-family: 'Open Sans',-apple-system,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-1 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 48px;
+  width: 48px;
+  margin-right: 16px;
+}
+
+@media screen and (min-width:768px) {
+  .emotion-1 {
+    height: 56px;
+    width: 56px;
+  }
+}
+
+.emotion-0 {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.emotion-2 {
+  font-family: Nunito,-apple-system,sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.emotion-3 {
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+<div
+  className="emotion-5"
+>
+  <div
+    className="emotion-4"
+  >
+    <div
+      className="emotion-1"
+    >
+      <img
+        alt="Salman"
+        className="emotion-0"
+        src="https://placekitten.com/200/200"
+      />
+    </div>
+    <div>
+      <h3
+        className="emotion-2"
+      >
+        Written by 
+        Salman
+        , 
+        Job title
+      </h3>
+      <p
+        className="emotion-3"
+      >
+        Edited by Sarah Guershon, Job title, 
+        15 March 2020
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -5,8 +5,12 @@ exports[`Storyshots Elements|Call Out Example 1`] = `
   font-family: 'Open Sans',-apple-system,sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #000000;
+}
+
+.emotion-7 {
+  padding: 10px;
 }
 
 .emotion-6 {
@@ -15,7 +19,7 @@ exports[`Storyshots Elements|Call Out Example 1`] = `
   padding-right: 16px;
   padding-top: 16px;
   padding-bottom: 16px;
-  background-color: #ECECEE;
+  background-color: #F2F2F3;
 }
 
 @media screen and (min-width:768px) {
@@ -45,25 +49,6 @@ exports[`Storyshots Elements|Call Out Example 1`] = `
   padding: 20%;
 }
 
-.emotion-3 {
-  font-family: Nunito,-apple-system,sans-serif;
-  font-size: 20px;
-  line-height: 1.2;
-  font-weight: 400;
-  margin-bottom: 16px;
-  margin-top: -3px;
-  margin-bottom: 8px;
-}
-
-.emotion-4 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.emotion-7 {
-  padding: 10px;
-}
-
 .emotion-0 {
   display: block;
   fill: none;
@@ -71,6 +56,22 @@ exports[`Storyshots Elements|Call Out Example 1`] = `
   stroke: white;
   stroke-linecap: square;
   stroke-width: 2;
+}
+
+.emotion-3 {
+  font-family: Nunito,-apple-system,sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-top: -3px;
+  margin-bottom: 4px;
+}
+
+.emotion-4 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 <div
