@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.list",
-  "version": "0.2.0",
+  "version": "0.2.6",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -15,7 +15,7 @@
     "typescript": "^3.6.2"
   },
   "peerDependencies": {
-    "@emotion/core": "^10.0.22",
+    "@emotion/core": "^10.0.27",
     "@mdx-js/react": "^1.5.3",
     "react": "^16.7.0",
     "theme-ui": "^0.2.52"

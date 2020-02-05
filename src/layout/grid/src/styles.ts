@@ -1,13 +1,17 @@
 import { mq } from '@uswitch/trustyle.styles'
 import { DynamicStyle } from 'facepaint'
 
-const gutterWidths = [8, 16, 24]
-const containerWidths = ['100%', 640, 1152]
+const defaultGutterWidths = [8, 16, 24]
+const defaultContainerWidths = ['100%', 640, 1152]
 
-const paddings = gutterWidths.map(gw => `${gw / 2}px`)
+export const container = (
+  outerMargin: string[] = ['0 auto'],
+  containerWidths: (string | number)[] = defaultContainerWidths,
+  gutterWidths: number[] = defaultGutterWidths
+): DynamicStyle[] => {
+  const paddings = gutterWidths.map(gw => `${gw / 2}px`)
 
-export const container = (outerMargin: string[] = ['0 auto']): DynamicStyle[] =>
-  mq({
+  return mq({
     position: 'relative',
     margin: outerMargin,
     maxWidth: containerWidths,
@@ -15,6 +19,7 @@ export const container = (outerMargin: string[] = ['0 auto']): DynamicStyle[] =>
     paddingLeft: paddings,
     paddingRight: paddings
   })
+}
 
 const getWidthPercentageFromSizes = (sizes: number[]) =>
   sizes.map(size => `${100 * size}%`)
@@ -30,9 +35,12 @@ export const column = (
   sizes: number[] = [],
   display: string[] = [],
   hasPaddingTop: boolean = false,
-  hasPaddingBottom: boolean = false
-): DynamicStyle[] =>
-  mq({
+  hasPaddingBottom: boolean = false,
+  gutterWidths: number[] = defaultGutterWidths
+): DynamicStyle[] => {
+  const paddings = gutterWidths.map(gw => `${gw / 2}px`)
+
+  return mq({
     boxSizing: 'border-box',
     display,
     paddingLeft: paddings,
@@ -44,13 +52,17 @@ export const column = (
     // IE 11 does not correctly take the padding into account when using border-box
     msFlexPreferredSize: getMsFlexPreferredSizes(sizes, paddings)
   })
+}
 
 export const row = (
   centerX: boolean = false,
   topSpacing: number[] = [],
-  bottomSpacing: number[] = []
-): DynamicStyle[] =>
-  mq({
+  bottomSpacing: number[] = [],
+  gutterWidths: number[] = defaultGutterWidths
+): DynamicStyle[] => {
+  const paddings = gutterWidths.map(gw => `${gw / 2}px`)
+
+  return mq({
     boxSizing: 'border-box',
     display: 'flex',
     flexDirection: 'row',
@@ -61,3 +73,4 @@ export const row = (
     justifyContent: centerX ? 'center' : 'flex-start',
     flexWrap: 'wrap'
   })
+}
