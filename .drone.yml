@@ -22,3 +22,10 @@ pipeline:
     image: node:11.15.0
     commands:
       - npx lerna run build
+
+  send-percy:
+    when:
+      event: [push]
+    image: node:11.15.0
+    commands:
+      - npm run snapshot
