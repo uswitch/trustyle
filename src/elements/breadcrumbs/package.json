@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.breadcrumbs",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -16,6 +16,6 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.icon": "^0.2.45"
+    "@uswitch/trustyle.icon": "^0.2.46"
   }
 }
