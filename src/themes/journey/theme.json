@@ -474,6 +474,7 @@
         "base": {
           "flex": "1",
           "flexGrow": 0,
+          "minWidth": "24px",
           "marginLeft": "xxxs",
           "backgroundColor": "progress-bg",
           "borderRadius": "999px",
@@ -550,6 +551,17 @@
 
           "incomplete": {
             "variant": "funnelProgress.base.phaseIcon.base"
+          }
+        }
+      },
+
+      "phaseCompleteIcon": {
+        "base": {
+          "width": "12px",
+          "display": "inline-block",
+          "padding-top": "50%",
+          "& > svg": {
+            "margin-top": "-50%"
           }
         }
       },

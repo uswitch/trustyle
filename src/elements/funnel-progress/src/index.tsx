@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import { jsx } from 'theme-ui'
+import { Icon } from '@uswitch/trustyle.icon'
 
 type PhaseIconVariant = 'open' | 'complete' | 'incomplete'
 
@@ -31,7 +32,13 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 
 const PhaseIcon: React.FC<PhaseIconProps> = ({ variant, step }) => (
   <div sx={{ variant: `funnelProgress.base.phaseIcon.variants.${variant}` }}>
-    {step}
+    {variant === 'complete' ? (
+      <div sx={{ variant: 'funnelProgress.base.phaseCompleteIcon.base' }}>
+        <Icon glyph="check" color="#FFFFFF" />
+      </div>
+    ) : (
+      step
+    )}
   </div>
 )
 

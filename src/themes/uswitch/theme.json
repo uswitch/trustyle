@@ -573,6 +573,17 @@
         }
       },
 
+      "phaseCompleteIcon": {
+        "base": {
+          "width": "12px",
+          "display": "inline-block",
+          "padding-top": "50%",
+          "& > svg": {
+            "margin-top": "-50%"
+          }
+        }
+      },
+
       "progress": {
         "base": {
           "position": "absolute",
