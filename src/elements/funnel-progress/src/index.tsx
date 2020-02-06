@@ -10,10 +10,8 @@ type PhaseIconVariant = 'open' | 'complete' | 'incomplete'
 const STARTING_PROGRESS = 0.1
 
 interface Phase {
+  key: string
   title: string
-  open: boolean
-  complete: boolean
-  progress: number
 }
 
 interface PhaseIconProps {
@@ -23,11 +21,16 @@ interface PhaseIconProps {
 
 interface FunnelPhaseProps {
   step: number
+  open: boolean
+  complete: boolean
+  progress: number
   phase: Phase
 }
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   phases: Phase[]
+  currentPhaseKey: string
+  progress: number
 }
 
 const PhaseIcon: React.FC<PhaseIconProps> = ({ variant, step }) => (
@@ -44,7 +47,10 @@ const PhaseIcon: React.FC<PhaseIconProps> = ({ variant, step }) => (
 
 const FunnelPhase: React.FC<FunnelPhaseProps> = ({
   step,
-  phase: { open, complete, title, progress }
+  open,
+  complete,
+  progress,
+  phase: { title }
 }) => (
   <div
     sx={{
@@ -76,12 +82,30 @@ const FunnelPhase: React.FC<FunnelPhaseProps> = ({
   </div>
 )
 
-const FunnelProgress: React.FC<Props> = ({ phases, ...rest }) => (
-  <div {...rest} sx={{ variant: 'funnelProgress.base' }}>
-    {phases.map((phase, ind) => (
-      <FunnelPhase key={ind} step={ind + 1} phase={phase} />
-    ))}
-  </div>
-)
+const FunnelProgress: React.FC<Props> = ({
+  phases,
+  currentPhaseKey,
+  progress,
+  ...rest
+}) => {
+  const currentPhaseIndex = phases.findIndex(
+    ({ key }) => key === currentPhaseKey
+  )
+
+  return (
+    <div {...rest} sx={{ variant: 'funnelProgress.base' }}>
+      {phases.map((phase, ind) => (
+        <FunnelPhase
+          key={ind}
+          step={ind + 1}
+          open={ind === currentPhaseIndex}
+          complete={ind < currentPhaseIndex}
+          progress={progress}
+          phase={phase}
+        />
+      ))}
+    </div>
+  )
+}
 
 export default FunnelProgress
