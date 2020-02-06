@@ -1,7 +1,7 @@
 {
   "name": "Money",
 
-  "breakpoints": [ "768px", "990px" ],
+  "breakpoints": ["768px", "990px"],
 
   "zIndices": {
     "min": 0,
@@ -143,7 +143,6 @@
 
   "----------------------------- Variants": "-----------------------------",
   "modules": {
-
     "content-hero-module": {
       "h1": {
         "mb": "sm",
@@ -166,7 +165,6 @@
         "textDecoration": "underline"
       },
 
-
       "content": {
         "display": "flex",
         "alignItems": "flex-end",
@@ -185,7 +183,6 @@
         }
       }
     }
-
   },
 
   "accordion": {
@@ -209,16 +206,17 @@
         "color": "plum"
       }
     },
-    "isActive": {
-      "button": {
-        "variant": "accordion.base.button"
-      },
-      "caret": {
-        "color": "fuschia"
+    "variants": {
+      "isActive": {
+        "button": {
+          "variant": "accordion.base.button"
+        },
+        "caret": {
+          "color": "fuschia"
+        }
       }
     }
   },
-
 
   "sideNav": {
     "internalLinkList": {
@@ -234,23 +232,23 @@
         "mb": 0,
         "position": "relative",
         "::after": {
-          "content":"\"\"",
-          "position":"absolute",
-          "top":"50%",
-          "transform":"translateY(-50%)",
-          "display":"block",
-          "width":12,
-          "height":12,
-          "left":6,
-          "borderRadius":12,
-          "backgroundColor":"white",
-          "borderWidth":2,
-          "borderStyle":"solid",
+          "content": "\"\"",
+          "position": "absolute",
+          "top": "50%",
+          "transform": "translateY(-50%)",
+          "display": "block",
+          "width": 12,
+          "height": 12,
+          "left": 6,
+          "borderRadius": 12,
+          "backgroundColor": "white",
+          "borderWidth": 2,
+          "borderStyle": "solid",
           "borderColor": "grey-30"
         },
         "::before": {
-          "content":"\"\"",
-          "position":"absolute",
+          "content": "\"\"",
+          "position": "absolute",
           "left": 13,
           "width": 2,
           "backgroundColor": "grey-30",
@@ -305,7 +303,6 @@
   },
 
   "compounds": {
-
     "card": {
       "display": "flex",
       "width": ["100%", "49%", "grid.lg.3"],
@@ -351,7 +348,6 @@
       "my": "sm",
       "mx": 0
     }
-
   },
 
   "container": {
@@ -397,7 +393,6 @@
   },
 
   "card": {
-
     "sm": {
       "image": { "width": "100%", "height": "auto" }
     },
@@ -405,56 +400,52 @@
     "lg": {
       "image": { "width": 278, "height": 230 }
     }
-
   },
 
   "buttons": {
-
-    "primary": {
-      "color": "experimental-text",
+    "base": {
       "fontSize": "md",
       "fontWeight": "bold",
       "border": "none",
-      "backgroundColor": "primary",
       "borderRadius": "50vh",
       "paddingX": "lg",
-      ":hover:not(:disabled)": {
-        "backgroundColor": "primary--dark"
-      },
-      ":focus": {
-        "backgroundColor": "primary--dark"
-      },
       ":disabled": {
         "opacity": "0.3",
         "cursor": "not-allowed"
-      },
-      ":active": {
-        "backgroundColor": "primary--dark"
       }
     },
 
-    "secondary": {
-      "color": "grey-0",
-      "fontSize": "md",
-      "fontWeight": "bold",
-      "backgroundColor": "secondary",
-      "borderRadius": "50vh",
-      "paddingX": "lg",
-      ":hover:not(:disabled)": {
-        "backgroundColor": "secondary--dark"
+    "variants": {
+      "primary": {
+        "variant": "buttons.base",
+        "color": "experimental-text",
+        "backgroundColor": "primary",
+        ":hover:not(:disabled)": {
+          "backgroundColor": "primary--dark"
+        },
+        ":focus": {
+          "backgroundColor": "primary--dark"
+        },
+        ":active": {
+          "backgroundColor": "primary--dark"
+        }
       },
-      ":focus": {
-        "backgroundColor": "secondary--dark"
-      },
-      ":disabled": {
-        "opacity": "0.3",
-        "cursor": "not-allowed"
-      },
-      ":active": {
-        "backgroundColor": "secondary--dark"
+
+      "secondary": {
+        "variant": "buttons.base",
+        "color": "grey-0",
+        "backgroundColor": "secondary",
+        ":hover:not(:disabled)": {
+          "backgroundColor": "secondary--dark"
+        },
+        ":focus": {
+          "backgroundColor": "secondary--dark"
+        },
+        ":active": {
+          "backgroundColor": "secondary--dark"
+        }
       }
     }
-
   },
 
   "list": {
@@ -489,6 +480,120 @@
     },
     "button": {
       "marginLeft": [null, "md"]
+    }
+  },
+
+  "funnelProgress": {
+    "base": {
+      "display": "flex",
+      "flexFlow": "row",
+      "userSelect": "none",
+
+      "phase": {
+        "base": {
+          "flex": "1",
+          "flexGrow": 0,
+          "marginLeft": "5px",
+          "background": "#E6F4FD",
+          "borderRadius": "999px",
+          "whiteSpace": "nowrap",
+          "position": "relative",
+          "transition": "flex-grow 0.4s",
+          "&:first-child": {
+            "marginLeft": "0px"
+          }
+        },
+        "variants": {
+          "open": {
+            "variant": "funnelProgress.base.phase.base",
+            "flexGrow": 1,
+            "overflow": "hidden"
+          }
+        }
+      },
+
+      "phaseLabel": {
+        "base": {
+          "position": "relative",
+          "whiteSpace": "nowrap",
+          "overflow": "hidden",
+          "textOverflow": "ellipsis"
+        }
+      },
+
+      "phaseLabelPart": {
+        "base": {
+          "display": "inline-block",
+          "verticalAlign": "top",
+          "marginLeft": "4px",
+          "fontSize": "14px",
+          "fontWeight": "bold",
+          "lineHeight": "24px",
+          "color": "#002396",
+          "&:first-child": {
+            "marginLeft": "0px"
+          }
+        }
+      },
+
+      "phaseIcon": {
+        "base": {
+          "transition": "background 0.4s, border-color 0.4s, color 0.4s",
+          "background": "#FFFFFF",
+          "border": "2px solid #B0B8BF",
+          "borderRadius": "999px",
+          "width": "20px",
+          "height": "20px",
+          "lineHeight": "20px",
+          "textAlign": "center",
+          "fontWeight": "bold",
+          "color": "#B0B8BF",
+          "fontSize": "14px"
+        },
+
+        "variants": {
+          "open": {
+            "variant": "funnelProgress.base.phaseIcon.base",
+            "background": "#FFFFFF",
+            "borderColor": "#A1E7FE",
+            "color": "#008FE9"
+          },
+
+          "complete": {
+            "variant": "funnelProgress.base.phaseIcon.base",
+            "background": "#028EE9",
+            "borderColor": "#028EE9"
+          },
+
+          "incomplete": {
+            "variant": "funnelProgress.base.phaseIcon.base"
+          }
+        }
+      },
+
+      "phaseCompleteIcon": {
+        "base": {
+          "width": "12px",
+          "display": "inline-block",
+          "padding-top": "50%",
+          "& > svg": {
+            "margin-top": "-50%"
+          }
+        }
+      },
+
+      "progress": {
+        "base": {
+          "position": "absolute",
+          "background": "#A1E7FE",
+          "minWidth": "24px",
+          "borderRadius": "999px",
+          "top": "0",
+          "bottom": "0",
+          "left": "0",
+          "transition": "width 0.4s"
+        }
+      }
     }
   },
 
@@ -534,7 +639,6 @@
   },
 
   "styles": {
-
     "h1": {
       "fontFamily": "heading",
       "fontSize": "xxxl",
@@ -611,6 +715,5 @@
         }
       }
     }
-
   }
 }

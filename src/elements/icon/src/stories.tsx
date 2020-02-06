@@ -9,6 +9,7 @@ import { Direction, Glyph, Icon } from './'
 const glyphChoices: Glyph[] = [
   'arrow',
   'caret',
+  'check',
   'close',
   'edit',
   'email',

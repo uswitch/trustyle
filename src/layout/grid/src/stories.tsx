@@ -16,7 +16,84 @@ const exampleColumnStyle = css({
 })
 
 const exampleRowStyle = css({
-  fontFamily: typography.defaultFontFamily
+  fontFamily: typography.defaultFontFamily,
+  paddingBottom: '16px'
+})
+
+storiesOf('Layout|Grid', module).add('Basic Example', () => (
+  <Container css={{ backgroundColor: colors.slateGrey, paddingBottom: '16px' }}>
+    <Row css={exampleRowStyle}>
+      <Column s={6 / 12} m={6 / 12} l={1 / 2}>
+        <div css={{ backgroundColor: 'white' }}>
+          <h2>A 6 / 12 column</h2>
+        </div>
+      </Column>
+
+      <Column s={6 / 12} m={1 / 2} l={1 / 2}>
+        <div css={{ backgroundColor: 'white' }}>
+          <h2>A 6 / 12 column</h2>
+        </div>
+      </Column>
+    </Row>
+
+    <Row css={exampleRowStyle}>
+      <Column s={2 / 12} m={2 / 12} l={2 / 12}>
+        <div css={{ backgroundColor: 'white' }}>2/12</div>
+      </Column>
+
+      <Column s={2 / 12} m={2 / 12} l={2 / 12}>
+        <div css={{ backgroundColor: 'white' }}>2/12</div>
+      </Column>
+
+      <Column s={2 / 12} m={2 / 12} l={2 / 12}>
+        <div css={{ backgroundColor: 'white' }}>2/12</div>
+      </Column>
+
+      <Column s={2 / 12} m={2 / 12} l={2 / 12}>
+        <div css={{ backgroundColor: 'white' }}>2/12</div>
+      </Column>
+
+      <Column s={2 / 12} m={2 / 12} l={2 / 12}>
+        <div css={{ backgroundColor: 'white' }}>2/12</div>
+      </Column>
+
+      <Column s={2 / 12} m={2 / 12} l={2 / 12}>
+        <div css={{ backgroundColor: 'white' }}>2/12</div>
+      </Column>
+    </Row>
+
+    <div css={{ backgroundColor: 'white' }}>
+      A normal block element in the container not in a row or column
+    </div>
+  </Container>
+))
+
+storiesOf('Layout|Grid', module).add('Custom gutters', () => {
+  const gutterWidths = [8, 16, 24]
+  return (
+    <Container
+      gutterWidths={gutterWidths}
+      css={{ backgroundColor: colors.offWhite, paddingBottom: '16px' }}
+    >
+      <Row css={exampleRowStyle}>
+        <Column m={1 / 2} l={1 / 2}>
+          <div css={{ backgroundColor: 'white' }}>
+            <h2>A 6 / 12 column</h2>
+          </div>
+        </Column>
+
+        <Column m={1 / 2} l={1 / 2}>
+          <div css={{ backgroundColor: 'white' }}>
+            <h2>A 6 / 12 column</h2>
+          </div>
+        </Column>
+      </Row>
+
+      <div css={{ backgroundColor: 'white' }}>
+        A normal block element in the container not in a row or column
+      </div>
+    </Container>
+  )
 })
 
 storiesOf('Layout|Grid', module).add('Example 1 - basics', () => (
