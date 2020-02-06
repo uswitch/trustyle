@@ -3,6 +3,7 @@
   "version": "0.2.48",
   "license": "MIT",
   "main": "lib/index.js",
+  "ts:main": "src/index.tsx",
   "scripts": {
     "--------------- BUILDING": "----------------------",
     "clean": "rm -rf lib",

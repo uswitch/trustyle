@@ -3,6 +3,7 @@
   "version": "1.0.48",
   "license": "MIT",
   "main": "lib/index.js",
+  "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
   },

@@ -14,6 +14,7 @@ module.exports = api => {
       }
     },
     presets: ['@babel/typescript', '@babel/preset-react'],
-    plugins: ['@babel/plugin-proposal-optional-chaining']
+    plugins: ['@babel/plugin-proposal-optional-chaining'],
+    sourceType: 'unambiguous'
   }
 }
