@@ -40,8 +40,15 @@ const newViewports = {
       height: '667px'
     }
   },
-  iPhone: {
-    name: 'iPhone', // iPhone 6/7/8 dimensions
+  iPhone5: {
+    name: 'iPhone 5/se', // iPhone 6/7/8 dimensions
+    styles: {
+      width: '320px',
+      height: '568px'
+    }
+  },
+  iPhone6: {
+    name: 'iPhone 6/7/8', // iPhone 6/7/8 dimensions
     styles: {
       width: '375px',
       height: '667px'
