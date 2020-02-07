@@ -156,6 +156,10 @@ const Breadcrumbs: React.FC<Props> = ({
   customBackIcon = '<',
   customHomeIcon
 }) => {
+  if (crumbs.length && crumbs[0].fields.path === '/') {
+    crumbs = crumbs.slice(1)
+  }
+
   return (
     <React.Fragment>
       <div sx={{ display: ['block', 'none'] }}>
