@@ -1,9 +1,8 @@
 {
-  "name": "@uswitch/trustyle.pagination",
-  "version": "0.1.8",
+  "name": "@uswitch/trustyle.funnel-progress",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "lib/index.js",
-  "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
   },

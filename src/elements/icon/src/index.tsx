@@ -5,6 +5,7 @@ import { jsx } from '@emotion/core'
 
 import { Arrow } from './arrow'
 import { Caret } from './caret'
+import { Check } from './check'
 import { Close } from './close'
 import { Edit } from './edit'
 import { Email } from './email'
@@ -18,6 +19,7 @@ import { Sms } from './sms'
 export type Glyph =
   | 'arrow'
   | 'caret'
+  | 'check'
   | 'close'
   | 'edit'
   | 'email'
@@ -52,6 +54,8 @@ export const Icon: React.FC<Props> = ({
       return <Arrow color={color} direction={direction} size={size} />
     case 'caret':
       return <Caret color={color} direction={direction} size={size} />
+    case 'check':
+      return <Check color={color} size={size} />
     case 'close':
       return <Close color={color} size={size} />
     case 'edit':

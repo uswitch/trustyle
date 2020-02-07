@@ -1,12 +1,13 @@
 ## Development
 All commands can be run from individual packages, but it is not necessary to do so.
 
-Run `npm install` at the project root to install the dev dependencies.
-Run `npx lerna exec 'npm install'` to install each package’s dependencies.
-Run `npx lerna bootstrap` to install each package’s dependencies.
-Run `npx lerna run build` to run each package’s build script.
+- Run `npm install` at the project root to install the dev dependencies.
+- Run `npx lerna exec 'npm install'` to install each package’s dependencies.
+- Run `npx lerna bootstrap` to link package dependencies to each other.
 
 To run storybook locally `npm start`.
+
+To run each package’s build script, run `npx lerna run build`. You don't usually have to do this as you don't need it for local development and the publish script runs it for you on publish.
 
 To add a new element, copy the template to the src/elements directory, update the package.json with the name and add your source code.
 
