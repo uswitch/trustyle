@@ -73,7 +73,7 @@ const newViewports = {
 addParameters({
   viewport: {
     viewports: newViewports,
-    defaultViewport: 'iPhone'
+    defaultViewport: 'iPhone6'
   },
   options: {
     name: 'TruStyle Storybook',
