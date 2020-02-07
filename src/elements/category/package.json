@@ -1,8 +1,9 @@
 {
   "name": "@uswitch/trustyle.category",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "license": "MIT",
   "main": "lib/index.js",
+  "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
   },

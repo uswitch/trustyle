@@ -15,16 +15,30 @@ const CTA: React.FC<CTAProps> = ({ title, text, buttonLink, buttonText }) => {
   const { theme }: any = useThemeUI()
 
   return (
-    <div sx={theme.cta?.main}>
-      <Styled.h3 sx={theme.cta?.title}>{title}</Styled.h3>
-      <Styled.p sx={theme.cta?.text}>{text}</Styled.p>
-      <ButtonLink
-        href={buttonLink}
-        variant={theme.cta?.button?.variant || 'primary'}
-        sx={theme.cta?.button}
-      >
-        {buttonText}
-      </ButtonLink>
+    <div
+      sx={{
+        paddingX: ['sm', 'md'],
+        paddingY: 'md',
+        display: ['block', 'flex'],
+        alignItems: 'center',
+        variant: 'cta.main'
+      }}
+    >
+      <div>
+        <Styled.h4 sx={{ marginTop: 0, variant: 'cta.title' }} as="h2">
+          {title}
+        </Styled.h4>
+        <Styled.p sx={{ variant: 'cta.text' }}>{text}</Styled.p>
+      </div>
+      <div sx={{ flexShrink: 0 }}>
+        <ButtonLink
+          href={buttonLink}
+          variant={theme.cta?.button?.variant || 'primary'}
+          sx={{ variant: 'cta.button' }}
+        >
+          {buttonText}
+        </ButtonLink>
+      </div>
     </div>
   )
 }

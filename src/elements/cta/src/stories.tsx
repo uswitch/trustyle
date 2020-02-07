@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { css, jsx } from '@emotion/core'
+import { jsx } from '@emotion/core'
 import { text } from '@storybook/addon-knobs'
 
 import CTA from './'
@@ -21,13 +21,11 @@ export const Example = () => {
   const buttonText = text('Button text', 'Compare credit cards')
 
   return (
-    <div css={css({ padding: 10 })}>
-      <CTA
-        title={titleText}
-        text={textText}
-        buttonText={buttonText}
-        buttonLink="https://google.com"
-      />
-    </div>
+    <CTA
+      title={titleText}
+      text={textText}
+      buttonText={buttonText}
+      buttonLink="https://google.com"
+    />
   )
 }
