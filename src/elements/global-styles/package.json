@@ -1,8 +1,9 @@
 {
   "name": "@uswitch/trustyle.global-styles",
-  "version": "0.3.6",
+  "version": "0.3.8",
   "license": "MIT",
   "main": "lib/index.js",
+  "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
   },

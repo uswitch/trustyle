@@ -1,8 +1,9 @@
 {
   "name": "@uswitch/trustyle.imgix-image",
-  "version": "0.1.23",
+  "version": "0.1.25",
   "license": "MIT",
   "main": "lib/index.js",
+  "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
   },

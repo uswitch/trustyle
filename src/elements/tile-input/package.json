@@ -1,8 +1,9 @@
 {
   "name": "@uswitch/trustyle.tile-input",
-  "version": "1.0.47",
+  "version": "1.0.50",
   "license": "MIT",
   "main": "lib/index.js",
+  "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
   },
@@ -13,11 +14,11 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.27",
-    "@uswitch/trustyle.styles": "^0.4.22",
+    "@uswitch/trustyle.styles": "^0.4.24",
     "react": "^16.7.0"
   },
   "devDependencies": {
-    "@uswitch/trustyle.grid": "^1.0.18",
+    "@uswitch/trustyle.grid": "^2.0.1",
     "typescript": "^3.6.2"
   }
 }
