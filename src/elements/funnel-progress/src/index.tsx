@@ -60,10 +60,18 @@ const FunnelPhase: React.FC<FunnelPhaseProps> = ({
     }}
   >
     <div
-      sx={{ variant: 'funnelProgress.base.progress.base' }}
+      sx={{
+        variant:
+          progress !== 0 || !open
+            ? 'funnelProgress.base.progress.base'
+            : 'funnelProgress.base.progress.variants.start'
+      }}
       style={{
-        width: `${STARTING_PROGRESS * 100 +
-          progress * (1 - STARTING_PROGRESS) * 100}%`
+        width:
+          progress !== 0 || !open
+            ? `${STARTING_PROGRESS * 100 +
+                progress * (1 - STARTING_PROGRESS) * 100}%`
+            : '0%'
       }}
     />
     <div sx={{ variant: 'funnelProgress.base.phaseLabel.base' }}>
