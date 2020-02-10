@@ -2,7 +2,7 @@ pipeline:
   install:
     when:
       event: [push]
-    image: node:12.14.1
+    image: registry.usw.co/cloud/node-12-puppeteer:375eedad2a24cb6eb85d3a707eeb28629c28615e
     commands:
       - npm install
       - npx lerna exec npm install
@@ -11,7 +11,7 @@ pipeline:
   code_checks:
     when:
       event: [push]
-    image: node:12.14.1
+    image: registry.usw.co/cloud/node-12-puppeteer:375eedad2a24cb6eb85d3a707eeb28629c28615e
     commands:
       - npm run eslint:check
       - npm run prettier:check
@@ -19,13 +19,13 @@ pipeline:
   build:
     when:
       event: [push]
-    image: node:12.14.1
+    image: registry.usw.co/cloud/node-12-puppeteer:375eedad2a24cb6eb85d3a707eeb28629c28615e
     commands:
       - npx lerna run build
 
   send-percy:
     when:
       event: [push]
-    image: node:12.14.1
+    image: registry.usw.co/cloud/node-12-puppeteer:375eedad2a24cb6eb85d3a707eeb28629c28615e
     commands:
       - npm run snapshot
