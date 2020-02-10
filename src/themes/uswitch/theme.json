@@ -695,7 +695,8 @@
       "fontSize": "base",
       "fontWeight": "base",
       "lineHeight": "base",
-      "color": "uswitch-navy"
+      "color": "uswitch-navy",
+      "background": "white"
     },
 
     "a": {
