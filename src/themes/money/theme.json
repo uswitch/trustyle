@@ -672,21 +672,18 @@
     "h4": {
       "variant": "styles.heading",
       "fontSize": "lg",
-      "marginY": 0,
       "paddingBottom": "sm"
     },
 
     "h5": {
       "variant": "styles.heading",
       "fontSize": "md",
-      "marginY": 0,
       "paddingBottom": "sm"
     },
 
     "h6": {
       "variant": "styles.heading",
       "fontSize": "sm",
-      "marginY": 0,
       "paddingBottom": "sm"
     },
 
