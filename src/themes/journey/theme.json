@@ -538,9 +538,9 @@
         "variants": {
           "open": {
             "variant": "funnelProgress.base.phaseIcon.base",
-            "background": "#FFFFFF",
-            "borderColor": "#A1E7FE",
-            "color": "#008FE9"
+            "background": "transparent",
+            "borderColor": "transparent",
+            "color": "progress-label"
           },
 
           "complete": {
@@ -575,7 +575,13 @@
           "top": "0",
           "bottom": "0",
           "left": "0",
-          "transition": "width 0.4s"
+          "transition": "width 0.4s, min-width 0.4s"
+        },
+        "variants": {
+          "start": {
+            "variant": "funnelProgress.base.progress.base",
+            "minWidth": "0px"
+          }
         }
       }
     }
