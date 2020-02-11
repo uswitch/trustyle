@@ -2,6 +2,7 @@
 import * as React from 'react'
 import { css, jsx } from '@emotion/core'
 import { number, text } from '@storybook/addon-knobs'
+import { action } from '@storybook/addon-actions'
 
 import theme from '../../../utils/theme-selector'
 
@@ -42,7 +43,7 @@ export const SecondaryVariant = () => (
 const CustomLink: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   to: string
 }> = ({ to, children, ...rest }) => (
-  <a onClick={() => window.alert(`Custom link component: ${to}`)} {...rest}>
+  <a onClick={action(`Custom link component: ${to}`)} {...rest}>
     {children}
   </a>
 )
