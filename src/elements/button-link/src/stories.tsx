@@ -38,3 +38,17 @@ export const PrimaryVariant = () => (
 export const SecondaryVariant = () => (
   <ButtonLink variant="secondary">Primary link button</ButtonLink>
 )
+
+const CustomLink: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  to: string
+}> = ({ to, children, ...rest }) => (
+  <a onClick={() => window.alert(`Custom link component: ${to}`)} {...rest}>
+    {children}
+  </a>
+)
+
+export const StyledComponentAsProp = () => (
+  <ButtonLink variant="primary" as={CustomLink} to="special-url">
+    Using <em>as</em> prop
+  </ButtonLink>
+)
