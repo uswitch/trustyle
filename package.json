@@ -7,7 +7,10 @@
     "test": "jest",
     "test:jest": "jest",
     "--------------- RUNNING": "-----------------------",
-    "start": "start-storybook -p 6006",
+    "start": "npm run storybook",
+    "typescript:check": "tsc --noEmit",
+    "typescript:watch": "tsc --noEmit --watch",
+    "storybook": "start-storybook -p 6006",
     "--------------- BUILDING": "----------------------",
     "build-storybook": "build-storybook",
     "--------------- LINTING": "-----------------------",
@@ -17,9 +20,8 @@
     "eslint:fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
     "prettier:check": "prettier --check 'src/**/*.{ts,tsx}'",
     "prettier:fix": "prettier --check --write 'src/**/*.{ts,tsx}'",
-    "typescript:check": "tsc --noEmit",
-    "typescript:watch": "tsc --noEmit --watch",
-    "storybook": "start-storybook -p 6006"
+    "--------------- DEPLOYING": "-----------------------",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
