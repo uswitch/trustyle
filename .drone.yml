@@ -27,5 +27,8 @@ pipeline:
     when:
       event: [push]
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    environment:
+      PERCY_TOKEN:
+        from_secret: percy_token
     commands:
       - npm run snapshot

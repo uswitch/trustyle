@@ -6,7 +6,7 @@
     "--------------- TESTING": "-----------------------",
     "test": "jest",
     "test:jest": "jest",
-    "snapshot": "build-storybook && PERCY_TOKEN=ec669f1772fb3c5e4192ed8adc3e7ee52e4ff5393fe8e7e6fc82c236ccf5ab0b percy-storybook --widths=320,1280",
+    "snapshot": "build-storybook && percy-storybook --widths=320,1280",
     "--------------- RUNNING": "-----------------------",
     "start": "start-storybook -p 6006",
     "--------------- BUILDING": "----------------------",
