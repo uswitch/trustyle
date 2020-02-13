@@ -700,6 +700,7 @@
 
     "a": {
       "color": "inherit",
+      "fontWeight": 500,
       "stroke": "currentColor",
       "textDecoration": "underline",
       "transition": "oapcity 0.2s ease",
