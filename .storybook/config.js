@@ -7,6 +7,7 @@ import { Styled, jsx, ThemeProvider } from 'theme-ui'
 import { Global } from '@emotion/core'
 import theme from '../src/utils/theme-selector'
 import { GlobalStyles } from '../src/elements/global-styles/src'
+import { colors } from '../src/themes/uswitch'
 
 const withTheme = story => (
   <ThemeProvider theme={theme()}>
@@ -86,4 +87,13 @@ addParameters({
     hierarchyRootSeparator: '|',
     hierarchySeparator: /\/|\./
   }
+})
+
+addParameters({
+  backgrounds: [
+    { name: 'White', value: colors.white, default: true },
+    { name: 'Grey10', value: colors['grey-10'] },
+    { name: 'Grey90', value: colors['grey-90'] },
+    { name: 'Black', value: colors.black }
+  ]
 })

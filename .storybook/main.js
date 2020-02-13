@@ -13,6 +13,7 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-viewport',
     '@storybook/addon-actions',
-    '@storybook/addon-links'
+    '@storybook/addon-links',
+    '@storybook/addon-backgrounds/register'
   ]
 }
