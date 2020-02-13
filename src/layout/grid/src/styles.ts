@@ -23,6 +23,7 @@ export const container = (
   const paddings = gutterWidths.map(gw => `${gw}px`)
 
   return mq({
+    boxSizing: 'border-box',
     position: 'relative',
     margin: outerMargin,
     maxWidth: containerWidths,

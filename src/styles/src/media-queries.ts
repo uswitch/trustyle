@@ -2,8 +2,8 @@ import facepaint from 'facepaint'
 
 export const breakpoints = {
   s: 0,
-  m: 768,
-  l: 990
+  m: 640,
+  l: 1152
 }
 
 export interface Breakpoints {
@@ -13,5 +13,5 @@ export interface Breakpoints {
 }
 
 export const mq = facepaint(
-  [768, 990].map((bp: number) => `@media (min-width: ${bp}px)`)
+  [640, 1152].map((bp: number) => `@media (min-width: ${bp}px)`)
 )

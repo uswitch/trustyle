@@ -372,6 +372,7 @@
 
   "buttons": {
     "base": {
+      "box-sizing": "border-box",
       "backgroundColor": "primary",
       "color": "light-1",
       "textAlign": "center",
@@ -381,7 +382,8 @@
       "borderRadius": "sm",
       ":hover": {
         "backgroundColor": "primary-hover",
-        "boxShadow": "inset 0 0 0 1px ${color}"
+        "boxShadow": "inset 0 0 0 1px ${color}",
+        "color": "light-1"
       },
       ":disabled": {
         "backgroundColor": "primary",
@@ -401,7 +403,8 @@
         "color": "link-2",
         "backgroundColor": "light-blue",
         ":hover": {
-          "backgroundColor": "secondary-hover"
+          "backgroundColor": "secondary-hover",
+          "color": "link-2"
         },
         ":disabled": {
           "backgroundColor": "light-blue",
@@ -422,7 +425,8 @@
         ":hover": {
           "backgroundColor": "light-1",
           "borderColor": "link",
-          "boxShadow": "linkInset"
+          "boxShadow": "linkInset",
+          "color": "black"
         },
         ":disabled": {
           "borderColor": "light-grey-blue",

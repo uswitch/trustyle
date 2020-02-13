@@ -14,7 +14,7 @@ const PaginationStory = ({ type }: any) => {
   const [currentPage, setCurrentPage] = React.useState(currentPageKnob)
 
   const handlePageChange = (number: number) => {
-    action(`number clicked: ${number}`)
+    action(`number clicked: ${number}`)()
     setCurrentPage(number)
   }
 
