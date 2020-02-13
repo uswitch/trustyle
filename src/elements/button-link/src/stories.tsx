@@ -2,6 +2,7 @@
 import * as React from 'react'
 import { css, jsx } from '@emotion/core'
 import { number, text } from '@storybook/addon-knobs'
+import { action } from '@storybook/addon-actions'
 
 import theme from '../../../utils/theme-selector'
 
@@ -16,7 +17,7 @@ export default {
 export const AllVariants = () => (
   <div css={css({ padding: number('Padding', 10) })}>
     {theme() &&
-      Object.keys(theme().buttons).map((key, index) => (
+      Object.keys(theme().buttons.variants).map((key, index) => (
         <React.Fragment key={index}>
           <ButtonLink
             variant={key}
@@ -37,4 +38,18 @@ export const PrimaryVariant = () => (
 
 export const SecondaryVariant = () => (
   <ButtonLink variant="secondary">Primary link button</ButtonLink>
+)
+
+const CustomLink: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  to: string
+}> = ({ to, children, ...rest }) => (
+  <a onClick={action(`Custom link component: ${to}`)} {...rest}>
+    {children}
+  </a>
+)
+
+export const StyledComponentAsProp = () => (
+  <ButtonLink variant="primary" as={CustomLink} to="special-url">
+    Using <em>as</em> prop
+  </ButtonLink>
 )

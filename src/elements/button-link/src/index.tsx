@@ -1,39 +1,41 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, useThemeUI } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 
-interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-  variant: string
-  href?: string
-}
+type Overwrite<T, U> = Omit<T, keyof U> & U
+type Props<T extends React.ComponentType<any>> = Overwrite<
+  React.ComponentProps<T>,
+  {
+    as?: T
+    variant: string
+    children: React.ReactNode
+  }
+>
 
-export const ButtonLink: React.FC<Props> = ({
+export const ButtonLink = <
+  T extends React.ComponentType<any> = React.ComponentType<
+    JSX.IntrinsicElements['a']
+  >
+>({
   children,
   variant,
-  href,
   ...props
-}) => {
-  const { theme }: any = useThemeUI()
-
-  return (
-    <a
-      sx={{
-        ...theme.buttons.base,
-        cursor: 'pointer',
-        backgroundImage: 'none',
-        fontFamily: 'base',
-        fontSize: 'base',
-        paddingX: 'sm',
-        paddingY: 'base',
-        display: 'inline-block',
-        textDecoration: 'none',
-        variant: `buttons.${variant}`
-      }}
-      href={href}
-      {...props}
-    >
-      {children}
-    </a>
-  )
-}
+}: Props<T>) => (
+  <Styled.a
+    sx={{
+      cursor: 'pointer',
+      backgroundImage: 'none',
+      fontFamily: 'base',
+      fontSize: 'base',
+      paddingX: 'sm',
+      paddingY: 'base',
+      display: 'inline-block',
+      textDecoration: 'none',
+      variant: `buttons.variants.${variant}`
+    }}
+    {...props}
+  >
+    {children}
+  </Styled.a>
+)
