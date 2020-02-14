@@ -597,6 +597,38 @@
     }
   },
 
+  "input": {
+    "radio": {
+      "base": {
+        "&:checked + span": {
+          "borderColor": "black",
+          "color": "black",
+          "&::before": {
+            "backgroundColor": "black",
+            "borderColor": "black",
+            "boxShadow": "inset 0 0 0 2px #fff"
+          }
+        },
+        "&:focus + span": {
+          "borderColor": "black"
+        }
+      },
+      "label": {
+        "borderColor": "black",
+        "borderStyle": "solid",
+        "borderWidth": "2px",
+        "color": "grey-80",
+        "fontWeight": "normal",
+        "&:before": {
+          "borderColor": "black",
+          "borderRadius": "50%",
+          "borderStyle": "solid",
+          "borderWidth": "2px"
+        }
+      }
+    }
+  },
+
   "pagination": {
     "arrow": {
       "color": "grey-100"
