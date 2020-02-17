@@ -228,12 +228,14 @@
         "color": "black"
       }
     },
-    "isActive": {
-      "button": {
-        "variant": "accordion.base.button"
-      },
-      "caret": {
-        "variant": "accordion.base.caret"
+    "variants": {
+      "isActive": {
+        "button": {
+          "variant": "accordion.base.button"
+        },
+        "caret": {
+          "variant": "accordion.base.caret"
+        }
       }
     }
   },
