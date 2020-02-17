@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Elements|Table primary variant 1`] = `
+<div
+  className="css-1k07r6f"
+>
+  <div
+    className="css-nk32ej"
+  >
+    <table
+      className="css-166bzj0"
+    >
+      <tr
+        className="css-1ky5jy0"
+      >
+        <td
+          className="css-1a7e2sk"
+        >
+          First item
+        </td>
+        <td
+          className="css-1a7e2sk"
+        >
+          Second item
+        </td>
+        <td
+          className="css-1a7e2sk"
+        >
+          Third item
+        </td>
+      </tr>
+      <tr
+        className="css-1ky5jy0"
+      >
+        <td
+          className="css-1a7e2sk"
+        >
+          First item
+        </td>
+        <td
+          className="css-1a7e2sk"
+        >
+          Second item
+        </td>
+        <td
+          className="css-1a7e2sk"
+        >
+          Third item
+        </td>
+      </tr>
+    </table>
+    <table
+      className="css-166bzj0"
+    >
+      <tr
+        className="css-1ky5jy0"
+      >
+        <th
+          className="css-z0aawa"
+        >
+          First title
+        </th>
+        <th
+          className="css-z0aawa"
+        >
+          Second title
+        </th>
+        <th
+          className="css-z0aawa"
+        >
+          Third title
+        </th>
+      </tr>
+      <tr
+        className="css-1ky5jy0"
+      >
+        <td
+          className="css-1a7e2sk"
+        >
+          First item
+        </td>
+        <td
+          className="css-1a7e2sk"
+        >
+          Second item
+        </td>
+        <td
+          className="css-1a7e2sk"
+        >
+          Third item
+        </td>
+      </tr>
+      <tr
+        className="css-1ky5jy0"
+      >
+        <td
+          className="css-1a7e2sk"
+        >
+          First item
+        </td>
+        <td
+          className="css-1a7e2sk"
+        >
+          Second item
+        </td>
+        <td
+          className="css-1a7e2sk"
+        >
+          Third item
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+`;
