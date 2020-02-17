@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.embedded-video",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
