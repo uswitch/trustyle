@@ -731,6 +731,35 @@
           "content": "\"“\""
         }
       }
+    },
+
+    "table": {
+      "borderSpacing": 0,
+      "width": "100%",
+      "borderStyle": "solid",
+      "borderColor": "grey-20",
+      "borderWidth": "1px",
+      "borderRadius": "3px",
+      "marginBottom": "base"
+    },
+
+    "th": {
+      "margin": 0,
+      "padding": "16px",
+      "fontSize": "xs",
+      "textAlign": "left"
+    },
+
+    "td": {
+      "margin": 0,
+      "padding": "16px",
+      "fontSize": "xs"
+    },
+
+    "tr": {
+      ":nth-child(even)": {
+        "backgroundColor": "grey-05"
+      }
     }
   }
 }
