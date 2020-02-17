@@ -18,6 +18,9 @@ export const AllVariants = () => (
         <RadioInput label="Radio input field" name="radio-name" />
       </div>
       <div css={wrapper}>
+        <RadioInput checked label="Radio input checked" name="radio-name" />
+      </div>
+      <div css={wrapper}>
         <RadioInput
           label="Radio input field with a bit of extra text making it span across two lines"
           name="radio-name"
