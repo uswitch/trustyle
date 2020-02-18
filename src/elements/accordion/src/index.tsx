@@ -42,6 +42,7 @@ const Accordion: React.FC<Props> & { Group: React.FC } = ({
   } else {
     isOpen = accordionContext.open === index
     setIsOpen = isOpen =>
+      // @ts-ignore - I have no idea why this is required
       accordionContext.setOpenId(isOpen ? (index as number) : -1)
   }
 
