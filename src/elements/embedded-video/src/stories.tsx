@@ -8,6 +8,7 @@ import EmbeddedVideo from './'
 const UswitchAdvert = 'https://www.youtube.com/embed/1cy0Buice_0'
 
 storiesOf('Elements|Embedded-video', module)
+  .addParameters({ percy: { skip: true } })
   .add('primary variant', () => (
     <EmbeddedVideo
       source={UswitchAdvert}

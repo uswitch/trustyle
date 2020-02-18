@@ -44,8 +44,8 @@ const MobileBreadcrumbs: React.FC<Props> = ({
 
   if (crumbs.length) {
     const lastCrumb = crumbs[crumbs.length - 1]
-    href = lastCrumb.fields.path
-    backTo = lastCrumb.fields.displayText
+    href = lastCrumb.fields?.path
+    backTo = lastCrumb.fields?.displayText
   } else {
     href = '/'
     backTo = customHomeIcon || <HomeIcon />
@@ -128,10 +128,10 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
         )}
       </li>
 
-      {crumbs.map((crumb, i) => (
+      {crumbs.map(({ fields: fields = {} }, i) => (
         <li sx={liStyling} key={i}>
-          <Styled.a sx={anchorStyling} href={crumb.fields.path}>
-            {crumb.fields.displayText}
+          <Styled.a sx={anchorStyling} href={fields.path}>
+            {fields.displayText}
           </Styled.a>
 
           {(i !== crumbs.length - 1 || title) && (
@@ -156,6 +156,10 @@ const Breadcrumbs: React.FC<Props> = ({
   customBackIcon = '<',
   customHomeIcon
 }) => {
+  if (crumbs.length && crumbs[0].fields?.path === '/') {
+    crumbs = crumbs.slice(1)
+  }
+
   return (
     <React.Fragment>
       <div sx={{ display: ['block', 'none'] }}>

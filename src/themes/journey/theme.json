@@ -97,7 +97,7 @@
         "4": 280
       }
     },
-    "hero": { "width": 1280 },
+    "hero": { "width": 1024 },
     "label": { "width": 280 },
     "input": { "height": 58 },
     "button": { "width": 264 },
@@ -321,16 +321,16 @@
   "container": {
     "sm": { "px": 20 },
     "md": { "px": 72 },
-    "lg": { "maxWidth": 1280, "mx": "auto", "px": "md" },
+    "lg": { "maxWidth": 1024, "mx": "auto", "px": "md" },
     "content": {
-      "maxWidth": 1280,
+      "maxWidth": 1024,
       "mx": "auto",
       "px": "md",
       "contentStyle": {
         "width": ["100%", "grid.lg.8"]
       }
     },
-    "hero": { "maxWidth": 1280, "mx": "auto", "px": 60 }
+    "hero": { "maxWidth": 1024, "mx": "auto", "px": 60 }
   },
 
   "hero": {
@@ -351,7 +351,7 @@
     "lg": {
       "display": "flex",
       "justifyContent": "space-between",
-      "width": 1280,
+      "width": 1024,
       "px": 158,
       "mx": "auto"
     },
@@ -372,6 +372,7 @@
 
   "buttons": {
     "base": {
+      "box-sizing": "border-box",
       "backgroundColor": "primary",
       "color": "light-1",
       "textAlign": "center",
@@ -381,7 +382,8 @@
       "borderRadius": "sm",
       ":hover": {
         "backgroundColor": "primary-hover",
-        "boxShadow": "inset 0 0 0 1px ${color}"
+        "boxShadow": "inset 0 0 0 1px ${color}",
+        "color": "light-1"
       },
       ":disabled": {
         "backgroundColor": "primary",
@@ -401,7 +403,8 @@
         "color": "link-2",
         "backgroundColor": "light-blue",
         ":hover": {
-          "backgroundColor": "secondary-hover"
+          "backgroundColor": "secondary-hover",
+          "color": "link-2"
         },
         ":disabled": {
           "backgroundColor": "light-blue",
@@ -422,7 +425,8 @@
         ":hover": {
           "backgroundColor": "light-1",
           "borderColor": "link",
-          "boxShadow": "linkInset"
+          "boxShadow": "linkInset",
+          "color": "black"
         },
         ":disabled": {
           "borderColor": "light-grey-blue",
@@ -582,6 +586,38 @@
             "variant": "funnelProgress.base.progress.base",
             "minWidth": "0px"
           }
+        }
+      }
+    }
+  },
+
+  "input": {
+    "radio": {
+      "base": {
+        "&:checked + span": {
+          "borderColor": "black",
+          "color": "black",
+          "&::before": {
+            "backgroundColor": "black",
+            "borderColor": "black",
+            "boxShadow": "inset 0 0 0 2px #fff"
+          }
+        },
+        "&:focus + span": {
+          "borderColor": "black"
+        }
+      },
+      "label": {
+        "borderColor": "black",
+        "borderStyle": "solid",
+        "borderWidth": "2px",
+        "color": "grey-80",
+        "fontWeight": "normal",
+        "&:before": {
+          "borderColor": "black",
+          "borderRadius": "50%",
+          "borderStyle": "solid",
+          "borderWidth": "2px"
         }
       }
     }
