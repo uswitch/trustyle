@@ -23,46 +23,48 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 const SideNav: React.FC<Props> = ({ internalLinks, additionalLinks = [] }) => {
   return (
     <nav>
-      <Accordion title={internalLinks.title} isInitiallyOpen>
-        <ul
-          sx={{
-            variant: 'sideNav.internalLinkList'
-          }}
-        >
-          {internalLinks?.links?.map(({ text, url, isActive }) => {
-            return (
-              <li
-                key={url}
-                sx={{
-                  variant: `sideNav.internalLinkListItem.${
-                    isActive ? 'isActive' : 'base'
-                  }`
-                }}
-              >
-                <a href={url}>{text}</a>
-              </li>
-            )
-          })}
-        </ul>
-      </Accordion>
-      {additionalLinks.map(({ title, links = [] }, index) => (
-        <Accordion key={index} title={title}>
-          <ul sx={{ padding: 0, margin: 0 }}>
-            {links.map(({ text, url }, index) => (
-              <li key={index} sx={{ marginBottom: 0 }}>
-                <a
-                  href={url}
+      <Accordion.Group>
+        <Accordion title={internalLinks.title}>
+          <ul
+            sx={{
+              variant: 'sideNav.internalLinkList'
+            }}
+          >
+            {internalLinks?.links?.map(({ text, url, isActive }) => {
+              return (
+                <li
+                  key={url}
                   sx={{
-                    variant: 'sideNav.additionalLink'
+                    variant: `sideNav.internalLinkListItem.${
+                      isActive ? 'isActive' : 'base'
+                    }`
                   }}
                 >
-                  {text}
-                </a>
-              </li>
-            ))}
+                  <a href={url}>{text}</a>
+                </li>
+              )
+            })}
           </ul>
         </Accordion>
-      ))}
+        {additionalLinks.map(({ title, links = [] }, index) => (
+          <Accordion key={index} title={title}>
+            <ul sx={{ padding: 0, margin: 0 }}>
+              {links.map(({ text, url }, index) => (
+                <li key={index} sx={{ marginBottom: 0 }}>
+                  <a
+                    href={url}
+                    sx={{
+                      variant: 'sideNav.additionalLink'
+                    }}
+                  >
+                    {text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </Accordion>
+        ))}
+      </Accordion.Group>
     </nav>
   )
 }
