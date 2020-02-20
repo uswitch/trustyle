@@ -20,6 +20,7 @@ export const ExampleCards = () => {
       {/* single card */}
       <Card
         imgSrc="https://placekitten.com/200/200"
+        imgAlt="Picture of a cute kitten"
         title={title}
         content={content}
         linkHref="https://www.uswitch.com"
@@ -29,6 +30,7 @@ export const ExampleCards = () => {
       <div sx={{ display: 'flex', flexDirection: ['column', 'row'] }}>
         <Card
           imgSrc="https://placekitten.com/200/200"
+          imgAlt="Picture of a cute kitten"
           title={title}
           content={content}
           linkHref="https://www.uswitch.com"
@@ -36,6 +38,7 @@ export const ExampleCards = () => {
         />
         <Card
           imgSrc="https://placekitten.com/200/200"
+          imgAlt="Picture of a cute kitten"
           title={title}
           content={content}
           linkHref="https://www.uswitch.com"
@@ -43,6 +46,7 @@ export const ExampleCards = () => {
         />
         <Card
           imgSrc="https://placekitten.com/200/200"
+          imgAlt="Picture of a cute kitten"
           title={title}
           content={content}
           linkHref="https://www.uswitch.com"
@@ -50,6 +54,7 @@ export const ExampleCards = () => {
         />
         <Card
           imgSrc="https://placekitten.com/200/200"
+          imgAlt="Picture of a cute kitten"
           title={title}
           content={content}
           linkHref="https://www.uswitch.com"

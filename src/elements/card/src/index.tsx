@@ -5,6 +5,7 @@ import { jsx } from 'theme-ui'
 
 interface Props {
   imgSrc: string
+  imgAlt: string
   title: string
   content: string
   linkHref: string
@@ -13,6 +14,7 @@ interface Props {
 
 const Card: React.FC<Props> = ({
   imgSrc,
+  imgAlt,
   title,
   content,
   linkHref,
@@ -28,12 +30,13 @@ const Card: React.FC<Props> = ({
       maxWidth: '245px'
     }}
   >
-    <div
+    <img
       sx={{
-        backgroundImage: `url(${imgSrc})`,
-        backgroundSize: 'cover',
-        height: '150px'
+        maxHeight: '100%',
+        maxWidth: '100%'
       }}
+      alt={imgAlt}
+      src={imgSrc}
     />
     <div
       sx={{
