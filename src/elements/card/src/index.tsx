@@ -25,8 +25,10 @@ const Card: React.FC<Props> = ({
       display: 'flex',
       flexDirection: 'column',
       border: 'solid 1px #E5E5E5',
-      padding: '6px',
-      margin: '0 6px 6px 6px',
+      padding: 'xs',
+      marginTop: '0',
+      marginRight: 'xs',
+      marginBottom: 'xs',
       maxWidth: '245px'
     }}
   >
