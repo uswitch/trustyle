@@ -26,7 +26,7 @@ export const ExampleCards = () => {
       />
 
       {/* Multiple cards */}
-      <div sx={{ display: 'flex' }}>
+      <div sx={{ display: 'flex', flexDirection: ['column', 'row'] }}>
         <Card
           imgSrc="https://placekitten.com/200/200"
           title={title}
