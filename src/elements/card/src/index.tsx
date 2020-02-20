@@ -3,6 +3,8 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
+import { ImgixImage } from '../../imgix-image/src'
+
 interface Props {
   imgSrc: string
   imgAlt: string
@@ -32,14 +34,7 @@ const Card: React.FC<Props> = ({
       maxWidth: '245px'
     }}
   >
-    <img
-      sx={{
-        maxHeight: '100%',
-        maxWidth: '100%'
-      }}
-      alt={imgAlt}
-      src={imgSrc}
-    />
+    <ImgixImage alt={imgAlt} src={imgSrc} height="100%" width="auto" critical />
     <div
       sx={{
         padding: 'xs',

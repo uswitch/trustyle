@@ -15,11 +15,12 @@ export const ExampleCards = () => {
     'Content',
     'its a card with a picture of a really cute kitten'
   )
+  const img = 'https://placekitten.com/200/200?image=1'
   return (
     <div>
       {/* single card */}
       <Card
-        imgSrc="https://placekitten.com/200/200?image=1"
+        imgSrc={img}
         imgAlt="Picture of a cute kitten"
         title={title}
         description={content}
@@ -29,7 +30,7 @@ export const ExampleCards = () => {
       {/* Multiple cards */}
       <div sx={{ display: 'flex', flexDirection: ['column', 'row'] }}>
         <Card
-          imgSrc="https://placekitten.com/200/200?image=1"
+          imgSrc={img}
           imgAlt="Picture of a cute kitten"
           title={title}
           description={content}
@@ -37,7 +38,7 @@ export const ExampleCards = () => {
           linkText="read about cats"
         />
         <Card
-          imgSrc="https://placekitten.com/200/200?image=1"
+          imgSrc={img}
           imgAlt="Picture of a cute kitten"
           title={title}
           description={content}
@@ -45,7 +46,7 @@ export const ExampleCards = () => {
           linkText="read about dogs"
         />
         <Card
-          imgSrc="https://placekitten.com/200/200?image=1"
+          imgSrc={img}
           imgAlt="Picture of a cute kitten"
           title={title}
           description={content}
@@ -53,7 +54,7 @@ export const ExampleCards = () => {
           linkText="read about turtles"
         />
         <Card
-          imgSrc="https://placekitten.com/200/200?image=1"
+          imgSrc={img}
           imgAlt="Picture of a cute kitten"
           title={title}
           description={content}
