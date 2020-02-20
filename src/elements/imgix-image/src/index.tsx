@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import Imgix from 'react-imgix'
-import './react-imgix'
+import './react-imgix.d'
 import { css, jsx } from '@emotion/core'
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
   height?: number | string
   imgixParams?: object
   sizes?: any
-  src: URL
+  src: string
   width?: number | string
 }
 
