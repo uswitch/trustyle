@@ -23,10 +23,10 @@ pipeline:
     commands:
       - npx lerna run build
 
-  send-percy:
-    when:
-      event: [push]
-    image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
-    secrets: [percy_token]
-    commands:
-      - npm run snapshot
+  # send-percy:
+  #   when:
+  #     event: [push]
+  #   image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+  #   secrets: [percy_token]
+  #   commands:
+  #     - npm run snapshot
