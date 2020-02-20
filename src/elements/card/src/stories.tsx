@@ -22,7 +22,7 @@ export const ExampleCards = () => {
         imgSrc="https://placekitten.com/200/200"
         imgAlt="Picture of a cute kitten"
         title={title}
-        content={content}
+        description={content}
         linkHref="https://www.uswitch.com"
       />
 
@@ -32,7 +32,7 @@ export const ExampleCards = () => {
           imgSrc="https://placekitten.com/200/200"
           imgAlt="Picture of a cute kitten"
           title={title}
-          content={content}
+          description={content}
           linkHref="https://www.uswitch.com"
           linkText="read about cats"
         />
@@ -40,7 +40,7 @@ export const ExampleCards = () => {
           imgSrc="https://placekitten.com/200/200"
           imgAlt="Picture of a cute kitten"
           title={title}
-          content={content}
+          description={content}
           linkHref="https://www.uswitch.com"
           linkText="read about dogs"
         />
@@ -48,7 +48,7 @@ export const ExampleCards = () => {
           imgSrc="https://placekitten.com/200/200"
           imgAlt="Picture of a cute kitten"
           title={title}
-          content={content}
+          description={content}
           linkHref="https://www.uswitch.com"
           linkText="read about turtles"
         />
@@ -56,7 +56,7 @@ export const ExampleCards = () => {
           imgSrc="https://placekitten.com/200/200"
           imgAlt="Picture of a cute kitten"
           title={title}
-          content={content}
+          description={content}
           linkHref="https://www.uswitch.com"
         />
       </div>
