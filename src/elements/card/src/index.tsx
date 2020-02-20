@@ -42,7 +42,7 @@ const Card: React.FC<Props> = ({
     />
     <div
       sx={{
-        padding: '8px',
+        padding: 'xs',
         display: 'flex',
         flexDirection: 'column',
         overflow: 'hidden'
