@@ -7,7 +7,7 @@ interface Props {
   imgSrc: string
   imgAlt: string
   title: string
-  content: string
+  description: string
   linkHref: string
   linkText?: string
 }
@@ -16,7 +16,7 @@ const Card: React.FC<Props> = ({
   imgSrc,
   imgAlt,
   title,
-  content,
+  description,
   linkHref,
   linkText = 'Read more'
 }) => (
@@ -47,7 +47,7 @@ const Card: React.FC<Props> = ({
       }}
     >
       <h3 sx={{ margin: '0' }}>{title}</h3>
-      <p>{content}</p>
+      <p>{description}</p>
       <a href={linkHref}>{linkText}</a>
     </div>
   </div>
