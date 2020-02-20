@@ -17,7 +17,7 @@ export default () => {
   const theme = select(
     'Trustyle Theme',
     Object.keys(themes),
-    Object.keys(themes)[0]
+    './uswitch/theme.json'
   )
 
   return themes[theme]

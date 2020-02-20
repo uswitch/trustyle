@@ -12,6 +12,12 @@ export default {
 const crumbs = [
   {
     fields: {
+      path: '/',
+      displayText: 'Home'
+    }
+  },
+  {
+    fields: {
       path: '/gas-electricity/',
       displayText: 'Gas & Electricity'
     }

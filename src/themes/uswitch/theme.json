@@ -228,12 +228,14 @@
         "color": "black"
       }
     },
-    "isActive": {
-      "button": {
-        "variant": "accordion.base.button"
-      },
-      "caret": {
-        "variant": "accordion.base.caret"
+    "variants": {
+      "isActive": {
+        "button": {
+          "variant": "accordion.base.button"
+        },
+        "caret": {
+          "variant": "accordion.base.caret"
+        }
       }
     }
   },
@@ -610,6 +612,38 @@
     }
   },
 
+  "input": {
+    "radio": {
+      "base": {
+        "&:checked + span": {
+          "borderColor": "black",
+          "color": "black",
+          "&::before": {
+            "backgroundColor": "black",
+            "borderColor": "black",
+            "boxShadow": "inset 0 0 0 2px #fff"
+          }
+        },
+        "&:focus + span": {
+          "borderColor": "black"
+        }
+      },
+      "label": {
+        "borderColor": "black",
+        "borderStyle": "solid",
+        "borderWidth": "2px",
+        "color": "grey-80",
+        "fontWeight": "normal",
+        "&:before": {
+          "borderColor": "black",
+          "borderRadius": "50%",
+          "borderStyle": "solid",
+          "borderWidth": "2px"
+        }
+      }
+    }
+  },
+
   "pagination": {
     "arrow": {
       "color": "#84A6FF"
@@ -700,6 +734,7 @@
 
     "a": {
       "color": "inherit",
+      "fontWeight": 500,
       "stroke": "currentColor",
       "textDecoration": "underline",
       "transition": "oapcity 0.2s ease",
@@ -729,6 +764,35 @@
         "::after": {
           "content": "\"“\""
         }
+      }
+    },
+
+    "table": {
+      "borderSpacing": 0,
+      "width": "100%",
+      "borderStyle": "solid",
+      "borderColor": "grey-20",
+      "borderWidth": "1px",
+      "borderRadius": "3px",
+      "marginBottom": "base"
+    },
+
+    "th": {
+      "margin": 0,
+      "padding": "16px",
+      "fontSize": "xs",
+      "textAlign": "left"
+    },
+
+    "td": {
+      "margin": 0,
+      "padding": "16px",
+      "fontSize": "xs"
+    },
+
+    "tr": {
+      ":nth-child(even)": {
+        "backgroundColor": "grey-05"
       }
     }
   }

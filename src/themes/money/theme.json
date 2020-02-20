@@ -95,7 +95,7 @@
         "4": 280
       }
     },
-    "hero": { "width": 1280 },
+    "hero": { "width": 1024 },
     "label": { "width": 280 },
     "input": { "height": 58 },
     "button": { "width": 264 },
@@ -353,16 +353,16 @@
   "container": {
     "sm": { "px": 20 },
     "md": { "px": 72 },
-    "lg": { "maxWidth": 1280, "mx": "auto", "px": "md" },
+    "lg": { "maxWidth": 1024, "mx": "auto", "px": "md" },
     "content": {
-      "maxWidth": 1280,
+      "maxWidth": 1024,
       "mx": "auto",
       "px": "md",
       "contentStyle": {
         "width": ["100%", "grid.lg.8"]
       }
     },
-    "hero": { "maxWidth": 1280, "mx": "auto", "px": 60 }
+    "hero": { "maxWidth": 1024, "mx": "auto", "px": 60 }
   },
 
   "hero": {
@@ -383,7 +383,7 @@
     "lg": {
       "display": "flex",
       "justifyContent": "space-between",
-      "width": 1280,
+      "width": 1024,
       "px": 158,
       "mx": "auto"
     },
@@ -597,6 +597,38 @@
     }
   },
 
+  "input": {
+    "radio": {
+      "base": {
+        "&:checked + span": {
+          "borderColor": "black",
+          "color": "black",
+          "&::before": {
+            "backgroundColor": "black",
+            "borderColor": "black",
+            "boxShadow": "inset 0 0 0 2px #fff"
+          }
+        },
+        "&:focus + span": {
+          "borderColor": "black"
+        }
+      },
+      "label": {
+        "borderColor": "black",
+        "borderStyle": "solid",
+        "borderWidth": "2px",
+        "color": "grey-80",
+        "fontWeight": "normal",
+        "&:before": {
+          "borderColor": "black",
+          "borderRadius": "50%",
+          "borderStyle": "solid",
+          "borderWidth": "2px"
+        }
+      }
+    }
+  },
+
   "pagination": {
     "arrow": {
       "color": "grey-100"
@@ -639,40 +671,57 @@
   },
 
   "styles": {
-    "h1": {
+    "heading": {
       "fontFamily": "heading",
-      "fontSize": "xxxl",
+      "color": "plum",
       "lineHeight": "heading",
       "fontWeight": "base",
-      "marginY": "md"
+      "marginTop": 0,
+      "marginBottom": 0
+    },
+
+    "h1": {
+      "variant": "styles.heading",
+      "fontSize": "xxxl",
+      "paddingTop": "xl",
+      "paddingBottom": "sm"
     },
 
     "h2": {
-      "variant": "styles.h1",
-      "fontSize": "xxl"
+      "variant": "styles.heading",
+      "fontSize": "xxl",
+      "paddingTop": "sm",
+      "paddingBottom": "sm"
     },
 
     "h3": {
-      "variant": "styles.h1",
-      "fontSize": "xl"
+      "variant": "styles.heading",
+      "fontSize": "xl",
+      "paddingTop": "sm",
+      "paddingBottom": "sm"
     },
 
     "h4": {
-      "variant": "styles.h1",
+      "variant": "styles.heading",
       "fontSize": "lg",
-      "marginY": "sm"
+      "paddingBottom": "sm"
     },
 
     "h5": {
-      "variant": "styles.h1",
+      "variant": "styles.heading",
       "fontSize": "md",
-      "marginY": "sm"
+      "paddingBottom": "sm"
     },
 
     "h6": {
-      "variant": "styles.h1",
+      "variant": "styles.heading",
       "fontSize": "sm",
-      "marginY": "sm"
+      "paddingBottom": "sm"
+    },
+
+    "p": {
+      "marginTop": 0,
+      "marginBottom": "base"
     },
 
     "root": {
@@ -689,6 +738,14 @@
       "textDecoration": "underline",
       "transition": "opacity 0.2s ease",
       ":hover": { "opacity": 0.8 }
+    },
+
+    "li": {
+      "marginBottom": 0,
+      "paddingBottom": "sm",
+      "p": {
+        "marginBottom": 0
+      }
     },
 
     "blockquote": {
@@ -713,6 +770,34 @@
         "::after": {
           "content": "\"“\""
         }
+      }
+    },
+
+    "table": {
+      "borderSpacing": 0,
+      "width": "100%",
+      "borderStyle": "solid",
+      "borderColor": "grey-20",
+      "borderWidth": "1px",
+      "borderRadius": "3px",
+      "marginBottom": "base"
+    },
+
+    "th": {
+      "margin": 0,
+      "padding": "16px",
+      "fontSize": "sm"
+    },
+
+    "td": {
+      "margin": 0,
+      "padding": "16px",
+      "fontSize": "xs"
+    },
+
+    "tr": {
+      ":nth-child(even)": {
+        "backgroundColor": "grey-05"
       }
     }
   }
