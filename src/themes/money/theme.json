@@ -670,53 +670,58 @@
     }
   },
 
+  "author": {
+    "heading": {
+      "color": "inherit"
+    }
+  },
+
   "styles": {
     "heading": {
       "fontFamily": "heading",
       "color": "plum",
       "lineHeight": "heading",
-      "fontWeight": "base",
-      "marginTop": 0,
-      "marginBottom": 0
+      "fontWeight": "base"
     },
 
     "h1": {
       "variant": "styles.heading",
       "fontSize": "xxxl",
-      "paddingTop": "xl",
-      "paddingBottom": "sm"
+      "marginTop": "xl",
+      "marginBottom": "sm"
     },
 
     "h2": {
       "variant": "styles.heading",
       "fontSize": "xxl",
-      "paddingTop": "sm",
-      "paddingBottom": "sm"
+      "marginY": "sm"
     },
 
     "h3": {
       "variant": "styles.heading",
       "fontSize": "xl",
-      "paddingTop": "sm",
-      "paddingBottom": "sm"
+      "marginY": "sm"
     },
 
     "h4": {
       "variant": "styles.heading",
       "fontSize": "lg",
-      "paddingBottom": "sm"
+      "marginTop": 0,
+      "marginBottom": "sm"
     },
 
     "h5": {
       "variant": "styles.heading",
       "fontSize": "md",
-      "paddingBottom": "sm"
+      "marginTop": 0,
+      "marginBottom": "sm"
     },
 
     "h6": {
       "variant": "styles.heading",
       "fontSize": "sm",
-      "paddingBottom": "sm"
+      "marginTop": 0,
+      "marginBottom": "sm"
     },
 
     "p": {
