@@ -16,6 +16,6 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.imgix-image": "^0.1.25"
+    "@uswitch/trustyle.imgix-image": "^0.1.26"
   }
 }

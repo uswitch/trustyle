@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, useThemeUI } from 'theme-ui'
 
 import { ImgixImage } from '../../imgix-image/src'
 
@@ -21,33 +21,43 @@ const Card: React.FC<Props> = ({
   description,
   linkHref,
   linkText = 'Read more'
-}) => (
-  <div
-    sx={{
-      display: 'flex',
-      flexDirection: 'column',
-      border: 'solid 1px #E5E5E5',
-      padding: 'xs',
-      marginTop: '0',
-      marginRight: 'xs',
-      marginBottom: 'xs',
-      maxWidth: '245px'
-    }}
-  >
-    <ImgixImage alt={imgAlt} src={imgSrc} height="100%" width="auto" critical />
+}) => {
+  const { theme }: any = useThemeUI()
+
+  return (
     <div
       sx={{
-        padding: 'xs',
         display: 'flex',
-        flexDirection: 'column',
-        overflow: 'hidden'
+        flexDirection: theme.card.flexDirection ? ['column', 'row'] : 'column',
+        border: theme.card.flexDirection ? 'none' : 'solid 1px #E5E5E5',
+        padding: theme.card.flexDirection ? '0' : 'xs',
+        marginTop: '0',
+        marginRight: 'xs',
+        marginBottom: 'xs',
+        maxWidth: theme.card.flexDirection ? ['245px', '450px'] : '245px'
       }}
     >
-      <h3 sx={{ margin: '0' }}>{title}</h3>
-      <p>{description}</p>
-      <a href={linkHref}>{linkText}</a>
+      <ImgixImage
+        alt={imgAlt}
+        src={imgSrc}
+        height="100%"
+        width="auto"
+        critical
+        sx={{ color: 'pink' }}
+      />
+      <div
+        sx={{
+          padding: 'xs',
+          display: 'flex',
+          flexDirection: 'column'
+        }}
+      >
+        <h3 sx={{ margin: '0' }}>{title}</h3>
+        <p>{description}</p>
+        <a href={linkHref}>{linkText}</a>
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default Card
