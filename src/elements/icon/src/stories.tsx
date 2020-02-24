@@ -2,7 +2,7 @@ import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { number, select } from '@storybook/addon-knobs'
 
-import { colors } from '../../../styles'
+import themeSelector from '../../../utils/theme-selector'
 
 import { Direction, Glyph, Icon } from './'
 
@@ -25,12 +25,16 @@ const directionChoices: Direction[] = ['up', 'down', 'right', 'left']
 
 storiesOf('Elements|Icon', module).add(
   'With selectable glyph and color',
-  () => (
-    <Icon
-      glyph={select('glyph', glyphChoices, 'arrow')}
-      color={select('color', colors, colors.battleshipGrey)}
-      direction={select('direction', directionChoices, 'up')}
-      size={number('Size', 0)}
-    />
-  )
+  () => {
+    const theme = themeSelector()
+
+    return (
+      <Icon
+        glyph={select('glyph', glyphChoices, 'arrow')}
+        color={select('color', theme.colors, 'link')}
+        direction={select('direction', directionChoices, 'up')}
+        size={number('Size', 0)}
+      />
+    )
+  }
 )
