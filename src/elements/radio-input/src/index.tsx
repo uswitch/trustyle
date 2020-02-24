@@ -12,6 +12,7 @@ export const RadioInput: React.FC<Props> = ({ label, ...inputProps }) => (
   <label sx={{ display: 'block' }}>
     <input
       sx={{
+        marginLeft: '-9000px',
         appearance: 'none',
         position: 'absolute',
         '&:checked + span': {
