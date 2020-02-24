@@ -151,6 +151,8 @@
     "grey-05": "#F3F3F4",
     "white": "#FFFFFF",
 
+    "frozen-bg": "#f6f6f6",
+
     "progress-bg": "#E6F4FD",
     "progress-primary": "#A1E7FE",
     "progress-label": "#002396"
@@ -613,6 +615,10 @@
   },
 
   "input": {
+    "frozen": {
+      "backgroundColor": "frozen-bg",
+      "borderRadius": "3px"
+    },
     "radio": {
       "base": {
         "&:checked + span": {
