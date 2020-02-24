@@ -228,7 +228,8 @@
     },
     "internalLinkListItem": {
       "base": {
-        "padding": "8px 0 8px 35px",
+        "padding": "8px 0 0 35px",
+        "paddingBottom": 0,
         "mb": 0,
         "position": "relative",
         "::after": {
@@ -676,7 +677,7 @@
 
   "author": {
     "heading": {
-      "color": "inherit"
+      "color": "grey-80"
     }
   },
 

@@ -57,6 +57,7 @@ const Author: React.FC<Props> = ({
             marginTop: 0,
             marginBottom: 'xxs',
             fontWeight: 'bold',
+            paddingBottom: 0,
             variant: 'author.heading'
           }}
           as="h3"
