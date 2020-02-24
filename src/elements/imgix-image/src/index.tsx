@@ -1,18 +1,12 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import Imgix from 'react-imgix'
-import './react-imgix.d'
+import Imgix, { SharedImigixAndSourceProps } from 'react-imgix'
 import { css, jsx } from '@emotion/core'
 
-interface Props {
+interface Props extends SharedImigixAndSourceProps {
   alt?: string
   critical?: boolean
-  height?: number | string
-  imgixParams?: object
-  sizes?: any
-  src: string
-  width?: number | string
 }
 
 const Image: React.FC<Props> = ({
@@ -39,11 +33,13 @@ const Image: React.FC<Props> = ({
     <Imgix
       htmlAttributes={{ alt }}
       attributeConfig={
-        !critical && {
-          src: 'data-src',
-          srcSet: 'data-srcset',
-          sizes: 'data-sizes'
-        }
+        !critical
+          ? {
+              src: 'data-src',
+              srcSet: 'data-srcset',
+              sizes: 'data-sizes'
+            }
+          : undefined
       }
       className={!critical ? 'lazyload' : ''}
       src={src}

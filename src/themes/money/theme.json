@@ -765,14 +765,6 @@
       ":hover": { "opacity": 0.8 }
     },
 
-    "li": {
-      "marginBottom": 0,
-      "paddingBottom": "sm",
-      "p": {
-        "marginBottom": 0
-      }
-    },
-
     "blockquote": {
       "backgroundColor": "grey-10",
       "paddingX": "md",
