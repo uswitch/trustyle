@@ -2,8 +2,7 @@
 
 import * as React from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
-
-import { ImgixImage } from '../../imgix-image/src'
+import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 
 interface Props {
   imgSrc: string
