@@ -28,7 +28,8 @@ const Card: React.FC<Props> = ({
       sx={{
         display: 'flex',
         flexDirection: theme.card.flexDirection ? ['column', 'row'] : 'column',
-        border: theme.card.flexDirection ? 'none' : 'solid 1px #E5E5E5',
+        border: theme.card.flexDirection ? 'none' : 'solid 1px',
+        borderColor: 'grey-20',
         padding: theme.card.flexDirection ? '0' : 'xs',
         marginTop: '0',
         marginRight: 'xs',
