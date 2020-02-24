@@ -28,7 +28,13 @@ export const ExampleCards = () => {
       />
 
       {/* Multiple cards */}
-      <div sx={{ display: 'flex', flexDirection: ['column', 'row'] }}>
+      <div
+        sx={{
+          display: 'flex',
+          flexDirection: ['column', 'row'],
+          flexWrap: 'wrap'
+        }}
+      >
         <Card
           imgSrc={img}
           imgAlt="Picture of a cute kitten"
