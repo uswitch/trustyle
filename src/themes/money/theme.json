@@ -9,7 +9,8 @@
   },
 
   "shadows": {
-    "box": "2px 2px 25px #0004"
+    "box": "2px 2px 25px #0004",
+    "linkInset": "inset 0 0 0 1px #008fe9"
   },
 
   "fonts": {
@@ -629,6 +630,21 @@
           "borderStyle": "solid",
           "borderWidth": "2px"
         }
+      }
+    },
+    "tile": {
+      "inputColor": "#008fe9",
+      "borderColor": "#b0b8bf",
+      "borderRadius": "3px",
+      "borderStyle": "solid",
+      "borderWidth": "1px",
+      "color": "slate-grey",
+      "fontWeight": "normal",
+      "before": {
+        "content": "' '",
+        "borderColor": "#b0b8bf",
+        "borderStyle": "solid",
+        "borderWidth": "2px"
       }
     }
   },
