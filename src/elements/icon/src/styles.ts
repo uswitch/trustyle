@@ -1,29 +1,27 @@
-import { css, SerializedStyles } from '@emotion/core'
 import { pxToRem } from '@uswitch/trustyle.styles'
+import { SxStyleProp } from 'theme-ui'
 
 import { Direction } from '.'
 
-export const icon: SerializedStyles = css({
-  display: 'block'
-})
+export const icon = { display: 'block' }
 
-export const rotate = (direction: Direction): SerializedStyles => {
+export const rotate = (direction: Direction): SxStyleProp => {
   switch (direction) {
     case 'right':
-      return css({ transform: 'rotate(0.25turn)' })
+      return { transform: 'rotate(0.25turn)' }
     case 'down':
-      return css({ transform: 'rotate(0.5turn)' })
+      return { transform: 'rotate(0.5turn)' }
     case 'left':
-      return css({ transform: 'rotate(0.75turn)' })
+      return { transform: 'rotate(0.75turn)' }
     default:
-      return css({})
+      return {}
   }
 }
 
-export const size = (size: number | undefined): SerializedStyles =>
+export const size = (size: number | undefined): SxStyleProp =>
   size
-    ? css({
+    ? {
         height: pxToRem(size),
         width: pxToRem(size)
-      })
-    : css({})
+      }
+    : {}

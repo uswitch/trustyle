@@ -598,6 +598,10 @@
   },
 
   "input": {
+    "frozen": {
+      "backgroundColor": "grey-10",
+      "borderRadius": "3px"
+    },
     "radio": {
       "base": {
         "&:checked + span": {
