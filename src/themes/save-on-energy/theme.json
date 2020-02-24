@@ -183,6 +183,9 @@
         "width": 278,
         "height": 230
       }
+    },
+    "flexDirection" : {
+        "flexDirection": "row"
     }
   },
 
