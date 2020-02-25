@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.breadcrumbs",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
