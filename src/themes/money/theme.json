@@ -229,7 +229,8 @@
     },
     "internalLinkListItem": {
       "base": {
-        "padding": "8px 0 8px 35px",
+        "padding": "8px 0 0 35px",
+        "paddingBottom": 0,
         "mb": 0,
         "position": "relative",
         "::after": {
@@ -354,7 +355,8 @@
   "container": {
     "sm": { "px": 20 },
     "md": { "px": 72 },
-    "lg": { "maxWidth": 1024, "mx": "auto", "px": "md" },
+    "article": { "maxWidth": 1024, "mx": "auto", "px": "md" },
+    "lg": { "maxWidth": 1154, "mx": "auto", "px": "md" },
     "content": {
       "maxWidth": 1024,
       "mx": "auto",
@@ -692,7 +694,7 @@
 
   "author": {
     "heading": {
-      "color": "inherit"
+      "color": "grey-80"
     }
   },
 
@@ -714,7 +716,8 @@
     "h2": {
       "variant": "styles.heading",
       "fontSize": "xxl",
-      "marginY": "sm"
+      "marginTop": "md",
+      "marginBottom": "sm"
     },
 
     "h3": {
