@@ -699,7 +699,8 @@
     "h2": {
       "variant": "styles.heading",
       "fontSize": "xxl",
-      "marginY": "sm"
+      "marginTop": "md",
+      "marginBottom": "sm"
     },
 
     "h3": {
