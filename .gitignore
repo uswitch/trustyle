@@ -6,3 +6,6 @@ lerna-debug.log
 ## Output
 src/**/lib
 storybook-static/
+
+# System files
+**/.DS_Store
