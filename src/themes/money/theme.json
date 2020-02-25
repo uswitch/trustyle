@@ -355,7 +355,8 @@
   "container": {
     "sm": { "px": 20 },
     "md": { "px": 72 },
-    "lg": { "maxWidth": 1024, "mx": "auto", "px": "md" },
+    "article": { "maxWidth": 1024, "mx": "auto", "px": "md" },
+    "lg": { "maxWidth": 1154, "mx": "auto", "px": "md" },
     "content": {
       "maxWidth": 1024,
       "mx": "auto",
