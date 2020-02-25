@@ -161,7 +161,7 @@ const Breadcrumbs: React.FC<Props> = ({
   }
 
   return (
-    <React.Fragment>
+    <div sx={{ variant: 'breadcrumbs.wrapper' }}>
       <div sx={{ display: ['block', 'none'] }}>
         <MobileBreadcrumbs
           crumbs={crumbs}
@@ -177,7 +177,7 @@ const Breadcrumbs: React.FC<Props> = ({
           customHomeIcon={customHomeIcon}
         />
       </div>
-    </React.Fragment>
+    </div>
   )
 }
 

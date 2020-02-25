@@ -686,6 +686,9 @@
   },
 
   "breadcrumbs": {
+    "wrapper": {
+      "py": "xs"
+    },
     "main": {
       "color": "uswitch-navy"
     },
