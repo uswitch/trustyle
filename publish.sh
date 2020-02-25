@@ -10,20 +10,14 @@
 # annotated tags or lerna will think every package has always been updated:
 # https://github.com/lerna/lerna/issues/1357#issuecomment-438162152
 
-git checkout master
-git pull origin --rebase
-git pull --tags
+git pull origin master --tags
 npx lerna exec npm install
 npx lerna bootstrap
 npx lerna run build
 
-v=$(git rev-parse --short HEAD)
-publish_branch=publish_$v
+publish_branch=$(git rev-parse --abbrev-ref HEAD)
 
-git checkout -B $publish_branch
-git push origin $publish_branch
-
-npx lerna publish --no-push
+npx lerna version --no-push
 
 tags=$(git tag --points-at HEAD)
 message=$(git log -1 HEAD --pretty=%B)
