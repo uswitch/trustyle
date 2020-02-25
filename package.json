@@ -88,5 +88,8 @@
       "prettier --write",
       "eslint --fix"
     ]
+  },
+  "dependencies": {
+    "@types/react-imgix": "^9.0.2"
   }
 }
