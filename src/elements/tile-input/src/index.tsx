@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx } from '@emotion/core'
+import { jsx } from 'theme-ui'
 
 import * as st from './styles'
 
@@ -19,11 +19,11 @@ export const TileInput: React.FC<Props> = ({
   ...inputProps
 }) => (
   <label>
-    <input css={st.input(type)} type={type} {...inputProps} />
-    <span css={st.container(type)}>
-      <span css={st.content}>
+    <input sx={st.input(type)} type={type} {...inputProps} />
+    <span sx={st.container(type)}>
+      <span sx={st.content}>
         <span />
-        <span css={st.childrenWrapper}>{children}</span>
+        <span sx={st.childrenWrapper}>{children}</span>
         {label}
       </span>
     </span>

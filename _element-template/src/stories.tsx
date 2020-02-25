@@ -10,6 +10,6 @@ export default {
 }
 
 export const ExampleWithKnobs = () => {
-  const someText = text('Some text', 'example')
+  const someText: string = text('Some text', 'example')
   return <MyComponent someText={someText} />
 }

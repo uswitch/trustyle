@@ -34,16 +34,17 @@ const Card: React.FC<Props> = ({
         marginTop: '0',
         marginRight: 'xs',
         marginBottom: 'xs',
-        maxWidth: theme.card.flexDirection ? ['245px', '450px'] : '245px'
+        '> img': {
+          height: 'auto',
+          width: '100%'
+        }
       }}
     >
       <ImgixImage
         alt={imgAlt}
         src={imgSrc}
-        height="100%"
-        width="auto"
+        imgixParams={{ fit: 'crop', crop: 'edges', ar: '16:9' }}
         critical
-        sx={{ color: 'pink' }}
       />
       <div
         sx={{

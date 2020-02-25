@@ -10,7 +10,7 @@
 
   "shadows": {
     "box": "2px 2px 25px #0004",
-    "linkInset": "inset 0 0 0 1px #008fe9"
+    "linkInset": "inset 0 0 0 1px #141424"
   },
 
   "fonts": {
@@ -652,6 +652,20 @@
           "borderStyle": "solid",
           "borderWidth": "2px"
         }
+      }
+    },
+    "tile": {
+      "inputColor": "#141424",
+      "borderColor": "light-grey-blue",
+      "borderStyle": "solid",
+      "borderWidth": "2px",
+      "color": "slate-grey",
+      "fontWeight": "normal",
+      "before": {
+        "content": "' '",
+        "borderColor": "light-grey-blue",
+        "borderStyle": "solid",
+        "borderWidth": "2px"
       }
     }
   },

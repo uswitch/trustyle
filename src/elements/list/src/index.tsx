@@ -13,7 +13,9 @@ export const List: React.FC<ListProps> = ({
   ...props
 }) => {
   const sx: any = {
-    listStyle: 'none'
+    listStyle: 'none',
+    paddingLeft: 'sm',
+    marginY: 'sm'
   }
 
   const childrenWithProps = React.Children.map(
@@ -46,10 +48,10 @@ export const ListItem: React.FC<ListItemProps> = ({
   const { theme }: any = useThemeUI()
 
   const sx: any = {
-    marginBottom: '20px',
+    marginBottom: 'sm',
     counterIncrement: 'li',
     position: 'relative',
-    paddingLeft: '20px',
+    paddingLeft: 'sm',
     '::before': {
       position: 'absolute',
       left: '0px'
