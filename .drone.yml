@@ -5,7 +5,7 @@ pipeline:
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
     commands:
       - npm install
-      - npx lerna bootstrap
+      - npx lerna bootstrap --no-ci
 
   code_checks:
     when:
