@@ -26,7 +26,7 @@ export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   width?: Width
 }
 
-// On Android, there is a behaviour where the keyboard may sometimes open ON TOP of a focused input.
+// On Android, there's a behaviour where the keyboard may sometimes open ON TOP of a focused input.
 // This effect fixes the problem by calling scrollIntoView on a window resize event - this event
 // is fired when the keyboard opens and pushes up the viewport.
 //
