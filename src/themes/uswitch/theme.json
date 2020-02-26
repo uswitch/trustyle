@@ -461,6 +461,12 @@
     }
   },
 
+  "author": {
+    "heading": {
+      "color": "grey-80"
+    }
+  },
+
   "callOut": {
     "main": {
       "backgroundColor": "grey-05"
@@ -694,6 +700,9 @@
   },
 
   "breadcrumbs": {
+    "wrapper": {
+      "py": "xs"
+    },
     "main": {
       "color": "uswitch-navy"
     },

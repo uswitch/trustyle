@@ -57,9 +57,10 @@ const Author: React.FC<Props> = ({
             marginTop: 0,
             marginBottom: 'xxs',
             fontWeight: 'bold',
+            paddingBottom: 0,
             variant: 'author.heading'
           }}
-          as="h3"
+          as="h2"
         >
           Written by {name}, {role}
         </Styled.h6>
@@ -70,7 +71,8 @@ const Author: React.FC<Props> = ({
             variant: 'author.text'
           }}
         >
-          {editorName && `Edited by ${editorName}, ${editorRole}, `}
+          {editorName &&
+            `Edited by ${editorName}${editorRole ? `, ${editorRole}` : ''}, `}
           {dayjs(date).format('LL')}
         </Styled.p>
       </div>
