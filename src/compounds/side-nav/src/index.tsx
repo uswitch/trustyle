@@ -50,7 +50,7 @@ const SideNav: React.FC<Props> = ({ internalLinks, additionalLinks = [] }) => {
           <Accordion key={index} title={title}>
             <ul sx={{ padding: 0, margin: 0 }}>
               {links.map(({ text, url }, index) => (
-                <li key={index} sx={{ marginBottom: 0 }}>
+                <li key={index} sx={{ marginBottom: 0, paddingBottom: 0 }}>
                   <a
                     href={url}
                     sx={{
