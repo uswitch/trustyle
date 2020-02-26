@@ -121,7 +121,7 @@
     "grey-30": "#C2C4C8",
     "grey-40": "#ADAFB3",
     "grey-50": "#A0A2A6",
-    "grey-60": "#6F7175",
+    "grey-60": "#6D6F73",
     "grey-70": "#393B3F",
     "grey-80": "#24262A",
     "grey-90": "#111317",
@@ -695,6 +695,11 @@
   "author": {
     "heading": {
       "color": "grey-80"
+    },
+    "link": {
+      ":hover": {
+        "color": "plum"
+      }
     }
   },
 
