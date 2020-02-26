@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.imgix-image",
-  "version": "0.1.27",
+  "version": "0.1.29",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -20,6 +20,7 @@
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
+    "@types/react-imgix": "^9.0.2",
     "react": "^16.7.0"
   }
 }
