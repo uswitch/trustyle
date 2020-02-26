@@ -24,7 +24,8 @@ const Card: React.FC<Props> = ({
   const { theme }: any = useThemeUI()
 
   return (
-    <div
+    <a
+      href={linkHref}
       sx={{
         display: 'flex',
         flexDirection: theme.card.flexDirection ? ['column', 'row'] : 'column',
@@ -37,7 +38,9 @@ const Card: React.FC<Props> = ({
         '> img': {
           height: 'auto',
           width: '100%'
-        }
+        },
+        textDecoration: 'none',
+        cursor: 'pointer'
       }}
     >
       <ImgixImage
@@ -55,9 +58,9 @@ const Card: React.FC<Props> = ({
       >
         <h3 sx={{ margin: '0' }}>{title}</h3>
         <p>{description}</p>
-        <a href={linkHref}>{linkText}</a>
+        <p sx={{ textDecoration: 'underline' }}>{linkText}</p>
       </div>
-    </div>
+    </a>
   )
 }
 
