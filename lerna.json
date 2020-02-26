@@ -11,7 +11,8 @@
   "version": "independent",
   "ignoreChanges": [
     "**/package-lock.json",
-    "**/*.stories.tsx"
+    "**/*.stories.tsx",
+    "**/.npmrc"
   ],
   "command": {
     "changed": {
