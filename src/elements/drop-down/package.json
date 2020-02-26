@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.drop-down",
-  "version": "0.4.58",
+  "version": "0.4.59",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
