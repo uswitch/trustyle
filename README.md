@@ -17,6 +17,7 @@ To add a new element, copy the template to the src/elements directory, update th
 - Generate column sizes based on number of columns and gutter widths.
 
 ## Publishing
-All changes should first be merged into the master branch. When you are ready to publish the master branch, run the `./publish.sh` script. When finished publishing, raise a PR to merge the new version numbers into master.
-
 To preview which packages have changed, you can run `npx lerna changed` without publishing.
+
+Once happy with the code changes, run `npx lerna version` and bump the versions accordingly.
+Lerna will generate a publish commit. Push that commit to your remote branch and once it gets merged to master, CI will publish the new versions to `npm`.
