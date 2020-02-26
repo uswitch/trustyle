@@ -6,17 +6,22 @@ interface Props {
   checked: boolean
   onChange?: (e: React.SyntheticEvent) => void
   icons?: {
-    checked: any
-    unchecked: any
+    checked: React.ReactNode
+    unchecked: React.ReactNode
   }
 }
 
-const ToggleSwitch: React.FC<Props> = ({ checked, onChange, icons }) => (
-  <div>
+const ToggleSwitch: React.FC<Props> = ({
+  checked,
+  onChange,
+  icons,
+  ...props
+}) => (
+  <div sx={{ display: 'inline-block' }}>
     <input
-      type="checkbox"
       checked={checked}
       onChange={onChange}
+      {...props}
       sx={{
         position: 'absolute',
         width: 1,
@@ -27,6 +32,7 @@ const ToggleSwitch: React.FC<Props> = ({ checked, onChange, icons }) => (
         clip: 'rect(0, 0, 0, 0)',
         border: 0
       }}
+      type="checkbox"
     />
     <div
       sx={{
@@ -39,7 +45,8 @@ const ToggleSwitch: React.FC<Props> = ({ checked, onChange, icons }) => (
         transition: 'background-color 400ms, border-color 400ms',
         variant: `toggleSwitch.${checked ? 'checked' : 'unchecked'}`
       }}
-      role="presentation"
+      role="checkbox"
+      aria-checked={checked}
       onClick={onChange}
     >
       <div
