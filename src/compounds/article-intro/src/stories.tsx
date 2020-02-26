@@ -19,8 +19,10 @@ export const ExampleWithKnobs = () => {
 
   const name = text('Author name', 'Salman')
   const role = text('Author role', 'Job title')
+  const authorUrl = text('Author url', 'https://www.jonathanfielding.com')
   const editorName = text('Editor name', 'Sarah Guershon')
   const editorRole = text('Editor role', 'Job title')
+  const editorUrl = text('Editor url', 'https://www.jonathanfielding.com')
   const image = (
     <img src="https://placekitten.com/200/200?image=9" alt="Salman" />
   )
@@ -30,8 +32,10 @@ export const ExampleWithKnobs = () => {
     <Author
       name={name}
       role={role}
+      authorUrl={authorUrl}
       editorName={editorName}
       editorRole={editorRole}
+      editorUrl={editorUrl}
       authorImage={image}
       date={updatedDate}
     />
