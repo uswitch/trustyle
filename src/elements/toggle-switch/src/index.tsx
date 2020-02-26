@@ -5,63 +5,62 @@ import { jsx } from 'theme-ui'
 interface Props {
   checked: boolean
   onChange?: (e: React.SyntheticEvent) => void
+  icons?: {
+    checked: any
+    unchecked: any
+  }
 }
 
-const ToggleSwitch: React.FC<Props> = ({ checked, onChange }) => {
-  const outerStyling = {
-    checked: {
-      backgroundColor: 'black',
-      variant: 'toggleSwitch.outer.variant.checked'
-    },
-    unchecked: {
-      backgroundColor: 'grey', // default value, override in theme
-      variant: 'toggleSwitch.outer.variant.unchecked'
-    }
-  }
-
-  const innerStyling = {
-    checked: {
-      transform: 'translateX(40px)',
-      variant: 'toggleSwitch.inner.variant.checked'
-    },
-    unchecked: {
-      variant: 'toggleSwitch.inner.variant.unchecked'
-    }
-  }
-
-  return (
-    <div>
-      <input
-        type="checkbox"
-        className="sr-only"
-        checked={checked}
-        onChange={onChange}
-      />
+const ToggleSwitch: React.FC<Props> = ({ checked, onChange, icons }) => (
+  <div>
+    <input
+      type="checkbox"
+      checked={checked}
+      onChange={onChange}
+      sx={{
+        position: 'absolute',
+        width: 1,
+        height: 1,
+        padding: 0,
+        margin: -1,
+        overflow: 'hidden',
+        clip: 'rect(0, 0, 0, 0)',
+        border: 0
+      }}
+    />
+    <div
+      sx={{
+        width: 80,
+        height: 40,
+        padding: 4,
+        borderWidth: 1,
+        borderStyle: 'solid',
+        borderRadius: '50vw',
+        transition: 'background-color 400ms, border-color 400ms',
+        variant: `toggleSwitch.${checked ? 'checked' : 'unchecked'}`
+      }}
+      role="presentation"
+      onClick={onChange}
+    >
       <div
         sx={{
-          width: 80,
-          height: 40,
-          padding: 4,
+          width: 39,
+          height: 38,
+          borderWidth: 1,
+          borderStyle: 'solid',
           borderRadius: '50vw',
-          transition: 'background-color 400ms',
-          ...outerStyling[checked ? 'checked' : 'unchecked']
+          transition: 'transform 400ms, border-color 400ms',
+          transform: checked ? 'translateX(40px)' : 'translateX(0)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          variant: `toggleSwitch.${checked ? 'checked' : 'unchecked'}.knob`
         }}
-        role="presentation"
-        onClick={onChange}
       >
-        <div
-          sx={{
-            width: 40,
-            height: 40,
-            borderRadius: '50vw',
-            backgroundColor: 'white',
-            transition: 'transform 400ms',
-            ...innerStyling[checked ? 'checked' : 'unchecked']
-          }}
-        ></div>
+        {checked ? icons?.checked : icons?.unchecked}
       </div>
     </div>
-  )
-}
+  </div>
+)
 
 export default ToggleSwitch

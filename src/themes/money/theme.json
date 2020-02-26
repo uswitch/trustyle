@@ -692,6 +692,25 @@
     }
   },
 
+  "toggleSwitch": {
+    "checked": {
+      "backgroundColor": "secondary",
+      "borderColor": "secondary",
+      "knob": {
+        "backgroundColor": "white",
+        "borderColor": "secondary"
+      }
+    },
+    "unchecked": {
+      "backgroundColor": "grey-20",
+      "borderColor": "grey-20",
+      "knob": {
+        "backgroundColor": "white",
+        "borderColor": "grey-20"
+      }
+    }
+  },
+
   "author": {
     "heading": {
       "color": "grey-80"

@@ -207,6 +207,25 @@
     }
   },
 
+  "toggleSwitch": {
+    "checked": {
+      "backgroundColor": "primary",
+      "borderColor": "primary",
+      "knob": {
+        "backgroundColor": "white",
+        "borderColor": "primary"
+      }
+    },
+    "unchecked": {
+      "backgroundColor": "light-3",
+      "borderColor": "light-3",
+      "knob": {
+        "backgroundColor": "white",
+        "borderColor": "light-3"
+      }
+    }
+  },
+
   "linkWithChevron": {
     "marginLeft": 8,
     "textDecoration": "underline"
