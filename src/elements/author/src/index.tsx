@@ -11,6 +11,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   editorRole?: string
   authorImage?: React.ReactElement
   date: number
+  authorUrl: string
+  editorUrl: string
 }
 
 const Author: React.FC<Props> = ({
@@ -19,7 +21,9 @@ const Author: React.FC<Props> = ({
   editorName,
   editorRole,
   authorImage,
-  date
+  date,
+  authorUrl,
+  editorUrl
 }) => {
   return (
     <div
@@ -31,7 +35,8 @@ const Author: React.FC<Props> = ({
       }}
     >
       {authorImage && (
-        <div
+        <a
+          href={authorUrl}
           sx={{
             flexShrink: 0,
             height: ['48px', '56px'],
@@ -48,7 +53,7 @@ const Author: React.FC<Props> = ({
               variant: 'author.image'
             }}
           />
-        </div>
+        </a>
       )}
 
       <div>
@@ -62,7 +67,15 @@ const Author: React.FC<Props> = ({
           }}
           as="h2"
         >
-          Written by {name}, {role}
+          <a
+            href={authorUrl}
+            sx={{
+              textDecoration: 'none',
+              variant: 'author.link'
+            }}
+          >
+            Written by {name}, {role}
+          </a>
         </Styled.h6>
         <Styled.p
           sx={{
@@ -71,8 +84,16 @@ const Author: React.FC<Props> = ({
             variant: 'author.text'
           }}
         >
-          {editorName &&
-            `Edited by ${editorName}${editorRole ? `, ${editorRole}` : ''}, `}
+          <Styled.a
+            href={editorUrl}
+            sx={{
+              textDecoration: 'none',
+              variant: 'author.link'
+            }}
+          >
+            {editorName &&
+              `Edited by ${editorName}${editorRole ? `, ${editorRole}` : ''}, `}
+          </Styled.a>
           {dayjs(date).format('LL')}
         </Styled.p>
       </div>
