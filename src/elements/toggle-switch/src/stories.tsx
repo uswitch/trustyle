@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import React, { Fragment } from 'react'
+import React, { useState } from 'react'
 import { jsx } from '@emotion/core'
-import { text } from '@storybook/addon-knobs'
+import { action } from '@storybook/addon-actions'
 
 import ToggleSwitch from './'
 
@@ -10,13 +10,20 @@ export default {
 }
 
 export const ExampleWithKnobs = () => {
-  const toggleClicked = ({ toggleState }) => {
-    console.log('Toggle Clicked', toggleState)
+  const [toggleState, setToggleState] = useState(true)
+
+  const handleOnChange = (e: any) => {
+    action(`Toggle clicked: ${toggleState}`)(e)
+    setToggleState(!toggleState)
   }
 
-  return (
-    <Fragment>
-      <ToggleSwitch on onClick={toggleClicked} />
-    </Fragment>
-  )
+  return <ToggleSwitch checked={toggleState} onChange={handleOnChange} />
+}
+
+export const ToggleOn = () => {
+  return <ToggleSwitch checked />
+}
+
+export const ToggleOff = () => {
+  return <ToggleSwitch checked={false} />
 }

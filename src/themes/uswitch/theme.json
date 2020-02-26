@@ -715,6 +715,19 @@
     }
   },
 
+  "toggleSwitch": {
+    "outer": {
+      "variant": {
+        "checked": {
+          "backgroundColor": "black"
+        },
+        "unchecked": {
+          "backgroundColor": "grey"
+        }
+      }
+    }
+  },
+
   "styles": {
     "h1": {
       "fontFamily": "heading",
