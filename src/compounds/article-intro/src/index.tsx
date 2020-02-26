@@ -12,7 +12,9 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 const ArticleIntro: React.FC<Props> = ({ title, author, description }) => {
   return (
     <div>
-      <Styled.h1 sx={{ marginTop: 0, marginBottom: 'sm' }}>{title}</Styled.h1>
+      <Styled.h1 sx={{ marginTop: 'xl', marginBottom: 'sm' }}>
+        {title}
+      </Styled.h1>
       {author}
       <p sx={{ marginTop: 'sm' }}>{description}</p>
     </div>

@@ -10,7 +10,7 @@
 
   "shadows": {
     "box": "2px 2px 25px #0004",
-    "linkInset": "inset 0 0 0 1px #008fe9"
+    "linkInset": "inset 0 0 0 1px #141424"
   },
 
   "fonts": {
@@ -150,6 +150,8 @@
     "grey-10": "#E8E8E9",
     "grey-05": "#F3F3F4",
     "white": "#FFFFFF",
+
+    "frozen-bg": "#f6f6f6",
 
     "progress-bg": "#E6F4FD",
     "progress-primary": "#A1E7FE",
@@ -459,6 +461,12 @@
     }
   },
 
+  "author": {
+    "heading": {
+      "color": "grey-80"
+    }
+  },
+
   "callOut": {
     "main": {
       "backgroundColor": "grey-05"
@@ -613,6 +621,10 @@
   },
 
   "input": {
+    "frozen": {
+      "backgroundColor": "frozen-bg",
+      "borderRadius": "3px"
+    },
     "radio": {
       "base": {
         "&:checked + span": {
@@ -640,6 +652,20 @@
           "borderStyle": "solid",
           "borderWidth": "2px"
         }
+      }
+    },
+    "tile": {
+      "inputColor": "#141424",
+      "borderColor": "light-grey-blue",
+      "borderStyle": "solid",
+      "borderWidth": "2px",
+      "color": "slate-grey",
+      "fontWeight": "normal",
+      "before": {
+        "content": "' '",
+        "borderColor": "light-grey-blue",
+        "borderStyle": "solid",
+        "borderWidth": "2px"
       }
     }
   },
@@ -674,6 +700,9 @@
   },
 
   "breadcrumbs": {
+    "wrapper": {
+      "py": "xs"
+    },
     "main": {
       "color": "uswitch-navy"
     },

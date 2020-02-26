@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { css, jsx } from '@emotion/core'
+import { jsx } from 'theme-ui'
 
 import * as st from './styles'
 
@@ -15,7 +15,12 @@ interface Props {
 
 export const Arrow: React.FC<Props> = ({ color, direction = 'up', size }) => (
   <svg
-    css={css([st.icon, st.rotate(direction), st.size(size), { fill: color }])}
+    sx={{
+      display: 'block',
+      ...st.rotate(direction),
+      ...st.size(size),
+      fill: color
+    }}
     viewBox="0 0 120 120"
   >
     <path

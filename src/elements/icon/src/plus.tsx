@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { css, jsx } from '@emotion/core'
+import { jsx } from 'theme-ui'
 
 import * as st from './styles'
 
@@ -11,7 +11,14 @@ interface Props {
 }
 
 export const Plus: React.FC<Props> = ({ color, size }) => (
-  <svg css={css([st.icon, { fill: color }, st.size(size)])} viewBox="0 0 17 17">
+  <svg
+    sx={{
+      display: 'block',
+      ...st.size(size),
+      fill: color
+    }}
+    viewBox="0 0 17 17"
+  >
     <g
       fill="none"
       fillRule="evenodd"

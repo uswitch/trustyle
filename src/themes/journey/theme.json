@@ -108,6 +108,7 @@
 
   "colors": {
     "azure": "#008fe9",
+    "battleship-grey": "#65717b",
     "periwinkle": "#C1D3FF",
     "primary": "#d64226",
     "primary-hover": "#ab351e",
@@ -133,6 +134,8 @@
     "anakiwa": "#99e2ff",
     "uswitch-navy": "#141424",
     "grey-70": "#575761",
+
+    "frozen-bg": "#f6f6f6",
 
     "progress-bg": "#E6F4FD",
     "progress-primary": "#A1E7FE",
@@ -594,6 +597,10 @@
   },
 
   "input": {
+    "frozen": {
+      "backgroundColor": "frozen-bg",
+      "borderRadius": "3px"
+    },
     "radio": {
       "base": {
         "&:checked + span": {
@@ -624,6 +631,21 @@
           "borderStyle": "solid",
           "borderWidth": "2px"
         }
+      }
+    },
+    "tile": {
+      "inputColor": "#008fe9",
+      "borderColor": "light-grey-blue",
+      "borderRadius": "3px",
+      "borderStyle": "solid",
+      "borderWidth": "1px",
+      "color": "slate-grey",
+      "fontWeight": "normal",
+      "before": {
+        "content": "' '",
+        "borderColor": "light-grey-blue",
+        "borderStyle": "solid",
+        "borderWidth": "2px"
       }
     }
   },
@@ -712,6 +734,7 @@
 
     "a": {
       "color": "link",
+      "fontWeight": "bold",
       "stroke": "link",
       "transition": "all 0.2s ease",
       ":visited": { "color": "link", "stroke": "link" },
