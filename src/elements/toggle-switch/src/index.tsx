@@ -40,9 +40,11 @@ const ToggleSwitch: React.FC<Props> = ({
         variant: `toggleSwitch.${checked ? 'checked' : 'unchecked'}`
       }}
       role="checkbox"
+      tabIndex={0}
       aria-checked={checked}
       aria-label={props['aria-label']}
       onClick={onChange}
+      onKeyDown={onChange}
     >
       <div
         sx={{
