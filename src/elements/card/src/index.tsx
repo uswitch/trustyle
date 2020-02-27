@@ -33,12 +33,16 @@ const Card: React.FC<Props> = ({
         borderColor: 'grey-20',
         padding: theme.card.flexDirection ? '0' : 'xs',
         marginTop: '0',
-        marginRight: 'xs',
+        marginRight: ['0', 'xs'],
         marginBottom: 'xs',
         '> img': {
           height: 'auto',
           width: '100%'
         },
+        '&:hover': {
+          opacity: '0.6'
+        },
+        opacity: '1',
         textDecoration: 'none',
         cursor: 'pointer'
       }}
