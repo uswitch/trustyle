@@ -38,6 +38,7 @@ const Author: React.FC<Props> = ({
         <Styled.a
           href={authorUrl}
           sx={{
+            variant: 'author.link',
             flexShrink: 0,
             height: ['48px', '56px'],
             width: ['48px', '56px'],
