@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
-import { text } from '@storybook/addon-knobs'
+import { number, text } from '@storybook/addon-knobs'
 
 import Category from './'
 
@@ -17,4 +17,13 @@ storiesOf('Elements|Category', module)
     const titleText = text('Title text', 'Title goes here')
 
     return <Category title={titleText} />
+  })
+  .add('example with custom container', () => {
+    const titleText = text('Title text', 'Title goes here')
+    const containerWidth = number('Container width', 200)
+    const Container: React.FC = ({ children }) => (
+      <div style={{ width: containerWidth, margin: '0 auto' }}>{children}</div>
+    )
+
+    return <Category title={titleText} container={Container} />
   })
