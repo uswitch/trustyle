@@ -1,76 +1,86 @@
-import { css, SerializedStyles } from '@emotion/core'
-import {
-  colors,
-  helpers,
-  pxToRem,
-  spacers,
-  typography
-} from '@uswitch/trustyle.styles'
+import { SxStyleProp, Theme } from 'theme-ui'
 
-const svgSafeAzure = colors.azure.replace('#', '%23')
+const svgSafeColor = (color: string) => color.replace('#', '%23')
 
-export const input = (type: 'radio' | 'checkbox'): SerializedStyles =>
-  css({
+interface InputTile {
+  input: {
+    tile: {
+      inputColor: string
+    }
+  }
+}
+
+export const input = (type: 'radio' | 'checkbox') => (
+  theme: Theme & InputTile
+): SxStyleProp => {
+  let inputColor = 'black'
+
+  if (
+    theme.input &&
+    theme.input.tile &&
+    theme.input.tile.inputColor &&
+    typeof theme.input.tile.inputColor === 'string'
+  ) {
+    inputColor = theme.input.tile.inputColor
+  }
+
+  return {
     marginLeft: '-9000px',
     appearance: 'none',
     position: 'absolute',
     '&:checked + span': {
-      borderColor: colors.azure,
-      boxShadow: helpers.insetBorder(colors.azure),
-      color: colors.black,
+      borderColor: inputColor,
+      boxShadow: 'linkInset',
+      color: 'black',
       '&::before': {
-        backgroundImage:
-          type === 'radio'
-            ? undefined
-            : `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="${svgSafeAzure}" viewBox="-1 -2 14 12"><path d="M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z" /></svg>')`,
-        backgroundColor: type === 'radio' ? colors.azure : colors.white,
-        borderColor: colors.azure,
-        boxShadow:
-          type === 'radio' ? `inset 0 0 0 2px ${colors.white}` : undefined
+        borderColor: inputColor,
+        boxShadow: 'inset 0 0 0 2px white',
+        ...(type === 'radio'
+          ? {
+              backgroundColor: inputColor
+            }
+          : {
+              backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="${svgSafeColor(
+                inputColor
+              )}" viewBox="-1 -2 14 12"><path d="M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z" /></svg>')`
+            })
       }
     },
     '&:focus': {
       outline: 0
+    },
+    '&:focus + span': {
+      boxShadow: 'linkInset'
     }
-  })
+  }
+}
 
-export const container = (type: 'radio' | 'checkbox'): SerializedStyles =>
-  css([
-    typography.label,
-    {
-      borderColor: colors.lightGreyBlue,
-      borderRadius: '3px',
-      borderStyle: 'solid',
-      borderWidth: '1px',
-      boxSizing: 'border-box',
-      color: colors.slateGrey,
-      cursor: 'pointer',
-      display: 'block',
-      fontWeight: 'normal',
-      minHeight: '130px',
-      position: 'relative',
-      width: '100%',
-      '&:before': {
-        borderColor: colors.lightGreyBlue,
-        borderRadius: type === 'radio' ? '50%' : 4,
-        borderStyle: 'solid',
-        borderWidth: '2px',
-        content: '" "',
-        display: 'block',
-        height: '17px',
-        margin: pxToRem(11, 0, 0, 11),
-        width: '17px'
-      }
-    }
-  ])
+export const container = (type: 'radio' | 'checkbox') => (): SxStyleProp => ({
+  boxSizing: 'border-box',
+  cursor: 'pointer',
+  display: 'block',
+  minHeight: '130px',
+  position: 'relative',
+  width: '100%',
+  '&:before': {
+    borderRadius: type === 'radio' ? '50%' : 4,
+    content: '" "',
+    display: 'block',
+    height: '17px',
+    margin: '11px 0 0 11px',
+    width: '17px',
+    variant: 'input.tile.before'
+  },
+  variant: 'input.tile'
+})
 
-export const content: SerializedStyles = css({
+export const content: SxStyleProp = {
   position: 'absolute',
   top: 0,
   left: 0,
   right: 0,
   bottom: 0,
-  padding: pxToRem(spacers.pink),
+  padding: 'xs',
   display: 'flex',
   alignItems: 'center',
   textAlign: 'center',
@@ -79,14 +89,14 @@ export const content: SerializedStyles = css({
   '& > *': {
     width: '100%'
   }
-})
+}
 
 // Wrapper to prevent flexbox from stretching images with a percentage width
-export const childrenWrapper: SerializedStyles = css({
+export const childrenWrapper: SxStyleProp = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   '& > *': {
     maxWidth: '80%'
   }
-})
+}

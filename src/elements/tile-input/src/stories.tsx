@@ -69,8 +69,8 @@ export default {
   title: 'Elements|TileInput'
 }
 
-export const Radio = () => <Form type="radio" />
-export const Checkbox = () => <Form type="checkbox" />
+export const Radio = () => <Form type="radio" useHooks />
+export const Checkbox = () => <Form type="checkbox" useHooks />
 
-export const RadioSelected = () => <Form type="radio" useHooks={false} />
-export const CheckboxSelected = () => <Form type="checkbox" useHooks={false} />
+export const RadioSelected = () => <Form type="radio" />
+export const CheckboxSelected = () => <Form type="checkbox" />

@@ -9,7 +9,8 @@
   },
 
   "shadows": {
-    "box": "2px 2px 25px #0004"
+    "box": "2px 2px 25px #0004",
+    "linkInset": "inset 0 0 0 1px #008fe9"
   },
 
   "fonts": {
@@ -120,7 +121,7 @@
     "grey-30": "#C2C4C8",
     "grey-40": "#ADAFB3",
     "grey-50": "#A0A2A6",
-    "grey-60": "#6F7175",
+    "grey-60": "#6D6F73",
     "grey-70": "#393B3F",
     "grey-80": "#24262A",
     "grey-90": "#111317",
@@ -218,6 +219,18 @@
     }
   },
 
+  "articleIntro": {
+    "base": {
+      "heading": {
+        "marginTop": ["sm", "sm", "xl"], 
+        "marginBottom": "sm"
+      },
+      "description": {
+        "marginTop": "sm"
+      }
+    }
+  },
+
   "sideNav": {
     "internalLinkList": {
       "listStyle": "none",
@@ -228,7 +241,8 @@
     },
     "internalLinkListItem": {
       "base": {
-        "padding": "8px 0 8px 35px",
+        "padding": "8px 0 0 35px",
+        "paddingBottom": 0,
         "mb": 0,
         "position": "relative",
         "::after": {
@@ -353,7 +367,8 @@
   "container": {
     "sm": { "px": 20 },
     "md": { "px": 72 },
-    "lg": { "maxWidth": 1024, "mx": "auto", "px": "md" },
+    "article": { "maxWidth": 1024, "mx": "auto", "px": "md" },
+    "lg": { "maxWidth": 1154, "mx": "auto", "px": "md" },
     "content": {
       "maxWidth": 1024,
       "mx": "auto",
@@ -630,6 +645,21 @@
           "borderWidth": "2px"
         }
       }
+    },
+    "tile": {
+      "inputColor": "#008fe9",
+      "borderColor": "#b0b8bf",
+      "borderRadius": "3px",
+      "borderStyle": "solid",
+      "borderWidth": "1px",
+      "color": "slate-grey",
+      "fontWeight": "normal",
+      "before": {
+        "content": "' '",
+        "borderColor": "#b0b8bf",
+        "borderStyle": "solid",
+        "borderWidth": "2px"
+      }
     }
   },
 
@@ -676,7 +706,12 @@
 
   "author": {
     "heading": {
-      "color": "inherit"
+      "color": "grey-80"
+    },
+    "link": {
+      ":hover": {
+        "color": "plum"
+      }
     }
   },
 
@@ -698,7 +733,8 @@
     "h2": {
       "variant": "styles.heading",
       "fontSize": "xxl",
-      "marginY": "sm"
+      "marginTop": "md",
+      "marginBottom": "sm"
     },
 
     "h3": {
