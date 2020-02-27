@@ -5,6 +5,7 @@ import { jsx } from 'theme-ui'
 interface Props {
   checked: boolean
   onChange?: (e: React.SyntheticEvent) => void
+  'aria-label'?: string
   icons?: {
     checked: React.ReactNode
     unchecked: React.ReactNode
@@ -47,6 +48,7 @@ const ToggleSwitch: React.FC<Props> = ({
       }}
       role="checkbox"
       aria-checked={checked}
+      aria-label={props['aria-label']}
       onClick={onChange}
     >
       <div
