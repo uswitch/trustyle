@@ -35,7 +35,7 @@ const Author: React.FC<Props> = ({
       }}
     >
       {authorImage && (
-        <a
+        <Styled.a
           href={authorUrl}
           sx={{
             flexShrink: 0,
@@ -53,7 +53,7 @@ const Author: React.FC<Props> = ({
               variant: 'author.image'
             }}
           />
-        </a>
+        </Styled.a>
       )}
 
       <div>
