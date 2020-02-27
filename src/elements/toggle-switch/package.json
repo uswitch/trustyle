@@ -1,5 +1,5 @@
 {
-  "name": "@uswitch/trustyle.toggle",
+  "name": "@uswitch/trustyle.toggle-switch",
   "version": "0.0.0",
   "license": "MIT",
   "main": "lib/index.js",
