@@ -9,12 +9,15 @@ interface ListProps extends React.HTMLAttributes<HTMLDivElement> {
   container?: React.FC
 }
 
-const Category: React.FC<ListProps> = ({ title, text, container }) => {
-  const DefaultContainer: React.FC = ({ children }) => (
-    <div sx={{ maxWidth: 1024, margin: '0 auto' }}>{children}</div>
-  )
-  const Container: React.FC = container || DefaultContainer
+const DefaultContainer: React.FC = ({ children }) => (
+  <div sx={{ maxWidth: 1024, margin: '0 auto' }}>{children}</div>
+)
 
+const Category: React.FC<ListProps> = ({
+  title,
+  text,
+  container: Container = DefaultContainer
+}) => {
   return (
     <div
       sx={{
