@@ -19,10 +19,10 @@ const icons = {
 export const ExampleWithState = () => {
   const [toggleState, setToggleState] = useState(true)
 
-  const handleOnChange = (e: any) => {
+  const handleOnChange = () => {
     const newState = !toggleState
     setToggleState(newState)
-    action(`Toggle changed: ${newState}`)(e)
+    action('Toggle changed')(newState)
   }
 
   return (
