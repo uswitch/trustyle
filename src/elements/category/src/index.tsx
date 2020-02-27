@@ -6,9 +6,18 @@ import { jsx, Styled } from 'theme-ui'
 interface ListProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   text?: string
+  container?: React.FC
 }
 
-const Category: React.FC<ListProps> = ({ title, text }) => {
+const DefaultContainer: React.FC = ({ children }) => (
+  <div sx={{ maxWidth: 1024, margin: '0 auto' }}>{children}</div>
+)
+
+const Category: React.FC<ListProps> = ({
+  title,
+  text,
+  container: Container = DefaultContainer
+}) => {
   return (
     <div
       sx={{
@@ -17,21 +26,23 @@ const Category: React.FC<ListProps> = ({ title, text }) => {
         variant: 'categoryTitle.main'
       }}
     >
-      <Styled.h1
-        as={text ? 'h1' : 'p'}
-        sx={{
-          padding: 0,
-          margin: 0,
-          variant: 'categoryTitle.heading'
-        }}
-      >
-        {title}
-      </Styled.h1>
-      {text && (
-        <Styled.p sx={{ marginBottom: 0, variant: 'categoryTitle.text' }}>
-          {text}
-        </Styled.p>
-      )}
+      <Container>
+        <Styled.h1
+          as={text ? 'h1' : 'p'}
+          sx={{
+            padding: 0,
+            margin: 0,
+            variant: 'categoryTitle.heading'
+          }}
+        >
+          {title}
+        </Styled.h1>
+        {text && (
+          <Styled.p sx={{ marginBottom: 0, variant: 'categoryTitle.text' }}>
+            {text}
+          </Styled.p>
+        )}
+      </Container>
     </div>
   )
 }

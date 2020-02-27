@@ -51,7 +51,7 @@ export const LinkListItem: React.FC<ListLinkItemProps> = ({
         paddingBottom: 'xs'
       }}
     >
-      <a
+      <Styled.a
         href={href}
         sx={{
           textDecoration: 'none',
@@ -61,7 +61,7 @@ export const LinkListItem: React.FC<ListLinkItemProps> = ({
         }}
       >
         {children}
-      </a>
+      </Styled.a>
     </li>
   )
 }
