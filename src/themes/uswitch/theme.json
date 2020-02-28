@@ -422,6 +422,21 @@
           "color": "white"
         }
       },
+      "primary-inverse": {
+        "variant": "buttons.base",
+        "color": "uswitch-navy",
+        "background": "white",
+        "border": "2px solid",
+        "borderColor": "uswitch-navy",
+        ":hover": {
+          "backgroundColor": "grey-10"
+        },
+        ":disabled": {
+          "color": "grey-40",
+          "borderColor": "grey-20",
+          "cursor": "not-allowed"
+        }
+      },
       "secondary": {
         "variant": "buttons.base",
         "color": "uswitch-navy",
