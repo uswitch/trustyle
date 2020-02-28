@@ -2,10 +2,20 @@
 
 import * as React from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
+import get from 'lodash/get'
 import { Icon } from '@uswitch/trustyle.icon'
 
-const HomeIcon: React.FC = () => {
+const lookup = (variant: string) =>
+  variant === 'base' ? 'breadcrumbs2.base' : `breadcrumbs2.variants.${variant}`
+
+interface HomeIconProps extends React.HTMLAttributes<HTMLDivElement> {
+  variant?: 'base' | 'light'
+}
+
+const HomeIcon: React.FC<HomeIconProps> = ({ variant = 'base' }) => {
   const { theme }: any = useThemeUI()
+
+  const iconColor = get(theme, `${lookup(variant)}.homeIcon.color`)
 
   return (
     <div
@@ -13,13 +23,10 @@ const HomeIcon: React.FC = () => {
         display: 'inline-block',
         width: '1.25em',
         height: '1em',
-        variant: 'breadcrumbs.homeIcon'
+        variant: `${lookup(variant)}.homeIcon`
       }}
     >
-      <Icon
-        glyph="home"
-        color={theme.colors[theme.breadcrumbs?.homeIcon?.color]}
-      />
+      <Icon glyph="home" color={theme.colors[iconColor]} />
     </div>
   )
 }
@@ -30,12 +37,14 @@ interface Props extends React.HTMLAttributes<HTMLUListElement> {
   customSeparator?: React.ReactNode | (() => React.ReactNode)
   customBackIcon?: React.ReactNode | (() => React.ReactNode)
   customHomeIcon?: React.ReactNode | (() => React.ReactNode)
+  variant?: 'base' | 'light'
 }
 
 const MobileBreadcrumbs: React.FC<Props> = ({
   crumbs,
   customBackIcon = '<',
-  customHomeIcon
+  customHomeIcon,
+  variant = 'base'
 }) => {
   const BackIcon =
     typeof customBackIcon === 'function' ? customBackIcon : () => customBackIcon
@@ -48,7 +57,7 @@ const MobileBreadcrumbs: React.FC<Props> = ({
     backTo = lastCrumb.fields?.displayText
   } else {
     href = '/'
-    backTo = customHomeIcon || <HomeIcon />
+    backTo = customHomeIcon || <HomeIcon variant={variant} />
   }
 
   return (
@@ -58,7 +67,7 @@ const MobileBreadcrumbs: React.FC<Props> = ({
         color: 'inherit',
         textDecoration: 'none',
         fontSize: 'xxs',
-        variant: 'breadcrumbs.mobileLink'
+        variant: `${lookup(variant)}.mobileLink`
       }}
       href={href}
     >
@@ -80,7 +89,8 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
   crumbs,
   title,
   customSeparator = '>',
-  customHomeIcon
+  customHomeIcon,
+  variant = 'base'
 }) => {
   const liStyling = {
     display: 'inline'
@@ -90,7 +100,7 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
     color: 'inherit',
     stroke: 'inherit',
     textDecoration: 'none',
-    variant: 'breadcrumbs.a',
+    variant: `${lookup(variant)}.a`,
     ':visited': {
       color: 'inherit'
     }
@@ -113,12 +123,13 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
         listStyleType: 'none',
         paddingLeft: 0,
         fontSize: 'xxs',
-        variant: 'breadcrumbs.main'
+        marginY: 0,
+        variant: `${lookup(variant)}.main`
       }}
     >
       <li sx={liStyling}>
         <Styled.a sx={anchorStyling} href="/">
-          {customHomeIcon || <HomeIcon />}
+          {customHomeIcon || <HomeIcon variant={variant} />}
         </Styled.a>
 
         {(crumbs.length || title) && (
@@ -143,7 +154,9 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
       ))}
 
       {title && (
-        <li sx={{ ...liStyling, variant: 'breadcrumbs.title' }}>{title}</li>
+        <li sx={{ ...liStyling, variant: `${lookup(variant)}.title` }}>
+          {title}
+        </li>
       )}
     </ul>
   )
@@ -154,19 +167,21 @@ const Breadcrumbs: React.FC<Props> = ({
   title,
   customSeparator = '>',
   customBackIcon = '<',
-  customHomeIcon
+  customHomeIcon,
+  variant = 'base'
 }) => {
   if (crumbs.length && crumbs[0].fields?.path === '/') {
     crumbs = crumbs.slice(1)
   }
 
   return (
-    <div sx={{ variant: 'breadcrumbs.wrapper' }}>
+    <div sx={{ variant: `${lookup(variant)}.wrapper` }}>
       <div sx={{ display: ['block', 'none'] }}>
         <MobileBreadcrumbs
           crumbs={crumbs}
           customBackIcon={customBackIcon}
           customHomeIcon={customHomeIcon}
+          variant={variant}
         />
       </div>
       <div sx={{ display: ['none', 'block'] }}>
@@ -175,6 +190,7 @@ const Breadcrumbs: React.FC<Props> = ({
           title={title}
           customSeparator={customSeparator}
           customHomeIcon={customHomeIcon}
+          variant={variant}
         />
       </div>
     </div>
