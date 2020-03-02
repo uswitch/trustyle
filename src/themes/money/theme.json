@@ -222,7 +222,7 @@
   "articleIntro": {
     "base": {
       "heading": {
-        "marginTop": ["sm", "sm", "xl"], 
+        "marginTop": ["sm", "sm", "xl"],
         "marginBottom": "sm"
       },
       "description": {
@@ -743,6 +743,7 @@
       "color": "grey-80"
     },
     "link": {
+      "color": "grey-80",
       ":hover": {
         "color": "plum"
       }
@@ -759,34 +760,34 @@
 
     "h1": {
       "variant": "styles.heading",
-      "fontSize": "xxxl",
+      "fontSize": ["xxl", "xxxl"],
       "marginTop": "xl",
       "marginBottom": "sm"
     },
 
     "h2": {
       "variant": "styles.heading",
-      "fontSize": "xxl",
+      "fontSize": ["xl", "xxl"],
       "marginTop": "md",
       "marginBottom": "sm"
     },
 
     "h3": {
       "variant": "styles.heading",
-      "fontSize": "xl",
+      "fontSize": ["lg", "xl"],
       "marginY": "sm"
     },
 
     "h4": {
       "variant": "styles.heading",
-      "fontSize": "lg",
+      "fontSize": ["md", "lg"],
       "marginTop": 0,
       "marginBottom": "sm"
     },
 
     "h5": {
       "variant": "styles.heading",
-      "fontSize": "md",
+      "fontSize": ["sm","md"],
       "marginTop": 0,
       "marginBottom": "sm"
     },

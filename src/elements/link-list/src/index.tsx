@@ -48,7 +48,8 @@ export const LinkListItem: React.FC<ListLinkItemProps> = ({
         borderTopStyle: 'solid',
         borderTopColor: 'grey-20',
         paddingTop: 'xs',
-        paddingBottom: 'xs'
+        paddingBottom: 'xs',
+        marginBottom: '0'
       }}
     >
       <Styled.a

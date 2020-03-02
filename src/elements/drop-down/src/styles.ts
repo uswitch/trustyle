@@ -26,7 +26,7 @@ export const root = (hasError: boolean, hasFocus: boolean): SerializedStyles =>
       borderRadius: '3px',
       boxSizing: 'border-box',
       color: colors.black,
-      outline: 'none', // rm Chrome mobile default focus
+      outline: 'none', // remove Chrome mobile default focus
       padding: pxToRem(16, spacers.orange, 16, 16),
       verticalAlign: 'middle',
       width: '100%',
