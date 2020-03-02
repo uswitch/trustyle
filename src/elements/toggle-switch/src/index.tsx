@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import React from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, useThemeUI } from 'theme-ui'
 
 interface Props {
   checked: boolean
@@ -24,7 +23,7 @@ const ToggleSwitch: React.FC<Props> = ({
       onChange={onChange}
       {...props}
       sx={{
-        variant: 'sr-only'
+        variant: 'srOnly'
       }}
       type="checkbox"
     />

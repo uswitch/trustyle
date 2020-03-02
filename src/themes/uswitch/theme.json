@@ -165,7 +165,7 @@
     "xl": 30
   },
 
-  "sr-only": {
+  "srOnly": {
     "position": "absolute",
     "width": 1,
     "height": 1,
