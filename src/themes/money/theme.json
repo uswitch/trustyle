@@ -430,6 +430,10 @@
       ":disabled": {
         "opacity": "0.3",
         "cursor": "not-allowed"
+      },
+      "btnSize": {
+        "large": "100%",
+        "small": "80%"
       }
     },
 

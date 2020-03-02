@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, useThemeUI } from 'theme-ui'
 
 export type Variant = 'primary' | 'secondary' | 'continue' | 'hollow'
 type IconPosition = 'left' | 'center' | 'right' | null
@@ -21,6 +21,8 @@ export const Button: React.FC<Props> = ({
   size = 'large',
   ...props
 }) => {
+  const { theme }: any = useThemeUI()
+
   return (
     <button
       sx={{
@@ -31,7 +33,9 @@ export const Button: React.FC<Props> = ({
         paddingX: 'sm',
         paddingY: 'base',
         variant: `buttons.variants.${variant}`,
-        width: size === 'large' ? '100%' : '80%',
+        width: theme.buttons.base.btnSize
+          ? theme.buttons.base.btnSize[size]
+          : theme.buttons.variants[variant].width,
         justifyContent: 'center',
         alignItems: 'center',
 
