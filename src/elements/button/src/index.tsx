@@ -33,13 +33,14 @@ export const Button: React.FC<Props> = ({
         variant: `buttons.variants.${variant}`,
         width: size === 'large' ? '100%' : '80%',
         justifyContent: 'center',
+        alignItems: 'center',
 
         ...(iconPosition
           ? {
               display: 'flex',
               justifyContent:
                 iconPosition === 'left'
-                  ? 'align-left'
+                  ? 'flex-start'
                   : iconPosition === 'right'
                   ? 'space-between'
                   : 'center'
