@@ -2,8 +2,12 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
+import { select } from '@storybook/addon-knobs'
 
 import Breadcrumbs from './'
+
+type Variant = 'base' | 'light'
+const variants = ['base', 'light']
 
 export default {
   title: 'Elements|Breadcrumbs'
@@ -31,32 +35,44 @@ const crumbs = [
 ]
 
 export const ExampleWithTitle = () => {
+  const variant = select('Variant', variants, 'base') as Variant
+
   return (
     <Breadcrumbs
       crumbs={crumbs}
       title="Understanding energy bills and electricity bills - FAQs and more"
+      variant={variant}
     />
   )
 }
 
 export const ExampleWithoutTitle = () => {
-  return <Breadcrumbs crumbs={crumbs} />
+  const variant = select('Variant', variants, 'base') as Variant
+
+  return <Breadcrumbs crumbs={crumbs} variant={variant} />
 }
 
 export const NoCrumbsAndTitle = () => {
+  const variant = select('Variant', variants, 'base') as Variant
+
   return (
     <Breadcrumbs
       crumbs={[]}
       title="Understanding energy bills and electricity bills - FAQs and more"
+      variant={variant}
     />
   )
 }
 
 export const NoCrumbsAndNoTitle = () => {
-  return <Breadcrumbs crumbs={[]} />
+  const variant = select('Variant', variants, 'base') as Variant
+
+  return <Breadcrumbs crumbs={[]} variant={variant} />
 }
 
 export const AllWithCustomSeparator = () => {
+  const variant = select('Variant', variants, 'base') as Variant
+
   const separator = (
     <span
       sx={{
@@ -85,11 +101,14 @@ export const AllWithCustomSeparator = () => {
       title="Understanding energy bills and electricity bills - FAQs and more"
       customSeparator={separator}
       customBackIcon={backIcon}
+      variant={variant}
     />
   )
 }
 
 export const NothingWithCustomSeparator = () => {
+  const variant = select('Variant', variants, 'base') as Variant
+
   const separator = (
     <span
       sx={{
@@ -117,11 +136,14 @@ export const NothingWithCustomSeparator = () => {
       crumbs={[]}
       customSeparator={separator}
       customBackIcon={backIcon}
+      variant={variant}
     />
   )
 }
 
 export const CustomHomeIcon = () => {
+  const variant = select('Variant', variants, 'base') as Variant
+
   const homeIcon = 'Uswitch.com'
 
   return (
@@ -129,6 +151,7 @@ export const CustomHomeIcon = () => {
       crumbs={crumbs}
       title="Understanding energy bills and electricity bills - FAQs and more"
       customHomeIcon={homeIcon}
+      variant={variant}
     />
   )
 }

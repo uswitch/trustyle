@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { jsx } from '@emotion/core'
+import { jsx } from 'theme-ui'
 import { text } from '@storybook/addon-knobs'
 
 import MyComponent from './'
