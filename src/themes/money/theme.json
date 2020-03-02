@@ -440,8 +440,8 @@
           "fontSize": "md"
         },
         "small": {
-          "paddingX": "40px",
-          "paddingY": "13px",
+          "paddingX": 40,
+          "paddingY": 13,
           "fontSize": "sm"
         }
       }
