@@ -24,6 +24,7 @@ export const AllVariants = () => (
             variant={key as Variant}
             disabled={boolean('Disabled', false)}
             onClick={action(`${key}-click`)}
+            size="large"
           >
             {text(`${key} label`, `${key} button`)}
             {key.match('icon') && (
@@ -41,6 +42,7 @@ export const AllVariants = () => (
             disabled={boolean('Disabled', false)}
             onClick={action(`${key}-click`)}
             iconPosition="right"
+            size="small"
           >
             {text(`${key} label`, `${key} button`)}
 

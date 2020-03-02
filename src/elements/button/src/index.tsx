@@ -9,6 +9,7 @@ type IconPosition = 'left' | 'center' | 'right' | null
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant: Variant
   iconPosition?: IconPosition
+  size?: string
 }
 
 export const Button: React.FC<Props> = ({
@@ -17,6 +18,7 @@ export const Button: React.FC<Props> = ({
   variant,
   iconPosition = null,
   onClick,
+  size = 'large',
   ...props
 }) => {
   return (
@@ -29,6 +31,8 @@ export const Button: React.FC<Props> = ({
         paddingX: 'sm',
         paddingY: 'base',
         variant: `buttons.variants.${variant}`,
+        width: size === 'large' ? '100%' : '80%',
+        justifyContent: 'center',
 
         ...(iconPosition
           ? {
