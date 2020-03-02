@@ -29,13 +29,16 @@ export const Button: React.FC<Props> = ({
         cursor: 'pointer',
         backgroundImage: 'none',
         fontFamily: 'base',
-        fontSize: 'base',
-        paddingX: 'sm',
-        paddingY: 'base',
+        fontSize: theme.buttons.base.btnSize
+          ? theme.buttons.base.btnSize[size].fontSize
+          : 'base',
+        paddingX: theme.buttons.base.btnSize
+          ? theme.buttons.base.btnSize[size].paddingX
+          : 'sm',
+        paddingY: theme.buttons.base.btnSize
+          ? theme.buttons.base.btnSize[size].paddingY
+          : 'base',
         variant: `buttons.variants.${variant}`,
-        width: theme.buttons.base.btnSize
-          ? theme.buttons.base.btnSize[size]
-          : theme.buttons.variants[variant].width,
         justifyContent: 'center',
         alignItems: 'center',
 

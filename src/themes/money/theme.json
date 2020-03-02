@@ -422,18 +422,24 @@
 
   "buttons": {
     "base": {
-      "fontSize": "md",
       "fontWeight": "bold",
       "border": "none",
       "borderRadius": "50vh",
-      "paddingX": "lg",
       ":disabled": {
         "opacity": "0.3",
         "cursor": "not-allowed"
       },
       "btnSize": {
-        "large": "100%",
-        "small": "80%"
+        "large": {
+          "paddingX": "xl",
+          "paddingY": "base",
+          "fontSize": "md"
+        },
+        "small": {
+          "paddingX": "40px",
+          "paddingY": "13px",
+          "fontSize": "sm"
+        }
       }
     },
 
@@ -473,6 +479,7 @@
         "color": "experimental-text",
         "borderColor": "primary",
         "border": "solid 1px",
+        "backgroundColor": "transparent",
         ":hover:not(:disabled)": {
           "backgroundColor": "button-hollow--hover"
         },
