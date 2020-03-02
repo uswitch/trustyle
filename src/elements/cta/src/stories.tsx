@@ -1,15 +1,20 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from '@emotion/core'
-import { text } from '@storybook/addon-knobs'
+import { select, text } from '@storybook/addon-knobs'
 
 import CTA from './'
+
+type Variant = 'base' | 'hero' | 'hero-white-bg'
+const variants = ['base', 'hero', 'hero-white-bg']
 
 export default {
   title: 'Elements|CTA'
 }
 
 export const Example = () => {
+  const variant = select('Variant', variants, 'base') as Variant
+
   const titleText = text(
     'CTA title',
     'Find the best credit card for your needs'
@@ -26,6 +31,7 @@ export const Example = () => {
       text={textText}
       buttonText={buttonText}
       buttonLink="https://google.com"
+      variant={variant}
     />
   )
 }
