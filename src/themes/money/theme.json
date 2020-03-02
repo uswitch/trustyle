@@ -858,7 +858,8 @@
     "th": {
       "margin": 0,
       "padding": "16px",
-      "fontSize": "sm"
+      "fontSize": "sm",
+      "textAlign": "left"
     },
 
     "td": {
