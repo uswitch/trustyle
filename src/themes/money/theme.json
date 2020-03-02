@@ -833,15 +833,7 @@
         "marginY": 0,
         "borderLeft": "2px solid",
         "borderLeftColor": "plum",
-        "fontWeight": "bold",
-
-        "::before": {
-          "content": "\"“\""
-        },
-
-        "::after": {
-          "content": "\"“\""
-        }
+        "fontWeight": "bold"
       }
     },
 

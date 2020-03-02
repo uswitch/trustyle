@@ -816,15 +816,7 @@
         "marginY": 0,
         "borderLeft": "2px solid",
         "borderLeftColor": "#84A6FF",
-        "fontWeight": "bold",
-
-        "::before": {
-          "content": "\"“\""
-        },
-
-        "::after": {
-          "content": "\"“\""
-        }
+        "fontWeight": "bold"
       }
     },
 
