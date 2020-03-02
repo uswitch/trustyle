@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@uswitch/trustyle.button-link": "^0.5.0",
+    "@uswitch/trustyle.utils": "0.0.0",
     "lodash": "^4.17.15"
   }
 }
