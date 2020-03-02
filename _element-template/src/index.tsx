@@ -8,8 +8,6 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const MyComponent: React.FC<Props> = ({ someText }) => {
-  // const { theme }: any = useThemeUI()
-
   return <div>{someText}</div>
 }
 

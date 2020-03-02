@@ -54,7 +54,8 @@
     "md": 24,
     "lg": 36,
     "xl": 56,
-    "xxl": 64
+    "xxl": 64,
+    "xxxl": 96
   },
 
   "sizes": {
@@ -689,6 +690,35 @@
     "title": {
       "color": "dark-1",
       "fontWeight": "bold"
+    }
+  },
+
+  "breadcrumbs2": {
+    "base": {
+      "main": {
+        "color": "uswitch-navy"
+      },
+      "homeIcon": {
+        "color": "uswitch-navy"
+      },
+      "title": {
+        "color": "dark-1",
+        "fontWeight": "bold"
+      }
+    },
+    "variants": {
+      "light": {
+        "main": {
+          "color": "white"
+        },
+        "homeIcon": {
+          "color": "white"
+        },
+        "title": {
+          "variant": "breadcrumbs.base.title",
+          "color": "white"
+        }
+      }
     }
   },
 

@@ -384,9 +384,13 @@
   },
 
   "hero": {
-    "sm": { "minHeight": 360, "pb": 34 },
-    "md": { "minHeight": 280, "pb": 56 },
-    "lg": { "minHeight": 438, "pb": 82 }
+    "wrapper": {
+      "background": "linear-gradient(172deg, #924A8B 28%, #AF4C83 100%)",
+      "color": "white",
+      "h1, h2, h3, h4, h5, h6": {
+        "color": "inherit"
+      }
+    }
   },
 
   "imageCalloutContent": {
@@ -724,6 +728,36 @@
     },
     "title": {
       "color": "grey-100"
+    }
+  },
+
+  "breadcrumbs2": {
+    "base": {
+      "main": {
+        "color": "grey-60"
+      },
+      "homeIcon": {
+        "color": "grey-60"
+      },
+      "title": {
+        "color": "grey-100"
+      }
+    },
+    "variants": {
+      "light": {
+        "main": {
+          "color": "grey-0"
+        },
+        "mobileLink": {
+          "color": "grey-0"
+        },
+        "homeIcon": {
+          "color": "grey-0"
+        },
+        "title": {
+          "color": "grey-0"
+        }
+      }
     }
   },
 
