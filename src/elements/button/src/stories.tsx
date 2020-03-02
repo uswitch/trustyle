@@ -39,7 +39,7 @@ export const AllVariants = () => (
           <Spacer />
           <Button
             variant={key as Variant}
-            disabled={boolean('Disabled', false)}
+            disabled
             onClick={action(`${key}-click`)}
             iconPosition="right"
             size="small"
@@ -83,7 +83,7 @@ export const SecondaryVariant = () => (
 )
 
 export const PrimaryDisabledVariant = () => (
-  <Button variant="primary" disabled>
+  <Button variant="hollow" disabled>
     Primary button
   </Button>
 )

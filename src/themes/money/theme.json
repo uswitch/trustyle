@@ -134,7 +134,8 @@
 
     "experimental-text": "#29335C",
     "button-secondary": "#34454E",
-    "button-secondary--hover": "#5D6A72"
+    "button-secondary--hover": "#5D6A72",
+    "button-hollow--hover": "#FFF6E2"
   },
 
   "radii": {
@@ -460,6 +461,22 @@
         },
         ":active": {
           "backgroundColor": "button-secondary--hover"
+        }
+      },
+
+      "hollow": {
+        "variant": "buttons.base",
+        "color": "experimental-text",
+        "borderColor": "primary",
+        "border": "solid 1px",
+        ":hover:not(:disabled)": {
+          "backgroundColor": "button-hollow--hover"
+        },
+        ":focus": {
+          "backgroundColor": "primary--dark"
+        },
+        ":active": {
+          "backgroundColor": "primary--dark"
         }
       }
     }
