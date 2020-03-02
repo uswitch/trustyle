@@ -54,7 +54,12 @@ storiesOf('Global Styles|Typography', module).add('Types', () => {
       <blockquote>
         <p>{children}</p>
       </blockquote>
-    )
+    ),
+    heading: null,
+    table: null,
+    th: null,
+    td: null,
+    tr: null
   }
 
   return (
@@ -62,9 +67,9 @@ storiesOf('Global Styles|Typography', module).add('Types', () => {
       {Object.keys(theme().styles).map((key: string) => {
         const textValue = text(`Text ${key}`, typeNames[key] || key)
 
-        const Comp = overrides[key] ? overrides[key] : key
+        const Comp = overrides[key] !== undefined ? overrides[key] : key
         // @ts-ignore
-        return <Comp key={key}>{textValue}</Comp>
+        return Comp && <Comp key={key}>{textValue}</Comp>
       })}
     </React.Fragment>
   )

@@ -25,9 +25,9 @@ const CTA: React.FC<CTAProps> = ({ title, text, buttonLink, buttonText }) => {
       }}
     >
       <div>
-        <Styled.h4 sx={{ marginTop: 0, variant: 'cta.title' }} as="h2">
+        <Styled.h3 sx={{ marginTop: 0, variant: 'cta.title' }} as="h2">
           {title}
-        </Styled.h4>
+        </Styled.h3>
         <Styled.p sx={{ variant: 'cta.text' }}>{text}</Styled.p>
       </div>
       <div sx={{ flexShrink: 0 }}>

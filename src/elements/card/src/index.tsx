@@ -34,10 +34,13 @@ const Card: React.FC<Props> = ({
         padding: theme.card.flexDirection ? '0' : 'xs',
         marginTop: '0',
         marginRight: 'xs',
-        marginBottom: 'xs',
+        marginBottom: ['0', 'xs'],
         '> img': {
           height: 'auto',
           width: '100%'
+        },
+        '&:hover': {
+          opacity: '0.5'
         },
         textDecoration: 'none',
         cursor: 'pointer'
@@ -53,11 +56,12 @@ const Card: React.FC<Props> = ({
         sx={{
           padding: 'xs',
           display: 'flex',
-          flexDirection: 'column'
+          flexDirection: 'column',
+          flex: '1'
         }}
       >
         <h3 sx={{ margin: '0' }}>{title}</h3>
-        <p>{description}</p>
+        <p sx={{ flex: '1' }}>{description}</p>
         <p sx={{ textDecoration: 'underline' }}>{linkText}</p>
       </div>
     </a>
