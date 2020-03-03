@@ -107,21 +107,28 @@ Accordion.Group = ({ children }) => {
   })
 
   return (
-    <AccordionContext.Provider value={{ open: openId, setOpenId }}>
-      {childrenWithIndexes}
-    </AccordionContext.Provider>
+    <div
+      sx={{
+        marginTop: 'sm',
+        marginBottom: 'sm'
+      }}
+    >
+      <AccordionContext.Provider value={{ open: openId, setOpenId }}>
+        {childrenWithIndexes}
+      </AccordionContext.Provider>
+    </div>
   )
 }
 
 Accordion.Title = ({ children, as = 'h2' }) => {
   return (
-    <Styled.h4
+    <Styled.h3
       as={as}
       sx={{
         variant: 'accordion.base.title'
       }}
     >
       {children}
-    </Styled.h4>
+    </Styled.h3>
   )
 }
