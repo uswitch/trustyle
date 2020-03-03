@@ -517,6 +517,56 @@
     }
   },
 
+  "cta2": {
+    "base": {
+      "main": {
+        "backgroundColor": "grey-10"
+      },
+      "title": {
+        "color": "experimental-text",
+        "fontWeight": "bold"
+      },
+      "text": {
+        "marginBottom": [null, 0]
+      },
+      "button": {
+        "marginLeft": [null, "md"]
+      }
+    },
+    "variants": {
+      "hero": {
+        "main": {
+          "backgroundColor": "none",
+          "color": "white"
+        },
+        "title": {
+          "variant": "cta2.base.title",
+          "color": "inherit"
+        },
+        "text": {
+          "variant": "cta2.base.text"
+        },
+        "button": {
+          "variant": "cta2.base.button"
+        }
+      },
+      "hero-white-bg": {
+        "main": {
+          "backgroundColor": "white"
+        },
+        "title": {
+          "variant": "cta2.base.title"
+        },
+        "text": {
+          "variant": "cta2.base.text"
+        },
+        "button": {
+          "variant": "cta2.base.button"
+        }
+      }
+    }
+  },
+
   "funnelProgress": {
     "base": {
       "display": "flex",
@@ -848,15 +898,7 @@
         "marginY": 0,
         "borderLeft": "2px solid",
         "borderLeftColor": "plum",
-        "fontWeight": "bold",
-
-        "::before": {
-          "content": "\"“\""
-        },
-
-        "::after": {
-          "content": "\"“\""
-        }
+        "fontWeight": "bold"
       }
     },
 
@@ -873,7 +915,8 @@
     "th": {
       "margin": 0,
       "padding": "16px",
-      "fontSize": "sm"
+      "fontSize": "sm",
+      "textAlign": "left"
     },
 
     "td": {
