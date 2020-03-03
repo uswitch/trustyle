@@ -191,7 +191,10 @@
 
   "accordion": {
     "base": {
+      "marginTop": "sm",
+      "marginBottom": "sm",
       "title": {
+        "marginTop": "0",
         "marginBottom": "xs"
       },
       "content": {
