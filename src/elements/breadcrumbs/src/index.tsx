@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
-import get from '@uswitch/trustyle.utils/get'
+import get from '@uswitch/trustyle-utils.get'
 import { Icon } from '@uswitch/trustyle.icon'
 
 const lookup = (variant: string) =>
