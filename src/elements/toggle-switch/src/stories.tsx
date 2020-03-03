@@ -1,7 +1,9 @@
 /** @jsx jsx */
-import React, { Fragment, useState } from 'react'
+import { Fragment, useState } from 'react'
 import { jsx } from 'theme-ui'
 import { action } from '@storybook/addon-actions'
+import { color } from '@storybook/addon-knobs'
+import { PaletteProvider } from '@uswitch/trustyle-utils.palette'
 
 import { checkedIcon, uncheckedIcon } from './assets'
 
@@ -27,16 +29,21 @@ export const ExampleWithState = () => {
 
   return (
     <Fragment>
-      <ToggleSwitch
-        id="toggle-1"
-        aria-label="toggle-1"
-        checked={toggleState}
-        onChange={handleOnChange}
-        icons={icons}
-      />
-      <label sx={{ marginLeft: 10 }} htmlFor="toggle-1">
-        {toggleState ? 'On' : 'Off'}
-      </label>
+      <PaletteProvider
+        value={{
+          featureColor: color('featureColor', '#141424', 'ToggleSwitch')
+        }}
+      >
+        <ToggleSwitch
+          aria-label="toggle-1"
+          checked={toggleState}
+          onChange={handleOnChange}
+          icons={icons}
+        />
+        <label sx={{ marginLeft: 10 }} htmlFor="toggle-1">
+          {toggleState ? 'On' : 'Off'}
+        </label>
+      </PaletteProvider>
     </Fragment>
   )
 }

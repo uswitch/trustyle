@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
+import { Palette } from '@uswitch/trustyle-utils.palette'
 
 interface Props {
   checked: boolean
-  className: string
   onChange?: (e: React.SyntheticEvent) => void
   'aria-label'?: string
   icons?: {
@@ -16,12 +16,11 @@ const ToggleSwitch: React.FC<Props> = ({
   checked,
   onChange,
   icons,
-  className = '',
   ...props
 }) => {
   const state = checked ? 'checked' : 'unchecked'
   return (
-    <div sx={{ display: 'inline-block' }} className={`toggle ${className}`}>
+    <div sx={{ display: 'inline-block' }}>
       <input
         checked={checked}
         onChange={onChange}
@@ -30,9 +29,15 @@ const ToggleSwitch: React.FC<Props> = ({
           variant: 'srOnly'
         }}
         type="checkbox"
-        className="toggle__input"
       />
-      <div
+      <Palette
+        as="div"
+        role="checkbox"
+        tabIndex={0}
+        aria-checked={checked}
+        aria-label={props['aria-label']}
+        onClick={onChange}
+        onKeyDown={onChange}
         sx={{
           width: 80,
           height: 40,
@@ -43,13 +48,10 @@ const ToggleSwitch: React.FC<Props> = ({
           transition: 'background-color 400ms, border-color 400ms',
           variant: `toggleSwitch.${state}`
         }}
-        className={`toggle__container toggle__container--${state}`}
-        role="checkbox"
-        tabIndex={0}
-        aria-checked={checked}
-        aria-label={props['aria-label']}
-        onClick={onChange}
-        onKeyDown={onChange}
+        px={{
+          backgroundColor: checked ? 'featureColor' : null,
+          borderColor: checked ? 'featureColor' : null
+        }}
       >
         <div
           sx={{
@@ -65,11 +67,10 @@ const ToggleSwitch: React.FC<Props> = ({
             alignItems: 'center',
             variant: `toggleSwitch.${state}.switch`
           }}
-          className={`toggle__switch toggle__switch--${state}`}
         >
           {checked ? icons?.checked : icons?.unchecked}
         </div>
-      </div>
+      </Palette>
     </div>
   )
 }
