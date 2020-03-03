@@ -493,7 +493,8 @@
         ":active": {
           "backgroundColor": "button-secondary--hover"
         }
-      },
+      }
+    }
   },
 
   "list": {
