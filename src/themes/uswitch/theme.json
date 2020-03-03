@@ -238,7 +238,7 @@
         "width": "100%"
       },
       "caret": {
-        "color": "plum"
+        "color": "black"
       }
     },
     "variants": {
@@ -247,7 +247,7 @@
           "variant": "accordion.base.button"
         },
         "caret": {
-          "color": "fuschia"
+          "color": "accordion.base.caret"
         }
       }
     }
