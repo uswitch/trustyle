@@ -113,7 +113,7 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
 
   const separatorStyling = {
     display: 'inline-block',
-    marginX: 'xxs',
+    marginX: 'xs',
     verticalAlign: customSeparator === 'function' ? 'middle' : undefined
   }
 
