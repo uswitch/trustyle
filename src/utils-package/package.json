@@ -1,0 +1,13 @@
+{
+  "name": "@uswitch/trustyle.utils",
+  "version": "1.0.0",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "--------------- BUILDING": "----------------------",
+    "clean": "rm -rf lib",
+    "build": "npm run clean && tsc"
+  }
+}

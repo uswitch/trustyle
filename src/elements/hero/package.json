@@ -1,6 +1,6 @@
 {
-  "name": "@uswitch/trustyle.accordion",
-  "version": "0.2.2",
+  "name": "@uswitch/trustyle.hero",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -12,15 +12,8 @@
     "clean": "rm -rf lib",
     "build": "npm run clean && tsc"
   },
-  "devDependencies": {
-    "typescript": "^3.6.2"
-  },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
-    "react": "^16.7.0",
-    "theme-ui": "^0.2.52"
-  },
-  "dependencies": {
-    "@uswitch/trustyle.icon": "^1.0.0"
+    "react": "^16.7.0"
   }
 }

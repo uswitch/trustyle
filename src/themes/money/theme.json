@@ -199,15 +199,23 @@
 
   "accordion": {
     "base": {
+      "title": {
+        "marginBottom": "xs"
+      },
+      "content": {
+        "marginBottom": "xs"
+      },
       "button": {
-        "padding": "sm",
-        "bg": ["grey-05", "transparent"],
+        "padding": "0",
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "bg": "transparent",
         "fontFamily": "base",
         "fontSize": "base",
         "fontWeight": "bold",
         "color": "textColor",
         "alignItems": "center",
-        "borderWidth": "0 0 1px 0",
+        "borderWidth": "1px 0 0 0",
         "borderStyle": "solid",
         "borderColor": "grey-20",
         "display": "flex",
@@ -291,6 +299,8 @@
           "color": "grey-60",
           "textDecoration": "none",
           "fontSize": "xs",
+          "marginTop": "-4px",
+          "display": "block",
           ":visited": {
             "color": "grey-60"
           }
@@ -318,12 +328,17 @@
       "color": "grey-80",
       "paddingTop": "xs",
       "paddingBottom": "xs",
-      "paddingLeft": "xs",
-      "textDecoration": "none",
-      "borderWidth": "0 0 1px 0",
+      "paddingLeft": "0",
+      "borderWidth": "1px 0 0 0",
       "borderStyle": "solid",
       "borderColor": "grey-20",
-      "fontSize": "xs"
+      "fontSize": "xs",
+      "a": {
+        "textDecoration": "none"
+      },
+      ":last-child": {
+        "paddingBottom": "0"
+      }
     }
   },
 
@@ -392,9 +407,13 @@
   },
 
   "hero": {
-    "sm": { "minHeight": 360, "pb": 34 },
-    "md": { "minHeight": 280, "pb": 56 },
-    "lg": { "minHeight": 438, "pb": 82 }
+    "wrapper": {
+      "background": "linear-gradient(172deg, #924A8B 28%, #AF4C83 100%)",
+      "color": "white",
+      "h1, h2, h3, h4, h5, h6": {
+        "color": "inherit"
+      }
+    }
   },
 
   "imageCalloutContent": {
@@ -506,6 +525,56 @@
     },
     "button": {
       "marginLeft": [null, "md"]
+    }
+  },
+
+  "cta2": {
+    "base": {
+      "main": {
+        "backgroundColor": "grey-10"
+      },
+      "title": {
+        "color": "experimental-text",
+        "fontWeight": "bold"
+      },
+      "text": {
+        "marginBottom": [null, 0]
+      },
+      "button": {
+        "marginLeft": [null, "md"]
+      }
+    },
+    "variants": {
+      "hero": {
+        "main": {
+          "backgroundColor": "none",
+          "color": "white"
+        },
+        "title": {
+          "variant": "cta2.base.title",
+          "color": "inherit"
+        },
+        "text": {
+          "variant": "cta2.base.text"
+        },
+        "button": {
+          "variant": "cta2.base.button"
+        }
+      },
+      "hero-white-bg": {
+        "main": {
+          "backgroundColor": "white"
+        },
+        "title": {
+          "variant": "cta2.base.title"
+        },
+        "text": {
+          "variant": "cta2.base.text"
+        },
+        "button": {
+          "variant": "cta2.base.button"
+        }
+      }
     }
   },
 
@@ -715,6 +784,36 @@
     }
   },
 
+  "breadcrumbs2": {
+    "base": {
+      "main": {
+        "color": "grey-60"
+      },
+      "homeIcon": {
+        "color": "grey-60"
+      },
+      "title": {
+        "color": "grey-100"
+      }
+    },
+    "variants": {
+      "light": {
+        "main": {
+          "color": "grey-0"
+        },
+        "mobileLink": {
+          "color": "grey-0"
+        },
+        "homeIcon": {
+          "color": "grey-0"
+        },
+        "title": {
+          "color": "grey-0"
+        }
+      }
+    }
+  },
+
   "toggleSwitch": {
     "checked": {
       "backgroundColor": "secondary",
@@ -829,15 +928,7 @@
         "marginY": 0,
         "borderLeft": "2px solid",
         "borderLeftColor": "plum",
-        "fontWeight": "bold",
-
-        "::before": {
-          "content": "\"“\""
-        },
-
-        "::after": {
-          "content": "\"“\""
-        }
+        "fontWeight": "bold"
       }
     },
 
@@ -854,7 +945,8 @@
     "th": {
       "margin": 0,
       "padding": "16px",
-      "fontSize": "sm"
+      "fontSize": "sm",
+      "textAlign": "left"
     },
 
     "td": {

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import React, { useContext, useState } from 'react'
-import { jsx, useThemeUI } from 'theme-ui'
+import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
 
 interface ContextProps {
@@ -21,12 +21,14 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   isInitiallyOpen?: boolean
 }
 
-const Accordion: React.FC<Props> & { Group: React.FC } = ({
-  index,
-  title,
-  isInitiallyOpen = false,
-  children
-}) => {
+interface TitleProps extends React.HTMLAttributes<HTMLDivElement> {
+  as?: React.ElementType
+}
+
+const Accordion: React.FC<Props> & {
+  Group: React.FC
+  Title: React.FC<TitleProps>
+} = ({ index, title, isInitiallyOpen = false, children }) => {
   const {
     theme: { accordion: accordionTheme = {}, colors = {} }
   }: any = useThemeUI()
@@ -79,7 +81,10 @@ const Accordion: React.FC<Props> & { Group: React.FC } = ({
       <div
         sx={{
           overflow: 'hidden',
-          height: isOpen ? 'auto' : '0'
+          height: isOpen ? 'auto' : '0',
+          marginBottom: isOpen
+            ? accordionTheme?.base?.content?.marginBottom
+            : '0'
         }}
       >
         {children}
@@ -105,5 +110,18 @@ Accordion.Group = ({ children }) => {
     <AccordionContext.Provider value={{ open: openId, setOpenId }}>
       {childrenWithIndexes}
     </AccordionContext.Provider>
+  )
+}
+
+Accordion.Title = ({ children, as = 'h2' }) => {
+  return (
+    <Styled.h4
+      as={as}
+      sx={{
+        variant: 'accordion.base.title'
+      }}
+    >
+      {children}
+    </Styled.h4>
   )
 }

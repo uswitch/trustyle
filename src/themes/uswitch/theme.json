@@ -373,9 +373,9 @@
   },
 
   "hero": {
-    "sm": { "minHeight": 360, "pb": 34 },
-    "md": { "minHeight": 280, "pb": 56 },
-    "lg": { "minHeight": 438, "pb": 82 }
+    "wrapper": {
+      "backgroundColor": "blue-50"
+    }
   },
 
   "imageCalloutContent": {
@@ -513,6 +513,57 @@
     "button": {
       "variant": "primary",
       "width": "auto"
+    }
+  },
+
+  "cta2": {
+    "base": {
+      "main": {
+        "position": "relative",
+        "borderWidth": 1,
+        "borderStyle": "solid",
+        "borderColor": "grey-10",
+        "paddingRight": ["md", "lg"],
+        "paddingLeft": [34, 42],
+        "paddingY": "md",
+        "::before": {
+          "position": "absolute",
+          "top": "0",
+          "left": "0",
+          "content": "\" \"",
+          "display": "block",
+          "width": 8,
+          "height": "100%",
+          "backgroundColor": "blue-75"
+        }
+      },
+      "button": {
+        "buttonVariant": "primary",
+        "width": "auto"
+      }
+    },
+    "variants": {
+      "hero": {
+        "variant": "cta2.base.main",
+        "borderWidth": 0,
+        "backgroundColor": "none",
+        "paddingLeft": ["md", "lg"],
+        "::before": {
+          "display": "none"
+        },
+        "button": {
+          "variant": "cta2.base.button"
+        }
+      },
+      "hero-white-bg": {
+        "main": {
+          "variant": "cta2.variants.hero.main",
+          "backgroundColor": "white"
+        },
+        "button": {
+          "variant": "cta2.base.button"
+        }
+      }
     }
   },
 
@@ -726,6 +777,38 @@
     }
   },
 
+  "breadcrumbs2": {
+    "base": {
+      "main": {
+        "color": "uswitch-navy"
+      },
+      "homeIcon": {
+        "color": "uswitch-navy"
+      },
+      "title": {
+        "color": "uswitch-navy",
+        "fontWeight": "bold"
+      }
+    },
+    "variants": {
+      "light": {
+        "main": {
+          "color": "white"
+        },
+        "mobileLink": {
+          "color": "white"
+        },
+        "homeIcon": {
+          "color": "white"
+        },
+        "title": {
+          "variant": "breadcrumbs.base.title",
+          "color": "white"
+        }
+      }
+    }
+  },
+
   "toggleSwitch": {
     "checked": {
       "backgroundColor": "black",
@@ -815,15 +898,7 @@
         "marginY": 0,
         "borderLeft": "2px solid",
         "borderLeftColor": "#84A6FF",
-        "fontWeight": "bold",
-
-        "::before": {
-          "content": "\"“\""
-        },
-
-        "::after": {
-          "content": "\"“\""
-        }
+        "fontWeight": "bold"
       }
     },
 
