@@ -38,6 +38,9 @@ export const Button: React.FC<Props> = ({
         paddingY: theme.buttons.base.btnSize
           ? theme.buttons.base.btnSize[size].paddingY
           : 'base',
+        height: theme.buttons.base.btnSize
+          ? theme.buttons.base.btnSize[size].height
+          : 'base',
         variant: `buttons.variants.${variant}`,
         justifyContent: 'center',
         alignItems: 'center',

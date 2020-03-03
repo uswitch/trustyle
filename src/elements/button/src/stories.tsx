@@ -44,7 +44,7 @@ export const AllVariants = () => (
           <Spacer />
           <Button
             variant={key as Variant}
-            disabled
+            disabled={boolean('Disabled', false)}
             onClick={action(`${key}-click`)}
             iconPosition="right"
             size={select('Sizes', sizeOptions, 'large')}

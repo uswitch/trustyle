@@ -437,12 +437,14 @@
         "large": {
           "paddingX": "xl",
           "paddingY": "base",
-          "fontSize": "md"
+          "fontSize": "md",
+          "height": 56
         },
         "small": {
           "paddingX": 40,
           "paddingY": 13,
-          "fontSize": "sm"
+          "fontSize": "sm",
+          "height": "xl"
         }
       }
     },
