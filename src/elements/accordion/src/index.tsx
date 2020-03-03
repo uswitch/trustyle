@@ -114,15 +114,11 @@ Accordion.Group = ({ children }) => {
 }
 
 Accordion.Title = ({ children, as = 'h2' }) => {
-  const {
-    theme: { accordion: accordionTheme = {} }
-  }: any = useThemeUI()
-
   return (
     <Styled.h4
       as={as}
       sx={{
-        marginBottom: accordionTheme?.base?.title?.marginBottom
+        variant: 'accordion.base.title'
       }}
     >
       {children}
