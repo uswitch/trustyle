@@ -211,17 +211,28 @@
 
   "accordion": {
     "base": {
+      "marginTop": "sm",
+      "marginBottom": "sm",
+      "title": {
+        "marginTop": "0",
+        "marginBottom": "xs"
+      },
+      "content": {
+        "marginBottom": "xs"
+      },
       "button": {
-        "padding": "sm",
-        "bg": "grey-05",
+        "padding": "0",
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "bg": "transparent",
         "fontFamily": "base",
         "fontSize": "base",
-        "color": "uswitch-navy",
+        "fontWeight": "bold",
+        "color": "textColor",
         "alignItems": "center",
-        "border": 0,
-        "borderBottomWidth": 1,
-        "borderBottomStyle": "solid",
-        "borderBottomColor": "grey-10",
+        "borderWidth": "1px 0 0 0",
+        "borderStyle": "solid",
+        "borderColor": "grey-20",
         "display": "flex",
         "flexDirection": "row",
         "width": "100%"
