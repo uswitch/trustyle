@@ -1,22 +1,28 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, SxStyleProp } from 'theme-ui'
 import { createContext, useContext } from 'react'
 
-const sw = cases => (prop, ...data) => {
+const sw = (cases: Record<string, Function>) => (
+  prop: string,
+  ...data: any
+) => {
   const f = {}.hasOwnProperty.call(cases, prop) ? cases[prop] : cases.default
 
   return f instanceof Function ? f(...data) : f
 }
 
-const PaletteContext = createContext()
+const PaletteContext = createContext({})
 export const PaletteProvider = PaletteContext.Provider
 
-const createSx = (palette = {}, obj = {}) => {
+const createSx = (
+  palette: { [key: string]: string } = {},
+  obj: SxStyleProp = {}
+) => {
   if (!obj) {
     return {}
   }
 
-  return Object.entries(obj).reduce((acc, [key, value]) => {
+  return Object.entries(obj).reduce((acc, [key, value]: [string, any]) => {
     return sw({
       object: () => ({ ...acc, [key]: createSx(palette, value) }),
       function: () => ({ ...acc, [key]: value(palette) }),
@@ -25,7 +31,19 @@ const createSx = (palette = {}, obj = {}) => {
   }, {})
 }
 
-export const Palette = ({ children, className, px = {}, ...props }) => {
+interface PaletteProps {
+  as: any
+  children: React.ReactNode
+  className: string
+  px: SxStyleProp
+}
+
+export const Palette: React.FC<PaletteProps> = ({
+  children,
+  className,
+  px = {},
+  ...props
+}) => {
   const palette = useContext(PaletteContext)
   const sx = createSx(palette, px)
 
