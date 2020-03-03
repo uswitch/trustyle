@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, useThemeUI } from 'theme-ui'
 
 export type Variant = 'primary' | 'secondary' | 'continue'
 type IconPosition = 'left' | 'center' | 'right' | null
@@ -9,6 +9,7 @@ type IconPosition = 'left' | 'center' | 'right' | null
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant: Variant
   iconPosition?: IconPosition
+  size?: string
 }
 
 export const Button: React.FC<Props> = ({
@@ -17,25 +18,39 @@ export const Button: React.FC<Props> = ({
   variant,
   iconPosition = null,
   onClick,
+  size = 'large',
   ...props
 }) => {
+  const { theme }: any = useThemeUI()
+
   return (
     <button
       sx={{
         cursor: 'pointer',
         backgroundImage: 'none',
         fontFamily: 'base',
-        fontSize: 'base',
-        paddingX: 'sm',
-        paddingY: 'base',
+        fontSize: theme.buttons.base.btnSize
+          ? theme.buttons.base.btnSize[size].fontSize
+          : 'base',
+        paddingX: theme.buttons.base.btnSize
+          ? theme.buttons.base.btnSize[size].paddingX
+          : 'sm',
+        paddingY: theme.buttons.base.btnSize
+          ? theme.buttons.base.btnSize[size].paddingY
+          : 'base',
+        height: theme.buttons.base.btnSize
+          ? theme.buttons.base.btnSize[size].height
+          : 'base',
         variant: `buttons.variants.${variant}`,
+        justifyContent: 'center',
+        alignItems: 'center',
 
         ...(iconPosition
           ? {
               display: 'flex',
               justifyContent:
                 iconPosition === 'left'
-                  ? 'align-left'
+                  ? 'flex-start'
                   : iconPosition === 'right'
                   ? 'space-between'
                   : 'center'
