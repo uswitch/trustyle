@@ -247,7 +247,7 @@
           "variant": "accordion.base.button"
         },
         "caret": {
-          "color": "accordion.base.caret"
+          "variant": "accordion.base.caret"
         }
       }
     }
