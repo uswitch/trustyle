@@ -10,6 +10,6 @@ export default {
 }
 
 export const ExampleWithKnobs = () => {
-  const someText: string = text('Some text', 'example')
-  return <Badge someText={someText} />
+  const content: string = text('content', 'Optional Badge')
+  return <Badge content={content} />
 }

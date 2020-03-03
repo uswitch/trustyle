@@ -490,6 +490,24 @@
     }
   },
 
+  "badge" : {
+    "base": {
+      "display": "flex",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "paddingX": "5px",
+      "height": 32,
+      "fontSize": "xs"
+    },
+    "variants": {
+      "primary": {
+        "variant": "badge.base",
+        "backgroundColor": "uswitch-navy",
+        "color": "white"
+       }
+    }
+  },
+
   "callOut": {
     "main": {
       "backgroundColor": "grey-05"
