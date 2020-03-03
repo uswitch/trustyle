@@ -3,6 +3,8 @@ import * as React from 'react'
 import { jsx, ThemeProvider } from 'theme-ui'
 import { boolean, select, text } from '@storybook/addon-knobs'
 
+import CTA from '../../cta/src'
+
 import CallOut from './'
 
 export default {
@@ -49,6 +51,13 @@ const PaletteProvider: React.FC<PaletteProps> = ({ palette, children }) => {
         main: {
           backgroundColor: palette.backgroundLight
         }
+      },
+      variants: {
+        'hero-white-bg': {
+          main: {
+            backgroundColor: palette.backgroundLight
+          }
+        }
       }
     }
   }
@@ -67,6 +76,19 @@ export const Palette = () => {
     `Tempor incididunt ut labore et dolore magna aliqua. Sint id est dolor laborum. Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolores est unt.`
   )
 
+  const exampleContents = (
+    <React.Fragment>
+      <CallOut title={titleText} text={textText} />
+      <CTA
+        title="Call to action"
+        text={textText}
+        buttonText="Example button"
+        buttonLink="https://google.com"
+        variant="hero-white-bg"
+      />
+    </React.Fragment>
+  )
+
   return (
     <React.Fragment>
       <PaletteProvider
@@ -74,42 +96,42 @@ export const Palette = () => {
           backgroundLight: 'hsl(0, 60%, 90%)'
         }}
       >
-        <CallOut title={titleText} text={textText} />
+        {exampleContents}
       </PaletteProvider>
       <PaletteProvider
         palette={{
           backgroundLight: 'hsl(60, 60%, 90%)'
         }}
       >
-        <CallOut title={titleText} text={textText} />
+        {exampleContents}
       </PaletteProvider>
       <PaletteProvider
         palette={{
           backgroundLight: 'hsl(120, 60%, 90%)'
         }}
       >
-        <CallOut title={titleText} text={textText} />
+        {exampleContents}
       </PaletteProvider>
       <PaletteProvider
         palette={{
           backgroundLight: 'hsl(180, 60%, 90%)'
         }}
       >
-        <CallOut title={titleText} text={textText} />
+        {exampleContents}
       </PaletteProvider>
       <PaletteProvider
         palette={{
           backgroundLight: 'hsl(240, 60%, 90%)'
         }}
       >
-        <CallOut title={titleText} text={textText} />
+        {exampleContents}
       </PaletteProvider>
       <PaletteProvider
         palette={{
           backgroundLight: 'hsl(300, 60%, 90%)'
         }}
       >
-        <CallOut title={titleText} text={textText} />
+        {exampleContents}
       </PaletteProvider>
     </React.Fragment>
   )
