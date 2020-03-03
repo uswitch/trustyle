@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx, ThemeProvider } from 'theme-ui'
-import { boolean, select, text } from '@storybook/addon-knobs'
+import { boolean, color, select, text } from '@storybook/addon-knobs'
 
 import CTA from '../../cta/src'
 
@@ -70,6 +70,7 @@ const PaletteProvider: React.FC<PaletteProps> = ({ palette, children }) => {
 }
 
 export const Palette = () => {
+  const firstColor = color('Background light', 'hsl(0, 60%, 90%)')
   const titleText = text(`Call out title`, `This is a call out`)
   const textText = text(
     `Call out text`,
@@ -93,7 +94,7 @@ export const Palette = () => {
     <React.Fragment>
       <PaletteProvider
         palette={{
-          backgroundLight: 'hsl(0, 60%, 90%)'
+          backgroundLight: firstColor
         }}
       >
         {exampleContents}
