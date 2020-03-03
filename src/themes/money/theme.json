@@ -479,24 +479,6 @@
           "backgroundColor": "button-secondary--hover"
         }
       },
-
-      "hollow": {
-        "variant": "buttons.base",
-        "color": "experimental-text",
-        "borderColor": "primary",
-        "border": "solid 1px",
-        "backgroundColor": "transparent",
-        ":hover:not(:disabled)": {
-          "backgroundColor": "button-hollow--hover"
-        },
-        ":focus": {
-          "backgroundColor": "primary--dark"
-        },
-        ":active": {
-          "backgroundColor": "primary--dark"
-        }
-      }
-    }
   },
 
   "list": {

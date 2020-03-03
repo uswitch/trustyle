@@ -89,7 +89,7 @@ export const SecondaryVariant = () => (
 )
 
 export const PrimaryDisabledVariant = () => (
-  <Button variant="hollow" disabled>
+  <Button variant="primary" disabled>
     Primary button
   </Button>
 )

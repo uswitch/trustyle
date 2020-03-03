@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
 
-export type Variant = 'primary' | 'secondary' | 'continue' | 'hollow'
+export type Variant = 'primary' | 'secondary' | 'continue'
 type IconPosition = 'left' | 'center' | 'right' | null
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
