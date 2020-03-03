@@ -7,7 +7,7 @@
     "src/layout/**/*",
     "src/themes/**/*",
     "src/helpers/**/*",
-    "src/utils"
+    "src/utils-package"
   ],
   "version": "independent",
   "ignoreChanges": [
