@@ -34,6 +34,8 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
         borderRadius: 4,
         paddingX: 'sm',
         paddingY: 'sm',
+        marginTop: 'xs',
+        marginBottom: 'md',
         variant: 'callOut.main'
       }}
     >
