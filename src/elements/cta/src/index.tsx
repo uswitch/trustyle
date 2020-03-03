@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
-import get from '@uswitch/trustyle.utils/get'
+import get from '@uswitch/trustyle-utils.get'
 
 const lookup = (variant: string) =>
   variant === 'base' ? 'cta2.base' : `cta2.variants.${variant}`
