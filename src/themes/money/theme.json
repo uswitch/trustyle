@@ -188,15 +188,23 @@
 
   "accordion": {
     "base": {
+      "title": {
+        "marginBottom": "xs"
+      },
+      "content": {
+        "marginBottom": "xs"
+      },
       "button": {
-        "padding": "sm",
-        "bg": ["grey-05", "transparent"],
+        "padding": "0",
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "bg": "transparent",
         "fontFamily": "base",
         "fontSize": "base",
         "fontWeight": "bold",
         "color": "textColor",
         "alignItems": "center",
-        "borderWidth": "0 0 1px 0",
+        "borderWidth": "1px 0 0 0",
         "borderStyle": "solid",
         "borderColor": "grey-20",
         "display": "flex",
@@ -280,6 +288,8 @@
           "color": "grey-60",
           "textDecoration": "none",
           "fontSize": "xs",
+          "marginTop": "-4px",
+          "display": "block",
           ":visited": {
             "color": "grey-60"
           }
@@ -307,12 +317,17 @@
       "color": "grey-80",
       "paddingTop": "xs",
       "paddingBottom": "xs",
-      "paddingLeft": "xs",
-      "textDecoration": "none",
-      "borderWidth": "0 0 1px 0",
+      "paddingLeft": "0",
+      "borderWidth": "1px 0 0 0",
       "borderStyle": "solid",
       "borderColor": "grey-20",
-      "fontSize": "xs"
+      "fontSize": "xs",
+      "a": {
+        "textDecoration": "none"
+      },
+      ":last-child": {
+        "paddingBottom": "0"
+      }
     }
   },
 
