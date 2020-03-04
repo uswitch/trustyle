@@ -42,7 +42,6 @@
     "@storybook/addon-viewport": "^5.3.8",
     "@storybook/addons": "^5.3.8",
     "@storybook/react": "^5.3.8",
-    "@theme-ui/color": "^0.3.1",
     "@types/facepaint": "^1.2.1",
     "@types/lodash.debounce": "^4.0.6",
     "@types/react": "^16.8.21",

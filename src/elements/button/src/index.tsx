@@ -19,10 +19,8 @@ const invertTheme = (theme: any, variant: any = {}) => {
   const borderColor = color
 
   const hoverColor = theme.colors[backgroundColor]
-    ? darken(theme.colors[backgroundColor], 0.1)()
+    ? darken(theme.colors[backgroundColor], '0.1')
     : null
-
-  console.log({ variant })
 
   return {
     ...variant,
