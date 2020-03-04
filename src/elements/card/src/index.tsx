@@ -28,12 +28,12 @@ const Card: React.FC<Props> = ({
       href={linkHref}
       sx={{
         display: 'flex',
-        flexDirection: theme.card.flexDirection ? ['column', 'row'] : 'column',
+        flexDirection: 'column',
         border: theme.card.flexDirection ? 'none' : 'solid 1px',
         borderColor: 'grey-20',
-        padding: theme.card.flexDirection ? '0' : 'xs',
+        padding: 'xs',
         marginTop: '0',
-        marginRight: 'xs',
+        marginRight: ['0', 'xs'],
         marginBottom: ['0', 'xs'],
         '> img': {
           height: 'auto',
