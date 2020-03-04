@@ -222,7 +222,7 @@
     "checked": {
       "backgroundColor": "primary",
       "borderColor": "primary",
-      "knob": {
+      "switch": {
         "backgroundColor": "white",
         "borderColor": "primary"
       }
@@ -230,7 +230,7 @@
     "unchecked": {
       "backgroundColor": "light-3",
       "borderColor": "light-3",
-      "knob": {
+      "switch": {
         "backgroundColor": "white",
         "borderColor": "light-3"
       }

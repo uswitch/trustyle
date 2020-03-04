@@ -13,7 +13,7 @@
     "build": "npm run clean && tsc"
   },
   "dependencies": {
-    "@uswitch/trustyle-utils.palette": "^1.0.0"
+    "@uswitch/trustyle-utils.palette": "^0.0.0"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",

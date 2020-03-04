@@ -2,7 +2,7 @@
 import { Fragment, useState } from 'react'
 import { jsx } from 'theme-ui'
 import { action } from '@storybook/addon-actions'
-import { color } from '@storybook/addon-knobs'
+import { boolean, color } from '@storybook/addon-knobs'
 import { PaletteProvider } from '@uswitch/trustyle-utils.palette'
 
 import { checkedIcon, uncheckedIcon } from './assets'
@@ -27,11 +27,15 @@ export const ExampleWithState = () => {
     action('Toggle changed')(newState)
   }
 
+  const applyPalette = boolean('Apply palette?', false, 'ToggleSwitch')
+
   return (
     <Fragment>
       <PaletteProvider
         value={{
-          featureColor: color('featureColor', '#141424', 'ToggleSwitch')
+          featureColor: applyPalette
+            ? color('featureColor', '#141424', 'ToggleSwitch')
+            : null
         }}
       >
         <ToggleSwitch

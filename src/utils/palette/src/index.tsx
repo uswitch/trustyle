@@ -35,15 +35,10 @@ interface PaletteProps {
   as: any
   children: React.ReactNode
   className: string
-  px: SxStyleProp
+  px: Record<string, any>
 }
 
-export const Palette: React.FC<PaletteProps> = ({
-  children,
-  className,
-  px = {},
-  ...props
-}) => {
+export const Palette = ({ children, className, px = {}, ...props }: any) => {
   const palette = useContext(PaletteContext)
   const sx = createSx(palette, px)
 
