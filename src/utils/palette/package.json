@@ -1,6 +1,6 @@
 {
-  "name": "@uswitch/trustyle.cta",
-  "version": "0.2.4",
+  "name": "@uswitch/trustyle-utils.palette",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -15,9 +15,5 @@
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
-  },
-  "dependencies": {
-    "@uswitch/trustyle-utils.get": "^1.0.1",
-    "@uswitch/trustyle.button-link": "^0.5.0"
   }
 }

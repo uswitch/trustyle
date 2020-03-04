@@ -121,6 +121,17 @@
     "xl": 30
   },
 
+  "srOnly": {
+    "position": "absolute",
+    "width": 1,
+    "height": 1,
+    "padding": 0,
+    "margin": -1,
+    "overflow": "hidden",
+    "clip": "rect(0, 0, 0, 0)",
+    "border": 0
+  },
+
   "container": {
     "sm": { "px": 20 },
     "md": { "px": 72 },
@@ -204,6 +215,25 @@
     "secondary": {
       "color": "light-1",
       "backgroundColor": "secondary"
+    }
+  },
+
+  "toggleSwitch": {
+    "checked": {
+      "backgroundColor": "primary",
+      "borderColor": "primary",
+      "switch": {
+        "backgroundColor": "white",
+        "borderColor": "primary"
+      }
+    },
+    "unchecked": {
+      "backgroundColor": "light-3",
+      "borderColor": "light-3",
+      "switch": {
+        "backgroundColor": "white",
+        "borderColor": "light-3"
+      }
     }
   },
 

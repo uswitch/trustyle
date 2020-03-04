@@ -16,14 +16,21 @@ export const SingleAccordion = () => {
 }
 
 export const AccordionGroup = () => {
+  const groupTitle = text('Group title', 'Example group title')
   const title = text('First title', 'This is an example title')
   const content = text('First content', 'This is some example content')
 
   return (
     <Accordion.Group>
+      <Accordion.Title as="h2">{groupTitle}</Accordion.Title>
       <Accordion title={title}>{content}</Accordion>
-      <Accordion title="Second accordion">Hello world again!</Accordion>
-      <Accordion title="Third accordion">Some new text</Accordion>
+      <Accordion title="Second accordion">
+        <p>Hello World</p>
+      </Accordion>
+      <Accordion title="Third accordion">
+        <p>Hello</p>
+        <p>World</p>
+      </Accordion>
     </Accordion.Group>
   )
 }

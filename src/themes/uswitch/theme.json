@@ -165,6 +165,17 @@
     "xl": 30
   },
 
+  "srOnly": {
+    "position": "absolute",
+    "width": 1,
+    "height": 1,
+    "padding": 0,
+    "margin": -1,
+    "overflow": "hidden",
+    "clip": "rect(0, 0, 0, 0)",
+    "border": 0
+  },
+
   "----------------------------- Variants": "-----------------------------",
   "modules": {
     "content-hero-module": {
@@ -211,17 +222,28 @@
 
   "accordion": {
     "base": {
+      "marginTop": "sm",
+      "marginBottom": "sm",
+      "title": {
+        "marginTop": "0",
+        "marginBottom": "xs"
+      },
+      "content": {
+        "marginBottom": "xs"
+      },
       "button": {
-        "padding": "sm",
-        "bg": "grey-05",
+        "padding": "0",
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "bg": "transparent",
         "fontFamily": "base",
         "fontSize": "base",
-        "color": "uswitch-navy",
+        "fontWeight": "bold",
+        "color": "textColor",
         "alignItems": "center",
-        "border": 0,
-        "borderBottomWidth": 1,
-        "borderBottomStyle": "solid",
-        "borderBottomColor": "grey-10",
+        "borderWidth": "1px 0 0 0",
+        "borderStyle": "solid",
+        "borderColor": "grey-20",
         "display": "flex",
         "flexDirection": "row",
         "width": "100%"
@@ -505,6 +527,57 @@
     }
   },
 
+  "cta2": {
+    "base": {
+      "main": {
+        "position": "relative",
+        "borderWidth": 1,
+        "borderStyle": "solid",
+        "borderColor": "grey-10",
+        "paddingRight": ["md", "lg"],
+        "paddingLeft": [34, 42],
+        "paddingY": "md",
+        "::before": {
+          "position": "absolute",
+          "top": "0",
+          "left": "0",
+          "content": "\" \"",
+          "display": "block",
+          "width": 8,
+          "height": "100%",
+          "backgroundColor": "blue-75"
+        }
+      },
+      "button": {
+        "buttonVariant": "primary",
+        "width": "auto"
+      }
+    },
+    "variants": {
+      "hero": {
+        "variant": "cta2.base.main",
+        "borderWidth": 0,
+        "backgroundColor": "none",
+        "paddingLeft": ["md", "lg"],
+        "::before": {
+          "display": "none"
+        },
+        "button": {
+          "variant": "cta2.base.button"
+        }
+      },
+      "hero-white-bg": {
+        "main": {
+          "variant": "cta2.variants.hero.main",
+          "backgroundColor": "white"
+        },
+        "button": {
+          "variant": "cta2.base.button"
+        }
+      }
+    }
+  },
+
   "funnelProgress": {
     "base": {
       "display": "flex",
@@ -747,6 +820,26 @@
     }
   },
 
+  "toggleSwitch": {
+    "checked": {
+      "backgroundColor": "black",
+      "borderColor": "black",
+      "switch": {
+        "backgroundColor": "white",
+        "borderColor": "black"
+      }
+    },
+    "unchecked": {
+      "backgroundColor": "grey-05",
+      "borderColor": "grey-40",
+      "switch": {
+        "color": "grey-40",
+        "backgroundColor": "white",
+        "borderColor": "grey-40"
+      }
+    }
+  },
+
   "styles": {
     "h1": {
       "fontFamily": "heading",
@@ -816,15 +909,7 @@
         "marginY": 0,
         "borderLeft": "2px solid",
         "borderLeftColor": "#84A6FF",
-        "fontWeight": "bold",
-
-        "::before": {
-          "content": "\"“\""
-        },
-
-        "::after": {
-          "content": "\"“\""
-        }
+        "fontWeight": "bold"
       }
     },
 

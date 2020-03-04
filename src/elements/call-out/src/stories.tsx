@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { css, jsx } from '@emotion/core'
-import { boolean, number, select, text } from '@storybook/addon-knobs'
+import { jsx } from '@emotion/core'
+import { boolean, select, text } from '@storybook/addon-knobs'
 
 import CallOut from './'
 
@@ -10,7 +10,6 @@ export default {
 }
 
 export const Example = () => {
-  const padding = number('Padding', 10)
   const titleText = text(`Call out title`, `This is a call out`)
   const textText = text(
     `Call out text`,
@@ -24,12 +23,10 @@ export const Example = () => {
   )
 
   return (
-    <div css={css({ padding })}>
-      <CallOut
-        title={titleText}
-        text={textText}
-        icon={showIcon ? iconGlyph : undefined}
-      />
-    </div>
+    <CallOut
+      title={titleText}
+      text={textText}
+      icon={showIcon ? iconGlyph : undefined}
+    />
   )
 }

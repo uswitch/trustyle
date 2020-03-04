@@ -132,7 +132,10 @@
     "secondary": "#924A8B",
     "secondary--dark": "#7A3E74",
 
-    "experimental-text": "#29335C"
+    "experimental-text": "#29335C",
+    "button-secondary": "#34454E",
+    "button-secondary--hover": "#5D6A72",
+    "button-hollow--hover": "#FFF6E2"
   },
 
   "radii": {
@@ -140,6 +143,17 @@
     "md": 6,
     "lg": 16,
     "xl": 30
+  },
+
+  "srOnly": {
+    "position": "absolute",
+    "width": 1,
+    "height": 1,
+    "padding": 0,
+    "margin": -1,
+    "overflow": "hidden",
+    "clip": "rect(0, 0, 0, 0)",
+    "border": 0
   },
 
   "----------------------------- Variants": "-----------------------------",
@@ -188,15 +202,26 @@
 
   "accordion": {
     "base": {
+      "marginTop": "sm",
+      "marginBottom": "sm",
+      "title": {
+        "marginTop": "0",
+        "marginBottom": "xs"
+      },
+      "content": {
+        "marginBottom": "xs"
+      },
       "button": {
-        "padding": "sm",
-        "bg": ["grey-05", "transparent"],
+        "padding": "0",
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "bg": "transparent",
         "fontFamily": "base",
         "fontSize": "base",
         "fontWeight": "bold",
         "color": "textColor",
         "alignItems": "center",
-        "borderWidth": "0 0 1px 0",
+        "borderWidth": "1px 0 0 0",
         "borderStyle": "solid",
         "borderColor": "grey-20",
         "display": "flex",
@@ -280,6 +305,8 @@
           "color": "grey-60",
           "textDecoration": "none",
           "fontSize": "xs",
+          "marginTop": "-4px",
+          "display": "block",
           ":visited": {
             "color": "grey-60"
           }
@@ -307,12 +334,17 @@
       "color": "grey-80",
       "paddingTop": "xs",
       "paddingBottom": "xs",
-      "paddingLeft": "xs",
-      "textDecoration": "none",
-      "borderWidth": "0 0 1px 0",
+      "paddingLeft": "0",
+      "borderWidth": "1px 0 0 0",
       "borderStyle": "solid",
       "borderColor": "grey-20",
-      "fontSize": "xs"
+      "fontSize": "xs",
+      "a": {
+        "textDecoration": "none"
+      },
+      ":last-child": {
+        "paddingBottom": "0"
+      }
     }
   },
 
@@ -423,14 +455,26 @@
 
   "buttons": {
     "base": {
-      "fontSize": "md",
       "fontWeight": "bold",
       "border": "none",
       "borderRadius": "50vh",
-      "paddingX": "lg",
       ":disabled": {
         "opacity": "0.3",
         "cursor": "not-allowed"
+      },
+      "btnSize": {
+        "large": {
+          "paddingX": "xl",
+          "paddingY": "base",
+          "fontSize": "md",
+          "height": 56
+        },
+        "small": {
+          "paddingX": 40,
+          "paddingY": 13,
+          "fontSize": "sm",
+          "height": "xl"
+        }
       }
     },
 
@@ -453,15 +497,15 @@
       "secondary": {
         "variant": "buttons.base",
         "color": "grey-0",
-        "backgroundColor": "secondary",
+        "backgroundColor": "button-secondary",
         ":hover:not(:disabled)": {
-          "backgroundColor": "secondary--dark"
+          "backgroundColor": "button-secondary--hover"
         },
         ":focus": {
-          "backgroundColor": "secondary--dark"
+          "backgroundColor": "button-secondary--hover"
         },
         ":active": {
-          "backgroundColor": "secondary--dark"
+          "backgroundColor": "button-secondary--hover"
         }
       }
     }
@@ -499,6 +543,56 @@
     },
     "button": {
       "marginLeft": [null, "md"]
+    }
+  },
+
+  "cta2": {
+    "base": {
+      "main": {
+        "backgroundColor": "grey-10"
+      },
+      "title": {
+        "color": "experimental-text",
+        "fontWeight": "bold"
+      },
+      "text": {
+        "marginBottom": [null, 0]
+      },
+      "button": {
+        "marginLeft": [null, "md"]
+      }
+    },
+    "variants": {
+      "hero": {
+        "main": {
+          "backgroundColor": "none",
+          "color": "white"
+        },
+        "title": {
+          "variant": "cta2.base.title",
+          "color": "inherit"
+        },
+        "text": {
+          "variant": "cta2.base.text"
+        },
+        "button": {
+          "variant": "cta2.base.button"
+        }
+      },
+      "hero-white-bg": {
+        "main": {
+          "backgroundColor": "white"
+        },
+        "title": {
+          "variant": "cta2.base.title"
+        },
+        "text": {
+          "variant": "cta2.base.text"
+        },
+        "button": {
+          "variant": "cta2.base.button"
+        }
+      }
     }
   },
 
@@ -738,6 +832,25 @@
     }
   },
 
+  "toggleSwitch": {
+    "checked": {
+      "backgroundColor": "secondary",
+      "borderColor": "secondary",
+      "switch": {
+        "backgroundColor": "white",
+        "borderColor": "secondary"
+      }
+    },
+    "unchecked": {
+      "backgroundColor": "grey-20",
+      "borderColor": "grey-20",
+      "switch": {
+        "backgroundColor": "white",
+        "borderColor": "grey-20"
+      }
+    }
+  },
+
   "author": {
     "heading": {
       "color": "grey-80"
@@ -833,15 +946,7 @@
         "marginY": 0,
         "borderLeft": "2px solid",
         "borderLeftColor": "plum",
-        "fontWeight": "bold",
-
-        "::before": {
-          "content": "\"“\""
-        },
-
-        "::after": {
-          "content": "\"“\""
-        }
+        "fontWeight": "bold"
       }
     },
 
@@ -858,7 +963,8 @@
     "th": {
       "margin": 0,
       "padding": "16px",
-      "fontSize": "sm"
+      "fontSize": "sm",
+      "textAlign": "left"
     },
 
     "td": {

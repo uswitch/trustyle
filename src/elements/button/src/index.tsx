@@ -11,6 +11,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant: Variant
   iconPosition?: IconPosition
   inverse?: boolean
+  size?: string
 }
 
 const invertTheme = (theme: any, variant: any = {}) => {
@@ -44,6 +45,7 @@ export const Button: React.FC<Props> = ({
   variant,
   iconPosition = null,
   onClick,
+  size = 'large',
   inverse = false,
   ...props
 }) => {
@@ -57,16 +59,31 @@ export const Button: React.FC<Props> = ({
         cursor: 'pointer',
         backgroundImage: 'none',
         fontFamily: 'base',
-        fontSize: 'base',
-        paddingX: 'sm',
-        paddingY: 'base',
+
+        fontSize: theme.buttons.base.btnSize
+          ? theme.buttons.base.btnSize[size].fontSize
+          : 'base',
+        paddingX: theme.buttons.base.btnSize
+          ? theme.buttons.base.btnSize[size].paddingX
+          : 'sm',
+        paddingY: theme.buttons.base.btnSize
+          ? theme.buttons.base.btnSize[size].paddingY
+          : 'base',
+        height: theme.buttons.base.btnSize
+          ? theme.buttons.base.btnSize[size].height
+          : 'base',
+        variant: `buttons.variants.${variant}`,
+
+        justifyContent: 'center',
+        alignItems: 'center',
         ...chosenStyle,
+
         ...(iconPosition
           ? {
               display: 'flex',
               justifyContent:
                 iconPosition === 'left'
-                  ? 'align-left'
+                  ? 'flex-start'
                   : iconPosition === 'right'
                   ? 'space-between'
                   : 'center'

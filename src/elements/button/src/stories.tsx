@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { css, jsx } from '@emotion/core'
-import { boolean, number, text } from '@storybook/addon-knobs'
+import { boolean, number, select, text } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
 import theme from '../../../utils/theme-selector'
@@ -15,6 +15,11 @@ export default {
   title: 'Elements|Button'
 }
 
+const sizeOptions = {
+  Large: 'large',
+  Small: 'small'
+}
+
 export const AllVariants = () => (
   <div css={css({ padding: number('Padding', 10) })}>
     {theme() &&
@@ -24,6 +29,7 @@ export const AllVariants = () => (
             variant={key as Variant}
             disabled={boolean('Disabled', false)}
             onClick={action(`${key}-click`)}
+            size={select('Sizes', sizeOptions, 'large')}
           >
             {text(`${key} label`, `${key} button`)}
             {key.match('icon') && (
@@ -41,6 +47,7 @@ export const AllVariants = () => (
             disabled={boolean('Disabled', false)}
             onClick={action(`${key}-click`)}
             iconPosition="right"
+            size={select('Sizes', sizeOptions, 'large')}
           >
             {text(`${key} label`, `${key} button`)}
 
@@ -57,6 +64,7 @@ export const AllVariants = () => (
             disabled={boolean('Disabled', false)}
             onClick={action(`${key}-click`)}
             iconPosition="left"
+            size={select('Sizes', sizeOptions, 'large')}
           >
             <Icon
               color={theme().colors.primary}
