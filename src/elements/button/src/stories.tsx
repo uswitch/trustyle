@@ -67,6 +67,23 @@ export const AllVariants = () => (
             {text(`${key} label`, `${key} button`)}
           </Button>
           <Spacer />
+          <Button
+            variant={key as Variant}
+            inverse
+            disabled={boolean('Disabled', false)}
+            onClick={action(`${key}-click`)}
+          >
+            {`inverse ${key} button`}
+            {key.match('icon') && (
+              <Icon
+                color={theme().colors.primary}
+                direction="right"
+                glyph="caret"
+                size={20}
+              />
+            )}
+          </Button>
+          <Spacer />
         </React.Fragment>
       ))}
   </div>
