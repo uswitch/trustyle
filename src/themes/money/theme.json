@@ -145,6 +145,17 @@
     "xl": 30
   },
 
+  "srOnly": {
+    "position": "absolute",
+    "width": 1,
+    "height": 1,
+    "padding": 0,
+    "margin": -1,
+    "overflow": "hidden",
+    "clip": "rect(0, 0, 0, 0)",
+    "border": 0
+  },
+
   "----------------------------- Variants": "-----------------------------",
   "modules": {
     "content-hero-module": {
@@ -817,6 +828,25 @@
         "title": {
           "color": "grey-0"
         }
+      }
+    }
+  },
+
+  "toggleSwitch": {
+    "checked": {
+      "backgroundColor": "secondary",
+      "borderColor": "secondary",
+      "switch": {
+        "backgroundColor": "white",
+        "borderColor": "secondary"
+      }
+    },
+    "unchecked": {
+      "backgroundColor": "grey-20",
+      "borderColor": "grey-20",
+      "switch": {
+        "backgroundColor": "white",
+        "borderColor": "grey-20"
       }
     }
   },
