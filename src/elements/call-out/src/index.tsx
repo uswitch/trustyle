@@ -15,8 +15,7 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
   const mainText = (
     <React.Fragment>
       {title && (
-        <Palette
-          as={Styled.h3}
+        <Styled.h3
           sx={{
             marginTop: '-3px',
             marginBottom: 'xxs',
@@ -24,7 +23,7 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
           }}
         >
           {title}
-        </Palette>
+        </Styled.h3>
       )}
       <Palette
         as={Styled.p}
@@ -53,8 +52,7 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
         variant: 'callOut.main'
       }}
       px={{
-        backgroundColor: 'accentColor',
-        color: 'accentColorText'
+        backgroundColor: 'accentColor'
       }}
     >
       {icon ? (
