@@ -17,6 +17,7 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.icon": "^1.0.0"
+    "@uswitch/trustyle.icon": "^1.0.0",
+    "@uswitch/trustyle-utils.palette": "0.0.0"
   }
 }
