@@ -12,11 +12,9 @@
     "clean": "rm -rf lib",
     "build": "npm run clean && tsc"
   },
-  "dependencies": {
-    "@uswitch/trustyle-utils.palette": "^1.0.1"
-  },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
+    "@uswitch/trustyle-utils.palette": "^1.0.1",
     "react": "^16.7.0"
   }
 }

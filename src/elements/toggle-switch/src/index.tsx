@@ -53,7 +53,8 @@ const ToggleSwitch: React.FC<Props> = ({
           borderColor: checked ? 'featureColor' : null
         }}
       >
-        <div
+        <Palette
+          as="div"
           sx={{
             width: 39,
             height: 38,
@@ -67,9 +68,12 @@ const ToggleSwitch: React.FC<Props> = ({
             alignItems: 'center',
             variant: `toggleSwitch.${state}.switch`
           }}
+          px={{
+            borderColor: checked ? 'featureColor' : null
+          }}
         >
           {checked ? icons?.checked : icons?.unchecked}
-        </div>
+        </Palette>
       </Palette>
     </div>
   )
