@@ -31,13 +31,6 @@ const createSx = (
   }, {})
 }
 
-interface PaletteProps {
-  as: any
-  children: React.ReactNode
-  className: string
-  px: Record<string, any>
-}
-
 export const Palette = ({ children, className, px = {}, ...props }: any) => {
   const palette = useContext(PaletteContext)
   const sx = createSx(palette, px)
