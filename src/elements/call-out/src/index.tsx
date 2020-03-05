@@ -3,6 +3,7 @@
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
+import { Palette } from '@uswitch/trustyle-utils.palette'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   icon?: Glyph
@@ -24,12 +25,24 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
           {title}
         </Styled.h3>
       )}
-      <Styled.p sx={{ marginY: 0, variant: 'callOut.text' }}>{text}</Styled.p>
+      <Palette
+        as={Styled.p}
+        sx={{
+          marginY: 0,
+          variant: 'callOut.text'
+        }}
+        px={{
+          color: 'accentColorText'
+        }}
+      >
+        {text}
+      </Palette>
     </React.Fragment>
   )
 
   return (
-    <div
+    <Palette
+      as="div"
       sx={{
         borderRadius: 4,
         paddingX: 'sm',
@@ -38,13 +51,22 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
         marginBottom: 'md',
         variant: 'callOut.main'
       }}
+      px={{
+        backgroundColor: 'accentColor'
+      }}
     >
       {icon ? (
         <div sx={{ display: 'flex' }}>
-          <div sx={{ flex: '0 0 16px', marginRight: '8px' }}>
+          <div
+            sx={{
+              flexGrow: 0,
+              flexShrink: 0,
+              flexBasis: ({ space }) => space.sm,
+              marginRight: 'xs'
+            }}
+          >
             <div
               sx={{
-                backgroundColor: 'primary',
                 borderRadius: '50%',
                 padding: '20%',
                 variant: 'callOut.icon'
@@ -59,7 +81,7 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
       ) : (
         mainText
       )}
-    </div>
+    </Palette>
   )
 }
 
