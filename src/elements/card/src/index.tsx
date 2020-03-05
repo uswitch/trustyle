@@ -64,7 +64,9 @@ const Card: React.FC<Props> = ({
     >
       <Styled.h3 sx={{ margin: '0' }}>{title}</Styled.h3>
       <Styled.p>{description}</Styled.p>
-      <Styled.p sx={{ textDecoration: 'underline' }}>{linkText}</Styled.p>
+      <Styled.a as="p" sx={{ textDecoration: 'underline' }}>
+        {linkText}
+      </Styled.a>
     </div>
   </a>
 )
