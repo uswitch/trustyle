@@ -41,7 +41,7 @@ export const ExampleCards = () => {
           flexWrap: 'wrap'
         }}
       >
-        <div sx={{ display: 'flex', width: ['auto', '33.3%'] }}>
+        <div sx={{ display: 'flex', width: ['auto'] }}>
           <Card
             imgSrc={img}
             imgAlt="Picture of a cute kitten"
@@ -51,7 +51,7 @@ export const ExampleCards = () => {
             linkText="read about cats"
           />
         </div>
-        <div sx={{ display: 'flex', width: ['auto', '33.3%'] }}>
+        <div sx={{ display: 'flex', width: ['auto'] }}>
           <Card
             imgSrc={img}
             imgAlt="Picture of a cute kitten"
@@ -61,7 +61,7 @@ export const ExampleCards = () => {
             linkText="read about cats"
           />
         </div>
-        <div sx={{ display: 'flex', width: ['auto', '33.3%'] }}>
+        <div sx={{ display: 'flex', width: ['auto'] }}>
           <Card
             imgSrc={img}
             imgAlt="Picture of a cute kitten"

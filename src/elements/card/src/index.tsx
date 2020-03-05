@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, useThemeUI } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 
 interface Props {
@@ -11,61 +11,62 @@ interface Props {
   description: string
   linkHref: string
   linkText?: string
+  className?: string
 }
 
+const variant = (prop = '') => `compounds.card${prop ? `.${prop}` : ''}`
 const Card: React.FC<Props> = ({
   imgSrc,
   imgAlt,
   title,
   description,
   linkHref,
-  linkText = 'Read more'
-}) => {
-  const { theme }: any = useThemeUI()
-
-  return (
-    <a
-      href={linkHref}
+  linkText = 'Read more',
+  className = ''
+}) => (
+  <a
+    className={className}
+    href={linkHref}
+    sx={{
+      textDecoration: 'none',
+      cursor: 'pointer',
+      '&:hover': {
+        opacity: '0.5'
+      },
+      variant: variant()
+    }}
+  >
+    <div
       sx={{
-        display: 'flex',
-        flexDirection: theme.card.flexDirection ? ['column', 'row'] : 'column',
-        border: theme.card.flexDirection ? 'none' : 'solid 1px',
-        borderColor: 'grey-20',
-        padding: theme.card.flexDirection ? '0' : 'xs',
-        marginTop: '0',
-        marginRight: 'xs',
-        marginBottom: ['0', 'xs'],
-        '> img': {
-          height: 'auto',
-          width: '100%'
-        },
-        '&:hover': {
-          opacity: '0.5'
-        },
-        textDecoration: 'none',
-        cursor: 'pointer'
+        width: '100%',
+        variant: variant('img')
       }}
     >
       <ImgixImage
+        sx={{
+          height: 'auto',
+          width: '100%'
+        }}
         alt={imgAlt}
         src={imgSrc}
         imgixParams={{ fit: 'crop', crop: 'edges', ar: '16:9' }}
         critical
       />
-      <div
-        sx={{
-          padding: 'xs',
-          display: 'flex',
-          flexDirection: 'column',
-          flex: '1'
-        }}
-      >
-        <h3 sx={{ margin: '0' }}>{title}</h3>
-        <p sx={{ flex: '1' }}>{description}</p>
-        <p sx={{ textDecoration: 'underline' }}>{linkText}</p>
-      </div>
-    </a>
-  )
-}
+    </div>
+    <div
+      sx={{
+        paddingY: 'xs',
+        display: 'flex',
+        flexDirection: 'column',
+        flex: '1',
+        variant: variant('content')
+      }}
+    >
+      <Styled.h3 sx={{ margin: '0' }}>{title}</Styled.h3>
+      <Styled.p>{description}</Styled.p>
+      <Styled.p sx={{ textDecoration: 'underline' }}>{linkText}</Styled.p>
+    </div>
+  </a>
+)
 
 export default Card
