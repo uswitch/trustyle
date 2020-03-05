@@ -7,11 +7,13 @@ import { css, jsx } from '@emotion/core'
 interface Props extends SharedImigixAndSourceProps {
   alt?: string
   critical?: boolean
+  className?: string
 }
 
 const Image: React.FC<Props> = ({
   alt,
   critical,
+  className = '',
   height,
   imgixParams,
   sizes,
@@ -21,6 +23,7 @@ const Image: React.FC<Props> = ({
   if (!src) {
     return (
       <span
+        className={className}
         css={css({
           display: 'inline-block',
           height,
@@ -41,7 +44,7 @@ const Image: React.FC<Props> = ({
             }
           : undefined
       }
-      className={!critical ? 'lazyload' : ''}
+      className={!critical ? `${className} lazyload` : className}
       src={src}
       height={height}
       width={width}
