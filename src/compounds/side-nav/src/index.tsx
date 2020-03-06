@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 import Accordion from '@uswitch/trustyle.accordion'
 
 interface Link {
@@ -58,7 +58,7 @@ const SideNav: React.FC<Props> = ({ internalLinks, additionalLinks = [] }) => {
                     variant: 'sideNav.additionalLink'
                   }}
                 >
-                  <a href={url}>{text}</a>
+                  <Styled.a href={url}>{text}</Styled.a>
                 </li>
               ))}
             </ul>
