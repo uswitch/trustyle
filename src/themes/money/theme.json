@@ -943,11 +943,14 @@
         "paddingLeft": "sm",
         "paddingY": "xs",
         "marginY": 0,
+        "color": "experimental-text",
         "borderLeft": "2px solid",
         "borderLeftColor": "plum",
-        "fontWeight": "bold"
+        "fontWeight": "bold",
+        "fontStyle": "normal"
       }
     },
+    
 
     "table": {
       "borderSpacing": 0,
@@ -963,7 +966,8 @@
       "margin": 0,
       "padding": "16px",
       "fontSize": "sm",
-      "textAlign": "left"
+      "textAlign": "left",
+      "color": "experimental-text"
     },
 
     "td": {
