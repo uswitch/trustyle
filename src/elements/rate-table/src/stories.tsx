@@ -68,8 +68,9 @@ export const Example2 = () => {
         </RateTable.cells.Primary>
       </RateTable.cells.Split>
       <RateTable.cells.Primary label="Annual saving" highlighted>
-        {/* <RateTable.Data.Range from="£000" to="£000" helpText="whatevs" /> */}
-        <p sx={{ margin: 0, fontSize: 'xxxl' }}>£288.60</p>
+        <RateTable.Data.Range from="£30" to="£260" />
+        <a>Clickable link</a>
+        {/*<p sx={{ margin: 0, fontSize: 'xxxl', fontWeight: 'bold' }}>£288.60</p>*/}
       </RateTable.cells.Primary>
       <RateTable.cells.Cta
         button={<ButtonLink variant="primary">Button</ButtonLink>}

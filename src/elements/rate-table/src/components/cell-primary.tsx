@@ -37,7 +37,7 @@ const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
       >
         {label}
       </div>
-      <div sx={{ flex: 1, fontSize: 'md', fontWeight: 'bold' }}>{children}</div>
+      <div sx={{ flex: 1 }}>{children}</div>
     </CellBase>
   )
 }
