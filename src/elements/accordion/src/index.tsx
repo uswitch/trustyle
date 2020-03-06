@@ -90,6 +90,9 @@ const Accordion: React.FC<Props> & {
           },
           '> *:last-child': {
             marginBottom: 0
+          },
+          '> p:last-child': {
+            marginBottom: 'xs'
           }
         }}
       >

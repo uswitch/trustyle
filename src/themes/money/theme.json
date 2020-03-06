@@ -873,7 +873,7 @@
     "h1": {
       "variant": "styles.heading",
       "fontSize": ["xxl", "xxxl"],
-      "marginTop": "xl",
+      "marginTop": 0,
       "marginBottom": "sm"
     },
 
