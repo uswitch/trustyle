@@ -412,6 +412,7 @@
 
   "buttons": {
     "base": {
+      "boxSizing": "border-box",
       "paddingX": "lg",
       "textAlign": "center",
       "fontWeight": "bold"
