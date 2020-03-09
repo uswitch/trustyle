@@ -7,6 +7,7 @@ import { ROWS } from './cell-split'
 export const CellContext = React.createContext({
   gridRow: '',
   gridColumn: '',
+  firstInSplit: false,
   inSplit: false
 })
 
@@ -51,8 +52,8 @@ const RateTableRow: React.FC<RowProps> = ({
           display: 'grid',
           gridTemplateColumns: `repeat(${childrenCount}, 1fr)`,
           gridTemplateRows: `repeat(${ROWS}, 1fr)`,
-          gridColumnGap: 'sm', // @todo this won't work in IE11
-          gridRowGap: 'xs'
+          marginX: -8,
+          marginY: -6
         }}
       >
         {React.Children.map(children, (child, index) => (
@@ -60,6 +61,7 @@ const RateTableRow: React.FC<RowProps> = ({
             value={{
               gridRow: `1 / span ${ROWS}`,
               gridColumn: `${index + 1} / span 1`,
+              firstInSplit: false,
               inSplit: false
             }}
           >

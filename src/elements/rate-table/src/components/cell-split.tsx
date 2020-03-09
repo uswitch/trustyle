@@ -21,6 +21,7 @@ const RateTableCellSplit: React.FC<React.HTMLAttributes<any>> = ({
           value={{
             gridColumn,
             gridRow: `${1 + index * rowsHeight} / span ${rowsHeight}`,
+            firstInSplit: index === 0,
             inSplit: true
           }}
         >
