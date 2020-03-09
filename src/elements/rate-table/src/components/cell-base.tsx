@@ -4,7 +4,12 @@ import { jsx } from 'theme-ui'
 
 import { CellContext } from './row'
 
-const RateTableCellBase: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
+interface CellBaseProps extends React.HTMLAttributes<HTMLDivElement> {
+  mobileOrder?: number
+}
+
+const RateTableCellBase: React.FC<CellBaseProps> = ({
+  mobileOrder = 2,
   children,
   className
 }) => {
@@ -20,7 +25,8 @@ const RateTableCellBase: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
     marginX: 8, // sm / 2
     paddingY: 6, // xs / 2
     gridColumn: ['initial', gridColumn],
-    gridRow: ['initial', gridRow]
+    gridRow: ['initial', gridRow],
+    order: [mobileOrder, 'initial']
   }
 
   if (inSplit) {

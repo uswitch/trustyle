@@ -4,7 +4,7 @@ import RateTableRow from './components/row'
 import RateTableCellImage from './components/cell-image'
 import RateTableCellSplit from './components/cell-split'
 import RateTableCellPlaceholder from './components/cell-placeholder'
-import RateTableCellPrimary from './components/cell-primary'
+import RateTableCellContent from './components/cell-content'
 import RateTableCellCta from './components/cell-cta'
 import RateTableDataRange from './components/data-range'
 
@@ -14,7 +14,7 @@ const RateTable = {
     Image: RateTableCellImage,
     Split: RateTableCellSplit,
     Placeholder: RateTableCellPlaceholder,
-    Primary: RateTableCellPrimary,
+    Content: RateTableCellContent,
     Cta: RateTableCellCta
   },
   Data: {

@@ -60,18 +60,17 @@ export const Example2 = () => {
         />
       </RateTable.cells.Image>
       <RateTable.cells.Split>
-        <RateTable.cells.Primary label="Fixed rate contract">
+        <RateTable.cells.Content label="Fixed rate contract">
           14 months
-        </RateTable.cells.Primary>
-        <RateTable.cells.Primary label="Early exit fee">
+        </RateTable.cells.Content>
+        <RateTable.cells.Content label="Early exit fee">
           £30 per fuel
-        </RateTable.cells.Primary>
+        </RateTable.cells.Content>
       </RateTable.cells.Split>
-      <RateTable.cells.Primary label="Annual saving" highlighted>
+      <RateTable.cells.Content label="Annual saving" primary>
         <RateTable.Data.Range from="£30" to="£260" />
         <a>Clickable link</a>
-        {/* <p sx={{ margin: 0, fontSize: 'xxxl', fontWeight: 'bold' }}>£288.60</p> */}
-      </RateTable.cells.Primary>
+      </RateTable.cells.Content>
       <RateTable.cells.Cta
         button={<ButtonLink variant="primary">Button</ButtonLink>}
         linkButton={<ButtonLink variant="link">Plan info</ButtonLink>}

@@ -7,24 +7,27 @@ import { CellContext } from './row'
 
 export interface CellPrimaryProps extends React.HTMLAttributes<HTMLDivElement> {
   label: string
-  highlighted?: boolean
+  primary?: boolean
 }
 const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
   label,
-  highlighted = false,
+  primary = false,
   children
 }) => {
   const { inSplit } = React.useContext(CellContext)
 
-  // @todo highlighted should be a variant
+  const primaryVariant = {
+    backgroundColor: 'grey-05',
+    padding: !inSplit ? 'sm' : ''
+  }
 
   return (
     <CellBase
+      mobileOrder={primary ? 1 : 2}
       sx={{
         flexDirection: inSplit ? 'row' : 'column-reverse',
         alignItems: inSplit ? 'center' : 'start',
-        backgroundColor: highlighted ? 'grey-05' : '',
-        padding: highlighted && !inSplit ? 'sm' : ''
+        ...(primary ? primaryVariant : null)
       }}
     >
       <div
