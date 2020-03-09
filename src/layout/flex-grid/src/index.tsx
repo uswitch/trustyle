@@ -12,11 +12,19 @@ const getNegativeSpaceValue = (key: string) => (theme: any = {}) => `-${getSpace
 
 const getGutterSize = (theme: any) => theme?.grid?.sizes?.gutter || DEFAULT_GUTTER_SIZE
 
+const mediaQueryFunction = (data: any, fn: any) => {
+  if (Array.isArray(data)) {
+    return data.map(fn)
+  }
+  return fn(data)
+}
+
 interface ContainerProps {
   children: any
   className?: string
   variant?: string
 }
+
 
 export const Container: React.FC<ContainerProps> = ({
   children,
@@ -39,8 +47,8 @@ export const Container: React.FC<ContainerProps> = ({
 
 interface RowProps {
   children: any
-  cols?: number,
-  direction?: string,
+  cols?: any
+  direction?: any
   className?: string
   variant?: string
 }
@@ -48,7 +56,7 @@ interface RowProps {
 export const Row: React.FC<RowProps> = ({
   children,
   cols = 12,
-  direction = 'row',
+  direction = ['column', 'row', 'row'],
   className = '',
   ...props
 }) => {
@@ -57,7 +65,6 @@ export const Row: React.FC<RowProps> = ({
     sx={{
       variant: `grid.row`,
       mx: getNegativeSpaceValue('xs'),
-      mb: DEFAULT_GUTTER_SIZE,
       display: 'flex',
       flexDirection: direction
     }}
@@ -71,7 +78,7 @@ interface ColProps {
   children: any
   cols?: number
   className?: string
-  span?: number
+  span?: any
 }
 
 export const Col: React.FC<ColProps> = ({
@@ -87,11 +94,12 @@ export const Col: React.FC<ColProps> = ({
       variant: `grid.col`,
       boxSizing: 'border-box',
       mx: getSpaceValue('xs'),
+      mb: DEFAULT_GUTTER_SIZE,
       flexGrow: 1,
       flexShrink: 0,
       flexBasis: `auto`,
       bg: 'red',
-      ...(span ? { width: theme => `calc(${(span / cols) * 100}% - ${getSpaceValue('sm')(theme)}px)` } : {})
+      ...(span ? { width: theme => mediaQueryFunction(span, (spanValue: number) => `calc(${(spanValue / cols) * 100}% - ${getSpaceValue('sm')(theme)}px)`) } : {})
     }}
     {...props}
   >
