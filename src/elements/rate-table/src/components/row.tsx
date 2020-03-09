@@ -29,22 +29,22 @@ const RateTableRow: React.FC<RowProps> = ({
   const childrenCount = React.Children.count(children)
   return (
     <section
-      sx={{ border: '1px solid', borderColor: 'grey-30', padding: 'sm' }}
+      sx={{ border: '1px solid', padding: 'sm', variant: 'rateTable.row.main' }}
     >
       <header
         sx={{
           borderBottom: '1px solid',
-          borderBottomColor: 'grey-20',
           marginBottom: 'sm',
-          paddingBottom: 'sm'
+          paddingBottom: 'sm',
+          variant: 'rateTable.row.header'
         }}
       >
         {preTitle && (
-          <span sx={{ fontSize: 'xs', color: 'grey-80' }}>{preTitle}</span>
+          <span sx={{ fontSize: 'xs', variant: 'rateTable.row.pretitle' }}>{preTitle}</span>
         )}
-        <h3 sx={{ margin: 0 }}>{rowTitle}</h3>
+        <h3 sx={{ margin: 0, variant: 'rateTable.row.title' }}>{rowTitle}</h3>
         {subtitle && (
-          <span sx={{ fontSize: 'xs', color: 'grey-80' }}>{subtitle}</span>
+          <span sx={{ fontSize: 'xs', variant: 'rateTable.row.subtitle' }}>{subtitle}</span>
         )}
       </header>
       <div
@@ -53,7 +53,8 @@ const RateTableRow: React.FC<RowProps> = ({
           gridTemplateColumns: ['auto', `repeat(${childrenCount}, 1fr)`],
           gridTemplateRows: ['auto', `repeat(${ROWS}, 1fr)`],
           marginX: -8,
-          marginY: -6
+          marginY: -6,
+          variant: 'rateTable.row.grid'
         }}
       >
         {React.Children.map(children, (child, index) => (
@@ -73,9 +74,9 @@ const RateTableRow: React.FC<RowProps> = ({
         <footer
           sx={{
             borderTop: '1px solid',
-            borderTopColor: 'grey-20',
             marginTop: 'sm',
-            paddingTop: 'sm'
+            paddingTop: 'sm',
+            variant: 'rateTable.row.footer'
           }}
         >
           <small sx={{ fontSize: 'xs' }}>{disclaimer}</small>

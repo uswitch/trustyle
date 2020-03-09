@@ -457,6 +457,7 @@
       "fontWeight": "bold",
       "border": "none",
       "borderRadius": "50vh",
+      "textAlign": "center",
       ":disabled": {
         "opacity": "0.3",
         "cursor": "not-allowed"
@@ -506,6 +507,13 @@
         ":active": {
           "backgroundColor": "button-secondary--hover"
         }
+      },
+
+      "link": {
+        "variant": "buttons.base",
+        "color": "grey-100",
+        "background": "none",
+        "textDecoration": "underline"
       }
     }
   },
@@ -862,6 +870,57 @@
     }
   },
 
+  "rateTable": {
+    "row": {
+      "main": {
+        "borderColor": "grey-20"
+      },
+      "header": {
+        "borderBottomColor": "grey-20"
+      },
+      "pretitle": {
+        "color": "grey-60"
+      },
+      "title": {
+        "fontWeight": "bold",
+        "color": "grey-100"
+      },
+      "subtitle": {
+        "color": "grey-60"
+      },
+      "footer": {
+        "borderTopColor": "grey-20"
+      }
+    },
+    "cellBase": {
+      "variants": {
+        "inSplit": {
+          "borderTopColor": "grey-20"
+        }
+      }
+    },
+    "cellContent": {
+      "main": {
+        "base": {},
+        "variants": {
+          "primary": {
+            "backgroundColor": "grey-05"
+          }
+        }
+      },
+      "label": {
+        "color": "grey-60"
+      }
+    },
+    "cellCta": {
+      "buttonWrapper": {
+        "a, button": {
+          "width": "100%"
+        }
+      }
+    }
+  },
+
   "styles": {
     "heading": {
       "fontFamily": "heading",
@@ -952,7 +1011,7 @@
         "fontStyle": "normal"
       }
     },
-    
+
 
     "table": {
       "borderSpacing": 0,

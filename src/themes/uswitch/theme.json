@@ -837,6 +837,53 @@
     }
   },
 
+  "rateTable": {
+    "row": {
+      "main": {
+        "borderColor": "grey-30"
+      },
+      "header": {
+        "borderBottomColor": "grey-20"
+      },
+      "pretitle": {
+        "color": "grey-80"
+      },
+      "subtitle": {
+        "color": "grey-80"
+      },
+      "footer": {
+        "borderTopColor": "grey-20"
+      }
+    },
+    "cellBase": {
+      "variants": {
+        "inSplit": {
+          "borderTopColor": "grey-20"
+        }
+      }
+    },
+    "cellContent": {
+      "main": {
+        "base": {},
+        "variants": {
+          "primary": {
+            "backgroundColor": "grey-05"
+          }
+        }
+      },
+      "label": {
+        "color": "grey-80"
+      }
+    },
+    "cellCta": {
+      "buttonWrapper": {
+        "a, button": {
+          "width": "100%"
+        }
+      }
+    }
+  },
+
   "styles": {
     "h1": {
       "fontFamily": "heading",

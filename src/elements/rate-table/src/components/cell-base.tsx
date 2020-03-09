@@ -32,7 +32,7 @@ const RateTableCellBase: React.FC<CellBaseProps> = ({
   if (inSplit) {
     sx['+ .in-split:not(.first-in-split)'] = {
       borderTop: '1px solid',
-      borderTopColor: 'grey-20'
+      variant: 'rateTable.cellBase.variants.inSplit'
     }
   }
 
