@@ -15,7 +15,7 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   preTitle?: React.ReactNode
   rowTitle: React.ReactNode
   subtitle?: React.ReactNode
-  disclaimer: React.ReactNode
+  disclaimer?: React.ReactNode
 }
 
 const RateTableRow: React.FC<RowProps> = ({
