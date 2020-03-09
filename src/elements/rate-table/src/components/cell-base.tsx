@@ -19,8 +19,8 @@ const RateTableCellBase: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
     justifyContent: 'center',
     marginX: 8, // sm / 2
     paddingY: 6, // xs / 2
-    gridColumn,
-    gridRow
+    gridColumn: ['initial', gridColumn],
+    gridRow: ['initial', gridRow]
   }
 
   if (inSplit) {
