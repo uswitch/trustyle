@@ -470,6 +470,12 @@
         ":visited": {
           "color": "white"
         }
+      },
+      "link": {
+        "variant": "buttons.base",
+        "color": "uswitch-navy",
+        "background": "none",
+        "textDecoration": "underline"
       }
     }
   },

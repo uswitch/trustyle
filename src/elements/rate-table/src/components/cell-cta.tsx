@@ -6,13 +6,23 @@ import CellBase from './cell-base'
 
 export interface CellCtaProps extends React.HTMLAttributes<HTMLDivElement> {
   button: React.ReactNode
-  link?: React.ReactNode
+  linkButton?: React.ReactNode
 }
-const RateTableCellCta: React.FC<CellCtaProps> = ({ button, link }) => {
+const RateTableCellCta: React.FC<CellCtaProps> = ({ button, linkButton }) => {
+  const buttonWrapperStyling = {
+    flex: [1, 'initial'],
+    width: '100%',
+    display: ['flex', 'block'],
+    'a, button': {
+      width: '100%'
+    }
+  }
   return (
-    <CellBase sx={{ flexDirection: 'column' }}>
-      {button}
-      <div sx={{ marginTop: 'xs' }}>{link}</div>
+    <CellBase sx={{ flexDirection: ['row', 'column'] }}>
+      <div sx={{ ...buttonWrapperStyling }}>{button}</div>
+      <div sx={{ ...buttonWrapperStyling, marginTop: [0, 'xs'] }}>
+        {linkButton}
+      </div>
     </CellBase>
   )
 }

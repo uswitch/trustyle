@@ -38,7 +38,7 @@ export const Example1 = () => {
       <RateTable.cells.Placeholder />
       <RateTable.cells.Cta
         button={<ButtonLink variant="primary">Apply now</ButtonLink>}
-        link={<a>More details</a>}
+        linkButton={<ButtonLink variant="link">More details</ButtonLink>}
       />
     </RateTable.Row>
   )
@@ -74,7 +74,7 @@ export const Example2 = () => {
       </RateTable.cells.Primary>
       <RateTable.cells.Cta
         button={<ButtonLink variant="primary">Button</ButtonLink>}
-        link={<a>Plan info</a>}
+        linkButton={<ButtonLink variant="link">Plan info</ButtonLink>}
       />
     </RateTable.Row>
   )

@@ -49,7 +49,8 @@ const RateTableRow: React.FC<RowProps> = ({
       </header>
       <div
         sx={{
-          display: 'grid',
+          display: ['flex', 'grid'],
+          flexDirection: 'column',
           gridTemplateColumns: `repeat(${childrenCount}, 1fr)`,
           gridTemplateRows: `repeat(${ROWS}, 1fr)`,
           marginX: -8,

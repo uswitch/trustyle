@@ -6,8 +6,7 @@ import { CellContext } from './row'
 
 const RateTableCellBase: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
   children,
-  className,
-  ...props
+  className
 }) => {
   const { gridColumn, gridRow, firstInSplit, inSplit } = React.useContext(
     CellContext
@@ -38,7 +37,6 @@ const RateTableCellBase: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
         inSplit ? 'in-split' : 'not-in-split',
         firstInSplit ? 'first-in-split' : 'not-first-in-split'
       ].join(' ')}
-      {...props}
     >
       <div
         sx={{
