@@ -176,6 +176,17 @@
     "border": 0
   },
 
+  "grid": {
+    "sizes": {
+      "gutter": ["xs", "sm", "sm"]
+    },
+    "container": {
+      "lg": {
+        "maxWidth": 1160
+      }
+    }
+  },
+
   "----------------------------- Variants": "-----------------------------",
   "modules": {
     "content-hero-module": {
