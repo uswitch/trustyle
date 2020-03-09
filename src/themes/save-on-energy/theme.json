@@ -121,6 +121,17 @@
     "xl": 30
   },
 
+  "srOnly": {
+    "position": "absolute",
+    "width": 1,
+    "height": 1,
+    "padding": 0,
+    "margin": -1,
+    "overflow": "hidden",
+    "clip": "rect(0, 0, 0, 0)",
+    "border": 0
+  },
+
   "container": {
     "sm": { "px": 20 },
     "md": { "px": 72 },
@@ -148,11 +159,19 @@
 
   "----------------------------- Variants": "-----------------------------",
   "compounds": {
-
     "card": {
-      "width": ["100%", "100%", "grid.lg.6"],
+      "itemsPerRow": [1, 1, 2],
+      "border": "none",
+      "display": "inline-flex !important",
       "flexDirection": ["column", "row"],
-      "paddingBottom": "xl"
+
+      "img": {
+        "width": ["100%", "grid.md.6", "grid.md.5"]
+      },
+      "content": {
+        "paddingY": ["sm", 0],
+        "paddingX": [0, "sm"]
+      }
     },
 
     "click-out-form": {
@@ -204,6 +223,25 @@
     "secondary": {
       "color": "light-1",
       "backgroundColor": "secondary"
+    }
+  },
+
+  "toggleSwitch": {
+    "checked": {
+      "backgroundColor": "primary",
+      "borderColor": "primary",
+      "switch": {
+        "backgroundColor": "white",
+        "borderColor": "primary"
+      }
+    },
+    "unchecked": {
+      "backgroundColor": "light-3",
+      "borderColor": "light-3",
+      "switch": {
+        "backgroundColor": "white",
+        "borderColor": "light-3"
+      }
     }
   },
 

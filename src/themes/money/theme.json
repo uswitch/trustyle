@@ -145,6 +145,17 @@
     "xl": 30
   },
 
+  "srOnly": {
+    "position": "absolute",
+    "width": 1,
+    "height": 1,
+    "padding": 0,
+    "margin": -1,
+    "overflow": "hidden",
+    "clip": "rect(0, 0, 0, 0)",
+    "border": 0
+  },
+
   "----------------------------- Variants": "-----------------------------",
   "modules": {
     "content-hero-module": {
@@ -191,7 +202,10 @@
 
   "accordion": {
     "base": {
+      "marginTop": "sm",
+      "marginBottom": "sm",
       "title": {
+        "marginTop": "0",
         "marginBottom": "xs"
       },
       "content": {
@@ -199,8 +213,8 @@
       },
       "button": {
         "padding": "0",
-        "paddingTop": "xs",
-        "paddingBottom": "xs",
+        "paddingTop": 10,
+        "paddingBottom": 10,
         "bg": "transparent",
         "fontFamily": "base",
         "fontSize": "base",
@@ -252,14 +266,13 @@
     },
     "internalLinkListItem": {
       "base": {
-        "padding": "8px 0 0 35px",
-        "paddingBottom": 0,
+        "padding": "8px 0 8px 35px",
         "mb": 0,
         "position": "relative",
         "::after": {
           "content": "\"\"",
           "position": "absolute",
-          "top": "50%",
+          "top": "45%",
           "transform": "translateY(-50%)",
           "display": "block",
           "width": 12,
@@ -823,6 +836,25 @@
     }
   },
 
+  "toggleSwitch": {
+    "checked": {
+      "backgroundColor": "secondary",
+      "borderColor": "secondary",
+      "switch": {
+        "backgroundColor": "white",
+        "borderColor": "secondary"
+      }
+    },
+    "unchecked": {
+      "backgroundColor": "grey-20",
+      "borderColor": "grey-20",
+      "switch": {
+        "backgroundColor": "white",
+        "borderColor": "grey-20"
+      }
+    }
+  },
+
   "author": {
     "heading": {
       "color": "grey-80"
@@ -846,7 +878,7 @@
     "h1": {
       "variant": "styles.heading",
       "fontSize": ["xxl", "xxxl"],
-      "marginTop": "xl",
+      "marginTop": 0,
       "marginBottom": "sm"
     },
 
@@ -894,7 +926,9 @@
       "fontSize": "base",
       "fontWeight": "base",
       "lineHeight": "base",
-      "color": "grey-100"
+      "color": "grey-100",
+      "-webkit-font-smoothing": "antialiased",
+      "-moz-osx-font-smoothing": "grayscale"
     },
 
     "a": {
@@ -916,11 +950,14 @@
         "paddingLeft": "sm",
         "paddingY": "xs",
         "marginY": 0,
+        "color": "experimental-text",
         "borderLeft": "2px solid",
         "borderLeftColor": "plum",
-        "fontWeight": "bold"
+        "fontWeight": "bold",
+        "fontStyle": "normal"
       }
     },
+    
 
     "table": {
       "borderSpacing": 0,
@@ -936,7 +973,8 @@
       "margin": 0,
       "padding": "16px",
       "fontSize": "sm",
-      "textAlign": "left"
+      "textAlign": "left",
+      "color": "experimental-text"
     },
 
     "td": {

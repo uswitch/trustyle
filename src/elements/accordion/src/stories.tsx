@@ -12,7 +12,11 @@ export default {
 export const SingleAccordion = () => {
   const title = text('Title', 'This is an example title')
   const content = text('Content', 'This is some example content')
-  return <Accordion title={title}>{content}</Accordion>
+  return (
+    <Accordion title={title}>
+      <p>{content}</p>
+    </Accordion>
+  )
 }
 
 export const AccordionGroup = () => {
@@ -23,9 +27,16 @@ export const AccordionGroup = () => {
   return (
     <Accordion.Group>
       <Accordion.Title as="h2">{groupTitle}</Accordion.Title>
-      <Accordion title={title}>{content}</Accordion>
-      <Accordion title="Second accordion">Hello world again!</Accordion>
-      <Accordion title="Third accordion">Some new text</Accordion>
+      <Accordion title={title}>
+        <p>{content}</p>
+      </Accordion>
+      <Accordion title="Second accordion">
+        <p>Hello World</p>
+      </Accordion>
+      <Accordion title="Third accordion">
+        <p>Hello</p>
+        <p>World</p>
+      </Accordion>
     </Accordion.Group>
   )
 }

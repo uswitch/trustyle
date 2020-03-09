@@ -84,7 +84,16 @@ const Accordion: React.FC<Props> & {
           height: isOpen ? 'auto' : '0',
           marginBottom: isOpen
             ? accordionTheme?.base?.content?.marginBottom
-            : '0'
+            : '0',
+          '> *:first-child': {
+            marginTop: 0
+          },
+          '> *:last-child': {
+            marginBottom: 0
+          },
+          '> p:last-child': {
+            marginBottom: 'xs'
+          }
         }}
       >
         {children}
@@ -107,21 +116,28 @@ Accordion.Group = ({ children }) => {
   })
 
   return (
-    <AccordionContext.Provider value={{ open: openId, setOpenId }}>
-      {childrenWithIndexes}
-    </AccordionContext.Provider>
+    <div
+      sx={{
+        marginTop: 'sm',
+        marginBottom: 'sm'
+      }}
+    >
+      <AccordionContext.Provider value={{ open: openId, setOpenId }}>
+        {childrenWithIndexes}
+      </AccordionContext.Provider>
+    </div>
   )
 }
 
 Accordion.Title = ({ children, as = 'h2' }) => {
   return (
-    <Styled.h4
+    <Styled.h3
       as={as}
       sx={{
         variant: 'accordion.base.title'
       }}
     >
       {children}
-    </Styled.h4>
+    </Styled.h3>
   )
 }
