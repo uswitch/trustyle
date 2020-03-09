@@ -29,7 +29,7 @@ const RateTableRow: React.FC<RowProps> = ({
   const childrenCount = React.Children.count(children)
   return (
     <section
-      sx={{ border: '1px solid', padding: 'sm', variant: 'rateTable.row.main' }}
+      sx={{ border: '1px solid', paddingX: ['sm', 'md'], paddingY: 'md', variant: 'rateTable.row.main' }}
     >
       <header
         sx={{

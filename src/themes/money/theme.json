@@ -454,6 +454,7 @@
 
   "buttons": {
     "base": {
+      "boxSizing": "border-box",
       "fontWeight": "bold",
       "border": "none",
       "borderRadius": "50vh",
