@@ -5,6 +5,7 @@ import { boolean, number, select, text } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
 import theme from '../../../utils/theme-selector'
+import AllThemes from '../../../utils/all-themes'
 import { Icon } from '../../icon/src'
 
 import { Button, Variant } from './'
@@ -97,22 +98,18 @@ export const AllVariants = () => (
   </div>
 )
 
-export const PrimaryVariant = () => (
-  <Button variant="primary">Primary button</Button>
-)
-
-export const SecondaryVariant = () => (
-  <Button variant="secondary">Primary button</Button>
-)
-
-export const PrimaryDisabledVariant = () => (
-  <Button variant="primary" disabled>
-    Primary button
-  </Button>
-)
-
-export const SecondaryDisabledVariant = () => (
-  <Button variant="secondary" disabled>
-    Primary button
-  </Button>
+export const Percy = () => (
+  <AllThemes>
+    <Button variant="primary">Primary button</Button>
+    <Spacer />
+    <Button variant="primary" disabled>
+      Primary button disabled
+    </Button>
+    <Spacer />
+    <Button variant="secondary">Secondary button</Button>
+    <Spacer />
+    <Button variant="secondary" disabled>
+      Secondary button disabled
+    </Button>
+  </AllThemes>
 )
