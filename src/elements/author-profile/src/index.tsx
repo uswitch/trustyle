@@ -26,15 +26,13 @@ const AuthorProfile: React.FC<Props> = ({
       sx={{
         display: 'flex',
         alignItems: 'center',
-        flexDirection: 'row',
-        variant: 'authorProfile.main'
+        flexDirection: 'row'
       }}
     >
       {authorImage && (
         <Styled.a
           href={authorUrl}
           sx={{
-            variant: 'author.link',
             flexShrink: 0,
             height: '87px',
             width: '87px',
@@ -47,8 +45,7 @@ const AuthorProfile: React.FC<Props> = ({
             sx={{
               maxHeight: '100%',
               maxWidth: '100%',
-              borderRadius: '50%',
-              variant: 'authorProfile.image'
+              borderRadius: '50%'
             }}
           />
         </Styled.a>
@@ -64,16 +61,14 @@ const AuthorProfile: React.FC<Props> = ({
             marginTop: 0,
             marginBottom: 'xxs',
             fontWeight: 'bold',
-            paddingBottom: 0,
-            variant: 'authorProfile.heading'
+            paddingBottom: 0
           }}
           as="h2"
         >
           <a
             href={authorUrl}
             sx={{
-              textDecoration: 'none',
-              variant: 'authorProfile.link'
+              textDecoration: 'none'
             }}
           >
             {name}, {role}
@@ -83,7 +78,6 @@ const AuthorProfile: React.FC<Props> = ({
           sx={{
             fontSize: 'sm',
             marginY: 0,
-            variant: 'authorProfile.text',
             width: ['100%', '75%', '60%']
           }}
         >
