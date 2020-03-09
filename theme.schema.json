@@ -27,6 +27,10 @@
   ],
 
   "definitions": {
+    "GenericTheme": {
+      "type": "object"
+    },
+
     "Indices": {
       "twelve": {
         "type": "object",
@@ -36,7 +40,8 @@
         "maxProperties": 12,
         "patternProperties": {
           "^(1[0-2]|[1-9])$": {
-            "type": "integer", "minimum": 0
+            "type": "integer",
+            "minimum": 0
           }
         }
       },
@@ -48,7 +53,8 @@
         "maxProperties": 4,
         "patternProperties": {
           "^[1-4]$": {
-            "type": "integer", "minimum": 0
+            "type": "integer",
+            "minimum": 0
           }
         }
       }
@@ -57,7 +63,7 @@
     "BoxShadow": {
       "type": "string",
       "description": "Pattern which matches a box shadow",
-      "pattern": "^[0-9]+px [0-9]+px [0-9]+px #([0-9]{3,4}|[0-9]{6,7})$"
+      "pattern": "^[0-9]+px [0-9]+px [0-9]+px #([0-9]{3,4}|[0-9]{6}|[0-9]{8})$"
     },
 
     "Radii": {
@@ -68,18 +74,25 @@
         },
         {
           "type": "string",
-          "pattern": "^(100|[0-9]{1,2})%$"
+          "pattern": "^(100|[1-9][0-9]|[0-9])%$"
         }
       ]
     },
 
     "FontWeight": {
       "type": "integer",
-      "multipleOf": 100
+      "multipleOf": 100,
+      "maximum": 900,
+      "minimum": 100
     },
 
     "TshirtSizes": {
+      "@@keys": {
+        "type": "string",
+        "enum": [ "base", "xxs", "xs", "sm", "md", "lg", "xl", "xxl", "xxxl" ]
+      },
       "type": "object",
+      "required": [ "base", "xxs", "xs", "sm", "md", "lg", "xl", "xxl", "xxxl" ],
       "properties": {
         "base": { "type": "integer", "minimum": 0 },
         "xxs": { "type": "integer", "minimum": 0 },
@@ -103,8 +116,8 @@
 
     "breakpoints": {
       "type": "array",
-      "minLength": 2,
-      "maxLength": 2,
+      "minItems": 2,
+      "maxItems": 2,
       "items": {
         "type": "string",
         "pattern": "^[0-9]+px$",
@@ -153,6 +166,7 @@
 
     "fontWeights": {
       "type": "object",
+      "required": [ "base", "light", "medium", "bold" ],
       "properties": {
         "base": { "$ref": "#/definitions/FontWeight" },
         "light": { "$ref": "#/definitions/FontWeight" },
@@ -163,6 +177,7 @@
 
     "radii": {
       "type": "object",
+      "required": [ "sm", "md", "lg", "xl", "round" ],
       "properties": {
         "sm": { "$ref": "#/definitions/Radii" },
         "md": { "$ref": "#/definitions/Radii" },
@@ -175,6 +190,7 @@
 
     "letterSpacings": {
       "type": "object",
+      "required": [ "base", "wide", "narrow" ],
       "properties": {
         "base": { "type": "number" },
         "wide": { "type": "number" },
@@ -185,6 +201,7 @@
 
     "lineHeights": {
       "type": "object",
+      "required": [ "base", "lg" ],
       "properties": {
         "base": { "type": "number" },
         "lg": { "type": "number" }
@@ -207,7 +224,7 @@
 
     "sizes": {
       "type": "object",
-      "requied": [ "grid" ],
+      "required": [ "grid" ],
       "properties": {
         "grid": {
           "type": "object",
@@ -227,6 +244,7 @@
 
     "zIndices": {
       "type": "object",
+      "required": [ "level", "max" ],
       "properties": {
         "level": { "$ref": "#/definitions/Indices/twelve" },
         "max": {
@@ -249,22 +267,22 @@
       "description": "Base styles for semantic HTML elements to inherit from as a <Styled.tag /> component",
       "additionalProperties": false,
       "properties": {
-        "root": { "type": "object" },
-        "h1": { "type": "object" },
-        "h2": { "type": "object" },
-        "h3": { "type": "object" },
-        "h4": { "type": "object" },
-        "h5": { "type": "object" },
-        "h6": { "type": "object" },
-        "pre": { "type": "object" },
-        "code": { "type": "object" },
-        "table": { "type": "object" },
-        "th": { "type": "object" },
-        "td": { "type": "object" },
-        "tr": { "type": "object" },
-        "p": { "type": "object" },
-        "a": { "type": "object" },
-        "blockquote": { "type": "object" }
+        "root": { "$ref": "#/definitions/GenericTheme" },
+        "h1": { "$ref": "#/definitions/GenericTheme" },
+        "h2": { "$ref": "#/definitions/GenericTheme" },
+        "h3": { "$ref": "#/definitions/GenericTheme" },
+        "h4": { "$ref": "#/definitions/GenericTheme" },
+        "h5": { "$ref": "#/definitions/GenericTheme" },
+        "h6": { "$ref": "#/definitions/GenericTheme" },
+        "pre": { "$ref": "#/definitions/GenericTheme" },
+        "code": { "$ref": "#/definitions/GenericTheme" },
+        "table": { "$ref": "#/definitions/GenericTheme" },
+        "th": { "$ref": "#/definitions/GenericTheme" },
+        "td": { "$ref": "#/definitions/GenericTheme" },
+        "tr": { "$ref": "#/definitions/GenericTheme" },
+        "p": { "$ref": "#/definitions/GenericTheme" },
+        "a": { "$ref": "#/definitions/GenericTheme" },
+        "blockquote": { "$ref": "#/definitions/GenericTheme" }
       }
     },
 
@@ -275,12 +293,25 @@
 
     "elements": {
       "type": "object",
-      "description": "An object of that can be used by elements"
+      "description": "An object of that can be used by elements",
+      "required": [
+        "button",
+        "input",
+        "toggleSwitch"
+      ],
+      "patternProperties": {
+        ".*": { "$ref": "#/definitions/GenericTheme" }
+      }
     },
 
     "compounds": {
       "type": "object",
-      "description": "An object of that can be used by elements"
+      "description": "An object of variants and base styles that can be used by compounds",
+      "required": [
+      ],
+      "patternProperties": {
+        ".*": { "$ref": "#/definitions/GenericTheme" }
+      }
     }
   }
 }
