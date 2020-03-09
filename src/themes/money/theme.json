@@ -367,8 +367,8 @@
         "md": { "width": "100%", "height": 230 },
         "lg": { "maxWidth": "grid.lg.3", "height": 230 }
       },
-      "p": { "fontSize": "base", "lineHeight": "130%" },
-      "h3": { "fontSize": "md", "minHeight": 0, "fontWeight": "bold" },
+      "p": { "fontSize": 16, "lineHeight": "130%", "color": "grey-80" },
+      "h3": { "fontSize": 18, "minHeight": 0, "fontWeight": "bold", "color": "experimental-text" },
       "content": {
         "paddingY": ["sm", 0],
         "paddingX": [0, "sm"]
