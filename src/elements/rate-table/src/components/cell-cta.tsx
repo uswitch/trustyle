@@ -18,9 +18,7 @@ const RateTableCellCta: React.FC<CellCtaProps> = ({ button, linkButton }) => {
   return (
     <CellBase sx={{ flexDirection: ['row', 'column'] }}>
       <div sx={{ ...buttonWrapperStyling }}>{button}</div>
-      <div sx={{ ...buttonWrapperStyling, marginTop: [0, 'xs'] }}>
-        {linkButton}
-      </div>
+      <div sx={{ ...buttonWrapperStyling }}>{linkButton}</div>
     </CellBase>
   )
 }

@@ -26,7 +26,9 @@ const RateTableRow: React.FC<RowProps> = ({
   disclaimer,
   children
 }) => {
-  const childrenCount = React.Children.count(children)
+  const nonNullChildren = React.Children.toArray(children).filter(c => c)
+  const childrenCount = nonNullChildren.length
+
   return (
     <section
       sx={{
@@ -66,7 +68,7 @@ const RateTableRow: React.FC<RowProps> = ({
           variant: 'rateTable.row.grid'
         }}
       >
-        {React.Children.map(children, (child, index) => (
+        {nonNullChildren.map((child, index) => (
           <CellContext.Provider
             value={{
               gridRow: `1 / span ${ROWS}`,
@@ -74,6 +76,7 @@ const RateTableRow: React.FC<RowProps> = ({
               firstInSplit: false,
               inSplit: false
             }}
+            key={index}
           >
             {child}
           </CellContext.Provider>

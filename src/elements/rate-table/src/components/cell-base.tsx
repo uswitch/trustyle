@@ -48,6 +48,7 @@ const RateTableCellBase: React.FC<CellBaseProps> = ({
         sx={{
           flex: 1,
           height: '100%',
+          boxSizing: 'border-box',
           // @todo: should cells by flex by default?
           display: 'flex',
           alignItems: 'center',
