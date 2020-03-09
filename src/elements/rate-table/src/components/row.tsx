@@ -29,7 +29,12 @@ const RateTableRow: React.FC<RowProps> = ({
   const childrenCount = React.Children.count(children)
   return (
     <section
-      sx={{ border: '1px solid', paddingX: ['sm', 'md'], paddingY: 'md', variant: 'rateTable.row.main' }}
+      sx={{
+        border: '1px solid',
+        paddingX: ['sm', 'md'],
+        paddingY: 'md',
+        variant: 'rateTable.row.main'
+      }}
     >
       <header
         sx={{
@@ -40,11 +45,15 @@ const RateTableRow: React.FC<RowProps> = ({
         }}
       >
         {preTitle && (
-          <span sx={{ fontSize: 'xs', variant: 'rateTable.row.pretitle' }}>{preTitle}</span>
+          <span sx={{ fontSize: 'xs', variant: 'rateTable.row.pretitle' }}>
+            {preTitle}
+          </span>
         )}
         <h3 sx={{ margin: 0, variant: 'rateTable.row.title' }}>{rowTitle}</h3>
         {subtitle && (
-          <span sx={{ fontSize: 'xs', variant: 'rateTable.row.subtitle' }}>{subtitle}</span>
+          <span sx={{ fontSize: 'xs', variant: 'rateTable.row.subtitle' }}>
+            {subtitle}
+          </span>
         )}
       </header>
       <div
