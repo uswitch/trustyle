@@ -27,3 +27,37 @@ const AllThemes: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
 }
 
 export default AllThemes
+
+export interface PermutationsObject {
+  [key: string]: any[]
+}
+
+export type PermutationsArray = { [key: string]: any }[]
+
+export const permutationsGenerator = (
+  permutationsObject: PermutationsObject
+): PermutationsArray => {
+  if (!Object.keys(permutationsObject).length) {
+    return [{}]
+  }
+
+  const permutationsArray: PermutationsArray = []
+  const [objectKey, objectValues] = Object.entries(permutationsObject)[0]
+
+  const omittedObject: PermutationsObject = { ...permutationsObject }
+  delete omittedObject[objectKey]
+
+  const recursiveValues = permutationsGenerator(omittedObject)
+
+  objectValues.forEach(value => {
+    recursiveValues.forEach(values => {
+      permutationsArray.push({
+        [objectKey]: value,
+        ...values
+      })
+    })
+  })
+
+  return permutationsArray
+}
+
