@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.flex-grid",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -16,5 +16,4 @@
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
   }
-
 }
