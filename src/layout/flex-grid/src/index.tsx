@@ -2,7 +2,6 @@
 
 import * as React from 'react'
 import { jsx } from 'theme-ui'
-import { breakpoints, Breakpoints } from '@uswitch/trustyle.styles'
 
 const DEFAULT_GUTTER_SIZE = 'xs'
 
@@ -78,18 +77,18 @@ interface ColProps {
   children: any
   cols?: number
   className?: string
-  span?: any
+  span?: any,
+  sx?: any
 }
 
 export const Col: React.FC<ColProps> = ({
   children,
   cols = 12,
   span,
-  className = '',
+  sx = {},
   ...props
 }) => {
   return <div
-    className={className}
     sx={{
       variant: `grid.col`,
       boxSizing: 'border-box',
@@ -99,7 +98,13 @@ export const Col: React.FC<ColProps> = ({
       flexShrink: 0,
       flexBasis: `auto`,
       bg: 'red',
-      ...(span ? { width: theme => mediaQueryFunction(span, (spanValue: number) => `calc(${(spanValue / cols) * 100}% - ${getSpaceValue('sm')(theme)}px)`) } : {})
+      ...(span ? { 
+        width: theme => mediaQueryFunction(
+          span, 
+          (spanValue: number, index: number) => `calc(${(spanValue / (Array.isArray(cols) ? cols[index] : cols)) * 100}% - ${getSpaceValue('sm')(theme)}px)`
+        )
+      } : {}),
+      ...sx
     }}
     {...props}
   >
