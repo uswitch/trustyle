@@ -176,3 +176,22 @@ storiesOf('Layout|Flex Grid', module).add('Offset columns', () => (
     </Container>
   </React.Fragment>
 ))
+
+storiesOf('Layout|Flex Grid', module).add('Grid with wrapping', () => (
+  <Container sx={{ bg: '#eee', color: 'white' }}>
+    <Row direction="row" cols={[4, 8, 12]} sx={{ textAlign: 'center' }} wrap>
+      <Col span={[2, 5, 4]} sx={colStyling}>
+        Col 1
+      </Col>
+      <Col span={[2, 3, 4]} sx={colStyling}>
+        Col 2
+      </Col>
+      <Col span={[2, 8, 4]} sx={colStyling}>
+        Col 3
+      </Col>
+      <Col span={[2, 8, 12]} sx={{ ...colStyling }}>
+        Col 4
+      </Col>
+    </Row>
+  </Container>
+))

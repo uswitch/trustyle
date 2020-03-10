@@ -65,12 +65,14 @@ interface RowProps {
   direction?: any
   className?: string
   variant?: string
+  wrap?: boolean
 }
 
 export const Row: React.FC<RowProps> = ({
   children,
   cols = 12,
   direction = ['column', 'row', 'row'],
+  wrap = false,
   ...props
 }) => {
   const childrenArray = Array.isArray(children) ? children : [children]
@@ -81,6 +83,7 @@ export const Row: React.FC<RowProps> = ({
         mx: theme => getNegativeSpaceValue(getGutterSize(theme)),
         display: 'flex',
         flexDirection: direction,
+        flexWrap: wrap ? 'wrap' : 'nowrap',
         overflowX: 'hidden'
       }}
       {...props}
