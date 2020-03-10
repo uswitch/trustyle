@@ -295,9 +295,6 @@
       "type": "object",
       "description": "An object of that can be used by elements",
       "required": [
-        "button",
-        "input",
-        "toggleSwitch"
       ],
       "patternProperties": {
         ".*": { "$ref": "#/definitions/GenericTheme" }
