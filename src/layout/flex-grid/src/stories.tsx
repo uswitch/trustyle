@@ -83,40 +83,40 @@ storiesOf('Layout|Flex Grid', module).add(
       </Container>
       <Container sx={{ bg: '#eee', color: 'white' }}>
         <Row direction="row" sx={{ textAlign: 'center' }} cols={[4, 12, 12]}>
-          <Col span={[1, 1, 1]} sx={greyColStyling}>
+          <Col span={1} sx={greyColStyling}>
             x
           </Col>
-          <Col span={[1, 1, 1]} sx={greyColStyling}>
+          <Col span={1} sx={greyColStyling}>
             x
           </Col>
-          <Col span={[1, 1, 1]} sx={greyColStyling}>
+          <Col span={1} sx={greyColStyling}>
             x
           </Col>
-          <Col span={[1, 1, 1]} sx={greyColStyling}>
+          <Col span={1} sx={greyColStyling}>
             x
           </Col>
-          <Col span={[1, 1, 1]} sx={greyColStyling}>
+          <Col span={1} sx={greyColStyling}>
             x
           </Col>
-          <Col span={[1, 1, 1]} sx={greyColStyling}>
+          <Col span={1} sx={greyColStyling}>
             x
           </Col>
-          <Col span={[1, 1, 1]} sx={greyColStyling}>
+          <Col span={1} sx={greyColStyling}>
             x
           </Col>
-          <Col span={[1, 1, 1]} sx={greyColStyling}>
+          <Col span={1} sx={greyColStyling}>
             x
           </Col>
-          <Col span={[1, 1, 1]} sx={greyColStyling}>
+          <Col span={1} sx={greyColStyling}>
             x
           </Col>
-          <Col span={[1, 1, 1]} sx={greyColStyling}>
+          <Col span={1} sx={greyColStyling}>
             x
           </Col>
-          <Col span={[1, 1, 1]} sx={greyColStyling}>
+          <Col span={1} sx={greyColStyling}>
             x
           </Col>
-          <Col span={[1, 1, 1]} sx={greyColStyling}>
+          <Col span={1} sx={greyColStyling}>
             x
           </Col>
         </Row>
@@ -136,40 +136,40 @@ storiesOf('Layout|Flex Grid', module).add('Offset columns', () => (
     </Container>
     <Container sx={{ bg: '#eee', color: 'white' }}>
       <Row direction="row" sx={{ textAlign: 'center' }} cols={[4, 12, 12]}>
-        <Col span={[1, 1, 1]} sx={greyColStyling}>
+        <Col span={1} sx={greyColStyling}>
           x
         </Col>
-        <Col span={[1, 1, 1]} sx={greyColStyling}>
+        <Col span={1} sx={greyColStyling}>
           x
         </Col>
-        <Col span={[1, 1, 1]} sx={greyColStyling}>
+        <Col span={1} sx={greyColStyling}>
           x
         </Col>
-        <Col span={[1, 1, 1]} sx={greyColStyling}>
+        <Col span={1} sx={greyColStyling}>
           x
         </Col>
-        <Col span={[1, 1, 1]} sx={greyColStyling}>
+        <Col span={1} sx={greyColStyling}>
           x
         </Col>
-        <Col span={[1, 1, 1]} sx={greyColStyling}>
+        <Col span={1} sx={greyColStyling}>
           x
         </Col>
-        <Col span={[1, 1, 1]} sx={greyColStyling}>
+        <Col span={1} sx={greyColStyling}>
           x
         </Col>
-        <Col span={[1, 1, 1]} sx={greyColStyling}>
+        <Col span={1} sx={greyColStyling}>
           x
         </Col>
-        <Col span={[1, 1, 1]} sx={greyColStyling}>
+        <Col span={1} sx={greyColStyling}>
           x
         </Col>
-        <Col span={[1, 1, 1]} sx={greyColStyling}>
+        <Col span={1} sx={greyColStyling}>
           x
         </Col>
-        <Col span={[1, 1, 1]} sx={greyColStyling}>
+        <Col span={1} sx={greyColStyling}>
           x
         </Col>
-        <Col span={[1, 1, 1]} sx={greyColStyling}>
+        <Col span={1} sx={greyColStyling}>
           x
         </Col>
       </Row>

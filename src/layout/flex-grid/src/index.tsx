@@ -17,7 +17,7 @@ const mediaQueryFunction = (data: any, fn: any) => {
   if (Array.isArray(data)) {
     return data.map(fn)
   }
-  return fn(data)
+  return fn(data, 0)
 }
 
 interface ContainerProps {
@@ -112,23 +112,22 @@ export const Col: React.FC<ColProps> = ({
         ...(span
           ? {
               width: theme =>
-                mediaQueryFunction(
-                  span,
-                  (spanValue: number, index: number) =>
-                    `calc(${(spanValue /
-                      (Array.isArray(cols) ? cols[index] : cols)) *
-                      100}% - ${getSpaceValue('sm')(theme)}px)`
-                )
+                mediaQueryFunction(cols, (colValue: number, index: number) => {
+                  console.log({ colValue, cols, index })
+                  return `calc(${((Array.isArray(span) ? span[index] : span) /
+                    colValue) *
+                    100}% - ${getSpaceValue('sm')(theme)}px)`
+                })
             }
           : {}),
         ...(offset
           ? {
               ml: theme =>
                 mediaQueryFunction(
-                  offset,
-                  (offsetValue: number, index: number) =>
-                    `calc(${(offsetValue /
-                      (Array.isArray(cols) ? cols[index] : cols)) *
+                  cols,
+                  (colValue: number, index: number) =>
+                    `calc(${((Array.isArray(offset) ? offset[index] : offset) /
+                      colValue) *
                       100}% + ${getSpaceValue('sm')(theme) / 2}px)`
                 )
             }
