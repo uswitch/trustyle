@@ -22,7 +22,7 @@ const withTheme = (story, { name }) => {
     </React.Fragment>
   )
 
-  if (name.toLowerCase().includes('percy')) {
+  if (name.toLowerCase().includes('automated tests')) {
     return contents
   }
 
