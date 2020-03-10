@@ -128,8 +128,8 @@ storiesOf('Layout|Flex Grid', module).add(
 storiesOf('Layout|Flex Grid', module).add('Offset columns', () => (
   <React.Fragment>
     <Container sx={{ bg: '#eee', color: 'white' }}>
-      <Row sx={{ textAlign: 'center' }} cols={12}>
-        <Col offset={3} span={6} sx={colStyling}>
+      <Row sx={{ textAlign: 'center' }} cols={[4, 12, 12]}>
+        <Col offset={[1, 3, 3]} span={[2, 6, 6]} sx={colStyling}>
           Offset column
         </Col>
       </Row>
