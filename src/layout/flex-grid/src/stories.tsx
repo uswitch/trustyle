@@ -8,16 +8,18 @@ import { Container, Row, Col } from './index'
 const bigCenteredSX = { height: 100, display: 'flex', alignItems: 'center', justifyContent: 'center' }
 
 storiesOf('Layout|Flex Grid', module).add('Basic Example', () => (
-  <Container sx={{ bg: '#eee', color: 'white' }}>
-    <Row 
-      sx={{ textAlign: 'center' }}
-    >
-      <Col>Col 1</Col>
-      <Col>Col 2</Col>
-      <Col>Col 3</Col>
-      <Col>Col 4</Col>
-    </Row>
-  </Container>
+  <React.Fragment>
+    <Container sx={{ bg: '#eee', color: 'white' }}>
+      <Row 
+        sx={{ textAlign: 'center' }}
+      >
+        <Col>Col 1</Col>
+        <Col>Col 2</Col>
+        <Col>Col 3</Col>
+        <Col>Col 4</Col>
+      </Row>
+    </Container>
+  </React.Fragment>
 ))
 
 storiesOf('Layout|Flex Grid', module).add('Example of responsive number of columns and responsive column span', () => (
@@ -27,10 +29,10 @@ storiesOf('Layout|Flex Grid', module).add('Example of responsive number of colum
       sx={{ textAlign: 'center' }}
       cols={[4, 8, 12]}
       >
-      <Col span={[2, 5, 2]} sx={bigCenteredSX}>Col 1</Col>
-      <Col span={[1, 1, 2]} sx={bigCenteredSX}>Col 2</Col>
+      <Col span={[2, 5, 1]} sx={bigCenteredSX}>Col 1</Col>
+      <Col span={[1, 1, 1]} sx={bigCenteredSX}>Col 2</Col>
       <Col span={[1, 1, 2]} sx={bigCenteredSX}>Col 3</Col>
-      <Col span={[1, 1, 6]} sx={{ ...bigCenteredSX, display: ['none', 'flex', null] }}>Col 4</Col>
+      <Col span={[1, 1, 6]} sx={{ ...bigCenteredSX }}>Col 4</Col>
     </Row>
   </Container>
 ))
@@ -48,3 +50,40 @@ storiesOf('Layout|Flex Grid', module).add('Change flow of columns responsively',
     </Row>
   </Container>
 ))
+
+storiesOf('Layout|Flex Grid', module).add('Create containers based upon cols', () => (
+  <React.Fragment>
+    <Container 
+      cols={12}
+      span={8}
+      sx={{ bg: '#eee', color: 'white' }}
+    >
+      <Row sx={{ textAlign: 'center' }}>
+        <Col>Container at 8 out of 12 cols width</Col>
+      </Row>
+    </Container>
+    <Container sx={{ bg: '#eee', color: 'white' }}>
+      <Row
+        direction='row'
+        sx={{ textAlign: 'center' }}
+        cols={[4, 12, 12]}
+        >
+        <Col span={[1, 1, 1]}>x</Col>
+        <Col span={[1, 1, 1]}>x</Col>
+        <Col span={[1, 1, 1]}>x</Col>
+        <Col span={[1, 1, 1]}>x</Col>
+        <Col span={[1, 1, 1]}>x</Col>
+        <Col span={[1, 1, 1]}>x</Col>
+        <Col span={[1, 1, 1]}>x</Col>
+        <Col span={[1, 1, 1]}>x</Col>
+        <Col span={[1, 1, 1]}>x</Col>
+        <Col span={[1, 1, 1]}>x</Col>
+        <Col span={[1, 1, 1]}>x</Col>
+        <Col span={[1, 1, 1]}>x</Col>
+      </Row>
+    </Container>
+  </React.Fragment>
+))
+
+
+

@@ -22,21 +22,23 @@ interface ContainerProps {
   children: any
   className?: string
   variant?: string
+  cols?: any
+  span?: any
 }
 
 
 export const Container: React.FC<ContainerProps> = ({
   children,
-  className = '',
   variant = 'lg',
+  cols,
+  span,
   ...props
 }) => {
   return <div
-    className={className}
     sx={{
       mx: 'auto',
       px: getGutterSize,
-      variant: `grid.container.${variant}`
+      maxWidth: theme => `calc(${1160 * (cols && span ? span / cols : 1)}px - ${getSpaceValue('sm')(theme)}px)`
     }}
     {...props}
   >
@@ -56,20 +58,20 @@ export const Row: React.FC<RowProps> = ({
   children,
   cols = 12,
   direction = ['column', 'row', 'row'],
-  className = '',
   ...props
 }) => {
+  const childrenArray = Array.isArray(children) ? children : [children]
   return <div
-    className={className}
     sx={{
       variant: `grid.row`,
       mx: getNegativeSpaceValue('xs'),
       display: 'flex',
-      flexDirection: direction
+      flexDirection: direction,
+      overflowX: 'hidden'
     }}
     {...props}
   >
-    {children.map((child: any) => React.cloneElement(child, { cols }))}
+    {childrenArray.map((child: any) => React.cloneElement(child, { cols }))}
   </div>
 }
 
