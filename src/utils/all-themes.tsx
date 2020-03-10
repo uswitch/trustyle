@@ -1,34 +1,16 @@
 import * as React from 'react'
 import { Styled, ThemeProvider, ThemeProviderProps } from 'theme-ui'
 
-import theme, { themes } from './theme-selector'
-
-// This sets everything in the existing theme to undefined so that it can be
-// passed into another ThemeProvider to reset the theme
-const negateTheme = (theme: ThemeProviderProps<any>) => {
-  const newObj: any = {}
-
-  Object.entries(theme).forEach(([key, value]) => {
-    if (typeof value === 'object' && !Array.isArray(value)) {
-      newObj[key] = negateTheme(value)
-    } else {
-      newObj[key] = undefined
-    }
-  })
-
-  return newObj
-}
+import { themes } from './theme-selector'
 
 const AllThemes: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
   children
 }) => {
-  const negatedTheme = negateTheme(theme())
-
   // @todo add prop to specify themes
   const themeKeys = ['uswitch', 'money', 'journey', 'save-on-energy']
 
   return (
-    <ThemeProvider theme={negatedTheme}>
+    <React.Fragment>
       {themeKeys.map((key, index) => {
         const theme = themes[`./${key}/theme.json`]
         return (
@@ -40,7 +22,7 @@ const AllThemes: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
           </ThemeProvider>
         )
       })}
-    </ThemeProvider>
+    </React.Fragment>
   )
 }
 

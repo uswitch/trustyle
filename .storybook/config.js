@@ -6,20 +6,30 @@ import { withKnobs } from '@storybook/addon-knobs'
 import { Styled, jsx, ThemeProvider } from 'theme-ui'
 import { Global } from '@emotion/core'
 import theme from '../src/utils/theme-selector'
+import { GlobalStyles } from '../src/elements/global-styles/src'
 
-const withTheme = story => {
+const withTheme = (story, { name }) => {
+  const contents = (
+    <React.Fragment>
+      <Global
+        styles={{
+          body: {
+            margin: 10
+          }
+        }}
+      />
+      {story()}
+    </React.Fragment>
+  )
+
+  if (name.toLowerCase().includes('percy')) {
+    return contents
+  }
+
   return (
     <ThemeProvider theme={theme()}>
-      <Styled.root>
-        <Global
-          styles={{
-            body: {
-              margin: 10
-            }
-          }}
-        />
-        {story()}
-      </Styled.root>
+      <GlobalStyles />
+      <Styled.root>{contents}</Styled.root>
     </ThemeProvider>
   )
 }

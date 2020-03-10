@@ -53,6 +53,8 @@ export const Button: React.FC<Props> = ({
   const variantStyle = theme.buttons?.variants[variant]
   const chosenStyle = inverse ? invertTheme(theme, variantStyle) : variantStyle
 
+  const btnSize = theme.buttons?.base?.btnSize
+
   return (
     <button
       sx={{
@@ -60,18 +62,10 @@ export const Button: React.FC<Props> = ({
         backgroundImage: 'none',
         fontFamily: 'base',
 
-        fontSize: theme.buttons.base.btnSize
-          ? theme.buttons.base.btnSize[size].fontSize
-          : 'base',
-        paddingX: theme.buttons.base.btnSize
-          ? theme.buttons.base.btnSize[size].paddingX
-          : 'sm',
-        paddingY: theme.buttons.base.btnSize
-          ? theme.buttons.base.btnSize[size].paddingY
-          : 'base',
-        height: theme.buttons.base.btnSize
-          ? theme.buttons.base.btnSize[size].height
-          : 'base',
+        fontSize: btnSize ? btnSize[size].fontSize : 'base',
+        paddingX: btnSize ? btnSize[size].paddingX : 'sm',
+        paddingY: btnSize ? btnSize[size].paddingY : 'base',
+        height: btnSize ? btnSize[size].height : 'base',
         variant: `buttons.variants.${variant}`,
 
         justifyContent: 'center',
