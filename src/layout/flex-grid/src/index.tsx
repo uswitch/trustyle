@@ -5,11 +5,13 @@ import { jsx } from 'theme-ui'
 
 const DEFAULT_GUTTER_SIZE = 'xs'
 
-const getSpaceValue = (key: string) => (theme: any = {}) =>  theme.space[key]
+const getSpaceValue = (key: string) => (theme: any = {}) => theme.space[key]
 
-const getNegativeSpaceValue = (key: string) => (theme: any = {}) => `-${getSpaceValue(key)(theme)}px`
+const getNegativeSpaceValue = (key: string) => (theme: any = {}) =>
+  `-${getSpaceValue(key)(theme)}px`
 
-const getGutterSize = (theme: any) => theme?.grid?.sizes?.gutter || DEFAULT_GUTTER_SIZE
+const getGutterSize = (theme: any) =>
+  theme?.grid?.sizes?.gutter || DEFAULT_GUTTER_SIZE
 
 const mediaQueryFunction = (data: any, fn: any) => {
   if (Array.isArray(data)) {
@@ -26,24 +28,27 @@ interface ContainerProps {
   span?: any
 }
 
-
 export const Container: React.FC<ContainerProps> = ({
   children,
-  variant = 'lg',
   cols,
   span,
   ...props
 }) => {
-  return <div
-    sx={{
-      mx: 'auto',
-      px: getGutterSize,
-      maxWidth: theme => `calc(${1160 * (cols && span ? span / cols : 1)}px - ${getSpaceValue('sm')(theme)}px)`
-    }}
-    {...props}
-  >
-    {children}
-  </div>
+  return (
+    <div
+      sx={{
+        mx: 'auto',
+        px: getGutterSize,
+        maxWidth: theme =>
+          `calc(${1160 * (cols && span ? span / cols : 1)}px - ${getSpaceValue(
+            'sm'
+          )(theme)}px)`
+      }}
+      {...props}
+    >
+      {children}
+    </div>
+  )
 }
 
 interface RowProps {
@@ -61,26 +66,28 @@ export const Row: React.FC<RowProps> = ({
   ...props
 }) => {
   const childrenArray = Array.isArray(children) ? children : [children]
-  return <div
-    sx={{
-      variant: `grid.row`,
-      mx: getNegativeSpaceValue('xs'),
-      display: 'flex',
-      flexDirection: direction,
-      overflowX: 'hidden'
-    }}
-    {...props}
-  >
-    {childrenArray.map((child: any) => React.cloneElement(child, { cols }))}
-  </div>
+  return (
+    <div
+      sx={{
+        variant: `grid.row`,
+        mx: getNegativeSpaceValue('xs'),
+        display: 'flex',
+        flexDirection: direction,
+        overflowX: 'hidden'
+      }}
+      {...props}
+    >
+      {childrenArray.map((child: any) => React.cloneElement(child, { cols }))}
+    </div>
+  )
 }
 
 interface ColProps {
   children: any
   cols?: number
   className?: string
-  span?: any,
-  sx?: any,
+  span?: any
+  sx?: any
   offset?: any
 }
 
@@ -92,32 +99,45 @@ export const Col: React.FC<ColProps> = ({
   sx = {},
   ...props
 }) => {
-  return <div
-    sx={{
-      variant: `grid.col`,
-      boxSizing: 'border-box',
-      mr: 'xs',
-      mb: DEFAULT_GUTTER_SIZE,
-      flexGrow: span ? 0 : 1,
-      flexShrink: 0,
-      flexBasis: `auto`,
-      bg: 'red',
-      ...(span ? { 
-        width: theme => mediaQueryFunction(
-          span, 
-          (spanValue: number, index: number) => `calc(${(spanValue / (Array.isArray(cols) ? cols[index] : cols)) * 100}% - ${getSpaceValue('sm')(theme)}px)`
-        )
-      } : {}),
-      ...(offset ? { 
-        ml: theme => mediaQueryFunction(
-          offset, 
-          (offsetValue: number, index: number) => `calc(${(offsetValue / (Array.isArray(cols) ? cols[index] : cols)) * 100}% + ${getSpaceValue('sm')(theme) / 2}px)`
-        )
-      } : { ml: 'xs' }),
-      ...sx
-    }}
-    {...props}
-  >
-    {children}
-  </div>
+  return (
+    <div
+      sx={{
+        variant: `grid.col`,
+        boxSizing: 'border-box',
+        mr: 'xs',
+        mb: DEFAULT_GUTTER_SIZE,
+        flexGrow: span ? 0 : 1,
+        flexShrink: 0,
+        flexBasis: `auto`,
+        ...(span
+          ? {
+              width: theme =>
+                mediaQueryFunction(
+                  span,
+                  (spanValue: number, index: number) =>
+                    `calc(${(spanValue /
+                      (Array.isArray(cols) ? cols[index] : cols)) *
+                      100}% - ${getSpaceValue('sm')(theme)}px)`
+                )
+            }
+          : {}),
+        ...(offset
+          ? {
+              ml: theme =>
+                mediaQueryFunction(
+                  offset,
+                  (offsetValue: number, index: number) =>
+                    `calc(${(offsetValue /
+                      (Array.isArray(cols) ? cols[index] : cols)) *
+                      100}% + ${getSpaceValue('sm')(theme) / 2}px)`
+                )
+            }
+          : { ml: 'xs' }),
+        ...sx
+      }}
+      {...props}
+    >
+      {children}
+    </div>
+  )
 }
