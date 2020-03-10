@@ -5,6 +5,7 @@ import { number, text } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
 import theme from '../../../utils/theme-selector'
+import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
 
 import { ButtonLink } from './'
 
@@ -32,14 +33,6 @@ export const AllVariants = () => (
   </div>
 )
 
-export const PrimaryVariant = () => (
-  <ButtonLink variant="primary">Primary link button</ButtonLink>
-)
-
-export const SecondaryVariant = () => (
-  <ButtonLink variant="secondary">Primary link button</ButtonLink>
-)
-
 const CustomLink: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   to: string
 }> = ({ to, children, ...rest }) => (
@@ -53,3 +46,20 @@ export const StyledComponentAsProp = () => (
     Using <em>as</em> prop
   </ButtonLink>
 )
+
+export const AutomatedTests = () => {
+  const permutations = permutationsGenerator({
+    variant: ['primary', 'secondary']
+  })
+
+  return (
+    <AllThemes>
+      {permutations.map((p, i) => (
+        <React.Fragment key={i}>
+          <ButtonLink variant={p.variant}>{p.variant}</ButtonLink>
+          <Spacer />
+        </React.Fragment>
+      ))}
+    </AllThemes>
+  )
+}

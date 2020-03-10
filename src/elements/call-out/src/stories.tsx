@@ -5,6 +5,7 @@ import { boolean, color, select, text } from '@storybook/addon-knobs'
 import { PaletteProvider } from '@uswitch/trustyle-utils.palette'
 
 import theme from '../../../utils/theme-selector'
+import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
 
 import CallOut from './'
 
@@ -70,5 +71,23 @@ export const ExampleWithPalette = () => {
         />
       </PaletteProvider>
     </Fragment>
+  )
+}
+
+export const AutomatedTests = () => {
+  const permutations = permutationsGenerator({
+    title: ['Call out title', undefined],
+    icon: [undefined, 'close'],
+    accentColor: [null, '#ffced3']
+  })
+
+  return (
+    <AllThemes>
+      {permutations.map((p, i) => (
+        <PaletteProvider value={{ accentColor: p.accentColor }} key={i}>
+          <CallOut title={p.title} text="Call out text" icon={p.icon} />
+        </PaletteProvider>
+      ))}
+    </AllThemes>
   )
 }

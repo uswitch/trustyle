@@ -97,6 +97,7 @@ export const AllVariants = () => (
       ))}
   </div>
 )
+
 export const AutomatedTests = () => {
   const permutations = permutationsGenerator({
     variant: ['primary', 'secondary'],

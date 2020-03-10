@@ -1,7 +1,9 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { jsx } from '@emotion/core'
+import { css, jsx } from '@emotion/core'
 import { number, select } from '@storybook/addon-knobs'
+
+import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
 
 import FunnelProgress from './'
 
@@ -9,22 +11,24 @@ export default {
   title: 'Elements|Funnel Progress'
 }
 
+const phases = [
+  {
+    key: 'currentPlan',
+    title: 'Current plan'
+  },
+  {
+    key: 'results',
+    title: 'Results'
+  },
+  {
+    key: 'apply',
+    title: 'Apply'
+  }
+]
+
 export const Example = () => (
   <FunnelProgress
-    phases={[
-      {
-        key: 'currentPlan',
-        title: 'Current plan'
-      },
-      {
-        key: 'results',
-        title: 'Results'
-      },
-      {
-        key: 'apply',
-        title: 'Apply'
-      }
-    ]}
+    phases={phases}
     currentPhaseKey={select(
       'phase',
       ['currentPlan', 'results', 'apply'],
@@ -38,3 +42,32 @@ export const Example = () => (
     })}
   />
 )
+
+const Spacer = () => <div css={css({ minHeight: 20 })} />
+
+export const AutomatedTests = () => {
+  const permutations = permutationsGenerator({
+    progress: [0, 0.25, 0.5, 0.75, 1]
+  })
+
+  return (
+    <AllThemes>
+      {permutations.map((p, i) => (
+        <React.Fragment key={i}>
+          <FunnelProgress
+            phases={phases}
+            currentPhaseKey={
+              p.progress < 0.3
+                ? 'currentPlan'
+                : p.progress < 0.8
+                ? 'results'
+                : 'apply'
+            }
+            progress={p.progress}
+          />
+          <Spacer />
+        </React.Fragment>
+      ))}
+    </AllThemes>
+  )
+}

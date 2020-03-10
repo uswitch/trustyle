@@ -3,6 +3,8 @@ import * as React from 'react'
 import { jsx } from '@emotion/core'
 import { text } from '@storybook/addon-knobs'
 
+import AllThemes from '../../../utils/all-themes'
+
 import Accordion from './'
 
 export default {
@@ -38,5 +40,13 @@ export const AccordionGroup = () => {
         <p>World</p>
       </Accordion>
     </Accordion.Group>
+  )
+}
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes>
+      <AccordionGroup />
+    </AllThemes>
   )
 }

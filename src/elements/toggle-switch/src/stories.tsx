@@ -6,6 +6,7 @@ import { boolean, color } from '@storybook/addon-knobs'
 import { PaletteProvider } from '@uswitch/trustyle-utils.palette'
 
 import theme from '../../../utils/theme-selector'
+import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
 
 import { checkedIcon, uncheckedIcon } from './assets'
 
@@ -58,10 +59,33 @@ export const ExampleWithState = () => {
   )
 }
 
-export const ToggleOn = () => {
-  return <ToggleSwitch checked />
-}
+const Spacer = () => <div sx={{ minHeight: 20 }} />
 
-export const ToggleOff = () => {
-  return <ToggleSwitch checked={false} />
+export const AutomatedTests = () => {
+  const permutations = permutationsGenerator({
+    featureColor: [null, '#ffced3'],
+    checked: [true, false],
+    icons: [icons, undefined]
+  })
+
+  return (
+    <AllThemes>
+      {permutations.map((p, i) => (
+        <Fragment key={i}>
+          <PaletteProvider value={{ featureColor: p.featureColor }}>
+            <ToggleSwitch
+              aria-label="toggle-1"
+              checked={p.checked}
+              icons={p.icons}
+            />
+            <label sx={{ marginLeft: 10 }} htmlFor="toggle-1">
+              {p.checked ? 'checked' : 'unchecked'} {p.icons && 'with icons'}
+              {p.featureColor && ' with palette'}
+            </label>
+          </PaletteProvider>
+          <Spacer />
+        </Fragment>
+      ))}
+    </AllThemes>
+  )
 }
