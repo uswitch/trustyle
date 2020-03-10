@@ -123,7 +123,8 @@ export const Col: React.FC<ColProps> = ({
                 mediaQueryFunction(cols, (colValue: number, index: number) => {
                   return `calc(${((Array.isArray(span) ? span[index] : span) /
                     colValue) *
-                    100}% - ${getSpaceValue(getGutterSize(theme))(theme)}px)`
+                    100}% - ${getSpaceValue(getGutterSize(theme))(theme) *
+                    2}px)`
                 })
             }
           : {}),
@@ -135,8 +136,7 @@ export const Col: React.FC<ColProps> = ({
                   (colValue: number, index: number) =>
                     `calc(${((Array.isArray(offset) ? offset[index] : offset) /
                       colValue) *
-                      100}% + ${getSpaceValue(getGutterSize(theme))(theme) /
-                      2}px)`
+                      100}% + ${getSpaceValue(getGutterSize(theme))(theme)}px)`
                 )
             }
           : { ml: getGutterSize }),
