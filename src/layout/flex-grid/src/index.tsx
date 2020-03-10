@@ -80,13 +80,15 @@ interface ColProps {
   cols?: number
   className?: string
   span?: any,
-  sx?: any
+  sx?: any,
+  offset?: any
 }
 
 export const Col: React.FC<ColProps> = ({
   children,
   cols = 12,
   span,
+  offset,
   sx = {},
   ...props
 }) => {
@@ -94,9 +96,9 @@ export const Col: React.FC<ColProps> = ({
     sx={{
       variant: `grid.col`,
       boxSizing: 'border-box',
-      mx: getSpaceValue('xs'),
+      mr: 'xs',
       mb: DEFAULT_GUTTER_SIZE,
-      flexGrow: 1,
+      flexGrow: span ? 0 : 1,
       flexShrink: 0,
       flexBasis: `auto`,
       bg: 'red',
@@ -106,6 +108,12 @@ export const Col: React.FC<ColProps> = ({
           (spanValue: number, index: number) => `calc(${(spanValue / (Array.isArray(cols) ? cols[index] : cols)) * 100}% - ${getSpaceValue('sm')(theme)}px)`
         )
       } : {}),
+      ...(offset ? { 
+        ml: theme => mediaQueryFunction(
+          offset, 
+          (offsetValue: number, index: number) => `calc(${(offsetValue / (Array.isArray(cols) ? cols[index] : cols)) * 100}% + ${getSpaceValue('sm')(theme) / 2}px)`
+        )
+      } : { ml: 'xs' }),
       ...sx
     }}
     {...props}
