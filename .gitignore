@@ -12,3 +12,4 @@ storybook-static/
 *.swp
 
 lib
+lib/*
