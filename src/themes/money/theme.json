@@ -157,6 +157,16 @@
     "border": 0
   },
 
+  "grid": {
+    "sizes": {
+      "gutter": "xs",
+      "virtcalGutter": "xs"
+    },
+    "container": {
+      "maxWidth": 1200
+    }
+  },
+
   "----------------------------- Variants": "-----------------------------",
   "modules": {
     "content-hero-module": {

@@ -4,6 +4,7 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 
 const DEFAULT_GUTTER_SIZE = 'xs'
+const DEFAULT_CONTAINER_WIDTH = 1200
 
 const getSpaceValue = (key: string) => (theme: any = {}) => theme.space[key]
 
@@ -12,6 +13,12 @@ const getNegativeSpaceValue = (key: string) => (theme: any = {}) =>
 
 const getGutterSize = (theme: any) =>
   theme?.grid?.sizes?.gutter || DEFAULT_GUTTER_SIZE
+
+const getVirticalGutterSize = (theme: any) =>
+  theme?.grid?.sizes?.virtcalGutter || DEFAULT_GUTTER_SIZE
+
+const getContainerSize = (theme: any) =>
+  theme?.grid?.container?.maxWidth || DEFAULT_CONTAINER_WIDTH
 
 const mediaQueryFunction = (data: any, fn: any) => {
   if (Array.isArray(data)) {
@@ -40,9 +47,10 @@ export const Container: React.FC<ContainerProps> = ({
         mx: 'auto',
         px: getGutterSize,
         maxWidth: theme =>
-          `calc(${1160 * (cols && span ? span / cols : 1)}px - ${getSpaceValue(
-            'sm'
-          )(theme)}px)`
+          `calc(${getContainerSize(theme) *
+            (cols && span ? span / cols : 1)}px - ${getSpaceValue('sm')(
+            theme
+          )}px)`
       }}
       {...props}
     >
@@ -70,7 +78,7 @@ export const Row: React.FC<RowProps> = ({
     <div
       sx={{
         variant: `grid.row`,
-        mx: getNegativeSpaceValue('xs'),
+        mx: theme => getNegativeSpaceValue(getGutterSize(theme)),
         display: 'flex',
         flexDirection: direction,
         overflowX: 'hidden'
@@ -104,8 +112,8 @@ export const Col: React.FC<ColProps> = ({
       sx={{
         variant: `grid.col`,
         boxSizing: 'border-box',
-        mr: 'xs',
-        mb: DEFAULT_GUTTER_SIZE,
+        mr: getGutterSize,
+        mb: getVirticalGutterSize,
         flexGrow: span ? 0 : 1,
         flexShrink: 0,
         flexBasis: `auto`,
@@ -113,10 +121,9 @@ export const Col: React.FC<ColProps> = ({
           ? {
               width: theme =>
                 mediaQueryFunction(cols, (colValue: number, index: number) => {
-                  console.log({ colValue, cols, index })
                   return `calc(${((Array.isArray(span) ? span[index] : span) /
                     colValue) *
-                    100}% - ${getSpaceValue('sm')(theme)}px)`
+                    100}% - ${getSpaceValue(getGutterSize(theme))(theme)}px)`
                 })
             }
           : {}),
@@ -128,10 +135,11 @@ export const Col: React.FC<ColProps> = ({
                   (colValue: number, index: number) =>
                     `calc(${((Array.isArray(offset) ? offset[index] : offset) /
                       colValue) *
-                      100}% + ${getSpaceValue('sm')(theme) / 2}px)`
+                      100}% + ${getSpaceValue(getGutterSize(theme))(theme) /
+                      2}px)`
                 )
             }
-          : { ml: 'xs' }),
+          : { ml: getGutterSize }),
         ...sx
       }}
       {...props}
