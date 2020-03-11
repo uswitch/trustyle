@@ -26,7 +26,8 @@ const AuthorProfile: React.FC<Props> = ({
       sx={{
         display: 'flex',
         alignItems: 'center',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        variant: 'authorProfile.main'
       }}
     >
       {authorImage && (
@@ -61,7 +62,8 @@ const AuthorProfile: React.FC<Props> = ({
             marginTop: 0,
             marginBottom: 'xxs',
             fontWeight: 'bold',
-            paddingBottom: 0
+            paddingBottom: 0,
+            variant: 'authorProfile.name'
           }}
           as="h2"
         >
