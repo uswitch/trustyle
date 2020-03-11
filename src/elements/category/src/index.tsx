@@ -1,12 +1,13 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Styled, useThemeUI } from 'theme-ui'
 
 interface ListProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   text?: string
   container?: React.FC
+  breadcrumbs?: React.ReactElement
 }
 
 const DefaultContainer: React.FC = ({ children }) => (
@@ -16,8 +17,12 @@ const DefaultContainer: React.FC = ({ children }) => (
 const Category: React.FC<ListProps> = ({
   title,
   text,
-  container: Container = DefaultContainer
+  container: Container = DefaultContainer,
+  breadcrumbs: Breadcrumbs
 }) => {
+  const { theme }: any = useThemeUI()
+  const breadcrumbsVariant = theme.categoryTitle?.breadcrumbs?.variant
+
   return (
     <div
       sx={{
@@ -27,6 +32,12 @@ const Category: React.FC<ListProps> = ({
       }}
     >
       <Container>
+        {Breadcrumbs && (
+          <Breadcrumbs.type
+            {...Breadcrumbs.props}
+            variant={breadcrumbsVariant}
+          />
+        )}
         <Styled.h1
           as={text ? 'h1' : 'p'}
           sx={{

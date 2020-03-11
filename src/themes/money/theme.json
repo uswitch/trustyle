@@ -788,6 +788,9 @@
     },
     "text": {
       "color": "grey-0"
+    },
+    "breadcrumbs": {
+      "variant": "light"
     }
   },
 
@@ -869,7 +872,9 @@
       "marginBottom": "xl"
     },
     "name": {
-      "color": "grey-80"
+      "a": {
+        "color": "grey-80"
+      }
     }
   },
 
