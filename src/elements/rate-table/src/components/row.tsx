@@ -2,6 +2,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
+import CellBase from './cell-base'
 import { ROWS } from './cell-split'
 
 export const CellContext = React.createContext({
@@ -38,40 +39,58 @@ const RateTableRow: React.FC<RowProps> = ({
         variant: 'rateTable.row.main'
       }}
     >
-      <header
-        sx={{
-          borderBottom: '1px solid',
-          marginBottom: 'sm',
-          paddingBottom: 'sm',
-          variant: 'rateTable.row.header'
-        }}
-      >
-        {preTitle && (
-          <span sx={{ fontSize: 'xs', variant: 'rateTable.row.pretitle' }}>
-            {preTitle}
-          </span>
-        )}
-        <h3 sx={{ margin: 0, variant: 'rateTable.row.title' }}>{rowTitle}</h3>
-        {subtitle && (
-          <span sx={{ fontSize: 'xs', variant: 'rateTable.row.subtitle' }}>
-            {subtitle}
-          </span>
-        )}
-      </header>
       <div
         sx={{
           display: 'grid',
           gridTemplateColumns: ['auto', `repeat(${childrenCount}, 1fr)`],
-          gridTemplateRows: ['auto', `repeat(${ROWS}, 1fr)`],
+          gridTemplateRows: [
+            'auto',
+            `auto repeat(${ROWS}, 1fr) ${disclaimer ? 'auto' : ''}`
+          ],
           marginX: -8,
           marginY: -6,
           variant: 'rateTable.row.grid'
         }}
       >
+        <CellContext.Provider
+          value={{
+            gridRow: '1 / span 1',
+            gridColumn: '1 / -1',
+            // @todo default values for these pls
+            inSplit: false,
+            firstInSplit: false
+          }}
+        >
+          <CellBase
+            sx={{
+              display: 'block',
+              borderBottom: '1px solid',
+              paddingBottom: 'sm',
+              marginTop: -6,
+              variant: 'rateTable.row.header'
+            }}
+            mobileOrder={-100}
+          >
+            {preTitle && (
+              <span sx={{ fontSize: 'xs', variant: 'rateTable.row.pretitle' }}>
+                {preTitle}
+              </span>
+            )}
+            <h3 sx={{ margin: 0, variant: 'rateTable.row.title' }}>
+              {rowTitle}
+            </h3>
+            {subtitle && (
+              <span sx={{ fontSize: 'xs', variant: 'rateTable.row.subtitle' }}>
+                {subtitle}
+              </span>
+            )}
+          </CellBase>
+        </CellContext.Provider>
+
         {nonNullChildren.map((child, index) => (
           <CellContext.Provider
             value={{
-              gridRow: `1 / span ${ROWS}`,
+              gridRow: `2 / span ${ROWS}`,
               gridColumn: `${index + 1} / span 1`,
               firstInSplit: false,
               inSplit: false
@@ -81,19 +100,30 @@ const RateTableRow: React.FC<RowProps> = ({
             {child}
           </CellContext.Provider>
         ))}
+        {disclaimer && (
+          <CellContext.Provider
+            value={{
+              gridRow: '-2 / span 1',
+              gridColumn: '1 / -1',
+              inSplit: false,
+              firstInSplit: false
+            }}
+          >
+            <CellBase
+              sx={{
+                display: 'block',
+                borderTop: '1px solid',
+                paddingTop: 'sm',
+                marginBottom: -6,
+                variant: 'rateTable.row.footer'
+              }}
+              mobileOrder={100}
+            >
+              <small sx={{ fontSize: 'xs' }}>{disclaimer}</small>
+            </CellBase>
+          </CellContext.Provider>
+        )}
       </div>
-      {disclaimer && (
-        <footer
-          sx={{
-            borderTop: '1px solid',
-            marginTop: 'sm',
-            paddingTop: 'sm',
-            variant: 'rateTable.row.footer'
-          }}
-        >
-          <small sx={{ fontSize: 'xs' }}>{disclaimer}</small>
-        </footer>
-      )}
     </section>
   )
 }
