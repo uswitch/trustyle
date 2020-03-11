@@ -2,8 +2,10 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { boolean, number, select, text } from '@storybook/addon-knobs'
+import { Global } from '@emotion/core'
 
 import { ButtonLink } from '../../button-link/src'
+import Badge from '../../badge/src'
 
 import RateTable from './'
 
@@ -34,6 +36,8 @@ export const ExampleWithKnobs = () => {
   const rowTitle = text('Row title', 'Santander Standard Loan (Online)')
   const subtitle = text('Subtitle', 'Personal loan')
 
+  const badgeText = text('Badge text', 'Award Winner')
+
   const unsplitColumns = columns.filter(col => !col.includes('Split'))
   const headerAddon = select('Header addon', unsplitColumns, 'Placeholder')
   const footerAddon = boolean('Show footer via addon?', true)
@@ -52,6 +56,9 @@ export const ExampleWithKnobs = () => {
 
   const buttonText = text('Button text', 'Apply now')
   const linkText = text('Link text', 'More details')
+  const badges = badgeText
+    ? [<Badge key="award-winner">{badgeText}</Badge>]
+    : []
 
   const getColumn = (col: Column): React.ReactNode => {
     if (col === 'Placeholder') {
@@ -133,21 +140,31 @@ export const ExampleWithKnobs = () => {
   }
 
   return (
-    <RateTable.Row
-      preTitle={preTitle}
-      rowTitle={rowTitle}
-      subtitle={subtitle}
-      addons={addons}
-    >
-      {getColumn(firstCol)}
-      {getColumn(secondCol)}
-      {getColumn(thirdCol)}
-      {getColumn(fourthCol)}
-      <RateTable.cells.Cta
-        button={<ButtonLink variant="primary">{buttonText}</ButtonLink>}
-        linkButton={<ButtonLink variant="link">{linkText}</ButtonLink>}
+    <React.Fragment>
+      <Global
+        styles={{
+          body: {
+            marginTop: 25
+          }
+        }}
       />
-    </RateTable.Row>
+      <RateTable.Row
+        badges={badges}
+        preTitle={preTitle}
+        rowTitle={rowTitle}
+        subtitle={subtitle}
+        addons={addons}
+      >
+        {getColumn(firstCol)}
+        {getColumn(secondCol)}
+        {getColumn(thirdCol)}
+        {getColumn(fourthCol)}
+        <RateTable.cells.Cta
+          button={<ButtonLink variant="primary">{buttonText}</ButtonLink>}
+          linkButton={<ButtonLink variant="link">{linkText}</ButtonLink>}
+        />
+      </RateTable.Row>
+    </React.Fragment>
   )
 }
 
@@ -186,44 +203,53 @@ export const Example1 = () => {
 
 export const Example2 = () => {
   return (
-    <RateTable.Row
-      // badges={[<Badge>Cashback</Badge>, <Badge>Award Winner</Badge>]}
-      preTitle="Sponsored"
-      rowTitle="Super Saver April 2021"
-      // subtitle="Personal Loan"
-    >
-      <RateTable.cells.Image>
-        <img
-          src="https://placekitten.com/200/75?image=12"
-          alt="Salman"
-          sx={{ height: 75, width: '100%', objectFit: 'cover' }}
-        />
-      </RateTable.cells.Image>
-      <RateTable.cells.Split>
-        <RateTable.cells.Content label="Fixed rate contract">
-          14 months
-        </RateTable.cells.Content>
-        <RateTable.cells.Content label="Early exit fee">
-          £30 per fuel
-        </RateTable.cells.Content>
-      </RateTable.cells.Split>
-      <RateTable.cells.Content label="Annual saving" primary>
-        <RateTable.Data.Range from="£30" to="£260" />
-        <a>Clickable link</a>
-      </RateTable.cells.Content>
-      <RateTable.cells.Cta
-        button={<ButtonLink variant="primary">Button</ButtonLink>}
-        linkButton={<ButtonLink variant="link">Plan info</ButtonLink>}
+    <React.Fragment>
+      <Global
+        styles={{
+          body: {
+            marginTop: 25
+          }
+        }}
       />
-    </RateTable.Row>
+      <RateTable.Row
+        badges={[
+          <Badge key="cashback">Cashback</Badge>,
+          <Badge key="award-winner">Award Winner</Badge>
+        ]}
+        preTitle="Sponsored"
+        rowTitle="Super Saver April 2021"
+      >
+        <RateTable.cells.Image>
+          <img
+            src="https://placekitten.com/200/75?image=12"
+            alt="Salman"
+            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          />
+        </RateTable.cells.Image>
+        <RateTable.cells.Split>
+          <RateTable.cells.Content label="Fixed rate contract">
+            14 months
+          </RateTable.cells.Content>
+          <RateTable.cells.Content label="Early exit fee">
+            £30 per fuel
+          </RateTable.cells.Content>
+        </RateTable.cells.Split>
+        <RateTable.cells.Content label="Annual saving" primary>
+          <RateTable.Data.Range from="£30" to="£260" />
+          <a>Clickable link</a>
+        </RateTable.cells.Content>
+        <RateTable.cells.Cta
+          button={<ButtonLink variant="primary">Button</ButtonLink>}
+          linkButton={<ButtonLink variant="link">Plan info</ButtonLink>}
+        />
+      </RateTable.Row>
+    </React.Fragment>
   )
 }
 
 export const ExampleWithAddons = () => {
   return (
     <RateTable.Row
-      // badges={[<Badge>Cashback</Badge>, <Badge>Award Winner</Badge>]}
-      // preTitle="Sponsored"
       rowTitle="Santander Standard Loan (Online)"
       subtitle="Personal Loan"
       addons={[

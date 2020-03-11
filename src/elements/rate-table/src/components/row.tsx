@@ -29,6 +29,7 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const RateTableRow: React.FC<RowProps> = ({
+  badges = [],
   preTitle,
   rowTitle,
   subtitle,
@@ -49,12 +50,25 @@ const RateTableRow: React.FC<RowProps> = ({
   return (
     <section
       sx={{
+        position: 'relative',
         border: '1px solid',
         paddingX: ['sm', 'md'],
         paddingY: 'md',
+        marginTop: badges.length ? [10, 15] : 0,
         variant: 'rateTable.row.main'
       }}
     >
+      {!!badges.length && (
+        <div
+          sx={{ position: 'absolute', top: 0, transform: 'translateY(-50%)' }}
+        >
+          {badges.map((badge, i) => (
+            <span sx={{ marginRight: 'sm' }} key={i}>
+              {badge}
+            </span>
+          ))}
+        </div>
+      )}
       <div
         sx={{
           display: 'grid',
@@ -76,7 +90,7 @@ const RateTableRow: React.FC<RowProps> = ({
               display: 'block',
               borderBottom: '1px solid',
               paddingBottom: 'sm',
-              marginTop: -6,
+              marginTop: (badges.length ? 6 : 0) - 6,
               variant: 'rateTable.row.header'
             }}
             mobileOrder={-100}
