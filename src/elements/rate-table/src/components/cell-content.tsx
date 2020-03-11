@@ -14,15 +14,17 @@ const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
   primary = false,
   children
 }) => {
-  const { inSplit } = React.useContext(CellContext)
+  const { inSplit, inAddon } = React.useContext(CellContext)
+
+  const isRow = inSplit || inAddon
 
   return (
     <CellBase
       mobileOrder={primary ? 1 : 2}
       sx={{
-        flexDirection: inSplit ? 'row' : 'column-reverse',
-        alignItems: inSplit ? 'center' : 'start',
-        padding: primary && !inSplit ? 'sm' : '',
+        flexDirection: isRow ? 'row' : 'column-reverse',
+        alignItems: isRow ? 'center' : 'start',
+        padding: primary && !isRow ? 'sm' : '',
         variant: primary
           ? 'rateTable.cellContent.main.variants.primary'
           : 'rateTable.cellContent.main.base'
@@ -30,9 +32,9 @@ const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
     >
       <div
         sx={{
-          flex: inSplit ? 1 : 0,
+          flex: isRow ? 1 : 0,
           fontSize: 'xs',
-          marginTop: inSplit ? '' : 'sm',
+          marginTop: isRow ? '' : 'sm',
           variant: 'rateTable.cellContent.label'
         }}
       >

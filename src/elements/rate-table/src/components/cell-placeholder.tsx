@@ -17,7 +17,7 @@ export const RateTableCellPlaceholder: React.FC<React.HTMLAttributes<
           : 'rgba(255, 51, 38, 0.2)',
         minHeight: inSplit || inAddon ? 0 : 150
       }}
-      mobileOrder={inAddon ? 1 : 2}
+      mobileOrder={inAddon ? 0 : 2}
     >
       Placeholder {inSplit ? 'column' : inAddon ? 'addon' : 'row'}
     </CellBase>

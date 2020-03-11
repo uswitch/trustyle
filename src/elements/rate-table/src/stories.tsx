@@ -19,7 +19,7 @@ type Column =
   | 'Split Placeholder'
   | 'Split Content'
   | 'None'
-const columns = [
+const columns: Column[] = [
   'Placeholder',
   'Image',
   // 'Simple Content',
@@ -34,10 +34,13 @@ export const ExampleWithKnobs = () => {
   const rowTitle = text('Row title', 'Santander Standard Loan (Online)')
   const subtitle = text('Subtitle', 'Personal loan')
 
-  const firstCol = select('First column', columns, 'Image') as Column
-  const secondCol = select('Second column', columns, 'Split Content') as Column
-  const thirdCol = select('Third column', columns, 'Content') as Column
-  const fourthCol = select('Fourth column', columns, 'None') as Column
+  const unsplitColumns = columns.filter(col => !col.includes('Split'))
+  const headerAddon = select('Header addon', unsplitColumns, 'Placeholder')
+
+  const firstCol = select('First column', columns, 'Image')
+  const secondCol = select('Second column', columns, 'Split Content')
+  const thirdCol = select('Third column', columns, 'Content')
+  const fourthCol = select('Fourth column', columns, 'None')
 
   const splitCount = number('Split count', 2, {
     range: true,
@@ -106,8 +109,23 @@ export const ExampleWithKnobs = () => {
     return null
   }
 
+  const addons = []
+
+  if (headerAddon !== 'None') {
+    addons.push(
+      <RateTable.addons.Header key="header-addon">
+        {getColumn(headerAddon === 'Content' ? 'Simple Content' : headerAddon)}
+      </RateTable.addons.Header>
+    )
+  }
+
   return (
-    <RateTable.Row preTitle={preTitle} rowTitle={rowTitle} subtitle={subtitle}>
+    <RateTable.Row
+      preTitle={preTitle}
+      rowTitle={rowTitle}
+      subtitle={subtitle}
+      addons={addons}
+    >
       {getColumn(firstCol)}
       {getColumn(secondCol)}
       {getColumn(thirdCol)}
