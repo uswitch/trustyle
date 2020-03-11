@@ -27,16 +27,23 @@ const Category: React.FC<ListProps> = ({
     <div
       sx={{
         paddingX: ['sm', 'md'],
-        paddingY: ['md', 'lg'],
+        paddingBottom: ['md', 'lg'],
+        paddingTop: ['xs', 'sm'],
         variant: 'categoryTitle.main'
       }}
     >
       <Container>
         {Breadcrumbs && (
-          <Breadcrumbs.type
-            {...Breadcrumbs.props}
-            variant={breadcrumbsVariant}
-          />
+          <div
+            sx={{
+              marginBottom: 'sm'
+            }}
+          >
+            <Breadcrumbs.type
+              {...Breadcrumbs.props}
+              variant={breadcrumbsVariant}
+            />
+          </div>
         )}
         <Styled.h1
           as={text ? 'h1' : 'p'}
