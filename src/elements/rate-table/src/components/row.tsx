@@ -5,7 +5,13 @@ import { jsx } from 'theme-ui'
 import CellBase from './cell-base'
 import { ROWS } from './cell-split'
 
-export const CellContext = React.createContext({
+interface CellContextProps {
+  gridRow: string
+  gridColumn: string
+  firstInSplit?: boolean
+  inSplit?: boolean
+}
+export const CellContext = React.createContext<CellContextProps>({
   gridRow: '',
   gridColumn: '',
   firstInSplit: false,
@@ -53,13 +59,7 @@ const RateTableRow: React.FC<RowProps> = ({
         }}
       >
         <CellContext.Provider
-          value={{
-            gridRow: '1 / span 1',
-            gridColumn: '1 / -1',
-            // @todo default values for these pls
-            inSplit: false,
-            firstInSplit: false
-          }}
+          value={{ gridRow: '1 / span 1', gridColumn: '1 / -1' }}
         >
           <CellBase
             sx={{
@@ -91,9 +91,7 @@ const RateTableRow: React.FC<RowProps> = ({
           <CellContext.Provider
             value={{
               gridRow: `2 / span ${ROWS}`,
-              gridColumn: `${index + 1} / span 1`,
-              firstInSplit: false,
-              inSplit: false
+              gridColumn: `${index + 1} / span 1`
             }}
             key={index}
           >
@@ -102,12 +100,7 @@ const RateTableRow: React.FC<RowProps> = ({
         ))}
         {disclaimer && (
           <CellContext.Provider
-            value={{
-              gridRow: '-2 / span 1',
-              gridColumn: '1 / -1',
-              inSplit: false,
-              firstInSplit: false
-            }}
+            value={{ gridRow: '-2 / span 1', gridColumn: '1 / -1' }}
           >
             <CellBase
               sx={{
