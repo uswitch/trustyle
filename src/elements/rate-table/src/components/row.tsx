@@ -10,6 +10,8 @@ interface CellContextProps {
   gridColumn: string
   firstInSplit?: boolean
   inSplit?: boolean
+  inAddon?: string
+  extraRules?: object
 }
 export const CellContext = React.createContext<CellContextProps>({
   gridRow: '',
@@ -23,6 +25,7 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   preTitle?: React.ReactNode
   rowTitle: React.ReactNode
   subtitle?: React.ReactNode
+  addons?: React.ReactNode[]
   disclaimer?: React.ReactNode
 }
 
@@ -30,6 +33,7 @@ const RateTableRow: React.FC<RowProps> = ({
   preTitle,
   rowTitle,
   subtitle,
+  addons,
   disclaimer,
   children
 }) => {
@@ -98,6 +102,9 @@ const RateTableRow: React.FC<RowProps> = ({
             {child}
           </CellContext.Provider>
         ))}
+
+        {addons}
+
         {disclaimer && (
           <CellContext.Provider
             value={{ gridRow: '-2 / span 1', gridColumn: '1 / -1' }}

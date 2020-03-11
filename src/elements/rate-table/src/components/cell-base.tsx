@@ -13,9 +13,13 @@ const RateTableCellBase: React.FC<CellBaseProps> = ({
   children,
   className
 }) => {
-  const { gridColumn, gridRow, firstInSplit, inSplit } = React.useContext(
-    CellContext
-  )
+  const {
+    gridColumn,
+    gridRow,
+    firstInSplit,
+    inSplit,
+    extraRules
+  } = React.useContext(CellContext)
 
   // @todo what type should this actually be?
   const sx: any = {
@@ -26,7 +30,8 @@ const RateTableCellBase: React.FC<CellBaseProps> = ({
     paddingY: 6, // xs / 2
     gridColumn: ['initial', gridColumn],
     gridRow: ['initial', gridRow],
-    order: [mobileOrder, 'initial']
+    order: [mobileOrder, 'initial'],
+    ...extraRules
   }
 
   if (inSplit) {

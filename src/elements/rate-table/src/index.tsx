@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import RateTableRow from './components/row'
+import RateTableAddonHeader from './components/addon-header'
 import RateTableCellImage from './components/cell-image'
 import RateTableCellSplit from './components/cell-split'
 import RateTableCellPlaceholder from './components/cell-placeholder'
@@ -10,6 +11,9 @@ import RateTableDataRange from './components/data-range'
 
 const RateTable = {
   Row: RateTableRow,
+  addons: {
+    Header: RateTableAddonHeader
+  },
   cells: {
     Image: RateTableCellImage,
     Split: RateTableCellSplit,

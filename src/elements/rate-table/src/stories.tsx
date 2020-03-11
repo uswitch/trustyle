@@ -197,6 +197,11 @@ export const ExampleWithAddons = () => {
       rowTitle="Santander Standard Loan (Online)"
       subtitle="Personal Loan"
       disclaimer="Representative example: Assumed borrowing of £10,000 over..."
+      addons={[
+        <RateTable.addons.Header key="header-placeholder">
+          <RateTable.cells.Placeholder />
+        </RateTable.addons.Header>
+      ]}
     >
       <RateTable.cells.Image>
         <img
