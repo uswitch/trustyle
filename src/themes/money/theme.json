@@ -888,8 +888,10 @@
       },
       "subtitle": {
         "color": "grey-60"
-      },
-      "footer": {
+      }
+    },
+    "addonFooter": {
+      "main": {
         "borderTopColor": "grey-20"
       }
     },

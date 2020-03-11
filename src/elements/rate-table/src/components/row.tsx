@@ -23,10 +23,9 @@ export const CellContext = React.createContext<CellContextProps>({
 export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   badges?: React.ReactNode[]
   preTitle?: React.ReactNode
-  rowTitle: React.ReactNode
+  rowTitle?: React.ReactNode
   subtitle?: React.ReactNode
   addons?: React.ReactNode[]
-  disclaimer?: React.ReactNode
 }
 
 const RateTableRow: React.FC<RowProps> = ({
@@ -34,11 +33,18 @@ const RateTableRow: React.FC<RowProps> = ({
   rowTitle,
   subtitle,
   addons,
-  disclaimer,
   children
 }) => {
   const nonNullChildren = React.Children.toArray(children).filter(c => c)
   const childrenCount = nonNullChildren.length
+
+  /**
+   * ROW 1: reserved for addons above header (auto height)
+   * ROW 2: used for header
+   * ROW 3: reserved for addons below header (auto height)
+   * ROW 4-9: used for grid
+   * ROW 10-12: reserved for addons below grid (footer addon uses 11)
+   */
 
   return (
     <section
@@ -55,7 +61,7 @@ const RateTableRow: React.FC<RowProps> = ({
           gridTemplateColumns: ['auto', `repeat(${childrenCount}, 1fr)`],
           gridTemplateRows: [
             'auto',
-            `auto repeat(${ROWS}, 1fr) ${disclaimer ? 'auto' : ''}`
+            `repeat(3, auto) repeat(${ROWS}, 1fr) repeat(3, auto)`
           ],
           marginX: -8,
           marginY: -6,
@@ -63,7 +69,7 @@ const RateTableRow: React.FC<RowProps> = ({
         }}
       >
         <CellContext.Provider
-          value={{ gridRow: '1 / span 1', gridColumn: '1 / -1' }}
+          value={{ gridRow: '2 / span 1', gridColumn: '1 / -1' }}
         >
           <CellBase
             sx={{
@@ -80,9 +86,11 @@ const RateTableRow: React.FC<RowProps> = ({
                 {preTitle}
               </span>
             )}
-            <h3 sx={{ margin: 0, variant: 'rateTable.row.title' }}>
-              {rowTitle}
-            </h3>
+            {rowTitle && (
+              <h3 sx={{ margin: 0, variant: 'rateTable.row.title' }}>
+                {rowTitle}
+              </h3>
+            )}
             {subtitle && (
               <span sx={{ fontSize: 'xs', variant: 'rateTable.row.subtitle' }}>
                 {subtitle}
@@ -94,7 +102,7 @@ const RateTableRow: React.FC<RowProps> = ({
         {nonNullChildren.map((child, index) => (
           <CellContext.Provider
             value={{
-              gridRow: `2 / span ${ROWS}`,
+              gridRow: `4 / span ${ROWS}`,
               gridColumn: `${index + 1} / span 1`
             }}
             key={index}
@@ -104,25 +112,6 @@ const RateTableRow: React.FC<RowProps> = ({
         ))}
 
         {addons}
-
-        {disclaimer && (
-          <CellContext.Provider
-            value={{ gridRow: '-2 / span 1', gridColumn: '1 / -1' }}
-          >
-            <CellBase
-              sx={{
-                display: 'block',
-                borderTop: '1px solid',
-                paddingTop: 'sm',
-                marginBottom: -6,
-                variant: 'rateTable.row.footer'
-              }}
-              mobileOrder={100}
-            >
-              <small sx={{ fontSize: 'xs' }}>{disclaimer}</small>
-            </CellBase>
-          </CellContext.Provider>
-        )}
       </div>
     </section>
   )

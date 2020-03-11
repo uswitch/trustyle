@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
-import { number, select, text } from '@storybook/addon-knobs'
+import { boolean, number, select, text } from '@storybook/addon-knobs'
 
 import { ButtonLink } from '../../button-link/src'
 
@@ -36,6 +36,7 @@ export const ExampleWithKnobs = () => {
 
   const unsplitColumns = columns.filter(col => !col.includes('Split'))
   const headerAddon = select('Header addon', unsplitColumns, 'Placeholder')
+  const footerAddon = boolean('Show footer via addon?', true)
 
   const firstCol = select('First column', columns, 'Image')
   const secondCol = select('Second column', columns, 'Split Content')
@@ -119,6 +120,18 @@ export const ExampleWithKnobs = () => {
     )
   }
 
+  if (footerAddon) {
+    addons.push(
+      <RateTable.addons.Footer key="footer">
+        <RateTable.cells.Base sx={{ display: 'block' }} mobileOrder={100}>
+          <small sx={{ fontSize: 'xs' }}>
+            Representative example: Assumed borrowing of £10,000 over...
+          </small>
+        </RateTable.cells.Base>
+      </RateTable.addons.Footer>
+    )
+  }
+
   return (
     <RateTable.Row
       preTitle={preTitle}
@@ -145,7 +158,6 @@ export const Example1 = () => {
       // preTitle="Sponsored"
       rowTitle="Santander Standard Loan (Online)"
       subtitle="Personal Loan"
-      disclaimer="Representative example: Assumed borrowing of £10,000 over..."
     >
       <RateTable.cells.Image>
         <img
@@ -214,11 +226,17 @@ export const ExampleWithAddons = () => {
       // preTitle="Sponsored"
       rowTitle="Santander Standard Loan (Online)"
       subtitle="Personal Loan"
-      disclaimer="Representative example: Assumed borrowing of £10,000 over..."
       addons={[
         <RateTable.addons.Header key="header-placeholder">
           <RateTable.cells.Placeholder />
-        </RateTable.addons.Header>
+        </RateTable.addons.Header>,
+        <RateTable.addons.Footer key="footer">
+          <RateTable.cells.Base sx={{ display: 'block' }} mobileOrder={100}>
+            <small sx={{ fontSize: 'xs' }}>
+              Representative example: Assumed borrowing of £10,000 over...
+            </small>
+          </RateTable.cells.Base>
+        </RateTable.addons.Footer>
       ]}
     >
       <RateTable.cells.Image>

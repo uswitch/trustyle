@@ -850,9 +850,6 @@
       },
       "subtitle": {
         "color": "grey-80"
-      },
-      "footer": {
-        "borderTopColor": "grey-20"
       }
     },
     "cellBase": {
@@ -860,6 +857,11 @@
         "inSplit": {
           "borderTopColor": "grey-20"
         }
+      }
+    },
+    "addonFooter": {
+      "main": {
+        "borderTopColor": "grey-20"
       }
     },
     "cellContent": {

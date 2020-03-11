@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui'
 
 import { CellContext } from './row'
 
-interface CellBaseProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface CellBaseProps extends React.HTMLAttributes<HTMLDivElement> {
   mobileOrder?: number
 }
 
