@@ -878,6 +878,23 @@
     }
   },
 
+  "badge" : {
+    "base": {
+      "paddingX": "base",
+      "paddingY": [3, 5.5],
+      "fontSize": ["xs", "sm"],
+      "fontWeight": "bold",
+      "borderRadius": "50vh"
+    },
+    "variants": {
+      "primary": {
+        "variant": "badge.base",
+        "backgroundColor": "plum",
+        "color": "white"
+       }
+    }
+  },
+
   "styles": {
     "heading": {
       "fontFamily": "heading",
@@ -968,7 +985,7 @@
         "fontStyle": "normal"
       }
     },
-    
+
 
     "table": {
       "borderSpacing": 0,

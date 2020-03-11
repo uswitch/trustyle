@@ -490,6 +490,22 @@
     }
   },
 
+  "badge" : {
+    "base": {
+      "paddingX": [14, 23],
+      "paddingY": [3, 7],
+      "fontSize": "xs",
+      "fontWeight": "bold"
+    },
+    "variants": {
+      "primary": {
+        "variant": "badge.base",
+        "backgroundColor": "uswitch-navy",
+        "color": "white"
+       }
+    }
+  },
+
   "callOut": {
     "main": {
       "backgroundColor": "grey-05"
