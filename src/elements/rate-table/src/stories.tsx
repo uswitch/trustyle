@@ -8,7 +8,7 @@ import { ButtonLink } from '../../button-link/src'
 import RateTable from './'
 
 export default {
-  title: 'Elements|RateTable'
+  title: 'Elements|Rate Table'
 }
 
 type Column =
