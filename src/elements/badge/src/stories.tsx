@@ -11,5 +11,5 @@ export default {
 
 export const ExampleWithKnobs = () => {
   const content: string = text('content', 'Optional Badge')
-  return <Badge content={content} />
+  return <Badge>{content}</Badge>
 }

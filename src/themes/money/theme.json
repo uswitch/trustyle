@@ -875,13 +875,11 @@
 
   "badge" : {
     "base": {
-      "display": "flex",
-      "justifyContent": "center",
-      "alignItems": "center",
       "paddingX": "base",
-      "height": 32,
-      "fontSize": "xs",
-      "borderRadius": 57
+      "paddingY": [3, 5.5],
+      "fontSize": ["xs", "sm"],
+      "fontWeight": "bold",
+      "borderRadius": "50vh"
     },
     "variants": {
       "primary": {
@@ -982,7 +980,7 @@
         "fontStyle": "normal"
       }
     },
-    
+
 
     "table": {
       "borderSpacing": 0,

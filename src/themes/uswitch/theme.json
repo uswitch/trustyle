@@ -492,12 +492,10 @@
 
   "badge" : {
     "base": {
-      "display": "flex",
-      "justifyContent": "center",
-      "alignItems": "center",
-      "paddingX": "5px",
-      "height": 32,
-      "fontSize": "xs"
+      "paddingX": [14, 23],
+      "paddingY": [3, 7],
+      "fontSize": "xs",
+      "fontWeight": "bold"
     },
     "variants": {
       "primary": {
