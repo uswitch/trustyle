@@ -864,6 +864,15 @@
     }
   },
 
+  "authorProfile": {
+    "main": {
+      "marginBottom": "xl"
+    },
+    "name": {
+      "color": "grey-80"
+    }
+  },
+
   "styles": {
     "heading": {
       "fontFamily": "heading",
