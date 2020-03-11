@@ -28,7 +28,7 @@ const Category: React.FC<ListProps> = ({
       sx={{
         paddingX: ['sm', 'md'],
         paddingBottom: ['md', 'lg'],
-        paddingTop: ['xs', 'sm'],
+        paddingTop: Breadcrumbs ? ['xs', 'sm'] : ['md', 'lg'],
         variant: 'categoryTitle.main'
       }}
     >
