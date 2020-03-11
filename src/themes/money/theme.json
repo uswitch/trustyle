@@ -45,6 +45,7 @@
   },
 
   "space": {
+    "gutter": 16,
     "base": 16,
     "xxs": 4,
     "xs": 8,
@@ -349,28 +350,29 @@
 
   "compounds": {
     "card": {
+      "itemsPerRow": [1, 2, 3],
       "display": "flex",
       "width": ["100%", "49%", "grid.lg.3"],
+      "height": ["auto", "400px", "400px"],
       "flexDirection": "column",
       "borderRadius": "sm",
       "borderStyle": "solid",
-      "borderColor": "grey-70",
+      "borderColor": "grey-20",
       "borderWidth": "1px",
+      "boxSizing": "border-box",
       "mb": "sm",
       "img": {
         "sm": { "width": "100%", "height": 230 },
         "md": { "width": "100%", "height": 230 },
         "lg": { "maxWidth": "grid.lg.3", "height": 230 }
       },
-      "p": { "fontSize": 14 },
-      "h4": { "fontSize": 18, "minHeight": 0 },
+      "p": { "fontSize": 16, "lineHeight": "130%", "color": "grey-80" },
+      "h3": { "fontSize": 18, "minHeight": 0, "fontWeight": "bold", "color": "experimental-text" },
       "content": {
-        "height": "100%",
-        "p": "sm",
-        "a": {
-          "pb": "xs"
-        }
-      }
+        "paddingY": ["sm", 0],
+        "paddingX": [0, "sm"]
+      },
+      "marginRight": "base"
     },
 
     "click-out-form": {
@@ -795,6 +797,9 @@
     },
     "text": {
       "color": "grey-0"
+    },
+    "breadcrumbs": {
+      "variant": "light"
     }
   },
 
@@ -868,6 +873,34 @@
       ":hover": {
         "color": "plum"
       }
+    }
+  },
+
+  "authorProfile": {
+    "main": {
+      "marginBottom": "xl"
+    },
+    "name": {
+      "a": {
+        "color": "grey-80"
+      }
+    }
+  },
+
+  "badge" : {
+    "base": {
+      "paddingX": "base",
+      "paddingY": [3, 5.5],
+      "fontSize": ["xs", "sm"],
+      "fontWeight": "bold",
+      "borderRadius": "50vh"
+    },
+    "variants": {
+      "primary": {
+        "variant": "badge.base",
+        "backgroundColor": "plum",
+        "color": "white"
+       }
     }
   },
 

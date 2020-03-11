@@ -176,6 +176,17 @@
     "border": 0
   },
 
+  "grid": {
+    "sizes": {
+      "gutter": ["xs", "sm", "sm"]
+    },
+    "container": {
+      "lg": {
+        "maxWidth": 1160
+      }
+    }
+  },
+
   "----------------------------- Variants": "-----------------------------",
   "modules": {
     "content-hero-module": {
@@ -483,6 +494,22 @@
   "author": {
     "heading": {
       "color": "grey-80"
+    }
+  },
+
+  "badge" : {
+    "base": {
+      "paddingX": [14, 23],
+      "paddingY": [3, 7],
+      "fontSize": "xs",
+      "fontWeight": "bold"
+    },
+    "variants": {
+      "primary": {
+        "variant": "badge.base",
+        "backgroundColor": "uswitch-navy",
+        "color": "white"
+       }
     }
   },
 
