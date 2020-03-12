@@ -366,6 +366,32 @@
     "breadcrumb": {
       "my": "sm",
       "mx": 0
+    },
+
+    "cookie-banner": {
+      "heading": {
+        "mt": [0, "md", "md"], 
+      },
+      "hr": {
+        "border": 0,
+        "height": 1,
+        "bg": "grey-20"
+      },
+      "copy": {
+        "mb": ["md", "sm", null],
+        "mt": "base"
+      },
+      "accept-all-button": {
+        "variant": "buttons.variants.primary"
+      },
+      "save-preferences-button": {
+        "variant": "buttons.variants.secondary"
+      },
+      "button-with-checkbox": {
+        "border": "2px solid",
+        "borderColor": "borderColor",
+        "backgroundColor": "white"
+      }
     }
   },
 
