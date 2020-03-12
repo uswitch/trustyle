@@ -50,7 +50,7 @@
     "@types/react-imgix": "^9.0.2",
     "@types/react-input-mask": "^2.0.3",
     "@types/react-transition-group": "^2.9.2",
-    "@types/theme-ui": "^0.2.7",
+    "@types/styled-system": "^5.1.9",
     "@typescript-eslint/eslint-plugin": "^1.10.2",
     "@typescript-eslint/parser": "^2.17.0",
     "ajv": "^6.12.0",
@@ -92,5 +92,11 @@
       "prettier --write",
       "eslint --fix"
     ]
+  },
+  "dependencies": {
+    "@styled-system/css": "^5.1.5",
+    "@types/styled-system__css": "^5.0.5",
+    "@types/theme-ui": "file:types/theme-ui",
+    "styled-system": "^5.1.5"
   }
 }

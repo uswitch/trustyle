@@ -40,7 +40,7 @@ export const Container: React.FC<ContainerProps> = ({
       sx={{
         mx: 'auto',
         px: getGutterSize,
-        maxWidth: theme =>
+        maxWidth: (theme: any) =>
           `calc(${getContainerSize(theme) *
             (cols && span ? span / cols : 1)}px - ${getSpaceValue('sm')(
             theme
@@ -74,7 +74,7 @@ export const Row: React.FC<RowProps> = ({
     <div
       sx={{
         variant: `grid.row`,
-        mx: theme => getNegativeSpaceValue(getGutterSize(theme)),
+        mx: (theme: any) => getNegativeSpaceValue(getGutterSize(theme)),
         display: 'flex',
         flexDirection: direction,
         flexWrap: wrap ? 'wrap' : 'nowrap',
@@ -116,7 +116,7 @@ export const Col: React.FC<ColProps> = ({
         flexBasis: `auto`,
         ...(span
           ? {
-              width: theme =>
+              width: (theme: any) =>
                 mediaQueryFunction(cols, (colValue: number, index: number) => {
                   return `calc(${((Array.isArray(span) ? span[index] : span) /
                     colValue) *
@@ -127,7 +127,7 @@ export const Col: React.FC<ColProps> = ({
           : {}),
         ...(offset
           ? {
-              ml: theme =>
+              ml: (theme: any) =>
                 mediaQueryFunction(
                   cols,
                   (colValue: number, index: number) =>
