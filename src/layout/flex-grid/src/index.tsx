@@ -3,22 +3,16 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-const DEFAULT_GUTTER_SIZE = 'xs'
-const DEFAULT_CONTAINER_WIDTH = 1200
-
 const getSpaceValue = (key: string) => (theme: any = {}) => theme.space[key]
 
 const getNegativeSpaceValue = (key: string) => (theme: any = {}) =>
   `-${getSpaceValue(key)(theme)}px`
 
-const getGutterSize = (theme: any) =>
-  theme?.grid?.sizes?.gutter || DEFAULT_GUTTER_SIZE
+const getGutterSize = (theme: any) => theme?.grid?.sizes?.gutter
 
-const getVirticalGutterSize = (theme: any) =>
-  theme?.grid?.sizes?.virtcalGutter || DEFAULT_GUTTER_SIZE
+const getVerticalGutterSize = (theme: any) => theme?.grid?.sizes?.verticalGutter
 
-const getContainerSize = (theme: any) =>
-  theme?.grid?.container?.maxWidth || DEFAULT_CONTAINER_WIDTH
+const getContainerSize = (theme: any) => theme?.grid?.container?.maxWidth
 
 const mediaQueryFunction = (data: any, fn: any) => {
   if (Array.isArray(data)) {
@@ -116,7 +110,7 @@ export const Col: React.FC<ColProps> = ({
         variant: `grid.col`,
         boxSizing: 'border-box',
         mr: getGutterSize,
-        mb: getVirticalGutterSize,
+        mb: getVerticalGutterSize,
         flexGrow: span ? 0 : 1,
         flexShrink: 0,
         flexBasis: `auto`,
