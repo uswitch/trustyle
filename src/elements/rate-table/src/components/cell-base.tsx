@@ -16,6 +16,8 @@ const RateTableCellBase: React.FC<CellBaseProps> = ({
   const {
     gridColumn,
     gridRow,
+    primaryCellCount,
+    primaryCellIndex,
     firstInSplit,
     inSplit,
     extraRules
@@ -28,7 +30,12 @@ const RateTableCellBase: React.FC<CellBaseProps> = ({
     justifyContent: 'center',
     marginX: 8, // sm / 2
     paddingY: 6, // xs / 2
-    gridColumn: ['initial', gridColumn],
+    gridColumn: [
+      typeof primaryCellIndex === 'number' && primaryCellCount === 2
+        ? `${primaryCellIndex + 1} / span 1`
+        : '1 / -1',
+      gridColumn
+    ],
     gridRow: ['initial', gridRow],
     order: [mobileOrder, 'initial'],
     ...extraRules

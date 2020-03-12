@@ -8,6 +8,8 @@ import { ROWS } from './cell-split'
 interface CellContextProps {
   gridRow: string
   gridColumn: string
+  primaryCellCount?: number
+  primaryCellIndex?: number
   firstInSplit?: boolean
   inSplit?: boolean
   inAddon?: string
@@ -16,6 +18,7 @@ interface CellContextProps {
 export const CellContext = React.createContext<CellContextProps>({
   gridRow: '',
   gridColumn: '',
+  primaryCellCount: 1,
   firstInSplit: false,
   inSplit: false
 })
@@ -36,8 +39,15 @@ const RateTableRow: React.FC<RowProps> = ({
   addons,
   children
 }) => {
-  const nonNullChildren = React.Children.toArray(children).filter(c => c)
-  const childrenCount = nonNullChildren.length
+  const nonNullChildren = React.Children.toArray(children).filter(
+    c => c
+  ) as React.ReactElement[]
+
+  const primaryCells = nonNullChildren.filter(child => child.props.primary)
+
+  if (primaryCells.length > 2) {
+    throw new Error('Primary cell count cannot be above two')
+  }
 
   /**
    * ROW 1: reserved for addons above header (auto height)
@@ -72,7 +82,10 @@ const RateTableRow: React.FC<RowProps> = ({
       <div
         sx={{
           display: 'grid',
-          gridTemplateColumns: ['auto', `repeat(${childrenCount}, 1fr)`],
+          gridTemplateColumns: [
+            'repeat(2, 1fr)',
+            `repeat(${nonNullChildren.length}, 1fr)`
+          ],
           gridTemplateRows: [
             'auto',
             `repeat(3, auto) repeat(${ROWS}, 1fr) repeat(3, auto)`
@@ -117,7 +130,10 @@ const RateTableRow: React.FC<RowProps> = ({
           <CellContext.Provider
             value={{
               gridRow: `4 / span ${ROWS}`,
-              gridColumn: `${index + 1} / span 1`
+              gridColumn: `${index + 1} / span 1`,
+              primaryCellCount: primaryCells.length,
+              primaryCellIndex:
+                child.props.primary && primaryCells.indexOf(child)
             }}
             key={index}
           >
