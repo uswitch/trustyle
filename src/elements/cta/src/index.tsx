@@ -37,13 +37,19 @@ const CTA: React.FC<CTAProps> = ({
       }}
     >
       <div>
-        <Styled.h3
-          sx={{ marginTop: 0, variant: `${lookup(variant)}.title` }}
-          as="h2"
-        >
-          {title}
-        </Styled.h3>
-        <Styled.p sx={{ variant: `${lookup(variant)}.text` }}>{text}</Styled.p>
+        {title && (
+          <Styled.h3
+            sx={{ marginTop: 0, variant: `${lookup(variant)}.title` }}
+            as="h2"
+          >
+            {title}
+          </Styled.h3>
+        )}
+        {text && (
+          <Styled.p sx={{ variant: `${lookup(variant)}.text` }}>
+            {text}
+          </Styled.p>
+        )}
       </div>
       <div sx={{ flexShrink: 0 }}>
         <ButtonLink

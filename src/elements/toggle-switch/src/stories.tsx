@@ -5,6 +5,8 @@ import { action } from '@storybook/addon-actions'
 import { boolean, color } from '@storybook/addon-knobs'
 import { PaletteProvider } from '@uswitch/trustyle-utils.palette'
 
+import theme from '../../../utils/theme-selector'
+
 import { checkedIcon, uncheckedIcon } from './assets'
 
 import ToggleSwitch from './'
@@ -27,14 +29,18 @@ export const ExampleWithState = () => {
     action('Toggle changed')(newState)
   }
 
-  const applyPalette = boolean('Apply palette?', false, 'ToggleSwitch')
+  const applyPalette = boolean('Apply palette?', false, 'Palette')
 
   return (
     <Fragment>
       <PaletteProvider
         value={{
           featureColor: applyPalette
-            ? color('featureColor', '#141424', 'ToggleSwitch')
+            ? color(
+                'featureColor',
+                theme().toggleSwitch?.checked?.backgroundColor,
+                'Palette'
+              )
             : null
         }}
       >

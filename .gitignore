@@ -10,3 +10,6 @@ storybook-static/
 # System files
 **/.DS_Store
 *.swp
+
+lib
+lib/*
