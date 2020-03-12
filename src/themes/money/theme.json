@@ -957,6 +957,18 @@
     }
   },
 
+  "progressBar": {
+    "main": {
+      "height": [5, 10],
+      "borderRadius": "4px",
+      "backgroundColor": "grey-10"
+    },
+    "progress": {
+      "borderRadius": "4px",
+      "backgroundColor": "#91CA50"
+    }
+  },
+
   "styles": {
     "heading": {
       "fontFamily": "heading",

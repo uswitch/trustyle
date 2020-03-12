@@ -12,9 +12,6 @@
     "clean": "rm -rf lib",
     "build": "npm run clean && tsc"
   },
-  "dependencies": {
-    "@uswitch/trustyle.styles": "^0.4.25"
-  },
   "devDependencies": {
     "@types/facepaint": "^1.2.1",
     "typescript": "^3.6.2"

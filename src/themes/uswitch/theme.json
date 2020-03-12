@@ -864,6 +864,15 @@
     }
   },
 
+  "progressBar": {
+    "main": {
+      "backgroundColor": "blue-25"
+    },
+    "progress": {
+      "backgroundColor": "blue"
+    }
+  },
+
   "rateTable": {
     "row": {
       "main": {
