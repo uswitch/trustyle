@@ -8,10 +8,12 @@ import { CellContext } from './row'
 export interface CellPrimaryProps extends React.HTMLAttributes<HTMLDivElement> {
   label: string
   primary?: boolean
+  mobileOrder?: number
 }
 const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
   label,
   primary = false,
+  mobileOrder,
   children
 }) => {
   const { inSplit, inAddon } = React.useContext(CellContext)
@@ -20,7 +22,7 @@ const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
 
   return (
     <CellBase
-      mobileOrder={primary ? 1 : 2}
+      mobileOrder={mobileOrder || (primary ? 1 : 2)}
       sx={{
         flexDirection: isRow ? 'row' : 'column-reverse',
         alignItems: isRow ? 'center' : 'start',
@@ -32,6 +34,7 @@ const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
     >
       <div
         sx={{
+          display: inAddon ? [undefined, 'none'] : undefined,
           flex: isRow ? 1 : 0,
           fontSize: 'xs',
           marginTop: isRow ? '' : 'sm',

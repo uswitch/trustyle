@@ -6,6 +6,7 @@ import { Global } from '@emotion/core'
 
 import { ButtonLink } from '../../button-link/src'
 import Badge from '../../badge/src'
+import { ProgressBar } from '../../progress-bar/src'
 
 import RateTable from './'
 
@@ -254,7 +255,16 @@ export const ExampleWithAddons = () => {
       subtitle="Personal Loan"
       addons={[
         <RateTable.addons.Header key="header-placeholder">
-          <RateTable.cells.Placeholder />
+          <RateTable.cells.Content label="Eligibility" mobileOrder={1}>
+            <div
+              sx={{ textAlign: 'center', maxWidth: 300, marginLeft: 'auto' }}
+            >
+              <span sx={{ display: 'block', fontSize: 14, marginBottom: 'xs' }}>
+                <strong>70%</strong> chance of approval
+              </span>
+              <ProgressBar current={70} max={100} />
+            </div>
+          </RateTable.cells.Content>
         </RateTable.addons.Header>,
         <RateTable.addons.Footer key="footer">
           <RateTable.cells.Base sx={{ display: 'block' }} mobileOrder={100}>
@@ -273,13 +283,55 @@ export const ExampleWithAddons = () => {
         />
       </RateTable.cells.Image>
       <RateTable.cells.Split>
-        <RateTable.cells.Placeholder />
-        <RateTable.cells.Placeholder />
+        <RateTable.cells.Content label="Fixed rate contract">
+          14 months
+        </RateTable.cells.Content>
+        <RateTable.cells.Content label="Early exit fee">
+          £30 per fuel
+        </RateTable.cells.Content>
       </RateTable.cells.Split>
       <RateTable.cells.Placeholder />
+      <RateTable.cells.Content label="Annual saving" primary>
+        <RateTable.Data.Range from="£30" to="£260" />
+        <a>Clickable link</a>
+      </RateTable.cells.Content>
       <RateTable.cells.Cta
         button={<ButtonLink variant="primary">Apply now</ButtonLink>}
         linkButton={<ButtonLink variant="link">More details</ButtonLink>}
+      />
+    </RateTable.Row>
+  )
+}
+
+export const ExampleWithMultiplePrimaries = () => {
+  return (
+    <RateTable.Row preTitle="Sponsored" rowTitle="Super Saver April 2021">
+      <RateTable.cells.Image>
+        <img
+          src="https://placekitten.com/200/75?image=1"
+          alt="Salman"
+          sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+        />
+      </RateTable.cells.Image>
+      <RateTable.cells.Split>
+        <RateTable.cells.Content label="Fixed rate contract">
+          14 months
+        </RateTable.cells.Content>
+        <RateTable.cells.Content label="Early exit fee">
+          £30 per fuel
+        </RateTable.cells.Content>
+      </RateTable.cells.Split>
+      <RateTable.cells.Content label="Annual saving" primary>
+        <RateTable.Data.Range from="£30" to="£260" />
+        <a>Clickable link</a>
+      </RateTable.cells.Content>
+      <RateTable.cells.Content label="Annual saving" primary>
+        <RateTable.Data.Range from="£30" to="£260" />
+        <a>Clickable link</a>
+      </RateTable.cells.Content>
+      <RateTable.cells.Cta
+        button={<ButtonLink variant="primary">Button</ButtonLink>}
+        linkButton={<ButtonLink variant="link">Plan info</ButtonLink>}
       />
     </RateTable.Row>
   )
