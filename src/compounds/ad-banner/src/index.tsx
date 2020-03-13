@@ -76,7 +76,7 @@ const AdBanner: React.FC<Props> = ({ title, content, usp, provider }) => {
         >
           {usp}
         </p>
-        <Button>Learn More</Button>
+        <Button variant="primary">Learn More</Button>
       </div>
     </div>
   )
