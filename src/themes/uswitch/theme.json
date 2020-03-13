@@ -369,7 +369,7 @@
 
     "cookie-banner": {
       "heading": {
-        "mt": [0, "md", "md"], 
+        "mt": [0, "md", "md"]
       },
       "hr": {
         "border": 0,
@@ -384,7 +384,7 @@
         "variant": "buttons.variants.primary"
       },
       "save-preferences-button": {
-        "variant": "buttons.variants.reversed"
+        "variant": "buttons.variants.inverse"
       },
       "button-with-checkbox": {
         "border": "2px solid",
@@ -393,7 +393,7 @@
       },
       "button-with-checkbox-checked": {
         "variant": "compounds.cookie-banner.button-with-checkbox",
-        "borderColor": "uswitch-navy",
+        "borderColor": "uswitch-navy"
       }
     }
   },
