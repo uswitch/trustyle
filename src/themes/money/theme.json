@@ -396,6 +396,7 @@
       "mx": 0
     },
 
+
     "cookie-banner": {
       "heading": {
         "mt": [0, "md", "md"], 
@@ -421,6 +422,10 @@
         "borderColor": "grey-40",
         "backgroundColor": "white",
         "borderRadius": 3
+      },
+      "button-with-checkbox-checked": {
+        "variant": "compounds.cookie-banner.button-with-checkbox",
+        "borderColor": "plum"
       }
     }
   },

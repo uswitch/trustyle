@@ -385,12 +385,16 @@
         "variant": "buttons.variants.primary"
       },
       "save-preferences-button": {
-        "variant": "buttons.variants.secondary"
+        "variant": "buttons.variants.reversed"
       },
       "button-with-checkbox": {
         "border": "2px solid",
-        "borderColor": "borderColor",
+        "borderColor": "grey-40",
         "backgroundColor": "white"
+      },
+      "button-with-checkbox-checked": {
+        "variant": "compounds.cookie-banner.button-with-checkbox",
+        "borderColor": "uswitch-navy",
       }
     }
   },
