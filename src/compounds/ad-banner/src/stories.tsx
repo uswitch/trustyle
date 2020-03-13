@@ -11,13 +11,20 @@ export default {
 
 export const ExampleWithKnobs = () => {
   const title: string = text('title', 'Galaxy S20 Series')
-  const content: string = text(
-    'content',
-    'A revolutionary camera with 8K video. Future-ready 5G. More memory for your memories.'
+  const content: React.ReactElement = (
+    <React.Fragment>
+      A revolutionary camera with 8K video.
+      <br /> Future-ready 5G. More memory for your memories.
+    </React.Fragment>
   )
+
+  const url =
+    'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/3OTEiajt8kWEUm8QcWI8w8/aab828afa135b4591375dc71d6a6584d/Logo_-_samsung.png?auto=compress%2Cformat&fit=fill&trim=color&ixlib=react-8.6.4&invert=true&sat=-100&con=100'
   const usp: string = text('usp', 'Free Galaxy Buds+ worth £159')
-  const provider = { logo: 'https://bit.ly/2THNlVA', name: 'Samsung' }
+  const sponsorLogo: string = text('Sponsor Logo', url)
+  const sponsorName: string = text('Sponsor Name', 'Samsung')
+  const sponsor = { logo: sponsorLogo, name: sponsorName }
   return (
-    <AdBanner title={title} content={content} usp={usp} provider={provider} />
+    <AdBanner title={title} content={content} usp={usp} sponsor={sponsor} />
   )
 }
