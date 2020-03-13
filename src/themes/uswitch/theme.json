@@ -509,6 +509,24 @@
         ":visited": {
           "color": "white"
         }
+      },
+      "inverse": {
+        "variant": "buttons.base",
+        "color": "uswitch-navy",
+        "backgroundColor": "white",
+        "border": "2px solid",
+        "borderColor": "uswitch-navy",
+        ":hover": {
+          "backgroundColor": "grey-100"
+        },
+        ":disabled": {
+          "borderColor": "grey-60",
+          "color": "grey-60",
+          "cursor": "not-allowed"
+        },
+        ":visited": {
+          "color": "uswitch-navy"
+        }
       }
     }
   },
