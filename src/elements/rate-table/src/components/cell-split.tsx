@@ -10,7 +10,7 @@ export const ROWS = 6
 const RateTableCellSplit: React.FC<React.HTMLAttributes<any>> = ({
   children
 }) => {
-  const { gridColumn } = React.useContext(CellContext)
+  const { gridColumnStart, gridColumnSpan } = React.useContext(CellContext)
 
   const nonNullChildren = React.Children.toArray(children).filter(c => c)
   const rowsHeight = ROWS / nonNullChildren.length
@@ -19,8 +19,10 @@ const RateTableCellSplit: React.FC<React.HTMLAttributes<any>> = ({
       {nonNullChildren.map((child, index) => (
         <CellContext.Provider
           value={{
-            gridColumn,
-            gridRow: `${4 + index * rowsHeight} / span ${rowsHeight}`,
+            gridColumnStart,
+            gridColumnSpan,
+            gridRowStart: 4 + index * rowsHeight,
+            gridRowSpan: rowsHeight,
             firstInSplit: index === 0,
             inSplit: true
           }}

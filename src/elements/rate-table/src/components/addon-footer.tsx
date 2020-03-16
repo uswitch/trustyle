@@ -7,11 +7,15 @@ import { CellContext } from './row'
 const RateTableAddonFooter: React.FC<React.HTMLAttributes<any>> = ({
   children
 }) => {
+  const { gridColumnSpan } = React.useContext(CellContext)
+
   return (
     <CellContext.Provider
       value={{
-        gridRow: '-3 / span 1',
-        gridColumn: '1 / -1',
+        gridRowStart: 11,
+        gridRowSpan: 1,
+        gridColumnStart: 1,
+        gridColumnSpan,
         inAddon: 'footer',
         extraRules: {
           borderTop: '1px solid',

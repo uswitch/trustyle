@@ -24,18 +24,29 @@ const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
     <CellBase
       mobileOrder={mobileOrder || (primary ? 1 : 2)}
       sx={{
-        flexDirection: isRow ? 'row' : 'column-reverse',
-        alignItems: isRow ? 'center' : 'start',
+        height: 'auto',
+        display: 'grid',
+        gridTemplateColumns: isRow ? '1fr 1fr' : '100%',
+        '-ms-grid-columns': isRow ? '1fr 1fr' : '100%',
+        gridTemplateRows: isRow ? '100%' : 'auto auto',
+        '-ms-grid-rows': isRow ? '100%' : 'auto auto',
         padding: primary && !isRow ? 'sm' : '',
         variant: primary
           ? 'rateTable.cellContent.main.variants.primary'
           : 'rateTable.cellContent.main.base'
       }}
+      // @ts-ignore
+      css={{ display: '-ms-grid' }}
     >
       <div
         sx={{
           display: inAddon ? [undefined, 'none'] : undefined,
-          flex: isRow ? 1 : 0,
+          gridColumn: '1 / span 1',
+          '-ms-grid-column': '1',
+          '-ms-grid-column-span': '1',
+          gridRow: isRow ? '1 / span 1' : '2 / span 1',
+          '-ms-grid-row': isRow ? '1' : '2',
+          '-ms-grid-row-span': '1',
           fontSize: 'xs',
           marginTop: isRow ? '' : 'sm',
           variant: 'rateTable.cellContent.label'
@@ -43,7 +54,18 @@ const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
       >
         {label}
       </div>
-      <div sx={{ flex: 1 }}>{children}</div>
+      <div
+        sx={{
+          gridColumn: isRow ? '2 / span 1' : '1 / span 1',
+          '-ms-grid-column': isRow ? '2' : '1',
+          '-ms-grid-column-span': '1',
+          gridRow: '1 / span 1',
+          '-ms-grid-row': '1',
+          '-ms-grid-row-span': '1'
+        }}
+      >
+        {children}
+      </div>
     </CellBase>
   )
 }

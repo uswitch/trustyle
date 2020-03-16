@@ -7,11 +7,15 @@ import { CellContext } from './row'
 const RateTableAddonHeader: React.FC<React.HTMLAttributes<any>> = ({
   children
 }) => {
+  const { gridColumnSpan } = React.useContext(CellContext)
+
   return (
     <CellContext.Provider
       value={{
-        gridColumn: '-3 / span 2',
-        gridRow: '2 / span 1',
+        gridColumnStart: gridColumnSpan - 1,
+        gridColumnSpan: 2,
+        gridRowStart: 2,
+        gridRowSpan: 1,
         inAddon: 'header',
         extraRules: {
           marginTop: [0, -6],

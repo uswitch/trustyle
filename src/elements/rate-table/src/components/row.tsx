@@ -6,8 +6,10 @@ import CellBase from './cell-base'
 import { ROWS } from './cell-split'
 
 interface CellContextProps {
-  gridRow: string
-  gridColumn: string
+  gridRowStart: number
+  gridRowSpan: number
+  gridColumnStart: number
+  gridColumnSpan: number
   primaryCellCount?: number
   primaryCellIndex?: number
   firstInSplit?: boolean
@@ -16,8 +18,10 @@ interface CellContextProps {
   extraRules?: object
 }
 export const CellContext = React.createContext<CellContextProps>({
-  gridRow: '',
-  gridColumn: '',
+  gridRowStart: 1,
+  gridRowSpan: 1,
+  gridColumnStart: 1,
+  gridColumnSpan: 1,
   primaryCellCount: 1,
   firstInSplit: false,
   inSplit: false
@@ -48,6 +52,8 @@ const RateTableRow: React.FC<RowProps> = ({
   if (primaryCells.length > 2) {
     throw new Error('Primary cell count cannot be above two')
   }
+
+  const cols = nonNullChildren.length
 
   /**
    * ROW 1: reserved for addons above header (auto height)
@@ -82,21 +88,35 @@ const RateTableRow: React.FC<RowProps> = ({
       <div
         sx={{
           display: 'grid',
-          gridTemplateColumns: [
-            'repeat(2, 1fr)',
-            `repeat(${nonNullChildren.length}, 1fr)`
-          ],
+          gridTemplateColumns: ['repeat(2, 1fr)', `repeat(${cols}, 1fr)`],
+          '-ms-grid-columns': ['(1fr)[2]', `(1fr)[${cols}]`],
           gridTemplateRows: [
             'auto',
             `repeat(3, auto) repeat(${ROWS}, 1fr) repeat(3, auto)`
           ],
+          '-ms-grid-rows': ['auto', `(auto)[3] (1fr)[${ROWS}] (auto)[3]`],
           marginX: -8,
           marginY: -6,
-          variant: 'rateTable.row.grid'
+          variant: 'rateTable.row.grid',
+
+          // Flex in mobile IE11 (?!) as auto-layout for grid isn't supported
+          '@media all and (max-width: 768px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
+            display: 'flex',
+            flexDirection: 'column'
+          }
+        }}
+        // @ts-ignore
+        css={{
+          display: '-ms-grid'
         }}
       >
         <CellContext.Provider
-          value={{ gridRow: '2 / span 1', gridColumn: '1 / -1' }}
+          value={{
+            gridRowStart: 2,
+            gridRowSpan: 1,
+            gridColumnStart: 1,
+            gridColumnSpan: cols
+          }}
         >
           <CellBase
             sx={{
@@ -129,8 +149,10 @@ const RateTableRow: React.FC<RowProps> = ({
         {nonNullChildren.map((child, index) => (
           <CellContext.Provider
             value={{
-              gridRow: `4 / span ${ROWS}`,
-              gridColumn: `${index + 1} / span 1`,
+              gridRowStart: 4,
+              gridRowSpan: ROWS,
+              gridColumnStart: index + 1,
+              gridColumnSpan: 1,
               primaryCellCount: primaryCells.length,
               primaryCellIndex:
                 child.props.primary && primaryCells.indexOf(child)
@@ -141,7 +163,16 @@ const RateTableRow: React.FC<RowProps> = ({
           </CellContext.Provider>
         ))}
 
-        {addons}
+        <CellContext.Provider
+          value={{
+            gridRowStart: 1,
+            gridRowSpan: ROWS,
+            gridColumnStart: 1,
+            gridColumnSpan: cols
+          }}
+        >
+          {addons}
+        </CellContext.Provider>
       </div>
     </section>
   )
