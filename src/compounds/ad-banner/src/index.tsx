@@ -3,15 +3,29 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { Button } from '@uswitch/trustyle.button'
+import BadgeWithIcon from '@uswitch/trustyle.badge-with-icon'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   content?: React.ReactElement
   usp: string
   sponsor: { logo: string; name: string }
+  label: string
+  backgroundImage: string
+  backgroundSize?: string[]
+  backgroundPosition?: string[]
 }
 
-const AdBanner: React.FC<Props> = ({ title, content, usp, sponsor }) => {
+const AdBanner: React.FC<Props> = ({
+  title,
+  content,
+  usp,
+  sponsor,
+  backgroundImage,
+  backgroundSize = ['100%'],
+  backgroundPosition = ['center'],
+  label
+}) => {
   return (
     <div
       sx={{
@@ -19,7 +33,11 @@ const AdBanner: React.FC<Props> = ({ title, content, usp, sponsor }) => {
         color: '#FFFFFF',
         position: 'relative',
         p: ['sm', 'md'],
-        paddingTop: ['210px', 'xl']
+        paddingTop: ['210px', 'xl'],
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: backgroundSize,
+        backgroundPosition: backgroundPosition,
+        backgroundRepeat: 'no-repeat'
       }}
     >
       <div
@@ -41,16 +59,37 @@ const AdBanner: React.FC<Props> = ({ title, content, usp, sponsor }) => {
       >
         <div
           sx={{
-            maxWidth: '200px',
-            marginBottom: 'sm'
+            mb: 'sm',
+            display: ['block', 'none']
           }}
         >
-          <img
-            src={sponsor.logo}
-            alt={sponsor.name}
+          <BadgeWithIcon label={label} />
+        </div>
+        <div
+          sx={{
+            maxWidth: '200px'
+          }}
+        >
+          <div
             sx={{
-              maxHeight: '100%',
-              maxWidth: '100%'
+              marginBottom: 'sm'
+            }}
+          >
+            <img
+              src={sponsor.logo}
+              alt={sponsor.name}
+              sx={{
+                maxHeight: '100%',
+                maxWidth: '100%'
+              }}
+            />
+          </div>
+          <img
+            src="https://bit.ly/3d7arga"
+            alt="Uswitch Awards"
+            sx={{
+              maxWidth: '100%',
+              display: ['none', 'block']
             }}
           />
         </div>
