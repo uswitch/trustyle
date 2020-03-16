@@ -106,6 +106,8 @@
 
   "useCustomProperties": false,
 
+  "useBodyStyles": false,
+
   "colors": {
     "text": "#4c4c4c",
     "sunshine": "#FEC340",
