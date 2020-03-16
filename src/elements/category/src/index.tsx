@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
+import { Container as DefaultContainer } from '@uswitch/trustyle.flex-grid'
 
 interface ListProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
@@ -9,10 +10,6 @@ interface ListProps extends React.HTMLAttributes<HTMLDivElement> {
   container?: React.FC
   breadcrumbs?: React.ReactElement
 }
-
-const DefaultContainer: React.FC = ({ children }) => (
-  <div sx={{ maxWidth: 1024, margin: '0 auto' }}>{children}</div>
-)
 
 const Category: React.FC<ListProps> = ({
   title,

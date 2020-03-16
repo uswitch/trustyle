@@ -18,5 +18,8 @@
   },
   "devDependencies": {
     "@uswitch/trustyle.breadcrumbs": "1.0.3"
+  },
+  "dependencies": {
+    "@uswitch/trustyle.flex-grid": "^0.2.0"
   }
 }
