@@ -3,7 +3,7 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 
 import CellBase from './cell-base'
-import { CellContext } from './row'
+import { CellContext } from './generics'
 
 export interface CellPrimaryProps extends React.HTMLAttributes<HTMLDivElement> {
   label: string

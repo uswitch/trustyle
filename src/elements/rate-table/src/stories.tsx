@@ -8,6 +8,8 @@ import { ButtonLink } from '../../button-link/src'
 import Badge from '../../badge/src'
 import { ProgressBar } from '../../progress-bar/src'
 
+import { AddonArg } from './components/generics'
+
 import RateTable from './'
 
 export default {
@@ -118,26 +120,28 @@ export const ExampleWithKnobs = () => {
     return null
   }
 
-  const addons = []
+  const addons: AddonArg[] = []
 
   if (headerAddon !== 'None') {
-    addons.push(
-      <RateTable.addons.Header key="header-addon">
-        {getColumn(headerAddon === 'Content' ? 'Simple Content' : headerAddon)}
-      </RateTable.addons.Header>
-    )
+    addons.push({
+      addon: RateTable.addons.headerRight,
+      component: getColumn(
+        headerAddon === 'Content' ? 'Simple Content' : headerAddon
+      )
+    })
   }
 
   if (footerAddon) {
-    addons.push(
-      <RateTable.addons.Footer key="footer">
+    addons.push({
+      addon: RateTable.addons.footer,
+      component: (
         <RateTable.cells.Base sx={{ display: 'block' }} mobileOrder={100}>
           <small sx={{ fontSize: 'xs' }}>
             Representative example: Assumed borrowing of £10,000 over...
           </small>
         </RateTable.cells.Base>
-      </RateTable.addons.Footer>
-    )
+      )
+    })
   }
 
   return (
@@ -254,25 +258,33 @@ export const ExampleWithAddons = () => {
       rowTitle="Santander Standard Loan (Online)"
       subtitle="Personal Loan"
       addons={[
-        <RateTable.addons.Header key="header-placeholder">
-          <RateTable.cells.Content label="Eligibility" mobileOrder={1}>
-            <div
-              sx={{ textAlign: 'center', maxWidth: 300, marginLeft: 'auto' }}
-            >
-              <span sx={{ display: 'block', fontSize: 14, marginBottom: 'xs' }}>
-                <strong>70%</strong> chance of approval
-              </span>
-              <ProgressBar current={70} max={100} />
-            </div>
-          </RateTable.cells.Content>
-        </RateTable.addons.Header>,
-        <RateTable.addons.Footer key="footer">
-          <RateTable.cells.Base sx={{ display: 'block' }} mobileOrder={100}>
-            <small sx={{ fontSize: 'xs' }}>
-              Representative example: Assumed borrowing of £10,000 over...
-            </small>
-          </RateTable.cells.Base>
-        </RateTable.addons.Footer>
+        {
+          addon: RateTable.addons.headerRight,
+          component: (
+            <RateTable.cells.Content label="Eligibility" mobileOrder={1}>
+              <div
+                sx={{ textAlign: 'center', maxWidth: 300, marginLeft: 'auto' }}
+              >
+                <span
+                  sx={{ display: 'block', fontSize: 14, marginBottom: 'xs' }}
+                >
+                  <strong>70%</strong> chance of approval
+                </span>
+                <ProgressBar current={70} max={100} />
+              </div>
+            </RateTable.cells.Content>
+          )
+        },
+        {
+          addon: RateTable.addons.footer,
+          component: (
+            <RateTable.cells.Base sx={{ display: 'block' }} mobileOrder={100}>
+              <small sx={{ fontSize: 'xs' }}>
+                Representative example: Assumed borrowing of £10,000 over...
+              </small>
+            </RateTable.cells.Base>
+          )
+        }
       ]}
     >
       <RateTable.cells.Image>

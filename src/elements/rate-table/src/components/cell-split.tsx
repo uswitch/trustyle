@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-import { CellContext } from './row'
+import { CellContext } from './generics'
 
 // Needs to be the lowest common factor of all the split counts
 export const ROWS = 6

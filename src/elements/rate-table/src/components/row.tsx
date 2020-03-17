@@ -4,35 +4,14 @@ import { jsx } from 'theme-ui'
 
 import CellBase from './cell-base'
 import { ROWS } from './cell-split'
-
-interface CellContextProps {
-  gridRowStart: number
-  gridRowSpan: number
-  gridColumnStart: number
-  gridColumnSpan: number
-  accentCellCount?: number
-  accentCellIndex?: number
-  firstInSplit?: boolean
-  inSplit?: boolean
-  inAddon?: string
-  extraRules?: object
-}
-export const CellContext = React.createContext<CellContextProps>({
-  gridRowStart: 1,
-  gridRowSpan: 1,
-  gridColumnStart: 1,
-  gridColumnSpan: 1,
-  accentCellCount: 1,
-  firstInSplit: false,
-  inSplit: false
-})
+import { Addon, AddonArg, CellContext } from './generics'
 
 export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   badges?: React.ReactNode[]
   preTitle?: React.ReactNode
   rowTitle?: React.ReactNode
   subtitle?: React.ReactNode
-  addons?: React.ReactNode[]
+  addons?: AddonArg[]
 }
 
 const RateTableRow: React.FC<RowProps> = ({
@@ -40,7 +19,7 @@ const RateTableRow: React.FC<RowProps> = ({
   preTitle,
   rowTitle,
   subtitle,
-  addons,
+  addons = [],
   children
 }) => {
   const nonNullChildren = React.Children.toArray(children).filter(
@@ -54,6 +33,14 @@ const RateTableRow: React.FC<RowProps> = ({
   }
 
   const cols = nonNullChildren.length
+
+  const addonsFor = (key: keyof Addon): React.ReactNode[] =>
+    addons.map(({ addon, component }, i) => {
+      if (addon[key]) {
+        const AddonPart = addon[key] as React.FC
+        return <AddonPart key={i}>{component}</AddonPart>
+      }
+    })
 
   /**
    * ROW 1: reserved for addons above header (auto height)
@@ -154,8 +141,7 @@ const RateTableRow: React.FC<RowProps> = ({
               gridColumnStart: index + 1,
               gridColumnSpan: 1,
               accentCellCount: accentCells.length,
-              accentCellIndex:
-                child.props.accent && accentCells.indexOf(child)
+              accentCellIndex: child.props.accent && accentCells.indexOf(child)
             }}
             key={index}
           >
@@ -171,7 +157,7 @@ const RateTableRow: React.FC<RowProps> = ({
             gridColumnSpan: cols
           }}
         >
-          {addons}
+          {addonsFor('body')}
         </CellContext.Provider>
       </div>
     </section>

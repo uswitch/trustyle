@@ -3,26 +3,22 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 
 import { Addon, CellContext } from './generics'
-import { ROWS } from './cell-split'
 
-const RateTableAddonFooter: Addon = {
+const RateTableAddonHeaderRight: Addon = {
   body: ({ children }) => {
     const { gridColumnSpan } = React.useContext(CellContext)
 
     return (
       <CellContext.Provider
         value={{
-          gridRowStart: ROWS + 5,
+          gridColumnStart: gridColumnSpan - 1,
+          gridColumnSpan: 2,
+          gridRowStart: 2,
           gridRowSpan: 1,
-          gridColumnStart: 1,
-          gridColumnSpan,
-          inAddon: 'footer',
+          inAddon: 'header',
           extraRules: {
-            borderTop: '1px solid',
-            paddingTop: 'sm',
-            marginTop: 'xs',
-            marginBottom: -6,
-            variant: 'rateTable.addonFooter.main'
+            marginTop: [0, -6],
+            marginBottom: [0, 'sm']
           }
         }}
       >
@@ -32,4 +28,4 @@ const RateTableAddonFooter: Addon = {
   }
 }
 
-export default RateTableAddonFooter
+export default RateTableAddonHeaderRight
