@@ -19,6 +19,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   additionalImageTag?: string
   href: string
   badgeIcon?: React.ReactElement
+  badgeVariant?: string
 }
 
 const AdBanner: React.FC<Props> = ({
@@ -34,7 +35,8 @@ const AdBanner: React.FC<Props> = ({
   additionalImage = '',
   additionalImageTag = '',
   href,
-  badgeIcon
+  badgeIcon,
+  badgeVariant = 'inverse'
 }) => {
   return (
     <div
@@ -73,10 +75,9 @@ const AdBanner: React.FC<Props> = ({
             display: ['block', 'none']
           }}
         >
-          <Badge>
-            {' '}
+          <Badge variant={badgeVariant}>
             {badgeIcon}
-            {label}{' '}
+            {label}
           </Badge>
         </div>
         <div
@@ -161,7 +162,7 @@ const AdBanner: React.FC<Props> = ({
             paddingX: 'md',
             alignSelf: ['center', 'flex-end']
           }}
-          variant="primary"
+          variant="inverse"
           href={href}
         >
           Learn more
