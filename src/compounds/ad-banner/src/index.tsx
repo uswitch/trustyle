@@ -24,7 +24,7 @@ const AdBanner: React.FC<Props> = ({
   content,
   usp,
   sponsor,
-  backgroundColor = 'uswitch-navy',
+  backgroundColor = 'black',
   backgroundImage,
   backgroundSize = ['100%'],
   backgroundPosition = ['center'],
@@ -150,7 +150,7 @@ const AdBanner: React.FC<Props> = ({
             paddingX: 'md',
             alignSelf: ['center', 'flex-end']
           }}
-          variant="inversed"
+          variant="inverse"
         >
           Learn more
         </Button>
