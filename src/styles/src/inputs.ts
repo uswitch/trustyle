@@ -2,10 +2,9 @@ import { css, SerializedStyles } from '@emotion/core'
 
 import { input, inputFontSize, inputLineHeight } from './typography'
 import {
-  azure,
   battleshipGrey,
-  lightGreyBlue,
   tomato,
+  UswitchNavy,
   veryLightGrey,
   white
 } from './colors'
@@ -15,7 +14,7 @@ export const inputInnerShadow = 'inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)'
 
 export const matchCircumstance = (hasError: boolean, hasFocus: boolean) => {
   if (hasError) return tomato
-  if (hasFocus) return azure
+  if (hasFocus) return UswitchNavy
 }
 
 export const emphasis = (
@@ -38,7 +37,7 @@ export const keyboardInputContainer = (
     {
       boxShadow: inputInnerShadow,
       backgroundColor: white,
-      border: `solid 1px ${lightGreyBlue}`,
+      border: `solid 1px ${UswitchNavy}`,
       borderRadius: '3px',
       boxSizing: 'border-box',
       display: 'flex',
