@@ -61,7 +61,7 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
             sx={{
               flexGrow: 0,
               flexShrink: 0,
-              flexBasis: ({ space }) => space.sm,
+              flexBasis: ({ space }: any) => space.sm,
               marginRight: 'xs'
             }}
           >

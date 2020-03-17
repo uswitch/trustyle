@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const checkedIcon = (
+export const checkedIcon: any = (
   <svg
     width="24"
     height="24"
@@ -12,7 +12,7 @@ export const checkedIcon = (
   </svg>
 )
 
-export const uncheckedIcon = (
+export const uncheckedIcon: any = (
   <svg
     width="24"
     height="24"

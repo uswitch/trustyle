@@ -72,7 +72,9 @@ export const Button: React.FC<Props> = ({
         height: theme.buttons.base.btnSize
           ? theme.buttons.base.btnSize[size].height
           : 'base',
-        variant: `buttons.variants.${variant}`,
+        variant: variant.includes('.')
+          ? variant
+          : `buttons.variants.${variant}`,
 
         justifyContent: 'center',
         alignItems: 'center',

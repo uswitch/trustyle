@@ -157,6 +157,16 @@
     "border": 0
   },
 
+  "grid": {
+    "sizes": {
+      "gutter": "xs",
+      "verticalGutter": "sm"
+    },
+    "container": {
+      "maxWidth": 1152
+    }
+  },
+
   "----------------------------- Variants": "-----------------------------",
   "modules": {
     "content-hero-module": {
@@ -352,8 +362,8 @@
     "card": {
       "itemsPerRow": [1, 2, 3],
       "display": "flex",
-      "width": ["100%", "49%", "grid.lg.3"],
-      "height": ["auto", "400px", "400px"],
+      "width": "100%",
+      "height": "100%",
       "flexDirection": "column",
       "borderRadius": "sm",
       "borderStyle": "solid",
@@ -367,10 +377,10 @@
         "lg": { "maxWidth": "grid.lg.3", "height": 230 }
       },
       "p": { "fontSize": 16, "lineHeight": "130%", "color": "grey-80" },
-      "h3": { "fontSize": 18, "minHeight": 0, "fontWeight": "bold", "color": "experimental-text" },
+      "h3": { "fontSize": 18, "minHeight": 0, "fontWeight": "bold", "color": "experimental-text", "marginBottom": "xs", "marginTop": "xs" },
       "content": {
-        "paddingY": ["sm", 0],
-        "paddingX": [0, "sm"]
+        "paddingY": 0,
+        "paddingX": ["sm", "sm"]
       },
       "marginRight": "base"
     },
@@ -394,6 +404,38 @@
     "breadcrumb": {
       "my": "sm",
       "mx": 0
+    },
+
+    "cookie-banner": {
+      "heading": {
+        "mt": [0, "md", "md"], 
+        "color": "grey-80"
+      },
+      "hr": {
+        "border": 0,
+        "height": 1,
+        "bg": "grey-20"
+      },
+      "copy": {
+        "mb": ["md", "sm", null],
+        "mt": "base"
+      },
+      "accept-all-button": {
+        "variant": "buttons.variants.primary"
+      },
+      "save-preferences-button": {
+        "variant": "buttons.variants.secondary"
+      },
+      "button-with-checkbox": {
+        "border": "1px solid",
+        "borderColor": "grey-40",
+        "backgroundColor": "white",
+        "borderRadius": 3
+      },
+      "button-with-checkbox-checked": {
+        "variant": "compounds.cookie-banner.button-with-checkbox",
+        "borderColor": "plum"
+      }
     }
   },
 
