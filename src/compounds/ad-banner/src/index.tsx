@@ -73,10 +73,9 @@ const AdBanner: React.FC<Props> = ({
             display: ['block', 'none']
           }}
         >
-          <Badge>
-            {' '}
+          <Badge variant="inverse">
             {badgeIcon}
-            {label}{' '}
+            {label}
           </Badge>
         </div>
         <div
@@ -161,7 +160,7 @@ const AdBanner: React.FC<Props> = ({
             paddingX: 'md',
             alignSelf: ['center', 'flex-end']
           }}
-          variant="primary"
+          variant="inverse"
           href={href}
         >
           Learn more
