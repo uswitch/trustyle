@@ -25,7 +25,6 @@ const RateTableCellBase: React.FC<CellBaseProps> = ({
     extraRules
   } = React.useContext(CellContext)
 
-  // @todo what type should this actually be?
   const sx: any = {
     display: 'flex',
     alignItems: 'center',
@@ -66,11 +65,7 @@ const RateTableCellBase: React.FC<CellBaseProps> = ({
         sx={{
           flex: 1,
           height: '100%',
-          boxSizing: 'border-box',
-          // @todo: should cells by flex by default?
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
+          boxSizing: 'border-box'
         }}
         className={className}
       >

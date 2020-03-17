@@ -12,6 +12,9 @@ export const RateTableCellPlaceholder: React.FC<React.HTMLAttributes<
   return (
     <CellBase
       sx={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         backgroundColor: inAddon
           ? 'rgba(91, 38, 255, 0.2)'
           : 'rgba(255, 51, 38, 0.2)',

@@ -16,7 +16,14 @@ const RateTableCellCta: React.FC<CellCtaProps> = ({ button, linkButton }) => {
     variant: 'rateTable.cellCta.buttonWrapper'
   }
   return (
-    <CellBase sx={{ flexDirection: ['row', 'column'] }}>
+    <CellBase
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: ['row', 'column']
+      }}
+    >
       <div sx={{ ...buttonWrapperStyling }}>{button}</div>
       <div sx={{ ...buttonWrapperStyling }}>{linkButton}</div>
     </CellBase>

@@ -123,7 +123,7 @@ const RateTableRow: React.FC<RowProps> = ({
               display: 'block',
               borderBottom: '1px solid',
               paddingBottom: 'sm',
-              marginTop: (badges.length ? 6 : 0) - 6,
+              marginTop: badges.length ? 0 : -6,
               variant: 'rateTable.row.header'
             }}
             mobileOrder={-100}

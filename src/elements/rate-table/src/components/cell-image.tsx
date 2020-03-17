@@ -5,7 +5,15 @@ import { jsx } from 'theme-ui'
 import CellBase from './cell-base'
 
 export const RateTableCellImage: React.FC = ({ children }) => (
-  <CellBase mobileOrder={0} sx={{ variant: 'rateTable.cellImage.main' }}>
+  <CellBase
+    mobileOrder={0}
+    sx={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      variant: 'rateTable.cellImage.main'
+    }}
+  >
     {children}
   </CellBase>
 )
