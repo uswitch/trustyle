@@ -161,7 +161,7 @@ const AdBanner: React.FC<Props> = ({
             paddingX: 'md',
             alignSelf: ['center', 'flex-end']
           }}
-          variant="inverse"
+          variant="primary"
           href={href}
         >
           Learn more
