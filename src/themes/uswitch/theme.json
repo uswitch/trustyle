@@ -103,6 +103,8 @@
 
   "useCustomProperties": false,
 
+  "useBodyStyles": false,
+
   "colors": {
     "blue": "#84A6FF",
     "blue-75": "#A3BCFF",
