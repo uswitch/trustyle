@@ -144,13 +144,13 @@ const AdBanner: React.FC<Props> = ({
         </div>
         <Button
           sx={{
-            background: 'white',
+            maxWidth: '200px',
             flexShrink: 0,
             paddingY: 'xs',
             paddingX: 'md',
             alignSelf: ['center', 'flex-end']
           }}
-          variant="secondary"
+          variant="inversed"
         >
           Learn more
         </Button>
