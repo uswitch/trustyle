@@ -11,5 +11,10 @@ export default {
 
 export const ExampleWithKnobs = () => {
   const content: string = text('content', 'Optional Badge')
-  return <Badge>{content}</Badge>
+  return (
+    <div>
+      <Badge>{content}</Badge>
+      <Badge variant="inverse">{content}</Badge>
+    </div>
+  )
 }

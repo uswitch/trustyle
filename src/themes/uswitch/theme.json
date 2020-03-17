@@ -539,6 +539,9 @@
 
   "badge" : {
     "base": {
+      "display": "flex",
+      "flexDirection": "row",
+      "alignItems": "center",
       "paddingX": [14, 23],
       "paddingY": [3, 7],
       "fontSize": "xs",
@@ -549,7 +552,18 @@
         "variant": "badge.base",
         "backgroundColor": "uswitch-navy",
         "color": "white"
-       }
+      },
+      "inverse": {
+        "variant": "badge.base",
+        "paddingX": ["xxs", "xs"],
+        "paddingY": ["0", "0"],
+        "fontSize": "xxs",
+        "color": "black",
+        "fontWeight": "bold",
+        "backgroundColor": "white",
+        "border": "2px solid #ACAAFF",
+        "borderRadius": "3px"
+      }
     }
   },
 
