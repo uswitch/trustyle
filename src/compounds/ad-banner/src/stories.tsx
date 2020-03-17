@@ -23,6 +23,7 @@ export const ExampleWithKnobs = () => {
   const sponsorLogo = text('Sponsor Logo', url)
   const sponsorName = text('Sponsor Name', 'Samsung')
   const label = text('Badge Label', 'Uswitch Manufacturer of the Year')
+  const href = text('href', 'https://www.google.com')
   const backgroundImage = text('background Image', 'https://bit.ly/2TTd2SZ')
   const backgroundColor = text('background color', 'black')
   const additionalImage = text(
@@ -47,6 +48,7 @@ export const ExampleWithKnobs = () => {
       backgroundColor={backgroundColor}
       additionalImage={additionalImage}
       additionalImageTag={additionalImageTag}
+      href={href}
     />
   )
 }

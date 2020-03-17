@@ -17,7 +17,7 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.button": "*",
-    "@uswitch/trustyle.badge-with-icon": "*"
+    "@uswitch/trustyle.button-link": "*",
+    "@uswitch/trustyle.badge": "*"
   }
 }

@@ -2,8 +2,8 @@
 
 import * as React from 'react'
 import { jsx } from 'theme-ui'
-import { Button } from '@uswitch/trustyle.button'
-import BadgeWithIcon from '@uswitch/trustyle.badge-with-icon'
+import { ButtonLink } from '@uswitch/trustyle.button-link'
+import Badge from '@uswitch/trustyle.badge'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
@@ -17,6 +17,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   backgroundPosition?: string[]
   additionalImage?: string
   additionalImageTag?: string
+  href: string
+  badgeIcon?: React.ReactElement
 }
 
 const AdBanner: React.FC<Props> = ({
@@ -30,7 +32,9 @@ const AdBanner: React.FC<Props> = ({
   backgroundPosition = ['center'],
   label,
   additionalImage = '',
-  additionalImageTag = ''
+  additionalImageTag = '',
+  href,
+  badgeIcon
 }) => {
   return (
     <div
@@ -69,11 +73,16 @@ const AdBanner: React.FC<Props> = ({
             display: ['block', 'none']
           }}
         >
-          <BadgeWithIcon label={label} />
+          <Badge>
+            {' '}
+            {badgeIcon}
+            {label}{' '}
+          </Badge>
         </div>
         <div
           sx={{
-            maxWidth: '200px'
+            maxWidth: '200px',
+            marginLeft: [0, 'sm']
           }}
         >
           <div
@@ -90,14 +99,16 @@ const AdBanner: React.FC<Props> = ({
               }}
             />
           </div>
-          <img
-            src={additionalImage}
-            alt={additionalImageTag}
-            sx={{
-              maxWidth: '100%',
-              display: ['none', 'block']
-            }}
-          />
+          <div>
+            <img
+              src={additionalImage}
+              alt={additionalImageTag}
+              sx={{
+                maxWidth: '100%',
+                display: ['none', 'block']
+              }}
+            />
+          </div>
         </div>
         <div
           sx={{
@@ -142,7 +153,7 @@ const AdBanner: React.FC<Props> = ({
             {usp}
           </p>
         </div>
-        <Button
+        <ButtonLink
           sx={{
             maxWidth: '200px',
             flexShrink: 0,
@@ -151,9 +162,10 @@ const AdBanner: React.FC<Props> = ({
             alignSelf: ['center', 'flex-end']
           }}
           variant="inverse"
+          href={href}
         >
           Learn more
-        </Button>
+        </ButtonLink>
       </div>
     </div>
   )
