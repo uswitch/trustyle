@@ -4,7 +4,12 @@ import * as React from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
 import { darken } from '@theme-ui/color'
 
-export type Variant = 'primary' | 'secondary' | 'continue'
+export type Variant =
+  | 'primary'
+  | 'secondary'
+  | 'continue'
+  | 'inverse'
+  | 'reversed'
 type IconPosition = 'left' | 'center' | 'right' | null
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
