@@ -12,8 +12,8 @@ const BadgeWithIcon: React.FC<Props> = ({ label }) => {
     <div
       sx={{
         display: 'flex',
-        paddingX: [14, 23],
-        paddingY: [3, 7],
+        paddingX: ['sm', 'md'],
+        paddingY: ['xxs', 'xs'],
         fontSize: 'xxs',
         color: 'black',
         fontWeight: 'bold',
