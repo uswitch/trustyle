@@ -12,7 +12,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   authorImage?: React.ReactElement
   date: number
   authorUrl: string
-  editorUrl: string
+  editorUrl?: string
 }
 
 const Author: React.FC<Props> = ({

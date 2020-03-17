@@ -1,32 +1,47 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Styled, useThemeUI } from 'theme-ui'
+import { Container as DefaultContainer } from '@uswitch/trustyle.flex-grid'
 
 interface ListProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   text?: string
   container?: React.FC
+  breadcrumbs?: React.ReactElement
 }
-
-const DefaultContainer: React.FC = ({ children }) => (
-  <div sx={{ maxWidth: 1024, margin: '0 auto' }}>{children}</div>
-)
 
 const Category: React.FC<ListProps> = ({
   title,
   text,
-  container: Container = DefaultContainer
+  container: Container = DefaultContainer,
+  breadcrumbs: Breadcrumbs
 }) => {
+  const { theme }: any = useThemeUI()
+  const breadcrumbsVariant = theme.categoryTitle?.breadcrumbs?.variant
+
   return (
     <div
       sx={{
         paddingX: ['sm', 'md'],
-        paddingY: ['md', 'lg'],
+        paddingBottom: ['md', 'lg'],
+        paddingTop: Breadcrumbs ? ['xs', 'sm'] : ['md', 'lg'],
         variant: 'categoryTitle.main'
       }}
     >
       <Container>
+        {Breadcrumbs && (
+          <div
+            sx={{
+              marginBottom: 'sm'
+            }}
+          >
+            <Breadcrumbs.type
+              {...Breadcrumbs.props}
+              variant={breadcrumbsVariant}
+            />
+          </div>
+        )}
         <Styled.h1
           as={text ? 'h1' : 'p'}
           sx={{

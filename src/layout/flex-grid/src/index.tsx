@@ -3,15 +3,16 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-const DEFAULT_GUTTER_SIZE = 'xs'
-
 const getSpaceValue = (key: string) => (theme: any = {}) => theme.space[key]
 
 const getNegativeSpaceValue = (key: string) => (theme: any = {}) =>
   `-${getSpaceValue(key)(theme)}px`
 
-const getGutterSize = (theme: any) =>
-  theme?.grid?.sizes?.gutter || DEFAULT_GUTTER_SIZE
+const getGutterSize = (theme: any) => theme?.grid?.sizes?.gutter
+
+const getVerticalGutterSize = (theme: any) => theme?.grid?.sizes?.verticalGutter
+
+const getContainerSize = (theme: any) => theme?.grid?.container?.maxWidth
 
 const mediaQueryFunction = (data: any, fn: any) => {
   if (Array.isArray(data)) {
@@ -39,10 +40,11 @@ export const Container: React.FC<ContainerProps> = ({
       sx={{
         mx: 'auto',
         px: getGutterSize,
-        maxWidth: theme =>
-          `calc(${1160 * (cols && span ? span / cols : 1)}px - ${getSpaceValue(
-            'sm'
-          )(theme)}px)`
+        maxWidth: (theme: any) =>
+          `calc(${getContainerSize(theme) *
+            (cols && span ? span / cols : 1)}px - ${getSpaceValue('sm')(
+            theme
+          )}px)`
       }}
       {...props}
     >
@@ -57,12 +59,14 @@ interface RowProps {
   direction?: any
   className?: string
   variant?: string
+  wrap?: boolean
 }
 
 export const Row: React.FC<RowProps> = ({
   children,
   cols = 12,
   direction = ['column', 'row', 'row'],
+  wrap = false,
   ...props
 }) => {
   const childrenArray = Array.isArray(children) ? children : [children]
@@ -70,10 +74,12 @@ export const Row: React.FC<RowProps> = ({
     <div
       sx={{
         variant: `grid.row`,
-        mx: getNegativeSpaceValue('xs'),
+        mx: (theme: any) => getNegativeSpaceValue(getGutterSize(theme)),
         display: 'flex',
         flexDirection: direction,
-        overflowX: 'hidden'
+        flexWrap: wrap ? 'wrap' : 'nowrap',
+        overflowX: 'hidden',
+        overflowY: 'visible'
       }}
       {...props}
     >
@@ -104,34 +110,34 @@ export const Col: React.FC<ColProps> = ({
       sx={{
         variant: `grid.col`,
         boxSizing: 'border-box',
-        mr: 'xs',
-        mb: DEFAULT_GUTTER_SIZE,
+        mr: getGutterSize,
+        mb: getVerticalGutterSize,
         flexGrow: span ? 0 : 1,
         flexShrink: 0,
         flexBasis: `auto`,
         ...(span
           ? {
-              width: theme =>
+              width: (theme: any) =>
                 mediaQueryFunction(cols, (colValue: number, index: number) => {
-                  console.log({ colValue, cols, index })
                   return `calc(${((Array.isArray(span) ? span[index] : span) /
                     colValue) *
-                    100}% - ${getSpaceValue('sm')(theme)}px)`
+                    100}% - ${getSpaceValue(getGutterSize(theme))(theme) *
+                    2}px)`
                 })
             }
           : {}),
         ...(offset
           ? {
-              ml: theme =>
+              ml: (theme: any) =>
                 mediaQueryFunction(
                   cols,
                   (colValue: number, index: number) =>
                     `calc(${((Array.isArray(offset) ? offset[index] : offset) /
                       colValue) *
-                      100}% + ${getSpaceValue('sm')(theme) / 2}px)`
+                      100}% + ${getSpaceValue(getGutterSize(theme))(theme)}px)`
                 )
             }
-          : { ml: 'xs' }),
+          : { ml: getGutterSize }),
         ...sx
       }}
       {...props}

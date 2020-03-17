@@ -65,7 +65,9 @@ export const Button: React.FC<Props> = ({
         fontSize: btnSize ? btnSize[size].fontSize : 'base',
         paddingX: btnSize ? btnSize[size].paddingX : 'sm',
         paddingY: btnSize ? btnSize[size].paddingY : 'base',
-        variant: `buttons.variants.${variant}`,
+        variant: variant.includes('.')
+          ? variant
+          : `buttons.variants.${variant}`,
 
         justifyContent: 'center',
         alignItems: 'center',

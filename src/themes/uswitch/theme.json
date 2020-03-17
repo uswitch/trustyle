@@ -178,12 +178,11 @@
 
   "grid": {
     "sizes": {
-      "gutter": ["xs", "sm", "sm"]
+      "gutter": "xs",
+      "verticalGutter": "xs"
     },
     "container": {
-      "lg": {
-        "maxWidth": 1160
-      }
+      "maxWidth": 1200
     }
   },
 
@@ -366,6 +365,36 @@
     "breadcrumb": {
       "my": "sm",
       "mx": 0
+    },
+
+    "cookie-banner": {
+      "heading": {
+        "mt": [0, "md", "md"]
+      },
+      "hr": {
+        "border": 0,
+        "height": 1,
+        "bg": "grey-20"
+      },
+      "copy": {
+        "mb": ["md", "sm", null],
+        "mt": "base"
+      },
+      "accept-all-button": {
+        "variant": "buttons.variants.primary"
+      },
+      "save-preferences-button": {
+        "variant": "buttons.variants.inverse"
+      },
+      "button-with-checkbox": {
+        "border": "2px solid",
+        "borderColor": "grey-40",
+        "backgroundColor": "white"
+      },
+      "button-with-checkbox-checked": {
+        "variant": "compounds.cookie-banner.button-with-checkbox",
+        "borderColor": "uswitch-navy"
+      }
     }
   },
 
@@ -481,6 +510,24 @@
         ":visited": {
           "color": "white"
         }
+      },
+      "inverse": {
+        "variant": "buttons.base",
+        "color": "uswitch-navy",
+        "backgroundColor": "white",
+        "border": "2px solid",
+        "borderColor": "uswitch-navy",
+        ":hover": {
+          "backgroundColor": "grey-100"
+        },
+        ":disabled": {
+          "borderColor": "grey-60",
+          "color": "grey-60",
+          "cursor": "not-allowed"
+        },
+        ":visited": {
+          "color": "uswitch-navy"
+        }
       }
     }
   },
@@ -488,6 +535,22 @@
   "author": {
     "heading": {
       "color": "grey-80"
+    }
+  },
+
+  "badge" : {
+    "base": {
+      "paddingX": [14, 23],
+      "paddingY": [3, 7],
+      "fontSize": "xs",
+      "fontWeight": "bold"
+    },
+    "variants": {
+      "primary": {
+        "variant": "badge.base",
+        "backgroundColor": "uswitch-navy",
+        "color": "white"
+       }
     }
   },
 

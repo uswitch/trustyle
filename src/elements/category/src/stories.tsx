@@ -3,6 +3,7 @@ import * as React from 'react'
 import { jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
 import { number, text } from '@storybook/addon-knobs'
+import Breadcrumbs from '@uswitch/trustyle.breadcrumbs'
 
 import Category from './'
 
@@ -11,7 +12,41 @@ storiesOf('Elements|Category', module)
     const titleText = text('Title text', 'Title goes here')
     const textText = text('Text', 'Text goes here')
 
-    return <Category title={titleText} text={textText} />
+    const crumbs = [
+      {
+        fields: {
+          path: '/',
+          displayText: 'Home'
+        }
+      },
+      {
+        fields: {
+          path: '/gas-electricity/',
+          displayText: 'Gas & Electricity'
+        }
+      },
+      {
+        fields: {
+          path: '/gas-electricity/guides',
+          displayText: 'Guides'
+        }
+      }
+    ]
+
+    const ExampleBreadcrumbs = (
+      <Breadcrumbs
+        crumbs={crumbs}
+        title="Understanding energy bills and electricity bills - FAQs and more"
+      />
+    )
+
+    return (
+      <Category
+        title={titleText}
+        text={textText}
+        breadcrumbs={ExampleBreadcrumbs}
+      />
+    )
   })
   .add('example without text', () => {
     const titleText = text('Title text', 'Title goes here')
