@@ -11,9 +11,12 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   usp: string
   sponsor: { logo: string; name: string }
   label: string
+  backgroundColor?: string
   backgroundImage: string
   backgroundSize?: string[]
   backgroundPosition?: string[]
+  additionalImage?: string
+  additionalImageTag?: string
 }
 
 const AdBanner: React.FC<Props> = ({
@@ -21,16 +24,19 @@ const AdBanner: React.FC<Props> = ({
   content,
   usp,
   sponsor,
+  backgroundColor = 'uswitch-navy',
   backgroundImage,
   backgroundSize = ['100%'],
   backgroundPosition = ['center'],
-  label
+  label,
+  additionalImage = '',
+  additionalImageTag = ''
 }) => {
   return (
     <div
       sx={{
-        backgroundColor: 'uswitch-navy',
-        color: '#FFFFFF',
+        backgroundColor: backgroundColor,
+        color: 'white',
         position: 'relative',
         p: ['sm', 'md'],
         paddingTop: ['210px', 'xl'],
@@ -85,8 +91,8 @@ const AdBanner: React.FC<Props> = ({
             />
           </div>
           <img
-            src="https://bit.ly/3d7arga"
-            alt="Uswitch Awards"
+            src={additionalImage}
+            alt={additionalImageTag}
             sx={{
               maxWidth: '100%',
               display: ['none', 'block']
@@ -109,7 +115,7 @@ const AdBanner: React.FC<Props> = ({
               fontSize: ['lg', 'xxl'],
               marginTop: 0,
               marginBottom: 'sm',
-              color: '#FFFFFF',
+              color: 'white',
               lineHeight: 1
             }}
           >
@@ -138,7 +144,7 @@ const AdBanner: React.FC<Props> = ({
         </div>
         <Button
           sx={{
-            background: '#FFFFFF',
+            background: 'white',
             flexShrink: 0,
             paddingY: 'xs',
             paddingX: 'md',
