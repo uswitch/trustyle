@@ -10,8 +10,8 @@ interface CellContextProps {
   gridRowSpan: number
   gridColumnStart: number
   gridColumnSpan: number
-  primaryCellCount?: number
-  primaryCellIndex?: number
+  accentCellCount?: number
+  accentCellIndex?: number
   firstInSplit?: boolean
   inSplit?: boolean
   inAddon?: string
@@ -22,7 +22,7 @@ export const CellContext = React.createContext<CellContextProps>({
   gridRowSpan: 1,
   gridColumnStart: 1,
   gridColumnSpan: 1,
-  primaryCellCount: 1,
+  accentCellCount: 1,
   firstInSplit: false,
   inSplit: false
 })
@@ -47,9 +47,9 @@ const RateTableRow: React.FC<RowProps> = ({
     c => c
   ) as React.ReactElement[]
 
-  const primaryCells = nonNullChildren.filter(child => child.props.primary)
+  const accentCells = nonNullChildren.filter(child => child.props.accent)
 
-  if (primaryCells.length > 2) {
+  if (accentCells.length > 2) {
     throw new Error('Primary cell count cannot be above two')
   }
 
@@ -153,9 +153,9 @@ const RateTableRow: React.FC<RowProps> = ({
               gridRowSpan: ROWS,
               gridColumnStart: index + 1,
               gridColumnSpan: 1,
-              primaryCellCount: primaryCells.length,
-              primaryCellIndex:
-                child.props.primary && primaryCells.indexOf(child)
+              accentCellCount: accentCells.length,
+              accentCellIndex:
+                child.props.accent && accentCells.indexOf(child)
             }}
             key={index}
           >

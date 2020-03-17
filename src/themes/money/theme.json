@@ -408,7 +408,7 @@
 
     "cookie-banner": {
       "heading": {
-        "mt": [0, "md", "md"], 
+        "mt": [0, "md", "md"],
         "color": "grey-80"
       },
       "hr": {
@@ -981,7 +981,7 @@
       "main": {
         "base": {},
         "variants": {
-          "primary": {
+          "accent": {
             "backgroundColor": "grey-05"
           }
         }

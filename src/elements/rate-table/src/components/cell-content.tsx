@@ -7,12 +7,12 @@ import { CellContext } from './row'
 
 export interface CellPrimaryProps extends React.HTMLAttributes<HTMLDivElement> {
   label: string
-  primary?: boolean
+  accent?: boolean
   mobileOrder?: number
 }
 const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
   label,
-  primary = false,
+  accent = false,
   mobileOrder,
   children
 }) => {
@@ -22,7 +22,7 @@ const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
 
   return (
     <CellBase
-      mobileOrder={mobileOrder || (primary ? 1 : 2)}
+      mobileOrder={mobileOrder || (accent ? 1 : 2)}
       sx={{
         height: 'auto',
         display: 'grid',
@@ -30,9 +30,9 @@ const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
         '-ms-grid-columns': isRow ? '1fr 1fr' : '100%',
         gridTemplateRows: isRow ? '100%' : 'auto auto',
         '-ms-grid-rows': isRow ? '100%' : 'auto auto',
-        padding: primary && !isRow ? 'sm' : '',
-        variant: primary
-          ? 'rateTable.cellContent.main.variants.primary'
+        padding: accent && !isRow ? 'sm' : '',
+        variant: accent
+          ? 'rateTable.cellContent.main.variants.accent'
           : 'rateTable.cellContent.main.base'
       }}
       // @ts-ignore

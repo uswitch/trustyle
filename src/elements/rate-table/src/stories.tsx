@@ -80,7 +80,7 @@ export const ExampleWithKnobs = () => {
 
     if (col === 'Content') {
       return (
-        <RateTable.cells.Content label="Annual saving" primary>
+        <RateTable.cells.Content label="Annual saving" accent>
           <RateTable.Data.Range from="£30" to="£260" />
           <a>Clickable link</a>
         </RateTable.cells.Content>
@@ -235,7 +235,7 @@ export const Example2 = () => {
             £30 per fuel
           </RateTable.cells.Content>
         </RateTable.cells.Split>
-        <RateTable.cells.Content label="Annual saving" primary>
+        <RateTable.cells.Content label="Annual saving" accent>
           <RateTable.Data.Range from="£30" to="£260" />
           <a>Clickable link</a>
         </RateTable.cells.Content>
@@ -291,7 +291,7 @@ export const ExampleWithAddons = () => {
         </RateTable.cells.Content>
       </RateTable.cells.Split>
       <RateTable.cells.Placeholder />
-      <RateTable.cells.Content label="Annual saving" primary>
+      <RateTable.cells.Content label="Annual saving" accent>
         <RateTable.Data.Range from="£30" to="£260" />
         <a>Clickable link</a>
       </RateTable.cells.Content>
@@ -303,7 +303,7 @@ export const ExampleWithAddons = () => {
   )
 }
 
-export const ExampleWithMultiplePrimaries = () => {
+export const ExampleWithMultipleAccents = () => {
   return (
     <RateTable.Row preTitle="Sponsored" rowTitle="Super Saver April 2021">
       <RateTable.cells.Image>
@@ -321,11 +321,11 @@ export const ExampleWithMultiplePrimaries = () => {
           £30 per fuel
         </RateTable.cells.Content>
       </RateTable.cells.Split>
-      <RateTable.cells.Content label="Annual saving" primary>
+      <RateTable.cells.Content label="Annual saving" accent>
         <RateTable.Data.Range from="£30" to="£260" />
         <a>Clickable link</a>
       </RateTable.cells.Content>
-      <RateTable.cells.Content label="Annual saving" primary>
+      <RateTable.cells.Content label="Annual saving" accent>
         <RateTable.Data.Range from="£30" to="£260" />
         <a>Clickable link</a>
       </RateTable.cells.Content>

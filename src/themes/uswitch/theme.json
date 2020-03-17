@@ -951,7 +951,7 @@
       "main": {
         "base": {},
         "variants": {
-          "primary": {
+          "accent": {
             "backgroundColor": "grey-05"
           }
         }
