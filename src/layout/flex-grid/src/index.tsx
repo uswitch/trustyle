@@ -78,7 +78,8 @@ export const Row: React.FC<RowProps> = ({
         display: 'flex',
         flexDirection: direction,
         flexWrap: wrap ? 'wrap' : 'nowrap',
-        overflowX: 'hidden'
+        overflowX: 'hidden',
+        overflowY: 'visible'
       }}
       {...props}
     >
