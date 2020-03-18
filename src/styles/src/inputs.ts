@@ -37,7 +37,8 @@ export const keyboardInputContainer = (
     {
       boxShadow: inputInnerShadow,
       backgroundColor: white,
-      border: `solid 1px ${UswitchNavy}`,
+      border: `solid 1px`,
+      borderColor: UswitchNavy,
       borderRadius: '3px',
       boxSizing: 'border-box',
       display: 'flex',
