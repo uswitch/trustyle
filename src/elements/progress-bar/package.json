@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.progress-bar",
-  "version": "0.3.18",
+  "version": "0.3.19",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -13,7 +13,7 @@
     "build": "npm run clean && tsc"
   },
   "dependencies": {
-    "@uswitch/trustyle.styles": "^0.4.26"
+    "@uswitch/trustyle.styles": "^0.4.27"
   },
   "devDependencies": {
     "@types/facepaint": "^1.2.1",
