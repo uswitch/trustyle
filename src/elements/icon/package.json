@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.icon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -13,7 +13,7 @@
     "build": "npm run clean && tsc"
   },
   "dependencies": {
-    "@uswitch/trustyle.styles": "^0.4.25"
+    "@uswitch/trustyle.styles": "^0.4.26"
   },
   "devDependencies": {
     "typescript": "^3.6.2"
