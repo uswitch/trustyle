@@ -50,7 +50,7 @@ export const ExampleWithKnobs = () => {
   )
 
   const url =
-    'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/3OTEiajt8kWEUm8QcWI8w8/aab828afa135b4591375dc71d6a6584d/Logo_-_samsung.png?auto=compress%2Cformat&fit=fill&trim=color&ixlib=react-8.6.4&invert=true&sat=-100&con=100'
+    'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/3OTEiajt8kWEUm8QcWI8w8/aab828afa135b4591375dc71d6a6584d/Logo_-_samsung.png?auto=compress%2Cformat&fit=fill&trim=color&ixlib=react-8.6.4&invert=true&sat=-100&con=100&w=148'
 
   const usp = text('usp', 'Free Galaxy Buds+ worth £159')
   const sponsorLogo = text('Sponsor Logo', url)
@@ -61,7 +61,7 @@ export const ExampleWithKnobs = () => {
   const backgroundColor = text('background color', 'black')
   const additionalImage = text(
     'optional additional image',
-    'https://bit.ly/3d7arga'
+    'https://uswitch-cms.imgix.net/uswitch-assets-eu/mobiles-comparison-uf/uswitch-manufacturer-award-image.png?fit=fillmax&h=60'
   )
   const additionalImageTag = text(
     'optional additional image alt tag',

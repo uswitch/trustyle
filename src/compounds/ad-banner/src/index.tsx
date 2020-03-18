@@ -45,17 +45,29 @@ const AdBanner: React.FC<Props> = ({
         color: 'white',
         position: 'relative',
         p: ['sm', 'md'],
-        paddingTop: ['210px', 'xl'],
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: backgroundSize,
-        backgroundPosition: backgroundPosition,
-        backgroundRepeat: 'no-repeat'
+        paddingTop: ['210px', 'xl']
       }}
     >
       <div
         sx={{
-          top: 'sm',
-          right: 'sm',
+          position: 'absolute',
+          top: '0',
+          left: '0',
+          right: '0',
+          maxHeight: '100%',
+          height: '230px',
+          bottom: ['', '0'],
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: backgroundSize,
+          backgroundPosition: backgroundPosition,
+          backgroundRepeat: 'no-repeat',
+          zIndex: '0'
+        }}
+      ></div>
+      <div
+        sx={{
+          top: 'lg',
+          right: 'lg',
           fontSize: 'sm',
           position: 'absolute'
         }}
@@ -66,13 +78,15 @@ const AdBanner: React.FC<Props> = ({
         sx={{
           display: 'flex',
           flexDirection: ['column', 'row', 'row'],
-          alignItems: ['center', 'flex-start']
+          alignItems: ['center', 'flex-start'],
+          zIndex: '1'
         }}
       >
         <div
           sx={{
             mb: 'sm',
-            display: ['block', 'none']
+            display: ['block', 'none'],
+            zIndex: '1'
           }}
         >
           <Badge variant={badgeVariant}>
@@ -117,7 +131,8 @@ const AdBanner: React.FC<Props> = ({
             flexDirection: 'column',
             flexGrow: 1,
             alignItems: ['center', 'flex-start'],
-            px: ['0', 'lg']
+            px: ['0', 'lg'],
+            zIndex: '1'
           }}
         >
           <h1
@@ -154,19 +169,25 @@ const AdBanner: React.FC<Props> = ({
             {usp}
           </p>
         </div>
-        <ButtonLink
+        <div
           sx={{
-            maxWidth: '200px',
             flexShrink: 0,
-            paddingY: 'xs',
-            paddingX: 'md',
-            alignSelf: ['center', 'flex-end']
+            alignSelf: ['center', 'flex-end'],
+            zIndex: 1
           }}
-          variant="inverse"
-          href={href}
         >
-          Learn more
-        </ButtonLink>
+          <ButtonLink
+            sx={{
+              maxWidth: '200px',
+              paddingY: 'xs',
+              paddingX: 'md'
+            }}
+            variant="inverse"
+            href={href}
+          >
+            Learn more
+          </ButtonLink>
+        </div>
       </div>
     </div>
   )
