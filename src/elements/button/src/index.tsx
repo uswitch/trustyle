@@ -56,7 +56,7 @@ export const Button: React.FC<Props> = ({
   ...props
 }) => {
   const { theme }: any = useThemeUI()
-  const variantStyle = get(theme, `buttons.variants${variant}`)
+  const variantStyle = get(theme, `buttons.variants.${variant}`)
   const chosenStyle = inverse ? invertTheme(theme, variantStyle) : variantStyle
 
   return (
