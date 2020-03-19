@@ -66,7 +66,7 @@ const AdBanner: React.FC<Props> = ({
       ></div>
       <div
         sx={{
-          top: 'lg',
+          top: 'md',
           right: 'lg',
           fontSize: 'sm',
           position: 'absolute'
