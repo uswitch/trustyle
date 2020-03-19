@@ -5,6 +5,15 @@ import { jsx } from 'theme-ui'
 import CellBase from './cell-base'
 import { AddonContext, CellContext } from './generics'
 
+const grid = (rowOrCol: 'row' | 'column', start: number, span: number) => {
+  const rowOrColCap = rowOrCol[0].toUpperCase() + rowOrCol.slice(1)
+  return {
+    [`grid${rowOrColCap}`]: `${start} / span ${span}`,
+    [`grid-${rowOrCol}`]: `${start}`,
+    [`grid-${rowOrCol}-span`]: `${span}`
+  }
+}
+
 export interface CellPrimaryProps extends React.HTMLAttributes<HTMLDivElement> {
   label: string
   accent?: boolean
@@ -44,12 +53,8 @@ const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
       <div
         sx={{
           display: inAddon ? [undefined, 'none'] : undefined,
-          gridColumn: '1 / span 1',
-          '-ms-grid-column': '1',
-          '-ms-grid-column-span': '1',
-          gridRow: isRow ? '1 / span 1' : '2 / span 1',
-          '-ms-grid-row': isRow ? '1' : '2',
-          '-ms-grid-row-span': '1',
+          ...grid('column', 1, 1),
+          ...grid('row', isRow ? 1 : 2, 1),
           fontSize: 'xs',
           marginTop: isRow ? '' : 'sm',
           variant: 'rateTable.cellContent.label'
@@ -59,12 +64,8 @@ const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
       </div>
       <div
         sx={{
-          gridColumn: isRow ? '2 / span 1' : '1 / span 1',
-          '-ms-grid-column': isRow ? '2' : '1',
-          '-ms-grid-column-span': '1',
-          gridRow: '1 / span 1',
-          '-ms-grid-row': '1',
-          '-ms-grid-row-span': '1'
+          ...grid('column', isRow ? 2 : 1, 1),
+          ...grid('row', 1, 1)
         }}
       >
         {children}
