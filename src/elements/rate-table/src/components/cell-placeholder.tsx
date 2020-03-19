@@ -3,12 +3,14 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 
 import CellBase from './cell-base'
-import { CellContext } from './generics'
+import { AddonContext, CellContext } from './generics'
 
 export const RateTableCellPlaceholder: React.FC<React.HTMLAttributes<
   HTMLDivElement
 >> = () => {
-  const { inSplit, inAddon } = React.useContext(CellContext)
+  const { inSplit } = React.useContext(CellContext)
+  const { inAddon } = React.useContext(AddonContext)
+
   return (
     <CellBase
       sx={{

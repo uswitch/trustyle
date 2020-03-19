@@ -9,12 +9,20 @@ export interface CellContextProps {
   accentCellIndex?: number
   firstInSplit?: boolean
   inSplit?: boolean
-  inAddon?: string
   inFlexbox?: boolean
   extraRules?: object
 }
 
 export const CellContext = React.createContext<CellContextProps>({})
+
+export interface AddonContextProps {
+  inAddon: string | false
+  extraRules?: object
+}
+
+export const AddonContext = React.createContext<AddonContextProps>({
+  inAddon: false
+})
 
 export interface Addon<ComponentType = any> {
   defaultArguments?: { [key: string]: any }

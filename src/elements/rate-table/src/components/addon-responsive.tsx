@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-import { Addon, CellContext } from './generics'
+import { Addon, AddonContext } from './generics'
 
 type Position = 'header' | 'body' | 'grid'
 
@@ -23,11 +23,11 @@ const RateTableAddonResponsive: Addon<AddonProps> = {
 
   body: ({ children, bodyOrder, positions }) => {
     if (!positions.includes('body')) {
-      return null;
+      return null
     }
 
     return (
-      <CellContext.Provider
+      <AddonContext.Provider
         value={{
           inAddon: 'header',
           extraRules: {
@@ -40,28 +40,26 @@ const RateTableAddonResponsive: Addon<AddonProps> = {
         }}
       >
         {children}
-      </CellContext.Provider>
+      </AddonContext.Provider>
     )
   },
 
   grid: ({ children, gridOrder, positions }) => {
     if (positions[0] === 'grid') {
-      console.error('Using the grid position on mobile will cause a gap on desktop - use the body position instead')
+      console.error(
+        'Using the grid position on mobile will cause a gap on desktop - use the body position instead'
+      )
     }
 
     if (!positions.includes('grid')) {
-      return null;
+      return null
     }
 
-    const { extraRules, ...parentCellContext } = React.useContext(CellContext)
-
     return (
-      <CellContext.Provider
+      <AddonContext.Provider
         value={{
-          ...parentCellContext,
           inAddon: 'header',
           extraRules: {
-            ...extraRules,
             display: positionsToDisplay(positions, 'grid'),
             marginTop: [0, -6],
             marginBottom: [0, 'sm'],
@@ -71,17 +69,17 @@ const RateTableAddonResponsive: Addon<AddonProps> = {
         }}
       >
         {children}
-      </CellContext.Provider>
+      </AddonContext.Provider>
     )
   },
 
   header: ({ children, headerOrder, positions }) => {
     if (!positions.includes('header')) {
-      return null;
+      return null
     }
 
     return (
-      <CellContext.Provider
+      <AddonContext.Provider
         value={{
           inAddon: 'header',
           extraRules: {
@@ -92,7 +90,7 @@ const RateTableAddonResponsive: Addon<AddonProps> = {
         }}
       >
         {children}
-      </CellContext.Provider>
+      </AddonContext.Provider>
     )
   }
 }

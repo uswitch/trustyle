@@ -3,7 +3,7 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 
 import CellBase from './cell-base'
-import { CellContext } from './generics'
+import { AddonContext, CellContext } from './generics'
 
 export interface CellPrimaryProps extends React.HTMLAttributes<HTMLDivElement> {
   label: string
@@ -16,7 +16,8 @@ const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
   mobileOrder,
   children
 }) => {
-  const { inSplit, inAddon } = React.useContext(CellContext)
+  const { inSplit } = React.useContext(CellContext)
+  const { inAddon } = React.useContext(AddonContext)
 
   const isRow = inSplit || inAddon
 

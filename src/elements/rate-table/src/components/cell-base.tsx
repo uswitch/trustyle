@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-import { CellContext } from './generics'
+import { AddonContext, CellContext } from './generics'
 
 export interface CellBaseProps extends React.HTMLAttributes<HTMLDivElement> {
   mobileOrder?: number
@@ -23,11 +23,18 @@ const RateTableCellBase: React.FC<CellBaseProps> = ({
     accentCellCount,
     accentCellIndex,
     firstInSplit,
+    inFlexbox,
     inSplit,
-    extraRules: extraRulesContext
+    extraRules: extraRulesCellContext
   } = React.useContext(CellContext)
 
-  const extraRules = { ...extraRulesContext, ...extraRulesProp }
+  const { extraRules: extraRulesAddonContext } = React.useContext(AddonContext)
+
+  const extraRules = {
+    ...extraRulesCellContext,
+    ...extraRulesAddonContext,
+    ...extraRulesProp
+  }
 
   const sx: any = {
     display: 'flex',
@@ -35,19 +42,24 @@ const RateTableCellBase: React.FC<CellBaseProps> = ({
     justifyContent: 'center',
     marginX: 8, // sm / 2
     paddingY: 6, // xs / 2
-    gridColumn: [
-      typeof accentCellIndex === 'number' && accentCellCount === 2
-        ? `${accentCellIndex + 1} / span 1`
-        : '1 / -1',
-      `${gridColumnStart} / span ${gridColumnSpan}`
-    ],
-    '-ms-grid-column': `${gridColumnStart}`,
-    '-ms-grid-column-span': `${gridColumnSpan}`,
-    gridRow: ['initial', `${gridRowStart} / span ${gridRowSpan}`],
-    '-ms-grid-row': ['initial', `${gridRowStart}`],
-    '-ms-grid-row-span': ['initial', `${gridRowSpan}`],
     order: [mobileOrder, 'initial'],
     ...extraRules
+  }
+
+  if (!inFlexbox) {
+    Object.assign(sx, {
+      gridColumn: [
+        typeof accentCellIndex === 'number' && accentCellCount === 2
+          ? `${accentCellIndex + 1} / span 1`
+          : '1 / -1',
+        `${gridColumnStart} / span ${gridColumnSpan}`
+      ],
+      '-ms-grid-column': `${gridColumnStart}`,
+      '-ms-grid-column-span': `${gridColumnSpan}`,
+      gridRow: ['initial', `${gridRowStart} / span ${gridRowSpan}`],
+      '-ms-grid-row': ['initial', `${gridRowStart}`],
+      '-ms-grid-row-span': ['initial', `${gridRowSpan}`]
+    })
   }
 
   if (inSplit) {
