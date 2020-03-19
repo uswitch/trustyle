@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import RateTableRow from './components/row'
-import RateTableAddonHeaderRight from './components/addon-header-right'
+import RateTableAddonResponsive from './components/addon-responsive'
 import RateTableAddonFooter from './components/addon-footer'
 import RateTableCellBase from './components/cell-base'
 import RateTableCellImage from './components/cell-image'
@@ -15,7 +15,7 @@ const RateTable = {
   Row: RateTableRow,
   addons: {
     footer: RateTableAddonFooter,
-    headerRight: RateTableAddonHeaderRight
+    responsive: RateTableAddonResponsive
   },
   cells: {
     Base: RateTableCellBase,

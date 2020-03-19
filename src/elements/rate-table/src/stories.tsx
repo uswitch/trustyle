@@ -42,7 +42,7 @@ export const ExampleWithKnobs = () => {
   const badgeText = text('Badge text', 'Award Winner')
 
   const unsplitColumns = columns.filter(col => !col.includes('Split'))
-  const headerAddon = select('Header addon', unsplitColumns, 'Placeholder')
+  const headerAddon = select('Header addon', unsplitColumns, 'None')
   const footerAddon = boolean('Show footer via addon?', true)
 
   const firstCol = select('First column', columns, 'Image')
@@ -124,7 +124,7 @@ export const ExampleWithKnobs = () => {
 
   if (headerAddon !== 'None') {
     addons.push({
-      addon: RateTable.addons.headerRight,
+      addon: RateTable.addons.responsive,
       component: getColumn(
         headerAddon === 'Content' ? 'Simple Content' : headerAddon
       )
@@ -259,11 +259,16 @@ export const ExampleWithAddons = () => {
       subtitle="Personal Loan"
       addons={[
         {
-          addon: RateTable.addons.headerRight,
+          addon: RateTable.addons.responsive,
           component: (
             <RateTable.cells.Content label="Eligibility" mobileOrder={1}>
               <div
-                sx={{ textAlign: 'center', maxWidth: 300, marginLeft: 'auto' }}
+                sx={{
+                  textAlign: 'center',
+                  maxWidth: 300,
+                  minWidth: [0, 200],
+                  marginLeft: 'auto'
+                }}
               >
                 <span
                   sx={{ display: 'block', fontSize: 14, marginBottom: 'xs' }}
@@ -274,6 +279,23 @@ export const ExampleWithAddons = () => {
               </div>
             </RateTable.cells.Content>
           )
+        },
+        {
+          addon: RateTable.addons.responsive,
+          component: (
+            <RateTable.cells.Image>
+              <img
+                src="https://placekitten.com/200/75?image=9"
+                alt="Salman"
+                sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+              />
+            </RateTable.cells.Image>
+          ),
+          options: {
+            headerOrder: -1,
+            gridOrder: -1,
+            positions: ['header', 'grid']
+          }
         },
         {
           addon: RateTable.addons.footer,
@@ -287,13 +309,6 @@ export const ExampleWithAddons = () => {
         }
       ]}
     >
-      <RateTable.cells.Image>
-        <img
-          src="https://placekitten.com/200/75?image=9"
-          alt="Salman"
-          sx={{ height: 75, width: '100%', objectFit: 'cover' }}
-        />
-      </RateTable.cells.Image>
       <RateTable.cells.Split>
         <RateTable.cells.Content label="Fixed rate contract">
           14 months
@@ -302,7 +317,10 @@ export const ExampleWithAddons = () => {
           £30 per fuel
         </RateTable.cells.Content>
       </RateTable.cells.Split>
-      <RateTable.cells.Placeholder />
+      <RateTable.cells.Content label="Annual saving" accent>
+        <RateTable.Data.Range from="£30" to="£260" />
+        <a>Clickable link</a>
+      </RateTable.cells.Content>
       <RateTable.cells.Content label="Annual saving" accent>
         <RateTable.Data.Range from="£30" to="£260" />
         <a>Clickable link</a>

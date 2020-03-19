@@ -22,9 +22,29 @@ const RateTableRow: React.FC<RowProps> = ({
   addons = [],
   children
 }) => {
-  const nonNullChildren = React.Children.toArray(children).filter(
-    c => c
-  ) as React.ReactElement[]
+  const addonsFor = (key: keyof Addon): React.ReactNode[] =>
+    addons.map(({ addon, component, options }, i) => {
+      options = Object.assign({}, addon.defaultArguments, options)
+
+      // @todo why isn't the check in the responsive addon doing this?
+      if (options.positions && !options.positions.includes(key)) {
+        return null;
+      }
+
+      if (addon[key]) {
+        const AddonPart = addon[key] as React.FC
+        return (
+          <AddonPart key={i} {...options}>
+            {component}
+          </AddonPart>
+        )
+      }
+    })
+
+  // @todo All addons go at the start - is there a better way to do this?
+  const nonNullChildren = addonsFor('grid')
+    .concat(React.Children.toArray(children))
+    .filter(c => c) as React.ReactElement[]
 
   const accentCells = nonNullChildren.filter(child => child.props.accent)
 
@@ -33,14 +53,6 @@ const RateTableRow: React.FC<RowProps> = ({
   }
 
   const cols = nonNullChildren.length
-
-  const addonsFor = (key: keyof Addon): React.ReactNode[] =>
-    addons.map(({ addon, component }, i) => {
-      if (addon[key]) {
-        const AddonPart = addon[key] as React.FC
-        return <AddonPart key={i}>{component}</AddonPart>
-      }
-    })
 
   /**
    * ROW 1: reserved for addons above header (auto height)
@@ -107,7 +119,6 @@ const RateTableRow: React.FC<RowProps> = ({
         >
           <CellBase
             sx={{
-              display: 'block',
               borderBottom: '1px solid',
               paddingBottom: 'sm',
               marginTop: badges.length ? 0 : -6,
@@ -115,21 +126,37 @@ const RateTableRow: React.FC<RowProps> = ({
             }}
             mobileOrder={-100}
           >
-            {preTitle && (
-              <span sx={{ fontSize: 'xs', variant: 'rateTable.row.pretitle' }}>
-                {preTitle}
-              </span>
-            )}
-            {rowTitle && (
-              <h3 sx={{ margin: 0, variant: 'rateTable.row.title' }}>
-                {rowTitle}
-              </h3>
-            )}
-            {subtitle && (
-              <span sx={{ fontSize: 'xs', variant: 'rateTable.row.subtitle' }}>
-                {subtitle}
-              </span>
-            )}
+            <div
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                marginX: -8,
+                marginY: -6
+              }}
+            >
+              <CellBase extraRules={{ marginRight: 'auto' }}>
+                {preTitle && (
+                  <span
+                    sx={{ fontSize: 'xs', variant: 'rateTable.row.pretitle' }}
+                  >
+                    {preTitle}
+                  </span>
+                )}
+                {rowTitle && (
+                  <h3 sx={{ margin: 0, variant: 'rateTable.row.title' }}>
+                    {rowTitle}
+                  </h3>
+                )}
+                {subtitle && (
+                  <span
+                    sx={{ fontSize: 'xs', variant: 'rateTable.row.subtitle' }}
+                  >
+                    {subtitle}
+                  </span>
+                )}
+              </CellBase>
+              {addonsFor('header')}
+            </div>
           </CellBase>
         </CellContext.Provider>
 

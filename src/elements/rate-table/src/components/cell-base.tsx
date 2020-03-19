@@ -6,10 +6,12 @@ import { CellContext } from './generics'
 
 export interface CellBaseProps extends React.HTMLAttributes<HTMLDivElement> {
   mobileOrder?: number
+  extraRules?: object
 }
 
 const RateTableCellBase: React.FC<CellBaseProps> = ({
   mobileOrder = 2,
+  extraRules: extraRulesProp = {},
   children,
   className
 }) => {
@@ -22,8 +24,10 @@ const RateTableCellBase: React.FC<CellBaseProps> = ({
     accentCellIndex,
     firstInSplit,
     inSplit,
-    extraRules
+    extraRules: extraRulesContext
   } = React.useContext(CellContext)
+
+  const extraRules = { ...extraRulesContext, ...extraRulesProp }
 
   const sx: any = {
     display: 'flex',

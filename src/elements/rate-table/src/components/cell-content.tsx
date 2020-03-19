@@ -20,14 +20,16 @@ const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
 
   const isRow = inSplit || inAddon
 
+  const rows = inAddon ? 'auto auto' : '1fr 1fr'
+
   return (
     <CellBase
       mobileOrder={mobileOrder || (accent ? 1 : 2)}
       sx={{
         height: 'auto',
         display: 'grid',
-        gridTemplateColumns: isRow ? '1fr 1fr' : '100%',
-        '-ms-grid-columns': isRow ? '1fr 1fr' : '100%',
+        gridTemplateColumns: isRow ? rows : '100%',
+        '-ms-grid-columns': isRow ? rows : '100%',
         gridTemplateRows: isRow ? '100%' : 'auto auto',
         '-ms-grid-rows': isRow ? '100%' : 'auto auto',
         padding: accent && !isRow ? 'sm' : '',
