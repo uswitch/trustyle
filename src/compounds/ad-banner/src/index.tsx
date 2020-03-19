@@ -45,7 +45,7 @@ const AdBanner: React.FC<Props> = ({
         color: 'white',
         position: 'relative',
         p: ['sm', 'md'],
-        paddingTop: ['210px', 'xl']
+        paddingTop: ['210px', 'md']
       }}
     >
       <div
