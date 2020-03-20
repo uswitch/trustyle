@@ -124,7 +124,7 @@ When inside a cell, you can tell whether you're inside a split cell or not
 using `CellContext`:
 
 ```js
-import { CellContext } from './generics'
+import { CellContext } from '@uswitch/trustyle.rate-table'
 
 // ...
 

@@ -2,9 +2,10 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
+import { Addon, AddonArg, CellContext } from '../generics'
+
 import CellBase from './cell-base'
 import { ROWS } from './cell-split'
-import { Addon, AddonArg, CellContext } from './generics'
 
 export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   badges?: React.ReactNode[]

@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-import { AddonContext, CellContext } from './generics'
+import { AddonContext, CellContext } from '../generics'
 
 export interface CellBaseProps extends React.HTMLAttributes<HTMLDivElement> {
   mobileOrder?: number

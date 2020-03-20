@@ -1,5 +1,10 @@
 import * as React from 'react'
 
+/**
+ * NOTE: Nothing in this file can be accessed from outside the package unless it
+ * it also exported in index.tsx
+ */
+
 export interface CellContextProps {
   gridRowStart?: number
   gridRowSpan?: number

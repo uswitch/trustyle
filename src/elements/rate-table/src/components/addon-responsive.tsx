@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-import { Addon, AddonContext } from './generics'
+import { Addon, AddonContext } from '../generics'
 
 type Position = 'header' | 'body' | 'grid'
 

@@ -2,8 +2,9 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
+import { AddonContext, CellContext } from '../generics'
+
 import CellBase from './cell-base'
-import { AddonContext, CellContext } from './generics'
 
 export const RateTableCellPlaceholder: React.FC<React.HTMLAttributes<
   HTMLDivElement

@@ -10,6 +10,14 @@ import RateTableCellPlaceholder from './components/cell-placeholder'
 import RateTableCellContent from './components/cell-content'
 import RateTableCellCta from './components/cell-cta'
 import RateTableDataRange from './components/data-range'
+import {
+  Addon,
+  AddonArg,
+  AddonContext,
+  AddonContextProps,
+  CellContext,
+  CellContextProps
+} from './generics'
 
 const RateTable = {
   Row: RateTableRow,
@@ -31,3 +39,12 @@ const RateTable = {
 }
 
 export default RateTable
+
+export {
+  CellContext,
+  CellContextProps,
+  AddonContext,
+  AddonContextProps,
+  Addon,
+  AddonArg
+}

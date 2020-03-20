@@ -2,8 +2,9 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
+import { AddonContext, CellContext } from '../generics'
+
 import CellBase from './cell-base'
-import { AddonContext, CellContext } from './generics'
 
 const grid = (rowOrCol: 'row' | 'column', start: number, span: number) => {
   const rowOrColCap = rowOrCol[0].toUpperCase() + rowOrCol.slice(1)

@@ -8,9 +8,7 @@ import { ButtonLink } from '../../button-link/src'
 import Badge from '../../badge/src'
 import { ProgressBar } from '../../progress-bar/src'
 
-import { AddonArg } from './components/generics'
-
-import RateTable from './'
+import RateTable, { AddonArg } from './'
 
 export default {
   title: 'Elements|Rate Table'

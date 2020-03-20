@@ -2,7 +2,8 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-import { Addon, AddonContext, CellContext } from './generics'
+import { Addon, AddonContext, CellContext } from '../generics'
+
 import { ROWS } from './cell-split'
 
 const RateTableAddonFooter: Addon = {
