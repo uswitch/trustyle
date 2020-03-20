@@ -3,6 +3,7 @@
 import * as React from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
 import { darken } from '@theme-ui/color'
+import get from '@uswitch/trustyle-utils.get'
 
 export type Variant =
   | 'primary'
@@ -55,7 +56,7 @@ export const Button: React.FC<Props> = ({
   ...props
 }) => {
   const { theme }: any = useThemeUI()
-  const variantStyle = theme.buttons?.variants[variant]
+  const variantStyle = get(theme, `buttons.variants.${variant}`)
   const chosenStyle = inverse ? invertTheme(theme, variantStyle) : variantStyle
 
   return (
