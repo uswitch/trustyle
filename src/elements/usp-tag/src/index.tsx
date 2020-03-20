@@ -29,6 +29,7 @@ const UspTag: React.FC<Props> = ({ usp }) => {
         {usp && (
           <p
             sx={{
+              fontFamily: "'-apple-system', 'BlinkMacSystemFont'",
               fontWeight: 'bold',
               fontSize: 'xs',
               color: 'grey-80',
