@@ -280,9 +280,7 @@ that we want the addon to use the body hook.
 Then, in the row component, you can find the following line:
 
 ```jsx harmony
-{
-  addonsFor('body')
-}
+{addonsFor('body')}
 ```
 
 Any addons specified using the `AddonFooter` component from above will now
