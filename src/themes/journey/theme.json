@@ -107,6 +107,8 @@
 
   "useCustomProperties": false,
 
+  "useBodyStyles": false,
+
   "colors": {
     "azure": "#008fe9",
     "battleship-grey": "#65717b",

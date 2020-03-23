@@ -3,8 +3,15 @@
 import * as React from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
 import { darken } from '@theme-ui/color'
+import get from '@uswitch/trustyle-utils.get'
 
-export type Variant = 'primary' | 'secondary' | 'continue' | 'link'
+export type Variant =
+  | 'primary'
+  | 'secondary'
+  | 'continue'
+  | 'inverse'
+  | 'reversed'
+  | 'link'
 type IconPosition = 'left' | 'center' | 'right' | null
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -50,7 +57,7 @@ export const Button: React.FC<Props> = ({
   ...props
 }) => {
   const { theme }: any = useThemeUI()
-  const variantStyle = theme.buttons?.variants[variant]
+  const variantStyle = get(theme, `buttons.variants.${variant}`)
   const chosenStyle = inverse ? invertTheme(theme, variantStyle) : variantStyle
 
   return (
@@ -60,21 +67,11 @@ export const Button: React.FC<Props> = ({
         backgroundImage: 'none',
         fontFamily: 'base',
 
-        fontSize: theme.buttons.base.btnSize
-          ? theme.buttons.base.btnSize[size].fontSize
-          : 'base',
-        paddingX: theme.buttons.base.btnSize
-          ? theme.buttons.base.btnSize[size].paddingX
-          : 'sm',
-        paddingY: theme.buttons.base.btnSize
-          ? theme.buttons.base.btnSize[size].paddingY
-          : 'base',
-        height: theme.buttons.base.btnSize
-          ? theme.buttons.base.btnSize[size].height
-          : 'base',
-        variant: variant.includes('.')
-          ? variant
-          : `buttons.variants.${variant}`,
+        fontSize: get(theme, `buttons.base.btnSize.${size}.fontSize`, 'base'),
+        paddingX: get(theme, `buttons.base.btnSize.${size}.paddingX`, 'sm'),
+        paddingY: get(theme, `buttons.base.btnSize.${size}.paddingY`, 'base'),
+        height: get(theme, `buttons.base.btnSize.${size}.height`, 'base'),
+        variant: get(theme, `buttons.variants.${variant}`),
 
         justifyContent: 'center',
         alignItems: 'center',

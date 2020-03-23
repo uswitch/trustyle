@@ -24,15 +24,9 @@ const Card: React.FC<Props> = ({
   linkText = 'Read more',
   className = ''
 }) => (
-  <a
+  <div
     className={className}
-    href={linkHref}
     sx={{
-      textDecoration: 'none',
-      cursor: 'pointer',
-      '&:hover': {
-        opacity: '0.5'
-      },
       variant: variant()
     }}
   >
@@ -42,33 +36,38 @@ const Card: React.FC<Props> = ({
         variant: variant('img')
       }}
     >
-      <ImgixImage
-        sx={{
-          height: 'auto',
-          width: '100%'
-        }}
-        alt={imgAlt}
-        src={imgSrc}
-        imgixParams={{ fit: 'crop', crop: 'edges', ar: '16:9' }}
-        critical
-      />
+      <Styled.a href={linkHref} sx={{ textDecoration: 'underline' }}>
+        <ImgixImage
+          sx={{
+            height: 'auto',
+            width: '100%'
+          }}
+          width={768}
+          height={405}
+          alt={imgAlt}
+          src={imgSrc}
+          imgixParams={{ fit: 'crop', crop: 'edges', ar: '16:9' }}
+          critical
+        />
+      </Styled.a>
     </div>
     <div
       sx={{
-        paddingY: 'xs',
         display: 'flex',
         flexDirection: 'column',
         flex: '1',
         variant: variant('content')
       }}
     >
-      <Styled.h3 sx={{ margin: '0' }}>{title}</Styled.h3>
+      <Styled.h3 sx={{ margin: '0' }}>
+        <Styled.a href={linkHref}>{title}</Styled.a>
+      </Styled.h3>
       <Styled.p>{description}</Styled.p>
-      <Styled.a as="p" sx={{ textDecoration: 'underline' }}>
+      <Styled.a href={linkHref} sx={{ textDecoration: 'underline' }}>
         {linkText}
       </Styled.a>
     </div>
-  </a>
+  </div>
 )
 
 export default Card
