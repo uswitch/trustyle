@@ -294,7 +294,7 @@ The addon positions currently supported are `header`, `grid`, and `body`.
 
 ## Data formatters
 
-Data formatters are simple components designed to output formatted data (duh).
+Data formatters are simple components designed to output formatted data.
 
 For example, the range data formatter takes a `from` value and a `to` value and
 displays something like this:
