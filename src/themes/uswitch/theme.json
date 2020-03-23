@@ -554,9 +554,6 @@
 
   "badge" : {
     "base": {
-      "display": "flex",
-      "flexDirection": "row",
-      "alignItems": "center",
       "paddingX": [14, 23],
       "paddingY": [3, 7],
       "fontSize": "xs",
