@@ -275,7 +275,9 @@ This is a shorter version of the real footer addon, which also adds some
 formatting such as a border and some padding.
 
 Note that the addon is an object with one entry, with key `body`. This means
-that we want the addon to use the body hook.
+that we want the addon to use the body hook. Addons can use more than one hook,
+but be aware that unless you add some logic to prevent it, that means the
+content will display twice.
 
 Then, in the row component, you can find the following line:
 
