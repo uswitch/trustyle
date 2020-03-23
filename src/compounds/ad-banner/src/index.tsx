@@ -94,8 +94,16 @@ const AdBanner: React.FC<Props> = ({
           }}
         >
           <Badge variant={badgeVariant}>
-            {badgeIcon}
-            {label}
+            <div
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center'
+              }}
+            >
+              {badgeIcon}
+              {label}
+            </div>
           </Badge>
         </div>
         <div
