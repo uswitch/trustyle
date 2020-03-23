@@ -3,6 +3,7 @@
 import * as React from 'react'
 import Imgix, { SharedImigixAndSourceProps } from 'react-imgix'
 import { css, jsx } from '@emotion/core'
+import 'lazysizes'
 
 interface Props extends SharedImigixAndSourceProps {
   alt?: string

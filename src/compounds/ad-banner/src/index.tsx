@@ -114,7 +114,6 @@ const AdBanner: React.FC<Props> = ({
               imgixParams={{
                 fit: 'fillmax'
               }}
-              critical
             />
           </div>
           <div>
@@ -129,7 +128,6 @@ const AdBanner: React.FC<Props> = ({
               imgixParams={{
                 fit: 'fillmax'
               }}
-              critical
             />
           </div>
         </div>
