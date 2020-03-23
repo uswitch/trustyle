@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@uswitch/trustyle.badge": "*",
-    "@uswitch/trustyle.button-link": "*"
+    "@uswitch/trustyle.button-link": "*",
+    "@uswitch/trustyle.imgix-image": "*"
   }
 }

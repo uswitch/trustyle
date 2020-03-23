@@ -4,6 +4,7 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
 import Badge from '@uswitch/trustyle.badge'
+import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
@@ -106,23 +107,29 @@ const AdBanner: React.FC<Props> = ({
               marginBottom: 'sm'
             }}
           >
-            <img
+            <ImgixImage
               src={sponsor.logo}
               alt={sponsor.name}
-              sx={{
-                maxHeight: '100%',
-                maxWidth: '100%'
+              width={148}
+              imgixParams={{
+                fit: 'fillmax'
               }}
+              critical
             />
           </div>
           <div>
-            <img
+            <ImgixImage
               src={additionalImage}
               alt={additionalImageTag}
+              height={60}
               sx={{
                 maxWidth: '100%',
                 display: ['none', 'block']
               }}
+              imgixParams={{
+                fit: 'fillmax'
+              }}
+              critical
             />
           </div>
         </div>
