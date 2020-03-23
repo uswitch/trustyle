@@ -56,6 +56,8 @@ const RateTableRow: React.FC<RowProps> = ({
   const cols = nonNullChildren.length
 
   /**
+   * Row numbers explained:
+   *
    * ROW 1: reserved for addons above header (auto height)
    * ROW 2: used for header
    * ROW 3: reserved for addons below header (auto height)

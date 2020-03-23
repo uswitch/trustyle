@@ -3,7 +3,7 @@
 The rate tables package contains a bunch of components that can be used to
 build a row of a rate table, like this:
 
-![A rate table row](./sky-broadband-row.png)
+![A rate table row](readme-sky-broadband-row.png)
 
 The component is extremely generic and can power different looking rate tables
 while still maintaining visual consistency between them. For example:
@@ -43,7 +43,7 @@ you want to know how to actually use it.
 
 ## Structure and terminology
 
-![A rate table row with cells highlighted](./sky-broadband-row-cells.png)
+![A rate table row with cells highlighted](readme-sky-broadband-row-cells.png)
 
 A rate table row is a collection of **cells**, inside **sections** of the row.
 
@@ -181,8 +181,13 @@ It will be automatically laid out in the grid.
 ## Addons
 
 If you want content to appear _outside_ of the grid, you'll need to use an
-addon. There's a couple built in ones that cover pretty much every use case, or
-you can build your own.
+addon. They allow you to use cells in other places—for example, to add a USP to
+the right of the title, or to add a footer.
+
+![Addon illustration](readme-addons.png)
+
+There's a couple built in ones that cover pretty much every use case, or you
+can build your own.
 
 ### The footer addon
 
@@ -192,7 +197,7 @@ displayed at the bottom of the row, full width, with a border above it:
 ```jsx harmony
 addons={
   [
-    { 
+    {
       addon: RateTable.addons.footer,
       component: (
         <RateTable.cells.Base sx={{ display: 'block' }} mobileOrder={100}>
@@ -235,7 +240,57 @@ accepts the values `header`, `grid` and `body`.
 
 ### Building your own addon
 
-Needs documenting.
+As explained previously, addons allow you to add content outside of the grid.
+There are hooks inside the row component that grab content from the specified
+addons where appropriate.
+
+It's easier to explain with an example.
+
+In the addon:
+
+```typescript jsx
+import { Addon, CellContext } from '@uswitch/trustyle.rate-table'
+
+const AddonFooter: Addon = {
+  body: ({ children }) => {
+    const { gridColumnSpan } = React.useContext(CellContext)
+
+    return (
+      <CellContext.Provider
+        value={{
+          gridRowStart: 11,
+          gridRowSpan: 1,
+          gridColumnStart: 1,
+          gridColumnSpan
+        }}
+      >
+        {children}
+      </CellContext.Provider>
+    )
+  }
+}
+```
+
+This is a shorter version of the real footer addon, which also adds some
+formatting such as a border and some padding.
+
+Note that the addon is an object with one entry, with key `body`. This means
+that we want the addon to use the body hook.
+
+Then, in the row component, you can find the following line:
+
+```jsx harmony
+{
+  addonsFor('body')
+}
+```
+
+Any addons specified using the `AddonFooter` component from above will now
+appear in the row body, spanning one row from row 11, and taking the full width.
+Exactly what you'd expect from a footer! Search "Row numbers explained" in
+row.tsx to see why we've chosen row 11 for the footer.
+
+The addon positions currently supported are `header`, `grid`, and `body`.
 
 ## Data formatters
 
@@ -244,7 +299,7 @@ Data formatters are simple components designed to output formatted data (duh).
 For example, the range data formatter takes a `from` value and a `to` value and
 displays something like this:
 
-![Range data formatter](./data-formatter-range.png)
+![Range data formatter](readme-data-formatter-range.png)
 
 These are great for using inside content cells, and I'd recommend that if none
 of the existing data formatters suit your need, you add a new one and contribute

@@ -306,10 +306,7 @@ export const ExampleWithAddons = () => {
                 Representative example: Assumed borrowing of £10,000 over...
               </small>
             </RateTable.cells.Base>
-          ),
-          options: {
-            mobileOrder: 100
-          }
+          )
         }
       ]}
     >

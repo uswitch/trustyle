@@ -14,6 +14,7 @@ const RateTableAddonFooter: Addon = {
       <AddonContext.Provider
         value={{
           inAddon: 'footer',
+          order: 100,
           extraRules: {
             borderTop: '1px solid',
             paddingTop: 'sm',
