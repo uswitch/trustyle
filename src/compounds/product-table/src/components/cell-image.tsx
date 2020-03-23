@@ -4,17 +4,17 @@ import { jsx } from 'theme-ui'
 
 import CellBase from './cell-base'
 
-export const RateTableCellImage: React.FC = ({ children }) => (
+export const ProductTableCellImage: React.FC = ({ children }) => (
   <CellBase
     mobileOrder={0}
     sx={{
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      variant: 'rateTable.cellImage.main'
+      variant: 'productTable.cellImage.main'
     }}
   >
     {children}
   </CellBase>
 )
-export default RateTableCellImage
+export default ProductTableCellImage

@@ -16,7 +16,7 @@ export interface AddonProps extends React.HTMLAttributes<any> {
 const positionsToDisplay = (positions: Position[], current: Position) =>
   positions.map(position => (position === current ? 'block' : 'none'))
 
-const RateTableAddonResponsive: Addon<AddonProps> = {
+const ProductTableAddonResponsive: Addon<AddonProps> = {
   defaultArguments: {
     positions: ['body', 'header']
   },
@@ -92,4 +92,4 @@ const RateTableAddonResponsive: Addon<AddonProps> = {
   }
 }
 
-export default RateTableAddonResponsive
+export default ProductTableAddonResponsive

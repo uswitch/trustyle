@@ -15,7 +15,7 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   addons?: AddonArg[]
 }
 
-const RateTableRow: React.FC<RowProps> = ({
+const ProductTableRow: React.FC<RowProps> = ({
   badges = [],
   preTitle,
   rowTitle,
@@ -73,7 +73,7 @@ const RateTableRow: React.FC<RowProps> = ({
         paddingX: ['sm', 'md'],
         paddingY: 'md',
         marginTop: badges.length ? [10, 15] : 0,
-        variant: 'rateTable.row.main'
+        variant: 'productTable.row.main'
       }}
     >
       {!!badges.length && (
@@ -99,7 +99,7 @@ const RateTableRow: React.FC<RowProps> = ({
           '-ms-grid-rows': ['auto', `(auto)[3] (1fr)[${ROWS}] (auto)[3]`],
           marginX: -8,
           marginY: -6,
-          variant: 'rateTable.row.grid',
+          variant: 'productTable.row.grid',
 
           // Flex in mobile IE11 (?!) as auto-layout for grid isn't supported
           '@media all and (max-width: 768px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
@@ -125,7 +125,7 @@ const RateTableRow: React.FC<RowProps> = ({
               borderBottom: '1px solid',
               paddingBottom: 'sm',
               marginTop: badges.length ? 0 : -6,
-              variant: 'rateTable.row.header'
+              variant: 'productTable.row.header'
             }}
             mobileOrder={-100}
           >
@@ -141,19 +141,25 @@ const RateTableRow: React.FC<RowProps> = ({
                 <CellBase extraRules={{ marginRight: 'auto' }}>
                   {preTitle && (
                     <span
-                      sx={{ fontSize: 'xs', variant: 'rateTable.row.pretitle' }}
+                      sx={{
+                        fontSize: 'xs',
+                        variant: 'productTable.row.pretitle'
+                      }}
                     >
                       {preTitle}
                     </span>
                   )}
                   {rowTitle && (
-                    <h3 sx={{ margin: 0, variant: 'rateTable.row.title' }}>
+                    <h3 sx={{ margin: 0, variant: 'productTable.row.title' }}>
                       {rowTitle}
                     </h3>
                   )}
                   {subtitle && (
                     <span
-                      sx={{ fontSize: 'xs', variant: 'rateTable.row.subtitle' }}
+                      sx={{
+                        fontSize: 'xs',
+                        variant: 'productTable.row.subtitle'
+                      }}
                     >
                       {subtitle}
                     </span>
@@ -196,4 +202,4 @@ const RateTableRow: React.FC<RowProps> = ({
   )
 }
 
-export default RateTableRow
+export default ProductTableRow

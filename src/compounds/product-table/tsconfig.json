@@ -3,5 +3,7 @@
   "compilerOptions": {
     "outDir": "./lib"
   },
-  "include": ["./src/index.tsx"]
+  "include": [
+    "./src/index.tsx"
+  ]
 }

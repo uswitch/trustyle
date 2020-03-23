@@ -4,14 +4,14 @@ import { jsx } from 'theme-ui'
 import { boolean, number, select, text } from '@storybook/addon-knobs'
 import { Global } from '@emotion/core'
 
-import { ButtonLink } from '../../button-link/src'
-import Badge from '../../badge/src'
-import { ProgressBar } from '../../progress-bar/src'
+import { ButtonLink } from '../../../elements/button-link/src'
+import Badge from '../../../elements/badge/src'
+import { ProgressBar } from '../../../elements/progress-bar/src'
 
-import RateTable, { AddonArg } from './'
+import ProductTable, { AddonArg } from './index'
 
 export default {
-  title: 'Elements|Rate Table'
+  title: 'Compounds|Product Table'
 }
 
 type Column =
@@ -63,55 +63,55 @@ export const ExampleWithKnobs = () => {
 
   const getColumn = (col: Column): React.ReactNode => {
     if (col === 'Placeholder') {
-      return <RateTable.cells.Placeholder />
+      return <ProductTable.cells.Placeholder />
     }
 
     if (col === 'Image') {
       return (
-        <RateTable.cells.Image>
+        <ProductTable.cells.Image>
           <img
             src="https://placekitten.com/200/75?image=9"
             alt="Salman"
             sx={{ height: 75, width: '100%', objectFit: 'cover' }}
           />
-        </RateTable.cells.Image>
+        </ProductTable.cells.Image>
       )
     }
 
     if (col === 'Content') {
       return (
-        <RateTable.cells.Content label="Annual saving" accent>
-          <RateTable.Data.Range from="£30" to="£260" />
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.Data.Range from="£30" to="£260" />
           <a>Clickable link</a>
-        </RateTable.cells.Content>
+        </ProductTable.cells.Content>
       )
     }
 
     if (col === 'Simple Content') {
       return (
-        <RateTable.cells.Content label="Fixed rate contract">
+        <ProductTable.cells.Content label="Fixed rate contract">
           14 months
-        </RateTable.cells.Content>
+        </ProductTable.cells.Content>
       )
     }
 
     if (col === 'Split Placeholder') {
       return (
-        <RateTable.cells.Split>
+        <ProductTable.cells.Split>
           {getColumn('Placeholder')}
           {getColumn('Placeholder')}
           {splitCount === 3 && getColumn('Placeholder')}
-        </RateTable.cells.Split>
+        </ProductTable.cells.Split>
       )
     }
 
     if (col === 'Split Content') {
       return (
-        <RateTable.cells.Split>
+        <ProductTable.cells.Split>
           {getColumn('Simple Content')}
           {getColumn('Simple Content')}
           {splitCount === 3 && getColumn('Simple Content')}
-        </RateTable.cells.Split>
+        </ProductTable.cells.Split>
       )
     }
 
@@ -122,7 +122,7 @@ export const ExampleWithKnobs = () => {
 
   if (headerAddon !== 'None') {
     addons.push({
-      addon: RateTable.addons.responsive,
+      addon: ProductTable.addons.responsive,
       component: getColumn(
         headerAddon === 'Content' ? 'Simple Content' : headerAddon
       )
@@ -131,13 +131,13 @@ export const ExampleWithKnobs = () => {
 
   if (footerAddon) {
     addons.push({
-      addon: RateTable.addons.footer,
+      addon: ProductTable.addons.footer,
       component: (
-        <RateTable.cells.Base sx={{ display: 'block' }} mobileOrder={100}>
+        <ProductTable.cells.Base sx={{ display: 'block' }} mobileOrder={100}>
           <small sx={{ fontSize: 'xs' }}>
             Representative example: Assumed borrowing of £10,000 over...
           </small>
-        </RateTable.cells.Base>
+        </ProductTable.cells.Base>
       )
     })
   }
@@ -151,7 +151,7 @@ export const ExampleWithKnobs = () => {
           }
         }}
       />
-      <RateTable.Row
+      <ProductTable.Row
         badges={badges}
         preTitle={preTitle}
         rowTitle={rowTitle}
@@ -162,45 +162,45 @@ export const ExampleWithKnobs = () => {
         {getColumn(secondCol)}
         {getColumn(thirdCol)}
         {getColumn(fourthCol)}
-        <RateTable.cells.Cta
+        <ProductTable.cells.Cta
           button={<ButtonLink variant="primary">{buttonText}</ButtonLink>}
           linkButton={<ButtonLink variant="link">{linkText}</ButtonLink>}
         />
-      </RateTable.Row>
+      </ProductTable.Row>
     </React.Fragment>
   )
 }
 
 export const Example1 = () => {
   return (
-    <RateTable.Row
+    <ProductTable.Row
       // badges={[<Badge>Cashback</Badge>, <Badge>Award Winner</Badge>]}
       // preTitle="Sponsored"
       rowTitle="Santander Standard Loan (Online)"
       subtitle="Personal Loan"
     >
-      <RateTable.cells.Image>
+      <ProductTable.cells.Image>
         <img
           src="https://placekitten.com/200/75?image=9"
           alt="Salman"
           sx={{ height: 75, width: '100%', objectFit: 'cover' }}
         />
-      </RateTable.cells.Image>
-      <RateTable.cells.Split>
-        <RateTable.cells.Placeholder />
-        <RateTable.cells.Placeholder />
-        <RateTable.cells.Placeholder />
-      </RateTable.cells.Split>
-      <RateTable.cells.Split>
-        <RateTable.cells.Placeholder />
-        <RateTable.cells.Placeholder />
-      </RateTable.cells.Split>
-      <RateTable.cells.Placeholder />
-      <RateTable.cells.Cta
+      </ProductTable.cells.Image>
+      <ProductTable.cells.Split>
+        <ProductTable.cells.Placeholder />
+        <ProductTable.cells.Placeholder />
+        <ProductTable.cells.Placeholder />
+      </ProductTable.cells.Split>
+      <ProductTable.cells.Split>
+        <ProductTable.cells.Placeholder />
+        <ProductTable.cells.Placeholder />
+      </ProductTable.cells.Split>
+      <ProductTable.cells.Placeholder />
+      <ProductTable.cells.Cta
         button={<ButtonLink variant="primary">Apply now</ButtonLink>}
         linkButton={<ButtonLink variant="link">More details</ButtonLink>}
       />
-    </RateTable.Row>
+    </ProductTable.Row>
   )
 }
 
@@ -214,7 +214,7 @@ export const Example2 = () => {
           }
         }}
       />
-      <RateTable.Row
+      <ProductTable.Row
         badges={[
           <Badge key="cashback">Cashback</Badge>,
           <Badge key="award-winner">Award Winner</Badge>
@@ -222,44 +222,44 @@ export const Example2 = () => {
         preTitle="Sponsored"
         rowTitle="Super Saver April 2021"
       >
-        <RateTable.cells.Image>
+        <ProductTable.cells.Image>
           <img
             src="https://placekitten.com/200/75?image=12"
             alt="Salman"
             sx={{ height: 75, width: '100%', objectFit: 'cover' }}
           />
-        </RateTable.cells.Image>
-        <RateTable.cells.Split>
-          <RateTable.cells.Content label="Fixed rate contract">
+        </ProductTable.cells.Image>
+        <ProductTable.cells.Split>
+          <ProductTable.cells.Content label="Fixed rate contract">
             14 months
-          </RateTable.cells.Content>
-          <RateTable.cells.Content label="Early exit fee">
+          </ProductTable.cells.Content>
+          <ProductTable.cells.Content label="Early exit fee">
             £30 per fuel
-          </RateTable.cells.Content>
-        </RateTable.cells.Split>
-        <RateTable.cells.Content label="Annual saving" accent>
-          <RateTable.Data.Range from="£30" to="£260" />
+          </ProductTable.cells.Content>
+        </ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.Data.Range from="£30" to="£260" />
           <a>Clickable link</a>
-        </RateTable.cells.Content>
-        <RateTable.cells.Cta
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Cta
           button={<ButtonLink variant="primary">Button</ButtonLink>}
           linkButton={<ButtonLink variant="link">Plan info</ButtonLink>}
         />
-      </RateTable.Row>
+      </ProductTable.Row>
     </React.Fragment>
   )
 }
 
 export const ExampleWithAddons = () => {
   return (
-    <RateTable.Row
+    <ProductTable.Row
       rowTitle="Santander Standard Loan (Online)"
       subtitle="Personal Loan"
       addons={[
         {
-          addon: RateTable.addons.responsive,
+          addon: ProductTable.addons.responsive,
           component: (
-            <RateTable.cells.Content label="Eligibility">
+            <ProductTable.cells.Content label="Eligibility">
               <div
                 sx={{
                   textAlign: 'center',
@@ -275,22 +275,22 @@ export const ExampleWithAddons = () => {
                 </span>
                 <ProgressBar current={70} max={100} />
               </div>
-            </RateTable.cells.Content>
+            </ProductTable.cells.Content>
           ),
           options: {
             bodyOrder: 1
           }
         },
         {
-          addon: RateTable.addons.responsive,
+          addon: ProductTable.addons.responsive,
           component: (
-            <RateTable.cells.Image>
+            <ProductTable.cells.Image>
               <img
                 src="https://placekitten.com/200/75?image=9"
                 alt="Salman"
                 sx={{ height: 75, width: '100%', objectFit: 'cover' }}
               />
-            </RateTable.cells.Image>
+            </ProductTable.cells.Image>
           ),
           options: {
             headerOrder: -1,
@@ -299,71 +299,71 @@ export const ExampleWithAddons = () => {
           }
         },
         {
-          addon: RateTable.addons.footer,
+          addon: ProductTable.addons.footer,
           component: (
-            <RateTable.cells.Base sx={{ display: 'block' }}>
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
               <small sx={{ fontSize: 'xs' }}>
                 Representative example: Assumed borrowing of £10,000 over...
               </small>
-            </RateTable.cells.Base>
+            </ProductTable.cells.Base>
           )
         }
       ]}
     >
-      <RateTable.cells.Split>
-        <RateTable.cells.Content label="Fixed rate contract">
+      <ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Fixed rate contract">
           14 months
-        </RateTable.cells.Content>
-        <RateTable.cells.Content label="Early exit fee">
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Content label="Early exit fee">
           £30 per fuel
-        </RateTable.cells.Content>
-      </RateTable.cells.Split>
-      <RateTable.cells.Content label="Annual saving" accent>
-        <RateTable.Data.Range from="£30" to="£260" />
+        </ProductTable.cells.Content>
+      </ProductTable.cells.Split>
+      <ProductTable.cells.Content label="Annual saving" accent>
+        <ProductTable.Data.Range from="£30" to="£260" />
         <a>Clickable link</a>
-      </RateTable.cells.Content>
-      <RateTable.cells.Content label="Annual saving" accent>
-        <RateTable.Data.Range from="£30" to="£260" />
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Content label="Annual saving" accent>
+        <ProductTable.Data.Range from="£30" to="£260" />
         <a>Clickable link</a>
-      </RateTable.cells.Content>
-      <RateTable.cells.Cta
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Cta
         button={<ButtonLink variant="primary">Apply now</ButtonLink>}
         linkButton={<ButtonLink variant="link">More details</ButtonLink>}
       />
-    </RateTable.Row>
+    </ProductTable.Row>
   )
 }
 
 export const ExampleWithMultipleAccents = () => {
   return (
-    <RateTable.Row preTitle="Sponsored" rowTitle="Super Saver April 2021">
-      <RateTable.cells.Image>
+    <ProductTable.Row preTitle="Sponsored" rowTitle="Super Saver April 2021">
+      <ProductTable.cells.Image>
         <img
           src="https://placekitten.com/200/75?image=1"
           alt="Salman"
           sx={{ height: 75, width: '100%', objectFit: 'cover' }}
         />
-      </RateTable.cells.Image>
-      <RateTable.cells.Split>
-        <RateTable.cells.Content label="Fixed rate contract">
+      </ProductTable.cells.Image>
+      <ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Fixed rate contract">
           14 months
-        </RateTable.cells.Content>
-        <RateTable.cells.Content label="Early exit fee">
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Content label="Early exit fee">
           £30 per fuel
-        </RateTable.cells.Content>
-      </RateTable.cells.Split>
-      <RateTable.cells.Content label="Annual saving" accent>
-        <RateTable.Data.Range from="£30" to="£260" />
+        </ProductTable.cells.Content>
+      </ProductTable.cells.Split>
+      <ProductTable.cells.Content label="Annual saving" accent>
+        <ProductTable.Data.Range from="£30" to="£260" />
         <a>Clickable link</a>
-      </RateTable.cells.Content>
-      <RateTable.cells.Content label="Annual saving" accent>
-        <RateTable.Data.Range from="£30" to="£260" />
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Content label="Annual saving" accent>
+        <ProductTable.Data.Range from="£30" to="£260" />
         <a>Clickable link</a>
-      </RateTable.cells.Content>
-      <RateTable.cells.Cta
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Cta
         button={<ButtonLink variant="primary">Button</ButtonLink>}
         linkButton={<ButtonLink variant="link">Plan info</ButtonLink>}
       />
-    </RateTable.Row>
+    </ProductTable.Row>
   )
 }

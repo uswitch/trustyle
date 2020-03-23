@@ -6,7 +6,7 @@ import { Addon, AddonContext, CellContext } from '../generics'
 
 import { ROWS } from './cell-split'
 
-const RateTableAddonFooter: Addon = {
+const ProductTableAddonFooter: Addon = {
   body: ({ children }) => {
     const { gridColumnSpan } = React.useContext(CellContext)
 
@@ -20,7 +20,7 @@ const RateTableAddonFooter: Addon = {
             paddingTop: 'sm',
             marginTop: 'xs',
             marginBottom: -6,
-            variant: 'rateTable.addonFooter.main'
+            variant: 'productTable.addonFooter.main'
           }
         }}
       >
@@ -39,4 +39,4 @@ const RateTableAddonFooter: Addon = {
   }
 }
 
-export default RateTableAddonFooter
+export default ProductTableAddonFooter

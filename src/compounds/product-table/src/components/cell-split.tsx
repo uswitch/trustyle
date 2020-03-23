@@ -7,7 +7,7 @@ import { CellContext } from '../generics'
 // Needs to be the lowest common factor of all the split counts
 export const ROWS = 6
 
-const RateTableCellSplit: React.FC<React.HTMLAttributes<any>> = ({
+const ProductTableCellSplit: React.FC<React.HTMLAttributes<any>> = ({
   children
 }) => {
   const { gridColumnStart, gridColumnSpan } = React.useContext(CellContext)
@@ -34,4 +34,4 @@ const RateTableCellSplit: React.FC<React.HTMLAttributes<any>> = ({
     </React.Fragment>
   )
 }
-export default RateTableCellSplit
+export default ProductTableCellSplit

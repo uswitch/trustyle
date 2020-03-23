@@ -9,7 +9,7 @@ export interface CellBaseProps extends React.HTMLAttributes<HTMLDivElement> {
   extraRules?: object
 }
 
-const RateTableCellBase: React.FC<CellBaseProps> = ({
+const ProductTableCellBase: React.FC<CellBaseProps> = ({
   mobileOrder = 2,
   extraRules: extraRulesProp = {},
   children,
@@ -67,7 +67,7 @@ const RateTableCellBase: React.FC<CellBaseProps> = ({
   if (inSplit) {
     sx['+ .in-split:not(.first-in-split)'] = {
       borderTop: '1px solid',
-      variant: 'rateTable.cellBase.variants.inSplit'
+      variant: 'productTable.cellBase.variants.inSplit'
     }
   }
 
@@ -92,4 +92,4 @@ const RateTableCellBase: React.FC<CellBaseProps> = ({
     </div>
   )
 }
-export default RateTableCellBase
+export default ProductTableCellBase

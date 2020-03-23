@@ -8,12 +8,15 @@ export interface CellCtaProps extends React.HTMLAttributes<HTMLDivElement> {
   button: React.ReactNode
   linkButton?: React.ReactNode
 }
-const RateTableCellCta: React.FC<CellCtaProps> = ({ button, linkButton }) => {
+const ProductTableCellCta: React.FC<CellCtaProps> = ({
+  button,
+  linkButton
+}) => {
   const buttonWrapperStyling = {
     flex: [1, 'initial'],
     width: '100%',
     display: ['flex', 'block'],
-    variant: 'rateTable.cellCta.buttonWrapper'
+    variant: 'productTable.cellCta.buttonWrapper'
   }
   return (
     <CellBase
@@ -30,4 +33,4 @@ const RateTableCellCta: React.FC<CellCtaProps> = ({ button, linkButton }) => {
   )
 }
 
-export default RateTableCellCta
+export default ProductTableCellCta

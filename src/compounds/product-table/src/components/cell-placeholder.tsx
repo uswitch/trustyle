@@ -6,7 +6,7 @@ import { AddonContext, CellContext } from '../generics'
 
 import CellBase from './cell-base'
 
-export const RateTableCellPlaceholder: React.FC<React.HTMLAttributes<
+export const ProductTableCellPlaceholder: React.FC<React.HTMLAttributes<
   HTMLDivElement
 >> = () => {
   const { inSplit } = React.useContext(CellContext)
@@ -29,4 +29,4 @@ export const RateTableCellPlaceholder: React.FC<React.HTMLAttributes<
     </CellBase>
   )
 }
-export default RateTableCellPlaceholder
+export default ProductTableCellPlaceholder

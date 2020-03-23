@@ -20,7 +20,7 @@ export interface CellPrimaryProps extends React.HTMLAttributes<HTMLDivElement> {
   accent?: boolean
   mobileOrder?: number
 }
-const RateTableCellContent: React.FC<CellPrimaryProps> = ({
+const ProductTableCellContent: React.FC<CellPrimaryProps> = ({
   label,
   accent = false,
   mobileOrder,
@@ -46,8 +46,8 @@ const RateTableCellContent: React.FC<CellPrimaryProps> = ({
         '-ms-grid-rows': isRow ? '100%' : 'auto auto',
         padding: accent && !isRow ? 'sm' : '',
         variant: accent
-          ? 'rateTable.cellContent.main.variants.accent'
-          : 'rateTable.cellContent.main.base'
+          ? 'productTable.cellContent.main.variants.accent'
+          : 'productTable.cellContent.main.base'
       }}
       // @ts-ignore
       css={{ display: '-ms-grid' }}
@@ -59,7 +59,7 @@ const RateTableCellContent: React.FC<CellPrimaryProps> = ({
           ...grid('row', isRow ? 1 : 2, 1),
           fontSize: 'xs',
           marginTop: isRow ? '' : 'sm',
-          variant: 'rateTable.cellContent.label'
+          variant: 'productTable.cellContent.label'
         }}
       >
         {label}
@@ -76,4 +76,4 @@ const RateTableCellContent: React.FC<CellPrimaryProps> = ({
   )
 }
 
-export default RateTableCellContent
+export default ProductTableCellContent

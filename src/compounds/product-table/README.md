@@ -1,12 +1,12 @@
-# Rate Tables
+# Product tables
 
-The rate tables package contains a bunch of components that can be used to
-build a row of a rate table, like this:
+The product tables package contains a bunch of components that can be used to
+build a row of a product table, like this:
 
-![A rate table row](readme-sky-broadband-row.png)
+![A product table row](readme-sky-broadband-row.png)
 
-The component is extremely generic and can power different looking rate tables
-while still maintaining visual consistency between them. For example:
+The component is extremely generic and can power different looking product
+tables while still maintaining visual consistency between them. For example:
 
 - There can be a subtitle below the title instead of a leader above
 - The content to the right of the title is completely customisable - and can
@@ -21,7 +21,7 @@ while still maintaining visual consistency between them. For example:
 - Additional content can be added anywhere in the row using "addons" - for
   example, a footer
 
-Basically, this package provides a framework to creating rate tables without
+Basically, this package provides a framework to creating product tables without
 being too prescriptive about what they should look like—but in a way that still
 maintains visual consistency throughout a brand.
 
@@ -30,7 +30,7 @@ you want to know how to actually use it.
 
 ## tl;dr
 
-- A rate table row consists of a **body**, a **header** and a **grid** (the
+- A product table row consists of a **body**, a **header** and a **grid** (the
   latter two of which are contained in the body).
 - You can use **cells**, of which there are some already provided, to populate
   the row.
@@ -43,9 +43,9 @@ you want to know how to actually use it.
 
 ## Structure and terminology
 
-![A rate table row with cells highlighted](readme-sky-broadband-row-cells.png)
+![A product table row with cells highlighted](readme-sky-broadband-row-cells.png)
 
-A rate table row is a collection of **cells**, inside **sections** of the row.
+A product table row is a collection of **cells**, inside **sections** of the row.
 
 There are three main sections:
 
@@ -59,7 +59,7 @@ There are three main sections:
 
 These sections will be especially important to know when writing addons.
 
-There are two ways to add cells to the body of a rate table row: as children
+There are two ways to add cells to the body of a product table row: as children
 (where they are added to the grid) and as addons (where the positioning is a
 bit more configurable). In the grid the cell components and the order they're
 specified in is responsible for layout, while with addons you get full control
@@ -106,12 +106,12 @@ screenshot at the start of this document. In JSX, that would actually look
 something like this:
 
 ```js
-<RateTable.cells.Split>
-  <RateTable.cells.Content label="Average speed">
+<ProductTable.cells.Split>
+  <ProductTable.cells.Content label="Average speed">
     30Mbps
-  </RateTable.cells.Content>
-  <RateTable.cells.Content label="Contract">18 months</RateTable.cells.Content>
-</RateTable.cells.Split>
+  </ProductTable.cells.Content>
+  <ProductTable.cells.Content label="Contract">18 months</ProductTable.cells.Content>
+</ProductTable.cells.Split>
 ```
 
 It takes other cells as arguments, then lays them out within the space of a
@@ -124,7 +124,7 @@ When inside a cell, you can tell whether you're inside a split cell or not
 using `CellContext`:
 
 ```js
-import { CellContext } from '@uswitch/trustyle.rate-table'
+import { CellContext } from '@uswitch/trustyle.product-table'
 
 // ...
 
@@ -133,8 +133,8 @@ const { inSplit } = React.useContext(CellContext)
 
 ### Writing your own cell
 
-In addition to the cells available under `RateTable.cells`, you can also create
-your own cells types when the existing ones don't do what you need.
+In addition to the cells available under `ProductTable.cells`, you can also
+create your own cells types when the existing ones don't do what you need.
 
 Usually, it's best to extend the content cell or the base cell. The content
 cell displays a label (except in addons on desktop) and your specified content,
@@ -142,13 +142,13 @@ and the base cell is just a blank canvas.
 
 For example, in FS we need an eligibility status showing using a progress bar.
 This isn't needed by any other teams and is quite simple, so it isn't part of
-the rate table package.
+the product table package.
 
 We can extend the content cell to do this:
 
 ```typescript jsx
 const EligibilityCell: React.FC<EligibilityCellProps> = ({ percent }) => (
-  <RateTable.cells.Content label="Eligibility" mobileOrder={1}>
+  <ProductTable.cells.Content label="Eligibility" mobileOrder={1}>
     <div
       sx={{
         textAlign: 'center',
@@ -162,18 +162,18 @@ const EligibilityCell: React.FC<EligibilityCellProps> = ({ percent }) => (
       </span>
       <ProgressBar current={percent} max={100} />
     </div>
-  </RateTable.cells.Content>
+  </ProductTable.cells.Content>
 )
 ```
 
 Then, you can use in a row like any other cell:
 
 ```js
-<RateTable.Row {...otherProps}>
+<ProductTable.Row {...otherProps}>
   {/* ... */}
   <EligibilityCell percent={80} />
   {/* ... */}
-</RateTable.Row>
+</ProductTable.Row>
 ```
 
 It will be automatically laid out in the grid.
@@ -198,13 +198,13 @@ displayed at the bottom of the row, full width, with a border above it:
 addons={
   [
     {
-      addon: RateTable.addons.footer,
+      addon: ProductTable.addons.footer,
       component: (
-        <RateTable.cells.Base sx={{ display: 'block' }} mobileOrder={100}>
+        <ProductTable.cells.Base sx={{ display: 'block' }} mobileOrder={100}>
           <small sx={{ fontSize: 'xs' }}>
             Representative example: Assumed borrowing of £10,000 over...
           </small>
-        </RateTable.cells.Base>
+        </ProductTable.cells.Base>
       )
     }
   ]
@@ -227,7 +227,7 @@ This is how we can do that:
 
 ```jsx harmony
 {
-  addon: RateTable.addons.responsive,
+  addon: ProductTable.addons.responsive,
   component: <EligibilityCell percent={80} />,
   options: {
     positions: ['body', 'header']
@@ -235,8 +235,8 @@ This is how we can do that:
 }
 ```
 
-The `positions` array uses the breakpoints from the breakpoints in the theme and
-accepts the values `header`, `grid` and `body`.
+The `positions` array uses the breakpoints from the breakpoints in the theme
+and accepts the values `header`, `grid` and `body`.
 
 ### Building your own addon
 
@@ -249,7 +249,7 @@ It's easier to explain with an example.
 In the addon:
 
 ```typescript jsx
-import { Addon, CellContext } from '@uswitch/trustyle.rate-table'
+import { Addon, CellContext } from '@uswitch/trustyle.product-table'
 
 const AddonFooter: Addon = {
   body: ({ children }) => {
@@ -282,7 +282,9 @@ content will display twice.
 Then, in the row component, you can find the following line:
 
 ```jsx harmony
-{addonsFor('body')}
+{
+  addonsFor('body')
+}
 ```
 
 Any addons specified using the `AddonFooter` component from above will now

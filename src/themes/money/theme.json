@@ -950,7 +950,7 @@
     }
   },
 
-  "rateTable": {
+  "productTable": {
     "row": {
       "main": {
         "borderColor": "grey-20"
