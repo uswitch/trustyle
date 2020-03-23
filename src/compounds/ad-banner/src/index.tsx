@@ -21,6 +21,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   href: string
   badgeIcon?: React.ReactElement
   badgeVariant?: string
+  imageCritical?: boolean
 }
 
 const AdBanner: React.FC<Props> = ({
@@ -37,7 +38,8 @@ const AdBanner: React.FC<Props> = ({
   additionalImageTag = '',
   href,
   badgeIcon,
-  badgeVariant = 'inverse'
+  badgeVariant = 'inverse',
+  imageCritical = true
 }) => {
   return (
     <div
@@ -122,6 +124,7 @@ const AdBanner: React.FC<Props> = ({
               imgixParams={{
                 fit: 'fillmax'
               }}
+              critical={imageCritical}
             />
           </div>
           <div>
@@ -136,6 +139,7 @@ const AdBanner: React.FC<Props> = ({
               imgixParams={{
                 fit: 'fillmax'
               }}
+              critical={imageCritical}
             />
           </div>
         </div>
