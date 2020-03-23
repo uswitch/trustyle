@@ -3,13 +3,14 @@
 import * as React from 'react'
 import Imgix, { SharedImigixAndSourceProps } from 'react-imgix'
 import { css, jsx } from '@emotion/core'
-import 'lazysizes'
 
 interface Props extends SharedImigixAndSourceProps {
   alt?: string
   critical?: boolean
   className?: string
 }
+
+// lazysizes needed if you require lazyloading
 
 const Image: React.FC<Props> = ({
   alt,
