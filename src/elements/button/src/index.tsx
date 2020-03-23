@@ -66,21 +66,11 @@ export const Button: React.FC<Props> = ({
         backgroundImage: 'none',
         fontFamily: 'base',
 
-        fontSize: theme.buttons.base.btnSize
-          ? theme.buttons.base.btnSize[size].fontSize
-          : 'base',
-        paddingX: theme.buttons.base.btnSize
-          ? theme.buttons.base.btnSize[size].paddingX
-          : 'sm',
-        paddingY: theme.buttons.base.btnSize
-          ? theme.buttons.base.btnSize[size].paddingY
-          : 'base',
-        height: theme.buttons.base.btnSize
-          ? theme.buttons.base.btnSize[size].height
-          : 'base',
-        variant: variant.includes('.')
-          ? variant
-          : `buttons.variants.${variant}`,
+        fontSize: get(theme, `buttons.base.btnSize.${size}.fontSize`, 'base'),
+        paddingX: get(theme, `buttons.base.btnSize.${size}.paddingX`, 'sm'),
+        paddingY: get(theme, `buttons.base.btnSize.${size}.paddingY`, 'base'),
+        height: get(theme, `buttons.base.btnSize.${size}.height`, 'base'),
+        variant: get(theme, `buttons.variants.${variant}`),
 
         justifyContent: 'center',
         alignItems: 'center',
