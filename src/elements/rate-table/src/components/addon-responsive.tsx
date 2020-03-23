@@ -29,13 +29,12 @@ const RateTableAddonResponsive: Addon<AddonProps> = {
     return (
       <AddonContext.Provider
         value={{
-          inAddon: 'header',
+          inAddon: 'body-responsive',
+          order: bodyOrder,
           extraRules: {
             display: positionsToDisplay(positions, 'body'),
             marginTop: [0, -6],
-            marginBottom: [0, 'sm'],
-            // As this is spread into another object, `order` cannot be undefined
-            ...(typeof bodyOrder === 'number' ? { order: bodyOrder } : {})
+            marginBottom: [0, 'sm']
           }
         }}
       >
@@ -58,13 +57,12 @@ const RateTableAddonResponsive: Addon<AddonProps> = {
     return (
       <AddonContext.Provider
         value={{
-          inAddon: 'header',
+          inAddon: 'grid-responsive',
+          order: gridOrder,
           extraRules: {
             display: positionsToDisplay(positions, 'grid'),
             marginTop: [0, -6],
-            marginBottom: [0, 'sm'],
-            // As this is spread into another object, `order` cannot be undefined
-            ...(typeof gridOrder === 'number' ? { order: gridOrder } : {})
+            marginBottom: [0, 'sm']
           }
         }}
       >
@@ -81,11 +79,10 @@ const RateTableAddonResponsive: Addon<AddonProps> = {
     return (
       <AddonContext.Provider
         value={{
-          inAddon: 'header',
+          inAddon: 'header-responsive',
+          order: headerOrder,
           extraRules: {
-            display: positionsToDisplay(positions, 'header'),
-            // As this is spread into another object, `order` cannot be undefined
-            ...(typeof headerOrder === 'number' ? { order: headerOrder } : {})
+            display: positionsToDisplay(positions, 'header')
           }
         }}
       >

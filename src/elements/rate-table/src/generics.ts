@@ -22,6 +22,7 @@ export const CellContext = React.createContext<CellContextProps>({})
 
 export interface AddonContextProps {
   inAddon: string | false
+  order?: number
   extraRules?: object
 }
 

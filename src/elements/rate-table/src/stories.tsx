@@ -259,7 +259,7 @@ export const ExampleWithAddons = () => {
         {
           addon: RateTable.addons.responsive,
           component: (
-            <RateTable.cells.Content label="Eligibility" mobileOrder={1}>
+            <RateTable.cells.Content label="Eligibility">
               <div
                 sx={{
                   textAlign: 'center',
@@ -276,7 +276,10 @@ export const ExampleWithAddons = () => {
                 <ProgressBar current={70} max={100} />
               </div>
             </RateTable.cells.Content>
-          )
+          ),
+          options: {
+            bodyOrder: 1
+          }
         },
         {
           addon: RateTable.addons.responsive,
@@ -298,12 +301,15 @@ export const ExampleWithAddons = () => {
         {
           addon: RateTable.addons.footer,
           component: (
-            <RateTable.cells.Base sx={{ display: 'block' }} mobileOrder={100}>
+            <RateTable.cells.Base sx={{ display: 'block' }}>
               <small sx={{ fontSize: 'xs' }}>
                 Representative example: Assumed borrowing of £10,000 over...
               </small>
             </RateTable.cells.Base>
-          )
+          ),
+          options: {
+            mobileOrder: 100
+          }
         }
       ]}
     >

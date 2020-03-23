@@ -10,8 +10,8 @@ const grid = (rowOrCol: 'row' | 'column', start: number, span: number) => {
   const rowOrColCap = rowOrCol[0].toUpperCase() + rowOrCol.slice(1)
   return {
     [`grid${rowOrColCap}`]: `${start} / span ${span}`,
-    [`grid-${rowOrCol}`]: `${start}`,
-    [`grid-${rowOrCol}-span`]: `${span}`
+    [`-ms-grid-${rowOrCol}`]: `${start}`,
+    [`-ms-grid-${rowOrCol}-span`]: `${span}`
   }
 }
 
@@ -20,7 +20,7 @@ export interface CellPrimaryProps extends React.HTMLAttributes<HTMLDivElement> {
   accent?: boolean
   mobileOrder?: number
 }
-const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
+const RateTableCellContent: React.FC<CellPrimaryProps> = ({
   label,
   accent = false,
   mobileOrder,
@@ -31,7 +31,8 @@ const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
 
   const isRow = inSplit || inAddon
 
-  const rows = inAddon ? 'auto auto' : '1fr 1fr'
+  const rows =
+    inAddon && inAddon !== 'body-responsive' ? 'auto auto' : '1fr 1fr'
 
   return (
     <CellBase
@@ -75,4 +76,4 @@ const RateTableCellPrimary: React.FC<CellPrimaryProps> = ({
   )
 }
 
-export default RateTableCellPrimary
+export default RateTableCellContent

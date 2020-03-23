@@ -28,7 +28,9 @@ const RateTableCellBase: React.FC<CellBaseProps> = ({
     extraRules: extraRulesCellContext
   } = React.useContext(CellContext)
 
-  const { extraRules: extraRulesAddonContext } = React.useContext(AddonContext)
+  const { order, extraRules: extraRulesAddonContext } = React.useContext(
+    AddonContext
+  )
 
   const extraRules = {
     ...extraRulesCellContext,
@@ -42,7 +44,7 @@ const RateTableCellBase: React.FC<CellBaseProps> = ({
     justifyContent: 'center',
     marginX: 8, // sm / 2
     paddingY: 6, // xs / 2
-    order: [mobileOrder, 'initial'],
+    order: order ?? [mobileOrder, 'initial'],
     ...extraRules
   }
 
