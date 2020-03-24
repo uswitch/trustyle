@@ -9,7 +9,7 @@ export default {
   title: 'Elements|Usp tag'
 }
 
-export const ExampleWithKnobs = () => {
+export const ExampleWithKnob = () => {
   const exampleUsps = [
     '2 months free insurance',
     '£100 Amazon.co.uk gift card',

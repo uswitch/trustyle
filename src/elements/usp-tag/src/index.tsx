@@ -4,14 +4,14 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  usp: string
+  usp?: string
 }
 
-const UspTag: React.FC<Props> = ({ usp }) => {
-  return (
+const UspTag: React.FC<Props> = ({ usp }) =>
+  usp ? (
     <div
       sx={{
-        height: 32,
+        minHeight: 32,
         backgroundColor: 'yellow-25',
         display: 'flex',
         alignItems: 'center',
@@ -19,29 +19,24 @@ const UspTag: React.FC<Props> = ({ usp }) => {
           content: '""',
           display: 'inline-block',
           width: 4,
-          height: 28,
+          minHeight: 28,
           margin: 2,
           backgroundColor: 'yellow'
         }
       }}
     >
-      <div>
-        {usp && (
-          <p
-            sx={{
-              fontFamily: "'-apple-system', 'BlinkMacSystemFont'",
-              fontWeight: 'bold',
-              fontSize: 'xs',
-              color: 'grey-80',
-              marginLeft: 8
-            }}
-          >
-            {usp}
-          </p>
-        )}
-      </div>
+      <span
+        sx={{
+          fontFamily: "'-apple-system', 'BlinkMacSystemFont'",
+          fontWeight: 'bold',
+          fontSize: 'xs',
+          color: 'grey-80',
+          marginLeft: 'xs'
+        }}
+      >
+        {usp}
+      </span>
     </div>
-  )
-}
+  ) : null
 
 export default UspTag
