@@ -112,64 +112,64 @@ const ProductTableRow: React.FC<RowProps> = ({
           display: '-ms-grid'
         }}
       >
-        <CellContext.Provider
-          value={{
-            gridRowStart: 2,
-            gridRowSpan: 1,
-            gridColumnStart: 1,
-            gridColumnSpan: cols
-          }}
-        >
-          <CellBase
-            sx={{
-              borderBottom: '1px solid',
-              paddingBottom: 'sm',
-              marginTop: badges.length ? 0 : -6,
-              variant: 'productTable.row.header'
+        {rowTitle && (
+          <CellContext.Provider
+            value={{
+              gridRowStart: 2,
+              gridRowSpan: 1,
+              gridColumnStart: 1,
+              gridColumnSpan: cols
             }}
-            mobileOrder={-100}
           >
-            <CellContext.Provider value={{ inFlexbox: true }}>
-              <div
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  marginX: -8,
-                  marginY: -6
-                }}
-              >
-                <CellBase extraRules={{ marginRight: 'auto' }}>
-                  {preTitle && (
-                    <span
-                      sx={{
-                        fontSize: 'xs',
-                        variant: 'productTable.row.pretitle'
-                      }}
-                    >
-                      {preTitle}
-                    </span>
-                  )}
-                  {rowTitle && (
+            <CellBase
+              sx={{
+                borderBottom: '1px solid',
+                paddingBottom: 'sm',
+                marginTop: badges.length ? 0 : -6,
+                variant: 'productTable.row.header'
+              }}
+              mobileOrder={-100}
+            >
+              <CellContext.Provider value={{ inFlexbox: true }}>
+                <div
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    marginX: -8,
+                    marginY: -6
+                  }}
+                >
+                  <CellBase extraRules={{ marginRight: 'auto' }}>
+                    {preTitle && (
+                      <span
+                        sx={{
+                          fontSize: 'xs',
+                          variant: 'productTable.row.pretitle'
+                        }}
+                      >
+                        {preTitle}
+                      </span>
+                    )}
                     <h3 sx={{ margin: 0, variant: 'productTable.row.title' }}>
                       {rowTitle}
                     </h3>
-                  )}
-                  {subtitle && (
-                    <span
-                      sx={{
-                        fontSize: 'xs',
-                        variant: 'productTable.row.subtitle'
-                      }}
-                    >
-                      {subtitle}
-                    </span>
-                  )}
-                </CellBase>
-                {addonsFor('header')}
-              </div>
-            </CellContext.Provider>
-          </CellBase>
-        </CellContext.Provider>
+                    {subtitle && (
+                      <span
+                        sx={{
+                          fontSize: 'xs',
+                          variant: 'productTable.row.subtitle'
+                        }}
+                      >
+                        {subtitle}
+                      </span>
+                    )}
+                  </CellBase>
+                  {addonsFor('header')}
+                </div>
+              </CellContext.Provider>
+            </CellBase>
+          </CellContext.Provider>
+        )}
 
         {nonNullChildren.map((child, index) => (
           <CellContext.Provider

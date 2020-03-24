@@ -163,8 +163,8 @@ export const ExampleWithKnobs = () => {
         {getColumn(thirdCol)}
         {getColumn(fourthCol)}
         <ProductTable.cells.Cta
-          button={<ButtonLink variant="primary">{buttonText}</ButtonLink>}
-          linkButton={<ButtonLink variant="link">{linkText}</ButtonLink>}
+          primary={<ButtonLink variant="primary">{buttonText}</ButtonLink>}
+          secondary={<ButtonLink variant="link">{linkText}</ButtonLink>}
         />
       </ProductTable.Row>
     </React.Fragment>
@@ -197,8 +197,8 @@ export const Example1 = () => {
       </ProductTable.cells.Split>
       <ProductTable.cells.Placeholder />
       <ProductTable.cells.Cta
-        button={<ButtonLink variant="primary">Apply now</ButtonLink>}
-        linkButton={<ButtonLink variant="link">More details</ButtonLink>}
+        primary={<ButtonLink variant="primary">Apply now</ButtonLink>}
+        secondary={<ButtonLink variant="link">More details</ButtonLink>}
       />
     </ProductTable.Row>
   )
@@ -242,8 +242,8 @@ export const Example2 = () => {
           <a>Clickable link</a>
         </ProductTable.cells.Content>
         <ProductTable.cells.Cta
-          button={<ButtonLink variant="primary">Button</ButtonLink>}
-          linkButton={<ButtonLink variant="link">Plan info</ButtonLink>}
+          primary={<ButtonLink variant="primary">Button</ButtonLink>}
+          secondary={<ButtonLink variant="link">Plan info</ButtonLink>}
         />
       </ProductTable.Row>
     </React.Fragment>
@@ -327,8 +327,8 @@ export const ExampleWithAddons = () => {
         <a>Clickable link</a>
       </ProductTable.cells.Content>
       <ProductTable.cells.Cta
-        button={<ButtonLink variant="primary">Apply now</ButtonLink>}
-        linkButton={<ButtonLink variant="link">More details</ButtonLink>}
+        primary={<ButtonLink variant="primary">Apply now</ButtonLink>}
+        secondary={<ButtonLink variant="link">More details</ButtonLink>}
       />
     </ProductTable.Row>
   )
@@ -361,8 +361,8 @@ export const ExampleWithMultipleAccents = () => {
         <a>Clickable link</a>
       </ProductTable.cells.Content>
       <ProductTable.cells.Cta
-        button={<ButtonLink variant="primary">Button</ButtonLink>}
-        linkButton={<ButtonLink variant="link">Plan info</ButtonLink>}
+        primary={<ButtonLink variant="primary">Button</ButtonLink>}
+        secondary={<ButtonLink variant="link">Plan info</ButtonLink>}
       />
     </ProductTable.Row>
   )

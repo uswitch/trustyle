@@ -5,12 +5,12 @@ import { jsx } from 'theme-ui'
 import CellBase from './cell-base'
 
 export interface CellCtaProps extends React.HTMLAttributes<HTMLDivElement> {
-  button: React.ReactNode
-  linkButton?: React.ReactNode
+  primary: React.ReactNode
+  secondary?: React.ReactNode
 }
 const ProductTableCellCta: React.FC<CellCtaProps> = ({
-  button,
-  linkButton
+  primary,
+  secondary
 }) => {
   const buttonWrapperStyling = {
     flex: [1, 'initial'],
@@ -27,8 +27,8 @@ const ProductTableCellCta: React.FC<CellCtaProps> = ({
         flexDirection: ['row', 'column']
       }}
     >
-      <div sx={{ ...buttonWrapperStyling }}>{button}</div>
-      <div sx={{ ...buttonWrapperStyling }}>{linkButton}</div>
+      <div sx={{ ...buttonWrapperStyling }}>{primary}</div>
+      {secondary && <div sx={{ ...buttonWrapperStyling }}>{secondary}</div>}
     </CellBase>
   )
 }

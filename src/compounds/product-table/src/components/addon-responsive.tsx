@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui'
 
 import { Addon, AddonContext } from '../generics'
 
-type Position = 'header' | 'body' | 'grid'
+type Position = 'header' | 'body' | 'grid' | 'hidden'
 
 export interface AddonProps extends React.HTMLAttributes<any> {
   bodyOrder?: number
