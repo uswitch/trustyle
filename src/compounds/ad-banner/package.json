@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.ad-banner",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",

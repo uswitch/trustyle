@@ -49,7 +49,7 @@ const AdBanner: React.FC<Props> = ({
         position: 'relative',
         px: ['sm', 'md'],
         pb: ['sm', 'md'],
-        paddingTop: ['210px', 'md']
+        paddingTop: ['210px', 'lg']
       }}
     >
       <div
@@ -70,7 +70,7 @@ const AdBanner: React.FC<Props> = ({
       ></div>
       <div
         sx={{
-          top: 'md',
+          top: 'lg',
           right: 'lg',
           fontSize: 'sm',
           position: 'absolute'
@@ -89,7 +89,7 @@ const AdBanner: React.FC<Props> = ({
         <div
           sx={{
             mb: 'sm',
-            display: ['block', 'none'],
+            display: ['flex', 'none'],
             zIndex: '1'
           }}
         >
@@ -98,7 +98,9 @@ const AdBanner: React.FC<Props> = ({
               sx={{
                 display: 'flex',
                 flexDirection: 'row',
-                alignItems: 'center'
+                justifyContent: 'center',
+                alignItems: 'center',
+                px: 'xxs'
               }}
             >
               {badgeIcon}
@@ -171,6 +173,7 @@ const AdBanner: React.FC<Props> = ({
               fontSize: 'xs',
               fontWeight: 'bold',
               marginBottom: 'sm',
+              marginTop: 0,
               textAlign: ['center', 'left']
             }}
           >
