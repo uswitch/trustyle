@@ -14,7 +14,9 @@ export const ExampleWithKnobs = () => {
     <div
       sx={{
         marginRight: 'xs',
-        marginTop: 'xxs'
+        py: 'xxs',
+        display: 'flex',
+        marginTop: '2px'
       }}
     >
       <svg
