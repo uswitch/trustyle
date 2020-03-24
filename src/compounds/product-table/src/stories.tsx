@@ -18,15 +18,15 @@ type Column =
   | 'Placeholder'
   | 'Image'
   | 'Simple Content'
-  | 'Content'
+  | 'Content from knob'
   | 'Split Placeholder'
   | 'Split Content'
   | 'None'
 const columns: Column[] = [
   'Placeholder',
   'Image',
-  // 'Simple Content',
-  'Content',
+  'Simple Content',
+  'Content from knob',
   'Split Placeholder',
   'Split Content',
   'None'
@@ -45,8 +45,22 @@ export const ExampleWithKnobs = () => {
 
   const firstCol = select('First column', columns, 'Image')
   const secondCol = select('Second column', columns, 'Split Content')
-  const thirdCol = select('Third column', columns, 'Content')
+  const thirdCol = select('Third column', columns, 'Content from knob')
   const fourthCol = select('Fourth column', columns, 'None')
+
+  const formatters = {
+    Range: <ProductTable.data.Range from={30} to={260} unit="pounds" />,
+    TextSubtext: (
+      <ProductTable.data.TextSubtext text="£121" subtext="/ month" />
+    ),
+    Value: <ProductTable.data.Value value={300} unit="pounds" />
+  }
+
+  const dataFormatterKey = select(
+    'Data formatter for content',
+    Object.keys(formatters),
+    'Range'
+  )
 
   const splitCount = number('Split count', 2, {
     range: true,
@@ -78,11 +92,13 @@ export const ExampleWithKnobs = () => {
       )
     }
 
-    if (col === 'Content') {
+    if (col === 'Content from knob') {
       return (
         <ProductTable.cells.Content label="Annual saving" accent>
-          <ProductTable.Data.Range from="£30" to="£260" />
-          <a>Clickable link</a>
+          {
+            // @ts-ignore
+            formatters[dataFormatterKey]
+          }
         </ProductTable.cells.Content>
       )
     }
@@ -124,7 +140,7 @@ export const ExampleWithKnobs = () => {
     addons.push({
       addon: ProductTable.addons.responsive,
       component: getColumn(
-        headerAddon === 'Content' ? 'Simple Content' : headerAddon
+        headerAddon === 'Content from knob' ? 'Simple Content' : headerAddon
       )
     })
   }
@@ -238,8 +254,7 @@ export const Example2 = () => {
           </ProductTable.cells.Content>
         </ProductTable.cells.Split>
         <ProductTable.cells.Content label="Annual saving" accent>
-          <ProductTable.Data.Range from="£30" to="£260" />
-          <a>Clickable link</a>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
         </ProductTable.cells.Content>
         <ProductTable.cells.Cta
           primary={<ButtonLink variant="primary">Button</ButtonLink>}
@@ -319,12 +334,10 @@ export const ExampleWithAddons = () => {
         </ProductTable.cells.Content>
       </ProductTable.cells.Split>
       <ProductTable.cells.Content label="Annual saving" accent>
-        <ProductTable.Data.Range from="£30" to="£260" />
-        <a>Clickable link</a>
+        <ProductTable.data.Range from={30} to={260} unit="pounds" />
       </ProductTable.cells.Content>
       <ProductTable.cells.Content label="Annual saving" accent>
-        <ProductTable.Data.Range from="£30" to="£260" />
-        <a>Clickable link</a>
+        <ProductTable.data.Range from={30} to={260} unit="pounds" />
       </ProductTable.cells.Content>
       <ProductTable.cells.Cta
         primary={<ButtonLink variant="primary">Apply now</ButtonLink>}
@@ -353,12 +366,10 @@ export const ExampleWithMultipleAccents = () => {
         </ProductTable.cells.Content>
       </ProductTable.cells.Split>
       <ProductTable.cells.Content label="Annual saving" accent>
-        <ProductTable.Data.Range from="£30" to="£260" />
-        <a>Clickable link</a>
+        <ProductTable.data.Range from={30} to={260} unit="pounds" />
       </ProductTable.cells.Content>
       <ProductTable.cells.Content label="Annual saving" accent>
-        <ProductTable.Data.Range from="£30" to="£260" />
-        <a>Clickable link</a>
+        <ProductTable.data.Range from={30} to={260} unit="pounds" />
       </ProductTable.cells.Content>
       <ProductTable.cells.Cta
         primary={<ButtonLink variant="primary">Button</ButtonLink>}

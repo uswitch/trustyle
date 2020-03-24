@@ -306,6 +306,3 @@ displays something like this:
 These are great for using inside content cells, and I'd recommend that if none
 of the existing data formatters suit your need, you add a new one and contribute
 it back to the package.
-
-When there's more than one, it would be good to get them all in storybook (and
-this paragraph removed!)

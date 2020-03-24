@@ -42,3 +42,12 @@ export interface AddonArg {
   component: React.ReactNode
   options?: { [key: string]: any }
 }
+
+const formatters: { [unit: string]: (value: number) => string } = {
+  pounds: value => `£${value}`
+}
+
+// Should be fleshed out and moved into a util package
+export function numberFormatter(value: number, unit: string): string {
+  return formatters[unit] ? formatters[unit](value) : `${value} ${unit}`
+}
