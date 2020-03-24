@@ -24,6 +24,8 @@ const valueWithDecimals = (value: string) => {
 const renderValue = (value: string) => {
   if (value.includes('.')) {
     return valueWithDecimals(value)
+  } else if (value.length > 8) {
+    return <small>{value}</small>
   } else {
     return value
   }
