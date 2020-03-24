@@ -31,7 +31,7 @@ const InformationBlocks = ({ details }) =>
     </Col>
   ))
 
-const MobileAd: React.FC<Props> = ({
+const StandardP0Ad: React.FC<Props> = ({
   title,
   imgSrc,
   imgAlt,
@@ -129,4 +129,4 @@ const MobileAd: React.FC<Props> = ({
   )
 }
 
-export default MobileAd
+export default StandardP0Ad

@@ -3,7 +3,7 @@ import * as React from 'react'
 import { jsx } from '@emotion/core'
 import { text } from '@storybook/addon-knobs'
 
-import MobileAd from '.'
+import StandardP0Ad from '.'
 
 export default {
   title: 'Compounds|ad-standard-p0'
@@ -21,7 +21,7 @@ export const ExampleWithKnobs = () => {
   const target = text('target', '_blank')
 
   return (
-    <MobileAd
+    <StandardP0Ad
       title={title}
       imgSrc={imgSrc}
       imgAlt={imgAlt}
