@@ -11,7 +11,7 @@ import ProductTableCellContent from './components/cell-content'
 import ProductTableCellCta from './components/cell-cta'
 import ProductTableDataRange from './components/data-range'
 import ProductTableDataValue from './components/data-value'
-import ProductTableDataTextSubtext from './components/data-text-subtext'
+import ProductTableDataTextSubscript from './components/data-text-subscript'
 import {
   Addon,
   AddonArg,
@@ -37,7 +37,7 @@ const ProductTable = {
   },
   data: {
     Range: ProductTableDataRange,
-    TextSubtext: ProductTableDataTextSubtext,
+    TextSubtext: ProductTableDataTextSubscript,
     Value: ProductTableDataValue
   }
 }

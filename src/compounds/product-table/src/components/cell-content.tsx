@@ -6,8 +6,11 @@ import { AddonContext, CellContext } from '../generics'
 
 import CellBase from './cell-base'
 
+const capitalise = (string: string) =>
+  string.charAt(0).toUpperCase() + string.slice(1)
+
 const grid = (rowOrCol: 'row' | 'column', start: number, span: number) => {
-  const rowOrColCap = rowOrCol[0].toUpperCase() + rowOrCol.slice(1)
+  const rowOrColCap = capitalise(rowOrCol)
   return {
     [`grid${rowOrColCap}`]: `${start} / span ${span}`,
     [`-ms-grid-${rowOrCol}`]: `${start}`,

@@ -7,11 +7,11 @@ import { AddonContext, CellContext } from '../generics'
 export interface DataTextSubtextProps
   extends React.HTMLAttributes<HTMLDivElement> {
   text: string
-  subtext: string
+  subscript: string
 }
 const ProductTableDataTextSubtext: React.FC<DataTextSubtextProps> = ({
   text,
-  subtext
+  subscript
 }) => {
   const { inSplit } = React.useContext(CellContext)
   const { inAddon } = React.useContext(AddonContext)
@@ -21,7 +21,7 @@ const ProductTableDataTextSubtext: React.FC<DataTextSubtextProps> = ({
   return (
     <div>
       <span sx={{ fontSize: isRow ? '' : 'xxxl' }}>{text}</span>
-      {' ' + subtext}
+      {' ' + subscript}
     </div>
   )
 }
