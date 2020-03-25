@@ -92,8 +92,8 @@ export const ExampleWithKnobs = () => {
         fgImageOnMobile={imageOnMobile}
         breadcrumbs={breadcrumbs}
       >
-        <Row cols={20}>
-          <Col span={[20, 9]}>
+        <Row>
+          <Col span={[12, 5]}>
             <Styled.h1 sx={{ marginTop: 0 }}>{headline}</Styled.h1>
             <div sx={{ backgroundColor: 'white', padding: 20 }}>
               <Styled.p sx={{ marginTop: 0 }}>

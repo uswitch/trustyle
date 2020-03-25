@@ -106,7 +106,11 @@ export const Col: React.FC<ColProps> = ({
   ...props
 }) => {
   if (Array.isArray(span) && !Array.isArray(cols)) {
-    cols = new Array(span.length).fill(cols)
+    const colsNumber = cols
+    cols = []
+    for (let i = 0; i < span.length; i++) {
+      cols.push(colsNumber)
+    }
   }
 
   return (
