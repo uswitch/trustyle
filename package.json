@@ -6,7 +6,7 @@
     "--------------- TESTING": "-----------------------",
     "test": "jest",
     "test:jest": "jest",
-    "test:schema": "node --experimental-modules scripts/validate-themes.mjs theme.schema.json src/themes/*/theme.json",
+    "test:schema": "node --experimental-modules scripts/validate-themes.mjs theme.schema.json src/utils/theme-composer/lib/money-theme.json",
     "snapshot": "build-storybook && percy-storybook --widths=320,1280",
     "--------------- RUNNING": "-----------------------",
     "start": "npm run storybook",

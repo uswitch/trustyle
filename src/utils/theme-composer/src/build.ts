@@ -1,8 +1,15 @@
+// @ts-nocheck
 import { writeFileSync } from 'fs'
 import { join } from 'path'
-
 import composeTheme from '.'
+import packageJSON from '../package.json'
 
 const { cwd } = process
+const brands = ['money']
 
-writeFileSync(join(cwd(), 'lib/money-theme.json'), composeTheme('money'))
+brands.map(brand =>
+  writeFileSync(
+    join(cwd(), `lib/${brand}-theme.json`), 
+    composeTheme(brand, packageJSON, '../node_modules', 'devDependencies')
+  )
+)
