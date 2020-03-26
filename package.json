@@ -78,6 +78,7 @@
     "prettier": "^1.19.1",
     "react": "^16.8.6",
     "react-imgix": "^8.6.1",
+    "react-json-view": "^1.19.1",
     "react-test-renderer": "^16.8.6",
     "theme-ui": "^0.2.52",
     "typescript": "^3.7.5"
@@ -97,6 +98,7 @@
     "@styled-system/css": "^5.1.5",
     "@types/styled-system__css": "^5.0.5",
     "@types/theme-ui": "file:types/theme-ui",
+    "@uswitch/trustyle.money-theme": "^0.9.6",
     "styled-system": "^5.1.5"
   }
 }

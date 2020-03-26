@@ -1,20 +1,24 @@
-import { themes as badgeThemes } from '@uswitch/trustyle.badge'
+import moneyTokens from '@uswitch/trustyle.money-theme'
+import { multibrandOptions as badgeMultibrandOptions } from '@uswitch/trustyle.badge'
 
-const elementThemes: any = {
-  badge: badgeThemes
+const tokens: any = {
+  money: moneyTokens
 }
 
-const getBrandTheme = (brand: any) => (themes: any) => themes[brand]
+const elements: any = {
+  badge: badgeMultibrandOptions
+}
 
 const composeTheme = (brand: string) => {
-  const getTheme = getBrandTheme(brand)
-
   const theme = {
-    ...{},
-    elements: Object.keys(elementThemes).reduce(
-      (variants, key) => ({ ...variants, [key]: getTheme(elementThemes[key]) }),
-      {}
-    ),
+    ...tokens[brand],
+    elements: Object.keys(elements).reduce((variants, key) => {
+      const multibrandOptions = elements[key]
+      return {
+        ...variants,
+        [multibrandOptions.name]: multibrandOptions.themes[brand]
+      }
+    }, {}),
     compounds: {}
   }
 
