@@ -13,7 +13,7 @@ const tokens: any = {
 }
 
 const elements: any = [
-  'badge'
+  '@uswitch/trustyle.badge'
 ]
 
 const composeTheme = (
@@ -29,17 +29,27 @@ const composeTheme = (
       .filter(dep => dep.match('@uswitch/trustyle'))
       .filter(dep => !dep.includes('theme'))
 
-  const componentThemes = dependencyNames.map(dependancy => require(`${nodeModulesPath}/${dependancy}/lib/themes/${brand}.js`))
+  const componentThemes = dependencyNames.reduce(
+    (obj, dependancy) => ({ 
+      ...obj, 
+      [dependancy]: require(`${nodeModulesPath}/${dependancy}/lib/themes/${brand}.js`).default
+    }),
+    {}
+  )
+
 
   const theme = {
     ...tokens[brand],
     '----------------------------- Variants': '----------------------------- ',
-    elements: elements.reduce((variants, multibrandOptions) => {
-      return {
-        ...variants,
-        ...(multibrandOptions.themes[brand] ? {[multibrandOptions.name]: multibrandOptions.themes[brand]} : {})
-      }
-    }, {}),
+    elements: 
+      Object.keys(componentThemes)
+        .filter(name => elements.includes(name))
+        .reduce((obj, packageName) => {
+          return {
+            ...obj,
+            ...{ [console.log('name', packageName.replace('@uswitch/trustyle.', '')) || packageName.replace('@uswitch/trustyle.', '')]: componentThemes[packageName] }
+          }
+        }, {}),
     compounds: {}
   }
 
