@@ -21,4 +21,10 @@ const Badge: React.FC<Props> = ({ children, variant = 'primary' }) => {
   )
 }
 
+export const themes = {
+  money: {
+    foo: 'bar'
+  }
+}
+
 export default Badge
