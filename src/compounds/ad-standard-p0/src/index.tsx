@@ -6,6 +6,9 @@ import { Icon } from '@uswitch/trustyle.icon'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
 import PrimaryInfoBlock from '@uswitch/trustyle.primary-info-block'
 import UspTag from '@uswitch/trustyle.usp-tag'
+import SponsoredByTag from '@uswitch/trustyle.sponsored-by-tag'
+import AwardsTag from '@uswitch/trustyle.awards-tag'
+import { Stack } from '@uswitch/trustyle.arrangement'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
 
@@ -17,9 +20,23 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   usp: string
   href: string
   target: string
+  sponsorSrc: string
+  award: string
+  enhancedImgSrc: string
 }
 
-const InformationBlocks = ({ details }) =>
+interface Detail {
+  prefix: string
+  value: string
+  suffix: string
+  label: string
+}
+
+interface Arg {
+  details: Detail[]
+}
+
+const InformationBlocks = ({ details }: Arg) =>
   details.map((obj, index) => (
     <Col span={[6]} key={`infoblock-${index}`}>
       <PrimaryInfoBlock
@@ -31,6 +48,39 @@ const InformationBlocks = ({ details }) =>
     </Col>
   ))
 
+const ProductImage = ({ src, alt }) =>
+  src && (
+    <ImgixImage
+      sx={{
+        width: 59,
+        height: 100,
+        marginBottom: 'xs',
+        marginTop: '-25px'
+      }}
+      alt={alt}
+      src={src}
+      imgixParams={{ fit: 'clip' }}
+      critical
+    />
+  )
+
+const EnhancedImage = ({ src }) =>
+  src && (
+    <ImgixImage
+      src={src}
+      imgixParams={{ fit: 'clip' }}
+      critical
+      sx={{
+        height: 100,
+        width: '100%',
+        marginBottom: -7.5
+      }}
+    />
+  )
+
+const topComponentMargin = ({ productSrc, enhancedSrc }) =>
+  productSrc && !enhancedSrc ? '25px' : null
+
 const StandardP0Ad: React.FC<Props> = ({
   title,
   imgSrc,
@@ -38,16 +88,24 @@ const StandardP0Ad: React.FC<Props> = ({
   informationDetails,
   usp,
   href,
-  target
-}) => {
-  return (
+  target,
+  sponsorSrc,
+  award,
+  enhancedImgSrc
+}) => (
+  <div
+    sx={{
+      marginTop: () => topComponentMargin(imgSrc, enhancedImgSrc)
+    }}
+  >
+    <EnhancedImage src={enhancedImgSrc} />
+
     <Container
       sx={{
         borderWidth: 1,
         borderStyle: 'solid',
         borderColor: 'grey-30',
-        paddingTop: 'xs',
-        paddingBottom: 'xs'
+        paddingTop: 'xs'
       }}
     >
       <div
@@ -56,45 +114,20 @@ const StandardP0Ad: React.FC<Props> = ({
           justifyContent: 'space-between'
         }}
       >
-        <ImgixImage
-          sx={{
-            width: 59,
-            height: 100,
-            marginBottom: 'xs',
-            marginTop: '-25px'
-          }}
-          alt={imgAlt}
-          src={imgSrc}
-          imgixParams={{ fit: 'clip' }}
-          critical
-        />
+        <ProductImage src={imgSrc} alt={imgAlt} />
+
         <div
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            marginX: 'xs',
-            width: '100%'
+            fontFamily: 'heading',
+            fontWeight: 'bold',
+            marginTop: 'xs',
+            width: '100%',
+            marginX: 'xs'
           }}
         >
-          <div
-            sx={{
-              fontSize: 'xxs',
-              color: 'grey-60'
-            }}
-          >
-            Sponsored
-          </div>
-
-          <div
-            sx={{
-              fontFamily: 'heading',
-              fontWeight: 'bold',
-              marginTop: 'xs'
-            }}
-          >
-            {title}
-          </div>
+          {title}
         </div>
+
         <ButtonLink
           variant="primary"
           href={href}
@@ -120,13 +153,23 @@ const StandardP0Ad: React.FC<Props> = ({
         </ButtonLink>
       </div>
 
-      <Row direction="row" cols={[2]}>
-        <InformationBlocks details={informationDetails} />
-      </Row>
+      <div
+        sx={{
+          width: ['100%']
+        }}
+      >
+        <Row direction="row" cols={[2]}>
+          <InformationBlocks details={informationDetails} />
+        </Row>
 
-      <UspTag usp={usp} />
+        <Stack spacing={[8]}>
+          <UspTag usp={usp} />
+          <AwardsTag award={award} />
+          <SponsoredByTag providerLogoSrc={sponsorSrc} />
+        </Stack>
+      </div>
     </Container>
-  )
-}
+  </div>
+)
 
 export default StandardP0Ad
