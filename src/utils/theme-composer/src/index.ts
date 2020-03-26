@@ -47,11 +47,7 @@ const composeTheme = (
         return {
           ...obj,
           ...{
-            [console.log(
-              'name',
-              packageName.replace('@uswitch/trustyle.', '')
-            ) ||
-            packageName.replace('@uswitch/trustyle.', '')]: componentThemes[
+            [packageName.replace('@uswitch/trustyle.', '')]: componentThemes[
               packageName
             ]
           }
