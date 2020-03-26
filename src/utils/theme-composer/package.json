@@ -10,7 +10,8 @@
   "scripts": {
     "--------------- BUILDING": "----------------------",
     "clean": "rm -rf lib",
-    "build": "npm run clean && tsc"
+    "build": "npm run clean && tsc",
+    "build-themes": "ts-node src/build"
   },
   "dependencies": {
     "@uswitch/trustyle.badge": "^1.0.0"
