@@ -16,7 +16,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   imgSrc: string
   imgAlt: string
-  informationDetails: object[]
+  informationDetails: Detail[]
   usp: string
   href: string
   target: string
@@ -32,56 +32,66 @@ interface Detail {
   label: string
 }
 
-interface Arg {
+interface InformationBlocksProps {
   details: Detail[]
 }
 
-const InformationBlocks = ({ details }: Arg) =>
-  details.map((obj, index) => (
-    <Col span={[6]} key={`infoblock-${index}`}>
-      <PrimaryInfoBlock
-        prefix={obj.prefix}
-        value={obj.value}
-        suffix={obj.suffix}
-        label={obj.label}
+const InformationBlocks: React.FC<InformationBlocksProps> = ({ details }) => (
+  <React.Fragment>
+    {details.map((obj, index) => (
+      <Col span={[6]} key={`infoblock-${index}`}>
+        <PrimaryInfoBlock
+          prefix={obj.prefix}
+          value={obj.value}
+          suffix={obj.suffix}
+          label={obj.label}
+        />
+      </Col>
+    ))}
+  </React.Fragment>
+)
+
+const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
+  <React.Fragment>
+    {src && (
+      <ImgixImage
+        sx={{
+          width: [59, 44],
+          height: [100, 85],
+          marginBottom: ['xs', 'none'],
+          marginTop: ['-25px', 0]
+        }}
+        alt={alt}
+        src={src}
+        imgixParams={{ fit: 'clip' }}
+        critical
       />
-    </Col>
-  ))
+    )}
+  </React.Fragment>
+)
 
-const ProductImage = ({ src, alt }) =>
-  src && (
-    <ImgixImage
-      sx={{
-        width: 59,
-        height: 100,
-        marginBottom: 'xs',
-        marginTop: '-25px'
-      }}
-      alt={alt}
-      src={src}
-      imgixParams={{ fit: 'clip' }}
-      critical
-    />
-  )
+const EnhancedImage = ({ src }: { src: string }) => (
+  <React.Fragment>
+    {src && (
+      <ImgixImage
+        src={src}
+        imgixParams={{ fit: 'clip' }}
+        critical
+        sx={{
+          height: 100,
+          width: '100%',
+          marginBottom: -7.5,
+          display: ['block', 'none']
+        }}
+      />
+    )}
+  </React.Fragment>
+)
 
-const EnhancedImage = ({ src }) =>
-  src && (
-    <ImgixImage
-      src={src}
-      imgixParams={{ fit: 'clip' }}
-      critical
-      sx={{
-        height: 100,
-        width: '100%',
-        marginBottom: -7.5
-      }}
-    />
-  )
-
-const topComponentMargin = ({ productSrc, enhancedSrc }) =>
+const topComponentMargin = (productSrc: string, enhancedSrc: string) =>
   productSrc && !enhancedSrc ? '25px' : null
 
-const StandardP0Ad: React.FC<Props> = ({
+const DealP0Ad: React.FC<Props> = ({
   title,
   imgSrc,
   imgAlt,
@@ -121,8 +131,9 @@ const StandardP0Ad: React.FC<Props> = ({
             fontFamily: 'heading',
             fontWeight: 'bold',
             marginTop: 'xs',
-            width: '100%',
-            marginX: 'xs'
+            width: ['100%', '50%'],
+            marginX: 'xs',
+            textAlign: ['none', 'right']
           }}
         >
           {title}
@@ -136,7 +147,7 @@ const StandardP0Ad: React.FC<Props> = ({
             padding: 0,
             width: 32,
             marginBottom: 'xs',
-            display: 'flex',
+            display: ['flex', 'none'],
             justifyContent: 'center',
             alignItems: 'center'
           }}
@@ -155,7 +166,7 @@ const StandardP0Ad: React.FC<Props> = ({
 
       <div
         sx={{
-          width: ['100%']
+          width: ['100%', '50%']
         }}
       >
         <Row direction="row" cols={[2]}>
@@ -164,12 +175,14 @@ const StandardP0Ad: React.FC<Props> = ({
 
         <Stack spacing={[8]}>
           <UspTag usp={usp} />
-          <AwardsTag award={award} />
-          <SponsoredByTag providerLogoSrc={sponsorSrc} />
+          <div sx={{ display: ['block', 'none'] }}>
+            <AwardsTag award={award} />
+            <SponsoredByTag providerLogoSrc={sponsorSrc} />
+          </div>
         </Stack>
       </div>
     </Container>
   </div>
 )
 
-export default StandardP0Ad
+export default DealP0Ad

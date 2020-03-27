@@ -3,10 +3,10 @@ import * as React from 'react'
 import { jsx } from '@emotion/core'
 import { text } from '@storybook/addon-knobs'
 
-import StandardP0Ad from '.'
+import DealP0Ad from '.'
 
 export default {
-  title: 'Compounds|ad-standard-p0'
+  title: 'Compounds|Deal-led-p0-ad'
 }
 
 export const ExampleWithKnobs = () => {
@@ -30,7 +30,7 @@ export const ExampleWithKnobs = () => {
   )
 
   return (
-    <StandardP0Ad
+    <DealP0Ad
       title={title}
       imgSrc={imgSrc}
       imgAlt={imgAlt}
