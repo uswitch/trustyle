@@ -14,7 +14,7 @@
     "build-themes": "ts-node src/build",
     "--------------- TESTING": "----------------------",
     "test": "npm run test:money",
-    "test:money": "node --experimental-modules scripts/validate-themes.mjs theme.schema.json lib/money-theme.json"
+    "test:money": "npm run build-themes; node --experimental-modules scripts/validate-themes.mjs theme.schema.json lib/money-theme.json"
   },
   "dependencies": {
     "@uswitch/trustyle.uswitch-theme": "^0.8.4"

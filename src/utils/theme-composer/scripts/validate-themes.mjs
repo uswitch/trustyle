@@ -41,11 +41,11 @@ const updateSchema = ({ required = [], ...subSchema }, components) => ({
 
 const schema = jsonRead(schemaPath)
 
-const elements = dirRead('../src/elements')
-const compounds = dirRead('../src/compounds')
+// const elements = dirRead('../src/elements')
+// const compounds = dirRead('../src/compounds')
 
-schema.properties.elements = updateSchema(schema.properties.elements, elements)
-schema.properties.compounds = updateSchema(schema.properties.compounds, compounds)
+// schema.properties.elements = updateSchema(schema.properties.elements, elements)
+// schema.properties.compounds = updateSchema(schema.properties.compounds, compounds)
 
 const validate = ajv.compile(schema)
 
