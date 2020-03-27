@@ -1,0 +1,171 @@
+{
+  "name": "Money",
+
+  "breakpoints": ["768px", "990px"],
+
+  "zIndices": {
+    "min": 0,
+    "max": 100
+  },
+
+  "shadows": {
+    "box": "2px 2px 25px #0004",
+    "linkInset": "inset 0 0 0 1px #008fe9"
+  },
+
+  "fonts": {
+    "base": "'Open Sans', -apple-system, sans-serif",
+    "body": "'Open Sans', -apple-system, sans-serif",
+    "heading": "Nunito, -apple-system, sans-serif",
+    "monospace": "Menlo, monospace",
+    "link": "'Open Sans', -apple-system, sans-serif"
+  },
+
+  "lineHeights": {
+    "base": "1.5",
+    "heading": "1.2"
+  },
+
+  "fontSizes": {
+    "base": 16,
+    "xxs": 12,
+    "xs": 14,
+    "sm": 16,
+    "md": 18,
+    "lg": 20,
+    "xl": 24,
+    "xxl": 30,
+    "xxxl": 36
+  },
+
+  "fontWeights": {
+    "base": 400,
+    "light": 300,
+    "bold": 600
+  },
+
+  "space": {
+    "gutter": 16,
+    "base": 16,
+    "xxs": 4,
+    "xs": 8,
+    "sm": 16,
+    "md": 24,
+    "lg": 32,
+    "xl": 48,
+    "xxl": 64,
+    "xxxl": 96
+  },
+
+  "sizes": {
+    "grid": {
+      "lg-docs": "// 84 + 16 gutter up to 12 columns",
+      "lg": {
+        "1": 82,
+        "2": 180,
+        "3": 278,
+        "4": 376,
+        "5": 474,
+        "6": 572,
+        "7": 670,
+        "8": 768,
+        "9": 866,
+        "10": 964,
+        "11": 1062,
+        "12": 1160
+      },
+      "md-docs": "// 64 + 16 gutter up to 12 columns",
+      "md": {
+        "1": 64,
+        "2": 144,
+        "3": 224,
+        "4": 304,
+        "5": 384,
+        "6": 464,
+        "7": 544,
+        "8": 624,
+        "9": 704,
+        "10": 784,
+        "11": 864,
+        "12": 944
+      },
+      "sm-docs": "// 58 + 16 gutter up to 12 columns",
+      "sm": {
+        "1": 58,
+        "2": 132,
+        "3": 206,
+        "4": 280
+      }
+    },
+    "hero": { "width": 1024 },
+    "label": { "width": 280 },
+    "input": { "height": 58 },
+    "button": { "width": 264 },
+    "footer": { "width": 576 }
+  },
+
+  "useCustomProperties": false,
+
+  "useBodyStyles": false,
+
+  "colors": {
+    "text": "#4c4c4c",
+    "sunshine": "#FEC340",
+    "burnt": "#FAA73F",
+    "jaffa": "#F4793B",
+    "fuschia": "#DB4D75",
+    "berry": "#A64470",
+    "plum": "#924A8B",
+
+    "grey-0": "#FFFFFF",
+    "grey-05": "#F7F7F7",
+    "grey-10": "#F2F2F3",
+    "grey-20": "#DFDFE1",
+    "grey-30": "#C2C4C8",
+    "grey-40": "#ADAFB3",
+    "grey-50": "#A0A2A6",
+    "grey-60": "#6D6F73",
+    "grey-70": "#393B3F",
+    "grey-80": "#24262A",
+    "grey-90": "#111317",
+    "grey-100": "#000000",
+
+    "primary": "#FEC340",
+    "primary--dark": "#F8B31B",
+    "secondary": "#924A8B",
+    "secondary--dark": "#7A3E74",
+
+    "experimental-text": "#29335C",
+    "button-secondary": "#34454E",
+    "button-secondary--hover": "#5D6A72",
+    "button-hollow--hover": "#FFF6E2"
+  },
+
+  "radii": {
+    "sm": 3,
+    "md": 6,
+    "lg": 16,
+    "xl": 30
+  },
+
+  "srOnly": {
+    "position": "absolute",
+    "width": 1,
+    "height": 1,
+    "padding": 0,
+    "margin": -1,
+    "overflow": "hidden",
+    "clip": "rect(0, 0, 0, 0)",
+    "border": 0
+  },
+
+  "grid": {
+    "sizes": {
+      "gutter": "xs",
+      "verticalGutter": "sm"
+    },
+    "container": {
+      "maxWidth": 1152
+    }
+  }
+}

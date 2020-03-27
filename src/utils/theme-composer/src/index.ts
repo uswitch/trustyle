@@ -3,28 +3,36 @@
 // Constants
 const ELEMENT = 'ELEMENT'
 const COMPOUND = 'COMPOUND'
-// const THEME = 'THEME'
+const TOKENS = 'TOKENS'
 
 // if we rename packages to include category we can remove these mappings
 const elements: any = ['@uswitch/trustyle.badge']
 const compounds = []
 
-const getPath = ({ brand, nodeModulesPath, packageName }) =>
-  `${nodeModulesPath}/${packageName}/lib/themes/${brand}.js`
+const getPath = ({ type, brand, nodeModulesPath, packageName }) =>
+  type === TOKENS
+    ? `${nodeModulesPath}/${packageName}/theme.json`
+    : `${nodeModulesPath}/${packageName}/lib/themes/${brand}.js`
 
 // if available require and map in themes from each component
 const getThemePartials = options => {
-  const { packageNames } = options
+  const { packageNames, type } = options
 
   return packageNames.reduce((obj, packageName) => {
     try {
-      return {
-        ...obj,
-        [packageName.replace('@uswitch/trustyle.', '')]: require(getPath({
+      const module = require(
+        getPath({
           ...options,
           packageName
-        })).default
-      }
+        }
+      ))
+
+      return type === TOKENS 
+        ? module 
+        : {
+          ...obj,
+          [packageName.replace('@uswitch/trustyle.', '')]: module.default
+        }
     } catch (e) {
       console.error(e)
       return obj
@@ -33,7 +41,7 @@ const getThemePartials = options => {
 }
 
 const composeTheme = options => {
-  const { tokens, packageJson, dependencyType } = options
+  const { packageJson, dependencyType } = options
   // get list of dependencies
   const packages = packageJson[dependencyType]
 
@@ -42,10 +50,14 @@ const composeTheme = options => {
     .filter(dep => dep.match('@uswitch/trustyle'))
     .filter(dep => !dep.includes('-utils'))
 
-  // const themePackageNames = trustylePackageNames.filter(name => name.includes('theme'))
+  const tokensPackageNames = trustylePackageNames.filter(
+    name => name.includes('theme')
+  )
+  
   const componentPackageNames = trustylePackageNames.filter(
     name => !name.includes('theme')
   )
+
   const elementPackageNames = componentPackageNames.filter(name =>
     elements.includes(name)
   )
@@ -55,18 +67,22 @@ const composeTheme = options => {
 
   // build theme
   const theme = {
-    ...tokens,
+    ...getThemePartials({
+      ...options,
+      type: TOKENS,
+      packageNames: tokensPackageNames
+    }),
     '----------------------------- Variants':
       '--------------------------------',
     elements: getThemePartials({
       ...options,
-      packageNames: elementPackageNames,
-      type: ELEMENT
+      type: ELEMENT,
+      packageNames: elementPackageNames
     }),
     compounds: getThemePartials({
       ...options,
-      packageNames: compoundPackageNames,
-      type: COMPOUND
+      type: COMPOUND,
+      packageNames: compoundPackageNames
     })
   }
 
