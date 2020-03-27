@@ -20,7 +20,8 @@ const IconTile: React.FC<Props> = ({ icon, children }) => {
         textAlign: 'center',
         borderRadius: 8,
         color: 'grey-100',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        variant: 'iconTile.main'
       }}
     >
       <div
@@ -33,7 +34,9 @@ const IconTile: React.FC<Props> = ({ icon, children }) => {
       >
         {icon}
       </div>
-      <Styled.p sx={{ fontSize: 'md', marginY: 0 }}>{children}</Styled.p>
+      <Styled.p sx={{ fontSize: 'md', marginY: 0, variant: 'iconTile.text' }}>
+        {children}
+      </Styled.p>
     </div>
   )
 }
