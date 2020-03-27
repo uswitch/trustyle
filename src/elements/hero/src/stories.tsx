@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
-import { boolean, number, select, text } from '@storybook/addon-knobs'
+import { boolean, select, text } from '@storybook/addon-knobs'
 
 import Breadcrumbs from '../../breadcrumbs/src'
 import { Button } from '../../button/src'
+import { Col, Container, Row } from '../../../layout/flex-grid/src'
 
 import Hero from './'
 
@@ -62,7 +63,6 @@ export const ExampleWithKnobs = () => {
     variants,
     'base'
   ) as Variant
-  const contentWidth = number('Content width', 45)
   const headline = text(
     'Headline',
     'Short snappy headline that runs over two lines'
@@ -86,22 +86,26 @@ export const ExampleWithKnobs = () => {
   return (
     <div sx={{ margin: -10 }}>
       <Hero
-        contentWidth={contentWidth}
+        container={Container}
         fgImage={fgImage.img}
         fgImagePosition={fgImage.position}
         fgImageOnMobile={imageOnMobile}
         breadcrumbs={breadcrumbs}
       >
-        <Styled.h1>{headline}</Styled.h1>
-        <div sx={{ backgroundColor: 'white', padding: 20 }}>
-          <Styled.p sx={{ marginTop: 0 }}>
-            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used
-            in laying out print, graphic or web designs.
-          </Styled.p>
-          <div sx={{ button: { width: 'auto' } }}>
-            <Button variant="primary">Optional CTA</Button>
-          </div>
-        </div>
+        <Row>
+          <Col span={[12, 5]}>
+            <Styled.h1 sx={{ marginTop: 0 }}>{headline}</Styled.h1>
+            <div sx={{ backgroundColor: 'white', padding: 20 }}>
+              <Styled.p sx={{ marginTop: 0 }}>
+                Lorem ipsum, or lipsum as it is sometimes known, is dummy text
+                used in laying out print, graphic or web designs.
+              </Styled.p>
+              <div sx={{ button: { width: 'auto' } }}>
+                <Button variant="primary">Optional CTA</Button>
+              </div>
+            </div>
+          </Col>
+        </Row>
       </Hero>
     </div>
   )

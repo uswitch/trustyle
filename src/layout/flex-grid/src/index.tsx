@@ -3,18 +3,24 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-const getSpaceValue = (key: string) => (theme: any = {}) => theme.space[key]
+const getSpaceValue = (key: string) => (theme: any = {}): number =>
+  theme.space[key]
 
-const getNegativeSpaceValue = (key: string) => (theme: any = {}) =>
+const getNegativeSpaceValue = (key: string) => (theme: any = {}): string =>
   `-${getSpaceValue(key)(theme)}px`
 
-const getGutterSize = (theme: any) => theme?.grid?.sizes?.gutter
+const getGutterSize = (theme: any): string => theme?.grid?.sizes?.gutter
 
-const getVerticalGutterSize = (theme: any) => theme?.grid?.sizes?.verticalGutter
+const getVerticalGutterSize = (theme: any): string | number =>
+  theme?.grid?.sizes?.verticalGutter
 
-const getContainerSize = (theme: any) => theme?.grid?.container?.maxWidth
+const getContainerSize = (theme: any): number =>
+  theme?.grid?.container?.maxWidth
 
-const mediaQueryFunction = (data: any, fn: any) => {
+const mediaQueryFunction = (
+  data: number | number[],
+  fn: (colValue: number, index: number) => string
+): string | string[] => {
   if (Array.isArray(data)) {
     return data.map(fn)
   }
@@ -22,11 +28,8 @@ const mediaQueryFunction = (data: any, fn: any) => {
 }
 
 interface ContainerProps {
-  children: any
-  className?: string
-  variant?: string
-  cols?: any
-  span?: any
+  cols?: number
+  span?: number
 }
 
 export const Container: React.FC<ContainerProps> = ({
@@ -54,11 +57,8 @@ export const Container: React.FC<ContainerProps> = ({
 }
 
 interface RowProps {
-  children: any
-  cols?: any
+  cols?: number | number[]
   direction?: any
-  className?: string
-  variant?: string
   wrap?: boolean
 }
 
@@ -74,7 +74,7 @@ export const Row: React.FC<RowProps> = ({
     <div
       sx={{
         variant: `grid.row`,
-        mx: (theme: any) => getNegativeSpaceValue(getGutterSize(theme)),
+        mx: (theme: any): any => getNegativeSpaceValue(getGutterSize(theme)),
         display: 'flex',
         flexDirection: direction,
         flexWrap: wrap ? 'wrap' : 'nowrap',
@@ -83,18 +83,19 @@ export const Row: React.FC<RowProps> = ({
       }}
       {...props}
     >
-      {childrenArray.map((child: any) => React.cloneElement(child, { cols }))}
+      {childrenArray.map((child: React.ReactNode) =>
+        React.isValidElement(child)
+          ? React.cloneElement(child, { cols })
+          : child
+      )}
     </div>
   )
 }
 
 interface ColProps {
-  children: any
-  cols?: number
-  className?: string
-  span?: any
-  sx?: any
-  offset?: any
+  cols?: number | number[]
+  span?: number | number[]
+  offset?: number | number[]
 }
 
 export const Col: React.FC<ColProps> = ({
@@ -102,9 +103,16 @@ export const Col: React.FC<ColProps> = ({
   cols = 12,
   span,
   offset,
-  sx = {},
   ...props
 }) => {
+  if (Array.isArray(span) && !Array.isArray(cols)) {
+    const colsNumber = cols
+    cols = []
+    for (let i = 0; i < span.length; i++) {
+      cols.push(colsNumber)
+    }
+  }
+
   return (
     <div
       sx={{
@@ -118,7 +126,7 @@ export const Col: React.FC<ColProps> = ({
         ...(span
           ? {
               width: (theme: any) =>
-                mediaQueryFunction(cols, (colValue: number, index: number) => {
+                mediaQueryFunction(cols, (colValue, index) => {
                   return `calc(${((Array.isArray(span) ? span[index] : span) /
                     colValue) *
                     100}% - ${getSpaceValue(getGutterSize(theme))(theme) *
@@ -129,16 +137,15 @@ export const Col: React.FC<ColProps> = ({
         ...(offset
           ? {
               ml: (theme: any) =>
-                mediaQueryFunction(
-                  cols,
-                  (colValue: number, index: number) =>
-                    `calc(${((Array.isArray(offset) ? offset[index] : offset) /
-                      colValue) *
-                      100}% + ${getSpaceValue(getGutterSize(theme))(theme)}px)`
-                )
+                mediaQueryFunction(cols, (colValue, index) => {
+                  return `calc(${((Array.isArray(offset)
+                    ? offset[index]
+                    : offset) /
+                    colValue) *
+                    100}% + ${getSpaceValue(getGutterSize(theme))(theme)}px)`
+                })
             }
-          : { ml: getGutterSize }),
-        ...sx
+          : { ml: getGutterSize })
       }}
       {...props}
     >
