@@ -16,9 +16,7 @@
     "test": "npm run test:money",
     "test:money": "npm run build-themes; node --experimental-modules scripts/validate-themes.mjs theme.schema.json lib/money-theme.json"
   },
-  "dependencies": {
-    "@uswitch/trustyle.uswitch-theme": "^0.8.4"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@uswitch/trustyle.badge": "^1.0.0",
     "ts-node": "^8.8.1"

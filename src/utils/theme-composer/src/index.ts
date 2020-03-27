@@ -70,12 +70,7 @@ const composeTheme = options => {
     })
   }
 
-  console.log(
-    JSON.stringify({
-      elements: theme.elements,
-      compounds: theme.compounds
-    })
-  )
+  console.log(JSON.stringify(theme))
 
   // return JSON
   return JSON.stringify(theme)
