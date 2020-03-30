@@ -1,4 +1,5 @@
 // @ts-nocheck
+/* eslint-disable @typescript-eslint/no-var-requires */
 
 // Constants
 const ELEMENT = 'ELEMENT'
@@ -6,7 +7,7 @@ const COMPOUND = 'COMPOUND'
 const TOKENS = 'TOKENS'
 
 // if we rename packages to include category we can remove these mappings
-const elements: any = ['@uswitch/trustyle.badge']
+const elements = ['@uswitch/trustyle.accordion', '@uswitch/trustyle.badge']
 const compounds = []
 
 const getPath = ({ type, brand, nodeModulesPath, packageName }) =>
@@ -20,19 +21,17 @@ const getThemePartials = options => {
 
   return packageNames.reduce((obj, packageName) => {
     try {
-      const module = require(
-        getPath({
-          ...options,
-          packageName
-        }
-      ))
+      const module = require(getPath({
+        ...options,
+        packageName
+      }))
 
-      return type === TOKENS 
-        ? module 
+      return type === TOKENS
+        ? module
         : {
-          ...obj,
-          [packageName.replace('@uswitch/trustyle.', '')]: module.default
-        }
+            ...obj,
+            [packageName.replace('@uswitch/trustyle.', '')]: module.default
+          }
     } catch (e) {
       console.error(e)
       return obj
@@ -41,7 +40,7 @@ const getThemePartials = options => {
 }
 
 const composeTheme = options => {
-  const { packageJson, dependencyType } = options
+  const { packageJson, dependencyType = 'dependencies' } = options
   // get list of dependencies
   const packages = packageJson[dependencyType]
 
@@ -50,10 +49,10 @@ const composeTheme = options => {
     .filter(dep => dep.match('@uswitch/trustyle'))
     .filter(dep => !dep.includes('-utils'))
 
-  const tokensPackageNames = trustylePackageNames.filter(
-    name => name.includes('theme')
+  const tokensPackageNames = trustylePackageNames.filter(name =>
+    name.includes('theme')
   )
-  
+
   const componentPackageNames = trustylePackageNames.filter(
     name => !name.includes('theme')
   )
@@ -61,6 +60,7 @@ const composeTheme = options => {
   const elementPackageNames = componentPackageNames.filter(name =>
     elements.includes(name)
   )
+
   const compoundPackageNames = componentPackageNames.filter(name =>
     compounds.includes(name)
   )
@@ -93,3 +93,11 @@ const composeTheme = options => {
 }
 
 export default composeTheme
+
+export const getComponentThemeConfig = ({ name, themes }) =>
+  !name || !themes || !themes.length
+    ? new Error('name and themes required')
+    : {
+        name,
+        themes
+      }
