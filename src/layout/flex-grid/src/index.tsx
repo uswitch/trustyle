@@ -44,7 +44,7 @@ export const Container: React.FC<ContainerProps> = ({
         mx: 'auto',
         px: getGutterSize,
         maxWidth: (theme: any) =>
-          []
+          ([] as number[])
             .concat(getContainerSize(theme))
             .map(
               maxWidth =>
