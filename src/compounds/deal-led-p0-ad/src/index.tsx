@@ -8,6 +8,7 @@ import PrimaryInfoBlock from '@uswitch/trustyle.primary-info-block'
 import UspTag from '@uswitch/trustyle.usp-tag'
 import SponsoredByTag from '@uswitch/trustyle.sponsored-by-tag'
 import AwardsTag from '@uswitch/trustyle.awards-tag'
+import Badge from '@uswitch/trustyle.badge'
 import { Stack } from '@uswitch/trustyle.arrangement'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
@@ -39,7 +40,7 @@ interface InformationBlocksProps {
 const InformationBlocks: React.FC<InformationBlocksProps> = ({ details }) => (
   <React.Fragment>
     {details.map((obj, index) => (
-      <Col span={[6]} key={`infoblock-${index}`}>
+      <Col span={[6]} key={`infoblock-${index}`} sx={{ marginRight: 0 }}>
         <PrimaryInfoBlock
           prefix={obj.prefix}
           value={obj.value}
@@ -56,9 +57,9 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
     {src && (
       <ImgixImage
         sx={{
-          maxHeight: [100, 85],
+          height: [100, 85],
           marginBottom: ['xs', 'none'],
-          marginTop: ['-25px', 0]
+          marginTop: ['-36px', 0]
         }}
         alt={alt}
         src={src}
@@ -111,6 +112,15 @@ const DealP0Ad: React.FC<Props> = ({
     }}
   >
     <EnhancedImage src={enhancedImgSrc} />
+
+    <span
+      sx={{
+        display: ['none', 'inline-block'],
+        marginBottom: 'sm'
+      }}
+    >
+      <Badge>Sponsored</Badge>
+    </span>
 
     <Container
       sx={{
@@ -243,15 +253,14 @@ const DealP0Ad: React.FC<Props> = ({
           sx={{
             fontFamily: 'heading',
             fontWeight: 'bold',
-            marginY: ['xs', 0],
-            marginX: ['xs', 0],
+            marginBottom: 'sm',
             display: ['none', 'block']
           }}
         >
           {title}
         </div>
 
-        <Row direction="row" cols={[2]}>
+        <Row direction="row" cols={[2]} sx={{ marginBottom: 'sm' }}>
           <InformationBlocks details={informationDetails} />
         </Row>
 
