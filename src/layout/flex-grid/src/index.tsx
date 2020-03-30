@@ -44,10 +44,15 @@ export const Container: React.FC<ContainerProps> = ({
         mx: 'auto',
         px: getGutterSize,
         maxWidth: (theme: any) =>
-          `calc(${getContainerSize(theme) *
-            (cols && span ? span / cols : 1)}px - ${getSpaceValue('sm')(
-            theme
-          )}px)`
+          []
+            .concat(getContainerSize(theme))
+            .map(
+              maxWidth =>
+                `calc(${maxWidth *
+                  (cols && span ? span / cols : 1)}px - ${getSpaceValue('sm')(
+                  theme
+                )}px)`
+            )
       }}
       {...props}
     >
