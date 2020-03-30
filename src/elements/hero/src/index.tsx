@@ -3,14 +3,25 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
+type ArrayOrNot<T> = T | T[]
+
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   breadcrumbs?: React.ReactNode
   container?: React.FC<any>
   fgImage?: string
-  fgImagePosition?: {
-    backgroundSize: (string | number)[] | string | number
-    backgroundPosition: (string | number)[] | string | number
-  }
+  fgImageType?: 'background' | 'img'
+  fgImagePosition?:
+    | {
+        backgroundSize: ArrayOrNot<string | number>
+        backgroundPosition: ArrayOrNot<string | number>
+      }
+    | {
+        left?: ArrayOrNot<string | number>
+        top?: ArrayOrNot<string | number>
+        right?: ArrayOrNot<string | number>
+        bottom?: ArrayOrNot<string | number>
+        transform?: ArrayOrNot<string>
+      }
   fgImageOnMobile?: boolean
 }
 
@@ -22,12 +33,15 @@ const Hero: React.FC<Props> = ({
   breadcrumbs,
   container: Container = DefaultContainer,
   fgImage,
+  fgImageType = 'background',
   fgImagePosition,
   fgImageOnMobile = true,
   children
 }) => {
   return (
-    <div sx={{ position: 'relative', variant: 'hero.wrapper' }}>
+    <div
+      sx={{ position: 'relative', overflow: 'hidden', variant: 'hero.wrapper' }}
+    >
       <Container>
         {breadcrumbs && (
           <div sx={{ paddingTop: 'sm', variant: 'hero.breadcrumbs' }}>
@@ -49,11 +63,27 @@ const Hero: React.FC<Props> = ({
               top: 0,
               bottom: 0,
               display: fgImageOnMobile ? 'block' : ['none', 'block'],
-              backgroundImage: `url(${fgImage})`,
-              backgroundRepeat: 'no-repeat',
-              ...fgImagePosition
+              ...(fgImageType === 'background'
+                ? {
+                    backgroundImage: `url(${fgImage})`,
+                    backgroundRepeat: 'no-repeat',
+                    ...fgImagePosition
+                  }
+                : undefined)
             }}
-          ></div>
+          >
+            {fgImageType === 'img' && (
+              <img
+                sx={{
+                  maxWidth: '100%',
+                  position: 'absolute',
+                  ...fgImagePosition
+                }}
+                src={fgImage}
+                role="presentation"
+              />
+            )}
+          </div>
           <div
             sx={{
               position: 'relative',
