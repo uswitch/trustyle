@@ -56,8 +56,7 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
     {src && (
       <ImgixImage
         sx={{
-          width: [59, 44],
-          height: [100, 85],
+          maxHeight: [100, 85],
           marginBottom: ['xs', 'none'],
           marginTop: ['-25px', 0]
         }}
@@ -78,7 +77,7 @@ const EnhancedImage = ({ src }: { src: string }) => (
         imgixParams={{ fit: 'clip' }}
         critical
         sx={{
-          height: 100,
+          height: 97,
           width: '100%',
           marginBottom: -7.5,
           display: ['block', 'none']
@@ -105,6 +104,9 @@ const DealP0Ad: React.FC<Props> = ({
 }) => (
   <div
     sx={{
+      borderWidth: [1, 'none'],
+      borderStyle: ['solid', 'none'],
+      borderColor: ['grey-30', 'none'],
       marginTop: () => topComponentMargin(imgSrc, enhancedImgSrc)
     }}
   >
@@ -112,28 +114,94 @@ const DealP0Ad: React.FC<Props> = ({
 
     <Container
       sx={{
-        borderWidth: 1,
-        borderStyle: 'solid',
-        borderColor: 'grey-30',
-        paddingTop: 'xs'
+        paddingX: ['xs', 'sm'],
+        paddingBottom: ['none', 'sm'],
+        display: [null, 'flex'],
+        boxShadow: ['none', '10px 10px rgba(20, 20, 36, 0.15)']
       }}
     >
       <div
         sx={{
-          display: 'flex',
-          justifyContent: 'space-between'
+          display: ['flex', 'grid'],
+          width: [null, '50%'],
+          position: [null, 'relative']
         }}
       >
-        <ProductImage src={imgSrc} alt={imgAlt} />
+        <span
+          sx={{
+            position: [null, 'relative']
+          }}
+        >
+          <ProductImage src={imgSrc} alt={imgAlt} />
+        </span>
+
+        <ImgixImage
+          src={sponsorSrc}
+          imgixParams={{ fit: 'clip' }}
+          critical
+          sx={{
+            height: 28,
+            backgroundColor: 'blue-25',
+            display: ['none', 'inline-block'],
+            position: [null, 'absolute'],
+            top: [null, 65],
+            left: [null, 25]
+          }}
+        />
+
+        <div
+          sx={{
+            width: 130,
+            height: 58,
+            display: ['none', 'flex'],
+            alignItems: 'center'
+          }}
+        >
+          <svg
+            height="58"
+            viewBox="0 0 22 23"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M-0.000966623 8.09716L8.05078 22.1208L21.9964 14.024L13.9447 0.000335086L-0.000966623 8.09716Z"
+              fill="#ACAAFF"
+            />
+            <path
+              d="M13.9475 22.1206L21.9993 8.09692L8.05364 9.82571e-05L0.00188873 14.0238L13.9475 22.1206Z"
+              fill="#7ED2E9"
+            />
+            <path
+              d="M19.0498 2.96484H2.94629V19.1585H19.0498V2.96484Z"
+              fill="#141423"
+            />
+            <path
+              d="M6.30542 12.1831V5.34229H8.37293V12.2014C8.37293 13.9269 9.30664 14.7439 10.8709 14.7439C12.4352 14.7439 13.3689 13.9269 13.3689 12.2014V5.34229H15.4364V12.1831C15.4364 15.0365 13.672 16.5425 10.8709 16.5425C8.12434 16.5486 6.30542 15.0365 6.30542 12.1831Z"
+              fill="white"
+            />
+          </svg>
+
+          <span
+            sx={{
+              width: 75,
+              lineHeight: 1,
+              fontSize: 'xxs',
+              fontFamily: "'-apple-system', 'BlinkMacSystemFont'"
+            }}
+          >
+            <strong>Uswitch</strong> Manufacturer of the Year
+            <strong> Winner 2020</strong>
+          </span>
+        </div>
 
         <div
           sx={{
             fontFamily: 'heading',
             fontWeight: 'bold',
-            marginTop: 'xs',
-            width: ['100%', '50%'],
+            marginTop: 'sm',
             marginX: 'xs',
-            textAlign: ['none', 'right']
+            display: [null, 'none'],
+            flex: 2
           }}
         >
           {title}
@@ -146,7 +214,8 @@ const DealP0Ad: React.FC<Props> = ({
           sx={{
             padding: 0,
             width: 32,
-            marginBottom: 'xs',
+            height: 48,
+            marginTop: 'sm',
             display: ['flex', 'none'],
             justifyContent: 'center',
             alignItems: 'center'
@@ -166,9 +235,22 @@ const DealP0Ad: React.FC<Props> = ({
 
       <div
         sx={{
-          width: ['100%', '50%']
+          width: ['100%', '50%'],
+          float: ['none', 'right']
         }}
       >
+        <div
+          sx={{
+            fontFamily: 'heading',
+            fontWeight: 'bold',
+            marginY: ['xs', 0],
+            marginX: ['xs', 0],
+            display: ['none', 'block']
+          }}
+        >
+          {title}
+        </div>
+
         <Row direction="row" cols={[2]}>
           <InformationBlocks details={informationDetails} />
         </Row>

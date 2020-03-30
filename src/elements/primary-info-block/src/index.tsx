@@ -76,11 +76,11 @@ const PrimaryInfoBlock: React.FC<Props> = ({
   return (
     <div
       sx={{
-        padding: 'sm',
+        padding: ['sm', 'xs'],
         backgroundColor: 'grey-05',
         display: 'flex',
         alignItems: 'center',
-        height: 84
+        maxHeight: [84, 59]
       }}
     >
       <div>{mainText}</div>
