@@ -6,10 +6,12 @@ import { jsx } from 'theme-ui'
 function getSpaceValue(
   key: string | string[] | number | number[]
 ): (theme: object) => number[]
+
 function getSpaceValue(
   key: string | string[] | number | number[],
   index?: number
 ): (theme: object) => number
+
 function getSpaceValue(key: any, index?: any) {
   return (theme: any = {}): any => {
     const spaceValues = ([] as any[])
@@ -23,10 +25,12 @@ function getSpaceValue(key: any, index?: any) {
 function getNegativeSpaceValue(
   key: string | string[] | number | number[]
 ): (theme: object) => string[]
+
 function getNegativeSpaceValue(
   key: string | string[] | number | number[],
   index?: number
 ): (theme: object) => string
+
 function getNegativeSpaceValue(key: any, index?: any) {
   return (theme: any = {}): any => {
     const spaceValues = ([] as number[])
@@ -38,13 +42,13 @@ function getNegativeSpaceValue(key: any, index?: any) {
 }
 
 const getGutterSize = (theme: any): string | string[] | number | number[] =>
-  theme?.grid?.sizes?.gutter
+  theme?.sizes?.grid?.gutter || theme?.grid?.sizes?.gutter
 
 const getVerticalGutterSize = (theme: any): string | number =>
-  theme?.grid?.sizes?.verticalGutter
+  theme?.sizes?.grid?.verticalGutter || theme?.grid?.sizes?.verticalGutter
 
 const getContainerSize = (theme: any): number | number[] =>
-  theme?.grid?.container?.maxWidth
+  theme?.sizes?.grid?.container?.maxWidth || theme?.grid?.container?.maxWidth
 
 const mediaQueryFunction = (
   data: number | number[],
