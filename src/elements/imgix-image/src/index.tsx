@@ -10,6 +10,8 @@ interface Props extends SharedImigixAndSourceProps {
   className?: string
 }
 
+// lazysizes needed if you require lazyloading
+
 const Image: React.FC<Props> = ({
   alt,
   critical,

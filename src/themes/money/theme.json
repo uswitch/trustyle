@@ -106,6 +106,8 @@
 
   "useCustomProperties": false,
 
+  "useBodyStyles": false,
+
   "colors": {
     "text": "#4c4c4c",
     "sunshine": "#FEC340",
@@ -377,9 +379,11 @@
         "lg": { "maxWidth": "grid.lg.3", "height": 230 }
       },
       "p": { "fontSize": 16, "lineHeight": "130%", "color": "grey-80" },
-      "h3": { "fontSize": 18, "minHeight": 0, "fontWeight": "bold", "color": "experimental-text", "marginBottom": "xs", "marginTop": "xs" },
+      "h3": { "fontSize": 18, "minHeight": 0, "fontWeight": "bold", "color": "experimental-text", "marginBottom": "xs", "marginTop": "0", "a": {
+        "textDecoration": "none"
+      } },
       "content": {
-        "paddingY": 0,
+        "paddingY": "sm",
         "paddingX": ["sm", "sm"]
       },
       "marginRight": "base"
@@ -935,6 +939,11 @@
         "color": "white"
        }
     }
+  },
+
+  "richTextModule": {
+    "contentCols": 12,
+    "contentSpan": 10
   },
 
   "styles": {

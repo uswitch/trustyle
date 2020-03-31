@@ -31,6 +31,25 @@
       "type": "object"
     },
 
+    "ResponsiveReference": {
+      "oneOf": [
+        { "type": "string", "description": "Reference to other size" },
+        { "type": "integer", "description": "Strict integer value" },
+        {
+          "type": "array",
+          "description": "Array of responsive items",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": {
+            "oneOf": [
+              { "type": "string" },
+              { "type": "integer" }
+            ]
+          }
+        }
+      ]
+    },
+
     "Indices": {
       "twelve": {
         "type": "object",
@@ -228,9 +247,13 @@
       "properties": {
         "grid": {
           "type": "object",
-          "required": [ "lg", "md", "sm" ],
+          "required": [ "lg", "md", "sm", "gutter", "verticalGutter", "maxWidth" ],
           "additionalProperties": false,
           "properties": {
+            "verticalGutter": { "oneOf": [ { "type": "string" }, { "type": "integer" } ] },
+            "gutter": { "$ref": "#/definitions/ResponsiveReference" },
+            "maxWidth": { "$ref": "#/definitions/ResponsiveReference" },
+
             "lg-docs": { "type": "string" },
             "md-docs": { "type": "string" },
             "sm-docs": { "type": "string" },
