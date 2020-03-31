@@ -3,19 +3,52 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-const getSpaceValue = (key: string) => (theme: any = {}): number =>
-  theme.space[key]
+function getSpaceValue(
+  key: string | string[] | number | number[]
+): (theme: object) => number[]
 
-const getNegativeSpaceValue = (key: string) => (theme: any = {}): string =>
-  `-${getSpaceValue(key)(theme)}px`
+function getSpaceValue(
+  key: string | string[] | number | number[],
+  index?: number
+): (theme: object) => number
 
-const getGutterSize = (theme: any): string => theme?.grid?.sizes?.gutter
+function getSpaceValue(key: any, index?: any) {
+  return (theme: any = {}): any => {
+    const spaceValues = ([] as any[])
+      .concat(key)
+      .map(it => (typeof it === 'number' ? it : theme.space[it] || 0))
+
+    return index ? spaceValues[index] || spaceValues[0] : spaceValues || 0
+  }
+}
+
+function getNegativeSpaceValue(
+  key: string | string[] | number | number[]
+): (theme: object) => string[]
+
+function getNegativeSpaceValue(
+  key: string | string[] | number | number[],
+  index?: number
+): (theme: object) => string
+
+function getNegativeSpaceValue(key: any, index?: any) {
+  return (theme: any = {}): any => {
+    const spaceValues = ([] as number[])
+      .concat(getSpaceValue(key)(theme))
+      .map(it => `-${it}px`)
+
+    return index ? spaceValues[index] || spaceValues[0] : spaceValues || 0
+  }
+}
+
+const getGutterSize = (theme: any): string | string[] | number | number[] =>
+  theme?.sizes?.grid?.gutter || theme?.grid?.sizes?.gutter
 
 const getVerticalGutterSize = (theme: any): string | number =>
-  theme?.grid?.sizes?.verticalGutter
+  theme?.sizes?.grid?.verticalGutter || theme?.grid?.sizes?.verticalGutter
 
-const getContainerSize = (theme: any): number =>
-  theme?.grid?.container?.maxWidth
+const getContainerSize = (theme: any): number | number[] =>
+  theme?.sizes?.grid?.container?.maxWidth || theme?.grid?.container?.maxWidth
 
 const mediaQueryFunction = (
   data: number | number[],
@@ -46,13 +79,7 @@ export const Container: React.FC<ContainerProps> = ({
         maxWidth: (theme: any) =>
           ([] as number[])
             .concat(getContainerSize(theme))
-            .map(
-              maxWidth =>
-                `calc(${maxWidth *
-                  (cols && span ? span / cols : 1)}px - ${getSpaceValue('sm')(
-                  theme
-                )}px)`
-            )
+            .map(maxWidth => maxWidth * (cols && span ? span / cols : 1))
       }}
       {...props}
     >
@@ -79,7 +106,8 @@ export const Row: React.FC<RowProps> = ({
     <div
       sx={{
         variant: `grid.row`,
-        mx: (theme: any): any => getNegativeSpaceValue(getGutterSize(theme)),
+        mx: (theme: any): any =>
+          getNegativeSpaceValue(getGutterSize(theme))(theme),
         display: 'flex',
         flexDirection: direction,
         flexWrap: wrap ? 'wrap' : 'nowrap',
@@ -134,8 +162,10 @@ export const Col: React.FC<ColProps> = ({
                 mediaQueryFunction(cols, (colValue, index) => {
                   return `calc(${((Array.isArray(span) ? span[index] : span) /
                     colValue) *
-                    100}% - ${getSpaceValue(getGutterSize(theme))(theme) *
-                    2}px)`
+                    100}% - ${getSpaceValue(
+                    getGutterSize(theme),
+                    index
+                  )(theme) * 2}px)`
                 })
             }
           : {}),
@@ -147,7 +177,10 @@ export const Col: React.FC<ColProps> = ({
                     ? offset[index]
                     : offset) /
                     colValue) *
-                    100}% + ${getSpaceValue(getGutterSize(theme))(theme)}px)`
+                    100}% + ${getSpaceValue(
+                    getGutterSize(theme),
+                    index
+                  )(theme)}px)`
                 })
             }
           : { ml: getGutterSize })
