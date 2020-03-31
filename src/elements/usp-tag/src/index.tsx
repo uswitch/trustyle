@@ -11,7 +11,7 @@ const UspTag: React.FC<Props> = ({ usp }) =>
   usp ? (
     <div
       sx={{
-        minHeight: [32, 26],
+        minHeight: 32,
         backgroundColor: 'yellow-25',
         display: 'flex',
         alignItems: 'center',
@@ -19,7 +19,7 @@ const UspTag: React.FC<Props> = ({ usp }) =>
           content: '""',
           display: 'inline-block',
           width: 4,
-          minHeight: [28, 20],
+          minHeight: 28,
           margin: 2,
           backgroundColor: 'yellow'
         }
@@ -29,7 +29,7 @@ const UspTag: React.FC<Props> = ({ usp }) =>
         sx={{
           fontFamily: "'-apple-system', 'BlinkMacSystemFont'",
           fontWeight: 'bold',
-          fontSize: 'xs',
+          fontSize: ['xs', 11],
           color: 'grey-80',
           marginLeft: 'xs'
         }}

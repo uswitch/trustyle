@@ -549,7 +549,16 @@
         "variant": "badge.base",
         "backgroundColor": "uswitch-navy",
         "color": "white"
-       }
+       },
+      "sponsored": {
+        "paddingX": 11,
+        "paddingY": 6,
+        "fontSize": "xxs",
+        "fontWeight": 500,
+        "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
+        "backgroundColor": "uswitch-navy",
+        "color": "white"
+      }
     }
   },
 

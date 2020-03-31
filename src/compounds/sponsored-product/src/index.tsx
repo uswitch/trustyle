@@ -40,7 +40,7 @@ interface InformationBlocksProps {
 const InformationBlocks: React.FC<InformationBlocksProps> = ({ details }) => (
   <React.Fragment>
     {details.map((obj, index) => (
-      <Col span={[6]} key={`infoblock-${index}`} sx={{ marginRight: 0 }}>
+      <Col span={[6]} key={`infoblock-${index}`}>
         <PrimaryInfoBlock
           prefix={obj.prefix}
           value={obj.value}
@@ -57,13 +57,13 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
     {src && (
       <ImgixImage
         sx={{
-          height: [100, 85],
+          maxHeight: [96, 105],
           marginBottom: ['xs', 'none'],
           marginTop: ['-36px', 0]
         }}
         alt={alt}
         src={src}
-        imgixParams={{ fit: 'clip' }}
+        imgixParams={{ fit: 'fit' }}
         critical
       />
     )}
@@ -78,9 +78,8 @@ const EnhancedImage = ({ src }: { src: string }) => (
         imgixParams={{ fit: 'clip' }}
         critical
         sx={{
-          height: 97,
+          height: 96,
           width: '100%',
-          marginBottom: -7.5,
           display: ['block', 'none']
         }}
       />
@@ -89,7 +88,7 @@ const EnhancedImage = ({ src }: { src: string }) => (
 )
 
 const topComponentMargin = (productSrc: string, enhancedSrc: string) =>
-  productSrc && !enhancedSrc ? '25px' : null
+  productSrc && !enhancedSrc ? '36px' : null
 
 const DealP0Ad: React.FC<Props> = ({
   title,
@@ -115,60 +114,62 @@ const DealP0Ad: React.FC<Props> = ({
 
     <span
       sx={{
-        display: ['none', 'inline-block'],
+        display: ['none', 'block'],
         marginBottom: 'sm'
       }}
     >
-      <Badge>Sponsored</Badge>
+      <Badge variant={'sponsored'}>Sponsored</Badge>
     </span>
 
     <Container
       sx={{
         paddingX: ['xs', 'sm'],
-        paddingBottom: ['none', 'sm'],
+        paddingY: ['none', 'sm'],
         display: [null, 'flex'],
-        boxShadow: ['none', '10px 10px rgba(20, 20, 36, 0.15)']
+        boxShadow: ['none', '12px 12px 0px rgba(20, 20, 36, 0.15)']
       }}
     >
       <div
         sx={{
-          display: ['flex', 'grid'],
-          width: [null, '50%'],
-          position: [null, 'relative']
+          display: 'flex',
+          flexDirection: [null, 'column'],
+          flex: [null, '1 0 auto']
         }}
       >
-        <span
+        <div
           sx={{
-            position: [null, 'relative']
+            display: [null, 'flex']
           }}
         >
           <ProductImage src={imgSrc} alt={imgAlt} />
-        </span>
 
-        <ImgixImage
-          src={sponsorSrc}
-          imgixParams={{ fit: 'clip' }}
-          critical
-          sx={{
-            height: 28,
-            backgroundColor: 'blue-25',
-            display: ['none', 'inline-block'],
-            position: [null, 'absolute'],
-            top: [null, 65],
-            left: [null, 25]
-          }}
-        />
+          <ImgixImage
+            src={sponsorSrc}
+            imgixParams={{ fit: 'clip' }}
+            critical
+            sx={{
+              maxHeight: 39,
+              maxWidth: 72,
+              paddingY: 'lg',
+              display: ['none', 'inline-block'],
+              borderWidth: ['none', 1],
+              borderStyle: ['none', 'solid'],
+              borderColor: ['none', 'grey-30'],
+              marginLeft: 'xs'
+            }}
+          />
+        </div>
 
         <div
           sx={{
-            width: 130,
-            height: 58,
+            width: 106,
             display: ['none', 'flex'],
-            alignItems: 'center'
+            alignItems: 'center',
+            marginTop: 'xs'
           }}
         >
           <svg
-            height="58"
+            height="48"
             viewBox="0 0 22 23"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -193,9 +194,11 @@ const DealP0Ad: React.FC<Props> = ({
 
           <span
             sx={{
-              width: 75,
+              width: 55,
               lineHeight: 1,
-              fontSize: 'xxs',
+              letterSpacing: -0.5,
+              fontSize: 9,
+              marginLeft: 'xxs',
               fontFamily: "'-apple-system', 'BlinkMacSystemFont'"
             }}
           >
@@ -223,7 +226,7 @@ const DealP0Ad: React.FC<Props> = ({
           target={target}
           sx={{
             padding: 0,
-            width: 32,
+            width: 48,
             height: 48,
             marginTop: 'sm',
             display: ['flex', 'none'],
@@ -245,22 +248,24 @@ const DealP0Ad: React.FC<Props> = ({
 
       <div
         sx={{
-          width: ['100%', '50%'],
-          float: ['none', 'right']
+          float: ['none', 'right'],
+          display: [null, 'flex'],
+          flexDirection: [null, 'column'],
+          flex: [null, '1.5 0 auto'],
+          justifyContent: [null, 'space-between']
         }}
       >
         <div
           sx={{
             fontFamily: 'heading',
             fontWeight: 'bold',
-            marginBottom: 'sm',
             display: ['none', 'block']
           }}
         >
           {title}
         </div>
 
-        <Row direction="row" cols={[2]} sx={{ marginBottom: 'sm' }}>
+        <Row direction="row" cols={[2]}>
           <InformationBlocks details={informationDetails} />
         </Row>
 

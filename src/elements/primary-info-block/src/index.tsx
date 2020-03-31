@@ -42,7 +42,7 @@ const PrimaryInfoBlock: React.FC<Props> = ({
       <strong
         sx={{
           fontFamily: 'heading',
-          fontSize: 'xl'
+          fontSize: ['xl', 'lg']
         }}
       >
         {prefix}
@@ -62,7 +62,7 @@ const PrimaryInfoBlock: React.FC<Props> = ({
         <p
           sx={{
             fontFamily: 'base',
-            fontSize: 'xs',
+            fontSize: ['xs', 'xxs'],
             color: 'grey-80',
             margin: 0
           }}
