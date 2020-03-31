@@ -90,7 +90,7 @@ const EnhancedImage = ({ src }: { src: string }) => (
 const topComponentMargin = (productSrc: string, enhancedSrc: string) =>
   productSrc && !enhancedSrc ? '36px' : null
 
-const DealP0Ad: React.FC<Props> = ({
+const SponsoredProduct: React.FC<Props> = ({
   title,
   imgSrc,
   imgAlt,
@@ -281,4 +281,4 @@ const DealP0Ad: React.FC<Props> = ({
   </div>
 )
 
-export default DealP0Ad
+export default SponsoredProduct
