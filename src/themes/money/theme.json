@@ -941,6 +941,11 @@
     }
   },
 
+  "richTextModule": {
+    "contentCols": 12,
+    "contentSpan": 10
+  },
+
   "styles": {
     "heading": {
       "fontFamily": "heading",
