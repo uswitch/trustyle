@@ -22,7 +22,7 @@ const getVerticalGutterSize = (theme: any): string | number =>
 const getContainerSize = (theme: any): number | number[] =>
   theme?.sizes?.grid?.container?.maxWidth || theme?.grid?.container?.maxWidth
 
-const getArray = (valueOrArray: any): any => [].concat(valueOrArray)
+const alwaysGetArray = (valueOrArray: any): any => [].concat(valueOrArray)
 
 const getValueFromSize = (theme: any, size: string | number): number =>
   typeof size === 'number' ? size : theme.space[size] || 0
@@ -31,7 +31,7 @@ const getHalf = (value: number): number => value / 2
 
 // if we originally had a value outside of an array return it that way
 // otherwise the underfined values will cause incorrect responsivness
-const formatArray = (arr: number[]): number | number[] =>
+const removeArrayIfSingleItem = (arr: number[]): number | number[] =>
   arr.length === 1 ? arr[0] : arr
 
 const toPx = (value: number) => `${value}px`
@@ -54,8 +54,8 @@ export const Container: React.FC<ContainerProps> = ({
         boxSizing: 'border-box',
         px: getGutterSize,
         maxWidth: (theme: any) =>
-          formatArray(
-            getArray(getContainerSize(theme)).map(
+          removeArrayIfSingleItem(
+            alwaysGetArray(getContainerSize(theme)).map(
               (maxWidth: number) => maxWidth * (cols && span ? span / cols : 1)
             )
           )
@@ -86,8 +86,8 @@ export const Row: React.FC<RowProps> = ({
       sx={{
         variant: `grid.row`,
         mx: (theme: any): any =>
-          formatArray(
-            getArray(getGutterSize(theme))
+          removeArrayIfSingleItem(
+            alwaysGetArray(getGutterSize(theme))
               .map((value: any) => getValueFromSize(theme, value))
               .map(getHalf)
               .map((gutterValue: number) => `${gutterValue * -1}`)
@@ -137,8 +137,8 @@ export const Col: React.FC<ColProps> = ({
         variant: `grid.col`,
         boxSizing: 'border-box',
         mr: (theme: any) =>
-          formatArray(
-            getArray(getGutterSize(theme))
+          removeArrayIfSingleItem(
+            alwaysGetArray(getGutterSize(theme))
               .map((value: any) => getValueFromSize(theme, value))
               .map(getHalf)
               .map(toPx)
@@ -150,8 +150,8 @@ export const Col: React.FC<ColProps> = ({
         ...(span
           ? {
               width: (theme: any) =>
-                formatArray(
-                  getArray(cols).map(
+                removeArrayIfSingleItem(
+                  alwaysGetArray(cols).map(
                     (colValue: number, index: number): string => {
                       return `calc(${((Array.isArray(span)
                         ? span[index]
@@ -169,8 +169,8 @@ export const Col: React.FC<ColProps> = ({
         ...(offset
           ? {
               ml: (theme: any) =>
-                formatArray(
-                  getArray(cols).map(
+                removeArrayIfSingleItem(
+                  alwaysGetArray(cols).map(
                     (colValue: number, index: number): string => {
                       return `calc(${((Array.isArray(offset)
                         ? offset[index]
@@ -186,8 +186,8 @@ export const Col: React.FC<ColProps> = ({
             }
           : {
               ml: (theme: any) =>
-                formatArray(
-                  getArray(getGutterSize(theme))
+                removeArrayIfSingleItem(
+                  alwaysGetArray(getGutterSize(theme))
                     .map((value: any) => getValueFromSize(theme, value))
                     .map(getHalf)
                     .map(toPx)
