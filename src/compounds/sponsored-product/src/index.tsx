@@ -125,6 +125,9 @@ const SponsoredProduct: React.FC<Props> = ({
         sx={{
           padding: [12, 'sm'],
           display: [null, 'flex'],
+          borderWidth: ['none', 1],
+          borderStyle: ['none', 'solid'],
+          borderColor: ['none', 'grey-30'],
           boxShadow: ['none', '12px 12px 0px rgba(20, 20, 36, 0.15)']
         }}
       >
