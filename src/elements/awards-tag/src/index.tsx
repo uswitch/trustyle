@@ -27,6 +27,7 @@ const AwardsTag: React.FC<Props> = ({ award }) =>
         viewBox="0 0 22 23"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        stroke="none"
       >
         <path
           d="M-0.000966623 8.09716L8.05078 22.1208L21.9964 14.024L13.9447 0.000335086L-0.000966623 8.09716Z"

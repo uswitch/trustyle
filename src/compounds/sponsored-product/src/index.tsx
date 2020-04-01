@@ -11,7 +11,7 @@ import AwardsTag from '@uswitch/trustyle.awards-tag'
 import Badge from '@uswitch/trustyle.badge'
 import { Stack } from '@uswitch/trustyle.arrangement'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
-import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
+import { Container } from '@uswitch/trustyle.flex-grid'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
@@ -40,14 +40,14 @@ interface InformationBlocksProps {
 const InformationBlocks: React.FC<InformationBlocksProps> = ({ details }) => (
   <React.Fragment>
     {details.map((obj, index) => (
-      <Col span={[6]} key={`infoblock-${index}`}>
+      <span key={`infoblock-${index}`}>
         <PrimaryInfoBlock
           prefix={obj.prefix}
           value={obj.value}
           suffix={obj.suffix}
           label={obj.label}
         />
-      </Col>
+      </span>
     ))}
   </React.Fragment>
 )
@@ -132,8 +132,7 @@ const SponsoredProduct: React.FC<Props> = ({
           sx={{
             display: 'flex',
             flexDirection: [null, 'column'],
-            flex: [null, '1 0 auto'],
-            marginBottom: ['sm', 'none']
+            flex: [null, '1 0 auto']
           }}
         >
           <div
@@ -154,7 +153,7 @@ const SponsoredProduct: React.FC<Props> = ({
                 display: ['none', 'inline-block'],
                 borderWidth: ['none', 1],
                 borderStyle: ['none', 'solid'],
-                borderColor: ['none', 'grey-30'],
+                borderColor: ['none', 'grey-10'],
                 marginLeft: 'xs'
               }}
             />
@@ -173,6 +172,7 @@ const SponsoredProduct: React.FC<Props> = ({
               viewBox="0 0 22 23"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              stroke="none"
             >
               <path
                 d="M-0.000966623 8.09716L8.05078 22.1208L21.9964 14.024L13.9447 0.000335086L-0.000966623 8.09716Z"
@@ -229,7 +229,8 @@ const SponsoredProduct: React.FC<Props> = ({
               height: 48,
               display: ['flex', 'none'],
               justifyContent: 'center',
-              alignItems: 'center'
+              alignItems: 'center',
+              marginBottom: 'sm'
             }}
           >
             <Icon
@@ -246,29 +247,32 @@ const SponsoredProduct: React.FC<Props> = ({
 
         <div
           sx={{
-            float: ['none', 'right'],
-            display: [null, 'flex'],
-            flexDirection: [null, 'column'],
-            flex: [null, '1.5 0 auto'],
-            justifyContent: [null, 'space-between']
+            width: [null, '55%']
           }}
         >
-          <div
-            sx={{
-              fontFamily: 'heading',
-              fontWeight: 'bold',
-              display: ['none', 'block']
-            }}
-          >
-            {title}
-          </div>
+          <Stack spacing={[8, 16]}>
+            <div
+              sx={{
+                fontFamily: 'heading',
+                fontWeight: 'bold',
+                display: ['none', 'block']
+              }}
+            >
+              {title}
+            </div>
 
-          <Row direction="row" cols={[2]}>
-            <InformationBlocks details={informationDetails} />
-          </Row>
+            <div
+              sx={{
+                display: 'grid',
+                gridGap: 'xs',
+                gridTemplateColumns: '1fr 1fr'
+              }}
+            >
+              <InformationBlocks details={informationDetails} />
+            </div>
 
-          <Stack spacing={[8]}>
             <UspTag usp={usp} />
+
             <div sx={{ display: ['block', 'none'] }}>
               <AwardsTag award={award} />
               <SponsoredByTag providerLogoSrc={sponsorSrc} />

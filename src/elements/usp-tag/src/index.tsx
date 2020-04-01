@@ -11,7 +11,7 @@ const UspTag: React.FC<Props> = ({ usp }) =>
   usp ? (
     <div
       sx={{
-        minHeight: 32,
+        height: 32,
         backgroundColor: 'yellow-25',
         display: 'flex',
         alignItems: 'center',
@@ -19,7 +19,7 @@ const UspTag: React.FC<Props> = ({ usp }) =>
           content: '""',
           display: 'inline-block',
           width: 4,
-          minHeight: 28,
+          height: 28,
           margin: 2,
           backgroundColor: 'yellow'
         }
