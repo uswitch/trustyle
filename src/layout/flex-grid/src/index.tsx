@@ -3,16 +3,6 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-function getSpaceValue(key: number | string, index?: number) {
-  return (theme: any = {}): any => {
-    const spaceValues = ([] as any[])
-      .concat(key)
-      .map(it => (typeof it === 'number' ? it : theme.space[it] || 0))
-
-    return index ? spaceValues[index] || spaceValues[0] : spaceValues || 0
-  }
-}
-
 const getGutterSize = (theme: any): any =>
   theme?.sizes?.grid?.gutter || theme?.grid?.sizes?.gutter
 
@@ -152,16 +142,12 @@ export const Col: React.FC<ColProps> = ({
               width: (theme: any) =>
                 removeArrayIfSingleItem(
                   alwaysGetArray(cols).map(
-                    (colValue: number, index: number): string => {
-                      return `calc(${((Array.isArray(span)
-                        ? span[index]
-                        : span) /
-                        colValue) *
-                        100}% - ${getSpaceValue(
-                        getGutterSize(theme),
-                        index
-                      )(theme) * 2}px)`
-                    }
+                    (colValue: number, index: number): string =>
+                      `calc(${(alwaysGetArray(span)[index] / colValue) *
+                        100}% - ${getValueFromSize(
+                        theme,
+                        alwaysGetArray(getGutterSize(theme))[index]
+                      ) * 2}px)`
                   )
                 )
             }
@@ -171,16 +157,12 @@ export const Col: React.FC<ColProps> = ({
               ml: (theme: any) =>
                 removeArrayIfSingleItem(
                   alwaysGetArray(cols).map(
-                    (colValue: number, index: number): string => {
-                      return `calc(${((Array.isArray(offset)
-                        ? offset[index]
-                        : offset) /
-                        colValue) *
-                        100}% + ${getSpaceValue(
-                        getGutterSize(theme),
-                        index
-                      )(theme)}px)`
-                    }
+                    (colValue: number, index: number): string =>
+                      `calc(${(alwaysGetArray(offset)[index] / colValue) *
+                        100}% + ${getValueFromSize(
+                        theme,
+                        alwaysGetArray(getGutterSize(theme))[index]
+                      )}px`
                   )
                 )
             }
