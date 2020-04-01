@@ -40,14 +40,13 @@ interface InformationBlocksProps {
 const InformationBlocks: React.FC<InformationBlocksProps> = ({ details }) => (
   <React.Fragment>
     {details.map((obj, index) => (
-      <span key={`infoblock-${index}`}>
-        <PrimaryInfoBlock
-          prefix={obj.prefix}
-          value={obj.value}
-          suffix={obj.suffix}
-          label={obj.label}
-        />
-      </span>
+      <PrimaryInfoBlock
+        prefix={obj.prefix}
+        value={obj.value}
+        suffix={obj.suffix}
+        label={obj.label}
+        key={`infoblock-${index}`}
+      />
     ))}
   </React.Fragment>
 )
@@ -112,14 +111,14 @@ const SponsoredProduct: React.FC<Props> = ({
     >
       <EnhancedImage src={enhancedImgSrc} />
 
-      <span
+      <div
         sx={{
           display: ['none', 'block'],
           marginBottom: 'xs'
         }}
       >
         <Badge variant={'sponsored'}>Sponsored</Badge>
-      </span>
+      </div>
 
       <Container
         sx={{
@@ -216,7 +215,7 @@ const SponsoredProduct: React.FC<Props> = ({
               fontWeight: 'bold',
               marginX: 'xs',
               display: [null, 'none'],
-              flexGrow: 2
+              flexGrow: 1
             }}
           >
             {title}
