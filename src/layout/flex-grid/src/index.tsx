@@ -60,17 +60,14 @@ const mediaQueryFunction = (
   return fn(data, 0)
 }
 
+// Not extending React.HTMLAttributes as used again in FromJsonProps
 interface ContainerProps {
   cols?: number
   span?: number
 }
 
-export const Container: React.FC<ContainerProps> = ({
-  children,
-  cols,
-  span,
-  ...props
-}) => {
+export const Container: React.FC<ContainerProps &
+  React.HTMLAttributes<any>> = ({ children, cols, span, ...props }) => {
   return (
     <div
       sx={{
@@ -88,13 +85,14 @@ export const Container: React.FC<ContainerProps> = ({
   )
 }
 
+// Not extending React.HTMLAttributes as used again in FromJsonProps
 interface RowProps {
   cols?: number | number[]
   direction?: any
   wrap?: boolean
 }
 
-export const Row: React.FC<RowProps> = ({
+export const Row: React.FC<RowProps & React.HTMLAttributes<any>> = ({
   children,
   cols = 12,
   direction = ['column', 'row', 'row'],
@@ -125,13 +123,14 @@ export const Row: React.FC<RowProps> = ({
   )
 }
 
+// Not extending React.HTMLAttributes as used again in FromJsonProps
 interface ColProps {
   cols?: number | number[]
   span?: number | number[]
   offset?: number | number[]
 }
 
-export const Col: React.FC<ColProps> = ({
+export const Col: React.FC<ColProps & React.HTMLAttributes<any>> = ({
   children,
   cols = 12,
   span,
@@ -188,6 +187,43 @@ export const Col: React.FC<ColProps> = ({
       {...props}
     >
       {children}
+    </div>
+  )
+}
+
+interface FromJsonProps extends React.HTMLAttributes<any> {
+  json: (RowProps & {
+    layout: (ColProps & {
+      key: number
+    })[]
+  })[]
+  childrenArray: React.ReactNode[]
+}
+
+export const GridFromJson: React.FC<FromJsonProps> = ({
+  json,
+  childrenArray
+}) => {
+  // In the future, string key could be support for contentful block ID
+  const getChildFromKey = (key: number): React.ReactNode => {
+    return childrenArray[key]
+  }
+
+  return (
+    <div>
+      {json.map(({ layout, ...rowProps }, i) => {
+        return (
+          <Row {...rowProps} key={i}>
+            {layout.map(({ key, ...colProps }) => {
+              return (
+                <Col {...colProps} key={key}>
+                  {getChildFromKey(key)}
+                </Col>
+              )
+            })}
+          </Row>
+        )
+      })}
     </div>
   )
 }
