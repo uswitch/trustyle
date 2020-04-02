@@ -1,6 +1,6 @@
 {
-  "name": "@uswitch/trustyle.category",
-  "version": "1.1.9",
+  "name": "@uswitch/trustyle.awards-tag",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -16,10 +16,7 @@
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
   },
-  "devDependencies": {
-    "@uswitch/trustyle.breadcrumbs": "^1.0.5"
-  },
   "dependencies": {
-    "@uswitch/trustyle.flex-grid": "^1.2.1"
+    "@uswitch/trustyle.imgix-image": "^0.1.31"
   }
 }
