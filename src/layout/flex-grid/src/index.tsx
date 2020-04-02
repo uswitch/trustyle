@@ -211,9 +211,3 @@ export const Col: React.FC<ColProps> = ({
     </div>
   )
 }
-
-// `calc(${(alwaysGetArray(offset)[index] / colValue) *
-//   100}% + ${getValueFromSize(
-//   theme,
-//   alwaysGetArray(getGutterSize(theme))[index]
-// )}px`
