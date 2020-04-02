@@ -210,7 +210,7 @@ export const GridFromJson: React.FC<FromJsonProps> = ({
   }
 
   return (
-    <div>
+    <React.Fragment>
       {json.map(({ layout, ...rowProps }, i) => {
         return (
           <Row {...rowProps} key={i}>
@@ -224,6 +224,6 @@ export const GridFromJson: React.FC<FromJsonProps> = ({
           </Row>
         )
       })}
-    </div>
+    </React.Fragment>
   )
 }
