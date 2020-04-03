@@ -8,6 +8,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   value: string
   label: string
   suffix?: string
+  className?: string
 }
 
 const valueWithDecimals = (value: string) => {
@@ -35,7 +36,8 @@ const PrimaryInfoBlock: React.FC<Props> = ({
   prefix,
   value,
   label,
-  suffix
+  suffix,
+  className = ''
 }) => {
   const mainText = (
     <React.Fragment>
@@ -75,12 +77,12 @@ const PrimaryInfoBlock: React.FC<Props> = ({
 
   return (
     <div
+      className={className}
       sx={{
         padding: ['sm', 'xs'],
         backgroundColor: 'grey-05',
         display: 'flex',
-        alignItems: 'center',
-        maxHeight: [84, 59]
+        alignItems: 'center'
       }}
     >
       <div>{mainText}</div>
