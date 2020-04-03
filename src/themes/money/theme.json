@@ -162,7 +162,7 @@
   "grid": {
     "sizes": {
       "gutter": "sm",
-      "verticalGutter": "sm"
+      "verticalGutter": "xs"
     },
     "container": {
       "maxWidth": 1152
@@ -939,6 +939,11 @@
         "color": "white"
        }
     }
+  },
+
+  "richTextModule": {
+    "contentCols": 12,
+    "contentSpan": 10
   },
 
   "styles": {
