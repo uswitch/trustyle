@@ -12,7 +12,7 @@ const getVerticalGutterSize = (theme: any): string | number =>
 const getContainerSize = (theme: any): number | number[] =>
   theme?.sizes?.grid?.container?.maxWidth || theme?.grid?.container?.maxWidth
 
-const alwaysGetArray = (valueOrArray: any): any => [].concat(valueOrArray)
+const castArray = (valueOrArray: any): any => [].concat(valueOrArray) // wiiilllllson
 
 const getValueFromSize = (theme: any, size: string | number): number =>
   typeof size === 'number' ? size : theme.space[size] || 0
@@ -20,8 +20,8 @@ const getValueFromSize = (theme: any, size: string | number): number =>
 const getHalf = (value: number): number => value / 2
 
 // if we originally had a value outside of an array return it that way
-// otherwise the underfined values will cause incorrect responsivness
-const removeArrayIfSingleItem = (arr: number[]): number | number[] =>
+// otherwise the undefined values will cause incorrect responsivness
+const uncastArrayIfSingle = (arr: number[]): number | number[] =>
   arr.length === 1 ? arr[0] : arr
 
 const toPx = (value: number) => `${value}px`
@@ -49,8 +49,8 @@ export const Container: React.FC<ContainerProps> = ({
         boxSizing: 'border-box',
         px: getGutterSize,
         maxWidth: (theme: any) =>
-          removeArrayIfSingleItem(
-            alwaysGetArray(getContainerSize(theme)).map(
+          uncastArrayIfSingle(
+            castArray(getContainerSize(theme)).map(
               (maxWidth: number) => maxWidth * (cols && span ? span / cols : 1)
             )
           )
@@ -81,8 +81,8 @@ export const Row: React.FC<RowProps> = ({
       sx={{
         variant: `grid.row`,
         mx: (theme: any): any =>
-          removeArrayIfSingleItem(
-            alwaysGetArray(getGutterSize(theme))
+          uncastArrayIfSingle(
+            castArray(getGutterSize(theme))
               .map((value: any) => getValueFromSize(theme, value))
               .map(getHalf)
               .map((gutterValue: number) => `${gutterValue * -1}`)
@@ -132,8 +132,8 @@ export const Col: React.FC<ColProps> = ({
         variant: `grid.col`,
         boxSizing: 'border-box',
         mr: (theme: any) =>
-          removeArrayIfSingleItem(
-            alwaysGetArray(getGutterSize(theme))
+          uncastArrayIfSingle(
+            castArray(getGutterSize(theme))
               .map((value: any) => getValueFromSize(theme, value))
               .map(getHalf)
               .map(toPx)
@@ -145,20 +145,20 @@ export const Col: React.FC<ColProps> = ({
         ...(span
           ? {
               width: (theme: any) =>
-                removeArrayIfSingleItem(
-                  alwaysGetArray(cols).map(
+                uncastArrayIfSingle(
+                  castArray(cols).map(
                     (colValue: number, index: number): string => {
                       const gutterValue = toPx(
                         getValueFromBreakpointIndex(
-                          alwaysGetArray(
-                            getGutterSize(theme)
-                          ).map((value: any) => getValueFromSize(theme, value)),
+                          castArray(getGutterSize(theme)).map((value: any) =>
+                            getValueFromSize(theme, value)
+                          ),
                           index
                         )
                       )
 
                       const currentSpan = getValueFromBreakpointIndex(
-                        alwaysGetArray(span),
+                        castArray(span),
                         index
                       )
                       return `calc(${(currentSpan / colValue) *
@@ -171,18 +171,18 @@ export const Col: React.FC<ColProps> = ({
         ...(offset
           ? {
               ml: (theme: any) =>
-                removeArrayIfSingleItem(
-                  alwaysGetArray(cols).map(
+                uncastArrayIfSingle(
+                  castArray(cols).map(
                     (colValue: number, index: number): string => {
                       const gutterValue = getValueFromBreakpointIndex(
-                        alwaysGetArray(getGutterSize(theme)).map((value: any) =>
+                        castArray(getGutterSize(theme)).map((value: any) =>
                           getValueFromSize(theme, value)
                         ),
                         index
                       )
 
                       const offsetValue = getValueFromBreakpointIndex(
-                        alwaysGetArray(offset).map((value: any) =>
+                        castArray(offset).map((value: any) =>
                           getValueFromSize(theme, value)
                         ),
                         index
@@ -196,8 +196,8 @@ export const Col: React.FC<ColProps> = ({
             }
           : {
               ml: (theme: any) =>
-                removeArrayIfSingleItem(
-                  alwaysGetArray(getGutterSize(theme))
+                uncastArrayIfSingle(
+                  castArray(getGutterSize(theme))
                     .map((value: any) => getValueFromSize(theme, value))
                     .map(getHalf)
                     .map(toPx)
