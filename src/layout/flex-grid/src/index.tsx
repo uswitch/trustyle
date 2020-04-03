@@ -27,7 +27,6 @@ const removeArrayIfSingleItem = (arr: number[]): number | number[] =>
 const toPx = (value: number) => `${value}px`
 
 const getValueFromBreakpointIndex = (arr: number[], index: number): number => {
-  console.log('arr', arr, index)
   if (arr[index]) return arr[index]
   return arr[arr.length - 1]
 }
