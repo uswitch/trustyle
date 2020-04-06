@@ -57,11 +57,12 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
       <ImgixImage
         sx={{
           maxHeight: [96, 105],
-          marginTop: [-48, 0]
+          marginTop: [-48, 0],
+          marginRight: ['xs', 0]
         }}
         alt={alt}
         src={src}
-        imgixParams={{ fit: 'fit' }}
+        imgixParams={{ fit: 'clip' }}
         critical
       />
     )}
@@ -139,7 +140,9 @@ const SponsoredProduct: React.FC<Props> = ({
         >
           <div
             sx={{
-              display: [null, 'flex']
+              display: [null, 'flex'],
+              width: [null, 140],
+              justifyContent: [null, 'space-between']
             }}
           >
             <ProductImage src={imgSrc} alt={imgAlt} />
@@ -155,8 +158,7 @@ const SponsoredProduct: React.FC<Props> = ({
                 display: ['none', 'inline-block'],
                 borderWidth: ['none', 1],
                 borderStyle: ['none', 'solid'],
-                borderColor: ['none', 'grey-10'],
-                marginLeft: 'xs'
+                borderColor: ['none', 'grey-10']
               }}
             />
           </div>
@@ -213,7 +215,7 @@ const SponsoredProduct: React.FC<Props> = ({
             sx={{
               fontFamily: 'heading',
               fontWeight: 'bold',
-              marginX: 'xs',
+              marginRight: 'xs',
               display: [null, 'none'],
               flexGrow: 1
             }}
@@ -230,6 +232,7 @@ const SponsoredProduct: React.FC<Props> = ({
               width: 32,
               height: 48,
               display: ['flex', 'none'],
+              flexShrink: 0,
               justifyContent: 'center',
               alignItems: 'center',
               marginBottom: 'sm'
@@ -277,7 +280,10 @@ const SponsoredProduct: React.FC<Props> = ({
 
             <div sx={{ display: ['block', 'none'] }}>
               <AwardsTag award={award} />
-              <SponsoredByTag providerLogoSrc={sponsorSrc} />
+              <SponsoredByTag
+                providerLogoSrc={sponsorSrc}
+                sx={{ marginTop: 'xs' }}
+              />
             </div>
           </Stack>
         </div>

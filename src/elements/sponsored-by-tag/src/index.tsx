@@ -6,20 +6,29 @@ import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   providerLogoSrc: string
+  className?: string
 }
 
-const SponsoredByTag: React.FC<Props> = ({ providerLogoSrc }) => (
+const SponsoredByTag: React.FC<Props> = ({
+  providerLogoSrc,
+  className = ''
+}) => (
   <div
+    className={className}
     sx={{
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      padding: 'xs'
+      paddingY: 4
     }}
   >
     <span
       sx={{
-        color: 'grey-60'
+        color: 'grey-60',
+        fontSize: 'xs',
+        fontFamily: 'base',
+        fontWeight: 'base',
+        fontStyle: 'normal'
       }}
     >
       Sponsored by
@@ -30,7 +39,7 @@ const SponsoredByTag: React.FC<Props> = ({ providerLogoSrc }) => (
       imgixParams={{ fit: 'clip' }}
       critical
       sx={{
-        height: 46
+        height: [40, 56]
       }}
     />
   </div>

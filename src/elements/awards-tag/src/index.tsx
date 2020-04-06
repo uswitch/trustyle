@@ -5,11 +5,13 @@ import { jsx } from 'theme-ui'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   award: string
+  className?: string
 }
 
-const AwardsTag: React.FC<Props> = ({ award }) =>
+const AwardsTag: React.FC<Props> = ({ award, className = '' }) =>
   award ? (
     <div
+      className={className}
       sx={{
         display: 'flex',
         alignItems: 'center',
