@@ -28,6 +28,10 @@ export const ExampleWithKnobs = () => {
     'Enhanced image url',
     'https://academy.alchemysystems.com/wp-content/uploads/2017/03/roundtable-banner-image-1400x350.jpg'
   )
+  const brandCaptionText = text(
+    'Brand caption',
+    'No landline needed. No engineer needed. Forget fibre. Join the party.'
+  )
 
   return (
     <div>
@@ -55,6 +59,7 @@ export const ExampleWithKnobs = () => {
         sponsorSrc={sponsorSrc}
         award={award}
         enhancedImgSrc={enhanced}
+        brandCaption={brandCaptionText}
       />
     </div>
   )
