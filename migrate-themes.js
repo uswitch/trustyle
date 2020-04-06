@@ -32,7 +32,7 @@ const themes = {
   money: moneyTheme
 }
 
-function migrate(brand, themes, outputDir) {
+function migrate(brand, themes, inputDir, outputDir) {
   const theme = themes[brand]
 
   let componentThemes = deleteKeys(
@@ -74,20 +74,24 @@ function migrate(brand, themes, outputDir) {
     const packageName = themeKeyToComponentMap[key];
     if (packageName) {
       const dirName = packageName.replace('@uswitch/trustyle.', '')
-      const path = `./${outputDir}/${compounds.includes(dirName) ? 'compounds' : 'elements'}/${dirName}/src`
+      const readPath = `./${inputDir}/${compounds.includes(dirName) ? 'compounds' : 'elements'}/${dirName}/src`
+      const writePath = `./${outputDir}/${compounds.includes(dirName) ? 'compounds' : 'elements'}/${dirName}/src`
+
+      fs.writeFile(`${writePath}/themes/${brand}.json`, JSON.stringify(componentThemes[key]), (e) => console.log(`${writePath}/${brand}.json`, e) )
       
-      fs.writeFile(`${path}/themes/${brand}.json`, JSON.stringify(componentThemes[key]), (e) => console.log(`${path}/${brand}.json`, e) )
-      
-      const js = fs.readFile(`${path}/index.tsx`, (e, data) => console.log(`${data}
-  export const themeConfig = getComponentThemeConfig({
+      const jsFile = fs.readFile(`${readPath}/index.tsx`, (e, data) => {
+        const newFile = `${data}
+export const themeConfig = getComponentThemeConfig({
   name: '${key}',
   themes: []
-  })
-  `) )
+})
+`
+        fs.writeFile(`${writePath}/index.tsx`, newFile, () => {})
+      }) 
   
     }
   })
 
 }
 
-migrate('money', themes, 'migration_test/src')
+migrate('money', themes, 'src', 'migration_test/src')
