@@ -7,7 +7,10 @@ const COMPOUND = 'COMPOUND'
 const TOKENS = 'TOKENS'
 
 // if we rename packages to include category we can remove these mappings
-const elements = ['@uswitch/trustyle.accordion', '@uswitch/trustyle.badge']
+const elements = [
+  '@uswitch/trustyle.accordion', 
+  '@uswitch/trustyle.badge'
+]
 const compounds = []
 
 const getPath = ({ type, brand, nodeModulesPath, packageName }) =>
