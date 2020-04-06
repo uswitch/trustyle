@@ -24,6 +24,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   sponsorSrc: string
   award: string
   enhancedImgSrc: string
+  brandCaption: string
 }
 
 interface Detail {
@@ -48,6 +49,28 @@ const InformationBlocks: React.FC<InformationBlocksProps> = ({ details }) => (
         key={`infoblock-${index}`}
       />
     ))}
+  </React.Fragment>
+)
+
+const BrandCaption = ({ text }: { text: string }) => (
+  <React.Fragment>
+    {text && (
+      <div
+        sx={{
+          backgroundColor: 'grey-05',
+          padding: 'xs',
+          marginBottom: ['sm', 'none']
+        }}
+      >
+        <span
+          sx={{
+            fontWeight: 'base'
+          }}
+        >
+          {text}
+        </span>
+      </div>
+    )}
   </React.Fragment>
 )
 
@@ -99,7 +122,8 @@ const SponsoredProduct: React.FC<Props> = ({
   target,
   sponsorSrc,
   award,
-  enhancedImgSrc
+  enhancedImgSrc,
+  brandCaption
 }) => (
   <a href={href} target={target} sx={{ textDecoration: 'none' }}>
     <div
@@ -265,6 +289,8 @@ const SponsoredProduct: React.FC<Props> = ({
             >
               {title}
             </div>
+
+            <BrandCaption text={brandCaption} />
 
             <div
               sx={{
