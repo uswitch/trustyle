@@ -72,7 +72,7 @@ export const Row: React.FC<RowProps> = ({
   children,
   cols = 12,
   direction = ['column', 'row', 'row'],
-  wrap = false,
+  wrap = true,
   ...props
 }) => {
   const childrenArray = Array.isArray(children) ? children : [children]
@@ -90,9 +90,7 @@ export const Row: React.FC<RowProps> = ({
           ),
         display: 'flex',
         flexDirection: direction,
-        flexWrap: wrap ? 'wrap' : 'nowrap',
-        overflowX: 'hidden',
-        overflowY: 'visible'
+        flexWrap: wrap ? 'wrap' : 'nowrap'
       }}
       {...props}
     >
