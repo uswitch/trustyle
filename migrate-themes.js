@@ -17,6 +17,11 @@ const themeKeyToComponentMap = {
   'toggleSwitch': '@uswitch/trustyle.toggle-switch',
 }
 
+const compounds = [
+  'article-intro',
+  'side-nav'
+]
+
 const deleteKeys = (obj, keys) => {
   const obj2 = { ...obj }
   keys.map(key => delete obj2[key])
@@ -65,7 +70,16 @@ function migrate(brand, themes) {
     ['modules', 'compounds']
   )
 
-  console.log(Object.keys(componentThemes))
+  Object.keys(componentThemes).map(key => {
+    const packageName = themeKeyToComponentMap[key];
+    if (packageName) {
+      const dirName = packageName.replace('@uswitch/trustyle.', '')
+      const path = `./migration_test/${compounds.includes(dirName) ? 'compounds' : 'elements'}/${dirName}/src/themes`
+      
+      fs.writeFile(`${path}/${brand}.json`, JSON.stringify(componentThemes[key]), (e) => console.log(`${path}/${brand}.json`, e) )
+    }
+  })
+
 }
 
 migrate('money', themes)
