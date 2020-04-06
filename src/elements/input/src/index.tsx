@@ -9,6 +9,7 @@ import debounce from 'lodash.debounce'
 
 import * as st from './styles'
 
+export type InputType = 'text' | 'email' | 'tel' | 'password' | 'number'
 export type Width = 'half' | 'full'
 
 export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
