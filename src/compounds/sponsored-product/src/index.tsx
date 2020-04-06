@@ -47,6 +47,7 @@ const InformationBlocks: React.FC<InformationBlocksProps> = ({ details }) => (
         suffix={obj.suffix}
         label={obj.label}
         key={`infoblock-${index}`}
+        sx={{ padding: [null, 'xs'] }}
       />
     ))}
   </React.Fragment>
