@@ -137,14 +137,16 @@ const SponsoredRateTable: React.FC<Props> = ({
           sx={{
             display: ['flex', 'none'],
             marginBottom: 'sm',
-            marginTop: 12
+            marginTop: 12,
+            justifyContent: 'space-between'
           }}
         >
           <div
             sx={{
               fontFamily: 'heading',
               fontWeight: 'bold',
-              flexGrow: 1
+              lineHeight: 'heading',
+              marginRight: 'xs'
             }}
           >
             {productName}
@@ -158,7 +160,8 @@ const SponsoredRateTable: React.FC<Props> = ({
               padding: 0,
               width: 32,
               height: 48,
-              display: ['flex', 'none'],
+              display: 'flex',
+              flexShrink: 0,
               justifyContent: 'center',
               alignItems: 'center'
             }}

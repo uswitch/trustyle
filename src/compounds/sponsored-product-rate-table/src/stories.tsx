@@ -10,7 +10,10 @@ export default {
 }
 
 export const ExampleWithKnobs = () => {
-  const title = text('Title', 'Apple iPhone XR 64Gb')
+  const title = text(
+    'Title',
+    '2 months free insurance with an Apple iPhone XR 64Gb'
+  )
   const imgSrc = text(
     'Image Url',
     'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/3PNmGXJpUL26qMX2odn7XI/d0d1311039c02d3e34cd501b9cbfa5ed/iphone-11-grey-front.png'
