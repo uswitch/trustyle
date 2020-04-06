@@ -125,6 +125,7 @@ const SponsoredRateTable: React.FC<Props> = ({
               sx={{
                 fontFamily: 'heading',
                 fontWeight: 'bold',
+                lineHeight: 'heading',
                 display: ['none', 'inline-block']
               }}
             >
