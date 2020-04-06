@@ -32,7 +32,7 @@ const themes = {
   money: moneyTheme
 }
 
-function migrate(brand, themes) {
+function migrate(brand, themes, outputDir) {
   const theme = themes[brand]
 
   let componentThemes = deleteKeys(
@@ -74,12 +74,20 @@ function migrate(brand, themes) {
     const packageName = themeKeyToComponentMap[key];
     if (packageName) {
       const dirName = packageName.replace('@uswitch/trustyle.', '')
-      const path = `./migration_test/${compounds.includes(dirName) ? 'compounds' : 'elements'}/${dirName}/src/themes`
+      const path = `./${outputDir}/${compounds.includes(dirName) ? 'compounds' : 'elements'}/${dirName}/src`
       
-      fs.writeFile(`${path}/${brand}.json`, JSON.stringify(componentThemes[key]), (e) => console.log(`${path}/${brand}.json`, e) )
+      fs.writeFile(`${path}/themes/${brand}.json`, JSON.stringify(componentThemes[key]), (e) => console.log(`${path}/${brand}.json`, e) )
+      
+      const js = fs.readFile(`${path}/index.tsx`, (e, data) => console.log(`${data}
+  export const themeConfig = getComponentThemeConfig({
+  name: '${key}',
+  themes: []
+  })
+  `) )
+  
     }
   })
 
 }
 
-migrate('money', themes)
+migrate('money', themes, 'migration_test/src')
