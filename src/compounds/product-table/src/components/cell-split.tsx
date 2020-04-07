@@ -7,12 +7,12 @@ import { CellContext } from '../generics'
 // Needs to be the lowest common factor of all the split counts
 export const ROWS = 6
 
-interface Props extends React.HTMLAttributes<any> {
+export interface CellSplitProps extends React.HTMLAttributes<any> {
   // customRows allows us to override the default row span of split components
   customRows?: number[]
 }
 
-const ProductTableCellSplit: React.FC<Props> = ({
+const ProductTableCellSplit: React.FC<CellSplitProps> = ({
   customRows = [],
   children
 }) => {
