@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.flex-grid",
-  "version": "0.2.1",
+  "version": "2.1.1",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",

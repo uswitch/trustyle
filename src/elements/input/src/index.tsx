@@ -9,7 +9,7 @@ import debounce from 'lodash.debounce'
 
 import * as st from './styles'
 
-export type InputType = 'text' | 'email' | 'tel' | 'password'
+export type InputType = 'text' | 'email' | 'tel' | 'password' | 'number'
 export type Width = 'half' | 'full'
 
 export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -21,7 +21,6 @@ export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   postprocess?: (x: string) => string
   prefix?: string
   suffix?: string
-  type: InputType
   value?: string | undefined
   width?: Width
 }

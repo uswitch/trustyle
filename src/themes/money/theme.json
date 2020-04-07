@@ -161,8 +161,8 @@
 
   "grid": {
     "sizes": {
-      "gutter": "xs",
-      "verticalGutter": "sm"
+      "gutter": "sm",
+      "verticalGutter": "xs"
     },
     "container": {
       "maxWidth": 1152
@@ -948,6 +948,11 @@
         "color": "white"
        }
     }
+  },
+
+  "richTextModule": {
+    "contentCols": 12,
+    "contentSpan": 10
   },
 
   "productTable": {

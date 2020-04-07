@@ -5,8 +5,7 @@ import { jsx } from 'theme-ui'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   breadcrumbs?: React.ReactNode
-  container?: React.FC
-  contentWidth?: number
+  container?: React.FC<any>
   fgImage?: string
   fgImagePosition?: {
     backgroundSize: (string | number)[] | string | number
@@ -22,7 +21,6 @@ const DefaultContainer: React.FC = ({ children }) => (
 const Hero: React.FC<Props> = ({
   breadcrumbs,
   container: Container = DefaultContainer,
-  contentWidth = 45,
   fgImage,
   fgImagePosition,
   fgImageOnMobile = true,
@@ -36,16 +34,21 @@ const Hero: React.FC<Props> = ({
             {breadcrumbs}
           </div>
         )}
-        <div sx={{ display: ['block', 'flex'], flexDirection: 'row-reverse' }}>
+        <div
+          sx={{
+            position: 'relative',
+            display: 'block',
+            flexDirection: 'row-reverse'
+          }}
+        >
           <div
             sx={{
-              position: ['absolute', 'static'],
-              left: 0,
+              position: 'absolute',
+              left: [0, '45%'],
               right: 0,
               top: 0,
               bottom: 0,
               display: fgImageOnMobile ? 'block' : ['none', 'block'],
-              flex: `${100 - contentWidth}%`,
               backgroundImage: `url(${fgImage})`,
               backgroundRepeat: 'no-repeat',
               ...fgImagePosition
@@ -53,11 +56,7 @@ const Hero: React.FC<Props> = ({
           ></div>
           <div
             sx={{
-              position: ['relative', 'static'],
-              flex: `${contentWidth}%`,
-              '> :first-child': {
-                marginTop: 0
-              },
+              position: 'relative',
               paddingTop: ['sm', 'xxl'],
               paddingBottom: ['sm', 'xxxl'],
               'h1, h2, h3, h4, h5, h6': {
