@@ -554,6 +554,17 @@
         ":active": {
           "backgroundColor": "button-secondary--hover"
         }
+      },
+
+      "collection": { 
+        "primary": {
+          "variant": "buttons.variants.primary",
+          "marginLeft": "sm"
+        },
+        "secondary": {
+          "variant": "buttons.variants.secondary",
+          "marginLeft": "sm"
+        }
       }
     }
   },
