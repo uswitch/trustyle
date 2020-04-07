@@ -3,7 +3,7 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { storiesOf } from '@storybook/react'
 
-import { Col, Container, Row } from './index'
+import { Col, Container, GridFromJson, Row } from './index'
 
 const colStyling = {
   height: 100,
@@ -195,3 +195,57 @@ storiesOf('Layout|Flex Grid', module).add('Grid with wrapping', () => (
     </Row>
   </Container>
 ))
+
+storiesOf('Layout|Flex Grid', module).add('Grid layout from JSON', () => {
+  const gridJson = [
+    {
+      cols: 12,
+      direction: 'row',
+      wrap: true,
+      layout: [
+        { key: 0, span: [12, 4] },
+        { key: 1, span: [6, 4] },
+        { key: 2, span: [6, 4] }
+      ]
+    },
+    {
+      cols: 12,
+      layout: [{ key: 3, span: 12 }]
+    },
+    {
+      direction: 'row',
+      wrap: true,
+      layout: [
+        { key: 4, span: [12, 6] },
+        { key: 5, span: [12, 6] }
+      ]
+    }
+  ]
+  return (
+    <Container>
+      <GridFromJson
+        json={gridJson}
+        childrenArray={[
+          <span sx={colStyling} key={1}>
+            Col 1
+          </span>,
+          <span sx={colStyling} key={2}>
+            Col 2
+          </span>,
+          <span sx={colStyling} key={3}>
+            Col 3
+          </span>,
+          <span sx={colStyling} key={4}>
+            Col 4
+          </span>,
+          <span sx={colStyling} key={5}>
+            Col 5
+          </span>,
+          <span sx={colStyling} key={6}>
+            Col 6
+          </span>
+        ]}
+      />
+    </Container>
+  )
+})

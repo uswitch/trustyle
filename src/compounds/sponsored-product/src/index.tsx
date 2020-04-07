@@ -11,7 +11,7 @@ import AwardsTag from '@uswitch/trustyle.awards-tag'
 import Badge from '@uswitch/trustyle.badge'
 import { Stack } from '@uswitch/trustyle.arrangement'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
-import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
+import { Container } from '@uswitch/trustyle.flex-grid'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
@@ -40,14 +40,13 @@ interface InformationBlocksProps {
 const InformationBlocks: React.FC<InformationBlocksProps> = ({ details }) => (
   <React.Fragment>
     {details.map((obj, index) => (
-      <Col span={[6]} key={`infoblock-${index}`}>
-        <PrimaryInfoBlock
-          prefix={obj.prefix}
-          value={obj.value}
-          suffix={obj.suffix}
-          label={obj.label}
-        />
-      </Col>
+      <PrimaryInfoBlock
+        prefix={obj.prefix}
+        value={obj.value}
+        suffix={obj.suffix}
+        label={obj.label}
+        key={`infoblock-${index}`}
+      />
     ))}
   </React.Fragment>
 )
@@ -58,12 +57,12 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
       <ImgixImage
         sx={{
           maxHeight: [96, 105],
-          marginBottom: ['xs', 'none'],
-          marginTop: ['-36px', 0]
+          marginTop: [-48, 0],
+          marginRight: ['xs', 0]
         }}
         alt={alt}
         src={src}
-        imgixParams={{ fit: 'fit' }}
+        imgixParams={{ fit: 'clip' }}
         critical
       />
     )}
@@ -88,7 +87,7 @@ const EnhancedImage = ({ src }: { src: string }) => (
 )
 
 const topComponentMargin = (productSrc: string, enhancedSrc: string) =>
-  productSrc && !enhancedSrc ? '36px' : null
+  productSrc && !enhancedSrc ? '48px' : null
 
 const SponsoredProduct: React.FC<Props> = ({
   title,
@@ -102,183 +101,195 @@ const SponsoredProduct: React.FC<Props> = ({
   award,
   enhancedImgSrc
 }) => (
-  <div
-    sx={{
-      borderWidth: [1, 'none'],
-      borderStyle: ['solid', 'none'],
-      borderColor: ['grey-30', 'none'],
-      marginTop: () => topComponentMargin(imgSrc, enhancedImgSrc)
-    }}
-  >
-    <EnhancedImage src={enhancedImgSrc} />
-
-    <span
+  <a href={href} target={target} sx={{ textDecoration: 'none' }}>
+    <div
       sx={{
-        display: ['none', 'block'],
-        marginBottom: 'sm'
+        borderWidth: [1, 'none'],
+        borderStyle: ['solid', 'none'],
+        borderColor: ['grey-30', 'none'],
+        marginTop: () => topComponentMargin(imgSrc, enhancedImgSrc)
       }}
     >
-      <Badge variant={'sponsored'}>Sponsored</Badge>
-    </span>
+      <EnhancedImage src={enhancedImgSrc} />
 
-    <Container
-      sx={{
-        paddingX: ['xs', 'sm'],
-        paddingY: ['none', 'sm'],
-        display: [null, 'flex'],
-        boxShadow: ['none', '12px 12px 0px rgba(20, 20, 36, 0.15)']
-      }}
-    >
       <div
         sx={{
-          display: 'flex',
-          flexDirection: [null, 'column'],
-          flex: [null, '1 0 auto']
+          display: ['none', 'block'],
+          marginBottom: 'xs'
         }}
       >
-        <div
-          sx={{
-            display: [null, 'flex']
-          }}
-        >
-          <ProductImage src={imgSrc} alt={imgAlt} />
-
-          <ImgixImage
-            src={sponsorSrc}
-            imgixParams={{ fit: 'clip' }}
-            critical
-            sx={{
-              maxHeight: 39,
-              maxWidth: 72,
-              paddingY: 'lg',
-              display: ['none', 'inline-block'],
-              borderWidth: ['none', 1],
-              borderStyle: ['none', 'solid'],
-              borderColor: ['none', 'grey-30'],
-              marginLeft: 'xs'
-            }}
-          />
-        </div>
-
-        <div
-          sx={{
-            width: 106,
-            display: ['none', 'flex'],
-            alignItems: 'center',
-            marginTop: 'xs'
-          }}
-        >
-          <svg
-            height="48"
-            viewBox="0 0 22 23"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M-0.000966623 8.09716L8.05078 22.1208L21.9964 14.024L13.9447 0.000335086L-0.000966623 8.09716Z"
-              fill="#ACAAFF"
-            />
-            <path
-              d="M13.9475 22.1206L21.9993 8.09692L8.05364 9.82571e-05L0.00188873 14.0238L13.9475 22.1206Z"
-              fill="#7ED2E9"
-            />
-            <path
-              d="M19.0498 2.96484H2.94629V19.1585H19.0498V2.96484Z"
-              fill="#141423"
-            />
-            <path
-              d="M6.30542 12.1831V5.34229H8.37293V12.2014C8.37293 13.9269 9.30664 14.7439 10.8709 14.7439C12.4352 14.7439 13.3689 13.9269 13.3689 12.2014V5.34229H15.4364V12.1831C15.4364 15.0365 13.672 16.5425 10.8709 16.5425C8.12434 16.5486 6.30542 15.0365 6.30542 12.1831Z"
-              fill="white"
-            />
-          </svg>
-
-          <span
-            sx={{
-              width: 55,
-              lineHeight: 1,
-              letterSpacing: -0.5,
-              fontSize: 9,
-              marginLeft: 'xxs',
-              fontFamily: "'-apple-system', 'BlinkMacSystemFont'"
-            }}
-          >
-            <strong>Uswitch</strong> Manufacturer of the Year
-            <strong> Winner 2020</strong>
-          </span>
-        </div>
-
-        <div
-          sx={{
-            fontFamily: 'heading',
-            fontWeight: 'bold',
-            marginTop: 'sm',
-            marginX: 'xs',
-            display: [null, 'none'],
-            flex: 2
-          }}
-        >
-          {title}
-        </div>
-
-        <ButtonLink
-          variant="primary"
-          href={href}
-          target={target}
-          sx={{
-            padding: 0,
-            width: 48,
-            height: 48,
-            marginTop: 'sm',
-            display: ['flex', 'none'],
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}
-        >
-          <Icon
-            color="white"
-            direction="right"
-            glyph="caret"
-            size={20}
-            sx={{
-              flexShrink: 0
-            }}
-          />
-        </ButtonLink>
+        <Badge variant={'sponsored'}>Sponsored</Badge>
       </div>
 
-      <div
+      <Container
         sx={{
-          float: ['none', 'right'],
+          padding: [12, 'sm'],
           display: [null, 'flex'],
-          flexDirection: [null, 'column'],
-          flex: [null, '1.5 0 auto'],
-          justifyContent: [null, 'space-between']
+          borderWidth: ['none', 1],
+          borderStyle: ['none', 'solid'],
+          borderColor: ['none', 'grey-30'],
+          boxShadow: ['none', '12px 12px 0px rgba(20, 20, 36, 0.15)']
         }}
       >
         <div
           sx={{
-            fontFamily: 'heading',
-            fontWeight: 'bold',
-            display: ['none', 'block']
+            display: 'flex',
+            flexDirection: [null, 'column'],
+            flex: [null, '1 0 auto']
           }}
         >
-          {title}
+          <div
+            sx={{
+              display: [null, 'flex'],
+              width: [null, 140],
+              justifyContent: [null, 'space-between']
+            }}
+          >
+            <ProductImage src={imgSrc} alt={imgAlt} />
+
+            <ImgixImage
+              src={sponsorSrc}
+              imgixParams={{ fit: 'clip' }}
+              critical
+              sx={{
+                maxHeight: 39,
+                maxWidth: 72,
+                paddingY: 'lg',
+                display: ['none', 'inline-block'],
+                borderWidth: ['none', 1],
+                borderStyle: ['none', 'solid'],
+                borderColor: ['none', 'grey-10']
+              }}
+            />
+          </div>
+
+          <div
+            sx={{
+              width: 106,
+              display: ['none', 'flex'],
+              alignItems: 'center',
+              marginTop: 'xs'
+            }}
+          >
+            <svg
+              height="48"
+              viewBox="0 0 22 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="none"
+            >
+              <path
+                d="M-0.000966623 8.09716L8.05078 22.1208L21.9964 14.024L13.9447 0.000335086L-0.000966623 8.09716Z"
+                fill="#ACAAFF"
+              />
+              <path
+                d="M13.9475 22.1206L21.9993 8.09692L8.05364 9.82571e-05L0.00188873 14.0238L13.9475 22.1206Z"
+                fill="#7ED2E9"
+              />
+              <path
+                d="M19.0498 2.96484H2.94629V19.1585H19.0498V2.96484Z"
+                fill="#141423"
+              />
+              <path
+                d="M6.30542 12.1831V5.34229H8.37293V12.2014C8.37293 13.9269 9.30664 14.7439 10.8709 14.7439C12.4352 14.7439 13.3689 13.9269 13.3689 12.2014V5.34229H15.4364V12.1831C15.4364 15.0365 13.672 16.5425 10.8709 16.5425C8.12434 16.5486 6.30542 15.0365 6.30542 12.1831Z"
+                fill="white"
+              />
+            </svg>
+
+            <span
+              sx={{
+                width: 55,
+                lineHeight: 1,
+                letterSpacing: -0.5,
+                fontSize: 9,
+                marginLeft: 'xxs',
+                fontFamily: "'-apple-system', 'BlinkMacSystemFont'"
+              }}
+            >
+              <strong>Uswitch</strong> Manufacturer of the Year
+              <strong> Winner 2020</strong>
+            </span>
+          </div>
+
+          <div
+            sx={{
+              fontFamily: 'heading',
+              fontWeight: 'bold',
+              marginRight: 'xs',
+              display: [null, 'none'],
+              flexGrow: 1
+            }}
+          >
+            {title}
+          </div>
+
+          <ButtonLink
+            variant="primary"
+            href={href}
+            target={target}
+            sx={{
+              padding: 0,
+              width: 32,
+              height: 48,
+              display: ['flex', 'none'],
+              flexShrink: 0,
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginBottom: 'sm'
+            }}
+          >
+            <Icon
+              color="white"
+              direction="right"
+              glyph="caret"
+              size={20}
+              sx={{
+                flexShrink: 0
+              }}
+            />
+          </ButtonLink>
         </div>
 
-        <Row direction="row" cols={[2]}>
-          <InformationBlocks details={informationDetails} />
-        </Row>
+        <div
+          sx={{
+            width: [null, '55%']
+          }}
+        >
+          <Stack spacing={[8, 16]}>
+            <div
+              sx={{
+                fontFamily: 'heading',
+                fontWeight: 'bold',
+                display: ['none', 'block']
+              }}
+            >
+              {title}
+            </div>
 
-        <Stack spacing={[8]}>
-          <UspTag usp={usp} />
-          <div sx={{ display: ['block', 'none'] }}>
-            <AwardsTag award={award} />
-            <SponsoredByTag providerLogoSrc={sponsorSrc} />
-          </div>
-        </Stack>
-      </div>
-    </Container>
-  </div>
+            <div
+              sx={{
+                display: 'grid',
+                gridGap: 'xs',
+                gridTemplateColumns: '1fr 1fr'
+              }}
+            >
+              <InformationBlocks details={informationDetails} />
+            </div>
+
+            <UspTag usp={usp} />
+
+            <div sx={{ display: ['block', 'none'] }}>
+              <AwardsTag award={award} />
+              <SponsoredByTag
+                providerLogoSrc={sponsorSrc}
+                sx={{ marginTop: 'xs' }}
+              />
+            </div>
+          </Stack>
+        </div>
+      </Container>
+    </div>
+  </a>
 )
 
 export default SponsoredProduct
