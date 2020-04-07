@@ -195,19 +195,16 @@ export const Example1 = () => {
       rowTitle="Santander Standard Loan (Online)"
       subtitle="Personal Loan"
     >
-      <ProductTable.cells.Image>
-        <img
-          src="https://placekitten.com/200/75?image=9"
-          alt="Salman"
-          sx={{ height: 75, width: '100%', objectFit: 'cover' }}
-        />
-      </ProductTable.cells.Image>
       <ProductTable.cells.Split>
         <ProductTable.cells.Placeholder />
         <ProductTable.cells.Placeholder />
         <ProductTable.cells.Placeholder />
       </ProductTable.cells.Split>
       <ProductTable.cells.Split>
+        <ProductTable.cells.Placeholder />
+        <ProductTable.cells.Placeholder />
+      </ProductTable.cells.Split>
+      <ProductTable.cells.Split customRows={[4, 2]}>
         <ProductTable.cells.Placeholder />
         <ProductTable.cells.Placeholder />
       </ProductTable.cells.Split>

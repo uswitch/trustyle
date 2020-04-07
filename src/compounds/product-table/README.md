@@ -131,6 +131,18 @@ import { CellContext } from '@uswitch/trustyle.product-table'
 const { inSplit } = React.useContext(CellContext)
 ```
 
+You can also override how many rows the children in a split cell take up using
+the `customRows` prop - by default they take up an even number of rows:
+
+```js
+<ProductTable.cells.Split customRows={[2, 4]}>
+  <ProductTable.cells.Content label="Average speed">
+    30Mbps
+  </ProductTable.cells.Content>
+  <ProductTable.cells.Content label="Contract">18 months</ProductTable.cells.Content>
+</ProductTable.cells.Split>
+```
+
 ### Writing your own cell
 
 In addition to the cells available under `ProductTable.cells`, you can also
