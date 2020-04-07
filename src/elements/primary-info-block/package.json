@@ -1,6 +1,6 @@
 {
-  "name": "@uswitch/trustyle.input",
-  "version": "0.3.56",
+  "name": "@uswitch/trustyle.primary-info-block",
+  "version": "0.2.5",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -12,17 +12,11 @@
     "clean": "rm -rf lib",
     "build": "npm run clean && tsc"
   },
-  "dependencies": {
-    "@uswitch/trustyle.frozen-input": "^1.0.2",
-    "@uswitch/trustyle.styles": "^0.4.27",
-    "lodash.debounce": "^4.0.8",
-    "react-input-mask": "^2.0.4"
-  },
-  "devDependencies": {
-    "typescript": "^3.6.2"
-  },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
+  },
+  "dependencies": {
+    "@uswitch/trustyle-utils.palette": "^1.0.2"
   }
 }

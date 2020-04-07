@@ -1,5 +1,5 @@
 {
-  "name": "Money",
+  "name": "Bankrate",
 
   "breakpoints": ["768px", "990px"],
 
@@ -161,8 +161,8 @@
 
   "grid": {
     "sizes": {
-      "gutter": "sm",
-      "verticalGutter": "xs"
+      "gutter": "xs",
+      "verticalGutter": "sm"
     },
     "container": {
       "maxWidth": 1152

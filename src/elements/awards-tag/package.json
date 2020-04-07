@@ -1,6 +1,6 @@
 {
-  "name": "@uswitch/trustyle.input",
-  "version": "0.3.56",
+  "name": "@uswitch/trustyle.awards-tag",
+  "version": "0.0.3",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -12,17 +12,11 @@
     "clean": "rm -rf lib",
     "build": "npm run clean && tsc"
   },
-  "dependencies": {
-    "@uswitch/trustyle.frozen-input": "^1.0.2",
-    "@uswitch/trustyle.styles": "^0.4.27",
-    "lodash.debounce": "^4.0.8",
-    "react-input-mask": "^2.0.4"
-  },
-  "devDependencies": {
-    "typescript": "^3.6.2"
-  },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
+  },
+  "dependencies": {
+    "@uswitch/trustyle.imgix-image": "^0.1.31"
   }
 }
