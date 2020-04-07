@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle-utils.get-theme-composer-config",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.ts",
@@ -15,7 +15,5 @@
     "--------------- TESTING": "----------------------",
     "test": "npm run test:money",
     "test:schema": "npm run build-themes; node --experimental-modules scripts/validate-themes.mjs theme.schema.json lib/money-theme.json"
-  },
-  "dependencies": {},
-  "devDependencies": {}
+  }
 }
