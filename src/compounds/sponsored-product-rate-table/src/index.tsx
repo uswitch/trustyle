@@ -84,7 +84,12 @@ const SponsoredRateTable: React.FC<Props> = ({
       sx={{
         borderWidth: 1,
         borderStyle: 'solid',
-        borderColor: 'grey-30'
+        borderColor: 'grey-30',
+        '&:hover': {
+          '.button-link': {
+            backgroundColor: '#575761'
+          }
+        }
       }}
     >
       <ImgixImage
@@ -203,6 +208,7 @@ const SponsoredRateTable: React.FC<Props> = ({
 
         <div sx={{ display: ['none', 'grid'], gridGap: 12 }}>
           <ButtonLink
+            className="button-link"
             variant="primary"
             href={href}
             target={target}
@@ -214,7 +220,7 @@ const SponsoredRateTable: React.FC<Props> = ({
               alignItems: 'center'
             }}
           >
-            <span sx={{}}>See Deal</span>
+            <span>See Deal</span>
             <Icon
               color="white"
               direction="right"
