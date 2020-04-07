@@ -3,23 +3,33 @@ var moneyTheme = require('@uswitch/trustyle.money-theme')
 
 const themeKeyToComponentMap = {
   'accordion': '@uswitch/trustyle.accordion',
-  'articleIntro': '@uswitch/trustyle.article-intro',
   'author': '@uswitch/trustyle.author',
   'authorProfile': '@uswitch/trustyle.author-profile',
+  'badge': '@uswitch/trustyle.badge',               
   'breadcrumbs2': '@uswitch/trustyle.breadcrumbs',
+  'buttons': '@uswitch/trustyle.button',             
   'callOut': '@uswitch/trustyle.call-out',
   'card': '@uswitch/trustyle.card',
   'categoryTitle': '@uswitch/trustyle.category',
   'cta2': '@uswitch/trustyle.cta',
+  'funnelProgress': '@uswitch/trustyle.funnel-progress',
   'grid': '@uswitch/trustyle.flex-grid',
+  'hero': '@uswitch/trustyle.hero',                
+  'input': '@uswitch/trustyle.input',               
   'list': '@uswitch/trustyle.list',
-  'sideNav': '@uswitch/trustyle.side-nav',
+  'pagination': '@uswitch/trustyle.pagination',
   'toggleSwitch': '@uswitch/trustyle.toggle-switch',
+  'articleIntro': '@uswitch/trustyle.article-intro',
+  'sideNav': '@uswitch/trustyle.side-nav'
 }
 
 const compounds = [
   'article-intro',
   'side-nav'
+]
+
+const layouts = [
+  'flex-grid'
 ]
 
 const deleteKeys = (obj, keys) => {
@@ -30,6 +40,12 @@ const deleteKeys = (obj, keys) => {
 
 const themes = {
   money: moneyTheme
+}
+
+const getComponentPath = dirName => {
+  if(compounds.includes(dirName)) return  'compounds';
+  if(layouts.includes(dirName)) return  'layout';
+  return 'elements'
 }
 
 function migrate(brand, themes, inputDir, outputDir) {
@@ -53,7 +69,6 @@ function migrate(brand, themes, inputDir, outputDir) {
       'colors',
       'radii',
       'srOnly',
-      'grid',
       '----------------------------- Variants',
       'styles'
     ]
@@ -70,25 +85,34 @@ function migrate(brand, themes, inputDir, outputDir) {
     ['modules', 'compounds']
   )
 
+  console.log(Object.keys(componentThemes))
+
   Object.keys(componentThemes).map(key => {
     const packageName = themeKeyToComponentMap[key];
     if (packageName) {
       const dirName = packageName.replace('@uswitch/trustyle.', '')
-      const readPath = `./${inputDir}/${compounds.includes(dirName) ? 'compounds' : 'elements'}/${dirName}/src`
-      const writePath = `./${outputDir}/${compounds.includes(dirName) ? 'compounds' : 'elements'}/${dirName}/src`
-
+      const readPath = `./${inputDir}/${getComponentPath(dirName)}/${dirName}/src`
+      const writePath = `./${outputDir}/${getComponentPath(dirName)}/${dirName}/src`
+      console.log('readPath', readPath+'/index.tsx')
       fs.writeFile(`${writePath}/themes/${brand}.json`, JSON.stringify(componentThemes[key]), (e) => console.log(`${writePath}/${brand}.json`, e) )
-      
       const jsFile = fs.readFile(`${readPath}/index.tsx`, (e, data) => {
-        const newFile = `${data}
+        if (!data) {
+          return console.error(`${readPath}/index.tsx could not be read`)
+        }
+        const newFile = `${data.toString().split('\n').map((line, index) => {
+          if (index === 2) {
+            return `import { getComponentThemeConfig } from '@uswitch/trustyle-utils.theme-composer'\n${line}`
+          }
+          return `${line}`
+        }).join('\n')}
 export const themeConfig = getComponentThemeConfig({
   name: '${key}',
   themes: []
 })
 `
+        // console.log(`\n\n${newFile}\n\n`)
         fs.writeFile(`${writePath}/index.tsx`, newFile, () => {})
       }) 
-  
     }
   })
 
