@@ -6,13 +6,12 @@ import packageJson from '../package.json'
 
 import composeTheme from '.'
 
-
 const { cwd } = process
 const brands = ['money']
 
 brands.map(brand =>
   writeFileSync(
-    join(cwd(), `lib/${brand}-theme.json`),
+    join(cwd(), `src/${brand}-theme.json`),
     composeTheme({
       brand,
       packageJson,
