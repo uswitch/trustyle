@@ -5,6 +5,7 @@
   },
   "include": [
     "./src/index.tsx",
+    "./src/themes/*.ts",
     "./src/themes/*.ts"
   ]
 }
