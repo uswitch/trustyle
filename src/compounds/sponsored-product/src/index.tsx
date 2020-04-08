@@ -96,16 +96,16 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
 const EnhancedImage = ({ src }: { src: string }) => (
   <React.Fragment>
     {src && (
-      <ImgixImage
-        src={src}
-        imgixParams={{ fit: 'clip' }}
-        critical
+      <div
         sx={{
           height: 96,
           width: '100%',
-          display: ['block', 'none']
+          display: ['block', 'none'],
+          backgroundImage: `url(${src})`,
+          backgroundPosition: 'left bottom',
+          backgroundRepeat: 'no-repeat'
         }}
-      />
+      ></div>
     )}
   </React.Fragment>
 )
