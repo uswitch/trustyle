@@ -107,10 +107,10 @@ const composeTheme = options => {
     })
   }
 
-  console.log(JSON.stringify(theme))
+  console.log(JSON.stringify(theme, undefined, 2))
 
   // return JSON
-  return JSON.stringify(theme)
+  return JSON.stringify(theme, undefined, 2)
 }
 
 export default composeTheme
