@@ -8,10 +8,28 @@ const TOKENS = 'TOKENS'
 
 // if we rename packages to include category we can remove these mappings
 const elements = [
-  '@uswitch/trustyle.accordion', 
-  '@uswitch/trustyle.badge'
+  '@uswitch/trustyle.accordion',
+  '@uswitch/trustyle.author',
+  '@uswitch/trustyle.author-profile',
+  '@uswitch/trustyle.badge',
+  '@uswitch/trustyle.breadcrumbs',
+  '@uswitch/trustyle.button',
+  '@uswitch/trustyle.call-out',
+  '@uswitch/trustyle.card',
+  '@uswitch/trustyle.category',
+  '@uswitch/trustyle.cta',
+  '@uswitch/trustyle.funnel-progress',
+  '@uswitch/trustyle.flex-grid',
+  '@uswitch/trustyle.hero',
+  '@uswitch/trustyle.input',
+  '@uswitch/trustyle.list',
+  '@uswitch/trustyle.pagination',
+  '@uswitch/trustyle.toggle-switch'
 ]
-const compounds = []
+const compounds = [
+  '@uswitch/trustyle.article-intro',
+  '@uswitch/trustyle.side-nav'
+]
 
 const getPath = ({ type, brand, nodeModulesPath, packageName }) =>
   type === TOKENS
