@@ -95,7 +95,7 @@ function migrate(brand, themes, inputDir, outputDir) {
       const readPath = `./${inputDir}/${getComponentPath(dirName)}/${dirName}/src`
       const writePath = `./${outputDir}/${getComponentPath(dirName)}/${dirName}/src`
       console.log('readPath', readPath+'/index.tsx')
-      fs.writeFile(`${writePath}/themes/${brand}.json`, JSON.stringify(componentThemes[key], undefined, 2), (e) => console.log(`${writePath}/${brand}.json`, e) )
+      fs.writeFile(`${writePath}/themes/${brand}.ts`, `export default ${JSON.stringify(componentThemes[key], undefined, 2)}`, (e) => console.log(`${writePath}/${brand}.json`, e) )
       const jsFile = fs.readFile(`${readPath}/index.tsx`, (e, data) => {
         if (!data) {
           return console.error(`${readPath}/index.tsx could not be read`)
