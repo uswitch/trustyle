@@ -1,5 +1,6 @@
 var fs = require('file-system');
 var moneyTheme = require('@uswitch/trustyle.money-theme')
+const { exec } = require('child_process');
 
 const themeKeyToComponentMap = {
   'accordion': '@uswitch/trustyle.accordion',
@@ -101,17 +102,19 @@ function migrate(brand, themes, inputDir, outputDir) {
         }
         const newFile = `${data.toString().split('\n').map((line, index) => {
           if (index === 2) {
-            return `import { getComponentThemeConfig } from '@uswitch/trustyle-utils.theme-composer'\n${line}`
+            return `import getThemeComposerConfig from '@uswitch/trustyle-utils.get-theme-composer-config'\n${line}`
           }
           return `${line}`
         }).join('\n')}
-export const themeConfig = getComponentThemeConfig({
+export const themeConfig = getThemeComposerConfig({
   name: '${key}',
   themes: []
 })
 `
         // console.log(`\n\n${newFile}\n\n`)
-        fs.writeFile(`${writePath}/index.tsx`, newFile, () => {})
+        fs.writeFile(`${writePath}/index.tsx`, newFile, () => {
+          exec(`cd ${writePath}/..; npm install @uswitch/trustyle-utils.get-theme-composer-config;`)
+        })
       }) 
     }
   })
