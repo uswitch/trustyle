@@ -113,7 +113,13 @@ export const themeConfig = getThemeComposerConfig({
 `
         // console.log(`\n\n${newFile}\n\n`)
         fs.writeFile(`${writePath}/index.tsx`, newFile, () => {
-          exec(`cd ${writePath}/..; npm install @uswitch/trustyle-utils.get-theme-composer-config;`)
+          fs.readFile(`${readPath}/../tsconfig.json`, (e, data) => {
+            let tsConfig = JSON.parse(data.toString());
+            tsConfig.include = [ ...tsConfig.include, "./src/themes/*.ts" ]
+            fs.writeFile(`${writePath}/../tsconfig.json`, JSON.stringify(tsConfig, undefined, 2), () => {
+              exec(`cd ${writePath}/..; npm install @uswitch/trustyle-utils.get-theme-composer-config; `) //npm run build;
+            })
+          })
         })
       }) 
     }
