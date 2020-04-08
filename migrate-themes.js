@@ -96,32 +96,13 @@ function migrate(brand, themes, inputDir, outputDir) {
       const writePath = `./${outputDir}/${getComponentPath(dirName)}/${dirName}/src`
       console.log('readPath', readPath+'/index.tsx')
       fs.writeFile(`${writePath}/themes/${brand}.ts`, `export default ${JSON.stringify(componentThemes[key], undefined, 2)}`, (e) => console.log(`${writePath}/${brand}.json`, e) )
-      const jsFile = fs.readFile(`${readPath}/index.tsx`, (e, data) => {
-        if (!data) {
-          return console.error(`${readPath}/index.tsx could not be read`)
-        }
-        const newFile = `${data.toString().split('\n').map((line, index) => {
-          if (index === 2) {
-            return `import getThemeComposerConfig from '@uswitch/trustyle-utils.get-theme-composer-config'\n${line}`
-          }
-          return `${line}`
-        }).join('\n')}
-export const themeConfig = getThemeComposerConfig({
-  name: '${key}',
-  themes: []
-})
-`
-        // console.log(`\n\n${newFile}\n\n`)
-        fs.writeFile(`${writePath}/index.tsx`, newFile, () => {
-          fs.readFile(`${readPath}/../tsconfig.json`, (e, data) => {
-            let tsConfig = JSON.parse(data.toString());
-            tsConfig.include = [ ...tsConfig.include, "./src/themes/*.ts" ]
-            fs.writeFile(`${writePath}/../tsconfig.json`, JSON.stringify(tsConfig, undefined, 2), () => {
-              exec(`cd ${writePath}/..; npm install @uswitch/trustyle-utils.get-theme-composer-config; npm run build;`) //
-            })
+        fs.readFile(`${readPath}/../tsconfig.json`, (e, data) => {
+          let tsConfig = JSON.parse(data.toString());
+          tsConfig.include = [ ...tsConfig.include, "./src/themes/*.ts" ]
+          fs.writeFile(`${writePath}/../tsconfig.json`, JSON.stringify(tsConfig, undefined, 2), () => {
+            exec(`cd ${writePath}/..; npm run build;`) //
           })
         })
-      }) 
     }
   })
 

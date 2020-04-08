@@ -1,12 +1,8 @@
-// @ts-nocheck
 /** @jsx jsx */
 
 import React, { useContext, useState } from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
-import { getComponentThemeConfig } from '@uswitch/trustyle-utils.theme-composer'
-
-import money from './themes/money.ts'
 
 interface ContextProps {
   open: number
@@ -145,8 +141,3 @@ Accordion.Title = ({ children, as = 'h2' }) => {
     </Styled.h3>
   )
 }
-
-export const themeConfig = getComponentThemeConfig({
-  name: 'accordion',
-  themes: [money]
-})
