@@ -228,7 +228,6 @@
       "base": {
         "mb": 0,
         "position": "relative",
-        "transition": "all 0.3s ease-in-out",
         ">a": {
           "transition": "all 0.3s ease-in-out",
           "display": "block",
