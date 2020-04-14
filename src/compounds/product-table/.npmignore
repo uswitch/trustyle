@@ -1,0 +1,6 @@
+src/components/row.tsx
+
+!lib/*
+!package.json
+!README.md
+!LICENSE

@@ -1,6 +1,6 @@
 {
-  "name": "@uswitch/trustyle.progress-bar",
-  "version": "1.0.0",
+  "name": "@uswitch/trustyle.product-table",
+  "version": "1.0.0-alpha.0",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -11,10 +11,6 @@
     "--------------- BUILDING": "----------------------",
     "clean": "rm -rf lib",
     "build": "npm run clean && tsc"
-  },
-  "devDependencies": {
-    "@types/facepaint": "^1.2.1",
-    "typescript": "^3.6.2"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
