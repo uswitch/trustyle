@@ -26,7 +26,11 @@ export const ExampleWithKnobs = () => {
   const award = text('Award', 'Uswitch Manufacturer of the Year')
   const enhanced = text(
     'Enhanced image url',
-    'https://academy.alchemysystems.com/wp-content/uploads/2017/03/roundtable-banner-image-1400x350.jpg'
+    'https://media-exp1.licdn.com/dms/image/C4E12AQE4xoCnD9YOYg/article-cover_image-shrink_600_2000/0?e=1591833600&v=beta&t=M5KsjSiq_qa5od-ZpqhcdesChm8pRobpp6RT-fHzo1s'
+  )
+  const brandCaptionText = text(
+    'Brand caption',
+    'No landline needed. No engineer needed. Forget fibre. Join the party.'
   )
 
   return (
@@ -35,10 +39,17 @@ export const ExampleWithKnobs = () => {
         title={title}
         imgSrc={imgSrc}
         imgAlt={imgAlt}
+        usp={usp}
+        href={href}
+        target={target}
+        sponsorSrc={sponsorSrc}
+        award={award}
+        enhancedImgSrc={enhanced}
+        brandCaption={brandCaptionText}
         informationDetails={[
           {
             prefix: '',
-            value: '30',
+            value: text('value', '30'),
             suffix: 'GB',
             label: 'data'
           },
@@ -49,12 +60,6 @@ export const ExampleWithKnobs = () => {
             label: 'per month'
           }
         ]}
-        usp={usp}
-        href={href}
-        target={target}
-        sponsorSrc={sponsorSrc}
-        award={award}
-        enhancedImgSrc={enhanced}
       />
     </div>
   )

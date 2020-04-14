@@ -17,13 +17,14 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   imgSrc: string
   imgAlt: string
-  informationDetails: Detail[]
+  informationDetails?: Detail[]
   usp: string
   href: string
   target: string
   sponsorSrc: string
-  award: string
+  award?: string
   enhancedImgSrc: string
+  brandCaption?: string
 }
 
 interface Detail {
@@ -46,8 +47,31 @@ const InformationBlocks: React.FC<InformationBlocksProps> = ({ details }) => (
         suffix={obj.suffix}
         label={obj.label}
         key={`infoblock-${index}`}
+        sx={{ padding: [null, 'xs'] }}
       />
     ))}
+  </React.Fragment>
+)
+
+const BrandCaption = ({ text }: { text: string }) => (
+  <React.Fragment>
+    {text && (
+      <div
+        sx={{
+          backgroundColor: 'grey-05',
+          padding: 'xs',
+          marginBottom: ['sm', 'none']
+        }}
+      >
+        <span
+          sx={{
+            fontWeight: 'base'
+          }}
+        >
+          {text}
+        </span>
+      </div>
+    )}
   </React.Fragment>
 )
 
@@ -56,7 +80,8 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
     {src && (
       <ImgixImage
         sx={{
-          maxHeight: [96, 105],
+          height: [96, 105],
+          width: 56,
           marginTop: [-48, 0],
           marginRight: ['xs', 0]
         }}
@@ -72,16 +97,16 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
 const EnhancedImage = ({ src }: { src: string }) => (
   <React.Fragment>
     {src && (
-      <ImgixImage
-        src={src}
-        imgixParams={{ fit: 'clip' }}
-        critical
+      <div
         sx={{
           height: 96,
           width: '100%',
-          display: ['block', 'none']
+          display: ['block', 'none'],
+          backgroundImage: `url(${src})`,
+          backgroundPosition: 'left bottom',
+          backgroundRepeat: 'no-repeat'
         }}
-      />
+      ></div>
     )}
   </React.Fragment>
 )
@@ -99,7 +124,8 @@ const SponsoredProduct: React.FC<Props> = ({
   target,
   sponsorSrc,
   award,
-  enhancedImgSrc
+  enhancedImgSrc,
+  brandCaption
 }) => (
   <a href={href} target={target} sx={{ textDecoration: 'none' }}>
     <div
@@ -125,6 +151,7 @@ const SponsoredProduct: React.FC<Props> = ({
         sx={{
           padding: [12, 'sm'],
           display: [null, 'flex'],
+          justifyContent: [null, 'space-between'],
           borderWidth: ['none', 1],
           borderStyle: ['none', 'solid'],
           borderColor: ['none', 'grey-30'],
@@ -135,14 +162,12 @@ const SponsoredProduct: React.FC<Props> = ({
           sx={{
             display: 'flex',
             flexDirection: [null, 'column'],
-            flex: [null, '1 0 auto']
+            width: [null, '45%']
           }}
         >
           <div
             sx={{
-              display: [null, 'flex'],
-              width: [null, 140],
-              justifyContent: [null, 'space-between']
+              display: [null, 'flex']
             }}
           >
             <ProductImage src={imgSrc} alt={imgAlt} />
@@ -152,69 +177,74 @@ const SponsoredProduct: React.FC<Props> = ({
               imgixParams={{ fit: 'clip' }}
               critical
               sx={{
-                maxHeight: 39,
+                maxHeight: 40,
                 maxWidth: 72,
                 paddingY: 'lg',
+                paddingX: 'xxs',
+                marginLeft: 'xs',
                 display: ['none', 'inline-block'],
-                borderWidth: ['none', 1],
-                borderStyle: ['none', 'solid'],
-                borderColor: ['none', 'grey-10']
+                borderWidth: 1,
+                borderStyle: 'solid',
+                borderColor: 'grey-10'
               }}
             />
           </div>
 
-          <div
-            sx={{
-              width: 106,
-              display: ['none', 'flex'],
-              alignItems: 'center',
-              marginTop: 'xs'
-            }}
-          >
-            <svg
-              height="48"
-              viewBox="0 0 22 23"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              stroke="none"
-            >
-              <path
-                d="M-0.000966623 8.09716L8.05078 22.1208L21.9964 14.024L13.9447 0.000335086L-0.000966623 8.09716Z"
-                fill="#ACAAFF"
-              />
-              <path
-                d="M13.9475 22.1206L21.9993 8.09692L8.05364 9.82571e-05L0.00188873 14.0238L13.9475 22.1206Z"
-                fill="#7ED2E9"
-              />
-              <path
-                d="M19.0498 2.96484H2.94629V19.1585H19.0498V2.96484Z"
-                fill="#141423"
-              />
-              <path
-                d="M6.30542 12.1831V5.34229H8.37293V12.2014C8.37293 13.9269 9.30664 14.7439 10.8709 14.7439C12.4352 14.7439 13.3689 13.9269 13.3689 12.2014V5.34229H15.4364V12.1831C15.4364 15.0365 13.672 16.5425 10.8709 16.5425C8.12434 16.5486 6.30542 15.0365 6.30542 12.1831Z"
-                fill="white"
-              />
-            </svg>
-
-            <span
+          {award ? (
+            <div
               sx={{
-                width: 55,
-                lineHeight: 1,
-                letterSpacing: -0.5,
-                fontSize: 9,
-                marginLeft: 'xxs',
-                fontFamily: "'-apple-system', 'BlinkMacSystemFont'"
+                width: 106,
+                display: ['none', 'flex'],
+                alignItems: 'center',
+                marginTop: 'xs'
               }}
             >
-              <strong>Uswitch</strong> Manufacturer of the Year
-              <strong> Winner 2020</strong>
-            </span>
-          </div>
+              <svg
+                height="48"
+                viewBox="0 0 22 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="none"
+              >
+                <path
+                  d="M-0.000966623 8.09716L8.05078 22.1208L21.9964 14.024L13.9447 0.000335086L-0.000966623 8.09716Z"
+                  fill="#ACAAFF"
+                />
+                <path
+                  d="M13.9475 22.1206L21.9993 8.09692L8.05364 9.82571e-05L0.00188873 14.0238L13.9475 22.1206Z"
+                  fill="#7ED2E9"
+                />
+                <path
+                  d="M19.0498 2.96484H2.94629V19.1585H19.0498V2.96484Z"
+                  fill="#141423"
+                />
+                <path
+                  d="M6.30542 12.1831V5.34229H8.37293V12.2014C8.37293 13.9269 9.30664 14.7439 10.8709 14.7439C12.4352 14.7439 13.3689 13.9269 13.3689 12.2014V5.34229H15.4364V12.1831C15.4364 15.0365 13.672 16.5425 10.8709 16.5425C8.12434 16.5486 6.30542 15.0365 6.30542 12.1831Z"
+                  fill="white"
+                />
+              </svg>
+
+              <span
+                sx={{
+                  width: 55,
+                  lineHeight: 1,
+                  letterSpacing: -0.5,
+                  fontSize: 9,
+                  marginLeft: 'xxs',
+                  fontFamily: "'-apple-system', 'BlinkMacSystemFont'"
+                }}
+              >
+                <strong>Uswitch</strong> Manufacturer of the Year
+                <strong> Winner 2020</strong>
+              </span>
+            </div>
+          ) : null}
 
           <div
             sx={{
               fontFamily: 'heading',
-              fontWeight: 'bold',
+              fontWeight: 700,
+              lineHeight: 'heading',
               marginRight: 'xs',
               display: [null, 'none'],
               flexGrow: 1
@@ -259,33 +289,40 @@ const SponsoredProduct: React.FC<Props> = ({
             <div
               sx={{
                 fontFamily: 'heading',
-                fontWeight: 'bold',
+                fontWeight: 700,
+                lineHeight: 'heading',
                 display: ['none', 'block']
               }}
             >
               {title}
             </div>
 
-            <div
-              sx={{
-                display: 'grid',
-                gridGap: 'xs',
-                gridTemplateColumns: '1fr 1fr'
-              }}
-            >
-              <InformationBlocks details={informationDetails} />
-            </div>
+            {brandCaption ? <BrandCaption text={brandCaption} /> : null}
+
+            {informationDetails ? (
+              <div
+                sx={{
+                  display: 'grid',
+                  gridGap: 'xs',
+                  gridTemplateColumns: '1fr 1fr'
+                }}
+              >
+                <InformationBlocks details={informationDetails} />
+              </div>
+            ) : null}
 
             <UspTag usp={usp} />
-
-            <div sx={{ display: ['block', 'none'] }}>
-              <AwardsTag award={award} />
-              <SponsoredByTag
-                providerLogoSrc={sponsorSrc}
-                sx={{ marginTop: 'xs' }}
-              />
-            </div>
           </Stack>
+
+          <div sx={{ display: ['block', 'none'] }}>
+            {award ? (
+              <AwardsTag award={award} sx={{ marginTop: 'xs' }} />
+            ) : null}
+            <SponsoredByTag
+              providerLogoSrc={sponsorSrc}
+              sx={{ marginTop: 'xs' }}
+            />
+          </div>
         </div>
       </Container>
     </div>

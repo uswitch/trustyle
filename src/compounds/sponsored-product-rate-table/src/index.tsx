@@ -10,6 +10,7 @@ import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import PrimaryInfoBlock from '@uswitch/trustyle.primary-info-block'
 import SponsoredByTag from '@uswitch/trustyle.sponsored-by-tag'
 import UspTag from '@uswitch/trustyle.usp-tag'
+import { Stack } from '@uswitch/trustyle.arrangement'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   productName: string
@@ -84,17 +85,22 @@ const SponsoredRateTable: React.FC<Props> = ({
       sx={{
         borderWidth: 1,
         borderStyle: 'solid',
-        borderColor: 'grey-30'
+        borderColor: 'grey-30',
+        '&:hover': {
+          '.button-link': {
+            backgroundColor: '#575761'
+          }
+        }
       }}
     >
-      <ImgixImage
-        src={campaignImgSrc}
-        imgixParams={{ fit: 'clip' }}
-        critical
+      <div
         sx={{
-          height: 192,
+          height: 150,
           width: '100%',
-          display: ['block', 'none']
+          display: ['block', 'none'],
+          backgroundImage: `url(${campaignImgSrc})`,
+          backgroundPosition: 'left bottom',
+          backgroundRepeat: 'no-repeat'
         }}
       />
 
@@ -107,13 +113,12 @@ const SponsoredRateTable: React.FC<Props> = ({
         }}
       >
         <div>
-          <ImgixImage
-            src={campaignImgSrc}
-            imgixParams={{ fit: 'clip' }}
-            critical
+          <div
             sx={{
               height: 150,
               width: '100%',
+              backgroundImage: `url(${campaignImgSrc})`,
+              backgroundPosition: 'left bottom',
               display: ['none', 'block']
             }}
           />
@@ -179,13 +184,13 @@ const SponsoredRateTable: React.FC<Props> = ({
           </ButtonLink>
         </div>
 
-        <div sx={{ display: 'grid', gridGap: 'xs' }}>
+        <Stack spacing={[8]}>
           <div
             sx={{
               display: 'grid',
               gridGap: 'xs',
               gridTemplateColumns: '1fr 1fr',
-              height: 150
+              height: [92, 150]
             }}
           >
             <InformationBlocks details={informationDetails} />
@@ -193,16 +198,17 @@ const SponsoredRateTable: React.FC<Props> = ({
 
           <UspTag usp={usp} />
 
-          <AwardsTag award={award} />
+          <AwardsTag award={award} sx={{ display: [null, 'none'] }} />
 
           <SponsoredByTag
             providerLogoSrc={sponsorLogoSrc}
             sx={{ display: [null, 'none'] }}
           />
-        </div>
+        </Stack>
 
-        <div sx={{ display: ['none', 'grid'], gridGap: 12 }}>
+        <Stack spacing={[16]} sx={{ display: ['none', 'block'] }}>
           <ButtonLink
+            className="button-link"
             variant="primary"
             href={href}
             target={target}
@@ -214,7 +220,7 @@ const SponsoredRateTable: React.FC<Props> = ({
               alignItems: 'center'
             }}
           >
-            <span sx={{}}>See Deal</span>
+            <span>See Deal</span>
             <Icon
               color="white"
               direction="right"
@@ -277,7 +283,7 @@ const SponsoredRateTable: React.FC<Props> = ({
               <strong> Winner 2020</strong>
             </span>
           </div>
-        </div>
+        </Stack>
       </Container>
     </div>
   </a>
