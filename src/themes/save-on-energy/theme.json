@@ -96,6 +96,8 @@
 
   "useCustomProperties": false,
 
+  "useBodyStyles": false,
+
   "colors": {
     "primary": "#446db5",
     "secondary": "#00aa4e",

@@ -103,6 +103,8 @@
 
   "useCustomProperties": false,
 
+  "useBodyStyles": false,
+
   "colors": {
     "blue": "#84A6FF",
     "blue-75": "#A3BCFF",
@@ -178,8 +180,8 @@
 
   "grid": {
     "sizes": {
-      "gutter": "xs",
-      "verticalGutter": "xs"
+      "gutter": 15,
+      "verticalGutter": 15
     },
     "container": {
       "maxWidth": 1200
@@ -333,17 +335,30 @@
   "compounds": {
     "card": {
       "itemsPerRow": [1, 2, 3],
-      "border": "1px solid",
-      "borderColor": "brand",
+      "display": "flex",
+      "width": "100%",
+      "height": "100%",
+      "flexDirection": "column",
+      "borderRadius": "sm",
+      "borderStyle": "solid",
+      "borderColor": "grey-20",
+      "borderWidth": "1px",
       "boxSizing": "border-box",
-      "paddingY": 0,
-
+      "mb": "sm",
       "img": {
-        "width": "100%"
+        "sm": { "width": "100%", "height": 230 },
+        "md": { "width": "100%", "height": 230 },
+        "lg": { "maxWidth": "grid.lg.3", "height": 230 }
       },
+      "p": { "fontSize": 16, "lineHeight": "130%", "color": "grey-80" },
+      "h3": { "a": {
+        "textDecoration": "none"
+      } },
       "content": {
-        "paddingY": ["sm", 0]
-      }
+        "paddingY": "sm",
+        "paddingX": ["sm", "sm"]
+      },
+      "marginRight": "base"
     },
 
     "click-out-form": {
@@ -550,7 +565,27 @@
         "variant": "badge.base",
         "backgroundColor": "uswitch-navy",
         "color": "white"
-       }
+       },
+      "sponsored": {
+        "paddingX": 11,
+        "paddingY": 6,
+        "fontSize": "xxs",
+        "fontWeight": 500,
+        "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
+        "backgroundColor": "uswitch-navy",
+        "color": "white"
+      },
+      "inverse": {
+        "variant": "badge.base",
+        "paddingX": ["xxs", "xs"],
+        "paddingY": ["0", "0"],
+        "fontSize": "xxs",
+        "color": "black",
+        "fontWeight": "bold",
+        "backgroundColor": "white",
+        "border": "2px solid #ACAAFF",
+        "borderRadius": "3px"
+      }
     }
   },
 

@@ -1,0 +1,30 @@
+{
+  "name": "@uswitch/trustyle.sponsored-product-rate-table",
+  "version": "0.0.2",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "ts:main": "src/index.tsx",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "--------------- BUILDING": "----------------------",
+    "clean": "rm -rf lib",
+    "build": "npm run clean && tsc"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.27",
+    "react": "^16.7.0"
+  },
+  "dependencies": {
+    "@uswitch/trustyle.arrangement": "^2.0.11",
+    "@uswitch/trustyle.awards-tag": "^0.0.3",
+    "@uswitch/trustyle.button-link": "^0.5.0",
+    "@uswitch/trustyle.flex-grid": "^1.2.1",
+    "@uswitch/trustyle.icon": "^1.0.2",
+    "@uswitch/trustyle.imgix-image": "^0.1.34",
+    "@uswitch/trustyle.primary-info-block": "^0.2.6",
+    "@uswitch/trustyle.sponsored-by-tag": "^0.0.3",
+    "@uswitch/trustyle.usp-tag": "^0.0.2"
+  }
+}
