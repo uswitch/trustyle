@@ -1,18 +1,22 @@
 import * as React from 'react'
 import { Styled, ThemeProvider, ThemeProviderProps } from 'theme-ui'
 
-import { themes } from './theme-selector'
+import { themes as themeFiles } from './theme-selector'
 
-const AllThemes: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
-  children
-}) => {
-  // @todo add prop to specify themes
-  const themeKeys = ['uswitch', 'money', 'journey', 'save-on-energy']
+interface Props extends React.HTMLAttributes<any> {
+  themes: string[]
+}
+
+const AllThemes: React.FC<Props> = ({ themes = [], children }) => {
+  const availableThemes = ['uswitch', 'money', 'journey', 'save-on-energy']
+  const themeKeys = themes.length
+    ? availableThemes.filter(theme => themes.includes(theme))
+    : availableThemes
 
   return (
     <React.Fragment>
       {themeKeys.map((key, index) => {
-        const theme = themes[`./${key}/theme.json`]
+        const theme = themeFiles[`./${key}/theme.json`]
         return (
           <ThemeProvider theme={theme as ThemeProviderProps<any>} key={index}>
             <Styled.root>
