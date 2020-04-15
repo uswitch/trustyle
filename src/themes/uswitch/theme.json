@@ -180,8 +180,8 @@
 
   "grid": {
     "sizes": {
-      "gutter": "xs",
-      "verticalGutter": "xs"
+      "gutter": 15,
+      "verticalGutter": 15
     },
     "container": {
       "maxWidth": 1200
@@ -467,6 +467,7 @@
 
   "buttons": {
     "base": {
+      "boxSizing": "border-box",
       "paddingX": "lg",
       "textAlign": "center",
       "fontWeight": "bold"
@@ -525,6 +526,12 @@
           "color": "white"
         }
       },
+      "link": {
+        "variant": "buttons.base",
+        "color": "uswitch-navy",
+        "background": "none",
+        "textDecoration": "underline"
+      },
       "inverse": {
         "variant": "buttons.base",
         "color": "uswitch-navy",
@@ -562,6 +569,15 @@
     "variants": {
       "primary": {
         "variant": "badge.base",
+        "backgroundColor": "uswitch-navy",
+        "color": "white"
+       },
+      "sponsored": {
+        "paddingX": 11,
+        "paddingY": 6,
+        "fontSize": "xxs",
+        "fontWeight": 500,
+        "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
         "backgroundColor": "uswitch-navy",
         "color": "white"
       },
@@ -926,6 +942,64 @@
         "color": "grey-40",
         "backgroundColor": "white",
         "borderColor": "grey-40"
+      }
+    }
+  },
+
+  "progressBar": {
+    "main": {
+      "backgroundColor": "blue-25"
+    },
+    "progress": {
+      "backgroundColor": "blue"
+    }
+  },
+
+  "productTable": {
+    "row": {
+      "main": {
+        "borderColor": "grey-30"
+      },
+      "header": {
+        "borderBottomColor": "grey-20"
+      },
+      "pretitle": {
+        "color": "grey-80"
+      },
+      "subtitle": {
+        "color": "grey-80"
+      }
+    },
+    "cellBase": {
+      "variants": {
+        "inSplit": {
+          "borderTopColor": "grey-20"
+        }
+      }
+    },
+    "addonFooter": {
+      "main": {
+        "borderTopColor": "grey-20"
+      }
+    },
+    "cellContent": {
+      "main": {
+        "base": {},
+        "variants": {
+          "accent": {
+            "backgroundColor": "grey-05"
+          }
+        }
+      },
+      "label": {
+        "color": "grey-80"
+      }
+    },
+    "cellCta": {
+      "buttonWrapper": {
+        "a, button": {
+          "width": "100%"
+        }
       }
     }
   },
