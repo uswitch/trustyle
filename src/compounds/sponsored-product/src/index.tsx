@@ -92,13 +92,12 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
     {src && (
       <ImgixImage
         sx={{
-          height: [96, 105],
-          width: 56,
           marginTop: [-48, 0],
           marginRight: ['xs', 0]
         }}
         alt={alt}
         src={src}
+        width={56}
         imgixParams={{ fit: 'clip' }}
         critical
       />
@@ -184,22 +183,32 @@ const SponsoredProduct: React.FC<Props> = ({
           >
             <ProductImage src={imgSrc} alt={imgAlt} />
 
-            <ImgixImage
-              src={sponsorSrc}
-              imgixParams={{ trim: 'color' }}
-              critical
+            <div
               sx={{
-                maxHeight: 40,
-                maxWidth: 72,
-                paddingY: 'lg',
-                paddingX: 'xxs',
+                width: 80,
+                position: 'relative',
                 marginLeft: 'xs',
                 display: ['none', 'inline-block'],
                 borderWidth: 1,
                 borderStyle: 'solid',
                 borderColor: 'grey-10'
               }}
-            />
+            >
+              <ImgixImage
+                src={sponsorSrc}
+                imgixParams={{ trim: 'color' }}
+                width={40}
+                critical
+                sx={{
+                  position: 'absolute',
+                  margin: 'auto',
+                  top: 0,
+                  bottom: 0,
+                  left: 0,
+                  right: 0
+                }}
+              />
+            </div>
           </div>
 
           {award ? (
