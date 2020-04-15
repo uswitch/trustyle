@@ -18,13 +18,14 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   imgSrc: string
   imgAlt: string
   informationDetails?: Detail[]
-  usps: string[]
+  usps?: string[]
   href: string
   target: string
   sponsorSrc: string
   award?: string
   enhancedImgSrc: string
   brandCaption?: string
+  backgroundColor?: string
 }
 
 interface Detail {
@@ -93,7 +94,8 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
       <ImgixImage
         sx={{
           marginTop: [-48, 0],
-          marginRight: ['xs', 0]
+          marginRight: ['xs', 0],
+          height: [96, 104]
         }}
         alt={alt}
         src={src}
@@ -136,7 +138,8 @@ const SponsoredProduct: React.FC<Props> = ({
   sponsorSrc,
   award,
   enhancedImgSrc,
-  brandCaption
+  brandCaption,
+  backgroundColor = 'white'
 }) => (
   <a href={href} target={target} sx={{ textDecoration: 'none' }}>
     <div
@@ -166,7 +169,8 @@ const SponsoredProduct: React.FC<Props> = ({
           borderWidth: ['none', 1],
           borderStyle: ['none', 'solid'],
           borderColor: ['none', 'grey-30'],
-          boxShadow: ['none', '12px 12px 0px rgba(20, 20, 36, 0.15)']
+          boxShadow: ['none', '12px 12px 0px rgba(20, 20, 36, 0.15)'],
+          backgroundColor: backgroundColor
         }}
       >
         <div
@@ -188,6 +192,7 @@ const SponsoredProduct: React.FC<Props> = ({
                 width: 80,
                 position: 'relative',
                 marginLeft: 'xs',
+                marginRight: 'sm',
                 display: ['none', 'inline-block'],
                 borderWidth: 1,
                 borderStyle: 'solid',
@@ -214,7 +219,7 @@ const SponsoredProduct: React.FC<Props> = ({
             </div>
           </div>
 
-          {award ? (
+          {award && (
             <div
               sx={{
                 width: 106,
@@ -262,7 +267,7 @@ const SponsoredProduct: React.FC<Props> = ({
                 <strong> Winner 2020</strong>
               </span>
             </div>
-          ) : null}
+          )}
 
           <div
             sx={{
@@ -321,7 +326,7 @@ const SponsoredProduct: React.FC<Props> = ({
               {title}
             </div>
 
-            {brandCaption ? <BrandCaption text={brandCaption} /> : null}
+            {brandCaption && <BrandCaption text={brandCaption} />}
 
             {informationDetails && (
               <div
