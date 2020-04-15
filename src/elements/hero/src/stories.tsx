@@ -152,33 +152,33 @@ export const MoneyHomepageHero = () => {
         <Styled.h2>
           Compare and find the deal that&apos;s right for you
         </Styled.h2>
-        <Row wrap>
-          <Col span={3}>
+        <Row wrap direction="row">
+          <Col span={[6, 3]}>
             <IconPanelHelper icon="creditCards">Credit cards</IconPanelHelper>
           </Col>
-          <Col span={3}>
+          <Col span={[6, 3]}>
             <IconPanelHelper icon="mortgages">Mortgages</IconPanelHelper>
           </Col>
-          <Col span={3}>
+          <Col span={[6, 3]}>
             <IconPanelHelper icon="loans">Loans</IconPanelHelper>
           </Col>
-          <Col span={3}>
+          <Col span={[6, 3]}>
             <IconPanelHelper icon="savingAccounts">
               Savings accounts
             </IconPanelHelper>
           </Col>
-          <Col span={3}>
+          <Col span={[6, 3]}>
             <IconPanelHelper icon="travelMoney">Travel money</IconPanelHelper>
           </Col>
-          <Col span={3}>
+          <Col span={[6, 3]}>
             <IconPanelHelper icon="currentAccounts">
               Current accounts
             </IconPanelHelper>
           </Col>
-          <Col span={3}>
+          <Col span={[6, 3]}>
             <IconPanelHelper icon="carInsurance">Car insurance</IconPanelHelper>
           </Col>
-          <Col span={3}>
+          <Col span={[6, 3]}>
             <IconPanelHelper icon="investments">Investments</IconPanelHelper>
           </Col>
         </Row>
