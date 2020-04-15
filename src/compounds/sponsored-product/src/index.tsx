@@ -18,7 +18,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   imgSrc: string
   imgAlt: string
   informationDetails?: Detail[]
-  usp: string
+  usps: string[]
   href: string
   target: string
   sponsorSrc: string
@@ -49,6 +49,18 @@ const InformationBlocks: React.FC<InformationBlocksProps> = ({ details }) => (
         key={`infoblock-${index}`}
         sx={{ padding: [null, 'xs'] }}
       />
+    ))}
+  </React.Fragment>
+)
+
+interface UspTagsProps {
+  usps: string[]
+}
+
+const UspTags: React.FC<UspTagsProps> = ({ usps }) => (
+  <React.Fragment>
+    {usps.map((obj, index) => (
+      <UspTag usp={obj} key={`infoblock-${index}`} />
     ))}
   </React.Fragment>
 )
@@ -119,7 +131,7 @@ const SponsoredProduct: React.FC<Props> = ({
   imgSrc,
   imgAlt,
   informationDetails,
-  usp,
+  usps,
   href,
   target,
   sponsorSrc,
@@ -174,7 +186,7 @@ const SponsoredProduct: React.FC<Props> = ({
 
             <ImgixImage
               src={sponsorSrc}
-              imgixParams={{ fit: 'clip' }}
+              imgixParams={{ trim: 'color' }}
               critical
               sx={{
                 maxHeight: 40,
@@ -311,7 +323,7 @@ const SponsoredProduct: React.FC<Props> = ({
               </div>
             ) : null}
 
-            <UspTag usp={usp} />
+            <UspTags usps={usps} />
           </Stack>
 
           <div sx={{ display: ['block', 'none'] }}>
