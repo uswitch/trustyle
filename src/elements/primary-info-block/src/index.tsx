@@ -25,8 +25,8 @@ const valueWithDecimals = (value: string) => {
 const renderValue = (value: string) => {
   if (value.includes('.')) {
     return valueWithDecimals(value)
-  } else if (value.length > 8) {
-    return <small>{value}</small>
+  } else if (isNaN(parseInt(value))) {
+    return <span sx={{ fontSize: 'xs' }}>{value}</span>
   } else {
     return value
   }
