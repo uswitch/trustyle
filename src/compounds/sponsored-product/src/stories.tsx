@@ -16,7 +16,10 @@ export const ExampleWithKnobs = () => {
     'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/3PNmGXJpUL26qMX2odn7XI/d0d1311039c02d3e34cd501b9cbfa5ed/iphone-11-grey-front.png'
   )
   const imgAlt = text('Image Alt', 'iPhone 11')
-  const usp = text('USP', 'Free insurance for 2 months')
+  const usps = [
+    text('USP', 'Free insurance for 2 months'),
+    text('USP2', 'Uswitch Award')
+  ]
   const href = text('href', 'https://www.uswitch.com/mobiles/')
   const target = text('target', '_blank')
   const sponsorSrc = text(
@@ -39,7 +42,7 @@ export const ExampleWithKnobs = () => {
         title={title}
         imgSrc={imgSrc}
         imgAlt={imgAlt}
-        usp={usp}
+        usps={usps}
         href={href}
         target={target}
         sponsorSrc={sponsorSrc}
