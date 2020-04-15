@@ -323,7 +323,7 @@ const SponsoredProduct: React.FC<Props> = ({
 
             {brandCaption ? <BrandCaption text={brandCaption} /> : null}
 
-            {informationDetails ? (
+            {informationDetails && (
               <div
                 sx={{
                   display: 'grid',
@@ -333,15 +333,13 @@ const SponsoredProduct: React.FC<Props> = ({
               >
                 <InformationBlocks details={informationDetails} />
               </div>
-            ) : null}
+            )}
 
-            <UspTags usps={usps} />
+            {usps && <UspTags usps={usps} />}
           </Stack>
 
           <div sx={{ display: ['block', 'none'] }}>
-            {award ? (
-              <AwardsTag award={award} sx={{ marginTop: 'xs' }} />
-            ) : null}
+            {award && <AwardsTag award={award} sx={{ marginTop: 'xs' }} />}
             <SponsoredByTag
               providerLogoSrc={sponsorSrc}
               sx={{ marginTop: 'xs' }}
