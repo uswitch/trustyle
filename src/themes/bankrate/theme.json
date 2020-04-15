@@ -71,11 +71,6 @@
 
   "colors": {
     "text": "#4c4c4c",
-    "sunshine": "#FEC340",
-    "burnt": "#FAA73F",
-    "jaffa": "#F4793B",
-    "fuschia": "#DB4D75",
-    "berry": "#A64470",
 
     "grey-0": "#FFFFFF",
     "grey-05": "#F7F7F7",
@@ -129,48 +124,7 @@
   },
 
   "----------------------------- Variants": "-----------------------------",
-  "modules": {
-    "content-hero-module": {
-      "h1": {
-        "mb": "sm",
-        "mt": 0,
-        "pt": ["sm", "sm", "lg"]
-      },
-
-      "h4": { "fontSize": "md", "fontWeight": "normal" },
-
-      "p": {
-        "width": ["auto", "grid.md.5", "grid.lg.5"],
-        "textAlign": ["left", "left", "center"],
-        "my": [0, 0, "xxs"],
-        "px": [0, 0, "md"],
-        "display": ["inline", "inline", "block"]
-      },
-
-      "a": {
-        "fontSize": ["base", "base", "lg"],
-        "textDecoration": "underline"
-      },
-
-      "content": {
-        "display": "flex",
-        "alignItems": "flex-end",
-
-        "modules": {
-          "width": ["100%", "50%", "50%"],
-          "mb": "lg"
-        },
-
-        "image": {
-          "height": [0, 0, 320],
-          "width": [0, 0, "50%"],
-          "mx": "auto",
-          "backgroundSize": 500,
-          "backgroundPosition": "bottom"
-        }
-      }
-    }
-  },
+  "modules": {},
 
   "accordion": {
     "base": {
@@ -229,7 +183,7 @@
         "mb": 0,
         "position": "relative",
         ">a": {
-          "transition": "all 0.3s ease-in-out",
+          "transition": "all 0.2s ease-in-out",
           "display": "block",
           "color": "grey-70",
           "textDecoration": "none",
@@ -259,7 +213,7 @@
           "variant": "sideNav.internalLinkListItem.base.>a",
           "color": "primary",
           "fontWeight": "bold",
-          "transform": "translateX(16px)",
+          "transform": "translateX(8px)",
           ":visited": {
             "color": "primary"
           }
@@ -277,50 +231,6 @@
   },
 
   "compounds": {
-    "card": {
-      "itemsPerRow": [1, 2, 3],
-      "display": "flex",
-      "width": "100%",
-      "height": "100%",
-      "flexDirection": "column",
-      "borderRadius": "sm",
-      "borderStyle": "solid",
-      "borderColor": "grey-20",
-      "borderWidth": "1px",
-      "boxSizing": "border-box",
-      "mb": "sm",
-      "img": {
-        "sm": { "width": "100%", "height": 230 },
-        "md": { "width": "100%", "height": 230 },
-        "lg": { "maxWidth": "grid.lg.3", "height": 230 }
-      },
-      "p": { "fontSize": 16, "lineHeight": "130%", "color": "grey-80" },
-      "h3": { "fontSize": 18, "minHeight": 0, "fontWeight": "bold", "color": "experimental-text", "marginBottom": "xs", "marginTop": "0", "a": {
-        "textDecoration": "none"
-      } },
-      "content": {
-        "paddingY": "sm",
-        "paddingX": ["sm", "sm"]
-      },
-      "marginRight": "base"
-    },
-
-    "click-out-form": {
-      "flexDirection": "column",
-      "width": ["auto", "grid.md.5", "grid.lg.5"],
-      "backgroundColor": "grey-0",
-      "p": ["sm", "sm", "lg"],
-      "borderRadius": [0, "md", "md"],
-      "mx": [-20, 0],
-      "& input, & button": {
-        "fontSize": "md",
-        "width": "100%"
-      },
-      "& button": {
-        "textAlign": "center"
-      }
-    },
-
     "breadcrumb": {
       "my": "sm",
       "mx": 0
@@ -429,10 +339,10 @@
 
   "list": {
     "bullet": {
-      "color": "jaffa"
+      "color": "grey-80"
     },
     "numeric": {
-      "color": "jaffa"
+      "color": "grey-80"
     }
   },
 
@@ -498,7 +408,8 @@
 
   "categoryTitle": {
     "main": {
-      "background": "linear-gradient(90deg, #924A8B 0.42%, #DB4D75 116.16%)"
+      "bg": "primary",
+      "mb": "md"
     },
     "heading": {
       "color": "grey-0"
@@ -555,11 +466,11 @@
 
   "toggleSwitch": {
     "checked": {
-      "backgroundColor": "secondary",
-      "borderColor": "secondary",
+      "backgroundColor": "primary",
+      "borderColor": "primary",
       "switch": {
         "backgroundColor": "white",
-        "borderColor": "secondary"
+        "borderColor": "primary"
       }
     },
     "unchecked": {
@@ -568,18 +479,6 @@
       "switch": {
         "backgroundColor": "white",
         "borderColor": "grey-20"
-      }
-    }
-  },
-
-  "author": {
-    "heading": {
-      "color": "grey-80"
-    },
-    "link": {
-      "color": "grey-80",
-      ":hover": {
-        "color": "grey-80"
       }
     }
   },
