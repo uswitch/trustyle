@@ -53,7 +53,7 @@ export const ExampleWithKnobs = () => {
           {
             prefix: '',
             value: text('value', '30'),
-            suffix: 'GB',
+            suffix: text('suffix', 'GB'),
             label: 'data'
           },
           {
