@@ -131,7 +131,8 @@ const SponsoredRateTable: React.FC<Props> = ({
               width: '100%',
               backgroundImage: `url(${campaignImgSrc})`,
               backgroundPosition: 'left bottom',
-              display: ['none', 'block']
+              display: ['none', 'block'],
+              backgroundRepeat: 'no-repeat'
             }}
           />
 
