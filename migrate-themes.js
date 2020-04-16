@@ -89,7 +89,7 @@ function migrate(brand, themes, inputDir, outputDir) {
 
   console.log(Object.keys(componentThemes))
 
-  return Object.keys(componentThemes)
+  // return Object.keys(componentThemes)
 
   Object.keys(componentThemes).map(key => {
     const packageName = themeKeyToComponentMap[key]
