@@ -19,8 +19,8 @@ const UspTag: React.FC<Props> = ({
       sx={{
         backgroundColor: backgroundColor,
         textAlign: 'left',
-        paddingX: 14,
-        paddingY: 'xs',
+        paddingX: 12,
+        paddingY: 'xxs',
         '::before': {
           content: '""',
           position: 'relative',
