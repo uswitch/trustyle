@@ -11,17 +11,16 @@ const UspTag: React.FC<Props> = ({ usp }) =>
   usp ? (
     <div
       sx={{
-        height: 32,
         backgroundColor: 'yellow-25',
-        display: 'flex',
-        alignItems: 'center',
+        textAlign: 'left',
+        paddingX: 14,
+        paddingY: 'xs',
         '::before': {
           content: '""',
-          display: 'inline-block',
-          width: 4,
-          height: 28,
-          margin: 2,
-          backgroundColor: 'yellow'
+          position: 'relative',
+          left: '-.55em',
+          borderLeft: '4px solid #FFD555',
+          paddingY: '.2em'
         }
       }}
     >
@@ -31,7 +30,7 @@ const UspTag: React.FC<Props> = ({ usp }) =>
           fontWeight: 'bold',
           fontSize: ['xs', 11],
           color: 'grey-80',
-          marginLeft: 'xs'
+          lineHeight: 1.3
         }}
       >
         {usp}
