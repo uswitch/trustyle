@@ -26,6 +26,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   enhancedImgSrc: string
   brandCaption?: string
   backgroundColor?: string
+  enhancedImgHeight?: string
 }
 
 interface Detail {
@@ -107,12 +108,12 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
   </React.Fragment>
 )
 
-const EnhancedImage = ({ src }: { src: string }) => (
+const EnhancedImage = ({ src, height }: { src: string; height: string }) => (
   <React.Fragment>
     {src && (
       <div
         sx={{
-          height: 96,
+          height: height,
           width: '100%',
           display: ['block', 'none'],
           backgroundImage: `url(${src})`,
@@ -125,7 +126,7 @@ const EnhancedImage = ({ src }: { src: string }) => (
 )
 
 const topComponentMargin = (productSrc: string, enhancedSrc: string) =>
-  productSrc && !enhancedSrc ? '48px' : null
+  productSrc && !enhancedSrc ? '38px' : null
 
 const SponsoredProduct: React.FC<Props> = ({
   title,
@@ -139,7 +140,8 @@ const SponsoredProduct: React.FC<Props> = ({
   award,
   enhancedImgSrc,
   brandCaption,
-  backgroundColor = 'white'
+  backgroundColor = 'white',
+  enhancedImgHeight = '144px'
 }) => (
   <a href={href} target={target} sx={{ textDecoration: 'none' }}>
     <div
@@ -150,7 +152,7 @@ const SponsoredProduct: React.FC<Props> = ({
         marginTop: () => topComponentMargin(imgSrc, enhancedImgSrc)
       }}
     >
-      <EnhancedImage src={enhancedImgSrc} />
+      <EnhancedImage src={enhancedImgSrc} height={enhancedImgHeight} />
 
       <div
         sx={{
