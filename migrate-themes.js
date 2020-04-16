@@ -6,6 +6,8 @@ var fs = require('file-system')
 var uswitchTheme = require('@uswitch/trustyle.uswitch-theme')
 var moneyTheme = require('@uswitch/trustyle.money-theme')
 var soeTheme = require('@uswitch/trustyle.save-on-energy-theme')
+var journeyTheme = require('@uswitch/trustyle.journey-theme')
+var bankrateTheme = require('@uswitch/trustyle.bankrate-theme')
 
 
 const themeKeyToComponentMap = {
@@ -43,7 +45,9 @@ const deleteKeys = (obj, keys) => {
 const themes = {
   money: moneyTheme,
   uswitch: uswitchTheme,
-  seo: soeTheme
+  seo: soeTheme,
+  journey: journeyTheme,
+  bankrate: bankrateTheme
 }
 
 const getComponentPath = dirName => {
@@ -85,6 +89,8 @@ function migrate(brand, themes, inputDir, outputDir) {
 
   console.log(Object.keys(componentThemes))
 
+  return Object.keys(componentThemes)
+
   Object.keys(componentThemes).map(key => {
     const packageName = themeKeyToComponentMap[key]
     if (packageName) {
@@ -117,13 +123,19 @@ function migrate(brand, themes, inputDir, outputDir) {
   })
 }
 
-// console.log('money')
-migrate('money', themes, 'src', 'src')
+console.log('money')
+const m = migrate('money', themes, 'src', 'src')
 
-// console.log('uswitch')
-// const u = migrate('uswitch', themes, 'src', 'src')
+console.log('uswitch')
+const u = migrate('uswitch', themes, 'src', 'src')
 
-// console.log('save on energy')
-// const s = migrate('seo', themes, 'src', 'src')
+console.log('save on energy')
+const s = migrate('seo', themes, 'src', 'src')
+
+console.log('journey')
+const j = migrate('journey', themes, 'src', 'src')
+
+console.log('bankrate')
+const b = migrate('bankrate', themes, 'src', 'src')
 
 // console.log(s.filter(x => !m.includes(x)));
