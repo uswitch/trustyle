@@ -561,17 +561,6 @@
         "color": "grey-100",
         "background": "none",
         "textDecoration": "underline"
-      },
-
-      "collection": {
-        "primary": {
-          "variant": "buttons.variants.primary",
-          "marginLeft": "sm"
-        },
-        "secondary": {
-          "variant": "buttons.variants.secondary",
-          "marginLeft": "sm"
-        }
       }
     }
   },
