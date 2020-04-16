@@ -45,7 +45,7 @@ const deleteKeys = (obj, keys) => {
 const themes = {
   money: moneyTheme,
   uswitch: uswitchTheme,
-  seo: soeTheme,
+  'save-on-energy': soeTheme,
   journey: journeyTheme,
   bankrate: bankrateTheme
 }
@@ -130,7 +130,7 @@ console.log('uswitch')
 const u = migrate('uswitch', themes, 'src', 'src')
 
 console.log('save on energy')
-const s = migrate('seo', themes, 'src', 'src')
+const s = migrate('save-on-energy', themes, 'src', 'src')
 
 console.log('journey')
 const j = migrate('journey', themes, 'src', 'src')
