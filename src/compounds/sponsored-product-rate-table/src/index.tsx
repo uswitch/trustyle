@@ -17,7 +17,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   productImgSrc: string
   productImgAlt: string
   informationDetails: Detail[]
-  usp: string
+  usps: string[]
   href: string
   target: string
   sponsorLogoSrc: string
@@ -68,12 +68,24 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
   </React.Fragment>
 )
 
+interface UspTagsProps {
+  usps: string[]
+}
+
+const UspTags: React.FC<UspTagsProps> = ({ usps }) => (
+  <React.Fragment>
+    {usps.map((obj, index) => (
+      <UspTag usp={obj} key={`infoblock-${index}`} />
+    ))}
+  </React.Fragment>
+)
+
 const SponsoredRateTable: React.FC<Props> = ({
   productName,
   productImgSrc,
   productImgAlt,
   informationDetails,
-  usp,
+  usps,
   href,
   target,
   sponsorLogoSrc,
@@ -95,7 +107,7 @@ const SponsoredRateTable: React.FC<Props> = ({
     >
       <div
         sx={{
-          height: 150,
+          height: 144,
           width: '100%',
           display: ['block', 'none'],
           backgroundImage: `url(${campaignImgSrc})`,
@@ -115,7 +127,7 @@ const SponsoredRateTable: React.FC<Props> = ({
         <div>
           <div
             sx={{
-              height: 150,
+              height: 144,
               width: '100%',
               backgroundImage: `url(${campaignImgSrc})`,
               backgroundPosition: 'left bottom',
@@ -190,13 +202,13 @@ const SponsoredRateTable: React.FC<Props> = ({
               display: 'grid',
               gridGap: 'xs',
               gridTemplateColumns: '1fr 1fr',
-              height: [92, 150]
+              height: [92, 144]
             }}
           >
             <InformationBlocks details={informationDetails} />
           </div>
 
-          <UspTag usp={usp} />
+          {usps && <UspTags usps={usps} />}
 
           <AwardsTag award={award} sx={{ display: [null, 'none'] }} />
 
