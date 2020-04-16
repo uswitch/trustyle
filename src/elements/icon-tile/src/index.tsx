@@ -21,7 +21,10 @@ const IconTile: React.FC<Props> = ({ icon, children }) => {
         borderRadius: 8,
         color: 'grey-100',
         textDecoration: 'none',
-        variant: 'iconTile.main'
+        variant: 'iconTile.main',
+        ':hover': {
+          opacity: 0.9
+        }
       }}
     >
       <div
