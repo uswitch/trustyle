@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 import AwardsTag from '@uswitch/trustyle.awards-tag'
-import { ButtonLink } from '@uswitch/trustyle.button-link'
+import { Button } from '@uswitch/trustyle.button'
 import { Container } from '@uswitch/trustyle.flex-grid'
 import { Icon } from '@uswitch/trustyle.icon'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
@@ -171,10 +171,8 @@ const SponsoredRateTable: React.FC<Props> = ({
             {productName}
           </div>
 
-          <ButtonLink
+          <Button
             variant="primary"
-            href={href}
-            target={target}
             sx={{
               padding: 0,
               width: 32,
@@ -194,7 +192,7 @@ const SponsoredRateTable: React.FC<Props> = ({
                 flexShrink: 0
               }}
             />
-          </ButtonLink>
+          </Button>
         </div>
 
         <Stack spacing={[8]}>
@@ -220,11 +218,9 @@ const SponsoredRateTable: React.FC<Props> = ({
         </Stack>
 
         <Stack spacing={[16]} sx={{ display: ['none', 'block'] }}>
-          <ButtonLink
+          <Button
             className="button-link"
             variant="primary"
-            href={href}
-            target={target}
             sx={{
               padding: 0,
               height: 48,
@@ -243,7 +239,7 @@ const SponsoredRateTable: React.FC<Props> = ({
                 flexShrink: 0
               }}
             />
-          </ButtonLink>
+          </Button>
 
           <SponsoredByTag
             providerLogoSrc={sponsorLogoSrc}
