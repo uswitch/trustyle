@@ -5,7 +5,7 @@ import { jsx } from 'theme-ui'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   prefix?: string
-  value: string
+  value: string | number
   label: string
   suffix?: string
   className?: string
@@ -14,21 +14,20 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 const valueWithDecimals = (value: string) => {
   const valueInt = value.split('.')[0]
   const valueDecimals = value.split('.')[1]
-
-  return (
+  return valueDecimals ? (
     <span>
       {valueInt}.<small>{valueDecimals}</small>
     </span>
+  ) : (
+    <span>{valueInt}</span>
   )
 }
 
-const renderValue = (value: string) => {
-  if (value.includes('.')) {
-    return valueWithDecimals(value)
-  } else if (value.length > 8) {
-    return <small>{value}</small>
+const renderValue = (value: any) => {
+  if (isNaN(value) && value.length > 8) {
+    return <span sx={{ fontSize: 'xs' }}>{value}</span>
   } else {
-    return value
+    return valueWithDecimals(value.toString())
   }
 }
 
