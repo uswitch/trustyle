@@ -74,11 +74,11 @@ interface UspTagsProps {
 }
 
 const UspTags: React.FC<UspTagsProps> = ({ usps }) => (
-  <React.Fragment>
+  <div className="usp-tags">
     {usps.map((obj, index) => (
       <UspTag usp={obj} key={`infoblock-${index}`} />
     ))}
-  </React.Fragment>
+  </div>
 )
 
 // todo use below when awards are ready
