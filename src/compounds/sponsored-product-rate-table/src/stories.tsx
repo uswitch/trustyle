@@ -61,6 +61,7 @@ export const ExampleWithKnobs = () => {
         sponsorLogoSrc={sponsorSrc}
         award={award}
         campaignImgSrc={campaignImage}
+        campaignImgHeight={'160px'}
       />
     </div>
   )

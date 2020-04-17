@@ -253,7 +253,7 @@ const SponsoredRateTable: React.FC<Props> = ({
               display: 'grid',
               gridGap: 'xs',
               gridTemplateColumns: '1fr 1fr',
-              height: [92, 144]
+              height: [92, campaignImgHeight]
             }}
           >
             <InformationBlocks details={informationDetails} />
