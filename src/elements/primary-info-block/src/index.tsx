@@ -5,7 +5,7 @@ import { jsx } from 'theme-ui'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   prefix?: string
-  value: string
+  value: string | number
   label: string
   suffix?: string
   className?: string
@@ -22,13 +22,13 @@ const valueWithDecimals = (value: string) => {
   )
 }
 
-const renderValue = (value: string) => {
-  if (value.includes('.')) {
-    return valueWithDecimals(value)
-  } else if (isNaN(parseInt(value))) {
+const renderValue = (value: any, label: string) => {
+  if (label === 'data' && isNaN(value)) {
     return <span sx={{ fontSize: 'xs' }}>{value}</span>
-  } else {
+  } else if (label === 'data' && !isNaN(value)) {
     return value
+  } else {
+    return valueWithDecimals(value)
   }
 }
 
@@ -49,7 +49,7 @@ const PrimaryInfoBlock: React.FC<Props> = ({
         }}
       >
         {prefix}
-        {renderValue(value)}
+        {renderValue(value, label)}
       </strong>
       {suffix && (
         <small

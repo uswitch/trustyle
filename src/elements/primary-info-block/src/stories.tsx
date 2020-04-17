@@ -12,7 +12,7 @@ export default {
 export const Example = () => {
   const values = [
     {
-      value: '10',
+      value: 10,
       suffix: 'GB',
       label: 'data'
     },
