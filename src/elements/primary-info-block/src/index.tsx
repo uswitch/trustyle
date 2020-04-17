@@ -14,21 +14,20 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 const valueWithDecimals = (value: string) => {
   const valueInt = value.split('.')[0]
   const valueDecimals = value.split('.')[1]
-
-  return (
+  return valueDecimals ? (
     <span>
       {valueInt}.<small>{valueDecimals}</small>
     </span>
+  ) : (
+    <span>{valueInt}</span>
   )
 }
 
-const renderValue = (value: any, label: string) => {
-  if (label === 'data' && isNaN(value)) {
+const renderValue = (value: any) => {
+  if (isNaN(value) && value.length > 8) {
     return <span sx={{ fontSize: 'xs' }}>{value}</span>
-  } else if (label === 'data' && !isNaN(value)) {
-    return value
   } else {
-    return valueWithDecimals(value)
+    return valueWithDecimals(value.toString())
   }
 }
 
@@ -49,7 +48,7 @@ const PrimaryInfoBlock: React.FC<Props> = ({
         }}
       >
         {prefix}
-        {renderValue(value, label)}
+        {renderValue(value)}
       </strong>
       {suffix && (
         <small

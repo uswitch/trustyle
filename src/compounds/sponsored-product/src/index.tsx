@@ -265,8 +265,7 @@ const SponsoredProduct: React.FC<Props> = ({
                   fontFamily: "'-apple-system', 'BlinkMacSystemFont'"
                 }}
               >
-                <strong>Uswitch</strong> Manufacturer of the Year
-                <strong> Winner 2020</strong>
+                {award}
               </span>
             </div>
           )}
