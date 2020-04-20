@@ -277,15 +277,6 @@ const SponsoredRateTable: React.FC<Props> = ({
             }}
           >
             <span>See Deal</span>
-            <Icon
-              color="white"
-              direction="right"
-              glyph="caret"
-              size={20}
-              sx={{
-                flexShrink: 0
-              }}
-            />
           </Button>
 
           <SponsoredByTag
