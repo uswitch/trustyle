@@ -208,11 +208,11 @@ export const Col: React.FC<ColProps & React.HTMLAttributes<any>> = ({
   )
 }
 
+type LayoutKey = number | '*'
+type Layout = ColProps & { key?: LayoutKey }
 interface FromJsonProps extends React.HTMLAttributes<any> {
   json: (RowProps & {
-    layout: (ColProps & {
-      key: number
-    })[]
+    layout: Layout[]
   })[]
   childrenArray: React.ReactNode[]
 }
@@ -221,9 +221,47 @@ export const GridFromJson: React.FC<FromJsonProps> = ({
   json,
   childrenArray
 }) => {
+  const flatLayout = json.reduce<Layout[]>(
+    (cells, { layout }) => cells.concat(layout),
+    []
+  )
+  const usedKeys = flatLayout.map(({ key }) => key)
+
+  interface ComponentAndId {
+    id: any
+    component: React.ReactNode
+  }
+  let autoKey = 0
   // In the future, string key could be support for contentful block ID
-  const getChildFromKey = (key: number): React.ReactNode => {
-    return childrenArray[key]
+  const getChildFromKey = (key?: LayoutKey): ComponentAndId => {
+    // If no key, search for the next key that isn't already used
+    if (typeof key === 'undefined') {
+      while (usedKeys.includes(autoKey)) {
+        autoKey++
+      }
+      usedKeys.push(autoKey)
+      key = autoKey
+    }
+
+    if (key === '*') {
+      throw new Error('Use getWildcardChildren() for this')
+    }
+
+    // We need to pass an ID back as if the key is generated it'll be undefined
+    // in the JSX
+    return { id: key, component: childrenArray[key] }
+  }
+
+  const getWildcardChildren = () => {
+    const wildcardCount = childrenArray.length - flatLayout.length + 1
+
+    const wildCardChildren: ComponentAndId[] = []
+
+    for (let i = 0; i < wildcardCount; i++) {
+      wildCardChildren.push(getChildFromKey())
+    }
+
+    return wildCardChildren
   }
 
   return (
@@ -232,9 +270,18 @@ export const GridFromJson: React.FC<FromJsonProps> = ({
         return (
           <Row {...rowProps} key={i}>
             {layout.map(({ key, ...colProps }) => {
+              if (key === '*') {
+                return getWildcardChildren().map(({ id, component }) => (
+                  <Col {...colProps} key={id}>
+                    {component}
+                  </Col>
+                ))
+              }
+
+              const { id, component } = getChildFromKey(key)
               return (
-                <Col {...colProps} key={key}>
-                  {getChildFromKey(key)}
+                <Col {...colProps} key={id}>
+                  {component}
                 </Col>
               )
             })}
