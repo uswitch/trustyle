@@ -228,7 +228,9 @@ export const GridFromJson: React.FC<FromJsonProps> = ({
 
   // In the future, string key could be support for contentful block ID
   let autoKey = 0
-  const getChildFromKey = (key?: number): React.ReactNode => {
+  const getChildFromKey = (
+    key?: number
+  ): { id: any; component: React.ReactNode } => {
     // If no key, search for the next key that isn't already used
     if (typeof key === 'undefined') {
       while (usedKeys.includes(autoKey)) {
