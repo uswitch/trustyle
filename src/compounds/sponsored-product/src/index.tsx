@@ -118,7 +118,8 @@ const EnhancedImage = ({ src, height }: { src: string; height: string }) => (
           display: ['block', 'none'],
           backgroundImage: `url(${src})`,
           backgroundPosition: 'left bottom',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover'
         }}
       ></div>
     )}
