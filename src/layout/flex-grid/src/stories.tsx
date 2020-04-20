@@ -296,41 +296,41 @@ storiesOf('Layout|Flex Grid', module).add(
   }
 )
 
-/* storiesOf('Layout|Flex Grid', module).add( */
-/*   'Grid layout from JSON with wildcard', */
-/*   () => { */
-/*     const gridJson = [ */
-/*       { layout: [{ key: 0, span: 12 }] }, */
-/*       { direction: 'row', layout: [{ key: '*', span: [12, 6, 4] }] }, */
-/*       { layout: [{ key: 1, span: 12 }] } */
-/*     ] */
+storiesOf('Layout|Flex Grid', module).add(
+  'Grid layout from JSON with wildcard',
+  () => {
+    const gridJson = [
+      { layout: [{ key: 0, span: 12 }] },
+      { direction: 'row', layout: [{ key: '*', span: [6, 3] }] },
+      { layout: [{ key: 1, span: 12 }] }
+    ]
 
-/*     return ( */
-/*       <Container> */
-/*         <GridFromJson */
-/*           json={gridJson} */
-/*           childrenArray={[ */
-/*             <span sx={colStyling} key={1}> */
-/*               Cell 1 */
-/*             </span>, */
-/*             <span sx={colStyling} key={2}> */
-/*               Cell 2 */
-/*             </span>, */
-/*             <span sx={colStyling} key={3}> */
-/*               Cell 3 */
-/*             </span>, */
-/*             <span sx={colStyling} key={4}> */
-/*               Cell 4 */
-/*             </span>, */
-/*             <span sx={colStyling} key={5}> */
-/*               Cell 5 */
-/*             </span>, */
-/*             <span sx={colStyling} key={6}> */
-/*               Cell 6 */
-/*             </span> */
-/*           ]} */
-/*         /> */
-/*       </Container> */
-/*     ) */
-/*   } */
-/* ) */
+    return (
+      <Container>
+        <GridFromJson
+          json={gridJson}
+          childrenArray={[
+            <span sx={colStyling} key={1}>
+              Header
+            </span>,
+            <span sx={colStyling} key={2}>
+              Footer
+            </span>,
+            <span sx={colStyling} key={3}>
+              Wildcard cell 1
+            </span>,
+            <span sx={colStyling} key={4}>
+              Wildcard cell 2
+            </span>,
+            <span sx={colStyling} key={5}>
+              Wildcard cell 3
+            </span>,
+            <span sx={colStyling} key={6}>
+              Wildcard cell 4
+            </span>
+          ]}
+        />
+      </Container>
+    )
+  }
+)
