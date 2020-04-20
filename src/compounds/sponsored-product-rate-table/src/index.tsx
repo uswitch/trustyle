@@ -148,12 +148,7 @@ const SponsoredRateTable: React.FC<Props> = ({
       sx={{
         borderWidth: 1,
         borderStyle: 'solid',
-        borderColor: 'grey-30',
-        '&:hover': {
-          '.button-link': {
-            backgroundColor: '#575761'
-          }
-        }
+        borderColor: 'grey-30'
       }}
     >
       <div
@@ -272,7 +267,6 @@ const SponsoredRateTable: React.FC<Props> = ({
 
         <Stack spacing={[16]} sx={{ display: ['none', 'block'] }}>
           <Button
-            className="button-link"
             variant="primary"
             sx={{
               padding: 0,
