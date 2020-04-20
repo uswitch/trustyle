@@ -167,8 +167,8 @@ const SponsoredRateTable: React.FC<Props> = ({
         sx={{
           padding: [12, 'sm'],
           display: [null, 'grid'],
-          gridTemplateColumns: [null, 'auto 260px auto'],
-          gridGap: [null, 12]
+          gridTemplateColumns: [null, '1.5fr 1fr 0.5fr'],
+          gridGap: [null, 'xs']
         }}
       >
         <div>
