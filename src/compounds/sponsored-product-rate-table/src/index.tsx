@@ -167,7 +167,7 @@ const SponsoredRateTable: React.FC<Props> = ({
         sx={{
           padding: [12, 'sm'],
           display: [null, 'grid'],
-          gridTemplateColumns: [null, '1.5fr 1fr 0.5fr'],
+          gridTemplateColumns: [null, 'auto 260px auto'],
           gridGap: [null, 12]
         }}
       >
@@ -247,7 +247,7 @@ const SponsoredRateTable: React.FC<Props> = ({
           <div
             sx={{
               display: 'grid',
-              gridGap: 12,
+              gridGap: ['xs', 12],
               gridTemplateColumns: '1fr 1fr',
               height: [92, campaignImgHeight]
             }}
