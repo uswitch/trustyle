@@ -227,25 +227,110 @@ storiesOf('Layout|Flex Grid', module).add('Grid layout from JSON', () => {
         json={gridJson}
         childrenArray={[
           <span sx={colStyling} key={1}>
-            Col 1
+            Cell 1
           </span>,
           <span sx={colStyling} key={2}>
-            Col 2
+            Cell 2
           </span>,
           <span sx={colStyling} key={3}>
-            Col 3
+            Cell 3
           </span>,
           <span sx={colStyling} key={4}>
-            Col 4
+            Cell 4
           </span>,
           <span sx={colStyling} key={5}>
-            Col 5
+            Cell 5
           </span>,
           <span sx={colStyling} key={6}>
-            Col 6
+            Cell 6
           </span>
         ]}
       />
     </Container>
   )
 })
+
+storiesOf('Layout|Flex Grid', module).add(
+  'Grid layout from JSON without keys',
+  () => {
+    const gridJson = [
+      {
+        direction: 'row',
+        layout: [{ span: [12, 4] }, { span: [6, 4] }, { span: [6, 4] }]
+      },
+      {
+        layout: [{ span: 12 }]
+      },
+      {
+        direction: 'row',
+        layout: [{ span: [12, 6] }, { span: [12, 6] }]
+      }
+    ]
+    return (
+      <Container>
+        <GridFromJson
+          json={gridJson}
+          childrenArray={[
+            <span sx={colStyling} key={1}>
+              Cell 1
+            </span>,
+            <span sx={colStyling} key={2}>
+              Cell 2
+            </span>,
+            <span sx={colStyling} key={3}>
+              Cell 3
+            </span>,
+            <span sx={colStyling} key={4}>
+              Cell 4
+            </span>,
+            <span sx={colStyling} key={5}>
+              Cell 5
+            </span>,
+            <span sx={colStyling} key={6}>
+              Cell 6
+            </span>
+          ]}
+        />
+      </Container>
+    )
+  }
+)
+
+/* storiesOf('Layout|Flex Grid', module).add( */
+/*   'Grid layout from JSON with wildcard', */
+/*   () => { */
+/*     const gridJson = [ */
+/*       { layout: [{ key: 0, span: 12 }] }, */
+/*       { direction: 'row', layout: [{ key: '*', span: [12, 6, 4] }] }, */
+/*       { layout: [{ key: 1, span: 12 }] } */
+/*     ] */
+
+/*     return ( */
+/*       <Container> */
+/*         <GridFromJson */
+/*           json={gridJson} */
+/*           childrenArray={[ */
+/*             <span sx={colStyling} key={1}> */
+/*               Cell 1 */
+/*             </span>, */
+/*             <span sx={colStyling} key={2}> */
+/*               Cell 2 */
+/*             </span>, */
+/*             <span sx={colStyling} key={3}> */
+/*               Cell 3 */
+/*             </span>, */
+/*             <span sx={colStyling} key={4}> */
+/*               Cell 4 */
+/*             </span>, */
+/*             <span sx={colStyling} key={5}> */
+/*               Cell 5 */
+/*             </span>, */
+/*             <span sx={colStyling} key={6}> */
+/*               Cell 6 */
+/*             </span> */
+/*           ]} */
+/*         /> */
+/*       </Container> */
+/*     ) */
+/*   } */
+/* ) */

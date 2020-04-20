@@ -208,11 +208,10 @@ export const Col: React.FC<ColProps & React.HTMLAttributes<any>> = ({
   )
 }
 
+type Layout = ColProps & { key?: number }
 interface FromJsonProps extends React.HTMLAttributes<any> {
   json: (RowProps & {
-    layout: (ColProps & {
-      key: number
-    })[]
+    layout: Layout[]
   })[]
   childrenArray: React.ReactNode[]
 }
@@ -221,9 +220,27 @@ export const GridFromJson: React.FC<FromJsonProps> = ({
   json,
   childrenArray
 }) => {
+  const flatLayout = json.reduce<Layout[]>(
+    (cells, { layout }) => cells.concat(layout),
+    []
+  )
+  const usedKeys: (number | undefined)[] = flatLayout.map(({ key }) => key)
+
   // In the future, string key could be support for contentful block ID
-  const getChildFromKey = (key: number): React.ReactNode => {
-    return childrenArray[key]
+  let autoKey = 0
+  const getChildFromKey = (key?: number): React.ReactNode => {
+    // If no key, search for the next key that isn't already used
+    if (typeof key === 'undefined') {
+      while (usedKeys.includes(autoKey)) {
+        autoKey++
+      }
+      usedKeys.push(autoKey)
+      key = autoKey
+    }
+
+    // We need to pass an ID back as if the key is generated it'll be undefined
+    // in the JSX
+    return { id: key, component: childrenArray[key] }
   }
 
   return (
@@ -232,9 +249,10 @@ export const GridFromJson: React.FC<FromJsonProps> = ({
         return (
           <Row {...rowProps} key={i}>
             {layout.map(({ key, ...colProps }) => {
+              const { id, component } = getChildFromKey(key)
               return (
-                <Col {...colProps} key={key}>
-                  {getChildFromKey(key)}
+                <Col {...colProps} key={id}>
+                  {component}
                 </Col>
               )
             })}
