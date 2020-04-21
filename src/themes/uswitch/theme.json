@@ -14,8 +14,8 @@
   },
 
   "fonts": {
-    "base": "'Helvetica Now Text', -apple-system, sans-serif",
-    "heading": "'Helvetica Now Display', -apple-system, sans-serif",
+    "base": "-apple-system, sans-serif",
+    "heading": "-apple-system, sans-serif",
     "monospace": "Menlo, monospace"
   },
 
