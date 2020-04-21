@@ -56,51 +56,53 @@ const composeTheme = options => {
     tokens = {},
     packageJson,
     dependencyType = 'dependencies',
-    elements = [],
-    compounds = []
+    elements = {},
+    compounds = {}
   } = options
-  // get list of dependencies
-  const packages = packageJson[dependencyType]
 
-  // get all trustyle package names
-  const trustylePackageNames = Object.keys(packages)
-    .filter(dep => dep.match('@uswitch/trustyle'))
-    .filter(dep => !dep.includes('-utils'))
-
-  const componentPackageNames = trustylePackageNames.filter(
-    name => !name.includes('theme')
-  )
-
-  const elementPackageNames = componentPackageNames.filter(name =>
-    ELEMENTS.includes(name)
-  )
-
-  const compoundPackageNames = componentPackageNames.filter(name =>
-    COMPOUNDS.includes(name)
-  )
-
-  // build theme
   const theme = {
     ...tokens,
     '----------------------------- Variants':
       '--------------------------------',
-    elements: {
-      ...(elementPackageNames.length > 0
-        ? getThemePartials({
-            ...options,
-            packageNames: elementPackageNames
-          })
-        : {}),
-      ...elements
-    },
-    compounds: {
-      ...(compoundPackageNames.length > 0
-        ? getThemePartials({
-            ...options,
-            packageNames: compoundPackageNames
-          })
-        : {}),
-      ...compounds
+    elements,
+    compounds
+  }
+
+  if (packageJson) {
+    // get list of dependencies
+    const packages = packageJson[dependencyType]
+
+    // get all trustyle package names
+    const trustylePackageNames = Object.keys(packages)
+      .filter(dep => dep.match('@uswitch/trustyle'))
+      .filter(dep => !dep.includes('-utils'))
+
+    const componentPackageNames = trustylePackageNames.filter(
+      name => !name.includes('theme')
+    )
+
+    const elementPackageNames = componentPackageNames.filter(name =>
+      ELEMENTS.includes(name)
+    )
+
+    const compoundPackageNames = componentPackageNames.filter(name =>
+      COMPOUNDS.includes(name)
+    )
+
+    theme.elements = {
+      ...getThemePartials({
+        ...options,
+        packageNames: elementPackageNames
+      }),
+      ...theme.elements
+    }
+
+    theme.compounds = {
+      ...getThemePartials({
+        ...options,
+        packageNames: compoundPackageNames
+      }),
+      ...theme.compounds
     }
   }
 
