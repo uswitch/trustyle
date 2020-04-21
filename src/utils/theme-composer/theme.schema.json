@@ -1,0 +1,314 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Trustyle base theme config map",
+  "description": "The core set of design tokens required by trustyle componenets. All themes should match this schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "useCustomProperties",
+    "breakpoints",
+    "fonts",
+    "fontSizes",
+    "fontWeights",
+    "colors",
+    "lineHeights",
+    "letterSpacings",
+    "radii",
+    "shadows",
+    "sizes",
+    "space",
+    "zIndices",
+    "----------------------------- Root styles",
+    "styles",
+    "----------------------------- Variants",
+    "elements",
+    "compounds"
+  ],
+
+  "definitions": {
+    "GenericTheme": {
+      "type": "object"
+    },
+
+    "Indices": {
+      "twelve": {
+        "type": "object",
+        "required": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+        "additionalProperties": false,
+        "minProperties": 12,
+        "maxProperties": 12,
+        "patternProperties": {
+          "^(1[0-2]|[1-9])$": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      "four": {
+        "type": "object",
+        "required": [ "1", "2", "3", "4" ],
+        "additionalProperties": false,
+        "minProperties": 4,
+        "maxProperties": 4,
+        "patternProperties": {
+          "^[1-4]$": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+
+    "BoxShadow": {
+      "type": "string",
+      "description": "Pattern which matches a box shadow",
+      "pattern": "^[0-9]+px [0-9]+px [0-9]+px #([0-9]{3,4}|[0-9]{6}|[0-9]{8})$"
+    },
+
+    "Radii": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 0
+        },
+        {
+          "type": "string",
+          "pattern": "^(100|[1-9][0-9]|[0-9])%$"
+        }
+      ]
+    },
+
+    "FontWeight": {
+      "type": "integer",
+      "multipleOf": 100,
+      "maximum": 900,
+      "minimum": 100
+    },
+
+    "TshirtSizes": {
+      "@@keys": {
+        "type": "string",
+        "enum": [ "base", "xxs", "xs", "sm", "md", "lg", "xl", "xxl", "xxxl" ]
+      },
+      "type": "object",
+      "required": [ "base", "xxs", "xs", "sm", "md", "lg", "xl", "xxl", "xxxl" ],
+      "properties": {
+        "base": { "type": "integer", "minimum": 0 },
+        "xxs": { "type": "integer", "minimum": 0 },
+        "xs": { "type": "integer", "minimum": 0 },
+        "sm": { "type": "integer", "minimum": 0 },
+        "md": { "type": "integer", "minimum": 0 },
+        "lg": { "type": "integer", "minimum": 0 },
+        "xl": { "type": "integer", "minimum": 0 },
+        "xxl": { "type": "integer", "minimum": 0 },
+        "xxxl": { "type": "integer", "minimum": 0 }
+      }
+    }
+  },
+
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the brand this theme defines"
+    },
+    "useCustomProperties": { "type": "boolean", "const": false },
+
+    "breakpoints": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9]+px$",
+        "description": "The two breakpoints for tablet & desktop"
+      }
+    },
+
+    "fonts": {
+      "type": "object",
+      "required": [ "base", "heading", "monospace" ],
+      "additionalProperties": false,
+      "properties": {
+        "base": { "type": "string", "description": "Base font for all text" },
+        "heading": { "type": "string", "description": "Font specifically used by headings" },
+        "monospace": { "type": "string", "description": "Font specifically used by monospace tags" }
+      }
+    },
+
+    "colors": {
+      "type": "object",
+      "description": "List of colours available for the theme",
+      "required": [
+        "grey-0",
+        "grey-05",
+        "grey-10",
+        "grey-20",
+        "grey-30",
+        "grey-40",
+        "grey-50",
+        "grey-60",
+        "grey-70",
+        "grey-80",
+        "grey-90",
+        "grey-100",
+        "text",
+        "brand"
+      ],
+      "patternProperties": {
+        ".*": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "description": "Hex code colour"
+        }
+      }
+    },
+
+    "fontWeights": {
+      "type": "object",
+      "required": [ "base", "light", "medium", "bold" ],
+      "properties": {
+        "base": { "$ref": "#/definitions/FontWeight" },
+        "light": { "$ref": "#/definitions/FontWeight" },
+        "medium": { "$ref": "#/definitions/FontWeight" },
+        "bold": { "$ref": "#/definitions/FontWeight" }
+      }
+    },
+
+    "radii": {
+      "type": "object",
+      "required": [ "sm", "md", "lg", "xl", "round" ],
+      "properties": {
+        "sm": { "$ref": "#/definitions/Radii" },
+        "md": { "$ref": "#/definitions/Radii" },
+        "lg": { "$ref": "#/definitions/Radii" },
+        "xl": { "$ref": "#/definitions/Radii" },
+        "round": { "enum": [ "50%", "0" ] }
+      }
+    },
+
+
+    "letterSpacings": {
+      "type": "object",
+      "required": [ "base", "wide", "narrow" ],
+      "properties": {
+        "base": { "type": "number" },
+        "wide": { "type": "number" },
+        "narrow": { "type": "number" }
+      }
+    },
+
+
+    "lineHeights": {
+      "type": "object",
+      "required": [ "base", "lg" ],
+      "properties": {
+        "base": { "type": "number" },
+        "lg": { "type": "number" }
+      }
+    },
+
+    "shadows": {
+      "low": { "$ref": "#/definitions/BoxShadow" },
+      "medium": { "$ref": "#/definitions/BoxShadow" },
+      "high": { "$ref": "#/definitions/BoxShadow" }
+    },
+
+    "fontSizes": {
+      "$ref": "#/definitions/TshirtSizes"
+    },
+
+    "space": {
+      "$ref": "#/definitions/TshirtSizes"
+    },
+
+    "sizes": {
+      "type": "object",
+      "required": [ "grid" ],
+      "properties": {
+        "grid": {
+          "type": "object",
+          "required": [ "lg", "md", "sm" ],
+          "additionalProperties": false,
+          "properties": {
+            "lg-docs": { "type": "string" },
+            "md-docs": { "type": "string" },
+            "sm-docs": { "type": "string" },
+            "lg": { "$ref": "#/definitions/Indices/twelve" },
+            "md": { "$ref": "#/definitions/Indices/twelve" },
+            "sm": { "$ref": "#/definitions/Indices/four" }
+          }
+        }
+      }
+    },
+
+    "zIndices": {
+      "type": "object",
+      "required": [ "level", "max" ],
+      "properties": {
+        "level": { "$ref": "#/definitions/Indices/twelve" },
+        "max": {
+          "type": "integer",
+          "minimum": 999
+        }
+      }
+    },
+
+    "----------------------------- Root styles": {
+      "description": "Marker to separate root styles",
+      "const": "-----------------------------"
+    },
+
+    "styles": {
+      "type": "object",
+      "required": [
+        "root", "h1", "h2", "h4", "h5", "h6", "pre", "code", "table", "th", "td"
+      ],
+      "description": "Base styles for semantic HTML elements to inherit from as a <Styled.tag /> component",
+      "additionalProperties": false,
+      "properties": {
+        "root": { "$ref": "#/definitions/GenericTheme" },
+        "h1": { "$ref": "#/definitions/GenericTheme" },
+        "h2": { "$ref": "#/definitions/GenericTheme" },
+        "h3": { "$ref": "#/definitions/GenericTheme" },
+        "h4": { "$ref": "#/definitions/GenericTheme" },
+        "h5": { "$ref": "#/definitions/GenericTheme" },
+        "h6": { "$ref": "#/definitions/GenericTheme" },
+        "pre": { "$ref": "#/definitions/GenericTheme" },
+        "code": { "$ref": "#/definitions/GenericTheme" },
+        "table": { "$ref": "#/definitions/GenericTheme" },
+        "th": { "$ref": "#/definitions/GenericTheme" },
+        "td": { "$ref": "#/definitions/GenericTheme" },
+        "tr": { "$ref": "#/definitions/GenericTheme" },
+        "p": { "$ref": "#/definitions/GenericTheme" },
+        "a": { "$ref": "#/definitions/GenericTheme" },
+        "blockquote": { "$ref": "#/definitions/GenericTheme" }
+      }
+    },
+
+    "----------------------------- Variants": {
+      "description": "Marker to separate root styles",
+      "const": "--------------------------------"
+    },
+
+    "elements": {
+      "type": "object",
+      "description": "An object of that can be used by elements",
+      "required": [
+      ],
+      "patternProperties": {
+        ".*": { "$ref": "#/definitions/GenericTheme" }
+      }
+    },
+
+    "compounds": {
+      "type": "object",
+      "description": "An object of variants and base styles that can be used by compounds",
+      "required": [
+      ],
+      "patternProperties": {
+        ".*": { "$ref": "#/definitions/GenericTheme" }
+      }
+    }
+  }
+}
