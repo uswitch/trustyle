@@ -4,10 +4,9 @@
 // Constants
 const ELEMENT = 'ELEMENT'
 const COMPOUND = 'COMPOUND'
-const TOKENS = 'TOKENS'
 
 // if we rename packages to include category we can remove these mappings
-const elements = [
+const ELEMENTS = [
   '@uswitch/trustyle.accordion',
   '@uswitch/trustyle.author',
   '@uswitch/trustyle.author-profile',
@@ -26,19 +25,17 @@ const elements = [
   '@uswitch/trustyle.pagination',
   '@uswitch/trustyle.toggle-switch'
 ]
-const compounds = [
+const COMPOUNDS = [
   '@uswitch/trustyle.article-intro',
   '@uswitch/trustyle.side-nav'
 ]
 
-const getPath = ({ type, brand, nodeModulesPath, packageName }) =>
-  type === TOKENS
-    ? `${nodeModulesPath}/${packageName}/theme.json`
-    : `${nodeModulesPath}/${packageName}/lib/themes/${brand}.js`
+const getPath = ({ brand, nodeModulesPath, packageName }) =>
+  `${nodeModulesPath}/${packageName}/lib/themes/${brand}.js`
 
 // if available require and map in themes from each component
 const getThemePartials = options => {
-  const { packageNames, type } = options
+  const { packageNames } = options
 
   return packageNames.reduce((obj, packageName) => {
     try {
@@ -47,12 +44,10 @@ const getThemePartials = options => {
         packageName
       }))
 
-      return type === TOKENS
-        ? module
-        : {
-            ...obj,
-            [packageName.replace('@uswitch/trustyle.', '')]: module.default
-          }
+      return {
+        ...obj,
+        [packageName.replace('@uswitch/trustyle.', '')]: module.default
+      }
     } catch (e) {
       console.error(e)
       return obj
@@ -61,7 +56,13 @@ const getThemePartials = options => {
 }
 
 const composeTheme = options => {
-  const { packageJson, dependencyType = 'dependencies' } = options
+  const {
+    tokens = {},
+    packageJson,
+    dependencyType = 'dependencies',
+    elements = [],
+    compounds = []
+  } = options
   // get list of dependencies
   const packages = packageJson[dependencyType]
 
@@ -70,55 +71,43 @@ const composeTheme = options => {
     .filter(dep => dep.match('@uswitch/trustyle'))
     .filter(dep => !dep.includes('-utils'))
 
-  const tokensPackageNames = trustylePackageNames.filter(name =>
-    name.includes('theme')
-  )
-
   const componentPackageNames = trustylePackageNames.filter(
     name => !name.includes('theme')
   )
 
   const elementPackageNames = componentPackageNames.filter(name =>
-    elements.includes(name)
+    ELEMENTS.includes(name)
   )
 
   const compoundPackageNames = componentPackageNames.filter(name =>
-    compounds.includes(name)
+    COMPOUNDS.includes(name)
   )
 
   // build theme
   const theme = {
-    ...getThemePartials({
-      ...options,
-      type: TOKENS,
-      packageNames: tokensPackageNames
-    }),
+    ...tokens,
     '----------------------------- Variants':
       '--------------------------------',
-    elements: getThemePartials({
-      ...options,
-      type: ELEMENT,
-      packageNames: elementPackageNames
-    }),
-    compounds: getThemePartials({
-      ...options,
-      type: COMPOUND,
-      packageNames: compoundPackageNames
-    })
+    elements: {
+      ...getThemePartials({
+        ...options,
+        type: ELEMENT,
+        packageNames: elementPackageNames
+      }),
+      ...elements
+    },
+    compounds: {
+      ...getThemePartials({
+        ...options,
+        type: COMPOUND,
+        packageNames: compoundPackageNames
+      }),
+      ...compounds
+    }
   }
-
-  console.log(JSON.stringify(theme, undefined, 2))
 
   // return JSON
   return JSON.stringify(theme, undefined, 2)
 }
 
 export default composeTheme
-
-export const getComponentThemeConfig = ({ name, themes }) =>
-  !name || !themes || !themes.length
-    ? new Error('name and themes required')
-    : {
-        name,
-        themes
-      }
