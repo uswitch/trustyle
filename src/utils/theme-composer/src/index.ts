@@ -1,10 +1,6 @@
 // @ts-nocheck
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-// Constants
-const ELEMENT = 'ELEMENT'
-const COMPOUND = 'COMPOUND'
-
 // if we rename packages to include category we can remove these mappings
 const ELEMENTS = [
   '@uswitch/trustyle.accordion',
@@ -89,19 +85,21 @@ const composeTheme = options => {
     '----------------------------- Variants':
       '--------------------------------',
     elements: {
-      ...getThemePartials({
-        ...options,
-        type: ELEMENT,
-        packageNames: elementPackageNames
-      }),
+      ...(elementPackageNames.length > 0
+        ? getThemePartials({
+            ...options,
+            packageNames: elementPackageNames
+          })
+        : {}),
       ...elements
     },
     compounds: {
-      ...getThemePartials({
-        ...options,
-        type: COMPOUND,
-        packageNames: compoundPackageNames
-      }),
+      ...(compoundPackageNames.length > 0
+        ? getThemePartials({
+            ...options,
+            packageNames: compoundPackageNames
+          })
+        : {}),
       ...compounds
     }
   }
