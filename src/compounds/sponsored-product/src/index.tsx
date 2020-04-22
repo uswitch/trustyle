@@ -274,7 +274,7 @@ const SponsoredProduct: React.FC<Props> = ({
                   letterSpacing: -0.5,
                   fontSize: 9,
                   marginLeft: 'xxs',
-                  fontFamily: "'-apple-system', 'BlinkMacSystemFont'"
+                  fontFamily: 'base'
                 }}
               >
                 {award}
