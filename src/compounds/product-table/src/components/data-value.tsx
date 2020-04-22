@@ -2,30 +2,23 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-import { AddonContext, CellContext, numberFormatter } from '../generics'
+import { numberFormatter } from '../generics'
 
 export interface DataValueProps extends React.HTMLAttributes<HTMLSpanElement> {
   value: number
   unit: string
+  subscript: string
 }
 // This isn't complete yet
-const ProductTableDataValue: React.FC<DataValueProps> = ({ value, unit }) => {
-  const { inSplit } = React.useContext(CellContext)
-  const { inAddon } = React.useContext(AddonContext)
-
-  const isRow = inSplit || inAddon
-
-  const baseStyles = {
-    variant: 'productTable.dataValue.base'
-  }
-  const isRowStyles = {
-    fontSize: 'xxxl',
-    variant: 'productTable.dataValue.variants.isRow'
-  }
-
+const ProductTableDataValue: React.FC<DataValueProps> = ({
+  value,
+  unit,
+  subscript
+}) => {
   return (
-    <span sx={isRow ? baseStyles : isRowStyles}>
+    <span>
       {numberFormatter(value, unit)}
+      {subscript ? <small>{subscript}</small> : null}
     </span>
   )
 }

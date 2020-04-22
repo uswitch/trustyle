@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-import { AddonContext, CellContext, numberFormatter } from '../generics'
+import { numberFormatter } from '../generics'
 
 export interface DataRangeProps extends React.HTMLAttributes<HTMLDivElement> {
   from: number
@@ -14,17 +14,10 @@ const ProductTableDataRange: React.FC<DataRangeProps> = ({
   to,
   unit
 }) => {
-  const { inSplit } = React.useContext(CellContext)
-  const { inAddon } = React.useContext(AddonContext)
-
-  const isRow = inSplit || inAddon
-
   return (
     <div>
-      <span sx={{ fontSize: isRow ? '' : 'xxxl' }}>
-        {numberFormatter(from, unit)}
-      </span>{' '}
-      to {numberFormatter(to, unit)}
+      {numberFormatter(from, unit) + ' '}
+      <small>to {numberFormatter(to, unit)}</small>
     </div>
   )
 }

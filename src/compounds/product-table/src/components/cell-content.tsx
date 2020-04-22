@@ -70,7 +70,11 @@ const ProductTableCellContent: React.FC<CellPrimaryProps> = ({
       <div
         sx={{
           ...grid('column', isRow ? 2 : 1, 1),
-          ...grid('row', 1, 1)
+          ...grid('row', 1, 1),
+          fontSize: isRow ? 'xs' : 'xxxl',
+          small: {
+            fontSize: 'xs'
+          }
         }}
       >
         {children}
