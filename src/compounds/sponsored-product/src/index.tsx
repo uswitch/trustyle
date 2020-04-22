@@ -70,7 +70,7 @@ const UspTags: React.FC<UspTagsProps> = ({ usps, uspColor, beforeColor }) => (
         usp={obj}
         backgroundColor={uspColor}
         beforeColor={beforeColor}
-        key={`infoblock-${index}`}
+        key={index}
       />
     ))}
   </React.Fragment>
