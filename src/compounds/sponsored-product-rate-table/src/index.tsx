@@ -148,12 +148,7 @@ const SponsoredRateTable: React.FC<Props> = ({
       sx={{
         borderWidth: 1,
         borderStyle: 'solid',
-        borderColor: 'grey-30',
-        '&:hover': {
-          '.button-link': {
-            backgroundColor: '#575761'
-          }
-        }
+        borderColor: 'grey-30'
       }}
     >
       <div
@@ -173,7 +168,7 @@ const SponsoredRateTable: React.FC<Props> = ({
           padding: [12, 'sm'],
           display: [null, 'grid'],
           gridTemplateColumns: [null, '1.5fr 1fr 0.5fr'],
-          gridGap: [null, 'xs']
+          gridGap: [null, 12]
         }}
       >
         <div>
@@ -252,7 +247,7 @@ const SponsoredRateTable: React.FC<Props> = ({
           <div
             sx={{
               display: 'grid',
-              gridGap: 'xs',
+              gridGap: ['xs', 12],
               gridTemplateColumns: '1fr 1fr',
               height: [92, campaignImgHeight]
             }}
@@ -272,7 +267,6 @@ const SponsoredRateTable: React.FC<Props> = ({
 
         <Stack spacing={[16]} sx={{ display: ['none', 'block'] }}>
           <Button
-            className="button-link"
             variant="primary"
             sx={{
               padding: 0,
@@ -283,15 +277,6 @@ const SponsoredRateTable: React.FC<Props> = ({
             }}
           >
             <span>See Deal</span>
-            <Icon
-              color="white"
-              direction="right"
-              glyph="caret"
-              size={20}
-              sx={{
-                flexShrink: 0
-              }}
-            />
           </Button>
 
           <SponsoredByTag
