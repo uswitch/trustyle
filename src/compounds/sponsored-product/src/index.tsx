@@ -19,6 +19,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   imgAlt: string
   informationDetails?: Detail[]
   usps?: string[]
+  uspBackgroundColor?: string
+  uspBeforeColor?: string
   href: string
   target: string
   sponsorSrc: string
@@ -57,12 +59,19 @@ const InformationBlocks: React.FC<InformationBlocksProps> = ({ details }) => (
 
 interface UspTagsProps {
   usps: string[]
+  uspColor: string
+  beforeColor: string
 }
 
-const UspTags: React.FC<UspTagsProps> = ({ usps }) => (
+const UspTags: React.FC<UspTagsProps> = ({ usps, uspColor, beforeColor }) => (
   <React.Fragment>
     {usps.map((obj, index) => (
-      <UspTag usp={obj} key={`infoblock-${index}`} />
+      <UspTag
+        usp={obj}
+        backgroundColor={uspColor}
+        beforeColor={beforeColor}
+        key={`infoblock-${index}`}
+      />
     ))}
   </React.Fragment>
 )
@@ -135,6 +144,8 @@ const SponsoredProduct: React.FC<Props> = ({
   imgAlt,
   informationDetails,
   usps,
+  uspBackgroundColor = 'rgba(132,166,255,0.3)',
+  uspBeforeColor = '#84A6FF',
   href,
   target,
   sponsorSrc,
@@ -342,7 +353,13 @@ const SponsoredProduct: React.FC<Props> = ({
               </div>
             )}
 
-            {usps && <UspTags usps={usps} />}
+            {usps && (
+              <UspTags
+                usps={usps}
+                uspColor={uspBackgroundColor}
+                beforeColor={uspBeforeColor}
+              />
+            )}
           </Stack>
 
           <div sx={{ display: ['block', 'none'] }}>
