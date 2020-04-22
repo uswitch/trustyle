@@ -50,7 +50,7 @@ const InformationBlocks: React.FC<InformationBlocksProps> = ({ details }) => (
         value={obj.value}
         suffix={obj.suffix}
         label={obj.label}
-        key={`infoblock-${index}`}
+        key={index}
         sx={{ padding: [null, 'xs'] }}
       />
     ))}
@@ -136,7 +136,7 @@ const EnhancedImage = ({ src, height }: { src: string; height: string }) => (
 )
 
 const topComponentMargin = (productSrc: string, enhancedSrc: string) =>
-  productSrc && !enhancedSrc ? '38px' : null
+  productSrc && !enhancedSrc ? ['38px', 0] : null
 
 const SponsoredProduct: React.FC<Props> = ({
   title,
@@ -158,7 +158,7 @@ const SponsoredProduct: React.FC<Props> = ({
   <a href={href} target={target} sx={{ textDecoration: 'none' }}>
     <div
       sx={{
-        borderWidth: [1, 'none'],
+        borderWidth: [1, 0],
         borderStyle: ['solid', 'none'],
         borderColor: ['grey-30', 'none'],
         marginTop: () => topComponentMargin(imgSrc, enhancedImgSrc)
@@ -180,9 +180,6 @@ const SponsoredProduct: React.FC<Props> = ({
           padding: [12, 'sm'],
           display: [null, 'flex'],
           justifyContent: [null, 'space-between'],
-          borderWidth: ['none', 1],
-          borderStyle: ['none', 'solid'],
-          borderColor: ['none', 'grey-30'],
           boxShadow: ['none', '12px 12px 0px rgba(20, 20, 36, 0.15)'],
           backgroundColor: backgroundColor
         }}
