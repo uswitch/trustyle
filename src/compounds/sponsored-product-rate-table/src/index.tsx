@@ -154,7 +154,15 @@ const SponsoredRateTable: React.FC<Props> = ({
   campaignImgSrc,
   campaignImgHeight = '144px'
 }) => (
-  <a href={href} target={target} sx={{ textDecoration: 'none' }}>
+  <a
+    href={href}
+    target={target}
+    sx={{
+      textDecoration: 'none',
+      color: 'inherit',
+      '&:hover': { color: 'inherit' }
+    }}
+  >
     <div
       sx={{
         borderWidth: 1,

@@ -155,7 +155,15 @@ const SponsoredProduct: React.FC<Props> = ({
   backgroundColor = 'white',
   enhancedImgHeight = '144px'
 }) => (
-  <a href={href} target={target} sx={{ textDecoration: 'none' }}>
+  <a
+    href={href}
+    target={target}
+    sx={{
+      textDecoration: 'none',
+      color: 'inherit',
+      '&:hover': { color: 'inherit' }
+    }}
+  >
     <div
       sx={{
         borderWidth: [1, 0],
