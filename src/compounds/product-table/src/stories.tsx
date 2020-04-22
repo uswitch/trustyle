@@ -50,8 +50,8 @@ export const ExampleWithKnobs = () => {
 
   const formatters = {
     Range: <ProductTable.data.Range from={30} to={260} unit="pounds" />,
-    TextSubtext: (
-      <ProductTable.data.TextSubtext text="£121" subscript="/ month" />
+    TextSubscript: (
+      <ProductTable.data.TextSubscript text="£121" subscript="/ month" />
     ),
     Value: <ProductTable.data.Value value={300} unit="pounds" />
   }
