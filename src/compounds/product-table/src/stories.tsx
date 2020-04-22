@@ -53,6 +53,13 @@ export const ExampleWithKnobs = () => {
     TextSubscript: (
       <ProductTable.data.TextSubscript text="£121" subscript="/ month" />
     ),
+    ValueSubscript: (
+      <ProductTable.data.ValueSubscript
+        value={121}
+        unit="pounds"
+        subscript="/ month"
+      />
+    ),
     Value: <ProductTable.data.Value value={300} unit="pounds" />
   }
 
