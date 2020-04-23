@@ -71,9 +71,9 @@ const ProductTableCellContent: React.FC<CellPrimaryProps> = ({
         sx={{
           ...grid('column', isRow ? 2 : 1, 1),
           ...grid('row', 1, 1),
-          fontSize: isRow ? 'xs' : 'xxxl',
+          fontSize: isRow ? 'sm' : 'xxxl',
           small: {
-            fontSize: 'xs'
+            fontSize: 'sm'
           }
         }}
       >
