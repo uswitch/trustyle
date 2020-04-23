@@ -45,7 +45,19 @@ export interface AddonArg {
 
 const formatters: { [unit: string]: (value: number) => string } = {
   pounds: value => `£${value}`,
-  percent: value => `${value}%`
+
+  percent: value => `${value}%`,
+
+  /**
+   * The simplicity of this funciton will need addressing in the future, however Kb, Mb, and Gb are
+   * all proven on the Uswitch site.
+   */
+  'data-transfer': (kilobits = 0) => {
+    if (kilobits < 1000) return `${kilobits || 0}Kb`
+    if (kilobits >= 1e6) return `${Math.floor(kilobits / 1e6)}Gb`
+
+    return `${Math.floor(kilobits / 1000)}Mb`
+  }
 }
 
 // Should be fleshed out and moved into a util package
@@ -53,5 +65,9 @@ export function numberFormatter(value: number | string, unit: string): string {
   if (typeof value === 'string') {
     return value
   }
-  return formatters[unit] ? formatters[unit](value) : `${value} ${unit}`
+
+  const formatter = unit.split(' ').join('-')
+  return formatters[formatter]
+    ? formatters[formatter](value)
+    : `${value} ${unit}`
 }

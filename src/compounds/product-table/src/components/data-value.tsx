@@ -5,7 +5,7 @@ import { jsx } from 'theme-ui'
 import { numberFormatter } from '../generics'
 
 export interface DataValueProps extends React.HTMLAttributes<HTMLSpanElement> {
-  value: number
+  value: number | string
   unit: string
   subscript: string
 }
@@ -18,7 +18,9 @@ const ProductTableDataValue: React.FC<DataValueProps> = ({
   return (
     <span>
       {numberFormatter(value, unit)}
-      {subscript ? <small>{' ' + subscript}</small> : null}
+      {typeof value === 'number' && subscript ? (
+        <small>{' ' + subscript}</small>
+      ) : null}
     </span>
   )
 }
