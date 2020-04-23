@@ -98,6 +98,12 @@ export const AllVariants = () => (
   </div>
 )
 
+AllVariants.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   const permutations = permutationsGenerator({
     variant: ['primary', 'secondary'],
