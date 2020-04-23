@@ -51,7 +51,10 @@ export const ExampleCards = () => {
               imgSrc={img}
               imgAlt="Picture of a cute kitten"
               title={title}
-              description={content}
+              description={
+                content +
+                ' with some extra words to make the card taller  with some extra words to make the card taller  with some extra words to make the card taller '
+              }
               linkHref="https://www.uswitch.com"
               linkText="read about cats"
             />

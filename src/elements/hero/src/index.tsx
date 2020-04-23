@@ -89,9 +89,6 @@ const Hero: React.FC<Props> = ({
               position: 'relative',
               paddingTop: ['sm', 'xxl'],
               paddingBottom: ['sm', 'xxxl'],
-              'h1, h2, h3, h4, h5, h6': {
-                maxWidth: ['66.6%', 'none']
-              },
               variant: 'hero.content'
             }}
           >

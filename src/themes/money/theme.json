@@ -363,10 +363,8 @@
   "compounds": {
     "card": {
       "itemsPerRow": [1, 2, 3],
-      "display": "flex",
       "width": "100%",
       "height": "100%",
-      "flexDirection": "column",
       "borderRadius": "sm",
       "borderStyle": "solid",
       "borderColor": "grey-20",
@@ -412,7 +410,8 @@
 
     "cookie-banner": {
       "heading": {
-        "mt": [0, "md", "md"], 
+        "mt": [0, "md", "md"],
+        "fontSize": ["xl", null, "xxxl"],
         "color": "grey-80"
       },
       "hr": {
@@ -421,6 +420,7 @@
         "bg": "grey-20"
       },
       "copy": {
+        "fontSize": ["xs", null, "base"],
         "mb": ["md", "sm", null],
         "mt": "base"
       },
@@ -502,9 +502,11 @@
 
   "buttons": {
     "base": {
+      "boxSizing": "border-box",
       "fontWeight": "bold",
       "border": "none",
       "borderRadius": "50vh",
+      "textAlign": "center",
       ":disabled": {
         "opacity": "0.3",
         "cursor": "not-allowed"
@@ -556,15 +558,11 @@
         }
       },
 
-      "collection": { 
-        "primary": {
-          "variant": "buttons.variants.primary",
-          "marginLeft": "sm"
-        },
-        "secondary": {
-          "variant": "buttons.variants.secondary",
-          "marginLeft": "sm"
-        }
+      "link": {
+        "variant": "buttons.base",
+        "color": "grey-100",
+        "background": "none",
+        "textDecoration": "underline"
       }
     }
   },
@@ -955,6 +953,71 @@
   "richTextModule": {
     "contentCols": 12,
     "contentSpan": 10
+  },
+
+  "productTable": {
+    "row": {
+      "main": {
+        "borderColor": "grey-20"
+      },
+      "header": {
+        "borderBottomColor": "grey-20"
+      },
+      "pretitle": {
+        "color": "grey-60"
+      },
+      "title": {
+        "fontWeight": "bold",
+        "color": "grey-100"
+      },
+      "subtitle": {
+        "color": "grey-60"
+      }
+    },
+    "addonFooter": {
+      "main": {
+        "borderTopColor": "grey-20"
+      }
+    },
+    "cellBase": {
+      "variants": {
+        "inSplit": {
+          "borderTopColor": "grey-20"
+        }
+      }
+    },
+    "cellContent": {
+      "main": {
+        "base": {},
+        "variants": {
+          "accent": {
+            "backgroundColor": "grey-05"
+          }
+        }
+      },
+      "label": {
+        "color": "grey-60"
+      }
+    },
+    "cellCta": {
+      "buttonWrapper": {
+        "a, button": {
+          "width": "100%"
+        }
+      }
+    }
+  },
+
+  "progressBar": {
+    "main": {
+      "height": [5, 10],
+      "borderRadius": "4px",
+      "backgroundColor": "grey-10"
+    },
+    "progress": {
+      "borderRadius": "4px",
+      "backgroundColor": "#91CA50"
+    }
   },
 
   "styles": {

@@ -18,13 +18,17 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   imgSrc: string
   imgAlt: string
   informationDetails?: Detail[]
-  usp: string
+  usps?: string[]
+  uspBackgroundColor?: string
+  uspBeforeColor?: string
   href: string
   target: string
   sponsorSrc: string
   award?: string
   enhancedImgSrc: string
   brandCaption?: string
+  backgroundColor?: string
+  enhancedImgHeight?: string
 }
 
 interface Detail {
@@ -46,8 +50,27 @@ const InformationBlocks: React.FC<InformationBlocksProps> = ({ details }) => (
         value={obj.value}
         suffix={obj.suffix}
         label={obj.label}
-        key={`infoblock-${index}`}
+        key={index}
         sx={{ padding: [null, 'xs'] }}
+      />
+    ))}
+  </React.Fragment>
+)
+
+interface UspTagsProps {
+  usps: string[]
+  uspColor: string
+  beforeColor: string
+}
+
+const UspTags: React.FC<UspTagsProps> = ({ usps, uspColor, beforeColor }) => (
+  <React.Fragment>
+    {usps.map((obj, index) => (
+      <UspTag
+        usp={obj}
+        backgroundColor={uspColor}
+        beforeColor={beforeColor}
+        key={index}
       />
     ))}
   </React.Fragment>
@@ -80,13 +103,13 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
     {src && (
       <ImgixImage
         sx={{
-          height: [96, 105],
-          width: 56,
           marginTop: [-48, 0],
-          marginRight: ['xs', 0]
+          marginRight: ['xs', 0],
+          height: [96, 104]
         }}
         alt={alt}
         src={src}
+        width={56}
         imgixParams={{ fit: 'clip' }}
         critical
       />
@@ -94,17 +117,18 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
   </React.Fragment>
 )
 
-const EnhancedImage = ({ src }: { src: string }) => (
+const EnhancedImage = ({ src, height }: { src: string; height: string }) => (
   <React.Fragment>
     {src && (
       <div
         sx={{
-          height: 96,
+          height: height,
           width: '100%',
           display: ['block', 'none'],
           backgroundImage: `url(${src})`,
           backgroundPosition: 'left bottom',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover'
         }}
       ></div>
     )}
@@ -112,31 +136,43 @@ const EnhancedImage = ({ src }: { src: string }) => (
 )
 
 const topComponentMargin = (productSrc: string, enhancedSrc: string) =>
-  productSrc && !enhancedSrc ? '48px' : null
+  productSrc && !enhancedSrc ? ['38px', 0] : null
 
 const SponsoredProduct: React.FC<Props> = ({
   title,
   imgSrc,
   imgAlt,
   informationDetails,
-  usp,
+  usps,
+  uspBackgroundColor = 'rgba(132,166,255,0.3)',
+  uspBeforeColor = '#84A6FF',
   href,
   target,
   sponsorSrc,
   award,
   enhancedImgSrc,
-  brandCaption
+  brandCaption,
+  backgroundColor = 'white',
+  enhancedImgHeight = '144px'
 }) => (
-  <a href={href} target={target} sx={{ textDecoration: 'none' }}>
+  <a
+    href={href}
+    target={target}
+    sx={{
+      textDecoration: 'none',
+      color: 'inherit',
+      '&:hover': { color: 'inherit' }
+    }}
+  >
     <div
       sx={{
-        borderWidth: [1, 'none'],
+        borderWidth: [1, 0],
         borderStyle: ['solid', 'none'],
         borderColor: ['grey-30', 'none'],
         marginTop: () => topComponentMargin(imgSrc, enhancedImgSrc)
       }}
     >
-      <EnhancedImage src={enhancedImgSrc} />
+      <EnhancedImage src={enhancedImgSrc} height={enhancedImgHeight} />
 
       <div
         sx={{
@@ -152,10 +188,8 @@ const SponsoredProduct: React.FC<Props> = ({
           padding: [12, 'sm'],
           display: [null, 'flex'],
           justifyContent: [null, 'space-between'],
-          borderWidth: ['none', 1],
-          borderStyle: ['none', 'solid'],
-          borderColor: ['none', 'grey-30'],
-          boxShadow: ['none', '12px 12px 0px rgba(20, 20, 36, 0.15)']
+          boxShadow: ['none', '12px 12px 0px rgba(20, 20, 36, 0.15)'],
+          backgroundColor: backgroundColor
         }}
       >
         <div
@@ -172,25 +206,39 @@ const SponsoredProduct: React.FC<Props> = ({
           >
             <ProductImage src={imgSrc} alt={imgAlt} />
 
-            <ImgixImage
-              src={sponsorSrc}
-              imgixParams={{ fit: 'clip' }}
-              critical
+            <div
               sx={{
-                maxHeight: 40,
-                maxWidth: 72,
-                paddingY: 'lg',
-                paddingX: 'xxs',
+                width: 80,
+                position: 'relative',
                 marginLeft: 'xs',
+                marginRight: 'sm',
                 display: ['none', 'inline-block'],
                 borderWidth: 1,
                 borderStyle: 'solid',
                 borderColor: 'grey-10'
               }}
-            />
+            >
+              <ImgixImage
+                src={sponsorSrc}
+                imgixParams={{ fit: 'clip', trim: 'color' }}
+                width={44}
+                height={88}
+                critical
+                sx={{
+                  position: 'absolute',
+                  margin: 'auto',
+                  top: 0,
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  maxWidth: '100%',
+                  height: 'auto'
+                }}
+              />
+            </div>
           </div>
 
-          {award ? (
+          {award && (
             <div
               sx={{
                 width: 106,
@@ -231,14 +279,13 @@ const SponsoredProduct: React.FC<Props> = ({
                   letterSpacing: -0.5,
                   fontSize: 9,
                   marginLeft: 'xxs',
-                  fontFamily: "'-apple-system', 'BlinkMacSystemFont'"
+                  fontFamily: 'base'
                 }}
               >
-                <strong>Uswitch</strong> Manufacturer of the Year
-                <strong> Winner 2020</strong>
+                {award}
               </span>
             </div>
-          ) : null}
+          )}
 
           <div
             sx={{
@@ -297,9 +344,9 @@ const SponsoredProduct: React.FC<Props> = ({
               {title}
             </div>
 
-            {brandCaption ? <BrandCaption text={brandCaption} /> : null}
+            {brandCaption && <BrandCaption text={brandCaption} />}
 
-            {informationDetails ? (
+            {informationDetails && (
               <div
                 sx={{
                   display: 'grid',
@@ -309,15 +356,19 @@ const SponsoredProduct: React.FC<Props> = ({
               >
                 <InformationBlocks details={informationDetails} />
               </div>
-            ) : null}
+            )}
 
-            <UspTag usp={usp} />
+            {usps && (
+              <UspTags
+                usps={usps}
+                uspColor={uspBackgroundColor}
+                beforeColor={uspBeforeColor}
+              />
+            )}
           </Stack>
 
           <div sx={{ display: ['block', 'none'] }}>
-            {award ? (
-              <AwardsTag award={award} sx={{ marginTop: 'xs' }} />
-            ) : null}
+            {award && <AwardsTag award={award} sx={{ marginTop: 'xs' }} />}
             <SponsoredByTag
               providerLogoSrc={sponsorSrc}
               sx={{ marginTop: 'xs' }}

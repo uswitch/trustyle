@@ -11,6 +11,7 @@ export type Variant =
   | 'continue'
   | 'inverse'
   | 'reversed'
+  | 'link'
 type IconPosition = 'left' | 'center' | 'right' | null
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {

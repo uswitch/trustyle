@@ -724,6 +724,15 @@
     }
   },
 
+  "progressBar": {
+    "main": {
+      "backgroundColor": "progress-bg"
+    },
+    "progress": {
+      "backgroundColor": "azure"
+    }
+  },
+
   "styles": {
     "root": {
       "fontFamily": "base",
