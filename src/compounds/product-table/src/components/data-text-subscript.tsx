@@ -13,8 +13,8 @@ const ProductTableDataTextSubscript: React.FC<DataTextSubscriptProps> = ({
 }) => {
   return (
     <div>
-      {text + ' '}
-      <small>{subscript}</small>
+      {text}
+      <small>{' ' + subscript}</small>
     </div>
   )
 }

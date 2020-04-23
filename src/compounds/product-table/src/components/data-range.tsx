@@ -16,8 +16,8 @@ const ProductTableDataRange: React.FC<DataRangeProps> = ({
 }) => {
   return (
     <div>
-      {numberFormatter(from, unit) + ' '}
-      <small>to {numberFormatter(to, unit)}</small>
+      {numberFormatter(from, unit)}
+      <small> to {numberFormatter(to, unit)}</small>
     </div>
   )
 }
