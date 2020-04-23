@@ -349,6 +349,52 @@ export const ExampleWithAddons = () => {
   )
 }
 
+export const ExampleWithNumberFormatters = () => {
+  return (
+    <React.Fragment>
+      <Global
+        styles={{
+          body: {
+            marginTop: 25
+          }
+        }}
+      />
+      <ProductTable.Row
+        badges={[
+          <Badge key="cashback">Cashback</Badge>,
+          <Badge key="award-winner">Award Winner</Badge>
+        ]}
+        preTitle="Sponsored"
+        rowTitle="Super Saver April 2021"
+      >
+        <ProductTable.cells.Split>
+          <ProductTable.cells.Content label="Download Speed">
+            <ProductTable.data.Value
+              value={number('Download speed (Kbps)', 1000)}
+              unit="data-transfer"
+              subscript=""
+            />
+          </ProductTable.cells.Content>
+          <ProductTable.cells.Content label="Upfront cost (free)">
+            <ProductTable.data.Value
+              value="No setup cost"
+              unit="pounds"
+              subscript="setup cost"
+            />
+          </ProductTable.cells.Content>
+        </ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Upfront cost" accent>
+          <ProductTable.data.Value
+            value={9.99}
+            unit="pounds"
+            subscript="setup cost"
+          />
+        </ProductTable.cells.Content>
+      </ProductTable.Row>
+    </React.Fragment>
+  )
+}
+
 export const ExampleWithMultipleAccents = () => {
   return (
     <ProductTable.Row preTitle="Sponsored" rowTitle="Super Saver April 2021">
