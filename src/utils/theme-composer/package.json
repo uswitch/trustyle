@@ -10,8 +10,7 @@
   "scripts": {
     "--------------- BUILDING": "----------------------",
     "clean": "rm -rf lib",
-    "build": "npm run clean && tsc",
-    "build-themes": "ts-node src/build",
+    "build": "ts-node src/build",
     "--------------- TESTING": "----------------------",
     "test": "npm run test:money",
     "test:schema": "npm run build-themes; node --experimental-modules scripts/validate-themes.mjs theme.schema.json lib/money-theme.json"
