@@ -5,33 +5,38 @@ import { jsx } from 'theme-ui'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   usp?: string
+  backgroundColor?: string
+  beforeColor?: string
 }
 
-const UspTag: React.FC<Props> = ({ usp }) =>
+const UspTag: React.FC<Props> = ({
+  usp,
+  backgroundColor = 'blue-25',
+  beforeColor = '#84A6FF'
+}) =>
   usp ? (
     <div
       sx={{
-        height: 32,
-        backgroundColor: 'yellow-25',
-        display: 'flex',
-        alignItems: 'center',
+        backgroundColor: backgroundColor,
+        textAlign: 'left',
+        paddingX: 12,
+        paddingY: 'xxs',
         '::before': {
           content: '""',
-          display: 'inline-block',
-          width: 4,
-          height: 28,
-          margin: 2,
-          backgroundColor: 'yellow'
+          position: 'relative',
+          left: '-.55em',
+          borderLeft: `4px solid ${beforeColor}`,
+          paddingY: '.2em'
         }
       }}
     >
       <span
         sx={{
-          fontFamily: "'-apple-system', 'BlinkMacSystemFont'",
+          fontFamily: 'base',
           fontWeight: 'bold',
-          fontSize: ['xs', 11],
+          fontSize: 'xs',
           color: 'grey-80',
-          marginLeft: 'xs'
+          lineHeight: 1.3
         }}
       >
         {usp}

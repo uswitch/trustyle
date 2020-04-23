@@ -1,7 +1,8 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Styled, useThemeUI } from 'theme-ui'
+import get from '@uswitch/trustyle-utils.get'
 
 type Overwrite<T, U> = Omit<T, keyof U> & U
 type Props<T extends React.ComponentType<any>> = Overwrite<
@@ -10,6 +11,7 @@ type Props<T extends React.ComponentType<any>> = Overwrite<
     as?: T
     variant: string
     children: React.ReactNode
+    size?: 'small' | 'large'
   }
 >
 
@@ -20,22 +22,28 @@ export const ButtonLink = <
 >({
   children,
   variant,
+  size = 'large',
   ...props
-}: Props<T>) => (
-  <Styled.a
-    sx={{
-      cursor: 'pointer',
-      backgroundImage: 'none',
-      fontFamily: 'base',
-      fontSize: 'base',
-      paddingX: 'sm',
-      paddingY: 'base',
-      display: 'inline-block',
-      textDecoration: 'none',
-      variant: `buttons.variants.${variant}`
-    }}
-    {...props}
-  >
-    {children}
-  </Styled.a>
-)
+}: Props<T>) => {
+  const { theme }: any = useThemeUI()
+
+  return (
+    <Styled.a
+      sx={{
+        cursor: 'pointer',
+        backgroundImage: 'none',
+        fontFamily: 'base',
+        fontSize: get(theme, `buttons.base.btnSize.${size}.fontSize`, 'base'),
+        paddingX: get(theme, `buttons.base.btnSize.${size}.paddingX`, 'sm'),
+        paddingY: get(theme, `buttons.base.btnSize.${size}.paddingY`, 'base'),
+        height: get(theme, `buttons.base.btnSize.${size}.height`, 'base'),
+        display: 'inline-block',
+        textDecoration: 'none',
+        variant: `buttons.variants.${variant}`
+      }}
+      {...props}
+    >
+      {children}
+    </Styled.a>
+  )
+}

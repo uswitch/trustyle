@@ -20,6 +20,6 @@
     "@uswitch/trustyle.breadcrumbs": "^1.0.7"
   },
   "dependencies": {
-    "@uswitch/trustyle.flex-grid": "^2.1.1"
+    "@uswitch/trustyle.flex-grid": "^2.2.0"
   }
 }

@@ -363,10 +363,8 @@
   "compounds": {
     "card": {
       "itemsPerRow": [1, 2, 3],
-      "display": "flex",
       "width": "100%",
       "height": "100%",
-      "flexDirection": "column",
       "borderRadius": "sm",
       "borderStyle": "solid",
       "borderColor": "grey-20",
@@ -413,6 +411,7 @@
     "cookie-banner": {
       "heading": {
         "mt": [0, "md", "md"],
+        "fontSize": ["xl", null, "xxxl"],
         "color": "grey-80"
       },
       "hr": {
@@ -421,6 +420,7 @@
         "bg": "grey-20"
       },
       "copy": {
+        "fontSize": ["xs", null, "base"],
         "mb": ["md", "sm", null],
         "mt": "base"
       },
@@ -563,17 +563,6 @@
         "color": "grey-100",
         "background": "none",
         "textDecoration": "underline"
-      },
-
-      "collection": {
-        "primary": {
-          "variant": "buttons.variants.primary",
-          "marginLeft": "sm"
-        },
-        "secondary": {
-          "variant": "buttons.variants.secondary",
-          "marginLeft": "sm"
-        }
       }
     }
   },
