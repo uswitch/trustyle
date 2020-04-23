@@ -37,7 +37,7 @@ const ProductTable = {
   },
   data: {
     Range: ProductTableDataRange,
-    TextSubtext: ProductTableDataTextSubscript,
+    TextSubscript: ProductTableDataTextSubscript,
     Value: ProductTableDataValue
   }
 }
