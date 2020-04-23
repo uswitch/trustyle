@@ -30,7 +30,7 @@ const getPath = ({ brand, nodeModulesPath, packageName }) =>
   `${nodeModulesPath}/${packageName}/lib/themes/${brand}.js`
 
 // if available require and map in themes from each component
-const getThemePartials = options => {
+const dynamicallyRequireThemePartials = options => {
   const { packageNames } = options
 
   return packageNames.reduce((obj, packageName) => {
@@ -90,7 +90,7 @@ const composeTheme = options => {
     )
 
     theme.elements = {
-      ...getThemePartials({
+      ...dynamicallyRequireThemePartials({
         ...options,
         packageNames: elementPackageNames
       }),
@@ -98,7 +98,7 @@ const composeTheme = options => {
     }
 
     theme.compounds = {
-      ...getThemePartials({
+      ...dynamicallyRequireThemePartials({
         ...options,
         packageNames: compoundPackageNames
       }),
