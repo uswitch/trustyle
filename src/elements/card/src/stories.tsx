@@ -10,7 +10,7 @@ export default {
   title: 'Elements|Card'
 }
 
-export const ExampleCards = () => {
+export const DefaultCards = () => {
   const title = text('Title', 'This is a card title')
   const content = text(
     'Content',
@@ -67,6 +67,68 @@ export const ExampleCards = () => {
               description={content}
               linkHref="https://www.uswitch.com"
               linkText="read about cats"
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  )
+}
+
+export const IconCards = () => {
+  const title = text('Title', 'This is a card title')
+  const content = text(
+    'Content',
+    'its a card with a picture of a really cute kitten'
+  )
+
+  const img =
+    'https://uswitch-contentful.imgix.net/t014ej9w3ur1/YPnGDSG9aTIPmg1rlWsZu/94483e7cec0dd6ac947e1f974650210f/800.jpg'
+  return (
+    <div>
+      {/* single card */}
+
+      <Container>
+        <Card
+          layout="icon"
+          imgSrc={img}
+          imgAlt="Picture of a cute kitten"
+          title={title}
+          description={content}
+        />
+      </Container>
+
+      {/* Multiple cards */}
+      <Container>
+        <Row cols={[1, 2, 3]}>
+          <Col span={1}>
+            <Card
+              layout="icon"
+              imgSrc={img}
+              imgAlt="Picture of a cute kitten"
+              title={title}
+              description={content}
+            />
+          </Col>
+          <Col span={1}>
+            <Card
+              layout="icon"
+              imgSrc={img}
+              imgAlt="Picture of a cute kitten"
+              title={title}
+              description={
+                content +
+                ' with some extra words to make the card taller  with some extra words to make the card taller  with some extra words to make the card taller '
+              }
+            />
+          </Col>
+          <Col span={1}>
+            <Card
+              layout="icon"
+              imgSrc={img}
+              imgAlt="Picture of a cute kitten"
+              title={title}
+              description={content}
             />
           </Col>
         </Row>
