@@ -1,9 +1,9 @@
 {
   "name": "@uswitch/trustyle.date",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "main": "lib/index.js",
-  "ts:main": "src/index.tsx",
+  "ts:main": "src/index.ts",
   "publishConfig": {
     "access": "public"
   },

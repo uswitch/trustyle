@@ -44,10 +44,14 @@ export interface AddonArg {
 }
 
 const formatters: { [unit: string]: (value: number) => string } = {
-  pounds: value => `£${value}`
+  pounds: value => `£${value}`,
+  percent: value => `${value}%`
 }
 
 // Should be fleshed out and moved into a util package
-export function numberFormatter(value: number, unit: string): string {
+export function numberFormatter(value: number | string, unit: string): string {
+  if (typeof value === 'string') {
+    return value
+  }
   return formatters[unit] ? formatters[unit](value) : `${value} ${unit}`
 }

@@ -19,6 +19,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   imgAlt: string
   informationDetails?: Detail[]
   usps?: string[]
+  uspBackgroundColor?: string
+  uspBeforeColor?: string
   href: string
   target: string
   sponsorSrc: string
@@ -48,7 +50,7 @@ const InformationBlocks: React.FC<InformationBlocksProps> = ({ details }) => (
         value={obj.value}
         suffix={obj.suffix}
         label={obj.label}
-        key={`infoblock-${index}`}
+        key={index}
         sx={{ padding: [null, 'xs'] }}
       />
     ))}
@@ -57,12 +59,19 @@ const InformationBlocks: React.FC<InformationBlocksProps> = ({ details }) => (
 
 interface UspTagsProps {
   usps: string[]
+  uspColor: string
+  beforeColor: string
 }
 
-const UspTags: React.FC<UspTagsProps> = ({ usps }) => (
+const UspTags: React.FC<UspTagsProps> = ({ usps, uspColor, beforeColor }) => (
   <React.Fragment>
     {usps.map((obj, index) => (
-      <UspTag usp={obj} key={`infoblock-${index}`} />
+      <UspTag
+        usp={obj}
+        backgroundColor={uspColor}
+        beforeColor={beforeColor}
+        key={index}
+      />
     ))}
   </React.Fragment>
 )
@@ -118,7 +127,8 @@ const EnhancedImage = ({ src, height }: { src: string; height: string }) => (
           display: ['block', 'none'],
           backgroundImage: `url(${src})`,
           backgroundPosition: 'left bottom',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover'
         }}
       ></div>
     )}
@@ -126,7 +136,7 @@ const EnhancedImage = ({ src, height }: { src: string; height: string }) => (
 )
 
 const topComponentMargin = (productSrc: string, enhancedSrc: string) =>
-  productSrc && !enhancedSrc ? '38px' : null
+  productSrc && !enhancedSrc ? ['38px', 0] : null
 
 const SponsoredProduct: React.FC<Props> = ({
   title,
@@ -134,6 +144,8 @@ const SponsoredProduct: React.FC<Props> = ({
   imgAlt,
   informationDetails,
   usps,
+  uspBackgroundColor = 'rgba(132,166,255,0.3)',
+  uspBeforeColor = '#84A6FF',
   href,
   target,
   sponsorSrc,
@@ -143,10 +155,18 @@ const SponsoredProduct: React.FC<Props> = ({
   backgroundColor = 'white',
   enhancedImgHeight = '144px'
 }) => (
-  <a href={href} target={target} sx={{ textDecoration: 'none' }}>
+  <a
+    href={href}
+    target={target}
+    sx={{
+      textDecoration: 'none',
+      color: 'inherit',
+      '&:hover': { color: 'inherit' }
+    }}
+  >
     <div
       sx={{
-        borderWidth: [1, 'none'],
+        borderWidth: [1, 0],
         borderStyle: ['solid', 'none'],
         borderColor: ['grey-30', 'none'],
         marginTop: () => topComponentMargin(imgSrc, enhancedImgSrc)
@@ -168,9 +188,6 @@ const SponsoredProduct: React.FC<Props> = ({
           padding: [12, 'sm'],
           display: [null, 'flex'],
           justifyContent: [null, 'space-between'],
-          borderWidth: ['none', 1],
-          borderStyle: ['none', 'solid'],
-          borderColor: ['none', 'grey-30'],
           boxShadow: ['none', '12px 12px 0px rgba(20, 20, 36, 0.15)'],
           backgroundColor: backgroundColor
         }}
@@ -262,7 +279,7 @@ const SponsoredProduct: React.FC<Props> = ({
                   letterSpacing: -0.5,
                   fontSize: 9,
                   marginLeft: 'xxs',
-                  fontFamily: "'-apple-system', 'BlinkMacSystemFont'"
+                  fontFamily: 'base'
                 }}
               >
                 {award}
@@ -341,7 +358,13 @@ const SponsoredProduct: React.FC<Props> = ({
               </div>
             )}
 
-            {usps && <UspTags usps={usps} />}
+            {usps && (
+              <UspTags
+                usps={usps}
+                uspColor={uspBackgroundColor}
+                beforeColor={uspBeforeColor}
+              />
+            )}
           </Stack>
 
           <div sx={{ display: ['block', 'none'] }}>

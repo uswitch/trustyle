@@ -411,6 +411,7 @@
     "cookie-banner": {
       "heading": {
         "mt": [0, "md", "md"],
+        "fontSize": ["xl", null, "xxxl"],
         "color": "grey-80"
       },
       "hr": {
@@ -419,6 +420,7 @@
         "bg": "grey-20"
       },
       "copy": {
+        "fontSize": ["xs", null, "base"],
         "mb": ["md", "sm", null],
         "mt": "base"
       },
