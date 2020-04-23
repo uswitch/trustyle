@@ -18,6 +18,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   productImgAlt: string
   informationDetails: Detail[]
   usps: string[]
+  uspBackgroundColor?: string
+  uspBeforeColor?: string
   href: string
   target: string
   sponsorLogoSrc: string
@@ -71,12 +73,19 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
 
 interface UspTagsProps {
   usps: string[]
+  uspColor: string
+  beforeColor: string
 }
 
-const UspTags: React.FC<UspTagsProps> = ({ usps }) => (
+const UspTags: React.FC<UspTagsProps> = ({ usps, uspColor, beforeColor }) => (
   <React.Fragment>
     {usps.map((obj, index) => (
-      <UspTag usp={obj} key={`infoblock-${index}`} />
+      <UspTag
+        usp={obj}
+        backgroundColor={uspColor}
+        beforeColor={beforeColor}
+        key={index}
+      />
     ))}
   </React.Fragment>
 )
@@ -122,7 +131,7 @@ const AwardBadge = ({ awardName }: { awardName: string }) => (
         letterSpacing: -0.5,
         fontSize: 9,
         marginLeft: 'xxs',
-        fontFamily: "'-apple-system', 'BlinkMacSystemFont'"
+        fontFamily: 'base'
       }}
     >
       {awardName}
@@ -136,6 +145,8 @@ const SponsoredRateTable: React.FC<Props> = ({
   productImgAlt,
   informationDetails,
   usps,
+  uspBackgroundColor = 'rgba(132,166,255,0.3)',
+  uspBeforeColor = '#84A6FF',
   href,
   target,
   sponsorLogoSrc,
@@ -143,7 +154,15 @@ const SponsoredRateTable: React.FC<Props> = ({
   campaignImgSrc,
   campaignImgHeight = '144px'
 }) => (
-  <a href={href} target={target} sx={{ textDecoration: 'none' }}>
+  <a
+    href={href}
+    target={target}
+    sx={{
+      textDecoration: 'none',
+      color: 'inherit',
+      '&:hover': { color: 'inherit' }
+    }}
+  >
     <div
       sx={{
         borderWidth: 1,
@@ -255,7 +274,13 @@ const SponsoredRateTable: React.FC<Props> = ({
             <InformationBlocks details={informationDetails} />
           </div>
 
-          {usps && <UspTags usps={usps} />}
+          {usps && (
+            <UspTags
+              usps={usps}
+              uspColor={uspBackgroundColor}
+              beforeColor={uspBeforeColor}
+            />
+          )}
 
           <AwardsTag award={award} sx={{ display: [null, 'none'] }} />
 
