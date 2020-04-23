@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.sponsored-product",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
