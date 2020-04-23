@@ -49,3 +49,13 @@ pipeline:
     secrets: [percy_token]
     commands:
       - npm run snapshot
+
+  check-unpublished:
+    when:
+      event: [push]
+      branch: master
+    image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    secrets: [slack_webhook]
+    commands:
+      - git pull --tags origin master
+      - node ./scripts/slack-unpublished.js
