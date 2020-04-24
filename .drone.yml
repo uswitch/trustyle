@@ -20,7 +20,7 @@ pipeline:
       event: [push]
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
     commands:
-      - npx lerna run build --scope $(npx lerna changed) --include-filtered-dependents --include-filtered-dependencies
+      - npx lerna run build
 
   publish:
     when:
