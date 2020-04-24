@@ -48,15 +48,17 @@ const formatters: { [unit: string]: (value: number) => string } = {
 
   percent: value => `${value}%`,
 
-  /**
-   * The simplicity of this funciton will need addressing in the future, however Kb, Mb, and Gb are
-   * all proven on the Uswitch site.
-   */
   'data-transfer': (kilobits = 0) => {
     if (kilobits < 1000) return `${kilobits || 0}Kb`
     if (kilobits >= 1e6) return `${Math.floor(kilobits / 1e6)}Gb`
 
     return `${Math.floor(kilobits / 1000)}Mb`
+  },
+
+  data: (megabytes = 0) => {
+    if (megabytes >= 1000) return `${Math.floor(megabytes / 1000)}GB`
+
+    return `${megabytes || 0}MB`
   }
 }
 
