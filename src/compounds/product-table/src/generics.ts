@@ -59,6 +59,10 @@ const formatters: { [unit: string]: (value: number) => string } = {
     return `${Math.floor(kilobits / 1000)}Mb`
   },
 
+  /**
+   * The simplicity of this funciton will need addressing in the future, however MB and GB are all
+   * proven on the Uswitch site.
+   */
   data: (megabytes = 0) => {
     if (megabytes >= 1000) return `${Math.floor(megabytes / 1000)}GB`
 
