@@ -76,8 +76,9 @@ export function numberFormatter(value: number | string, unit: string): string {
     return value
   }
 
-  const formatter = unit.split(' ').join('-')
+  const unitValue = unit || ''
+  const formatter = unitValue.split(' ').join('-')
   return formatters[formatter]
     ? formatters[formatter](value)
-    : `${value} ${unit}`
+    : `${value} ${unitValue}`.trim()
 }

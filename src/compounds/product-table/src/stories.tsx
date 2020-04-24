@@ -397,6 +397,9 @@ export const ExampleWithNumberFormatters = () => {
             subscript="setup cost"
           />
         </ProductTable.cells.Content>
+        <ProductTable.cells.Content label="No formatter" accent>
+          <ProductTable.data.Value value={1000} unit={null} subscript="" />
+        </ProductTable.cells.Content>
       </ProductTable.Row>
     </React.Fragment>
   )
