@@ -57,6 +57,12 @@ const formatters: { [unit: string]: (value: number) => string } = {
     if (kilobits >= 1e6) return `${Math.floor(kilobits / 1e6)}Gb`
 
     return `${Math.floor(kilobits / 1000)}Mb`
+  },
+
+  data: (megabytes = 0) => {
+    if (megabytes >= 1000) return `${Math.floor(megabytes / 1000)}GB`
+
+    return `${megabytes || 0}MB`
   }
 }
 

@@ -370,8 +370,15 @@ export const ExampleWithNumberFormatters = () => {
         <ProductTable.cells.Split>
           <ProductTable.cells.Content label="Download Speed">
             <ProductTable.data.Value
-              value={number('Download speed (Kbps)', 1000)}
+              value={number('Download speed (Kbps)', 10000)}
               unit="data-transfer"
+              subscript=""
+            />
+          </ProductTable.cells.Content>
+          <ProductTable.cells.Content label="Data">
+            <ProductTable.data.Value
+              value={number('Data (Mb)', 100000)}
+              unit="data"
               subscript=""
             />
           </ProductTable.cells.Content>
