@@ -21,6 +21,12 @@ export const SingleAccordion = () => {
   )
 }
 
+SingleAccordion.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AccordionGroup = () => {
   const groupTitle = text('Group title', 'Example group title')
   const title = text('First title', 'This is an example title')
@@ -43,9 +49,15 @@ export const AccordionGroup = () => {
   )
 }
 
+AccordionGroup.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
-    <AllThemes>
+    <AllThemes themes={['uswitch', 'money']}>
       <AccordionGroup />
     </AllThemes>
   )

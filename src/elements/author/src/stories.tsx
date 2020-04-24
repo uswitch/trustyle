@@ -48,9 +48,15 @@ export const Example = () => {
   )
 }
 
+Example.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
-    <AllThemes>
+    <AllThemes themes={['uswitch', 'money']}>
       <Example />
     </AllThemes>
   )

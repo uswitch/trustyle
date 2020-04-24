@@ -7,6 +7,7 @@ import Breadcrumbs from '../../breadcrumbs/src'
 import { Button } from '../../button/src'
 import { Col, Container, Row } from '../../../layout/flex-grid/src'
 import IconTile from '../../icon-tile/src'
+import AllThemes from '../../../utils/all-themes'
 
 import Hero from './'
 
@@ -112,6 +113,12 @@ export const ExampleWithKnobs = () => {
   )
 }
 
+ExampleWithKnobs.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 interface PanelHelperProps extends React.HTMLAttributes<any> {
   icon: string
 }
@@ -184,5 +191,20 @@ export const MoneyHomepageHero = () => {
         </Row>
       </Hero>
     </div>
+  )
+}
+
+MoneyHomepageHero.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+// @todo test with more than one image and position
+export const AutomatedTests = () => {
+  return (
+    <AllThemes themes={['uswitch', 'money']}>
+      <ExampleWithKnobs />
+    </AllThemes>
   )
 }

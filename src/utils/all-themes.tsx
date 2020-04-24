@@ -4,7 +4,7 @@ import { Styled, ThemeProvider, ThemeProviderProps } from 'theme-ui'
 import { themes as themeFiles } from './theme-selector'
 
 interface Props extends React.HTMLAttributes<any> {
-  themes: string[]
+  themes?: string[]
 }
 
 const AllThemes: React.FC<Props> = ({ themes = [], children }) => {

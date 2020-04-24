@@ -43,6 +43,12 @@ export const Example = () => (
   />
 )
 
+Example.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 const Spacer = () => <div css={css({ minHeight: 20 })} />
 
 export const AutomatedTests = () => {
@@ -51,7 +57,7 @@ export const AutomatedTests = () => {
   })
 
   return (
-    <AllThemes>
+    <AllThemes themes={['uswitch', 'money', 'journey']}>
       {permutations.map((p, i) => (
         <React.Fragment key={i}>
           <FunnelProgress

@@ -38,9 +38,15 @@ export const Example = () => {
   )
 }
 
+Example.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
-    <AllThemes>
+    <AllThemes themes={['uswitch', 'money']}>
       <CTA
         title="Find the best credit card for your needs"
         text="Find the best credit card for you, whether you're looking for a 0% card for balance transfers or purchases or day to day spending and rewards."

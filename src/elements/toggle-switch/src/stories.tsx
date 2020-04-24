@@ -59,6 +59,12 @@ export const ExampleWithState = () => {
   )
 }
 
+ExampleWithState.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 const Spacer = () => <div sx={{ minHeight: 20 }} />
 
 export const AutomatedTests = () => {
@@ -69,7 +75,7 @@ export const AutomatedTests = () => {
   })
 
   return (
-    <AllThemes>
+    <AllThemes themes={['uswitch', 'money', 'save-on-energy']}>
       {permutations.map((p, i) => (
         <Fragment key={i}>
           <PaletteProvider value={{ featureColor: p.featureColor }}>

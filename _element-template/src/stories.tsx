@@ -16,15 +16,21 @@ export const ExampleWithKnobs = () => {
   return <MyComponent someText={someText} />
 }
 
+ExampleWithKnobs.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   const permutations = permutationsGenerator({
-    someText: ['Text one', 'Text two']
+    variant: ['primary', 'secondary']
   })
 
   return (
     <AllThemes>
       {permutations.map((p, i) => (
-        <MyComponent someText={p.someText} key={i} />
+        <MyComponent someText="Some text" variant={p.variant} key={i} />
       ))}
     </AllThemes>
   )

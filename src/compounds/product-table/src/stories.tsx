@@ -7,6 +7,7 @@ import { Global } from '@emotion/core'
 import { ButtonLink } from '../../../elements/button-link/src'
 import Badge from '../../../elements/badge/src'
 import { ProgressBar } from '../../../elements/progress-bar/src'
+import AllThemes from '../../../utils/all-themes'
 
 import ProductTable, { AddonArg } from './index'
 
@@ -424,5 +425,23 @@ export const ExampleWithMultipleAccents = () => {
         secondary={<ButtonLink variant="link">Plan info</ButtonLink>}
       />
     </ProductTable.Row>
+  )
+}
+
+const Spacer = () => <div sx={{ minHeight: 20 }} />
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes themes={['uswitch', 'money']}>
+      <Example1 />
+      <Spacer />
+      <Example2 />
+      <Spacer />
+      <ExampleWithAddons />
+      <Spacer />
+      <ExampleWithNumberFormatters />
+      <Spacer />
+      <ExampleWithMultipleAccents />
+    </AllThemes>
   )
 }

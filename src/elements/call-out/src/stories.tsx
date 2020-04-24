@@ -35,6 +35,12 @@ export const Example = () => {
   )
 }
 
+Example.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const ExampleWithPalette = () => {
   const titleText = text(`Call out title`, `This is a call out`, 'CallOut')
   const textText = text(
@@ -74,6 +80,12 @@ export const ExampleWithPalette = () => {
   )
 }
 
+ExampleWithPalette.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   const permutations = permutationsGenerator({
     title: ['Call out title', undefined],
@@ -82,7 +94,7 @@ export const AutomatedTests = () => {
   })
 
   return (
-    <AllThemes>
+    <AllThemes themes={['uswitch', 'money', 'journey']}>
       {permutations.map((p, i) => (
         <PaletteProvider value={{ accentColor: p.accentColor }} key={i}>
           <CallOut title={p.title} text="Call out text" icon={p.icon} />

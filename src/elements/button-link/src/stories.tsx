@@ -33,6 +33,12 @@ export const AllVariants = () => (
   </div>
 )
 
+AllVariants.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 const CustomLink: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   to: string
 }> = ({ to, children, ...rest }) => (
@@ -47,16 +53,25 @@ export const StyledComponentAsProp = () => (
   </ButtonLink>
 )
 
+StyledComponentAsProp.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   const permutations = permutationsGenerator({
-    variant: ['primary', 'secondary']
+    variant: ['primary', 'secondary'],
+    as: [{}, { as: CustomLink, to: 'special-url' }]
   })
 
   return (
     <AllThemes>
       {permutations.map((p, i) => (
         <React.Fragment key={i}>
-          <ButtonLink variant={p.variant}>{p.variant}</ButtonLink>
+          <ButtonLink variant={p.variant} {...p.as}>
+            {p.variant} {p.as.as ? ' using `as` prop' : ''}
+          </ButtonLink>
           <Spacer />
         </React.Fragment>
       ))}
