@@ -57,6 +57,16 @@ const formatters: { [unit: string]: (value: number) => string } = {
     if (kilobits >= 1e6) return `${Math.floor(kilobits / 1e6)}Gb`
 
     return `${Math.floor(kilobits / 1000)}Mb`
+  },
+
+  /**
+   * The simplicity of this funciton will need addressing in the future, however MB and GB are all
+   * proven on the Uswitch site.
+   */
+  data: (megabytes = 0) => {
+    if (megabytes >= 1000) return `${Math.floor(megabytes / 1000)}GB`
+
+    return `${megabytes || 0}MB`
   }
 }
 
@@ -66,8 +76,9 @@ export function numberFormatter(value: number | string, unit: string): string {
     return value
   }
 
-  const formatter = unit.split(' ').join('-')
+  const unitValue = unit || ''
+  const formatter = unitValue.split(' ').join('-')
   return formatters[formatter]
     ? formatters[formatter](value)
-    : `${value} ${unit}`
+    : `${value} ${unitValue}`.trim()
 }

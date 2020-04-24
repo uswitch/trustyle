@@ -12,6 +12,7 @@ import { Email } from './email'
 import { Filters } from './filters'
 import { Home } from './home'
 import { Letter } from './letter'
+import { Minus } from './minus'
 import { Phone } from './phone'
 import { Plus } from './plus'
 import { Sms } from './sms'
@@ -26,6 +27,7 @@ export type Glyph =
   | 'filters'
   | 'home'
   | 'letter'
+  | 'minus'
   | 'phone'
   | 'plus'
   | 'sms'
@@ -68,6 +70,8 @@ export const Icon: React.FC<Props> = ({
       return <Home color={color} size={size} />
     case 'letter':
       return <Letter color={color} size={size} />
+    case 'minus':
+      return <Minus color={color} size={size} />
     case 'phone':
       return <Phone color={color} size={size} />
     case 'plus':

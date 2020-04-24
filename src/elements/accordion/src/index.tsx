@@ -2,11 +2,13 @@
 
 import React, { useContext, useState } from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
-import { Icon } from '@uswitch/trustyle.icon'
+import { Glyph, Icon } from '@uswitch/trustyle.icon'
 
 interface ContextProps {
   open: number
   setOpenId: React.Dispatch<number>
+  iconClosed?: Glyph
+  iconOpen?: Glyph
 }
 
 const AccordionContext = React.createContext<Partial<ContextProps>>({
@@ -25,8 +27,13 @@ interface TitleProps extends React.HTMLAttributes<HTMLDivElement> {
   as?: React.ElementType
 }
 
+interface GroupProps {
+  iconClosed?: Glyph
+  iconOpen?: Glyph
+}
+
 const Accordion: React.FC<Props> & {
-  Group: React.FC
+  Group: React.FC<GroupProps>
   Title: React.FC<TitleProps>
 } = ({ index, title, isInitiallyOpen = false, children }) => {
   const {
@@ -67,16 +74,30 @@ const Accordion: React.FC<Props> & {
         >
           {title}
         </div>
-        <Icon
-          color={
-            isOpen
-              ? colors[accordionTheme?.variants?.isActive?.caret?.color]
-              : colors[accordionTheme?.base?.caret?.color]
-          }
-          glyph="caret"
-          direction={isOpen ? 'up' : 'down'}
-          size={16}
-        />
+        {accordionContext.iconClosed && accordionContext.iconOpen ? (
+          <Icon
+            color={
+              isOpen
+                ? colors[accordionTheme?.variants?.isActive?.caret?.color]
+                : colors[accordionTheme?.base?.caret?.color]
+            }
+            glyph={
+              isOpen ? accordionContext.iconOpen : accordionContext.iconClosed
+            }
+            size={16}
+          />
+        ) : (
+          <Icon
+            color={
+              isOpen
+                ? colors[accordionTheme?.variants?.isActive?.caret?.color]
+                : colors[accordionTheme?.base?.caret?.color]
+            }
+            glyph="caret"
+            direction={isOpen ? 'up' : 'down'}
+            size={16}
+          />
+        )}
       </button>
       <div
         sx={{
@@ -104,7 +125,7 @@ const Accordion: React.FC<Props> & {
 
 export default Accordion
 
-Accordion.Group = ({ children }) => {
+Accordion.Group = ({ children, iconClosed, iconOpen }) => {
   const [openId, setOpenId] = useState(0)
 
   const childrenWithIndexes = React.Children.map(children, (child, index) => {
@@ -122,7 +143,9 @@ Accordion.Group = ({ children }) => {
         marginBottom: 'sm'
       }}
     >
-      <AccordionContext.Provider value={{ open: openId, setOpenId }}>
+      <AccordionContext.Provider
+        value={{ open: openId, setOpenId, iconClosed, iconOpen }}
+      >
         {childrenWithIndexes}
       </AccordionContext.Provider>
     </div>

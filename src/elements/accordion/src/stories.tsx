@@ -55,10 +55,39 @@ AccordionGroup.story = {
   }
 }
 
+export const AccordionGroupWithIcons = () => {
+  const groupTitle = text('Group title', 'Example group title')
+  const title = text('First title', 'This is an example title')
+  const content = text('First content', 'This is some example content')
+
+  return (
+    <Accordion.Group iconClosed="plus" iconOpen="minus">
+      <Accordion.Title as="h2">{groupTitle}</Accordion.Title>
+      <Accordion title={title}>
+        <p>{content}</p>
+      </Accordion>
+      <Accordion title="Second accordion">
+        <p>Hello World</p>
+      </Accordion>
+      <Accordion title="Third accordion">
+        <p>Hello</p>
+        <p>World</p>
+      </Accordion>
+    </Accordion.Group>
+  )
+}
+
+AccordionGroupWithIcons.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
     <AllThemes themes={['uswitch', 'money']}>
       <AccordionGroup />
+      <AccordionGroupWithIcons />
     </AllThemes>
   )
 }
