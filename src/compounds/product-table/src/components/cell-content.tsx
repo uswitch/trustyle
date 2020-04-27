@@ -23,64 +23,130 @@ export interface CellPrimaryProps extends React.HTMLAttributes<HTMLDivElement> {
   accent?: boolean
   mobileOrder?: number
 }
-const ProductTableCellContent: React.FC<CellPrimaryProps> = ({
+
+export interface ContentRowProps extends CellPrimaryProps {
+  inAddon: string | boolean
+}
+
+const RowContent: React.FC<ContentRowProps> = ({
+  accent,
+  children,
+  inAddon,
   label,
-  accent = false,
+  mobileOrder
+}) => (
+  <CellBase
+    mobileOrder={mobileOrder || (accent ? 1 : 2)}
+    sx={{
+      height: 'auto',
+      display: 'grid',
+      alignItems: 'center',
+      gridGap: 'sm',
+      gridTemplateColumns: 'auto auto',
+      msGridColumns: 'auto auto',
+      gridTemplateRows: '100%',
+      msGridRows: '100%',
+      variant: `productTable.cellContent.variants.inSplit.${
+        accent ? 'accent' : 'main'
+      }`
+    }}
+    // @ts-ignore
+    css={{ display: '-ms-grid' }}
+  >
+    <div
+      sx={{
+        display: inAddon ? [undefined, 'none'] : undefined,
+        ...grid('column', 1, 1),
+        ...grid('row', 1, 1),
+        fontSize: 'xs',
+        marginTop: '',
+        variant: 'productTable.cellContent.variants.inSplit.label'
+      }}
+    >
+      {label}
+    </div>
+    <div
+      sx={{
+        ...grid('column', 2, 1),
+        ...grid('row', 1, 1),
+        fontSize: 'sm',
+        textAlign: 'right',
+        small: {
+          fontSize: 'sm'
+        },
+        variant: 'productTable.cellContent.variants.inSplit.content'
+      }}
+    >
+      {children}
+    </div>
+  </CellBase>
+)
+
+const BlockContent: React.FC<CellPrimaryProps> = ({
+  label,
+  accent,
   mobileOrder,
   children
+}) => (
+  <CellBase
+    mobileOrder={mobileOrder || (accent ? 1 : 2)}
+    sx={{
+      height: 'auto',
+      display: 'grid',
+      alignItems: 'center',
+      gridTemplateColumns: '100%',
+      msGridColumns: '100%',
+      gridTemplateRows: 'auto auto',
+      msGridRows: 'auto auto',
+      padding: accent ? 'sm' : '',
+      variant: `productTable.cellContent.${accent ? 'accent' : 'main'}`
+    }}
+    // @ts-ignore
+    css={{ display: '-ms-grid' }}
+  >
+    <div
+      sx={{
+        ...grid('column', 1, 1),
+        ...grid('row', 2, 1),
+        fontSize: 'xs',
+        marginTop: 'sm',
+        variant: 'productTable.cellContent.label'
+      }}
+    >
+      {label}
+    </div>
+    <div
+      sx={{
+        ...grid('column', 1, 1),
+        ...grid('row', 1, 1),
+        fontSize: 'xxxl',
+        small: {
+          fontSize: 'sm'
+        },
+        variant: 'productTable.cellContent.content'
+      }}
+    >
+      {children}
+    </div>
+  </CellBase>
+)
+
+const ProductTableCellContent: React.FC<CellPrimaryProps> = ({
+  children,
+  ...props
 }) => {
   const { inSplit } = React.useContext(CellContext)
   const { inAddon } = React.useContext(AddonContext)
 
-  const isRow = inSplit || inAddon
-
-  const rows =
-    inAddon && inAddon !== 'body-responsive' ? 'auto auto' : '1fr 1fr'
-
-  return (
-    <CellBase
-      mobileOrder={mobileOrder || (accent ? 1 : 2)}
-      sx={{
-        height: 'auto',
-        display: 'grid',
-        gridTemplateColumns: isRow ? rows : '100%',
-        '-ms-grid-columns': isRow ? rows : '100%',
-        gridTemplateRows: isRow ? '100%' : 'auto auto',
-        '-ms-grid-rows': isRow ? '100%' : 'auto auto',
-        padding: accent && !isRow ? 'sm' : '',
-        variant: accent
-          ? 'productTable.cellContent.main.variants.accent'
-          : 'productTable.cellContent.main.base'
-      }}
-      // @ts-ignore
-      css={{ display: '-ms-grid' }}
-    >
-      <div
-        sx={{
-          display: inAddon ? [undefined, 'none'] : undefined,
-          ...grid('column', 1, 1),
-          ...grid('row', isRow ? 1 : 2, 1),
-          fontSize: 'xs',
-          marginTop: isRow ? '' : 'sm',
-          variant: 'productTable.cellContent.label'
-        }}
-      >
-        {label}
-      </div>
-      <div
-        sx={{
-          ...grid('column', isRow ? 2 : 1, 1),
-          ...grid('row', 1, 1),
-          fontSize: isRow ? 'sm' : 'xxxl',
-          small: {
-            fontSize: 'sm'
-          }
-        }}
-      >
+  if (inSplit || inAddon) {
+    return (
+      <RowContent inAddon={inAddon} {...props}>
         {children}
-      </div>
-    </CellBase>
-  )
+      </RowContent>
+    )
+  }
+
+  return <BlockContent {...props}>{children}</BlockContent>
 }
 
 export default ProductTableCellContent

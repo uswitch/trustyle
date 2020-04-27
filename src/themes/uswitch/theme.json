@@ -981,16 +981,25 @@
       }
     },
     "cellContent": {
-      "main": {
-        "base": {},
-        "variants": {
+      "main": {},
+      "label": {
+        "color": "grey-80"
+      },
+      "content": {},
+      "accent": {
+        "backgroundColor": "grey-05"
+      },
+      "variants": {
+        "inSplit": {
+          "main": {},
+          "label": {
+            "color": "grey-80"
+          },
+          "content": {},
           "accent": {
             "backgroundColor": "grey-05"
           }
         }
-      },
-      "label": {
-        "color": "grey-80"
       }
     },
     "cellCta": {

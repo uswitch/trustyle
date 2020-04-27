@@ -86,9 +86,15 @@ export const ExampleWithKnobs = () => {
       return (
         <ProductTable.cells.Image>
           <img
-            src="https://placekitten.com/200/75?image=9"
+            src="https://uswitch-cms.imgix.net/uswitch-assets-eu/broadband/images/providers/virgin-media.png"
             alt="Salman"
-            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+            sx={{
+              maxHeight: 75,
+              height: '100%',
+              maxWidth: '100%',
+              width: 'auto',
+              objectFit: 'contain'
+            }}
           />
         </ProductTable.cells.Image>
       )
