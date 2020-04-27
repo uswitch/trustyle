@@ -94,6 +94,14 @@
         "4": 280
       }
     },
+    "icon": {
+      "xs": 16,
+      "sm": 16,
+      "md": 32,
+      "lg": 64,
+      "xl": 72,
+      "xxl": 96
+    },
     "hero": { "width": 1280 },
     "label": { "width": 280 },
     "input": { "height": 58 },
@@ -978,6 +986,11 @@
     "addonFooter": {
       "main": {
         "borderTopColor": "grey-20"
+      }
+    },
+    "cellImage": {
+      "main": {
+        "padding": "sm"
       }
     },
     "cellContent": {
