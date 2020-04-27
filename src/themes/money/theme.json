@@ -268,7 +268,7 @@
       }
     }
   },
-
+  
   "sideNav": {
     "internalLinkList": {
       "listStyle": "none",
@@ -361,6 +361,18 @@
   },
 
   "compounds": {
+    "articleIntro": {
+      "base": {
+        "heading": {
+          "marginTop": ["sm", "sm", "xl"],
+          "marginBottom": "sm"
+        },
+        "description": {
+          "marginTop": "sm"
+        }
+      }
+    },
+
     "card": {
       "itemsPerRow": [1, 2, 3],
       "width": "100%",
@@ -466,7 +478,7 @@
       "h1, h2, h3, h4, h5, h6": {
         "color": "inherit"
       }
-    }
+    } 
   },
 
   "imageCalloutContent": {
