@@ -196,31 +196,7 @@
     }
   },
 
-  "accordion": {
-    "base": {
-      "button": {
-        "padding": "sm",
-        "bg": "uswitch-navy",
-        "fontFamily": "base",
-        "fontSize": "base",
-        "fontWeight": "bold",
-        "color": "light-1",
-        "alignItems": "center"
-      },
-      "caret": {
-        "color": "light-1"
-      }
-    },
 
-    "isActive": {
-      "button": {
-        "variant": "accordion.base.button"
-      },
-      "caret": {
-        "color": "light-1"
-      }
-    }
-  },
 
   "sideNav": {
     "internalLinkList": {
@@ -279,6 +255,32 @@
   },
 
   "compounds": {
+    "accordion": {
+      "base": {
+        "button": {
+          "padding": "sm",
+          "bg": "uswitch-navy",
+          "fontFamily": "base",
+          "fontSize": "base",
+          "fontWeight": "bold",
+          "color": "light-1",
+          "alignItems": "center"
+        },
+        "caret": {
+          "color": "light-1"
+        }
+      },
+  
+      "isActive": {
+        "button": {
+          "variant": "compounds.accordion.base.button"
+        },
+        "caret": {
+          "color": "light-1"
+        }
+      }
+    },
+
     "card": {
       "display": "flex",
       "width": ["100%", "49%", "grid.lg.3"],

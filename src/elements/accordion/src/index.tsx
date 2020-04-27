@@ -61,8 +61,8 @@ const Accordion: React.FC<Props> & {
         sx={{
           cursor: 'pointer',
           variant: !isOpen
-            ? 'accordion.base.button'
-            : 'accordion.variants.isActive.button'
+            ? 'compounds.accordion.base.button'
+            : 'compounds.accordion.variants.isActive.button'
         }}
         onClick={() => setIsOpen(!isOpen)}
       >
@@ -157,7 +157,7 @@ Accordion.Title = ({ children, as = 'h2' }) => {
     <Styled.h3
       as={as}
       sx={{
-        variant: 'accordion.base.title'
+        variant: 'compounds.accordion.base.title'
       }}
     >
       {children}
