@@ -230,7 +230,7 @@
   },
 
   "compounds": {
-    "sideNav": {
+    "side-nav": {
       "internalLinkList": {
         "listStyle": "none",
         "paddingLeft": 0,
@@ -255,11 +255,11 @@
           }
         },
         "isActive": {
-          "variant": "compounds.sideNav.internalLinkListItem.base",
+          "variant": "compounds.side-nav.internalLinkListItem.base",
           "color": "primary",
           "bg": "rgb(247, 247, 248)",
           "::after": {
-            "variant": "compounds.sideNav.internalLinkListItem.base.::after",
+            "variant": "compounds.side-nav.internalLinkListItem.base.::after",
             "content": "\"\"",
             "position": "absolute",
             "top": "0",
@@ -270,7 +270,7 @@
             "backgroundColor": "primary"
           },
           ">a": {
-            "variant": "compounds.sideNav.internalLinkListItem.base.>a",
+            "variant": "compounds.side-nav.internalLinkListItem.base.>a",
             "color": "primary",
             "fontWeight": "bold",
             "transform": "translateX(8px)",

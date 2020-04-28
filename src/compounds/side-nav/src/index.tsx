@@ -27,7 +27,7 @@ const SideNav: React.FC<Props> = ({ internalLinks, additionalLinks = [] }) => {
         <Accordion title={internalLinks.title}>
           <ul
             sx={{
-              variant: 'compounds.sideNav.internalLinkList'
+              variant: 'compounds.side-nav.internalLinkList'
             }}
           >
             {internalLinks?.links?.map(({ text, url, isActive }) => {
@@ -35,7 +35,7 @@ const SideNav: React.FC<Props> = ({ internalLinks, additionalLinks = [] }) => {
                 <li
                   key={url}
                   sx={{
-                    variant: `compounds.sideNav.internalLinkListItem.${
+                    variant: `compounds.side-nav.internalLinkListItem.${
                       isActive ? 'isActive' : 'base'
                     }`
                   }}
@@ -55,7 +55,7 @@ const SideNav: React.FC<Props> = ({ internalLinks, additionalLinks = [] }) => {
                   sx={{
                     marginBottom: 0,
                     paddingBottom: 0,
-                    variant: 'compounds.sideNav.additionalLink'
+                    variant: 'compounds.side-nav.additionalLink'
                   }}
                 >
                   <Styled.a href={url}>{text}</Styled.a>

@@ -361,7 +361,7 @@
   },
 
   "compounds": {
-    "sideNav": {
+    "side-nav": {
       "internalLinkList": {
         "listStyle": "none",
         "paddingLeft": 0,
@@ -417,14 +417,14 @@
           }
         },
         "isActive": {
-          "variant": "compounds.sideNav.internalLinkListItem.base",
+          "variant": "compounds.side-nav.internalLinkListItem.base",
           "color": "experimental-text",
           "::after": {
-            "variant": "compounds.sideNav.internalLinkListItem.base.::after",
+            "variant": "compounds.side-nav.internalLinkListItem.base.::after",
             "borderColor": "fuschia"
           },
           ">a": {
-            "variant": "compounds.sideNav.internalLinkListItem.base.>a",
+            "variant": "compounds.side-nav.internalLinkListItem.base.>a",
             "color": "experimental-text",
             "fontWeight": "bold",
             ":visited": {
