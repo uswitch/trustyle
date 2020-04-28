@@ -268,7 +268,7 @@
       }
     }
   },
-
+  
   "sideNav": {
     "internalLinkList": {
       "listStyle": "none",
@@ -360,6 +360,7 @@
     }
   },
 
+  
   "compounds": {
     "side-nav": {
       "internalLinkList": {
@@ -448,6 +449,18 @@
         },
         ":last-child": {
           "paddingBottom": "0"
+        }
+      }
+    },
+
+    "article-intro": {
+      "base": {
+        "heading": {
+          "marginTop": ["sm", "sm", "xl"],
+          "marginBottom": "sm"
+        },
+        "description": {
+          "marginTop": "sm"
         }
       }
     },
@@ -557,7 +570,7 @@
       "h1, h2, h3, h4, h5, h6": {
         "color": "inherit"
       }
-    }
+    } 
   },
 
   "imageCalloutContent": {
