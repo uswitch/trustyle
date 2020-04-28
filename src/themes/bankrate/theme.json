@@ -194,11 +194,11 @@
         }
       },
       "isActive": {
-        "variant": "compounds.sideNav.internalLinkListItem.base",
+        "variant": "sideNav.internalLinkListItem.base",
         "color": "primary",
         "bg": "rgb(247, 247, 248)",
         "::after": {
-          "variant": "compounds.sideNav.internalLinkListItem.base.::after",
+          "variant": "sideNav.internalLinkListItem.base.::after",
           "content": "\"\"",
           "position": "absolute",
           "top": "0",
@@ -209,7 +209,7 @@
           "backgroundColor": "primary"
         },
         ">a": {
-          "variant": "compounds.sideNav.internalLinkListItem.base.>a",
+          "variant": "sideNav.internalLinkListItem.base.>a",
           "color": "primary",
           "fontWeight": "bold",
           "transform": "translateX(8px)",
