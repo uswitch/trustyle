@@ -37,7 +37,10 @@ const Accordion: React.FC<Props> & {
   Title: React.FC<TitleProps>
 } = ({ index, title, isInitiallyOpen = false, children }) => {
   const {
-    theme: { accordion: accordionTheme = {}, colors = {} }
+    theme: {
+      compounds: { accordion: accordionTheme = {} },
+      colors = {}
+    }
   }: any = useThemeUI()
   const [isOpenState, setIsOpenState] = useState(isInitiallyOpen)
   const accordionContext = useContext(AccordionContext)
