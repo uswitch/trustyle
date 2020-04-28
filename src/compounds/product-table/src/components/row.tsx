@@ -73,6 +73,10 @@ const ProductTableRow: React.FC<RowProps> = ({
         paddingX: ['sm', 'md'],
         paddingY: 'md',
         marginTop: badges.length ? [10, 15] : 0,
+        marginBottom: 'md',
+        ':last-of-type': {
+          marginBottom: 0
+        },
         variant: 'productTable.row.main'
       }}
     >
