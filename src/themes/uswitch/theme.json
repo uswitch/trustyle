@@ -964,11 +964,7 @@
   "productTable": {
     "row": {
       "main": {
-        "borderColor": "grey-30",
-        "marginBottom": "md",
-        ":last-of-type": {
-          "marginBottom": 0
-        }
+        "borderColor": "grey-30"
       },
       "header": {
         "borderBottomColor": "grey-20"
