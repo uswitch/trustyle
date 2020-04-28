@@ -81,7 +81,9 @@ const ProductTableCellBase: React.FC<CellBaseProps> = ({
     >
       <div
         sx={{
-          flex: 1,
+          flexGrow: 1,
+          flexShrink: 1,
+          flexBasis: 'auto',
           height: '100%',
           boxSizing: 'border-box'
         }}
