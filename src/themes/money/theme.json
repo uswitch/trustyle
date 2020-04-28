@@ -276,7 +276,7 @@
       }
     }
   },
-  
+
   "sideNav": {
     "internalLinkList": {
       "listStyle": "none",
@@ -368,7 +368,7 @@
     }
   },
 
-  
+
   "compounds": {
     "article-intro": {
       "base": {
@@ -487,7 +487,7 @@
       "h1, h2, h3, h4, h5, h6": {
         "color": "inherit"
       }
-    } 
+    }
   },
 
   "imageCalloutContent": {
@@ -979,7 +979,11 @@
   "productTable": {
     "row": {
       "main": {
-        "borderColor": "grey-20"
+        "borderColor": "grey-20",
+        "marginBottom": "md",
+        ":last-of-type": {
+          "marginBottom": 0
+        }
       },
       "header": {
         "borderBottomColor": "grey-20"
