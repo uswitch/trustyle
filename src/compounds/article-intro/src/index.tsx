@@ -12,11 +12,11 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 const ArticleIntro: React.FC<Props> = ({ title, author, description }) => {
   return (
     <div>
-      <Styled.h1 sx={{ variant: 'compounds.articleIntro.base.heading' }}>
+      <Styled.h1 sx={{ variant: 'compounds.article-intro.base.heading' }}>
         {title}
       </Styled.h1>
       {author}
-      <p sx={{ variant: 'compounds.articleIntro.base.description' }}>
+      <p sx={{ variant: 'compounds.article-intro.base.description' }}>
         {description}
       </p>
     </div>

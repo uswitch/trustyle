@@ -361,7 +361,7 @@
   },
 
   "compounds": {
-    "articleIntro": {
+    "article-intro": {
       "base": {
         "heading": {
           "marginTop": ["sm", "sm", "xl"],
