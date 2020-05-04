@@ -1,9 +1,6 @@
 {
   "name": "saveOnEnergy",
-  "breakpoints": [
-    "768px",
-    "1280px"
-  ],
+  "breakpoints": ["768px", "1280px"],
 
   "fonts": {
     "base": "Montserrat, sans-serif",
@@ -102,7 +99,7 @@
     "primary": "#446db5",
     "secondary": "#00aa4e",
     "heading": "#443160",
-    "link": "#009fbb",
+    "link": "#545454",
     "brand": "#443160",
     "accent-1": "#00aa4e",
     "accent-2": "#6abd45",
@@ -182,13 +179,46 @@
     }
   },
 
+  "linkList": {
+    "base": {
+      "fontSize": "sm",
+      "fontWeight": "normal",
+      "color": "text",
+      "paddingTop": 64,
+      "paddingBottom": "xxs",
+      "maxWidth": 712
+    }
+  },
+
+  "linkListItem": {
+    "base": {
+      "paddingY": 7,
+      "borderColor": "light-3",
+      "maxWidth": 712
+    }
+  },
+
+  "linkListLink": {
+    "base": {
+      "paddingY": 0,
+      "color": "text",
+      "fontWeight": "light"
+    }
+  },
+
   "imageCallout": {
     "imageSize": { "height": 337, "width": 477 },
     "sm": { "display": "flex", "width": 320, "mx": "auto" },
     "md": { "display": "flex", "width": 768, "mx": "auto" },
-    "lg": { "display": "flex", "justifyContent": "space-between", "width": 1280, "px": 158, "mx": "auto"  },
+    "lg": {
+      "display": "flex",
+      "justifyContent": "space-between",
+      "width": 1280,
+      "px": 158,
+      "mx": "auto"
+    },
     "right": { "flexDirection": "row-reverse", "alignItems": "flex-start" },
-    "left": { "flexDirection": "row", "alignItems": "flex-start"  },
+    "left": { "flexDirection": "row", "alignItems": "flex-start" },
     "column": { "flexDirection": "column", "alignItems": "center" }
   },
 
@@ -205,8 +235,8 @@
         "height": 230
       }
     },
-    "flexDirection" : {
-        "flexDirection": "row"
+    "flexDirection": {
+      "flexDirection": "row"
     }
   },
 
@@ -263,7 +293,7 @@
     "h1": {
       "color": "heading",
       "fontFamily": "heading",
-      "fontSize": [ "lg", "lg", "xxl" ],
+      "fontSize": ["lg", "lg", "xxl"],
       "fontWeight": "bold",
       "margin": 0,
       "mb": "sm"
@@ -271,7 +301,7 @@
     "h2": {
       "color": "heading",
       "fontFamily": "heading",
-      "fontSize": [ "lg", "lg", "xl" ],
+      "fontSize": ["lg", "lg", "xl"],
       "fontWeight": "light",
       "mb": "base"
     },

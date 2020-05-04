@@ -13,6 +13,7 @@ export const LinkList: React.FC<ListLinkProps> = ({ children, title }) => {
       <Styled.h3
         as="h2"
         sx={{
+          variant: 'linkList.base',
           paddingTop: 'xs',
           paddingBottom: 'xs',
           margin: 0
@@ -44,6 +45,7 @@ export const LinkListItem: React.FC<ListLinkItemProps> = ({
   return (
     <li
       sx={{
+        variant: 'linkListItem.base',
         borderTopWidth: '1px',
         borderTopStyle: 'solid',
         borderTopColor: 'grey-20',
@@ -55,6 +57,7 @@ export const LinkListItem: React.FC<ListLinkItemProps> = ({
       <Styled.a
         href={href}
         sx={{
+          variant: 'linkListLink.base',
           textDecoration: 'none',
           ':hover': {
             textDecoration: 'underline'
