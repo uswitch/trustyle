@@ -19,24 +19,11 @@ const IconCard: React.FC<Props> = ({
   description = '',
   orientation = 'left'
 }) => {
-  let sx
-
-  orientation === 'top'
-    ? (sx = {
-        display: 'flex',
-        flexDirection: 'column'
-      })
-    : (sx = {
-        display: 'flex',
-        flexDirection: 'row'
-      })
-
   return (
-    <div sx={sx}>
+    <div sx={{ variant: `compounds.icon-card.variants.${orientation}` }}>
       <div
         sx={{
-          mr: 28,
-          mb: 18
+          variant: 'compounds.icon-card.base.image-container'
         }}
       >
         <ImgixImage
@@ -49,7 +36,13 @@ const IconCard: React.FC<Props> = ({
         />
       </div>
       <div>
-        <Styled.h4 sx={{ mt: 0 }}>{title}</Styled.h4>
+        <Styled.h4
+          sx={{
+            variant: 'compounds.icon-card.base.h4'
+          }}
+        >
+          {title}
+        </Styled.h4>
         <Styled.p>{description}</Styled.p>
       </div>
     </div>

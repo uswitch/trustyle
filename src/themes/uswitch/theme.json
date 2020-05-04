@@ -416,6 +416,27 @@
         "variant": "compounds.cookie-banner.button-with-checkbox",
         "borderColor": "uswitch-navy"
       }
+    },
+    "icon-card": {
+      "base": {
+        "h4": {
+          "mt": 0
+        },
+        "image-container": {
+          "mr": "md",
+          "mb": "sm"
+        }
+      },
+      "variants": {
+        "top": {
+          "display": "flex",
+          "flexDirection": "column"
+        },
+        "left": {
+          "display": "flex",
+          "flexDirection": "row"
+        }
+      }
     }
   },
 
