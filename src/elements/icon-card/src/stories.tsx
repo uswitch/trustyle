@@ -12,7 +12,7 @@ export const ExampleWithKnobs = () => {
   const title = text('Card Title', 'This is a title')
   const description = text(
     'Card description',
-    'Simple icon card with title, image and descripton'
+    'Simple icon card with title, image and description'
   )
   const icon = select('Icon', ['Tick', 'Receipt'], 'Tick')
   const orientation = select('orientation', ['left', 'top'], 'left')

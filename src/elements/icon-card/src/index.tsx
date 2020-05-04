@@ -43,7 +43,9 @@ const IconCard: React.FC<Props> = ({
         >
           {title}
         </Styled.h4>
-        <Styled.p>{description}</Styled.p>
+        <Styled.p sx={{ variant: 'compounds.icon-card.base.p' }}>
+          {description}
+        </Styled.p>
       </div>
     </div>
   )
