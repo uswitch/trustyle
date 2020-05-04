@@ -17,6 +17,7 @@ const glyphChoices: Glyph[] = [
   'home',
   'letter',
   'minus',
+  'person',
   'phone',
   'plus',
   'sms'
