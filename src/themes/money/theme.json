@@ -170,7 +170,7 @@
   "grid": {
     "sizes": {
       "gutter": "sm",
-      "verticalGutter": "xs"
+      "verticalGutter": ["sm", "md"]
     },
     "container": {
       "maxWidth": 1152
