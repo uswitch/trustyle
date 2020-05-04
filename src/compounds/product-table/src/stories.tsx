@@ -85,11 +85,7 @@ export const ExampleWithKnobs = () => {
     if (col === 'Image') {
       return (
         <ProductTable.cells.Image>
-          <img
-            src="https://placekitten.com/200/75?image=9"
-            alt="Salman"
-            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
-          />
+          <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
         </ProductTable.cells.Image>
       )
     }
@@ -434,5 +430,67 @@ export const ExampleWithMultipleAccents = () => {
         secondary={<ButtonLink variant="link">Plan info</ButtonLink>}
       />
     </ProductTable.Row>
+  )
+}
+
+export const ExampleStacked = () => {
+  return (
+    <>
+      <ProductTable.Row preTitle="Sponsored" rowTitle="Super Saver April 2021">
+        <ProductTable.cells.Image>
+          <img
+            src="https://placekitten.com/200/75?image=1"
+            alt="Salman"
+            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          />
+        </ProductTable.cells.Image>
+        <ProductTable.cells.Split>
+          <ProductTable.cells.Content label="Fixed rate contract">
+            14 months
+          </ProductTable.cells.Content>
+          <ProductTable.cells.Content label="Early exit fee">
+            £30 per fuel
+          </ProductTable.cells.Content>
+        </ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Cta
+          primary={<ButtonLink variant="primary">Button</ButtonLink>}
+          secondary={<ButtonLink variant="link">Plan info</ButtonLink>}
+        />
+      </ProductTable.Row>
+
+      <ProductTable.Row preTitle="Sponsored" rowTitle="Super Saver April 2021">
+        <ProductTable.cells.Image>
+          <img
+            src="https://placekitten.com/200/75?image=1"
+            alt="Salman"
+            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          />
+        </ProductTable.cells.Image>
+        <ProductTable.cells.Split>
+          <ProductTable.cells.Content label="Fixed rate contract">
+            14 months
+          </ProductTable.cells.Content>
+          <ProductTable.cells.Content label="Early exit fee">
+            £30 per fuel
+          </ProductTable.cells.Content>
+        </ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Cta
+          primary={<ButtonLink variant="primary">Button</ButtonLink>}
+          secondary={<ButtonLink variant="link">Plan info</ButtonLink>}
+        />
+      </ProductTable.Row>
+    </>
   )
 }

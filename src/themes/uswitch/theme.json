@@ -94,6 +94,14 @@
         "4": 280
       }
     },
+    "icon": {
+      "xs": 16,
+      "sm": 16,
+      "md": 32,
+      "lg": 64,
+      "xl": 72,
+      "xxl": 96
+    },
     "hero": { "width": 1280 },
     "label": { "width": 280 },
     "input": { "height": 58 },
@@ -378,6 +386,62 @@
       }
     },
 
+    "side-nav": {
+      "internalLinkList": {
+        "listStyle": "none",
+        "paddingLeft": 0,
+        "paddingTop": "xxs",
+        "paddingBottom": "xxs",
+        "margin": 0
+      },
+      "internalLinkListItem": {
+        "base": {
+          "mb": 0,
+          "position": "relative",
+          ">a": {
+            "display": "block",
+            "color": "grey-70",
+            "textDecoration": "none",
+            "fontSize": "sm",
+            "padding": "12px 16px",
+            ":visited": {
+              "color": "grey-70"
+            }
+          }
+        },
+        "isActive": {
+          "variant": "compounds.side-nav.internalLinkListItem.base",
+          "color": "uswitch-navy",
+          "::after": {
+            "variant": "compounds.side-nav.internalLinkListItem.base.::after",
+            "content": "\"\"",
+            "position": "absolute",
+            "top": "0",
+            "left": "0",
+            "display": "block",
+            "width": 4,
+            "height": "100%",
+            "backgroundColor": "uswitch-navy"
+          },
+          ">a": {
+            "variant": "compounds.side-nav.internalLinkListItem.base.>a",
+            "color": "uswitch-navy",
+            ":visited": {
+              "color": "uswitch-navy"
+            }
+          }
+        }
+      },
+      "additionalLink": {
+        "display": "block",
+        "marginBottom": "xxs",
+        "color": "grey-80",
+        "paddingTop": "xxs",
+        "paddingBottom": "xxs",
+        "textDecoration": "none"
+      }
+    },
+    
     "card": {
       "itemsPerRow": [1, 2, 3],
       "width": "100%",
@@ -402,6 +466,36 @@
         "paddingX": ["sm", "sm"]
       },
       "marginRight": "base"
+    },
+
+    "testimonial-card": {
+      "author": {
+        "display": "flex",
+        "alignItems": "center",
+        "flexDirection": "row",
+        "> p": {
+          "m": 0
+        }
+      },
+      "author-image-container": {
+        "height": ["48px", "56px"],
+        "width": ["48px", "56px"],
+        "marginRight": "sm",
+        "> img": {
+          "maxHeight": "100%",
+          "maxWidth": "100%",
+          "borderRadius": "50%"
+        }
+      },
+      "author-placeholder": {
+        "height": "100%",
+        "width": "100%",
+        "borderRadius": "50%",
+        "backgroundColor": "grey-05",
+        "display": "flex",
+        "justifyContent": "center",
+        "alignItems": "center"
+      }
     },
 
     "click-out-form": {
@@ -1025,17 +1119,31 @@
         "borderTopColor": "grey-20"
       }
     },
-    "cellContent": {
+    "cellImage": {
       "main": {
-        "base": {},
-        "variants": {
+        "padding": "sm"
+      }
+    },
+    "cellContent": {
+      "main": {},
+      "label": {
+        "color": "grey-80"
+      },
+      "content": {},
+      "accent": {
+        "backgroundColor": "grey-05"
+      },
+      "variants": {
+        "inSplit": {
+          "main": {},
+          "label": {
+            "color": "grey-80"
+          },
+          "content": {},
           "accent": {
             "backgroundColor": "grey-05"
           }
         }
-      },
-      "label": {
-        "color": "grey-80"
       }
     },
     "cellCta": {
