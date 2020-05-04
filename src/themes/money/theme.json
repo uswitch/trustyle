@@ -97,6 +97,14 @@
         "4": 280
       }
     },
+    "icon": {
+      "xs": 16,
+      "sm": 16,
+      "md": 32,
+      "lg": 64,
+      "xl": 72,
+      "xxl": 96
+    },
     "hero": { "width": 1024 },
     "label": { "width": 280 },
     "input": { "height": 58 },
@@ -268,7 +276,7 @@
       }
     }
   },
-  
+
   "sideNav": {
     "internalLinkList": {
       "listStyle": "none",
@@ -360,7 +368,7 @@
     }
   },
 
-  
+
   "compounds": {
     "side-nav": {
       "internalLinkList": {
@@ -570,7 +578,7 @@
       "h1, h2, h3, h4, h5, h6": {
         "color": "inherit"
       }
-    } 
+    }
   },
 
   "imageCalloutContent": {
@@ -1090,17 +1098,31 @@
         }
       }
     },
-    "cellContent": {
+    "cellImage": {
       "main": {
-        "base": {},
-        "variants": {
+        "padding": "sm"
+      }
+    },
+    "cellContent": {
+      "main": {},
+      "label": {
+        "color": "grey-60"
+      },
+      "content": {},
+      "accent": {
+        "backgroundColor": "grey-05"
+      },
+      "variants": {
+        "inSplit": {
+          "main": {},
+          "label": {
+            "color": "grey-60"
+          },
+          "content": {},
           "accent": {
             "backgroundColor": "grey-05"
           }
         }
-      },
-      "label": {
-        "color": "grey-60"
       }
     },
     "cellCta": {
@@ -1184,8 +1206,8 @@
       "fontWeight": "base",
       "lineHeight": "base",
       "color": "grey-100",
-      "-webkit-font-smoothing": "antialiased",
-      "-moz-osx-font-smoothing": "grayscale"
+      "webkitFontSmoothing": "antialiased",
+      "mozOsxFontSmoothing": "grayscale"
     },
 
     "a": {

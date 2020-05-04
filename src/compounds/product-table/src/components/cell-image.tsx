@@ -11,6 +11,13 @@ export const ProductTableCellImage: React.FC = ({ children }) => (
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
+      img: {
+        maxHeight: 'icon.xxl',
+        height: '100%',
+        maxWidth: '100%',
+        width: 'auto',
+        objectFit: 'contain'
+      },
       variant: 'productTable.cellImage.main'
     }}
   >
