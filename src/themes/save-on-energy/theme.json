@@ -179,6 +179,53 @@
     }
   },
 
+  "accordion": {
+    "base": {
+      "&:last-of-type": {
+        "borderWidth": "0 0 1px 0",
+        "borderStyle": "solid",
+        "borderColor": "light-3"
+      },
+      "title": {
+        "marginTop": "0",
+        "marginBottom": "xs"
+      },
+      "content": {
+        "marginBottom": ["xxs", 26],
+        "fontSize": "base",
+        "color": "link"
+      },
+      "button": {
+        "padding": "0",
+        "paddingTop": ["sm", 32],
+        "paddingBottom": ["sm", 32],
+        "bg": "transparent",
+        "fontFamily": "base",
+        "fontSize": ["base", "md"],
+        "color": "text",
+        "alignItems": "center",
+        "borderWidth": "1px 0 0 0",
+        "borderStyle": "solid",
+        "borderColor": "light-3",
+        "display": "flex",
+        "width": "100%"
+      },
+      "caret": {
+        "color": "primary"
+      }
+    },
+    "variants": {
+      "isActive": {
+        "button": {
+          "variant": "accordion.base.button"
+        },
+        "caret": {
+          "color": "primary--dark"
+        }
+      }
+    }
+  },
+
   "linkList": {
     "base": {
       "fontSize": "sm",

@@ -56,7 +56,7 @@ const Accordion: React.FC<Props> & {
   }
 
   return (
-    <div>
+    <div sx={{ variant: 'accordion.base' }}>
       <button
         sx={{
           cursor: 'pointer',
@@ -101,7 +101,9 @@ const Accordion: React.FC<Props> & {
       </button>
       <div
         sx={{
+          variant: 'accordion.base.content',
           overflow: 'hidden',
+          display: isOpen ? 'block' : 'none',
           height: isOpen ? 'auto' : '0',
           marginBottom: isOpen
             ? accordionTheme?.base?.content?.marginBottom
