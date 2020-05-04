@@ -12,8 +12,6 @@ interface Props {
 
 export const Person: React.FC<Props> = ({ color, size }) => (
   <svg
-    width="18"
-    height="22"
     sx={{
       display: 'block',
       ...st.size(size),
