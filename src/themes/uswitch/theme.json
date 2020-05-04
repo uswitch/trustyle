@@ -367,6 +367,36 @@
       "marginRight": "base"
     },
 
+    "testimonial-card": {
+      "author": {
+        "display": "flex",
+        "alignItems": "center",
+        "flexDirection": "row",
+        "> p": {
+          "m": 0
+        }
+      },
+      "author-image-container": {
+        "height": ["48px", "56px"],
+        "width": ["48px", "56px"],
+        "marginRight": "sm",
+        "> img": {
+          "maxHeight": "100%",
+          "maxWidth": "100%",
+          "borderRadius": "50%"
+        }
+      },
+      "author-placeholder": {
+        "height": "100%",
+        "width": "100%",
+        "borderRadius": "50%",
+        "backgroundColor": "grey-05",
+        "display": "flex",
+        "justifyContent": "center",
+        "alignItems": "center"
+      }
+    },
+
     "click-out-form": {
       "flexDirection": "column",
       "width": ["auto", "grid.md.5", "grid.lg.5"],
