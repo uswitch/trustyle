@@ -12,19 +12,18 @@ export const ExampleWithKnobs = () => {
   const title = text('Card Title', 'This is a title')
   const description = text(
     'Card description',
-    'simple icon card with title, image and description'
+    'simple icon card with title, image and descripton'
   )
-
+  const icon = select('Icon', ['Tick', 'Tv', 'Smile', 'Receipt'], 'Tick')
   const orientation = select('orientation', ['left', 'top'], 'left')
 
-  const imgSrc = `https://uswitch-contentful.imgix.net/t014ej9w3ur1/YPnGDSG9aTIPmg1rlWsZu/94483e7cec0dd6ac947e1f974650210f/800.jpg`
-  const imgAlt = 'Picture of kitten.'
+  const imgAlt = 'image description goes here.'
 
   return (
     <IconCard
       title={title}
       description={description}
-      imgSrc={imgSrc}
+      imgSrc={require(`../../../../static/energy-homepage-icons/${icon}.svg`)}
       imgAlt={imgAlt}
       orientation={orientation}
     />
