@@ -19,12 +19,7 @@ export const Example = () => {
     `Tempor incididunt ut labore et dolore magna aliqua. Sint id est dolor laborum. Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolores est unt.`
   )
 
-  return (
-    <CallOut
-      title={titleText}
-      text={textText}
-    />
-  )
+  return <CallOut title={titleText} text={textText} />
 }
 
 export const ExampleWithPalette = () => {
@@ -49,10 +44,7 @@ export const ExampleWithPalette = () => {
           accentColor: applyPalette ? accentColor : null
         }}
       >
-        <CallOut
-          title={titleText}
-          text={textText}
-        />
+        <CallOut title={titleText} text={textText} />
       </PaletteProvider>
     </Fragment>
   )
