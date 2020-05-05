@@ -671,7 +671,7 @@
       "variants":{
         "left": {
           "colorBlock": {
-            "bg": "accent-3"
+            "bg": "primary--dark"
           },
           "image": {
             "borderTopRightRadius": "xl",
@@ -695,7 +695,7 @@
         },
         "dark": {
           "wrapper": {
-            "bg": "brand",
+            "bg": "plum",
             "& h2": {
               "color": "white"
             },
@@ -1167,6 +1167,11 @@
   },
 
   "richTextModule": {
+    "contentCols": 12,
+    "contentSpan": 10
+  },
+
+  "imageModule": {
     "contentCols": 12,
     "contentSpan": 10
   },
