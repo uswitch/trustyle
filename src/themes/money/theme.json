@@ -14,11 +14,11 @@
   },
 
   "fonts": {
-    "base": "Montserrat, sans-serif",
-    "body": "Montserrat, sans-serif",
-    "heading": "Montserrat, sans-serif",
+    "base": "'Open Sans', -apple-system, sans-serif",
+    "body": "'Open Sans', -apple-system, sans-serif",
+    "heading": "Nunito, -apple-system, sans-serif",
     "monospace": "Menlo, monospace",
-    "link": "Montserrat, sans-serif"
+    "link": "'Open Sans', -apple-system, sans-serif"
   },
 
   "lineHeights": {
@@ -126,19 +126,16 @@
     "plum": "#924A8B",
 
     "grey-0": "#FFFFFF",
-    "grey-03": "#F9F9F9",
     "grey-05": "#F7F7F7",
     "grey-10": "#F2F2F3",
     "grey-20": "#DFDFE1",
     "grey-30": "#C2C4C8",
     "grey-40": "#ADAFB3",
     "grey-50": "#A0A2A6",
-    "grey-55": "#545454",
     "grey-60": "#6D6F73",
     "grey-70": "#393B3F",
     "grey-80": "#24262A",
     "grey-90": "#111317",
-    "grey-95": "#141424",
     "grey-100": "#000000",
 
     "primary": "#FEC340",
@@ -602,18 +599,11 @@
 
   "callOut": {
     "main": {
-      "backgroundColor": "grey-03",
+      "backgroundColor": "grey-10",
       "paddingX": ["sm", "md"]
     },
-    "heading": {
-      "color": "grey-95",
-      "marginBottom": "8px"
-    },
-    "text": {
-      "color": "grey-55"
-    },
     "icon": {
-      "backgroundColor": "grey-95"
+      "backgroundColor": "plum"
     }
   },
 
