@@ -182,14 +182,15 @@
       "p": {
         "fontSize": 16,
         "lineHeight": "130%",
-        "color": "grey-80"
+        "color": "grey-80",
+        "marginTop": 0
       },
       "h3": {
         "color": "grey-2",
         "fontFamily": "base",
         "fontSize": ["sm", "md"],
         "fontWeight": "base",
-        "marginBottom": "xs",
+        "marginBottom": "base",
         "marginTop": "0",
         "wordBreak": "break-all",
         "lineHeight": 1,
