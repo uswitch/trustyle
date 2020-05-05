@@ -6,7 +6,9 @@ import { jsx } from 'theme-ui'
 const getGutterSize = (theme: any): any =>
   theme?.sizes?.grid?.gutter || theme?.grid?.sizes?.gutter
 
-const getVerticalGutterSize = (theme: any): string | number =>
+const getVerticalGutterSize = (
+  theme: any
+): string | number | (string | number)[] =>
   theme?.sizes?.grid?.verticalGutter || theme?.grid?.sizes?.verticalGutter
 
 const getContainerSize = (theme: any): number | number[] =>

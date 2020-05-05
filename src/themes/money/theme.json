@@ -170,7 +170,7 @@
   "grid": {
     "sizes": {
       "gutter": "sm",
-      "verticalGutter": "xs"
+      "verticalGutter": ["sm", "md"]
     },
     "container": {
       "maxWidth": 1152
@@ -370,6 +370,97 @@
 
 
   "compounds": {
+    "side-nav": {
+      "internalLinkList": {
+        "listStyle": "none",
+        "paddingLeft": 0,
+        "paddingTop": "xxs",
+        "paddingBottom": "xxs",
+        "margin": 0
+      },
+      "internalLinkListItem": {
+        "base": {
+          "padding": "8px 0 8px 35px",
+          "mb": 0,
+          "position": "relative",
+          "::after": {
+            "content": "\"\"",
+            "position": "absolute",
+            "top": "45%",
+            "transform": "translateY(-50%)",
+            "display": "block",
+            "width": 12,
+            "height": 12,
+            "left": 6,
+            "borderRadius": 12,
+            "backgroundColor": "white",
+            "borderWidth": 2,
+            "borderStyle": "solid",
+            "borderColor": "grey-30"
+          },
+          "::before": {
+            "content": "\"\"",
+            "position": "absolute",
+            "left": 13,
+            "width": 2,
+            "backgroundColor": "grey-30",
+            "top": "0",
+            "height": "100%"
+          },
+          ":first-child::before": {
+            "top": "50%",
+            "height": "50%"
+          },
+          ":last-child::before": {
+            "height": "50%"
+          },
+          ">a": {
+            "color": "grey-60",
+            "textDecoration": "none",
+            "fontSize": "xs",
+            "marginTop": "-4px",
+            "display": "block",
+            ":visited": {
+              "color": "grey-60"
+            }
+          }
+        },
+        "isActive": {
+          "variant": "compounds.side-nav.internalLinkListItem.base",
+          "color": "experimental-text",
+          "::after": {
+            "variant": "compounds.side-nav.internalLinkListItem.base.::after",
+            "borderColor": "fuschia"
+          },
+          ">a": {
+            "variant": "compounds.side-nav.internalLinkListItem.base.>a",
+            "color": "experimental-text",
+            "fontWeight": "bold",
+            ":visited": {
+              "color": "experimental-text"
+            }
+          }
+        }
+      },
+      "additionalLink": {
+        "display": "block",
+        "color": "grey-80",
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "paddingLeft": "0",
+        "borderWidth": "1px 0 0 0",
+        "borderStyle": "solid",
+        "borderColor": "grey-20",
+        "fontSize": "xs",
+        "a": {
+          "textDecoration": "none"
+        },
+        ":last-child": {
+          "paddingBottom": "0"
+        }
+      }
+    },
+
     "article-intro": {
       "base": {
         "heading": {
@@ -490,26 +581,86 @@
     }
   },
 
-  "imageCalloutContent": {
-    "sm": { "pt": "xl" },
-    "lg": { "pt": "xl" }
-  },
-
   "imageCallout": {
-    "imageSize": { "height": 337, "width": 477 },
-    "sm": { "display": "flex", "width": 320, "mx": "auto" },
-    "md": { "display": "flex", "width": 768, "mx": "auto" },
-    "lg": {
-      "display": "flex",
-      "justifyContent": "space-between",
-      "width": 1024,
-      "px": 158,
-      "mx": "auto"
+      "base": {
+        "wrapper": {
+          "pb": [120, 128, 168],
+          "display": "flex",
+          "justifyContent": "space-between",
+          "&.image-callout + .image-callout": {
+            "marginTop": 0
+          }
+        },
+        "inner": {
+          "display": "flex",
+          "justifyContent": ["flex-start", "flex-start", "space-between"],
+          "alignItems": ["center", "center", "flex-start"],
+          "width": [320, 768, 1200],
+          "mx": "auto",
+          "px": [15, 15, 158]
+        },
+        "content": {
+          "maxWidth": ["100%", "grid.md.8", "grid.lg.4"],
+          "pt": "xl"
+        },
+        "colorBlock": {
+          "width": [63, 89],
+          "height": [63, 89],
+          "position": "absolute",
+          "right": [30, 52, 52],
+          "bottom": [-23, -37, -37],
+          "borderTopLeftRadius": "xl",
+          "borderBottomRightRadius": "xl"
+        },
+        "image-container": {
+          "position": "relative"
+        },
+        "image": {
+          "position": "relative",
+          "mt": -64,
+          "imgixWidth": 477,
+          "imgixParams":{
+            "fill": "fillmax"
+          }
+        }
+      },
+      "variants":{
+        "left": {
+          "colorBlock": {
+            "bg": "primary--dark"
+          },
+          "image": {
+            "borderTopRightRadius": "xl",
+            "borderBottomLeftRadius": "xl"
+          },
+          "inner": {
+            "flexDirection": ["column", "column", "row"]
+          }
+        },
+        "right": {
+          "colorBlock": {
+            "bg": "secondary"
+          },
+          "image": {
+            "borderTopLeftRadius": "xl",
+            "borderBottomRightRadius": "xl"
+          },
+          "inner": {
+            "flexDirection": ["column", "column", "row-reverse"]
+          }
+        },
+        "dark": {
+          "wrapper": {
+            "bg": "plum",
+            "& h2": {
+              "color": "white"
+            },
+            "color": "white"
+          }
+        },
+        "light": {}
+      }
     },
-    "right": { "flexDirection": "row-reverse", "alignItems": "flex-start" },
-    "left": { "flexDirection": "row", "alignItems": "flex-start" },
-    "column": { "flexDirection": "column", "alignItems": "center" }
-  },
 
   "card": {
     "sm": {
