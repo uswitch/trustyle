@@ -24,23 +24,14 @@ const Card: React.FC<Props> = ({
   linkText = 'Read more',
   className = ''
 }) => (
-  <div
-    className={className}
-    sx={{
-      variant: variant()
-    }}
-  >
-    <div
-      sx={{
-        width: '100%',
-        variant: variant('img')
-      }}
-    >
+  <div className={className} sx={{ variant: variant() }}>
+    <div sx={{ variant: variant('img') }}>
       <Styled.a href={linkHref} sx={{ textDecoration: 'underline' }}>
         <ImgixImage
           sx={{
             height: 'auto',
-            width: '100%'
+            width: '100%',
+            variant: variant('img')
           }}
           width={768}
           height={405}
@@ -51,9 +42,7 @@ const Card: React.FC<Props> = ({
         />
       </Styled.a>
     </div>
-    <div
-      sx={{ variant: variant('content') }}
-    >
+    <div sx={{ variant: variant('content') }}>
       <Styled.h3 sx={{ margin: '0' }}>
         <Styled.a href={linkHref}>{title}</Styled.a>
       </Styled.h3>
