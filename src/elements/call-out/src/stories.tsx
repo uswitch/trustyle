@@ -25,10 +25,13 @@ export const Example = () => {
     'close'
   )
 
+  const orientation = select('orientation', ['left', 'top'], 'left')
+
   return (
     <CallOut
       title={titleText}
       text={textText}
+      orientation={orientation}
       icon={showIcon ? iconGlyph : undefined}
     />
   )
@@ -49,6 +52,8 @@ export const ExampleWithPalette = () => {
     'CallOut'
   )
 
+  const orientation = select('orientation', ['left', 'top'], 'left')
+
   const applyPalette = boolean('Apply palette?', false, 'Palette')
   const accentColor = color(
     'accentColor',
@@ -66,6 +71,7 @@ export const ExampleWithPalette = () => {
         <CallOut
           title={titleText}
           text={textText}
+          orientation={orientation}
           icon={showIcon ? iconGlyph : undefined}
         />
       </PaletteProvider>

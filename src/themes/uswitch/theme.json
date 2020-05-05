@@ -396,7 +396,7 @@
         "textDecoration": "none"
       }
     },
-    
+
     "card": {
       "itemsPerRow": [1, 2, 3],
       "width": "100%",
@@ -693,6 +693,9 @@
     },
     "heading": {
       "marginTop": "-5px"
+    },
+    "icon-container": {
+      "width": 16
     },
     "icon": {
       "backgroundColor": "uswitch-navy"
