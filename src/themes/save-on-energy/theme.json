@@ -172,6 +172,7 @@
       "borderColor": "light-3",
       "borderWidth": "1px",
       "boxSizing": "border-box",
+      "padding": "8px",
       "mb": "sm",
       "img": {
         "sm": { "width": "100%", "height": 230 },
