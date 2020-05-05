@@ -52,12 +52,7 @@ const Card: React.FC<Props> = ({
       </Styled.a>
     </div>
     <div
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        flex: '1',
-        variant: variant('content')
-      }}
+      sx={{ variant: variant('content') }}
     >
       <Styled.h3 sx={{ margin: '0' }}>
         <Styled.a href={linkHref}>{title}</Styled.a>

@@ -199,6 +199,9 @@
         }
       },
       "content": {
+        "display": "flex",
+        "flexDirection": "column",
+        "flex": "1",
         "paddingY": "sm",
         "paddingX": ["sm", "sm"]
       },
