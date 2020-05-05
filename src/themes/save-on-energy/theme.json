@@ -114,7 +114,10 @@
     "light-2": "#f9f9f9",
     "light-3": "#e6e6e6",
     "hero": "rgba(212, 242, 255, 0.8)",
-    "hero-solid": "D4F2F1"
+    "hero-solid": "D4F2F1",
+    "grey-1": "#F9F9F9",
+    "grey-2": "#141424",
+    "grey-3": "#545454"
   },
 
   "radii": {
@@ -207,6 +210,28 @@
     },
     "flexDirection" : {
         "flexDirection": "row"
+    }
+  },
+
+  "callOut": {
+    "main": {
+      "backgroundColor": "grey-1",
+      "marginTop": "xs",
+      "marginBottom": "md",
+      "paddingX": "sm",
+      "paddingY": "sm"
+    },
+    "heading": {
+      "color": "grey-2",
+      "fontFamily": "base",
+      "fontSize": ["sm"],
+      "fontWeight": "base",
+      "marginBottom": "8px",
+      "wordBreak": "break-all",
+      "lineHeight": 1
+    },
+    "text": {
+      "color": "grey-3"
     }
   },
 
