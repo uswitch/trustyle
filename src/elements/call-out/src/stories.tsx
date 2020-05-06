@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { Fragment } from 'react'
 import { jsx } from '@emotion/core'
-import { boolean, color, text } from '@storybook/addon-knobs'
+import { boolean, color, select, text } from '@storybook/addon-knobs'
 import { PaletteProvider } from '@uswitch/trustyle-utils.palette'
 
 import theme from '../../../utils/theme-selector'
@@ -18,8 +18,20 @@ export const Example = () => {
     `Call out text`,
     `Tempor incididunt ut labore et dolore magna aliqua. Sint id est dolor laborum. Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolores est unt.`
   )
+  const showIcon = boolean('Show icon?', true)
+  const iconGlyph = select(
+    'Icon',
+    ['arrow', 'caret', 'close', 'edit', 'email'],
+    'close'
+  )
 
-  return <CallOut title={titleText} text={textText} />
+  return (
+    <CallOut
+      title={titleText}
+      text={textText}
+      icon={showIcon ? iconGlyph : undefined}
+    />
+  )
 }
 
 export const ExampleWithPalette = () => {
@@ -27,6 +39,13 @@ export const ExampleWithPalette = () => {
   const textText = text(
     'Call out text',
     'Tempor incididunt ut labore et dolore magna aliqua. Sint id est dolor laborum. Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolores est unt.',
+    'CallOut'
+  )
+  const showIcon = boolean('Show icon?', true, 'CallOut')
+  const iconGlyph = select(
+    'Icon',
+    ['arrow', 'caret', 'close', 'edit', 'email'],
+    'close',
     'CallOut'
   )
 
@@ -44,7 +63,11 @@ export const ExampleWithPalette = () => {
           accentColor: applyPalette ? accentColor : null
         }}
       >
-        <CallOut title={titleText} text={textText} />
+        <CallOut
+          title={titleText}
+          text={textText}
+          icon={showIcon ? iconGlyph : undefined}
+        />
       </PaletteProvider>
     </Fragment>
   )

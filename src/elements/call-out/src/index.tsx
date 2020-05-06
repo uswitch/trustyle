@@ -2,14 +2,16 @@
 
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
+import { Glyph, Icon } from '@uswitch/trustyle.icon'
 import { Palette } from '@uswitch/trustyle-utils.palette'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
+  icon?: Glyph
   title?: string
   text: string
 }
 
-const CallOut: React.FC<Props> = ({ title, text }) => {
+const CallOut: React.FC<Props> = ({ title, text, icon }) => {
   const mainText = (
     <React.Fragment>
       {title && (
@@ -46,7 +48,32 @@ const CallOut: React.FC<Props> = ({ title, text }) => {
         backgroundColor: 'accentColor'
       }}
     >
-      {mainText}
+      {icon ? (
+        <div sx={{ display: 'flex' }}>
+          <div
+            sx={{
+              flexGrow: 0,
+              flexShrink: 0,
+              flexBasis: ({ space }: any) => space.sm,
+              marginRight: 'xs'
+            }}
+          >
+            <div
+              sx={{
+                borderRadius: '50%',
+                padding: '20%',
+                variant: 'callOut.icon'
+              }}
+            >
+              <Icon color="white" glyph={icon} />
+            </div>
+          </div>
+
+          <div>{mainText}</div>
+        </div>
+      ) : (
+        mainText
+      )}
     </Palette>
   )
 }
