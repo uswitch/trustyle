@@ -1127,6 +1127,11 @@
     "contentSpan": 10
   },
 
+  "imageModule": {
+    "contentCols": 12,
+    "contentSpan": 10
+  },
+
   "productTable": {
     "row": {
       "main": {
