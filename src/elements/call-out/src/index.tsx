@@ -9,9 +9,17 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   icon?: Glyph
   title?: string
   text: string
+  orientation?: string
 }
 
-const CallOut: React.FC<Props> = ({ title, text, icon }) => {
+const CallOut: React.FC<Props> = ({
+  title,
+  text,
+  icon,
+  orientation = 'left'
+}) => {
+  const flexDirection = orientation === 'left' ? 'row' : 'column'
+
   const mainText = (
     <React.Fragment>
       {title && (
@@ -56,13 +64,20 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
       }}
     >
       {icon ? (
-        <div sx={{ display: 'flex' }}>
+        <div
+          sx={{
+            display: 'flex',
+            flexDirection: flexDirection
+          }}
+        >
           <div
             sx={{
               flexGrow: 0,
               flexShrink: 0,
               flexBasis: ({ space }: any) => space.sm,
-              marginRight: 'xs'
+              marginRight: 'xs',
+              marginBottom: 'sm',
+              variant: 'callOut.icon-container'
             }}
           >
             <div
