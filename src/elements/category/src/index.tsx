@@ -48,7 +48,7 @@ const Category: React.FC<ListProps> = ({
           </div>
         )}
         <Row>
-          <Col span={contentSpan}>
+          <Col span={contentSpan} sx={{ marginBottom: 0 }}>
             <Styled.h1
               as={text ? 'h1' : 'p'}
               sx={{
