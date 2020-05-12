@@ -732,14 +732,12 @@
         "large": {
           "paddingX": "xl",
           "paddingY": "base",
-          "fontSize": "md",
-          "height": 56
+          "fontSize": "md"
         },
         "small": {
           "paddingX": 40,
           "paddingY": 13,
-          "fontSize": "sm",
-          "height": "xl"
+          "fontSize": "sm"
         }
       }
     },
