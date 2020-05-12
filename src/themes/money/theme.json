@@ -796,6 +796,9 @@
       "backgroundColor": "grey-10",
       "paddingX": ["sm", "md"]
     },
+    "icon-container": {
+      "width": 16
+    },
     "icon": {
       "backgroundColor": "plum"
     }
