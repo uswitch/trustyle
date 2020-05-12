@@ -53,8 +53,13 @@ export const ListItem: React.FC<ListItemProps> = ({
     position: 'relative',
     paddingLeft: 'sm',
     '::before': {
-      position: 'absolute',
-      left: '0px'
+      // https://www.w3.org/Style/Examples/007/color-bullets.en.html
+      display: 'inline-block',
+      width: '1em',
+      marginLeft: '-1.5em',
+      marginRight: '0.5em',
+      textAlign: 'right',
+      direction: 'rtl'
     }
   }
 

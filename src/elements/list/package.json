@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.list",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
