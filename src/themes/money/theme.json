@@ -1009,8 +1009,9 @@
   },
 
   "categoryTitle": {
+    "contentSpan": [12, 6],
     "main": {
-      "background": "linear-gradient(90deg, #924A8B 0.42%, #DB4D75 116.16%)"
+      "background": "linear-gradient(172deg, #924A8B 28%, #AF4C83 100%)"
     },
     "heading": {
       "color": "grey-0"

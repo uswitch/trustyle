@@ -10,7 +10,10 @@ import Category from './'
 storiesOf('Elements|Category', module)
   .add('example with text', () => {
     const titleText = text('Title text', 'Title goes here')
-    const textText = text('Text', 'Text goes here')
+    const textText = text(
+      'Text',
+      'Cat ipsum dolor sit amet, climb a tree, wait for a fireman jump to fireman then scratch his face. Why use post when this sofa is here soft kitty warm kitty little ball of furr for fall over dead (not really but gets sypathy), for missing until dinner time.'
+    )
 
     const crumbs = [
       {
