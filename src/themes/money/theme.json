@@ -370,8 +370,51 @@
     }
   },
 
-
   "compounds": {
+    "accordion": {
+      "base": {
+        "marginTop": "sm",
+        "marginBottom": "sm",
+        "title": {
+          "marginTop": "0",
+          "marginBottom": "xs"
+        },
+        "content": {
+          "marginBottom": "xs"
+        },
+        "button": {
+          "padding": "0",
+          "paddingTop": 10,
+          "paddingBottom": 10,
+          "bg": "transparent",
+          "fontFamily": "base",
+          "fontSize": "base",
+          "fontWeight": "bold",
+          "color": "textColor",
+          "alignItems": "center",
+          "borderWidth": "1px 0 0 0",
+          "borderStyle": "solid",
+          "borderColor": "grey-20",
+          "display": "flex",
+          "flexDirection": "row",
+          "width": "100%"
+        },
+        "caret": {
+          "color": "plum"
+        }
+      },
+      "variants": {
+        "isActive": {
+          "button": {
+            "variant": "compounds.accordion.base.button"
+          },
+          "caret": {
+            "color": "fuschia"
+          }
+        }
+      }
+    },
+
     "side-nav": {
       "internalLinkList": {
         "listStyle": "none",
@@ -1012,8 +1055,9 @@
   },
 
   "categoryTitle": {
+    "contentSpan": [12, 6],
     "main": {
-      "background": "linear-gradient(90deg, #924A8B 0.42%, #DB4D75 116.16%)"
+      "background": "linear-gradient(172deg, #924A8B 28%, #AF4C83 100%)"
     },
     "heading": {
       "color": "grey-0"
