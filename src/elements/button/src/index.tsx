@@ -70,7 +70,6 @@ export const Button: React.FC<Props> = ({
         fontSize: get(theme, `buttons.base.btnSize.${size}.fontSize`, 'base'),
         paddingX: get(theme, `buttons.base.btnSize.${size}.paddingX`, 'sm'),
         paddingY: get(theme, `buttons.base.btnSize.${size}.paddingY`, 'base'),
-        height: get(theme, `buttons.base.btnSize.${size}.height`, 'base'),
         variant: get(theme, `buttons.variants.${variant}`),
 
         justifyContent: 'center',
