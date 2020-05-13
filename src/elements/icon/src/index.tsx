@@ -14,17 +14,21 @@ import { Conversation } from './conversation'
 import { Edit } from './edit'
 import { Email } from './email'
 import { Filters } from './filters'
+import { Four } from './four'
 import { Home } from './home'
 import { Letter } from './letter'
 import { Location } from './location'
 import { Minus } from './minus'
 import { Mobile } from './mobile'
+import { One } from './one'
 import { Person } from './person'
 import { Phone } from './phone'
 import { Plus } from './plus'
 import { Smile } from './smile'
 import { Sms } from './sms'
+import { Three } from './three'
 import { Tv } from './tv'
+import { Two } from './two'
 
 export type Glyph =
   | 'arrow'
@@ -38,17 +42,21 @@ export type Glyph =
   | 'edit'
   | 'email'
   | 'filters'
+  | 'four'
   | 'home'
   | 'letter'
   | 'location'
   | 'minus'
   | 'mobile'
+  | 'one'
   | 'person'
   | 'phone'
   | 'plus'
   | 'smile'
   | 'sms'
+  | 'three'
   | 'tv'
+  | 'two'
 
 export type Direction = 'up' | 'down' | 'left' | 'right'
 
@@ -92,6 +100,8 @@ export const Icon: React.FC<Props> = ({
       return <Email color={color} size={size} />
     case 'filters':
       return <Filters color={color} size={size} />
+    case 'four':
+      return <Four color={color} size={size} />
     case 'home':
       return <Home color={color} size={size} />
     case 'letter':
@@ -102,6 +112,8 @@ export const Icon: React.FC<Props> = ({
       return <Minus color={color} size={size} />
     case 'mobile':
       return <Mobile color={color} size={size} />
+    case 'one':
+      return <One color={color} size={size} />
     case 'person':
       return <Person color={color} size={size} />
     case 'phone':
@@ -112,8 +124,12 @@ export const Icon: React.FC<Props> = ({
       return <Smile color={color} size={size} />
     case 'sms':
       return <Sms color={color} size={size} />
+    case 'three':
+      return <Three color={color} size={size} />
     case 'tv':
       return <Tv color={color} size={size} />
+    case 'two':
+      return <Two color={color} size={size} />
     default:
       return assertNever('glyph', glyph)
   }
