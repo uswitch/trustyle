@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.category",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -17,7 +17,7 @@
     "react": "^16.7.0"
   },
   "devDependencies": {
-    "@uswitch/trustyle.breadcrumbs": "^1.0.11"
+    "@uswitch/trustyle.breadcrumbs": "^1.0.12"
   },
   "dependencies": {
     "@uswitch/trustyle.flex-grid": "^2.2.2"
