@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.primary-info-block",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -17,6 +17,6 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle-utils.palette": "^1.0.3"
+    "@uswitch/trustyle-utils.palette": "^1.0.4"
   }
 }

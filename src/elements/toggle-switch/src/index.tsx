@@ -20,7 +20,7 @@ const ToggleSwitch: React.FC<Props> = ({
 }) => {
   const state = checked ? 'checked' : 'unchecked'
   return (
-    <div sx={{ display: 'inline-block' }}>
+    <div sx={{ display: 'inline-block', verticalAlign: 'middle' }}>
       <input
         checked={checked}
         onChange={onChange}
