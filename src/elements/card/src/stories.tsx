@@ -27,6 +27,7 @@ export const ExampleCards = () => {
         <Card
           imgSrc={img}
           imgAlt="Picture of a cute kitten"
+          imgSizes="(max-width: 1200px) 100vw, 1200px"
           title={title}
           description={content}
           linkHref="https://www.uswitch.com"

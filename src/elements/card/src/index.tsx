@@ -7,6 +7,7 @@ import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 interface Props {
   imgSrc: string
   imgAlt: string
+  imgSizes?: string
   title: string
   description: string
   linkHref: string
@@ -18,6 +19,7 @@ const variant = (prop = '') => `compounds.card${prop ? `.${prop}` : ''}`
 const Card: React.FC<Props> = ({
   imgSrc,
   imgAlt,
+  imgSizes = '768px',
   title,
   description,
   linkHref,
@@ -42,11 +44,10 @@ const Card: React.FC<Props> = ({
             height: 'auto',
             width: '100%'
           }}
-          width={768}
-          height={405}
           alt={imgAlt}
           src={imgSrc}
-          imgixParams={{ fit: 'crop', crop: 'edges', ar: '16:9' }}
+          sizes={imgSizes}
+          imgixParams={{ fit: 'crop', crop: 'faces,entropy', ar: '16:9' }}
           critical
         />
       </Styled.a>
