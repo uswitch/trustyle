@@ -1,5 +1,8 @@
 {
   "name": "saveOnEnergy",
+
+  "useLocalStorage": false,
+
   "breakpoints": [
     "768px",
     "1280px"
