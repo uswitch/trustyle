@@ -143,7 +143,8 @@ Accordion.Group = ({ children, iconClosed, iconOpen }) => {
     <div
       sx={{
         marginTop: 'sm',
-        marginBottom: 'sm'
+        marginBottom: 'sm',
+        variant: 'compounds.accordion.base.container'
       }}
     >
       <AccordionContext.Provider
