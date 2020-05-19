@@ -13,7 +13,8 @@
     "build": "npm run clean && tsc"
   },
   "dependencies": {
-    "@uswitch/trustyle.styles": "^0.4.28"
+    "@uswitch/trustyle.styles": "^0.4.28",
+    "@uswitch/trustyle-utils.get": "^1.0.4"
   },
   "devDependencies": {
     "typescript": "^3.6.2"
