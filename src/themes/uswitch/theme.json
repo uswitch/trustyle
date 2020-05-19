@@ -167,7 +167,10 @@
 
     "progress-bg": "#E6F4FD",
     "progress-primary": "#A1E7FE",
-    "progress-label": "#002396"
+    "progress-label": "#002396",
+
+    "error-red": "#D64226",
+    "success-green": "#2AAA5B"
   },
 
   "radii": {
@@ -340,6 +343,16 @@
       "paddingTop": "xxs",
       "paddingBottom": "xxs",
       "textDecoration": "none"
+    }
+  },
+
+  "elements": {
+    "input-alert": {
+      "padding": 16,
+      "notificationColor": "uswitch-navy",
+      "alertColor": "error-red",
+      "color": "white",
+      "radii": 0
     }
   },
 
