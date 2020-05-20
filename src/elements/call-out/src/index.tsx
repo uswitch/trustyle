@@ -51,14 +51,7 @@ const CallOut: React.FC<Props> = ({
   return (
     <Palette
       as="div"
-      sx={{
-        borderRadius: 4,
-        paddingX: 'sm',
-        paddingY: 'sm',
-        marginTop: 'xs',
-        marginBottom: 'md',
-        variant: 'callOut.main'
-      }}
+      sx={{ variant: 'callOut.main' }}
       px={{
         backgroundColor: 'accentColor'
       }}
