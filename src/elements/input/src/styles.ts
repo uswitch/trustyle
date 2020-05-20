@@ -1,54 +1,93 @@
-import { css, SerializedStyles } from '@emotion/core'
-import {
-  colors,
-  inputs,
-  pxToRem,
-  spacers,
-  typography
-} from '@uswitch/trustyle.styles'
+import { colors, pxToRem, spacers } from '@uswitch/trustyle.styles'
 
-export const half: SerializedStyles = css({
-  width: '50%'
+import { SxStyleProp } from '../../../../types/theme-ui'
+
+const { battleshipGrey, tomato, UswitchNavy, veryLightGrey, white } = colors
+
+export const wrapper = (
+  hasError: boolean,
+  hasFocus: boolean,
+  width: 'half' | 'full'
+): SxStyleProp => ({
+  boxShadow: (theme: any) =>
+    hasError
+      ? `inset 0 0 0 1px ${theme.elements?.input?.errorColor ?? tomato}`
+      : hasFocus
+      ? `inset 0 0 0 1px ${theme.elements?.input?.focusColor ?? UswitchNavy}`
+      : 'inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)',
+  backgroundColor: white,
+  border: `solid 1px`,
+  borderColor: (theme: any) =>
+    hasError
+      ? theme.elements?.input?.errorColor ?? tomato
+      : hasFocus
+      ? theme.elements?.input?.focusColor ?? UswitchNavy
+      : theme.elements?.input?.defaultColor ?? UswitchNavy,
+  borderRadius: '3px',
+  boxSizing: 'border-box',
+  display: 'flex',
+  position: 'relative',
+  width: width === 'half' ? '50%' : '100%'
 })
 
-export const full: SerializedStyles = css({
-  width: '100%'
-})
+export const input: SxStyleProp = {
+  fontFamily: 'base',
+  fontSize: 'base',
+  lineHeight: '1.33',
+  color: 'text',
 
-const affix: SerializedStyles = css([
-  typography.input,
-  {
-    margin: pxToRem(8, 0),
-    padding: pxToRem(8, spacers.green),
-    textAlign: 'center',
-    boxSizing: 'border-box'
+  appearance: 'none',
+  border: 'none',
+  background: 'none',
+  borderRadius: '3px',
+  boxSizing: 'border-box',
+  display: 'flex',
+  flex: 1,
+  padding: (theme: any) => pxToRem(theme.space.base),
+  position: 'relative',
+  verticalAlign: 'middle',
+  width: '100%',
+  '&:focus': {
+    outline: 'none'
+  },
+  '&:disabled': {
+    outline: 'none',
+    border: 'none',
+    color: battleshipGrey,
+    background: veryLightGrey
   }
-])
+}
 
-export const prefix = (
-  hasError: boolean,
-  hasFocus: boolean
-): SerializedStyles =>
-  css([
-    affix,
-    {
-      color:
-        inputs.matchCircumstance(hasError, hasFocus) || colors.lightGreyBlue,
-      borderRight: `solid 1px ${inputs.matchCircumstance(hasError, hasFocus) ||
-        colors.lightGrey}`
-    }
-  ])
+const affix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({
+  fontFamily: 'base',
+  fontSize: 'base',
+  lineHeight: 'base',
+  margin: pxToRem(8, 0),
+  padding: pxToRem(8, spacers.green),
+  textAlign: 'center',
+  boxSizing: 'border-box',
+  borderColor: (theme: any) =>
+    hasError
+      ? theme.elements?.input?.errorColor ?? tomato
+      : hasFocus
+      ? theme.elements?.input?.focusColor ?? UswitchNavy
+      : theme.elements?.input?.defaultColor ?? UswitchNavy,
+  color: (theme: any) =>
+    hasError
+      ? theme.elements?.input?.errorColor ?? tomato
+      : hasFocus
+      ? theme.elements?.input?.focusColor ?? UswitchNavy
+      : theme.elements?.input?.defaultColor ?? 'text'
+})
 
-export const suffix = (
-  hasError: boolean,
-  hasFocus: boolean
-): SerializedStyles =>
-  css([
-    affix,
-    {
-      color:
-        inputs.matchCircumstance(hasError, hasFocus) || colors.lightGreyBlue,
-      borderLeft: `solid 1px ${inputs.matchCircumstance(hasError, hasFocus) ||
-        colors.lightGrey}`
-    }
-  ])
+export const prefix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({
+  ...affix(hasError, hasFocus),
+  borderRightStyle: 'solid',
+  borderRightWidth: 1
+})
+
+export const suffix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({
+  ...affix(hasError, hasFocus),
+  borderLeftStyle: 'solid',
+  borderLeftWidth: 1
+})

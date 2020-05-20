@@ -55,8 +55,6 @@ const CallOut: React.FC<Props> = ({
         borderRadius: 4,
         paddingX: 'sm',
         paddingY: 'sm',
-        marginTop: 'xs',
-        marginBottom: 'md',
         variant: 'callOut.main'
       }}
       px={{

@@ -13,6 +13,7 @@ interface Props {
   linkHref: string
   linkText?: string
   className?: string
+  imageSize?: 'cover' | 'contain'
 }
 
 const variant = (prop = '') => `compounds.card${prop ? `.${prop}` : ''}`
@@ -20,6 +21,7 @@ const Card: React.FC<Props> = ({
   imgSrc,
   imgAlt,
   imgSizes = '768px',
+  imageSize = 'cover',
   title,
   description,
   linkHref,
@@ -47,7 +49,12 @@ const Card: React.FC<Props> = ({
           alt={imgAlt}
           src={imgSrc}
           sizes={imgSizes}
-          imgixParams={{ fit: 'crop', crop: 'faces,entropy', ar: '16:9' }}
+          imgixParams={{
+            fit: imageSize === 'cover' ? 'crop' : 'fill',
+            crop: 'faces,entropy',
+            ar: '16:9',
+            fill: 'solid'
+          }}
           critical
         />
       </Styled.a>
