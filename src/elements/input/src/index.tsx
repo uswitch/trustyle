@@ -1,9 +1,8 @@
 /** @jsx jsx */
 
 import { useEffect, useRef, useState } from 'react'
-import { jsx } from '@emotion/core'
+import { jsx } from 'theme-ui'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
-import { inputs } from '@uswitch/trustyle.styles'
 import InputMask from 'react-input-mask'
 import debounce from 'lodash.debounce'
 
@@ -112,7 +111,7 @@ export const Input: React.FC<Props> = ({
 
   const childProps = {
     ...inputProps,
-    css: inputs.keyboardInput,
+    sx: st.input,
     onBlur: blurHandler,
     onChange: changeHandler,
     onFocus: focusHandler,
@@ -122,8 +121,8 @@ export const Input: React.FC<Props> = ({
 
   return (
     <FrozenInput text={interiorValue} freezable={freezable} inputRef={inputRef}>
-      <div css={[inputs.keyboardInputContainer(hasError, hasFocus), st[width]]}>
-        {prefix && <span css={st.prefix(hasError, hasFocus)}>{prefix}</span>}
+      <div sx={st.wrapper(hasError, hasFocus, width)}>
+        {prefix && <span sx={st.prefix(hasError, hasFocus)}>{prefix}</span>}
 
         {mask ? (
           <InputMask
@@ -136,7 +135,7 @@ export const Input: React.FC<Props> = ({
           <input ref={inputRef} {...childProps} />
         )}
 
-        {suffix && <span css={st.suffix(hasError, hasFocus)}>{suffix}</span>}
+        {suffix && <span sx={st.suffix(hasError, hasFocus)}>{suffix}</span>}
       </div>
     </FrozenInput>
   )
