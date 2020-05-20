@@ -1,6 +1,8 @@
 {
   "name": "Bankrate",
 
+  "useLocalStorage": false,
+
   "breakpoints": ["768px", "990px"],
 
   "zIndices": {
