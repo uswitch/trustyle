@@ -19,6 +19,10 @@ export const ExampleCards = () => {
 
   const img =
     'https://uswitch-contentful.imgix.net/t014ej9w3ur1/YPnGDSG9aTIPmg1rlWsZu/94483e7cec0dd6ac947e1f974650210f/800.jpg'
+
+  const imgColumnSizes =
+    '(max-width: 768px) 100vw, (max-width: 992px) 50vw, 400px'
+
   return (
     <div>
       {/* single card */}
@@ -27,6 +31,7 @@ export const ExampleCards = () => {
         <Card
           imgSrc={img}
           imgAlt="Picture of a cute kitten"
+          imgSizes="(max-width: 1200px) 100vw, 1200px"
           title={title}
           description={content}
           linkHref="https://www.uswitch.com"
@@ -40,6 +45,7 @@ export const ExampleCards = () => {
             <Card
               imgSrc={img}
               imgAlt="Picture of a cute kitten"
+              imgSizes={imgColumnSizes}
               title={title}
               description={content}
               linkHref="https://www.uswitch.com"
@@ -50,6 +56,7 @@ export const ExampleCards = () => {
             <Card
               imgSrc={img}
               imgAlt="Picture of a cute kitten"
+              imgSizes={imgColumnSizes}
               title={title}
               description={
                 content +
@@ -63,6 +70,7 @@ export const ExampleCards = () => {
             <Card
               imgSrc={img}
               imgAlt="Picture of a cute kitten"
+              imgSizes={imgColumnSizes}
               title={title}
               description={content}
               linkHref="https://www.uswitch.com"
