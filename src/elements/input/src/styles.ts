@@ -33,7 +33,7 @@ export const wrapper = (
 export const input: SxStyleProp = {
   fontFamily: 'base',
   fontSize: 'base',
-  lineHeight: 'base',
+  lineHeight: '1.33',
   color: 'text',
 
   appearance: 'none',
