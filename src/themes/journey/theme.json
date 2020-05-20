@@ -283,6 +283,12 @@
   },
 
   "elements": {
+    "drop-down": {
+      "defaultColor": "light-grey-blue",
+      "errorColor": "error-red",
+      "focusColor": "#008fe9"
+    },
+
     "input": {
       "defaultColor": "light-grey-blue",
       "errorColor": "error-red",
