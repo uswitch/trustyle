@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
-import { text } from '@storybook/addon-knobs'
+import { select, text } from '@storybook/addon-knobs'
 import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
 
 import Card from './'
@@ -15,6 +15,12 @@ export const ExampleCards = () => {
   const content = text(
     'Content',
     'its a card with a picture of a really cute kitten'
+  )
+
+  const imageSize = select(
+    'Image Size',
+    { cover: 'cover', contain: 'contain' },
+    'cover'
   )
 
   const img =
@@ -32,6 +38,7 @@ export const ExampleCards = () => {
           imgSrc={img}
           imgAlt="Picture of a cute kitten"
           imgSizes="(max-width: 1200px) 100vw, 1200px"
+          imageSize={imageSize}
           title={title}
           description={content}
           linkHref="https://www.uswitch.com"
@@ -46,6 +53,7 @@ export const ExampleCards = () => {
               imgSrc={img}
               imgAlt="Picture of a cute kitten"
               imgSizes={imgColumnSizes}
+              imageSize={imageSize}
               title={title}
               description={content}
               linkHref="https://www.uswitch.com"
@@ -57,6 +65,7 @@ export const ExampleCards = () => {
               imgSrc={img}
               imgAlt="Picture of a cute kitten"
               imgSizes={imgColumnSizes}
+              imageSize={imageSize}
               title={title}
               description={
                 content +
@@ -71,6 +80,7 @@ export const ExampleCards = () => {
               imgSrc={img}
               imgAlt="Picture of a cute kitten"
               imgSizes={imgColumnSizes}
+              imageSize={imageSize}
               title={title}
               description={content}
               linkHref="https://www.uswitch.com"
