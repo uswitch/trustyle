@@ -50,7 +50,7 @@ const Category: React.FC<ListProps> = ({
           </div>
         )}
         <Row>
-          <Col span={contentSpan}>
+          <Col span={contentSpan} sx={{ marginBottom: [0, 0] }}>
             <Styled.h1
               as={text ? 'h1' : 'p'}
               sx={{
@@ -68,7 +68,7 @@ const Category: React.FC<ListProps> = ({
             )}
           </Col>
           {Image ? (
-            <Col span={[12, 6]} sx={{ marginTop: ['sm', 0] }}>
+            <Col span={[12, 6]} sx={{ marginBottom: ['sm', 0] }}>
               {Image}
             </Col>
           ) : null}
