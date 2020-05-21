@@ -48,7 +48,7 @@ const Category: React.FC<ListProps> = ({
           </div>
         )}
         <Row>
-          <Col span={contentSpan} sx={{ marginBottom: [0, 0] }}>
+          <Col span={contentSpan} sx={{ marginBottom: ['sm', 0] }}>
             <Styled.h1
               as={text ? 'h1' : 'p'}
               sx={{
@@ -65,6 +65,7 @@ const Category: React.FC<ListProps> = ({
               </Styled.p>
             )}
           </Col>
+          <Col span={[12, 6]}>{Image}</Col>
         </Row>
       </Container>
     </div>
