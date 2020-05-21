@@ -9,9 +9,15 @@ import ProductTableCellSplit from './components/cell-split'
 import ProductTableCellPlaceholder from './components/cell-placeholder'
 import ProductTableCellContent from './components/cell-content'
 import ProductTableCellCta from './components/cell-cta'
-import ProductTableDataRange from './components/data-range'
-import ProductTableDataValue from './components/data-value'
-import ProductTableDataTextSubscript from './components/data-text-subscript'
+import ProductTableDataRange, {
+  Plain as PlainProductTableDataRange
+} from './components/data-range'
+import ProductTableDataValue, {
+  Plain as PlainProductTableDataValue
+} from './components/data-value'
+import ProductTableDataTextSubscript, {
+  Plain as PlainProductTableDataTextSubscript
+} from './components/data-text-subscript'
 import {
   Addon,
   AddonArg,
@@ -34,6 +40,11 @@ const ProductTable = {
     Placeholder: ProductTableCellPlaceholder,
     Content: ProductTableCellContent,
     Cta: ProductTableCellCta
+  },
+  text: {
+    Range: PlainProductTableDataRange,
+    TextSubscript: PlainProductTableDataTextSubscript,
+    Value: PlainProductTableDataValue
   },
   data: {
     Range: ProductTableDataRange,
