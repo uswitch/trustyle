@@ -584,10 +584,10 @@
         "mt": "base"
       },
       "accept-all-button": {
-        "variant": "buttons.variants.primary"
+        "variant": "primary"
       },
       "save-preferences-button": {
-        "variant": "buttons.variants.secondary"
+        "variant": "secondary"
       },
       "button-with-checkbox": {
         "border": "1px solid",
@@ -1202,7 +1202,8 @@
     },
     "addonFooter": {
       "main": {
-        "borderTopColor": "grey-20"
+        "borderTopColor": "grey-20",
+        "fontSize": "md"
       }
     },
     "cellBase": {
@@ -1222,7 +1223,9 @@
       "label": {
         "color": "grey-60"
       },
-      "content": {},
+      "content": {
+        "whiteSpace": "nowrap"
+      },
       "accent": {
         "backgroundColor": "grey-05"
       },

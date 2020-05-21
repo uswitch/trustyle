@@ -10,13 +10,15 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title?: string
   text: string
   orientation?: string
+  bold?: boolean
 }
 
 const CallOut: React.FC<Props> = ({
   title,
   text,
   icon,
-  orientation = 'left'
+  orientation = 'left',
+  bold = false
 }) => {
   const flexDirection = orientation === 'left' ? 'row' : 'column'
 
@@ -37,7 +39,8 @@ const CallOut: React.FC<Props> = ({
         as={Styled.p}
         sx={{
           marginY: 0,
-          variant: 'callOut.text'
+          variant: 'callOut.text',
+          fontWeight: bold ? 'bold' : 'normal'
         }}
         px={{
           color: 'accentColorText'
@@ -55,8 +58,6 @@ const CallOut: React.FC<Props> = ({
         borderRadius: 4,
         paddingX: 'sm',
         paddingY: 'sm',
-        marginTop: 'xs',
-        marginBottom: 'md',
         variant: 'callOut.main'
       }}
       px={{

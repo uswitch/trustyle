@@ -144,7 +144,9 @@
 
     "progress-bg": "#E6F4FD",
     "progress-primary": "#A1E7FE",
-    "progress-label": "#002396"
+    "progress-label": "#002396",
+
+    "error-red": "#db1818"
   },
 
   "radii": {
@@ -280,6 +282,20 @@
     }
   },
 
+  "elements": {
+    "drop-down": {
+      "defaultColor": "light-grey-blue",
+      "errorColor": "error-red",
+      "focusColor": "#008fe9"
+    },
+
+    "input": {
+      "defaultColor": "light-grey-blue",
+      "errorColor": "error-red",
+      "focusColor": "#008fe9"
+    }
+  },
+
   "compounds": {
     "accordion": {
       "base": {
@@ -296,7 +312,7 @@
           "color": "light-1"
         }
       },
-  
+
       "isActive": {
         "button": {
           "variant": "compounds.accordion.base.button"
