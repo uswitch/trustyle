@@ -584,10 +584,10 @@
         "mt": "base"
       },
       "accept-all-button": {
-        "variant": "buttons.variants.primary"
+        "variant": "primary"
       },
       "save-preferences-button": {
-        "variant": "buttons.variants.secondary"
+        "variant": "secondary"
       },
       "button-with-checkbox": {
         "border": "1px solid",

@@ -548,10 +548,10 @@
         "mt": "base"
       },
       "accept-all-button": {
-        "variant": "buttons.variants.primary"
+        "variant": "primary"
       },
       "save-preferences-button": {
-        "variant": "buttons.variants.inverse"
+        "variant": "inverse"
       },
       "button-with-checkbox": {
         "border": "2px solid",
