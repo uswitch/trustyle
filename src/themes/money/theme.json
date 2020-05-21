@@ -1202,7 +1202,8 @@
     },
     "addonFooter": {
       "main": {
-        "borderTopColor": "grey-20"
+        "borderTopColor": "grey-20",
+        "fontSize": "md"
       }
     },
     "cellBase": {
@@ -1222,7 +1223,9 @@
       "label": {
         "color": "grey-60"
       },
-      "content": {},
+      "content": {
+        "whiteSpace": "nowrap"
+      },
       "accent": {
         "backgroundColor": "grey-05"
       },
