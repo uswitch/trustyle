@@ -33,29 +33,31 @@ const useScrollIntoView = (
   inputRef: React.RefObject<HTMLInputElement>,
   hasFocus: boolean
 ) => {
-  const [isResizing, setIsResizing] = useState(false)
-
   useEffect(() => {
-    const handleResize = debounce(() => setIsResizing(true), 50)
+    if (!hasFocus) return
+
+    const handleResize = debounce(() => {
+      try {
+        // eslint-disable-next-line no-unused-expressions
+        inputRef.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        })
+      } catch {
+        // `block: 'center'` is unsupported in Firefox < 58
+        // eslint-disable-next-line no-unused-expressions
+        inputRef.current?.scrollIntoView({
+          behavior: 'smooth'
+        })
+      }
+    }, 50)
+
     window.addEventListener('resize', handleResize)
 
     return () => {
       window.removeEventListener('resize', handleResize)
     }
   }, [])
-
-  useEffect(() => {
-    if (hasFocus && isResizing) {
-      const inputEl = inputRef.current
-      inputEl &&
-        inputEl.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center'
-        })
-    }
-
-    isResizing && setIsResizing(false)
-  }, [hasFocus, isResizing])
 }
 
 export const Input: React.FC<Props> = ({
