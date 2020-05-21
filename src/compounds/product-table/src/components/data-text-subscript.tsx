@@ -19,4 +19,11 @@ const ProductTableDataTextSubscript: React.FC<DataTextSubscriptProps> = ({
   )
 }
 
+const PlainProductTableDataTextSubscript = (props: DataTextSubscriptProps) => {
+  const { text, subscript } = props
+  return `${text} ${subscript}`
+}
+
 export default ProductTableDataTextSubscript
+export const Rich = ProductTableDataTextSubscript
+export const Plain = PlainProductTableDataTextSubscript
