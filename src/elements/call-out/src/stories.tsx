@@ -19,6 +19,7 @@ export const Example = () => {
     `Tempor incididunt ut labore et dolore magna aliqua. Sint id est dolor laborum. Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolores est unt. `
   )
   const showIcon = boolean('Show icon?', true)
+  const boldText = boolean('Bold text', false)
   const iconGlyph = select(
     'Icon',
     ['arrow', 'caret', 'close', 'edit', 'email'],
@@ -33,6 +34,7 @@ export const Example = () => {
       text={textText}
       orientation={orientation}
       icon={showIcon ? iconGlyph : undefined}
+      bold={boldText}
     />
   )
 }
