@@ -13,13 +13,15 @@ interface ListProps extends React.HTMLAttributes<HTMLDivElement> {
   text?: string
   container?: React.FC
   breadcrumbs?: React.ReactElement
+  image?: React.ReactElement
 }
 
 const Category: React.FC<ListProps> = ({
   title,
   text,
   container: Container = DefaultContainer,
-  breadcrumbs: Breadcrumbs
+  breadcrumbs: Breadcrumbs,
+  image: Image
 }) => {
   const { theme }: any = useThemeUI()
   const breadcrumbsVariant = theme.categoryTitle?.breadcrumbs?.variant
@@ -48,7 +50,7 @@ const Category: React.FC<ListProps> = ({
           </div>
         )}
         <Row>
-          <Col span={contentSpan} sx={{ marginBottom: ['sm', 0] }}>
+          <Col span={contentSpan}>
             <Styled.h1
               as={text ? 'h1' : 'p'}
               sx={{
@@ -65,7 +67,11 @@ const Category: React.FC<ListProps> = ({
               </Styled.p>
             )}
           </Col>
-          <Col span={[12, 6]}>{Image}</Col>
+          {Image ? (
+            <Col span={[12, 6]} sx={{ marginTop: ['sm', 0] }}>
+              {Image}
+            </Col>
+          ) : null}
         </Row>
       </Container>
     </div>
