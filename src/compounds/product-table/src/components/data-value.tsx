@@ -25,4 +25,16 @@ const ProductTableDataValue: React.FC<DataValueProps> = ({
   )
 }
 
+const PlainProductTableDataValue = (props: DataValueProps) => {
+  const { value, unit, subscript } = props
+  return [
+    numberFormatter(value, unit),
+    typeof value === 'number' && subscript ? subscript : null
+  ]
+    .filter((i: any) => !!i)
+    .join(' ')
+}
+
 export default ProductTableDataValue
+export const Rich = ProductTableDataValue
+export const Plain = PlainProductTableDataValue
