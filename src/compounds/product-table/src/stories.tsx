@@ -72,7 +72,8 @@ export const ExampleWithKnobs = () => {
     ),
     Value: (
       <ProductTable.data.Value value={300} unit="pounds" subscript="/ month" />
-    )
+    ),
+    Auto: <ProductTable.data.Auto text="£10 - £20/month" />
   }
 
   const dataFormatterKey = select(

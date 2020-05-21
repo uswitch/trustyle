@@ -18,6 +18,9 @@ import ProductTableDataValue, {
 import ProductTableDataTextSubscript, {
   Plain as PlainProductTableDataTextSubscript
 } from './components/data-text-subscript'
+import ProductTableDataAuto, {
+  Plain as PlainProductTableDataAuto
+} from './components/data-auto'
 import {
   Addon,
   AddonArg,
@@ -44,12 +47,14 @@ const ProductTable = {
   text: {
     Range: PlainProductTableDataRange,
     TextSubscript: PlainProductTableDataTextSubscript,
-    Value: PlainProductTableDataValue
+    Value: PlainProductTableDataValue,
+    Auto: PlainProductTableDataAuto
   },
   data: {
     Range: ProductTableDataRange,
     TextSubscript: ProductTableDataTextSubscript,
-    Value: ProductTableDataValue
+    Value: ProductTableDataValue,
+    Auto: ProductTableDataAuto
   }
 }
 
