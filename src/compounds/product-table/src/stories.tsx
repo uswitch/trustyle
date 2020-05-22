@@ -478,7 +478,6 @@ export const ExampleStacked = () => {
         </ProductTable.cells.Content>
         <ProductTable.cells.Cta
           primary={<ButtonLink variant="primary">Button</ButtonLink>}
-          secondary={<ButtonLink variant="link">Plan info</ButtonLink>}
         />
       </ProductTable.Row>
 

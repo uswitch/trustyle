@@ -91,7 +91,7 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
   <CellBase
     mobileOrder={mobileOrder || (accent ? 1 : 2)}
     sx={{
-      height: 'auto',
+      height: accent ? '100%' : 'auto',
       display: 'grid',
       alignItems: 'center',
       gridTemplateColumns: '100%',
@@ -123,6 +123,7 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
         small: {
           fontSize: 'sm'
         },
+        lineHeight: 1,
         variant: 'productTable.cellContent.content'
       }}
     >
