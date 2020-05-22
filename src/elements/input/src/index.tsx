@@ -29,24 +29,22 @@ export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 // is fired when the keyboard opens and pushes up the viewport.
 //
 // Related: https://stackoverflow.com/questions/23757345/android-does-not-correctly-scroll-on-input-focus-if-not-body-element?noredirect=1&lq=1
-const useScrollIntoView = (
-  inputRef: React.RefObject<HTMLInputElement>,
-  hasFocus: boolean
-) => {
+const useScrollIntoView = (inputRef: React.RefObject<HTMLInputElement>) => {
   useEffect(() => {
-    if (!hasFocus) return
-
     const handleResize = debounce(() => {
+      if (
+        inputRef.current === null ||
+        inputRef.current !== document.activeElement
+      )
+        return
       try {
-        // eslint-disable-next-line no-unused-expressions
-        inputRef.current?.scrollIntoView({
+        inputRef.current.scrollIntoView({
           behavior: 'smooth',
           block: 'center'
         })
       } catch {
         // `block: 'center'` is unsupported in Firefox < 58
-        // eslint-disable-next-line no-unused-expressions
-        inputRef.current?.scrollIntoView({
+        inputRef.current.scrollIntoView({
           behavior: 'smooth'
         })
       }
@@ -79,7 +77,7 @@ export const Input: React.FC<Props> = ({
     null
   )
   const [hasFocus, setHasFocus] = useState(false)
-  useScrollIntoView(inputRef, hasFocus)
+  useScrollIntoView(inputRef)
   const [interiorValue, setInteriorValue] = useState(
     inputProps.value || defaultValue || ''
   )
