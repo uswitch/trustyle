@@ -19,6 +19,8 @@ export const ProductTableCellImage: React.FC = ({ children }) => (
         position: 'relative',
         height: '100%',
         width: '100%',
+        minHeight: 75,
+        minWidth: 100,
         img: {
           position: 'absolute',
           top: 0,
@@ -27,7 +29,8 @@ export const ProductTableCellImage: React.FC = ({ children }) => (
           bottom: 0,
           maxWidth: '100%',
           maxHeight: '100%',
-          margin: 'auto'
+          margin: 'auto',
+          objectFit: 'contain'
         }
       }}
     >

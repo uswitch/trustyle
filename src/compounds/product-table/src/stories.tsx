@@ -72,7 +72,8 @@ export const ExampleWithKnobs = () => {
     ),
     Value: (
       <ProductTable.data.Value value={300} unit="pounds" subscript="/ month" />
-    )
+    ),
+    Auto: <ProductTable.data.Auto text="£10 - £20/month" />
   }
 
   const dataFormatterKey = select(
@@ -477,7 +478,6 @@ export const ExampleStacked = () => {
         </ProductTable.cells.Content>
         <ProductTable.cells.Cta
           primary={<ButtonLink variant="primary">Button</ButtonLink>}
-          secondary={<ButtonLink variant="link">Plan info</ButtonLink>}
         />
       </ProductTable.Row>
 
