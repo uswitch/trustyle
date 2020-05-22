@@ -28,6 +28,7 @@ const glyphChoices: Glyph[] = [
   'person',
   'phone',
   'plus',
+  'question',
   'smile',
   'sms',
   'three',

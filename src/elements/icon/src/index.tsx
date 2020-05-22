@@ -24,6 +24,7 @@ import { One } from './one'
 import { Person } from './person'
 import { Phone } from './phone'
 import { Plus } from './plus'
+import { Question } from './question'
 import { Smile } from './smile'
 import { Sms } from './sms'
 import { Three } from './three'
@@ -52,6 +53,7 @@ export type Glyph =
   | 'person'
   | 'phone'
   | 'plus'
+  | 'question'
   | 'smile'
   | 'sms'
   | 'three'
@@ -120,6 +122,8 @@ export const Icon: React.FC<Props> = ({
       return <Phone color={color} size={size} />
     case 'plus':
       return <Plus color={color} size={size} />
+    case 'question':
+      return <Question color={color} size={size} />
     case 'smile':
       return <Smile color={color} size={size} />
     case 'sms':
