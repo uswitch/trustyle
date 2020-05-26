@@ -184,6 +184,7 @@ export const ExampleWithKnobs = () => {
         }}
       />
       <ProductTable.Row
+        id="deal-1"
         badges={badges}
         preTitle={preTitle}
         rowTitle={rowTitle}
