@@ -490,12 +490,12 @@
           "display": "flex",
           "alignItems": "start",
           "image": {
-            "width": 474,
+            "width": [132, 384, 474],
             "mr": 32
           },
 
           "content": {
-            "width": 670,
+            "width": [132, 544, 670],
             "variant": "compounds.card.base.content"
           },
           "link": {
