@@ -521,29 +521,64 @@
     },
 
     "card": {
-      "itemsPerRow": [1, 2, 3],
-      "width": "100%",
-      "height": "100%",
-      "borderRadius": "sm",
-      "borderStyle": "solid",
-      "borderColor": "grey-20",
-      "borderWidth": "1px",
-      "boxSizing": "border-box",
-      "mb": "sm",
-      "img": {
-        "sm": { "width": "100%", "height": 230 },
-        "md": { "width": "100%", "height": 230 },
-        "lg": { "maxWidth": "grid.lg.3", "height": 230 }
+      "base": {
+        "width": "100%",
+        "height": "100%",
+        "borderRadius": "sm",
+        "borderStyle": "solid",
+        "borderColor": "grey-20",
+        "borderWidth": "1px",
+        "boxSizing": "border-box",
+        "mb": "sm",
+        "img": {
+          "width": "100%"
+        },
+        "p": { "fontSize": 16, "lineHeight": "130%", "color": "grey-80" },
+        "h3": {
+          "fontSize": 18,
+          "minHeight": 0,
+          "fontWeight": "bold",
+          "color": "experimental-text",
+          "marginBottom": "xs",
+          "marginTop": "0",
+          "a": {
+            "textDecoration": "none"
+          }
+        },
+        "content": {
+          "paddingY": "sm",
+          "paddingX": ["sm", "sm"]
+        },
+        "marginRight": "base"
       },
-      "p": { "fontSize": 16, "lineHeight": "130%", "color": "grey-80" },
-      "h3": { "fontSize": 18, "minHeight": 0, "fontWeight": "bold", "color": "experimental-text", "marginBottom": "xs", "marginTop": "0", "a": {
-        "textDecoration": "none"
-      } },
-      "content": {
-        "paddingY": "sm",
-        "paddingX": ["sm", "sm"]
-      },
-      "marginRight": "base"
+      "variants": {
+        "vertical": {
+          "variant": "compounds.card.base",
+          "content": {
+            "variant": "compounds.card.base.content"
+          },
+          "link": {
+            "variant": "compounds.card.base.link"
+          }
+        },
+        "horizontal": {
+          "variant": "compounds.card.base",
+          "display": "flex",
+          "alignItems": "start",
+          "image": {
+            "width": 474,
+            "mr": 32
+          },
+
+          "content": {
+            "width": 670,
+            "variant": "compounds.card.base.content"
+          },
+          "link": {
+            "variant": "compounds.card.base.link"
+          }
+        }
+      }
     },
 
     "click-out-form": {
@@ -629,85 +664,85 @@
   },
 
   "imageCallout": {
-      "base": {
-        "wrapper": {
-          "pb": [120, 128, 168],
-          "display": "flex",
-          "justifyContent": "space-between",
-          "&.image-callout + .image-callout": {
-            "marginTop": 0
-          }
+    "base": {
+      "wrapper": {
+        "pb": [120, 128, 168],
+        "display": "flex",
+        "justifyContent": "space-between",
+        "&.image-callout + .image-callout": {
+          "marginTop": 0
+        }
+      },
+      "inner": {
+        "display": "flex",
+        "justifyContent": ["flex-start", "flex-start", "space-between"],
+        "alignItems": ["center", "center", "flex-start"],
+        "width": [320, 768, 1200],
+        "mx": "auto",
+        "px": [15, 15, 158]
+      },
+      "content": {
+        "maxWidth": ["100%", "grid.md.8", "grid.lg.4"],
+        "pt": "xl"
+      },
+      "colorBlock": {
+        "width": [63, 89],
+        "height": [63, 89],
+        "position": "absolute",
+        "right": [30, 52, 52],
+        "bottom": [-23, -37, -37],
+        "borderTopLeftRadius": "xl",
+        "borderBottomRightRadius": "xl"
+      },
+      "image-container": {
+        "position": "relative"
+      },
+      "image": {
+        "position": "relative",
+        "mt": -64,
+        "imgixWidth": 477,
+        "imgixParams": {
+          "fill": "fillmax"
+        }
+      }
+    },
+    "variants": {
+      "left": {
+        "colorBlock": {
+          "bg": "primary--dark"
+        },
+        "image": {
+          "borderTopRightRadius": "xl",
+          "borderBottomLeftRadius": "xl"
         },
         "inner": {
-          "display": "flex",
-          "justifyContent": ["flex-start", "flex-start", "space-between"],
-          "alignItems": ["center", "center", "flex-start"],
-          "width": [320, 768, 1200],
-          "mx": "auto",
-          "px": [15, 15, 158]
-        },
-        "content": {
-          "maxWidth": ["100%", "grid.md.8", "grid.lg.4"],
-          "pt": "xl"
-        },
+          "flexDirection": ["column", "column", "row"]
+        }
+      },
+      "right": {
         "colorBlock": {
-          "width": [63, 89],
-          "height": [63, 89],
-          "position": "absolute",
-          "right": [30, 52, 52],
-          "bottom": [-23, -37, -37],
+          "bg": "secondary"
+        },
+        "image": {
           "borderTopLeftRadius": "xl",
           "borderBottomRightRadius": "xl"
         },
-        "image-container": {
-          "position": "relative"
-        },
-        "image": {
-          "position": "relative",
-          "mt": -64,
-          "imgixWidth": 477,
-          "imgixParams":{
-            "fill": "fillmax"
-          }
+        "inner": {
+          "flexDirection": ["column", "column", "row-reverse"]
         }
       },
-      "variants":{
-        "left": {
-          "colorBlock": {
-            "bg": "primary--dark"
-          },
-          "image": {
-            "borderTopRightRadius": "xl",
-            "borderBottomLeftRadius": "xl"
-          },
-          "inner": {
-            "flexDirection": ["column", "column", "row"]
-          }
-        },
-        "right": {
-          "colorBlock": {
-            "bg": "secondary"
-          },
-          "image": {
-            "borderTopLeftRadius": "xl",
-            "borderBottomRightRadius": "xl"
-          },
-          "inner": {
-            "flexDirection": ["column", "column", "row-reverse"]
-          }
-        },
-        "dark": {
-          "wrapper": {
-            "bg": "plum",
-            "& h2": {
-              "color": "white"
-            },
+      "dark": {
+        "wrapper": {
+          "bg": "plum",
+          "& h2": {
             "color": "white"
-          }
-        },
-        "light": {}
-      }
-    },
+          },
+          "color": "white"
+        }
+      },
+      "light": {}
+    }
+  },
 
   "card": {
     "sm": {
@@ -1154,7 +1189,7 @@
     }
   },
 
-  "badge" : {
+  "badge": {
     "base": {
       "paddingX": "base",
       "paddingY": [3, 5.5],
@@ -1167,7 +1202,7 @@
         "variant": "badge.base",
         "backgroundColor": "plum",
         "color": "white"
-       }
+      }
     }
   },
 
@@ -1298,7 +1333,7 @@
 
     "h5": {
       "variant": "styles.heading",
-      "fontSize": ["sm","md"],
+      "fontSize": ["sm", "md"],
       "marginTop": 0,
       "marginBottom": "sm"
     },
@@ -1351,7 +1386,6 @@
         "fontStyle": "normal"
       }
     },
-
 
     "table": {
       "borderSpacing": 0,
