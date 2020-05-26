@@ -5,47 +5,44 @@ import { jsx, Styled } from 'theme-ui'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 
 interface Props {
-  imgSrc: string
+  className?: string
+  description: string
+  horizontal?: boolean
+  imageSize?: 'cover' | 'contain'
   imgAlt: string
   imgSizes?: string
-  title: string
-  description: string
+  imgSrc: string
   linkHref: string
   linkText?: string
-  className?: string
-  imageSize?: 'cover' | 'contain'
+  title: string
 }
 
-const variant = (prop = '') => `compounds.card${prop ? `.${prop}` : ''}`
+const makeStyles = (variant: string) => (element?: string) =>
+  `compounds.card.variants.${variant}${element ? `.${element}` : ''}`
+
 const Card: React.FC<Props> = ({
-  imgSrc,
+  className = '',
+  description,
+  horizontal = false,
+  imageSize = 'cover',
   imgAlt,
   imgSizes = '768px',
-  imageSize = 'cover',
-  title,
-  description,
+  imgSrc,
   linkHref,
   linkText = 'Read more',
-  className = ''
-}) => (
-  <div
-    className={className}
-    sx={{
-      variant: variant()
-    }}
-  >
+  title
+}) => {
+  const styles = makeStyles(horizontal ? 'horizontal' : 'vertical')
+
+  return (
     <div
+      className={className}
       sx={{
-        width: '100%',
-        variant: variant('img')
+        variant: styles()
       }}
     >
-      <Styled.a href={linkHref} sx={{ textDecoration: 'underline' }}>
+      <Styled.a sx={{ variant: styles('image') }} href={linkHref}>
         <ImgixImage
-          sx={{
-            height: 'auto',
-            width: '100%'
-          }}
           alt={imgAlt}
           src={imgSrc}
           sizes={imgSizes}
@@ -58,27 +55,27 @@ const Card: React.FC<Props> = ({
           critical
         />
       </Styled.a>
-    </div>
-    <div
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        flex: '1',
-        variant: variant('content')
-      }}
-    >
-      <Styled.h3 sx={{ margin: '0' }}>
-        <Styled.a href={linkHref}>{title}</Styled.a>
-      </Styled.h3>
-      <Styled.p>{description}</Styled.p>
-      <Styled.a
-        href={linkHref}
-        sx={{ textDecoration: 'underline', variant: variant('link') }}
+      <div
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          flex: '1',
+          variant: styles('content')
+        }}
       >
-        {linkText}
-      </Styled.a>
+        <Styled.h3 sx={{ margin: '0' }}>
+          <Styled.a href={linkHref}>{title}</Styled.a>
+        </Styled.h3>
+        <Styled.p>{description}</Styled.p>
+        <Styled.a
+          href={linkHref}
+          sx={{ textDecoration: 'underline', variant: styles('link') }}
+        >
+          {linkText}
+        </Styled.a>
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default Card
