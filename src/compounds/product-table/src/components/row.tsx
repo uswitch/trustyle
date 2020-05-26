@@ -115,7 +115,7 @@ const ProductTableRow: React.FC<RowProps> = ({
           variant: 'productTable.row.grid',
 
           // Flex in mobile IE11 (?!) as auto-layout for grid isn't supported
-          '@media all and (max-width: 768px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
+          '@media all and (max-width: 990px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
             display: 'flex',
             flexDirection: 'column'
           }
