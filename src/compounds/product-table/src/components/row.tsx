@@ -21,7 +21,8 @@ const ProductTableRow: React.FC<RowProps> = ({
   rowTitle,
   subtitle,
   addons = [],
-  children
+  children,
+  id
 }) => {
   const addonsFor = (key: keyof Addon): React.ReactNode[] =>
     addons.map(({ addon, component, options }, i) => {
@@ -67,6 +68,7 @@ const ProductTableRow: React.FC<RowProps> = ({
 
   return (
     <section
+      id={id}
       sx={{
         position: 'relative',
         border: '1px solid',
