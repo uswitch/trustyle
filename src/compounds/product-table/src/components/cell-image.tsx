@@ -4,9 +4,17 @@ import { jsx } from 'theme-ui'
 
 import CellBase from './cell-base'
 
-export const ProductTableCellImage: React.FC = ({ children }) => (
+export interface ProductTableCellImageProps extends React.HTMLAttributes<any> {
+  customSize?: string
+}
+
+export const ProductTableCellImage: React.FC<ProductTableCellImageProps> = ({
+  customSize = '0.7fr',
+  children
+}) => (
   <CellBase
     mobileOrder={0}
+    customSize={customSize}
     sx={{
       display: 'flex',
       alignItems: 'center',

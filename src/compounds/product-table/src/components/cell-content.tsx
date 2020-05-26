@@ -22,6 +22,7 @@ export interface CellPrimaryProps extends React.HTMLAttributes<HTMLDivElement> {
   label: string
   accent?: boolean
   mobileOrder?: number
+  customSize?: string
 }
 
 export interface ContentRowProps extends CellPrimaryProps {
@@ -33,10 +34,12 @@ const RowContent: React.FC<ContentRowProps> = ({
   children,
   inAddon,
   label,
-  mobileOrder
+  mobileOrder,
+  customSize
 }) => (
   <CellBase
     mobileOrder={mobileOrder || (accent ? 1 : 2)}
+    customSize={customSize}
     sx={{
       height: 'auto',
       display: 'grid',

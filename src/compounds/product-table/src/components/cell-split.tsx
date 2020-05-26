@@ -7,10 +7,21 @@ import { CellContext } from '../generics'
 // Needs to be the lowest common factor of all the split counts
 export const ROWS = 6
 
-const ProductTableCellSplit: React.FC<React.HTMLAttributes<any>> = ({
+export interface ProductTableCellSplitProps extends React.HTMLAttributes<any> {
+  customSize: string
+}
+
+const ProductTableCellSplit: React.FC<ProductTableCellSplitProps> = ({
+  customSize,
   children
 }) => {
-  const { gridColumnStart, gridColumnSpan } = React.useContext(CellContext)
+  const { gridColumnStart, gridColumnSpan, setSize } = React.useContext(
+    CellContext
+  )
+
+  if (setSize && customSize) {
+    setSize(customSize)
+  }
 
   const nonNullChildren = React.Children.toArray(children).filter(c => c)
   const rowsHeight = ROWS / nonNullChildren.length

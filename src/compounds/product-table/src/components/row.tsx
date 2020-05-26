@@ -21,8 +21,7 @@ const ProductTableRow: React.FC<RowProps> = ({
   rowTitle,
   subtitle,
   addons = [],
-  children,
-  id
+  children
 }) => {
   const addonsFor = (key: keyof Addon): React.ReactNode[] =>
     addons.map(({ addon, component, options }, i) => {
@@ -44,7 +43,7 @@ const ProductTableRow: React.FC<RowProps> = ({
     })
 
   // @todo All addons go at the start - is there a better way to do this?
-  const nonNullChildren = addonsFor('grid')
+  let nonNullChildren = addonsFor('grid')
     .concat(React.Children.toArray(children))
     .filter(c => c) as React.ReactElement[]
 
@@ -55,6 +54,31 @@ const ProductTableRow: React.FC<RowProps> = ({
   }
 
   const cols = nonNullChildren.length
+
+  const [sizes, setSizes] = React.useState(() => {
+    const initialSizes: string[] = []
+    for (let i = 0; i < cols; i++) {
+      initialSizes.push('1fr')
+    }
+    return initialSizes
+  })
+
+  const setSize = (i: number, size: string) => {
+    // IF YOU BREAK THIS IF STATEMENT YOU WILL CREATE AN INFINITE LOOP
+    // @todo is there a better way of doing this? It runs n*2 times where n is
+    // every child with a customSize, and causes a rerender every time
+    if (size !== sizes[i]) {
+      setSizes([...sizes.slice(0, i), size, ...sizes.slice(i + 1)])
+    }
+  }
+
+  nonNullChildren = nonNullChildren.map((child, i) =>
+    React.cloneElement(child, {
+      setSize: (size: string) => {
+        setSize(i, size)
+      }
+    })
+  )
 
   /**
    * Row numbers explained:
@@ -68,7 +92,6 @@ const ProductTableRow: React.FC<RowProps> = ({
 
   return (
     <section
-      id={id}
       sx={{
         position: 'relative',
         border: '1px solid',
@@ -96,12 +119,8 @@ const ProductTableRow: React.FC<RowProps> = ({
       <div
         sx={{
           display: 'grid',
-          gridTemplateColumns: [
-            'repeat(2, 1fr)',
-            undefined,
-            `repeat(${cols}, 1fr)`
-          ],
-          '-ms-grid-columns': ['(1fr)[2]', undefined, `(1fr)[${cols}]`],
+          gridTemplateColumns: ['repeat(2, 1fr)', undefined, sizes.join(' ')],
+          '-ms-grid-columns': ['(1fr)[2]', undefined, sizes.join(' ')],
           gridTemplateRows: [
             'auto',
             undefined,
@@ -117,7 +136,7 @@ const ProductTableRow: React.FC<RowProps> = ({
           variant: 'productTable.row.grid',
 
           // Flex in mobile IE11 (?!) as auto-layout for grid isn't supported
-          '@media all and (max-width: 990px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
+          '@media all and (max-width: 768px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
             display: 'flex',
             flexDirection: 'column'
           }
@@ -194,7 +213,8 @@ const ProductTableRow: React.FC<RowProps> = ({
               gridColumnStart: index + 1,
               gridColumnSpan: 1,
               accentCellCount: accentCells.length,
-              accentCellIndex: child.props.accent && accentCells.indexOf(child)
+              accentCellIndex: child.props.accent && accentCells.indexOf(child),
+              setSize: (size: string) => setSize(index, size)
             }}
             key={index}
           >

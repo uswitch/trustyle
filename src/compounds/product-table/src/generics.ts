@@ -16,6 +16,7 @@ export interface CellContextProps {
   inSplit?: boolean
   inFlexbox?: boolean
   extraRules?: object
+  setSize?: (size: string) => void
 }
 
 export const CellContext = React.createContext<CellContextProps>({})

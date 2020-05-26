@@ -6,14 +6,20 @@ import { AddonContext, CellContext } from '../generics'
 
 import CellBase from './cell-base'
 
-export const ProductTableCellPlaceholder: React.FC<React.HTMLAttributes<
-  HTMLDivElement
->> = () => {
+export interface ProductTableCellPlaceholderProps
+  extends React.HTMLAttributes<any> {
+  customSize?: string
+}
+
+export const ProductTableCellPlaceholder: React.FC<ProductTableCellPlaceholderProps> = ({
+  customSize
+}) => {
   const { inSplit } = React.useContext(CellContext)
   const { inAddon } = React.useContext(AddonContext)
 
   return (
     <CellBase
+      customSize={customSize}
       sx={{
         display: 'flex',
         alignItems: 'center',

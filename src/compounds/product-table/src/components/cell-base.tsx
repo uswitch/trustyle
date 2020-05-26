@@ -7,11 +7,13 @@ import { AddonContext, CellContext } from '../generics'
 export interface CellBaseProps extends React.HTMLAttributes<HTMLDivElement> {
   mobileOrder?: number
   extraRules?: object
+  customSize?: string
 }
 
 const ProductTableCellBase: React.FC<CellBaseProps> = ({
   mobileOrder = 2,
   extraRules: extraRulesProp = {},
+  customSize,
   children,
   className
 }) => {
@@ -25,12 +27,17 @@ const ProductTableCellBase: React.FC<CellBaseProps> = ({
     firstInSplit,
     inFlexbox,
     inSplit,
-    extraRules: extraRulesCellContext
+    extraRules: extraRulesCellContext,
+    setSize
   } = React.useContext(CellContext)
 
   const { order, extraRules: extraRulesAddonContext } = React.useContext(
     AddonContext
   )
+
+  if (setSize && customSize) {
+    setSize(customSize)
+  }
 
   const extraRules = {
     ...extraRulesCellContext,

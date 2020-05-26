@@ -7,10 +7,12 @@ import CellBase from './cell-base'
 export interface CellCtaProps extends React.HTMLAttributes<HTMLDivElement> {
   primary: React.ReactNode
   secondary?: React.ReactNode
+  customSize?: string
 }
 const ProductTableCellCta: React.FC<CellCtaProps> = ({
   primary,
-  secondary
+  secondary,
+  customSize
 }) => {
   const buttonWrapperStyling = {
     flex: [1, undefined, 'initial'],
@@ -20,6 +22,7 @@ const ProductTableCellCta: React.FC<CellCtaProps> = ({
   }
   return (
     <CellBase
+      customSize={customSize}
       sx={{
         display: 'flex',
         alignItems: 'center',

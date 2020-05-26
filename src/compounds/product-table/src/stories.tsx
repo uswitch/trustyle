@@ -512,3 +512,35 @@ export const ExampleStacked = () => {
     </>
   )
 }
+
+export const CustomSizes = () => {
+  return (
+    <React.Fragment>
+      <ProductTable.Row preTitle="Sponsored" rowTitle="Super Saver April 2021">
+        <ProductTable.cells.Image customSize="0.5fr">
+          <img
+            src="https://placekitten.com/200/75?image=12"
+            alt="Salman"
+            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          />
+        </ProductTable.cells.Image>
+        <ProductTable.cells.Split customSize="1.2fr">
+          <ProductTable.cells.Content label="Fixed rate contract">
+            14 months
+          </ProductTable.cells.Content>
+          <ProductTable.cells.Content label="Early exit fee">
+            £30 per fuel
+          </ProductTable.cells.Content>
+        </ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Cta
+          primary={<ButtonLink variant="primary">Button</ButtonLink>}
+          secondary={<ButtonLink variant="link">Plan info</ButtonLink>}
+          customSize="0.7fr"
+        />
+      </ProductTable.Row>
+    </React.Fragment>
+  )
+}
