@@ -15,3 +15,5 @@ lib
 lib/*
 
 .storybook/changed.json
+
+tsconfig.*.json
