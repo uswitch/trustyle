@@ -43,7 +43,7 @@ const ProductTableRow: React.FC<RowProps> = ({
     })
 
   // @todo All addons go at the start - is there a better way to do this?
-  let nonNullChildren = addonsFor('grid')
+  const nonNullChildren = addonsFor('grid')
     .concat(React.Children.toArray(children))
     .filter(c => c) as React.ReactElement[]
 
@@ -71,14 +71,6 @@ const ProductTableRow: React.FC<RowProps> = ({
       setSizes([...sizes.slice(0, i), size, ...sizes.slice(i + 1)])
     }
   }
-
-  nonNullChildren = nonNullChildren.map((child, i) =>
-    React.cloneElement(child, {
-      setSize: (size: string) => {
-        setSize(i, size)
-      }
-    })
-  )
 
   /**
    * Row numbers explained:
