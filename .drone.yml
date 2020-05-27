@@ -7,6 +7,13 @@ pipeline:
       - npm install
       - npx lerna bootstrap --no-ci
 
+  cores:
+    when:
+      event: [push]
+    image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    commands:
+      - echo "console.log(require('os').cpus().length)" | node
+
   code_checks:
     when:
       event: [push]
@@ -26,7 +33,7 @@ pipeline:
     when:
       branch: master
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
-    secrets: [ "npm_token" ]
+    secrets: ['npm_token']
     commands:
       - npm config set '//registry.npmjs.org/:_authToken' $NPM_TOKEN
       - npx lerna publish from-package --yes

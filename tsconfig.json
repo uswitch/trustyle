@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true,
     "checkJs": false,
     "declaration": true,
     "esModuleInterop": true,
@@ -11,9 +12,6 @@
     "sourceMap": true,
     "strict": true,
     "target": "es5",
-    "typeRoots": [
-      "./node_modules/@types",
-      "./types"
-    ]
+    "typeRoots": ["./node_modules/@types", "./types"]
   }
 }
