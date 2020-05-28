@@ -17,5 +17,8 @@
   },
   "dependencies": {
     "@uswitch/trustyle.icon": "^1.5.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.5"
   }
 }

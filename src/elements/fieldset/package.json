@@ -17,7 +17,8 @@
   },
   "devDependencies": {
     "@uswitch/trustyle.grid": "^2.0.5",
-    "typescript": "^3.6.2"
+    "@uswitch/trustyle.radio-input": "^2.1.3",
+    "typescript": "^3.7.5"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",

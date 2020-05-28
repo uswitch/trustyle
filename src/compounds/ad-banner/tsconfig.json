@@ -1,7 +1,21 @@
 {
-  "extends": "../../../tsconfig.json",
+  "extends": "../../../tsconfig.settings.json",
   "compilerOptions": {
-    "outDir": "./lib"
+    "outDir": "./lib",
+    "rootDir": "./src"
   },
-  "include": ["./src/index.tsx"]
+  "include": [
+    "./src/index.tsx"
+  ],
+  "references": [
+    {
+      "path": "../../elements/badge"
+    },
+    {
+      "path": "../../elements/button-link"
+    },
+    {
+      "path": "../../elements/imgix-image"
+    }
+  ]
 }

@@ -18,5 +18,8 @@
   },
   "dependencies": {
     "@uswitch/trustyle.date": "^0.0.8"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.5"
   }
 }

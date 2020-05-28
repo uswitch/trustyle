@@ -18,5 +18,8 @@
   },
   "dependencies": {
     "@uswitch/trustyle.accordion": "^0.4.7"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.5"
   }
 }

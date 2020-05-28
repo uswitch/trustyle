@@ -2,8 +2,7 @@
 import { ChangeEvent, useState } from 'react'
 import { jsx } from '@emotion/core'
 import { Column, Container, Row } from '@uswitch/trustyle.grid'
-
-import { Fieldset } from '../../fieldset/src'
+import { Fieldset } from '@uswitch/trustyle.fieldset'
 
 import { TileInput } from './.'
 

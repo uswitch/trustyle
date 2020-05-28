@@ -18,5 +18,8 @@
   },
   "dependencies": {
     "@uswitch/trustyle-utils.palette": "^1.0.4"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.5"
   }
 }

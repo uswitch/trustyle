@@ -19,5 +19,8 @@
     "@emotion/core": "^10.0.27",
     "@mdx-js/react": "^1.5.3",
     "theme-ui": "^0.2.52"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.5"
   }
 }

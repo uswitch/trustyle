@@ -1,7 +1,45 @@
 {
-  "extends": "../../../tsconfig.json",
+  "extends": "../../../tsconfig.settings.json",
   "compilerOptions": {
-    "outDir": "./lib"
+    "outDir": "./lib",
+    "rootDir": "./src"
   },
-  "include": ["./src/index.tsx"]
+  "include": [
+    "./src/index.tsx"
+  ],
+  "references": [
+    {
+      "path": "../../layout/arrangement"
+    },
+    {
+      "path": "../../elements/awards-tag"
+    },
+    {
+      "path": "../../elements/badge"
+    },
+    {
+      "path": "../../elements/button-link"
+    },
+    {
+      "path": "../../layout/flex-grid"
+    },
+    {
+      "path": "../../layout/grid"
+    },
+    {
+      "path": "../../elements/icon"
+    },
+    {
+      "path": "../../elements/imgix-image"
+    },
+    {
+      "path": "../../elements/primary-info-block"
+    },
+    {
+      "path": "../../elements/sponsored-by-tag"
+    },
+    {
+      "path": "../../elements/usp-tag"
+    }
+  ]
 }

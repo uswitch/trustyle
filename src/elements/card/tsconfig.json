@@ -1,7 +1,18 @@
 {
-  "extends": "../../../tsconfig.json",
+  "extends": "../../../tsconfig.settings.json",
   "compilerOptions": {
-    "outDir": "./lib"
+    "outDir": "./lib",
+    "rootDir": "./src"
   },
-  "include": ["./src/index.tsx"]
+  "include": [
+    "./src/index.tsx"
+  ],
+  "references": [
+    {
+      "path": "../../layout/flex-grid"
+    },
+    {
+      "path": "../../elements/imgix-image"
+    }
+  ]
 }

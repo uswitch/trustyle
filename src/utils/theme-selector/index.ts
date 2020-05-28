@@ -1,12 +1,12 @@
 import { select } from '@storybook/addon-knobs'
 
 // themes
-const reqThemes = require.context('../themes', true, /theme\.json$/)
+const reqThemes = (require as any).context('../themes', true, /theme\.json$/)
 const themes: any = reqThemes
   .keys()
-  .filter(key => key.indexOf('theme-utils') === -1)
+  .filter((key: any) => key.indexOf('theme-utils') === -1)
   .reduce(
-    (themes, filename) => ({
+    (themes: any, filename: any) => ({
       ...themes,
       [filename]: reqThemes(filename)
     }),

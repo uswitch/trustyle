@@ -28,5 +28,8 @@
     "@uswitch/trustyle.primary-info-block": "^0.2.10",
     "@uswitch/trustyle.sponsored-by-tag": "^0.0.4",
     "@uswitch/trustyle.usp-tag": "^0.0.6"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.5"
   }
 }

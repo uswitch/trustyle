@@ -2,6 +2,7 @@
 npm-debug.log*
 **/node_modules/
 lerna-debug.log
+*.tsbuildinfo
 
 ## Output
 src/**/lib

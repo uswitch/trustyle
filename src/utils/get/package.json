@@ -11,5 +11,8 @@
     "--------------- BUILDING": "----------------------",
     "clean": "rm -rf lib",
     "build": "npm run clean && tsc"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.5"
   }
 }

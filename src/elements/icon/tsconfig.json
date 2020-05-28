@@ -1,7 +1,15 @@
 {
-  "extends": "../../../tsconfig.json",
+  "extends": "../../../tsconfig.settings.json",
   "compilerOptions": {
-    "outDir": "./lib"
+    "outDir": "./lib",
+    "rootDir": "./src"
   },
-  "include": ["./src/index.tsx"]
+  "references": [
+    {
+      "path": "../../styles"
+    },
+    {
+      "path": "../../utils/theme-selector"
+    }
+  ]
 }

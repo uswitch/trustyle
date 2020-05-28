@@ -3,10 +3,9 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { boolean, number, select, text } from '@storybook/addon-knobs'
 import { Global } from '@emotion/core'
-
-import { ButtonLink } from '../../../elements/button-link/src'
-import Badge from '../../../elements/badge/src'
-import { ProgressBar } from '../../../elements/progress-bar/src'
+import { ButtonLink } from '@uswitch/trustyle.button-link/src'
+import Badge from '@uswitch/trustyle.badge/src'
+import { ProgressBar } from '@uswitch/trustyle.progress-bar/src'
 
 import ProductTable, { AddonArg } from './index'
 
@@ -413,7 +412,7 @@ export const ExampleWithNumberFormatters = () => {
           />
         </ProductTable.cells.Content>
         <ProductTable.cells.Content label="No formatter" accent>
-          <ProductTable.data.Value value={1000} unit={null} subscript="" />
+          <ProductTable.data.Value value={1000} unit={''} subscript="" />
         </ProductTable.cells.Content>
       </ProductTable.Row>
     </React.Fragment>
@@ -454,7 +453,7 @@ export const ExampleWithMultipleAccents = () => {
 
 export const ExampleStacked = () => {
   return (
-    <>
+    <React.Fragment>
       <ProductTable.Row preTitle="Sponsored" rowTitle="Super Saver April 2021">
         <ProductTable.cells.Image>
           <img
@@ -509,6 +508,6 @@ export const ExampleStacked = () => {
           secondary={<ButtonLink variant="link">Plan info</ButtonLink>}
         />
       </ProductTable.Row>
-    </>
+    </React.Fragment>
   )
 }

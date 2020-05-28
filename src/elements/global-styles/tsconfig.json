@@ -1,7 +1,8 @@
 {
-  "extends": "../../../tsconfig.json",
+  "extends": "../../../tsconfig.settings.json",
   "compilerOptions": {
     "outDir": "./lib",
+    "rootDir": "./src",
     "module": "ES6"
   },
   "include": ["./src/index.tsx"]

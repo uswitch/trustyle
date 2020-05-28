@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@uswitch/trustyle.grid": "^2.0.5",
-    "typescript": "^3.6.2"
+    "@uswitch/trustyle.fieldset": "^0.0.27",
+    "typescript": "^3.7.5"
   }
 }

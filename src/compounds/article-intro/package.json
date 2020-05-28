@@ -17,6 +17,7 @@
     "react": "^16.7.0"
   },
   "devDependencies": {
-    "@uswitch/trustyle.author": "^0.1.13"
+    "@uswitch/trustyle.author": "^0.1.13",
+    "typescript": "^3.7.5"
   }
 }

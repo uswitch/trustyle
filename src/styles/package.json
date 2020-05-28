@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@types/facepaint": "^1.2.1",
-    "typescript": "^3.6.2"
+    "typescript": "^3.7.5"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",

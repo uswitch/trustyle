@@ -6,5 +6,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {}
+  "scripts": {},
+  "devDependencies": {
+    "typescript": "^3.7.5"
+  }
 }

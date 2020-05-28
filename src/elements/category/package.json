@@ -17,7 +17,8 @@
     "react": "^16.7.0"
   },
   "devDependencies": {
-    "@uswitch/trustyle.breadcrumbs": "^1.0.14"
+    "@uswitch/trustyle.breadcrumbs": "^1.0.14",
+    "typescript": "^3.7.5"
   },
   "dependencies": {
     "@uswitch/trustyle.flex-grid": "^2.2.2"

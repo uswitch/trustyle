@@ -1,12 +1,15 @@
 {
-  "extends": "../../../tsconfig.json",
+  "extends": "../../../tsconfig.settings.json",
   "compilerOptions": {
-    "baseUrl": ".",
     "outDir": "./lib",
-    "paths": {
-      "@lib/trustyle/icon": ["node_modules/@uswitch/trustyle.icon"],
-      "@lib/trustyle/styles": ["node_modules/@uswitch/trustyle.styles"]
-    }
+    "rootDir": "./src"
   },
-  "include": ["./src/index.tsx"]
+  "references": [
+    {
+      "path": "../../elements/icon"
+    },
+    {
+      "path": "../../styles"
+    }
+  ]
 }

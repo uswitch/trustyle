@@ -16,7 +16,7 @@
     "@uswitch/trustyle.styles": "^0.4.28"
   },
   "devDependencies": {
-    "typescript": "^3.6.2"
+    "typescript": "^3.7.5"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",

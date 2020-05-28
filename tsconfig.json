@@ -1,19 +1,173 @@
 {
-  "compilerOptions": {
-    "checkJs": false,
-    "declaration": true,
-    "esModuleInterop": true,
-    "jsx": "react",
-    "lib": ["es2015", "dom"],
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "outDir": "lib",
-    "sourceMap": true,
-    "strict": true,
-    "target": "es5",
-    "typeRoots": [
-      "./node_modules/@types",
-      "./types"
-    ]
-  }
+  "files": [],
+  "references": [
+    {
+      "path": "src/compounds/ad-banner"
+    },
+    {
+      "path": "src/compounds/article-intro"
+    },
+    {
+      "path": "src/compounds/product-table"
+    },
+    {
+      "path": "src/compounds/side-nav"
+    },
+    {
+      "path": "src/compounds/sponsored-product-rate-table"
+    },
+    {
+      "path": "src/compounds/sponsored-product"
+    },
+    {
+      "path": "src/compounds/testimonial-card"
+    },
+    {
+      "path": "src/elements/accordion"
+    },
+    {
+      "path": "src/elements/author-profile"
+    },
+    {
+      "path": "src/elements/author"
+    },
+    {
+      "path": "src/elements/awards-tag"
+    },
+    {
+      "path": "src/elements/badge"
+    },
+    {
+      "path": "src/elements/breadcrumbs"
+    },
+    {
+      "path": "src/elements/bullet-list-highlight"
+    },
+    {
+      "path": "src/elements/bullet-list-timeline"
+    },
+    {
+      "path": "src/elements/button-link"
+    },
+    {
+      "path": "src/elements/button"
+    },
+    {
+      "path": "src/elements/call-out"
+    },
+    {
+      "path": "src/elements/card"
+    },
+    {
+      "path": "src/elements/category"
+    },
+    {
+      "path": "src/elements/checkbox-input"
+    },
+    {
+      "path": "src/elements/cta"
+    },
+    {
+      "path": "src/elements/drop-down"
+    },
+    {
+      "path": "src/elements/embedded-video"
+    },
+    {
+      "path": "src/elements/fieldset"
+    },
+    {
+      "path": "src/elements/frozen-input"
+    },
+    {
+      "path": "src/elements/funnel-progress"
+    },
+    {
+      "path": "src/elements/global-styles"
+    },
+    {
+      "path": "src/elements/hero"
+    },
+    {
+      "path": "src/elements/icon-tile"
+    },
+    {
+      "path": "src/elements/icon"
+    },
+    {
+      "path": "src/elements/imgix-image"
+    },
+    {
+      "path": "src/elements/input-alert"
+    },
+    {
+      "path": "src/elements/input"
+    },
+    {
+      "path": "src/elements/link-list"
+    },
+    {
+      "path": "src/elements/list"
+    },
+    {
+      "path": "src/elements/loading-spinner"
+    },
+    {
+      "path": "src/elements/pagination"
+    },
+    {
+      "path": "src/elements/primary-info-block"
+    },
+    {
+      "path": "src/elements/progress-bar"
+    },
+    {
+      "path": "src/elements/radio-input"
+    },
+    {
+      "path": "src/elements/side-drawer"
+    },
+    {
+      "path": "src/elements/sponsored-by-tag"
+    },
+    {
+      "path": "src/elements/table"
+    },
+    {
+      "path": "src/elements/tile-input"
+    },
+    {
+      "path": "src/elements/toggle-switch"
+    },
+    {
+      "path": "src/elements/usp-tag"
+    },
+    {
+      "path": "src/helpers/date"
+    },
+    {
+      "path": "src/layout/arrangement"
+    },
+    {
+      "path": "src/layout/flex-grid"
+    },
+    {
+      "path": "src/layout/grid"
+    },
+    {
+      "path": "src/styles"
+    },
+    {
+      "path": "src/utils/get-theme-composer-config"
+    },
+    {
+      "path": "src/utils/get"
+    },
+    {
+      "path": "src/utils/palette"
+    },
+    {
+      "path": "src/utils/theme-composer"
+    }
+  ]
 }
