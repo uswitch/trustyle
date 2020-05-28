@@ -90,6 +90,9 @@
     "react": "^16.8.6",
     "react-imgix": "^8.6.1",
     "react-test-renderer": "^16.8.6",
+    "svg-sprite-loader": "^5.0.0",
+    "svg-transform-loader": "^2.0.13",
+    "svgo-loader": "^2.2.1",
     "theme-ui": "^0.2.52",
     "typescript": "^3.7.5"
   },

@@ -18,6 +18,16 @@ module.exports = {
     extensions: ['.js', '.ts', '.tsx']
   },
   module: {
-    rules: [{ test: /\.tsx?$/, loader: 'ts-loader' }]
+    rules: [
+      { test: /\.tsx?$/, loader: 'ts-loader' },
+      {
+        test: /\.svg$/,
+        use: [
+          { loader: 'svg-sprite-loader', options: {} },
+          'svg-transform-loader',
+          'svgo-loader'
+        ]
+      }
+    ]
   }
 }

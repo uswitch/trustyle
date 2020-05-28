@@ -1,13 +1,35 @@
 /** @jsx jsx */
-import * as React from 'react'
 import { jsx } from 'theme-ui'
+
+import theme from '../../../utils/theme-selector'
 
 import ThemedIcon from './'
 
 export default {
-  title: 'Elements|ThemedIcon'
+  title: 'Elements|Themed Icon'
 }
 
 export const ExampleWithKnobs = () => {
-  return <ThemedIcon icon="test" />
+  const themeName = theme().name.toLowerCase()
+
+  const iconNames = require
+    .context('./icons', true, /\.svg$/)
+    .keys()
+    .filter(file => file.includes(themeName))
+    .map(file => (/\/([^/]+)\.svg$/.exec(file) as string[])[1])
+    .sort()
+
+  return (
+    <div>
+      {iconNames.map(icon => (
+        <p key={icon}>
+          <ThemedIcon icon={icon} sx={{ color: 'red' }} /> {icon}
+        </p>
+      ))}
+      <p>
+        If an icon isn&apos;t red, something has gone wrong - webpack should be
+        replacing the stroke with <code>currentColor</code>.
+      </p>
+    </div>
+  )
 }
