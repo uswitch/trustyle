@@ -7,6 +7,8 @@ const cwd = process.cwd()
 
 const tsconfig = JSON.parse(fs.readFileSync(path.join(cwd, 'tsconfig.json')))
 
+const cores = Math.min(require('os').cpus().length, 2)
+
 const toConfig = (tsconfig, dir) => {
   const config = { dir, include: [] }
 
@@ -19,6 +21,15 @@ const toConfig = (tsconfig, dir) => {
   })
 
   return config
+}
+
+// https://stackoverflow.com/questions/8188548/splitting-a-js-array-into-n-arrays
+const splitToChunks = (array, parts) => {
+  let result = []
+  for (let i = parts; i > 0; i--) {
+    result.push(array.slice(0, Math.ceil(array.length / i)))
+  }
+  return result
 }
 
 ;(async () => {
@@ -34,46 +45,55 @@ const toConfig = (tsconfig, dir) => {
   let it = 0
 
   while (readyPackages.length > 0) {
-    console.log(`Build iteration ${++it}: ${readyPackages.length} packages`)
-
-    // TODO group by the tsconfig.json variants (if necessary)
-    const dirs = readyPackages.map(package => package.location)
-    const configs = dirs
-      .filter(dir => fs.existsSync(path.join(dir, 'tsconfig.json')))
-      .map(dir => {
-        try {
-          console.log(path.join(dir, 'tsconfig.json'))
-
-          return toConfig(
-            JSON.parse(fs.readFileSync(path.join(dir, 'tsconfig.json'))),
-            dir
-          )
-        } catch (e) {
-          console.log(dir, e)
-          throw e
-        }
-      })
-
-    const buildTsconfig = {
-      ...tsconfig,
-      compilerOptions: {
-        ...tsconfig.compilerOptions,
-        rootDir: '.',
-        outDir: 'lib'
-      },
-      include: configs
-        .map(config => config.include)
-        .reduce((acc, arr) => acc.concat(arr), [])
-    }
-    const configFilename = `tsconfig.${it}.json`
-
-    fs.writeFileSync(
-      path.join(cwd, configFilename),
-      JSON.stringify(buildTsconfig, null, 4)
+    const filteredPackages = readyPackages.filter(package =>
+      fs.existsSync(path.join(package.location, 'tsconfig.json'))
     )
 
-    const { stdout } = await execa.command(
-      `npx tsc --project ${configFilename}`
+    const dirs = filteredPackages.map(package => package.location)
+    const configs = dirs.map(dir => {
+      try {
+        console.log(path.join(dir, 'tsconfig.json'))
+
+        return toConfig(
+          JSON.parse(fs.readFileSync(path.join(dir, 'tsconfig.json'))),
+          dir
+        )
+      } catch (e) {
+        console.log(dir, e)
+        throw e
+      }
+    })
+
+    const partitions = splitToChunks(configs, cores)
+
+    console.log(
+      `Build iteration ${++it}: ${filteredPackages.length} packages (${
+        partitions.length
+      } partitions)`
+    )
+
+    await Promise.all(
+      partitions.map((config, ind) => {
+        const buildTsconfig = {
+          ...tsconfig,
+          compilerOptions: {
+            ...tsconfig.compilerOptions,
+            rootDir: '.',
+            outDir: 'lib'
+          },
+          include: configs
+            .map(config => config.include)
+            .reduce((acc, arr) => acc.concat(arr), [])
+        }
+        const configFilename = `tsconfig.${it}.${ind}.json`
+
+        fs.writeFileSync(
+          path.join(cwd, configFilename),
+          JSON.stringify(buildTsconfig, null, 4)
+        )
+
+        return execa.command(`npx tsc --project ${configFilename}`)
+      })
     )
 
     await Promise.all(
