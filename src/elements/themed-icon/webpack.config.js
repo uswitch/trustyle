@@ -27,7 +27,7 @@ module.exports = {
     rules: [
       { test: /\.tsx?$/, loader: 'ts-loader' },
       {
-        test: /icons\/.+\.svg$/,
+        test: /themed-icon\/src\/icons\/.+\.svg$/,
         use: [
           { loader: 'svg-sprite-loader', options: spriteLoaderOptions },
           'svg-transform-loader',

@@ -19,7 +19,7 @@ module.exports = ({ config }) => {
         rule.exclude = []
       }
 
-      rule.exclude.push(/icons\/.+\.svg$/)
+      rule.exclude.push(/themed-icon\/src\/icons\/.+\.svg$/)
     }
   })
 
