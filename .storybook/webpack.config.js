@@ -1,3 +1,4 @@
+process.env.IN_STORYBOOK = true
 const iconWebpackConfig = require('../src/elements/themed-icon/webpack.config')
 
 module.exports = ({ config }) => {

@@ -41,7 +41,7 @@ module.exports = {
   }
 }
 
-if (mode === 'production') {
+if (mode === 'production' && !process.env.IN_STORYBOOK) {
   module.exports.plugins = [new SpriteLoaderPlugin()]
   spriteLoaderOptions.extract = true
 }
