@@ -6,10 +6,5 @@
   "ts:main": "src/index.ts",
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "--------------- BUILDING": "----------------------",
-    "clean": "rm -rf lib",
-    "build": "npm run clean && tsc"
   }
 }
