@@ -17,7 +17,7 @@ const ARROW_SIZE = 8
 export const InputAlert: React.FC<Props> = ({ type, children, ...props }) => {
   const { theme }: any = useThemeUI()
 
-  const padding = get(theme, 'elements.input-alert.padding', theme.space.xs)
+  const padding = get(theme, 55, theme.space.xs)
   const notificationColor = get(
     theme,
     'elements.input-alert.notificationColor',
