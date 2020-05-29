@@ -56,6 +56,7 @@ const TabContent: React.FC<TabContentProps> = ({ children, active }) => {
 
 interface TabProps {
   title: string
+  children: React.ReactNode
 }
 
 export const Tab: React.FC<TabProps> = () => null
