@@ -25,7 +25,7 @@ const TabLink: React.FC<TabLinkProps> = ({ title, isActive, ...props }) => {
             : 'compounds.collectionTabs.base.container'
         }}
       >
-        <div sx={{ pr: 'sm' }}>
+        <div>
           <Styled.h6>{title}</Styled.h6>
         </div>
       </div>
@@ -75,7 +75,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
         }}
       >
         {React.Children.map(children, (child, index) => (
-          <Col sx={{ mx: 0 }}>
+          <Col sx={{ mx: 'md' }}>
             <TabLink
               key={index}
               title={child.props.title}
