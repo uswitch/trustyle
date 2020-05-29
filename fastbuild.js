@@ -80,12 +80,36 @@ const copyBuiltFiles = async location => {
   return execa.command(`cp -r ${from} ${to}`, { stdio: 'inherit' })
 }
 
+const isCustomBuild = location => {
+  const packageJson = JSON.parse(
+    readFileSync(path.join(location, 'package.json'))
+  )
+
+  return packageJson.scripts && packageJson.scripts.build
+}
+
+const customBuild = async location => {
+  await execa.command(`npm run clean`, {
+    cwd: location,
+    stdio: 'inherit'
+  })
+  await execa.command(`npm run build`, {
+    cwd: location,
+    stdio: 'inherit'
+  })
+}
+
 const buildIteration = async (iteration, n) => {
-  const locations = iteration.map(package => package.location)
+  const allLocations = iteration.map(package => package.location)
+  const locations = allLocations.filter(location => !isCustomBuild(location))
+  const customLocations = allLocations.filter(isCustomBuild)
 
   console.log(`Build iteration ${n}: ${locations.length} packages`)
 
   const filename = `${TSCONFIG_FILENAME}.${n}`
+  const include = (
+    await Promise.all(locations.map(location => calcIncludes(location)))
+  ).reduce((acc, arr) => acc.concat(arr), [])
   const iterationTsconfig = {
     ...tsconfig(),
     compilerOptions: {
@@ -93,9 +117,7 @@ const buildIteration = async (iteration, n) => {
       rootDir: CWD,
       outDir: OUT_DIR
     },
-    include: (
-      await Promise.all(locations.map(location => calcIncludes(location)))
-    ).reduce((acc, arr) => acc.concat(arr), [])
+    include
   }
 
   writeFileSync(
@@ -103,12 +125,22 @@ const buildIteration = async (iteration, n) => {
     JSON.stringify(iterationTsconfig, null, 4)
   )
 
-  await execa.command(`npx tsc --project ${filename}`, {
-    stdio: 'inherit'
-  })
+  if (include.length > 0) {
+    await execa.command(`npx tsc --project ${filename}`, {
+      stdio: 'inherit'
+    })
+  }
 
   for (const location of locations) {
     await copyBuiltFiles(location)
+  }
+
+  if (customLocations.length > 0) {
+    console.log(`Build iteration ${n}: ${customLocations.length} custom builds`)
+
+    for (const location of customLocations) {
+      await customBuild(location)
+    }
   }
 }
 
