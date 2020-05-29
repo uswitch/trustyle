@@ -6,7 +6,7 @@ import { text } from '@storybook/addon-knobs'
 import { Tab, Tabs } from './'
 
 export default {
-  title: 'Compounds|Tab'
+  title: 'Compounds|Tabs'
 }
 
 export const ExampleWithTwoTabs = () => {
