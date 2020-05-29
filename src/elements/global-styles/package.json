@@ -7,11 +7,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "--------------- BUILDING": "----------------------",
-    "clean": "rm -rf lib",
-    "build": "npm run clean && tsc"
-  },
   "dependencies": {
     "normalize.css": "^8.0.1"
   },

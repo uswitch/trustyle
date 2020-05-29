@@ -7,11 +7,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "--------------- BUILDING": "----------------------",
-    "clean": "rm -rf lib",
-    "build": "npm run clean && tsc"
-  },
   "peerDependencies": {
     "@emotion/core": "^10.0.10",
     "react": "^16.7.0"
