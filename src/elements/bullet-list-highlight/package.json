@@ -4,11 +4,6 @@
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
-  "scripts": {
-    "--------------- BUILDING": "----------------------",
-    "clean": "rm -rf lib",
-    "build": "npm run clean && tsc"
-  },
   "publishConfig": {
     "access": "public"
   },
