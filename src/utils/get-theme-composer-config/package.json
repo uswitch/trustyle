@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle-utils.get-theme-composer-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.ts",

@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.awards-tag",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -12,6 +12,6 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.imgix-image": "^0.1.35"
+    "@uswitch/trustyle.imgix-image": "^0.1.36"
   }
 }
