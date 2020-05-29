@@ -3,10 +3,6 @@ import React, { useState } from 'react'
 import { jsx, Styled } from 'theme-ui'
 import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
 
-// colsMobile: number
-// colsTablet: number
-// colsDesktop: number
-
 interface TabLinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
   title: string
   isActive: boolean
@@ -29,7 +25,7 @@ const TabLink: React.FC<TabLinkProps> = ({ title, isActive, ...props }) => {
             : 'compounds.collectionTabs.base.container'
         }}
       >
-        <div>
+        <div sx={{ pr: 'sm' }}>
           <Styled.h6>{title}</Styled.h6>
         </div>
       </div>
@@ -79,7 +75,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
         }}
       >
         {React.Children.map(children, (child, index) => (
-          <Col sx={{ mx: 'md' }}>
+          <Col sx={{ mx: 0 }}>
             <TabLink
               key={index}
               title={child.props.title}
@@ -92,14 +88,12 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
           </Col>
         ))}
       </Row>
-      <Row>
-        <Col>
+      <Row cols={12}>
+        <Col span={12}>
           {React.Children.map(children, (child, index) => (
-            <Col sx={{ mx: 'md' }}>
-              <TabContent key={index} active={index === activeTab}>
-                {child.props.children}
-              </TabContent>
-            </Col>
+            <TabContent key={index} active={index === activeTab}>
+              {child.props.children}
+            </TabContent>
           ))}
         </Col>
       </Row>
