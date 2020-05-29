@@ -581,6 +581,33 @@
       }
     },
 
+    "collectionTabs": {
+  "base":{
+    "container": {
+      "borderBottomWidth": 1,
+      "borderBottomStyle": "solid",
+      "borderBottomColor": "grey-20",
+      "h6":{
+        "fontSize": ["base", 14, "sm"],
+        "color": "grey-60"
+      }
+    }
+  },
+  "variants": {
+    "isActive": {
+      "container": {
+        "borderBottomStyle": "solid",
+        "borderBottomWidth": 2,
+        "borderBottomColor": "black",
+        "h6": {
+          "fontSize": ["base", 14, "sm"],
+          "color": "black"
+        }
+      }
+    }
+  }
+},
+
     "click-out-form": {
       "flexDirection": "column",
       "width": ["auto", "grid.md.5", "grid.lg.5"],
