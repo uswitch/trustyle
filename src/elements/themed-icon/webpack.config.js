@@ -1,8 +1,14 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
 
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
+
+const mode =
+  process.env.NODE_ENV === 'production' ? 'production' : 'development'
+const spriteLoaderOptions = {}
+
 module.exports = {
-  mode: 'development', // @todo CHANGE THIS
+  mode,
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'lib'),
@@ -21,13 +27,21 @@ module.exports = {
     rules: [
       { test: /\.tsx?$/, loader: 'ts-loader' },
       {
-        test: /\.svg$/,
+        test: /icons\/.+\.svg$/,
         use: [
-          { loader: 'svg-sprite-loader', options: {} },
+          { loader: 'svg-sprite-loader', options: spriteLoaderOptions },
           'svg-transform-loader',
-          'svgo-loader'
+          {
+            loader: 'svgo-loader',
+            options: { plugins: [{ convertColors: { currentColor: true } }] }
+          }
         ]
       }
     ]
   }
+}
+
+if (mode === 'production') {
+  module.exports.plugins = [new SpriteLoaderPlugin()]
+  spriteLoaderOptions.extract = true
 }

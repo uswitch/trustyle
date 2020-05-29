@@ -17,10 +17,10 @@ interface Props extends React.HTMLAttributes<any> {
   icon: string
 }
 
-const ThemedIcon: React.FC<Props> & { addIcons: any } = ({
-  icon,
-  className
-}) => {
+const ThemedIcon: React.FC<Props> & {
+  addIcons: any
+  OldSyntax: React.FC<OldProps>
+} = ({ icon, className }) => {
   const { theme }: any = useThemeUI()
   const themeName = theme.name.toLowerCase()
 
@@ -49,6 +49,42 @@ const ThemedIcon: React.FC<Props> & { addIcons: any } = ({
     >
       <use xlinkHref={`#${iconSymbol.id}`} />
     </svg>
+  )
+}
+
+type Direction = 'up' | 'down' | 'left' | 'right'
+interface OldProps extends React.HTMLAttributes<any> {
+  color: string
+  direction?: Direction
+  glyph: string
+  size?: number
+}
+
+/**
+ * This supports the syntax from the old component that didn't support themed
+ * icons. It's encouraged to switch to the new syntax and use sx instead of
+ * color, direction and size.
+ */
+ThemedIcon.OldSyntax = ({ color, direction = 'up', glyph, size }) => {
+  const rotate: number = { up: 0, right: 0.25, down: 0.5, left: 0.75 }[
+    direction
+  ]
+
+  return (
+    <ThemedIcon
+      icon={glyph}
+      sx={{
+        display: 'block',
+        transform: rotate ? `rotate(${rotate}turn)` : null,
+        // It's not documented behaviour in the old component, but size=0
+        // doesn't set width and height
+        height: size || 'auto',
+        width: size || 'auto',
+        color,
+        // Both themedIcon.oldMain AND themedIcon.main will be applied
+        variant: 'themedIcon.oldMain'
+      }}
+    />
   )
 }
 

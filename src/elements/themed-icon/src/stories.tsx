@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
+import { number, select } from '@storybook/addon-knobs'
 
 import theme from '../../../utils/theme-selector'
 
@@ -9,16 +10,19 @@ export default {
   title: 'Elements|Themed Icon'
 }
 
-export const ExampleWithKnobs = () => {
+const getIconNames = () => {
   const themeName = theme().name.toLowerCase()
 
-  const iconNames = require
+  return require
     .context('./icons', true, /\.svg$/)
     .keys()
     .filter(file => file.includes(themeName))
     .map(file => (/\/([^/]+)\.svg$/.exec(file) as string[])[1])
     .sort()
+}
 
+export const ExampleWithKnobs = () => {
+  const iconNames = getIconNames()
   return (
     <div>
       {iconNames.map(icon => (
@@ -31,5 +35,18 @@ export const ExampleWithKnobs = () => {
         replacing the stroke with <code>currentColor</code>.
       </p>
     </div>
+  )
+}
+
+export const OldSyntaxExampleWithKnobs = () => {
+  const directionChoices = ['up', 'down', 'right', 'left']
+
+  return (
+    <ThemedIcon.OldSyntax
+      glyph={select('glyph', getIconNames(), 'arrow')}
+      color={select('color', theme().colors, 'link')}
+      direction={select('direction', directionChoices, 'up')}
+      size={number('Size', 0)}
+    />
   )
 }

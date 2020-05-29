@@ -1,3 +1,5 @@
+const iconWebpackConfig = require('../src/elements/themed-icon/webpack.config')
+
 module.exports = ({ config }) => {
   config.module.rules.push({
     test: /\.tsx?$/,
@@ -20,18 +22,10 @@ module.exports = ({ config }) => {
     }
   })
 
-  // @todo import from other webpack.config.json
-  config.module.rules.push({
-    test: /icons\/.+\.svg$/,
-    use: [
-      { loader: 'svg-sprite-loader', options: {} },
-      'svg-transform-loader',
-      {
-        loader: 'svgo-loader',
-        options: { plugins: [{ convertColors: { currentColor: true } }] }
-      }
-    ]
-  })
+  const iconRule = iconWebpackConfig.module.rules.find(({ test }) =>
+    test.toString().includes('icons')
+  )
+  config.module.rules.push(iconRule)
 
   return config
 }
