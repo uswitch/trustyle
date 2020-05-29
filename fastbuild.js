@@ -129,4 +129,7 @@ const build = async () => {
   }
 }
 
-build()
+build().catch(e => {
+  console.error(`Build failed: ${String(e)}`)
+  process.exit(1)
+})
