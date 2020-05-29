@@ -1,6 +1,4 @@
 {
   "extends": "../../../tsconfig.json",
-  "compilerOptions": {
-    "types": ["webpack-env"]
-  }
+  "types": ["webpack-env"]
 }

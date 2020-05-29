@@ -52,7 +52,7 @@ const ThemedIcon: React.FC<Props> & {
   )
 }
 
-type Direction = 'up' | 'down' | 'left' | 'right'
+export type Direction = 'up' | 'down' | 'left' | 'right'
 interface OldProps extends React.HTMLAttributes<any> {
   color: string
   direction?: Direction
@@ -92,7 +92,7 @@ const importAll = (r: any) => r.keys().map(r)
 
 // This can be used for manually adding icons by passing a webpack require
 // context. It's probably not needed while the code below is there.
-ThemedIcon.addIcons = (newIcons: RequireContext) => {
+ThemedIcon.addIcons = (newIcons: any) => {
   importAll(newIcons).forEach(
     ({ default: icon }: { default: BrowserSpriteSymbol }) => {
       if (icons.added[icon.id]) {
@@ -108,7 +108,7 @@ ThemedIcon.addIcons = (newIcons: RequireContext) => {
 // Not sure if this should be in here permanently - it adds every icon from
 // every theme into the bundle
 const allIcons = require.context('./icons', true, /\.svg$/)
-allIcons.keys().forEach(path => {
+allIcons.keys().forEach((path: any) => {
   const theme = path.split('/')[1]
   const { default: icon } = allIcons(path)
 

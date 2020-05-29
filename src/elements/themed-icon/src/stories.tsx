@@ -4,20 +4,20 @@ import { number, select } from '@storybook/addon-knobs'
 
 import theme from '../../../utils/theme-selector'
 
-import ThemedIcon from './'
+import ThemedIcon, { Direction } from './'
 
 export default {
   title: 'Elements|Themed Icon'
 }
 
-const getIconNames = () => {
+const getIconNames = (): string[] => {
   const themeName = theme().name.toLowerCase()
 
   return require
     .context('./icons', true, /\.svg$/)
     .keys()
-    .filter(file => file.includes(themeName))
-    .map(file => (/\/([^/]+)\.svg$/.exec(file) as string[])[1])
+    .filter((file: string) => file.includes(themeName))
+    .map((file: string) => (/\/([^/]+)\.svg$/.exec(file) as string[])[1])
     .sort()
 }
 
@@ -45,7 +45,7 @@ export const OldSyntaxExampleWithKnobs = () => {
     <ThemedIcon.OldSyntax
       glyph={select('glyph', getIconNames(), 'arrow')}
       color={select('color', theme().colors, 'link')}
-      direction={select('direction', directionChoices, 'up')}
+      direction={select('direction', directionChoices, 'up') as Direction}
       size={number('Size', 0)}
     />
   )
