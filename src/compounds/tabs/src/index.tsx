@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { jsx, Styled } from 'theme-ui'
 import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
+import ScrollContainer from 'react-indiana-drag-scroll'
 
 interface TabLinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
   title: string
@@ -66,28 +67,23 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
 
   return (
     <Container>
-      <Row
-        direction="row"
-        wrap={false}
-        sx={{
-          overflow: 'scroll',
-          '::-webkit-scrollbar': { display: 'none' }
-        }}
-      >
-        {React.Children.map(children, (child, index) => (
-          <Col sx={{ mx: 'md' }}>
-            <TabLink
-              key={index}
-              title={child.props.title}
-              onClick={e => {
-                e.preventDefault()
-                setActiveTab(index)
-              }}
-              isActive={index === activeTab}
-            />
-          </Col>
-        ))}
-      </Row>
+      <ScrollContainer hideScrollbars>
+        <Row direction="row" wrap={false} sx={{}}>
+          {React.Children.map(children, (child, index) => (
+            <Col sx={{ mx: 'md' }}>
+              <TabLink
+                key={index}
+                title={child.props.title}
+                onClick={e => {
+                  e.preventDefault()
+                  setActiveTab(index)
+                }}
+                isActive={index === activeTab}
+              />
+            </Col>
+          ))}
+        </Row>
+      </ScrollContainer>
       <Row cols={12}>
         <Col span={12}>
           {React.Children.map(children, (child, index) => (

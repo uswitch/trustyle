@@ -17,6 +17,7 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.flex-grid": "^2.2.2"
+    "@uswitch/trustyle.flex-grid": "^2.2.2",
+    "react-indiana-drag-scroll": "^1.6.1"
   }
 }
