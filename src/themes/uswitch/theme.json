@@ -400,6 +400,45 @@
       }
     },
 
+        "collectionStepTabs": {
+      "base": {
+        "container": {
+          "bg": "grey-05",
+          "& h5": {
+            "color": "grey-60"
+          },
+          "color": "grey-60"
+        },
+        "iconColor": "grey-60"
+      },
+      "variants": {
+        "isActive":{
+          "iconColor": "black",
+          "container": {
+            "position": "relative",
+            "mx": ["auto", 0],
+            "width": ["80%", "auto"],
+            "bg": "white",
+            "boxShadow": ["0px 0px 16px rgba(0, 0, 0, 0.15)", "0px 8px 16px rgba(0, 0, 0, 0.15)"],
+            "borderBottomWidth": 4,
+            "borderBottomStyle": "solid",
+            "borderBottomColor": "primary",
+            "::before":{
+              "content": "''",
+              "position": "absolute",
+              "width": 24,
+              "height": 24,
+              "left": ["calc(50% - 24px/2)", -12],
+              "top": [-10, "calc(50% - 18px)"],
+              "background": "white",
+              "transform": "rotate(45deg)",
+              "boxShadow": ["none", "-8px 10px 16px -6px rgba(0, 0, 0, 0.15)"]
+            }
+          }
+        }
+      }
+    },
+
     "side-nav": {
       "internalLinkList": {
         "listStyle": "none",
