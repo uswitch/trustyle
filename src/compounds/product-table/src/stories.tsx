@@ -205,6 +205,12 @@ export const ExampleWithKnobs = () => {
   )
 }
 
+ExampleWithKnobs.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const Example1 = () => {
   return (
     <ProductTable.Row
@@ -236,6 +242,12 @@ export const Example1 = () => {
       />
     </ProductTable.Row>
   )
+}
+
+Example1.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const Example2 = () => {
@@ -281,6 +293,12 @@ export const Example2 = () => {
       </ProductTable.Row>
     </React.Fragment>
   )
+}
+
+Example2.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const ExampleWithAddons = () => {
@@ -365,6 +383,12 @@ export const ExampleWithAddons = () => {
   )
 }
 
+ExampleWithAddons.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const ExampleWithNumberFormatters = () => {
   return (
     <React.Fragment>
@@ -421,6 +445,12 @@ export const ExampleWithNumberFormatters = () => {
   )
 }
 
+ExampleWithNumberFormatters.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const ExampleWithMultipleAccents = () => {
   return (
     <ProductTable.Row preTitle="Sponsored" rowTitle="Super Saver April 2021">
@@ -451,6 +481,12 @@ export const ExampleWithMultipleAccents = () => {
       />
     </ProductTable.Row>
   )
+}
+
+ExampleWithMultipleAccents.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const ExampleStacked = () => {
@@ -512,6 +548,12 @@ export const ExampleStacked = () => {
       </ProductTable.Row>
     </>
   )
+}
+
+ExampleStacked.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 const Spacer = () => <div sx={{ minHeight: 20 }} />
