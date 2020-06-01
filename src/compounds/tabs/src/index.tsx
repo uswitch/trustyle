@@ -67,7 +67,10 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
 
   return (
     <Container>
-      <ScrollContainer hideScrollbars>
+      <ScrollContainer
+        hideScrollbars={false}
+        sx={{ '::-webkit-scrollbar': { display: 'none' } }}
+      >
         <Row direction="row" wrap={false} sx={{}}>
           {React.Children.map(children, (child, index) => (
             <Col sx={{ mx: 'md' }}>
