@@ -678,16 +678,14 @@
       "backgroundColor": "frozen-bg",
       "borderRadius": "3px"
     },
-    "radio": {
+    "radioish": {
       "base": {
         "&:checked + span": {
           "borderColor": "azure",
           "boxShadow": "linkInset",
           "color": "black",
           "&::before": {
-            "backgroundColor": "azure",
-            "borderColor": "azure",
-            "boxShadow": "inset 0 0 0 2px #fff"
+            "borderColor": "azure"
           }
         },
         "&:focus + span": {
@@ -704,9 +702,69 @@
         "padding": "11px 12px 11px 0",
         "&:before": {
           "borderColor": "light-grey-blue",
-          "borderRadius": "50%",
           "borderStyle": "solid",
           "borderWidth": "2px"
+        }
+      }
+    },
+    "radio": {
+      "base": {
+        "variant": "input.radioish.base",
+        "&:checked + span": {
+          "variant": "input.radioish.base.&:checked + span",
+          "&::before": {
+            "variant": "input.radioish.base.&:checked + span.&::before",
+            "backgroundColor": "azure",
+            "boxShadow": "inset 0 0 0 2px #fff"
+          }
+        }
+      },
+      "label": {
+        "variant": "input.radioish.label",
+        "&:before": {
+          "variant": "input.radioish.label.&:before",
+          "borderRadius": "50%"
+        }
+      }
+    },
+    "checkbox": {
+      "base": {
+        "variant": "input.radioish.base",
+        "&:checked + span": {
+          "variant": "input.radioish.base.&:checked + span",
+          "&::before": {
+            "variant": "input.radioish.base.&:checked + span.&::before",
+            "backgroundImage": "url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23008fe9' viewBox='-1 -2 14 12'%3E%3Cpath d='M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z' /%3E%3C/svg%3E\")",
+            "backgroundSize": "16px 16px",
+            "borderColor": "azure"
+          }
+        }
+      },
+      "label": {
+        "variant": "input.radioish.label",
+        "&:before": {
+          "variant": "input.radioish.label.&:before",
+          "borderRadius": "4px"
+        }
+      },
+      "variants": {
+        "normal": {
+          "variant": "input.checkbox.base"
+        },
+        "slim": {
+          "variant": "input.checkbox.base",
+          "& + span": {
+            "padding": "0px",
+            "border": "none"
+          },
+          "&:checked + span": {
+            "variant": "input.checkbox.base.&:checked + span",
+            "boxShadow": "none",
+            "&::before": {
+              "variant": "input.checkbox.base.&:checked + span.&::before"
+            }
+          },
+          "&:focus + span": {}
         }
       }
     },
