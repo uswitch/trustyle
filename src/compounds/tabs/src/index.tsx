@@ -71,8 +71,9 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
         sx={{
           '::-webkit-scrollbar': { display: 'none' },
           '-ms-overflow-style': 'none',
+          scrollbarWidth: 'none',
           mb: 'lg',
-          boxShadow: 'inset -16px 0px 7px -12px rgba(0, 0, 0, 0.1)'
+          boxShadow: 'inset -16px 0px 15px -12px rgba(0, 0, 0, 0.1)'
         }}
       >
         <Row direction="row" wrap={false} sx={{}}>
