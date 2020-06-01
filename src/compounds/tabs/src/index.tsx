@@ -20,7 +20,6 @@ const TabLink: React.FC<TabLinkProps> = ({ title, isActive, ...props }) => {
     >
       <div
         sx={{
-          mb: 'lg',
           variant: isActive
             ? 'compounds.collectionTabs.variants.isActive.container'
             : 'compounds.collectionTabs.base.container'
@@ -69,11 +68,16 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
     <Container>
       <ScrollContainer
         hideScrollbars={false}
-        sx={{ '::-webkit-scrollbar': { display: 'none' } }}
+        sx={{
+          '::-webkit-scrollbar': { display: 'none' },
+          '-ms-overflow-style': 'none',
+          mb: 'lg',
+          boxShadow: 'inset -16px 0px 7px -12px rgba(0, 0, 0, 0.1)'
+        }}
       >
         <Row direction="row" wrap={false} sx={{}}>
           {React.Children.map(children, (child, index) => (
-            <Col sx={{ mx: 'md' }}>
+            <Col sx={{ mx: 'md', mb: 0 }}>
               <TabLink
                 key={index}
                 title={child.props.title}
