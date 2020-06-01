@@ -8,18 +8,32 @@ import { Direction, Glyph, Icon } from './'
 
 const glyphChoices: Glyph[] = [
   'arrow',
+  'bill',
+  'calendar',
   'caret',
   'check',
+  'clock',
   'close',
+  'conversation',
   'edit',
   'email',
   'filters',
+  'four',
   'home',
   'letter',
+  'location',
   'minus',
+  'mobile',
+  'one',
+  'person',
   'phone',
   'plus',
-  'sms'
+  'question',
+  'smile',
+  'sms',
+  'three',
+  'tv',
+  'two'
 ]
 
 const directionChoices: Direction[] = ['up', 'down', 'right', 'left']

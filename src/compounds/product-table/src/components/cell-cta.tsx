@@ -13,9 +13,9 @@ const ProductTableCellCta: React.FC<CellCtaProps> = ({
   secondary
 }) => {
   const buttonWrapperStyling = {
-    flex: [1, 'initial'],
+    flex: [1, undefined, 'initial'],
     width: '100%',
-    display: ['flex', 'block'],
+    display: ['flex', undefined, 'block'],
     variant: 'productTable.cellCta.buttonWrapper'
   }
   return (
@@ -24,7 +24,7 @@ const ProductTableCellCta: React.FC<CellCtaProps> = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        flexDirection: ['row', 'column']
+        flexDirection: ['row', undefined, 'column']
       }}
     >
       <div sx={{ ...buttonWrapperStyling }}>{primary}</div>

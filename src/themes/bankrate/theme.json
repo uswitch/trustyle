@@ -1,6 +1,8 @@
 {
   "name": "Bankrate",
 
+  "useLocalStorage": false,
+
   "breakpoints": ["768px", "990px"],
 
   "zIndices": {
@@ -119,7 +121,7 @@
       "verticalGutter": "sm"
     },
     "container": {
-      "maxWidth": 1152
+      "maxWidth": 1248
     }
   },
 
@@ -169,7 +171,6 @@
       }
     }
   },
-
   "sideNav": {
     "internalLinkList": {
       "listStyle": "none",
@@ -231,6 +232,110 @@
   },
 
   "compounds": {
+    "accordion": {
+      "base": {
+        "marginTop": "sm",
+        "marginBottom": "sm",
+        "title": {
+          "marginTop": "0",
+          "marginBottom": "xs"
+        },
+        "content": {
+          "marginBottom": "xs"
+        },
+        "button": {
+          "padding": "0",
+          "paddingTop": 10,
+          "paddingBottom": 10,
+          "bg": "transparent",
+          "fontFamily": "base",
+          "fontSize": "base",
+          "fontWeight": "bold",
+          "color": "textColor",
+          "alignItems": "center",
+          "borderWidth": "1px 0 0 0",
+          "borderStyle": "solid",
+          "borderColor": "grey-20",
+          "display": "flex",
+          "flexDirection": "row",
+          "width": "100%"
+        },
+        "caret": {
+          "color": "primary"
+        }
+      },
+      "variants": {
+        "isActive": {
+          "button": {
+            "variant": "compounds.accordion.base.button"
+          },
+          "caret": {
+            "color": "primary--dark"
+          }
+        }
+      }
+    },
+
+    "side-nav": {
+      "internalLinkList": {
+        "listStyle": "none",
+        "paddingLeft": 0,
+        "paddingTop": "xxs",
+        "paddingBottom": "xxs",
+        "margin": 0
+      },
+      "internalLinkListItem": {
+        "base": {
+          "mb": 0,
+          "position": "relative",
+          ">a": {
+            "transition": "all 0.2s ease-in-out",
+            "display": "block",
+            "color": "grey-70",
+            "textDecoration": "none",
+            "fontSize": "sm",
+            "padding": "12px 16px",
+            ":visited": {
+              "color": "grey-70"
+            }
+          }
+        },
+        "isActive": {
+          "variant": "compounds.side-nav.internalLinkListItem.base",
+          "color": "primary",
+          "bg": "rgb(247, 247, 248)",
+          "::after": {
+            "variant": "compounds.side-nav.internalLinkListItem.base.::after",
+            "content": "\"\"",
+            "position": "absolute",
+            "top": "0",
+            "left": "0",
+            "display": "block",
+            "width": 4,
+            "height": "100%",
+            "backgroundColor": "primary"
+          },
+          ">a": {
+            "variant": "compounds.side-nav.internalLinkListItem.base.>a",
+            "color": "primary",
+            "fontWeight": "bold",
+            "transform": "translateX(8px)",
+            ":visited": {
+              "color": "primary"
+            }
+          }
+        }
+      },
+      "additionalLink": {
+        "display": "block",
+        "marginBottom": "xxs",
+        "color": "grey-80",
+        "paddingTop": "xxs",
+        "paddingBottom": "xxs",
+        "textDecoration": "none"
+      }
+    },
+
     "breadcrumb": {
       "my": "sm",
       "mx": 0
@@ -251,10 +356,10 @@
         "mt": "base"
       },
       "accept-all-button": {
-        "variant": "buttons.variants.primary"
+        "variant": "primary"
       },
       "save-preferences-button": {
-        "variant": "buttons.variants.secondary"
+        "variant": "secondary"
       },
       "button-with-checkbox": {
         "border": "1px solid",
@@ -282,7 +387,6 @@
       "border": "none",
       "fontFamily": "heading",
       "borderRadius": "4px",
-      "lineHeight": 0,
       ":disabled": {
         "opacity": "0.3",
         "cursor": "not-allowed"
@@ -291,14 +395,12 @@
         "large": {
           "paddingX": "xl",
           "paddingY": "base",
-          "fontSize": "md",
-          "height": 56
+          "fontSize": "md"
         },
         "small": {
           "paddingX": 40,
           "paddingY": 13,
-          "fontSize": "sm",
-          "height": "xl"
+          "fontSize": "sm"
         }
       }
     },

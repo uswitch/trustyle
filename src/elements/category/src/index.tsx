@@ -2,23 +2,30 @@
 
 import * as React from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
-import { Container as DefaultContainer } from '@uswitch/trustyle.flex-grid'
+import {
+  Col,
+  Container as DefaultContainer,
+  Row
+} from '@uswitch/trustyle.flex-grid'
 
 interface ListProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   text?: string
   container?: React.FC
   breadcrumbs?: React.ReactElement
+  image?: React.ReactElement
 }
 
 const Category: React.FC<ListProps> = ({
   title,
   text,
   container: Container = DefaultContainer,
-  breadcrumbs: Breadcrumbs
+  breadcrumbs: Breadcrumbs,
+  image: Image
 }) => {
   const { theme }: any = useThemeUI()
   const breadcrumbsVariant = theme.categoryTitle?.breadcrumbs?.variant
+  const contentSpan = theme.categoryTitle?.contentSpan || 12
 
   return (
     <div
@@ -42,21 +49,30 @@ const Category: React.FC<ListProps> = ({
             />
           </div>
         )}
-        <Styled.h1
-          as={text ? 'h1' : 'p'}
-          sx={{
-            padding: 0,
-            margin: 0,
-            variant: 'categoryTitle.heading'
-          }}
-        >
-          {title}
-        </Styled.h1>
-        {text && (
-          <Styled.p sx={{ marginBottom: 0, variant: 'categoryTitle.text' }}>
-            {text}
-          </Styled.p>
-        )}
+        <Row>
+          <Col span={contentSpan} sx={{ marginBottom: [0, 0] }}>
+            <Styled.h1
+              as={text ? 'h1' : 'p'}
+              sx={{
+                padding: 0,
+                margin: 0,
+                variant: 'categoryTitle.heading'
+              }}
+            >
+              {title}
+            </Styled.h1>
+            {text && (
+              <Styled.p sx={{ marginBottom: 0, variant: 'categoryTitle.text' }}>
+                {text}
+              </Styled.p>
+            )}
+          </Col>
+          {Image ? (
+            <Col span={[12, 6]} sx={{ marginTop: ['sm', 0] }}>
+              {Image}
+            </Col>
+          ) : null}
+        </Row>
       </Container>
     </div>
   )

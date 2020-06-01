@@ -1,9 +1,8 @@
 /** @jsx jsx */
 
 import { useEffect, useRef, useState } from 'react'
-import { jsx } from '@emotion/core'
+import { jsx } from 'theme-ui'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
-import { inputs } from '@uswitch/trustyle.styles'
 import InputMask from 'react-input-mask'
 import debounce from 'lodash.debounce'
 
@@ -30,33 +29,33 @@ export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 // is fired when the keyboard opens and pushes up the viewport.
 //
 // Related: https://stackoverflow.com/questions/23757345/android-does-not-correctly-scroll-on-input-focus-if-not-body-element?noredirect=1&lq=1
-const useScrollIntoView = (
-  inputRef: React.RefObject<HTMLInputElement>,
-  hasFocus: boolean
-) => {
-  const [isResizing, setIsResizing] = useState(false)
-
+const useScrollIntoView = (inputRef: React.RefObject<HTMLInputElement>) => {
   useEffect(() => {
-    const handleResize = debounce(() => setIsResizing(true), 50)
+    const handleResize = debounce(() => {
+      if (
+        inputRef.current === null ||
+        inputRef.current !== document.activeElement
+      )
+        return
+      try {
+        inputRef.current.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        })
+      } catch {
+        // `block: 'center'` is unsupported in Firefox < 58
+        inputRef.current.scrollIntoView({
+          behavior: 'smooth'
+        })
+      }
+    }, 50)
+
     window.addEventListener('resize', handleResize)
 
     return () => {
       window.removeEventListener('resize', handleResize)
     }
   }, [])
-
-  useEffect(() => {
-    if (hasFocus && isResizing) {
-      const inputEl = inputRef.current
-      inputEl &&
-        inputEl.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center'
-        })
-    }
-
-    isResizing && setIsResizing(false)
-  }, [hasFocus, isResizing])
 }
 
 export const Input: React.FC<Props> = ({
@@ -78,7 +77,7 @@ export const Input: React.FC<Props> = ({
     null
   )
   const [hasFocus, setHasFocus] = useState(false)
-  useScrollIntoView(inputRef, hasFocus)
+  useScrollIntoView(inputRef)
   const [interiorValue, setInteriorValue] = useState(
     inputProps.value || defaultValue || ''
   )
@@ -112,7 +111,7 @@ export const Input: React.FC<Props> = ({
 
   const childProps = {
     ...inputProps,
-    css: inputs.keyboardInput,
+    sx: st.input,
     onBlur: blurHandler,
     onChange: changeHandler,
     onFocus: focusHandler,
@@ -122,8 +121,8 @@ export const Input: React.FC<Props> = ({
 
   return (
     <FrozenInput text={interiorValue} freezable={freezable} inputRef={inputRef}>
-      <div css={[inputs.keyboardInputContainer(hasError, hasFocus), st[width]]}>
-        {prefix && <span css={st.prefix(hasError, hasFocus)}>{prefix}</span>}
+      <div sx={st.wrapper(hasError, hasFocus, width)}>
+        {prefix && <span sx={st.prefix(hasError, hasFocus)}>{prefix}</span>}
 
         {mask ? (
           <InputMask
@@ -136,7 +135,7 @@ export const Input: React.FC<Props> = ({
           <input ref={inputRef} {...childProps} />
         )}
 
-        {suffix && <span css={st.suffix(hasError, hasFocus)}>{suffix}</span>}
+        {suffix && <span sx={st.suffix(hasError, hasFocus)}>{suffix}</span>}
       </div>
     </FrozenInput>
   )

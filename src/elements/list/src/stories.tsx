@@ -16,6 +16,13 @@ export const Example = () => (
       <ListItem>First item</ListItem>
       <ListItem>Second item</ListItem>
       <ListItem>Third item</ListItem>
+      <ListItem>Fourth item</ListItem>
+      <ListItem>Fifth item</ListItem>
+      <ListItem>Sixth item</ListItem>
+      <ListItem>Seventh item</ListItem>
+      <ListItem>Eighth item</ListItem>
+      <ListItem>Ninth item</ListItem>
+      <ListItem>Tenth item</ListItem>
     </List>
 
     <List listType="bullet">

@@ -22,4 +22,11 @@ const ProductTableDataRange: React.FC<DataRangeProps> = ({
   )
 }
 
+const PlainProductTableDataRange = (props: DataRangeProps) => {
+  const { from, to, unit } = props
+  return `${numberFormatter(from, unit)} to ${numberFormatter(to, unit)}`
+}
+
 export default ProductTableDataRange
+export const Rich = ProductTableDataRange
+export const Plain = PlainProductTableDataRange

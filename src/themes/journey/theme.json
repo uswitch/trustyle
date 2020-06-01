@@ -1,6 +1,8 @@
 {
   "name": "Journey",
 
+  "useLocalStorage": false,
+
   "breakpoints": ["768px", "990px"],
 
   "zIndices": {
@@ -22,9 +24,8 @@
   },
 
   "lineHeights": {
-    "base": "26px",
-    "sm": "16px",
-    "md": "26px"
+    "base": "1.5",
+    "heading": "1.3"
   },
 
   "fontSizes": {
@@ -142,7 +143,9 @@
 
     "progress-bg": "#E6F4FD",
     "progress-primary": "#A1E7FE",
-    "progress-label": "#002396"
+    "progress-label": "#002396",
+
+    "error-red": "#db1818"
   },
 
   "radii": {
@@ -278,29 +281,100 @@
     }
   },
 
+  "elements": {
+    "drop-down": {
+      "defaultColor": "light-grey-blue",
+      "errorColor": "error-red",
+      "focusColor": "#008fe9"
+    },
+
+    "input": {
+      "defaultColor": "light-grey-blue",
+      "errorColor": "error-red",
+      "focusColor": "#008fe9"
+    }
+  },
+
   "compounds": {
-    "card": {
-      "display": "flex",
-      "width": ["100%", "49%", "grid.lg.3"],
-      "flexDirection": "column",
-      "borderRadius": "sm",
-      "borderStyle": "solid",
-      "borderColor": "dark-2",
-      "borderWidth": "1px",
-      "mb": "sm",
-      "img": {
-        "sm": { "width": "100%", "height": 230 },
-        "md": { "width": "100%", "height": 230 },
-        "lg": { "maxWidth": "grid.lg.3", "height": 230 }
-      },
-      "p": { "fontSize": 14 },
-      "h4": { "fontSize": 18, "minHeight": 0 },
-      "content": {
-        "height": "100%",
-        "p": "sm",
-        "a": {
-          "pb": "xs"
+    "accordion": {
+      "base": {
+        "button": {
+          "padding": "sm",
+          "bg": "uswitch-navy",
+          "fontFamily": "base",
+          "fontSize": "base",
+          "fontWeight": "bold",
+          "color": "light-1",
+          "alignItems": "center"
+        },
+        "caret": {
+          "color": "light-1"
         }
+      },
+
+      "isActive": {
+        "button": {
+          "variant": "compounds.accordion.base.button"
+        },
+        "caret": {
+          "color": "light-1"
+        }
+      }
+    },
+
+    "side-nav": {
+      "internalLinkList": {
+        "listStyle": "none",
+        "paddingLeft": 0,
+        "paddingTop": "xxs",
+        "paddingBottom": "xxs",
+        "margin": 0
+      },
+      "internalLinkListItem": {
+        "base": {
+          "mb": 0,
+          "position": "relative",
+          ">a": {
+            "display": "block",
+            "color": "grey-70",
+            "textDecoration": "none",
+            "fontSize": "sm",
+            "padding": "12px 16px",
+            ":visited": {
+              "color": "grey-70"
+            }
+          }
+        },
+        "isActive": {
+          "variant": "compounds.side-nav.internalLinkListItem.base",
+          "color": "uswitch-navy",
+          "::after": {
+            "variant": "compounds.side-nav.internalLinkListItem.base.::after",
+            "content": "\"\"",
+            "position": "absolute",
+            "top": "0",
+            "left": "0",
+            "display": "block",
+            "width": 4,
+            "height": "100%",
+            "backgroundColor": "uswitch-navy"
+          },
+          ">a": {
+            "variant": "compounds.side-nav.internalLinkListItem.base.>a",
+            "color": "uswitch-navy",
+            ":visited": {
+              "color": "uswitch-navy"
+            }
+          }
+        }
+      },
+      "additionalLink": {
+        "display": "block",
+        "marginBottom": "xxs",
+        "color": "grey-80",
+        "paddingTop": "xxs",
+        "paddingBottom": "xxs",
+        "textDecoration": "none"
       }
     },
 
@@ -604,16 +678,14 @@
       "backgroundColor": "frozen-bg",
       "borderRadius": "3px"
     },
-    "radio": {
+    "radioish": {
       "base": {
         "&:checked + span": {
           "borderColor": "azure",
           "boxShadow": "linkInset",
           "color": "black",
           "&::before": {
-            "backgroundColor": "azure",
-            "borderColor": "azure",
-            "boxShadow": "inset 0 0 0 2px #fff"
+            "borderColor": "azure"
           }
         },
         "&:focus + span": {
@@ -622,17 +694,77 @@
       },
       "label": {
         "borderColor": "light-grey-blue",
-        "borderRadius": "3px",
+        "borderRadius": "0px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "color": "slate-grey",
         "fontWeight": "normal",
-        "padding": "14px 12px 16px 0",
+        "padding": "11px 12px 11px 0",
         "&:before": {
           "borderColor": "light-grey-blue",
-          "borderRadius": "50%",
           "borderStyle": "solid",
           "borderWidth": "2px"
+        }
+      }
+    },
+    "radio": {
+      "base": {
+        "variant": "input.radioish.base",
+        "&:checked + span": {
+          "variant": "input.radioish.base.&:checked + span",
+          "&::before": {
+            "variant": "input.radioish.base.&:checked + span.&::before",
+            "backgroundColor": "azure",
+            "boxShadow": "inset 0 0 0 2px #fff"
+          }
+        }
+      },
+      "label": {
+        "variant": "input.radioish.label",
+        "&:before": {
+          "variant": "input.radioish.label.&:before",
+          "borderRadius": "50%"
+        }
+      }
+    },
+    "checkbox": {
+      "base": {
+        "variant": "input.radioish.base",
+        "&:checked + span": {
+          "variant": "input.radioish.base.&:checked + span",
+          "&::before": {
+            "variant": "input.radioish.base.&:checked + span.&::before",
+            "backgroundImage": "url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23008fe9' viewBox='-1 -2 14 12'%3E%3Cpath d='M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z' /%3E%3C/svg%3E\")",
+            "backgroundSize": "16px 16px",
+            "borderColor": "azure"
+          }
+        }
+      },
+      "label": {
+        "variant": "input.radioish.label",
+        "&:before": {
+          "variant": "input.radioish.label.&:before",
+          "borderRadius": "4px"
+        }
+      },
+      "variants": {
+        "normal": {
+          "variant": "input.checkbox.base"
+        },
+        "slim": {
+          "variant": "input.checkbox.base",
+          "& + span": {
+            "padding": "0px",
+            "border": "none"
+          },
+          "&:checked + span": {
+            "variant": "input.checkbox.base.&:checked + span",
+            "boxShadow": "none",
+            "&::before": {
+              "variant": "input.checkbox.base.&:checked + span.&::before"
+            }
+          },
+          "&:focus + span": {}
         }
       }
     },

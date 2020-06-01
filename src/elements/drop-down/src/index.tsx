@@ -1,12 +1,14 @@
 /** @jsx jsx */
 
 import { forwardRef, useImperativeHandle, useRef, useState } from 'react'
-import { jsx } from '@emotion/core'
-import { colors, inputs } from '@uswitch/trustyle.styles'
+import { jsx, useThemeUI } from 'theme-ui'
+import { colors } from '@uswitch/trustyle.styles'
 import { Icon } from '@uswitch/trustyle.icon'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
 
-import { container, icon, root } from './styles'
+import * as st from './styles'
+
+const { blueGrey, tomato, UswitchNavy } = colors
 
 export interface DataProps {
   [key: string]: boolean | number | string | null
@@ -61,6 +63,7 @@ export const DropDown = forwardRef(
     }: Props,
     ref: React.Ref<DropDownElement>
   ) => {
+    const { theme }: any = useThemeUI()
     const [hasFocus, setHasFocus] = useState(false)
     const option = options.find(_ => _.value === value)
     const frozenText = option && option.text
@@ -76,7 +79,7 @@ export const DropDown = forwardRef(
 
     return (
       <FrozenInput text={frozenText} freezable={freezable} inputRef={inputRef}>
-        <div css={container}>
+        <div sx={st.container}>
           <select
             ref={inputRef}
             onFocus={() => {
@@ -88,7 +91,7 @@ export const DropDown = forwardRef(
               onBlur()
             }}
             onChange={e => onChange(e.currentTarget.value)}
-            css={root(hasError, hasFocus)}
+            sx={st.select(hasError, hasFocus)}
             id={name}
             name={name}
             value={!value ? '' : value}
@@ -106,11 +109,15 @@ export const DropDown = forwardRef(
               </option>
             ))}
           </select>
-          <span css={icon}>
+          <span sx={st.icon}>
             <Icon
               glyph="caret"
               color={
-                inputs.matchCircumstance(hasError, hasFocus) || colors.blueGrey
+                hasError
+                  ? theme.elements?.['drop-down']?.errorColor ?? tomato
+                  : hasFocus
+                  ? theme.elements?.['drop-down']?.focusColor ?? UswitchNavy
+                  : theme.elements?.['drop-down']?.defaultColor ?? blueGrey
               }
               direction="down"
             />

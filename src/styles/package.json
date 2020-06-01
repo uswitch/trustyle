@@ -1,16 +1,11 @@
 {
   "name": "@uswitch/trustyle.styles",
-  "version": "0.4.28",
+  "version": "0.4.29",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.ts",
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "--------------- BUILDING": "----------------------",
-    "clean": "rm -rf lib",
-    "build": "npm run clean && tsc"
   },
   "dependencies": {
     "facepaint": "^1.2.1"

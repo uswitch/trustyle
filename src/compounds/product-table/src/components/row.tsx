@@ -21,7 +21,8 @@ const ProductTableRow: React.FC<RowProps> = ({
   rowTitle,
   subtitle,
   addons = [],
-  children
+  children,
+  id
 }) => {
   const addonsFor = (key: keyof Addon): React.ReactNode[] =>
     addons.map(({ addon, component, options }, i) => {
@@ -67,12 +68,17 @@ const ProductTableRow: React.FC<RowProps> = ({
 
   return (
     <section
+      id={id}
       sx={{
         position: 'relative',
         border: '1px solid',
         paddingX: ['sm', 'md'],
         paddingY: 'md',
         marginTop: badges.length ? [10, 15] : 0,
+        marginBottom: 'md',
+        ':last-of-type': {
+          marginBottom: 0
+        },
         variant: 'productTable.row.main'
       }}
     >
@@ -90,19 +96,28 @@ const ProductTableRow: React.FC<RowProps> = ({
       <div
         sx={{
           display: 'grid',
-          gridTemplateColumns: ['repeat(2, 1fr)', `repeat(${cols}, 1fr)`],
-          '-ms-grid-columns': ['(1fr)[2]', `(1fr)[${cols}]`],
+          gridTemplateColumns: [
+            'repeat(2, 1fr)',
+            undefined,
+            `repeat(${cols}, 1fr)`
+          ],
+          '-ms-grid-columns': ['(1fr)[2]', undefined, `(1fr)[${cols}]`],
           gridTemplateRows: [
             'auto',
+            undefined,
             `repeat(3, auto) repeat(${ROWS}, 1fr) repeat(3, auto)`
           ],
-          '-ms-grid-rows': ['auto', `(auto)[3] (1fr)[${ROWS}] (auto)[3]`],
+          '-ms-grid-rows': [
+            'auto',
+            undefined,
+            `(auto)[3] (1fr)[${ROWS}] (auto)[3]`
+          ],
           marginX: -8,
           marginY: -6,
           variant: 'productTable.row.grid',
 
           // Flex in mobile IE11 (?!) as auto-layout for grid isn't supported
-          '@media all and (max-width: 768px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
+          '@media all and (max-width: 990px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
             display: 'flex',
             flexDirection: 'column'
           }

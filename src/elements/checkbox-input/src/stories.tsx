@@ -3,7 +3,7 @@ import { ChangeEvent, useState } from 'react'
 import { jsx } from '@emotion/core'
 import { storiesOf } from '@storybook/react'
 import { boolean } from '@storybook/addon-knobs'
-import { Column, Container, Row } from '@uswitch/trustyle.grid'
+import { Stack } from '@uswitch/trustyle.arrangement'
 
 import { Fieldset } from '../../fieldset/src'
 
@@ -25,24 +25,21 @@ const Form = () => {
   }
 
   return (
-    <Container css={{ marginTop: '4px' }}>
-      <Fieldset label="Example checkboxes">
-        <Row>
-          {Object.entries(values).map(([value, checked]) => (
-            <Column key={value}>
-              <CheckboxInput
-                name="example"
-                checked={checked}
-                onChange={changeHandler}
-                value={value}
-                label={value.toUpperCase()}
-                slim={slim}
-              />
-            </Column>
-          ))}
-        </Row>
-      </Fieldset>
-    </Container>
+    <Fieldset label="Example checkboxes">
+      <Stack spacing={[8]}>
+        {Object.entries(values).map(([value, checked], ind) => (
+          <CheckboxInput
+            key={ind}
+            name="example"
+            checked={checked}
+            onChange={changeHandler}
+            value={value}
+            label={value.toUpperCase()}
+            slim={slim}
+          />
+        ))}
+      </Stack>
+    </Fieldset>
   )
 }
 

@@ -1,20 +1,15 @@
 {
   "name": "@uswitch/trustyle.bullet-list-highlight",
-  "version": "0.2.56",
+  "version": "0.2.62",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
-  "scripts": {
-    "--------------- BUILDING": "----------------------",
-    "clean": "rm -rf lib",
-    "build": "npm run clean && tsc"
-  },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@uswitch/trustyle.icon": "^1.2.1",
-    "@uswitch/trustyle.styles": "^0.4.28"
+    "@uswitch/trustyle.icon": "^1.5.3",
+    "@uswitch/trustyle.styles": "^0.4.29"
   },
   "devDependencies": {
     "typescript": "^3.6.2"

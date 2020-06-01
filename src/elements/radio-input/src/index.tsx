@@ -31,10 +31,10 @@ export const RadioInput: React.FC<Props> = ({ label, ...inputProps }) => (
         boxSizing: 'border-box',
         cursor: 'pointer',
         display: 'flex',
-        minHeight: '50px',
         padding: 'base',
         paddingLeft: 0,
         width: '100%',
+        userSelect: 'none',
         '&::before': {
           borderRadius: '50%',
           borderStyle: 'solid',

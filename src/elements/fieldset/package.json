@@ -1,22 +1,17 @@
 {
   "name": "@uswitch/trustyle.fieldset",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "--------------- BUILDING": "----------------------",
-    "clean": "rm -rf lib",
-    "build": "npm run clean && tsc"
-  },
   "dependencies": {
-    "@uswitch/trustyle.styles": "^0.4.28"
+    "@uswitch/trustyle.styles": "^0.4.29"
   },
   "devDependencies": {
-    "@uswitch/trustyle.grid": "^2.0.5",
+    "@uswitch/trustyle.grid": "^2.0.6",
     "typescript": "^3.6.2"
   },
   "peerDependencies": {

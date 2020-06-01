@@ -1,16 +1,11 @@
 {
   "name": "@uswitch/trustyle.list",
-  "version": "0.2.10",
+  "version": "0.2.12",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "--------------- BUILDING": "----------------------",
-    "clean": "rm -rf lib",
-    "build": "npm run clean && tsc"
   },
   "devDependencies": {
     "typescript": "^3.6.2"

@@ -37,7 +37,10 @@ const Accordion: React.FC<Props> & {
   Title: React.FC<TitleProps>
 } = ({ index, title, isInitiallyOpen = false, children }) => {
   const {
-    theme: { accordion: accordionTheme = {}, colors = {} }
+    theme: {
+      compounds: { accordion: accordionTheme = {} },
+      colors = {}
+    }
   }: any = useThemeUI()
   const [isOpenState, setIsOpenState] = useState(isInitiallyOpen)
   const accordionContext = useContext(AccordionContext)
@@ -61,8 +64,8 @@ const Accordion: React.FC<Props> & {
         sx={{
           cursor: 'pointer',
           variant: !isOpen
-            ? 'accordion.base.button'
-            : 'accordion.variants.isActive.button'
+            ? 'compounds.accordion.base.button'
+            : 'compounds.accordion.variants.isActive.button'
         }}
         onClick={() => setIsOpen(!isOpen)}
       >
@@ -157,7 +160,7 @@ Accordion.Title = ({ children, as = 'h2' }) => {
     <Styled.h3
       as={as}
       sx={{
-        variant: 'accordion.base.title'
+        variant: 'compounds.accordion.base.title'
       }}
     >
       {children}

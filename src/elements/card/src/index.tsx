@@ -5,69 +5,77 @@ import { jsx, Styled } from 'theme-ui'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 
 interface Props {
-  imgSrc: string
-  imgAlt: string
-  title: string
+  className?: string
   description: string
+  horizontal?: boolean
+  imageSize?: 'cover' | 'contain'
+  imgAlt: string
+  imgSizes?: string
+  imgSrc: string
   linkHref: string
   linkText?: string
-  className?: string
+  title: string
 }
 
-const variant = (prop = '') => `compounds.card${prop ? `.${prop}` : ''}`
+const makeStyles = (variant: string) => (element?: string) =>
+  `compounds.card.variants.${variant}${element ? `.${element}` : ''}`
+
 const Card: React.FC<Props> = ({
-  imgSrc,
-  imgAlt,
-  title,
+  className = '',
   description,
+  horizontal = false,
+  imageSize = 'cover',
+  imgAlt,
+  imgSizes = '768px',
+  imgSrc,
   linkHref,
   linkText = 'Read more',
-  className = ''
-}) => (
-  <div
-    className={className}
-    sx={{
-      variant: variant()
-    }}
-  >
+  title
+}) => {
+  const styles = makeStyles(horizontal ? 'horizontal' : 'vertical')
+
+  return (
     <div
+      className={className}
       sx={{
-        width: '100%',
-        variant: variant('img')
+        variant: styles()
       }}
     >
-      <Styled.a href={linkHref} sx={{ textDecoration: 'underline' }}>
+      <Styled.a sx={{ variant: styles('image') }} href={linkHref}>
         <ImgixImage
-          sx={{
-            height: 'auto',
-            width: '100%'
-          }}
-          width={768}
-          height={405}
           alt={imgAlt}
           src={imgSrc}
-          imgixParams={{ fit: 'crop', crop: 'edges', ar: '16:9' }}
+          sizes={imgSizes}
+          imgixParams={{
+            fit: imageSize === 'cover' ? 'crop' : 'fill',
+            crop: 'faces,entropy',
+            ar: '16:9',
+            fill: 'solid'
+          }}
           critical
         />
       </Styled.a>
+      <div
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          flex: '1',
+          variant: styles('content')
+        }}
+      >
+        <Styled.h3 sx={{ margin: '0' }}>
+          <Styled.a href={linkHref}>{title}</Styled.a>
+        </Styled.h3>
+        <Styled.p>{description}</Styled.p>
+        <Styled.a
+          href={linkHref}
+          sx={{ textDecoration: 'underline', variant: styles('link') }}
+        >
+          {linkText}
+        </Styled.a>
+      </div>
     </div>
-    <div
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        flex: '1',
-        variant: variant('content')
-      }}
-    >
-      <Styled.h3 sx={{ margin: '0' }}>
-        <Styled.a href={linkHref}>{title}</Styled.a>
-      </Styled.h3>
-      <Styled.p>{description}</Styled.p>
-      <Styled.a href={linkHref} sx={{ textDecoration: 'underline' }}>
-        {linkText}
-      </Styled.a>
-    </div>
-  </div>
-)
+  )
+}
 
 export default Card

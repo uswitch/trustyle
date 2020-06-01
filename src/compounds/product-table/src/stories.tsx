@@ -49,6 +49,23 @@ export const ExampleWithKnobs = () => {
   const thirdCol = select('Third column', columns, 'Content from knob')
   const fourthCol = select('Fourth column', columns, 'None')
 
+  console.log(
+    'Value',
+    ProductTable.text.Value({
+      value: 300,
+      unit: 'pounds',
+      subscript: '/ month'
+    })
+  )
+  console.log(
+    'Range',
+    ProductTable.text.Range({ from: 30, to: 260, unit: 'pounds' })
+  )
+  console.log(
+    'Subscript',
+    ProductTable.text.TextSubscript({ text: '£121', subscript: '/ month' })
+  )
+
   const formatters = {
     Range: <ProductTable.data.Range from={30} to={260} unit="pounds" />,
     TextSubscript: (
@@ -56,7 +73,8 @@ export const ExampleWithKnobs = () => {
     ),
     Value: (
       <ProductTable.data.Value value={300} unit="pounds" subscript="/ month" />
-    )
+    ),
+    Auto: <ProductTable.data.Auto text="£10 - £20/month" />
   }
 
   const dataFormatterKey = select(
@@ -86,11 +104,7 @@ export const ExampleWithKnobs = () => {
     if (col === 'Image') {
       return (
         <ProductTable.cells.Image>
-          <img
-            src="https://placekitten.com/200/75?image=9"
-            alt="Salman"
-            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
-          />
+          <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
         </ProductTable.cells.Image>
       )
     }
@@ -171,6 +185,7 @@ export const ExampleWithKnobs = () => {
         }}
       />
       <ProductTable.Row
+        id="deal-1"
         badges={badges}
         preTitle={preTitle}
         rowTitle={rowTitle}
@@ -438,6 +453,67 @@ export const ExampleWithMultipleAccents = () => {
   )
 }
 
+export const ExampleStacked = () => {
+  return (
+    <>
+      <ProductTable.Row preTitle="Sponsored" rowTitle="Super Saver April 2021">
+        <ProductTable.cells.Image>
+          <img
+            src="https://placekitten.com/200/75?image=1"
+            alt="Salman"
+            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          />
+        </ProductTable.cells.Image>
+        <ProductTable.cells.Split>
+          <ProductTable.cells.Content label="Fixed rate contract">
+            14 months
+          </ProductTable.cells.Content>
+          <ProductTable.cells.Content label="Early exit fee">
+            £30 per fuel
+          </ProductTable.cells.Content>
+        </ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Cta
+          primary={<ButtonLink variant="primary">Button</ButtonLink>}
+        />
+      </ProductTable.Row>
+
+      <ProductTable.Row preTitle="Sponsored" rowTitle="Super Saver April 2021">
+        <ProductTable.cells.Image>
+          <img
+            src="https://placekitten.com/200/75?image=1"
+            alt="Salman"
+            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          />
+        </ProductTable.cells.Image>
+        <ProductTable.cells.Split>
+          <ProductTable.cells.Content label="Fixed rate contract">
+            14 months
+          </ProductTable.cells.Content>
+          <ProductTable.cells.Content label="Early exit fee">
+            £30 per fuel
+          </ProductTable.cells.Content>
+        </ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Cta
+          primary={<ButtonLink variant="primary">Button</ButtonLink>}
+          secondary={<ButtonLink variant="link">Plan info</ButtonLink>}
+        />
+      </ProductTable.Row>
+    </>
+  )
+}
+
 const Spacer = () => <div sx={{ minHeight: 20 }} />
 
 export const AutomatedTests = () => {
@@ -452,6 +528,8 @@ export const AutomatedTests = () => {
       <ExampleWithNumberFormatters />
       <Spacer />
       <ExampleWithMultipleAccents />
+      <Spacer />
+      <ExampleStacked />
     </AllThemes>
   )
 }

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
-import { text } from '@storybook/addon-knobs'
+import { select, text } from '@storybook/addon-knobs'
 import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
 
 import AllThemes from '../../../utils/all-themes'
@@ -12,15 +12,25 @@ export default {
   title: 'Elements|Card'
 }
 
-export const ExampleCards = () => {
+export const VerticalCards = () => {
   const title = text('Title', 'This is a card title')
   const content = text(
     'Content',
     'its a card with a picture of a really cute kitten'
   )
 
+  const imageSize = select(
+    'Image Size',
+    { cover: 'cover', contain: 'contain' },
+    'cover'
+  )
+
   const img =
     'https://uswitch-contentful.imgix.net/t014ej9w3ur1/YPnGDSG9aTIPmg1rlWsZu/94483e7cec0dd6ac947e1f974650210f/800.jpg'
+
+  const imgColumnSizes =
+    '(max-width: 768px) 100vw, (max-width: 992px) 50vw, 400px'
+
   return (
     <div>
       {/* single card */}
@@ -29,6 +39,8 @@ export const ExampleCards = () => {
         <Card
           imgSrc={img}
           imgAlt="Picture of a cute kitten"
+          imgSizes="(max-width: 1200px) 100vw, 1200px"
+          imageSize={imageSize}
           title={title}
           description={content}
           linkHref="https://www.uswitch.com"
@@ -42,6 +54,8 @@ export const ExampleCards = () => {
             <Card
               imgSrc={img}
               imgAlt="Picture of a cute kitten"
+              imgSizes={imgColumnSizes}
+              imageSize={imageSize}
               title={title}
               description={content}
               linkHref="https://www.uswitch.com"
@@ -52,6 +66,8 @@ export const ExampleCards = () => {
             <Card
               imgSrc={img}
               imgAlt="Picture of a cute kitten"
+              imgSizes={imgColumnSizes}
+              imageSize={imageSize}
               title={title}
               description={
                 content +
@@ -65,6 +81,8 @@ export const ExampleCards = () => {
             <Card
               imgSrc={img}
               imgAlt="Picture of a cute kitten"
+              imgSizes={imgColumnSizes}
+              imageSize={imageSize}
               title={title}
               description={content}
               linkHref="https://www.uswitch.com"
@@ -77,7 +95,69 @@ export const ExampleCards = () => {
   )
 }
 
-ExampleCards.story = {
+export const HorizontalCards = () => {
+  const title = text('Title', 'This is a card title')
+  const content = text(
+    'Content',
+    'its a card with a picture of a really cute kitten'
+  )
+
+  const imageSize = select(
+    'Image Size',
+    { cover: 'cover', contain: 'contain' },
+    'cover'
+  )
+
+  const img =
+    'https://uswitch-contentful.imgix.net/t014ej9w3ur1/YPnGDSG9aTIPmg1rlWsZu/94483e7cec0dd6ac947e1f974650210f/800.jpg'
+
+  return (
+    <div>
+      <Container>
+        <Card
+          imgSrc={img}
+          imgAlt="Picture of a cute kitten"
+          imgSizes="(max-width: 1200px) 100vw, 1200px"
+          imageSize={imageSize}
+          title={title}
+          description={content}
+          linkHref="https://www.uswitch.com"
+          horizontal
+        />
+
+        <Card
+          imgSrc={img}
+          imgAlt="Picture of a cute kitten"
+          imgSizes="(max-width: 1200px) 100vw, 1200px"
+          imageSize={imageSize}
+          title={title}
+          description={content}
+          linkHref="https://www.uswitch.com"
+          horizontal
+        />
+
+        <Card
+          imgSrc={img}
+          imgAlt="Picture of a cute kitten"
+          imgSizes="(max-width: 1200px) 100vw, 1200px"
+          imageSize={imageSize}
+          title={title}
+          description={content}
+          linkHref="https://www.uswitch.com"
+          horizontal
+        />
+      </Container>
+    </div>
+  )
+}
+
+HorizontalCards.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+VerticalCards.story = {
   parameters: {
     percy: { skip: true }
   }
@@ -86,7 +166,8 @@ ExampleCards.story = {
 export const AutomatedTests = () => {
   return (
     <AllThemes themes={['uswitch', 'money']}>
-      <ExampleCards />
+      <VerticalCards />
+      <HorizontalCards />
     </AllThemes>
   )
 }

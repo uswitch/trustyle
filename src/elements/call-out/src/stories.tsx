@@ -17,20 +17,25 @@ export const Example = () => {
   const titleText = text(`Call out title`, `This is a call out`)
   const textText = text(
     `Call out text`,
-    `Tempor incididunt ut labore et dolore magna aliqua. Sint id est dolor laborum. Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolores est unt.`
+    `Tempor incididunt ut labore et dolore magna aliqua. Sint id est dolor laborum. Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolores est unt. `
   )
   const showIcon = boolean('Show icon?', true)
+  const boldText = boolean('Bold text', false)
   const iconGlyph = select(
     'Icon',
     ['arrow', 'caret', 'close', 'edit', 'email'],
     'close'
   )
 
+  const orientation = select('orientation', ['left', 'top'], 'left')
+
   return (
     <CallOut
       title={titleText}
       text={textText}
+      orientation={orientation}
       icon={showIcon ? iconGlyph : undefined}
+      bold={boldText}
     />
   )
 }
@@ -56,6 +61,8 @@ export const ExampleWithPalette = () => {
     'CallOut'
   )
 
+  const orientation = select('orientation', ['left', 'top'], 'left')
+
   const applyPalette = boolean('Apply palette?', false, 'Palette')
   const accentColor = color(
     'accentColor',
@@ -73,6 +80,7 @@ export const ExampleWithPalette = () => {
         <CallOut
           title={titleText}
           text={textText}
+          orientation={orientation}
           icon={showIcon ? iconGlyph : undefined}
         />
       </PaletteProvider>

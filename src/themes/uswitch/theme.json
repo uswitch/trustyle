@@ -1,6 +1,8 @@
 {
   "name": "uSwitch",
 
+  "useLocalStorage": false,
+
   "breakpoints": ["768px", "990px"],
 
   "zIndices": {
@@ -94,6 +96,14 @@
         "4": 280
       }
     },
+    "icon": {
+      "xs": 16,
+      "sm": 16,
+      "md": 32,
+      "lg": 64,
+      "xl": 72,
+      "xxl": 96
+    },
     "hero": { "width": 1280 },
     "label": { "width": 280 },
     "input": { "height": 58 },
@@ -157,7 +167,10 @@
 
     "progress-bg": "#E6F4FD",
     "progress-primary": "#A1E7FE",
-    "progress-label": "#002396"
+    "progress-label": "#002396",
+
+    "error-red": "#D64226",
+    "success-green": "#2AAA5B"
   },
 
   "radii": {
@@ -332,31 +345,194 @@
     }
   },
 
+  "elements": {
+    "input-alert": {
+      "padding": 16,
+      "notificationColor": "uswitch-navy",
+      "alertColor": "error-red",
+      "color": "white",
+      "radii": 0
+    }
+  },
+
   "compounds": {
-    "card": {
-      "itemsPerRow": [1, 2, 3],
-      "width": "100%",
-      "height": "100%",
-      "borderRadius": "sm",
-      "borderStyle": "solid",
-      "borderColor": "grey-20",
-      "borderWidth": "1px",
-      "boxSizing": "border-box",
-      "mb": "sm",
-      "img": {
-        "sm": { "width": "100%", "height": 230 },
-        "md": { "width": "100%", "height": 230 },
-        "lg": { "maxWidth": "grid.lg.3", "height": 230 }
+    "accordion": {
+      "base": {
+        "marginTop": "sm",
+        "marginBottom": "sm",
+        "title": {
+          "marginTop": "0",
+          "marginBottom": "xs"
+        },
+        "content": {
+          "marginBottom": "xs"
+        },
+        "button": {
+          "padding": "0",
+          "paddingTop": "xs",
+          "paddingBottom": "xs",
+          "bg": "transparent",
+          "fontFamily": "base",
+          "fontSize": "base",
+          "fontWeight": "bold",
+          "color": "textColor",
+          "alignItems": "center",
+          "borderWidth": "1px 0 0 0",
+          "borderStyle": "solid",
+          "borderColor": "grey-20",
+          "display": "flex",
+          "flexDirection": "row",
+          "width": "100%"
+        },
+        "caret": {
+          "color": "black"
+        }
       },
-      "p": { "fontSize": 16, "lineHeight": "130%", "color": "grey-80" },
-      "h3": { "a": {
+      "variants": {
+        "isActive": {
+          "button": {
+            "variant": "compounds.accordion.base.button"
+          },
+          "caret": {
+            "variant": "compounds.accordion.base.caret"
+          }
+        }
+      }
+    },
+
+    "side-nav": {
+      "internalLinkList": {
+        "listStyle": "none",
+        "paddingLeft": 0,
+        "paddingTop": "xxs",
+        "paddingBottom": "xxs",
+        "margin": 0
+      },
+      "internalLinkListItem": {
+        "base": {
+          "mb": 0,
+          "position": "relative",
+          ">a": {
+            "display": "block",
+            "color": "grey-70",
+            "textDecoration": "none",
+            "fontSize": "sm",
+            "padding": "12px 16px",
+            ":visited": {
+              "color": "grey-70"
+            }
+          }
+        },
+        "isActive": {
+          "variant": "compounds.side-nav.internalLinkListItem.base",
+          "color": "uswitch-navy",
+          "::after": {
+            "variant": "compounds.side-nav.internalLinkListItem.base.::after",
+            "content": "\"\"",
+            "position": "absolute",
+            "top": "0",
+            "left": "0",
+            "display": "block",
+            "width": 4,
+            "height": "100%",
+            "backgroundColor": "uswitch-navy"
+          },
+          ">a": {
+            "variant": "compounds.side-nav.internalLinkListItem.base.>a",
+            "color": "uswitch-navy",
+            ":visited": {
+              "color": "uswitch-navy"
+            }
+          }
+        }
+      },
+      "additionalLink": {
+        "display": "block",
+        "marginBottom": "xxs",
+        "color": "grey-80",
+        "paddingTop": "xxs",
+        "paddingBottom": "xxs",
         "textDecoration": "none"
-      } },
-      "content": {
-        "paddingY": "sm",
-        "paddingX": ["sm", "sm"]
+      }
+    },
+
+    "card": {
+      "base": {
+        "width": "100%",
+        "height": "100%",
+        "boxSizing": "border-box",
+        "mb": "sm",
+        "img": {
+          "width": "100%"
+        },
+        "p": { "fontSize": 16, "lineHeight": "130%", "color": "grey-80" },
+        "h3": {
+          "a": {
+            "textDecoration": "none"
+          }
+        },
+        "content": {
+          "padding": 0
+        }
       },
-      "marginRight": "base"
+      "variants": {
+        "vertical": {
+          "variant": "compounds.card.base",
+          "content": {
+            "variant": "compounds.card.base.content"
+          },
+          "link": {
+            "variant": "compounds.card.base.link"
+          }
+        },
+        "horizontal": {
+          "variant": "compounds.card.base",
+          "display": "flex",
+          "alignItems": "start",
+          "image": {
+            "width": [132, 384, 474],
+            "mr": 32
+          },
+
+          "content": {
+            "width": [132, 544, 670],
+            "variant": "compounds.card.base.content"
+          },
+          "link": {
+            "variant": "compounds.card.base.link"
+          }
+        }
+      }
+    },
+
+    "testimonial-card": {
+      "author": {
+        "display": "flex",
+        "alignItems": "center",
+        "flexDirection": "row",
+        "> p": {
+          "m": 0
+        }
+      },
+      "author-image-container": {
+        "height": ["48px", "56px"],
+        "width": ["48px", "56px"],
+        "marginRight": "sm",
+        "> img": {
+          "maxHeight": "100%",
+          "maxWidth": "100%",
+          "borderRadius": "50%"
+        }
+      },
+      "author-placeholder": {
+        "height": "100%",
+        "width": "100%",
+        "borderRadius": "50%",
+        "backgroundColor": "grey-05",
+        "display": "flex",
+        "justifyContent": "center",
+        "alignItems": "center"
+      }
     },
 
     "click-out-form": {
@@ -394,10 +570,10 @@
         "mt": "base"
       },
       "accept-all-button": {
-        "variant": "buttons.variants.primary"
+        "variant": "primary"
       },
       "save-preferences-button": {
-        "variant": "buttons.variants.inverse"
+        "variant": "inverse"
       },
       "button-with-checkbox": {
         "border": "2px solid",
@@ -558,7 +734,7 @@
     }
   },
 
-  "badge" : {
+  "badge": {
     "base": {
       "paddingX": [14, 23],
       "paddingY": [3, 7],
@@ -570,7 +746,7 @@
         "variant": "badge.base",
         "backgroundColor": "uswitch-navy",
         "color": "white"
-       },
+      },
       "sponsored": {
         "paddingX": 11,
         "paddingY": 6,
@@ -600,6 +776,9 @@
     },
     "heading": {
       "marginTop": "-5px"
+    },
+    "icon-container": {
+      "width": 16
     },
     "icon": {
       "backgroundColor": "uswitch-navy"
@@ -803,32 +982,108 @@
       "backgroundColor": "frozen-bg",
       "borderRadius": "3px"
     },
-    "radio": {
+    "focus": {
+      "outline": "2px solid",
+      "outline-color": "orange"
+    },
+    "radioish": {
       "base": {
         "&:checked + span": {
           "borderColor": "black",
+          "boxShadow": "linkInset",
           "color": "black",
           "&::before": {
-            "backgroundColor": "black",
-            "borderColor": "black",
-            "boxShadow": "inset 0 0 0 2px #fff"
+            "borderColor": "black"
           }
         },
         "&:focus + span": {
-          "borderColor": "black"
+          "variant": "input.focus"
         }
       },
       "label": {
-        "borderColor": "black",
+        "borderColor": "grey-40",
         "borderStyle": "solid",
-        "borderWidth": "2px",
+        "borderWidth": "1px",
         "color": "grey-80",
         "fontWeight": "normal",
+        "padding": "11px 12px 11px 0",
         "&:before": {
-          "borderColor": "black",
-          "borderRadius": "50%",
+          "borderColor": "grey-30",
           "borderStyle": "solid",
           "borderWidth": "2px"
+        }
+      },
+      "variants": {
+        "normal": {
+          "variant": "input.radioish.base"
+        },
+        "slim": {
+          "variant": "input.radioish.base"
+        }
+      }
+    },
+    "radio": {
+      "base": {
+        "variant": "input.radioish.base",
+        "&:checked + span": {
+          "variant": "input.radioish.base.&:checked + span",
+          "&::before": {
+            "variant": "input.radioish.base.&:checked + span.&::before",
+            "background": "black",
+            "boxShadow": "inset 0 0 0 2px #fff"
+          }
+        }
+      },
+      "label": {
+        "variant": "input.radioish.label",
+        "&:before": {
+          "variant": "input.radioish.label.&:before",
+          "borderRadius": "50%"
+        }
+      }
+    },
+    "checkbox": {
+      "base": {
+        "variant": "input.radioish.base",
+        "&:checked + span": {
+          "variant": "input.radioish.base.&:checked + span",
+          "&::before": {
+            "variant": "input.radioish.base.&:checked + span.&::before",
+            "backgroundImage": "url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='-1 -2 14 12'%3E%3Cpath d='M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z' /%3E%3C/svg%3E\")",
+            "backgroundSize": "16px 16px",
+            "backgroundColor": "black",
+            "borderColor": "black"
+          }
+        }
+      },
+      "label": {
+        "variant": "input.radioish.label",
+        "&:before": {
+          "variant": "input.radioish.label.&:before",
+          "borderRadius": "4px"
+        }
+      },
+      "variants": {
+        "normal": {
+          "variant": "input.checkbox.base"
+        },
+        "slim": {
+          "variant": "input.checkbox.base",
+          "& + span": {
+            "padding": "0px",
+            "border": "none"
+          },
+          "&:checked + span": {
+            "variant": "input.checkbox.base.&:checked + span",
+            "boxShadow": "none",
+            "&::before": {
+              "variant": "input.checkbox.base.&:checked + span.&::before"
+            }
+          },
+          "&:focus + span": {},
+          "&:focus + span::before": {
+            "variant": "input.focus"
+          }
         }
       }
     },
@@ -981,17 +1236,31 @@
         "borderTopColor": "grey-20"
       }
     },
-    "cellContent": {
+    "cellImage": {
       "main": {
-        "base": {},
-        "variants": {
+        "padding": "sm"
+      }
+    },
+    "cellContent": {
+      "main": {},
+      "label": {
+        "color": "grey-80"
+      },
+      "content": {},
+      "accent": {
+        "backgroundColor": "grey-05"
+      },
+      "variants": {
+        "inSplit": {
+          "main": {},
+          "label": {
+            "color": "grey-80"
+          },
+          "content": {},
           "accent": {
             "backgroundColor": "grey-05"
           }
         }
-      },
-      "label": {
-        "color": "grey-80"
       }
     },
     "cellCta": {
@@ -1088,7 +1357,6 @@
 
     "p": {
       "color": "text"
-
     },
 
     "th": {
