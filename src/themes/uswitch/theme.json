@@ -670,6 +670,7 @@
     "base": {
       "boxSizing": "border-box",
       "paddingX": "lg",
+      "boxSizing": "border-box",
       "textAlign": "center",
       "fontWeight": "bold"
     },

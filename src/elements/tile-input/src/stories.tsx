@@ -3,6 +3,7 @@ import { ChangeEvent, useState } from 'react'
 import { jsx } from '@emotion/core'
 import { Column, Container, Row } from '@uswitch/trustyle.grid'
 
+import AllThemes from '../../../utils/all-themes'
 import { Fieldset } from '../../fieldset/src'
 
 import { TileInput } from './.'
@@ -70,7 +71,44 @@ export default {
 }
 
 export const Radio = () => <Form type="radio" useHooks />
+
+Radio.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const Checkbox = () => <Form type="checkbox" useHooks />
 
+Checkbox.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const RadioSelected = () => <Form type="radio" />
+
+RadioSelected.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const CheckboxSelected = () => <Form type="checkbox" />
+
+CheckboxSelected.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes themes={['journey', 'uswitch']}>
+      <Radio />
+      <Checkbox />
+      <RadioSelected />
+      <CheckboxSelected />
+    </AllThemes>
+  )
+}
