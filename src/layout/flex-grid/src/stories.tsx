@@ -3,7 +3,7 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { storiesOf } from '@storybook/react'
 
-import { Col, Container, GridFromJson, Row } from './index'
+import { Col, Container, GridFromJson, LayoutJson, Row } from './index'
 
 const colStyling = {
   height: 100,
@@ -299,7 +299,7 @@ storiesOf('Layout|Flex Grid', module).add(
 storiesOf('Layout|Flex Grid', module).add(
   'Grid layout from JSON with wildcard',
   () => {
-    const gridJson = [
+    const gridJson: LayoutJson = [
       { layout: [{ key: 0, span: 12 }] },
       { direction: 'row', layout: [{ key: '*', span: [6, 3] }] },
       { layout: [{ key: 1, span: 12 }] }

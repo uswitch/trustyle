@@ -16,7 +16,7 @@
     "typescript:watch": "tsc --noEmit --watch",
     "storybook": "start-storybook -p 6006",
     "--------------- BUILDING": "----------------------",
-    "build": "node fastbuild.js",
+    "build": "node fastbuild.js && npx lerna run build",
     "build-storybook": "build-storybook",
     "--------------- LINTING": "-----------------------",
     "lint:fix": "npm run typescript:check && npm run prettier:fix && npm run eslint:fix",
