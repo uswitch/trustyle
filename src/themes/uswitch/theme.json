@@ -985,6 +985,7 @@
       "base": {
         "&:checked + span": {
           "borderColor": "black",
+          "boxShadow": "linkInset",
           "color": "black",
           "&::before": {
             "backgroundColor": "black",
@@ -993,17 +994,18 @@
           }
         },
         "&:focus + span": {
-          "borderColor": "black"
+          "boxShadow": "linkInset"
         }
       },
       "label": {
-        "borderColor": "black",
+        "borderColor": "grey-40",
         "borderStyle": "solid",
-        "borderWidth": "2px",
+        "borderWidth": "1px",
         "color": "grey-80",
         "fontWeight": "normal",
+        "padding": "11px 12px 11px 0",
         "&:before": {
-          "borderColor": "black",
+          "borderColor": "grey-30",
           "borderRadius": "50%",
           "borderStyle": "solid",
           "borderWidth": "2px"
