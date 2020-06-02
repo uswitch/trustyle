@@ -476,7 +476,8 @@
       "width": ["100%"],
       "border": "none",
       "fontWeight": "bold",
-      "borderRadius": "sm",
+      "borderRadius": "0px",
+      "lineHeight": "base",
       ":hover": {
         "backgroundColor": "primary-hover",
         "boxShadow": "inset 0 0 0 1px ${color}",
@@ -489,6 +490,16 @@
       },
       ":visited": {
         "color": "light-1"
+      },
+      "btnSize": {
+        "small": {
+          "paddingX": "40px",
+          "paddingY": "12px"
+        },
+        "large": {
+          "paddingX": "40px",
+          "paddingY": "12px"
+        }
       }
     },
     "variants": {
