@@ -526,12 +526,12 @@
     },
 
     "collectionTabs": {
-      "base":{
+      "base": {
         "container": {
           "borderBottomWidth": 1,
           "borderBottomStyle": "solid",
           "borderBottomColor": "grey-20",
-          "h6":{
+          "h6": {
             "fontSize": ["base", 14, "sm"],
             "color": "grey-60"
           }
@@ -690,9 +690,22 @@
     "base": {
       "boxSizing": "border-box",
       "paddingX": "lg",
-      "boxSizing": "border-box",
       "textAlign": "center",
-      "fontWeight": "bold"
+      "fontWeight": "bold",
+      "lineHeight": "base",
+      ":focus": {
+        "variant": "input.focus"
+      },
+      "btnSize": {
+        "small": {
+          "paddingX": "40px",
+          "paddingY": "12px"
+        },
+        "large": {
+          "paddingX": "40px",
+          "paddingY": "12px"
+        }
+      }
     },
     "variants": {
       "primary": {
