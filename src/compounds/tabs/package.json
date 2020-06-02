@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.tabs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -12,7 +12,7 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.flex-grid": "^2.2.2",
+    "@uswitch/trustyle.flex-grid": "^2.2.4",
     "react-indiana-drag-scroll": "^1.6.1"
   }
 }
