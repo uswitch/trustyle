@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle-utils.get-theme-composer-config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.ts",
@@ -9,8 +9,6 @@
   },
   "scripts": {
     "--------------- BUILDING": "----------------------",
-    "clean": "rm -rf lib",
-    "build": "npm run clean && tsc",
     "build-themes": "ts-node src/build",
     "--------------- TESTING": "----------------------",
     "test": "npm run test:money",

@@ -438,7 +438,7 @@ export const ExampleWithNumberFormatters = () => {
           />
         </ProductTable.cells.Content>
         <ProductTable.cells.Content label="No formatter" accent>
-          <ProductTable.data.Value value={1000} unit={null} subscript="" />
+          <ProductTable.data.Value value={1000} unit="" subscript="" />
         </ProductTable.cells.Content>
       </ProductTable.Row>
     </React.Fragment>
@@ -491,7 +491,7 @@ ExampleWithMultipleAccents.story = {
 
 export const ExampleStacked = () => {
   return (
-    <>
+    <React.Fragment>
       <ProductTable.Row preTitle="Sponsored" rowTitle="Super Saver April 2021">
         <ProductTable.cells.Image>
           <img
@@ -546,7 +546,7 @@ export const ExampleStacked = () => {
           secondary={<ButtonLink variant="link">Plan info</ButtonLink>}
         />
       </ProductTable.Row>
-    </>
+    </React.Fragment>
   )
 }
 

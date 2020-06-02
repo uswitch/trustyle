@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui'
 
 import AllThemes from '../../../utils/all-themes'
 
-import { Col, Container, GridFromJson, Row } from './index'
+import { Col, Container, GridFromJson, LayoutJson, Row } from './index'
 
 const colStyling = {
   height: 100,
@@ -344,7 +344,7 @@ GridFromJsonNoKeys.story = {
 }
 
 export const GridFromJsonWildcard = () => {
-  const gridJson = [
+  const gridJson: LayoutJson = [
     { layout: [{ key: 0, span: 12 }] },
     { direction: 'row', layout: [{ key: '*', span: [6, 3] }] },
     { layout: [{ key: 1, span: 12 }] }
