@@ -378,7 +378,9 @@
       "select": {
         "base": {
           "border": "1px solid",
-          "borderColor": "grey-40"
+          "borderColor": "grey-40",
+          "borderRadius": 4,
+          "iconColor": "experimental-text"
         },
         "variants": {
           "error": {
@@ -1354,7 +1356,8 @@
   "productTable": {
     "row": {
       "main": {
-        "borderColor": "grey-20"
+        "borderColor": "grey-20",
+        "borderRadius": 4
       },
       "header": {
         "borderBottomColor": "grey-20"
