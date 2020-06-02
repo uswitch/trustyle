@@ -356,6 +356,23 @@
   },
 
   "compounds": {
+    "stepper": {
+      "unselectedNumberCircle": {
+        "border": "1px black solid",
+        "color": "black"
+      },
+      "selectedNumberCircle": {
+        "border": "1px black solid",
+        "backgroundColor": "black",
+        "color": "white"
+      },
+      "progress": {
+        "backgroundColor": "blue"
+      },
+      "backButton": {
+      }
+    },
+
     "accordion": {
       "base": {
         "marginTop": "sm",
