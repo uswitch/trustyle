@@ -17,8 +17,8 @@ module.exports = {
     libraryTarget: 'umd'
   },
   externals: {
-    react: 'commonjs2 react',
-    'theme-ui': 'commonjs2 theme-ui'
+    react: 'umd react',
+    'theme-ui': 'umd theme-ui'
   },
   resolve: {
     extensions: ['.js', '.ts', '.tsx']
