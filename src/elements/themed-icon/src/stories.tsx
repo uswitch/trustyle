@@ -38,6 +38,10 @@ export const ExampleWithKnobs = () => {
   )
 }
 
+export const IconNotFound = () => {
+  return <ThemedIcon icon="oiwq" />
+}
+
 export const OldSyntaxExampleWithKnobs = () => {
   const directionChoices = ['up', 'down', 'right', 'left']
 

@@ -31,22 +31,40 @@ const ThemedIcon: React.FC<Props> & {
     iconSymbol = icons.added[icon]
   }
 
+  const svgStyling = {
+    display: 'inline-block',
+    width: '1em',
+    variant: 'themedIcon.main'
+  }
+
   if (!iconSymbol) {
     console.error(`Icon "${icon}" not found`)
-    // @TODO: What should this return?
-    return <svg></svg>
+    return (
+      <svg viewBox="0 0 50 50" sx={svgStyling}>
+        <circle
+          r="23"
+          cx="25"
+          cy="25"
+          stroke="red"
+          strokeWidth="4px"
+          fill="none"
+        />
+        <text
+          fill="red"
+          x="25"
+          y="25"
+          textAnchor="middle"
+          dominantBaseline="central"
+          fontSize="36px"
+        >
+          ?
+        </text>
+      </svg>
+    )
   }
 
   return (
-    <svg
-      viewBox={iconSymbol.viewBox}
-      className={className}
-      sx={{
-        display: 'inline-block',
-        width: '1em',
-        variant: 'themedIcon.main'
-      }}
-    >
+    <svg viewBox={iconSymbol.viewBox} className={className} sx={svgStyling}>
       <use xlinkHref={`#${iconSymbol.id}`} />
     </svg>
   )
