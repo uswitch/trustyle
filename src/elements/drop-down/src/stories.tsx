@@ -1,10 +1,14 @@
 /** @jsx jsx */
 import { useState } from 'react'
 import { css, jsx } from '@emotion/core'
-import { storiesOf } from '@storybook/react'
-import { number } from '@storybook/addon-knobs'
+
+import AllThemes from '../../../utils/all-themes'
 
 import { DropDown } from './'
+
+export default {
+  title: 'Elements|Dropdown'
+}
 
 const options = [
   { value: 'red', text: 'Red' },
@@ -41,8 +45,8 @@ const FrozenColourSelect = () => {
   )
 }
 
-storiesOf('Elements|DropDown', module).add('example', () => (
-  <div css={css({ padding: number('Padding', 10) })}>
+export const Example = () => (
+  <div>
     <ColourSelect />
 
     <Spacer />
@@ -60,4 +64,18 @@ storiesOf('Elements|DropDown', module).add('example', () => (
       value={''}
     />
   </div>
-))
+)
+
+Example.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes>
+      <Example />
+    </AllThemes>
+  )
+}

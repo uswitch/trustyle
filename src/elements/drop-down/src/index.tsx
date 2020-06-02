@@ -6,8 +6,6 @@ import { colors } from '@uswitch/trustyle.styles'
 import { Icon } from '@uswitch/trustyle.icon'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
 
-import * as st from './styles'
-
 const { blueGrey, tomato, UswitchNavy } = colors
 
 export interface DataProps {
@@ -79,7 +77,9 @@ export const DropDown = forwardRef(
 
     return (
       <FrozenInput text={frozenText} freezable={freezable} inputRef={inputRef}>
-        <div sx={st.container}>
+        <div
+          sx={{ position: 'relative', variant: 'elements.drop-down.container' }}
+        >
           <select
             ref={inputRef}
             onFocus={() => {
@@ -91,7 +91,27 @@ export const DropDown = forwardRef(
               onBlur()
             }}
             onChange={e => onChange(e.currentTarget.value)}
-            sx={st.select(hasError, hasFocus)}
+            sx={{
+              fontFamily: 'base',
+              fontSize: 'base',
+              lineHeight: '1.33',
+              appearance: 'none',
+              backgroundColor: 'white',
+              borderRadius: 3,
+              boxSizing: 'border-box',
+              padding: 16,
+              paddingRight: 48,
+              verticalAlign: 'middle',
+              width: '100%',
+              '&::-ms-expand': {
+                display: 'none'
+              },
+              variant: hasError
+                ? 'elements.drop-down.select.variants.error'
+                : hasFocus
+                ? 'elements.drop-down.select.variants.focus'
+                : 'elements.drop-down.select.base'
+            }}
             id={name}
             name={name}
             value={!value ? '' : value}
@@ -109,7 +129,17 @@ export const DropDown = forwardRef(
               </option>
             ))}
           </select>
-          <span sx={st.icon}>
+          <span
+            sx={{
+              height: 15,
+              width: 15,
+              pointerEvents: 'none',
+              position: 'absolute',
+              right: 16,
+              top: 'calc(50% - 15px / 2)',
+              variant: 'elements.drop-down.icon'
+            }}
+          >
             <Icon
               glyph="caret"
               color={

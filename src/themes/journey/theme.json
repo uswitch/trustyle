@@ -283,9 +283,24 @@
 
   "elements": {
     "drop-down": {
-      "defaultColor": "light-grey-blue",
-      "errorColor": "error-red",
-      "focusColor": "#008fe9"
+      "select": {
+        "base": {
+          "border": "1px solid",
+          "borderColor": "light-grey-blue"
+        },
+        "variants": {
+          "error": {
+            "variant": "elements.drop-down.select.base",
+            "border": "2px solid",
+            "borderColor": "error-red",
+            "outlineColor": "error-red"
+          },
+          "focus": {
+            "variant": "elements.drop-down.select.base",
+            "outlineColor": "#008fe9"
+          }
+        }
+      }
     },
 
     "input": {

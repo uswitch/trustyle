@@ -1,16 +1,20 @@
 /** @jsx jsx */
 import { ChangeEvent, useState } from 'react'
 import { jsx } from '@emotion/core'
-import { storiesOf } from '@storybook/react'
 import { boolean } from '@storybook/addon-knobs'
 import { Stack } from '@uswitch/trustyle.arrangement'
 
+import AllThemes from '../../../utils/all-themes'
 import { Fieldset } from '../../fieldset/src'
 
 import { CheckboxInput } from './.'
 
+export default {
+  title: 'Elements|CheckboxInput'
+}
+
 const initialValues = {
-  a: false,
+  a: true,
   b: false,
   c: false,
   d: false
@@ -43,6 +47,20 @@ const Form = () => {
   )
 }
 
-storiesOf('Elements|CheckboxInput', module).add('Example', () => {
+export const Example = () => {
   return <Form />
-})
+}
+
+Example.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes>
+      <Example />
+    </AllThemes>
+  )
+}

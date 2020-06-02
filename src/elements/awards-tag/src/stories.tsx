@@ -3,6 +3,8 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { text } from '@storybook/addon-knobs'
 
+import AllThemes from '../../../utils/all-themes'
+
 import AwardsTag from './'
 
 export default {
@@ -13,4 +15,18 @@ export const ExampleWithKnobs = () => {
   const awardTitle: string = text('Award', 'Uswitch Manufacturer of the Year')
 
   return <AwardsTag award={awardTitle} />
+}
+
+ExampleWithKnobs.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes>
+      <ExampleWithKnobs />
+    </AllThemes>
+  )
 }

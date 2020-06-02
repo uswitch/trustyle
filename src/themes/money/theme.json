@@ -126,6 +126,7 @@
     "fuschia": "#DB4D75",
     "berry": "#A64470",
     "plum": "#924A8B",
+    "error": "#D64226",
 
     "grey-0": "#FFFFFF",
     "grey-05": "#F7F7F7",
@@ -372,6 +373,28 @@
     }
   },
 
+  "elements": {
+    "drop-down": {
+      "select": {
+        "base": {
+          "border": "1px solid",
+          "borderColor": "grey-40"
+        },
+        "variants": {
+          "error": {
+            "variant": "elements.drop-down.select.base",
+            "borderColor": "error",
+            "outlineColor": "error"
+          },
+          "focus": {
+            "variant": "elements.drop-down.select.base",
+            "outlineColor": "plum"
+          }
+        }
+      }
+    }
+  },
+
   "compounds": {
     "accordion": {
       "base": {
@@ -576,6 +599,33 @@
           },
           "link": {
             "variant": "compounds.card.base.link"
+          }
+        }
+      }
+    },
+
+    "collectionTabs": {
+      "base":{
+        "container": {
+          "borderBottomWidth": 1,
+          "borderBottomStyle": "solid",
+          "borderBottomColor": "grey-20",
+          "h6":{
+            "fontSize": ["base", 14, "sm"],
+            "color": "grey-60"
+          }
+        }
+      },
+      "variants": {
+        "isActive": {
+          "container": {
+            "borderBottomStyle": "solid",
+            "borderBottomWidth": 2,
+            "borderBottomColor": "black",
+            "h6": {
+              "fontSize": ["base", 14, "sm"],
+              "color": "black"
+            }
           }
         }
       }

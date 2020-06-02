@@ -3,6 +3,8 @@ import * as React from 'react'
 import { jsx } from '@emotion/core'
 import { text } from '@storybook/addon-knobs'
 
+import AllThemes from '../../../utils/all-themes'
+
 import Accordion from './'
 
 export default {
@@ -17,6 +19,12 @@ export const SingleAccordion = () => {
       <p>{content}</p>
     </Accordion>
   )
+}
+
+SingleAccordion.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const AccordionGroup = () => {
@@ -41,6 +49,12 @@ export const AccordionGroup = () => {
   )
 }
 
+AccordionGroup.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AccordionGroupWithIcons = () => {
   const groupTitle = text('Group title', 'Example group title')
   const title = text('First title', 'This is an example title')
@@ -60,5 +74,20 @@ export const AccordionGroupWithIcons = () => {
         <p>World</p>
       </Accordion>
     </Accordion.Group>
+  )
+}
+
+AccordionGroupWithIcons.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes themes={['uswitch', 'money']}>
+      <AccordionGroup />
+      <AccordionGroupWithIcons />
+    </AllThemes>
   )
 }

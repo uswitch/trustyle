@@ -4,6 +4,8 @@ import { jsx } from 'theme-ui'
 import { select, text } from '@storybook/addon-knobs'
 import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
 
+import AllThemes from '../../../utils/all-themes'
+
 import Card from './'
 
 export default {
@@ -146,5 +148,26 @@ export const HorizontalCards = () => {
         />
       </Container>
     </div>
+  )
+}
+
+HorizontalCards.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+VerticalCards.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes themes={['uswitch', 'money']}>
+      <VerticalCards />
+      <HorizontalCards />
+    </AllThemes>
   )
 }
