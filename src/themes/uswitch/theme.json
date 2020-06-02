@@ -346,6 +346,26 @@
   },
 
   "elements": {
+    "drop-down": {
+      "select": {
+        "base": {
+          "border": "1px solid",
+          "borderColor": "grey-40"
+        },
+        "variants": {
+          "error": {
+            "variant": "elements.drop-down.select.base",
+            "borderColor": "error-red",
+            "outlineColor": "error-red"
+          },
+          "focus": {
+            "variant": "elements.drop-down.select.base",
+            "outlineColor": "#008fe9"
+          }
+        }
+      }
+    },
+
     "input-alert": {
       "padding": 16,
       "notificationColor": "uswitch-navy",

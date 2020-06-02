@@ -126,6 +126,7 @@
     "fuschia": "#DB4D75",
     "berry": "#A64470",
     "plum": "#924A8B",
+    "error": "#D64226",
 
     "grey-0": "#FFFFFF",
     "grey-05": "#F7F7F7",
@@ -368,6 +369,28 @@
       },
       ":last-child": {
         "paddingBottom": "0"
+      }
+    }
+  },
+
+  "elements": {
+    "drop-down": {
+      "select": {
+        "base": {
+          "border": "1px solid",
+          "borderColor": "grey-40"
+        },
+        "variants": {
+          "error": {
+            "variant": "elements.drop-down.select.base",
+            "borderColor": "error",
+            "outlineColor": "error"
+          },
+          "focus": {
+            "variant": "elements.drop-down.select.base",
+            "outlineColor": "plum"
+          }
+        }
       }
     }
   },

@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { useState } from 'react'
 import { css, jsx } from '@emotion/core'
-import { number } from '@storybook/addon-knobs'
 
 import AllThemes from '../../../utils/all-themes'
 
@@ -47,7 +46,7 @@ const FrozenColourSelect = () => {
 }
 
 export const Example = () => (
-  <div css={css({ padding: number('Padding', 10) })}>
+  <div>
     <ColourSelect />
 
     <Spacer />
