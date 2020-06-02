@@ -612,7 +612,9 @@
           "borderBottomColor": "grey-20",
           "h6":{
             "fontSize": ["base", 14, "sm"],
-            "color": "grey-60"
+            "color": "grey-60",
+            "fontWeight": "bold",
+            "textAlign": "center"
           }
         }
       },
@@ -620,11 +622,13 @@
         "isActive": {
           "container": {
             "borderBottomStyle": "solid",
-            "borderBottomWidth": 2,
-            "borderBottomColor": "black",
+            "borderBottomWidth": 3,
+            "borderBottomColor": "fuschia",
             "h6": {
               "fontSize": ["base", 14, "sm"],
-              "color": "black"
+              "color": "black",
+              "fontWeight": "bold",
+              "textAlign": "center"
             }
           }
         }

@@ -97,7 +97,7 @@ export const Tabs: React.FC<TabsProps> = ({ children, isScrollable }) => {
           </Row>
         </ScrollContainer>
       ) : (
-        <Row direction="row" wrap sx={{}}>
+        <Row direction="row" wrap={false} sx={{}}>
           {tabChildren}
         </Row>
       )}
