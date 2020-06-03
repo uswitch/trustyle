@@ -71,9 +71,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
         sx={{
           overflowX: 'scroll',
           '::-webkit-scrollbar': { display: 'none' },
-          '-ms-overflow-style': 'none',
-          mb: 'lg',
-          boxShadow: 'inset -16px 0px 15px -12px rgba(0, 0, 0, 0.1)'
+          '-ms-overflow-style': 'none'
         }}
       >
         {React.Children.map(children, (child, index) => (

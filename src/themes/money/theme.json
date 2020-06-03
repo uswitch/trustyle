@@ -615,7 +615,7 @@
             "color": "grey-60",
             "fontWeight": "bold",
             "textAlign": "center",
-            "mb": "xxs"
+            "mb": "xs"
           }
         }
       },
@@ -630,7 +630,7 @@
               "color": "black",
               "fontWeight": "bold",
               "textAlign": "center",
-              "mb": "xxs"
+              "mb": "xs"
             }
           }
         }
