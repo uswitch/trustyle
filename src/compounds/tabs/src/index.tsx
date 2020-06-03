@@ -59,48 +59,39 @@ export const Tab: React.FC<TabProps> = () => null
 
 interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactElement<TabProps>[]
-  isScrollable: boolean
 }
 
-export const Tabs: React.FC<TabsProps> = ({ children, isScrollable }) => {
+export const Tabs: React.FC<TabsProps> = ({ children }) => {
   const [activeTab, setActiveTab] = useState(0)
-
-  const tabChildren = React.Children.map(children, (child, index) => (
-    <Col sx={{ mx: 'md', mb: 0 }}>
-      <TabLink
-        key={index}
-        title={child.props.title}
-        onClick={e => {
-          e.preventDefault()
-          setActiveTab(index)
-        }}
-        isActive={index === activeTab}
-      />
-    </Col>
-  ))
 
   return (
     <Container>
-      {isScrollable ? (
-        <ScrollContainer
-          hideScrollbars={false}
-          sx={{
-            '::-webkit-scrollbar': { display: 'none' },
-            '-ms-overflow-style': 'none',
-            scrollbarWidth: 'none',
-            mb: 'lg',
-            boxShadow: 'inset -16px 0px 15px -12px rgba(0, 0, 0, 0.1)'
-          }}
-        >
-          <Row direction="row" wrap={false} sx={{}}>
-            {tabChildren}
-          </Row>
-        </ScrollContainer>
-      ) : (
+      <ScrollContainer
+        hideScrollbars={false}
+        sx={{
+          '::-webkit-scrollbar': { display: 'none' },
+          '-ms-overflow-style': 'none',
+          scrollbarWidth: 'none',
+          mb: 'lg',
+          boxShadow: 'inset -16px 0px 15px -12px rgba(0, 0, 0, 0.1)'
+        }}
+      >
         <Row direction="row" wrap={false} sx={{}}>
-          {tabChildren}
+          {React.Children.map(children, (child, index) => (
+            <Col sx={{ mx: 'md', mb: 0 }}>
+              <TabLink
+                key={index}
+                title={child.props.title}
+                onClick={e => {
+                  e.preventDefault()
+                  setActiveTab(index)
+                }}
+                isActive={index === activeTab}
+              />
+            </Col>
+          ))}
         </Row>
-      )}
+      </ScrollContainer>
       <Row cols={12}>
         <Col span={12}>
           {React.Children.map(children, (child, index) => (

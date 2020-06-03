@@ -11,9 +11,9 @@ export default {
 
 export const ExampleWithTwoTabs = () => {
   return (
-    <Tabs isScrollable>
+    <Tabs>
       <Tab title={text('Tab 1 title', 'Tab 1')}>
-        {text('Tab 1 content', 'I am some content!')}
+        {text('Tab 1 content', 'I am some content')}
       </Tab>
       <Tab title={text('Tab 2 title', 'Tab 2')}>
         {text('Tab 2 content', 'Here is some more content')}
@@ -26,7 +26,7 @@ export const ExampleWithScrollingTabTitles = () => {
   const dummyTab = <Tab title="Dummy Tab">Dummy Tab Content</Tab>
 
   return (
-    <Tabs isScrollable={false}>
+    <Tabs>
       <Tab title={text('Tab 1 title', 'Tab 1')}>
         {text('Tab 1 content', 'I am some content')}
       </Tab>
