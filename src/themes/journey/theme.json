@@ -24,9 +24,8 @@
   },
 
   "lineHeights": {
-    "base": "26px",
-    "sm": "16px",
-    "md": "26px"
+    "base": "1.5",
+    "heading": "1.3"
   },
 
   "fontSizes": {
@@ -284,9 +283,24 @@
 
   "elements": {
     "drop-down": {
-      "defaultColor": "light-grey-blue",
-      "errorColor": "error-red",
-      "focusColor": "#008fe9"
+      "select": {
+        "base": {
+          "border": "1px solid",
+          "borderColor": "light-grey-blue"
+        },
+        "variants": {
+          "error": {
+            "variant": "elements.drop-down.select.base",
+            "border": "2px solid",
+            "borderColor": "error-red",
+            "outlineColor": "error-red"
+          },
+          "focus": {
+            "variant": "elements.drop-down.select.base",
+            "outlineColor": "#008fe9"
+          }
+        }
+      }
     },
 
     "input": {
@@ -462,7 +476,8 @@
       "width": ["100%"],
       "border": "none",
       "fontWeight": "bold",
-      "borderRadius": "sm",
+      "borderRadius": "0px",
+      "lineHeight": "base",
       ":hover": {
         "backgroundColor": "primary-hover",
         "boxShadow": "inset 0 0 0 1px ${color}",
@@ -475,6 +490,16 @@
       },
       ":visited": {
         "color": "light-1"
+      },
+      "btnSize": {
+        "small": {
+          "paddingX": "40px",
+          "paddingY": "12px"
+        },
+        "large": {
+          "paddingX": "40px",
+          "paddingY": "12px"
+        }
       }
     },
     "variants": {
@@ -679,16 +704,14 @@
       "backgroundColor": "frozen-bg",
       "borderRadius": "3px"
     },
-    "radio": {
+    "radioish": {
       "base": {
         "&:checked + span": {
           "borderColor": "azure",
           "boxShadow": "linkInset",
           "color": "black",
           "&::before": {
-            "backgroundColor": "azure",
-            "borderColor": "azure",
-            "boxShadow": "inset 0 0 0 2px #fff"
+            "borderColor": "azure"
           }
         },
         "&:focus + span": {
@@ -697,17 +720,77 @@
       },
       "label": {
         "borderColor": "light-grey-blue",
-        "borderRadius": "3px",
+        "borderRadius": "0px",
         "borderStyle": "solid",
         "borderWidth": "1px",
         "color": "slate-grey",
         "fontWeight": "normal",
-        "padding": "14px 12px 16px 0",
+        "padding": "11px 12px 11px 0",
         "&:before": {
           "borderColor": "light-grey-blue",
-          "borderRadius": "50%",
           "borderStyle": "solid",
           "borderWidth": "2px"
+        }
+      }
+    },
+    "radio": {
+      "base": {
+        "variant": "input.radioish.base",
+        "&:checked + span": {
+          "variant": "input.radioish.base.&:checked + span",
+          "&::before": {
+            "variant": "input.radioish.base.&:checked + span.&::before",
+            "backgroundColor": "azure",
+            "boxShadow": "inset 0 0 0 2px #fff"
+          }
+        }
+      },
+      "label": {
+        "variant": "input.radioish.label",
+        "&:before": {
+          "variant": "input.radioish.label.&:before",
+          "borderRadius": "50%"
+        }
+      }
+    },
+    "checkbox": {
+      "base": {
+        "variant": "input.radioish.base",
+        "&:checked + span": {
+          "variant": "input.radioish.base.&:checked + span",
+          "&::before": {
+            "variant": "input.radioish.base.&:checked + span.&::before",
+            "backgroundImage": "url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23008fe9' viewBox='-1 -2 14 12'%3E%3Cpath d='M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z' /%3E%3C/svg%3E\")",
+            "backgroundSize": "16px 16px",
+            "borderColor": "azure"
+          }
+        }
+      },
+      "label": {
+        "variant": "input.radioish.label",
+        "&:before": {
+          "variant": "input.radioish.label.&:before",
+          "borderRadius": "4px"
+        }
+      },
+      "variants": {
+        "normal": {
+          "variant": "input.checkbox.base"
+        },
+        "slim": {
+          "variant": "input.checkbox.base",
+          "& + span": {
+            "padding": "0px",
+            "border": "none"
+          },
+          "&:checked + span": {
+            "variant": "input.checkbox.base.&:checked + span",
+            "boxShadow": "none",
+            "&::before": {
+              "variant": "input.checkbox.base.&:checked + span.&::before"
+            }
+          },
+          "&:focus + span": {}
         }
       }
     },

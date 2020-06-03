@@ -1,22 +1,17 @@
 {
   "name": "@uswitch/trustyle.testimonial-card",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "--------------- BUILDING": "----------------------",
-    "clean": "rm -rf lib",
-    "build": "npm run clean && tsc"
-  },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.icon": "^1.5.2"
+    "@uswitch/trustyle.icon": "^1.5.3"
   }
 }

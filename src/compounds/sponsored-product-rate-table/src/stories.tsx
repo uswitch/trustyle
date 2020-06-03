@@ -3,6 +3,8 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { text } from '@storybook/addon-knobs'
 
+import AllThemes from '../../../utils/all-themes'
+
 import SponsoredRateTable from '.'
 
 export default {
@@ -64,5 +66,19 @@ export const ExampleWithKnobs = () => {
         campaignImgHeight={'160px'}
       />
     </div>
+  )
+}
+
+ExampleWithKnobs.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes>
+      <ExampleWithKnobs />
+    </AllThemes>
   )
 }

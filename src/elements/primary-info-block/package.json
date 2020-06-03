@@ -1,22 +1,17 @@
 {
   "name": "@uswitch/trustyle.primary-info-block",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "--------------- BUILDING": "----------------------",
-    "clean": "rm -rf lib",
-    "build": "npm run clean && tsc"
-  },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle-utils.palette": "^1.0.4"
+    "@uswitch/trustyle-utils.palette": "^1.0.5"
   }
 }

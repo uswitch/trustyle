@@ -3,6 +3,8 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { text } from '@storybook/addon-knobs'
 
+import AllThemes from '../../../utils/all-themes'
+
 import TestimonialCard from './'
 
 export default {
@@ -40,5 +42,19 @@ export const Example = () => {
         authorName={authorName}
       />
     </React.Fragment>
+  )
+}
+
+Example.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes>
+      <Example />
+    </AllThemes>
   )
 }

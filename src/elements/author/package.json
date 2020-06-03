@@ -1,22 +1,17 @@
 {
   "name": "@uswitch/trustyle.author",
-  "version": "0.1.13",
+  "version": "0.1.15",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "--------------- BUILDING": "----------------------",
-    "clean": "rm -rf lib",
-    "build": "npm run clean && tsc"
-  },
   "peerDependencies": {
     "@emotion/core": "^10.0.10",
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.date": "^0.0.8"
+    "@uswitch/trustyle.date": "^0.0.9"
   }
 }

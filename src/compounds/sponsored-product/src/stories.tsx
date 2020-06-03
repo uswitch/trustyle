@@ -3,6 +3,8 @@ import * as React from 'react'
 import { jsx } from '@emotion/core'
 import { text } from '@storybook/addon-knobs'
 
+import AllThemes from '../../../utils/all-themes'
+
 import SponsoredProduct from '.'
 
 export default {
@@ -65,5 +67,17 @@ export const ExampleWithKnobs = () => {
         ]}
       />
     </div>
+  )
+}
+ExampleWithKnobs.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+export const AutomatedTests = () => {
+  return (
+    <AllThemes>
+      <ExampleWithKnobs />
+    </AllThemes>
   )
 }
