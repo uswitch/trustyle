@@ -614,7 +614,8 @@
             "fontSize": ["base", 14, "sm"],
             "color": "grey-60",
             "fontWeight": "bold",
-            "textAlign": "center"
+            "textAlign": "center",
+            "mb": "xxs"
           }
         }
       },
@@ -628,7 +629,8 @@
               "fontSize": ["base", 14, "sm"],
               "color": "black",
               "fontWeight": "bold",
-              "textAlign": "center"
+              "textAlign": "center",
+              "mb": "xxs"
             }
           }
         }
