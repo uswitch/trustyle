@@ -78,9 +78,8 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
       >
         <Row direction="row" wrap={false} sx={{}}>
           {React.Children.map(children, (child, index) => (
-            <Col sx={{ mx: 'md', mb: 0 }}>
+            <Col key={index} sx={{ mx: 'md', mb: 0 }}>
               <TabLink
-                key={index}
                 title={child.props.title}
                 onClick={e => {
                   e.preventDefault()
