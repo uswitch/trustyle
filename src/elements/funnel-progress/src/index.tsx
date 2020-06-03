@@ -2,7 +2,6 @@
 
 import React, { Fragment } from 'react'
 import { jsx } from 'theme-ui'
-import { Icon } from '@uswitch/trustyle.icon'
 
 type PhaseIconVariant = 'open' | 'complete' | 'incomplete'
 
@@ -121,17 +120,6 @@ const FunnelProgress: React.FC<Props> = ({
                 ? `${STARTING_PROGRESS * 100 +
                     progress * (1 - STARTING_PROGRESS) * 100}%`
                 : '0%'
-          }}
-        />
-      </div>
-      <div sx={{ marginTop: '14px' }}>
-        <Icon
-          color="black"
-          direction="left"
-          glyph="arrow"
-          size={15}
-          sx={{
-            flexShrink: 0
           }}
         />
       </div>

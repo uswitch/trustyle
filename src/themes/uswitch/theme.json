@@ -886,7 +886,7 @@
 
       "phase": {
         "base": {
-          "flex": "1",
+          "flex": "auto",
           "flexGrow": 0,
           "marginLeft": "sm",
           "backgroundColor": "white",
