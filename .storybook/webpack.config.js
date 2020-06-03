@@ -11,7 +11,9 @@ module.exports = ({ config }) => {
   })
   config.resolve.extensions.push('.ts', '.tsx')
 
-  config.resolve.mainFields = ['ts:main', 'main']
+  if (process.env.NODE_ENV !== 'test') {
+    config.resolve.mainFields = ['ts:main', 'main']
+  }
 
   config.module.rules.forEach(rule => {
     if (rule.test.toString().includes('svg')) {
