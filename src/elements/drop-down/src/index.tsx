@@ -22,6 +22,7 @@ interface Props<V = any> {
   placeholder?: string
   value: V
   overlay?: React.ReactNode
+  className?: string
 }
 
 const prependDataProps = (dataProps: DataProps) =>
@@ -57,7 +58,8 @@ export const DropDown = forwardRef(
       options,
       placeholder,
       value,
-      overlay
+      overlay,
+      className
     }: Props,
     ref: React.Ref<DropDownElement>
   ) => {
@@ -106,6 +108,7 @@ export const DropDown = forwardRef(
                 borderRadius: 3,
                 variant
               }}
+              className={className}
             >
               {overlay}
             </div>
@@ -141,6 +144,7 @@ export const DropDown = forwardRef(
             }}
             id={name}
             name={name}
+            className={className}
             value={!value ? '' : value}
             disabled={disabled}
             {...prependDataProps(dataProps)}
