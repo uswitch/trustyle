@@ -5,6 +5,7 @@ import { boolean, number, select, text } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
 import theme from '../../../utils/theme-selector'
+import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
 import { Icon } from '../../icon/src'
 
 import { Button, Variant } from './'
@@ -97,22 +98,36 @@ export const AllVariants = () => (
   </div>
 )
 
-export const PrimaryVariant = () => (
-  <Button variant="primary">Primary button</Button>
-)
+AllVariants.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
 
-export const SecondaryVariant = () => (
-  <Button variant="secondary">Primary button</Button>
-)
+export const AutomatedTests = () => {
+  const permutations = permutationsGenerator({
+    variant: ['primary', 'secondary'],
+    size: ['large', 'small'],
+    disabled: [false, true],
+    inverse: [false, true]
+  })
 
-export const PrimaryDisabledVariant = () => (
-  <Button variant="primary" disabled>
-    Primary button
-  </Button>
-)
-
-export const SecondaryDisabledVariant = () => (
-  <Button variant="secondary" disabled>
-    Primary button
-  </Button>
-)
+  return (
+    <AllThemes>
+      {permutations.map((p, i) => (
+        <React.Fragment key={i}>
+          <Button
+            variant={p.variant}
+            inverse={p.inverse}
+            disabled={p.disabled}
+            size={p.size}
+          >
+            {p.variant}, {p.inverse && 'inverted, '}
+            {p.disabled && 'disabled, '} {p.size}
+          </Button>
+          <Spacer />
+        </React.Fragment>
+      ))}
+    </AllThemes>
+  )
+}

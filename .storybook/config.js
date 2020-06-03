@@ -8,10 +8,9 @@ import { Global } from '@emotion/core'
 import theme from '../src/utils/theme-selector'
 import { GlobalStyles } from '../src/elements/global-styles/src'
 
-const withTheme = story => (
-  <ThemeProvider theme={theme()}>
-    <GlobalStyles />
-    <Styled.root>
+const withTheme = (story, { name }) => {
+  const contents = (
+    <React.Fragment>
       <Global
         styles={{
           body: {
@@ -20,9 +19,20 @@ const withTheme = story => (
         }}
       />
       {story()}
-    </Styled.root>
-  </ThemeProvider>
-)
+    </React.Fragment>
+  )
+
+  if (name.toLowerCase().includes('automated tests')) {
+    return contents
+  }
+
+  return (
+    <ThemeProvider theme={theme()}>
+      <GlobalStyles />
+      <Styled.root>{contents}</Styled.root>
+    </ThemeProvider>
+  )
+}
 
 addDecorator(withTheme)
 addDecorator(withA11y)

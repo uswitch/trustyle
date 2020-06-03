@@ -4,6 +4,7 @@ import { jsx } from 'theme-ui'
 import { boolean, select, text } from '@storybook/addon-knobs'
 
 import { Col, Container, Row } from '../../../layout/flex-grid/src'
+import AllThemes from '../../../utils/all-themes'
 
 import IconTile from './'
 
@@ -37,5 +38,35 @@ export const ExampleWithKnobs = () => {
     </div>
   ) : (
     justTile
+  )
+}
+
+ExampleWithKnobs.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const AutomatedTests = () => {
+  const iconImg = (icon: string) => (
+    <img src={require(`../../../../static/money-icons/${icon}.svg`)} />
+  )
+  const getTile = (icon: string, text: string) => (
+    <IconTile icon={iconImg(icon)}>{text}</IconTile>
+  )
+
+  return (
+    <AllThemes themes={['uswitch', 'money']}>
+      <div sx={{ margin: -10, backgroundColor: '#924A8B', paddingY: 'md' }}>
+        <Container>
+          <Row direction="row">
+            <Col span={4} offset={2}>
+              {getTile('carInsurance', 'Cat insurance')}
+            </Col>
+            <Col span={4}>{getTile('creditCards', 'Credit cards')}</Col>
+          </Row>
+        </Container>
+      </div>
+    </AllThemes>
   )
 }

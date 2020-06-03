@@ -1,12 +1,17 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from '@emotion/core'
-import { storiesOf } from '@storybook/react'
 import { date, text } from '@storybook/addon-knobs'
+
+import AllThemes from '../../../utils/all-themes'
 
 import Author from './'
 
-storiesOf('Elements|Author', module).add('Example', () => {
+export default {
+  title: 'Elements|Author'
+}
+
+export const Example = () => {
   const name = text('Author name', 'Salman')
   const role = text('Author role', 'Job title')
   const editorName = text('Editor name', 'Sarah Guershon')
@@ -41,4 +46,18 @@ storiesOf('Elements|Author', module).add('Example', () => {
       />
     </div>
   )
-})
+}
+
+Example.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes themes={['uswitch', 'money']}>
+      <Example />
+    </AllThemes>
+  )
+}

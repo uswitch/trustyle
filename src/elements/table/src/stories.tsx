@@ -1,13 +1,17 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { css, jsx } from '@emotion/core'
-import { storiesOf } from '@storybook/react'
-import { number } from '@storybook/addon-knobs'
+import { jsx } from 'theme-ui'
+
+import AllThemes from '../../../utils/all-themes'
 
 import Table from './'
 
-storiesOf('Elements|Table', module).add('primary variant', () => (
-  <div css={css({ padding: number('Padding', 10) })}>
+export default {
+  title: 'Elements|Table'
+}
+
+export const Example = () => (
+  <div>
     <Table.wrap>
       <Table.tr>
         <Table.td>First item</Table.td>
@@ -39,4 +43,18 @@ storiesOf('Elements|Table', module).add('primary variant', () => (
       </Table.tr>
     </Table.wrap>
   </div>
-))
+)
+
+Example.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes themes={['uswitch', 'money']}>
+      <Example />
+    </AllThemes>
+  )
+}

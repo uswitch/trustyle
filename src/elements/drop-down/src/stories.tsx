@@ -1,10 +1,15 @@
 /** @jsx jsx */
 import { useState } from 'react'
-import { css, jsx } from '@emotion/core'
-import { storiesOf } from '@storybook/react'
-import { number } from '@storybook/addon-knobs'
+import { jsx, useThemeUI } from 'theme-ui'
+
+import AllThemes from '../../../utils/all-themes'
+import ThemedIcon from '../../themed-icon/src'
 
 import { DropDown } from './'
+
+export default {
+  title: 'Elements|Dropdown'
+}
 
 const options = [
   { value: 'red', text: 'Red' },
@@ -12,7 +17,7 @@ const options = [
   { value: 'yellow', text: 'Yellow' }
 ]
 
-const Spacer = () => <div css={css({ minHeight: 20 })} />
+const Spacer = () => <div sx={{ minHeight: 20 }} />
 
 const ColourSelect = () => {
   const [val, setVal] = useState('red')
@@ -41,8 +46,34 @@ const FrozenColourSelect = () => {
   )
 }
 
-storiesOf('Elements|DropDown', module).add('example', () => (
-  <div css={css({ padding: number('Padding', 10) })}>
+const SelectWithOverlay = () => {
+  const { theme }: any = useThemeUI()
+  const [val, setVal] = useState('red')
+
+  const icon = theme.name === 'Money' ? 'sort' : 'car'
+  const iconColor = theme.name === 'Money' ? 'fuschia' : 'red'
+  return (
+    <DropDown
+      name="overlay-example"
+      onBlur={() => {}}
+      onChange={setVal}
+      options={options}
+      value={val}
+      overlay={
+        <span>
+          <ThemedIcon
+            icon={icon}
+            sx={{ marginRight: 'xs', color: iconColor, borderColor: 'grey-20' }}
+          />
+          Sort by
+        </span>
+      }
+    />
+  )
+}
+
+export const Example = () => (
+  <div>
     <ColourSelect />
 
     <Spacer />
@@ -59,5 +90,23 @@ storiesOf('Elements|DropDown', module).add('example', () => (
       options={[{ value: '', text: 'Incorrect' }]}
       value={''}
     />
+
+    <Spacer />
+
+    <SelectWithOverlay />
   </div>
-))
+)
+
+Example.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes>
+      <Example />
+    </AllThemes>
+  )
+}
