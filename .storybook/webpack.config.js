@@ -2,22 +2,16 @@ process.env.IN_STORYBOOK = true
 const iconWebpackConfig = require('../src/elements/themed-icon/webpack.config')
 
 module.exports = ({ config }) => {
-  if (process.env.NODE_ENV !== 'test') {
-    config.module.rules.push({
-      test: /\.tsx?$/,
-      loader: 'babel-loader',
-      options: {
-        presets: [
-          '@babel/typescript',
-          '@babel/preset-react',
-          '@babel/preset-env'
-        ]
-      }
-    })
-    config.resolve.extensions.push('.ts', '.tsx')
+  config.module.rules.push({
+    test: /\.tsx?$/,
+    loader: 'babel-loader',
+    options: {
+      presets: ['@babel/typescript', '@babel/preset-react', '@babel/preset-env']
+    }
+  })
+  config.resolve.extensions.push('.ts', '.tsx')
 
-    config.resolve.mainFields = ['ts:main', 'main']
-  }
+  config.resolve.mainFields = ['ts:main', 'main']
 
   config.module.rules.forEach(rule => {
     if (rule.test.toString().includes('svg')) {
