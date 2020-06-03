@@ -212,10 +212,9 @@ export const Col: React.FC<ColProps & React.HTMLAttributes<any>> = ({
 
 type LayoutKey = number | '*'
 type Layout = ColProps & { key?: LayoutKey }
+export type LayoutJson = (RowProps & { layout: Layout[] })[]
 interface FromJsonProps extends React.HTMLAttributes<any> {
-  json: (RowProps & {
-    layout: Layout[]
-  })[]
+  json: LayoutJson
   childrenArray: React.ReactNode[]
 }
 

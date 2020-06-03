@@ -7,6 +7,7 @@ import { Global } from '@emotion/core'
 import { ButtonLink } from '../../../elements/button-link/src'
 import Badge from '../../../elements/badge/src'
 import { ProgressBar } from '../../../elements/progress-bar/src'
+import AllThemes from '../../../utils/all-themes'
 
 import ProductTable, { AddonArg } from './index'
 
@@ -204,6 +205,12 @@ export const ExampleWithKnobs = () => {
   )
 }
 
+ExampleWithKnobs.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const Example1 = () => {
   return (
     <ProductTable.Row
@@ -235,6 +242,12 @@ export const Example1 = () => {
       />
     </ProductTable.Row>
   )
+}
+
+Example1.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const Example2 = () => {
@@ -280,6 +293,12 @@ export const Example2 = () => {
       </ProductTable.Row>
     </React.Fragment>
   )
+}
+
+Example2.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const ExampleWithAddons = () => {
@@ -364,6 +383,12 @@ export const ExampleWithAddons = () => {
   )
 }
 
+ExampleWithAddons.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const ExampleWithNumberFormatters = () => {
   return (
     <React.Fragment>
@@ -413,11 +438,17 @@ export const ExampleWithNumberFormatters = () => {
           />
         </ProductTable.cells.Content>
         <ProductTable.cells.Content label="No formatter" accent>
-          <ProductTable.data.Value value={1000} unit={null} subscript="" />
+          <ProductTable.data.Value value={1000} unit="" subscript="" />
         </ProductTable.cells.Content>
       </ProductTable.Row>
     </React.Fragment>
   )
+}
+
+ExampleWithNumberFormatters.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const ExampleWithMultipleAccents = () => {
@@ -452,9 +483,15 @@ export const ExampleWithMultipleAccents = () => {
   )
 }
 
+ExampleWithMultipleAccents.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const ExampleStacked = () => {
   return (
-    <>
+    <React.Fragment>
       <ProductTable.Row preTitle="Sponsored" rowTitle="Super Saver April 2021">
         <ProductTable.cells.Image>
           <img
@@ -509,6 +546,32 @@ export const ExampleStacked = () => {
           secondary={<ButtonLink variant="link">Plan info</ButtonLink>}
         />
       </ProductTable.Row>
-    </>
+    </React.Fragment>
+  )
+}
+
+ExampleStacked.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+const Spacer = () => <div sx={{ minHeight: 20 }} />
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes themes={['uswitch', 'money']}>
+      <Example1 />
+      <Spacer />
+      <Example2 />
+      <Spacer />
+      <ExampleWithAddons />
+      <Spacer />
+      <ExampleWithNumberFormatters />
+      <Spacer />
+      <ExampleWithMultipleAccents />
+      <Spacer />
+      <ExampleStacked />
+    </AllThemes>
   )
 }

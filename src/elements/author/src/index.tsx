@@ -71,6 +71,7 @@ const Author: React.FC<Props> = ({
           <a
             href={authorUrl}
             sx={{
+              color: 'inherit',
               textDecoration: 'none',
               variant: 'author.link'
             }}

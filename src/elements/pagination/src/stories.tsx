@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { jsx } from '@emotion/core'
-import { storiesOf } from '@storybook/react'
+import { jsx } from 'theme-ui'
 import { number } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
+
+import AllThemes from '../../../utils/all-themes'
 
 import Pagination from './'
 
@@ -37,7 +38,38 @@ const PaginationStory = ({ type }: any) => {
   )
 }
 
-storiesOf('Elements|Pagination', module)
-  .add('Example with onClick', () => <PaginationStory type="onClick" />)
-  .add('Example with href', () => <PaginationStory type="href" />)
-  .add('Example with both', () => <PaginationStory type="both" />)
+export default {
+  title: 'Elements|Pagination'
+}
+
+export const ExampleWithOnclick = () => <PaginationStory type="onClick" />
+
+ExampleWithOnclick.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const ExampleWithHref = () => <PaginationStory type="href" />
+
+ExampleWithHref.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const ExampleWithBoth = () => <PaginationStory type="both" />
+
+ExampleWithBoth.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes themes={['uswitch', 'money', 'journey']}>
+      <PaginationStory type="onClick" />
+    </AllThemes>
+  )
+}
