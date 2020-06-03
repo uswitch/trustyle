@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import { jsx, Styled } from 'theme-ui'
 import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
-import ScrollContainer from 'react-indiana-drag-scroll'
 
 interface TabLinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
   title: string
@@ -66,32 +65,31 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
 
   return (
     <Container>
-      <ScrollContainer
-        hideScrollbars={false}
+      <Row
+        direction="row"
+        wrap={false}
         sx={{
+          overflowX: 'scroll',
           '::-webkit-scrollbar': { display: 'none' },
           '-ms-overflow-style': 'none',
-          scrollbarWidth: 'none',
           mb: 'lg',
           boxShadow: 'inset -16px 0px 15px -12px rgba(0, 0, 0, 0.1)'
         }}
       >
-        <Row direction="row" wrap={false} sx={{}}>
-          {React.Children.map(children, (child, index) => (
-            <Col sx={{ mx: 'md', mb: 0 }}>
-              <TabLink
-                key={index}
-                title={child.props.title}
-                onClick={e => {
-                  e.preventDefault()
-                  setActiveTab(index)
-                }}
-                isActive={index === activeTab}
-              />
-            </Col>
-          ))}
-        </Row>
-      </ScrollContainer>
+        {React.Children.map(children, (child, index) => (
+          <Col sx={{ mx: 'md', mb: 0 }}>
+            <TabLink
+              key={index}
+              title={child.props.title}
+              onClick={e => {
+                e.preventDefault()
+                setActiveTab(index)
+              }}
+              isActive={index === activeTab}
+            />
+          </Col>
+        ))}
+      </Row>
       <Row cols={12}>
         <Col span={12}>
           {React.Children.map(children, (child, index) => (
