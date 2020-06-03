@@ -10,7 +10,7 @@
   "scripts": {
     "--------------- BUILDING": "----------------------",
     "clean": "rm -rf lib",
-    "build": "npm run clean && webpack"
+    "build": "npm run clean && webpack && mv ./lib/elements/themed-icon/src/index.d.ts ./lib"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
