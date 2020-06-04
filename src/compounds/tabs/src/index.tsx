@@ -70,6 +70,8 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
   const [wrapWidth, setWrapWidth] = useState(0)
   const [isPressed, setIsPressed] = useState(false)
   const [lastX, setLastX] = useState(false)
+  const [showLeftBorder, setShowLeftBorder] = useState(false)
+  const [showRightBorder, setShowRightBorder] = useState(false)
 
   useEffect(() => {
     setPadding(tabs?.current?.offsetHeight)
@@ -112,9 +114,13 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
     if (lastX > event.clientX) {
       const diff = lastX - event.clientX
       setRealLeft(left - diff)
+      setShowLeftBorder(true)
+      setShowRightBorder(false)
     } else {
       const diff = event.clientX - lastX
       setRealLeft(left + diff)
+      setShowLeftBorder(false)
+      setShowRightBorder(true)
     }
 
     setLastX(event.clientX)
@@ -155,7 +161,29 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
         sx={{
           overflowX: 'hidden',
           paddingTop: `${padding}px`,
-          position: 'relative'
+          position: 'relative',
+          '::after': {
+            content: showRightBorder ? '""' : 'none',
+            position: 'absolute',
+            display: 'block',
+            width: '30px',
+            top: 0,
+            right: 0,
+            height: '100%',
+            backgroundColor: 'pink',
+            opacity: 0.1
+          },
+          '::before': {
+            content: showLeftBorder ? '""' : 'none',
+            position: 'absolute',
+            display: 'block',
+            width: '30px',
+            top: 0,
+            left: 0,
+            height: '100%',
+            backgroundColor: 'pink',
+            opacity: 0.1
+          }
         }}
       >
         <div
@@ -171,7 +199,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
             top: 0
           }}
         >
-          <Row direction="row" wrap={false}>
+          <Row direction="row" wrap={false} sx={{}}>
             {React.Children.map(children, (child, index) => (
               <Col sx={{ mx: 'md', mb: 0 }} key={index}>
                 <TabLink
