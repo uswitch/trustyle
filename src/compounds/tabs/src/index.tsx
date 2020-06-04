@@ -68,7 +68,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
   const [padding, setPadding] = useState(0)
   const [width, setWidth] = useState(0)
   const [wrapWidth, setWrapWidth] = useState(0)
-  const [mouseIsDown, setMouseIsDown] = useState(false)
+  const [isPressed, setIsPressed] = useState(false)
   const [lastX, setLastX] = useState(false)
 
   useEffect(() => {
@@ -80,7 +80,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
     setWrapWidth(tabWrap?.current?.offsetWidth)
   }, [tabWrap])
 
-  function setRealLeft(left: number) {
+  const setRealLeft = (left: number) => {
     if (left > 0) {
       return setLeft(0)
     }
@@ -94,18 +94,20 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
     setLeft(left)
   }
 
-  function onMouseDown(event) {
+  const onMouseDown = event => {
     if (wrapWidth > width) return
     setLastX(event.clientX)
-    setMouseIsDown(true)
+    setIsPressed(true)
   }
 
-  function onMouseUp() {
-    setMouseIsDown(false)
+  const onMouseUp = () => {
+    setIsPressed(false)
   }
 
-  function onMouseMove(event) {
-    if (!mouseIsDown) return
+  const onMouseMove = event => {
+    if (!isPressed) return
+
+    // TODO add debound if events fire too much
 
     if (lastX > event.clientX) {
       const diff = lastX - event.clientX
@@ -116,6 +118,32 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
     }
 
     setLastX(event.clientX)
+  }
+
+  const onTouchStart = event => {
+    if (wrapWidth > width) return
+    setLastX(event.touches[0].clientX)
+    setIsPressed(true)
+  }
+
+  const onTouchEnd = () => {
+    setIsPressed(false)
+  }
+
+  const onTouchMove = event => {
+    if (!isPressed) return
+
+    // TODO add debound if events fire too much
+
+    if (lastX > event.touches[0].clientX) {
+      const diff = lastX - event.touches[0].clientX
+      setRealLeft(left - diff)
+    } else {
+      const diff = event.touches[0].clientX - lastX
+      setRealLeft(left + diff)
+    }
+
+    setLastX(event.touches[0].clientX)
   }
 
   window.addEventListener('mouseup', onMouseUp)
@@ -134,6 +162,9 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
           ref={tabs}
           onMouseMove={onMouseMove}
           onMouseDown={onMouseDown}
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
           sx={{
             position: 'absolute',
             left: `${left}px`,
