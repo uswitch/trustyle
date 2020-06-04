@@ -11,7 +11,7 @@ module.exports = ({ config }) => {
   })
   config.resolve.extensions.push('.ts', '.tsx')
 
-  if (process.env.NODE_ENV !== 'test') {
+  if (process.env.DONT_USE_TS_MAIN !== 'true') {
     config.resolve.mainFields = ['ts:main', 'main']
   }
 
