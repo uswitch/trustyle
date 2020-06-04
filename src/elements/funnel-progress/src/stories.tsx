@@ -57,7 +57,7 @@ export const AutomatedTests = () => {
   })
 
   return (
-    <AllThemes themes={['uswitch']}>
+    <AllThemes themes={['uswitch', 'journey']}>
       {permutations.map((p, i) => (
         <React.Fragment key={i}>
           <FunnelProgress
