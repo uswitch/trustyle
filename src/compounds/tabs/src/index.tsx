@@ -69,9 +69,10 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
   const [width, setWidth] = useState(0)
   const [wrapWidth, setWrapWidth] = useState(0)
   const [isPressed, setIsPressed] = useState(false)
-  const [lastX, setLastX] = useState(false)
+  const [lastX, setLastX] = useState(0)
   const [showLeftBorder, setShowLeftBorder] = useState(false)
   const [showRightBorder, setShowRightBorder] = useState(false)
+  const [scrollEnd, setScrollEnd] = useState(false)
 
   useEffect(() => {
     setPadding(tabs?.current?.offsetHeight)
@@ -80,6 +81,16 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
 
   useEffect(() => {
     setWrapWidth(tabWrap?.current?.offsetWidth)
+
+    if (width > wrapWidth && !scrollEnd) {
+      setShowRightBorder(true)
+    }
+
+    if (left !== 0) {
+      setShowLeftBorder(true)
+    } else {
+      setShowLeftBorder(false)
+    }
   }, [tabWrap])
 
   const setRealLeft = (left: number) => {
@@ -89,15 +100,21 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
 
     const minLeft = -(width - wrapWidth)
 
-    if (left < minLeft) {
+    if (left <= minLeft) {
+      setScrollEnd(true)
+      setShowRightBorder(false)
       return setLeft(minLeft)
+    } else {
+      setScrollEnd(false)
+      setShowRightBorder(true)
     }
 
     setLeft(left)
   }
 
-  const onMouseDown = event => {
+  const onMouseDown = (event: any) => {
     if (wrapWidth > width) return
+
     setLastX(event.clientX)
     setIsPressed(true)
   }
@@ -106,27 +123,23 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
     setIsPressed(false)
   }
 
-  const onMouseMove = event => {
+  const onMouseMove = (event: any) => {
     if (!isPressed) return
 
-    // TODO add debound if events fire too much
-
     if (lastX > event.clientX) {
+      // drag left
       const diff = lastX - event.clientX
       setRealLeft(left - diff)
-      setShowLeftBorder(true)
-      setShowRightBorder(false)
     } else {
+      // drag right
       const diff = event.clientX - lastX
       setRealLeft(left + diff)
-      setShowLeftBorder(false)
-      setShowRightBorder(true)
     }
 
     setLastX(event.clientX)
   }
 
-  const onTouchStart = event => {
+  const onTouchStart = (event: any) => {
     if (wrapWidth > width) return
     setLastX(event.touches[0].clientX)
     setIsPressed(true)
@@ -136,10 +149,8 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
     setIsPressed(false)
   }
 
-  const onTouchMove = event => {
+  const onTouchMove = (event: any) => {
     if (!isPressed) return
-
-    // TODO add debound if events fire too much
 
     if (lastX > event.touches[0].clientX) {
       const diff = lastX - event.touches[0].clientX
@@ -162,6 +173,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
           overflowX: 'hidden',
           paddingTop: `${padding}px`,
           position: 'relative',
+          pointer: 'grab',
           '::after': {
             content: showRightBorder ? '""' : 'none',
             position: 'absolute',
