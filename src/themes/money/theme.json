@@ -653,9 +653,7 @@
         "borderBottom": {
           "borderBottomWidth": 1,
           "borderBottomStyle": "solid",
-          "borderBottomColor": "grey-20"
-        },
-        "rowBackgroundColor": {
+          "borderBottomColor": "grey-20",
           "backgroundColor": "grey-05"
         }
       }
