@@ -10,6 +10,14 @@ interface Props {
   hasAccordion?: boolean
   accordionTitle?: string
   accordionContent?: string
+  autoPlay?: boolean
+}
+
+const vimeoUrl = '?autoplay=1&loop=1&muted=1&background=1'
+const youtubeUrl = '?autoplay=1&loop=1&mute=1&controls=0'
+
+const constructUrl = (url: string) => {
+  return url.includes('youtube') ? url + youtubeUrl : url + vimeoUrl
 }
 
 const EmbeddedVideo: React.FC<Props> = ({
@@ -17,7 +25,8 @@ const EmbeddedVideo: React.FC<Props> = ({
   allowFullScreen = true,
   hasAccordion = true,
   accordionTitle = '',
-  accordionContent = ''
+  accordionContent = '',
+  autoPlay = false
 }) => (
   <div>
     <div
@@ -38,9 +47,10 @@ const EmbeddedVideo: React.FC<Props> = ({
           width: '100%',
           height: '100%'
         }}
-        src={source}
+        src={autoPlay ? constructUrl(source) : source}
         frameBorder="0"
         allowFullScreen={allowFullScreen}
+        allow="autoplay; fullscreen"
       />
     </div>
     {hasAccordion && (
