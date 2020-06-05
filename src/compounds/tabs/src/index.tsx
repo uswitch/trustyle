@@ -176,25 +176,11 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
           pointer: 'grab',
           '::after': {
             content: showRightBorder ? '""' : 'none',
-            position: 'absolute',
-            display: 'block',
-            width: '30px',
-            top: 0,
-            right: 0,
-            height: '100%',
-            backgroundColor: 'pink',
-            opacity: 0.1
+            variant: 'compounds.collectionTabs.variants.overflowBorderRight'
           },
           '::before': {
             content: showLeftBorder ? '""' : 'none',
-            position: 'absolute',
-            display: 'block',
-            width: '30px',
-            top: 0,
-            left: 0,
-            height: '100%',
-            backgroundColor: 'pink',
-            opacity: 0.1
+            variant: 'compounds.collectionTabs.variants.overflowBorderLeft'
           }
         }}
       >
