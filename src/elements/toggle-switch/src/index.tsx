@@ -1,11 +1,15 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Palette } from '@uswitch/trustyle-utils.palette'
+import { DetailedHTMLProps, InputHTMLAttributes } from 'react'
 
-interface Props {
+interface Props
+  extends DetailedHTMLProps<
+    InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  > {
   checked: boolean
   onChange?: (e: React.SyntheticEvent) => void
-  'aria-label'?: string
   icons?: {
     checked: React.ReactNode
     unchecked: React.ReactNode
