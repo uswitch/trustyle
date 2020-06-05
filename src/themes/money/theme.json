@@ -607,6 +607,7 @@
     "collectionTabs": {
       "base":{
         "container": {
+          "px": "xxs",
           "h6":{
             "fontSize": ["base", 14, "sm"],
             "color": "grey-60",
@@ -622,6 +623,7 @@
             "borderBottomStyle": "solid",
             "borderBottomWidth": 3,
             "borderBottomColor": "fuschia",
+            "px": "xxs",
             "h6": {
               "fontSize": ["base", 14, "sm"],
               "color": "black",
