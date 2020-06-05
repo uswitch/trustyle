@@ -163,6 +163,10 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
     setLastX(event.touches[0].clientX)
   }
 
+  const onDragStart = (event: any) => {
+    event.preventDefault()
+  }
+
   window.addEventListener('mouseup', onMouseUp)
 
   return (
@@ -191,6 +195,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
+          onDragStart={onDragStart}
           sx={{
             position: 'absolute',
             left: `${left}px`,

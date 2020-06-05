@@ -641,8 +641,7 @@
             "top": 0,
             "left": 0,
             "height": "100%",
-            "backgroundColor": "green",
-            "opacity": 0.1,
+            "background": "linear-gradient(to right, rgba(219,77,117,0.5), rgba(219,77,117, 0.1))",
             "zIndex": 10
         },
         "overflowBorderRight": {
@@ -652,8 +651,7 @@
           "top": 0,
           "right": 0,
           "height": "100%",
-          "backgroundColor": "blue",
-          "opacity": 0.1,
+          "background": "linear-gradient(to left, rgba(219,77,117,0.5), rgba(219,77,117, 0.1))",
           "zIndex": 10
       }
       }
