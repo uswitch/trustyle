@@ -76,7 +76,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
 
   useEffect(() => {
     setPadding(tabs?.current?.offsetHeight)
-    setWidth(tabs?.current?.offsetWidth)
+    setWidth(tabs?.current?.scrollWidth)
   }, [tabs])
 
   useEffect(() => {
@@ -133,6 +133,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
     } else {
       // drag right
       const diff = event.clientX - lastX
+
       setRealLeft(left + diff)
     }
 
