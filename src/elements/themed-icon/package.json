@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.themed-icon",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -10,7 +10,7 @@
   "scripts": {
     "--------------- BUILDING": "----------------------",
     "clean": "rm -rf lib",
-    "build": "npm run clean && webpack"
+    "build": "npm run clean && webpack && mv ./lib/elements/themed-icon/src/index.d.ts ./lib"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",

@@ -63,11 +63,12 @@ const SelectWithOverlay = () => {
         <span>
           <ThemedIcon
             icon={icon}
-            sx={{ marginRight: 'xs', color: iconColor, borderColor: 'grey-20' }}
+            sx={{ marginRight: 'xs', color: iconColor }}
           />
           Sort by
         </span>
       }
+      sx={{ borderColor: 'grey-20' }}
     />
   )
 }

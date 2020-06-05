@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.funnel-progress",
-  "version": "1.0.15",
+  "version": "2.0.0",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -9,8 +9,5 @@
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
-  },
-  "dependencies": {
-    "@uswitch/trustyle.icon": "^1.5.3"
   }
 }

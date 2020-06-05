@@ -1,4 +1,11 @@
 pipeline:
+  fetch_tags:
+    when:
+      event: [push]
+    image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    commands:
+      - git fetch --tags
+
   install:
     when:
       event: [push]
@@ -20,7 +27,7 @@ pipeline:
       event: [push]
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
     commands:
-      - npm run build
+      - NODE_ENV=production npm run build
 
   publish:
     when:
@@ -57,5 +64,4 @@ pipeline:
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
     secrets: [slack_webhook]
     commands:
-      - git pull --tags origin master
       - node ./scripts/slack-unpublished.js

@@ -15,6 +15,7 @@ const glyphChoices: Glyph[] = [
   'clock',
   'close',
   'conversation',
+  'cross',
   'edit',
   'email',
   'filters',
@@ -32,6 +33,7 @@ const glyphChoices: Glyph[] = [
   'smile',
   'sms',
   'three',
+  'tick',
   'tv',
   'two'
 ]

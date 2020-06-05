@@ -141,8 +141,8 @@
 
     "frozen-bg": "#f6f6f6",
 
-    "progress-bg": "#E6F4FD",
-    "progress-primary": "#A1E7FE",
+    "progress-bg": "#E0E9FF",
+    "progress-primary": "#84A6FF",
     "progress-label": "#002396",
 
     "error-red": "#db1818"
@@ -584,11 +584,10 @@
 
       "phase": {
         "base": {
-          "flex": "1",
+          "flex": "auto",
           "flexGrow": 0,
-          "minWidth": "24px",
-          "marginLeft": "xxxs",
-          "backgroundColor": "progress-bg",
+          "marginLeft": "sm",
+          "backgroundColor": "white",
           "borderRadius": "999px",
           "whiteSpace": "nowrap",
           "position": "relative",
@@ -611,8 +610,7 @@
           "position": "relative",
           "whiteSpace": "nowrap",
           "overflow": "hidden",
-          "textOverflow": "ellipsis",
-          "lineHeight": "0px"
+          "textOverflow": "ellipsis"
         }
       },
 
@@ -620,11 +618,11 @@
         "base": {
           "display": "inline-block",
           "verticalAlign": "top",
-          "marginLeft": "xxxs",
+          "marginLeft": "xxs",
           "fontSize": "xs",
           "fontWeight": "bold",
           "lineHeight": "24px",
-          "color": "progress-label",
+          "color": "black",
           "&:first-child": {
             "marginLeft": "0px"
           }
@@ -634,31 +632,32 @@
       "phaseIcon": {
         "base": {
           "transition": "background 0.4s, border-color 0.4s, color 0.4s",
-          "background": "#FFFFFF",
+          "background": "white",
           "border": "2px solid",
-          "borderColor": "grey-30",
+          "borderColor": "black",
           "borderRadius": "999px",
           "width": "20px",
           "height": "20px",
           "lineHeight": "20px",
           "textAlign": "center",
           "fontWeight": "bold",
-          "color": "#B0B8BF",
+          "color": "black",
           "fontSize": "14px"
         },
 
         "variants": {
           "open": {
             "variant": "funnelProgress.base.phaseIcon.base",
-            "background": "transparent",
-            "borderColor": "transparent",
-            "color": "progress-label"
+            "background": "black",
+            "borderColor": "black",
+            "color": "white"
           },
 
           "complete": {
             "variant": "funnelProgress.base.phaseIcon.base",
-            "background": "#028EE9",
-            "borderColor": "#028EE9"
+            "background": "black",
+            "borderColor": "black",
+            "color": "white"
           },
 
           "incomplete": {
@@ -671,7 +670,6 @@
         "base": {
           "width": "12px",
           "display": "inline-block",
-          "padding-top": "50%",
           "& > svg": {
             "margin-top": "-50%"
           }
@@ -683,17 +681,17 @@
           "position": "absolute",
           "backgroundColor": "progress-primary",
           "minWidth": "24px",
-          "borderRadius": "999px",
           "top": "0",
           "bottom": "0",
           "left": "0",
-          "transition": "width 0.4s, min-width 0.4s"
+          "transition": "width 0.4s"
         },
-        "variants": {
-          "start": {
-            "variant": "funnelProgress.base.progress.base",
-            "minWidth": "0px"
-          }
+        "back": {
+          "height": "4px",
+          "width": "100%",
+          "position": "relative",
+          "backgroundColor": "progress-bg",
+          "marginTop": "13px"
         }
       }
     }
