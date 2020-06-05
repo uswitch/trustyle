@@ -11,6 +11,7 @@ import { Check } from './check'
 import { Clock } from './clock'
 import { Close } from './close'
 import { Conversation } from './conversation'
+import { Cross } from './cross'
 import { Edit } from './edit'
 import { Email } from './email'
 import { Filters } from './filters'
@@ -28,6 +29,7 @@ import { Question } from './question'
 import { Smile } from './smile'
 import { Sms } from './sms'
 import { Three } from './three'
+import { Tick } from './tick'
 import { Tv } from './tv'
 import { Two } from './two'
 
@@ -40,6 +42,7 @@ export type Glyph =
   | 'clock'
   | 'close'
   | 'conversation'
+  | 'cross'
   | 'edit'
   | 'email'
   | 'filters'
@@ -57,6 +60,7 @@ export type Glyph =
   | 'smile'
   | 'sms'
   | 'three'
+  | 'tick'
   | 'tv'
   | 'two'
 
@@ -96,6 +100,8 @@ export const Icon: React.FC<Props> = ({
       return <Close color={color} size={size} />
     case 'conversation':
       return <Conversation color={color} size={size} />
+    case 'cross':
+      return <Cross color={color} size={size} />
     case 'edit':
       return <Edit color={color} size={size} />
     case 'email':
@@ -130,6 +136,8 @@ export const Icon: React.FC<Props> = ({
       return <Sms color={color} size={size} />
     case 'three':
       return <Three color={color} size={size} />
+    case 'tick':
+      return <Tick color={color} size={size} />
     case 'tv':
       return <Tv color={color} size={size} />
     case 'two':
