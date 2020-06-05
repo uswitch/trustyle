@@ -179,6 +179,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
           paddingTop: `${padding}px`,
           position: 'relative',
           pointer: 'grab',
+          variant: 'compounds.collectionTabs.variants.borderBottom',
           '::after': {
             content: showRightBorder ? '""' : 'none',
             variant: 'compounds.collectionTabs.variants.overflowBorderRight'
@@ -203,7 +204,13 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
             top: 0
           }}
         >
-          <Row direction="row" wrap={false} sx={{}}>
+          <Row
+            direction="row"
+            wrap={false}
+            sx={{
+              variant: 'compounds.collectionTabs.variants.rowBackgroundColor'
+            }}
+          >
             {React.Children.map(children, (child, index) => (
               <Col sx={{ mx: 'md', mb: 0 }} key={index}>
                 <TabLink

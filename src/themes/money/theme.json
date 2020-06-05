@@ -607,9 +607,6 @@
     "collectionTabs": {
       "base":{
         "container": {
-          "borderBottomWidth": 1,
-          "borderBottomStyle": "solid",
-          "borderBottomColor": "grey-20",
           "h6":{
             "fontSize": ["base", 14, "sm"],
             "color": "grey-60",
@@ -637,22 +634,30 @@
         "overflowBorderLeft": {
             "position": "absolute",
             "display": "block",
-            "width": "30px",
+            "width": "40px",
             "top": 0,
             "left": 0,
             "height": "100%",
-            "background": "linear-gradient(to right, rgba(219,77,117,0.5), rgba(219,77,117, 0.1))",
+            "background": "linear-gradient(to right, rgba(249, 249, 251, 0.99) 0%, rgba(249, 249, 251, 0.26) 100%)",
             "zIndex": 10
         },
         "overflowBorderRight": {
           "position": "absolute",
           "display": "block",
-          "width": "30px",
+          "width": "40px",
           "top": 0,
           "right": 0,
           "height": "100%",
-          "background": "linear-gradient(to left, rgba(219,77,117,0.5), rgba(219,77,117, 0.1))",
+          "background": "linear-gradient(to left, rgba(249, 249, 251, 0.99) 0%, rgba(249, 249, 251, 0.26) 100%)",
           "zIndex": 10
+      },
+      "borderBottom": {
+        "borderBottomWidth": 1,
+        "borderBottomStyle": "solid",
+        "borderBottomColor": "grey-20"
+      },
+      "rowBackgroundColor" :{
+        "backgroundColor": "grey-05"
       }
       }
     },
