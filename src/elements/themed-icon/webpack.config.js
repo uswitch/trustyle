@@ -10,11 +10,10 @@ const spriteLoaderOptions = {}
 module.exports = {
   mode,
   entry: './src/index.tsx',
+  target: 'node',
   output: {
     path: path.resolve(__dirname, 'lib'),
-    filename: 'index.js',
-    library: 'ThemedIcon',
-    libraryTarget: 'umd'
+    filename: 'index.js'
   },
   externals: {
     react: 'umd react',
