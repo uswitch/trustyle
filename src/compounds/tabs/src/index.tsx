@@ -179,15 +179,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
           paddingTop: `${padding}px`,
           position: 'relative',
           pointer: 'grab',
-          variant: 'compounds.collectionTabs.variants.borderBottom',
-          '::after': {
-            content: showRightBorder ? '""' : 'none',
-            variant: 'compounds.collectionTabs.variants.overflowBorderRight'
-          },
-          '::before': {
-            content: showLeftBorder ? '""' : 'none',
-            variant: 'compounds.collectionTabs.variants.overflowBorderLeft'
-          }
+          variant: 'compounds.collectionTabs.variants.borderBottom'
         }}
       >
         <div
@@ -201,7 +193,15 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
           sx={{
             position: 'absolute',
             left: `${left}px`,
-            top: 0
+            top: 0,
+            '::after': {
+              content: showRightBorder ? '""' : 'none',
+              variant: 'compounds.collectionTabs.variants.overflowBorderRight'
+            },
+            '::before': {
+              content: showLeftBorder ? '""' : 'none',
+              variant: 'compounds.collectionTabs.variants.overflowBorderLeft'
+            }
           }}
         >
           <Row
@@ -212,7 +212,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
             }}
           >
             {React.Children.map(children, (child, index) => (
-              <Col sx={{ mx: 'md', mb: 0 }} key={index}>
+              <Col sx={{ mx: 'sm', mb: 0 }} key={index}>
                 <TabLink
                   title={child.props.title}
                   onClick={e => {
