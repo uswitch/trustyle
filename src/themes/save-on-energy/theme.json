@@ -243,6 +243,14 @@
     }
   },
 
+  "input": {
+    "textInput": {
+      "wrapper": {
+        "borderRadius": "3px"
+      }
+    }
+  },
+
   "buttons": {
     "variants": {
       "primary": {

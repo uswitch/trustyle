@@ -23,7 +23,6 @@ export const wrapper = (
       : hasFocus
       ? theme.elements?.input?.focusColor ?? UswitchNavy
       : theme.elements?.input?.defaultColor ?? UswitchNavy,
-  borderRadius: '3px',
   boxSizing: 'border-box',
   display: 'flex',
   position: 'relative',
@@ -39,7 +38,6 @@ export const input: SxStyleProp = {
   appearance: 'none',
   border: 'none',
   background: 'none',
-  borderRadius: '3px',
   boxSizing: 'border-box',
   display: 'flex',
   flex: 1,
