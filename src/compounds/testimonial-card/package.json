@@ -13,5 +13,8 @@
   },
   "dependencies": {
     "@uswitch/trustyle.icon": "^1.5.3"
+  },
+  "devDependencies": {
+    "@uswitch/trustyle.carousel": "^0.0.1"
   }
 }
