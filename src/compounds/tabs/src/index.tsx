@@ -179,7 +179,15 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
           paddingTop: `${padding}px`,
           position: 'relative',
           pointer: 'grab',
-          variant: 'compounds.collectionTabs.variants.borderBottom'
+          variant: 'compounds.collectionTabs.variants.borderBottom',
+          '::after': {
+            content: showRightBorder ? '""' : 'none',
+            variant: 'compounds.collectionTabs.variants.overflowBorderRight'
+          },
+          '::before': {
+            content: showLeftBorder ? '""' : 'none',
+            variant: 'compounds.collectionTabs.variants.overflowBorderLeft'
+          }
         }}
       >
         <div
@@ -193,15 +201,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
           sx={{
             position: 'absolute',
             left: `${left}px`,
-            top: 0,
-            '::after': {
-              content: showRightBorder ? '""' : 'none',
-              variant: 'compounds.collectionTabs.variants.overflowBorderRight'
-            },
-            '::before': {
-              content: showLeftBorder ? '""' : 'none',
-              variant: 'compounds.collectionTabs.variants.overflowBorderLeft'
-            }
+            top: 0
           }}
         >
           <Row
