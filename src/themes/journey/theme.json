@@ -699,8 +699,7 @@
 
   "input": {
     "frozen": {
-      "backgroundColor": "frozen-bg",
-      "borderRadius": "3px"
+      "backgroundColor": "frozen-bg"
     },
     "radioish": {
       "base": {
@@ -747,8 +746,13 @@
         "variant": "input.radioish.label",
         "&:before": {
           "variant": "input.radioish.label.&:before",
-          "borderRadius": "50%"
+          "borderRadius": "0"
         }
+      }
+    },
+    "textInput": {
+      "wrapper": {
+        "borderRadius": "0px"
       }
     },
     "checkbox": {
@@ -795,7 +799,7 @@
     "tile": {
       "inputColor": "#008fe9",
       "borderColor": "light-grey-blue",
-      "borderRadius": "3px",
+      "borderRadius": "0px",
       "borderStyle": "solid",
       "borderWidth": "1px",
       "color": "slate-grey",

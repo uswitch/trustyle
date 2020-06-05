@@ -380,6 +380,13 @@
     "lg": { "maxWidth": 1210, "mx": "auto", "px": "md" }
   },
 
+  "input": {
+    "textInput": {
+      "wrapper": {
+        "borderRadius": "3px"
+      }
+    }
+  },
 
   "buttons": {
     "base": {

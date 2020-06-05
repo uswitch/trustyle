@@ -121,7 +121,12 @@ export const Input: React.FC<Props> = ({
 
   return (
     <FrozenInput text={interiorValue} freezable={freezable} inputRef={inputRef}>
-      <div sx={st.wrapper(hasError, hasFocus, width)}>
+      <div
+        sx={{
+          ...st.wrapper(hasError, hasFocus, width),
+          variant: 'input.textInput.wrapper'
+        }}
+      >
         {prefix && <span sx={st.prefix(hasError, hasFocus)}>{prefix}</span>}
 
         {mask ? (
@@ -132,7 +137,11 @@ export const Input: React.FC<Props> = ({
             {...childProps}
           />
         ) : (
-          <input ref={inputRef} {...childProps} />
+          <input
+            ref={inputRef}
+            {...childProps}
+            sx={{ ...st.input, variant: 'input.textInput' }}
+          />
         )}
 
         {suffix && <span sx={st.suffix(hasError, hasFocus)}>{suffix}</span>}
