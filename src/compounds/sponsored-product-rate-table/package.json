@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.sponsored-product-rate-table",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -16,7 +16,7 @@
     "@uswitch/trustyle.awards-tag": "^0.0.5",
     "@uswitch/trustyle.button": "^0.11.10",
     "@uswitch/trustyle.flex-grid": "^1.2.1",
-    "@uswitch/trustyle.icon": "^1.8.0",
+    "@uswitch/trustyle.icon": "^1.8.1",
     "@uswitch/trustyle.imgix-image": "^0.1.36",
     "@uswitch/trustyle.primary-info-block": "^0.2.11",
     "@uswitch/trustyle.sponsored-by-tag": "^0.0.5",
