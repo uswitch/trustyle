@@ -22,9 +22,6 @@
     },
     "publish": {
       "includeMergedTags": true
-    },
-    "version": {
-      "message": "Version [CI SKIP]"
     }
   }
 }
