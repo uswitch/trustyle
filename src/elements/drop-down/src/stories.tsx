@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { useState } from 'react'
-import { css, jsx } from '@emotion/core'
+import { jsx, useThemeUI } from 'theme-ui'
 
 import AllThemes from '../../../utils/all-themes'
+import ThemedIcon from '../../themed-icon/src'
 
 import { DropDown } from './'
 
@@ -16,7 +17,7 @@ const options = [
   { value: 'yellow', text: 'Yellow' }
 ]
 
-const Spacer = () => <div css={css({ minHeight: 20 })} />
+const Spacer = () => <div sx={{ minHeight: 20 }} />
 
 const ColourSelect = () => {
   const [val, setVal] = useState('red')
@@ -45,6 +46,33 @@ const FrozenColourSelect = () => {
   )
 }
 
+const SelectWithOverlay = () => {
+  const { theme }: any = useThemeUI()
+  const [val, setVal] = useState('red')
+
+  const icon = theme.name === 'Money' ? 'sort' : 'car'
+  const iconColor = theme.name === 'Money' ? 'fuschia' : 'red'
+  return (
+    <DropDown
+      name="overlay-example"
+      onBlur={() => {}}
+      onChange={setVal}
+      options={options}
+      value={val}
+      overlay={
+        <span>
+          <ThemedIcon
+            icon={icon}
+            sx={{ marginRight: 'xs', color: iconColor }}
+          />
+          Sort by
+        </span>
+      }
+      sx={{ borderColor: 'grey-20' }}
+    />
+  )
+}
+
 export const Example = () => (
   <div>
     <ColourSelect />
@@ -63,6 +91,10 @@ export const Example = () => (
       options={[{ value: '', text: 'Incorrect' }]}
       value={''}
     />
+
+    <Spacer />
+
+    <SelectWithOverlay />
   </div>
 )
 

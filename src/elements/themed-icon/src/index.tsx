@@ -40,7 +40,7 @@ const ThemedIcon: React.FC<Props> & {
   if (!iconSymbol) {
     console.error(`Icon "${icon}" not found`)
     return (
-      <svg viewBox="0 0 50 50" sx={svgStyling}>
+      <svg viewBox="0 0 50 50" className={className} sx={svgStyling}>
         <circle
           r="23"
           cx="25"

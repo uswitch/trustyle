@@ -378,7 +378,9 @@
       "select": {
         "base": {
           "border": "1px solid",
-          "borderColor": "grey-40"
+          "borderColor": "grey-40",
+          "borderRadius": 4,
+          "iconColor": "experimental-text"
         },
         "variants": {
           "error": {
@@ -394,6 +396,7 @@
       }
     }
   },
+
 
   "compounds": {
     "accordion": {
@@ -603,6 +606,7 @@
         }
       }
     },
+
 
     "collectionTabs": {
       "base":{
@@ -1119,6 +1123,11 @@
       "outline": "2px solid",
       "outline-color": "orange"
     },
+    "textInput": {
+      "wrapper": {
+        "borderRadius": "3px"
+      }
+    },
     "radioish": {
       "base": {
         "&:checked + span": {
@@ -1384,7 +1393,8 @@
   "productTable": {
     "row": {
       "main": {
-        "borderColor": "grey-20"
+        "borderColor": "grey-20",
+        "borderRadius": 4
       },
       "header": {
         "borderBottomColor": "grey-20"
