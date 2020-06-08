@@ -14,10 +14,16 @@ interface Props {
 }
 
 const vimeoUrl = '?autoplay=1&loop=1&muted=1&background=1'
-const youtubeUrl = '?autoplay=1&loop=1&mute=1&controls=0'
+const youtubeUrl = '?autoplay=1&loop=1&mute=1&controls=0&modestbranding=1'
+
+const ytVideoId = (url: string) => {
+  url.slice(-11)
+}
 
 const constructUrl = (url: string) => {
-  return url.includes('youtube') ? url + youtubeUrl : url + vimeoUrl
+  return url.includes('youtube')
+    ? url + youtubeUrl + `&playlist=${ytVideoId(url)}`
+    : url + vimeoUrl
 }
 
 const EmbeddedVideo: React.FC<Props> = ({
