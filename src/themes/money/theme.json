@@ -397,6 +397,7 @@
     }
   },
 
+
   "compounds": {
     "accordion": {
       "base": {
@@ -605,6 +606,7 @@
         }
       }
     },
+
 
     "collectionTabs": {
       "base":{
@@ -1090,6 +1092,11 @@
     "focus": {
       "outline": "2px solid",
       "outline-color": "orange"
+    },
+    "textInput": {
+      "wrapper": {
+        "borderRadius": "3px"
+      }
     },
     "radioish": {
       "base": {

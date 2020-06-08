@@ -24,6 +24,7 @@ const glyphChoices: Glyph[] = [
   'letter',
   'location',
   'minus',
+  'money-filter',
   'mobile',
   'one',
   'person',
@@ -32,10 +33,12 @@ const glyphChoices: Glyph[] = [
   'question',
   'smile',
   'sms',
+  'sort',
   'three',
   'tick',
   'tv',
-  'two'
+  'two',
+  'edit-journey'
 ]
 
 const directionChoices: Direction[] = ['up', 'down', 'right', 'left']
