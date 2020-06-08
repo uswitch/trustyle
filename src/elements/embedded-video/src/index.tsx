@@ -50,7 +50,7 @@ const EmbeddedVideo: React.FC<Props> = ({
         src={autoPlay ? constructUrl(source) : source}
         frameBorder="0"
         allowFullScreen={allowFullScreen}
-        allow="autoplay; fullscreen"
+        allow="autoplay"
       />
     </div>
     {hasAccordion && (
