@@ -24,7 +24,7 @@
       "includeMergedTags": true
     },
     "version": {
-      "message": "Version [CI SKIP]"
+      "message": "Version [CI SKIP]\n\nskip-checks: true"
     }
   }
 }
