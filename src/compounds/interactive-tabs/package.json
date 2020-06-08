@@ -1,0 +1,20 @@
+{
+  "name": "@uswitch/trustyle.interactive-tabs",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "ts:main": "src/index.tsx",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.27",
+    "react": "^16.7.0"
+  },
+  "dependencies": {
+    "@uswitch/trustyle-utils.get": "^1.0.5",
+    "@uswitch/trustyle.carousel": "^1.0.0",
+    "@uswitch/trustyle.flex-grid": "^2.2.3",
+    "@uswitch/trustyle.icon": "^1.5.3"
+  }
+}
