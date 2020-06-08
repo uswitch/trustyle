@@ -93,7 +93,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
     }
   }, [tabWrap])
 
-  const setRealLeft = (left: number) => {
+  const normalizeLeft = (left: number) => {
     if (left > 0) {
       return setLeft(0)
     }
@@ -123,23 +123,6 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
     setIsPressed(false)
   }
 
-  const onMouseMove = (event: any) => {
-    if (!isPressed) return
-
-    if (lastX > event.clientX) {
-      // drag left
-      const diff = lastX - event.clientX
-      setRealLeft(left - diff)
-    } else {
-      // drag right
-      const diff = event.clientX - lastX
-
-      setRealLeft(left + diff)
-    }
-
-    setLastX(event.clientX)
-  }
-
   const onTouchStart = (event: any) => {
     if (wrapWidth > width) return
     setLastX(event.touches[0].clientX)
@@ -150,18 +133,26 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
     setIsPressed(false)
   }
 
-  const onTouchMove = (event: any) => {
+  const onMove = (event: any) => {
     if (!isPressed) return
 
-    if (lastX > event.touches[0].clientX) {
-      const diff = lastX - event.touches[0].clientX
-      setRealLeft(left - diff)
+    let xPosition = 0
+
+    if (!event.touches) {
+      xPosition = event.clientX
     } else {
-      const diff = event.touches[0].clientX - lastX
-      setRealLeft(left + diff)
+      xPosition = event.touches[0].clientX
     }
 
-    setLastX(event.touches[0].clientX)
+    if (lastX > xPosition) {
+      const diff = lastX - xPosition
+      normalizeLeft(left - diff)
+    } else {
+      const diff = xPosition - lastX
+      normalizeLeft(left + diff)
+    }
+
+    setLastX(xPosition)
   }
 
   const onDragStart = (event: any) => {
@@ -192,10 +183,10 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
       >
         <div
           ref={tabs}
-          onMouseMove={onMouseMove}
+          onMouseMove={onMove}
           onMouseDown={onMouseDown}
           onTouchStart={onTouchStart}
-          onTouchMove={onTouchMove}
+          onTouchMove={onMove}
           onTouchEnd={onTouchEnd}
           onDragStart={onDragStart}
           sx={{
