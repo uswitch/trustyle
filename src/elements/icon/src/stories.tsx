@@ -36,7 +36,8 @@ const glyphChoices: Glyph[] = [
   'three',
   'tick',
   'tv',
-  'two'
+  'two',
+  'edit-journey'
 ]
 
 const directionChoices: Direction[] = ['up', 'down', 'right', 'left']
