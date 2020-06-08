@@ -13,17 +13,18 @@ interface Props {
   autoPlay?: boolean
 }
 
-const vimeoUrl = '?autoplay=1&loop=1&muted=1&background=1'
-const youtubeUrl = '?autoplay=1&loop=1&mute=1&controls=0&modestbranding=1'
+const vimeoParameters = '?autoplay=1&loop=1&muted=1&background=1'
+const youtubeParameters =
+  '?autoplay=1&loop=1&mute=1&controls=0&modestbranding=1'
 
-const ytVideoId = (url: string) => {
-  url.slice(-11)
+const youtubeVideoId = (url: string) => {
+  return url.slice(-11)
 }
 
 const constructUrl = (url: string) => {
   return url.includes('youtube')
-    ? url + youtubeUrl + `&playlist=${ytVideoId(url)}`
-    : url + vimeoUrl
+    ? url + youtubeParameters + `&playlist=${youtubeVideoId(url)}`
+    : url + vimeoParameters
 }
 
 const EmbeddedVideo: React.FC<Props> = ({
