@@ -23,7 +23,7 @@ const youtubeVideoId = (url: string) => {
 
 const constructUrl = (url: string) => {
   return url.includes('youtube')
-    ? url + youtubeParameters + `&playlist=${youtubeVideoId(url)}`
+    ? `${url}${youtubeParameters}&playlist=${youtubeVideoId(url)}`
     : url + vimeoParameters
 }
 
