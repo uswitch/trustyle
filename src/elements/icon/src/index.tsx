@@ -28,10 +28,12 @@ import { Plus } from './plus'
 import { Question } from './question'
 import { Smile } from './smile'
 import { Sms } from './sms'
+import { Sort } from './sort'
 import { Three } from './three'
 import { Tick } from './tick'
 import { Tv } from './tv'
 import { Two } from './two'
+import { EditJourney } from './edit-journey'
 
 export type Glyph =
   | 'arrow'
@@ -59,10 +61,13 @@ export type Glyph =
   | 'question'
   | 'smile'
   | 'sms'
+  | 'sort'
   | 'three'
   | 'tick'
   | 'tv'
   | 'two'
+  // temporary icons
+  | 'edit-journey'
 
 export type Direction = 'up' | 'down' | 'left' | 'right'
 
@@ -134,6 +139,8 @@ export const Icon: React.FC<Props> = ({
       return <Smile color={color} size={size} />
     case 'sms':
       return <Sms color={color} size={size} />
+    case 'sort':
+      return <Sort color={color} size={size} />
     case 'three':
       return <Three color={color} size={size} />
     case 'tick':
@@ -142,6 +149,9 @@ export const Icon: React.FC<Props> = ({
       return <Tv color={color} size={size} />
     case 'two':
       return <Two color={color} size={size} />
+    // Temporary icons
+    case 'edit-journey':
+      return <EditJourney color={color} size={size} />
     default:
       return assertNever('glyph', glyph)
   }
