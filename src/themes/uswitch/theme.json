@@ -389,8 +389,7 @@
       "progress": {
         "backgroundColor": "blue"
       },
-      "backButton": {
-      }
+      "backButton": {}
     },
 
     "accordion": {
@@ -1390,7 +1389,8 @@
     "h6": {
       "variant": "styles.h1",
       "fontSize": "xs",
-      "marginY": "sm"
+      "marginY": "sm",
+      "fontFamily": "Helvetica"
     },
 
     "root": {
