@@ -17,7 +17,7 @@
 
   "fonts": {
     "base": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif",
-    "heading": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif",
+    "heading": "Helvetica",
     "monospace": "Menlo, monospace"
   },
 
@@ -389,8 +389,7 @@
       "progress": {
         "backgroundColor": "blue"
       },
-      "backButton": {
-      }
+      "backButton": {}
     },
 
     "accordion": {
