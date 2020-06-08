@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { text } from '@storybook/addon-knobs'
-import Carousel from '@uswitch/trustyle.carousel'
+import { Carousel } from '@uswitch/trustyle.carousel'
 
 import AllThemes from '../../../utils/all-themes'
 
