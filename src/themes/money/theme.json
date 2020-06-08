@@ -617,7 +617,7 @@
             "color": "grey-60",
             "fontWeight": "bold",
             "textAlign": "center",
-            "my": "xs"
+            "my":["xs", "sm"]
           }
         }
       },
@@ -633,7 +633,7 @@
               "color": "black",
               "fontWeight": "bold",
               "textAlign": "center",
-              "my": "xs"
+              "my": ["xs", "sm"]
             }
           }
         },

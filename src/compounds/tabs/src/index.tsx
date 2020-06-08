@@ -166,7 +166,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
       <div
         ref={tabWrap}
         sx={{
-          overflowX: 'hidden',
+          overflow: 'hidden',
           paddingTop: `${padding}px`,
           position: 'relative',
           pointer: 'grab',
@@ -192,12 +192,13 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
           sx={{
             position: 'absolute',
             left: `${left}px`,
-            top: 0
+            top: 0,
+            maxHeight: '54px'
           }}
         >
           <Row direction="row" wrap={false}>
             {React.Children.map(children, (child, index) => (
-              <Col sx={{ mx: 'sm', mb: 0 }} key={index}>
+              <Col sx={{ mx: 'md', mb: 0 }} key={index}>
                 <TabLink
                   title={child.props.title}
                   onClick={e => {
