@@ -23,7 +23,7 @@ const InteractiveTabLink: React.FC<InteractiveTabLinkProps> = ({
 }) => {
   return (
     <a
-      href={'#'}
+      href="#"
       sx={{
         textDecoration: 'none'
       }}
@@ -38,7 +38,7 @@ const InteractiveTabLink: React.FC<InteractiveTabLinkProps> = ({
       >
         {icon && (
           <div sx={{ mr: 'md' }}>
-            <Icon color={'black'} glyph={icon} size={21} />
+            <Icon color="black" glyph={icon} size={21} />
           </div>
         )}
 
@@ -121,10 +121,7 @@ export const InteractiveTabs: React.FC<InteractiveTabsProps> = ({
         </Row>
       </Container>
       <div sx={{ display: ['block', 'none', 'none'], mt: '-35px' }}>
-        <Carousel
-          slidesMobile={1.01} // there appears to be a bug in the library where the gliderSlideVisible event does not fire when the number of visible slides is 1
-          onSlideVisible={(slide: number) => setActiveTab(slide)}
-        >
+        <Carousel slides={[1]} onSlideVisible={setActiveTab}>
           {React.Children.map(children, (child, index) => (
             <div sx={{ pt: '20px' }}>
               <InteractiveTabLink

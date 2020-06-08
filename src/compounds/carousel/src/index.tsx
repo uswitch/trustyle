@@ -7,9 +7,7 @@ import { gliderStyles } from './glider-styles'
 
 interface CarouselProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactElement<CarouselProps>[]
-  slidesMobile?: number
-  slidesTablet?: number
-  slidesDesktop?: number
+  slides?: number[]
   carouselControls?: boolean
   carouselDots?: boolean
   onSlideVisible?: (slideIndex: number) => void
@@ -17,16 +15,12 @@ interface CarouselProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export const Carousel: React.FC<CarouselProps> = ({
   children,
-  slidesMobile = 1,
-  slidesTablet = 1.5,
-  slidesDesktop = 2.5,
+  slides = [1, 1.5, 2.5],
   carouselDots = true,
   carouselControls = false,
   onSlideVisible
 }) => {
   const { theme }: any = useThemeUI()
-
-  const SLIDES_PER_PAGE = [slidesMobile, slidesTablet, slidesDesktop]
 
   return (
     <div css={gliderStyles} sx={{ variant: 'compounds.carousel' }}>
@@ -36,8 +30,8 @@ export const Carousel: React.FC<CarouselProps> = ({
         settings={{
           scrollLock: true,
           draggable: true,
-          slidesToShow: slidesMobile,
-          responsive: SLIDES_PER_PAGE.slice(1).map((count, i) => ({
+          slidesToShow: slides[0],
+          responsive: slides.slice(1).map((count, i) => ({
             breakpoint: parseInt(theme.breakpoints[i]),
             settings: {
               slidesToShow: count,
