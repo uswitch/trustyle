@@ -813,6 +813,9 @@
     },
     "text": {
       "color": "grey-70"
+    },
+    "main": {
+      "marginBottom": "sm"
     }
   },
 
