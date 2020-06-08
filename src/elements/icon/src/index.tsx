@@ -28,6 +28,7 @@ import { Plus } from './plus'
 import { Question } from './question'
 import { Smile } from './smile'
 import { Sms } from './sms'
+import { Sort } from './sort'
 import { Three } from './three'
 import { Tick } from './tick'
 import { Tv } from './tv'
@@ -60,6 +61,7 @@ export type Glyph =
   | 'question'
   | 'smile'
   | 'sms'
+  | 'sort'
   | 'three'
   | 'tick'
   | 'tv'
@@ -137,6 +139,8 @@ export const Icon: React.FC<Props> = ({
       return <Smile color={color} size={size} />
     case 'sms':
       return <Sms color={color} size={size} />
+    case 'sort':
+      return <Sort color={color} size={size} />
     case 'three':
       return <Three color={color} size={size} />
     case 'tick':
