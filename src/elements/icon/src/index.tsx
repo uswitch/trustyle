@@ -21,6 +21,7 @@ import { Letter } from './letter'
 import { Location } from './location'
 import { Minus } from './minus'
 import { Mobile } from './mobile'
+import { MoneyFilter } from './money-filter'
 import { One } from './one'
 import { Person } from './person'
 import { Phone } from './phone'
@@ -54,6 +55,7 @@ export type Glyph =
   | 'location'
   | 'minus'
   | 'mobile'
+  | 'money-filter'
   | 'one'
   | 'person'
   | 'phone'
@@ -125,6 +127,8 @@ export const Icon: React.FC<Props> = ({
       return <Minus color={color} size={size} />
     case 'mobile':
       return <Mobile color={color} size={size} />
+    case 'money-filter':
+      return <MoneyFilter color={color} size={size} />
     case 'one':
       return <One color={color} size={size} />
     case 'person':
