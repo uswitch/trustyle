@@ -21,10 +21,12 @@ const youtubeVideoId = (url: string) => {
   return url.slice(-11)
 }
 
-const constructUrl = (url: string) => {
-  return url.includes('youtube')
-    ? `${url}${youtubeParameters}&playlist=${youtubeVideoId(url)}`
-    : url + vimeoParameters
+const constructUrl = (source: string, autoPlay: boolean) => {
+  return autoPlay
+    ? source.includes('youtube')
+      ? `${source}${youtubeParameters}&playlist=${youtubeVideoId(source)}`
+      : source + vimeoParameters
+    : source
 }
 
 const EmbeddedVideo: React.FC<Props> = ({
@@ -54,7 +56,7 @@ const EmbeddedVideo: React.FC<Props> = ({
           width: '100%',
           height: '100%'
         }}
-        src={autoPlay ? constructUrl(source) : source}
+        src={constructUrl(source, autoPlay)}
         frameBorder="0"
         allowFullScreen={allowFullScreen}
         allow="autoplay"
