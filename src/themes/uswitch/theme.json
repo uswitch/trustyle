@@ -446,6 +446,19 @@
       "paddingBottom": "xxl",
       "slide": {
         "mr": [0, "sm", "lg"]
+      },
+      ".glider-dots": {
+        ".glider-dot": {
+          "backgroundColor": "grey-20",
+          "width": "8px",
+          "height": "8px",
+          "&:focus, &.active": {
+            "backgroundColor": "primary"
+          },
+          "&:hover": {
+            "backgroundColor": "grey-30"
+          }
+        }
       }
     },
 

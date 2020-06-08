@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-import Carousel from './'
+import { Carousel } from './'
 
 export default {
   title: 'Compounds|Carousel'

@@ -3,7 +3,7 @@ import React from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
 import Glider from 'react-glider-carousel'
 
-import './glider.css'
+import { gliderStyles } from './glider-styles'
 
 interface CarouselProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactElement<CarouselProps>[]
@@ -29,7 +29,7 @@ export const Carousel: React.FC<CarouselProps> = ({
   const SLIDES_PER_PAGE = [slidesMobile, slidesTablet, slidesDesktop]
 
   return (
-    <div sx={{ variant: 'compounds.carousel' }}>
+    <div css={gliderStyles} sx={{ variant: 'compounds.carousel' }}>
       <Glider
         hasDots={carouselDots}
         hasArrows={carouselControls}
@@ -58,5 +58,3 @@ export const Carousel: React.FC<CarouselProps> = ({
     </div>
   )
 }
-
-export default Carousel

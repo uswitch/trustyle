@@ -4,7 +4,7 @@ import React, { Fragment, useState } from 'react'
 import { jsx, Styled } from 'theme-ui'
 import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
-import Carousel from '@uswitch/trustyle.carousel'
+import { Carousel } from '@uswitch/trustyle.carousel'
 
 interface InteractiveTabLinkProps
   extends React.HTMLAttributes<HTMLAnchorElement> {
