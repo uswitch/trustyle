@@ -848,10 +848,16 @@
 
   "callOut": {
     "main": {
-      "backgroundColor": "grey-05"
+      "backgroundColor": "grey-05",
+      "marginBottom": ["sm", "md"],
+      "marginTop": ["0", "xs"],
+      "fontFamily": "Helvetica",
+      "color": "grey-80",
+      "fontSize": ["xs", "sm"]
     },
     "heading": {
-      "marginTop": "-5px"
+      "marginTop": "-5px",
+      "fontSize": ["md", "xl"]
     },
     "icon-container": {
       "width": 16
