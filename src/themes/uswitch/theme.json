@@ -807,6 +807,12 @@
   "author": {
     "heading": {
       "color": "grey-80"
+    },
+    "link": {
+      "fontWeight": "inherit"
+    },
+    "text": {
+      "color": "grey-70"
     }
   },
 
