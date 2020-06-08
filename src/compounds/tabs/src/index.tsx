@@ -75,12 +75,12 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
   const [scrollEnd, setScrollEnd] = useState(false)
 
   useEffect(() => {
-    setPadding(tabs?.current?.offsetHeight)
-    setWidth(tabs?.current?.scrollWidth)
+    setPadding(tabs?.current?.offsetHeight || 0)
+    setWidth(tabs?.current?.scrollWidth || 0)
   }, [tabs])
 
   useEffect(() => {
-    setWrapWidth(tabWrap?.current?.offsetWidth)
+    setWrapWidth(tabWrap?.current?.offsetWidth || 0)
 
     if (width > wrapWidth && !scrollEnd) {
       setShowRightBorder(true)
