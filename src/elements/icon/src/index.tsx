@@ -32,6 +32,7 @@ import { Three } from './three'
 import { Tick } from './tick'
 import { Tv } from './tv'
 import { Two } from './two'
+import { EditJourney } from './edit-journey'
 
 export type Glyph =
   | 'arrow'
@@ -63,6 +64,8 @@ export type Glyph =
   | 'tick'
   | 'tv'
   | 'two'
+  // temporary icons
+  | 'edit-journey'
 
 export type Direction = 'up' | 'down' | 'left' | 'right'
 
@@ -142,6 +145,9 @@ export const Icon: React.FC<Props> = ({
       return <Tv color={color} size={size} />
     case 'two':
       return <Two color={color} size={size} />
+    // Temporary icons
+    case 'edit-journey':
+      return <EditJourney color={color} size={size} />
     default:
       return assertNever('glyph', glyph)
   }
