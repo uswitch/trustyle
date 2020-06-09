@@ -12,14 +12,15 @@ const LogoCollection: React.FC<Props> = ({ providerImage }) => {
     <div
       sx={{
         display: 'flex',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        alignItems: 'center'
       }}
     >
       {providerImage.map((img, i) => (
         <div
           key={`logo-collection-${i}`}
           sx={{
-            variant: 'logoCollection.logoSpacing'
+            variant: 'logoCollection.base'
           }}
         >
           {img}
