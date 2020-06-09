@@ -19,7 +19,7 @@ const LogoCollection: React.FC<Props> = ({ providerImage }) => {
         <div
           key={`logo-collection-${i}`}
           sx={{
-            mr: '16px'
+            variant: 'logoCollection.logoSpacing'
           }}
         >
           {img}

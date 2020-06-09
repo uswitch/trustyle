@@ -1310,6 +1310,12 @@
     }
   },
 
+  "logoCollection": {
+    "logoSpacing": {
+      "mr": "16px"
+    }
+  },
+
   "author": {
     "heading": {
       "color": "grey-80"

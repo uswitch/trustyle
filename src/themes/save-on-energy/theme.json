@@ -270,6 +270,12 @@
       }
     }
   },
+  
+  "logoCollection": {
+    "logoSpacing": {
+      "mr": "16px"
+    }
+  },
 
   "toggleSwitch": {
     "checked": {
