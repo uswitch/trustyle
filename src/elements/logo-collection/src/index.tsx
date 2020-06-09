@@ -4,10 +4,10 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  providerImage: React.ReactElement[]
+  logoImage: React.ReactElement[]
 }
 
-const LogoCollection: React.FC<Props> = ({ providerImage }) => {
+const LogoCollection: React.FC<Props> = ({ logoImage }) => {
   return (
     <div
       sx={{
@@ -16,7 +16,7 @@ const LogoCollection: React.FC<Props> = ({ providerImage }) => {
         alignItems: 'center'
       }}
     >
-      {providerImage.map((img, i) => (
+      {logoImage.map((img, i) => (
         <div
           key={`logo-collection-${i}`}
           sx={{
