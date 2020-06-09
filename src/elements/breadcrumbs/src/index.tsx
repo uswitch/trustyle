@@ -167,7 +167,7 @@ const Breadcrumbs: React.FC<Props> = ({
   crumbs,
   title,
   customSeparator = '>',
-  shouldDisplayHomeIcon,
+  shouldDisplayHomeIcon = false,
   customBackIcon = '<',
   customHomeIcon,
   homePath = '/',
