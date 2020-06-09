@@ -1440,7 +1440,10 @@
       "borderColor": "grey-20",
       "borderWidth": "1px",
       "borderRadius": "3px",
-      "marginBottom": "base"
+      "marginBottom": ["base","md"],
+      "*":{
+        "fontFamily":"Helvetica"
+      }
     },
 
     "p": {
@@ -1450,14 +1453,20 @@
     "th": {
       "margin": 0,
       "padding": "16px",
-      "fontSize": "xs",
-      "textAlign": "left"
+      "fontSize": ["xs","sm"],
+      "textAlign": "left",
+      "fontStyle":"normal",
+      "fontWeight":"bold",
+      "lineHeight":["1.3","1.5"],
+      "color":"uswitch-navy"
     },
 
     "td": {
       "margin": 0,
       "padding": "16px",
-      "fontSize": "xs"
+      "fontSize": ["xs","sm"],
+      "lineHeight":"1.5",
+      "color":"grey-80"
     },
 
     "tr": {
