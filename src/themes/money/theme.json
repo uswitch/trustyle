@@ -874,10 +874,10 @@
       "control": {
         "boxSizing": "border-box",
         "padding": "sm",
-        "fontSize": "xs",
         "border": "1px solid",
         "borderColor": "grey-20",
-        "borderRadius": 4
+        "borderRadius": 4,
+        "backgroundColor": "white"
       }
     }
   },
