@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.breadcrumbs",
-  "version": "1.0.19",
+  "version": "1.1.0",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -13,6 +13,6 @@
   },
   "dependencies": {
     "@uswitch/trustyle-utils.get": "^1.0.5",
-    "@uswitch/trustyle.icon": "^1.8.0"
+    "@uswitch/trustyle.icon": "^1.8.1"
   }
 }
