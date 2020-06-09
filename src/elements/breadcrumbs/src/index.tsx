@@ -36,7 +36,9 @@ interface Props extends React.HTMLAttributes<HTMLUListElement> {
   title?: string
   customSeparator?: React.ReactNode | (() => React.ReactNode)
   customBackIcon?: React.ReactNode | (() => React.ReactNode)
+  shouldDisplayHomeIcon?: boolean
   customHomeIcon?: React.ReactNode | (() => React.ReactNode)
+  homePath?: string
   variant?: 'base' | 'light'
 }
 
@@ -44,6 +46,7 @@ const MobileBreadcrumbs: React.FC<Props> = ({
   crumbs,
   customBackIcon = '<',
   customHomeIcon,
+  homePath,
   variant = 'base'
 }) => {
   const BackIcon =
@@ -56,7 +59,7 @@ const MobileBreadcrumbs: React.FC<Props> = ({
     href = lastCrumb.fields?.path
     backTo = lastCrumb.fields?.displayText
   } else {
-    href = '/'
+    href = homePath
     backTo = customHomeIcon || <HomeIcon variant={variant} />
   }
 
@@ -89,7 +92,9 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
   crumbs,
   title,
   customSeparator = '>',
+  shouldDisplayHomeIcon,
   customHomeIcon,
+  homePath,
   variant = 'base'
 }) => {
   const liStyling = {
@@ -117,6 +122,14 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
     verticalAlign: customSeparator === 'function' ? 'middle' : undefined
   }
 
+  const renderLink = (fields: any) => {
+    if (shouldDisplayHomeIcon && fields.path === homePath) {
+      return customHomeIcon || <HomeIcon variant={variant} />
+    } else {
+      return fields.displayText
+    }
+  }
+
   return (
     <ul
       sx={{
@@ -127,22 +140,10 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
         variant: `${lookup(variant)}.main`
       }}
     >
-      <li sx={liStyling}>
-        <Styled.a sx={anchorStyling} href="/">
-          {customHomeIcon || <HomeIcon variant={variant} />}
-        </Styled.a>
-
-        {(crumbs.length || title) && (
-          <span sx={separatorStyling}>
-            <Separator />
-          </span>
-        )}
-      </li>
-
       {crumbs.map(({ fields: fields = {} }, i) => (
         <li sx={liStyling} key={i}>
           <Styled.a sx={anchorStyling} href={fields.path}>
-            {fields.displayText}
+            {renderLink(fields)}
           </Styled.a>
 
           {(i !== crumbs.length - 1 || title) && (
@@ -166,35 +167,35 @@ const Breadcrumbs: React.FC<Props> = ({
   crumbs,
   title,
   customSeparator = '>',
+  shouldDisplayHomeIcon,
   customBackIcon = '<',
   customHomeIcon,
+  homePath = '/',
   variant = 'base'
-}) => {
-  if (crumbs.length && crumbs[0].fields?.path === '/') {
-    crumbs = crumbs.slice(1)
-  }
-
-  return (
-    <div sx={{ variant: `${lookup(variant)}.wrapper` }}>
-      <div sx={{ display: ['block', 'none'] }}>
-        <MobileBreadcrumbs
-          crumbs={crumbs}
-          customBackIcon={customBackIcon}
-          customHomeIcon={customHomeIcon}
-          variant={variant}
-        />
-      </div>
-      <div sx={{ display: ['none', 'block'] }}>
-        <DesktopBreadcrumbs
-          crumbs={crumbs}
-          title={title}
-          customSeparator={customSeparator}
-          customHomeIcon={customHomeIcon}
-          variant={variant}
-        />
-      </div>
+}) => (
+  <div sx={{ variant: `${lookup(variant)}.wrapper` }}>
+    <div sx={{ display: ['block', 'none'] }}>
+      <MobileBreadcrumbs
+        crumbs={crumbs}
+        customBackIcon={customBackIcon}
+        shouldDisplayHomeIcon={shouldDisplayHomeIcon}
+        customHomeIcon={customHomeIcon}
+        homePath={homePath}
+        variant={variant}
+      />
     </div>
-  )
-}
+    <div sx={{ display: ['none', 'block'] }}>
+      <DesktopBreadcrumbs
+        crumbs={crumbs}
+        title={title}
+        customSeparator={customSeparator}
+        shouldDisplayHomeIcon={shouldDisplayHomeIcon}
+        customHomeIcon={customHomeIcon}
+        homePath={homePath}
+        variant={variant}
+      />
+    </div>
+  </div>
+)
 
 export default Breadcrumbs
