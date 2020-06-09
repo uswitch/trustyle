@@ -637,6 +637,14 @@
             }
           }
         },
+        "tabSpacing": {
+          "mx": "sm",
+          "mb": 0
+        },
+        "tabContentSpacing": {
+          "mx": ["xxs", "xs"],
+          "my": "sm"
+        },
         "overflowBorderLeft": {
             "position": "absolute",
             "display": "block",

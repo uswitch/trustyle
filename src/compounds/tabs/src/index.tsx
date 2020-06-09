@@ -40,7 +40,7 @@ const TabContent: React.FC<TabContentProps> = ({ children, active }) => {
   return (
     <div
       sx={{
-        mx: ['xxs', 'md'],
+        variant: 'compounds.collectionTabs.variants.tabContentSpacing',
         display: active ? 'block' : 'none'
       }}
     >
@@ -198,7 +198,10 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
         >
           <Row direction="row" wrap={false}>
             {React.Children.map(children, (child, index) => (
-              <Col sx={{ mx: 'md', mb: 0 }} key={index}>
+              <Col
+                sx={{ variant: 'compounds.collectionTabs.variants.tabSpacing' }}
+                key={index}
+              >
                 <TabLink
                   title={child.props.title}
                   onClick={e => {
