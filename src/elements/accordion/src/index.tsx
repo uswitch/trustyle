@@ -59,7 +59,7 @@ const Accordion: React.FC<Props> & {
   }
 
   return (
-    <div>
+    <div sx={{ variant: 'accordion' }}>
       <button
         sx={{
           cursor: 'pointer',
@@ -117,7 +117,8 @@ const Accordion: React.FC<Props> & {
           },
           '> p:last-child': {
             marginBottom: 'xs'
-          }
+          },
+          variant: 'accordion.base.content'
         }}
       >
         {children}
@@ -143,7 +144,8 @@ Accordion.Group = ({ children, iconClosed, iconOpen }) => {
     <div
       sx={{
         marginTop: 'sm',
-        marginBottom: 'sm'
+        marginBottom: 'sm',
+        variant: 'compounds.accordion.base'
       }}
     >
       <AccordionContext.Provider
