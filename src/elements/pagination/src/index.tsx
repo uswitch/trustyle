@@ -121,13 +121,12 @@ const Pagination: React.FC<Props> = ({
           ...liStyling
         }}
       >
-        {console.log(currentPage)}
         {currentPage === 1 ? (
           <InlineIcon direction="left" />
         ) : (
           <a
-            onClick={e => onPageChange(currentPage--, e)}
-            href={numberToLink && numberToLink(currentPage--)}
+            onClick={e => onPageChange(currentPage - 1, e)}
+            href={numberToLink && numberToLink(currentPage - 1)}
             sx={anchorStyling}
           >
             <InlineIcon direction="left" />
@@ -167,8 +166,8 @@ const Pagination: React.FC<Props> = ({
           <InlineIcon direction="right" />
         ) : (
           <a
-            onClick={e => onPageChange(currentPage++, e)}
-            href={numberToLink && numberToLink(currentPage++)}
+            onClick={e => onPageChange(currentPage + 1, e)}
+            href={numberToLink && numberToLink(currentPage + 1)}
             sx={anchorStyling}
           >
             <InlineIcon direction="right" />
