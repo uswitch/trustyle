@@ -125,8 +125,8 @@ const Pagination: React.FC<Props> = ({
           <InlineIcon direction="left" />
         ) : (
           <a
-            onClick={e => onPageChange(1, e)}
-            href={numberToLink && numberToLink(1)}
+            onClick={e => onPageChange(currentPage - 1, e)}
+            href={numberToLink && numberToLink(currentPage - 1)}
             sx={anchorStyling}
           >
             <InlineIcon direction="left" />
@@ -166,8 +166,8 @@ const Pagination: React.FC<Props> = ({
           <InlineIcon direction="right" />
         ) : (
           <a
-            onClick={e => onPageChange(totalPages, e)}
-            href={numberToLink && numberToLink(totalPages)}
+            onClick={e => onPageChange(currentPage + 1, e)}
+            href={numberToLink && numberToLink(currentPage + 1)}
             sx={anchorStyling}
           >
             <InlineIcon direction="right" />
