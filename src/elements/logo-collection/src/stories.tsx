@@ -27,7 +27,7 @@ const images = [
 ]
 
 export const ExampleWithKnobs = () => {
-  return <LogoCollection providerImage={images} />
+  return <LogoCollection logoImage={images} />
 }
 
 ExampleWithKnobs.story = {

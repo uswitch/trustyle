@@ -1314,8 +1314,8 @@
     "base": {
       "mr": "16px",
       "img": {
-        "maxWidth": "250px",
-        "maxHeight": "150px"
+        "maxWidth": "100px",
+        "maxHeight": "64px"
       }
     }
   },

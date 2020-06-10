@@ -13,7 +13,8 @@ const LogoCollection: React.FC<Props> = ({ logoImage }) => {
       sx={{
         display: 'flex',
         flexWrap: 'wrap',
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'center'
       }}
     >
       {logoImage.map((img, i) => (
