@@ -17,7 +17,7 @@
 
   "fonts": {
     "base": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif",
-    "heading": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif",
+    "heading": "Helvetica",
     "monospace": "Menlo, monospace"
   },
 
@@ -247,6 +247,9 @@
   },
 
   "accordion": {
+    "*":{
+      "fontFamily":"Helvetica"
+    },
     "base": {
       "marginTop": "sm",
       "marginBottom": "sm",
@@ -255,7 +258,9 @@
         "marginBottom": "xs"
       },
       "content": {
-        "marginBottom": "xs"
+        "fontSize": ["base","md"],
+        "color":"grey-80",
+        "lineHeight":"1.5"
       },
       "button": {
         "padding": "0",
@@ -263,7 +268,8 @@
         "paddingBottom": "xs",
         "bg": "transparent",
         "fontFamily": "base",
-        "fontSize": "base",
+        "lineHeight":"1.3",
+        "fontSize": ["base","md"],
         "fontWeight": "bold",
         "color": "textColor",
         "alignItems": "center",
@@ -395,22 +401,24 @@
 
     "accordion": {
       "base": {
-        "marginTop": "sm",
-        "marginBottom": "sm",
+        "marginBottom": ["sm","md"],
         "title": {
-          "marginTop": "0",
-          "marginBottom": "xs"
+          "marginTop": "xs",
+          "marginBottom": "xs",
+          "fontSize":["md","xl"],
+          "lineHeight":"1.3"
         },
         "content": {
-          "marginBottom": "xs"
+          "marginBottom": ["xs","sm"]
         },
         "button": {
           "padding": "0",
           "paddingTop": "xs",
           "paddingBottom": "xs",
+          "lineHeight":"1.3",
           "bg": "transparent",
           "fontFamily": "base",
-          "fontSize": "base",
+          "fontSize": ["base","md"],
           "fontWeight": "bold",
           "color": "textColor",
           "alignItems": "center",
@@ -941,10 +949,16 @@
 
   "callOut": {
     "main": {
-      "backgroundColor": "grey-05"
+      "backgroundColor": "grey-05",
+      "marginBottom": ["sm", "md"],
+      "marginTop": ["0", "xs"],
+      "fontFamily": "Helvetica",
+      "color": "grey-80",
+      "fontSize": ["xs", "sm"]
     },
     "heading": {
-      "marginTop": "-5px"
+      "marginTop": "-5px",
+      "fontSize": ["md", "xl"]
     },
     "icon-container": {
       "width": 16
@@ -1528,7 +1542,10 @@
       "borderColor": "grey-20",
       "borderWidth": "1px",
       "borderRadius": "3px",
-      "marginBottom": "base"
+      "marginBottom": ["base","md"],
+      "*":{
+        "fontFamily":"Helvetica"
+      }
     },
 
     "p": {
@@ -1538,14 +1555,20 @@
     "th": {
       "margin": 0,
       "padding": "16px",
-      "fontSize": "xs",
-      "textAlign": "left"
+      "fontSize": ["xs","sm"],
+      "textAlign": "left",
+      "fontStyle":"normal",
+      "fontWeight":"bold",
+      "lineHeight":["1.3","1.5"],
+      "color":"uswitch-navy"
     },
 
     "td": {
       "margin": 0,
       "padding": "16px",
-      "fontSize": "xs"
+      "fontSize": ["xs","sm"],
+      "lineHeight":"1.5",
+      "color":"grey-80"
     },
 
     "tr": {
