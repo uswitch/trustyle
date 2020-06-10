@@ -38,13 +38,15 @@ interface Props extends React.HTMLAttributes<HTMLUListElement> {
   customBackIcon?: React.ReactNode | (() => React.ReactNode)
   customHomeIcon?: React.ReactNode | (() => React.ReactNode)
   variant?: 'base' | 'light'
+  homePath?: string
 }
 
 const MobileBreadcrumbs: React.FC<Props> = ({
   crumbs,
   customBackIcon = '<',
   customHomeIcon,
-  variant = 'base'
+  variant = 'base',
+  homePath
 }) => {
   const BackIcon =
     typeof customBackIcon === 'function' ? customBackIcon : () => customBackIcon
@@ -56,7 +58,7 @@ const MobileBreadcrumbs: React.FC<Props> = ({
     href = lastCrumb.fields?.path
     backTo = lastCrumb.fields?.displayText
   } else {
-    href = '/'
+    href = homePath
     backTo = customHomeIcon || <HomeIcon variant={variant} />
   }
 
@@ -90,7 +92,8 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
   title,
   customSeparator = '>',
   customHomeIcon,
-  variant = 'base'
+  variant = 'base',
+  homePath
 }) => {
   const liStyling = {
     display: 'inline'
@@ -128,7 +131,7 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
       }}
     >
       <li sx={liStyling}>
-        <Styled.a sx={anchorStyling} href="/">
+        <Styled.a sx={anchorStyling} href={homePath}>
           {customHomeIcon || <HomeIcon variant={variant} />}
         </Styled.a>
 
@@ -168,9 +171,10 @@ const Breadcrumbs: React.FC<Props> = ({
   customSeparator = '>',
   customBackIcon = '<',
   customHomeIcon,
-  variant = 'base'
+  variant = 'base',
+  homePath = '/'
 }) => {
-  if (crumbs.length && crumbs[0].fields?.path === '/') {
+  if (crumbs.length && crumbs[0].fields?.path === homePath) {
     crumbs = crumbs.slice(1)
   }
 
@@ -182,6 +186,7 @@ const Breadcrumbs: React.FC<Props> = ({
           customBackIcon={customBackIcon}
           customHomeIcon={customHomeIcon}
           variant={variant}
+          homePath={homePath}
         />
       </div>
       <div sx={{ display: ['none', 'block'] }}>
@@ -191,6 +196,7 @@ const Breadcrumbs: React.FC<Props> = ({
           customSeparator={customSeparator}
           customHomeIcon={customHomeIcon}
           variant={variant}
+          homePath={homePath}
         />
       </div>
     </div>
