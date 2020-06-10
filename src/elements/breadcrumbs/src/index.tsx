@@ -186,6 +186,7 @@ const Breadcrumbs: React.FC<Props> = ({
           customBackIcon={customBackIcon}
           customHomeIcon={customHomeIcon}
           variant={variant}
+          homePath={homePath}
         />
       </div>
       <div sx={{ display: ['none', 'block'] }}>
@@ -195,6 +196,7 @@ const Breadcrumbs: React.FC<Props> = ({
           customSeparator={customSeparator}
           customHomeIcon={customHomeIcon}
           variant={variant}
+          homePath={homePath}
         />
       </div>
     </div>
