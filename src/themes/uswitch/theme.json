@@ -356,7 +356,7 @@
     "drop-down": {
       "select": {
         "base": {
-          "border": "1px solid",
+          "border": "2px solid",
           "borderColor": "grey-40"
         },
         "variants": {
@@ -1189,7 +1189,7 @@
   "input": {
     "frozen": {
       "backgroundColor": "frozen-bg",
-      "borderRadius": "3px"
+      "borderRadius": "0px"
     },
     "focus": {
       "outline": "2px solid",
