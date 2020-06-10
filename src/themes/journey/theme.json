@@ -285,7 +285,7 @@
     "drop-down": {
       "select": {
         "base": {
-          "border": "1px solid",
+          "border": "2px solid",
           "borderColor": "light-grey-blue"
         },
         "variants": {
@@ -720,7 +720,7 @@
   "input": {
     "frozen": {
       "backgroundColor": "frozen-bg",
-      "borderRadius": "3px"
+      "borderRadius": "0"
     },
     "focus": {
       "outline": "2px solid",

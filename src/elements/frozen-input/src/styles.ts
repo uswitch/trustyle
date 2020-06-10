@@ -26,7 +26,6 @@ export const value: SerializedStyles = css({
 export const edit: SerializedStyles = css({
   background: 'none',
   border: 'none',
-  borderLeft: `1px solid ${colors.slateGrey}`,
   cursor: 'pointer',
   height: pxToRem(28),
   padding: pxToRem(0, spacers.teal),
