@@ -160,6 +160,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
   }
 
   window.addEventListener('mouseup', onMouseUp)
+  window.addEventListener('touchend', onTouchEnd)
 
   return (
     <Container>
@@ -187,7 +188,6 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
           onMouseDown={onMouseDown}
           onTouchStart={onTouchStart}
           onTouchMove={onMove}
-          onTouchEnd={onTouchEnd}
           onDragStart={onDragStart}
           sx={{
             position: 'absolute',
