@@ -877,6 +877,14 @@
         ":visited": {
           "color": "uswitch-navy"
         }
+      },
+      "control": {
+        "boxSizing": "border-box",
+        "padding": "sm",
+        "border": "1px solid",
+        "borderColor": "grey-40",
+        "borderRadius": 3,
+        "backgroundColor": "white"
       }
     }
   },
