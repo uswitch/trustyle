@@ -628,9 +628,6 @@
     "collectionTabs": {
       "base": {
         "container": {
-          "borderBottomWidth": 1,
-          "borderBottomStyle": "solid",
-          "borderBottomColor": "grey-20",
           "h6": {
             "fontSize": ["base", 14, "sm"],
             "color": "grey-60"
@@ -648,6 +645,38 @@
               "color": "black"
             }
           }
+        },
+        "tabSpacing": {
+          "mx": "md",
+          "mb": 0
+        },
+        "tabContentSpacing": {
+          "mx": ["xxs", "md"],
+          "my": "sm"
+        },
+        "overflowBorderLeft": {
+          "position": "absolute",
+          "display": "block",
+          "width": "20px",
+          "top": 0,
+          "left": 0,
+          "height": "100%",
+          "background": "linear-gradient(to right, rgba(255, 255, 255, 255) 0%, rgba(0, 0, 0, 0) 100%)",
+          "zIndex": 10
+        },
+        "overflowBorderRight": {
+          "position": "absolute",
+          "display": "block",
+          "width": "20px",
+          "top": 0,
+          "right": 0,
+          "height": "100%",
+          "background": "linear-gradient(to left, rgba(255, 255, 255, 255) 0%, rgba(0, 0, 0, 0) 100%)"
+        },
+        "borderBottom": {
+          "borderBottomWidth": 1,
+          "borderBottomStyle": "solid",
+          "borderBottomColor": "grey-20"
         }
       }
     },
