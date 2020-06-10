@@ -883,7 +883,7 @@
 
   "logoCollection": {
     "base": {
-      "mr": "16px",
+      "mr": ["lg", "lg", "md"],
       "img": {
         "maxWidth": "250px",
         "maxHeight": "150px"
