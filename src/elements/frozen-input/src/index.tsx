@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import { Fragment, useEffect, useState } from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, useThemeUI } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
 import { colors } from '@uswitch/trustyle.styles'
 
@@ -22,6 +22,8 @@ export const FrozenInput: React.FC<Props> = ({
   children
 }) => {
   const [frozen, setFrozen] = useState(freezable && !!text)
+  const { theme }: any = useThemeUI()
+  const iconGlyph = theme.name === 'Journey' ? 'edit-journey' : 'edit'
 
   useEffect(() => {
     if (freezable && !frozen && !!text && inputRef && inputRef.current) {
@@ -64,7 +66,7 @@ export const FrozenInput: React.FC<Props> = ({
           css={st.edit}
           onClick={() => setFrozen(false)}
         >
-          <Icon color={colors.azure} glyph="edit" />
+          <Icon color={colors.azure} glyph={iconGlyph} />
         </button>
       </div>
 
