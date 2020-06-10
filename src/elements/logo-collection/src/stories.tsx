@@ -26,11 +26,11 @@ const images = [
   />
 ]
 
-export const ExampleWithKnobs = () => {
+export const ExampleWithLogos = () => {
   return <LogoCollection logoImage={images} />
 }
 
-ExampleWithKnobs.story = {
+ExampleWithLogos.story = {
   parameters: {
     percy: { skip: true }
   }
