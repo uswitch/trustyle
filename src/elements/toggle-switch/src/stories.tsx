@@ -16,18 +16,19 @@ export default {
   title: 'Elements|Toggle Switch'
 }
 
-const icons = {
-  checked: checkedIcon,
-  unchecked: uncheckedIcon
-}
-
 export const ExampleWithState = () => {
   const [toggleState, setToggleState] = useState(true)
+  const compact = boolean('Compact', false)
 
   const handleOnChange = () => {
     const newState = !toggleState
     setToggleState(newState)
     action('Toggle changed')(newState)
+  }
+
+  const icons = {
+    checked: checkedIcon(compact),
+    unchecked: uncheckedIcon
   }
 
   const applyPalette = boolean('Apply palette?', false, 'Palette')
@@ -48,6 +49,7 @@ export const ExampleWithState = () => {
         <ToggleSwitch
           aria-label="toggle-1"
           checked={toggleState}
+          compact={compact}
           onChange={handleOnChange}
           icons={icons}
         />
@@ -69,9 +71,10 @@ const Spacer = () => <div sx={{ minHeight: 20 }} />
 
 export const AutomatedTests = () => {
   const permutations = permutationsGenerator({
+    compact: [false, true],
     featureColor: [null, '#ffced3'],
     checked: [true, false],
-    icons: [icons, undefined]
+    icons: [true, false]
   })
 
   return (
@@ -82,11 +85,19 @@ export const AutomatedTests = () => {
             <ToggleSwitch
               aria-label="toggle-1"
               checked={p.checked}
-              icons={p.icons}
+              compact={p.compact}
+              icons={
+                p.icons
+                  ? {
+                      checked: checkedIcon(p.checked),
+                      unchecked: uncheckedIcon
+                    }
+                  : undefined
+              }
             />
             <label sx={{ marginLeft: 10 }} htmlFor="toggle-1">
-              {p.checked ? 'checked' : 'unchecked'} {p.icons && 'with icons'}
-              {p.featureColor && ' with palette'}
+              {p.compact && 'compact'} {p.checked ? 'checked' : 'unchecked'}
+              {p.icons && ' with icons'} {p.featureColor && 'with palette'}
             </label>
           </PaletteProvider>
           <Spacer />

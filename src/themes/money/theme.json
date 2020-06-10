@@ -1310,6 +1310,43 @@
     }
   },
 
+  "toggleSwitch2": {
+    "base": {
+      "checked": {
+        "backgroundColor": "secondary",
+        "borderColor": "secondary",
+        "switch": {
+          "backgroundColor": "white",
+          "borderColor": "secondary"
+        }
+      },
+      "unchecked": {
+        "backgroundColor": "grey-20",
+        "borderColor": "grey-20",
+        "switch": {
+          "backgroundColor": "white",
+          "borderColor": "grey-20"
+        }
+      }
+    },
+    "variants": {
+      "compact": {
+        "checked": {
+          "switch": {
+            "backgroundColor": "secondary",
+            "color": "white",
+            "borderColor": "secondary"
+          }
+        },
+        "unchecked": {
+          "switch": {
+            "variant": "toggleSwitch2.base.unchecked.switch"
+          }
+        }
+      }
+    }
+  },
+
   "author": {
     "heading": {
       "color": "grey-80"
