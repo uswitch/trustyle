@@ -78,7 +78,7 @@ export const AutomatedTests = () => {
   })
 
   return (
-    <AllThemes themes={['uswitch', 'money', 'save-on-energy']}>
+    <AllThemes themes={['uswitch', 'money', 'save-on-energy', 'bankrate']}>
       {permutations.map((p, i) => (
         <Fragment key={i}>
           <PaletteProvider value={{ featureColor: p.featureColor }}>
@@ -89,7 +89,7 @@ export const AutomatedTests = () => {
               icons={
                 p.icons
                   ? {
-                      checked: checkedIcon(p.checked),
+                      checked: checkedIcon(p.compact),
                       unchecked: uncheckedIcon
                     }
                   : undefined
