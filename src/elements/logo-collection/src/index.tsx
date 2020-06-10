@@ -19,7 +19,7 @@ const LogoCollection: React.FC<Props> = ({ logoImage }) => {
     >
       {logoImage.map((img, i) => (
         <div
-          key={`logo-collection-${i}`}
+          key={img.key || i}
           sx={{
             variant: 'logoCollection.base'
           }}
