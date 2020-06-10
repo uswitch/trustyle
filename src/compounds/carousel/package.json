@@ -1,20 +1,17 @@
 {
-  "name": "@uswitch/trustyle.icon",
-  "version": "1.8.2",
+  "name": "@uswitch/trustyle.carousel",
+  "version": "1.0.3",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "@uswitch/trustyle.styles": "^0.4.29"
-  },
-  "devDependencies": {
-    "typescript": "^3.6.2"
-  },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
+  },
+  "dependencies": {
+    "react-glider-carousel": "^0.1.2"
   }
 }
