@@ -12,10 +12,10 @@ const IconTile: React.FC<Props> = ({ icon, children }) => {
       sx={{
         boxSizing: 'border-box',
         display: 'flex',
-        flexDirection: 'column',
-        height: 136,
+        flexDirection: ['column', 'column', 'row'],
+        height: [136, 136, 95],
         backgroundColor: 'white',
-        padding: 'sm',
+        padding: ['sm', 'sm', 'lg'],
         paddingTop: 0,
         textAlign: 'center',
         borderRadius: 8,
@@ -24,7 +24,8 @@ const IconTile: React.FC<Props> = ({ icon, children }) => {
         variant: 'iconTile.main',
         ':hover': {
           opacity: 0.9
-        }
+        },
+        alignItems: 'center'
       }}
     >
       <div
