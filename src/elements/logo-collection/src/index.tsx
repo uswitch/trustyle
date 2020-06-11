@@ -14,14 +14,15 @@ const LogoCollection: React.FC<Props> = ({ logoImage }) => {
         display: 'flex',
         flexWrap: 'wrap',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        variant: 'logoCollection.base.outer'
       }}
     >
       {logoImage.map((img, i) => (
         <div
           key={img.key || i}
           sx={{
-            variant: 'logoCollection.base'
+            variant: 'logoCollection.base.inner'
           }}
         >
           {img}
