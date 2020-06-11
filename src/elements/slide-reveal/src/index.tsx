@@ -20,7 +20,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const SlideReveal: React.FC<Props> = ({ open, children }) => {
-  const contentsWrapperEl = React.useRef(null)
+  const contentsWrapperEl = React.useRef<HTMLDivElement>(null)
   const [height, setHeight] = React.useState(0)
 
   // This is to ensure that the maxHeight is added back to the DOM before it is
@@ -37,6 +37,10 @@ const SlideReveal: React.FC<Props> = ({ open, children }) => {
   const [transitioning, setTransitioning] = React.useState(false)
 
   const calculateHeight = () => {
+    if (contentsWrapperEl.current === null) {
+      console.error('Wrapper element somehow not defined')
+      return
+    }
     const height = contentsWrapperEl.current.getBoundingClientRect().height
     setHeight(height)
 
