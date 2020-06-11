@@ -22,6 +22,7 @@ const ToggleSwitch: React.FC<Props> = ({
   compact = false,
   onChange,
   icons,
+  className,
   ...props
 }) => {
   const state = checked ? 'checked' : 'unchecked'
@@ -30,7 +31,10 @@ const ToggleSwitch: React.FC<Props> = ({
     : 'toggleSwitch2.base'
 
   return (
-    <div sx={{ display: 'inline-block', verticalAlign: 'middle' }}>
+    <div
+      sx={{ display: 'inline-block', verticalAlign: 'middle' }}
+      className={className}
+    >
       <input
         checked={checked}
         onChange={onChange}
