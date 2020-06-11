@@ -9,24 +9,34 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   imageUrl?: string
 }
 
-const testUrl = "https://bankrate-contentful.imgix.net/av9bri1l3qli/7sbWLFU7hxGV58I6SN9Wzl/2896300c00c95e4193118e533d0fe517/Secrets-financial-planer-commission"
+const DefaultContainer: React.FC<Props> = ({ children, className }) => {
+  return (
+    <div 
+      className={className}
+      sx={{ margin: 'auto', variant: 'grid.container' }}
+    >
+      {children}
+    </div>
+  )
+}
 
 const HeroWithBackgroundImage: React.FC<Props> = ({
   breadcrumbs,
   children,
-  imageUrl
+  imageUrl,
+  container: Container = DefaultContainer,
 }) => {
-  console.log("imageUrl", imageUrl)
   return (
-    <div sx={{ position: 'relative', overflow: 'hidden', variant: 'hero-with-background-image' }} >
-      <div sx={{
-        backgroundSize: 'cover',
-        backgroundPosition: 'center center',
-        backgroundRepeat: 'no-repeat',
-        backgroundImage: `url(${imageUrl})`,
-      }}>
-        Hello
-      </div>
+    <div sx={{
+      backgroundSize: 'cover',
+      backgroundPosition: 'center center',
+      backgroundRepeat: 'no-repeat',
+      backgroundImage: `url(${imageUrl})`,
+    }}>
+      <Container>
+        {breadcrumbs}
+        {children}
+      </Container>
     </div>
   )
 }
