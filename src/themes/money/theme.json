@@ -1258,17 +1258,24 @@
   },
 
   "input": {
+    "default": {
+      "color": "grey-40"
+    },
+    "error": {
+      "color": "error"
+    },
     "frozen": {
       "backgroundColor": "grey-10",
       "borderRadius": "3px"
     },
     "focus": {
+      "color": "plum",
       "outline": "2px solid",
       "outline-color": "orange"
     },
     "textInput": {
       "wrapper": {
-        "borderRadius": "3px"
+        "borderRadius": "4px"
       }
     },
     "radioish": {

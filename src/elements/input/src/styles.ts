@@ -10,19 +10,20 @@ export const wrapper = (
   width: 'half' | 'full'
 ): SxStyleProp => ({
   boxShadow: (theme: any) =>
-    hasError
-      ? `inset 0 0 0 1px ${theme.elements?.input?.errorColor ?? tomato}`
+    console.log(theme) || hasError
+      ? `inset 0 0 0 1px ${theme.colors[theme.input?.error?.color] ?? tomato}`
       : hasFocus
-      ? `inset 0 0 0 1px ${theme.elements?.input?.focusColor ?? UswitchNavy}`
+      ? `inset 0 0 0 1px ${theme.colors[theme.input?.focus?.color] ??
+          UswitchNavy}`
       : 'inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)',
   backgroundColor: white,
   border: `solid 1px`,
   borderColor: (theme: any) =>
     hasError
-      ? theme.elements?.input?.errorColor ?? tomato
+      ? theme.colors[theme.input?.error?.color] ?? tomato
       : hasFocus
-      ? theme.elements?.input?.focusColor ?? UswitchNavy
-      : theme.elements?.input?.defaultColor ?? UswitchNavy,
+      ? theme.colors[theme.input?.focus?.color] ?? UswitchNavy
+      : theme.colors[theme.input?.default?.color] ?? UswitchNavy,
   boxSizing: 'border-box',
   display: 'flex',
   position: 'relative',
@@ -68,16 +69,16 @@ const affix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({
   boxSizing: 'border-box',
   borderColor: (theme: any) =>
     hasError
-      ? theme.elements?.input?.errorColor ?? tomato
+      ? theme.colors[theme.input?.error?.color] ?? tomato
       : hasFocus
-      ? theme.elements?.input?.focusColor ?? UswitchNavy
-      : theme.elements?.input?.defaultColor ?? UswitchNavy,
+      ? theme.colors[theme.input?.focus?.color] ?? UswitchNavy
+      : theme.colors[theme.input?.default?.color] ?? UswitchNavy,
   color: (theme: any) =>
     hasError
-      ? theme.elements?.input?.errorColor ?? tomato
+      ? theme.colors[theme.input?.error?.color] ?? tomato
       : hasFocus
-      ? theme.elements?.input?.focusColor ?? UswitchNavy
-      : theme.elements?.input?.defaultColor ?? 'text'
+      ? theme.colors[theme.input?.focus?.color] ?? UswitchNavy
+      : theme.colors[theme.input?.default?.color] ?? 'text'
 })
 
 export const prefix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({
