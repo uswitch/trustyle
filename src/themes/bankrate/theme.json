@@ -127,6 +127,9 @@
 
   "----------------------------- Variants": "-----------------------------",
   "modules": {},
+  "hero-with-background-image": {
+      "backgroundImage": "linear-gradient(90deg, rgba(0, 2, 11, 0.75) 0%, rgba(0, 2, 11, 0) 100%)"
+  },
 
   "accordion": {
     "base": {
@@ -511,6 +514,18 @@
         "button": {
           "variant": "cta2.base.button"
         }
+      },
+      "hero-with-background-image": {
+        "backgroundColor": "red",
+        "title": {
+          "variant": "cta2.base.title"
+        },
+        "text": {
+          "variant": "cta2.base.text"
+        },
+        "button": {
+          "variant": "cta2.base.button"
+        }
       }
     }
   },
@@ -546,10 +561,10 @@
   "breadcrumbs2": {
     "base": {
       "main": {
-        "color": "grey-60"
+        "color": "grey-100"
       },
       "homeIcon": {
-        "color": "grey-60"
+        "color": "grey-100"
       },
       "title": {
         "color": "grey-100"
