@@ -105,7 +105,6 @@ export const DropDown = forwardRef(
                 display: 'flex',
                 alignItems: 'center',
                 paddingX: 16,
-                borderRadius: 3,
                 variant
               }}
               className={className}
@@ -131,11 +130,11 @@ export const DropDown = forwardRef(
               lineHeight: '1.33',
               appearance: 'none',
               backgroundColor: 'white',
-              borderRadius: 3,
               boxSizing: 'border-box',
               padding: 16,
               paddingRight: 48,
               verticalAlign: 'middle',
+              borderRadius: 0,
               width: '100%',
               '&::-ms-expand': {
                 display: 'none'

@@ -357,17 +357,18 @@
       "select": {
         "base": {
           "border": "1px solid",
-          "borderColor": "grey-40"
+          "borderColor": "black"
         },
         "variants": {
           "error": {
             "variant": "elements.drop-down.select.base",
             "borderColor": "error-red",
+            "border": "2px solid",
             "outlineColor": "error-red"
           },
           "focus": {
             "variant": "elements.drop-down.select.base",
-            "outlineColor": "#008fe9"
+            "outlineColor": "black"
           }
         }
       }
@@ -1199,7 +1200,7 @@
   "input": {
     "frozen": {
       "backgroundColor": "frozen-bg",
-      "borderRadius": "3px"
+      "borderRadius": "0px"
     },
     "focus": {
       "outline": "2px solid",
