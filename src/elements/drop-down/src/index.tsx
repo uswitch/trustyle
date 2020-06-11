@@ -134,6 +134,7 @@ export const DropDown = forwardRef(
               padding: 16,
               paddingRight: 48,
               verticalAlign: 'middle',
+              borderRadius: 0,
               width: '100%',
               '&::-ms-expand': {
                 display: 'none'

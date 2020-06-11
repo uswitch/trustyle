@@ -350,18 +350,19 @@
     "drop-down": {
       "select": {
         "base": {
-          "border": "2px solid",
-          "borderColor": "grey-40"
+          "border": "1px solid",
+          "borderColor": "black"
         },
         "variants": {
           "error": {
             "variant": "elements.drop-down.select.base",
             "borderColor": "error-red",
+            "border": "2px solid",
             "outlineColor": "error-red"
           },
           "focus": {
             "variant": "elements.drop-down.select.base",
-            "outlineColor": "#008fe9"
+            "outlineColor": "black"
           }
         }
       }
