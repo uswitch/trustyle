@@ -604,6 +604,57 @@
     }
   },
 
+  "toggleSwitch2": {
+    "base": {
+      "base": {
+        "width": 70,
+        "height": 30,
+        "switch": {
+          "width": 28,
+          "height": 28
+        }
+      },
+      "checked": {
+        "variant": "toggleSwitch2.base.base",
+        "backgroundColor": "primary",
+        "borderColor": "primary",
+        "switch": {
+          "variant": "toggleSwitch2.base.base.switch",
+          "backgroundColor": "white",
+          "borderColor": "primary"
+        }
+      },
+      "unchecked": {
+        "variant": "toggleSwitch2.base.base",
+        "backgroundColor": "grey-20",
+        "borderColor": "grey-20",
+        "switch": {
+          "variant": "toggleSwitch2.base.base.switch",
+          "backgroundColor": "white",
+          "borderColor": "grey-20"
+        }
+      }
+    },
+    "variants": {
+      "compact": {
+        "checked": {
+          "switch": {
+            "variant": "toggleSwitch2.base.base.switch",
+            "backgroundColor": "primary",
+            "borderColor": "primary"
+          }
+        },
+        "unchecked": {
+          "switch": {
+            "variant": "toggleSwitch2.base.base.switch",
+            "backgroundColor": "grey-20",
+            "borderColor": "grey-20"
+          }
+        }
+      }
+    }
+  },
+
   "richTextModule": {
     "contentCols": 12,
     "contentSpan": 10
