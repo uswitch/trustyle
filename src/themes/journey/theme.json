@@ -300,7 +300,8 @@
       "select": {
         "base": {
           "border": "1px solid",
-          "borderColor": "light-grey-blue"
+          "borderRadius": 0,
+          "borderColor": "black"
         },
         "variants": {
           "error": {
@@ -311,7 +312,7 @@
           },
           "focus": {
             "variant": "elements.drop-down.select.base",
-            "outlineColor": "#008fe9"
+            "outlineColor": "black"
           }
         }
       }
@@ -477,25 +478,13 @@
 
   "buttons": {
     "base": {
-      "box-sizing": "border-box",
+      "boxSizing": "border-box",
+      "paddingX": "lg",
       "textAlign": "center",
-      "width": ["100%"],
-      "border": "none",
       "fontWeight": "bold",
-      "borderRadius": "0px",
       "lineHeight": "base",
-      ":hover": {
-        "backgroundColor": "primary-hover",
-        "boxShadow": "inset 0 0 0 1px ${color}",
-        "color": "light-1"
-      },
-      ":disabled": {
-        "backgroundColor": "primary",
-        "opacity": "0.6",
-        "cursor": "not-allowed"
-      },
-      ":visited": {
-        "color": "light-1"
+      ":focus": {
+        "variant": "input.focus"
       },
       "btnSize": {
         "small": {
@@ -526,10 +515,6 @@
           "color": "white"
         }
       },
-      "continue": {
-        "variant": "buttons.variants.primary"
-      },
-
       "secondary": {
         "variant": "buttons.base",
         "color": "uswitch-navy",
@@ -542,6 +527,48 @@
         ":disabled": {
           "color": "grey-40",
           "borderColor": "grey-20",
+          "cursor": "not-allowed"
+        },
+        ":visited": {
+          "color": "uswitch-navy"
+        }
+      },
+      "reversed": {
+        "variant": "buttons.base",
+        "color": "white",
+        "backgroundColor": "uswitch-navy",
+        "border": "2px solid",
+        "borderColor": "white",
+        ":hover": {
+          "backgroundColor": "grey-80"
+        },
+        ":disabled": {
+          "borderColor": "grey-60",
+          "color": "grey-60",
+          "cursor": "not-allowed"
+        },
+        ":visited": {
+          "color": "white"
+        }
+      },
+      "link": {
+        "variant": "buttons.base",
+        "color": "uswitch-navy",
+        "background": "none",
+        "textDecoration": "underline"
+      },
+      "inverse": {
+        "variant": "buttons.base",
+        "color": "uswitch-navy",
+        "backgroundColor": "white",
+        "border": "2px solid",
+        "borderColor": "uswitch-navy",
+        ":hover": {
+          "backgroundColor": "grey-100"
+        },
+        ":disabled": {
+          "borderColor": "grey-60",
+          "color": "grey-60",
           "cursor": "not-allowed"
         },
         ":visited": {
@@ -701,7 +728,12 @@
 
   "input": {
     "frozen": {
-      "backgroundColor": "frozen-bg"
+      "backgroundColor": "frozen-bg",
+      "borderRadius": "0"
+    },
+    "focus": {
+      "outline": "2px solid",
+      "outline-color": "orange"
     },
     "radioish": {
       "base": {
@@ -714,21 +746,28 @@
           }
         },
         "&:focus + span": {
-          "boxShadow": "linkInset"
+          "variant": "input.focus"
         }
       },
       "label": {
-        "borderColor": "light-grey-blue",
-        "borderRadius": "0px",
+        "borderColor": "grey-40",
         "borderStyle": "solid",
         "borderWidth": "1px",
-        "color": "slate-grey",
+        "color": "grey-80",
         "fontWeight": "normal",
         "padding": "11px 12px 11px 0",
         "&:before": {
-          "borderColor": "light-grey-blue",
+          "borderColor": "grey-30",
           "borderStyle": "solid",
           "borderWidth": "2px"
+        }
+      },
+      "variants": {
+        "normal": {
+          "variant": "input.radioish.base"
+        },
+        "slim": {
+          "variant": "input.radioish.base"
         }
       }
     },
@@ -739,7 +778,7 @@
           "variant": "input.radioish.base.&:checked + span",
           "&::before": {
             "variant": "input.radioish.base.&:checked + span.&::before",
-            "backgroundColor": "black",
+            "background": "black",
             "boxShadow": "inset 0 0 0 2px #fff"
           }
         }
@@ -748,13 +787,8 @@
         "variant": "input.radioish.label",
         "&:before": {
           "variant": "input.radioish.label.&:before",
-          "borderRadius": "0"
+          "borderRadius": "50%"
         }
-      }
-    },
-    "textInput": {
-      "wrapper": {
-        "borderRadius": "0px"
       }
     },
     "checkbox": {
@@ -764,9 +798,10 @@
           "variant": "input.radioish.base.&:checked + span",
           "&::before": {
             "variant": "input.radioish.base.&:checked + span.&::before",
-            "backgroundImage": "url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23008fe9' viewBox='-1 -2 14 12'%3E%3Cpath d='M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z' /%3E%3C/svg%3E\")",
+            "backgroundImage": "url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='-1 -2 14 12'%3E%3Cpath d='M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z' /%3E%3C/svg%3E\")",
             "backgroundSize": "16px 16px",
-            "borderColor": "azure"
+            "backgroundColor": "black",
+            "borderColor": "black"
           }
         }
       },
@@ -794,7 +829,10 @@
               "variant": "input.checkbox.base.&:checked + span.&::before"
             }
           },
-          "&:focus + span": {}
+          "&:focus + span": {},
+          "&:focus + span::before": {
+            "variant": "input.focus"
+          }
         }
       }
     },
