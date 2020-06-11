@@ -8,7 +8,13 @@ interface Props extends React.HTMLAttributes<any> {
 }
 
 const AllThemes: React.FC<Props> = ({ themes = [], children }) => {
-  const availableThemes = ['uswitch', 'money', 'journey', 'save-on-energy']
+  const availableThemes = [
+    'uswitch',
+    'money',
+    'journey',
+    'save-on-energy',
+    'bankrate'
+  ]
   const themeKeys = themes.length
     ? availableThemes.filter(theme => themes.includes(theme))
     : availableThemes
