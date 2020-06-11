@@ -1387,10 +1387,12 @@
 
   "logoCollection": {
     "base": {
-      "mr": ["lg", "lg", "md"],
-      "img": {
-        "maxWidth": "100px",
-        "maxHeight": "64px"
+      "inner": {
+        "mr": ["lg", "lg", "md"],
+        "img": {
+          "maxWidth": "100px",
+          "maxHeight": "64px"
+        }
       }
     }
   },
