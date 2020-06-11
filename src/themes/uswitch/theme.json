@@ -928,10 +928,16 @@
 
   "logoCollection": {
     "base": {
-      "mr": ["lg", "lg", "md"],
-      "img": {
-        "maxWidth": "250px",
-        "maxHeight": "150px"
+      "outer": {
+        "justifyContent": "flex-start",
+        "alignItems": "flex-start"
+      },
+      "inner" : {
+        "mr": ["lg", "lg", "md"],
+        "img": {
+          "maxWidth": "250px",
+          "maxHeight": "150px"
+        }
       }
     }
   },
