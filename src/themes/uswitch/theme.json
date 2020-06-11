@@ -925,6 +925,16 @@
     }
   },
 
+  "logoCollection": {
+    "base": {
+      "mr": ["lg", "lg", "md"],
+      "img": {
+        "maxWidth": "250px",
+        "maxHeight": "150px"
+      }
+    }
+  },
+
   "author": {
     "heading": {
       "color": "grey-80"

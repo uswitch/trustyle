@@ -1385,6 +1385,16 @@
     }
   },
 
+  "logoCollection": {
+    "base": {
+      "mr": ["lg", "lg", "md"],
+      "img": {
+        "maxWidth": "100px",
+        "maxHeight": "64px"
+      }
+    }
+  },
+
   "author": {
     "heading": {
       "color": "grey-80"
