@@ -301,15 +301,8 @@
           }
         }
       }
-    },
-
-    "input": {
-      "defaultColor": "light-grey-blue",
-      "errorColor": "error-red",
-      "focusColor": "#008fe9"
     }
   },
-
   "compounds": {
     "accordion": {
       "base": {
@@ -698,8 +691,41 @@
   },
 
   "input": {
+    "base": {
+      "fontFamily": "base",
+      "fontSize": "base",
+      "lineHeight": 1.33,
+      "color": "text",
+      "appearance": "none",
+      "border": "none",
+      "background": "none",
+      "boxSizing": "border-box",
+      "display": "flex",
+      "flex": 1,
+      "position": "relative",
+      "verticalAlign": "middle",
+      "width": "100%",
+      "&:focus": {
+        "outline": "none"
+      },
+      "&:disabled": {
+        "outline": "none",
+        "border": "none",
+        "color": "battleshipGrey",
+        "background": "veryLightGrey"
+      }
+    },
     "frozen": {
       "backgroundColor": "frozen-bg"
+    },
+    "default": {
+      "color": "light-grey-blue"
+    },
+    "error": {
+      "color": "error-red"
+    },
+    "focus": {
+      "color": "p#008fe9lum"
     },
     "radioish": {
       "base": {

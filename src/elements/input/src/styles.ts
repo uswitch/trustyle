@@ -2,7 +2,7 @@ import { colors, pxToRem, spacers } from '@uswitch/trustyle.styles'
 
 import { SxStyleProp } from '../../../../types/theme-ui'
 
-const { battleshipGrey, tomato, UswitchNavy, veryLightGrey, white } = colors
+const { tomato, UswitchNavy, white } = colors
 
 export const wrapper = (
   hasError: boolean,
@@ -10,7 +10,7 @@ export const wrapper = (
   width: 'half' | 'full'
 ): SxStyleProp => ({
   boxShadow: (theme: any) =>
-    console.log(theme) || hasError
+    hasError
       ? `inset 0 0 0 1px ${theme.colors[theme.input?.error?.color] ?? tomato}`
       : hasFocus
       ? `inset 0 0 0 1px ${theme.colors[theme.input?.focus?.color] ??
@@ -29,33 +29,6 @@ export const wrapper = (
   position: 'relative',
   width: width === 'half' ? '50%' : '100%'
 })
-
-export const input: SxStyleProp = {
-  fontFamily: 'base',
-  fontSize: 'base',
-  lineHeight: '1.33',
-  color: 'text',
-
-  appearance: 'none',
-  border: 'none',
-  background: 'none',
-  boxSizing: 'border-box',
-  display: 'flex',
-  flex: 1,
-  padding: (theme: any) => pxToRem(theme.space.base),
-  position: 'relative',
-  verticalAlign: 'middle',
-  width: '100%',
-  '&:focus': {
-    outline: 'none'
-  },
-  '&:disabled': {
-    outline: 'none',
-    border: 'none',
-    color: battleshipGrey,
-    background: veryLightGrey
-  }
-}
 
 const affix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({
   fontFamily: 'base',

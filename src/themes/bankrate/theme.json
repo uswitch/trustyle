@@ -381,9 +381,29 @@
   },
 
   "input": {
-    "textInput": {
-      "wrapper": {
-        "borderRadius": "3px"
+    "base": {
+      "fontFamily": "base",
+      "fontSize": "base",
+      "lineHeight": 1.33,
+      "color": "text",
+      "borderRadius": "4px",
+      "appearance": "none",
+      "border": "none",
+      "background": "none",
+      "boxSizing": "border-box",
+      "display": "flex",
+      "flex": 1,
+      "position": "relative",
+      "verticalAlign": "middle",
+      "width": "100%",
+      "&:focus": {
+        "outline": "none"
+      },
+      "&:disabled": {
+        "outline": "none",
+        "border": "none",
+        "color": "primary",
+        "background": "veryLightGrey"
       }
     }
   },
