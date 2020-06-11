@@ -611,12 +611,13 @@
     "collectionTabs": {
       "base":{
         "container": {
-          "borderBottomWidth": 1,
-          "borderBottomStyle": "solid",
-          "borderBottomColor": "grey-20",
+          "px": "xxs",
           "h6":{
             "fontSize": ["base", 14, "sm"],
-            "color": "grey-60"
+            "color": "grey-60",
+            "fontWeight": "bold",
+            "textAlign": "center",
+            "my":["xs", "sm"]
           }
         }
       },
@@ -624,13 +625,50 @@
         "isActive": {
           "container": {
             "borderBottomStyle": "solid",
-            "borderBottomWidth": 2,
-            "borderBottomColor": "black",
+            "borderBottomWidth": 3,
+            "borderBottomColor": "fuschia",
+            "px": "xxs",
             "h6": {
               "fontSize": ["base", 14, "sm"],
-              "color": "black"
+              "color": "black",
+              "fontWeight": "bold",
+              "textAlign": "center",
+              "my": ["xs", "sm"]
             }
           }
+        },
+        "tabSpacing": {
+          "mx": "sm",
+          "mb": 0
+        },
+        "tabContentSpacing": {
+          "mx": ["xxs", "xs"],
+          "my": "sm"
+        },
+        "overflowBorderLeft": {
+            "position": "absolute",
+            "display": "block",
+            "width": "20px",
+            "top": 0,
+            "left": 0,
+            "height": "100%",
+            "background": "linear-gradient(to right, rgba(249, 249, 251, 0.99) 0%, rgba(249, 249, 251, 0.26) 100%)",
+            "zIndex": 10
+        },
+        "overflowBorderRight": {
+          "position": "absolute",
+          "display": "block",
+          "width": "20px",
+          "top": 0,
+          "right": 0,
+          "height": "100%",
+          "background": "linear-gradient(to left, rgba(249, 249, 251, 0.99) 0%, rgba(249, 249, 251, 0.26) 100%)"
+      },
+        "borderBottom": {
+          "borderBottomWidth": 1,
+          "borderBottomStyle": "solid",
+          "borderBottomColor": "grey-20",
+          "backgroundColor": "grey-05"
         }
       }
     },
@@ -1306,6 +1344,43 @@
       "switch": {
         "backgroundColor": "white",
         "borderColor": "grey-20"
+      }
+    }
+  },
+
+  "toggleSwitch2": {
+    "base": {
+      "checked": {
+        "backgroundColor": "secondary",
+        "borderColor": "secondary",
+        "switch": {
+          "backgroundColor": "white",
+          "borderColor": "secondary"
+        }
+      },
+      "unchecked": {
+        "backgroundColor": "grey-20",
+        "borderColor": "grey-20",
+        "switch": {
+          "backgroundColor": "white",
+          "borderColor": "grey-20"
+        }
+      }
+    },
+    "variants": {
+      "compact": {
+        "checked": {
+          "switch": {
+            "backgroundColor": "secondary",
+            "color": "white",
+            "borderColor": "secondary"
+          }
+        },
+        "unchecked": {
+          "switch": {
+            "variant": "toggleSwitch2.base.unchecked.switch"
+          }
+        }
       }
     }
   },
