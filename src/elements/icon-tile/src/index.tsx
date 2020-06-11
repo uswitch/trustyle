@@ -30,7 +30,7 @@ const IconTile: React.FC<Props> = ({ icon, children }) => {
     >
       <div
         sx={{
-          flex: 1,
+          flex: [1, null, 0],
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
@@ -38,7 +38,14 @@ const IconTile: React.FC<Props> = ({ icon, children }) => {
       >
         {icon}
       </div>
-      <Styled.p sx={{ fontSize: 'md', marginY: 0, variant: 'iconTile.text' }}>
+      <Styled.p
+        sx={{
+          flex: [null, null, 1],
+          fontSize: 'md',
+          marginY: 0,
+          variant: 'iconTile.text'
+        }}
+      >
         {children}
       </Styled.p>
     </div>
