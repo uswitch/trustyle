@@ -1,14 +1,11 @@
 {
-  "name": "@uswitch/trustyle.toggle-switch",
-  "version": "1.2.2",
+  "name": "@uswitch/trustyle.logo-collection",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "@uswitch/trustyle-utils.palette": "^1.0.5"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
