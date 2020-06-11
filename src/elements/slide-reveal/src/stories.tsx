@@ -18,11 +18,11 @@ export const ExampleWithKnobs = () => {
       <p sx={{ marginTop: 0 }}>test content</p>
       <p>test content</p>
       <p>test content</p>
-      <p>test content</p>
       <img
         src="https://placekitten.com/408/287?image=5"
         sx={{ maxWidth: '100%' }}
       />
+      <p>test content</p>
     </SlideReveal>
   )
 }
