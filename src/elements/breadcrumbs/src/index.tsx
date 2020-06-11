@@ -5,8 +5,12 @@ import { jsx, Styled, useThemeUI } from 'theme-ui'
 import get from '@uswitch/trustyle-utils.get'
 import { Icon } from '@uswitch/trustyle.icon'
 
+const themePrefix = 'breadcrumbs2'
+
 const lookup = (variant: string) =>
-  variant === 'base' ? 'breadcrumbs2.base' : `breadcrumbs2.variants.${variant}`
+  variant === 'base'
+    ? `${themePrefix}.base`
+    : `${themePrefix}.variants.${variant}`
 
 interface HomeIconProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?: 'base' | 'light'
@@ -96,7 +100,8 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
   homePath
 }) => {
   const liStyling = {
-    display: 'inline'
+    display: 'inline',
+    variant: `${themePrefix}.li`
   }
 
   const anchorStyling = {

@@ -127,7 +127,53 @@
 
   "----------------------------- Variants": "-----------------------------",
   "modules": {},
-  
+  "hero-with-background-image": {
+      "backgroundImage": "linear-gradient(90deg, rgba(0, 2, 11, 0.75) 0%, rgba(0, 2, 11, 0) 100%)"
+  },
+
+  "accordion": {
+    "base": {
+      "marginTop": "sm",
+      "marginBottom": "sm",
+      "title": {
+        "marginTop": "0",
+        "marginBottom": "xs"
+      },
+      "content": {
+        "marginBottom": "xs"
+      },
+      "button": {
+        "padding": "0",
+        "paddingTop": 10,
+        "paddingBottom": 10,
+        "bg": "transparent",
+        "fontFamily": "base",
+        "fontSize": "base",
+        "fontWeight": "bold",
+        "color": "textColor",
+        "alignItems": "center",
+        "borderWidth": "1px 0 0 0",
+        "borderStyle": "solid",
+        "borderColor": "grey-20",
+        "display": "flex",
+        "flexDirection": "row",
+        "width": "100%"
+      },
+      "caret": {
+        "color": "primary"
+      }
+    },
+    "variants": {
+      "isActive": {
+        "button": {
+          "variant": "accordion.base.button"
+        },
+        "caret": {
+          "color": "primary--dark"
+        }
+      }
+    }
+  },
   "sideNav": {
     "internalLinkList": {
       "listStyle": "none",
@@ -464,6 +510,18 @@
         "button": {
           "variant": "cta2.base.button"
         }
+      },
+      "hero-with-background-image": {
+        "backgroundColor": "red",
+        "title": {
+          "variant": "cta2.base.title"
+        },
+        "text": {
+          "variant": "cta2.base.text"
+        },
+        "button": {
+          "variant": "cta2.base.button"
+        }
       }
     }
   },
@@ -499,10 +557,10 @@
   "breadcrumbs2": {
     "base": {
       "main": {
-        "color": "grey-60"
+        "color": "grey-100"
       },
       "homeIcon": {
-        "color": "grey-60"
+        "color": "grey-100"
       },
       "title": {
         "color": "grey-100"
