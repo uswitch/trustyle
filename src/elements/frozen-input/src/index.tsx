@@ -66,7 +66,7 @@ export const FrozenInput: React.FC<Props> = ({
           css={st.edit}
           onClick={() => setFrozen(false)}
         >
-          <Icon color={colors.azure} glyph={iconGlyph} />
+          <Icon color={colors.UswitchNavy} glyph={iconGlyph} />
         </button>
       </div>
 
