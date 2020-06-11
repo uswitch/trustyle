@@ -285,8 +285,9 @@
     "drop-down": {
       "select": {
         "base": {
-          "border": "2px solid",
-          "borderColor": "light-grey-blue"
+          "border": "1px solid",
+          "borderRadius": 0,
+          "borderColor": "black"
         },
         "variants": {
           "error": {
@@ -297,7 +298,7 @@
           },
           "focus": {
             "variant": "elements.drop-down.select.base",
-            "outlineColor": "#008fe9"
+            "outlineColor": "black"
           }
         }
       }
