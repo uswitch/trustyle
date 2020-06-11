@@ -149,6 +149,8 @@
     "black-75": "#4F4F5B",
     "black-50": "#898991",
     "black-25": "#C4C4C8",
+    "battleshipGrey": "#65717B",
+    "veryLightGrey": "#E9EBED",
 
     "uswitch-navy": "#141424",
 
@@ -164,7 +166,7 @@
     "grey-05": "#F3F3F4",
     "white": "#FFFFFF",
 
-    "frozen-bg": "#f6f6f6",
+    "frozen-bg": "#F6F6F6",
 
     "progress-bg": "#E0E9FF",
     "progress-primary": "#84A6FF",
@@ -1253,6 +1255,30 @@
   },
 
   "input": {
+    "base": {
+      "fontFamily": "base",
+      "fontSize": "base",
+      "lineHeight": 1.33,
+      "color": "text",
+      "appearance": "none",
+      "border": "none",
+      "background": "none",
+      "boxSizing": "border-box",
+      "display": "flex",
+      "flex": 1,
+      "position": "relative",
+      "verticalAlign": "middle",
+      "width": "100%",
+      "&:focus": {
+        "outline": "none"
+      },
+      "&:disabled": {
+        "outline": "none",
+        "border": "none",
+        "color": "battleshipGrey",
+        "background": "veryLightGrey"
+      }
+    },
     "frozen": {
       "backgroundColor": "frozen-bg",
       "borderRadius": "0px"

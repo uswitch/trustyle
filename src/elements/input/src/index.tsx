@@ -3,6 +3,7 @@
 import { forwardRef, useEffect, useRef, useState } from 'react'
 import { jsx } from 'theme-ui'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
+import { pxToRem } from '@uswitch/trustyle.styles'
 import InputMask from 'react-input-mask'
 import debounce from 'lodash.debounce'
 
@@ -116,7 +117,10 @@ export const Input = forwardRef<HTMLInputElement, Props>(
 
     const childProps = {
       ...inputProps,
-      sx: st.input,
+      sx: {
+        variant: 'input.base',
+        padding: (theme: any) => pxToRem(theme.space.base)
+      },
       onBlur: blurHandler,
       onChange: changeHandler,
       onFocus: focusHandler,
@@ -133,7 +137,7 @@ export const Input = forwardRef<HTMLInputElement, Props>(
         <div
           sx={{
             ...st.wrapper(hasError, hasFocus, width),
-            variant: 'input.textInput.wrapper'
+            variant: (theme: any) => theme?.input?.base?.borderRadius
           }}
         >
           {prefix && <span sx={st.prefix(hasError, hasFocus)}>{prefix}</span>}
@@ -149,7 +153,10 @@ export const Input = forwardRef<HTMLInputElement, Props>(
             <input
               ref={inputRef}
               {...childProps}
-              sx={{ ...st.input, variant: 'input.textInput' }}
+              sx={{
+                variant: 'input.base',
+                padding: (theme: any) => pxToRem(theme.space.base)
+              }}
             />
           )}
 
