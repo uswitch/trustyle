@@ -116,6 +116,7 @@
   "useBodyStyles": false,
 
   "colors": {
+    "primary": "#141424",
     "blue": "#84A6FF",
     "blue-75": "#A3BCFF",
     "blue-50": "#C1D3FF",
@@ -356,17 +357,18 @@
       "select": {
         "base": {
           "border": "1px solid",
-          "borderColor": "grey-40"
+          "borderColor": "black"
         },
         "variants": {
           "error": {
             "variant": "elements.drop-down.select.base",
             "borderColor": "error-red",
+            "border": "2px solid",
             "outlineColor": "error-red"
           },
           "focus": {
             "variant": "elements.drop-down.select.base",
-            "outlineColor": "#008fe9"
+            "outlineColor": "black"
           }
         }
       }
@@ -439,6 +441,81 @@
           },
           "caret": {
             "variant": "compounds.accordion.base.caret"
+          }
+        }
+      }
+    },
+
+    "carousel": {
+      "display": "flex",
+      "verticalAlign": "middle",
+      "alignItems": "center",
+      "paddingRight": "0",
+      "paddingBottom": "xxl",
+      "slide": {
+        "mr": [0, "sm", "lg"]
+      },
+      ".glider-dots": {
+        ".glider-dot": {
+          "backgroundColor": "grey-20",
+          "width": "8px",
+          "height": "8px",
+          "&:focus, &.active": {
+            "backgroundColor": "primary"
+          },
+          "&:hover": {
+            "backgroundColor": "grey-30"
+          }
+        }
+      }
+    },
+
+    "interactiveTabs": {
+      "base": {
+        "bg": "grey-05",
+        "h5": {
+          "color": "grey-60",
+          "mt": 0
+        },
+        "color": "grey-60",
+        "iconColor": "grey-60",
+        "padding": "md",
+        "mb": "md",
+        "display": "flex",
+        "flexDirection": "row",
+        "svg": {
+            "fill": "grey-60"
+          }
+      },
+      "variants": {
+        "isActive":{
+          "variant": "compounds.interactiveTabs.base",
+          "iconColor": "black",
+          "position": "relative",
+          "mx": ["auto", 0],
+          "width": ["80%", "auto"],
+          "bg": "white",
+          "boxShadow": ["0px 0px 16px rgba(0, 0, 0, 0.15)", "0px 8px 16px rgba(0, 0, 0, 0.15)"],
+          "h5": {
+            "color": "primary",
+            "mt": 0
+          },
+          "svg": {
+            "fill": "primary"
+          },
+          "borderBottomWidth": 4,
+          "borderBottomStyle": "solid",
+          "borderBottomColor": "primary",
+          "::before":{
+            "content": "''",
+            "position": "absolute",
+            "width": 24,
+            "height": 24,
+            "left": ["calc(50% - 24px/2)", -12],
+            "top": [-10, "calc(50% - 18px)"],
+            "background": "white",
+            "transform": "rotate(45deg)",
+            "boxShadow": ["none", "-8px 10px 16px -6px rgba(0, 0, 0, 0.15)"]
           }
         }
       }
@@ -552,9 +629,6 @@
     "collectionTabs": {
       "base": {
         "container": {
-          "borderBottomWidth": 1,
-          "borderBottomStyle": "solid",
-          "borderBottomColor": "grey-20",
           "h6": {
             "fontSize": ["base", 14, "sm"],
             "color": "grey-60"
@@ -572,6 +646,38 @@
               "color": "black"
             }
           }
+        },
+        "tabSpacing": {
+          "mx": "md",
+          "mb": 0
+        },
+        "tabContentSpacing": {
+          "mx": ["xxs", "md"],
+          "my": "sm"
+        },
+        "overflowBorderLeft": {
+          "position": "absolute",
+          "display": "block",
+          "width": "20px",
+          "top": 0,
+          "left": 0,
+          "height": "100%",
+          "background": "linear-gradient(to right, rgba(255, 255, 255, 255) 0%, rgba(0, 0, 0, 0) 100%)",
+          "zIndex": 10
+        },
+        "overflowBorderRight": {
+          "position": "absolute",
+          "display": "block",
+          "width": "20px",
+          "top": 0,
+          "right": 0,
+          "height": "100%",
+          "background": "linear-gradient(to left, rgba(255, 255, 255, 255) 0%, rgba(0, 0, 0, 0) 100%)"
+        },
+        "borderBottom": {
+          "borderBottomWidth": 1,
+          "borderBottomStyle": "solid",
+          "borderBottomColor": "grey-20"
         }
       }
     },
@@ -807,6 +913,30 @@
         },
         ":visited": {
           "color": "uswitch-navy"
+        }
+      },
+      "control": {
+        "boxSizing": "border-box",
+        "padding": "sm",
+        "border": "1px solid",
+        "borderColor": "grey-40",
+        "borderRadius": 3,
+        "backgroundColor": "white"
+      }
+    }
+  },
+
+  "logoCollection": {
+    "base": {
+      "outer": {
+        "justifyContent": "flex-start",
+        "alignItems": "flex-start"
+      },
+      "inner" : {
+        "mr": ["lg", "lg", "md"],
+        "img": {
+          "maxWidth": "250px",
+          "maxHeight": "150px"
         }
       }
     }
@@ -1076,7 +1206,7 @@
   "input": {
     "frozen": {
       "backgroundColor": "frozen-bg",
-      "borderRadius": "3px"
+      "borderRadius": "0px"
     },
     "focus": {
       "outline": "2px solid",
@@ -1292,6 +1422,44 @@
         "color": "grey-40",
         "backgroundColor": "white",
         "borderColor": "grey-40"
+      }
+    }
+  },
+
+  "toggleSwitch2": {
+    "base": {
+      "checked": {
+        "backgroundColor": "black",
+        "borderColor": "black",
+        "switch": {
+          "backgroundColor": "white",
+          "borderColor": "black"
+        }
+      },
+      "unchecked": {
+        "backgroundColor": "grey-05",
+        "borderColor": "grey-40",
+        "switch": {
+          "color": "grey-40",
+          "backgroundColor": "white",
+          "borderColor": "grey-40"
+        }
+      }
+    },
+    "variants": {
+      "compact": {
+        "checked": {
+          "switch": {
+            "backgroundColor": "black",
+            "color": "white",
+            "borderColor": "black"
+          }
+        },
+        "unchecked": {
+          "switch": {
+            "variant": "toggleSwitch2.base.unchecked.switch"
+          }
+        }
       }
     }
   },
