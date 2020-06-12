@@ -110,13 +110,13 @@ const FunnelProgress: React.FC<Props> = ({
         <div
           sx={{
             variant:
-              progress !== 0 || !open
+              progress !== 0
                 ? 'funnelProgress.base.progress.base'
                 : 'funnelProgress.base.progress.variants.start'
           }}
           style={{
             width:
-              progress !== 0 || !open
+              progress !== 0
                 ? `${STARTING_PROGRESS * 100 +
                     progress * (1 - STARTING_PROGRESS) * 100}%`
                 : '0%'

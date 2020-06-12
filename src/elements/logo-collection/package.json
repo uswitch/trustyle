@@ -1,6 +1,6 @@
 {
-  "name": "@uswitch/trustyle.breadcrumbs",
-  "version": "1.2.3",
+  "name": "@uswitch/trustyle.logo-collection",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -10,9 +10,5 @@
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
-  },
-  "dependencies": {
-    "@uswitch/trustyle-utils.get": "^1.0.5",
-    "@uswitch/trustyle.icon": "^1.8.4"
   }
 }

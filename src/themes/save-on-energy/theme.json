@@ -270,6 +270,17 @@
       }
     }
   },
+  
+  "logoCollection": {
+    "base": {
+      "mr": "16px",
+      "img": {
+        "maxWidth": "250px",
+        "maxHeight": "150px"
+      }
+    }
+
+  },
 
   "toggleSwitch": {
     "checked": {
@@ -286,6 +297,43 @@
       "switch": {
         "backgroundColor": "white",
         "borderColor": "light-3"
+      }
+    }
+  },
+
+  "toggleSwitch2": {
+    "base": {
+      "checked": {
+        "backgroundColor": "primary",
+        "borderColor": "primary",
+        "switch": {
+          "backgroundColor": "white",
+          "borderColor": "primary"
+        }
+      },
+      "unchecked": {
+        "backgroundColor": "light-3",
+        "borderColor": "light-3",
+        "switch": {
+          "backgroundColor": "white",
+          "borderColor": "light-3"
+        }
+      }
+    },
+    "variants": {
+      "compact": {
+        "checked": {
+          "switch": {
+            "backgroundColor": "primary",
+            "borderColor": "primary"
+          }
+        },
+        "unchecked": {
+          "switch": {
+            "backgroundColor": "light-3",
+            "borderColor": "light-3"
+          }
+        }
       }
     }
   },

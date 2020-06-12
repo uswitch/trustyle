@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from '@emotion/core'
 
-import { battleshipGrey, black, cerulean, white } from './colors'
+import { black, cerulean, grey70, white } from './colors'
 import { pxToRem } from './utils'
 
 export const defaultFontFamily =
@@ -41,7 +41,7 @@ export const subheading: SerializedStyles = css({
   fontStretch: 'normal',
   lineHeight: 1.33,
   letterSpacing: 'normal',
-  color: battleshipGrey
+  color: grey70
 })
 
 export const inputFontSize = 16
@@ -62,7 +62,7 @@ export const text: SerializedStyles = css({
   fontWeight: 'normal',
   lineHeight: '1.43',
   letterSpacing: 'normal',
-  color: battleshipGrey
+  color: grey70
 })
 
 export const small: SerializedStyles = css({
@@ -71,7 +71,7 @@ export const small: SerializedStyles = css({
   fontWeight: 'normal',
   lineHeight: '1.29',
   letterSpacing: 'normal',
-  color: battleshipGrey
+  color: grey70
 })
 
 export const linkText: SerializedStyles = css({

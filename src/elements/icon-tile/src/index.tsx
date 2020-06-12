@@ -12,10 +12,10 @@ const IconTile: React.FC<Props> = ({ icon, children }) => {
       sx={{
         boxSizing: 'border-box',
         display: 'flex',
-        flexDirection: 'column',
-        height: 136,
+        flexDirection: ['column', 'column', 'row'],
+        height: [136, 136, 95],
         backgroundColor: 'white',
-        padding: 'sm',
+        padding: ['sm', 'sm', 'lg'],
         paddingTop: 0,
         textAlign: 'center',
         borderRadius: 8,
@@ -24,12 +24,13 @@ const IconTile: React.FC<Props> = ({ icon, children }) => {
         variant: 'iconTile.main',
         ':hover': {
           opacity: 0.9
-        }
+        },
+        alignItems: 'center'
       }}
     >
       <div
         sx={{
-          flex: 1,
+          flex: [1, null, 0],
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
@@ -37,7 +38,14 @@ const IconTile: React.FC<Props> = ({ icon, children }) => {
       >
         {icon}
       </div>
-      <Styled.p sx={{ fontSize: 'md', marginY: 0, variant: 'iconTile.text' }}>
+      <Styled.p
+        sx={{
+          flex: [null, null, 1],
+          fontSize: 'md',
+          marginY: 0,
+          variant: 'iconTile.text'
+        }}
+      >
         {children}
       </Styled.p>
     </div>
