@@ -5,7 +5,7 @@ import { jsx } from 'theme-ui'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
 import { pxToRem } from '@uswitch/trustyle.styles'
 import InputMask from 'react-input-mask'
-import debounce from 'lodash.debounce'
+import debounce from 'tiny-debounce'
 
 import * as st from './styles'
 
