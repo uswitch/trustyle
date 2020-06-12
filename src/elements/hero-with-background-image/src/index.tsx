@@ -11,7 +11,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 
 const DefaultContainer: React.FC<Props> = ({ children, className }) => {
   return (
-    <div 
+    <div
       className={className}
       sx={{ margin: 'auto', variant: 'grid.container' }}
     >
@@ -21,22 +21,20 @@ const DefaultContainer: React.FC<Props> = ({ children, className }) => {
 }
 
 const HeroWithBackgroundImage: React.FC<Props> = ({
-  breadcrumbs,
   children,
   imageUrl,
-  container: Container = DefaultContainer,
+  container: Container = DefaultContainer
 }) => {
   return (
-    <div sx={{
-      backgroundSize: 'cover',
-      backgroundPosition: 'center center',
-      backgroundRepeat: 'no-repeat',
-      backgroundImage: `url(${imageUrl})`,
-    }}>
-      <Container>
-        {breadcrumbs}
-        {children}
-      </Container>
+    <div
+      sx={{
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
+        backgroundImage: `url(${imageUrl})`
+      }}
+    >
+      <Container>{children}</Container>
     </div>
   )
 }

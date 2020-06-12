@@ -5,7 +5,7 @@ import { jsx, Styled } from 'theme-ui'
 import AllThemes from '../../../utils/all-themes'
 import { Col, Container, Row } from '../../../layout/flex-grid/src'
 import { Button } from '../../button/src'
-import Breadcrumbs from '../../breadcrumbs/src'
+/* import Breadcrumbs from '../../breadcrumbs/src' */
 import IconTile from '../../icon-tile/src'
 
 import HeroWithBackgroundImage from './'
@@ -18,34 +18,34 @@ export default {
   title: 'Elements|HeroWithBackgroundImage'
 }
 
-const crumbs = [
-  {
-    fields: {
-      path: '/',
-      displayText: 'Home'
-    }
-  },
-  {
-    fields: {
-      path: '/gas-electricity/',
-      displayText: 'Gas & Electricity'
-    }
-  },
-  {
-    fields: {
-      path: '/gas-electricity/guides',
-      displayText: 'Guides'
-    }
-  }
-]
+/* const crumbs = [
+ *   {
+ *     fields: {
+ *       path: '/',
+ *       displayText: 'Home'
+ *     }
+ *   },
+ *   {
+ *     fields: {
+ *       path: '/gas-electricity/',
+ *       displayText: 'Gas & Electricity'
+ *     }
+ *   },
+ *   {
+ *     fields: {
+ *       path: '/gas-electricity/guides',
+ *       displayText: 'Guides'
+ *     }
+ *   }
+ * ] */
 
-const breadcrumbs = (
-  <Breadcrumbs
-    crumbs={crumbs}
-    title="Understanding energy bills and electricity bills - FAQs and more"
-  />
-)
-
+/* const breadcrumbs = (
+ *   <Breadcrumbs
+ *     crumbs={crumbs}
+ *     title="Understanding energy bills and electricity bills - FAQs and more"
+ *   />
+ * )
+ *  */
 interface PanelHelperProps extends React.HTMLAttributes<any> {
   icon: string
 }
@@ -104,11 +104,7 @@ export const HeroWithCustomContainer = () => {
   )
 
   return (
-    <HeroWithBackgroundImage
-      imageUrl={images.wallet}
-      container={Container}
-      breadcrumbs={breadcrumbs}
-    >
+    <HeroWithBackgroundImage imageUrl={images.wallet} container={Container}>
       {content}
     </HeroWithBackgroundImage>
   )
@@ -122,11 +118,7 @@ HeroWithCustomContainer.story = {
 
 export const HeroWithFlexGridContainer = () => {
   return (
-    <HeroWithBackgroundImage
-      imageUrl={images.wallet}
-      container={Container}
-      breadcrumbs={breadcrumbs}
-    >
+    <HeroWithBackgroundImage imageUrl={images.wallet} container={Container}>
       {content}
     </HeroWithBackgroundImage>
   )
