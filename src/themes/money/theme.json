@@ -1314,22 +1314,23 @@
     "radioish": {
       "base": {
         "&:checked + span": {
-          "borderColor": "black",
-          "boxShadow": "linkInset",
-          "color": "black",
+          "borderColor": "grey-40",
+          "color": "grey-80",
           "&::before": {
             "borderColor": "black"
           }
         },
         "&:focus + span": {
-          "variant": "input.focus"
+          "border": "2px solid",
+          "borderColor": "plum"
         }
       },
       "label": {
         "borderColor": "grey-40",
         "borderStyle": "solid",
+        "borderRadius": "4px",
         "borderWidth": "1px",
-        "color": "grey-80",
+        "color": "grey-60",
         "fontWeight": "normal",
         "padding": "11px 12px 11px 0",
         "&:before": {
@@ -1376,8 +1377,8 @@
             "variant": "input.radioish.base.&:checked + span.&::before",
             "backgroundImage": "url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='-1 -2 14 12'%3E%3Cpath d='M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z' /%3E%3C/svg%3E\")",
             "backgroundSize": "16px 16px",
-            "backgroundColor": "black",
-            "borderColor": "black"
+            "backgroundColor": "plum",
+            "borderColor": "plum"
           }
         }
       },
