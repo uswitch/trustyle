@@ -140,7 +140,16 @@ export const Input = forwardRef<HTMLInputElement, Props>(
             variant: (theme: any) => theme?.input?.base?.borderRadius
           }}
         >
-          {prefix && <span sx={st.prefix(hasError, hasFocus)}>{prefix}</span>}
+        {prefix && (
+          <span
+            sx={{
+              ...st.prefix(hasError, hasFocus),
+              variant: 'input.affix.prefix'
+            }}
+          >
+            {prefix}
+          </span>
+        )}
 
           {mask ? (
             <InputMask
@@ -150,17 +159,19 @@ export const Input = forwardRef<HTMLInputElement, Props>(
               {...childProps}
             />
           ) : (
-            <input
-              ref={inputRef}
-              {...childProps}
-              sx={{
-                variant: 'input.base',
-                padding: (theme: any) => pxToRem(theme.space.base)
-              }}
-            />
+            <input ref={inputRef} {...childProps} />
           )}
 
-          {suffix && <span sx={st.suffix(hasError, hasFocus)}>{suffix}</span>}
+          {suffix && (
+            <span 
+              sx={{
+                ...st.suffix(hasError, hasFocus),
+                variant: 'input.affix.suffix'
+              }}
+            >
+            {suffix}
+            </span>
+          )}
         </div>
       </FrozenInput>
     )

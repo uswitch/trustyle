@@ -1280,7 +1280,7 @@
         "outline": "none",
         "border": "none",
         "color": "primary",
-        "background": "veryLightGrey"
+        "background": "grey-05"
       }
     },
     "default": {
@@ -1294,9 +1294,15 @@
       "borderRadius": "3px"
     },
     "focus": {
-      "color": "plum",
-      "outline": "2px solid",
-      "outline-color": "orange"
+      "color": "plum"
+    },
+    "affix": {
+      "prefix": {
+        "borderRightStyle": "none"
+      },
+      "suffix": {
+        "borderLeftStyle": "none"
+      }
     },
     "radioish": {
       "base": {
