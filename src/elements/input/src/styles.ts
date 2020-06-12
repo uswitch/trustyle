@@ -53,13 +53,9 @@ const affix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({
 })
 
 export const prefix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({
-  ...affix(hasError, hasFocus),
-  borderRightStyle: 'solid',
-  borderRightWidth: 1
+  ...affix(hasError, hasFocus)
 })
 
 export const suffix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({
-  ...affix(hasError, hasFocus),
-  borderLeftStyle: 'solid',
-  borderLeftWidth: 1
+  ...affix(hasError, hasFocus)
 })

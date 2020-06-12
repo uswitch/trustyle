@@ -1221,6 +1221,16 @@
       "outline": "2px solid",
       "outline-color": "orange"
     },
+    "affix": {
+      "prefix": {
+        "borderRightStyle": "solid",
+        "borderRightWidth": 1
+      },
+      "suffix": {
+        "borderLeftStyle": "solid",
+        "borderLeftWidth": 1
+      }
+    },
     "radioish": {
       "base": {
         "&:checked + span": {
