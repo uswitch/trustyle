@@ -43,7 +43,6 @@ const breadcrumbs = (
   <Breadcrumbs
     crumbs={crumbs}
     title="Understanding energy bills and electricity bills - FAQs and more"
-    variant="light"
   />
 )
 
@@ -61,9 +60,7 @@ const content = (
   <React.Fragment>
     <Row>
       <Col span={[12, 6]}>
-        <Styled.h1 sx={{ marginTop: 0 }}>
-          Get a headstart on your savings goals and take out an investment ISA
-        </Styled.h1>
+        <Styled.h1 sx={{ marginTop: 0 }}></Styled.h1>
         <Button variant="primary">Compare investment ISAs</Button>
       </Col>
     </Row>

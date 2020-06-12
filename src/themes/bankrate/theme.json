@@ -559,15 +559,24 @@
   },
 
   "breadcrumbs2": {
+    "li": {
+      "backgroundColor": "grey-10",
+      "px": "xs",
+      "py": "xxs",
+      "marginRight": "xxs"
+    },
     "base": {
       "main": {
-        "color": "grey-60"
+        "color": "grey-100"
       },
       "homeIcon": {
-        "color": "grey-60"
+        "color": "grey-100"
       },
       "title": {
-        "color": "grey-100"
+        "color": "grey-100",
+        "backgroundColor": "grey-10",
+        "px": "xs",
+        "py": "xxs"
       }
     },
     "variants": {
@@ -582,7 +591,10 @@
           "color": "grey-0"
         },
         "title": {
-          "color": "grey-0"
+          "color": "grey-0",
+          "backgroundColor": "red",
+          "px": "xs",
+          "py": "xxs"
         }
       }
     }
