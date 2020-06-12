@@ -1122,6 +1122,12 @@
     }
   },
 
+  "iconTile": {
+    "text": {
+      "color": "grey-80"
+    }
+  },
+
   "input": {
     "frozen": {
       "backgroundColor": "grey-10",
