@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import { jsx } from 'theme-ui'
+import { keyframes } from '@emotion/core'
 
 // Extra pixels just in case something minor changes and isn't caught by onLoad
 // or useEffect
@@ -23,18 +24,14 @@ const SlideReveal: React.FC<Props> = ({ open, children }) => {
   const contentsWrapperEl = React.useRef<HTMLDivElement>(null)
   const [height, setHeight] = React.useState(0)
 
-  // This is to ensure that the maxHeight is added back to the DOM before it is
-  // set to 0 - otherwise the transition doesn't happen
-  const [delayedOpen, setDelayedOpen] = React.useState(open)
-
   // Initial is to make sure that content displays when JS is disabled and that
   // initially opened content doesn't animate open
   const [initial, setInitial] = React.useState(true)
 
-  // Store whether we're transitioning or not so that when the slider is open
-  // and not transitioning, we can remove the maxHeight to reduce the
+  // Store whether we're animating or not so that when the slider is open
+  // and not animating, we can remove the maxHeight to reduce the
   // possibility of edge cases causing content to be cropped
-  const [transitioning, setTransitioning] = React.useState(false)
+  const [animating, setAnimating] = React.useState(false)
 
   const calculateHeight = () => {
     if (contentsWrapperEl.current === null) {
@@ -55,26 +52,32 @@ const SlideReveal: React.FC<Props> = ({ open, children }) => {
     calculateHeight()
 
     if (prevOpen !== undefined && open !== prevOpen) {
-      setTransitioning(true)
+      setAnimating(true)
     }
   })
 
-  if (delayedOpen !== open) {
-    setTimeout(() => setDelayedOpen(open))
-  }
+  const slideAnimation = keyframes({
+    from: { maxHeight: 0 },
+    to: { maxHeight: height + buffer }
+  })
 
   return (
     <div
       sx={
-        initial || (!transitioning && delayedOpen)
+        initial
           ? {}
-          : {
-              maxHeight: delayedOpen ? height + buffer : 0,
-              transition: 'max-height 0.4s',
+          : animating
+          ? {
+              animationName: slideAnimation.toString(),
+              animationDuration: '400ms',
+              animationDirection: open ? 'normal' : 'reverse',
               overflow: 'hidden'
             }
+          : open
+          ? {}
+          : { maxHeight: 0, overflow: 'hidden' }
       }
-      onTransitionEnd={() => setTransitioning(false)}
+      onAnimationEnd={() => setAnimating(false)}
       // This updates the height when child images finish loading
       onLoad={calculateHeight}
     >
