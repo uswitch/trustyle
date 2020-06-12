@@ -12,7 +12,8 @@
 
   "shadows": {
     "box": "2px 2px 25px #0004",
-    "linkInset": "inset 0 0 0 1px #008fe9"
+    "linkInset": "inset 0 0 0 1px #008fe9",
+    "plumInset": "inset 0 0 0 1px #924A8B"
   },
 
   "fonts": {
@@ -1323,11 +1324,14 @@
       "base": {
         "&:checked + span": {
           "borderColor": "grey-40",
-          "boxShadow": "green",
           "color": "grey-80",
           "&::before": {
             "borderColor": "black"
           }
+        },
+        "&:focus + span": {
+          "borderColor": "plum",
+          "boxShadow": "plumInset"
         }
       },
       "label": {
