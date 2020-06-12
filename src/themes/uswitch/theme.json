@@ -1281,7 +1281,6 @@
     },
     "wrapper": {
       "backgroundColor": "white",
-      "border": "solid 1px",
       "boxSizing": "border-box",
       "display": "flex",
       "position": "relative",
@@ -1296,11 +1295,20 @@
       "outline-color": "orange"
     },
     "affix": {
+      "base": {
+        "fontFamily": "base",
+        "fontSize": "base",
+        "lineHeight": "base",
+        "textAlign": "center",
+        "boxSizing": "border-box"      
+      },
       "prefix": {
+        "variant": "input.affix.base",
         "borderRightStyle": "solid",
         "borderRightWidth": 1
       },
       "suffix": {
+        "variant": "input.affix.base",
         "borderLeftStyle": "solid",
         "borderLeftWidth": 1
       }
