@@ -1653,6 +1653,13 @@
       ":nth-child(even)": {
         "backgroundColor": "grey-05"
       }
+    },
+
+    "hr": {
+      "marginY": "md",
+      "border": "none",
+      "borderBottom": "1px solid",
+      "borderBottomColor": "grey-20"
     }
   }
 }
