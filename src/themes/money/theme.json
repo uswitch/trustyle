@@ -1149,7 +1149,6 @@
     },
     "wrapper": {
       "backgroundColor": "white",
-      "border": "solid 1px",
       "boxSizing": "border-box",
       "display": "flex",
       "position": "relative",
@@ -1169,10 +1168,19 @@
       "color": "plum"
     },
     "affix": {
+      "base": {
+        "fontFamily": "base",
+        "fontSize": "base",
+        "lineHeight": "base",
+        "textAlign": "center",
+        "boxSizing": "border-box"      
+      },
       "prefix": {
+        "variant": "input.affix.base",
         "borderRightStyle": "none"
       },
       "suffix": {
+        "variant": "input.affix.base",
         "borderLeftStyle": "none"
       }
     },
@@ -1180,14 +1188,11 @@
       "base": {
         "&:checked + span": {
           "borderColor": "grey-40",
+          "boxShadow": "green",
           "color": "grey-80",
           "&::before": {
             "borderColor": "black"
           }
-        },
-        "&:focus + span": {
-          "border": "2px solid",
-          "borderColor": "plum"
         }
       },
       "label": {

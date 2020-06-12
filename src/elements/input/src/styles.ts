@@ -9,6 +9,7 @@ export const wrapper = (
   hasFocus: boolean,
   width: 'half' | 'full'
 ): SxStyleProp => ({
+  border: 'solid 1px',
   boxShadow: (theme: any) =>
     hasError
       ? `inset 0 0 0 1px ${theme.colors[theme.input?.error?.color] ?? tomato}`
@@ -17,7 +18,7 @@ export const wrapper = (
           UswitchNavy}`
       : 'inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)',
   borderColor: (theme: any) =>
-    hasError
+    console.log(theme) || hasError
       ? theme.colors[theme.input?.error?.color] ?? tomato
       : hasFocus
       ? theme.colors[theme.input?.focus?.color] ?? UswitchNavy
@@ -26,13 +27,8 @@ export const wrapper = (
 })
 
 const affix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({
-  fontFamily: 'base',
-  fontSize: 'base',
-  lineHeight: 'base',
   margin: pxToRem(8, 0),
   padding: pxToRem(8, spacers.green),
-  textAlign: 'center',
-  boxSizing: 'border-box',
   borderColor: (theme: any) =>
     hasError
       ? theme.colors[theme.input?.error?.color] ?? tomato
