@@ -134,12 +134,12 @@ export const Input = forwardRef<HTMLInputElement, Props>(
         freezable={freezable}
         inputRef={inputRef}
       >
-        <div
-          sx={{
-            ...st.wrapper(hasError, hasFocus, width),
-            variant: (theme: any) => theme?.input?.base?.borderRadius
-          }}
-        >
+      <div
+        sx={{
+          ...st.wrapper(hasError, hasFocus, width),
+          variant: 'input.wrapper'
+        }}
+      >
         {prefix && (
           <span
             sx={{

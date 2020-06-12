@@ -2,7 +2,7 @@ import { colors, pxToRem } from '@uswitch/trustyle.styles'
 
 import { SxStyleProp } from '../../../../types/theme-ui'
 
-const { tomato, UswitchNavy, white } = colors
+const { tomato, UswitchNavy } = colors
 
 export const wrapper = (
   hasError: boolean,
@@ -16,17 +16,12 @@ export const wrapper = (
       ? `inset 0 0 0 1px ${theme.colors[theme.input?.focus?.color] ??
           UswitchNavy}`
       : 'inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)',
-  backgroundColor: white,
-  border: `solid 1px`,
   borderColor: (theme: any) =>
     hasError
       ? theme.colors[theme.input?.error?.color] ?? tomato
       : hasFocus
       ? theme.colors[theme.input?.focus?.color] ?? UswitchNavy
       : theme.colors[theme.input?.default?.color] ?? UswitchNavy,
-  boxSizing: 'border-box',
-  display: 'flex',
-  position: 'relative',
   width: width === 'half' ? '50%' : '100%'
 })
 

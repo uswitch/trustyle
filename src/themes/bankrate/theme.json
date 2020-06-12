@@ -498,6 +498,14 @@
         "background": "veryLightGrey"
       }
     },
+    "wrapper": {
+      "backgroundColor": "white",
+      "border": "solid 1px",
+      "boxSizing": "border-box",
+      "display": "flex",
+      "position": "relative",
+      "borderRadius": "3px"
+    },
     "affix": {
       "prefix": {
         "borderRightStyle": "solid",
