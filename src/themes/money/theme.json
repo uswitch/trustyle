@@ -1128,7 +1128,6 @@
       "fontSize": "base",
       "lineHeight": 1.33,
       "color": "text",
-      "borderRadius": "4px",
       "appearance": "none",
       "border": "none",
       "background": "none",
@@ -1147,6 +1146,14 @@
         "color": "primary",
         "background": "grey-05"
       }
+    },
+    "wrapper": {
+      "backgroundColor": "white",
+      "border": "solid 1px",
+      "boxSizing": "border-box",
+      "display": "flex",
+      "position": "relative",
+      "borderRadius": "4px"
     },
     "default": {
       "color": "grey-40"

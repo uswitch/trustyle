@@ -128,7 +128,7 @@ export const Input: React.FC<Props> = ({
       <div
         sx={{
           ...st.wrapper(hasError, hasFocus, width),
-          variant: (theme: any) => theme?.input?.base?.borderRadius
+          variant: 'input.wrapper'
         }}
       >
         {prefix && (
