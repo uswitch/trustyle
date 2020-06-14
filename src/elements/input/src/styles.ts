@@ -18,7 +18,7 @@ export const wrapper = (
           UswitchNavy}`
       : 'inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)',
   borderColor: (theme: any) =>
-    console.log(theme) || hasError
+    hasError
       ? theme.colors[theme.input?.error?.color] ?? tomato
       : hasFocus
       ? theme.colors[theme.input?.focus?.color] ?? UswitchNavy
