@@ -22,21 +22,3 @@ export const value: SerializedStyles = css({
   textOverflow: 'ellipsis',
   width: `calc(100% - ${editIconWidth})`
 })
-
-export const edit: SerializedStyles = css({
-  background: 'none',
-  border: 'none',
-  borderLeft: `1px solid ${colors.slateGrey}`,
-  cursor: 'pointer',
-  height: pxToRem(28),
-  padding: pxToRem(0, spacers.teal),
-  width: editIconWidth,
-  ':focus': {
-    outline: `2px solid ${colors.azure}`
-  },
-  '&::-moz-focus-inner': { border: 0 }
-})
-
-export const hidden: SerializedStyles = css({
-  display: 'none'
-})

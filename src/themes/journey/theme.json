@@ -723,7 +723,28 @@
       "borderRadius": "3px"
     },
     "frozen": {
-      "backgroundColor": "frozen-bg"
+      "base": {
+        "backgroundColor": "frozen-bg",
+        "borderRadius": "3px"
+      },
+      "button": {
+        "background": "none",
+        "border": "none",
+        "borderLeft": "1px solid",
+        "borderLeftColor": "#59646d",
+        "height": "28px",
+        "padding": "0 24px",
+        "width": "69px",
+        "cursor": "pointer",
+        ":focus": {
+          "outline": "2px solid",
+          "outlineColor": "#008fe9"
+        },
+        "&::-moz-focus-inner": { "border": 0 }
+      },
+      "hidden": {
+        "display": "none"
+      }
     },
     "default": {
       "color": "light-grey-blue"
@@ -732,7 +753,7 @@
       "color": "error-red"
     },
     "focus": {
-      "color": "p#008fe9lum"
+      "color": "#008fe9"
     },
     "affix": {
       "base": {

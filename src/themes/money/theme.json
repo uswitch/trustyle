@@ -1162,8 +1162,27 @@
       "color": "error"
     },
     "frozen": {
-      "backgroundColor": "grey-10",
-      "borderRadius": "3px"
+      "base": {
+        "backgroundColor": "grey-10",
+        "borderRadius": "4px"
+      },
+      "button": {
+        "background": "none",
+        "border": "none",
+        "borderLeft": "none",
+        "height": "28px",
+        "padding": "0 24px",
+        "width": "69px",
+        "cursor": "pointer",
+        ":focus": {
+          "outline": "2px solid",
+          "outlineColor": "plum"
+        },
+        "&::-moz-focus-inner": { "border": 0 }
+      },
+      "hidden": {
+        "display": "none"
+      }
     },
     "focus": {
       "color": "plum"

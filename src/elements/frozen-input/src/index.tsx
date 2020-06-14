@@ -5,8 +5,6 @@ import { jsx, useThemeUI } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
 import { colors } from '@uswitch/trustyle.styles'
 
-import * as st from './styles'
-
 interface Props {
   text?: string
   freezable?: boolean
@@ -47,7 +45,7 @@ export const FrozenInput: React.FC<Props> = ({
           display: 'flex',
           height: '64px',
           justifyContent: 'space-between',
-          variant: 'input.frozen'
+          variant: 'input.frozen.base'
         }}
       >
         <p
@@ -63,14 +61,14 @@ export const FrozenInput: React.FC<Props> = ({
         </p>
         <button
           aria-label="Edit Value"
-          css={st.edit}
+          sx={{ variant: 'input.frozen.button' }}
           onClick={() => setFrozen(false)}
         >
           <Icon color={colors.azure} glyph={iconGlyph} />
         </button>
       </div>
 
-      <div css={st.hidden}>{children}</div>
+      <div sx={{ variant: 'input.frozen.hidden' }}>{children}</div>
     </Fragment>
   )
 }
