@@ -1364,7 +1364,8 @@
           "variant": "input.radioish.base.&:checked + span",
           "&::before": {
             "variant": "input.radioish.base.&:checked + span.&::before",
-            "background": "black",
+            "borderColor": "plum",
+            "backgroundColor": "plum",
             "boxShadow": "inset 0 0 0 2px #fff"
           }
         }
