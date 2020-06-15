@@ -801,6 +801,10 @@
           "borderStyle": "solid",
           "borderWidth": "2px"
         }
+      },
+      "error": {
+        "variant": "input.radioish.label",
+        "color": "error-red"
       }
     },
     "radio": {
