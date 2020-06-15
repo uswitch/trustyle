@@ -17,7 +17,7 @@ export default () => {
   const theme = select(
     'Trustyle Theme',
     Object.keys(themes),
-    './bankrate/theme.json'
+    './uswitch/theme.json'
   )
 
   return themes[theme]

@@ -100,8 +100,7 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
   homePath
 }) => {
   const liStyling = {
-    display: 'inline',
-    variant: `${themePrefix}.li`
+    display: 'inline'
   }
 
   const anchorStyling = {
