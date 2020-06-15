@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.uswitch-theme",
-  "version": "0.14.2",
+  "version": "0.14.3",
   "license": "MIT",
   "main": "index.js",
   "publishConfig": {
