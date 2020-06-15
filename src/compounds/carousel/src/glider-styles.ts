@@ -24,8 +24,7 @@ export const gliderStyles = css({
   },
   '.glider.draggable': {
     'user-select': 'none',
-    cursor: 'grab',
-    overflow: 'hidden'
+    cursor: 'grab'
   },
   '.glider.draggable .glider-slide img': {
     'user-select': 'none',
@@ -109,19 +108,5 @@ export const gliderStyles = css({
   },
   '.glider-dot:focus, .glider-dot.active': {
     background: '#141424'
-  },
-  '@media(max-width: 36em)': {
-    '.glider::-webkit-scrollbar': {
-      opacity: 1,
-      '-webkit-appearance': 'none',
-      width: '7px',
-      height: '3px'
-    },
-    '.glider::-webkit-scrollbar-thumb': {
-      opacity: 1,
-      'border-radius': '99px',
-      'background-color': 'rgba(156, 156, 156, 0.25)',
-      'box-shadow': '0 0 1px rgba(255,255,255,.25)'
-    }
   }
 })
