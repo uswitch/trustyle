@@ -12,6 +12,7 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "react-glider-carousel": "^0.1.2"
+    "react-glider-carousel": "^0.1.2",
+    "simplestatemanager": "^4.1.1"
   }
 }
