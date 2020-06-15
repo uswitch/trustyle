@@ -1,9 +1,10 @@
 /** @jsx jsx */
 
 import { forwardRef, useEffect, useRef, useState } from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, useThemeUI } from 'theme-ui'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
 import { pxToRem } from '@uswitch/trustyle.styles'
+import { Glyph, Icon } from '@uswitch/trustyle.icon'
 import InputMask from 'react-input-mask'
 import debounce from 'tiny-debounce'
 
@@ -20,6 +21,7 @@ export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   name: string
   postprocess?: (x: string) => string
   prefix?: string
+  prefixIcon?: Glyph
   suffix?: string
   value?: string | undefined
   width?: Width
@@ -71,6 +73,7 @@ export const Input = forwardRef<HTMLInputElement, Props>(
       onFocus,
       postprocess = x => x,
       prefix,
+      prefixIcon,
       suffix,
       type,
       width = 'full',
@@ -128,26 +131,33 @@ export const Input = forwardRef<HTMLInputElement, Props>(
       value
     }
 
-    return (
-      <FrozenInput
-        text={interiorValue}
-        freezable={freezable}
-        inputRef={inputRef}
-      >
+  const { theme }: any = useThemeUI()
+  const iconColor = theme.colors[theme.input?.affix?.prefix?.iconColor]
+
+  return (
+    <FrozenInput 
+      text={interiorValue} 
+      freezable={freezable} 
+      inputRef={inputRef}
+    >
       <div
         sx={{
           ...st.wrapper(hasError, hasFocus, width),
           variant: 'input.wrapper'
         }}
       >
-        {prefix && (
+        {(prefix || prefixIcon) && (
           <span
             sx={{
               ...st.prefix(hasError, hasFocus),
               variant: 'input.affix.prefix'
             }}
           >
-            {prefix}
+            {prefixIcon ? (
+              <Icon glyph={prefixIcon} size={16} color={iconColor} />
+            ) : (
+              prefix
+            )}
           </span>
         )}
 

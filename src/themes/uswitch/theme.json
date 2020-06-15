@@ -1360,6 +1360,10 @@
           "borderWidth": "2px"
         }
       },
+      "error": {
+        "variant": "input.radioish.label",
+        "color": "error-red"
+      },
       "variants": {
         "normal": {
           "variant": "input.radioish.base"

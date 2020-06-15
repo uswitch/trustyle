@@ -1299,7 +1299,10 @@
     "frozen": {
       "base": {
         "backgroundColor": "grey-10",
-        "borderRadius": "4px"
+        "borderRadius": "4px",
+        "p": {
+          "margin": 0
+        }
       },
       "button": {
         "background": "none",
@@ -1309,6 +1312,7 @@
         "padding": "0 24px",
         "width": "69px",
         "cursor": "pointer",
+        "color": "grey-80",
         ":focus": {
           "outline": "2px solid",
           "outlineColor": "plum"
@@ -1332,7 +1336,8 @@
       },
       "prefix": {
         "variant": "input.affix.base",
-        "borderRightStyle": "none"
+        "borderRightStyle": "none",
+        "iconColor": "grey-80"
       },
       "suffix": {
         "variant": "input.affix.base",
@@ -1366,6 +1371,10 @@
           "borderStyle": "solid",
           "borderWidth": "2px"
         }
+      },
+      "error": {
+        "variant": "input.radioish.label",
+        "color": "error"
       },
       "variants": {
         "normal": {
