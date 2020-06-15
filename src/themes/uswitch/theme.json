@@ -359,17 +359,18 @@
       "select": {
         "base": {
           "border": "1px solid",
-          "borderColor": "grey-40"
+          "borderColor": "black"
         },
         "variants": {
           "error": {
             "variant": "elements.drop-down.select.base",
             "borderColor": "error-red",
+            "border": "2px solid",
             "outlineColor": "error-red"
           },
           "focus": {
             "variant": "elements.drop-down.select.base",
-            "outlineColor": "#008fe9"
+            "outlineColor": "black"
           }
         }
       }
@@ -919,6 +920,22 @@
     }
   },
 
+  "logoCollection": {
+    "base": {
+      "outer": {
+        "justifyContent": "flex-start",
+        "alignItems": "flex-start"
+      },
+      "inner" : {
+        "mr": ["lg", "lg", "md"],
+        "img": {
+          "maxWidth": "250px",
+          "maxHeight": "150px"
+        }
+      }
+    }
+  },
+
   "author": {
     "heading": {
       "color": "grey-80"
@@ -1202,7 +1219,7 @@
         "outline": "none",
         "border": "none",
         "color": "battleshipGrey",
-        "background": "veryLightGrey"
+        "backgroundColor": "veryLightGrey"
       }
     },
     "wrapper": {
@@ -1210,12 +1227,12 @@
       "boxSizing": "border-box",
       "display": "flex",
       "position": "relative",
-      "borderRadius": "3px"
+      "borderRadius": "0px"
     },
     "frozen": {
       "base": {
         "backgroundColor": "frozen-bg",
-        "borderRadius": "3px"
+        "borderRadius": "0px"
       },
       "button": {
         "background": "none",
@@ -1492,6 +1509,44 @@
         "color": "grey-40",
         "backgroundColor": "white",
         "borderColor": "grey-40"
+      }
+    }
+  },
+
+  "toggleSwitch2": {
+    "base": {
+      "checked": {
+        "backgroundColor": "black",
+        "borderColor": "black",
+        "switch": {
+          "backgroundColor": "white",
+          "borderColor": "black"
+        }
+      },
+      "unchecked": {
+        "backgroundColor": "grey-05",
+        "borderColor": "grey-40",
+        "switch": {
+          "color": "grey-40",
+          "backgroundColor": "white",
+          "borderColor": "grey-40"
+        }
+      }
+    },
+    "variants": {
+      "compact": {
+        "checked": {
+          "switch": {
+            "backgroundColor": "black",
+            "color": "white",
+            "borderColor": "black"
+          }
+        },
+        "unchecked": {
+          "switch": {
+            "variant": "toggleSwitch2.base.unchecked.switch"
+          }
+        }
       }
     }
   },

@@ -6,7 +6,6 @@ export const root: SerializedStyles = css([
   {
     alignItems: 'center',
     backgroundColor: colors.offWhite,
-    borderRadius: '3px',
     display: 'flex',
     height: pxToRem(64),
     justifyContent: 'space-between'

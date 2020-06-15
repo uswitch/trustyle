@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.bullet-list-highlight",
-  "version": "0.2.68",
+  "version": "0.2.70",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -8,8 +8,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@uswitch/trustyle.icon": "^1.8.2",
-    "@uswitch/trustyle.styles": "^0.4.29"
+    "@uswitch/trustyle.icon": "^1.8.4",
+    "@uswitch/trustyle.styles": "^0.5.0"
   },
   "devDependencies": {
     "typescript": "^3.6.2"

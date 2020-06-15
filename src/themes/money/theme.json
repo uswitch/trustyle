@@ -1123,6 +1123,12 @@
     }
   },
 
+  "iconTile": {
+    "text": {
+      "color": "grey-80"
+    }
+  },
+
   "input": {
     "base": {
       "fontFamily": "base",
@@ -1145,7 +1151,7 @@
         "outline": "none",
         "border": "none",
         "color": "primary",
-        "background": "grey-05"
+        "backgroundColor": "grey-05"
       }
     },
     "wrapper": {
@@ -1442,6 +1448,55 @@
     }
   },
 
+  "toggleSwitch2": {
+    "base": {
+      "checked": {
+        "backgroundColor": "secondary",
+        "borderColor": "secondary",
+        "switch": {
+          "backgroundColor": "white",
+          "borderColor": "secondary"
+        }
+      },
+      "unchecked": {
+        "backgroundColor": "grey-20",
+        "borderColor": "grey-20",
+        "switch": {
+          "backgroundColor": "white",
+          "borderColor": "grey-20"
+        }
+      }
+    },
+    "variants": {
+      "compact": {
+        "checked": {
+          "switch": {
+            "backgroundColor": "secondary",
+            "color": "white",
+            "borderColor": "secondary"
+          }
+        },
+        "unchecked": {
+          "switch": {
+            "variant": "toggleSwitch2.base.unchecked.switch"
+          }
+        }
+      }
+    }
+  },
+
+  "logoCollection": {
+    "base": {
+      "inner": {
+        "mr": ["lg", "lg", "md"],
+        "img": {
+          "maxWidth": "100px",
+          "maxHeight": "64px"
+        }
+      }
+    }
+  },
+
   "author": {
     "heading": {
       "color": "grey-80"
@@ -1692,6 +1747,13 @@
       ":nth-child(even)": {
         "backgroundColor": "grey-05"
       }
+    },
+
+    "hr": {
+      "marginY": "md",
+      "border": "none",
+      "borderBottom": "1px solid",
+      "borderBottomColor": "grey-20"
     }
   }
 }
