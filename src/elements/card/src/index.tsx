@@ -6,7 +6,7 @@ import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 
 interface Props {
   className?: string
-  description: string
+  description?: string
   horizontal?: boolean
   imageSize?: 'cover' | 'contain'
   imgAlt: string
@@ -29,7 +29,7 @@ const Card: React.FC<Props> = ({
   imgSizes = '768px',
   imgSrc,
   linkHref,
-  linkText = 'Read more',
+  linkText,
   title
 }) => {
   const styles = makeStyles(horizontal ? 'horizontal' : 'vertical')
@@ -66,13 +66,15 @@ const Card: React.FC<Props> = ({
         <Styled.h3 sx={{ margin: '0' }}>
           <Styled.a href={linkHref}>{title}</Styled.a>
         </Styled.h3>
-        <Styled.p>{description}</Styled.p>
-        <Styled.a
-          href={linkHref}
-          sx={{ textDecoration: 'underline', variant: styles('link') }}
-        >
-          {linkText}
-        </Styled.a>
+        {!horizontal && description && <Styled.p>{description}</Styled.p>}
+        {!horizontal && linkText && (
+          <Styled.a
+            href={linkHref}
+            sx={{ textDecoration: 'underline', variant: styles('link') }}
+          >
+            {linkText}
+          </Styled.a>
+        )}
       </div>
     </div>
   )

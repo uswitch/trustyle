@@ -550,14 +550,11 @@
       "base": {
         "width": "100%",
         "height": "100%",
-        "borderRadius": "sm",
-        "borderStyle": "solid",
-        "borderColor": "grey-20",
-        "borderWidth": "1px",
         "boxSizing": "border-box",
         "mb": "sm",
         "img": {
-          "width": "100%"
+          "width": "100%",
+          "borderRadius": "sm"
         },
         "p": { "fontSize": 16, "lineHeight": "130%", "color": "grey-80" },
         "h3": {
