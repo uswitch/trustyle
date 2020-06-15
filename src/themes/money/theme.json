@@ -1337,18 +1337,14 @@
     "fontFamily": "base",
     "fontSize": "base",
     "lineHeight": 1.38,
-    "color": "white",
+    "color": "error",
     "padding": "xs",
     "position": "relative",
     "borderRadius": "sm",
-    "notificationColor": "#65717B",
-    "alertColor": "error",
+    "notificationColor": "none",
+    "alertColor": "none",
     "before": {
-      "position": "absolute",
-      "content": "''",
-      "width": 0,
-      "height": 0,
-      "borderBottomStyle": "solid"
+      "content": "none"
     }
   },
 
