@@ -460,6 +460,25 @@
     }
   },
 
+  "input-alert": {
+    "fontFamily": "base",
+    "fontSize": "base",
+    "lineHeight": 1.38,
+    "color": "white",
+    "padding": "xs",
+    "position": "relative",
+    "borderRadius": "sm",
+    "notificationColor": "#65717B",
+    "alertColor": "#DB1818",
+    "before": {
+      "position": "absolute",
+      "content": "''",
+      "width": 0,
+      "height": 0,
+      "borderBottomStyle": "solid"
+    }
+  },
+
   "buttons": {
     "base": {
       "fontWeight": "bold",

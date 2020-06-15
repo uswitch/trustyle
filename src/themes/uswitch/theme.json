@@ -373,14 +373,6 @@
           }
         }
       }
-    },
-
-    "input-alert": {
-      "padding": 16,
-      "notificationColor": "uswitch-navy",
-      "alertColor": "error-red",
-      "color": "white",
-      "radii": 0
     }
   },
 
@@ -1385,6 +1377,25 @@
         "borderStyle": "solid",
         "borderWidth": "2px"
       }
+    }
+  },
+
+  "input-alert": {
+    "fontFamily": "base",
+    "fontSize": "base",
+    "lineHeight": 1.38,
+    "color": "white",
+    "padding": 16,
+    "position": "relative",
+    "borderRadius": 0,
+    "notificationColor": "uswitch-navy",
+    "alertColor": "error-red",
+    "before": {
+      "position": "absolute",
+      "content": "''",
+      "width": 0,
+      "height": 0,
+      "borderBottomStyle": "solid"
     }
   },
 

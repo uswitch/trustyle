@@ -1333,6 +1333,25 @@
     }
   },
 
+  "input-alert": {
+    "fontFamily": "base",
+    "fontSize": "base",
+    "lineHeight": 1.38,
+    "color": "white",
+    "padding": "xs",
+    "position": "relative",
+    "borderRadius": "sm",
+    "notificationColor": "#65717B",
+    "alertColor": "error",
+    "before": {
+      "position": "absolute",
+      "content": "''",
+      "width": 0,
+      "height": 0,
+      "borderBottomStyle": "solid"
+    }
+  },
+
   "pagination": {
     "arrow": {
       "color": "grey-100"
