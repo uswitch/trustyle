@@ -3,6 +3,7 @@
 import { Fragment, useEffect, useState } from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
+import { colors } from '@uswitch/trustyle.styles'
 
 interface Props {
   text?: string
@@ -22,7 +23,7 @@ export const FrozenInput: React.FC<Props> = ({
   const { theme }: any = useThemeUI()
   const iconGlyph = theme.name === 'Journey' ? 'edit-journey' : 'edit'
   const iconColor =
-    theme.colors[theme.input?.frozen?.button?.color] || '#008fe9'
+    theme.colors[theme.input?.frozen?.button?.color] || colors.azure
 
   useEffect(() => {
     if (freezable && !frozen && !!text && inputRef && inputRef.current) {
