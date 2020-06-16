@@ -569,7 +569,7 @@
           }
         },
         "content": {
-          "paddingY": "sm"
+          "paddingBottom": "sm"
         },
         "marginRight": "base",
         "meta": {
@@ -580,14 +580,15 @@
           "mb": "xxs"
         },
         "tag": {
-          "color": "fuschia",
+          "color": "berry",
           "bg": "primary--light",
           "paddingX": "xs",
           "paddingY": "xxs",
           "display": ["none", "block"],
           "mb": "xxs",
           "font-weight":"bold",
-          "line-height": "150%"
+          "line-height": "150%",
+          "borderRadius": 4
         }
       },
       "variants": {
@@ -605,7 +606,8 @@
           },
           
           "content": {
-            "variant": "compounds.card.base.content"
+            "variant": "compounds.card.base.content",
+            "paddingTop": "sm"
           },
           "link": {
             "variant": "compounds.card.base.link"
@@ -617,7 +619,7 @@
           "display": "flex",
           "alignItems": "start",
           "image": {
-            "width": 474
+            "width": [168,474]
           },
           "h3": {
             "variant": "compounds.card.base.h3",
