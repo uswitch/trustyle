@@ -977,7 +977,7 @@
     },
 
     "a": {
-      "color": "inherit",
+      "color": "uswitch-navy",
       "fontWeight": 500,
       "stroke": "currentColor",
       "textDecoration": "underline",
