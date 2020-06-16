@@ -1344,7 +1344,7 @@
     "fontSize": "base",
     "lineHeight": 1.38,
     "color": "error",
-    "padding": 12,
+    "padding": 8,
     "position": "relative",
     "borderRadius": "sm",
     "notificationColor": "none",
