@@ -20,9 +20,26 @@ const interactiveTab = (imageUrl: string) => (
   </InteractiveTab>
 )
 
+const titleElement = (
+  <h2>
+    Get more when you switch{' '}
+    <span css={{ color: 'grey' }}>with the Uswitch App</span>
+  </h2>
+)
+
 export const Example = () => {
   return (
     <InteractiveTabs>
+      {interactiveTab('https://placekitten.com/200/200?image=1')}
+      {interactiveTab('https://placekitten.com/200/200?image=2')}
+      {interactiveTab('https://placekitten.com/200/200?image=3')}
+    </InteractiveTabs>
+  )
+}
+
+export const ExampleWithTitle = () => {
+  return (
+    <InteractiveTabs titleElement={titleElement}>
       {interactiveTab('https://placekitten.com/200/200?image=1')}
       {interactiveTab('https://placekitten.com/200/200?image=2')}
       {interactiveTab('https://placekitten.com/200/200?image=3')}

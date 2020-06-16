@@ -479,7 +479,6 @@
   "buttons": {
     "base": {
       "boxSizing": "border-box",
-      "paddingX": "lg",
       "textAlign": "center",
       "fontWeight": "bold",
       "lineHeight": "base",
@@ -519,8 +518,9 @@
         "variant": "buttons.base",
         "color": "uswitch-navy",
         "background": "none",
-        "border": "2px solid",
+        "border": "none",
         "borderColor": "uswitch-navy",
+        "width": ["100%"],
         ":hover": {
           "backgroundColor": "grey-10"
         },

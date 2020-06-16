@@ -127,50 +127,7 @@
 
   "----------------------------- Variants": "-----------------------------",
   "modules": {},
-
-  "accordion": {
-    "base": {
-      "marginTop": "sm",
-      "marginBottom": "sm",
-      "title": {
-        "marginTop": "0",
-        "marginBottom": "xs"
-      },
-      "content": {
-        "marginBottom": "xs"
-      },
-      "button": {
-        "padding": "0",
-        "paddingTop": 10,
-        "paddingBottom": 10,
-        "bg": "transparent",
-        "fontFamily": "base",
-        "fontSize": "base",
-        "fontWeight": "bold",
-        "color": "textColor",
-        "alignItems": "center",
-        "borderWidth": "1px 0 0 0",
-        "borderStyle": "solid",
-        "borderColor": "grey-20",
-        "display": "flex",
-        "flexDirection": "row",
-        "width": "100%"
-      },
-      "caret": {
-        "color": "primary"
-      }
-    },
-    "variants": {
-      "isActive": {
-        "button": {
-          "variant": "accordion.base.button"
-        },
-        "caret": {
-          "color": "primary--dark"
-        }
-      }
-    }
-  },
+  
   "sideNav": {
     "internalLinkList": {
       "listStyle": "none",
@@ -248,14 +205,12 @@
           "paddingTop": 10,
           "paddingBottom": 10,
           "bg": "transparent",
-          "fontFamily": "base",
-          "fontSize": "base",
-          "fontWeight": "bold",
+          "fontFamily": "heading",
+          "fontSize": "xl",
+          "fontWeight": "base",
           "color": "textColor",
           "alignItems": "center",
-          "borderWidth": "1px 0 0 0",
-          "borderStyle": "solid",
-          "borderColor": "grey-20",
+          "borderWidth": "0",
           "display": "flex",
           "flexDirection": "row",
           "width": "100%"
@@ -277,6 +232,16 @@
     },
 
     "side-nav": {
+      "paddingLeft": 0,
+      "marginLeft": 0, 
+      "border": 0, 
+      
+      "layout": {
+        "flexDirection": ["column-reverse", "column-reverse", "column-reverse"], 
+        "text": [12],
+        "nav": [12]
+      },
+      
       "internalLinkList": {
         "listStyle": "none",
         "paddingLeft": 0,
@@ -287,43 +252,31 @@
       "internalLinkListItem": {
         "base": {
           "mb": 0,
+          "borderBottomWidth": 2,
+          "borderBottomStyle": "solid",
+          "borderColor": "grey-10",
           "position": "relative",
+          "&:hover":{
+            "backgroundColor": "grey-10"
+          }, 
           ">a": {
+            "&:hover":{
+              "marginLeft": "sm"
+            },
             "transition": "all 0.2s ease-in-out",
             "display": "block",
-            "color": "grey-70",
+            "color": "grey-60",
             "textDecoration": "none",
             "fontSize": "sm",
-            "padding": "12px 16px",
+            "fontWeight": "bold", 
+            "paddingY": "sm",
             ":visited": {
-              "color": "grey-70"
+              "color": "grey-60"
             }
           }
         },
         "isActive": {
-          "variant": "compounds.side-nav.internalLinkListItem.base",
-          "color": "primary",
-          "bg": "rgb(247, 247, 248)",
-          "::after": {
-            "variant": "compounds.side-nav.internalLinkListItem.base.::after",
-            "content": "\"\"",
-            "position": "absolute",
-            "top": "0",
-            "left": "0",
-            "display": "block",
-            "width": 4,
-            "height": "100%",
-            "backgroundColor": "primary"
-          },
-          ">a": {
-            "variant": "compounds.side-nav.internalLinkListItem.base.>a",
-            "color": "primary",
-            "fontWeight": "bold",
-            "transform": "translateX(8px)",
-            ":visited": {
-              "color": "primary"
-            }
-          }
+          "variant": "compounds.side-nav.internalLinkListItem.base"
         }
       },
       "additionalLink": {
@@ -657,7 +610,7 @@
 
   "richTextModule": {
     "contentCols": 12,
-    "contentSpan": 10
+    "contentSpan": 8
   },
 
   "styles": {
