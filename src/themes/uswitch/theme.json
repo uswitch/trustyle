@@ -595,12 +595,15 @@
         "p": {
           "fontSize": ["xs", "md"],
           "lineHeight": "base",
-          "color": "grey-80"
+          "color": "grey-80",
+          "marginBottom": "xs",
+          "marginTop": "xs"
         },
         "h3": {
           "a": {
             "textDecoration": "none",
-            "color": "green"
+            "color": "uswitch-navy",
+            "fontWeight": "bold"
           },
           "lineHeight": "heading",
           "fontSize": ["md", "xl"]
@@ -613,7 +616,8 @@
         "link": {
           "fontSize": "sm",
           "fontWeight": 500,
-          "marginBottom": "sm"
+          "marginBottom": "sm",
+          "color": "uswitch-navy"
         }
       },
       "variants": {
