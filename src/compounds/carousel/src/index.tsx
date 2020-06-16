@@ -5,12 +5,42 @@ import Glider from 'react-glider-carousel'
 
 import { gliderStyles } from './glider-styles'
 
+interface GliderEventListeners {
+  gliderLoaded?: (event: any) => void
+  gliderRefresh?: (event: any) => void
+  gliderAnimated?: (event: any) => void
+  gliderAdd?: (event: any) => void
+  gliderRemove?: (event: any) => void
+  gliderDestroy?: (event: any) => void
+  gliderSlideVisible?: (event: any) => void
+  gliderSlideHidden?: (event: any) => void
+}
+
+interface GliderSettings {
+  slidesToShow?: number | string
+  slidesToScroll?: number | string
+  itemWidth?: number
+  exactWidth?: boolean
+  scrollLock?: boolean
+  scrollLockDelay?: number
+  resizeLock?: boolean
+  responsive?: object[]
+  rewind?: boolean
+  scrollPropagate?: boolean
+  draggable?: boolean
+  dragVelocity?: number
+  duration?: number
+  propagateEvent?: boolean
+  skipTrack?: boolean
+}
+
 interface CarouselProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactElement<CarouselProps>[]
   slides?: number[]
   carouselControls?: boolean
   carouselDots?: boolean
-  onSlideVisible?: (slideIndex: number) => void
+  gliderSettings?: GliderSettings
+  gliderEventListeners?: GliderEventListeners
 }
 
 export const Carousel: React.FC<CarouselProps> = ({
@@ -18,7 +48,8 @@ export const Carousel: React.FC<CarouselProps> = ({
   slides = [1, 1.5, 2.5],
   carouselDots = true,
   carouselControls = false,
-  onSlideVisible
+  gliderSettings,
+  gliderEventListeners
 }) => {
   const { theme }: any = useThemeUI()
 
@@ -30,18 +61,16 @@ export const Carousel: React.FC<CarouselProps> = ({
         settings={{
           scrollLock: true,
           draggable: true,
-          slidesToShow: slides[0],
-          responsive: slides.slice(1).map((count, i) => ({
-            breakpoint: parseInt(theme.breakpoints[i]),
+          responsive: slides.map((count, i) => ({
+            breakpoint: parseInt([0, ...theme.breakpoints][i]),
             settings: {
               slidesToShow: count,
               slidesToScroll: count
             }
-          }))
+          })),
+          ...gliderSettings
         }}
-        gliderSlideVisible={(event: CustomEvent) => {
-          onSlideVisible && onSlideVisible(event.detail.slide)
-        }}
+        {...gliderEventListeners}
       >
         {React.Children.map(children, (child, index) => (
           <div key={index} sx={{ variant: 'compounds.carousel.slide' }}>

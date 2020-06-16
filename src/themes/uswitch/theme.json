@@ -472,8 +472,12 @@
 
     "interactiveTabs": {
       "base": {
-        "bg": "grey-05",
-        "h5": {
+        "link": {
+          "bg": "grey-05",
+          "h5": {
+            "color": "grey-60",
+            "mt": 0
+          },
           "color": "grey-60",
           "mt": 0
         },
@@ -521,9 +525,11 @@
             "boxShadow": ["none", "-8px 10px 16px -6px rgba(0, 0, 0, 0.15)"]
           }
         }
+      },
+      "title": {
+        "mt": 0
       }
     },
-
     "side-nav": {
       "internalLinkList": {
         "listStyle": "none",
@@ -654,6 +660,7 @@
       "base": {
         "container": {
           "h6": {
+            "py": "xs",
             "fontSize": ["base", 14, "sm"],
             "color": "grey-60"
           }
@@ -662,22 +669,22 @@
       "variants": {
         "isActive": {
           "container": {
-            "borderBottomStyle": "solid",
-            "borderBottomWidth": 2,
-            "borderBottomColor": "black",
             "h6": {
+              "py": "xs",
+              "borderBottomStyle": "solid",
+              "borderBottomWidth": 2,
+              "borderBottomColor": "black",
               "fontSize": ["base", 14, "sm"],
               "color": "black"
             }
           }
         },
         "tabSpacing": {
-          "mx": "md",
+          "mr": ["md", "lg"],
           "mb": 0
         },
         "tabContentSpacing": {
-          "mx": ["xxs", "md"],
-          "my": "sm"
+          "my": "xxl"
         },
         "overflowBorderLeft": {
           "position": "absolute",

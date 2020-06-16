@@ -1,6 +1,6 @@
 {
-  "name": "@uswitch/trustyle.carousel",
-  "version": "1.0.4",
+  "name": "@uswitch/trustyle.slide-reveal",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -10,8 +10,5 @@
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
-  },
-  "dependencies": {
-    "react-glider-carousel": "^0.1.2"
   }
 }
