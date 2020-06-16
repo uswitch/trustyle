@@ -303,18 +303,22 @@
         "base": {
           "border": "1px solid",
           "borderRadius": 0,
-          "borderColor": "black"
+          "borderColor": "black",
+          "&:focus": {
+            "outline": "2px black solid"
+          }
         },
         "variants": {
           "error": {
             "variant": "elements.drop-down.select.base",
             "border": "2px solid",
             "borderColor": "error-red",
-            "outlineColor": "error-red"
+            "&:focus": {
+              "outline": "2px #D64226 solid"
+            }
           },
           "focus": {
-            "variant": "elements.drop-down.select.base",
-            "outlineColor": "black"
+            "variant": "elements.drop-down.select.base"
           }
         }
       }

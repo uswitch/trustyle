@@ -947,6 +947,15 @@
   "author": {
     "heading": {
       "color": "grey-80"
+    },
+    "link": {
+      "fontWeight": "inherit"
+    },
+    "text": {
+      "color": "grey-70"
+    },
+    "main": {
+      "marginBottom": "sm"
     }
   },
 
@@ -1664,7 +1673,8 @@
     "h6": {
       "variant": "styles.h1",
       "fontSize": "xs",
-      "marginY": "sm"
+      "marginY": "sm",
+      "fontFamily": "Helvetica"
     },
 
     "root": {
