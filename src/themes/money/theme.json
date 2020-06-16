@@ -559,19 +559,17 @@
         },
         "p": { "lineHeight": "130%", "color": "grey-80" },
         "h3": {
-          "fontSize": [16,18],
+          "fontSize": [20,24],
           "minHeight": 0,
           "fontWeight": "bold",
           "color": "experimental-text",
-          "marginBottom": "xs",
-          "marginTop": "0",
+          "marginY": ["xxs", "xs"],
           "a": {
             "textDecoration": "none"
           }
         },
         "content": {
-          "paddingY": "sm",
-          "paddingX": ["sm", "sm"]
+          "paddingY": "sm"
         },
         "marginRight": "base",
         "meta": {
@@ -619,8 +617,11 @@
           "display": "flex",
           "alignItems": "start",
           "image": {
-            "width": 474,
-            "mr": 8
+            "width": 474
+          },
+          "h3": {
+            "variant": "compounds.card.base.h3",
+            "fontSize":[16,18]
           },
 
           "meta": {
@@ -630,6 +631,7 @@
 
           "content": {
             "width": 670,
+            "paddingX": ["xs","sm"],
             "variant": "compounds.card.base.content"
           },
           "link": {
