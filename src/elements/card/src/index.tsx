@@ -69,7 +69,10 @@ const Card: React.FC<Props> = ({
         <Styled.p>{description}</Styled.p>
         <Styled.a
           href={linkHref}
-          sx={{ textDecoration: 'underline', variant: styles('link') }}
+          sx={{
+            textDecoration: 'underline',
+            variant: styles('link')
+          }}
         >
           {linkText}
         </Styled.a>
