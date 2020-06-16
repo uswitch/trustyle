@@ -75,7 +75,7 @@ const Card: React.FC<Props> = ({
           }}
         >
           {tag && (
-            <span sx={{ marginRight: 'xs', variant: styles('tag') }}>
+            <span sx={{ marginRight: 'sm', variant: styles('tag') }}>
               {tag}
             </span>
           )}
