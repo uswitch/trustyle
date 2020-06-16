@@ -88,6 +88,8 @@
     "grey-100": "#050505",
 
     "frozen-bg": "#F6F6F6",
+    "battleshipGrey": "#65717B",
+    "veryLightGrey": "#E9EBED",
 
     "primary": "#0157FF",
     "primary--dark": "rgb(0, 70, 212);",
@@ -357,7 +359,7 @@
       "&:disabled": {
         "outline": "none",
         "border": "none",
-        "color": "primary",
+        "color": "battleshipGrey",
         "backgroundColor": "veryLightGrey"
       }
     },
