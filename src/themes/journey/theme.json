@@ -982,7 +982,7 @@
       "stroke": "currentColor",
       "textDecoration": "underline",
       "transition": "oapcity 0.2s ease",
-      ":visited": { "color": "inherit" },
+      ":visited": { "color": "uswitch-navy" },
       ":hover": { "opacity": 0.8 }
     },
 
