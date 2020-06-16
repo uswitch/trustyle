@@ -143,6 +143,7 @@
 
     "primary": "#FEC340",
     "primary--dark": "#F8B31B",
+    "primary--light": "#FFF6E2",
     "secondary": "#924A8B",
     "secondary--dark": "#7A3E74",
 
@@ -556,9 +557,9 @@
           "width": "100%",
           "borderRadius": "sm"
         },
-        "p": { "fontSize": 16, "lineHeight": "130%", "color": "grey-80" },
+        "p": { "lineHeight": "130%", "color": "grey-80" },
         "h3": {
-          "fontSize": 18,
+          "fontSize": [16,18],
           "minHeight": 0,
           "fontWeight": "bold",
           "color": "experimental-text",
@@ -572,17 +573,46 @@
           "paddingY": "sm",
           "paddingX": ["sm", "sm"]
         },
-        "marginRight": "base"
+        "marginRight": "base",
+        "meta": {
+          "display": "flex",
+          "font-size": 14
+        },
+        "date": {
+          "mb": "xxs"
+        },
+        "tag": {
+          "color": "fuschia",
+          "bg": "primary--light",
+          "paddingX": "xs",
+          "paddingY": "xxs",
+          "display": ["none", "block"],
+          "mb": "xxs",
+          "font-weight":"bold",
+          "line-height": "150%"
+        }
       },
       "variants": {
         "vertical": {
-          "variant": "compounds.card.base",
+          "tag": {
+            "variant": "compounds.card.base.tag"
+          },
+
+          "date": {
+            "variant": "compounds.card.base.date"
+          },
+
+          "meta": {
+            "variant": "compounds.card.base.meta"
+          },
+          
           "content": {
             "variant": "compounds.card.base.content"
           },
           "link": {
             "variant": "compounds.card.base.link"
-          }
+          },
+          "variant": "compounds.card.base"
         },
         "horizontal": {
           "variant": "compounds.card.base",
@@ -590,7 +620,12 @@
           "alignItems": "start",
           "image": {
             "width": 474,
-            "mr": 32
+            "mr": 8
+          },
+
+          "meta": {
+            "flex-direction": "column",
+            "variant": "compounds.card.base.meta"
           },
 
           "content": {
@@ -599,6 +634,12 @@
           },
           "link": {
             "variant": "compounds.card.base.link"
+          },
+          "tag": {
+            "variant": "compounds.card.base.tag"
+          },
+          "date": {
+            "variant": "compounds.card.base.date"
           }
         }
       }

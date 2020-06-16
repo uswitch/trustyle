@@ -15,6 +15,7 @@ interface Props {
   imgSrc: string
   linkHref: string
   linkText?: string
+  tag?: string
   title: string
 }
 
@@ -32,6 +33,7 @@ const Card: React.FC<Props> = ({
   imgSrc,
   linkHref,
   linkText,
+  tag,
   title
 }) => {
   const styles = makeStyles(horizontal ? 'horizontal' : 'vertical')
@@ -65,7 +67,21 @@ const Card: React.FC<Props> = ({
           variant: styles('content')
         }}
       >
-        {date && <Styled.p>{date}</Styled.p>}
+        <div
+          sx={{
+            display: 'flex',
+            alignItems: 'baseline',
+            variant: styles('meta')
+          }}
+        >
+          {tag && (
+            <span sx={{ marginRight: 'xs', variant: styles('tag') }}>
+              {tag}
+            </span>
+          )}
+          {date && <Styled.p sx={{ variant: styles('date') }}>{date}</Styled.p>}
+        </div>
+
         <Styled.h3 sx={{ margin: '0' }}>
           <Styled.a href={linkHref}>{title}</Styled.a>
         </Styled.h3>

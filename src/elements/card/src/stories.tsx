@@ -44,6 +44,7 @@ export const VerticalCards = () => {
           title={title}
           description={content}
           linkHref="https://www.uswitch.com"
+          tag="Credit Card"
         />
       </Container>
 
@@ -60,6 +61,7 @@ export const VerticalCards = () => {
               description={content}
               linkHref="https://www.uswitch.com"
               linkText="read about cats"
+              tag="Credit Card"
             />
           </Col>
           <Col span={1}>
@@ -75,6 +77,7 @@ export const VerticalCards = () => {
               }
               linkHref="https://www.uswitch.com"
               linkText="read about cats"
+              tag="Credit Card"
             />
           </Col>
           <Col span={1}>
@@ -88,6 +91,7 @@ export const VerticalCards = () => {
               description={content}
               linkHref="https://www.uswitch.com"
               linkText="read about cats"
+              tag="Credit Card"
             />
           </Col>
         </Row>
@@ -124,6 +128,7 @@ export const HorizontalCards = () => {
           description={content}
           linkHref="https://www.uswitch.com"
           horizontal
+          tag="Credit Card"
         />
 
         <Card
@@ -135,6 +140,7 @@ export const HorizontalCards = () => {
           description={content}
           linkHref="https://www.uswitch.com"
           horizontal
+          tag="Credit Card"
         />
 
         <Card
@@ -147,6 +153,7 @@ export const HorizontalCards = () => {
           description={content}
           linkHref="https://www.uswitch.com"
           horizontal
+          tag="Credit Card"
         />
       </Container>
     </div>
