@@ -418,7 +418,7 @@
     "fontSize": "base",
     "lineHeight": 1.38,
     "color": "white",
-    "padding": 12,
+    "padding": 8,
     "position": "relative",
     "borderRadius": "sm",
     "notificationColor": "#65717B",
