@@ -1,0 +1,10 @@
+{
+  "name": "@uswitch/trustyle.media-centre-theme",
+  "version": "0.9.12",
+  "license": "MIT",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {}
+}

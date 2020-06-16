@@ -26,7 +26,7 @@ const AuthorProfile: React.FC<Props> = ({
       sx={{
         display: 'flex',
         alignItems: 'center',
-        flexDirection: 'row',
+        flexDirection: ['column', 'row'],
         variant: 'authorProfile.main'
       }}
     >
@@ -38,15 +38,16 @@ const AuthorProfile: React.FC<Props> = ({
             height: '87px',
             width: '87px',
             marginRight: 'sm',
-            alignSelf: 'baseline'
+            alignSelf: 'baseline',
+            variant: 'authorProfile.link'
           }}
         >
           <authorImage.type
             {...authorImage.props}
             sx={{
+              variant: 'authorProfile.image',
               maxHeight: '100%',
               maxWidth: '100%',
-              borderRadius: '50%'
             }}
           />
         </Styled.a>
@@ -54,7 +55,8 @@ const AuthorProfile: React.FC<Props> = ({
 
       <div
         sx={{
-          paddingY: 'xs'
+          paddingY: 'xs',
+          variant: 'authorProfile.nameContainer'
         }}
       >
         <Styled.h2
@@ -73,14 +75,23 @@ const AuthorProfile: React.FC<Props> = ({
               textDecoration: 'none'
             }}
           >
-            {name}, {role}
+            {name}
           </a>
         </Styled.h2>
+        <Styled.h5
+          sx={{
+            variant: 'authorProfile.role'
+          }}
+          as="h5"
+        >
+          {role}
+        </Styled.h5>
         <Styled.p
           sx={{
             fontSize: 'sm',
             marginY: 0,
-            width: ['100%', '75%', '60%']
+            width: ['100%', '75%', '60%'],
+            variant: 'authorProfile.text'
           }}
         >
           {bio}
