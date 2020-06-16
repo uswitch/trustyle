@@ -1,9 +1,10 @@
 {
   "name": "@uswitch/trustyle.journey-theme",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "license": "MIT",
   "main": "index.js",
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "21a0b9ecbf7bb737fa20a85e6fe5f4b556e6a800"
 }

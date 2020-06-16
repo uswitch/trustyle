@@ -301,18 +301,22 @@
         "base": {
           "border": "1px solid",
           "borderRadius": 0,
-          "borderColor": "black"
+          "borderColor": "black",
+          "&:focus": {
+            "outline": "2px black solid"
+          }
         },
         "variants": {
           "error": {
             "variant": "elements.drop-down.select.base",
             "border": "2px solid",
             "borderColor": "error-red",
-            "outlineColor": "error-red"
+            "&:focus": {
+              "outline": "2px #D64226 solid"
+            }
           },
           "focus": {
-            "variant": "elements.drop-down.select.base",
-            "outlineColor": "black"
+            "variant": "elements.drop-down.select.base"
           }
         }
       }
@@ -479,7 +483,6 @@
   "buttons": {
     "base": {
       "boxSizing": "border-box",
-      "paddingX": "lg",
       "textAlign": "center",
       "fontWeight": "bold",
       "lineHeight": "base",
@@ -519,8 +522,9 @@
         "variant": "buttons.base",
         "color": "uswitch-navy",
         "background": "none",
-        "border": "2px solid",
+        "border": "none",
         "borderColor": "uswitch-navy",
+        "width": ["100%"],
         ":hover": {
           "backgroundColor": "grey-10"
         },
@@ -973,12 +977,12 @@
     },
 
     "a": {
-      "color": "inherit",
+      "color": "uswitch-navy",
       "fontWeight": 500,
       "stroke": "currentColor",
       "textDecoration": "underline",
       "transition": "oapcity 0.2s ease",
-      ":visited": { "color": "inherit" },
+      ":visited": { "color": "uswitch-navy" },
       ":hover": { "opacity": 0.8 }
     },
 

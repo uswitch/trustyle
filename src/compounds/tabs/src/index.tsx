@@ -159,8 +159,10 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
     event.preventDefault()
   }
 
-  window.addEventListener('mouseup', onMouseUp)
-  window.addEventListener('touchend', onTouchEnd)
+  useEffect(() => {
+    window.addEventListener('mouseup', onMouseUp)
+    window.addEventListener('touchend', onTouchEnd)
+  }, [])
 
   return (
     <Container>
