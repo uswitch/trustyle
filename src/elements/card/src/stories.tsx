@@ -128,7 +128,6 @@ export const HorizontalCards = () => {
           description={content}
           linkHref="https://www.uswitch.com"
           horizontal
-          tag="Credit Card"
         />
 
         <Card
