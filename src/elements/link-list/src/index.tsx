@@ -5,11 +5,16 @@ import { jsx, Styled } from 'theme-ui'
 
 interface ListLinkProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string
+  className?: string
 }
 
-export const LinkList: React.FC<ListLinkProps> = ({ children, title }) => {
+export const LinkList: React.FC<ListLinkProps> = ({
+  children,
+  title,
+  className
+}) => {
   return (
-    <div>
+    <div className={className}>
       <Styled.h3
         as="h2"
         sx={{
@@ -35,11 +40,13 @@ export const LinkList: React.FC<ListLinkProps> = ({ children, title }) => {
 
 interface ListLinkItemProps extends React.HTMLAttributes<HTMLDivElement> {
   href?: string
+  className?: string
 }
 
 export const LinkListItem: React.FC<ListLinkItemProps> = ({
   children,
-  href
+  href,
+  className
 }) => {
   return (
     <li
@@ -51,6 +58,7 @@ export const LinkListItem: React.FC<ListLinkItemProps> = ({
         paddingBottom: 'xs',
         marginBottom: '0'
       }}
+      className={className}
     >
       <Styled.a
         href={href}

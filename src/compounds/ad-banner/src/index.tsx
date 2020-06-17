@@ -22,6 +22,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   badgeIcon?: React.ReactElement
   badgeVariant?: string
   imageCritical?: boolean
+  className?: string
 }
 
 const AdBanner: React.FC<Props> = ({
@@ -39,10 +40,12 @@ const AdBanner: React.FC<Props> = ({
   href,
   badgeIcon,
   badgeVariant = 'inverse',
-  imageCritical = true
+  imageCritical = true,
+  className
 }) => {
   return (
     <div
+      className={className}
       sx={{
         backgroundColor: backgroundColor,
         color: 'white',

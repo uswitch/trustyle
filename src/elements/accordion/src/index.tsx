@@ -21,21 +21,24 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   index?: number
   title: string
   isInitiallyOpen?: boolean
+  className?: string
 }
 
 interface TitleProps extends React.HTMLAttributes<HTMLDivElement> {
   as?: React.ElementType
+  className?: string
 }
 
 interface GroupProps {
   iconClosed?: Glyph
   iconOpen?: Glyph
+  className?: string
 }
 
 const Accordion: React.FC<Props> & {
   Group: React.FC<GroupProps>
   Title: React.FC<TitleProps>
-} = ({ index, title, isInitiallyOpen = false, children }) => {
+} = ({ index, title, isInitiallyOpen = false, children, className }) => {
   const {
     theme: {
       compounds: { accordion: accordionTheme = {} },
@@ -59,7 +62,7 @@ const Accordion: React.FC<Props> & {
   }
 
   return (
-    <div sx={{ variant: 'accordion' }}>
+    <div sx={{ variant: 'accordion' }} className={className}>
       <button
         sx={{
           cursor: 'pointer',
@@ -129,7 +132,7 @@ const Accordion: React.FC<Props> & {
 
 export default Accordion
 
-Accordion.Group = ({ children, iconClosed, iconOpen }) => {
+Accordion.Group = ({ children, iconClosed, iconOpen, className }) => {
   const [openId, setOpenId] = useState(0)
 
   const childrenWithIndexes = React.Children.map(children, (child, index) => {
@@ -147,6 +150,7 @@ Accordion.Group = ({ children, iconClosed, iconOpen }) => {
         marginBottom: 'sm',
         variant: 'compounds.accordion.base'
       }}
+      className={className}
     >
       <AccordionContext.Provider
         value={{ open: openId, setOpenId, iconClosed, iconOpen }}
@@ -157,13 +161,14 @@ Accordion.Group = ({ children, iconClosed, iconOpen }) => {
   )
 }
 
-Accordion.Title = ({ children, as = 'h2' }) => {
+Accordion.Title = ({ children, as = 'h2', className }) => {
   return (
     <Styled.h3
       as={as}
       sx={{
         variant: 'compounds.accordion.base.title'
       }}
+      className={className}
     >
       {children}
     </Styled.h3>

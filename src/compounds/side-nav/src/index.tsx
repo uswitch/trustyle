@@ -20,9 +20,13 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   additionalLinks?: LinkGroup[]
 }
 
-const SideNav: React.FC<Props> = ({ internalLinks, additionalLinks = [] }) => {
+const SideNav: React.FC<Props> = ({
+  internalLinks,
+  additionalLinks = [],
+  className
+}) => {
   return (
-    <nav>
+    <nav className={className}>
       <Accordion.Group>
         <Accordion title={internalLinks.title}>
           <ul

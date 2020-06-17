@@ -5,6 +5,12 @@ import { jsx } from '@emotion/core'
 
 import * as st from './styles'
 
-export const LoadingSpinner: React.FC = () => (
-  <div css={st.rotate}>loading...</div>
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string
+}
+
+export const LoadingSpinner: React.FC<Props> = ({ className }) => (
+  <div css={st.rotate} className={className}>
+    loading...
+  </div>
 )
