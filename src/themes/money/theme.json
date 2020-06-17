@@ -584,7 +584,6 @@
           "bg": "primary--light",
           "paddingX": "xs",
           "paddingY": "xxs",
-          "display": ["none", "block"],
           "mb": "xxs",
           "font-weight":"bold",
           "line-height": "150%",
@@ -619,7 +618,7 @@
           "display": "flex",
           "alignItems": "start",
           "image": {
-            "width": [168,474]
+            "width": [168,192]
           },
           "h3": {
             "variant": "compounds.card.base.h3",
