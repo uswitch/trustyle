@@ -197,8 +197,16 @@ export const ExampleWithKnobs = () => {
         {getColumn(thirdCol)}
         {getColumn(fourthCol)}
         <ProductTable.cells.Cta
-          primary={<ButtonLink variant="primary">{buttonText}</ButtonLink>}
-          secondary={<ButtonLink variant="link">{linkText}</ButtonLink>}
+          primary={
+            <ButtonLink variant="primary" size="small">
+              {buttonText}
+            </ButtonLink>
+          }
+          secondary={
+            <ButtonLink variant="link" size="small">
+              {linkText}
+            </ButtonLink>
+          }
         />
       </ProductTable.Row>
     </React.Fragment>

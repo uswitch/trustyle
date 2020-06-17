@@ -32,8 +32,8 @@ const InteractiveTabLink: React.FC<InteractiveTabLinkProps> = ({
       <div
         sx={{
           variant: isActive
-            ? 'compounds.interactiveTabs.variants.isActive'
-            : 'compounds.interactiveTabs.base'
+            ? 'compounds.interactiveTabs.variants.link.isActive'
+            : 'compounds.interactiveTabs.base.link'
         }}
       >
         {icon && (
@@ -82,12 +82,16 @@ export const InteractiveTab: React.FC<InteractiveTabProps> = () => null
 
 interface InteractiveTabsProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactElement<InteractiveTabProps>[]
+  titleElement?: React.ReactElement
 }
 
 export const InteractiveTabs: React.FC<InteractiveTabsProps> = ({
-  children
+  children,
+  titleElement
 }) => {
   const [activeTab, setActiveTab] = useState(0)
+
+  const onSlideVisible = (event: any) => setActiveTab(event.detail.slide)
 
   return (
     <Fragment>
@@ -104,6 +108,12 @@ export const InteractiveTabs: React.FC<InteractiveTabsProps> = ({
             span={1}
             sx={{ display: ['none', 'flex', 'flex'], flexDirection: 'column' }}
           >
+            {titleElement && (
+              <titleElement.type
+                sx={{ variant: 'compounds.interactiveTabs.title' }}
+                {...titleElement.props}
+              />
+            )}
             {React.Children.map(children, (child, index) => (
               <InteractiveTabLink
                 key={index}
@@ -120,8 +130,17 @@ export const InteractiveTabs: React.FC<InteractiveTabsProps> = ({
           </Col>
         </Row>
       </Container>
-      <div sx={{ display: ['block', 'none', 'none'], mt: '-35px' }}>
-        <Carousel slides={[1]} onSlideVisible={setActiveTab}>
+      <div
+        sx={{
+          display: ['block', 'none', 'none'],
+          mt: '-35px',
+          variant: 'compounds.interactiveTabs.mobileLinks'
+        }}
+      >
+        <Carousel
+          slides={[1]}
+          gliderEventListeners={{ gliderSlideVisible: onSlideVisible }}
+        >
           {React.Children.map(children, (child, index) => (
             <div sx={{ pt: '20px' }}>
               <InteractiveTabLink

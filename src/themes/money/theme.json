@@ -1593,7 +1593,7 @@
       "fontSize": "base",
       "fontWeight": "base",
       "lineHeight": "base",
-      "color": "grey-100",
+      "color": "grey-80",
       "webkitFontSmoothing": "antialiased",
       "mozOsxFontSmoothing": "grayscale"
     },
