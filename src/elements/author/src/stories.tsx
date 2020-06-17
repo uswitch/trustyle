@@ -33,6 +33,13 @@ export const Example = () => {
         authorUrl={authorUrl}
         date={updatedDate}
       />
+      <h3>Without date</h3>
+      <Author
+        name={name}
+        role={role}
+        authorImage={image}
+        authorUrl={authorUrl}
+      />
       <h3>With editor</h3>
       <Author
         name={name}
