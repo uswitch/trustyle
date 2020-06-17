@@ -29,7 +29,7 @@ const Card: React.FC<Props> = ({
   horizontal = false,
   imageSize = 'cover',
   imgAlt,
-  imgSizes = ['168px', '768px'],
+  imgSizes = '768px',
   imgSrc,
   linkHref,
   linkText,
