@@ -6,7 +6,7 @@ import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 
 interface Props {
   className?: string
-  metaInfo?: string
+  superScript?: string
   description?: string
   horizontal?: boolean
   imageSize?: 'cover' | 'contain'
@@ -24,7 +24,7 @@ const makeStyles = (variant: string) => (element?: string) =>
 
 const Card: React.FC<Props> = ({
   className = '',
-  metaInfo,
+  superScript,
   description,
   horizontal = false,
   imageSize = 'cover',
@@ -79,8 +79,10 @@ const Card: React.FC<Props> = ({
               {tag}
             </span>
           )}
-          {metaInfo && (
-            <Styled.p sx={{ variant: styles('metaInfo') }}>{metaInfo}</Styled.p>
+          {superScript && (
+            <Styled.p sx={{ variant: styles('superScript') }}>
+              {superScript}
+            </Styled.p>
           )}
         </div>
 
