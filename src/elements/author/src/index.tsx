@@ -13,6 +13,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   date: number
   authorUrl: string
   editorUrl?: string
+  className?: string
 }
 
 const Author: React.FC<Props> = ({
@@ -23,7 +24,8 @@ const Author: React.FC<Props> = ({
   authorImage,
   date,
   authorUrl,
-  editorUrl
+  editorUrl,
+  className
 }) => {
   return (
     <div
@@ -33,6 +35,7 @@ const Author: React.FC<Props> = ({
         flexDirection: 'row',
         variant: 'author.main'
       }}
+      className={className}
     >
       {authorImage && (
         <Styled.a

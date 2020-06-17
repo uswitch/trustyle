@@ -26,6 +26,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   award: string
   campaignImgSrc: string
   campaignImgHeight?: string
+  className?: string
 }
 
 interface Detail {
@@ -152,7 +153,8 @@ const SponsoredRateTable: React.FC<Props> = ({
   sponsorLogoSrc,
   award,
   campaignImgSrc,
-  campaignImgHeight = '144px'
+  campaignImgHeight = '144px',
+  className
 }) => (
   <a
     href={href}
@@ -162,6 +164,7 @@ const SponsoredRateTable: React.FC<Props> = ({
       color: 'inherit',
       '&:hover': { color: 'inherit' }
     }}
+    className={className}
   >
     <div
       sx={{

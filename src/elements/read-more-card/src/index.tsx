@@ -7,6 +7,7 @@ import { Icon } from '@uswitch/trustyle.icon'
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   text: string
   href: string
+  className?: string
 }
 
 const outerElementSx = {
@@ -32,9 +33,9 @@ const outerElementSx = {
   backgroundColor: 'grey-05'
 }
 
-const ReadMoreCard: React.FC<Props> = ({ text, href }) => {
+const ReadMoreCard: React.FC<Props> = ({ text, href, className }) => {
   return (
-    <a href={href} sx={outerElementSx}>
+    <a href={href} sx={outerElementSx} className={className}>
       <div sx={{ flexGrow: 1 }}>{text}</div>
       <div sx={{ flexShrink: 0, paddingLeft: 'md' }}>
         <Icon glyph={'arrow'} color={'primary'} direction={'right'} size={18} />

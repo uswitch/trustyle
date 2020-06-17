@@ -11,6 +11,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   text: string
   orientation?: string
   bold?: boolean
+  className?: string
 }
 
 const CallOut: React.FC<Props> = ({
@@ -18,7 +19,8 @@ const CallOut: React.FC<Props> = ({
   text,
   icon,
   orientation = 'left',
-  bold = false
+  bold = false,
+  className
 }) => {
   const flexDirection = orientation === 'left' ? 'row' : 'column'
 
@@ -63,6 +65,7 @@ const CallOut: React.FC<Props> = ({
       px={{
         backgroundColor: 'accentColor'
       }}
+      className={className}
     >
       {icon ? (
         <div

@@ -82,13 +82,15 @@ interface Props extends React.HTMLAttributes<HTMLUListElement> {
   totalPages: number
   onPageChange?: (number: number, e?: React.MouseEvent) => any
   numberToLink?: (number: number) => string
+  className?: string
 }
 
 const Pagination: React.FC<Props> = ({
   currentPage,
   totalPages,
   onPageChange = () => {},
-  numberToLink
+  numberToLink,
+  className
 }) => {
   const { theme }: any = useThemeUI()
 
@@ -114,6 +116,7 @@ const Pagination: React.FC<Props> = ({
         paddingLeft: 0,
         variant: 'pagination.main'
       }}
+      className={className}
     >
       <li
         sx={{
