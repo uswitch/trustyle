@@ -472,18 +472,6 @@
         "button": {
           "variant": "cta2.base.button"
         }
-      },
-      "hero-with-background-image": {
-        "backgroundColor": "red",
-        "title": {
-          "variant": "cta2.base.title"
-        },
-        "text": {
-          "variant": "cta2.base.text"
-        },
-        "button": {
-          "variant": "cta2.base.button"
-        }
       }
     }
   },
