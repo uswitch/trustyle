@@ -143,6 +143,7 @@
 
     "primary": "#FEC340",
     "primary--dark": "#F8B31B",
+    "primary--light": "#FFF6E2",
     "secondary": "#924A8B",
     "secondary--dark": "#7A3E74",
 
@@ -550,58 +551,98 @@
       "base": {
         "width": "100%",
         "height": "100%",
-        "borderRadius": "sm",
-        "borderStyle": "solid",
-        "borderColor": "grey-20",
-        "borderWidth": "1px",
         "boxSizing": "border-box",
         "mb": "sm",
         "img": {
-          "width": "100%"
+          "width": "100%",
+          "borderRadius": "sm"
         },
-        "p": { "fontSize": 16, "lineHeight": "130%", "color": "grey-80" },
+        "p": { "lineHeight": "130%", "color": "grey-80" },
         "h3": {
-          "fontSize": 18,
+          "fontSize": [20,24],
           "minHeight": 0,
           "fontWeight": "bold",
           "color": "experimental-text",
-          "marginBottom": "xs",
-          "marginTop": "0",
+          "marginY": ["xxs", "xs"],
           "a": {
             "textDecoration": "none"
           }
         },
         "content": {
-          "paddingY": "sm",
-          "paddingX": ["sm", "sm"]
+          "paddingBottom": "sm"
         },
-        "marginRight": "base"
+        "marginRight": "base",
+        "meta": {
+          "display": "flex",
+          "font-size": 14
+        },
+        "superScript": {
+          "mb": "xxs"
+        },
+        "tag": {
+          "color": "berry",
+          "bg": "primary--light",
+          "paddingX": "xs",
+          "paddingY": "xxs",
+          "mb": "xxs",
+          "font-weight":"bold",
+          "line-height": "150%",
+          "borderRadius": 4
+        }
       },
       "variants": {
         "vertical": {
-          "variant": "compounds.card.base",
+          "tag": {
+            "variant": "compounds.card.base.tag"
+          },
+
+          "superScript": {
+            "variant": "compounds.card.base.superScript"
+          },
+
+          "meta": {
+            "variant": "compounds.card.base.meta"
+          },
+          
           "content": {
-            "variant": "compounds.card.base.content"
+            "variant": "compounds.card.base.content",
+            "paddingTop": "sm"
           },
           "link": {
             "variant": "compounds.card.base.link"
-          }
+          },
+          "variant": "compounds.card.base"
         },
         "horizontal": {
           "variant": "compounds.card.base",
           "display": "flex",
           "alignItems": "start",
           "image": {
-            "width": 474,
-            "mr": 32
+            "width": [168,192]
+          },
+          "h3": {
+            "variant": "compounds.card.base.h3",
+            "fontSize":[16,18]
+          },
+
+          "meta": {
+            "flex-direction": "column",
+            "variant": "compounds.card.base.meta"
           },
 
           "content": {
             "width": 670,
+            "paddingX": ["xs","sm"],
             "variant": "compounds.card.base.content"
           },
           "link": {
             "variant": "compounds.card.base.link"
+          },
+          "tag": {
+            "variant": "compounds.card.base.tag"
+          },
+          "superScript": {
+            "variant": "compounds.card.base.superScript"
           }
         }
       }
