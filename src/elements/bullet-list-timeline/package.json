@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.bullet-list-timeline",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
