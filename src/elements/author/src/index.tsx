@@ -99,7 +99,7 @@ const Author: React.FC<Props> = ({
             {editorName &&
               `Edited by ${editorName}${editorRole ? `, ${editorRole}` : ''}, `}
           </Styled.a>
-          {dayjs(date).format('LL')}
+          {date !== undefined && dayjs(date).format('LL')}
         </Styled.p>
       </div>
     </div>
