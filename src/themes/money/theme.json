@@ -576,7 +576,7 @@
           "display": "flex",
           "font-size": 14
         },
-        "date": {
+        "metaInfo": {
           "mb": "xxs"
         },
         "tag": {
@@ -597,8 +597,8 @@
             "variant": "compounds.card.base.tag"
           },
 
-          "date": {
-            "variant": "compounds.card.base.date"
+          "metaInfo": {
+            "variant": "compounds.card.base.metaInfo"
           },
 
           "meta": {
@@ -642,8 +642,8 @@
           "tag": {
             "variant": "compounds.card.base.tag"
           },
-          "date": {
-            "variant": "compounds.card.base.date"
+          "metaInfo": {
+            "variant": "compounds.card.base.metaInfo"
           }
         }
       }

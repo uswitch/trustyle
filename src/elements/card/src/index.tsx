@@ -6,7 +6,7 @@ import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 
 interface Props {
   className?: string
-  date?: string
+  metaInfo?: string
   description?: string
   horizontal?: boolean
   imageSize?: 'cover' | 'contain'
@@ -24,7 +24,7 @@ const makeStyles = (variant: string) => (element?: string) =>
 
 const Card: React.FC<Props> = ({
   className = '',
-  date,
+  metaInfo,
   description,
   horizontal = false,
   imageSize = 'cover',
@@ -79,7 +79,9 @@ const Card: React.FC<Props> = ({
               {tag}
             </span>
           )}
-          {date && <Styled.p sx={{ variant: styles('date') }}>{date}</Styled.p>}
+          {metaInfo && (
+            <Styled.p sx={{ variant: styles('metaInfo') }}>{metaInfo}</Styled.p>
+          )}
         </div>
 
         <Styled.h3 sx={{ margin: '0' }}>
@@ -94,16 +96,6 @@ const Card: React.FC<Props> = ({
             {linkText}
           </Styled.a>
         )}
-        <Styled.p>{description}</Styled.p>
-        <Styled.a
-          href={linkHref}
-          sx={{
-            textDecoration: 'underline',
-            variant: styles('link')
-          }}
-        >
-          {linkText}
-        </Styled.a>
       </div>
     </div>
   )
