@@ -733,7 +733,10 @@
   "input": {
     "frozen": {
       "backgroundColor": "frozen-bg",
-      "borderRadius": "0"
+      "borderRadius": "0",
+      "text": {
+        "color": "grey-80"
+      }
     },
     "focus": {
       "outline": "2px solid",
