@@ -1,4 +1,4 @@
-import { colors, pxToRem, spacers } from '@uswitch/trustyle.styles'
+import { colors, pxToRem } from '@uswitch/trustyle.styles'
 
 import { SxStyleProp } from '../../../../types/theme-ui'
 
@@ -57,11 +57,13 @@ export const input: SxStyleProp = {
 }
 
 const affix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({
+  alignItems: 'center',
+  display: 'flex',
   fontFamily: 'base',
   fontSize: 'base',
   lineHeight: 'base',
   margin: pxToRem(8, 0),
-  padding: pxToRem(8, spacers.green),
+  padding: pxToRem(0, 12),
   textAlign: 'center',
   boxSizing: 'border-box',
   borderColor: (theme: any) =>

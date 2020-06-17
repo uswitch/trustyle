@@ -847,7 +847,7 @@
       "inputColor": "#141424",
       "borderColor": "light-grey-blue",
       "borderStyle": "solid",
-      "borderWidth": "2px",
+      "borderWidth": "1px",
       "color": "slate-grey",
       "fontWeight": "normal",
       "before": {
