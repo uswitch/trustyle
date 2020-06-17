@@ -8,6 +8,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   container?: React.FC<any>
   imageUrl?: string
   gradient?: string
+  className?: string
 }
 
 const DefaultContainer: React.FC<Props> = ({ children, className }) => {
@@ -39,7 +40,8 @@ const HeroWithBackgroundImage: React.FC<Props> = ({
   imageUrl,
   container: Container = DefaultContainer,
   gradient,
-  breadcrumbs
+  breadcrumbs,
+  className
 }) => {
   return (
     <div
@@ -47,8 +49,10 @@ const HeroWithBackgroundImage: React.FC<Props> = ({
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
+        variant: 'hero-with-background-image',
         backgroundImage: createBackgroundStr(gradient, imageUrl)
       }}
+      className={className}
     >
       <Container>
         {breadcrumbs}
