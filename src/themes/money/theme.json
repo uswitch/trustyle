@@ -576,7 +576,7 @@
           "display": "flex",
           "font-size": 14
         },
-        "metaInfo": {
+        "superScript": {
           "mb": "xxs"
         },
         "tag": {
@@ -597,8 +597,8 @@
             "variant": "compounds.card.base.tag"
           },
 
-          "metaInfo": {
-            "variant": "compounds.card.base.metaInfo"
+          "superScript": {
+            "variant": "compounds.card.base.superScript"
           },
 
           "meta": {
@@ -642,8 +642,8 @@
           "tag": {
             "variant": "compounds.card.base.tag"
           },
-          "metaInfo": {
-            "variant": "compounds.card.base.metaInfo"
+          "superScript": {
+            "variant": "compounds.card.base.superScript"
           }
         }
       }

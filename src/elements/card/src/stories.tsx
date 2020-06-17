@@ -82,7 +82,7 @@ export const VerticalCards = () => {
           </Col>
           <Col span={1}>
             <Card
-              metaInfo="01 January 2020"
+              superScript="01 January 2020"
               imgSrc={img}
               imgAlt="Picture of a cute kitten"
               imgSizes={imgColumnSizes}
@@ -144,7 +144,7 @@ export const HorizontalCards = () => {
         />
 
         <Card
-          metaInfo="01 January 2020"
+          superScript="01 January 2020"
           imgSrc={img}
           imgAlt="Picture of a cute kitten"
           imgSizes="(max-width: 1200px) 100vw, 1200px"
