@@ -23,7 +23,7 @@ export const FrozenInput: React.FC<Props> = ({
 }) => {
   const [frozen, setFrozen] = useState(freezable && !!text)
   const { theme }: any = useThemeUI()
-  const iconGlyph = theme.name === 'Journey' ? 'edit-journey' : 'edit'
+  const iconGlyph = theme?.name === 'Journey' ? 'edit-journey' : 'edit'
 
   useEffect(() => {
     if (freezable && !frozen && !!text && inputRef && inputRef.current) {
