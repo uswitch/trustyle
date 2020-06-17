@@ -47,7 +47,7 @@
   },
 
   "space": {
-    "gutter": 16,
+    "gutter": 14,
     "base": 16,
     "xxs": 4,
     "xs": 8,
@@ -72,6 +72,7 @@
   "useBodyStyles": false,
 
   "colors": {
+    "brand": "#0157FF",
     "text": "#4c4c4c",
 
     "grey-0": "#FFFFFF",
@@ -117,7 +118,7 @@
 
   "grid": {
     "sizes": {
-      "gutter": "xs",
+      "gutter": "gutter",
       "verticalGutter": "sm"
     },
     "container": {
@@ -127,7 +128,14 @@
 
   "----------------------------- Variants": "-----------------------------",
   "modules": {},
-  
+  "hero-with-background-image": {
+      "backgroundImage": "linear-gradient(90deg, rgba(0, 2, 11, 0.75) 0%, rgba(0, 2, 11, 0) 100%)",
+      "color": "white",
+      "h1,h2,h3,h4,h5,h6,p": {
+        "color": "white"
+      }
+  },
+
   "sideNav": {
     "internalLinkList": {
       "listStyle": "none",
@@ -499,10 +507,10 @@
   "breadcrumbs2": {
     "base": {
       "main": {
-        "color": "grey-60"
+        "color": "grey-100"
       },
       "homeIcon": {
-        "color": "grey-60"
+        "color": "grey-100"
       },
       "title": {
         "color": "grey-100"
