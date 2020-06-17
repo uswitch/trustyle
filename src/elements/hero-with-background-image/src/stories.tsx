@@ -3,9 +3,8 @@ import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
 
 import AllThemes from '../../../utils/all-themes'
-import { Col, Container, Row } from '../../../layout/flex-grid/src'
+import { Col, Row } from '../../../layout/flex-grid/src'
 import { Button } from '../../button/src'
-import Breadcrumbs from '../../breadcrumbs/src'
 import IconTile from '../../icon-tile/src'
 
 import HeroWithBackgroundImage from './'
@@ -17,35 +16,6 @@ const images = {
 export default {
   title: 'Elements|HeroWithBackgroundImage'
 }
-
-const crumbs = [
-  {
-    fields: {
-      path: '/',
-      displayText: 'Home'
-    }
-  },
-  {
-    fields: {
-      path: '/gas-electricity/',
-      displayText: 'Gas & Electricity'
-    }
-  },
-  {
-    fields: {
-      path: '/gas-electricity/guides',
-      displayText: 'Guides'
-    }
-  }
-]
-
-const breadcrumbs = (
-  <Breadcrumbs
-    crumbs={crumbs}
-    title="Understanding energy bills and electricity bills - FAQs and more"
-    variant="light"
-  />
-)
 
 interface PanelHelperProps extends React.HTMLAttributes<any> {
   icon: string
@@ -106,17 +76,8 @@ const content = (
 )
 
 export const HeroWithCustomContainer = () => {
-  const Container: React.FC = ({ children }) => (
-    <div sx={{ width: 600, margin: 'auto' }}>{children}</div>
-  )
-
   return (
-    <HeroWithBackgroundImage
-      imageUrl={images.wallet}
-      container={Container}
-      gradient="linear-gradient(90deg, rgba(0, 2, 11, 0.75) 0%, rgba(0, 2, 11, 0) 100%)"
-      breadcrumbs={breadcrumbs}
-    >
+    <HeroWithBackgroundImage imageUrl={images.wallet}>
       {content}
     </HeroWithBackgroundImage>
   )
@@ -130,12 +91,7 @@ HeroWithCustomContainer.story = {
 
 export const HeroWithFlexGridContainer = () => {
   return (
-    <HeroWithBackgroundImage
-      imageUrl={images.wallet}
-      container={Container}
-      gradient="linear-gradient(90deg, rgba(0, 2, 11, 0.75) 0%, rgba(0, 2, 11, 0) 100%)"
-      breadcrumbs={breadcrumbs}
-    >
+    <HeroWithBackgroundImage imageUrl={images.wallet}>
       {content}
     </HeroWithBackgroundImage>
   )
