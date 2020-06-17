@@ -94,6 +94,16 @@ const Card: React.FC<Props> = ({
             {linkText}
           </Styled.a>
         )}
+        <Styled.p>{description}</Styled.p>
+        <Styled.a
+          href={linkHref}
+          sx={{
+            textDecoration: 'underline',
+            variant: styles('link')
+          }}
+        >
+          {linkText}
+        </Styled.a>
       </div>
     </div>
   )
