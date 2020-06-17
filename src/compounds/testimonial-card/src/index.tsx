@@ -9,15 +9,17 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   quote: string
   authorName: string
   authorImg?: React.ReactElement
+  className?: string
 }
 
 const TestimonialCard: React.FC<Props> = ({
   ratingImg,
   quote,
   authorName,
-  authorImg
+  authorImg,
+  className
 }) => (
-  <div sx={{ variant: 'compounds.testimonial-card' }}>
+  <div sx={{ variant: 'compounds.testimonial-card' }} className={className}>
     <ratingImg.type {...ratingImg.props} />
     <Styled.h5>{quote}</Styled.h5>
     <div sx={{ variant: 'compounds.testimonial-card.author' }}>

@@ -29,6 +29,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   brandCaption?: string
   backgroundColor?: string
   enhancedImgHeight?: string
+  className?: string
 }
 
 interface Detail {
@@ -153,7 +154,8 @@ const SponsoredProduct: React.FC<Props> = ({
   enhancedImgSrc,
   brandCaption,
   backgroundColor = 'white',
-  enhancedImgHeight = '144px'
+  enhancedImgHeight = '144px',
+  className
 }) => (
   <a
     href={href}
@@ -163,6 +165,7 @@ const SponsoredProduct: React.FC<Props> = ({
       color: 'inherit',
       '&:hover': { color: 'inherit' }
     }}
+    className={className}
   >
     <div
       sx={{

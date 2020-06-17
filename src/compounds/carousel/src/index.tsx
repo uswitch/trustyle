@@ -41,6 +41,7 @@ interface CarouselProps extends React.HTMLAttributes<HTMLDivElement> {
   carouselDots?: boolean
   gliderSettings?: GliderSettings
   gliderEventListeners?: GliderEventListeners
+  className?: string
 }
 
 export const Carousel: React.FC<CarouselProps> = ({
@@ -49,12 +50,17 @@ export const Carousel: React.FC<CarouselProps> = ({
   carouselDots = true,
   carouselControls = false,
   gliderSettings,
-  gliderEventListeners
+  gliderEventListeners,
+  className
 }) => {
   const { theme }: any = useThemeUI()
 
   return (
-    <div css={gliderStyles} sx={{ variant: 'compounds.carousel' }}>
+    <div
+      css={gliderStyles}
+      sx={{ variant: 'compounds.carousel' }}
+      className={className}
+    >
       <Glider
         hasDots={carouselDots}
         hasArrows={carouselControls}
@@ -81,3 +87,5 @@ export const Carousel: React.FC<CarouselProps> = ({
     </div>
   )
 }
+
+export default Carousel

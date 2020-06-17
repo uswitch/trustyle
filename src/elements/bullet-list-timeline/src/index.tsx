@@ -16,6 +16,7 @@ interface BulletProps {
 
 interface Props {
   stages: React.ReactNode[]
+  className?: string
 }
 
 const EmailSVG = () => (
@@ -102,8 +103,8 @@ const Bullet: React.FC<BulletProps> = ({ position, children }) => (
   </li>
 )
 
-export const BulletListTimeline: React.FC<Props> = ({ stages }) => (
-  <ul css={st.highlights}>
+export const BulletListTimeline: React.FC<Props> = ({ stages, className }) => (
+  <ul css={st.highlights} className={className}>
     {stages.map((stage, index) => {
       const isFirst = index === 0
       const isLast = index === stages.length - 1
@@ -118,3 +119,5 @@ export const BulletListTimeline: React.FC<Props> = ({ stages }) => (
     })}
   </ul>
 )
+
+export default BulletListTimeline
