@@ -5,9 +5,10 @@ import { jsx } from 'theme-ui'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   logoImage: React.ReactElement[]
+  className?: string
 }
 
-const LogoCollection: React.FC<Props> = ({ logoImage }) => {
+const LogoCollection: React.FC<Props> = ({ logoImage, className }) => {
   return (
     <div
       sx={{
@@ -17,6 +18,7 @@ const LogoCollection: React.FC<Props> = ({ logoImage }) => {
         justifyContent: 'center',
         variant: 'logoCollection.base.outer'
       }}
+      className={className}
     >
       {logoImage.map((img, i) => (
         <div

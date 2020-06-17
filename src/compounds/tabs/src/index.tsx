@@ -52,6 +52,7 @@ const TabContent: React.FC<TabContentProps> = ({ children, active }) => {
 interface TabProps {
   title: string
   children: React.ReactNode
+  className?: string
 }
 
 export const Tab: React.FC<TabProps> = () => null
@@ -60,7 +61,7 @@ interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactElement<TabProps>[]
 }
 
-export const Tabs: React.FC<TabsProps> = ({ children }) => {
+export const Tabs: React.FC<TabsProps> = ({ children, className }) => {
   const [activeTab, setActiveTab] = useState(0)
   const [left, setLeft] = useState(0)
   const tabs: RefObject<HTMLDivElement> = React.createRef()
@@ -165,7 +166,7 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => {
   }, [])
 
   return (
-    <Container>
+    <Container className={className}>
       <div
         ref={tabWrap}
         sx={{

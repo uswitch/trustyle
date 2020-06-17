@@ -8,10 +8,11 @@ import * as st from './styles'
 interface Props {
   children: React.ReactNode
   label?: string
+  className?: string
 }
 
-export const Fieldset: React.FC<Props> = ({ children, label }) => (
-  <fieldset css={st.root}>
+export const Fieldset: React.FC<Props> = ({ children, label, className }) => (
+  <fieldset css={st.root} className={className}>
     {label && <legend css={st.label}>{label}</legend>}
     {children}
   </fieldset>

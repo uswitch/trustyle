@@ -14,6 +14,7 @@ interface ListProps extends React.HTMLAttributes<HTMLDivElement> {
   container?: React.FC
   breadcrumbs?: React.ReactElement
   image?: React.ReactElement
+  className?: string
 }
 
 const Category: React.FC<ListProps> = ({
@@ -21,7 +22,8 @@ const Category: React.FC<ListProps> = ({
   text,
   container: Container = DefaultContainer,
   breadcrumbs: Breadcrumbs,
-  image: Image
+  image: Image,
+  className
 }) => {
   const { theme }: any = useThemeUI()
   const breadcrumbsVariant = theme.categoryTitle?.breadcrumbs?.variant
@@ -35,6 +37,7 @@ const Category: React.FC<ListProps> = ({
         paddingTop: Breadcrumbs ? ['xs', 'sm'] : ['md', 'lg'],
         variant: 'categoryTitle.main'
       }}
+      className={className}
     >
       <Container>
         {Breadcrumbs && (
