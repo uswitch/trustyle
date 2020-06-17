@@ -9,14 +9,16 @@ import * as st from './styles'
 
 interface BulletProps {
   children: React.ReactNode
+  className?: string
 }
 
 interface Props {
   highlights: React.ReactNode[]
+  className?: string
 }
 
-const Bullet: React.FC<BulletProps> = ({ children }) => (
-  <li css={st.highlight}>
+const Bullet: React.FC<BulletProps> = ({ children, className }) => (
+  <li css={st.highlight} className={className}>
     <span>
       <i css={st.highlightBullet}>
         <Icon glyph="arrow" color={colors.white} direction="right" />
@@ -26,8 +28,11 @@ const Bullet: React.FC<BulletProps> = ({ children }) => (
   </li>
 )
 
-export const BulletListHighlight: React.FC<Props> = ({ highlights }) => (
-  <ul css={st.highlights}>
+export const BulletListHighlight: React.FC<Props> = ({
+  highlights,
+  className
+}) => (
+  <ul css={st.highlights} className={className}>
     {highlights.map((highlight, key) => (
       <Bullet key={key}>{highlight}</Bullet>
     ))}
