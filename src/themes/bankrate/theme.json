@@ -216,6 +216,59 @@
   },
 
   "compounds": {
+    "card": {
+      "itemsPerRow": [1], 
+      "base": {
+        "width": "100%",
+        "height": "100%",
+        "borderStyle": "solid",
+        "borderColor": "grey-20",
+        "borderWidth": "1px 0 0 0",
+        "boxSizing": "border-box",
+        "mb": "sm",
+        "img": {
+          "width": "100%"
+        },
+        "p": { "fontSize": 16, "lineHeight": "130%", "color": "grey-80" },
+        "h3": {
+          "fontSize": 18,
+          "minHeight": 0,
+          "fontWeight": "bold",
+          "color": "experimental-text",
+          "marginBottom": "xs",
+          "marginTop": "0",
+          "a": {
+            "textDecoration": "none"
+          }
+        },
+        "content": {
+          "paddingY": "lg",
+          "marginRight": "lg"
+        },
+        "marginRight": "base"
+      },
+      "variants": {
+        "vertical": {
+          "variant": "compounds.card.base",
+          "display": "flex",
+          "flexDirection": "row-reverse", 
+          "alignItems": "start",
+          "image": {
+            "paddingTop": "lg", 
+            "width": 250
+          },
+
+          "content": {
+            "width": 670,
+            "variant": "compounds.card.base.content"
+          },
+          "link": {
+            "variant": "compounds.card.base.link"
+          }
+        }
+      }
+    },
+    
     "accordion": {
       "base": {
         "marginTop": "sm",
@@ -271,8 +324,8 @@
       
       "layout": {
         "flexDirection": ["column-reverse", "column-reverse", "column-reverse"], 
-        "text": [12],
-        "nav": [12]
+        "text": [12, 12, 12],
+        "nav": [12, 12, 12]
       },
       
       "internalLinkList": {
