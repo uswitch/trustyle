@@ -359,6 +359,10 @@
         "borderColor": "primary",
         "color": "grey-100"
       }
+    },
+
+    "card": {
+      "itemsPerRow": [1, 2, 3]
     }
   },
 
