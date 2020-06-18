@@ -96,14 +96,22 @@ const AuthorProfile: React.FC<Props> = ({
           }}
         >
           {email && (
-            <div
+            <Styled.a
+              href={'mailto:' + email}
               sx={{
-                display: 'flex'
+                textDecoration: 'none',
+                cursor: 'pointer'
               }}
             >
-              <Icon glyph="email" size={22} color="grey-80" />
-              {email}
-            </div>
+              <div
+                sx={{
+                  display: 'flex'
+                }}
+              >
+                <Icon glyph="email" size={22} color="grey-80" />
+                {email}
+              </div>
+            </Styled.a>
           )}
         </div>
       </div>
