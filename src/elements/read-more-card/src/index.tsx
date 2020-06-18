@@ -28,7 +28,7 @@ const baseStyle = {
   }
 }
 
-const variantStyles = {
+const variantStyles: { [key: string]: any } = {
   default: {
     outer: {
       ...baseStyle.outer,
@@ -59,9 +59,9 @@ const variantStyles = {
     outer: {
       ...baseStyle.outer,
       padding: 'md',
-      flexDirection: 'column',
-      alignItems: 'stretch',
-      height: 176,
+      flexDirection: ['row', 'column'],
+      alignItems: ['center', 'stretch'],
+      height: [null, 176],
       '&:hover': {
         boxShadow: 'card',
         opacity: 1
@@ -69,17 +69,17 @@ const variantStyles = {
     },
     text: {
       ...baseStyle.text,
-      marginBottom: 'md'
+      marginBottom: [null, 'md']
     },
     icon: {
       ...baseStyle.icon,
-      alignSelf: 'flex-end'
+      alignSelf: [null, 'flex-end']
     }
   }
 }
 
-const getStyle = (variant: string) =>
-  variantStyles[variant] || variantStyles.default
+const getStyle = (variant?: string) =>
+  variant ? variantStyles[variant] : variantStyles.default
 
 const ReadMoreCard: React.FC<Props> = ({ text, href, className, variant }) => {
   const style = getStyle(variant)
