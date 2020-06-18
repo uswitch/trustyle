@@ -12,7 +12,8 @@
 
   "shadows": {
     "box": "2px 2px 25px #0004",
-    "linkInset": "inset 0 0 0 1px #008fe9"
+    "linkInset": "inset 0 0 0 1px #008fe9",
+    "card": "rgba(0, 0, 72, 0.28) 0px 23px 28px -16px, rgba(0, 0, 72, 0.06) 0px -2px 11px 0px"
   },
 
   "fonts": {
