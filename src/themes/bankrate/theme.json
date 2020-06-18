@@ -229,18 +229,21 @@
         "img": {
           "width": "100%"
         },
-        "p": { "fontSize": 16, "lineHeight": "130%", "color": "grey-80" },
+        "p": { "fontSize": 16, "lineHeight": "base", "color": "grey-80" },
         "h3": {
           "fontSize": 18,
           "minHeight": 0,
-          "fontWeight": "bold",
-          "color": "experimental-text",
           "marginBottom": "xs",
           "marginTop": "0",
           "a": {
+            "color": "grey-100",
             "textDecoration": "none"
           }
         },
+        "a": {
+          "color": "text",
+          "textDecoration": "none"
+        }, 
         "content": {
           "paddingY": "lg",
           "marginRight": "lg"
