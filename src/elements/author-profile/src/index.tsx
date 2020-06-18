@@ -12,7 +12,6 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   bio: string
   email?: string
   className?: string
-  detailed?: boolean
 }
 
 const AuthorProfile: React.FC<Props> = ({
@@ -22,7 +21,6 @@ const AuthorProfile: React.FC<Props> = ({
   authorUrl,
   bio,
   email,
-  detailed = false,
   className = ''
 }) => {
   return (
@@ -90,33 +88,24 @@ const AuthorProfile: React.FC<Props> = ({
         >
           {bio}
         </Styled.p>
-        {detailed && (
-          <React.Fragment>
-            <Styled.h6>Details</Styled.h6>
-            <ul
+        <div
+          sx={{
+            variant: 'authorProfile.details',
+            marginTop: 'sm',
+            paddingLeft: 'xs'
+          }}
+        >
+          {email && (
+            <div
               sx={{
-                listStyleType: 'none',
-                paddingLeft: 'sm',
-                fontSize: 'xs',
-                marginY: 'xs',
-                variant: 'authorProfile.details'
+                display: 'flex'
               }}
             >
-              {email && (
-                <li>
-                  <div
-                    sx={{
-                      display: 'flex'
-                    }}
-                  >
-                    <Icon glyph="email" size={22} color="grey-80" />
-                    {email}
-                  </div>
-                </li>
-              )}
-            </ul>
-          </React.Fragment>
-        )}
+              <Icon glyph="email" size={22} color="grey-80" />
+              {email}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )

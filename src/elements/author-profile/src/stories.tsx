@@ -13,7 +13,6 @@ export default {
 
 export const ExampleWithKnobs = () => {
   const name = text('Author name', 'Salman')
-  const email = text('Author email', 'salman@gmail.com')
   const role = text('Author role', 'Job title')
   const authorUrl = text('Author URL', 'https://www.jonathanfielding.com/')
   const image = (
@@ -31,7 +30,6 @@ export const ExampleWithKnobs = () => {
       authorImage={image}
       authorUrl={authorUrl}
       bio={bio}
-      email={email}
     />
   )
 }
@@ -42,7 +40,7 @@ ExampleWithKnobs.story = {
   }
 }
 
-export const ExampleWithDetails = () => {
+export const ExampleWithEmail = () => {
   const name = text('Author name', 'Salman')
   const email = text('Author email', 'salman@gmail.com')
   const role = text('Author role', 'Job title')
@@ -63,12 +61,11 @@ export const ExampleWithDetails = () => {
       authorUrl={authorUrl}
       bio={bio}
       email={email}
-      detailed
     />
   )
 }
 
-ExampleWithDetails.story = {
+ExampleWithEmail.story = {
   parameters: {
     percy: { skip: true }
   }
