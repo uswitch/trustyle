@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
+import { Icon } from '@uswitch/trustyle.icon'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   name: string
@@ -9,7 +10,9 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   authorImage?: React.ReactElement
   authorUrl: string
   bio: string
+  email?: string
   className?: string
+  detailed?: boolean
 }
 
 const AuthorProfile: React.FC<Props> = ({
@@ -18,6 +21,8 @@ const AuthorProfile: React.FC<Props> = ({
   authorImage,
   authorUrl,
   bio,
+  email,
+  detailed = false,
   className = ''
 }) => {
   return (
@@ -85,6 +90,33 @@ const AuthorProfile: React.FC<Props> = ({
         >
           {bio}
         </Styled.p>
+        {detailed && (
+          <React.Fragment>
+            <Styled.h6>Details</Styled.h6>
+            <ul
+              sx={{
+                listStyleType: 'none',
+                paddingLeft: 'sm',
+                fontSize: 'xs',
+                marginY: 'xs',
+                variant: 'authorProfile.details'
+              }}
+            >
+              {email && (
+                <li>
+                  <div
+                    sx={{
+                      display: 'flex'
+                    }}
+                  >
+                    <Icon glyph="email" size={22} color="grey-80" />
+                    {email}
+                  </div>
+                </li>
+              )}
+            </ul>
+          </React.Fragment>
+        )}
       </div>
     </div>
   )

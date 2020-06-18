@@ -13,6 +13,7 @@ export default {
 
 export const ExampleWithKnobs = () => {
   const name = text('Author name', 'Salman')
+  const email = text('Author email', 'salman@gmail.com')
   const role = text('Author role', 'Job title')
   const authorUrl = text('Author URL', 'https://www.jonathanfielding.com/')
   const image = (
@@ -30,6 +31,7 @@ export const ExampleWithKnobs = () => {
       authorImage={image}
       authorUrl={authorUrl}
       bio={bio}
+      email={email}
     />
   )
 }
