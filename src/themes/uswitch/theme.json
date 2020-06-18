@@ -587,6 +587,7 @@
     },
 
     "card": {
+      "itemsPerRow": [1, 2, 3],
       "base": {
         "*": {
           "fontFamily": "Helvetica"
