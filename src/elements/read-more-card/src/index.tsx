@@ -84,8 +84,6 @@ const getStyle = (variant?: string) =>
 const ReadMoreCard: React.FC<Props> = ({ text, href, className, variant }) => {
   const style = getStyle(variant)
 
-  console.log(style.outer)
-
   return (
     <a href={href} sx={style.outer} className={className}>
       <div sx={style.text}>{text}</div>
