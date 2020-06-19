@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
-import { text } from '@storybook/addon-knobs'
+import { select, text } from '@storybook/addon-knobs'
 
 import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
 
@@ -13,7 +13,9 @@ export default {
 
 export const ExampleWithKnobs = () => {
   const someText: string = text('Some text', 'example')
-  return <ReadMoreCard text={someText} href="" />
+  const variant: string = select('Variant', ['default', 'cupcard'], 'default')
+
+  return <ReadMoreCard text={someText} href="" variant={variant} />
 }
 
 ExampleWithKnobs.story = {
