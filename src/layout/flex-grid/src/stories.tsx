@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
+import { boolean, number, select } from '@storybook/addon-knobs'
 
 import AllThemes from '../../../utils/all-themes'
 
@@ -25,12 +26,58 @@ export default {
   title: 'Layout|Flex Grid'
 }
 
+export const KnobsExample = () => {
+  const gridJson = [
+    {
+      wrap: boolean('wrap', false),
+      direction: select('direction', ['row', 'row-reverse']),
+      cols: number('cols', 12),
+      offset: number('row 1 offset', 0),
+      span: number('row 1 span', 12),
+      layout: [
+        {
+          offset: number('div 1 offset', 0, 'Span 1'),
+          span: number('div 1 span', 12, 'Span 1')
+        },
+        {
+          offset: number('div 2 offset', 0, 'Span 2'),
+          span: number('div 2 span', 12, 'Span 2')
+        }
+      ]
+    }
+  ]
+
+  return (
+    <React.Fragment>
+      <Container sx={{ bg: '#eee', color: 'white' }}>
+        <GridFromJson
+          json={gridJson}
+          childrenArray={[
+            <span key={1} sx={{ ...colStyling, backgroundColor: '#0157FF' }}>
+              span 1
+            </span>,
+            <span key={2} sx={{ ...colStyling, backgroundColor: '#924A8B' }}>
+              span 2
+            </span>
+          ]}
+        />
+      </Container>
+    </React.Fragment>
+  )
+}
+
+KnobsExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const BasicExample = () => (
   <React.Fragment>
     <Container sx={{ bg: '#eee', color: 'white' }}>
       <Row sx={{ textAlign: 'center' }}>
-        <Col sx={colStyling}>Col 1</Col>
-        <Col sx={colStyling}>Col 2</Col>
+        <Col sx={colStyling}>Div 1</Col>
+        <Col sx={colStyling}>Div 2</Col>
         <Col sx={colStyling}>Col 3</Col>
         <Col sx={colStyling}>Col 4</Col>
       </Row>
