@@ -3,28 +3,46 @@
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
 
+export type Variant = 'base' | 'quickLinks'
+
 interface ListLinkProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string
+  icon?: React.ReactNode
+  variant?: Variant
   className?: string
 }
+
+const styles = (variant: Variant, element?: string) =>
+  `elements.linkList.variants.${variant}${element ? `.${element}` : ''}`
 
 export const LinkList: React.FC<ListLinkProps> = ({
   children,
   title,
+  icon,
+  variant = 'base',
   className
 }) => {
   return (
-    <div className={className}>
-      <Styled.h3
-        as="h2"
+    <div className={className} sx={{ variant: styles(variant) }}>
+      <div
         sx={{
-          paddingTop: 'xs',
-          paddingBottom: 'xs',
-          margin: 0
+          display: 'flex',
+          alignItems: 'center',
+          variant: styles(variant, 'header')
         }}
       >
-        {title}
-      </Styled.h3>
+        {icon}
+        <Styled.h3
+          as="h2"
+          sx={{
+            paddingTop: 'xs',
+            paddingBottom: 'xs',
+            margin: 0
+          }}
+        >
+          {title}
+        </Styled.h3>
+      </div>
       <ul
         sx={{
           padding: 0,
@@ -41,12 +59,14 @@ export const LinkList: React.FC<ListLinkProps> = ({
 interface ListLinkItemProps extends React.HTMLAttributes<HTMLDivElement> {
   href?: string
   className?: string
+  icon?: React.ReactNode
 }
 
 export const LinkListItem: React.FC<ListLinkItemProps> = ({
   children,
   href,
-  className
+  className,
+  icon
 }) => {
   return (
     <li
@@ -56,7 +76,10 @@ export const LinkListItem: React.FC<ListLinkItemProps> = ({
         borderTopColor: 'grey-20',
         paddingTop: 'xs',
         paddingBottom: 'xs',
-        marginBottom: '0'
+        marginBottom: '0',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center'
       }}
       className={className}
     >
@@ -71,6 +94,7 @@ export const LinkListItem: React.FC<ListLinkItemProps> = ({
       >
         {children}
       </Styled.a>
+      {icon}
     </li>
   )
 }
