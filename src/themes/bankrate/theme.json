@@ -130,6 +130,10 @@
   "----------------------------- Variants": "-----------------------------",
   "modules": {
     "hero-with-background-image": {
+      "layout": {
+        "contentCols": 12,
+        "contentSpan": 8
+      }, 
       "::before": {
         "background-image": "linear-gradient(90deg, rgba(0, 2, 11, 0.75) 0%, rgba(0, 2, 11, 0) 100%)",
         "position": "absolute",
