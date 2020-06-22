@@ -10,7 +10,7 @@ import * as st from './styles'
 interface Props {
   text?: string
   freezable?: boolean
-  inputRef?: React.RefObject<HTMLElement | HTMLElement>
+  inputRef?: React.RefObject<HTMLElement>
 }
 
 const editIconWidth = 69
