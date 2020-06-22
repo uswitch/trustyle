@@ -354,6 +354,14 @@
 
   "elements": {
     "drop-down": {
+      "placeholder": {
+        "border": "1px solid",
+        "borderRadius": 0,
+        "borderColor": "black",
+        "&:focus": {
+          "outline": "2px black solid"
+        }
+      },
       "select": {
         "base": {
           "border": "1px solid",
