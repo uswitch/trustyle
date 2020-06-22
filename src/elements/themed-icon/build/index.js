@@ -50,7 +50,11 @@ glob('../src/icons/**/*.svg', { cwd: __dirname }, (err, paths) => {
   const filePreface =
     '// This file was programmatically generated - do not manually change\n\n'
   const svgoConfig = JSON.stringify({
-    plugins: [{ convertColors: { currentColor: true } }]
+    plugins: [
+      { convertColors: { currentColor: true } },
+      { removeViewbox: false },
+      { removeDimensions: true }
+    ]
   })
   const require = path =>
     `require('!!file-loader?name=icons/[name]-[hash].[ext]!svgo-loader?${svgoConfig}!${path}').default`

@@ -16,8 +16,8 @@ const ThemedIcon: React.FC<Props> & {
   const { theme }: any = useThemeUI()
   const themeName = theme.name.toLowerCase()
 
-  type StatusType = 'loading' | 'loaded'
-  const [status, setStatus] = React.useState<StatusType>('loading')
+  type StatusType = 'js-disabled' | 'loading' | 'loaded'
+  const [status, setStatus] = React.useState<StatusType>('js-disabled')
   const [viewBox, setViewBox] = React.useState<string>('')
   const [html, setHtml] = React.useState<string>('')
 
@@ -54,7 +54,7 @@ const ThemedIcon: React.FC<Props> & {
     )
   }
 
-  if (status === 'loading') {
+  if (status === 'js-disabled' || status === 'loading') {
     const handleSvgLoad = (e: React.SyntheticEvent<HTMLObjectElement>) => {
       const target = e.target as HTMLObjectElement
       const doc = target?.contentDocument?.documentElement
@@ -74,14 +74,22 @@ const ThemedIcon: React.FC<Props> & {
       setHtml(html)
       setStatus('loaded')
     }
+
+    if (typeof window !== 'undefined' && status === 'js-disabled') {
+      setStatus('loading')
+    }
+
     return (
       <object
         type="image/svg+xml"
         data={iconPath}
         onLoad={handleSvgLoad}
         className={className}
-        // This element should be replaced, but we're adding styling in case it isn't
-        sx={svgStyling}
+        sx={
+          status === 'js-disabled'
+            ? svgStyling
+            : { visibility: 'hidden', width: 1, height: 1 }
+        }
       />
     )
   }
