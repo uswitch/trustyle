@@ -376,6 +376,12 @@
 
   "elements": {
     "drop-down": {
+      "placeholder": {
+        "border": "1px solid",
+        "borderColor": "grey-40",
+        "borderRadius": 4,
+        "iconColor": "experimental-text"
+      },
       "select": {
         "base": {
           "border": "1px solid",

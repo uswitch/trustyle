@@ -139,7 +139,10 @@ export const DropDown = forwardRef(
               '&::-ms-expand': {
                 display: 'none'
               },
-              variant
+              variant:
+                placeholder && value === undefined
+                  ? 'elements.drop-down.placeholder'
+                  : variant
             }}
             id={name}
             name={name}
