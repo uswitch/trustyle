@@ -297,6 +297,15 @@
 
   "elements": {
     "drop-down": {
+      "placeholder": {
+        "color": "grey-60",
+        "border": "1px solid",
+        "borderRadius": 0,
+        "borderColor": "black",
+        "&:focus": {
+          "outline": "2px black solid"
+        }
+      },
       "select": {
         "base": {
           "border": "1px solid",
