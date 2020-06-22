@@ -3,15 +3,7 @@
 import * as React from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
 
-interface BrowserSpriteSymbol {
-  content: string
-  id: string
-  node: HTMLElement
-  viewBox: string
-}
-const icons: { [theme: string]: { [icon: string]: BrowserSpriteSymbol } } = {
-  added: {}
-}
+const icons: { [theme: string]: { [icon: string]: string } } = {}
 
 interface Props extends React.HTMLAttributes<any> {
   icon: string
@@ -24,12 +16,10 @@ const ThemedIcon: React.FC<Props> & {
   const { theme }: any = useThemeUI()
   const themeName = theme.name.toLowerCase()
 
-  let iconSymbol
-  if (icons[themeName]) {
-    iconSymbol = icons[themeName][icon] || icons.added[icon]
-  } else {
-    iconSymbol = icons.added[icon]
-  }
+  type StatusType = 'loading' | 'loaded'
+  const [status, setStatus] = React.useState<StatusType>('loading')
+  const [viewBox, setViewBox] = React.useState<string>('')
+  const [html, setHtml] = React.useState<string>('')
 
   const svgStyling = {
     display: 'inline-block',
@@ -37,7 +27,8 @@ const ThemedIcon: React.FC<Props> & {
     variant: 'themedIcon.main'
   }
 
-  if (!iconSymbol) {
+  const iconPath = icons[themeName] && icons[themeName][icon]
+  if (!iconPath) {
     console.error(`Icon "${icon}" not found`)
     return (
       <svg viewBox="0 0 50 50" className={className} sx={svgStyling}>
@@ -63,10 +54,43 @@ const ThemedIcon: React.FC<Props> & {
     )
   }
 
+  if (status === 'loading') {
+    const handleSvgLoad = (e: React.SyntheticEvent<HTMLObjectElement>) => {
+      const target = e.target as HTMLObjectElement
+      const doc = target?.contentDocument?.documentElement
+
+      if (!doc) {
+        // @TODO improve error
+        console.error('Something went wrong')
+        return
+      }
+
+      const viewBox =
+        doc.getAttribute('viewBox') ||
+        `0 0 ${doc.getAttribute('width')} ${doc.getAttribute('height')}`
+      const html = doc.innerHTML
+
+      setViewBox(viewBox)
+      setHtml(html)
+      setStatus('loaded')
+    }
+    return (
+      <object
+        type="image/svg+xml"
+        data={iconPath}
+        onLoad={handleSvgLoad}
+        // This element should be replaced, but we're adding styling in case it isn't
+        sx={svgStyling}
+      />
+    )
+  }
   return (
-    <svg viewBox={iconSymbol.viewBox} className={className} sx={svgStyling}>
-      <use xlinkHref={`#${iconSymbol.id}`} />
-    </svg>
+    <svg
+      viewBox={viewBox}
+      fill="none"
+      sx={svgStyling}
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
   )
 }
 
@@ -113,35 +137,39 @@ ThemedIcon.OldSyntax = ({
   )
 }
 
-const importAll = (r: any) => r.keys().map(r)
+export default ThemedIcon
 
-// This can be used for manually adding icons by passing a webpack require
-// context. It's probably not needed while the code below is there.
-ThemedIcon.addIcons = (newIcons: any) => {
-  importAll(newIcons).forEach(
-    ({ default: icon }: { default: BrowserSpriteSymbol }) => {
-      if (icons.added[icon.id]) {
-        console.warn(
-          `Icon "${icon.id}" already exists and will be overwritten.`
-        )
-      }
-      icons.added[icon.id] = icon
-    }
-  )
+interface IconObj {
+  theme: string
+  icon: string
+  file: string
 }
 
-// Not sure if this should be in here permanently - it adds every icon from
-// every theme into the bundle
-const allIcons = require.context('./icons', true, /\.svg$/)
-allIcons.keys().forEach((path: any) => {
-  const theme = path.split('/')[1]
-  const { default: icon } = allIcons(path)
-
-  if (!icons[theme]) {
-    icons[theme] = {}
+const addIcon = (icon: IconObj) => {
+  if (!icons[icon.theme]) {
+    icons[icon.theme] = {}
   }
 
-  icons[theme][icon.id] = icon
-})
+  if (icons[icon.theme][icon.icon]) {
+    const oldIcon = icons[icon.theme][icon.icon]
+    if (oldIcon !== icon.file) {
+      console.warn(
+        `Icon "${icon.icon}" is being overwritten with a different image!`
+      )
+    }
+  }
 
-export default ThemedIcon
+  icons[icon.theme][icon.icon] = icon.file
+}
+
+ThemedIcon.addIcons = (...iconArgs: IconObj[]) => {
+  iconArgs.forEach(iconArg => {
+    if (iconArg.file) {
+      addIcon(iconArg)
+    } else if (Array.isArray(iconArg) && iconArg[0].file) {
+      iconArg.forEach(addIcon)
+    } else if (typeof iconArg === 'object' && Object.values(iconArg)[0].file) {
+      Object.values(iconArg).forEach(addIcon)
+    }
+  })
+}

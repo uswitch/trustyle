@@ -1,0 +1,9 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink">
+  <symbol viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg" id="newchevron">
+    <path d="M17 9L9 1 1.5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
+  <symbol viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg" id="cross">
+    <path d="M1.5 8l5.316 5.316c.1.1.264.097.36-.008L18.5 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+  </symbol>
+</svg>

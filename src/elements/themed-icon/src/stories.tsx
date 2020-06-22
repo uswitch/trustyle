@@ -2,6 +2,8 @@
 import { jsx } from 'theme-ui'
 import { number, select } from '@storybook/addon-knobs'
 
+// @ts-ignore
+import * as uswitchIcons from '../themes/uswitch'
 import theme from '../../../utils/theme-selector'
 
 import ThemedIcon, { Direction } from './'
@@ -9,6 +11,8 @@ import ThemedIcon, { Direction } from './'
 export default {
   title: 'Elements|Themed Icon'
 }
+
+ThemedIcon.addIcons(uswitchIcons)
 
 const getIconNames = (): string[] => {
   const themeName = theme().name.toLowerCase()
