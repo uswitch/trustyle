@@ -12,7 +12,8 @@
 
   "shadows": {
     "box": "2px 2px 25px #0004",
-    "linkInset": "inset 0 0 0 1px #008fe9"
+    "linkInset": "inset 0 0 0 1px #008fe9",
+    "card": "rgba(0, 0, 72, 0.28) 0px 23px 28px -16px, rgba(0, 0, 72, 0.06) 0px -2px 11px 0px"
   },
 
   "fonts": {
@@ -216,6 +217,62 @@
   },
 
   "compounds": {
+    "card": {
+      "itemsPerRow": [1],
+      "base": {
+        "width": "100%",
+        "height": "100%",
+        "borderStyle": "solid",
+        "borderColor": "grey-20",
+        "borderWidth": "1px 0 0 0",
+        "boxSizing": "border-box",
+        "mb": "sm",
+        "img": {
+          "width": "100%"
+        },
+        "p": { "fontSize": 16, "lineHeight": "base", "color": "grey-80" },
+        "h3": {
+          "fontSize": 18,
+          "minHeight": 0,
+          "marginBottom": "xs",
+          "marginTop": "0",
+          "a": {
+            "color": "grey-100",
+            "textDecoration": "none"
+          }
+        },
+        "a": {
+          "color": "text",
+          "textDecoration": "none"
+        }, 
+        "content": {
+          "paddingY": "lg",
+          "marginRight": "lg"
+        },
+        "marginRight": "base"
+      },
+      "variants": {
+        "vertical": {
+          "variant": "compounds.card.base",
+          "display": "flex",
+          "flexDirection": "row-reverse", 
+          "alignItems": "start",
+          "image": {
+            "paddingTop": "lg", 
+            "width": 250
+          },
+
+          "content": {
+            "width": 670,
+            "variant": "compounds.card.base.content"
+          },
+          "link": {
+            "variant": "compounds.card.base.link"
+          }
+        }
+      }
+    },
+    
     "accordion": {
       "base": {
         "marginTop": "sm",
@@ -271,8 +328,8 @@
       
       "layout": {
         "flexDirection": ["column-reverse", "column-reverse", "column-reverse"], 
-        "text": [12],
-        "nav": [12]
+        "text": [12, 12, 12],
+        "nav": [12, 12, 12]
       },
       
       "internalLinkList": {
