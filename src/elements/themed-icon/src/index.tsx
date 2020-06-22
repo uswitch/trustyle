@@ -79,6 +79,7 @@ const ThemedIcon: React.FC<Props> & {
         type="image/svg+xml"
         data={iconPath}
         onLoad={handleSvgLoad}
+        className={className}
         // This element should be replaced, but we're adding styling in case it isn't
         sx={svgStyling}
       />
@@ -88,6 +89,7 @@ const ThemedIcon: React.FC<Props> & {
     <svg
       viewBox={viewBox}
       fill="none"
+      className={className}
       sx={svgStyling}
       dangerouslySetInnerHTML={{ __html: html }}
     />
