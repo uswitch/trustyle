@@ -423,7 +423,7 @@
             "padding": 0
           },
           "ul": {
-            "mb": ["sm",40]
+            "mb": 0
           },
           "li": {
             "border": "none",
@@ -433,14 +433,18 @@
             "fontWeight": "bold",
             "paddingX": "md",
             "paddingY": "sm",
-            "mb": "xs",
 
             "svg": {
               "fill": "plum"
+            },
+
+            "& + li": {
+              "mt": "xs"
             }
           },
 
           "& + a": {
+            "mt": ["sm",40],
             "width": ["100%", "unset"]
           }
         }
@@ -817,6 +821,29 @@
       "button-with-checkbox-checked": {
         "variant": "compounds.cookie-banner.button-with-checkbox",
         "borderColor": "plum"
+      }
+    },
+
+    "heroCard": {
+      "variants": {
+        "background": "linear-gradient(161.42deg, #924A8B 22.95%, #AF4C83 77.05%)",
+        "box-shadow": "0px 9px 19px rgba(92, 36, 87, 0.2)",
+        "column-gap": 104,
+        "paddingX":["sm","xxxl"],
+        "pt": ["md", 85],
+        "pb": ["lg", 85],
+        "border-radius": ["4px", "8px"],
+        "grid-template-columns": ["1fr", "1fr 1fr"],
+        "h1": {
+          "color": "grey-0",
+          "align-self": [null, "flex-end"]
+        },
+
+        "buttonLink": {
+          "justify-self": "baseline",
+          "align-self": "flex-start",
+          "mt":["sm", 0]
+        }
       }
     }
   },

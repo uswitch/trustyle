@@ -24,25 +24,29 @@ export const LinkList: React.FC<ListLinkProps> = ({
 }) => {
   return (
     <div className={className} sx={{ variant: styles(variant) }}>
-      <div
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          variant: styles(variant, 'header')
-        }}
-      >
-        {icon}
-        <Styled.h3
-          as="h2"
+      {(title || icon) && (
+        <div
           sx={{
-            paddingTop: 'xs',
-            paddingBottom: 'xs',
-            margin: 0
+            display: 'flex',
+            alignItems: 'center',
+            variant: styles(variant, 'header')
           }}
         >
-          {title}
-        </Styled.h3>
-      </div>
+          {icon}
+          {title && (
+            <Styled.h3
+              as="h2"
+              sx={{
+                paddingTop: 'xs',
+                paddingBottom: 'xs',
+                margin: 0
+              }}
+            >
+              {title}
+            </Styled.h3>
+          )}
+        </div>
+      )}
       <ul
         sx={{
           padding: 0,
