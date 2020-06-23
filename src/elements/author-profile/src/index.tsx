@@ -49,7 +49,9 @@ const AuthorProfile: React.FC<Props> = ({
             sx={{
               maxHeight: '100%',
               maxWidth: '100%',
-              borderRadius: '50%'
+              borderRadius: '50%',
+              objectFit: 'cover',
+              height: '100%'
             }}
           />
         </Styled.a>
