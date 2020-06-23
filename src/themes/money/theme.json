@@ -150,7 +150,8 @@
     "experimental-text": "#29335C",
     "button-secondary": "#34454E",
     "button-secondary--hover": "#5D6A72",
-    "button-hollow--hover": "#FFF6E2"
+    "button-hollow--hover": "#FFF6E2",
+    "quick-link-bg": "#F1F1F3"
   },
 
   "radii": {
@@ -398,6 +399,49 @@
           "focus": {
             "variant": "elements.drop-down.select.base",
             "outlineColor": "plum"
+          }
+        }
+      }
+    },
+
+    "linkList": {
+      "variants": {
+        "quickLinks": {
+          "display": "flex",
+          "flex-direction": "column",
+          "header": {
+            "paddingY":["sm","md"]
+          },
+          "img": {
+            "mr": "sm",
+            "width": [57,35]
+          },
+          "h2": {
+            "color": "grey-80",
+            "fontWeight": "bold",
+            "fontSize": 20,
+            "padding": 0
+          },
+          "ul": {
+            "mb": ["sm",40]
+          },
+          "li": {
+            "border": "none",
+            "borderRadius": 4,
+            "bg": "quick-link-bg",
+            "fontSize": "xs",
+            "fontWeight": "bold",
+            "paddingX": "md",
+            "paddingY": "sm",
+            "mb": "xs",
+
+            "svg": {
+              "fill": "plum"
+            }
+          },
+
+          "& + a": {
+            "width": ["100%", "unset"]
           }
         }
       }
