@@ -3,7 +3,23 @@
 import * as React from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
 
-const icons: { [theme: string]: { [icon: string]: string } } = {}
+interface FilePromiseResolution {
+  viewBox: string
+  html: string
+}
+
+const icons: {
+  [theme: string]: {
+    [icon: string]: {
+      path: string
+      file: Promise<FilePromiseResolution>
+      _promiseMethods?: {
+        resolve: (value: FilePromiseResolution) => void
+        reject: (reason: any) => void
+      }
+    }
+  }
+} = {}
 
 interface Props extends React.HTMLAttributes<any> {
   icon: string
@@ -16,7 +32,7 @@ const ThemedIcon: React.FC<Props> & {
   const { theme }: any = useThemeUI()
   const themeName = theme.name.toLowerCase()
 
-  type StatusType = 'js-disabled' | 'loading' | 'loaded'
+  type StatusType = 'js-disabled' | 'loading' | 'loading-promise' | 'loaded'
   const [status, setStatus] = React.useState<StatusType>('js-disabled')
   const [viewBox, setViewBox] = React.useState<string>('')
   const [html, setHtml] = React.useState<string>('')
@@ -27,7 +43,8 @@ const ThemedIcon: React.FC<Props> & {
     variant: 'themedIcon.main'
   }
 
-  const iconPath = icons[themeName] && icons[themeName][icon]
+  const iconObj = icons[themeName] && icons[themeName][icon]
+  const iconPath = iconObj?.path
   if (!iconPath) {
     console.error(`Icon "${icon}" not found`)
     return (
@@ -54,7 +71,8 @@ const ThemedIcon: React.FC<Props> & {
     )
   }
 
-  if (status === 'js-disabled' || status === 'loading') {
+  if (status !== 'loaded') {
+    // @TODO handle errors
     const handleSvgLoad = (e: React.SyntheticEvent<HTMLObjectElement>) => {
       const target = e.target as HTMLObjectElement
       const doc = target?.contentDocument?.documentElement
@@ -73,10 +91,35 @@ const ThemedIcon: React.FC<Props> & {
       setViewBox(viewBox)
       setHtml(html)
       setStatus('loaded')
+
+      if (iconObj._promiseMethods) {
+        iconObj._promiseMethods.resolve({ viewBox, html })
+      } else {
+        console.warn('realistically cannot see this happening, but @TODO')
+      }
     }
 
     if (typeof window !== 'undefined' && status === 'js-disabled') {
+      if (iconObj.file) {
+        iconObj.file.then(({ viewBox, html }) => {
+          setViewBox(viewBox)
+          setHtml(html)
+          setStatus('loaded')
+        })
+
+        setStatus('loading-promise')
+        return null
+      }
+
       setStatus('loading')
+
+      iconObj.file = new Promise<FilePromiseResolution>((resolve, reject) => {
+        iconObj._promiseMethods = { resolve, reject }
+      })
+    }
+
+    if (status === 'loading-promise') {
+      return null
     }
 
     return (
@@ -161,7 +204,7 @@ const addIcon = (icon: IconObj) => {
   }
 
   if (icons[icon.theme][icon.icon]) {
-    const oldIcon = icons[icon.theme][icon.icon]
+    const oldIcon = icons[icon.theme][icon.icon].path
     if (oldIcon !== icon.file) {
       console.warn(
         `Icon "${icon.icon}" is being overwritten with a different image!`
@@ -169,7 +212,7 @@ const addIcon = (icon: IconObj) => {
     }
   }
 
-  icons[icon.theme][icon.icon] = icon.file
+  icons[icon.theme][icon.icon] = { path: icon.file }
 }
 
 ThemedIcon.addIcons = (...iconArgs: IconObj[]) => {
