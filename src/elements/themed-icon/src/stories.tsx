@@ -34,7 +34,7 @@ export const ExampleWithKnobs = () => {
 
   const iconNames = getIconNames()
   return (
-    <div>
+    <div key={theme().name}>
       {iconNames.map(icon => (
         <p key={icon}>
           <ThemedIcon icon={icon} sx={{ color: 'red' }} /> {icon}
