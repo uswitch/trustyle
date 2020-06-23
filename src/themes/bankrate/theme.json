@@ -253,22 +253,31 @@
       },
       "variants": {
         "vertical": {
-          "variant": "compounds.card.base",
-          "display": "flex",
-          "flexDirection": "row-reverse", 
-          "alignItems": "start",
-          "image": {
-            "paddingTop": "lg", 
-            "width": 250
+          "&:hover": {
+            "box-shadow": "rgba(0,0,72,0.28) 0px 23px 28px -16px, rgba(0,0,72,0.06) 0px -2px 11px 0px",
+            "opacity": 1
+          },
+          "tag": {
+            "variant": "compounds.card.base.tag"
           },
 
+          "superScript": {
+            "variant": "compounds.card.base.superScript"
+          },
+
+          "meta": {
+            "variant": "compounds.card.base.meta"
+          },
+          
           "content": {
-            "width": 670,
-            "variant": "compounds.card.base.content"
+            "variant": "compounds.card.base.content",
+            "paddingTop": "sm",
+            "px": "sm"
           },
           "link": {
             "variant": "compounds.card.base.link"
-          }
+          },
+          "variant": "compounds.card.base"
         }
       }
     },
