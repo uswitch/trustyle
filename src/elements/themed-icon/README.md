@@ -30,7 +30,7 @@ To get single-theme icons:
 
 ```js
 import ThemedIcon, { addIcons } from '@uswitch/trustyle.themed-icon'
-import { dollarIcon } from '@uswitch/trustyle.themed-icon/theme/money'
+import { dollarIcon } from '@uswitch/trustyle.themed-icon/themes/money'
 
 addIcons(dollarIcon)
 
@@ -41,7 +41,7 @@ To get multi-theme icons:
 
 ```js
 import ThemedIcon, { addIcons } from '@uswitch/trustyle.themed-icon'
-import caretIcon from '@uswitch/trustyle.themed-icon/icon/caret'
+import caretIcon from '@uswitch/trustyle.themed-icon/icons/caret'
 
 addIcons(caretIcon)
 
@@ -52,15 +52,11 @@ To get all icons for a theme:
 
 ```js
 import ThemedIcon, { addIcons } from '@uswitch/trustyle.themed-icon'
-import * as moneyIcons from '@uswitch/trustyle.themed-icon/theme/money'
+import * as moneyIcons from '@uswitch/trustyle.themed-icon/themes/money'
 
 addIcons(moneyIcons)
 
 return <ThemedIcon icon={iconFromContentful} sx={{ color: 'grey-80' }} />
 ```
 
-## Considerations
-
-- What about icons from Contentful?
-- How do we avoid bundling more icons than needed?
-- Can we split the SVGs out into an external .svg file to avoid increasing the bundle size?
+You can also pass more than one argument to the `addIcons` function to add multiple things at the same time.

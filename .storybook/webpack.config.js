@@ -14,15 +14,5 @@ module.exports = ({ config }) => {
     config.resolve.mainFields = ['ts:main', 'main']
   }
 
-  //   config.module.rules.forEach(rule => {
-  //     if (rule.test.toString().includes('svg')) {
-  //       if (!rule.exclude) {
-  //         rule.exclude = []
-  //       }
-
-  //       rule.exclude.push(/themed-icon\/src\/icons\/.+\.svg$/)
-  //     }
-  //   })
-
   return config
 }
