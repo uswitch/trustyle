@@ -12,7 +12,7 @@ const icons: {
   [theme: string]: {
     [icon: string]: {
       path: string
-      file: Promise<FilePromiseResolution>
+      file?: Promise<FilePromiseResolution>
       _promiseMethods?: {
         resolve: (value: FilePromiseResolution) => void
         reject: (reason: any) => void
