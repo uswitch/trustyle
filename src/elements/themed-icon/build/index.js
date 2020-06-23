@@ -62,6 +62,8 @@ glob('../src/icons/**/*.svg', { cwd: __dirname }, (err, paths) => {
     `{ theme: '${iconObj.theme}', icon: '${
       iconObj.icon
     }', file: ${require(iconObj.path)} }`
+  const iconObjInterface =
+    'interface IconObj { theme: string; icon: string; file: any }\n\n'
 
   for (const [theme, iconObjs] of Object.entries(themes)) {
     const importStr = iconObj =>
@@ -72,6 +74,14 @@ glob('../src/icons/**/*.svg', { cwd: __dirname }, (err, paths) => {
     files.push({
       path: `../themes/${theme}.js`,
       contents
+    })
+
+    const typeStr = iconObj =>
+      `export declare const ${iconObj.icon}Icon: IconObj;\n`
+    const typeContents = iconObjInterface + iconObjs.map(typeStr).join('')
+    files.push({
+      path: `../themes/${theme}.d.ts`,
+      contents: typeContents
     })
   }
 
@@ -86,6 +96,15 @@ glob('../src/icons/**/*.svg', { cwd: __dirname }, (err, paths) => {
     files.push({
       path: `../icons/${icon}.js`,
       contents
+    })
+
+    const typeContents =
+      iconObjInterface +
+      'declare const _default: IconObj[];\nexport default _default;\n'
+
+    files.push({
+      path: `../icons/${icon}.d.ts`,
+      contents: typeContents
     })
   }
 

@@ -2,11 +2,8 @@
 import { jsx } from 'theme-ui'
 import { boolean, number, select } from '@storybook/addon-knobs'
 
-// @ts-ignore
 import * as uswitchIcons from '../themes/uswitch'
-// @ts-ignore
 import * as moneyIcons from '../themes/money'
-// @ts-ignore
 import * as journeyIcons from '../themes/journey'
 import theme from '../../../utils/theme-selector'
 
