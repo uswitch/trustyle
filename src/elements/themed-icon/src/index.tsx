@@ -15,7 +15,7 @@ const icons: {
       file?: Promise<FilePromiseResolution>
       _promiseMethods?: {
         resolve: (value: FilePromiseResolution) => void
-        reject: (reason: any) => void
+        reject: (reason?: any) => void
       }
     }
   }
@@ -32,7 +32,12 @@ const ThemedIcon: React.FC<Props> & {
   const { theme }: any = useThemeUI()
   const themeName = theme.name.toLowerCase()
 
-  type StatusType = 'js-disabled' | 'loading' | 'loading-promise' | 'loaded'
+  type StatusType =
+    | 'js-disabled'
+    | 'loading'
+    | 'loading-promise'
+    | 'loaded'
+    | 'error'
   const [status, setStatus] = React.useState<StatusType>('js-disabled')
   const [viewBox, setViewBox] = React.useState<string>('')
   const [html, setHtml] = React.useState<string>('')
@@ -72,14 +77,21 @@ const ThemedIcon: React.FC<Props> & {
   }
 
   if (status !== 'loaded') {
-    // @TODO handle errors
     const handleSvgLoad = (e: React.SyntheticEvent<HTMLObjectElement>) => {
       const target = e.target as HTMLObjectElement
       const doc = target?.contentDocument?.documentElement
 
-      if (!doc) {
-        // @TODO improve error
-        console.error('Something went wrong')
+      if (!doc || doc.tagName !== 'svg') {
+        console.error(`Unable to retrieve icon "${icon}"`)
+
+        // Show not found image instead
+        delete icons[themeName][icon]
+
+        if (iconObj._promiseMethods) {
+          iconObj._promiseMethods.reject(new Error('Icon not found'))
+        }
+
+        setStatus('error')
         return
       }
 
@@ -101,11 +113,15 @@ const ThemedIcon: React.FC<Props> & {
 
     if (typeof window !== 'undefined' && status === 'js-disabled') {
       if (iconObj.file) {
-        iconObj.file.then(({ viewBox, html }) => {
-          setViewBox(viewBox)
-          setHtml(html)
-          setStatus('loaded')
-        })
+        iconObj.file
+          .then(({ viewBox, html }) => {
+            setViewBox(viewBox)
+            setHtml(html)
+            setStatus('loaded')
+          })
+          .catch(() => {
+            setStatus('error')
+          })
 
         setStatus('loading-promise')
         return null
