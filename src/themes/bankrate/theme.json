@@ -110,8 +110,8 @@
     "position": "absolute",
     "width": 1,
     "height": 1,
-    "padding": 0,
-    "margin": -1,
+    "p": 0,
+    "m": -1,
     "overflow": "hidden",
     "clip": "rect(0, 0, 0, 0)",
     "border": 0
@@ -153,19 +153,19 @@
         "display": "flex",
         "flex-direction": "column"
       },
-      "marginBottom": "xl",
-      "paddingBottom": "xl",
-      "paddingTop": "xs"
+      "mb": "xl",
+      "pb": "xl",
+      "pt": "xs"
     }
   },
 
   "sideNav": {
     "internalLinkList": {
       "listStyle": "none",
-      "paddingLeft": 0,
-      "paddingTop": "xxs",
-      "paddingBottom": "xxs",
-      "margin": 0
+      "pl": 0,
+      "pt": "xxs",
+      "pb": "xxs",
+      "m": 0
     },
     "internalLinkListItem": {
       "base": {
@@ -177,7 +177,7 @@
           "color": "grey-70",
           "textDecoration": "none",
           "fontSize": "sm",
-          "padding": "12px 16px",
+          "p": "12px 16px",
           ":visited": {
             "color": "grey-70"
           }
@@ -211,10 +211,10 @@
     },
     "additionalLink": {
       "display": "block",
-      "marginBottom": "xxs",
+      "mb": "xxs",
       "color": "grey-80",
-      "paddingTop": "xxs",
-      "paddingBottom": "xxs",
+      "pt": "xxs",
+      "pb": "xxs",
       "textDecoration": "none"
     }
   },
@@ -237,8 +237,8 @@
         "h3": {
           "fontSize": 18,
           "minHeight": 0,
-          "marginBottom": "xs",
-          "marginTop": "0",
+          "mb": "xs",
+          "mt": "0",
           "a": {
             "color": "grey-100",
             "textDecoration": "none"
@@ -249,10 +249,10 @@
           "textDecoration": "none"
         }, 
         "content": {
-          "paddingY": "lg",
-          "marginRight": "lg"
+          "py": "lg",
+          "mr": "lg"
         },
-        "marginRight": "base"
+        "mr": "base"
       },
       "variants": {
         "vertical": {
@@ -274,7 +274,7 @@
           
           "content": {
             "variant": "compounds.card.base.content",
-            "paddingTop": "sm",
+            "pt": "sm",
             "px": "sm"
           },
           "link": {
@@ -287,19 +287,19 @@
     
     "accordion": {
       "base": {
-        "marginTop": "sm",
-        "marginBottom": "sm",
+        "mt": "sm",
+        "mb": "sm",
         "title": {
-          "marginTop": "0",
-          "marginBottom": "xs"
+          "mt": "0",
+          "mb": "xs"
         },
         "content": {
-          "marginBottom": "xs"
+          "mb": "xs"
         },
         "button": {
-          "padding": "0",
-          "paddingTop": 10,
-          "paddingBottom": 10,
+          "p": "0",
+          "pt": 10,
+          "pb": 10,
           "bg": "transparent",
           "fontFamily": "heading",
           "fontSize": "xl",
@@ -334,8 +334,8 @@
     },
 
     "side-nav": {
-      "paddingLeft": 0,
-      "marginLeft": 0, 
+      "pl": 0,
+      "ml": 0, 
       "border": 0, 
       
       "layout": {
@@ -346,10 +346,10 @@
       
       "internalLinkList": {
         "listStyle": "none",
-        "paddingLeft": 0,
-        "paddingTop": "xxs",
-        "paddingBottom": "xxs",
-        "margin": 0
+        "pl": 0,
+        "pt": "xxs",
+        "pb": "xxs",
+        "m": 0
       },
       "internalLinkListItem": {
         "base": {
@@ -363,7 +363,7 @@
           }, 
           ">a": {
             "&:hover":{
-              "marginLeft": "sm"
+              "ml": "sm"
             },
             "transition": "all 0.2s ease-in-out",
             "display": "block",
@@ -371,7 +371,7 @@
             "textDecoration": "none",
             "fontSize": "sm",
             "fontWeight": "bold", 
-            "paddingY": "sm",
+            "py": "sm",
             ":visited": {
               "color": "grey-60"
             }
@@ -383,10 +383,10 @@
       },
       "additionalLink": {
         "display": "block",
-        "marginBottom": "xxs",
+        "mb": "xxs",
         "color": "grey-80",
-        "paddingTop": "xxs",
-        "paddingBottom": "xxs",
+        "pt": "xxs",
+        "pb": "xxs",
         "textDecoration": "none"
       }
     },
@@ -455,13 +455,13 @@
       },
       "btnSize": {
         "large": {
-          "paddingX": "xl",
-          "paddingY": "base",
+          "px": "xl",
+          "py": "base",
           "fontSize": "md"
         },
         "small": {
-          "paddingX": 40,
-          "paddingY": 13,
+          "px": 40,
+          "py": 13,
           "fontSize": "sm"
         }
       }
@@ -513,7 +513,7 @@
   "callOut": {
     "main": {
       "backgroundColor": "grey-10",
-      "paddingX": ["sm", "md"]
+      "px": ["sm", "md"]
     },
     "icon": {
       "backgroundColor": "grey-80"
@@ -530,10 +530,10 @@
         "fontWeight": "bold"
       },
       "text": {
-        "marginBottom": [null, 0]
+        "mb": [null, 0]
       },
       "button": {
-        "marginLeft": [null, "md"]
+        "ml": [null, "md"]
       }
     },
     "variants": {
@@ -774,8 +774,8 @@
     },
 
     "p": {
-      "marginTop": 0,
-      "marginBottom": "base"
+      "mt": 0,
+      "mb": "base"
     },
 
     "root": {
@@ -798,15 +798,15 @@
 
     "blockquote": {
       "backgroundColor": "grey-10",
-      "paddingX": "md",
-      "paddingY": "sm",
-      "marginX": 0,
+      "px": "md",
+      "py": "sm",
+      "mx": 0,
       "borderLeft": "none",
 
       "p": {
-        "paddingLeft": "sm",
-        "paddingY": "xs",
-        "marginY": 0,
+        "pl": "sm",
+        "py": "xs",
+        "my": 0,
         "color": "experimental-text",
         "borderLeft": "2px solid",
         "borderLeftColor": "grey-80",
@@ -823,20 +823,20 @@
       "borderColor": "grey-20",
       "borderWidth": "1px",
       "borderRadius": "3px",
-      "marginBottom": "base"
+      "mb": "base"
     },
 
     "th": {
-      "margin": 0,
-      "padding": "16px",
+      "m": 0,
+      "p": "16px",
       "fontSize": "sm",
       "textAlign": "left",
       "color": "experimental-text"
     },
 
     "td": {
-      "margin": 0,
-      "padding": "16px",
+      "m": 0,
+      "p": "16px",
       "fontSize": "xs"
     },
 
