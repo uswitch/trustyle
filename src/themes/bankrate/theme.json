@@ -632,9 +632,8 @@
     "heading": {
     },
     "image-link": {
-      "height": ["48px", "48px"],
-      "width": ["48px", "48px"],
-      "border": "1px solid blue"
+      "height": [48, 48],
+      "width": [48, 48]
     }
   },
 

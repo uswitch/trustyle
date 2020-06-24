@@ -42,11 +42,10 @@ const Author: React.FC<Props> = ({
           href={authorUrl}
           sx={{
             flexShrink: 0,
-            height: ['48px', '56px'],
-            width: ['48px', '56px'],
+            height: [48, 56],
+            width: [48, 56],
             marginRight: 'sm',
-            border: "1px solid red",
-            variant: "author.image-link"
+            variant: 'author.image-link'
           }}
         >
           <authorImage.type
