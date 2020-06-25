@@ -56,7 +56,7 @@ export const ListItem: React.FC<ListItemProps> = ({
       // https://www.w3.org/Style/Examples/007/color-bullets.en.html
       position: 'absolute',
       left: '-1.5em',
-      width: '1.5em',
+      width: '1em',
       textAlign: 'right',
       direction: 'rtl'
     }
