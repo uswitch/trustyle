@@ -23,6 +23,9 @@ export const Example = () => (
       <ListItem>Eighth item</ListItem>
       <ListItem>Ninth item</ListItem>
       <ListItem>Tenth item</ListItem>
+      <ListItem>
+        <p>Item with a block element inside</p>
+      </ListItem>
     </List>
 
     <List listType="bullet">
