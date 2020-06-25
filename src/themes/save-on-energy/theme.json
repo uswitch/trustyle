@@ -338,6 +338,35 @@
     }
   },
 
+  "richTextBlock": {
+    "base": {
+      "*:first-child": { "mt": 0 }
+    },
+    "panel-primary": {
+      "py": "lg",
+      "px": ["sm", "52px"],
+      "bg": "grey-0",
+      "color": "grey-80",
+      "boxShadow":
+        "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
+      "borderRadius": "5px"
+    }
+  },
+
+  "form": {
+    "label" :{
+      "variant": "styles.h4",
+      "color": "grey-80",
+      "mb": "sm",
+      "display": "block",
+      "mt": "sm",
+      ":not(:first-child)": { "mb": "sm" }
+    },
+    "button": {
+      "my": "16px"
+    }
+  },
+
   "linkWithChevron": {
     "marginLeft": 8,
     "textDecoration": "underline"
