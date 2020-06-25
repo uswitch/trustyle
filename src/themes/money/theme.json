@@ -1641,6 +1641,20 @@
     }
   },
 
+  "form": {
+    "label" :{
+      "variant": "styles.h4",
+      "color": "grey-80",
+      "mb": "sm",
+      "display": "block",
+      "mt": "sm",
+      ":not(:first-child)": { "mb": "sm" }
+    },
+    "button": {
+      "my": "16px"
+    }
+  },
+
   "styles": {
     "heading": {
       "fontFamily": "heading",
