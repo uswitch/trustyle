@@ -55,8 +55,8 @@ export const ListItem: React.FC<ListItemProps> = ({
     '::before': {
       // https://www.w3.org/Style/Examples/007/color-bullets.en.html
       position: 'absolute',
-      left: '-1em',
-      width: '1em',
+      left: '-1.5em',
+      width: '1.5em',
       textAlign: 'right',
       direction: 'rtl'
     }
