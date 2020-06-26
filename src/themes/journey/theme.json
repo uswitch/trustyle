@@ -801,6 +801,7 @@
       },
       "label": {
         "variant": "input.radioish.label",
+        "minHeight": "54px",
         "&:before": {
           "variant": "input.radioish.label.&:before",
           "borderRadius": "50%"

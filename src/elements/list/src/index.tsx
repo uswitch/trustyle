@@ -47,6 +47,9 @@ export const ListItem: React.FC<ListItemProps> = ({
 }) => {
   const { theme }: any = useThemeUI()
 
+  const element: any = theme?.elements?.list || theme?.list || {} // latter is backwards compatibility
+  const before: any =
+    element?.[listType]?.['::before'] || element?.[listType]?.[':before'] || {}
   const sx: any = {
     marginBottom: 'sm',
     counterIncrement: 'li',
@@ -54,10 +57,9 @@ export const ListItem: React.FC<ListItemProps> = ({
     paddingLeft: 'sm',
     '::before': {
       // https://www.w3.org/Style/Examples/007/color-bullets.en.html
-      display: 'inline-block',
-      width: '1em',
-      marginLeft: '-1.5em',
-      marginRight: '0.5em',
+      position: 'absolute',
+      left: '-1em',
+      width: '1.5em',
       textAlign: 'right',
       direction: 'rtl'
     }
@@ -65,16 +67,19 @@ export const ListItem: React.FC<ListItemProps> = ({
 
   if (listType === 'bullet') {
     sx['::before'] = {
-      ...sx['::before'],
       content: '"• "',
-      color: theme.list && theme.list.bullet ? theme.list.bullet.color : 'black'
+      color:
+        theme.list && theme.list.bullet ? theme.list.bullet.color : 'black',
+      ...sx['::before'],
+      ...before
     }
   } else if (listType === 'numeric') {
     sx['::before'] = {
-      ...sx['::before'],
       content: 'counter(li)',
       color:
-        theme.list && theme.list.numeric ? theme.list.numeric.color : 'black'
+        theme.list && theme.list.numeric ? theme.list.numeric.color : 'black',
+      ...sx['::before'],
+      ...before
     }
   }
 
