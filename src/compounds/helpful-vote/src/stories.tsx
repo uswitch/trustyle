@@ -11,15 +11,7 @@ export default {
 }
 
 export const BasicExample = () => {
-  const yesButton = {
-    text: 'Yes',
-    showIcon: true
-  }
-  const noButton = {
-    text: 'No',
-    showIcon: true
-  }
-  return <HelpfulVote yesButton={yesButton} noButton={noButton} />
+  return <HelpfulVote />
 }
 
 BasicExample.story = {
@@ -27,10 +19,30 @@ BasicExample.story = {
     percy: { skip: true }
   }
 }
+
+export const CustomExample = () => {
+  const yesButton = {
+    text: 'Accept',
+    showIcon: true
+  }
+  const noButton = {
+    text: 'Deny',
+    onClick: () => console.log('Deny clicked!')
+  }
+  return <HelpfulVote yesButton={yesButton} noButton={noButton} />
+}
+
+CustomExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
     <AllThemes>
       <BasicExample />
+      <CustomExample />
     </AllThemes>
   )
 }

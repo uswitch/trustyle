@@ -7,14 +7,24 @@ import { Icon } from '@uswitch/trustyle.icon'
 
 interface Button {
   text: string
-  showIcon: boolean
+  showIcon?: boolean
+  onClick?: () => void
 }
 
 interface Props {
-  yesButton: Button
-  noButton: Button
+  yesButton?: Button
+  noButton?: Button
 }
-const HelpfulVote: React.FC<Props> = ({ yesButton, noButton }) => {
+const HelpfulVote: React.FC<Props> = ({
+  yesButton = {
+    text: 'Yes',
+    showIcon: true
+  },
+  noButton = {
+    text: 'No',
+    showIcon: true
+  }
+}) => {
   const btnVariant: Variant = 'secondary'
   const btnSx = {
     width: '100%',
@@ -50,13 +60,17 @@ const HelpfulVote: React.FC<Props> = ({ yesButton, noButton }) => {
       >
         Did you find this guide helpful?
       </div>
-      <Button sx={{ ...btnSx, marginRight: 'xs' }} variant={btnVariant}>
+      <Button
+        onClick={yesButton.onClick}
+        sx={{ ...btnSx, marginRight: 'xs' }}
+        variant={btnVariant}
+      >
         {yesButton.showIcon && (
           <Icon color="uswitch-navy" glyph="check" size={16} />
         )}
         {yesButton.text}
       </Button>
-      <Button sx={btnSx} variant={btnVariant}>
+      <Button onClick={noButton.onClick} sx={btnSx} variant={btnVariant}>
         {noButton.showIcon && (
           <Icon color="uswitch-navy" glyph="close" size={16} />
         )}
