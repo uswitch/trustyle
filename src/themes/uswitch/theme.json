@@ -394,11 +394,13 @@
   "compounds": {
     "helpful-vote": {
       "container": {
-        "borderColor": "grey-20"
+        "borderColor": "grey-20",
+        "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)"
       },
       "button": {
         "height": 56,
-        "borderColor": "grey-20"
+        "border": "1px solid",
+        "borderColor": "grey-10"
       }
     },
     "stepper": {

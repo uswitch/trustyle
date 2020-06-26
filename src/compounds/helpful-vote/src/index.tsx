@@ -31,6 +31,7 @@ const HelpfulVote: React.FC<Props> = ({
     maxWidth: 144,
     display: 'flex',
     justifyContent: 'flex-start',
+    border: 'none',
     svg: {
       marginRight: 'xs'
     },
@@ -45,6 +46,8 @@ const HelpfulVote: React.FC<Props> = ({
         padding: ['sm', 'md'],
         border: '1px solid',
         width: '100%',
+        height: 104,
+        boxSizing: 'border-box',
         maxWidth: 611,
         fontFamily: 'heading',
         fontWeight: 'bold',
@@ -55,27 +58,36 @@ const HelpfulVote: React.FC<Props> = ({
     >
       <div
         sx={{
-          marginRight: ['sm', 'md']
+          marginRight: ['sm', 'md'],
+          textAlign: 'center',
+          flex: 'none'
         }}
       >
-        Did you find this guide helpful?
+        Did you find this guide useful?
       </div>
-      <Button
-        onClick={yesButton.onClick}
-        sx={{ ...btnSx, marginRight: 'xs' }}
-        variant={btnVariant}
+      <div
+        sx={{
+          width: 296,
+          display: 'flex'
+        }}
       >
-        {yesButton.showIcon && (
-          <Icon color="uswitch-navy" glyph="check" size={16} />
-        )}
-        {yesButton.text}
-      </Button>
-      <Button onClick={noButton.onClick} sx={btnSx} variant={btnVariant}>
-        {noButton.showIcon && (
-          <Icon color="uswitch-navy" glyph="close" size={16} />
-        )}
-        {noButton.text}
-      </Button>
+        <Button
+          onClick={yesButton.onClick}
+          sx={{ ...btnSx, marginRight: 'xs' }}
+          variant={btnVariant}
+        >
+          {yesButton.showIcon && (
+            <Icon color="uswitch-navy" glyph="check" size={16} />
+          )}
+          {yesButton.text}
+        </Button>
+        <Button onClick={noButton.onClick} sx={btnSx} variant={btnVariant}>
+          {noButton.showIcon && (
+            <Icon color="uswitch-navy" glyph="close" size={16} />
+          )}
+          {noButton.text}
+        </Button>
+      </div>
     </div>
   )
 }
