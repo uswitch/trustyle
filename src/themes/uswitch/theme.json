@@ -392,6 +392,15 @@
   },
 
   "compounds": {
+    "helpful-vote": {
+      "container": {
+        "borderColor": "grey-20"
+      },
+      "button": {
+        "height": 56,
+        "borderColor": "grey-20"
+      }
+    },
     "stepper": {
       "unselectedNumberCircle": {
         "border": "1px black solid",
