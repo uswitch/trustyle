@@ -27,8 +27,7 @@ const HelpfulVote: React.FC<Props> = ({
 }) => {
   const btnVariant: Variant = 'secondary'
   const btnSx = {
-    width: '100%',
-    maxWidth: 144,
+    width: '50%',
     display: 'flex',
     justifyContent: 'flex-start',
     border: 'none',
@@ -42,11 +41,12 @@ const HelpfulVote: React.FC<Props> = ({
     <div
       sx={{
         display: 'flex',
-        alignItems: 'center',
+        flexDirection: ['column', 'row'],
+        alignItems: ['start', 'center'],
         padding: ['sm', 'md'],
         border: '1px solid',
         width: '100%',
-        height: 104,
+        height: 'fit-content',
         boxSizing: 'border-box',
         maxWidth: 611,
         fontFamily: 'heading',
@@ -59,15 +59,15 @@ const HelpfulVote: React.FC<Props> = ({
       <div
         sx={{
           marginRight: ['sm', 'md'],
-          textAlign: 'center',
-          flex: 'none'
+          flex: 'none',
+          marginBottom: ['md', 0]
         }}
       >
         Did you find this guide useful?
       </div>
       <div
         sx={{
-          width: 296,
+          width: '100%',
           display: 'flex'
         }}
       >
