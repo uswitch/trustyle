@@ -67,7 +67,7 @@ glob('../src/icons/**/*.svg', { cwd: __dirname }, (err, paths) => {
 
   for (const [theme, iconObjs] of Object.entries(themes)) {
     const importStr = iconObj =>
-      `export const ${iconObj.icon}Icon = ${iconToStr(iconObj)}\n`
+      `exports.${iconObj.icon}Icon = ${iconToStr(iconObj)}\n`
 
     const contents = filePreface + iconObjs.map(importStr).join('')
 
@@ -88,7 +88,7 @@ glob('../src/icons/**/*.svg', { cwd: __dirname }, (err, paths) => {
   for (const [icon, iconObjs] of Object.entries(icons)) {
     const contents =
       filePreface +
-      `export default [\n${iconObjs
+      `module.exports = [\n${iconObjs
         .map(iconToStr)
         .map(str => '  ' + str)
         .join(',\n')}\n]\n`

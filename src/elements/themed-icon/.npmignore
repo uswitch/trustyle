@@ -1,6 +1,9 @@
 **/*
 
 !lib/*
+!themes/*
+!icons/*
+!src/icons/**/*
 !package.json
 !README.md
 !LICENSE

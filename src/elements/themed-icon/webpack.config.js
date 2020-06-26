@@ -13,8 +13,8 @@ module.exports = {
     filename: 'index.js'
   },
   externals: {
-    react: 'umd react',
-    'theme-ui': 'umd theme-ui'
+    react: 'commonjs2 react',
+    'theme-ui': 'commonjs2 theme-ui'
   },
   resolve: {
     extensions: ['.js', '.ts', '.tsx']
