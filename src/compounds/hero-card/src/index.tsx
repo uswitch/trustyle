@@ -17,16 +17,22 @@ const HeroCard: React.FC<Props> = ({ title, ctaText, children }) => {
   return (
     <div
       sx={{
-        display: 'grid',
-        alignItems: 'center',
+        display: 'flex',
         variant: styles()
       }}
     >
-      <Styled.h1>{title}</Styled.h1>
+      <div sx={{ variant: styles('flexContainer') }}>
+        <Styled.h1>{title}</Styled.h1>
+        <ButtonLink
+          variant="primary"
+          size="small"
+          sx={{ variant: styles('buttonLink'), display: ['none', 'initial'] }}
+        >
+          {ctaText}
+        </ButtonLink>
+      </div>
       <div
         sx={{
-          gridColumn: [1, 2],
-          gridRow: [null, '1/span 2'],
           variant: styles('links')
         }}
       >
@@ -35,7 +41,7 @@ const HeroCard: React.FC<Props> = ({ title, ctaText, children }) => {
       <ButtonLink
         variant="primary"
         size="small"
-        sx={{ variant: styles('buttonLink') }}
+        sx={{ variant: styles('buttonLink'), display: ['initial', 'none'] }}
       >
         {ctaText}
       </ButtonLink>
