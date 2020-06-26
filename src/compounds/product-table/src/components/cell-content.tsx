@@ -33,7 +33,8 @@ const RowContent: React.FC<ContentRowProps> = ({
   children,
   inAddon,
   label,
-  mobileOrder
+  mobileOrder,
+  className
 }) => (
   <CellBase
     mobileOrder={mobileOrder || (accent ? 1 : 2)}
@@ -52,6 +53,7 @@ const RowContent: React.FC<ContentRowProps> = ({
     }}
     // @ts-ignore
     css={{ display: '-ms-grid' }}
+    className={className}
   >
     <div
       sx={{
@@ -86,6 +88,7 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
   label,
   accent,
   mobileOrder,
+  className,
   children
 }) => (
   <CellBase
@@ -103,6 +106,7 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
     }}
     // @ts-ignore
     css={{ display: '-ms-grid' }}
+    className={className}
   >
     <div
       sx={{
@@ -147,7 +151,24 @@ const ProductTableCellContent: React.FC<CellPrimaryProps> = ({
     )
   }
 
-  return <BlockContent {...props}>{children}</BlockContent>
+  if (props.accent) {
+    return <BlockContent {...props}>{children}</BlockContent>
+  }
+
+  return (
+    <React.Fragment>
+      <RowContent
+        inAddon={inAddon}
+        {...props}
+        sx={{ display: [null, null, 'none'] }}
+      >
+        {children}
+      </RowContent>
+      <BlockContent {...props} sx={{ display: ['none', null, 'grid'] }}>
+        {children}
+      </BlockContent>
+    </React.Fragment>
+  )
 }
 
 export default ProductTableCellContent

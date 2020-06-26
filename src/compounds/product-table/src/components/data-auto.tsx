@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 
 interface FormattedText {
   size: 'big' | 'small'
@@ -35,6 +35,16 @@ function autoFormat(text?: string): FormattedText[] {
 
       return words.concat(word)
     }, [] as FormattedText[])
+    .map(word => {
+      if (word.size === 'big') {
+        return word
+      }
+
+      return {
+        size: word.size,
+        word: word.word.charAt(0) !== '/' ? ' ' + word.word : word.word
+      }
+    })
 }
 
 export interface DataAutoProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -44,7 +54,13 @@ const ProductTableDataAuto: React.FC<DataAutoProps> = ({ text }) => {
   return (
     <div>
       {autoFormat(text).map(({ word, size }) =>
-        size === 'small' ? <small>{word}</small> : word
+        size === 'small' ? (
+          <small>{word}</small>
+        ) : (
+          <Styled.h2 as="span" sx={{ color: 'inherit' }}>
+            {word}
+          </Styled.h2>
+        )
       )}
     </div>
   )

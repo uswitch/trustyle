@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 
 import { Addon, AddonArg, CellContext } from '../generics'
 
@@ -165,9 +165,11 @@ const ProductTableRow: React.FC<RowProps> = ({
                         {preTitle}
                       </span>
                     )}
-                    <h3 sx={{ margin: 0, variant: 'productTable.row.title' }}>
+                    <Styled.h3
+                      sx={{ margin: 0, variant: 'productTable.row.title' }}
+                    >
                       {rowTitle}
-                    </h3>
+                    </Styled.h3>
                     {subtitle && (
                       <span
                         sx={{

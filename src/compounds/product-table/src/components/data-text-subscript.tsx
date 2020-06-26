@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 
 export interface DataTextSubscriptProps
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -13,7 +13,9 @@ const ProductTableDataTextSubscript: React.FC<DataTextSubscriptProps> = ({
 }) => {
   return (
     <div>
-      {text}
+      <Styled.h2 as="span" sx={{ color: 'inherit' }}>
+        {text}
+      </Styled.h2>
       <small>{' ' + subscript}</small>
     </div>
   )

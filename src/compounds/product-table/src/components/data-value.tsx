@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 
 import { numberFormatter } from '../generics'
 
@@ -17,7 +17,9 @@ const ProductTableDataValue: React.FC<DataValueProps> = ({
 }) => {
   return (
     <span>
-      {numberFormatter(value, unit)}
+      <Styled.h2 as="span" sx={{ color: 'inherit' }}>
+        {numberFormatter(value, unit)}
+      </Styled.h2>
       {typeof value === 'number' && subscript ? (
         <small>{` ${subscript}`}</small>
       ) : null}

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 
 import { numberFormatter } from '../generics'
 
@@ -16,7 +16,9 @@ const ProductTableDataRange: React.FC<DataRangeProps> = ({
 }) => {
   return (
     <div>
-      {numberFormatter(from, unit)}
+      <Styled.h2 as="span" sx={{ color: 'inherit' }}>
+        {numberFormatter(from, unit)}
+      </Styled.h2>
       <small> to {numberFormatter(to, unit)}</small>
     </div>
   )
