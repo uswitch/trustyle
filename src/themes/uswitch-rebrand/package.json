@@ -1,0 +1,9 @@
+{
+  "name": "@uswitch/trustyle.uswitch-rebrand-theme",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  }
+}
