@@ -8,6 +8,15 @@ const glob = require('glob')
 const slugify = str =>
   str.replace(/-([a-z])/g, (_, match) => match.toUpperCase())
 
+/**
+ * This file generates the themes/[theme].js and icons/[icon].js files from
+ * the SVG files in the src/icons/[theme] directories.
+ *
+ * 1. Get the file paths and extract the theme and icon names from them.
+ * 2. Generate theme and icon js files, and corresponding type definition files.
+ * 3. Write generated files to disk.
+ */
+
 glob('../src/icons/**/*.svg', { cwd: __dirname }, (err, paths) => {
   if (err) {
     throw err
@@ -16,6 +25,7 @@ glob('../src/icons/**/*.svg', { cwd: __dirname }, (err, paths) => {
   const themes = {}
   const icons = {}
 
+  // 1. Iterate theough paths, extracting theme and icon names
   paths.forEach(path => {
     const splitFile = path.split('/')
     const theme = splitFile[splitFile.length - 2]
@@ -65,6 +75,7 @@ glob('../src/icons/**/*.svg', { cwd: __dirname }, (err, paths) => {
   const iconObjInterface =
     'interface IconObj { theme: string; icon: string; file: any }\n\n'
 
+  // 2.1 Generate theme js files
   for (const [theme, iconObjs] of Object.entries(themes)) {
     const importStr = iconObj =>
       `exports.${iconObj.icon}Icon = ${iconToStr(iconObj)}\n`
@@ -76,6 +87,7 @@ glob('../src/icons/**/*.svg', { cwd: __dirname }, (err, paths) => {
       contents
     })
 
+    // …and corresponding type definition files
     const typeStr = iconObj =>
       `export declare const ${iconObj.icon}Icon: IconObj;\n`
     const typeContents = iconObjInterface + iconObjs.map(typeStr).join('')
@@ -85,6 +97,7 @@ glob('../src/icons/**/*.svg', { cwd: __dirname }, (err, paths) => {
     })
   }
 
+  // 2.2 Generate icon js files
   for (const [icon, iconObjs] of Object.entries(icons)) {
     const contents =
       filePreface +
@@ -98,6 +111,7 @@ glob('../src/icons/**/*.svg', { cwd: __dirname }, (err, paths) => {
       contents
     })
 
+    // …and corresponding type definition files
     const typeContents =
       iconObjInterface +
       'declare const _default: IconObj[];\nexport default _default;\n'
@@ -108,6 +122,7 @@ glob('../src/icons/**/*.svg', { cwd: __dirname }, (err, paths) => {
     })
   }
 
+  // 3. Write generated files to disk
   const promises = files.map(file =>
     fs.outputFile(path.resolve(__dirname, file.path), file.contents)
   )
