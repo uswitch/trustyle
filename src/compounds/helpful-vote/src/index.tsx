@@ -18,11 +18,11 @@ interface Props {
 const HelpfulVote: React.FC<Props> = ({
   yesButton = {
     text: 'Yes',
-    showIcon: true
+    showIcon: false
   },
   noButton = {
     text: 'No',
-    showIcon: true
+    showIcon: false
   }
 }) => {
   const btnVariant: Variant = 'secondary'
@@ -68,7 +68,8 @@ const HelpfulVote: React.FC<Props> = ({
       <div
         sx={{
           width: '100%',
-          display: 'flex'
+          display: 'flex',
+          variant: 'compounds.helpful-cote.question'
         }}
       >
         <Button
