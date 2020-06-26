@@ -12,7 +12,7 @@ export default {
 }
 
 export const ExampleWithKnobs = () => {
-  const someText: string = text('Some text', 'example')
+  const someText: string = text('Some text', 'Example')
   const variant: string = select('Variant', ['default', 'cupcard'], 'default')
 
   return <ReadMoreCard text={someText} href="" variant={variant} />

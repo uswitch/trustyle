@@ -24,7 +24,7 @@ const baseStyle = {
   },
   icon: {
     flexShrink: 0,
-    paddingLeft: 'md'
+    pl: 'md'
   }
 }
 
@@ -38,15 +38,16 @@ const variantStyles: { [key: string]: any } = {
       borderLeftWidth: 6,
       borderStyle: 'solid',
       borderColor: 'primary',
-      paddingLeft: 'md',
-      paddingRight: 'sm',
-      paddingTop: 'sm',
-      paddingBottom: 'base',
+      pl: 'md',
+      pr: 'sm',
+      pt: 'sm',
+      pb: 'base',
       '&:hover': {
         textDecoration: 'underline',
         color: 'anchor-hover',
         backgroundColor: 'grey-10'
-      }
+      },
+      my: 'md'
     },
     text: {
       ...baseStyle.text
@@ -58,7 +59,7 @@ const variantStyles: { [key: string]: any } = {
   cupcard: {
     outer: {
       ...baseStyle.outer,
-      padding: 'md',
+      p: 'md',
       flexDirection: ['row', 'column'],
       alignItems: ['center', 'stretch'],
       height: [null, 176],
@@ -69,7 +70,7 @@ const variantStyles: { [key: string]: any } = {
     },
     text: {
       ...baseStyle.text,
-      marginBottom: [null, 'md']
+      mb: [null, 'md']
     },
     icon: {
       ...baseStyle.icon,

@@ -6,7 +6,7 @@ import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 
 interface Props {
   className?: string
-  superScript?: string
+  critical?: boolean
   description?: string
   horizontal?: boolean
   imageSize?: 'cover' | 'contain'
@@ -15,6 +15,7 @@ interface Props {
   imgSrc: string
   linkHref: string
   linkText?: string
+  superScript?: string
   tag?: string
   title: string
 }
@@ -24,7 +25,7 @@ const makeStyles = (variant: string) => (element?: string) =>
 
 const Card: React.FC<Props> = ({
   className = '',
-  superScript,
+  critical = true,
   description,
   horizontal = false,
   imageSize = 'cover',
@@ -33,6 +34,7 @@ const Card: React.FC<Props> = ({
   imgSrc,
   linkHref,
   linkText,
+  superScript,
   tag,
   title
 }) => {
@@ -56,7 +58,7 @@ const Card: React.FC<Props> = ({
             ar: '16:9',
             fill: 'solid'
           }}
-          critical
+          critical={critical}
         />
       </Styled.a>
       <div
@@ -89,8 +91,8 @@ const Card: React.FC<Props> = ({
         <Styled.h3 sx={{ margin: '0' }}>
           <Styled.a href={linkHref}>{title}</Styled.a>
         </Styled.h3>
-        {!horizontal && description && <Styled.p>{description}</Styled.p>}
-        {!horizontal && linkText && (
+        {description && <Styled.p>{description}</Styled.p>}
+        {linkText && (
           <Styled.a
             href={linkHref}
             sx={{ textDecoration: 'underline', variant: styles('link') }}
