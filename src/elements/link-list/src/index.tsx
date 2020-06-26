@@ -25,7 +25,7 @@ export const LinkList: React.FC<ListLinkProps> = ({
   return (
     <div className={className} sx={{ variant: styles(variant) }}>
       {(title || icon) && (
-        <div
+        <header
           sx={{
             display: 'flex',
             alignItems: 'center',
@@ -45,7 +45,7 @@ export const LinkList: React.FC<ListLinkProps> = ({
               {title}
             </Styled.h3>
           )}
-        </div>
+        </header>
       )}
       <ul
         sx={{
