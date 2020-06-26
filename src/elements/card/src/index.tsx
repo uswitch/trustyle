@@ -91,8 +91,8 @@ const Card: React.FC<Props> = ({
         <Styled.h3 sx={{ margin: '0' }}>
           <Styled.a href={linkHref}>{title}</Styled.a>
         </Styled.h3>
-        {!horizontal && description && <Styled.p>{description}</Styled.p>}
-        {!horizontal && linkText && (
+        {description && <Styled.p>{description}</Styled.p>}
+        {linkText && (
           <Styled.a
             href={linkHref}
             sx={{ textDecoration: 'underline', variant: styles('link') }}
