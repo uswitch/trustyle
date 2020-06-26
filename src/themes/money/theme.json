@@ -1635,6 +1635,9 @@
       "px": ["sm", "52px"],
       "bg": "grey-0",
       "color": "grey-60",
+      ":not(:label)": {
+        "textAlign": ["center", "left"]
+      },
       "boxShadow":
         "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
       "borderRadius": "5px"
@@ -1643,7 +1646,8 @@
 
   "form": {
     "label" :{
-      "variant": "styles.h4",
+      "fontSize": ["18px", "20px"],
+      "fontWeight": "bold",
       "color": "grey-80",
       "mb": "sm",
       "display": "block",
