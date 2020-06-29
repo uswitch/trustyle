@@ -458,7 +458,8 @@
       },
       "question": {
         "color": "secondary-blueberry",
-        "fontSize": "lg"
+        "fontSize": "lg",
+        "fontFamily": "heading"
       },
       "button": {
         "container": {

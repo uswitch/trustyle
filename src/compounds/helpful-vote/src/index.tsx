@@ -38,6 +38,7 @@ const HelpfulVote: React.FC<Props> = ({
     },
     backgroundColor: 'grey05-hover',
     padding: 'sm',
+    fontFamily: 'sofia-pro, -apple-system, sans-serif',
     variant: 'compounds.helpful-vote.button'
   }
 
@@ -74,6 +75,7 @@ const HelpfulVote: React.FC<Props> = ({
           marginRight: ['sm', 'md'],
           flex: 'none',
           marginBottom: ['md', 0],
+          fontFamily: 'Helvetica',
           variant: 'compounds.helpful-vote.question'
         }}
       >
