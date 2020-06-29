@@ -221,6 +221,17 @@
     }
   },
 
+  "elements": {
+    "list": {
+      "bullet": {
+        "color": "grey-80"
+      },
+      "numeric": {
+        "color": "grey-80"
+      }
+    }
+  },
+
   "compounds": {
     "card": {
       "itemsPerRow": [1],
@@ -359,7 +370,6 @@
       "pl": 0,
       "ml": 0,
       "border": 0,
-
       "layout": {
         "flexDirection": ["column-reverse", "column-reverse", "column-reverse"],
         "text": [12, 12, 12],
@@ -520,15 +530,6 @@
           "backgroundColor": "button-secondary--hover"
         }
       }
-    }
-  },
-
-  "list": {
-    "bullet": {
-      "color": "grey-80"
-    },
-    "numeric": {
-      "color": "grey-80"
     }
   },
 
