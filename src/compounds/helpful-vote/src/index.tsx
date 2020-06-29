@@ -19,11 +19,11 @@ interface Props {
 const HelpfulVote: React.FC<Props> = ({
   confirmButton = {
     text: 'Yes',
-    showIcon: false
+    showIcon: true
   },
   dismissButton = {
     text: 'No',
-    showIcon: false
+    showIcon: true
   },
   question = 'Did you find this guide useful?'
 }) => {
@@ -36,12 +36,15 @@ const HelpfulVote: React.FC<Props> = ({
     svg: {
       marginRight: 'xs'
     },
+    backgroundColor: 'grey05-hover',
+    padding: 'sm',
     variant: 'compounds.helpful-vote.button'
   }
 
   const btnContent = {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    color: 'uswitch-navy'
   }
 
   return (
@@ -56,10 +59,13 @@ const HelpfulVote: React.FC<Props> = ({
         height: 'fit-content',
         boxSizing: 'border-box',
         maxWidth: 611,
+        minHeight: 104,
         fontFamily: 'heading',
         fontWeight: 'bold',
         fontSize: 'md',
         lineHeight: 'heading',
+        borderColor: 'grey-20',
+        color: '#000000',
         variant: 'compounds.helpful-vote.container'
       }}
     >
@@ -67,7 +73,8 @@ const HelpfulVote: React.FC<Props> = ({
         sx={{
           marginRight: ['sm', 'md'],
           flex: 'none',
-          marginBottom: ['md', 0]
+          marginBottom: ['md', 0],
+          variant: 'compounds.helpful-vote.question'
         }}
       >
         {question}

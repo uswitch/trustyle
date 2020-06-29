@@ -88,8 +88,9 @@
     "grey-80": "#24262A",
     "grey-90": "#141424",
     "grey-100": "#050505",
-
     "grey05-hover": "#F3F3F4",
+
+    "uswitch-navy": "#141424",
 
     "primary": "#0157FF",
     "primary--dark": "rgb(0, 70, 212);",
