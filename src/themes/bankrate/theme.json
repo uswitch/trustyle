@@ -227,7 +227,12 @@
         "color": "grey-80"
       },
       "numeric": {
-        "color": "grey-80"
+        "color": "grey-80",
+        "::before": {
+          "content": "\" - \" counter(li)",
+          "left": "-2em",
+          "width": "2.5em"
+        }
       }
     }
   },
@@ -367,9 +372,8 @@
     },
 
     "side-nav": {
-      "pl": 0,
-      "ml": 0,
-      "border": 0,
+      "paddingLeft": "0",
+      "marginLeft": "0",
       "layout": {
         "flexDirection": ["column-reverse", "column-reverse", "column-reverse"],
         "text": [12, 12, 12],
