@@ -30,7 +30,11 @@ export const CustomExample = () => {
     onClick: () => console.log('Deny clicked!')
   }
   return (
-    <HelpfulVote confirmButton={confirmButton} dismissButton={dismissButton} />
+    <HelpfulVote
+      question="Do you accept terms?"
+      confirmButton={confirmButton}
+      dismissButton={dismissButton}
+    />
   )
 }
 

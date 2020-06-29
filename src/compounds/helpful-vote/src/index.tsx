@@ -14,6 +14,7 @@ interface Button {
 interface Props {
   confirmButton?: Button
   dismissButton?: Button
+  question?: string
 }
 const HelpfulVote: React.FC<Props> = ({
   confirmButton = {
@@ -23,7 +24,8 @@ const HelpfulVote: React.FC<Props> = ({
   dismissButton = {
     text: 'No',
     showIcon: false
-  }
+  },
+  question = 'Did you find this guide useful?'
 }) => {
   const btnVariant: Variant = 'secondary'
   const btnSx = {
@@ -47,7 +49,7 @@ const HelpfulVote: React.FC<Props> = ({
       sx={{
         display: 'flex',
         flexDirection: ['column', 'row'],
-        alignItems: ['start', 'center'],
+        alignItems: 'center',
         padding: ['sm', 'md'],
         border: '1px solid',
         width: '100%',
@@ -68,13 +70,13 @@ const HelpfulVote: React.FC<Props> = ({
           marginBottom: ['md', 0]
         }}
       >
-        Did you find this guide useful?
+        {question}
       </div>
       <div
         sx={{
           width: '100%',
           display: 'flex',
-          variant: 'compounds.helpful-cote.question'
+          variant: 'compounds.helpful-vote.button.container'
         }}
       >
         <Button
