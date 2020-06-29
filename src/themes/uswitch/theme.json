@@ -592,6 +592,7 @@
       "padding": 16,
       "position": "relative",
       "borderRadius": 0,
+      "radii": 0,
       "notificationColor": "uswitch-navy",
       "alertColor": "error-red",
       "before": {
