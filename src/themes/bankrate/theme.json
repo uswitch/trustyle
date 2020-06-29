@@ -89,6 +89,8 @@
     "grey-90": "#141424",
     "grey-100": "#050505",
 
+    "grey05-hover": "#F3F3F4",
+
     "primary": "#0157FF",
     "primary--dark": "rgb(0, 70, 212);",
     "secondary": "#924A8B",
@@ -217,6 +219,11 @@
   },
 
   "compounds": {
+    "helpful-vote": {
+      "button": {
+        "borderRadius": "0px"
+      }
+    },
     "card": {
       "itemsPerRow": [1],
       "base": {
@@ -244,7 +251,7 @@
         "a": {
           "color": "text",
           "textDecoration": "none"
-        }, 
+        },
         "content": {
           "paddingY": "lg",
           "marginRight": "lg"
@@ -268,7 +275,7 @@
           "meta": {
             "variant": "compounds.card.base.meta"
           },
-          
+
           "content": {
             "variant": "compounds.card.base.content",
             "paddingTop": "sm",
@@ -281,7 +288,7 @@
         }
       }
     },
-    
+
     "accordion": {
       "base": {
         "marginTop": "sm",
@@ -332,15 +339,15 @@
 
     "side-nav": {
       "paddingLeft": 0,
-      "marginLeft": 0, 
-      "border": 0, 
-      
+      "marginLeft": 0,
+      "border": 0,
+
       "layout": {
-        "flexDirection": ["column-reverse", "column-reverse", "column-reverse"], 
+        "flexDirection": ["column-reverse", "column-reverse", "column-reverse"],
         "text": [12, 12, 12],
         "nav": [12, 12, 12]
       },
-      
+
       "internalLinkList": {
         "listStyle": "none",
         "paddingLeft": 0,
@@ -355,11 +362,11 @@
           "borderBottomStyle": "solid",
           "borderColor": "grey-10",
           "position": "relative",
-          "&:hover":{
+          "&:hover": {
             "backgroundColor": "grey-10"
-          }, 
+          },
           ">a": {
-            "&:hover":{
+            "&:hover": {
               "marginLeft": "sm"
             },
             "transition": "all 0.2s ease-in-out",
@@ -367,7 +374,7 @@
             "color": "grey-60",
             "textDecoration": "none",
             "fontSize": "sm",
-            "fontWeight": "bold", 
+            "fontWeight": "bold",
             "paddingY": "sm",
             ":visited": {
               "color": "grey-60"
@@ -395,7 +402,7 @@
 
     "cookie-banner": {
       "heading": {
-        "mt": [0, "xs", "xs"], 
+        "mt": [0, "xs", "xs"],
         "color": "grey-80"
       },
       "hr": {
@@ -749,7 +756,7 @@
 
     "h5": {
       "variant": "styles.heading",
-      "fontSize": ["sm","md"],
+      "fontSize": ["sm", "md"],
       "marginTop": 0,
       "marginBottom": "sm"
     },
@@ -802,7 +809,6 @@
         "fontStyle": "normal"
       }
     },
-
 
     "table": {
       "borderSpacing": 0,

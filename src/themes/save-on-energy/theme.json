@@ -114,7 +114,9 @@
     "light-2": "#f9f9f9",
     "light-3": "#e6e6e6",
     "hero": "rgba(212, 242, 255, 0.8)",
-    "hero-solid": "D4F2F1"
+    "hero-solid": "D4F2F1",
+
+    "grey05-hover": "#F3F3F4"
   },
 
   "radii": {
@@ -270,7 +272,7 @@
       }
     }
   },
-  
+
   "logoCollection": {
     "base": {
       "mr": "16px",
@@ -279,7 +281,6 @@
         "maxHeight": "150px"
       }
     }
-
   },
 
   "toggleSwitch": {

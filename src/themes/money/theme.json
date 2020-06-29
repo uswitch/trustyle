@@ -146,6 +146,7 @@
     "primary--light": "#FFF6E2",
     "secondary": "#924A8B",
     "secondary--dark": "#7A3E74",
+    "secondary-blueberry": "#34454E",
 
     "experimental-text": "#29335C",
     "button-secondary": "#34454E",
@@ -455,9 +456,14 @@
         "color": "experimental-text",
         "textAlign": "center"
       },
+      "question": {
+        "color": "secondary-blueberry",
+        "fontSize": "lg"
+      },
       "button": {
         "container": {
-          "width": "auto"
+          "width": "auto",
+          "color": "experimental-text"
         },
         "height": 56,
         "border": "1px solid",
