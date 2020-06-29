@@ -372,8 +372,9 @@
     },
 
     "side-nav": {
-      "paddingLeft": "0",
-      "marginLeft": "0",
+      "paddingLeft": 0,
+      "marginLeft": 0,
+      "border": 0,
       "layout": {
         "flexDirection": ["column-reverse", "column-reverse", "column-reverse"],
         "text": [12, 12, 12],
