@@ -13,11 +13,19 @@ To add a new element, copy the template to the src/elements directory, update th
 
 ## Publishing
 
+**Do not do this until you are ready to merge and your PR has been approved!** Justification below.
+
 To preview which packages have changed, you can run `npx lerna changed` without publishing.
 
 Once happy with the code changes, run `npx lerna version` and bump the versions accordingly.
 
 Lerna will generate a publish commit. Push that commit to your remote branch and once it gets merged to master, CI will publish the new versions to `npm`.
+
+Why you shouldn't publish until ready to merge:
+
+- You will block anyone else who wants to change that package or any dependents or dependencies until your PR is merged.
+- If changes are requested, you will have to update the version again after making the changes.
+- If you have to merge in master, you will have to update the version again.
 
 ## TODO:
 

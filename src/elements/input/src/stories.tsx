@@ -55,8 +55,19 @@ const PostprocessStory: React.FC = () => {
 
 export const Example = () => {
   const spaceBetween = number('Space Between', 10)
+  const inputRef = React.useRef<HTMLInputElement>(null)
+  React.useEffect(() => {
+    if (inputRef.current) inputRef.current.value = 'ref is working'
+  })
   return (
     <div css={css({ padding: number('Padding', 10) })}>
+      <Input
+        ref={inputRef}
+        name="example"
+        defaultValue="ref isn't working"
+        type="text"
+      />
+      <Spacer height={spaceBetween} />
       <Input name="example" defaultValue="Cascat" type="text" />
       <Spacer height={spaceBetween} />
       <Input name="example" placeholder="Placeholder" type="text" />

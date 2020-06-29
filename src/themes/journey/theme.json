@@ -299,6 +299,15 @@
 
   "elements": {
     "drop-down": {
+      "placeholder": {
+        "color": "grey-60",
+        "border": "1px solid",
+        "borderRadius": 0,
+        "borderColor": "black",
+        "&:focus": {
+          "outline": "2px black solid"
+        }
+      },
       "select": {
         "base": {
           "border": "1px solid",
@@ -768,6 +777,9 @@
         "backgroundColor": "frozen-bg",
         "borderRadius": "0px"
       },
+      "text": {
+        "color": "grey-80"
+      },
       "button": {
         "background": "none",
         "border": "none",
@@ -795,7 +807,9 @@
         "fontSize": "base",
         "lineHeight": "base",
         "textAlign": "center",
-        "boxSizing": "border-box"      
+        "boxSizing": "border-box" ,
+        "alignItems": "center",
+        "display": "flex"     
       },
       "prefix": {
         "variant": "input.affix.base",
@@ -862,6 +876,7 @@
       },
       "label": {
         "variant": "input.radioish.label",
+        "minHeight": "54px",
         "&:before": {
           "variant": "input.radioish.label.&:before",
           "borderRadius": "50%"
@@ -917,7 +932,7 @@
       "inputColor": "#141424",
       "borderColor": "light-grey-blue",
       "borderStyle": "solid",
-      "borderWidth": "2px",
+      "borderWidth": "1px",
       "color": "slate-grey",
       "fontWeight": "normal",
       "before": {
@@ -1070,12 +1085,12 @@
     },
 
     "a": {
-      "color": "inherit",
+      "color": "uswitch-navy",
       "fontWeight": 500,
       "stroke": "currentColor",
       "textDecoration": "underline",
       "transition": "oapcity 0.2s ease",
-      ":visited": { "color": "inherit" },
+      ":visited": { "color": "uswitch-navy" },
       ":hover": { "opacity": 0.8 }
     },
 

@@ -307,7 +307,9 @@
         "fontSize": "base",
         "lineHeight": "base",
         "textAlign": "center",
-        "boxSizing": "border-box"      
+        "boxSizing": "border-box",
+        "alignItems": "center",
+        "display": "flex" 
       },
       "prefix": {
         "variant": "input.affix.base",

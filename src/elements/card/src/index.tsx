@@ -6,7 +6,8 @@ import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 
 interface Props {
   className?: string
-  description: string
+  critical?: boolean
+  description?: string
   horizontal?: boolean
   imageSize?: 'cover' | 'contain'
   imgAlt: string
@@ -14,6 +15,8 @@ interface Props {
   imgSrc: string
   linkHref: string
   linkText?: string
+  superScript?: string
+  tag?: string
   title: string
 }
 
@@ -22,6 +25,7 @@ const makeStyles = (variant: string) => (element?: string) =>
 
 const Card: React.FC<Props> = ({
   className = '',
+  critical = true,
   description,
   horizontal = false,
   imageSize = 'cover',
@@ -29,7 +33,9 @@ const Card: React.FC<Props> = ({
   imgSizes = '768px',
   imgSrc,
   linkHref,
-  linkText = 'Read more',
+  linkText,
+  superScript,
+  tag,
   title
 }) => {
   const styles = makeStyles(horizontal ? 'horizontal' : 'vertical')
@@ -52,7 +58,7 @@ const Card: React.FC<Props> = ({
             ar: '16:9',
             fill: 'solid'
           }}
-          critical
+          critical={critical}
         />
       </Styled.a>
       <div
@@ -63,19 +69,37 @@ const Card: React.FC<Props> = ({
           variant: styles('content')
         }}
       >
+        <div
+          sx={{
+            display: 'flex',
+            alignItems: 'baseline',
+            variant: styles('meta')
+          }}
+        >
+          {tag && (
+            <span sx={{ marginRight: 'sm', variant: styles('tag') }}>
+              {tag}
+            </span>
+          )}
+          {superScript && (
+            <Styled.p sx={{ variant: styles('superScript') }}>
+              {superScript}
+            </Styled.p>
+          )}
+        </div>
+
         <Styled.h3 sx={{ margin: '0' }}>
           <Styled.a href={linkHref}>{title}</Styled.a>
         </Styled.h3>
-        <Styled.p>{description}</Styled.p>
-        <Styled.a
-          href={linkHref}
-          sx={{
-            textDecoration: 'underline',
-            variant: styles('link')
-          }}
-        >
-          {linkText}
-        </Styled.a>
+        {description && <Styled.p>{description}</Styled.p>}
+        {linkText && (
+          <Styled.a
+            href={linkHref}
+            sx={{ textDecoration: 'underline', variant: styles('link') }}
+          >
+            {linkText}
+          </Styled.a>
+        )}
       </div>
     </div>
   )

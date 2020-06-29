@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.arrangement",
-  "version": "2.0.14",
+  "version": "2.0.15",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.27",
-    "@uswitch/trustyle.styles": "^0.5.0",
+    "@uswitch/trustyle.styles": "^0.5.1",
     "facepaint": "^1.2.1"
   },
   "devDependencies": {

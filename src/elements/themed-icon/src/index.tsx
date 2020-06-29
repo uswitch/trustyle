@@ -83,13 +83,20 @@ interface OldProps extends React.HTMLAttributes<any> {
  * icons. It's encouraged to switch to the new syntax and use sx instead of
  * color, direction and size.
  */
-ThemedIcon.OldSyntax = ({ color, direction = 'up', glyph, size }) => {
+ThemedIcon.OldSyntax = ({
+  color,
+  direction = 'up',
+  glyph,
+  size,
+  className
+}) => {
   const rotate: number = { up: 0, right: 0.25, down: 0.5, left: 0.75 }[
     direction
   ]
 
   return (
     <ThemedIcon
+      className={className}
       icon={glyph}
       sx={{
         display: 'block',

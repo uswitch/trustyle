@@ -11,6 +11,7 @@ interface Props {
   accordionTitle?: string
   accordionContent?: string
   autoPlay?: boolean
+  className?: string
 }
 
 const vimeoParameters = '?autoplay=1&loop=1&muted=1&background=1'
@@ -35,9 +36,10 @@ const EmbeddedVideo: React.FC<Props> = ({
   hasAccordion = true,
   accordionTitle = '',
   accordionContent = '',
-  autoPlay = false
+  autoPlay = false,
+  className
 }) => (
-  <div>
+  <div className={className}>
     <div
       sx={{
         position: 'relative',

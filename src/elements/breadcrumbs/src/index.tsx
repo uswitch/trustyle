@@ -172,14 +172,15 @@ const Breadcrumbs: React.FC<Props> = ({
   customBackIcon = '<',
   customHomeIcon,
   variant = 'base',
-  homePath = '/'
+  homePath = '/',
+  className
 }) => {
   if (crumbs.length && crumbs[0].fields?.path === homePath) {
     crumbs = crumbs.slice(1)
   }
 
   return (
-    <div sx={{ variant: `${lookup(variant)}.wrapper` }}>
+    <div sx={{ variant: `${lookup(variant)}.wrapper` }} className={className}>
       <div sx={{ display: ['block', 'none'] }}>
         <MobileBreadcrumbs
           crumbs={crumbs}

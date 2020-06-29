@@ -23,6 +23,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
         transform?: ArrayOrNot<string>
       }
   fgImageOnMobile?: boolean
+  className?: string
 }
 
 const DefaultContainer: React.FC = ({ children }) => (
@@ -36,11 +37,13 @@ const Hero: React.FC<Props> = ({
   fgImageType = 'background',
   fgImagePosition,
   fgImageOnMobile = true,
-  children
+  children,
+  className
 }) => {
   return (
     <div
       sx={{ position: 'relative', overflow: 'hidden', variant: 'hero.wrapper' }}
+      className={className}
     >
       <Container>
         {breadcrumbs && (

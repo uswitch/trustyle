@@ -20,10 +20,11 @@ const options = [
 const Spacer = () => <div sx={{ minHeight: 20 }} />
 
 const ColourSelect = () => {
-  const [val, setVal] = useState('red')
+  const [val, setVal] = useState()
   return (
     <DropDown
       name="example"
+      placeholder="example"
       onBlur={() => {}}
       onChange={setVal}
       options={options}

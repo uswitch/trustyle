@@ -119,7 +119,7 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
       sx={{
         ...grid('column', 1, 1),
         ...grid('row', 1, 1),
-        fontSize: 'xxxl',
+        fontSize: 'xxl',
         small: {
           fontSize: 'sm'
         },

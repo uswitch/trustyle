@@ -356,6 +356,14 @@
 
   "elements": {
     "drop-down": {
+      "placeholder": {
+        "border": "1px solid",
+        "borderRadius": 0,
+        "borderColor": "black",
+        "&:focus": {
+          "outline": "2px black solid"
+        }
+      },
       "select": {
         "base": {
           "border": "1px solid",
@@ -581,6 +589,7 @@
     },
 
     "card": {
+      "itemsPerRow": [1, 2, 3],
       "base": {
         "*": {
           "fontFamily": "Helvetica"
@@ -1301,7 +1310,9 @@
         "fontSize": "base",
         "lineHeight": "base",
         "textAlign": "center",
-        "boxSizing": "border-box"      
+        "boxSizing": "border-box",
+        "alignItems": "center",
+        "display": "flex"
       },
       "prefix": {
         "variant": "input.affix.base",

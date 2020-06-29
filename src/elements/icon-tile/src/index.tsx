@@ -5,8 +5,9 @@ import { jsx, Styled } from 'theme-ui'
 
 interface Props extends React.HTMLAttributes<any> {
   icon: React.ReactNode
+  className?: string
 }
-const IconTile: React.FC<Props> = ({ icon, children }) => {
+const IconTile: React.FC<Props> = ({ icon, children, className }) => {
   return (
     <div
       sx={{
@@ -27,6 +28,7 @@ const IconTile: React.FC<Props> = ({ icon, children }) => {
         },
         alignItems: 'center'
       }}
+      className={className}
     >
       <div
         sx={{

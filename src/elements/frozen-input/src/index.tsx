@@ -8,7 +8,7 @@ import { colors } from '@uswitch/trustyle.styles'
 interface Props {
   text?: string
   freezable?: boolean
-  inputRef?: React.RefObject<HTMLElement | HTMLElement>
+  inputRef?: React.RefObject<HTMLElement>
 }
 
 const editIconWidth = 69
@@ -21,7 +21,7 @@ export const FrozenInput: React.FC<Props> = ({
 }) => {
   const [frozen, setFrozen] = useState(freezable && !!text)
   const { theme }: any = useThemeUI()
-  const iconGlyph = theme.name === 'Journey' ? 'edit-journey' : 'edit'
+  const iconGlyph = theme?.name === 'Journey' ? 'edit-journey' : 'edit'
   const iconColor =
     theme.colors[theme.input?.frozen?.button?.color] || colors.UswitchNavy
 
@@ -56,7 +56,8 @@ export const FrozenInput: React.FC<Props> = ({
             overflow: 'hidden',
             padding: '0 24px',
             textOverflow: 'ellipsis',
-            width: `calc(100% - ${editIconWidth}px)`
+            width: `calc(100% - ${editIconWidth}px)`,
+            variant: 'input.frozen.text'
           }}
         >
           {text}

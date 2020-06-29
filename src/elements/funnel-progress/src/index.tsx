@@ -30,6 +30,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   phases: Phase[]
   currentPhaseKey: string
   progress: number
+  hideProgressBar?: boolean
 }
 
 const PhaseIcon: React.FC<PhaseIconProps> = ({ variant, step }) => (
@@ -77,6 +78,7 @@ const FunnelProgress: React.FC<Props> = ({
   phases,
   currentPhaseKey,
   progress,
+  hideProgressBar,
   ...rest
 }) => {
   const currentPhaseIndex = phases.findIndex(
@@ -97,32 +99,34 @@ const FunnelProgress: React.FC<Props> = ({
           />
         ))}
       </div>
-      <div
-        sx={{
-          variant: 'funnelProgress.base.progess.back',
-          height: '4px',
-          width: '100%',
-          position: 'relative',
-          backgroundColor: 'progress-bg',
-          marginTop: '13px'
-        }}
-      >
+      {!hideProgressBar && (
         <div
           sx={{
-            variant:
-              progress !== 0
-                ? 'funnelProgress.base.progress.base'
-                : 'funnelProgress.base.progress.variants.start'
+            variant: 'funnelProgress.base.progess.back',
+            height: '4px',
+            width: '100%',
+            position: 'relative',
+            backgroundColor: 'progress-bg',
+            marginTop: '13px'
           }}
-          style={{
-            width:
-              progress !== 0
-                ? `${STARTING_PROGRESS * 100 +
-                    progress * (1 - STARTING_PROGRESS) * 100}%`
-                : '0%'
-          }}
-        />
-      </div>
+        >
+          <div
+            sx={{
+              variant:
+                progress !== 0
+                  ? 'funnelProgress.base.progress.base'
+                  : 'funnelProgress.base.progress.variants.start'
+            }}
+            style={{
+              width:
+                progress !== 0
+                  ? `${STARTING_PROGRESS * 100 +
+                      progress * (1 - STARTING_PROGRESS) * 100}%`
+                  : '0%'
+            }}
+          />
+        </div>
+      )}
     </Fragment>
   )
 }

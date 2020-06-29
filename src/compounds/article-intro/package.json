@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.article-intro",
-  "version": "0.0.14",
+  "version": "0.3.0",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -12,6 +12,6 @@
     "react": "^16.7.0"
   },
   "devDependencies": {
-    "@uswitch/trustyle.author": "^0.1.15"
+    "@uswitch/trustyle.author": "^0.4.0"
   }
 }

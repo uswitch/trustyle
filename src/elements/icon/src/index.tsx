@@ -14,6 +14,7 @@ import { Conversation } from './conversation'
 import { Cross } from './cross'
 import { Edit } from './edit'
 import { Email } from './email'
+import { FilledArrow } from './filled-arrow'
 import { Filters } from './filters'
 import { Four } from './four'
 import { Home } from './home'
@@ -48,6 +49,7 @@ export type Glyph =
   | 'cross'
   | 'edit'
   | 'email'
+  | 'filled-arrow'
   | 'filters'
   | 'four'
   | 'home'
@@ -113,6 +115,8 @@ export const Icon: React.FC<Props> = ({
       return <Edit color={color} size={size} />
     case 'email':
       return <Email color={color} size={size} />
+    case 'filled-arrow':
+      return <FilledArrow color={color} size={size} />
     case 'filters':
       return <Filters color={color} size={size} />
     case 'four':

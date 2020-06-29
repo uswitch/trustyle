@@ -13,6 +13,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   date: number
   authorUrl: string
   editorUrl?: string
+  className?: string
 }
 
 const Author: React.FC<Props> = ({
@@ -23,7 +24,8 @@ const Author: React.FC<Props> = ({
   authorImage,
   date,
   authorUrl,
-  editorUrl
+  editorUrl,
+  className
 }) => {
   return (
     <div
@@ -33,16 +35,17 @@ const Author: React.FC<Props> = ({
         flexDirection: 'row',
         variant: 'author.main'
       }}
+      className={className}
     >
       {authorImage && (
         <Styled.a
           href={authorUrl}
           sx={{
-            variant: 'author.link',
             flexShrink: 0,
-            height: ['48px', '56px'],
-            width: ['48px', '56px'],
-            marginRight: 'sm'
+            height: [48, 56],
+            width: [48, 56],
+            marginRight: 'sm',
+            variant: 'author.image-link'
           }}
         >
           <authorImage.type
@@ -96,7 +99,7 @@ const Author: React.FC<Props> = ({
             {editorName &&
               `Edited by ${editorName}${editorRole ? `, ${editorRole}` : ''}, `}
           </Styled.a>
-          {dayjs(date).format('LL')}
+          {date !== undefined && dayjs(date).format('LL')}
         </Styled.p>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { colors, pxToRem, spacers } from '@uswitch/trustyle.styles'
+import { colors, pxToRem } from '@uswitch/trustyle.styles'
 
 import { SxStyleProp } from '../../../../types/theme-ui'
 
@@ -28,7 +28,7 @@ export const wrapper = (
 
 const affix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({
   margin: pxToRem(8, 0),
-  padding: pxToRem(8, spacers.green),
+  padding: pxToRem(0, 12),
   borderColor: (theme: any) =>
     hasError
       ? theme.colors[theme.input?.error?.color] ?? tomato
