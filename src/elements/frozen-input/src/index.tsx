@@ -23,7 +23,8 @@ export const FrozenInput: React.FC<Props> = ({
   const { theme }: any = useThemeUI()
   const iconGlyph = theme?.name === 'Journey' ? 'edit-journey' : 'edit'
   const iconColor =
-    theme.colors[theme.input?.frozen?.button?.color] || colors.UswitchNavy
+    theme.colors[theme.elements.input?.frozen?.button?.color] ||
+    colors.UswitchNavy
 
   useEffect(() => {
     if (freezable && !frozen && !!text && inputRef && inputRef.current) {
@@ -47,7 +48,7 @@ export const FrozenInput: React.FC<Props> = ({
           display: 'flex',
           height: '64px',
           justifyContent: 'space-between',
-          variant: 'input.frozen.base'
+          variant: 'elements.input.frozen.base'
         }}
       >
         <p
@@ -57,21 +58,21 @@ export const FrozenInput: React.FC<Props> = ({
             padding: '0 24px',
             textOverflow: 'ellipsis',
             width: `calc(100% - ${editIconWidth}px)`,
-            variant: 'input.frozen.text'
+            variant: 'elements.input.frozen.text'
           }}
         >
           {text}
         </p>
         <button
           aria-label="Edit Value"
-          sx={{ variant: 'input.frozen.button' }}
+          sx={{ variant: 'elements.input.frozen.button' }}
           onClick={() => setFrozen(false)}
         >
           <Icon color={iconColor} glyph={iconGlyph} />
         </button>
       </div>
 
-      <div sx={{ variant: 'input.frozen.hidden' }}>{children}</div>
+      <div sx={{ variant: 'elements.input.frozen.hidden' }}>{children}</div>
     </Fragment>
   )
 }

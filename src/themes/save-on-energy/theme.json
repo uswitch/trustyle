@@ -163,6 +163,86 @@
   },
 
   "----------------------------- Variants": "-----------------------------",
+  "elements": {
+    "input": {
+      "base": {
+        "fontFamily": "base",
+        "fontSize": "base",
+        "lineHeight": 1.33,
+        "color": "text",
+        "borderRadius": "4px",
+        "appearance": "none",
+        "border": "none",
+        "background": "none",
+        "boxSizing": "border-box",
+        "display": "flex",
+        "flex": 1,
+        "position": "relative",
+        "verticalAlign": "middle",
+        "width": "100%",
+        "&:focus": {
+          "outline": "none"
+        },
+        "&:disabled": {
+          "outline": "none",
+          "border": "none",
+          "color": "battleshipGrey",
+          "backgroundColor": "veryLightGrey"
+        }
+      },
+      "wrapper": {
+        "backgroundColor": "white",
+        "boxSizing": "border-box",
+        "display": "flex",
+        "position": "relative",
+        "borderRadius": "3px"
+      },
+      "frozen": {
+        "base": {
+          "backgroundColor": "frozen-bg",
+          "borderRadius": "3px"
+        },
+        "button": {
+          "background": "none",
+          "border": "none",
+          "height": "28px",
+          "padding": "0 24px",
+          "width": "69px",
+          "cursor": "pointer",
+          ":focus": {
+            "outline": "2px solid",
+            "outlineColor": "#008fe9"
+          },
+          "&::-moz-focus-inner": { "border": 0 }
+        },
+        "hidden": {
+          "display": "none"
+        }
+      },
+      "affix": {
+        "base": {
+          "fontFamily": "base",
+          "fontSize": "base",
+          "lineHeight": "base",
+          "textAlign": "center",
+          "boxSizing": "border-box",
+          "alignItems": "center",
+          "display": "flex" 
+        },
+        "prefix": {
+          "variant": "elements.input.affix.base",
+          "borderRightStyle": "solid",
+          "borderRightWidth": 1
+        },
+        "suffix": {
+          "variant": "elements.input.affix.base",
+          "borderLeftStyle": "solid",
+          "borderLeftWidth": 1
+        }
+      }
+    }
+  },
+  
   "compounds": {
     "card": {
       "base": {
@@ -247,79 +327,9 @@
   },
 
   "input": {
-    "base": {
-      "fontFamily": "base",
-      "fontSize": "base",
-      "lineHeight": 1.33,
-      "color": "text",
-      "borderRadius": "4px",
-      "appearance": "none",
-      "border": "none",
-      "background": "none",
-      "boxSizing": "border-box",
-      "display": "flex",
-      "flex": 1,
-      "position": "relative",
-      "verticalAlign": "middle",
-      "width": "100%",
-      "&:focus": {
-        "outline": "none"
-      },
-      "&:disabled": {
-        "outline": "none",
-        "border": "none",
-        "color": "battleshipGrey",
-        "backgroundColor": "veryLightGrey"
-      }
-    },
-    "wrapper": {
-      "backgroundColor": "white",
-      "boxSizing": "border-box",
-      "display": "flex",
-      "position": "relative",
-      "borderRadius": "3px"
-    },
-    "frozen": {
-      "base": {
-        "backgroundColor": "frozen-bg",
+    "textInput": {
+      "wrapper": {
         "borderRadius": "3px"
-      },
-      "button": {
-        "background": "none",
-        "border": "none",
-        "height": "28px",
-        "padding": "0 24px",
-        "width": "69px",
-        "cursor": "pointer",
-        ":focus": {
-          "outline": "2px solid",
-          "outlineColor": "#008fe9"
-        },
-        "&::-moz-focus-inner": { "border": 0 }
-      },
-      "hidden": {
-        "display": "none"
-      }
-    },
-    "affix": {
-      "base": {
-        "fontFamily": "base",
-        "fontSize": "base",
-        "lineHeight": "base",
-        "textAlign": "center",
-        "boxSizing": "border-box",
-        "alignItems": "center",
-        "display": "flex" 
-      },
-      "prefix": {
-        "variant": "input.affix.base",
-        "borderRightStyle": "solid",
-        "borderRightWidth": 1
-      },
-      "suffix": {
-        "variant": "input.affix.base",
-        "borderLeftStyle": "solid",
-        "borderLeftWidth": 1
       }
     }
   },

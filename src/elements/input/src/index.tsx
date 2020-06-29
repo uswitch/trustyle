@@ -121,7 +121,7 @@ export const Input = forwardRef<HTMLInputElement, Props>(
     const childProps = {
       ...inputProps,
       sx: {
-        variant: 'input.base',
+        variant: 'elements.input.base',
         padding: (theme: any) => pxToRem(theme.space.base)
       },
       onBlur: blurHandler,
@@ -143,14 +143,14 @@ export const Input = forwardRef<HTMLInputElement, Props>(
         <div
           sx={{
             ...st.wrapper(hasError, hasFocus, width),
-            variant: 'input.wrapper'
+            variant: 'elements.input.wrapper'
           }}
         >
           {(prefix || prefixIcon) && (
             <span
               sx={{
                 ...st.prefix(hasError, hasFocus),
-                variant: 'input.affix.prefix'
+                variant: 'elements.input.affix.prefix'
               }}
             >
               {prefixIcon ? (
@@ -176,7 +176,7 @@ export const Input = forwardRef<HTMLInputElement, Props>(
             <span
               sx={{
                 ...st.suffix(hasError, hasFocus),
-                variant: 'input.affix.suffix'
+                variant: 'elements.input.affix.suffix'
               }}
             >
               {suffix}
