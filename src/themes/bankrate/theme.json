@@ -316,7 +316,26 @@
           "borderLeftWidth": 1
         }
       }
-    }  
+    },
+    
+    "input-alert": {
+      "fontFamily": "base",
+      "fontSize": "base",
+      "lineHeight": 1.38,
+      "color": "white",
+      "padding": 8,
+      "position": "relative",
+      "borderRadius": "sm",
+      "notificationColor": "#65717B",
+      "alertColor": "#DB1818",
+      "before": {
+        "position": "absolute",
+        "content": "''",
+        "width": 0,
+        "height": 0,
+        "borderBottomStyle": "solid"
+      }
+    }
   },
 
   "compounds": {
@@ -559,25 +578,6 @@
       "wrapper": {
         "borderRadius": "3px"
       }
-    }
-  },
-
-  "input-alert": {
-    "fontFamily": "base",
-    "fontSize": "base",
-    "lineHeight": 1.38,
-    "color": "white",
-    "padding": 8,
-    "position": "relative",
-    "borderRadius": "sm",
-    "notificationColor": "#65717B",
-    "alertColor": "#DB1818",
-    "before": {
-      "position": "absolute",
-      "content": "''",
-      "width": 0,
-      "height": 0,
-      "borderBottomStyle": "solid"
     }
   },
 
