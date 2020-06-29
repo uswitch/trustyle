@@ -456,6 +456,9 @@
         "textAlign": "center"
       },
       "button": {
+        "container": {
+          "width": "auto"
+        },
         "height": 56,
         "border": "1px solid",
         "background": "none",
