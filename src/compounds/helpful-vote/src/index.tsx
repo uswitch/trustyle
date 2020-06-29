@@ -12,15 +12,15 @@ interface Button {
 }
 
 interface Props {
-  yesButton?: Button
-  noButton?: Button
+  confirmButton?: Button
+  dismissButton?: Button
 }
 const HelpfulVote: React.FC<Props> = ({
-  yesButton = {
+  confirmButton = {
     text: 'Yes',
     showIcon: false
   },
-  noButton = {
+  dismissButton = {
     text: 'No',
     showIcon: false
   }
@@ -35,6 +35,11 @@ const HelpfulVote: React.FC<Props> = ({
       marginRight: 'xs'
     },
     variant: 'compounds.helpful-vote.button'
+  }
+
+  const btnContent = {
+    display: 'flex',
+    alignItems: 'center'
   }
 
   return (
@@ -73,20 +78,24 @@ const HelpfulVote: React.FC<Props> = ({
         }}
       >
         <Button
-          onClick={yesButton.onClick}
+          onClick={confirmButton.onClick}
           sx={{ ...btnSx, marginRight: 'xs' }}
           variant={btnVariant}
         >
-          {yesButton.showIcon && (
-            <Icon color="uswitch-navy" glyph="check" size={16} />
-          )}
-          {yesButton.text}
+          <div sx={btnContent}>
+            {confirmButton.showIcon && (
+              <Icon color="uswitch-navy" glyph="check" size={16} />
+            )}
+            {confirmButton.text}
+          </div>
         </Button>
-        <Button onClick={noButton.onClick} sx={btnSx} variant={btnVariant}>
-          {noButton.showIcon && (
-            <Icon color="uswitch-navy" glyph="close" size={16} />
-          )}
-          {noButton.text}
+        <Button onClick={dismissButton.onClick} sx={btnSx} variant={btnVariant}>
+          <div sx={btnContent}>
+            {dismissButton.showIcon && (
+              <Icon color="uswitch-navy" glyph="close" size={16} />
+            )}
+            {dismissButton.text}
+          </div>
         </Button>
       </div>
     </div>

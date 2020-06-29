@@ -21,15 +21,17 @@ BasicExample.story = {
 }
 
 export const CustomExample = () => {
-  const yesButton = {
+  const confirmButton = {
     text: 'Accept',
     showIcon: true
   }
-  const noButton = {
+  const dismissButton = {
     text: 'Deny',
     onClick: () => console.log('Deny clicked!')
   }
-  return <HelpfulVote yesButton={yesButton} noButton={noButton} />
+  return (
+    <HelpfulVote confirmButton={confirmButton} dismissButton={dismissButton} />
+  )
 }
 
 CustomExample.story = {
