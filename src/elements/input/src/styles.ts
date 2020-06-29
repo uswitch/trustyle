@@ -12,17 +12,18 @@ export const wrapper = (
   border: 'solid 1px',
   boxShadow: (theme: any) =>
     hasError
-      ? `inset 0 0 0 1px ${theme.colors[theme.input?.error?.color] ?? tomato}`
+      ? `inset 0 0 0 1px ${theme.colors[theme.elements.input?.error?.color] ??
+          tomato}`
       : hasFocus
-      ? `inset 0 0 0 1px ${theme.colors[theme.input?.focus?.color] ??
+      ? `inset 0 0 0 1px ${theme.colors[theme.elements.input?.focus?.color] ??
           UswitchNavy}`
       : 'inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)',
   borderColor: (theme: any) =>
     hasError
-      ? theme.colors[theme.input?.error?.color] ?? tomato
+      ? theme.colors[theme.elements.input?.error?.color] ?? tomato
       : hasFocus
-      ? theme.colors[theme.input?.focus?.color] ?? UswitchNavy
-      : theme.colors[theme.input?.default?.color] ?? UswitchNavy,
+      ? theme.colors[theme.elements.input?.focus?.color] ?? UswitchNavy
+      : theme.colors[theme.elements.input?.default?.color] ?? UswitchNavy,
   width: width === 'half' ? '50%' : '100%'
 })
 
@@ -31,16 +32,16 @@ const affix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({
   padding: pxToRem(8, spacers.green),
   borderColor: (theme: any) =>
     hasError
-      ? theme.colors[theme.input?.error?.color] ?? tomato
+      ? theme.colors[theme.elements.input?.error?.color] ?? tomato
       : hasFocus
-      ? theme.colors[theme.input?.focus?.color] ?? UswitchNavy
-      : theme.colors[theme.input?.default?.color] ?? UswitchNavy,
+      ? theme.colors[theme.elements.input?.focus?.color] ?? UswitchNavy
+      : theme.colors[theme.elements.input?.default?.color] ?? UswitchNavy,
   color: (theme: any) =>
     hasError
-      ? theme.colors[theme.input?.error?.color] ?? tomato
+      ? theme.colors[theme.elements.input?.error?.color] ?? tomato
       : hasFocus
-      ? theme.colors[theme.input?.focus?.color] ?? UswitchNavy
-      : theme.colors[theme.input?.default?.color] ?? 'text'
+      ? theme.colors[theme.elements.input?.focus?.color] ?? UswitchNavy
+      : theme.colors[theme.elements.input?.default?.color] ?? 'text'
 })
 
 export const prefix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({

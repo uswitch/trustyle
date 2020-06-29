@@ -20,7 +20,7 @@ export const RadioInput: React.FC<Props> = ({ label, ...inputProps }) => (
             transition: 'background-color 200ms, border-color 200ms'
           }
         },
-        variant: 'input.radio.base'
+        variant: 'elements.input.radio.base'
       }}
       type="radio"
       {...inputProps}
@@ -48,7 +48,7 @@ export const RadioInput: React.FC<Props> = ({ label, ...inputProps }) => (
           flexGrow: 0,
           flexShrink: 0
         },
-        variant: 'input.radio.label'
+        variant: 'elements.input.radio.label'
       }}
     >
       {label}

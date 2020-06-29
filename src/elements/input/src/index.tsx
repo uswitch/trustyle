@@ -121,7 +121,7 @@ export const Input = forwardRef<HTMLInputElement, Props>(
     const childProps = {
       ...inputProps,
       sx: {
-        variant: 'input.base',
+        variant: 'elements.input.base',
         padding: (theme: any) => pxToRem(theme.space.base)
       },
       onBlur: blurHandler,
@@ -140,26 +140,26 @@ export const Input = forwardRef<HTMLInputElement, Props>(
       freezable={freezable} 
       inputRef={inputRef}
     >
-      <div
-        sx={{
-          ...st.wrapper(hasError, hasFocus, width),
-          variant: 'input.wrapper'
-        }}
-      >
-        {(prefix || prefixIcon) && (
-          <span
-            sx={{
-              ...st.prefix(hasError, hasFocus),
-              variant: 'input.affix.prefix'
-            }}
-          >
-            {prefixIcon ? (
-              <Icon glyph={prefixIcon} size={16} color={iconColor} />
-            ) : (
-              prefix
-            )}
-          </span>
-        )}
+        <div
+          sx={{
+            ...st.wrapper(hasError, hasFocus, width),
+            variant: 'elements.input.wrapper'
+          }}
+        >
+          {(prefix || prefixIcon) && (
+            <span
+              sx={{
+                ...st.prefix(hasError, hasFocus),
+                variant: 'elements.input.affix.prefix'
+              }}
+            >
+              {prefixIcon ? (
+                <Icon glyph={prefixIcon} size={16} color={iconColor} />
+              ) : (
+                prefix
+              )}
+            </span>
+          )}
 
           {mask ? (
             <InputMask
@@ -176,7 +176,7 @@ export const Input = forwardRef<HTMLInputElement, Props>(
             <span 
               sx={{
                 ...st.suffix(hasError, hasFocus),
-                variant: 'input.affix.suffix'
+                variant: 'elements.input.affix.suffix'
               }}
             >
             {suffix}
