@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui'
 
 import AllThemes from '../../../utils/all-themes'
 
-import HelpfulVote from './'
+import HelpfulVote, { ButtonProps } from './'
 
 export default {
   title: 'compounds|Helpful Vote'
@@ -21,11 +21,11 @@ BasicExample.story = {
 }
 
 export const CustomExample = () => {
-  const confirmButton = {
+  const confirmButton: ButtonProps = {
     text: 'Accept',
     showIcon: true
   }
-  const dismissButton = {
+  const dismissButton: ButtonProps = {
     text: 'Deny',
     onClick: () => console.log('Deny clicked!')
   }

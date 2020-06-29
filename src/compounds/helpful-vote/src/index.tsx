@@ -5,15 +5,15 @@ import { jsx } from 'theme-ui'
 import { Button, Variant } from '@uswitch/trustyle.button'
 import { Icon } from '@uswitch/trustyle.icon'
 
-interface Button {
+export interface ButtonProps {
   text: string
   showIcon?: boolean
   onClick?: () => void
 }
 
 interface Props {
-  confirmButton?: Button
-  dismissButton?: Button
+  confirmButton?: ButtonProps
+  dismissButton?: ButtonProps
   question?: string
 }
 const HelpfulVote: React.FC<Props> = ({
@@ -34,14 +34,14 @@ const HelpfulVote: React.FC<Props> = ({
     justifyContent: 'flex-start',
     border: 'none',
     svg: {
-      marginRight: 'xs'
+      marginRight: 12
     },
     backgroundColor: 'grey05-hover',
     padding: 'sm',
     fontFamily: 'sofia-pro, -apple-system, sans-serif',
+    fontWeight: 'bold',
     variant: 'compounds.helpful-vote.button'
   }
-
   const btnContent = {
     display: 'flex',
     alignItems: 'center',
@@ -90,7 +90,7 @@ const HelpfulVote: React.FC<Props> = ({
       >
         <Button
           onClick={confirmButton.onClick}
-          sx={{ ...btnSx, marginRight: 'xs' }}
+          sx={{ ...btnSx, marginRight: 8 }}
           variant={btnVariant}
         >
           <div sx={btnContent}>
