@@ -1632,26 +1632,25 @@
     },
     "panel-primary": {
       "py": "lg",
-      "px": ["sm", "52px"],
+      "px": ["sm", "xl"],
       "bg": "grey-0",
       "color": "grey-60",
-      ":not(:label)": {
-        "textAlign": ["center", "left"]
+      "p": {
+        "textAlign": ["center", "left"],
+        "mb": 0
       },
       "boxShadow":
         "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
-      "borderRadius": "5px"
+      "borderRadius": "md"
     }
   },
 
   "form": {
     "label" :{
-      "fontSize": ["18px", "20px"],
+      "variant": "styles.h4",
       "fontWeight": "bold",
       "color": "grey-80",
-      "mb": "sm",
       "display": "block",
-      "mt": "sm",
       ":not(:first-child)": { "mb": "sm" }
     },
     "button": {
