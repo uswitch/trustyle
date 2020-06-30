@@ -49,13 +49,17 @@ const listItem = (item: string, color: Color) => (
       glyph={color === 'green' ? 'tick' : 'cross'}
       size={24}
     />
-    {Text(item, 'uswitch-navy')}
+    {Text(item, 'uswitch-navy', { variant: getVariant('item') })}
   </div>
 )
 
 const getColumnList = (color: Color, { items, title }: ItemsList) => (
   <Col span={1} sx={{ marginBottom: [24, 0], variant: getVariant('column') }}>
-    {title && Text(title, 'grey-60', { marginBottom: [8, 16] })}
+    {title &&
+      Text(title, 'grey-60', {
+        marginBottom: [8, 16],
+        variant: getVariant('title')
+      })}
     <div
       sx={{
         backgroundColor: 'grey-05',
