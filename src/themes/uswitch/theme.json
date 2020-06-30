@@ -722,6 +722,14 @@
   },
 
   "compounds": {
+    "pros-and-cons": {
+      "column": {
+        "background": {
+          "backgroundColor": "none",
+          "paddingLeft": 0
+        }
+      }
+    },
     "stepper": {
       "unselectedNumberCircle": {
         "border": "1px primary solid",
