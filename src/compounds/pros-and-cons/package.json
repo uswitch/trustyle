@@ -1,0 +1,18 @@
+{
+  "name": "@uswitch/trustyle.pros-and-cons",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "ts:main": "src/index.tsx",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.27",
+    "react": "^16.7.0"
+  },
+  "dependencies": {
+    "@uswitch/trustyle.flex-grid": "^2.2.4",
+    "@uswitch/trustyle.icon": "^1.8.6"
+  }
+}
