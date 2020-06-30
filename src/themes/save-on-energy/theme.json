@@ -311,6 +311,29 @@
     }
   },
 
+  "elements": {
+    "sponsoredByTag": {
+      "base": {
+        "wrapper": {
+          "display": "flex",
+          "alignItems": "center",
+          "justifyContent": "space-between",
+          "paddingY": 4
+        },
+        "text": {
+          "color": "grey-60",
+          "fontSize": "xs",
+          "fontFamily": "base",
+          "fontWeight": "base",
+          "fontStyle": "normal"
+        },
+        "image":{
+          "height": [40, 56]
+        }
+      }
+    }
+  },
+
   "imageCallout": {
     "imageSize": { "height": 337, "width": 477 },
     "sm": { "display": "flex", "width": 320, "mx": "auto" },
