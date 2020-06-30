@@ -1654,7 +1654,7 @@
       ":not(:first-child)": { "mb": "sm" }
     },
     "button": {
-      "my": "16px"
+      "my": "sm"
     }
   },
 
