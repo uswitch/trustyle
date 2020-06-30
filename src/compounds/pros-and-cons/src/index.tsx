@@ -24,9 +24,8 @@ const Text = (text: string, color: string, sx?: any) => (
     sx={{
       fontStyle: 'normal',
       fontWeight: 'bold',
-      fontSize: 18,
-      lineHeight: 1.3,
-      color,
+      fontSize: 'md',
+      lineHeight: 'heading',
       ...sx
     }}
   >
@@ -38,9 +37,10 @@ const listItem = (item: string, color: Color) => (
   <div
     sx={{
       display: 'flex',
-      margin: '9px 0px',
+      marginX: 0,
+      marginY: 'xs',
       svg: {
-        marginRight: 12
+        marginRight: 'xs'
       }
     }}
   >
@@ -54,16 +54,17 @@ const listItem = (item: string, color: Color) => (
 )
 
 const getColumnList = (color: Color, { items, title }: ItemsList) => (
-  <Col span={1} sx={{ marginBottom: [24, 0], variant: getVariant('column') }}>
+  <Col span={1} sx={{ marginBottom: ['md', 0], variant: getVariant('column') }}>
     {title &&
       Text(title, 'grey-60', {
-        marginBottom: [8, 16],
+        marginBottom: ['xs', 'sm'],
         variant: getVariant('title')
       })}
     <div
       sx={{
         backgroundColor: 'grey-05',
-        padding: ['15.5px 19px', '18px 27px'],
+        paddingY: 'md',
+        paddingX: ['sm', 'md'],
         variant: getVariant('column.background')
       }}
     >
@@ -73,11 +74,7 @@ const getColumnList = (color: Color, { items, title }: ItemsList) => (
 )
 
 const ProsAndCons: React.FC<Props> = ({ pros, cons }) => (
-  <Container
-    sx={{
-      '*': { fontFamily: 'Helvetica' }
-    }}
-  >
+  <Container>
     <Row cols={[1, 2]}>
       {getColumnList('green', pros)}
       {getColumnList('red', cons)}
