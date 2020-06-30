@@ -602,6 +602,27 @@
         "height": 0,
         "borderBottomStyle": "solid"
       }
+    },
+
+    "sponsoredByTag": {
+      "base": {
+        "wrapper": {
+          "display": "flex",
+          "alignItems": "center",
+          "justifyContent": "space-between",
+          "paddingY": 4
+        },
+        "text": {
+          "color": "grey-60",
+          "fontSize": "xs",
+          "fontFamily": "base",
+          "fontWeight": "base",
+          "fontStyle": "normal"
+        },
+        "image":{
+          "height": [40, 56]
+        }
+      }
     }
   },
 
