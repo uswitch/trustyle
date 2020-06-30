@@ -1651,7 +1651,7 @@
       "fontWeight": "bold",
       "color": "grey-80",
       "display": "block",
-      ":not(:first-child)": { "mb": "sm" }
+      ":not(:first-child)": { "mt": "sm" }
     },
     "button": {
       "my": "sm"
