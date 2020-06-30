@@ -89,6 +89,8 @@
     "grey-90": "#141424",
     "grey-100": "#050505",
 
+    "uswitch-navy": "#141424",
+
     "primary": "#0157FF",
     "primary--dark": "rgb(0, 70, 212);",
     "secondary": "#924A8B",
@@ -374,11 +376,11 @@
           "borderBottomStyle": "solid",
           "borderColor": "grey-10",
           "position": "relative",
-          "&:hover":{
+          "&:hover": {
             "backgroundColor": "grey-10"
           },
           ">a": {
-            "&:hover":{
+            "&:hover": {
               "ml": "sm"
             },
             "transition": "all 0.2s ease-in-out",
@@ -636,8 +638,7 @@
   },
 
   "author": {
-    "heading": {
-    },
+    "heading": {},
     "image-link": {
       "height": [48, 48],
       "width": [48, 48]
@@ -768,7 +769,7 @@
 
     "h5": {
       "variant": "styles.heading",
-      "fontSize": ["sm","md"],
+      "fontSize": ["sm", "md"],
       "marginTop": 0,
       "marginBottom": "sm"
     },
@@ -821,7 +822,6 @@
         "fontStyle": "normal"
       }
     },
-
 
     "table": {
       "borderSpacing": 0,
