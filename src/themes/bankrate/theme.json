@@ -92,6 +92,7 @@
     "frozen-bg": "#F6F6F6",
     "battleshipGrey": "#65717B",
     "veryLightGrey": "#E9EBED",
+    "uswitch-navy": "#141424",
 
     "primary": "#0157FF",
     "primary--dark": "rgb(0, 70, 212);",
@@ -316,7 +317,7 @@
         }
       }
     },
-    
+
     "input-alert": {
       "fontFamily": "base",
       "fontSize": "base",
@@ -335,7 +336,7 @@
         "borderBottomStyle": "solid"
       }
     },
-    
+
     "sponsoredByTag": {
       "base": {
         "wrapper": {
@@ -351,7 +352,7 @@
           "fontWeight": "base",
           "fontStyle": "normal"
         },
-        "image":{
+        "image": {
           "height": [40, 56]
         }
       }
@@ -516,11 +517,11 @@
           "borderBottomStyle": "solid",
           "borderColor": "grey-10",
           "position": "relative",
-          "&:hover":{
+          "&:hover": {
             "backgroundColor": "grey-10"
           },
           ">a": {
-            "&:hover":{
+            "&:hover": {
               "ml": "sm"
             },
             "transition": "all 0.2s ease-in-out",
@@ -778,8 +779,7 @@
   },
 
   "author": {
-    "heading": {
-    },
+    "heading": {},
     "image-link": {
       "height": [48, 48],
       "width": [48, 48]
@@ -893,15 +893,14 @@
           "textAlign": ["center", "left"],
           "mb": 0
         },
-        "boxShadow":
-          "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
+        "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
         "borderRadius": "md"
-      }  
+      }
     }
   },
 
   "form": {
-    "label" :{
+    "label": {
       "variant": "styles.h4",
       "color": "grey-80",
       "display": "block",
@@ -947,7 +946,7 @@
 
     "h5": {
       "variant": "styles.heading",
-      "fontSize": ["sm","md"],
+      "fontSize": ["sm", "md"],
       "my": "sm"
     },
 
@@ -998,7 +997,6 @@
         "fontStyle": "normal"
       }
     },
-
 
     "table": {
       "borderSpacing": 0,
