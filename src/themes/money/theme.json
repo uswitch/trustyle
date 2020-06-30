@@ -678,7 +678,31 @@
       "before": {
         "content": "none"
       }
-    }  
+    },
+
+    "sponsoredByTag": {
+      "base": {
+        "wrapper": {
+          "display": "flex",
+          "alignItems": "center",
+          "justifyContent": "flex-end",
+          "paddingY": "xxs"
+        },
+        "text": {
+          "color": "white",
+          "fontSize": "xs",
+          "fontFamily": "base",
+          "fontWeight": "base",
+          "fontStyle": "normal"
+        },
+        "image":{
+          "maxHeight": "32px",
+          "maxWidth": "76px",
+          "pb": [0,"sm"],
+          "ml": "xs"
+        }
+      }
+    }
   },
 
   "compounds": {
