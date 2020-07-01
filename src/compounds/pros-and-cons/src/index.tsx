@@ -26,6 +26,7 @@ const Text = (text: string, color: string, sx?: any) => (
       fontWeight: 'bold',
       fontSize: 'md',
       lineHeight: 'heading',
+      color,
       ...sx
     }}
   >
