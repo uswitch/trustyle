@@ -80,7 +80,8 @@ const HelpfulVote: React.FC<Props> = ({
             fontStyle: 'normal',
             fontWeight: 'bold',
             fontSize: 'md',
-            lineHeight: 'heading'
+            lineHeight: 'heading',
+            variant: getVariant('question')
           }}
         >
           {question}

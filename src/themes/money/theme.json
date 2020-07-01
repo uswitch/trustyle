@@ -20,12 +20,14 @@
     "body": "'Open Sans', -apple-system, sans-serif",
     "heading": "Nunito, -apple-system, sans-serif",
     "monospace": "Menlo, monospace",
-    "link": "'Open Sans', -apple-system, sans-serif"
+    "link": "'Open Sans', -apple-system, sans-serif",
+    "sofia": "sofia-pro, -apple-system, sans-serif"
   },
 
   "lineHeights": {
     "base": "1.5",
-    "heading": "1.2"
+    "heading": "1.2",
+    "mid": "1.33"
   },
 
   "fontSizes": {
@@ -452,28 +454,23 @@
   "compounds": {
     "helpful-vote": {
       "container": {
-        "border": "none",
-        "color": "experimental-text",
-        "textAlign": "center"
+        "borderWidth": 0
       },
       "question": {
+        "marginTop": "base",
         "color": "secondary-blueberry",
         "fontSize": "lg",
-        "fontFamily": "heading"
+        "text-align": "center"
       },
       "button": {
-        "container": {
-          "width": "auto",
-          "color": "experimental-text"
-        },
-        "padding": "sm xl",
-        "height": 56,
-        "border": "1px solid",
-        "background": "none",
-        "borderColor": "sunshine",
+        "fontFamily": "sofia",
         "color": "experimental-text",
-        "display": "flex",
+        "background": "none",
+        "border": "1px solid",
+        "borderColor": "sunshine",
         "justifyContent": "center",
+        "lineHeight": "mid",
+        "svg": { "display": "none" },
         ":hover:not(:disabled)": {
           "backgroundColor": "grey-10"
         }
