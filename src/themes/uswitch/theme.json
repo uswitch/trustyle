@@ -863,16 +863,6 @@
     "column": { "flexDirection": "column", "alignItems": "center" }
   },
 
-  "card": {
-    "sm": {
-      "image": { "width": "100%", "height": "auto" }
-    },
-
-    "lg": {
-      "image": { "width": 278, "height": 230 }
-    }
-  },
-
   "buttons": {
     "base": {
       "boxSizing": "border-box",
@@ -1710,6 +1700,16 @@
       "paddingTop": "xxs",
       "paddingBottom": "xxs",
       "textDecoration": "none"
+    }
+  },
+
+  "card": {
+    "sm": {
+      "image": { "width": "100%", "height": "auto" }
+    },
+
+    "lg": {
+      "image": { "width": 278, "height": 230 }
     }
   }
   

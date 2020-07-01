@@ -291,6 +291,16 @@
   },
 
   "compounds": {
+    "card": {
+      "sm": {
+        "image": { "width": "100%", "height": "auto" }
+      },
+  
+      "lg": {
+        "image": { "width": 278, "height": 230 }
+      }
+    },
+    
     "accordion": {
       "base": {
         "button": {
@@ -439,6 +449,8 @@
   },
 
 
+
+
   "container": {
     "sm": { "px": 20 },
     "md": { "px": 72 },
@@ -453,7 +465,6 @@
     },
     "hero": { "maxWidth": 1024, "mx": "auto", "px": 60 }
   },
-
 
   "imageCalloutContent": {
     "sm": { "pt": "xl" },
@@ -474,16 +485,6 @@
     "right": { "flexDirection": "row-reverse", "alignItems": "flex-start" },
     "left": { "flexDirection": "row", "alignItems": "flex-start" },
     "column": { "flexDirection": "column", "alignItems": "center" }
-  },
-
-  "card": {
-    "sm": {
-      "image": { "width": "100%", "height": "auto" }
-    },
-
-    "lg": {
-      "image": { "width": 278, "height": 230 }
-    }
   },
 
   "buttons": {
