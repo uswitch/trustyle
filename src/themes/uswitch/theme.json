@@ -395,8 +395,12 @@
     "pros-and-cons": {
       "column": {
         "background": {
+          "paddingLeft": [0, 0],
           "backgroundColor": "none",
-          "paddingLeft": 0
+          "fontFamily": "heading"
+        },
+        "title": {
+          "fontFamily": "heading"
         }
       }
     },

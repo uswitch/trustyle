@@ -28,8 +28,8 @@ BasicExample.story = {
 }
 
 export const TitleExample = () => {
-  const props: ItemsList = { items: [], title: 'Pros title' }
-  const cons: ItemsList = { items: [], title: 'Cons title' }
+  const props: ItemsList = { items: [], title: 'Pros' }
+  const cons: ItemsList = { items: [], title: 'Cons' }
 
   for (let i = 1; i < 4; i++) {
     props.items.push('This is props text ' + i)
