@@ -741,8 +741,10 @@
         "color": "white",
         "width": ["100%"],
         "border": "none",
-        ":hover": {
-          "backgroundColor": "grey-70"
+        "@media (hover: hover)": {
+          ":hover": {
+            "backgroundColor": "grey-70"
+          }
         },
         ":disabled": {
           "backgroundColor": "grey-20",
@@ -759,8 +761,10 @@
         "border": "none",
         "borderColor": "uswitch-navy",
         "width": ["100%"],
-        ":hover": {
-          "backgroundColor": "grey-10"
+        "@media (hover: hover)": {
+          ":hover": {
+            "backgroundColor": "grey-10"
+          }
         },
         ":disabled": {
           "color": "grey-40",
@@ -777,8 +781,10 @@
         "backgroundColor": "uswitch-navy",
         "border": "2px solid",
         "borderColor": "white",
-        ":hover": {
-          "backgroundColor": "grey-80"
+        "@media (hover: hover)": {
+          ":hover": {
+            "backgroundColor": "grey-80"
+          }
         },
         ":disabled": {
           "borderColor": "grey-60",
@@ -801,8 +807,10 @@
         "backgroundColor": "white",
         "border": "2px solid",
         "borderColor": "uswitch-navy",
-        ":hover": {
-          "backgroundColor": "grey-100"
+        "@media (hover: hover)": {
+          ":hover": {
+            "backgroundColor": "grey-100"
+          }
         },
         ":disabled": {
           "borderColor": "grey-60",
@@ -1174,6 +1182,39 @@
     }
   },
 
+  "richTextBlock": {
+    "base": {
+      "*:first-child": { "mt": 0 }
+    },
+    "variants": {
+      "panel-primary": {
+        "py": "lg",
+        "px": ["sm", "xl"],
+        "bg": "grey-0",
+        "color": "grey-80",
+        "p": {
+          "textAlign": ["center", "left"],
+          "mb": 0
+        },
+        "boxShadow":
+          "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
+        "borderRadius": "md"
+      }  
+    }
+  },
+
+  "form": {
+    "label" :{
+      "variant": "styles.h4",
+      "color": "grey-80",
+      "display": "block",
+      ":not(:first-child)": { "mt": "sm" }
+    },
+    "button": {
+      "my": "sm"
+    }
+  },
+
   "styles": {
     "root": {
       "fontFamily": "base",
@@ -1221,7 +1262,9 @@
       "textDecoration": "underline",
       "transition": "oapcity 0.2s ease",
       ":visited": { "color": "uswitch-navy" },
-      ":hover": { "opacity": 0.8 }
+      "@media (hover: hover)": {
+        ":hover": { "opacity": 0.8 }
+      }
     },
 
     "blockquote": {

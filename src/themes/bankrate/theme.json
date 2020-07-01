@@ -44,7 +44,8 @@
   "fontWeights": {
     "base": 400,
     "light": 300,
-    "bold": 600
+    "bold": 600,
+    "heading": 500
   },
 
   "space": {
@@ -78,7 +79,7 @@
 
     "grey-0": "#FFFFFF",
     "grey-05": "#F7F7F7",
-    "grey-10": "#F2F2F3",
+    "grey-10": "#F2F2F7",
     "grey-20": "#DFDFE1",
     "grey-30": "#C2C4C8",
     "grey-40": "#ADAFB3",
@@ -149,6 +150,7 @@
         "color": "white"
       },
       "height": 420,
+      "boxSizing": "border-box",
       "*": {
         "zIndex": 1
       },
@@ -340,6 +342,8 @@
     "card": {
       "itemsPerRow": [1],
       "base": {
+        "backgroundColor": "grey-10",
+        "transition": "all 0.3s ease",
         "width": "100%",
         "height": "100%",
         "borderStyle": "solid",
@@ -398,6 +402,24 @@
             "variant": "compounds.card.base.link"
           },
           "variant": "compounds.card.base"
+        },
+        "horizontal": {
+          "variant": "compounds.card.base",
+          "display": "flex",
+          "flexDirection": "row-reverse",
+          "alignItems": "start",
+          "image": {
+            "pt": "lg",
+            "width": 250
+          },
+
+          "content": {
+            "width": 670,
+            "variant": "compounds.card.base.content"
+          },
+          "link": {
+            "variant": "compounds.card.base.link"
+          }
         }
       }
     },
@@ -451,10 +473,9 @@
     },
 
     "side-nav": {
-      "pl": 0,
-      "ml": 0,
+      "paddingLeft": 0,
+      "marginLeft": 0,
       "border": 0,
-
       "layout": {
         "flexDirection": ["column-reverse", "column-reverse", "column-reverse"],
         "text": [12, 12, 12],
@@ -742,6 +763,12 @@
     "image-link": {
       "height": [48, 48],
       "width": [48, 48]
+    },
+    "link": {
+      "fontWeight": "base"
+    },
+    "text": {
+      "fontWeight": "base"
     }
   },
 
@@ -832,72 +859,101 @@
     "contentSpan": 8
   },
 
+  "richTextBlock": {
+    "base": {
+      "*:first-child": { "mt": 0 }
+    },
+    "variants": {
+      "panel-primary": {
+        "py": "lg",
+        "px": ["sm", "xl"],
+        "bg": "grey-0",
+        "color": "grey-80",
+        "p": {
+          "textAlign": ["center", "left"],
+          "mb": 0
+        },
+        "boxShadow":
+          "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
+        "borderRadius": "md"
+      }  
+    }
+  },
+
+  "form": {
+    "label" :{
+      "variant": "styles.h4",
+      "color": "grey-80",
+      "display": "block",
+      ":not(:first-child)": { "mt": "sm" }
+    },
+    "button": {
+      "my": "sm"
+    }
+  },
+
   "styles": {
     "heading": {
       "fontFamily": "heading",
       "color": "grey-90",
       "lineHeight": "heading",
-      "fontWeight": "base"
+      "fontWeight": "heading",
+      "m": 0
     },
 
     "h1": {
       "variant": "styles.heading",
       "fontSize": ["xxl", "xxxl"],
-      "marginTop": 0,
-      "marginBottom": "sm"
+      "my": "md"
     },
 
     "h2": {
       "variant": "styles.heading",
       "fontSize": ["xl", "xxl"],
-      "marginTop": "md",
-      "marginBottom": "sm"
+      "my": "md"
     },
 
     "h3": {
       "variant": "styles.heading",
       "fontSize": ["lg", "xl"],
-      "marginY": "sm"
+      "my": "sm"
     },
 
     "h4": {
       "variant": "styles.heading",
       "fontSize": ["md", "lg"],
-      "marginTop": 0,
-      "marginBottom": "sm"
+      "my": "sm"
     },
 
     "h5": {
       "variant": "styles.heading",
       "fontSize": ["sm","md"],
-      "marginTop": 0,
-      "marginBottom": "sm"
+      "my": "sm"
     },
 
     "h6": {
       "variant": "styles.heading",
       "fontSize": "sm",
-      "marginTop": 0,
-      "marginBottom": "sm"
+      "my": "sm"
     },
 
     "p": {
-      "mt": 0,
-      "mb": "base"
+      "mb": "sm",
+      "lineHeight": "base"
     },
 
     "root": {
       "fontFamily": "base",
-      "fontSize": "base",
+      "fontSize": "md",
       "fontWeight": "base",
       "lineHeight": "base",
-      "color": "grey-100",
+      "color": "grey-80",
       "-webkit-font-smoothing": "antialiased",
       "-moz-osx-font-smoothing": "grayscale"
     },
 
     "a": {
-      "color": "inherit",
+      "color": "brand",
       "stroke": "currentColor",
       "textDecoration": "underline",
       "transition": "opacity 0.2s ease",
