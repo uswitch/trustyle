@@ -469,7 +469,9 @@
         "border": "1px solid",
         "borderColor": "sunshine",
         "justifyContent": "center",
-        "lineHeight": "mid",
+        "span": {
+          "lineHeight": "mid"
+        },
         "svg": { "display": "none" },
         ":hover:not(:disabled)": {
           "backgroundColor": "grey-10"
