@@ -19,14 +19,14 @@
     "base": "26px",
     "sm": "16px",
     "md": "26px",
-    "smlg": "23px"
+    "m": "23px"
   },
 
   "fontSizes": {
     "base": 16,
     "xxs": 12,
     "xs": 14,
-    "smsm": 18,
+    "s": 18,
     "sm": 20,
     "md": 24,
     "lg": 32,
@@ -179,14 +179,14 @@
         },
         "span": {
           "color": "uswitch-navy",
-          "fontSize": "smsm",
-          "lineHeight": "smlg",
+          "fontSize": "s",
+          "lineHeight": "m",
           "fontWeight": "bold"
         }
       },
       "question": {
         "lineHeight": 1.3,
-        "fontSize": "smsm",
+        "fontSize": "s",
         "fontFamily": "helvetica",
         "text-align": "center",
         "marginY": "sm",
