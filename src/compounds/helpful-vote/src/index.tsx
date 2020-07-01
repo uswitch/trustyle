@@ -37,6 +37,8 @@ const HelpfulVote: React.FC<Props> = ({
     justifyContent: 'flex-start',
     padding: 'sm',
     minWidth: 144,
+    borderWidth: 1,
+    boxSizing: 'border-box',
     svg: {
       marginRight: 'xs'
     },
