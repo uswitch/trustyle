@@ -20,7 +20,8 @@
     "body": "'Open Sans', -apple-system, sans-serif",
     "heading": "Nunito, -apple-system, sans-serif",
     "monospace": "Menlo, monospace",
-    "link": "'Open Sans', -apple-system, sans-serif"
+    "link": "'Open Sans', -apple-system, sans-serif",
+    "sofia": "sofia-pro, -apple-system, sans-serif"
   },
 
   "lineHeights": {
@@ -464,10 +465,16 @@
         "lineHeight": "heading"
       },
       "item": {
-        "fontFamily": "sofia-pro, -apple-system, sans-serif",
+        "fontFamily": "sofia",
         "fontWeight": "normal",
         "fontSize": "sm",
-        "lineHeight": "base"
+        "lineHeight": "base",
+        "color": "grey-80"
+      },
+      "column": {
+        "background": {
+          "padding": ["sm", "sm"]
+        }
       }
     },
     "accordion": {
