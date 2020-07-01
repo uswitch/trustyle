@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 import { Button, Variant } from '@uswitch/trustyle.button'
 import { Icon } from '@uswitch/trustyle.icon'
 
@@ -16,6 +16,9 @@ interface Props {
   dismissButton?: ButtonProps
   question?: string
 }
+
+const getVariant = (element: string) => 'compounds.helpful-vote.' + element
+
 const HelpfulVote: React.FC<Props> = ({
   confirmButton = {
     text: 'Yes',
@@ -28,85 +31,75 @@ const HelpfulVote: React.FC<Props> = ({
   question = 'Did you find this guide useful?'
 }) => {
   const btnVariant: Variant = 'secondary'
+
   const btnSx = {
-    width: '50%',
     display: 'flex',
     justifyContent: 'flex-start',
-    border: 'none',
-    svg: {
-      marginRight: 12
-    },
-    backgroundColor: 'grey05-hover',
     padding: 'sm',
-    fontFamily: 'sofia-pro, -apple-system, sans-serif',
-    fontWeight: 'bold',
-    variant: 'compounds.helpful-vote.button'
-  }
-  const btnContent = {
-    display: 'flex',
-    alignItems: 'center',
-    color: 'uswitch-navy'
+    minWidth: 144,
+    svg: {
+      marginRight: 'xs'
+    },
+    span: {
+      marginLeft: 'xxs',
+      fontStyle: 'normal',
+      fontWeight: 'bold',
+      fontSize: 'md',
+      lineHeight: 'heading'
+    },
+    variant: getVariant('button')
   }
 
   return (
     <div
       sx={{
+        maxWidth: 'fit-content',
         display: 'flex',
         flexDirection: ['column', 'row'],
-        alignItems: 'center',
-        padding: ['sm', 'md'],
         border: '1px solid',
-        width: '100%',
-        height: 'fit-content',
-        boxSizing: 'border-box',
-        maxWidth: 611,
-        minHeight: 104,
-        fontFamily: 'heading',
-        fontWeight: 'bold',
-        fontSize: 'md',
-        lineHeight: 'heading',
         borderColor: 'grey-20',
-        color: '#000000',
-        variant: 'compounds.helpful-vote.container'
+        boxSizing: 'border-box',
+        marginBottom: 'md',
+        padding: ['sm', 'md'],
+        justifyContent: 'space-between',
+        variant: getVariant('container')
       }}
     >
       <div
         sx={{
-          marginRight: ['sm', 'md'],
-          flex: 'none',
-          marginBottom: ['md', 0],
-          fontFamily: 'Helvetica',
-          variant: 'compounds.helpful-vote.question'
+          alignItems: 'center',
+          marginRight: [0, 'md'],
+          marginBottom: ['xs', 0],
+          flex: 'none'
         }}
       >
-        {question}
+        <Styled.h6
+          sx={{
+            fontStyle: 'normal',
+            fontWeight: 'bold',
+            fontSize: 'md',
+            lineHeight: 'heading'
+          }}
+        >
+          {question}
+        </Styled.h6>
       </div>
-      <div
-        sx={{
-          width: '100%',
-          display: 'flex',
-          variant: 'compounds.helpful-vote.button.container'
-        }}
-      >
+      <div sx={{ display: 'flex', justifyContent: 'space-around' }}>
         <Button
           onClick={confirmButton.onClick}
-          sx={{ ...btnSx, marginRight: 8 }}
+          sx={{ ...btnSx, marginRight: 'xs' }}
           variant={btnVariant}
         >
-          <div sx={btnContent}>
-            {confirmButton.showIcon && (
-              <Icon color="uswitch-navy" glyph="check" size={16} />
-            )}
-            {confirmButton.text}
-          </div>
+          {confirmButton.showIcon && (
+            <Icon color="uswitch-navy" glyph="check" size={16} />
+          )}
+          <span>{confirmButton.text}</span>
         </Button>
         <Button onClick={dismissButton.onClick} sx={btnSx} variant={btnVariant}>
-          <div sx={btnContent}>
-            {dismissButton.showIcon && (
-              <Icon color="uswitch-navy" glyph="close" size={16} />
-            )}
-            {dismissButton.text}
-          </div>
+          {dismissButton.showIcon && (
+            <Icon color="uswitch-navy" glyph="close" size={16} />
+          )}
+          <span>{dismissButton.text}</span>
         </Button>
       </div>
     </div>
