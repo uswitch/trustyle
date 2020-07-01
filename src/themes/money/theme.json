@@ -474,8 +474,8 @@
         "&:disabled": {
           "outline": "none",
           "border": "none",
-          "color": "primary",
-          "backgroundColor": "grey-05"
+          "color": "grey-60",
+          "backgroundColor": "grey-20"
         }
       },
       "wrapper": {
