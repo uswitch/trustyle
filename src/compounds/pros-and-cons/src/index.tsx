@@ -3,9 +3,12 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
-import { Icon } from '@uswitch/trustyle.icon'
+import { Glyph, Icon } from '@uswitch/trustyle.icon'
 
-type Color = 'green' | 'red'
+enum Colors {
+  green,
+  red
+}
 
 export interface ItemsList {
   items: string[]
@@ -18,7 +21,6 @@ interface Props {
 }
 
 const getVariant = (element: string) => 'compounds.pros-and-cons.' + element
-
 const Text = (text: string, color: string, sx?: any) => (
   <div
     sx={{
@@ -34,7 +36,12 @@ const Text = (text: string, color: string, sx?: any) => (
   </div>
 )
 
-const listItem = (item: string, color: Color) => (
+const gylphs = {
+  [Colors.green]: 'tick',
+  [Colors.red]: 'cross'
+}
+
+const listItem = (item: string, color: Colors) => (
   <div
     sx={{
       display: 'flex',
@@ -50,16 +57,12 @@ const listItem = (item: string, color: Color) => (
       }
     }}
   >
-    <Icon
-      color={color}
-      glyph={color === 'green' ? 'tick' : 'cross'}
-      size={24}
-    />
+    <Icon color={Colors[color]} glyph={gylphs[color] as Glyph} size={24} />
     {Text(item, 'uswitch-navy', { variant: getVariant('item') })}
   </div>
 )
 
-const getColumnList = (color: Color, { items, title }: ItemsList) => (
+const getColumnList = (color: Colors, { items, title }: ItemsList) => (
   <Col span={1} sx={{ marginBottom: ['md', 0], variant: getVariant('column') }}>
     {title &&
       Text(title, 'grey-60', {
@@ -82,8 +85,8 @@ const getColumnList = (color: Color, { items, title }: ItemsList) => (
 const ProsAndCons: React.FC<Props> = ({ pros, cons }) => (
   <Container>
     <Row cols={[1, 2]}>
-      {getColumnList('green', pros)}
-      {getColumnList('red', cons)}
+      {getColumnList(Colors.green, pros)}
+      {getColumnList(Colors.red, cons)}
     </Row>
   </Container>
 )
