@@ -250,6 +250,56 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "cta": {
+      "base": {
+        "main": {
+          "backgroundColor": "grey-10"
+        },
+        "title": {
+          "color": "experimental-text",
+          "fontWeight": "bold"
+        },
+        "text": {
+          "mb": [null, 0]
+        },
+        "button": {
+          "ml": [null, "md"]
+        }
+      },
+      "variants": {
+        "hero": {
+          "main": {
+            "backgroundColor": "none",
+            "color": "white"
+          },
+          "title": {
+            "variant": "cta2.base.title",
+            "color": "inherit"
+          },
+          "text": {
+            "variant": "cta2.base.text"
+          },
+          "button": {
+            "variant": "cta2.base.button"
+          }
+        },
+        "hero-white-bg": {
+          "main": {
+            "backgroundColor": "white"
+          },
+          "title": {
+            "variant": "cta2.base.title"
+          },
+          "text": {
+            "variant": "cta2.base.text"
+          },
+          "button": {
+            "variant": "cta2.base.button"
+          }
+        }
+      }
+    },
+    
     "buttons": {
       "base": {
         "fontWeight": "bold",
@@ -606,56 +656,6 @@
     },
     "icon": {
       "backgroundColor": "grey-80"
-    }
-  },
-
-  "cta2": {
-    "base": {
-      "main": {
-        "backgroundColor": "grey-10"
-      },
-      "title": {
-        "color": "experimental-text",
-        "fontWeight": "bold"
-      },
-      "text": {
-        "mb": [null, 0]
-      },
-      "button": {
-        "ml": [null, "md"]
-      }
-    },
-    "variants": {
-      "hero": {
-        "main": {
-          "backgroundColor": "none",
-          "color": "white"
-        },
-        "title": {
-          "variant": "cta2.base.title",
-          "color": "inherit"
-        },
-        "text": {
-          "variant": "cta2.base.text"
-        },
-        "button": {
-          "variant": "cta2.base.button"
-        }
-      },
-      "hero-white-bg": {
-        "main": {
-          "backgroundColor": "white"
-        },
-        "title": {
-          "variant": "cta2.base.title"
-        },
-        "text": {
-          "variant": "cta2.base.text"
-        },
-        "button": {
-          "variant": "cta2.base.button"
-        }
-      }
     }
   },
 
