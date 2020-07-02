@@ -291,7 +291,7 @@
         },
   
         "secondary": {
-          "variant": "elements.buttons.basebuttons.base",
+          "variant": "elements.buttons.base",
           "color": "grey-70",
           "border": "#E0E1E4 1px solid",
           "backgroundColor": "button-secondary",
