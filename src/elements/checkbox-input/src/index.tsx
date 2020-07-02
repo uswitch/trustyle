@@ -28,7 +28,7 @@ export const CheckboxInput: React.FC<Props> = ({
               transition: 'background-color 200ms, border-color 200ms'
             }
           },
-          variant: `input.checkbox.variants.${variant}`
+          variant: `elements.input.checkbox.variants.${variant}`
         }}
         type="checkbox"
         {...inputProps}
@@ -56,7 +56,7 @@ export const CheckboxInput: React.FC<Props> = ({
             flexGrow: 0,
             flexShrink: 0
           },
-          variant: 'input.checkbox.label'
+          variant: 'elements.input.checkbox.label'
         }}
       >
         {label}

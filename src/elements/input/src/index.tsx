@@ -1,10 +1,12 @@
 /** @jsx jsx */
 
 import { forwardRef, useEffect, useRef, useState } from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, useThemeUI } from 'theme-ui'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
+import { pxToRem } from '@uswitch/trustyle.styles'
+import { Glyph, Icon } from '@uswitch/trustyle.icon'
 import InputMask from 'react-input-mask'
-import debounce from 'lodash.debounce'
+import debounce from 'tiny-debounce'
 
 import * as st from './styles'
 
@@ -19,6 +21,7 @@ export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   name: string
   postprocess?: (x: string) => string
   prefix?: string
+  prefixIcon?: Glyph
   suffix?: string
   value?: string | undefined
   width?: Width
@@ -71,6 +74,7 @@ export const Input = forwardRef<HTMLInputElement, Props>(
       postprocess = x => x,
       prefix,
       suffix,
+      prefixIcon,
       type,
       width = 'full',
       ...inputProps
@@ -116,13 +120,19 @@ export const Input = forwardRef<HTMLInputElement, Props>(
 
     const childProps = {
       ...inputProps,
-      sx: st.input,
+      sx: {
+        variant: 'elements.input.base',
+        padding: (theme: any) => pxToRem(theme.space.base)
+      },
       onBlur: blurHandler,
       onChange: changeHandler,
       onFocus: focusHandler,
       type,
       value
     }
+
+    const { theme }: any = useThemeUI()
+    const iconColor = theme.colors[theme.input?.affix?.prefix?.iconColor]
 
     return (
       <FrozenInput
@@ -133,10 +143,23 @@ export const Input = forwardRef<HTMLInputElement, Props>(
         <div
           sx={{
             ...st.wrapper(hasError, hasFocus, width),
-            variant: 'input.textInput.wrapper'
+            variant: 'elements.input.wrapper'
           }}
         >
-          {prefix && <span sx={st.prefix(hasError, hasFocus)}>{prefix}</span>}
+          {(prefix || prefixIcon) && (
+            <span
+              sx={{
+                ...st.prefix(hasError, hasFocus),
+                variant: 'elements.input.affix.prefix'
+              }}
+            >
+              {prefixIcon ? (
+                <Icon glyph={prefixIcon} size={16} color={iconColor} />
+              ) : (
+                prefix
+              )}
+            </span>
+          )}
 
           {mask ? (
             <InputMask
@@ -146,14 +169,19 @@ export const Input = forwardRef<HTMLInputElement, Props>(
               {...childProps}
             />
           ) : (
-            <input
-              ref={inputRef}
-              {...childProps}
-              sx={{ ...st.input, variant: 'input.textInput' }}
-            />
+            <input ref={inputRef} {...childProps} />
           )}
 
-          {suffix && <span sx={st.suffix(hasError, hasFocus)}>{suffix}</span>}
+          {suffix && (
+            <span
+              sx={{
+                ...st.suffix(hasError, hasFocus),
+                variant: 'elements.input.affix.suffix'
+              }}
+            >
+              {suffix}
+            </span>
+          )}
         </div>
       </FrozenInput>
     )

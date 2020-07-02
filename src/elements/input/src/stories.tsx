@@ -80,6 +80,8 @@ export const Example = () => {
       <Spacer height={spaceBetween} />
       <Input name="example" prefix="£" type="tel" />
       <Spacer height={spaceBetween} />
+      <Input name="example" prefixIcon="email" type="tel" />
+      <Spacer height={spaceBetween} />
       <Input name="example" suffix=".00" type="tel" />
       <Spacer height={spaceBetween} />
       <Input name="password" type="password" defaultValue="swordfish" />

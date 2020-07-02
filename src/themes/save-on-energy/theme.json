@@ -114,7 +114,10 @@
     "light-2": "#f9f9f9",
     "light-3": "#e6e6e6",
     "hero": "rgba(212, 242, 255, 0.8)",
-    "hero-solid": "D4F2F1"
+    "hero-solid": "D4F2F1",
+    "frozen-bg": "#F6F6F6",
+    "battleshipGrey": "#65717B",
+    "veryLightGrey": "#E9EBED"
   },
 
   "radii": {
@@ -160,6 +163,105 @@
   },
 
   "----------------------------- Variants": "-----------------------------",
+  "elements": {
+    "input": {
+      "base": {
+        "fontFamily": "base",
+        "fontSize": "base",
+        "lineHeight": 1.33,
+        "color": "text",
+        "borderRadius": "4px",
+        "appearance": "none",
+        "border": "none",
+        "background": "none",
+        "boxSizing": "border-box",
+        "display": "flex",
+        "flex": 1,
+        "position": "relative",
+        "verticalAlign": "middle",
+        "width": "100%",
+        "&:focus": {
+          "outline": "none"
+        },
+        "&:disabled": {
+          "outline": "none",
+          "border": "none",
+          "color": "battleshipGrey",
+          "backgroundColor": "veryLightGrey"
+        }
+      },
+      "wrapper": {
+        "backgroundColor": "white",
+        "boxSizing": "border-box",
+        "display": "flex",
+        "position": "relative",
+        "borderRadius": "3px"
+      },
+      "frozen": {
+        "base": {
+          "backgroundColor": "frozen-bg",
+          "borderRadius": "3px"
+        },
+        "button": {
+          "background": "none",
+          "border": "none",
+          "height": "28px",
+          "padding": "0 24px",
+          "width": "69px",
+          "cursor": "pointer",
+          ":focus": {
+            "outline": "2px solid",
+            "outlineColor": "#008fe9"
+          },
+          "&::-moz-focus-inner": { "border": 0 }
+        },
+        "hidden": {
+          "display": "none"
+        }
+      },
+      "affix": {
+        "base": {
+          "fontFamily": "base",
+          "fontSize": "base",
+          "lineHeight": "base",
+          "textAlign": "center",
+          "boxSizing": "border-box",
+          "alignItems": "center",
+          "display": "flex" 
+        },
+        "prefix": {
+          "variant": "elements.input.affix.base",
+          "borderRightStyle": "solid",
+          "borderRightWidth": 1
+        },
+        "suffix": {
+          "variant": "elements.input.affix.base",
+          "borderLeftStyle": "solid",
+          "borderLeftWidth": 1
+        }
+      }
+    },
+
+    "input-alert": {
+      "fontFamily": "base",
+      "fontSize": "base",
+      "lineHeight": 1.38,
+      "color": "white",
+      "padding": 12,
+      "position": "relative",
+      "borderRadius": "sm",
+      "notificationColor": "#65717B",
+      "alertColor": "#DB1818",
+      "before": {
+        "position": "absolute",
+        "content": "''",
+        "width": 0,
+        "height": 0,
+        "borderBottomStyle": "solid"
+      }
+    }  
+  },
+  
   "compounds": {
     "card": {
       "base": {

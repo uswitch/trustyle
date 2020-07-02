@@ -17,37 +17,23 @@ const ARROW_SIZE = 8
 export const InputAlert: React.FC<Props> = ({ type, children, ...props }) => {
   const { theme }: any = useThemeUI()
 
-  const padding = get(theme, 'elements.input-alert.padding', theme.space.xs)
-  const notificationColor = get(
-    theme,
-    'elements.input-alert.notificationColor',
-    '#65717b'
-  )
-  const alertColor = get(theme, 'elements.input-alert.alertColor', '#db1818')
+  const padding = get(theme, 'elements.input-alert.padding')
+  const notificationColor = get(theme, 'elements.input-alert.notificationColor')
+  const alertColor = get(theme, 'elements.input-alert.alertColor')
 
   return (
     <div
       {...props}
       sx={{
-        fontFamily: 'base',
-        fontSize: 'base',
-        lineHeight: 1.38,
-        color: get(theme, 'elements.input-alert.color', 'white'),
-        padding: padding,
+        variant: 'elements.input-alert',
         marginTop: `calc(${ARROW_SIZE}px + ${padding}px)`,
-        position: 'relative',
-        borderRadius: get(theme, 'elements.input-alert.radii', theme.radii.sm),
         backgroundColor: type === 'alert' ? alertColor : notificationColor,
         '&:before': {
-          position: 'absolute',
-          content: "''",
+          variant: 'elements.input-alert.before',
           top: -ARROW_SIZE,
-          width: 0,
-          height: 0,
           borderLeft: `${ARROW_SIZE}px solid transparent`,
           borderRight: `${ARROW_SIZE}px solid transparent`,
           borderBottomWidth: ARROW_SIZE,
-          borderBottomStyle: 'solid',
           borderBottomColor: type === 'alert' ? alertColor : notificationColor
         }
       }}
