@@ -21,82 +21,85 @@ const sizeOptions = {
   Small: 'small'
 }
 
-export const AllVariants = () => (
-  <div css={css({ padding: number('Padding', 10) })}>
-    {theme() &&
-      Object.keys(theme().buttons.variants).map((key, index) => (
-        <React.Fragment key={index}>
-          <Button
-            variant={key as Variant}
-            disabled={boolean('Disabled', false)}
-            onClick={action(`${key}-click`)}
-            size={select('Sizes', sizeOptions, 'large')}
-          >
-            {text(`${key} label`, `${key} button`)}
-            {key.match('icon') && (
-              <Icon
-                color={theme().colors.primary}
-                direction="right"
-                glyph="caret"
-                size={20}
-              />
-            )}
-          </Button>
-          <Spacer />
-          <Button
-            variant={key as Variant}
-            disabled={boolean('Disabled', false)}
-            onClick={action(`${key}-click`)}
-            iconPosition="right"
-            size={select('Sizes', sizeOptions, 'large')}
-          >
-            {text(`${key} label`, `${key} button`)}
+export const AllVariants = () => {
+  console.log(theme())
+  return (
+    <div css={css({ padding: number('Padding', 10) })}>
+      {theme() &&
+        Object.keys(theme().elements.buttons.variants).map((key, index) => (
+          <React.Fragment key={index}>
+            <Button
+              variant={key as Variant}
+              disabled={boolean('Disabled', false)}
+              onClick={action(`${key}-click`)}
+              size={select('Sizes', sizeOptions, 'large')}
+            >
+              {text(`${key} label`, `${key} button`)}
+              {key.match('icon') && (
+                <Icon
+                  color={theme().colors.primary}
+                  direction="right"
+                  glyph="caret"
+                  size={20}
+                />
+              )}
+            </Button>
+            <Spacer />
+            <Button
+              variant={key as Variant}
+              disabled={boolean('Disabled', false)}
+              onClick={action(`${key}-click`)}
+              iconPosition="right"
+              size={select('Sizes', sizeOptions, 'large')}
+            >
+              {text(`${key} label`, `${key} button`)}
 
-            <Icon
-              color={theme().colors.primary}
-              direction="right"
-              glyph="caret"
-              size={20}
-            />
-          </Button>
-          <Spacer />
-          <Button
-            variant={key as Variant}
-            disabled={boolean('Disabled', false)}
-            onClick={action(`${key}-click`)}
-            iconPosition="left"
-            size={select('Sizes', sizeOptions, 'large')}
-          >
-            <Icon
-              color={theme().colors.primary}
-              direction="right"
-              glyph="caret"
-              size={20}
-            />
-            {text(`${key} label`, `${key} button`)}
-          </Button>
-          <Spacer />
-          <Button
-            variant={key as Variant}
-            inverse
-            disabled={boolean('Disabled', false)}
-            onClick={action(`${key}-click`)}
-          >
-            {`inverse ${key} button`}
-            {key.match('icon') && (
               <Icon
                 color={theme().colors.primary}
                 direction="right"
                 glyph="caret"
                 size={20}
               />
-            )}
-          </Button>
-          <Spacer />
-        </React.Fragment>
-      ))}
-  </div>
-)
+            </Button>
+            <Spacer />
+            <Button
+              variant={key as Variant}
+              disabled={boolean('Disabled', false)}
+              onClick={action(`${key}-click`)}
+              iconPosition="left"
+              size={select('Sizes', sizeOptions, 'large')}
+            >
+              <Icon
+                color={theme().colors.primary}
+                direction="right"
+                glyph="caret"
+                size={20}
+              />
+              {text(`${key} label`, `${key} button`)}
+            </Button>
+            <Spacer />
+            <Button
+              variant={key as Variant}
+              inverse
+              disabled={boolean('Disabled', false)}
+              onClick={action(`${key}-click`)}
+            >
+              {`inverse ${key} button`}
+              {key.match('icon') && (
+                <Icon
+                  color={theme().colors.primary}
+                  direction="right"
+                  glyph="caret"
+                  size={20}
+                />
+              )}
+            </Button>
+            <Spacer />
+          </React.Fragment>
+        ))}
+    </div>
+  )
+}
 
 AllVariants.story = {
   parameters: {

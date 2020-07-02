@@ -315,6 +315,80 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "buttons": {
+      "base": {
+        "boxSizing": "border-box",
+        "fontWeight": "bold",
+        "border": "none",
+        "borderRadius": "50vh",
+        "textAlign": "center",
+        ":disabled": {
+          "opacity": "0.3",
+          "cursor": "not-allowed"
+        },
+        "btnSize": {
+          "large": {
+            "paddingX": "xl",
+            "paddingY": "base",
+            "fontSize": "md"
+          },
+          "small": {
+            "paddingX": 40,
+            "paddingY": 13,
+            "fontSize": "sm"
+          }
+        }
+      },
+  
+      "variants": {
+        "primary": {
+          "variant": "elements.buttons.base",
+          "color": "experimental-text",
+          "backgroundColor": "primary",
+          ":hover:not(:disabled)": {
+            "backgroundColor": "primary--dark"
+          },
+          ":focus": {
+            "backgroundColor": "primary--dark"
+          },
+          ":active": {
+            "backgroundColor": "primary--dark"
+          }
+        },
+  
+        "secondary": {
+          "variant": "elements.buttons.base",
+          "color": "grey-0",
+          "backgroundColor": "button-secondary",
+          ":hover:not(:disabled)": {
+            "backgroundColor": "button-secondary--hover"
+          },
+          ":focus": {
+            "backgroundColor": "button-secondary--hover"
+          },
+          ":active": {
+            "backgroundColor": "button-secondary--hover"
+          }
+        },
+  
+        "link": {
+          "variant": "elements.buttons.base",
+          "color": "grey-100",
+          "background": "none",
+          "textDecoration": "underline"
+        },
+  
+        "control": {
+          "boxSizing": "border-box",
+          "padding": "sm",
+          "border": "1px solid",
+          "borderColor": "grey-20",
+          "borderRadius": 4,
+          "backgroundColor": "white"
+        }
+      }
+    },
+    
     "hero": {
       "wrapper": {
         "background": "linear-gradient(172deg, #924A8B 28%, #AF4C83 100%)",
@@ -929,80 +1003,6 @@
         }
       },
       "light": {}
-    }
-  },
-
-  "buttons": {
-    "base": {
-      "boxSizing": "border-box",
-      "fontWeight": "bold",
-      "border": "none",
-      "borderRadius": "50vh",
-      "textAlign": "center",
-      ":disabled": {
-        "opacity": "0.3",
-        "cursor": "not-allowed"
-      },
-      "btnSize": {
-        "large": {
-          "paddingX": "xl",
-          "paddingY": "base",
-          "fontSize": "md"
-        },
-        "small": {
-          "paddingX": 40,
-          "paddingY": 13,
-          "fontSize": "sm"
-        }
-      }
-    },
-
-    "variants": {
-      "primary": {
-        "variant": "buttons.base",
-        "color": "experimental-text",
-        "backgroundColor": "primary",
-        ":hover:not(:disabled)": {
-          "backgroundColor": "primary--dark"
-        },
-        ":focus": {
-          "backgroundColor": "primary--dark"
-        },
-        ":active": {
-          "backgroundColor": "primary--dark"
-        }
-      },
-
-      "secondary": {
-        "variant": "buttons.base",
-        "color": "grey-0",
-        "backgroundColor": "button-secondary",
-        ":hover:not(:disabled)": {
-          "backgroundColor": "button-secondary--hover"
-        },
-        ":focus": {
-          "backgroundColor": "button-secondary--hover"
-        },
-        ":active": {
-          "backgroundColor": "button-secondary--hover"
-        }
-      },
-
-      "link": {
-        "variant": "buttons.base",
-        "color": "grey-100",
-        "background": "none",
-        "textDecoration": "underline"
-      },
-
-      "control": {
-        "boxSizing": "border-box",
-        "padding": "sm",
-        "border": "1px solid",
-        "borderColor": "grey-20",
-        "borderRadius": 4,
-        "backgroundColor": "white"
-      }
     }
   },
 
