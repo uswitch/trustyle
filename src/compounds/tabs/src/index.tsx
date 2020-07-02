@@ -20,8 +20,8 @@ const TabLink: React.FC<TabLinkProps> = ({ title, isActive, ...props }) => {
       <div
         sx={{
           variant: isActive
-            ? 'compounds.collectionTabs.variants.isActive.container'
-            : 'compounds.collectionTabs.base.container'
+            ? 'compounds.collection-tabs.variants.isActive.container'
+            : 'compounds.collection-tabs.base.container'
         }}
       >
         <div>
@@ -40,7 +40,7 @@ const TabContent: React.FC<TabContentProps> = ({ children, active }) => {
   return (
     <div
       sx={{
-        variant: 'compounds.collectionTabs.variants.tabContentSpacing',
+        variant: 'compounds.collection-tabs.variants.tabContentSpacing',
         display: active ? 'block' : 'none'
       }}
     >
@@ -174,14 +174,14 @@ export const Tabs: React.FC<TabsProps> = ({ children, className }) => {
           paddingTop: `${padding}px`,
           position: 'relative',
           pointer: 'grab',
-          variant: 'compounds.collectionTabs.variants.borderBottom',
+          variant: 'compounds.collection-tabs.variants.borderBottom',
           '::after': {
             content: showRightBorder ? '""' : 'none',
-            variant: 'compounds.collectionTabs.variants.overflowBorderRight'
+            variant: 'compounds.collection-tabs.variants.overflowBorderRight'
           },
           '::before': {
             content: showLeftBorder ? '""' : 'none',
-            variant: 'compounds.collectionTabs.variants.overflowBorderLeft'
+            variant: 'compounds.collection-tabs.variants.overflowBorderLeft'
           }
         }}
       >
@@ -202,7 +202,9 @@ export const Tabs: React.FC<TabsProps> = ({ children, className }) => {
           <Row direction="row" wrap={false}>
             {React.Children.map(children, (child, index) => (
               <Col
-                sx={{ variant: 'compounds.collectionTabs.variants.tabSpacing' }}
+                sx={{
+                  variant: 'compounds.collection-tabs.variants.tabSpacing'
+                }}
                 key={index}
               >
                 <TabLink

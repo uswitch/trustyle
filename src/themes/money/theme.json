@@ -935,7 +935,7 @@
       }
     },
 
-    "collectionTabs": {
+    "collection-tabs": {
       "base":{
         "container": {
           "px": "xxs",
