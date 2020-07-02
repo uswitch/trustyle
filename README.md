@@ -10,7 +10,7 @@ To run storybook locally `npm start`.
 The packages are all built using the same build step. Run `npm run build` to build all the packages using `tsc`. All files matching `src/**/*.{ts,tsx}` are included and output is written to the `lib` directory within each package.
 
 To add a new element, copy the template to the src/elements directory, update the package.json with the name and add your source code.
-
+ 
 ## Publishing
 
 **Do not do this until you are ready to merge and your PR has been approved!** Justification below.

@@ -12,7 +12,8 @@
 
   "shadows": {
     "box": "2px 2px 25px #0004",
-    "linkInset": "inset 0 0 0 1px #008fe9"
+    "linkInset": "inset 0 0 0 1px #008fe9",
+    "plumInset": "inset 0 0 0 1px #924A8B"
   },
 
   "fonts": {
@@ -450,9 +451,235 @@
           }
         }
       }
-    }
-  },
+    },
 
+    "input": {
+      "base": {
+        "fontFamily": "base",
+        "fontSize": "base",
+        "lineHeight": 1.33,
+        "color": "text",
+        "appearance": "none",
+        "border": "none",
+        "background": "none",
+        "boxSizing": "border-box",
+        "display": "flex",
+        "flex": 1,
+        "position": "relative",
+        "verticalAlign": "middle",
+        "width": "100%",
+        "&:focus": {
+          "outline": "none"
+        },
+        "&:disabled": {
+          "outline": "none",
+          "border": "none",
+          "color": "grey-60",
+          "backgroundColor": "grey-20"
+        }
+      },
+      "wrapper": {
+        "backgroundColor": "white",
+        "boxSizing": "border-box",
+        "display": "flex",
+        "position": "relative",
+        "borderRadius": "4px"
+      },
+      "default": {
+        "color": "grey-40"
+      },
+      "error": {
+        "color": "error"
+      },
+      "frozen": {
+        "base": {
+          "backgroundColor": "grey-10",
+          "borderRadius": "4px",
+          "p": {
+            "margin": 0
+          }
+        },
+        "button": {
+          "background": "none",
+          "border": "none",
+          "borderLeft": "none",
+          "height": "28px",
+          "padding": "0 24px",
+          "width": "69px",
+          "cursor": "pointer",
+          "color": "grey-80",
+          ":focus": {
+            "outline": "2px solid",
+            "outlineColor": "plum"
+          },
+          "&::-moz-focus-inner": { "border": 0 }
+        },
+        "hidden": {
+          "display": "none"
+        }
+      },
+      "focus": {
+        "color": "plum"
+      },
+      "affix": {
+        "base": {
+          "fontFamily": "base",
+          "fontSize": "base",
+          "lineHeight": "base",
+          "textAlign": "center",
+          "boxSizing": "border-box",
+          "alignItems": "center",
+          "display": "flex"  
+        },
+        "prefix": {
+          "variant": "elements.input.affix.base",
+          "borderRightStyle": "none",
+          "iconColor": "grey-80"
+        },
+        "suffix": {
+          "variant": "elements.input.affix.base",
+          "borderLeftStyle": "none"
+        }
+      },
+      "radioish": {
+        "base": {
+          "&:checked + span": {
+            "borderColor": "grey-40",
+            "color": "grey-80",
+            "&::before": {
+              "borderColor": "black"
+            }
+          },
+          "&:focus + span": {
+            "borderColor": "plum",
+            "boxShadow": "plumInset"
+          }
+        },
+        "label": {
+          "borderColor": "grey-40",
+          "borderStyle": "solid",
+          "borderRadius": "4px",
+          "borderWidth": "1px",
+          "color": "grey-60",
+          "fontWeight": "normal",
+          "padding": "11px 12px 11px 0",
+          "&:before": {
+            "borderColor": "grey-30",
+            "borderStyle": "solid",
+            "borderWidth": "2px"
+          }
+        },
+        "error": {
+          "variant": "elements.input.radioish.label",
+          "color": "error"
+        },
+        "variants": {
+          "normal": {
+            "variant": "elements.input.radioish.base"
+          },
+          "slim": {
+            "variant": "elements.input.radioish.base"
+          }
+        }
+      },
+      "radio": {
+        "base": {
+          "variant": "elements.input.radioish.base",
+          "&:checked + span": {
+            "variant": "elements.input.radioish.base.&:checked + span",
+            "&::before": {
+              "variant": "elements.input.radioish.base.&:checked + span.&::before",
+              "borderColor": "plum",
+              "backgroundColor": "plum",
+              "boxShadow": "inset 0 0 0 2px #fff"
+            }
+          }
+        },
+        "label": {
+          "variant": "elements.input.radioish.label",
+          "&:before": {
+            "variant": "elements.input.radioish.label.&:before",
+            "borderRadius": "50%"
+          }
+        }
+      },
+      "checkbox": {
+        "base": {
+          "variant": "elements.input.radioish.base",
+          "&:checked + span": {
+            "variant": "elements.input.radioish.base.&:checked + span",
+            "&::before": {
+              "variant": "elements.input.radioish.base.&:checked + span.&::before",
+              "backgroundImage": "url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='-1 -2 14 12'%3E%3Cpath d='M9.603 1L11 2.507 4.681 9 1 4.898l1.453-1.446L4.74 5.999z' /%3E%3C/svg%3E\")",
+              "backgroundSize": "16px 16px",
+              "backgroundColor": "plum",
+              "borderColor": "plum"
+            }
+          }
+        },
+        "label": {
+          "variant": "elements.input.radioish.label",
+          "&:before": {
+            "variant": "elements.input.radioish.label.&:before",
+            "borderRadius": "4px"
+          }
+        },
+        "variants": {
+          "normal": {
+            "variant": "elements.input.checkbox.base"
+          },
+          "slim": {
+            "variant": "elements.input.checkbox.base",
+            "& + span": {
+              "padding": "0px",
+              "border": "none"
+            },
+            "&:checked + span": {
+              "variant": "elements.input.checkbox.base.&:checked + span",
+              "boxShadow": "none",
+              "&::before": {
+                "variant": "elements.input.checkbox.base.&:checked + span.&::before"
+              }
+            },
+            "&:focus + span": {},
+            "&:focus + span::before": {
+              "variant": "elements.input.focus"
+            }
+          }
+        }
+      },
+      "tile": {
+        "inputColor": "#008fe9",
+        "borderColor": "#b0b8bf",
+        "borderRadius": "3px",
+        "borderStyle": "solid",
+        "borderWidth": "1px",
+        "color": "slate-grey",
+        "fontWeight": "normal",
+        "before": {
+          "content": "' '",
+          "borderColor": "#b0b8bf",
+          "borderStyle": "solid",
+          "borderWidth": "2px"
+        }
+      }
+    },
+
+    "input-alert": {
+      "fontFamily": "base",
+      "fontSize": "base",
+      "lineHeight": 1.38,
+      "color": "error",
+      "padding": 8,
+      "position": "relative",
+      "borderRadius": "sm",
+      "notificationColor": "none",
+      "alertColor": "none",
+      "before": {
+        "content": "none"
+      }
+    }  
+  },
 
   "compounds": {
     "accordion": {
