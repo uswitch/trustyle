@@ -492,7 +492,7 @@
       },
       "variants": {
         "hero": {
-          "variant": "cta2.base.main",
+          "variant": "elements.cta.base.main",
           "borderWidth": 0,
           "backgroundColor": "none",
           "paddingLeft": ["md", "lg"],
@@ -500,16 +500,16 @@
             "display": "none"
           },
           "button": {
-            "variant": "cta2.base.button"
+            "variant": "elements.cta.base.button"
           }
         },
         "hero-white-bg": {
           "main": {
-            "variant": "cta2.variants.hero.main",
+            "variant": "elements.cta.variants.hero.main",
             "backgroundColor": "white"
           },
           "button": {
-            "variant": "cta2.base.button"
+            "variant": "elements.cta.base.button"
           }
         }
       }

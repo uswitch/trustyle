@@ -283,14 +283,14 @@
             "color": "white"
           },
           "title": {
-            "variant": "cta2.base.title",
+            "variant": "elements.cta.base.title",
             "color": "inherit"
           },
           "text": {
-            "variant": "cta2.base.text"
+            "variant": "elements.cta.base.text"
           },
           "button": {
-            "variant": "cta2.base.button"
+            "variant": "elements.cta.base.button"
           }
         },
         "hero-white-bg": {
@@ -298,13 +298,13 @@
             "backgroundColor": "white"
           },
           "title": {
-            "variant": "cta2.base.title"
+            "variant": "elements.cta.base.title"
           },
           "text": {
-            "variant": "cta2.base.text"
+            "variant": "elements.cta.base.text"
           },
           "button": {
-            "variant": "cta2.base.button"
+            "variant": "elements.cta.base.button"
           }
         }
       }
