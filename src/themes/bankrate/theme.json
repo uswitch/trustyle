@@ -250,6 +250,16 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "call-out": {
+      "main": {
+        "backgroundColor": "grey-10",
+        "px": ["sm", "md"]
+      },
+      "icon": {
+        "backgroundColor": "grey-80"
+      }
+    },
+
     "cta": {
       "base": {
         "main": {
@@ -646,16 +656,6 @@
       "wrapper": {
         "borderRadius": "3px"
       }
-    }
-  },
-
-  "callOut": {
-    "main": {
-      "backgroundColor": "grey-10",
-      "px": ["sm", "md"]
-    },
-    "icon": {
-      "backgroundColor": "grey-80"
     }
   },
 

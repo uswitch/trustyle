@@ -13,7 +13,7 @@ interface ListLinkProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const styles = (variant: Variant, element?: string) =>
-  `elements.linkList.variants.${variant}${element ? `.${element}` : ''}`
+  `elements.link-list.variants.${variant}${element ? `.${element}` : ''}`
 
 export const LinkList: React.FC<ListLinkProps> = ({
   children,
