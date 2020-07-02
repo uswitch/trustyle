@@ -315,6 +315,12 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "icon-tile": {
+      "text": {
+        "color": "grey-80"
+      }
+    },
+    
     "call-out": {
       "main": {
         "backgroundColor": "grey-10",
@@ -1075,12 +1081,6 @@
         }
       },
       "light": {}
-    }
-  },
-
-  "iconTile": {
-    "text": {
-      "color": "grey-80"
     }
   },
 
