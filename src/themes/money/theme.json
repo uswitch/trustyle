@@ -315,6 +315,15 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "list": {
+      "bullet": {
+        "color": "jaffa"
+      },
+      "numeric": {
+        "color": "jaffa"
+      }
+    },
+    
     "buttons": {
       "base": {
         "boxSizing": "border-box",
@@ -1003,15 +1012,6 @@
         }
       },
       "light": {}
-    }
-  },
-
-  "list": {
-    "bullet": {
-      "color": "jaffa"
-    },
-    "numeric": {
-      "color": "jaffa"
     }
   },
 
