@@ -62,9 +62,9 @@ const InlineIcon = ({ direction }: { direction: Direction }) => {
   const { theme }: any = useThemeUI()
 
   let color = 'black'
-  if (theme.pagination) {
+  if (theme.elements.pagination) {
     // This step is necessary as the icon component doesn't support themes yet
-    const processedTheme: any = css(theme.pagination)(theme)
+    const processedTheme: any = css(theme.elements.pagination)(theme)
     if (processedTheme.arrow && processedTheme.arrow.color) {
       color = processedTheme.arrow.color
     }
@@ -99,7 +99,7 @@ const Pagination: React.FC<Props> = ({
   const liStyling = {
     display: 'inline-block',
     padding: 'xs',
-    variant: 'pagination.li'
+    variant: 'elements.pagination.li'
   }
 
   const anchorStyling = {
@@ -114,13 +114,13 @@ const Pagination: React.FC<Props> = ({
         listStyleType: 'none',
         marginLeft: 0,
         paddingLeft: 0,
-        variant: 'pagination.main'
+        variant: 'elements.pagination.main'
       }}
       className={className}
     >
       <li
         sx={{
-          ...(currentPage === 1 && theme.pagination?.arrowDisabled),
+          ...(currentPage === 1 && theme.elements.pagination?.arrowDisabled),
           ...liStyling
         }}
       >
@@ -141,8 +141,8 @@ const Pagination: React.FC<Props> = ({
           key={i}
           sx={{
             ...(number === currentPage
-              ? theme.pagination?.currentPage
-              : theme.pagination?.nonCurrentPage),
+              ? theme.elements.pagination?.currentPage
+              : theme.elements.pagination?.nonCurrentPage),
             ...liStyling
           }}
         >
@@ -161,7 +161,8 @@ const Pagination: React.FC<Props> = ({
       ))}
       <li
         sx={{
-          ...(currentPage === totalPages && theme.pagination?.arrowDisabled),
+          ...(currentPage === totalPages &&
+            theme.elements.pagination?.arrowDisabled),
           ...liStyling
         }}
       >
