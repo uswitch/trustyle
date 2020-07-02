@@ -959,7 +959,7 @@
       },
       "button-with-checkbox-checked": {
         "variant": "compounds.cookie-banner.button-with-checkbox",
-        "borderColor": "uswitch-navy"
+        "borderColor": "primary"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "variants": {
       "primary": {
         "variant": "buttons.base",
-        "backgroundColor": "uswitch-navy",
+        "backgroundColor": "primary",
         "color": "light-1",
         ":hover": {
           "backgroundColor": "grey-70"
@@ -1228,13 +1228,13 @@
           "border": "2px solid #FFAA55"
         },
         ":visited": {
-          "color": "uswitch-navy"
+          "color": "primary"
         }
       },
       "reversed": {
         "variant": "buttons.base",
         "color": "light-1",
-        "backgroundColor": "uswitch-navy",
+        "backgroundColor": "primary",
         "border": "2px solid",
         "borderColor": "light-1",
         ":hover": {
@@ -1251,16 +1251,16 @@
       },
       "link": {
         "variant": "buttons.base",
-        "color": "uswitch-navy",
+        "color": "primary",
         "background": "none",
         "textDecoration": "underline"
       },
       "inverse": {
         "variant": "buttons.base",
-        "color": "uswitch-navy",
+        "color": "primary",
         "backgroundColor": "light-1",
         "border": "2px solid",
-        "borderColor": "uswitch-navy",
+        "borderColor": "primary",
         ":hover": {
           "backgroundColor": "grey-100"
         },
@@ -1270,7 +1270,7 @@
           "cursor": "not-allowed"
         },
         ":visited": {
-          "color": "uswitch-navy"
+          "color": "primary"
         }
       }
     }
@@ -1317,7 +1317,7 @@
     "variants": {
       "primary": {
         "variant": "badge.base",
-        "backgroundColor": "uswitch-navy",
+        "backgroundColor": "primary",
         "color": "light-1"
       },
       "sponsored": {
@@ -1326,7 +1326,7 @@
         "fontSize": "xxs",
         "fontWeight": 500,
         "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
-        "backgroundColor": "uswitch-navy",
+        "backgroundColor": "primary",
         "color": "light-1"
       },
       "inverse": {

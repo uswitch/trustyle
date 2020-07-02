@@ -9,6 +9,7 @@ interface Props extends React.HTMLAttributes<any> {
 
 const AllThemes: React.FC<Props> = ({ themes = [], children }) => {
   const availableThemes = [
+    'uswitch-rebrand',
     'uswitch',
     'money',
     'journey',
