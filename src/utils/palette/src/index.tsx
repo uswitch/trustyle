@@ -35,11 +35,12 @@ export const Palette = ({ children, className, px = {}, ...props }: any) => {
   const palette = useContext(PaletteContext)
   const sx = createSx(palette, px)
 
+  // added padding to ensure margin is not applied to parent element
   return (
     <props.as
       {...props}
       className={`palette ${className}`}
-      sx={{ '&.palette': { ...sx, overflow: 'hidden' } }}
+      sx={{ '&.palette': { ...sx, padding: '1px 0' } }}
     >
       {children}
     </props.as>
