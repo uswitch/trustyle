@@ -39,9 +39,14 @@ const listItem = (item: string, color: Color) => (
     sx={{
       display: 'flex',
       marginX: 0,
+      alignItems: 'center',
       marginY: 'xs',
       svg: {
-        marginRight: 'xs'
+        marginRight: 'xs',
+        maxHeight: 18,
+        maxWidth: 18,
+        height: '100%',
+        width: '100%'
       }
     }}
   >
