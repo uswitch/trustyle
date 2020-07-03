@@ -134,13 +134,6 @@
     "border": 0
   },
 
-  "container": {
-    "sm": { "px": 20 },
-    "md": { "px": 72 },
-    "lg": { "px": 64, "width": 1280, "mx": "auto" },
-    "content": { "width": 1280, "px": 158, "mx": "auto" },
-    "hero": { "width": 1280, "mx": "auto", "px": 60 }
-  },
 
 
   "styles": {
@@ -209,6 +202,14 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "input": {
+      "textInput": {
+        "wrapper": {
+          "borderRadius": "3px"
+        }
+      }
+    },
+  
     "logo-collection": {
       "base": {
         "mr": "16px",
@@ -338,6 +339,8 @@
     }
   },
 
+
+
   "imageCalloutContent": {
     "sm": { "pt": "xl" },
     "lg": { "pt": "xl" }
@@ -359,12 +362,12 @@
     "column": { "flexDirection": "column", "alignItems": "center" }
   },
 
-  "input": {
-    "textInput": {
-      "wrapper": {
-        "borderRadius": "3px"
-      }
-    }
+  "container": {
+    "sm": { "px": 20 },
+    "md": { "px": 72 },
+    "lg": { "px": 64, "width": 1280, "mx": "auto" },
+    "content": { "width": 1280, "px": 158, "mx": "auto" },
+    "hero": { "width": 1280, "mx": "auto", "px": 60 }
   },
 
 

@@ -243,6 +243,14 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "input": {
+      "textInput": {
+        "wrapper": {
+          "borderRadius": "3px"
+        }
+      }
+    },
+
     "author": {
       "heading": {
       },
@@ -763,86 +771,15 @@
     }
   },
 
+
   "container": {
     "lg": { "maxWidth": 1210, "mx": "auto", "px": "md" }
   },
 
-  "input": {
-    "textInput": {
-      "wrapper": {
-        "borderRadius": "3px"
-      }
-    }
-  },
 
 
   "richTextModule": {
     "contentCols": 12,
     "contentSpan": 8
-  },
-
-
-
-  "----------------------------- Depreciated": "-----------------------------",
-
-  "sideNav": {
-    "internalLinkList": {
-      "listStyle": "none",
-      "pl": 0,
-      "pt": "xxs",
-      "pb": "xxs",
-      "m": 0
-    },
-    "internalLinkListItem": {
-      "base": {
-        "mb": 0,
-        "position": "relative",
-        ">a": {
-          "transition": "all 0.2s ease-in-out",
-          "display": "block",
-          "color": "grey-70",
-          "textDecoration": "none",
-          "fontSize": "sm",
-          "p": "12px 16px",
-          ":visited": {
-            "color": "grey-70"
-          }
-        }
-      },
-      "isActive": {
-        "variant": "sideNav.internalLinkListItem.base",
-        "color": "primary",
-        "bg": "rgb(247, 247, 248)",
-        "::after": {
-          "variant": "sideNav.internalLinkListItem.base.::after",
-          "content": "\"\"",
-          "position": "absolute",
-          "top": "0",
-          "left": "0",
-          "display": "block",
-          "width": 4,
-          "height": "100%",
-          "backgroundColor": "primary"
-        },
-        ">a": {
-          "variant": "sideNav.internalLinkListItem.base.>a",
-          "color": "primary",
-          "fontWeight": "bold",
-          "transform": "translateX(8px)",
-          ":visited": {
-            "color": "primary"
-          }
-        }
-      }
-    },
-    "additionalLink": {
-      "display": "block",
-      "mb": "xxs",
-      "color": "grey-80",
-      "pt": "xxs",
-      "pb": "xxs",
-      "textDecoration": "none"
-    }
   }
-
 }

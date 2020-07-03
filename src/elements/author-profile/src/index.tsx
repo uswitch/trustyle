@@ -30,7 +30,7 @@ const AuthorProfile: React.FC<Props> = ({
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'row',
-        variant: 'author-profile.main'
+        variant: 'elements.author-profile.main'
       }}
     >
       {authorImage && (
@@ -68,7 +68,7 @@ const AuthorProfile: React.FC<Props> = ({
             marginBottom: 'xxs',
             fontWeight: 'bold',
             paddingBottom: 0,
-            variant: 'author-profile.name'
+            variant: 'elements.author-profile.name'
           }}
           as="h2"
         >
@@ -92,7 +92,7 @@ const AuthorProfile: React.FC<Props> = ({
         </Styled.p>
         <div
           sx={{
-            variant: 'author-profile.details',
+            variant: 'elements.author-profile.details',
             marginTop: 'sm',
             paddingLeft: 'xs'
           }}

@@ -47,7 +47,7 @@ export const FrozenInput: React.FC<Props> = ({
           display: 'flex',
           height: '64px',
           justifyContent: 'space-between',
-          variant: 'input.frozen'
+          variant: 'elements.input.frozen'
         }}
       >
         <p
@@ -57,7 +57,7 @@ export const FrozenInput: React.FC<Props> = ({
             padding: '0 24px',
             textOverflow: 'ellipsis',
             width: `calc(100% - ${editIconWidth}px)`,
-            variant: 'input.frozen.text'
+            variant: 'elements.input.frozen.text'
           }}
         >
           {text}
