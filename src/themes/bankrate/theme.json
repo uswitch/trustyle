@@ -243,6 +243,36 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "breadcrumbs": {
+      "base": {
+        "main": {
+          "color": "grey-100"
+        },
+        "homeIcon": {
+          "color": "grey-100"
+        },
+        "title": {
+          "color": "grey-100"
+        }
+      },
+      "variants": {
+        "light": {
+          "main": {
+            "color": "grey-0"
+          },
+          "mobileLink": {
+            "color": "grey-0"
+          },
+          "homeIcon": {
+            "color": "grey-0"
+          },
+          "title": {
+            "color": "grey-0"
+          }
+        }
+      }
+    },
+
     "category": {
       "main": {
         "bg": "primary",
@@ -675,48 +705,6 @@
     "textInput": {
       "wrapper": {
         "borderRadius": "3px"
-      }
-    }
-  },
-
-  "breadcrumbs": {
-    "main": {
-      "color": "grey-60"
-    },
-    "homeIcon": {
-      "color": "grey-60"
-    },
-    "title": {
-      "color": "grey-100"
-    }
-  },
-
-  "breadcrumbs2": {
-    "base": {
-      "main": {
-        "color": "grey-100"
-      },
-      "homeIcon": {
-        "color": "grey-100"
-      },
-      "title": {
-        "color": "grey-100"
-      }
-    },
-    "variants": {
-      "light": {
-        "main": {
-          "color": "grey-0"
-        },
-        "mobileLink": {
-          "color": "grey-0"
-        },
-        "homeIcon": {
-          "color": "grey-0"
-        },
-        "title": {
-          "color": "grey-0"
-        }
       }
     }
   },

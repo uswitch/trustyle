@@ -305,6 +305,36 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "breadcrumbs": {
+      "base": {
+        "main": {
+          "color": "grey-60"
+        },
+        "homeIcon": {
+          "color": "grey-60"
+        },
+        "title": {
+          "color": "grey-100"
+        }
+      },
+      "variants": {
+        "light": {
+          "main": {
+            "color": "grey-0"
+          },
+          "mobileLink": {
+            "color": "grey-0"
+          },
+          "homeIcon": {
+            "color": "grey-0"
+          },
+          "title": {
+            "color": "grey-0"
+          }
+        }
+      }
+    },
+
     "category": {
       "contentSpan": [12, 6],
       "main": {
@@ -1256,36 +1286,6 @@
     },
     "title": {
       "color": "grey-100"
-    }
-  },
-
-  "breadcrumbs2": {
-    "base": {
-      "main": {
-        "color": "grey-60"
-      },
-      "homeIcon": {
-        "color": "grey-60"
-      },
-      "title": {
-        "color": "grey-100"
-      }
-    },
-    "variants": {
-      "light": {
-        "main": {
-          "color": "grey-0"
-        },
-        "mobileLink": {
-          "color": "grey-0"
-        },
-        "homeIcon": {
-          "color": "grey-0"
-        },
-        "title": {
-          "color": "grey-0"
-        }
-      }
     }
   },
 

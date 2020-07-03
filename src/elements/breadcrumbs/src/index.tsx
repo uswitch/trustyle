@@ -6,7 +6,9 @@ import get from '@uswitch/trustyle-utils.get'
 import { Icon } from '@uswitch/trustyle.icon'
 
 const lookup = (variant: string) =>
-  variant === 'base' ? 'breadcrumbs2.base' : `breadcrumbs2.variants.${variant}`
+  variant === 'base'
+    ? 'elements.breadcrumbs.base'
+    : `elements.breadcrumbs.variants.${variant}`
 
 interface HomeIconProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?: 'base' | 'light'

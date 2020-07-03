@@ -312,6 +312,38 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "breadcrumbs": {
+      "base": {
+        "main": {
+          "color": "uswitch-navy"
+        },
+        "homeIcon": {
+          "color": "uswitch-navy"
+        },
+        "title": {
+          "color": "uswitch-navy",
+          "fontWeight": "bold"
+        }
+      },
+      "variants": {
+        "light": {
+          "main": {
+            "color": "white"
+          },
+          "mobileLink": {
+            "color": "white"
+          },
+          "homeIcon": {
+            "color": "white"
+          },
+          "title": {
+            "variant": "elements.breadcrumbs.base.title",
+            "color": "white"
+          }
+        }
+      }
+    },
+
     "category": {
       "main": {
         "backgroundColor": "blue-50"
@@ -1385,54 +1417,6 @@
         "borderColor": "light-grey-blue",
         "borderStyle": "solid",
         "borderWidth": "2px"
-      }
-    }
-  },
-
-  "breadcrumbs": {
-    "wrapper": {
-      "py": "xs"
-    },
-    "main": {
-      "color": "uswitch-navy"
-    },
-    "homeIcon": {
-      "color": "uswitch-navy"
-    },
-    "title": {
-      "color": "uswitch-navy",
-      "fontWeight": "bold"
-    }
-  },
-
-  "breadcrumbs2": {
-    "base": {
-      "main": {
-        "color": "uswitch-navy"
-      },
-      "homeIcon": {
-        "color": "uswitch-navy"
-      },
-      "title": {
-        "color": "uswitch-navy",
-        "fontWeight": "bold"
-      }
-    },
-    "variants": {
-      "light": {
-        "main": {
-          "color": "white"
-        },
-        "mobileLink": {
-          "color": "white"
-        },
-        "homeIcon": {
-          "color": "white"
-        },
-        "title": {
-          "variant": "breadcrumbs.base.title",
-          "color": "white"
-        }
       }
     }
   },
