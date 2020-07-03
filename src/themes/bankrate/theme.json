@@ -118,6 +118,8 @@
     "border": 0
   },
 
+  "----------------------------- Base Styles": "-----------------------------",
+
   "styles": {
     "heading": {
       "fontFamily": "heading",
@@ -241,6 +243,22 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "category": {
+      "main": {
+        "bg": "primary",
+        "mb": "md"
+      },
+      "heading": {
+        "color": "grey-0"
+      },
+      "text": {
+        "color": "grey-0"
+      },
+      "breadcrumbs": {
+        "variant": "light"
+      }
+    },
+
     "call-out": {
       "main": {
         "backgroundColor": "grey-10",
@@ -658,22 +676,6 @@
       "wrapper": {
         "borderRadius": "3px"
       }
-    }
-  },
-
-  "categoryTitle": {
-    "main": {
-      "bg": "primary",
-      "mb": "md"
-    },
-    "heading": {
-      "color": "grey-0"
-    },
-    "text": {
-      "color": "grey-0"
-    },
-    "breadcrumbs": {
-      "variant": "light"
     }
   },
 

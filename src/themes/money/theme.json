@@ -305,6 +305,22 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "category": {
+      "contentSpan": [12, 6],
+      "main": {
+        "background": "linear-gradient(172deg, #924A8B 28%, #AF4C83 100%)"
+      },
+      "heading": {
+        "color": "grey-0"
+      },
+      "text": {
+        "color": "grey-0"
+      },
+      "breadcrumbs": {
+        "variant": "light"
+      }
+    },
+
     "pagination": {
       "arrow": {
         "color": "grey-100"
@@ -1228,22 +1244,6 @@
         }
       },
       "light": {}
-    }
-  },
-
-  "categoryTitle": {
-    "contentSpan": [12, 6],
-    "main": {
-      "background": "linear-gradient(172deg, #924A8B 28%, #AF4C83 100%)"
-    },
-    "heading": {
-      "color": "grey-0"
-    },
-    "text": {
-      "color": "grey-0"
-    },
-    "breadcrumbs": {
-      "variant": "light"
     }
   },
 
