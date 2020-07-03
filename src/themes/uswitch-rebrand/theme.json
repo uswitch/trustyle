@@ -387,6 +387,43 @@
 
   "----------------------------- Variants": "-----------------------------",
   "elements": {
+    "toggleSwitch": {
+      "base": {
+        "checked": {
+          "backgroundColor": "black",
+          "borderColor": "black",
+          "switch": {
+            "backgroundColor": "white",
+            "borderColor": "black"
+          }
+        },
+        "unchecked": {
+          "backgroundColor": "grey-05",
+          "borderColor": "grey-40",
+          "switch": {
+            "color": "grey-40",
+            "backgroundColor": "white",
+            "borderColor": "grey-40"
+          }
+        }
+      },
+      "variants": {
+        "compact": {
+          "checked": {
+            "switch": {
+              "backgroundColor": "black",
+              "color": "white",
+              "borderColor": "black"
+            }
+          },
+          "unchecked": {
+            "switch": {
+              "variant": "elements.toggleSwitch.base.unchecked.switch"
+            }
+          }
+        }
+      }
+    },
     "call-out": {
       "main": {
         "backgroundColor": "white",
@@ -1136,10 +1173,6 @@
         "mb": 0
       }
     },
-    "breadcrumb": {
-      "my": "sm",
-      "mx": 0
-    },
     "two-tone-heading": {
       "base": {
         "textAlign": [
@@ -1260,44 +1293,6 @@
       },
       "title": {
         "fontWeight": "bold"
-      }
-    }
-  },
-
-  "toggleSwitch2": {
-    "base": {
-      "checked": {
-        "backgroundColor": "black",
-        "borderColor": "black",
-        "switch": {
-          "backgroundColor": "white",
-          "borderColor": "black"
-        }
-      },
-      "unchecked": {
-        "backgroundColor": "grey-05",
-        "borderColor": "grey-40",
-        "switch": {
-          "color": "grey-40",
-          "backgroundColor": "white",
-          "borderColor": "grey-40"
-        }
-      }
-    },
-    "variants": {
-      "compact": {
-        "checked": {
-          "switch": {
-            "backgroundColor": "black",
-            "color": "white",
-            "borderColor": "black"
-          }
-        },
-        "unchecked": {
-          "switch": {
-            "variant": "toggleSwitch2.base.unchecked.switch"
-          }
-        }
       }
     }
   },

@@ -243,6 +243,57 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "toggleSwitch": {
+      "base": {
+        "base": {
+          "width": 70,
+          "height": 30,
+          "switch": {
+            "width": 28,
+            "height": 28
+          }
+        },
+        "checked": {
+          "variant": "elements.toggleSwitch.base.base",
+          "backgroundColor": "primary",
+          "borderColor": "primary",
+          "switch": {
+            "variant": "elements.toggleSwitch.base.base.switch",
+            "backgroundColor": "white",
+            "borderColor": "primary"
+          }
+        },
+        "unchecked": {
+          "variant": "elements.toggleSwitch.base.base",
+          "backgroundColor": "grey-20",
+          "borderColor": "grey-20",
+          "switch": {
+            "variant": "elements.toggleSwitch.base.base.switch",
+            "backgroundColor": "white",
+            "borderColor": "grey-20"
+          }
+        }
+      },
+      "variants": {
+        "compact": {
+          "checked": {
+            "switch": {
+              "variant": "elements.toggleSwitch.base.base.switch",
+              "backgroundColor": "primary",
+              "borderColor": "primary"
+            }
+          },
+          "unchecked": {
+            "switch": {
+              "variant": "elements.toggleSwitch.base.base.switch",
+              "backgroundColor": "grey-20",
+              "borderColor": "grey-20"
+            }
+          }
+        }
+      }
+    },
+
     "breadcrumbs": {
       "base": {
         "main": {
@@ -721,88 +772,6 @@
     },
     "text": {
       "fontWeight": "base"
-    }
-  },
-
-  "toggleSwitch": {
-    "base": {
-      "width": 70,
-      "height": 30,
-      "switch": {
-        "width": 28,
-        "height": 28
-      }
-    },
-    "checked": {
-      "variant": "toggleSwitch.base",
-      "backgroundColor": "primary",
-      "borderColor": "primary",
-      "switch": {
-        "variant": "toggleSwitch.base.switch",
-        "backgroundColor": "white",
-        "borderColor": "primary"
-      }
-    },
-    "unchecked": {
-      "variant": "toggleSwitch.base",
-      "backgroundColor": "grey-20",
-      "borderColor": "grey-20",
-      "switch": {
-        "variant": "toggleSwitch.base.switch",
-        "backgroundColor": "white",
-        "borderColor": "grey-20"
-      }
-    }
-  },
-
-  "toggleSwitch2": {
-    "base": {
-      "base": {
-        "width": 70,
-        "height": 30,
-        "switch": {
-          "width": 28,
-          "height": 28
-        }
-      },
-      "checked": {
-        "variant": "toggleSwitch2.base.base",
-        "backgroundColor": "primary",
-        "borderColor": "primary",
-        "switch": {
-          "variant": "toggleSwitch2.base.base.switch",
-          "backgroundColor": "white",
-          "borderColor": "primary"
-        }
-      },
-      "unchecked": {
-        "variant": "toggleSwitch2.base.base",
-        "backgroundColor": "grey-20",
-        "borderColor": "grey-20",
-        "switch": {
-          "variant": "toggleSwitch2.base.base.switch",
-          "backgroundColor": "white",
-          "borderColor": "grey-20"
-        }
-      }
-    },
-    "variants": {
-      "compact": {
-        "checked": {
-          "switch": {
-            "variant": "toggleSwitch2.base.base.switch",
-            "backgroundColor": "primary",
-            "borderColor": "primary"
-          }
-        },
-        "unchecked": {
-          "switch": {
-            "variant": "toggleSwitch2.base.base.switch",
-            "backgroundColor": "grey-20",
-            "borderColor": "grey-20"
-          }
-        }
-      }
     }
   },
 
