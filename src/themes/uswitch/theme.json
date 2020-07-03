@@ -312,6 +312,21 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "author": {
+      "heading": {
+        "color": "grey-80"
+      },
+      "link": {
+        "fontWeight": "inherit"
+      },
+      "text": {
+        "color": "grey-70"
+      },
+      "main": {
+        "marginBottom": "sm"
+      }
+    },
+    
     "logo-collection": {
       "base": {
         "outer": {
@@ -1279,21 +1294,6 @@
     "right": { "flexDirection": "row-reverse", "alignItems": "flex-start" },
     "left": { "flexDirection": "row", "alignItems": "flex-start" },
     "column": { "flexDirection": "column", "alignItems": "center" }
-  },
-
-  "author": {
-    "heading": {
-      "color": "grey-80"
-    },
-    "link": {
-      "fontWeight": "inherit"
-    },
-    "text": {
-      "color": "grey-70"
-    },
-    "main": {
-      "marginBottom": "sm"
-    }
   },
 
   "badge": {

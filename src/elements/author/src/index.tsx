@@ -33,7 +33,7 @@ const Author: React.FC<Props> = ({
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'row',
-        variant: 'author.main'
+        variant: 'elements.author.main'
       }}
       className={className}
     >
@@ -45,7 +45,7 @@ const Author: React.FC<Props> = ({
             height: [48, 56],
             width: [48, 56],
             marginRight: 'sm',
-            variant: 'author.image-link'
+            variant: 'elements.author.image-link'
           }}
         >
           <authorImage.type
@@ -54,7 +54,7 @@ const Author: React.FC<Props> = ({
               maxHeight: '100%',
               maxWidth: '100%',
               borderRadius: '50%',
-              variant: 'author.image'
+              variant: 'elements.author.image'
             }}
           />
         </Styled.a>
@@ -67,7 +67,7 @@ const Author: React.FC<Props> = ({
             marginBottom: 'xxs',
             fontWeight: 'bold',
             paddingBottom: 0,
-            variant: 'author.heading'
+            variant: 'elements.author.heading'
           }}
           as="h2"
         >
@@ -76,7 +76,7 @@ const Author: React.FC<Props> = ({
             sx={{
               color: 'inherit',
               textDecoration: 'none',
-              variant: 'author.link'
+              variant: 'elements.author.link'
             }}
           >
             Written by {name}, {role}
@@ -86,14 +86,14 @@ const Author: React.FC<Props> = ({
           sx={{
             fontSize: 'xxs',
             marginY: 0,
-            variant: 'author.text'
+            variant: 'elements.author.text'
           }}
         >
           <Styled.a
             href={editorUrl}
             sx={{
               textDecoration: 'none',
-              variant: 'author.link'
+              variant: 'elements.author.link'
             }}
           >
             {editorName &&
