@@ -312,6 +312,15 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "progress-bar": {
+      "main": {
+        "backgroundColor": "blue-25"
+      },
+      "progress": {
+        "backgroundColor": "blue"
+      }
+    },
+
     "badge": {
       "base": {
         "paddingX": [14, 23],
@@ -416,6 +425,7 @@
         }
       }
     },
+
     "breadcrumbs": {
       "base": {
         "main": {
@@ -825,6 +835,69 @@
   },
 
   "compounds": {
+    "product-table": {
+      "row": {
+        "main": {
+          "borderColor": "grey-30"
+        },
+        "header": {
+          "borderBottomColor": "grey-20"
+        },
+        "pretitle": {
+          "color": "grey-80"
+        },
+        "subtitle": {
+          "color": "grey-80"
+        }
+      },
+      "cellBase": {
+        "variants": {
+          "inSplit": {
+            "borderTopColor": "grey-20"
+          }
+        }
+      },
+      "addonFooter": {
+        "main": {
+          "borderTopColor": "grey-20"
+        }
+      },
+      "cellImage": {
+        "main": {
+          "padding": "sm"
+        }
+      },
+      "cellContent": {
+        "main": {},
+        "label": {
+          "color": "grey-80"
+        },
+        "content": {},
+        "accent": {
+          "backgroundColor": "grey-05"
+        },
+        "variants": {
+          "inSplit": {
+            "main": {},
+            "label": {
+              "color": "grey-80"
+            },
+            "content": {},
+            "accent": {
+              "backgroundColor": "grey-05"
+            }
+          }
+        }
+      },
+      "cellCta": {
+        "buttonWrapper": {
+          "a, button": {
+            "width": "100%"
+          }
+        }
+      }
+    },
+
     "stepper": {
       "unselectedNumberCircle": {
         "border": "1px black solid",
@@ -1455,78 +1528,6 @@
         "borderColor": "light-grey-blue",
         "borderStyle": "solid",
         "borderWidth": "2px"
-      }
-    }
-  },
-
-  "progressBar": {
-    "main": {
-      "backgroundColor": "blue-25"
-    },
-    "progress": {
-      "backgroundColor": "blue"
-    }
-  },
-
-  "productTable": {
-    "row": {
-      "main": {
-        "borderColor": "grey-30"
-      },
-      "header": {
-        "borderBottomColor": "grey-20"
-      },
-      "pretitle": {
-        "color": "grey-80"
-      },
-      "subtitle": {
-        "color": "grey-80"
-      }
-    },
-    "cellBase": {
-      "variants": {
-        "inSplit": {
-          "borderTopColor": "grey-20"
-        }
-      }
-    },
-    "addonFooter": {
-      "main": {
-        "borderTopColor": "grey-20"
-      }
-    },
-    "cellImage": {
-      "main": {
-        "padding": "sm"
-      }
-    },
-    "cellContent": {
-      "main": {},
-      "label": {
-        "color": "grey-80"
-      },
-      "content": {},
-      "accent": {
-        "backgroundColor": "grey-05"
-      },
-      "variants": {
-        "inSplit": {
-          "main": {},
-          "label": {
-            "color": "grey-80"
-          },
-          "content": {},
-          "accent": {
-            "backgroundColor": "grey-05"
-          }
-        }
-      }
-    },
-    "cellCta": {
-      "buttonWrapper": {
-        "a, button": {
-          "width": "100%"
-        }
       }
     }
   }

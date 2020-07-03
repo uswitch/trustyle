@@ -248,6 +248,15 @@
   "----------------------------- Variants": "-----------------------------",
   
   "elements": {
+    "progress-bar": {
+      "main": {
+        "backgroundColor": "progress-bg"
+      },
+      "progress": {
+        "backgroundColor": "azure"
+      }
+    },
+  
     "breadcrumbs": {
       "base": {
         "main": {
@@ -922,17 +931,7 @@
         "borderWidth": "2px"
       }
     }
-  },
-
-  "progressBar": {
-    "main": {
-      "backgroundColor": "progress-bg"
-    },
-    "progress": {
-      "backgroundColor": "azure"
-    }
   }
-
 
 
 }

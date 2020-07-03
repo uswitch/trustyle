@@ -828,6 +828,75 @@
   },
 
   "compounds": {
+    "product-table": {
+      "row": {
+        "main": {
+          "borderColor": "grey-20",
+          "borderRadius": 4
+        },
+        "header": {
+          "borderBottomColor": "grey-20"
+        },
+        "pretitle": {
+          "color": "grey-60"
+        },
+        "title": {
+          "fontWeight": "bold",
+          "color": "grey-100"
+        },
+        "subtitle": {
+          "color": "grey-60"
+        }
+      },
+      "addonFooter": {
+        "main": {
+          "borderTopColor": "grey-20",
+          "fontSize": "md"
+        }
+      },
+      "cellBase": {
+        "variants": {
+          "inSplit": {
+            "borderTopColor": "grey-20"
+          }
+        }
+      },
+      "cellImage": {
+        "main": {
+          "padding": "sm"
+        }
+      },
+      "cellContent": {
+        "main": {},
+        "label": {
+          "color": "grey-60"
+        },
+        "content": {},
+        "accent": {
+          "backgroundColor": "grey-05"
+        },
+        "variants": {
+          "inSplit": {
+            "main": {},
+            "label": {
+              "color": "grey-60"
+            },
+            "content": {},
+            "accent": {
+              "backgroundColor": "grey-05"
+            }
+          }
+        }
+      },
+      "cellCta": {
+        "buttonWrapper": {
+          "a, button": {
+            "width": "100%"
+          }
+        }
+      }
+    },
+
     "accordion": {
       "base": {
         "marginTop": "sm",
@@ -1285,6 +1354,9 @@
     }
   },
 
+
+  
+
   "richTextModule": {
     "contentCols": 12,
     "contentSpan": 10
@@ -1293,87 +1365,6 @@
   "imageModule": {
     "contentCols": 12,
     "contentSpan": 10
-  },
-
-  "productTable": {
-    "row": {
-      "main": {
-        "borderColor": "grey-20",
-        "borderRadius": 4
-      },
-      "header": {
-        "borderBottomColor": "grey-20"
-      },
-      "pretitle": {
-        "color": "grey-60"
-      },
-      "title": {
-        "fontWeight": "bold",
-        "color": "grey-100"
-      },
-      "subtitle": {
-        "color": "grey-60"
-      }
-    },
-    "addonFooter": {
-      "main": {
-        "borderTopColor": "grey-20",
-        "fontSize": "md"
-      }
-    },
-    "cellBase": {
-      "variants": {
-        "inSplit": {
-          "borderTopColor": "grey-20"
-        }
-      }
-    },
-    "cellImage": {
-      "main": {
-        "padding": "sm"
-      }
-    },
-    "cellContent": {
-      "main": {},
-      "label": {
-        "color": "grey-60"
-      },
-      "content": {},
-      "accent": {
-        "backgroundColor": "grey-05"
-      },
-      "variants": {
-        "inSplit": {
-          "main": {},
-          "label": {
-            "color": "grey-60"
-          },
-          "content": {},
-          "accent": {
-            "backgroundColor": "grey-05"
-          }
-        }
-      }
-    },
-    "cellCta": {
-      "buttonWrapper": {
-        "a, button": {
-          "width": "100%"
-        }
-      }
-    }
-  },
-
-  "progressBar": {
-    "main": {
-      "height": [5, 10],
-      "borderRadius": "4px",
-      "backgroundColor": "grey-10"
-    },
-    "progress": {
-      "borderRadius": "4px",
-      "backgroundColor": "#91CA50"
-    }
   },
 
   "imageCallout": {

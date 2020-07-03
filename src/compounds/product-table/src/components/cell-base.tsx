@@ -68,7 +68,7 @@ const ProductTableCellBase: React.FC<CellBaseProps> = ({
   if (inSplit) {
     sx['+ .in-split:not(.first-in-split)'] = {
       borderTop: '1px solid',
-      variant: 'productTable.cellBase.variants.inSplit'
+      variant: 'compounds.product-table.cellBase.variants.inSplit'
     }
   }
 
