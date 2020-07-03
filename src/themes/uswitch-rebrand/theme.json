@@ -387,7 +387,7 @@
 
   "----------------------------- Variants": "-----------------------------",
   "elements": {
-    "toggleSwitch": {
+    "toggle-switch": {
       "base": {
         "checked": {
           "backgroundColor": "black",
@@ -418,7 +418,7 @@
           },
           "unchecked": {
             "switch": {
-              "variant": "elements.toggleSwitch.base.unchecked.switch"
+              "variant": "elements.toggle-switch.base.unchecked.switch"
             }
           }
         }

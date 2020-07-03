@@ -209,7 +209,17 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
-    "toggleSwitch": {
+    "logo-collection": {
+      "base": {
+        "mr": "16px",
+        "img": {
+          "maxWidth": "250px",
+          "maxHeight": "150px"
+        }
+      }
+    },
+
+    "toggle-switch": {
       "base": {
         "checked": {
           "backgroundColor": "primary",
@@ -356,17 +366,7 @@
       }
     }
   },
-  
-  "logoCollection": {
-    "base": {
-      "mr": "16px",
-      "img": {
-        "maxWidth": "250px",
-        "maxHeight": "150px"
-      }
-    }
 
-  },
 
   "linkWithChevron": {
     "marginLeft": 8,

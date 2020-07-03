@@ -243,7 +243,7 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
-    "toggleSwitch": {
+    "toggle-switch": {
       "base": {
         "base": {
           "width": 70,
@@ -254,21 +254,21 @@
           }
         },
         "checked": {
-          "variant": "elements.toggleSwitch.base.base",
+          "variant": "elements.toggle-switch.base.base",
           "backgroundColor": "primary",
           "borderColor": "primary",
           "switch": {
-            "variant": "elements.toggleSwitch.base.base.switch",
+            "variant": "elements.toggle-switch.base.base.switch",
             "backgroundColor": "white",
             "borderColor": "primary"
           }
         },
         "unchecked": {
-          "variant": "elements.toggleSwitch.base.base",
+          "variant": "elements.toggle-switch.base.base",
           "backgroundColor": "grey-20",
           "borderColor": "grey-20",
           "switch": {
-            "variant": "elements.toggleSwitch.base.base.switch",
+            "variant": "elements.toggle-switch.base.base.switch",
             "backgroundColor": "white",
             "borderColor": "grey-20"
           }
@@ -278,14 +278,14 @@
         "compact": {
           "checked": {
             "switch": {
-              "variant": "elements.toggleSwitch.base.base.switch",
+              "variant": "elements.toggle-switch.base.base.switch",
               "backgroundColor": "primary",
               "borderColor": "primary"
             }
           },
           "unchecked": {
             "switch": {
-              "variant": "elements.toggleSwitch.base.base.switch",
+              "variant": "elements.toggle-switch.base.base.switch",
               "backgroundColor": "grey-20",
               "borderColor": "grey-20"
             }

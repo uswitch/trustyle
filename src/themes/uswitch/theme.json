@@ -312,7 +312,23 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
-    "toggleSwitch": {
+    "logo-collection": {
+      "base": {
+        "outer": {
+          "justifyContent": "flex-start",
+          "alignItems": "flex-start"
+        },
+        "inner": {
+          "mr": ["lg", "lg", "md"],
+          "img": {
+            "maxWidth": "250px",
+            "maxHeight": "150px"
+          }
+        }
+      }
+    },
+
+    "toggle-switch": {
       "base": {
         "checked": {
           "backgroundColor": "black",
@@ -343,7 +359,7 @@
           },
           "unchecked": {
             "switch": {
-              "variant": "elements.toggleSwitch.base.unchecked.switch"
+              "variant": "elements.toggle-switch.base.unchecked.switch"
             }
           }
         }
@@ -1263,22 +1279,6 @@
     "right": { "flexDirection": "row-reverse", "alignItems": "flex-start" },
     "left": { "flexDirection": "row", "alignItems": "flex-start" },
     "column": { "flexDirection": "column", "alignItems": "center" }
-  },
-
-  "logoCollection": {
-    "base": {
-      "outer": {
-        "justifyContent": "flex-start",
-        "alignItems": "flex-start"
-      },
-      "inner": {
-        "mr": ["lg", "lg", "md"],
-        "img": {
-          "maxWidth": "250px",
-          "maxHeight": "150px"
-        }
-      }
-    }
   },
 
   "author": {

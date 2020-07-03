@@ -27,8 +27,8 @@ const ToggleSwitch: React.FC<Props> = ({
 }) => {
   const state = checked ? 'checked' : 'unchecked'
   const variantRoot = compact
-    ? 'elements.toggleSwitch.variants.compact'
-    : 'elements.toggleSwitch.base'
+    ? 'elements.toggle-switch.variants.compact'
+    : 'elements.toggle-switch.base'
 
   return (
     <div
