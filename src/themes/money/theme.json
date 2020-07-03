@@ -305,6 +305,34 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "badge": {
+      "base": {
+        "paddingX": "base",
+        "paddingY": [3, 5.5],
+        "fontSize": ["xs", "sm"],
+        "fontWeight": "bold",
+        "borderRadius": "50vh"
+      },
+      "variants": {
+        "primary": {
+          "variant": "elements.badge.base",
+          "backgroundColor": "plum",
+          "color": "white"
+        }
+      }
+    },
+
+    "author-profile": {
+      "main": {
+        "marginBottom": "xl"
+      },
+      "name": {
+        "a": {
+          "color": "grey-80"
+        }
+      }
+    },
+
     "author": {
       "heading": {
         "color": "grey-80"
@@ -1257,34 +1285,6 @@
     }
   },
 
-  "authorProfile": {
-    "main": {
-      "marginBottom": "xl"
-    },
-    "name": {
-      "a": {
-        "color": "grey-80"
-      }
-    }
-  },
-
-  "badge": {
-    "base": {
-      "paddingX": "base",
-      "paddingY": [3, 5.5],
-      "fontSize": ["xs", "sm"],
-      "fontWeight": "bold",
-      "borderRadius": "50vh"
-    },
-    "variants": {
-      "primary": {
-        "variant": "badge.base",
-        "backgroundColor": "plum",
-        "color": "white"
-      }
-    }
-  },
-
   "richTextModule": {
     "contentCols": 12,
     "contentSpan": 10
@@ -1456,9 +1456,6 @@
       "light": {}
     }
   },
-
-   "----------------------------- Depreciated": "-----------------------------",
-
 
   "container": {
     "sm": { "px": 20 },

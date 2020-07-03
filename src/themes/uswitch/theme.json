@@ -312,6 +312,42 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "badge": {
+      "base": {
+        "paddingX": [14, 23],
+        "paddingY": [3, 7],
+        "fontSize": "xs",
+        "fontWeight": "bold"
+      },
+      "variants": {
+        "primary": {
+          "variant": "elements.badge.base",
+          "backgroundColor": "uswitch-navy",
+          "color": "white"
+        },
+        "sponsored": {
+          "paddingX": 11,
+          "paddingY": 6,
+          "fontSize": "xxs",
+          "fontWeight": 500,
+          "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
+          "backgroundColor": "uswitch-navy",
+          "color": "white"
+        },
+        "inverse": {
+          "variant": "elements.badge.base",
+          "paddingX": ["xxs", "xs"],
+          "paddingY": ["0", "0"],
+          "fontSize": "xxs",
+          "color": "black",
+          "fontWeight": "bold",
+          "backgroundColor": "white",
+          "border": "2px solid #ACAAFF",
+          "borderRadius": "3px"
+        }
+      }
+    },
+    
     "author": {
       "heading": {
         "color": "grey-80"
@@ -1296,41 +1332,6 @@
     "column": { "flexDirection": "column", "alignItems": "center" }
   },
 
-  "badge": {
-    "base": {
-      "paddingX": [14, 23],
-      "paddingY": [3, 7],
-      "fontSize": "xs",
-      "fontWeight": "bold"
-    },
-    "variants": {
-      "primary": {
-        "variant": "badge.base",
-        "backgroundColor": "uswitch-navy",
-        "color": "white"
-      },
-      "sponsored": {
-        "paddingX": 11,
-        "paddingY": 6,
-        "fontSize": "xxs",
-        "fontWeight": 500,
-        "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
-        "backgroundColor": "uswitch-navy",
-        "color": "white"
-      },
-      "inverse": {
-        "variant": "badge.base",
-        "paddingX": ["xxs", "xs"],
-        "paddingY": ["0", "0"],
-        "fontSize": "xxs",
-        "color": "black",
-        "fontWeight": "bold",
-        "backgroundColor": "white",
-        "border": "2px solid #ACAAFF",
-        "borderRadius": "3px"
-      }
-    }
-  },
 
   "input": {
     "frozen": {
@@ -1527,127 +1528,6 @@
           "width": "100%"
         }
       }
-    }
-  },
-
- 
-
-
-  "----------------------------- Depreciated": "-----------------------------",
-
-  "accordion": {
-    "*": {
-      "fontFamily": "Helvetica"
-    },
-    "base": {
-      "marginTop": "sm",
-      "marginBottom": "sm",
-      "title": {
-        "marginTop": "0",
-        "marginBottom": "xs"
-      },
-      "content": {
-        "fontSize": ["base", "md"],
-        "color": "grey-80",
-        "lineHeight": "1.5"
-      },
-      "button": {
-        "padding": "0",
-        "paddingTop": "xs",
-        "paddingBottom": "xs",
-        "bg": "transparent",
-        "fontFamily": "base",
-        "lineHeight": "1.3",
-        "fontSize": ["base", "md"],
-        "fontWeight": "bold",
-        "color": "textColor",
-        "alignItems": "center",
-        "borderWidth": "1px 0 0 0",
-        "borderStyle": "solid",
-        "borderColor": "grey-20",
-        "display": "flex",
-        "flexDirection": "row",
-        "width": "100%"
-      },
-      "caret": {
-        "color": "black"
-      }
-    },
-    "variants": {
-      "isActive": {
-        "button": {
-          "variant": "accordion.base.button"
-        },
-        "caret": {
-          "variant": "accordion.base.caret"
-        }
-      }
-    }
-  },
-
-  "sideNav": {
-    "internalLinkList": {
-      "listStyle": "none",
-      "paddingLeft": 0,
-      "paddingTop": "xxs",
-      "paddingBottom": "xxs",
-      "margin": 0
-    },
-    "internalLinkListItem": {
-      "base": {
-        "mb": 0,
-        "position": "relative",
-        ">a": {
-          "display": "block",
-          "color": "grey-70",
-          "textDecoration": "none",
-          "fontSize": "sm",
-          "padding": "12px 16px",
-          ":visited": {
-            "color": "grey-70"
-          }
-        }
-      },
-      "isActive": {
-        "variant": "sideNav.internalLinkListItem.base",
-        "color": "uswitch-navy",
-        "::after": {
-          "variant": "sideNav.internalLinkListItem.base.::after",
-          "content": "\"\"",
-          "position": "absolute",
-          "top": "0",
-          "left": "0",
-          "display": "block",
-          "width": 4,
-          "height": "100%",
-          "backgroundColor": "uswitch-navy"
-        },
-        ">a": {
-          "variant": "sideNav.internalLinkListItem.base.>a",
-          "color": "uswitch-navy",
-          ":visited": {
-            "color": "uswitch-navy"
-          }
-        }
-      }
-    },
-    "additionalLink": {
-      "display": "block",
-      "marginBottom": "xxs",
-      "color": "grey-80",
-      "paddingTop": "xxs",
-      "paddingBottom": "xxs",
-      "textDecoration": "none"
-    }
-  },
-
-  "card": {
-    "sm": {
-      "image": { "width": "100%", "height": "auto" }
-    },
-
-    "lg": {
-      "image": { "width": 278, "height": 230 }
     }
   }
   
