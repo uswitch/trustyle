@@ -309,16 +309,6 @@
     }
   },
 
-  "grid": {
-    "sizes": {
-      "gutter": 15,
-      "verticalGutter": 15
-    },
-    "container": {
-      "maxWidth": 1200
-    }
-  },
-
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
@@ -1143,7 +1133,17 @@
     }
   },
 
-
+  "layout": {
+    "flex-grid": {
+      "sizes": {
+        "gutter": 15,
+        "verticalGutter": 15
+      },
+      "container": {
+        "maxWidth": 1200
+      }
+    }
+  },
 
   "container": {
     "sm": { "px": 20 },

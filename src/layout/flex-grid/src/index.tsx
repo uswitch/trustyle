@@ -4,15 +4,15 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 
 const getGutterSize = (theme: any): any =>
-  theme?.sizes?.grid?.gutter || theme?.grid?.sizes?.gutter
+  theme?.layout && theme?.layout['flex-grid'].sizes?.gutter
 
 const getVerticalGutterSize = (
   theme: any
 ): string | number | (string | number)[] =>
-  theme?.sizes?.grid?.verticalGutter || theme?.grid?.sizes?.verticalGutter
+  theme?.layout && theme?.layout['flex-grid'].sizes?.verticalGutter
 
 const getContainerSize = (theme: any): number | number[] =>
-  theme?.sizes?.grid?.container?.maxWidth || theme?.grid?.container?.maxWidth
+  theme?.layout && theme?.layout['flex-grid']?.container?.maxWidth
 
 const castArray = (valueOrArray: any): any => [].concat(valueOrArray) // wiiilllllson
 
@@ -79,7 +79,6 @@ export const Row: React.FC<RowProps & React.HTMLAttributes<any>> = ({
   return (
     <div
       sx={{
-        variant: `grid.row`,
         mx: (theme: any): any =>
           uncastArrayIfSingle(
             castArray(getGutterSize(theme))
@@ -128,7 +127,6 @@ export const Col: React.FC<ColProps & React.HTMLAttributes<any>> = ({
   return (
     <div
       sx={{
-        variant: `grid.col`,
         boxSizing: 'border-box',
         mr: (theme: any) =>
           uncastArrayIfSingle(

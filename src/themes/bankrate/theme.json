@@ -237,15 +237,6 @@
     }
   },
 
-  "grid": {
-    "sizes": {
-      "gutter": "gutter",
-      "verticalGutter": "sm"
-    },
-    "container": {
-      "maxWidth": 1248
-    }
-  },
 
   "----------------------------- Variants": "-----------------------------",
 
@@ -646,6 +637,17 @@
     }
   },
 
+  "layout": {
+    "flex-grid": {
+      "sizes": {
+        "gutter": "gutter",
+        "verticalGutter": "sm"
+      },
+      "container": {
+        "maxWidth": 1248
+      }
+    }
+  },
 
   "container": {
     "lg": { "maxWidth": 1210, "mx": "auto", "px": "md" }

@@ -173,16 +173,6 @@
     "border": 0
   },
 
-  "grid": {
-    "sizes": {
-      "gutter": "sm",
-      "verticalGutter": ["sm", "md"]
-    },
-    "container": {
-      "maxWidth": 1152
-    }
-  },
-
   "styles": {
     "heading": {
       "fontFamily": "heading",
@@ -1149,7 +1139,15 @@
   },
 
   "layout": {
-
+    "flex-grid": {
+      "sizes": {
+        "gutter": "sm",
+        "verticalGutter": ["sm", "md", "md"]
+      },
+      "container": {
+        "maxWidth": 1152
+      }
+    }
   },
 
   "imageCallout": {
