@@ -406,7 +406,8 @@
       ]
     },
     "icon-container": {
-      "mr": 0
+      "mr": [20, 20, 28],
+      "flexBasis": 32
     },
     "icon": {
       "backgroundColor": "transparent",
@@ -733,6 +734,27 @@
         "maxWidth": 110,
         "width": "auto"
       }
+    },
+
+    "sponsoredByTag": {
+      "base": {
+        "wrapper": {
+          "display": "flex",
+          "alignItems": "center",
+          "justifyContent": "space-between",
+          "paddingY": 4
+        },
+        "text": {
+          "color": "grey-60",
+          "fontSize": "xs",
+          "fontFamily": "base",
+          "fontWeight": "base",
+          "fontStyle": "normal"
+        },
+        "image":{
+          "height": [40, 56]
+        }
+      }
     }
   },
 
@@ -766,7 +788,8 @@
       },
       ".glider-contain": {
         ".glider.draggable": {
-          "overflow": "auto"
+          "overflow": "auto",
+          "scrollbarWidth": "none"
         },
         ".glider-dots": {
           "mt": "xl",
@@ -934,7 +957,7 @@
         }
       },
       "mobileLinks": {
-        "mt": "-55px",
+        "mt": "-38px",
         "mx": "-16px"
       },
       "title": {
@@ -1134,13 +1157,14 @@
       }
     },
     "supplierRow": {
-      "mt": "24px",
+      "mt": ["32px", "44px"],
       "borderBottomWidth": "1px",
       "borderBottomStyle": "solid",
       "borderBottomColor": "grey-20",
       "> div": {
+        "mb": ["32px", "44px"],
         "> img": {
-          "maxWidth": "100%"
+          "maxWidth": "80%"
         }
       },
       "description": {
@@ -2504,7 +2528,11 @@
       "lineHeight": "xl",
       "paddingBottom": "sm",
       "margin": 0,
-      "color": "grey-60"
+      "color": "grey-60",
+      "& a": {
+        "variant": "styles.a",
+        "fontSize": ["base", "base", "sm"]
+      }
     },
     "a": {
       "color": "link-2",
@@ -2512,10 +2540,13 @@
       "textDecoration": "none",
       "borderBottom": "1px dashed #898991",
       "lineHeight": "31px",
+<<<<<<< HEAD
       "fontSize": [
         "base",
         "md"
       ],
+=======
+>>>>>>> origin
       "fontWeight": "bold",
       "& svg": {
         "fill": "light-1",
