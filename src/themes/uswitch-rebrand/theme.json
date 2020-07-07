@@ -879,7 +879,7 @@
     "interactiveTabs": {
       "base": {
         "link": {
-          "bg": "grey-05",
+          "backgroundColor": "grey-05",
           "h5": {
             "color": "grey-60",
             "mt": 0
@@ -913,7 +913,7 @@
               "calc(100% - 48px)",
               "auto"
             ],
-            "bg": "light-1",
+            "backgroundColor": "light-1",
             "boxShadow": [
               "0px 0px 16px rgba(0, 0, 0, 0.15)",
               "0px 8px 16px rgba(0, 0, 0, 0.15)"
@@ -946,7 +946,7 @@
                 -10,
                 "calc(50% - 18px)"
               ],
-              "background": "light-1",
+              "backgroundColor": "light-1",
               "transform": "rotate(45deg)",
               "boxShadow": [
                 "none",
@@ -1336,7 +1336,7 @@
       "hr": {
         "border": 0,
         "height": 1,
-        "bg": "grey-20"
+        "backgroundColor": "grey-20"
       },
       "copy": {
         "mb": [
@@ -2076,7 +2076,7 @@
       "phaseIcon": {
         "base": {
           "transition": "background 0.4s, border-color 0.4s, color 0.4s",
-          "background": "light-1",
+          "backgroundColor": "light-1",
           "border": "2px solid",
           "borderColor": "dark-1",
           "borderRadius": "999px",
@@ -2091,13 +2091,13 @@
         "variants": {
           "open": {
             "variant": "funnelProgress.base.phaseIcon.base",
-            "background": "dark-1",
+            "backgroundColor": "dark-1",
             "borderColor": "dark-1",
             "color": "light-1"
           },
           "complete": {
             "variant": "funnelProgress.base.phaseIcon.base",
-            "background": "dark-1",
+            "backgroundColor": "dark-1",
             "borderColor": "dark-1",
             "color": "light-1"
           },
@@ -2187,7 +2187,7 @@
           "variant": "input.radioish.base.&:checked + span",
           "&::before": {
             "variant": "input.radioish.base.&:checked + span.&::before",
-            "background": "dark-1",
+            "backgroundColor": "dark-1",
             "boxShadow": "inset 0 0 0 2px #fff"
           }
         }
@@ -2401,7 +2401,7 @@
           "sm",
           "xl"
         ],
-        "bg": "grey-0",
+        "backgroundColor": "grey-0",
         "color": "grey-80",
         "p": {
           "textAlign": [
