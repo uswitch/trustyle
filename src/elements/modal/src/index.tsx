@@ -1,0 +1,196 @@
+/** @jsx jsx */
+import React, { useCallback, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
+import { jsx } from 'theme-ui'
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
+import FocusLock from 'react-focus-lock'
+import ThemedIcon from '@uswitch/trustyle.themed-icon'
+import Measure from 'react-measure'
+
+type ModalMobileHeight = 'full' | 'partial'
+type ModalRole = 'dialog' | 'alert' | 'alertdialog'
+type FocusLockProps = React.ComponentProps<typeof FocusLock>
+type OnCloseFn = () => void
+
+interface Props {
+  ariaLabel: string // a description of the modal’s content
+  children: React.ReactNode
+  closeButtonProps?: any
+  height?: ModalMobileHeight
+  onClose: OnCloseFn
+  role?: ModalRole
+  focusLockProps?: FocusLockProps
+}
+
+interface OverlayProps {
+  ariaLabel: string // a description of the modal’s content
+  children: React.ReactNode
+  closeButtonProps?: any
+  height: ModalMobileHeight
+  onClose: OnCloseFn
+  role: ModalRole
+  focusLockProps: FocusLockProps
+}
+
+const Overlay: React.FC<OverlayProps> = ({
+  ariaLabel,
+  children,
+  closeButtonProps,
+  height,
+  onClose,
+  role
+}) => {
+  const holdingRef = useRef<HTMLDivElement>()
+  const closeButtonRef = useRef<HTMLButtonElement>()
+  const modalRef = useCallback(node => {
+    if (node !== null) {
+      // @ts-ignore: Read only prop error
+      holdingRef.current = node
+      disableBodyScroll(node, { reserveScrollBarGap: true })
+    } else {
+      if (holdingRef.current) {
+        enableBodyScroll(holdingRef.current)
+      } else throw new Error('Failed to unlock background, missing node.')
+    }
+  }, [])
+  const [minHeight, setMinHeight] = useState<number | null>(null)
+
+  const onBackgroundClick = (event: React.MouseEvent<HTMLElement>): void => {
+    let withinModal = false
+    let node: Node | null = event.target as Node
+
+    do {
+      withinModal = withinModal || node === holdingRef.current
+      node = node?.parentNode
+    } while (node?.parentNode)
+
+    if (!withinModal) {
+      if (closeButtonRef.current) {
+        closeButtonRef.current.focus()
+      }
+      onClose()
+    }
+  }
+
+  const onKeyDown = (event: React.KeyboardEvent<HTMLElement>): void => {
+    if (event.keyCode === 27) onClose() // close on esc
+    event.stopPropagation()
+  }
+
+  return createPortal(
+    <aside
+      sx={{
+        left: 0,
+        height: '100%',
+        position: 'fixed',
+        top: 0,
+        transform: 'translateZ(0)',
+        width: '100%',
+        zIndex: 10000,
+        variant: 'elements.overlay'
+      }}
+      aria-label={ariaLabel}
+      aria-modal="true"
+      onClick={onBackgroundClick}
+      onKeyDown={onKeyDown}
+      role={role}
+    >
+      <FocusLock autoFocus returnFocus>
+        <div
+          sx={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            overflowY: 'auto',
+            display: 'flex',
+            flexFlow: 'column'
+          }}
+        >
+          {/* Mobile: push down the modal if it is partial height, UNLESS the content overflows
+            in which case this shrinks to 0px. */}
+          <div sx={{ flex: [height === 'partial' ? 1 : 'initial', 1] }} />
+
+          <div
+            sx={{
+              flex: 1,
+              WebkitOverflowScrolling: 'touch',
+              width: '100%',
+              height: 'auto',
+              variant: `elements.modal.variants.${height}`
+            }}
+            style={{
+              // This is needed for IE11, since it doesn't properly support flex-grow
+              ...(minHeight
+                ? {
+                    minHeight: `${minHeight}px`
+                  }
+                : {})
+            }}
+            ref={modalRef}
+          >
+            <Measure
+              bounds
+              onResize={({ bounds }) => {
+                if (bounds) {
+                  setMinHeight(bounds?.height ?? null)
+                }
+              }}
+            >
+              {({ measureRef }) => (
+                <div ref={measureRef}>
+                  <div sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                    <button
+                      ref={closeButtonRef}
+                      aria-label="Close Modal"
+                      onClick={onClose}
+                      sx={{
+                        variant: 'elements.modal.closeButton'
+                      }}
+                      {...closeButtonProps}
+                    >
+                      <ThemedIcon
+                        icon="close"
+                        sx={{
+                          variant: 'elements.modal.closeIcon'
+                        }}
+                      />
+                    </button>
+                  </div>
+                  <div>{children}</div>
+                </div>
+              )}
+            </Measure>
+          </div>
+          <div
+            sx={{
+              flex: [height === 'partial' ? 1 : 'initial', 1],
+              display: ['none', 'block']
+            }}
+          />
+        </div>
+      </FocusLock>
+    </aside>,
+    document.body
+  )
+}
+
+const Modal: React.FC<Props> = ({
+  children,
+  height = 'partial',
+  role = 'dialog',
+  focusLockProps = {},
+  ...props
+}) => (
+  <Overlay
+    height={height}
+    role={role}
+    focusLockProps={focusLockProps}
+    {...props}
+  >
+    {children}
+  </Overlay>
+)
+
+export default Modal
