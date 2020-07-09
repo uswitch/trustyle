@@ -70,6 +70,7 @@ const MobileBreadcrumbs: React.FC<Props> = ({
         display: 'inline-block',
         color: 'inherit',
         textDecoration: 'none',
+        borderBottom: 0,
         fontSize: 'xxs',
         variant: `${lookup(variant)}.mobileLink`
       }}
@@ -105,6 +106,7 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
     color: 'inherit',
     stroke: 'inherit',
     textDecoration: 'none',
+    borderBottom: 0,
     variant: `${lookup(variant)}.a`,
     ':visited': {
       color: 'inherit'

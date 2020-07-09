@@ -163,6 +163,7 @@
     }
   },
   "useCustomProperties": false,
+  
   "colors": {
     "primary": "#141424",
     "heading": "#141424",

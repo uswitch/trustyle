@@ -76,6 +76,7 @@ const Author: React.FC<Props> = ({
             sx={{
               color: 'inherit',
               textDecoration: 'none',
+              borderBottom: 0,
               variant: 'elements.author.link'
             }}
           >
@@ -93,6 +94,7 @@ const Author: React.FC<Props> = ({
             href={editorUrl}
             sx={{
               textDecoration: 'none',
+              borderBottom: 0,
               variant: 'elements.author.link'
             }}
           >

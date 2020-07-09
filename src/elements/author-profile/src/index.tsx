@@ -41,7 +41,8 @@ const AuthorProfile: React.FC<Props> = ({
             height: '87px',
             width: '87px',
             marginRight: 'sm',
-            alignSelf: 'baseline'
+            alignSelf: 'baseline',
+            borderBottom: 0
           }}
         >
           <authorImage.type
@@ -75,7 +76,8 @@ const AuthorProfile: React.FC<Props> = ({
           <a
             href={authorUrl}
             sx={{
-              textDecoration: 'none'
+              textDecoration: 'none',
+              borderBottom: 0
             }}
           >
             {name}, {role}
@@ -102,7 +104,8 @@ const AuthorProfile: React.FC<Props> = ({
               href={'mailto:' + email}
               sx={{
                 textDecoration: 'none',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                borderBottom: 0
               }}
             >
               <div
