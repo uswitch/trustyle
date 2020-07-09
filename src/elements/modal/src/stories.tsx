@@ -98,9 +98,3 @@ export const AutomatedTests = () => (
     </Modal>
   </AllThemes>
 )
-
-AutomatedTests.story = {
-  parameters: {
-    percy: { skip: true }
-  }
-}
