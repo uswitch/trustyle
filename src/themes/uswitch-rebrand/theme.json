@@ -1191,6 +1191,367 @@
   },
 
   "modules": {
+    "image-callout": {
+      "base": {
+        "wrapper": {
+          "display": "flex",
+          "justifyContent": "space-between",
+          "pb": [
+            74,
+            38
+          ],
+          "&.image-callout + .image-callout": {
+            "marginTop": 0
+          }
+        },
+        "inner": {
+          "display": "flex",
+          "justifyContent": [
+            "flex-start",
+            "flex-start",
+            "space-between"
+          ],
+          "width": [
+            null,
+            768,
+            1200
+          ]
+        },
+        "image-container": {
+          "position": "relative",
+          "flexBasis": [
+            null,
+            "50%"
+          ],
+          "mt": [
+            null,
+            -30,
+            20
+          ],
+          "mb": [
+            10,
+            90
+          ]
+        },
+        "image": {
+          "position": "relative",
+          "zIndex": 2,
+          "mt": -64,
+          "maxWidth": [
+            "100%",
+            "grid.md.6",
+            "100%"
+          ],
+          "imgixWidth": 608,
+          "imgixParams": {
+            "fill": "fillmax"
+          }
+        },
+        "content": {
+          "flexBasis": [
+            null,
+            "40%"
+          ],
+          "maxWidth": [
+            "100%",
+            "100%",
+            "grid.lg.5"
+          ],
+          "h4": {
+            "width": [
+              "60%",
+              "100%",
+              "66%"
+            ],
+            "pb": [
+              24,
+              24,
+              32
+            ]
+          },
+          "> p": {
+            "mb": [
+              40,
+              70,
+              96
+            ]
+          }
+        },
+        "colorBlock": {
+          "width": "100%",
+          "height": [
+            "100%",
+            "100%",
+            "93%"
+          ],
+          "position": "absolute",
+          "top": [
+            0,
+            0,
+            21
+          ],
+          "zIndex": 1
+        }
+      },
+      "variants": {
+        "solidColorImageLeft": {
+          "wrapper": {
+            "pb": [
+              74,
+              100
+            ],
+            "px": 0
+          },
+          "inner": {
+            "flexDirection": [
+              "column",
+              "row"
+            ],
+            "alignItems": [
+              "center",
+              "center",
+              "flex-start"
+            ],
+            "px": 0
+          },
+          "colorBlock": {
+            "backgroundColor": "grey-05",
+            "top": [
+              0,
+              77,
+              148
+            ],
+            "right": [
+              0,
+              100,
+              170
+            ],
+            "height": [
+              "85%",
+              "100%"
+            ]
+          },
+          "image-container": {
+            "alignSelf": [
+              "auto",
+              "flex-start",
+              "auto"
+            ],
+            "mt": [
+              null,
+              0,
+              20
+            ],
+            "px": 0,
+            "py": [
+              45,
+              0
+            ]
+          },
+          "content": {
+            "alignSelf": "center",
+            "px": [
+              20,
+              20,
+              0
+            ],
+            "maxWidth": [
+              "100%",
+              "grid.md.7",
+              "grid.md.8"
+            ],
+            "flexBasis": [
+              null,
+              "45%"
+            ],
+            "h4": {
+              "width": "100%"
+            }
+          },
+          "image": {
+            "mt": [
+              0,
+              -40,
+              0
+            ],
+            "maxWidth": [
+              "100%",
+              "100%"
+            ]
+          }
+        },
+        "solidColorImageRight": {
+          "colorBlock": {
+            "backgroundColor": "orange-25",
+            "top": [
+              0,
+              14,
+              -84
+            ],
+            "left": [
+              0,
+              15,
+              119
+            ],
+            "height": [
+              "100%",
+              "85%",
+              "95%"
+            ]
+          },
+          "inner": {
+            "flexDirection": [
+              "column",
+              "row-reverse"
+            ],
+            "alignItems": [
+              "center",
+              "center",
+              "flex-start"
+            ],
+            "px": [
+              0,
+              15,
+              0
+            ],
+            "mb": [
+              30
+            ]
+          },
+          "content": {
+            "alignSelf": "flex-start",
+            "mt": [
+              0,
+              0,
+              120
+            ],
+            "px": [
+              20,
+              20,
+              15
+            ],
+            "maxWidth": [
+              "100%",
+              "grid.lg.4",
+              "grid.md.9"
+            ],
+            "flexBasis": [
+              null,
+              "45%"
+            ],
+            "h1": {
+              "width": [
+                null,
+                null,
+                "95%"
+              ]
+            }
+          },
+          "image": {
+            "mt": [
+              0,
+              53,
+              0
+            ],
+            "maxWidth": "100%"
+          },
+          "image-container": {
+            "mt": [
+              null,
+              0,
+              20
+            ],
+            "px": [
+              20,
+              0
+            ],
+            "py": [
+              45,
+              0
+            ]
+          }
+        },
+        "gradientImageLeft": {
+          "inner": {
+            "flexDirection": [
+              "column",
+              "row"
+            ],
+            "alignItems": [
+              "center",
+              "center",
+              "flex-start"
+            ]
+          },
+          "colorBlock": {
+            "background": "linear-gradient(90deg, #C1D3FF 0%, #BEE8F3 100%)"
+          },
+          "content": {
+            "pl": [
+              null,
+              50,
+              0
+            ]
+          }
+        },
+        "gradientImageRight": {
+          "inner": {
+            "flexDirection": [
+              "column",
+              "row-reverse"
+            ],
+            "alignItems": [
+              "center",
+              "center",
+              "flex-start"
+            ]
+          },
+          "image-container": {
+            "alignSelf": [
+              "auto",
+              "auto",
+              "center"
+            ]
+          },
+          "colorBlock": {
+            "background": "linear-gradient(90deg, #AC96DE 0%, #ACAAFF 100%)",
+            "height": [
+              "98%",
+              "98%",
+              "95%"
+            ]
+          },
+          "content": {
+            "flexBasis": [
+              null,
+              "50%",
+              "45%"
+            ],
+            "maxWidth": [
+              "100%",
+              "100%",
+              "grid.lg.5"
+            ],
+            "px": [
+              null,
+              0,
+              0
+            ],
+            "h4": {
+              "width": [
+                "70%",
+                "100%",
+                "100%"
+              ]
+            },
+            "> div": {
+              "px": 0
+            }
+          }
+        }
+      }
+    },
+
     "content-hero-module": {
       "p": {
         "width": [
@@ -1293,367 +1654,6 @@
       },
       "title": {
         "fontWeight": "bold"
-      }
-    }
-  },
-
-  "imageCallout": {
-    "base": {
-      "wrapper": {
-        "display": "flex",
-        "justifyContent": "space-between",
-        "pb": [
-          74,
-          38
-        ],
-        "&.image-callout + .image-callout": {
-          "marginTop": 0
-        }
-      },
-      "inner": {
-        "display": "flex",
-        "justifyContent": [
-          "flex-start",
-          "flex-start",
-          "space-between"
-        ],
-        "width": [
-          null,
-          768,
-          1200
-        ]
-      },
-      "image-container": {
-        "position": "relative",
-        "flexBasis": [
-          null,
-          "50%"
-        ],
-        "mt": [
-          null,
-          -30,
-          20
-        ],
-        "mb": [
-          10,
-          90
-        ]
-      },
-      "image": {
-        "position": "relative",
-        "zIndex": 2,
-        "mt": -64,
-        "maxWidth": [
-          "100%",
-          "grid.md.6",
-          "100%"
-        ],
-        "imgixWidth": 608,
-        "imgixParams": {
-          "fill": "fillmax"
-        }
-      },
-      "content": {
-        "flexBasis": [
-          null,
-          "40%"
-        ],
-        "maxWidth": [
-          "100%",
-          "100%",
-          "grid.lg.5"
-        ],
-        "h4": {
-          "width": [
-            "60%",
-            "100%",
-            "66%"
-          ],
-          "pb": [
-            24,
-            24,
-            32
-          ]
-        },
-        "> p": {
-          "mb": [
-            40,
-            70,
-            96
-          ]
-        }
-      },
-      "colorBlock": {
-        "width": "100%",
-        "height": [
-          "100%",
-          "100%",
-          "93%"
-        ],
-        "position": "absolute",
-        "top": [
-          0,
-          0,
-          21
-        ],
-        "zIndex": 1
-      }
-    },
-    "variants": {
-      "solidColorImageLeft": {
-        "wrapper": {
-          "pb": [
-            74,
-            100
-          ],
-          "px": 0
-        },
-        "inner": {
-          "flexDirection": [
-            "column",
-            "row"
-          ],
-          "alignItems": [
-            "center",
-            "center",
-            "flex-start"
-          ],
-          "px": 0
-        },
-        "colorBlock": {
-          "backgroundColor": "grey-05",
-          "top": [
-            0,
-            77,
-            148
-          ],
-          "right": [
-            0,
-            100,
-            170
-          ],
-          "height": [
-            "85%",
-            "100%"
-          ]
-        },
-        "image-container": {
-          "alignSelf": [
-            "auto",
-            "flex-start",
-            "auto"
-          ],
-          "mt": [
-            null,
-            0,
-            20
-          ],
-          "px": 0,
-          "py": [
-            45,
-            0
-          ]
-        },
-        "content": {
-          "alignSelf": "center",
-          "px": [
-            20,
-            20,
-            0
-          ],
-          "maxWidth": [
-            "100%",
-            "grid.md.7",
-            "grid.md.8"
-          ],
-          "flexBasis": [
-            null,
-            "45%"
-          ],
-          "h4": {
-            "width": "100%"
-          }
-        },
-        "image": {
-          "mt": [
-            0,
-            -40,
-            0
-          ],
-          "maxWidth": [
-            "100%",
-            "100%"
-          ]
-        }
-      },
-      "solidColorImageRight": {
-        "colorBlock": {
-          "backgroundColor": "orange-25",
-          "top": [
-            0,
-            14,
-            -84
-          ],
-          "left": [
-            0,
-            15,
-            119
-          ],
-          "height": [
-            "100%",
-            "85%",
-            "95%"
-          ]
-        },
-        "inner": {
-          "flexDirection": [
-            "column",
-            "row-reverse"
-          ],
-          "alignItems": [
-            "center",
-            "center",
-            "flex-start"
-          ],
-          "px": [
-            0,
-            15,
-            0
-          ],
-          "mb": [
-            30
-          ]
-        },
-        "content": {
-          "alignSelf": "flex-start",
-          "mt": [
-            0,
-            0,
-            120
-          ],
-          "px": [
-            20,
-            20,
-            15
-          ],
-          "maxWidth": [
-            "100%",
-            "grid.lg.4",
-            "grid.md.9"
-          ],
-          "flexBasis": [
-            null,
-            "45%"
-          ],
-          "h1": {
-            "width": [
-              null,
-              null,
-              "95%"
-            ]
-          }
-        },
-        "image": {
-          "mt": [
-            0,
-            53,
-            0
-          ],
-          "maxWidth": "100%"
-        },
-        "image-container": {
-          "mt": [
-            null,
-            0,
-            20
-          ],
-          "px": [
-            20,
-            0
-          ],
-          "py": [
-            45,
-            0
-          ]
-        }
-      },
-      "gradientImageLeft": {
-        "inner": {
-          "flexDirection": [
-            "column",
-            "row"
-          ],
-          "alignItems": [
-            "center",
-            "center",
-            "flex-start"
-          ]
-        },
-        "colorBlock": {
-          "background": "linear-gradient(90deg, #C1D3FF 0%, #BEE8F3 100%)"
-        },
-        "content": {
-          "pl": [
-            null,
-            50,
-            0
-          ]
-        }
-      },
-      "gradientImageRight": {
-        "inner": {
-          "flexDirection": [
-            "column",
-            "row-reverse"
-          ],
-          "alignItems": [
-            "center",
-            "center",
-            "flex-start"
-          ]
-        },
-        "image-container": {
-          "alignSelf": [
-            "auto",
-            "auto",
-            "center"
-          ]
-        },
-        "colorBlock": {
-          "background": "linear-gradient(90deg, #AC96DE 0%, #ACAAFF 100%)",
-          "height": [
-            "98%",
-            "98%",
-            "95%"
-          ]
-        },
-        "content": {
-          "flexBasis": [
-            null,
-            "50%",
-            "45%"
-          ],
-          "maxWidth": [
-            "100%",
-            "100%",
-            "grid.lg.5"
-          ],
-          "px": [
-            null,
-            0,
-            0
-          ],
-          "h4": {
-            "width": [
-              "70%",
-              "100%",
-              "100%"
-            ]
-          },
-          "> div": {
-            "px": 0
-          }
-        }
       }
     }
   }
