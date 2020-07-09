@@ -1033,6 +1033,8 @@
     },
 
     "article-intro": {
+      "contentCols": 12,
+      "contentSpan": 10,
       "base": {
         "heading": {
           "marginTop": ["sm", "sm", "xl"],
@@ -1350,7 +1352,6 @@
   },
 
 
-  
 
   "richTextModule": {
     "contentCols": 12,

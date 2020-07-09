@@ -16,7 +16,8 @@ export const input = (type: 'radio' | 'checkbox') => (
   let inputColor = 'black'
 
   if (
-    theme.input &&
+    theme.elements &&
+    theme.elements.input &&
     theme.elements.input.tile &&
     theme.elements.input.tile.inputColor &&
     typeof theme.elements.input.tile.inputColor === 'string'
