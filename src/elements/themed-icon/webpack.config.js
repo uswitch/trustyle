@@ -13,7 +13,8 @@ module.exports = {
   target: 'node',
   output: {
     path: path.resolve(__dirname, 'lib'),
-    filename: 'index.js'
+    filename: 'index.js',
+    libraryTarget: 'umd'
   },
   externals: {
     react: 'umd react',
