@@ -25,8 +25,7 @@
   },
 
   "lineHeights": {
-    "base": "1.5",
-    "heading": "1.2"
+    "base": "1.5"
   },
 
   "fontSizes": {
