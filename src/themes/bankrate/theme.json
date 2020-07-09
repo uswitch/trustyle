@@ -765,6 +765,10 @@
   },
 
   "layout": {
+    "container": {
+      "lg": { "maxWidth": 1210, "mx": "auto", "px": "md" }
+    },
+
     "flex-grid": {
       "sizes": {
         "gutter": "gutter",
@@ -774,10 +778,6 @@
         "maxWidth": 1248
       }
     }
-  },
-
-
-  "container": {
-    "lg": { "maxWidth": 1210, "mx": "auto", "px": "md" }
   }
+
 }

@@ -895,25 +895,24 @@
     }
   },
 
-
-
-
-
-
-  "container": {
-    "sm": { "px": 20 },
-    "md": { "px": 72 },
-    "lg": { "maxWidth": 1024, "mx": "auto", "px": "md" },
-    "content": {
-      "maxWidth": 1024,
-      "mx": "auto",
-      "px": "md",
-      "contentStyle": {
-        "width": ["100%", "grid.lg.8"]
-      }
-    },
-    "hero": { "maxWidth": 1024, "mx": "auto", "px": 60 }
+  "layout": {
+    "container": {
+      "sm": { "px": 20 },
+      "md": { "px": 72 },
+      "lg": { "maxWidth": 1024, "mx": "auto", "px": "md" },
+      "content": {
+        "maxWidth": 1024,
+        "mx": "auto",
+        "px": "md",
+        "contentStyle": {
+          "width": ["100%", "grid.lg.8"]
+        }
+      },
+      "hero": { "maxWidth": 1024, "mx": "auto", "px": 60 }
+    }
   },
+
+
 
   "imageCalloutContent": {
     "sm": { "pt": "xl" },
