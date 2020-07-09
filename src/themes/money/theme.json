@@ -1297,6 +1297,11 @@
   },
 
   "modules": {
+    "rich-text": {
+      "contentCols": 12,
+      "contentSpan": 10
+    },
+
     "content-hero-module": {
       "h1": {
         "mb": "sm",
@@ -1352,11 +1357,6 @@
   },
 
 
-
-  "richTextModule": {
-    "contentCols": 12,
-    "contentSpan": 10
-  },
 
   "imageModule": {
     "contentCols": 12,
