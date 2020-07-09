@@ -23,7 +23,7 @@ export const FrozenInput: React.FC<Props> = ({
   const { theme }: any = useThemeUI()
   const iconGlyph = theme?.name === 'Journey' ? 'edit-journey' : 'edit'
   const iconColor =
-    theme.colors[theme.elements.input?.frozen?.button?.color] ||
+    (theme && theme.colors[theme.elements.input?.frozen?.button?.color]) ||
     colors.UswitchNavy
 
   useEffect(() => {
