@@ -23,10 +23,10 @@
     "publish": {
       "includeMergedTags": true,
       "conventionalCommits": true,
-      "message": "chore(release): release"
+      "message": "chore: release"
     },
     "version": {
-      "message": "chore(release): release"
+      "message": "chore: release"
     }  
   }
 }
