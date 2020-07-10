@@ -481,6 +481,15 @@
   },
 
   "layout": {
+    "flex-grid": {
+      "sizes": {
+        "gutter": "sm",
+        "verticalGutter": ["sm", "md", "md"]
+      },
+      "container": {
+        "maxWidth": 1280
+      }
+    },
     "container": {
       "sm": { "px": 20 },
       "md": { "px": 72 },
