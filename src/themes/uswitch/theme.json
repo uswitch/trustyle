@@ -1263,7 +1263,9 @@
           "height": [40, 56]
         }
       }
+    }
   },
+
   "compounds": { 
     "product-table": {
       "row": {
@@ -1986,6 +1988,7 @@
       }
     }
   },
+
   "modules": {
     "image-callout": {
       "base": {

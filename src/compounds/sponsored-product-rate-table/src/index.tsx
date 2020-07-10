@@ -298,6 +298,7 @@ const SponsoredRateTable: React.FC<Props> = ({
             variant="primary"
             sx={{
               padding: 0,
+              width: '100%',
               height: 48,
               display: ['none', 'flex'],
               justifyContent: 'space-evenly',
