@@ -37,11 +37,14 @@ const invertTheme = (theme: any, variant: any = {}) => {
     borderColor,
     borderWidth: 2,
     borderStyle: 'solid',
-    ':hover': {
-      backgroundColor: hoverColor
-    },
-    ':hover:not(:disabled)': {
-      backgroundColor: hoverColor
+    '@media (hover: hover)': {
+      // prevents sticky hover bug on iOS
+      ':hover': {
+        backgroundColor: hoverColor
+      },
+      ':hover:not(:disabled)': {
+        backgroundColor: hoverColor
+      }
     }
   }
 }

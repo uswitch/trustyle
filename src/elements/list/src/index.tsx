@@ -55,6 +55,10 @@ export const ListItem: React.FC<ListItemProps> = ({
     counterIncrement: 'li',
     position: 'relative',
     paddingLeft: 'sm',
+    // handle bug in eevee that results in incorrect extra spacing
+    p: {
+      display: 'inline'
+    },
     '::before': {
       // https://www.w3.org/Style/Examples/007/color-bullets.en.html
       position: 'absolute',

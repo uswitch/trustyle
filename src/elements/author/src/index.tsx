@@ -27,6 +27,9 @@ const Author: React.FC<Props> = ({
   editorUrl,
   className
 }) => {
+  const authorString = role
+    ? `Written by ${name}, ${role}`
+    : `Written by ${name}`
   return (
     <div
       sx={{
@@ -80,7 +83,7 @@ const Author: React.FC<Props> = ({
               variant: 'elements.author.link'
             }}
           >
-            Written by {name}, {role}
+            Written by {authorString}
           </a>
         </Styled.h6>
         <Styled.p
