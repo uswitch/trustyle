@@ -1376,7 +1376,7 @@
         }
       }
     },
-    "collectionTabs": {
+    "collection-tabs": {
       "base": {
         "container": {
           "h6": {
