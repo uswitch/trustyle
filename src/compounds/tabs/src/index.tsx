@@ -166,7 +166,10 @@ export const Tabs: React.FC<TabsProps> = ({ children, className }) => {
   }, [])
 
   return (
-    <Container className={className}>
+    <Container
+      className={className}
+      sx={{ variant: 'compounds.collection-tabs.variants.containerPadding' }}
+    >
       <div
         ref={tabWrap}
         sx={{
