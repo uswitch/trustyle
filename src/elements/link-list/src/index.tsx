@@ -91,6 +91,7 @@ export const LinkListItem: React.FC<ListLinkItemProps> = ({
         href={href}
         sx={{
           textDecoration: 'none',
+          borderBottom: 0,
           ':hover': {
             textDecoration: 'underline'
           }
