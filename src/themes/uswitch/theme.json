@@ -195,6 +195,7 @@
     "grey-05": "#F3F3F4",
     "blue": "#84A6FF",
     "blue-75": "#A3BCFF",
+    "blue-50": "#C1D3FF",
     "blue-25": "#E0E9FF",
     "orange": "#FFAA55",
     "progress-bg": "#E0E9FF",
@@ -962,6 +963,9 @@
       }
     },
     "hero": {
+      "wrapper": {
+        "backgroundColor": "blue-50"
+      },
       "sm": {
         "minHeight": 360,
         "pb": 34
@@ -2444,6 +2448,18 @@
       },
       "title": {
         "fontWeight": "bold"
+      }
+    }
+  },
+  
+  "layout": {
+    "flex-grid": {
+      "sizes": {
+        "verticalGutter": "md",
+        "gutter": "gutter"
+      },
+      "container": {
+        "maxWidth": 1200
       }
     }
   }
