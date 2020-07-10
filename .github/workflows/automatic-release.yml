@@ -1,0 +1,22 @@
+name: Publish
+
+on:
+  pull_request:
+    types: [closed] # github has no "merge" type, merged and closed PRs are bundled together, see if statement underneath
+
+jobs:
+  build:
+    # only runs on successful merge, not a manually closed PR
+    if: github.event.pull_request.merged == 'true' 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm install
+      - run: npx lerna publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
