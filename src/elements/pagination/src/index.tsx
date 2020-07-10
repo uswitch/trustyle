@@ -105,6 +105,7 @@ const Pagination: React.FC<Props> = ({
   const anchorStyling = {
     color: 'inherit',
     textDecoration: 'none',
+    borderBottom: 0,
     cursor: 'pointer'
   }
 
