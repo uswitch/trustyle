@@ -2,12 +2,10 @@ name: Publish
 
 on:
   pull_request:
-    types: [closed] # github has no "merge" type, merged and closed PRs are bundled together, see if statement underneath
+    types: [closed]
 
 jobs:
   build:
-    # only runs on successful merge, not a manually closed PR
-    if: github.event.pull_request.merged == 'true' 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
