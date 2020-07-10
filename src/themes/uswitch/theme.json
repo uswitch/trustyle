@@ -1,5 +1,6 @@
 {
   "name": "Uswitch",
+  "useBodyStyles": false,
   "breakpoints": ["768px", "992px"],
   "zIndices": {
     "min": 0,
