@@ -710,6 +710,9 @@
       "heading": {
         "color": "grey-80"
       },
+      "image-link": {
+        "borderBottom": 0
+      },
       "link": {
         "fontWeight": "inherit"
       },
