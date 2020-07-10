@@ -160,7 +160,9 @@
 
     "progress-bg": "#E0E9FF",
     "progress-primary": "#84A6FF",
-    "progress-label": "#002396"
+    "progress-label": "#002396",
+
+    "overlay-bg": "rgba(20, 20, 36, 0.5)"
   },
 
   "radii": {
@@ -249,6 +251,42 @@
   "----------------------------- Variants": "-----------------------------",
   
   "elements": {
+    "overlay": {
+      "backgroundColor": "overlay-bg"
+    },
+    
+    "modal": {
+      "base": {
+        "backgroundColor": "#FFFFFF"
+      },
+      "variants": {
+        "full": {
+          "variant": "elements.modal.base",
+          "maxWidth": ["none", "30em", "38em"],
+          "margin": ["auto", "100px auto"],
+          "flexGrow": [1, 0]
+        },
+        "partial": {
+          "variant": "elements.modal.base",
+          "maxWidth": ["none", "30em", "38em"],
+          "margin": ["auto", "100px auto"],
+          "flexGrow": "0"
+        }
+      },
+      "closeIcon": {
+        "width": "24px",
+        "height": "24px",
+        "color": "link-2"
+      },
+      "closeButton": {
+        "backgroundColor": "#FFFFFF",
+        "border": 0,
+        "cursor": "pointer",
+        "lineHeight": 0,
+        "padding": "xs"
+      }
+    },
+
     "sponsored-by-tag": {
       "base": {
         "wrapper": {
@@ -337,9 +375,9 @@
           "fontSize": "base",
           "lineHeight": "base",
           "textAlign": "center",
-          "boxSizing": "border-box" ,
+          "boxSizing": "border-box",
           "alignItems": "center",
-          "display": "flex"     
+          "display": "flex"
         },
         "prefix": {
           "variant": "elements.input.affix.base",
