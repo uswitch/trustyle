@@ -1244,7 +1244,7 @@
         "width": "auto"
       }
     },
-    "sponsoredByTag": {
+    "sponsored-by-tag": {
       "base": {
         "wrapper": {
           "display": "flex",
@@ -1263,7 +1263,6 @@
           "height": [40, 56]
         }
       }
-    }
   },
   "compounds": { 
     "product-table": {
