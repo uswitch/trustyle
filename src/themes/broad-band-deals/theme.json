@@ -18,8 +18,8 @@
   "fonts": {
     "base": "DM Sans, sans-serif",
     "heading": "Helvetica",
-    "monospace": "Menlo, monospace",
-    "helvetica": "Helvetica"
+    "body": "Helvetica",
+    "monospace": "Menlo, monospace"
   },
 
   "lineHeights": {
@@ -160,11 +160,9 @@
   "compounds": {
     "pros-and-cons": {
       "title": {
-        "fontFamily": "helvetica",
         "lineHeight": "md"
       },
       "item": {
-        "fontFamily": "helvetica",
         "lineHeight": "md"
       }
     }

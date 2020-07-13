@@ -21,8 +21,7 @@
     "body": "Roboto, -apple-system, system-ui, system-ui, Arial, sans-serif",
     "heading": "sofia-pro, -apple-system, sans-serif",
     "monospace": "Menlo, monospace",
-    "link": "Roboto, -apple-system, system-ui, system-ui, Arial, sans-serif",
-    "helvetica": "Helvetica"
+    "link": "Roboto, -apple-system, system-ui, system-ui, Arial, sans-serif"
   },
 
   "lineHeights": {
@@ -365,11 +364,9 @@
   "compounds": {
     "pros-and-cons": {
       "title": {
-        "fontFamily": "helvetica",
         "lineHeight": "md"
       },
       "item": {
-        "fontFamily": "helvetica",
         "lineHeight": "md"
       }
     },
