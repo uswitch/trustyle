@@ -13,6 +13,7 @@ const AllThemes: React.FC<Props> = ({ themes = [], children }) => {
     'money',
     'journey',
     'save-on-energy',
+    'broad-band-deals',
     'bankrate'
   ]
   const themeKeys = themes.length
