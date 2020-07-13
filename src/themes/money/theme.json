@@ -20,8 +20,7 @@
     "body": "'Open Sans', -apple-system, sans-serif",
     "heading": "Nunito, -apple-system, sans-serif",
     "monospace": "Menlo, monospace",
-    "link": "'Open Sans', -apple-system, sans-serif",
-    "sofia": "sofia-pro, -apple-system, sans-serif"
+    "link": "'Open Sans', -apple-system, sans-serif"
   },
 
   "lineHeights": {
@@ -460,12 +459,10 @@
     "pros-and-cons": {
       "title": {
         "color": "plum",
-        "fontFamily": "heading",
         "fontSize": "sm",
         "lineHeight": "heading"
       },
       "item": {
-        "fontFamily": "sofia",
         "fontWeight": "normal",
         "fontSize": "sm",
         "lineHeight": "base",

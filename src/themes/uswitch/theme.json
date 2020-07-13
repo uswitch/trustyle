@@ -398,9 +398,6 @@
           "paddingLeft": [0, 0],
           "backgroundColor": "none",
           "fontFamily": "heading"
-        },
-        "title": {
-          "fontFamily": "heading"
         }
       }
     },

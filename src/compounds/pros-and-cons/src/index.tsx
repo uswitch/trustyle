@@ -66,7 +66,7 @@ const listItem = (item: string, color: Colors) => (
     {Text(
       item,
       'uswitch-navy',
-      { variant: getVariant('item') },
+      { fontFamily: 'body', variant: getVariant('item') },
       { color: 'textColor' }
     )}
   </div>
@@ -80,6 +80,7 @@ const getColumnList = (color: Colors, { items, title }: ItemsList) => (
         'grey-60',
         {
           marginBottom: ['xs', 'sm'],
+          fontFamily: 'heading',
           variant: getVariant('title')
         },
         { color: 'textColorAccent' }
