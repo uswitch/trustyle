@@ -91,7 +91,7 @@ const Hero: React.FC<Props> = ({
             sx={{
               position: 'relative',
               paddingTop: ['sm', 'xxl'],
-              paddingBottom: ['sm', 'xxxl'],
+              paddingBottom: ['sm', 'xxl'],
               variant: 'hero.content'
             }}
           >
