@@ -43,8 +43,8 @@ export interface DataAutoProps extends React.HTMLAttributes<HTMLDivElement> {
 const ProductTableDataAuto: React.FC<DataAutoProps> = ({ text }) => {
   return (
     <div>
-      {autoFormat(text).map(({ word, size }) =>
-        size === 'small' ? <small>{word}</small> : word
+      {autoFormat(text).map(({ word, size }, index) =>
+        size === 'small' ? <small key={index}>{word}</small> : word
       )}
     </div>
   )
