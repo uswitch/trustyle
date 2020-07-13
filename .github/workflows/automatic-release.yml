@@ -16,7 +16,8 @@ jobs:
       - run: git checkout master
       - run: git fetch --tags
       - run: npm install
-      - run: npx lerna publish
+      - run: npx lerna bootstrap
+      - run: npx lerna publish --conventional-commits
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
