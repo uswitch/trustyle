@@ -4,6 +4,7 @@
     "768px",
     "992px"
   ],
+  "useBodyStyles": false,
   "zIndices": {
     "min": 0,
     "max": 100
