@@ -28,7 +28,7 @@
   "lineHeights": {
     "base": "1.5",
     "heading": "1.2",
-    "mid": "1.3"
+    "md": "1.3"
   },
 
   "fontSizes": {
@@ -231,13 +231,13 @@
         "fontFamily": "heading",
         "color": "uswitch-navy",
         "span": {
-          "lineHeight": "mid"
+          "lineHeight": "md"
         }
       },
       "question": {
         "marginTop": "sm",
         "fontFamily": "helvetica",
-        "lineHeight": "mid",
+        "lineHeight": "md",
         "color": "black",
         "textAlign": "center"
       }

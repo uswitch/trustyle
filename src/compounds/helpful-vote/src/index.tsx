@@ -81,6 +81,7 @@ const HelpfulVote: React.FC<Props> = ({
             fontWeight: 'bold',
             fontSize: 'md',
             lineHeight: 'heading',
+            fontFamily: 'heading',
             variant: getVariant('question')
           }}
         >

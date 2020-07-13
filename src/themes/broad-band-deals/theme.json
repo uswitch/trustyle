@@ -158,12 +158,24 @@
   "modules": {},
 
   "compounds": {
-    "pros-and-cons": {
-      "title": {
-        "lineHeight": "md"
+    "helpful-vote": {
+      "button": {
+        "border": "none",
+        "backgroundColor": "grey-05",
+        "fontFamily": "heading",
+        "color": "uswitch-navy",
+        "span": {
+          "lineHeight": "md",
+          "fontWeight": "bold",
+          "fontSize": "md"
+        }
       },
-      "item": {
-        "lineHeight": "md"
+      "question": {
+        "fontFamily": "heading",
+        "lineHeight": "md",
+        "color": "black",
+        "textAlign": "center",
+        "marginY": "sm"
       }
     }
   }
