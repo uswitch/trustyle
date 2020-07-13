@@ -21,8 +21,7 @@
     "body": "Roboto, -apple-system, system-ui, system-ui, Arial, sans-serif",
     "heading": "sofia-pro, -apple-system, sans-serif",
     "monospace": "Menlo, monospace",
-    "link": "Roboto, -apple-system, system-ui, system-ui, Arial, sans-serif",
-    "helvetica": "Helvetica"
+    "link": "Roboto, -apple-system, system-ui, system-ui, Arial, sans-serif"
   },
 
   "lineHeights": {
@@ -236,7 +235,7 @@
       },
       "question": {
         "marginTop": "sm",
-        "fontFamily": "helvetica",
+        "fontFamily": "heading",
         "lineHeight": "md",
         "color": "black",
         "textAlign": "center"
