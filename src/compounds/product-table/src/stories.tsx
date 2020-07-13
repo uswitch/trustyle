@@ -49,23 +49,6 @@ export const ExampleWithKnobs = () => {
   const thirdCol = select('Third column', columns, 'Content from knob')
   const fourthCol = select('Fourth column', columns, 'None')
 
-  console.log(
-    'Value',
-    ProductTable.text.Value({
-      value: 300,
-      unit: 'pounds',
-      subscript: '/ month'
-    })
-  )
-  console.log(
-    'Range',
-    ProductTable.text.Range({ from: 30, to: 260, unit: 'pounds' })
-  )
-  console.log(
-    'Subscript',
-    ProductTable.text.TextSubscript({ text: '£121', subscript: '/ month' })
-  )
-
   const formatters = {
     Range: <ProductTable.data.Range from={30} to={260} unit="pounds" />,
     TextSubscript: (
