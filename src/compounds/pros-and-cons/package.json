@@ -12,6 +12,7 @@
     "react": "^16.7.0"
   },
   "dependencies": {
+    "@uswitch/trustyle-utils.palette": "^1.2.1",
     "@uswitch/trustyle.flex-grid": "^2.2.4",
     "@uswitch/trustyle.icon": "^1.8.6"
   }
