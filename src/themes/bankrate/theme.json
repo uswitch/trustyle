@@ -957,7 +957,9 @@
     "h5": {
       "variant": "styles.heading",
       "fontSize": ["sm", "md"],
-      "my": "sm"
+      "my": "sm",
+      "marginTop": 0,
+      "marginBottom": "sm"
     },
 
     "h6": {
