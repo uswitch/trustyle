@@ -88,7 +88,7 @@ const getColumnList = (color: Colors, { items, title }: ItemsList) => (
       as={Styled.div}
       sx={{
         backgroundColor: 'grey-05',
-        paddingY: 'md',
+        paddingY: 'sm',
         paddingX: ['sm', 'md'],
         variant: getVariant('column.background')
       }}
