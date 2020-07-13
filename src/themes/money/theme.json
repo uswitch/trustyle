@@ -725,7 +725,8 @@
       },
       "column": {
         "background": {
-          "padding": ["sm", "sm"]
+          "paddingX": ["sm", "sm"],
+          "paddingY": ["xs", "xs"]
         }
       }
     },
