@@ -65,7 +65,7 @@ TitleExample.story = {
 
 export const AutomatedTests = () => {
   return (
-    <AllThemes>
+    <AllThemes themes={['broad-band-deals', 'bankrate']}>
       <BasicExample />
       <TitleExample />
     </AllThemes>

@@ -1,9 +1,10 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
+import { Palette } from '@uswitch/trustyle-utils.palette'
 
 enum Colors {
   green,
@@ -21,8 +22,9 @@ interface Props {
 }
 
 const getVariant = (element: string) => 'compounds.pros-and-cons.' + element
-const Text = (text: string, color: string, sx?: any) => (
-  <div
+const Text = (text: string, color: string, sx?: any, px?: any) => (
+  <Palette
+    as={Styled.div}
     sx={{
       fontStyle: 'normal',
       fontWeight: 'bold',
@@ -31,9 +33,12 @@ const Text = (text: string, color: string, sx?: any) => (
       color,
       ...sx
     }}
+    px={{
+      ...px
+    }}
   >
     {text}
-  </div>
+  </Palette>
 )
 
 const gylphs = {
@@ -58,27 +63,41 @@ const listItem = (item: string, color: Colors) => (
     }}
   >
     <Icon color={Colors[color]} glyph={gylphs[color] as Glyph} size={24} />
-    {Text(item, 'uswitch-navy', { variant: getVariant('item') })}
+    {Text(
+      item,
+      'uswitch-navy',
+      { variant: getVariant('item') },
+      { color: 'textColor' }
+    )}
   </div>
 )
 
 const getColumnList = (color: Colors, { items, title }: ItemsList) => (
   <Col span={1} sx={{ marginBottom: ['md', 0], variant: getVariant('column') }}>
     {title &&
-      Text(title, 'grey-60', {
-        marginBottom: ['xs', 'sm'],
-        variant: getVariant('title')
-      })}
-    <div
+      Text(
+        title,
+        'grey-60',
+        {
+          marginBottom: ['xs', 'sm'],
+          variant: getVariant('title')
+        },
+        { color: 'textColorAccent' }
+      )}
+    <Palette
+      as={Styled.div}
       sx={{
         backgroundColor: 'grey-05',
         paddingY: 'md',
         paddingX: ['sm', 'md'],
         variant: getVariant('column.background')
       }}
+      px={{
+        backgroundColor: 'backgroundColor'
+      }}
     >
       {items.map(item => listItem(item, color))}
-    </div>
+    </Palette>
   </Col>
 )
 
