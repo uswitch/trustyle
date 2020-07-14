@@ -22,6 +22,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   isInitiallyOpen?: boolean
   className?: string
+  icon?: React.ReactNode
 }
 
 interface TitleProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -38,7 +39,7 @@ interface GroupProps {
 const Accordion: React.FC<Props> & {
   Group: React.FC<GroupProps>
   Title: React.FC<TitleProps>
-} = ({ index, title, isInitiallyOpen = false, children, className }) => {
+} = ({ index, title, isInitiallyOpen = false, children, className, icon }) => {
   const {
     theme: {
       compounds: { accordion: accordionTheme = {} },
@@ -72,14 +73,36 @@ const Accordion: React.FC<Props> & {
         }}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div
-          sx={{
-            flex: '1',
-            textAlign: 'left'
-          }}
-        >
-          {title}
-        </div>
+        {icon ? (
+          <div
+            sx={{
+              flex: '1',
+              textAlign: 'left',
+              alignItems: 'center',
+              display: 'flex'
+            }}
+          >
+            <div
+              sx={{
+                marginRight: '13px',
+                display: 'flex'
+              }}
+            >
+              {icon}
+            </div>
+            {title}
+          </div>
+        ) : (
+          <div
+            sx={{
+              flex: '1',
+              textAlign: 'left'
+            }}
+          >
+            {title}
+          </div>
+        )}
+
         {accordionContext.iconClosed && accordionContext.iconOpen ? (
           <Icon
             color={
