@@ -39,7 +39,11 @@ const Category: React.FC<ListProps> = ({
       }}
       className={className}
     >
-      <Container>
+      <Container
+        sx={{
+          variant: 'categoryTitle.container'
+        }}
+      >
         {Breadcrumbs && (
           <div
             sx={{

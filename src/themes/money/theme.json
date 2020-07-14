@@ -1665,11 +1665,17 @@
     "main": {
       "background": "linear-gradient(172deg, #924A8B 28%, #AF4C83 100%)"
     },
+    "container": {
+      "paddingX": ["0", "sm"]
+    },
     "heading": {
-      "color": "grey-0"
+      "color": "grey-0",
+      "fontSize": ["xl", "xxl"],
+      "marginBottom": ["xs", "xxs"]
     },
     "text": {
-      "color": "grey-0"
+      "color": "grey-0",
+      "fontSize": ["xs", "sm"]
     },
     "breadcrumbs": {
       "variant": "light"
