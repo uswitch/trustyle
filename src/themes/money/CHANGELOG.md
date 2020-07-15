@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.21.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@0.21.5...@uswitch/trustyle.money-theme@0.21.6) (2020-07-15)
+
+
+### Bug Fixes
+
+* hero breadcrumb styling for Money ([bf296a9](https://github.com/uswitch/trustyle/commit/bf296a9))
+
+
+
+
+
 ## [0.21.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@0.21.4...@uswitch/trustyle.money-theme@0.21.5) (2020-07-15)
 
 

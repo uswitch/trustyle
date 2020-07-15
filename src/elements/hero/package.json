@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.hero",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -10,5 +10,8 @@
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
+  },
+  "dependencies": {
+    "@uswitch/trustyle-utils.get": "^1.0.5"
   }
 }
