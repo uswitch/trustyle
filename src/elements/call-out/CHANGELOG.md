@@ -1,0 +1,8 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [1.2.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.call-out@1.2.5...@uswitch/trustyle.call-out@1.2.6) (2020-07-15)
+
+**Note:** Version bump only for package @uswitch/trustyle.call-out
