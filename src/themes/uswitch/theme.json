@@ -378,22 +378,50 @@
   "----------------------------- Variants": "-----------------------------",
   "elements": {
     "list": {
+      "pros-and-cons": {
+        "title": { "color": "grey-60", "fontSize": "sm" },
+        "base": {
+          "paddingY": "sm",
+          "paddingLeft": [0, 0],
+          "li": {
+            "paddingLeft": 0,
+            "fontWeight": "bold",
+            "marginBottom": "xs",
+            "fontSize": "sm",
+            "lineHeight": "sm",
+            "display": "flex",
+            "alignItems": "center",
+            "::before": { "display": "none" }
+          },
+          ":last-child": {
+            "marginBottom": "0"
+          }
+        },
+        "icon": {
+          "display": "inline",
+          "marginRight": "xxs"
+        }
+      },
       "variants": {
-        "pros-and-cons": {
-          "title": { "color": "grey-60", "fontSize": "sm" },
+        "pros": {
+          "title": {
+            "variant": "elements.list.pros-and-cons.title"
+          },
           "base": {
-            "paddingY": "sm",
-            "paddingLeft": [0, 0],
-            "li": {
-              "paddingLeft": 0,
-              "fontWeight": "bold",
-              "marginBottom": "xs",
-              "fontSize": "sm",
-              "lineHeight": "sm",
-              "::before": { "display": "none" }
-            },
-            ":last-child": {
-              "marginBottom": "0"
+            "variant": "elements.list.pros-and-cons.base",
+            "svg": {
+              "variant": "elements.list.pros-and-cons.icon"
+            }
+          }
+        },
+        "cons": {
+          "title": {
+            "variant": "elements.list.pros-and-cons.title"
+          },
+          "base": {
+            "variant": "elements.list.pros-and-cons.base",
+            "svg": {
+              "variant": "elements.list.pros-and-cons.icon"
             }
           }
         }
