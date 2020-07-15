@@ -839,6 +839,22 @@
       },
       "numeric": {
         "color": "jaffa"
+      },
+      "variants": {
+        "pros-and-cons": {
+          "base": {
+            "backgroundColor": "grey-05",
+            "padding": "sm",
+            "li": {
+              "marginLeft": 0,
+              "marginBottom": "xs",
+              "::before": { "display": "none" }
+            },
+            ":last-child": {
+              "marginBottom": "0"
+            }
+          }
+        }
       }
     },
 
