@@ -184,6 +184,8 @@
             "marginBottom": "xs",
             "lineHeight": "md",
             "fontSize": "sm",
+            "display": "flex",
+            "alignItems": "center",
             "::before": { "display": "none" }
           },
           ":last-child": {
@@ -192,7 +194,7 @@
         },
         "icon": {
           "display": "inline",
-          "marginRight": "xs"
+          "marginRight": "xxs"
         }
       },
       "variants": {
