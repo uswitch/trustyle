@@ -1,21 +1,29 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, useThemeUI } from 'theme-ui'
+import { jsx, Styled, useThemeUI } from 'theme-ui'
 
 interface ListProps extends React.OlHTMLAttributes<HTMLUListElement> {
   listType?: 'numeric' | 'bullet'
+  variant?: string
+  title?: string
 }
 
 export const List: React.FC<ListProps> = ({
   children,
+  variant,
+  title,
   listType = 'bullet',
   ...props
 }) => {
+  const getVariant = (element: string) =>
+    `elements.list.${variant ? `variants.${variant}.${element}` : element}`
+
   const sx: any = {
     listStyle: 'none',
     paddingLeft: 'sm',
-    marginY: 'sm'
+    marginY: 'sm',
+    variant: getVariant('base')
   }
 
   const childrenWithProps = React.Children.map(
@@ -25,14 +33,19 @@ export const List: React.FC<ListProps> = ({
     }
   )
 
-  return listType === 'numeric' ? (
-    <ol {...props} sx={sx}>
-      {childrenWithProps}
-    </ol>
-  ) : (
-    <ul {...props} sx={sx}>
-      {children}
-    </ul>
+  return (
+    <div>
+      {title && <Styled.h6>{title}</Styled.h6>}
+      {listType === 'numeric' ? (
+        <ol {...props} sx={sx}>
+          {childrenWithProps}
+        </ol>
+      ) : (
+        <ul {...props} sx={sx}>
+          {children}
+        </ul>
+      )}
+    </div>
   )
 }
 
