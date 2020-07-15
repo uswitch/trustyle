@@ -407,6 +407,28 @@
     }
   },
   "elements": {
+    "list": {
+      "variants": {
+        "pros-and-cons": {
+          "title": { "color": "grey-60", "fontSize": "sm" },
+          "base": {
+            "paddingY": "sm",
+            "paddingLeft": [0, 0],
+            "li": {
+              "paddingLeft": 0,
+              "fontWeight": "bold",
+              "marginBottom": "xs",
+              "fontSize": "sm",
+              "lineHeight": "sm",
+              "::before": { "display": "none" }
+            },
+            ":last-child": {
+              "marginBottom": "0"
+            }
+          }
+        }
+      }
+    },
     "drop-down": {
       "placeholder": {
         "border": "1px solid",

@@ -385,7 +385,7 @@
             "backgroundColor": "grey-05",
             "padding": "sm",
             "li": {
-              "marginLeft": 0,
+              "paddingLeft": 0,
               "marginBottom": "xs",
               "::before": { "display": "none" }
             },
