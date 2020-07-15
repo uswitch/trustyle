@@ -212,28 +212,54 @@
 
   "elements": {
     "list": {
-      "variants": {
-        "pros-and-cons": {
-          "title": {
-            "color": "grey-60",
-            "fontSize": "sm",
+      "pros-and-cons": {
+        "title": {
+          "color": "grey-60",
+          "fontSize": "sm",
+          "fontWeight": "bold",
+          "lineHeight": "md"
+        },
+        "base": {
+          "paddingY": "md",
+          "paddingX": ["sm", "md"],
+          "backgroundColor": "grey-05",
+          "li": {
+            "paddingLeft": 0,
             "fontWeight": "bold",
-            "lineHeight": "md"
+            "marginBottom": "xs",
+            "lineHeight": "md",
+            "fontSize": "sm",
+            "::before": { "display": "none" }
+          },
+          ":last-child": {
+            "marginBottom": "0"
+          }
+        },
+        "icon": {
+          "display": "inline",
+          "marginRight": "xs"
+        }
+      },
+      "variants": {
+        "pros": {
+          "title": {
+            "variant": "elements.list.pros-and-cons.title"
           },
           "base": {
-            "paddingY": "md",
-            "paddingX": ["sm", "md"],
-            "backgroundColor": "grey-05",
-            "li": {
-              "paddingLeft": 0,
-              "fontWeight": "bold",
-              "marginBottom": "xs",
-              "lineHeight": "md",
-              "fontSize": "sm",
-              "::before": { "display": "none" }
-            },
-            ":last-child": {
-              "marginBottom": "0"
+            "variant": "elements.list.pros-and-cons.base",
+            "svg": {
+              "variant": "elements.list.pros-and-cons.icon"
+            }
+          }
+        },
+        "cons": {
+          "title": {
+            "variant": "elements.list.pros-and-cons.title"
+          },
+          "base": {
+            "variant": "elements.list.pros-and-cons.base",
+            "svg": {
+              "variant": "elements.list.pros-and-cons.icon"
             }
           }
         }

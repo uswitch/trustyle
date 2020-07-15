@@ -2,10 +2,13 @@
 
 import * as React from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
+import { Icon } from '@uswitch/trustyle.icon'
+
+type Variant = 'pros' | 'cons'
 
 interface ListProps extends React.OlHTMLAttributes<HTMLUListElement> {
   listType?: 'numeric' | 'bullet'
-  variant?: string
+  variant?: Variant
   title?: string
 }
 
@@ -29,20 +32,22 @@ export const List: React.FC<ListProps> = ({
   const childrenWithProps = React.Children.map(
     children,
     (childComponent: any) => {
-      return React.cloneElement(childComponent, { listType })
+      return React.cloneElement(childComponent, { listType, variant })
     }
   )
 
   return (
     <div>
-      {title && <Styled.h6>{title}</Styled.h6>}
+      {title && (
+        <Styled.h6 sx={{ variant: getVariant('title') }}>{title}</Styled.h6>
+      )}
       {listType === 'numeric' ? (
         <ol {...props} sx={sx}>
           {childrenWithProps}
         </ol>
       ) : (
         <ul {...props} sx={sx}>
-          {children}
+          {childrenWithProps}
         </ul>
       )}
     </div>
@@ -51,10 +56,12 @@ export const List: React.FC<ListProps> = ({
 
 interface ListItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
   listType?: 'numeric' | 'bullet'
+  variant?: Variant
 }
 
 export const ListItem: React.FC<ListItemProps> = ({
   children,
+  variant,
   listType = 'bullet',
   ...props
 }) => {
@@ -100,6 +107,8 @@ export const ListItem: React.FC<ListItemProps> = ({
 
   return (
     <li sx={sx} {...props}>
+      {variant === 'pros' && <Icon color="green" glyph="tick" size={24} />}
+      {variant === 'cons' && <Icon color="red" glyph="cross" size={24} />}
       {children}
     </li>
   )
