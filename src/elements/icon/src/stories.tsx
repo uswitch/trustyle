@@ -18,6 +18,7 @@ const glyphChoices: Glyph[] = [
   'cross',
   'edit',
   'email',
+  'error',
   'filled-arrow',
   'filters',
   'four',
