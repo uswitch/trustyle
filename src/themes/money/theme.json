@@ -1786,7 +1786,7 @@
         "mr": ["lg", "lg", "md"],
         "img": {
           "maxWidth": "100px",
-          "maxHeight": "64px"
+          "height": "64px"
         }
       }
     }
