@@ -378,6 +378,24 @@
   },
 
   "elements": {
+    "list": {
+      "variants": {
+        "pros-and-cons": {
+          "base": {
+            "backgroundColor": "grey-05",
+            "padding": "sm",
+            "li": {
+              "marginLeft": 0,
+              "marginBottom": "xs",
+              "::before": { "display": "none" }
+            },
+            ":last-child": {
+              "marginBottom": "0"
+            }
+          }
+        }
+      }
+    },
     "drop-down": {
       "placeholder": {
         "border": "1px solid",
@@ -412,11 +430,11 @@
           "display": "flex",
           "flex-direction": "column",
           "header": {
-            "paddingY":["sm","md"]
+            "paddingY": ["sm", "md"]
           },
           "img": {
             "mr": "sm",
-            "width": [57,35]
+            "width": [57, 35]
           },
           "h2": {
             "color": "grey-80",
@@ -446,7 +464,7 @@
           },
 
           "& + a": {
-            "mt": ["sm",40],
+            "mt": ["sm", 40],
             "width": ["100%", "unset"]
           }
         }
@@ -529,7 +547,7 @@
           "textAlign": "center",
           "boxSizing": "border-box",
           "alignItems": "center",
-          "display": "flex"  
+          "display": "flex"
         },
         "prefix": {
           "variant": "elements.input.affix.base",
@@ -695,10 +713,10 @@
           "fontWeight": "base",
           "fontStyle": "normal"
         },
-        "image":{
+        "image": {
           "maxHeight": "32px",
           "maxWidth": "76px",
-          "pb": [0,"sm"],
+          "pb": [0, "sm"],
           "ml": "xs"
         }
       }
@@ -866,7 +884,7 @@
         },
         "p": { "lineHeight": "130%", "color": "grey-80" },
         "h3": {
-          "fontSize": [20,24],
+          "fontSize": [20, 24],
           "minHeight": 0,
           "fontWeight": "bold",
           "color": "experimental-text",
@@ -892,7 +910,7 @@
           "paddingX": "xs",
           "paddingY": "xxs",
           "mb": "xxs",
-          "font-weight":"bold",
+          "font-weight": "bold",
           "line-height": "150%",
           "borderRadius": 4
         }
@@ -910,7 +928,7 @@
           "meta": {
             "variant": "compounds.card.base.meta"
           },
-          
+
           "content": {
             "variant": "compounds.card.base.content",
             "paddingTop": "sm"
@@ -925,11 +943,11 @@
           "display": "flex",
           "alignItems": "start",
           "image": {
-            "width": [168,192]
+            "width": [168, 192]
           },
           "h3": {
             "variant": "compounds.card.base.h3",
-            "fontSize":[16,18]
+            "fontSize": [16, 18]
           },
 
           "meta": {
@@ -939,7 +957,7 @@
 
           "content": {
             "width": 670,
-            "paddingX": ["xs","sm"],
+            "paddingX": ["xs", "sm"],
             "variant": "compounds.card.base.content"
           },
           "link": {
@@ -955,17 +973,16 @@
       }
     },
 
-
     "collectionTabs": {
-      "base":{
+      "base": {
         "container": {
           "px": "xxs",
-          "h6":{
+          "h6": {
             "fontSize": ["base", 14, "sm"],
             "color": "grey-60",
             "fontWeight": "bold",
             "textAlign": "center",
-            "my":["xs", "sm"]
+            "my": ["xs", "sm"]
           }
         }
       },
@@ -994,14 +1011,14 @@
           "my": "sm"
         },
         "overflowBorderLeft": {
-            "position": "absolute",
-            "display": "block",
-            "width": "20px",
-            "top": 0,
-            "left": 0,
-            "height": "100%",
-            "background": "linear-gradient(to right, rgba(249, 249, 251, 0.99) 0%, rgba(249, 249, 251, 0.26) 100%)",
-            "zIndex": 10
+          "position": "absolute",
+          "display": "block",
+          "width": "20px",
+          "top": 0,
+          "left": 0,
+          "height": "100%",
+          "background": "linear-gradient(to right, rgba(249, 249, 251, 0.99) 0%, rgba(249, 249, 251, 0.26) 100%)",
+          "zIndex": 10
         },
         "overflowBorderRight": {
           "position": "absolute",
@@ -1084,7 +1101,7 @@
         "flex-direction": ["column", "row"],
         "background": "linear-gradient(161.42deg, #924A8B 22.95%, #AF4C83 77.05%)",
         "box-shadow": "0px 9px 19px rgba(92, 36, 87, 0.2)",
-        "paddingX":["sm","4xl"],
+        "paddingX": ["sm", "4xl"],
         "pt": ["md", "xxxl"],
         "pb": ["lg", "xxxl"],
         "border-radius": ["4px", "8px"],
@@ -1093,12 +1110,12 @@
         },
 
         "links": {
-          "width": ["initial","50%"]
+          "width": ["initial", "50%"]
         },
 
         "flexContainer": {
-          "width": ["initial","50%"],
-          "mr": [0,"4xl"],
+          "width": ["initial", "50%"],
+          "mr": [0, "4xl"],
           "display": ["flex"],
           "flex-direction": "column",
           "justify-content": "center",
@@ -1106,7 +1123,7 @@
         },
 
         "buttonLink": {
-          "mt":["sm","xs"]
+          "mt": ["sm", "xs"]
         }
       }
     }
@@ -1931,15 +1948,14 @@
           "textAlign": ["center", "left"],
           "mb": 0
         },
-        "boxShadow":
-          "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
+        "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
         "borderRadius": "md"
       }
     }
   },
 
   "form": {
-    "label" :{
+    "label": {
       "variant": "styles.h4",
       "fontWeight": "bold",
       "color": "grey-80",
