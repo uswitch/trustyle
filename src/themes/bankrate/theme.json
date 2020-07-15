@@ -26,7 +26,8 @@
   },
 
   "lineHeights": {
-    "base": "1.5"
+    "base": "1.5",
+    "heading": "1.3"
   },
 
   "fontSizes": {
@@ -308,6 +309,32 @@
         },
         "image": {
           "height": [40, 56]
+        }
+      },
+      "variants": {
+        "pros-and-cons": {
+          "title": {
+            "color": "grey-60",
+            "fontSize": "md",
+            "fontWeight": "bold",
+            "lineHeight": "heading"
+          },
+          "base": {
+            "paddingY": "md",
+            "paddingX": ["sm", "md"],
+            "backgroundColor": "grey-05",
+            "li": {
+              "paddingLeft": 0,
+              "fontWeight": "bold",
+              "marginBottom": "xs",
+              "lineHeight": "heading",
+              "fontSize": "md",
+              "::before": { "display": "none" }
+            },
+            ":last-child": {
+              "marginBottom": "0"
+            }
+          }
         }
       }
     },
