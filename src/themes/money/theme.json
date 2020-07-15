@@ -1785,7 +1785,7 @@
       "inner": {
         "mr": ["lg", "lg", "md"],
         "img": {
-          "maxWidth": "100px",
+          "width": "100px",
           "maxHeight": "64px"
         }
       }
