@@ -290,7 +290,7 @@
     },
 
     "tr": {
-      ":nth-child(even)": {
+      ":nth-of-type(even)": {
         "backgroundColor": "grey-05"
       }
     },
@@ -376,7 +376,7 @@
           "mr": ["lg", "lg", "md"],
           "img": {
             "maxWidth": "100px",
-            "maxHeight": "64px"
+            "height": "64px"
           }
         }
       }
@@ -454,11 +454,17 @@
       "main": {
         "background": "linear-gradient(172deg, #924A8B 28%, #AF4C83 100%)"
       },
+      "container": {
+        "paddingX": ["0", "sm"]
+      },
       "heading": {
-        "color": "grey-0"
+        "color": "grey-0",
+        "fontSize": ["xl", "xxl"],
+        "marginBottom": ["xs", "xxs"]
       },
       "text": {
-        "color": "grey-0"
+        "color": "grey-0",
+        "fontSize": ["xs", "sm"]
       },
       "breadcrumbs": {
         "variant": "light"
@@ -868,6 +874,9 @@
         "h1, h2, h3, h4, h5, h6": {
           "color": "inherit"
         }
+      },
+      "breadcrumbs": {
+        "variant": "light"
       }
     },
     

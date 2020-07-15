@@ -57,11 +57,11 @@ const ProductTableCellBase: React.FC<CellBaseProps> = ({
         undefined,
         `${gridColumnStart} / span ${gridColumnSpan}`
       ],
-      '-ms-grid-column': `${gridColumnStart}`,
-      '-ms-grid-column-span': `${gridColumnSpan}`,
+      msGridColumn: `${gridColumnStart}`,
+      msGridColumnSpan: `${gridColumnSpan}`,
       gridRow: ['initial', undefined, `${gridRowStart} / span ${gridRowSpan}`],
-      '-ms-grid-row': ['initial', undefined, `${gridRowStart}`],
-      '-ms-grid-row-span': ['initial', undefined, `${gridRowSpan}`]
+      msGridRow: ['initial', undefined, `${gridRowStart}`],
+      msGridRowSpan: ['initial', undefined, `${gridRowSpan}`]
     })
   }
 

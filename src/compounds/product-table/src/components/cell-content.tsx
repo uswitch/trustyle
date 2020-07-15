@@ -13,8 +13,8 @@ const grid = (rowOrCol: 'row' | 'column', start: number, span: number) => {
   const rowOrColCap = capitalise(rowOrCol)
   return {
     [`grid${rowOrColCap}`]: `${start} / span ${span}`,
-    [`-ms-grid-${rowOrCol}`]: `${start}`,
-    [`-ms-grid-${rowOrCol}-span`]: `${span}`
+    [`msGrid${rowOrColCap}`]: `${start}`,
+    [`msGrid${rowOrColCap}Span`]: `${span}`
   }
 }
 

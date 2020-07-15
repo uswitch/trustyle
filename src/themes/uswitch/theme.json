@@ -1,10 +1,10 @@
 {
   "name": "Uswitch",
+  "useBodyStyles": false,
   "breakpoints": [
     "768px",
     "992px"
   ],
-  "useBodyStyles": false,
   "zIndices": {
     "min": 0,
     "max": 100
@@ -393,7 +393,7 @@
       "fontSize": "xs"
     },
     "tr": {
-      ":nth-child(even)": {
+      ":nth-of-type(even)": {
         "backgroundColor": "grey-05"
       }
     }

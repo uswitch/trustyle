@@ -93,9 +93,9 @@ export const Row: React.FC<RowProps & React.HTMLAttributes<any>> = ({
       }}
       {...props}
     >
-      {childrenArray.map((child: React.ReactNode) =>
+      {childrenArray.map((child: React.ReactNode, key) =>
         React.isValidElement(child)
-          ? React.cloneElement(child, { cols })
+          ? React.cloneElement(child, { cols, key })
           : child
       )}
     </div>

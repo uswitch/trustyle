@@ -379,7 +379,7 @@
       "fontSize": "xs"
     },
     "tr": {
-      ":nth-child(even)": {
+      ":nth-of-type(even)": {
         "backgroundColor": "grey-05"
       }
     }

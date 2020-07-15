@@ -101,17 +101,13 @@ const ProductTableRow: React.FC<RowProps> = ({
             undefined,
             `repeat(${cols}, 1fr)`
           ],
-          '-ms-grid-columns': ['(1fr)[2]', undefined, `(1fr)[${cols}]`],
+          msGridColumns: ['(1fr)[2]', undefined, `(1fr)[${cols}]`],
           gridTemplateRows: [
             'auto',
             undefined,
             `repeat(3, auto) repeat(${ROWS}, 1fr) repeat(3, auto)`
           ],
-          '-ms-grid-rows': [
-            'auto',
-            undefined,
-            `(auto)[3] (1fr)[${ROWS}] (auto)[3]`
-          ],
+          msGridRows: ['auto', undefined, `(auto)[3] (1fr)[${ROWS}] (auto)[3]`],
           marginX: -8,
           marginY: -6,
           variant: 'compounds.product-table.row.grid',
