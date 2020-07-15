@@ -25,7 +25,8 @@
   },
 
   "lineHeights": {
-    "base": "1.5"
+    "base": "1.5",
+    "heading": "1.3"
   },
 
   "fontSizes": {
@@ -236,6 +237,32 @@
           "left": "-2em",
           "width": "2.5em"
         }
+      },
+      "variants": {
+        "pros-and-cons": {
+          "title": {
+            "color": "grey-60",
+            "fontSize": "md",
+            "fontWeight": "bold",
+            "lineHeight": "heading"
+          },
+          "base": {
+            "paddingY": "md",
+            "paddingX": ["sm", "md"],
+            "backgroundColor": "grey-05",
+            "li": {
+              "paddingLeft": 0,
+              "fontWeight": "bold",
+              "marginBottom": "xs",
+              "lineHeight": "heading",
+              "fontSize": "md",
+              "::before": { "display": "none" }
+            },
+            ":last-child": {
+              "marginBottom": "0"
+            }
+          }
+        }
       }
     },
 
@@ -316,7 +343,7 @@
         }
       }
     },
-    
+
     "input-alert": {
       "fontFamily": "base",
       "fontSize": "base",
@@ -335,7 +362,7 @@
         "borderBottomStyle": "solid"
       }
     },
-    
+
     "sponsoredByTag": {
       "base": {
         "wrapper": {
@@ -351,7 +378,7 @@
           "fontWeight": "base",
           "fontStyle": "normal"
         },
-        "image":{
+        "image": {
           "height": [40, 56]
         }
       }
@@ -516,11 +543,11 @@
           "borderBottomStyle": "solid",
           "borderColor": "grey-10",
           "position": "relative",
-          "&:hover":{
+          "&:hover": {
             "backgroundColor": "grey-10"
           },
           ">a": {
-            "&:hover":{
+            "&:hover": {
               "ml": "sm"
             },
             "transition": "all 0.2s ease-in-out",
@@ -778,8 +805,7 @@
   },
 
   "author": {
-    "heading": {
-    },
+    "heading": {},
     "image-link": {
       "height": [48, 48],
       "width": [48, 48]
@@ -893,15 +919,14 @@
           "textAlign": ["center", "left"],
           "mb": 0
         },
-        "boxShadow":
-          "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
+        "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
         "borderRadius": "md"
-      }  
+      }
     }
   },
 
   "form": {
-    "label" :{
+    "label": {
       "variant": "styles.h4",
       "color": "grey-80",
       "display": "block",
@@ -947,7 +972,7 @@
 
     "h5": {
       "variant": "styles.heading",
-      "fontSize": ["sm","md"],
+      "fontSize": ["sm", "md"],
       "my": "sm"
     },
 
@@ -998,7 +1023,6 @@
         "fontStyle": "normal"
       }
     },
-
 
     "table": {
       "borderSpacing": 0,
