@@ -1246,16 +1246,16 @@
     },
 
     "input-alert": {
+      "padding": 16,
+      "notificationColor": "primary",
+      "alertColor": "error-red",
+      "color": "light-1",
+      "radii": 0,
       "fontFamily": "base",
       "fontSize": "base",
       "lineHeight": 1.38,
-      "padding": 16,
       "position": "relative",
       "borderRadius": 0,
-      "radii": 0,
-      "notificationColor": "uswitch-navy",
-      "alertColor": "error-red",
-      "color": "white",
       "before": {
         "position": "absolute",
         "content": "''",
@@ -2503,4 +2503,5 @@
     }
   }
 
+  
 }
