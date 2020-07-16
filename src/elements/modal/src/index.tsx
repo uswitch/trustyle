@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom'
 import { jsx } from 'theme-ui'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import FocusLock from 'react-focus-lock'
-import ThemedIcon from '@uswitch/trustyle.themed-icon'
+import { Icon } from '@uswitch/trustyle.icon'
 import Measure from 'react-measure'
 
 type ModalMobileHeight = 'full' | 'partial'
@@ -150,12 +150,7 @@ const Overlay: React.FC<OverlayProps> = ({
                       }}
                       {...closeButtonProps}
                     >
-                      <ThemedIcon
-                        icon="close"
-                        sx={{
-                          variant: 'elements.modal.closeIcon'
-                        }}
-                      />
+                      <Icon glyph="close" color="#141424" size={18} />
                     </button>
                   </div>
                   <div>{children}</div>
