@@ -172,9 +172,11 @@
           "color": "grey-60",
           "fontSize": "sm",
           "fontWeight": "bold",
-          "lineHeight": "md"
+          "lineHeight": "md",
+          "marginX": "xxs"
         },
         "base": {
+          "margin": "xxs",
           "paddingY": "md",
           "paddingX": ["sm", "md"],
           "backgroundColor": "grey-05",
