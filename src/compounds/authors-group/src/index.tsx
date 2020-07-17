@@ -6,14 +6,11 @@ import Author from '@uswitch/trustyle.author'
 import dayjs from '@uswitch/trustyle.date'
 
 interface AuthorProps extends React.HTMLAttributes<HTMLDivElement> {
-  name: string
-  role: string
-  editorName?: string
-  editorRole?: string
+  title: string
+  subtitle: string
+  titleUrl?: string
+  subtitleUrl?: string
   authorImage?: React.ReactElement
-  date: number
-  authorUrl: string
-  editorUrl?: string
   className?: string
 }
 
