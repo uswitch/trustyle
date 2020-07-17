@@ -333,10 +333,10 @@
           "fontWeight": "base",
           "fontStyle": "normal"
         },
-        "image":{
+        "image": {
           "maxHeight": "32px",
           "maxWidth": "76px",
-          "pb": [0,"sm"],
+          "pb": [0, "sm"],
           "ml": "xs"
         }
       }
@@ -381,7 +381,7 @@
         }
       }
     },
-    
+
     "logo-collection": {
       "base": {
         "inner": {
@@ -430,7 +430,7 @@
         }
       }
     },
-    
+
     "breadcrumbs": {
       "base": {
         "main": {
@@ -499,7 +499,7 @@
         "fontSize": "xs"
       }
     },
-    
+
     "input": {
       "base": {
         "fontFamily": "base",
@@ -576,7 +576,7 @@
           "textAlign": "center",
           "boxSizing": "border-box",
           "alignItems": "center",
-          "display": "flex"  
+          "display": "flex"
         },
         "prefix": {
           "variant": "elements.input.affix.base",
@@ -732,7 +732,7 @@
         "color": "grey-80"
       }
     },
-    
+
     "call-out": {
       "main": {
         "backgroundColor": "grey-10",
@@ -804,7 +804,7 @@
         "color": "jaffa"
       }
     },
-    
+
     "buttons": {
       "base": {
         "boxSizing": "border-box",
@@ -829,7 +829,7 @@
           }
         }
       },
-  
+
       "variants": {
         "primary": {
           "variant": "elements.buttons.base",
@@ -845,7 +845,7 @@
             "backgroundColor": "primary--dark"
           }
         },
-  
+
         "secondary": {
           "variant": "elements.buttons.base",
           "color": "grey-0",
@@ -860,14 +860,14 @@
             "backgroundColor": "button-secondary--hover"
           }
         },
-  
+
         "link": {
           "variant": "elements.buttons.base",
           "color": "grey-100",
           "background": "none",
           "textDecoration": "underline"
         },
-  
+
         "control": {
           "boxSizing": "border-box",
           "padding": "sm",
@@ -878,7 +878,7 @@
         }
       }
     },
-    
+
     "hero": {
       "wrapper": {
         "background": "linear-gradient(172deg, #924A8B 28%, #AF4C83 100%)",
@@ -891,7 +891,7 @@
         "variant": "light"
       }
     },
-    
+
     "drop-down": {
       "placeholder": {
         "border": "1px solid",
@@ -926,11 +926,11 @@
           "display": "flex",
           "flex-direction": "column",
           "header": {
-            "paddingY":["sm","md"]
+            "paddingY": ["sm", "md"]
           },
           "img": {
             "mr": "sm",
-            "width": [57,35]
+            "width": [57, 35]
           },
           "h2": {
             "color": "grey-80",
@@ -960,7 +960,7 @@
           },
 
           "& + a": {
-            "mt": ["sm",40],
+            "mt": ["sm", 40],
             "width": ["100%", "unset"]
           }
         }
@@ -1200,7 +1200,7 @@
         },
         "p": { "lineHeight": "130%", "color": "grey-80" },
         "h3": {
-          "fontSize": [20,24],
+          "fontSize": [20, 24],
           "minHeight": 0,
           "fontWeight": "bold",
           "color": "experimental-text",
@@ -1226,7 +1226,7 @@
           "paddingX": "xs",
           "paddingY": "xxs",
           "mb": "xxs",
-          "font-weight":"bold",
+          "font-weight": "bold",
           "line-height": "150%",
           "borderRadius": 4
         }
@@ -1244,7 +1244,7 @@
           "meta": {
             "variant": "compounds.card.base.meta"
           },
-          
+
           "content": {
             "variant": "compounds.card.base.content",
             "paddingTop": "sm"
@@ -1259,11 +1259,11 @@
           "display": "flex",
           "alignItems": "start",
           "image": {
-            "width": [168,192]
+            "width": [168, 192]
           },
           "h3": {
             "variant": "compounds.card.base.h3",
-            "fontSize":[16,18]
+            "fontSize": [16, 18]
           },
 
           "meta": {
@@ -1273,7 +1273,7 @@
 
           "content": {
             "width": 670,
-            "paddingX": ["xs","sm"],
+            "paddingX": ["xs", "sm"],
             "variant": "compounds.card.base.content"
           },
           "link": {
@@ -1290,15 +1290,15 @@
     },
 
     "collection-tabs": {
-      "base":{
+      "base": {
         "container": {
           "px": "xxs",
-          "h6":{
+          "h6": {
             "fontSize": ["base", 14, "sm"],
             "color": "grey-60",
             "fontWeight": "bold",
             "textAlign": "center",
-            "my":["xs", "sm"]
+            "my": ["xs", "sm"]
           }
         }
       },
@@ -1327,14 +1327,14 @@
           "my": "sm"
         },
         "overflowBorderLeft": {
-            "position": "absolute",
-            "display": "block",
-            "width": "20px",
-            "top": 0,
-            "left": 0,
-            "height": "100%",
-            "background": "linear-gradient(to right, rgba(249, 249, 251, 0.99) 0%, rgba(249, 249, 251, 0.26) 100%)",
-            "zIndex": 10
+          "position": "absolute",
+          "display": "block",
+          "width": "20px",
+          "top": 0,
+          "left": 0,
+          "height": "100%",
+          "background": "linear-gradient(to right, rgba(249, 249, 251, 0.99) 0%, rgba(249, 249, 251, 0.26) 100%)",
+          "zIndex": 10
         },
         "overflowBorderRight": {
           "position": "absolute",
@@ -1412,7 +1412,7 @@
         "flex-direction": ["column", "row"],
         "background": "linear-gradient(161.42deg, #924A8B 22.95%, #AF4C83 77.05%)",
         "box-shadow": "0px 9px 19px rgba(92, 36, 87, 0.2)",
-        "paddingX":["sm","4xl"],
+        "paddingX": ["sm", "4xl"],
         "pt": ["md", "xxxl"],
         "pb": ["lg", "xxxl"],
         "border-radius": ["4px", "8px"],
@@ -1421,12 +1421,12 @@
         },
 
         "links": {
-          "width": ["initial","50%"]
+          "width": ["initial", "50%"]
         },
 
         "flexContainer": {
-          "width": ["initial","50%"],
-          "mr": [0,"4xl"],
+          "width": ["initial", "50%"],
+          "mr": [0, "4xl"],
           "display": ["flex"],
           "flex-direction": "column",
           "justify-content": "center",
@@ -1434,7 +1434,7 @@
         },
 
         "buttonLink": {
-          "mt":["sm","xs"]
+          "mt": ["sm", "xs"]
         }
       }
     }
@@ -1526,7 +1526,7 @@
       "contentCols": 12,
       "contentSpan": 10
     },
-  
+
     "rich-text": {
       "contentCols": 12,
       "contentSpan": 10
@@ -1601,5 +1601,4 @@
       }
     }
   }
-
 }

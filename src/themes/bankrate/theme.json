@@ -158,7 +158,7 @@
 
     "h5": {
       "variant": "styles.heading",
-      "fontSize": ["sm","md"],
+      "fontSize": ["sm", "md"],
       "my": "sm"
     },
 
@@ -210,7 +210,6 @@
       }
     },
 
-
     "table": {
       "borderSpacing": 0,
       "width": "100%",
@@ -242,7 +241,6 @@
     }
   },
 
-
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
@@ -261,7 +259,7 @@
           "fontWeight": "base",
           "fontStyle": "normal"
         },
-        "image":{
+        "image": {
           "height": [40, 56]
         }
       }
@@ -363,10 +361,9 @@
         "borderBottomStyle": "solid"
       }
     },
-    
+
     "author": {
-      "heading": {
-      },
+      "heading": {},
       "image-link": {
         "height": [48, 48],
         "width": [48, 48]
@@ -378,7 +375,7 @@
         "fontWeight": "base"
       }
     },
-    
+
     "toggle-switch": {
       "base": {
         "base": {
@@ -535,7 +532,7 @@
         }
       }
     },
-    
+
     "buttons": {
       "base": {
         "fontWeight": "bold",
@@ -559,7 +556,7 @@
           }
         }
       },
-  
+
       "variants": {
         "primary": {
           "variant": "elements.buttons.base",
@@ -575,7 +572,7 @@
             "backgroundColor": "primary--dark"
           }
         },
-  
+
         "secondary": {
           "variant": "elements.buttons.base",
           "color": "grey-70",
@@ -593,7 +590,7 @@
         }
       }
     },
-    
+
     "list": {
       "bullet": {
         "color": "grey-80"
@@ -767,11 +764,11 @@
           "borderBottomStyle": "solid",
           "borderColor": "grey-10",
           "position": "relative",
-          "&:hover":{
+          "&:hover": {
             "backgroundColor": "grey-10"
           },
           ">a": {
-            "&:hover":{
+            "&:hover": {
               "ml": "sm"
             },
             "transition": "all 0.2s ease-in-out",
@@ -892,5 +889,4 @@
       }
     }
   }
-
 }
