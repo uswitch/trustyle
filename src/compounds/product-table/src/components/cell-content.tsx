@@ -46,7 +46,7 @@ const RowContent: React.FC<ContentRowProps> = ({
       msGridColumns: 'auto auto',
       gridTemplateRows: '100%',
       msGridRows: '100%',
-      variant: `productTable.cellContent.variants.inSplit.${
+      variant: `compounds.product-table.cellContent.variants.inSplit.${
         accent ? 'accent' : 'main'
       }`
     }}
@@ -60,7 +60,7 @@ const RowContent: React.FC<ContentRowProps> = ({
         ...grid('row', 1, 1),
         fontSize: 'xs',
         marginTop: '',
-        variant: 'productTable.cellContent.variants.inSplit.label'
+        variant: 'compounds.product-table.cellContent.variants.inSplit.label'
       }}
     >
       {label}
@@ -74,7 +74,7 @@ const RowContent: React.FC<ContentRowProps> = ({
         small: {
           fontSize: 'sm'
         },
-        variant: 'productTable.cellContent.variants.inSplit.content'
+        variant: 'compounds.product-table.cellContent.variants.inSplit.content'
       }}
     >
       {children}
@@ -99,7 +99,9 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
       gridTemplateRows: 'auto auto',
       msGridRows: 'auto auto',
       padding: accent ? 'sm' : '',
-      variant: `productTable.cellContent.${accent ? 'accent' : 'main'}`
+      variant: `compounds.product-table.cellContent.${
+        accent ? 'accent' : 'main'
+      }`
     }}
     // @ts-ignore
     css={{ display: '-ms-grid' }}
@@ -110,7 +112,7 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
         ...grid('row', 2, 1),
         fontSize: 'xs',
         marginTop: 'sm',
-        variant: 'productTable.cellContent.label'
+        variant: 'compounds.product-table.cellContent.label'
       }}
     >
       {label}
@@ -124,7 +126,7 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
           fontSize: 'sm'
         },
         lineHeight: 1,
-        variant: 'productTable.cellContent.content'
+        variant: 'compounds.product-table.cellContent.content'
       }}
     >
       {children}

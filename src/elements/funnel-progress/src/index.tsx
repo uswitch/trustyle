@@ -34,9 +34,15 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const PhaseIcon: React.FC<PhaseIconProps> = ({ variant, step }) => (
-  <div sx={{ variant: `funnelProgress.base.phaseIcon.variants.${variant}` }}>
+  <div
+    sx={{
+      variant: `elements.funnel-progress.base.phaseIcon.variants.${variant}`
+    }}
+  >
     {variant === 'complete' ? (
-      <div sx={{ variant: 'funnelProgress.base.phaseCompleteIcon.base' }}>
+      <div
+        sx={{ variant: 'elements.funnel-progress.base.phaseCompleteIcon.base' }}
+      >
         {step}
       </div>
     ) : (
@@ -54,19 +60,23 @@ const FunnelPhase: React.FC<FunnelPhaseProps> = ({
   <div
     sx={{
       variant: !open
-        ? 'funnelProgress.base.phase.base'
-        : 'funnelProgress.base.phase.variants.open'
+        ? 'elements.funnel-progress.base.phase.base'
+        : 'elements.funnel-progress.base.phase.variants.open'
     }}
   >
-    <div sx={{ variant: 'funnelProgress.base.phaseLabel.base' }}>
-      <div sx={{ variant: 'funnelProgress.base.phaseLabelPart.base' }}>
+    <div sx={{ variant: 'elements.funnel-progress.base.phaseLabel.base' }}>
+      <div
+        sx={{ variant: 'elements.funnel-progress.base.phaseLabelPart.base' }}
+      >
         <PhaseIcon
           step={step}
           variant={open ? 'open' : complete ? 'complete' : 'incomplete'}
         />
       </div>
       {open && (
-        <div sx={{ variant: 'funnelProgress.base.phaseLabelPart.base' }}>
+        <div
+          sx={{ variant: 'elements.funnel-progress.base.phaseLabelPart.base' }}
+        >
           {title}
         </div>
       )}
@@ -87,7 +97,7 @@ const FunnelProgress: React.FC<Props> = ({
 
   return (
     <Fragment>
-      <div {...rest} sx={{ variant: 'funnelProgress.base' }}>
+      <div {...rest} sx={{ variant: 'elements.funnel-progress.base' }}>
         {phases.map((phase, ind) => (
           <FunnelPhase
             key={ind}
@@ -102,7 +112,7 @@ const FunnelProgress: React.FC<Props> = ({
       {!hideProgressBar && (
         <div
           sx={{
-            variant: 'funnelProgress.base.progess.back',
+            variant: 'elements.funnel-progress.base.progess.back',
             height: '4px',
             width: '100%',
             position: 'relative',
@@ -114,8 +124,8 @@ const FunnelProgress: React.FC<Props> = ({
             sx={{
               variant:
                 progress !== 0
-                  ? 'funnelProgress.base.progress.base'
-                  : 'funnelProgress.base.progress.variants.start'
+                  ? 'elements.funnel-progress.base.progress.base'
+                  : 'elements.funnel-progress.base.progress.variants.start'
             }}
             style={{
               width:
