@@ -30,7 +30,7 @@ const AuthorProfile: React.FC<Props> = ({
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'row',
-        variant: 'authorProfile.main'
+        variant: 'elements.author-profile.main'
       }}
     >
       {authorImage && (
@@ -41,7 +41,8 @@ const AuthorProfile: React.FC<Props> = ({
             height: '87px',
             width: '87px',
             marginRight: 'sm',
-            alignSelf: 'baseline'
+            alignSelf: 'baseline',
+            borderBottom: 0
           }}
         >
           <authorImage.type
@@ -68,14 +69,15 @@ const AuthorProfile: React.FC<Props> = ({
             marginBottom: 'xxs',
             fontWeight: 'bold',
             paddingBottom: 0,
-            variant: 'authorProfile.name'
+            variant: 'elements.author-profile.name'
           }}
           as="h2"
         >
           <a
             href={authorUrl}
             sx={{
-              textDecoration: 'none'
+              textDecoration: 'none',
+              borderBottom: 0
             }}
           >
             {name}, {role}
@@ -92,7 +94,7 @@ const AuthorProfile: React.FC<Props> = ({
         </Styled.p>
         <div
           sx={{
-            variant: 'authorProfile.details',
+            variant: 'elements.author-profile.details',
             marginTop: 'sm',
             paddingLeft: 'xs'
           }}
@@ -102,7 +104,8 @@ const AuthorProfile: React.FC<Props> = ({
               href={'mailto:' + email}
               sx={{
                 textDecoration: 'none',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                borderBottom: 0
               }}
             >
               <div

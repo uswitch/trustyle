@@ -18,12 +18,12 @@ const SponsoredByTag: React.FC<Props> = ({
   <div
     className={className}
     sx={{
-      variant: 'elements.sponsoredByTag.base.wrapper'
+      variant: 'elements.sponsored-by-tag.base.wrapper'
     }}
   >
     <span
       sx={{
-        variant: 'elements.sponsoredByTag.base.text'
+        variant: 'elements.sponsored-by-tag.base.text'
       }}
     >
       {providerText}
@@ -34,7 +34,7 @@ const SponsoredByTag: React.FC<Props> = ({
       imgixParams={{ fit: 'clip' }}
       critical
       sx={{
-        variant: 'elements.sponsoredByTag.base.image'
+        variant: 'elements.sponsored-by-tag.base.image'
       }}
     />
   </div>

@@ -31,6 +31,8 @@ export const ExampleWithState = () => {
     unchecked: uncheckedIcon
   }
 
+  const themeNode =
+    (theme().elemments && theme().elemments['toggle-switch']) || {}
   const applyPalette = boolean('Apply palette?', false, 'Palette')
 
   return (
@@ -40,7 +42,7 @@ export const ExampleWithState = () => {
           featureColor: applyPalette
             ? color(
                 'featureColor',
-                theme().toggleSwitch?.checked?.backgroundColor,
+                themeNode?.checked?.backgroundColor,
                 'Palette'
               )
             : null

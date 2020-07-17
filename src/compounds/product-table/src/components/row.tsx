@@ -79,7 +79,7 @@ const ProductTableRow: React.FC<RowProps> = ({
         ':last-of-type': {
           marginBottom: 0
         },
-        variant: 'productTable.row.main'
+        variant: 'compounds.product-table.row.main'
       }}
     >
       {!!badges.length && (
@@ -110,7 +110,7 @@ const ProductTableRow: React.FC<RowProps> = ({
           msGridRows: ['auto', undefined, `(auto)[3] (1fr)[${ROWS}] (auto)[3]`],
           marginX: -8,
           marginY: -6,
-          variant: 'productTable.row.grid',
+          variant: 'compounds.product-table.row.grid',
 
           // Flex in mobile IE11 (?!) as auto-layout for grid isn't supported
           '@media all and (max-width: 990px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
@@ -137,7 +137,7 @@ const ProductTableRow: React.FC<RowProps> = ({
                 borderBottom: '1px solid',
                 paddingBottom: 'sm',
                 marginTop: badges.length ? 0 : -6,
-                variant: 'productTable.row.header'
+                variant: 'compounds.product-table.row.header'
               }}
               mobileOrder={-100}
             >
@@ -155,20 +155,25 @@ const ProductTableRow: React.FC<RowProps> = ({
                       <span
                         sx={{
                           fontSize: 'xs',
-                          variant: 'productTable.row.pretitle'
+                          variant: 'compounds.product-table.row.pretitle'
                         }}
                       >
                         {preTitle}
                       </span>
                     )}
-                    <h3 sx={{ margin: 0, variant: 'productTable.row.title' }}>
+                    <h3
+                      sx={{
+                        margin: 0,
+                        variant: 'compounds.product-table.row.title'
+                      }}
+                    >
                       {rowTitle}
                     </h3>
                     {subtitle && (
                       <span
                         sx={{
                           fontSize: 'xs',
-                          variant: 'productTable.row.subtitle'
+                          variant: 'compounds.product-table.row.subtitle'
                         }}
                       >
                         {subtitle}

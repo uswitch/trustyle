@@ -26,8 +26,8 @@ const Category: React.FC<ListProps> = ({
   className
 }) => {
   const { theme }: any = useThemeUI()
-  const breadcrumbsVariant = theme.categoryTitle?.breadcrumbs?.variant
-  const contentSpan = theme.categoryTitle?.contentSpan || 12
+  const breadcrumbsVariant = theme.elements?.category?.breadcrumbs?.variant
+  const contentSpan = theme.elements?.category?.contentSpan || 12
 
   return (
     <div
@@ -35,13 +35,13 @@ const Category: React.FC<ListProps> = ({
         paddingX: ['sm', 'md'],
         paddingBottom: ['md', 'lg'],
         paddingTop: Breadcrumbs ? ['xs', 'sm'] : ['md', 'lg'],
-        variant: 'categoryTitle.main'
+        variant: 'elements.category.main'
       }}
       className={className}
     >
       <Container
         sx={{
-          variant: 'categoryTitle.container'
+          variant: 'elements.category.container'
         }}
       >
         {Breadcrumbs && (
@@ -63,13 +63,15 @@ const Category: React.FC<ListProps> = ({
               sx={{
                 padding: 0,
                 margin: 0,
-                variant: 'categoryTitle.heading'
+                variant: 'elements.category.heading'
               }}
             >
               {title}
             </Styled.h1>
             {text && (
-              <Styled.p sx={{ marginBottom: 0, variant: 'categoryTitle.text' }}>
+              <Styled.p
+                sx={{ marginBottom: 0, variant: 'elements.category.text' }}
+              >
                 {text}
               </Styled.p>
             )}

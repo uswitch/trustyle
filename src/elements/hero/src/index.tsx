@@ -49,12 +49,16 @@ const Hero: React.FC<Props> = ({
 
   return (
     <div
-      sx={{ position: 'relative', overflow: 'hidden', variant: 'hero.wrapper' }}
+      sx={{
+        position: 'relative',
+        overflow: 'hidden',
+        variant: 'elements.hero.wrapper'
+      }}
       className={className}
     >
       <Container>
         {breadcrumbs && (
-          <div sx={{ paddingTop: 'sm', variant: 'hero.breadcrumbs' }}>
+          <div sx={{ paddingTop: 'sm', variant: 'elements.hero.breadcrumbs' }}>
             {breadcrumbWithVariant}
           </div>
         )}
@@ -99,7 +103,7 @@ const Hero: React.FC<Props> = ({
               position: 'relative',
               paddingTop: ['sm', 'xxl'],
               paddingBottom: ['sm', 'xxl'],
-              variant: 'hero.content'
+              variant: 'elements.hero.content'
             }}
           >
             {children}
