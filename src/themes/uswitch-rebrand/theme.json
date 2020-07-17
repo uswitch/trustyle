@@ -1,9 +1,6 @@
 {
   "name": "Uswitch",
-  "breakpoints": [
-    "768px",
-    "992px"
-  ],
+  "breakpoints": ["768px", "992px"],
   "zIndices": {
     "min": 0,
     "max": 100
@@ -148,11 +145,7 @@
       "mx": "auto",
       "px": "gutter",
       "contentStyle": {
-        "width": [
-          "100%",
-          "grid.md.12",
-          "grid.lg.8"
-        ],
+        "width": ["100%", "grid.md.12", "grid.lg.8"],
         "maxWidth": "100%"
       }
     },
@@ -224,11 +217,7 @@
     "h1": {
       "fontFamily": "heading",
       "color": "heading",
-      "fontSize": [
-        "xl",
-        "xxl",
-        "xxxl"
-      ],
+      "fontSize": ["xl", "xxl", "xxxl"],
       "lineHeight": "sm",
       "fontWeight": "xbold",
       "> i": {
@@ -262,11 +251,7 @@
     "h4": {
       "margin": 0,
       "fontFamily": "heading",
-      "fontSize": [
-        21,
-        "lg",
-        "lg"
-      ],
+      "fontSize": [21, "lg", "lg"],
       "lineHeight": "sm",
       "fontWeight": "xbold",
       "color": "heading",
@@ -278,10 +263,7 @@
     "h5": {
       "margin": 0,
       "fontFamily": "heading",
-      "fontSize": [
-        20,
-        "md"
-      ],
+      "fontSize": [20, "md"],
       "lineHeight": "sm",
       "fontWeight": "xbold",
       "color": "heading",
@@ -303,11 +285,7 @@
       }
     },
     "p": {
-      "fontSize": [
-        "base",
-        "base",
-        "sm"
-      ],
+      "fontSize": ["base", "base", "sm"],
       "fontFamily": "heading",
       "fontWeight": "bold",
       "lineHeight": "xl",
@@ -321,10 +299,7 @@
       "textDecoration": "none",
       "borderBottom": "1px dashed #898991",
       "lineHeight": "31px",
-      "fontSize": [
-        "base",
-        "md"
-      ],
+      "fontSize": ["base", "md"],
       "fontWeight": "bold",
       "& svg": {
         "fill": "white",
@@ -428,24 +403,12 @@
       "main": {
         "backgroundColor": "white",
         "padding": 0,
-        "fontSize": [
-          16,
-          16,
-          18
-        ]
+        "fontSize": [16, 16, 18]
       },
       "heading": {
-        "fontSize": [
-          20,
-          20,
-          28
-        ],
+        "fontSize": [20, 20, 28],
         "mb": 0,
-        "pb": [
-          8,
-          8,
-          16
-        ]
+        "pb": [8, 8, 16]
       },
       "icon-container": {
         "mr": 0
@@ -454,22 +417,10 @@
         "backgroundColor": "transparent",
         "borderRadius": 0,
         "padding": 0,
-        "mr": [
-          20,
-          20,
-          28
-        ],
+        "mr": [20, 20, 28],
         "> svg": {
-          "width": [
-            24,
-            24,
-            32
-          ],
-          "height": [
-            24,
-            24,
-            32
-          ],
+          "width": [24, 24, 32],
+          "height": [24, 24, 32],
           "stroke": "black",
           "fill": "black"
         }
@@ -518,11 +469,7 @@
         },
         "secondary": {
           "variant": "elements.buttons.base",
-          "paddingX": [
-            0,
-            0,
-            "md"
-          ],
+          "paddingX": [0, 0, "md"],
           "color": "primary",
           "backgroundColor": "grey-05",
           "border": "none",
@@ -631,15 +578,9 @@
       "radii": 0
     },
     "logo": {
-      "height": [
-        "icon.lg",
-        "icon.xl"
-      ],
+      "height": ["icon.lg", "icon.xl"],
       "img": {
-        "maxHeight": [
-          "icon.lg",
-          "icon.xl"
-        ],
+        "maxHeight": ["icon.lg", "icon.xl"],
         "maxWidth": 110,
         "width": "auto"
       }
@@ -654,11 +595,7 @@
       "paddingRight": "0",
       "paddingBottom": "md",
       "slide": {
-        "mr": [
-          0,
-          "sm",
-          "sm"
-        ]
+        "mr": [0, "sm", "sm"]
       },
       ".glider-contain": {
         ".glider.draggable": {
@@ -666,16 +603,10 @@
         },
         ".glider-dots": {
           "mt": "xl",
-          "mb": [
-            0,
-            "xl"
-          ]
+          "mb": [0, "xl"]
         },
         ".glider-slide": {
-          "px": [
-            "sm",
-            0
-          ],
+          "px": ["sm", 0],
           "&:first-of-type": {
             "pl": "sm"
           }
@@ -687,11 +618,7 @@
         "container": {
           "h6": {
             "py": "xs",
-            "fontSize": [
-              "base",
-              14,
-              "sm"
-            ],
+            "fontSize": ["base", 14, "sm"],
             "color": "grey-60"
           }
         }
@@ -704,20 +631,13 @@
               "borderBottomStyle": "solid",
               "borderBottomWidth": 2,
               "borderBottomColor": "black",
-              "fontSize": [
-                "base",
-                14,
-                "sm"
-              ],
+              "fontSize": ["base", 14, "sm"],
               "color": "black"
             }
           }
         },
         "tabSpacing": {
-          "mr": [
-            "md",
-            "lg"
-          ],
+          "mr": ["md", "lg"],
           "mb": 0
         },
         "tabContentSpacing": {
@@ -760,10 +680,7 @@
           "color": "grey-60",
           "iconColor": "grey-60",
           "padding": "md",
-          "mb": [
-            0,
-            "md"
-          ],
+          "mb": [0, "md"],
           "display": "flex",
           "flexDirection": "row",
           "svg": {
@@ -778,23 +695,14 @@
             "variant": "compounds.interactiveTabs.base.link",
             "iconColor": "black",
             "position": "relative",
-            "mx": [
-              "auto",
-              0
-            ],
-            "width": [
-              "calc(100% - 48px)",
-              "auto"
-            ],
+            "mx": ["auto", 0],
+            "width": ["calc(100% - 48px)", "auto"],
             "bg": "white",
             "boxShadow": [
               "0px 0px 16px rgba(0, 0, 0, 0.15)",
               "0px 8px 16px rgba(0, 0, 0, 0.15)"
             ],
-            "mb": [
-              0,
-              "md"
-            ],
+            "mb": [0, "md"],
             "h5": {
               "color": "primary",
               "mt": 0
@@ -811,20 +719,11 @@
               "position": "absolute",
               "width": 24,
               "height": 24,
-              "left": [
-                "calc(50% - 24px/2)",
-                -12
-              ],
-              "top": [
-                -10,
-                "calc(50% - 18px)"
-              ],
+              "left": ["calc(50% - 24px/2)", -12],
+              "top": [-10, "calc(50% - 18px)"],
               "background": "white",
               "transform": "rotate(45deg)",
-              "boxShadow": [
-                "none",
-                "-8px 10px 16px -6px rgba(0, 0, 0, 0.15)"
-              ]
+              "boxShadow": ["none", "-8px 10px 16px -6px rgba(0, 0, 0, 0.15)"]
             }
           }
         }
@@ -852,18 +751,10 @@
         "content": {},
         "button": {
           "padding": "0",
-          "paddingY": [
-            "sm",
-            "md",
-            "md"
-          ],
+          "paddingY": ["sm", "md", "md"],
           "bg": "transparent",
           "fontFamily": "heading",
-          "fontSize": [
-            "sm",
-            "md",
-            "lg"
-          ],
+          "fontSize": ["sm", "md", "lg"],
           "fontWeight": "bold",
           "color": "heading",
           "alignItems": "center",
@@ -893,24 +784,15 @@
     "link-with-label": {
       "wrapper": {
         "display": "flex",
-        "flexDirection": [
-          "column",
-          "row"
-        ],
-        "alignItems": [
-          "flex-start",
-          "center"
-        ],
+        "flexDirection": ["column", "row"],
+        "alignItems": ["flex-start", "center"],
         "height": "100%"
       },
       "column": {
         "flexDirection": "column",
         "flex": 1,
         "& p": {
-          "display": [
-            "none",
-            "block"
-          ],
+          "display": ["none", "block"],
           "fontSize": "xxs",
           "m": 0
         }
@@ -954,19 +836,11 @@
           "display": "flex",
           "alignItems": "start",
           "image": {
-            "width": [
-              132,
-              384,
-              474
-            ],
+            "width": [132, 384, 474],
             "mr": 32
           },
           "content": {
-            "width": [
-              132,
-              544,
-              670
-            ],
+            "width": [132, 544, 670],
             "variant": "compounds.card.base.content"
           },
           "link": {
@@ -999,14 +873,8 @@
         }
       },
       "author-image-container": {
-        "height": [
-          "48px",
-          "56px"
-        ],
-        "width": [
-          "48px",
-          "56px"
-        ],
+        "height": ["48px", "56px"],
+        "width": ["48px", "56px"],
         "marginRight": "sm",
         "> img": {
           "maxHeight": "100%",
@@ -1035,21 +903,14 @@
         }
       },
       "description": {
-        "pr": [
-          0,
-          0,
-          "xl"
-        ],
+        "pr": [0, 0, "xl"],
         "mt": 0,
         "color": "grey-50"
       },
       "compare": {
         "display": "flex",
         "flexDirection": "row",
-        "order": [
-          2,
-          1
-        ],
+        "order": [2, 1],
         "> div:first-of-type": {
           "flex": 1,
           "mr": "xs",
@@ -1061,19 +922,10 @@
         }
       },
       "award": {
-        "mt": [
-          0,
-          "xs"
-        ],
-        "mb": [
-          "md",
-          0
-        ],
+        "mt": [0, "xs"],
+        "mb": ["md", 0],
         "borderRadius": "0",
-        "order": [
-          1,
-          2
-        ]
+        "order": [1, 2]
       }
     },
     "numberedCallouts": {
@@ -1118,10 +970,7 @@
       "my": 0,
       "backgroundColor": "light-1",
       "py": "md",
-      "mx": [
-        -20,
-        0
-      ],
+      "mx": [-20, 0],
       "& input, & button": {
         "fontSize": "sm",
         "width": "100%",
@@ -1175,10 +1024,7 @@
     },
     "two-tone-heading": {
       "base": {
-        "textAlign": [
-          "left",
-          "center"
-        ],
+        "textAlign": ["left", "center"],
         "mx": "auto"
       },
       "variants": {
@@ -1196,353 +1042,151 @@
         "wrapper": {
           "display": "flex",
           "justifyContent": "space-between",
-          "pb": [
-            74,
-            38
-          ],
+          "pb": [74, 38],
           "&.image-callout + .image-callout": {
             "marginTop": 0
           }
         },
         "inner": {
           "display": "flex",
-          "justifyContent": [
-            "flex-start",
-            "flex-start",
-            "space-between"
-          ],
-          "width": [
-            null,
-            768,
-            1200
-          ]
+          "justifyContent": ["flex-start", "flex-start", "space-between"],
+          "width": [null, 768, 1200]
         },
         "image-container": {
           "position": "relative",
-          "flexBasis": [
-            null,
-            "50%"
-          ],
-          "mt": [
-            null,
-            -30,
-            20
-          ],
-          "mb": [
-            10,
-            90
-          ]
+          "flexBasis": [null, "50%"],
+          "mt": [null, -30, 20],
+          "mb": [10, 90]
         },
         "image": {
           "position": "relative",
           "zIndex": 2,
           "mt": -64,
-          "maxWidth": [
-            "100%",
-            "grid.md.6",
-            "100%"
-          ],
+          "maxWidth": ["100%", "grid.md.6", "100%"],
           "imgixWidth": 608,
           "imgixParams": {
             "fill": "fillmax"
           }
         },
         "content": {
-          "flexBasis": [
-            null,
-            "40%"
-          ],
-          "maxWidth": [
-            "100%",
-            "100%",
-            "grid.lg.5"
-          ],
+          "flexBasis": [null, "40%"],
+          "maxWidth": ["100%", "100%", "grid.lg.5"],
           "h4": {
-            "width": [
-              "60%",
-              "100%",
-              "66%"
-            ],
-            "pb": [
-              24,
-              24,
-              32
-            ]
+            "width": ["60%", "100%", "66%"],
+            "pb": [24, 24, 32]
           },
           "> p": {
-            "mb": [
-              40,
-              70,
-              96
-            ]
+            "mb": [40, 70, 96]
           }
         },
         "colorBlock": {
           "width": "100%",
-          "height": [
-            "100%",
-            "100%",
-            "93%"
-          ],
+          "height": ["100%", "100%", "93%"],
           "position": "absolute",
-          "top": [
-            0,
-            0,
-            21
-          ],
+          "top": [0, 0, 21],
           "zIndex": 1
         }
       },
       "variants": {
         "solidColorImageLeft": {
           "wrapper": {
-            "pb": [
-              74,
-              100
-            ],
+            "pb": [74, 100],
             "px": 0
           },
           "inner": {
-            "flexDirection": [
-              "column",
-              "row"
-            ],
-            "alignItems": [
-              "center",
-              "center",
-              "flex-start"
-            ],
+            "flexDirection": ["column", "row"],
+            "alignItems": ["center", "center", "flex-start"],
             "px": 0
           },
           "colorBlock": {
             "backgroundColor": "grey-05",
-            "top": [
-              0,
-              77,
-              148
-            ],
-            "right": [
-              0,
-              100,
-              170
-            ],
-            "height": [
-              "85%",
-              "100%"
-            ]
+            "top": [0, 77, 148],
+            "right": [0, 100, 170],
+            "height": ["85%", "100%"]
           },
           "image-container": {
-            "alignSelf": [
-              "auto",
-              "flex-start",
-              "auto"
-            ],
-            "mt": [
-              null,
-              0,
-              20
-            ],
+            "alignSelf": ["auto", "flex-start", "auto"],
+            "mt": [null, 0, 20],
             "px": 0,
-            "py": [
-              45,
-              0
-            ]
+            "py": [45, 0]
           },
           "content": {
             "alignSelf": "center",
-            "px": [
-              20,
-              20,
-              0
-            ],
-            "maxWidth": [
-              "100%",
-              "grid.md.7",
-              "grid.md.8"
-            ],
-            "flexBasis": [
-              null,
-              "45%"
-            ],
+            "px": [20, 20, 0],
+            "maxWidth": ["100%", "grid.md.7", "grid.md.8"],
+            "flexBasis": [null, "45%"],
             "h4": {
               "width": "100%"
             }
           },
           "image": {
-            "mt": [
-              0,
-              -40,
-              0
-            ],
-            "maxWidth": [
-              "100%",
-              "100%"
-            ]
+            "mt": [0, -40, 0],
+            "maxWidth": ["100%", "100%"]
           }
         },
         "solidColorImageRight": {
           "colorBlock": {
             "backgroundColor": "orange-25",
-            "top": [
-              0,
-              14,
-              -84
-            ],
-            "left": [
-              0,
-              15,
-              119
-            ],
-            "height": [
-              "100%",
-              "85%",
-              "95%"
-            ]
+            "top": [0, 14, -84],
+            "left": [0, 15, 119],
+            "height": ["100%", "85%", "95%"]
           },
           "inner": {
-            "flexDirection": [
-              "column",
-              "row-reverse"
-            ],
-            "alignItems": [
-              "center",
-              "center",
-              "flex-start"
-            ],
-            "px": [
-              0,
-              15,
-              0
-            ],
-            "mb": [
-              30
-            ]
+            "flexDirection": ["column", "row-reverse"],
+            "alignItems": ["center", "center", "flex-start"],
+            "px": [0, 15, 0],
+            "mb": [30]
           },
           "content": {
             "alignSelf": "flex-start",
-            "mt": [
-              0,
-              0,
-              120
-            ],
-            "px": [
-              20,
-              20,
-              15
-            ],
-            "maxWidth": [
-              "100%",
-              "grid.lg.4",
-              "grid.md.9"
-            ],
-            "flexBasis": [
-              null,
-              "45%"
-            ],
+            "mt": [0, 0, 120],
+            "px": [20, 20, 15],
+            "maxWidth": ["100%", "grid.lg.4", "grid.md.9"],
+            "flexBasis": [null, "45%"],
             "h1": {
-              "width": [
-                null,
-                null,
-                "95%"
-              ]
+              "width": [null, null, "95%"]
             }
           },
           "image": {
-            "mt": [
-              0,
-              53,
-              0
-            ],
+            "mt": [0, 53, 0],
             "maxWidth": "100%"
           },
           "image-container": {
-            "mt": [
-              null,
-              0,
-              20
-            ],
-            "px": [
-              20,
-              0
-            ],
-            "py": [
-              45,
-              0
-            ]
+            "mt": [null, 0, 20],
+            "px": [20, 0],
+            "py": [45, 0]
           }
         },
         "gradientImageLeft": {
           "inner": {
-            "flexDirection": [
-              "column",
-              "row"
-            ],
-            "alignItems": [
-              "center",
-              "center",
-              "flex-start"
-            ]
+            "flexDirection": ["column", "row"],
+            "alignItems": ["center", "center", "flex-start"]
           },
           "colorBlock": {
             "background": "linear-gradient(90deg, #C1D3FF 0%, #BEE8F3 100%)"
           },
           "content": {
-            "pl": [
-              null,
-              50,
-              0
-            ]
+            "pl": [null, 50, 0]
           }
         },
         "gradientImageRight": {
           "inner": {
-            "flexDirection": [
-              "column",
-              "row-reverse"
-            ],
-            "alignItems": [
-              "center",
-              "center",
-              "flex-start"
-            ]
+            "flexDirection": ["column", "row-reverse"],
+            "alignItems": ["center", "center", "flex-start"]
           },
           "image-container": {
-            "alignSelf": [
-              "auto",
-              "auto",
-              "center"
-            ]
+            "alignSelf": ["auto", "auto", "center"]
           },
           "colorBlock": {
             "background": "linear-gradient(90deg, #AC96DE 0%, #ACAAFF 100%)",
-            "height": [
-              "98%",
-              "98%",
-              "95%"
-            ]
+            "height": ["98%", "98%", "95%"]
           },
           "content": {
-            "flexBasis": [
-              null,
-              "50%",
-              "45%"
-            ],
-            "maxWidth": [
-              "100%",
-              "100%",
-              "grid.lg.5"
-            ],
-            "px": [
-              null,
-              0,
-              0
-            ],
+            "flexBasis": [null, "50%", "45%"],
+            "maxWidth": ["100%", "100%", "grid.lg.5"],
+            "px": [null, 0, 0],
             "h4": {
-              "width": [
-                "70%",
-                "100%",
-                "100%"
-              ]
+              "width": ["70%", "100%", "100%"]
             },
             "> div": {
               "px": 0
@@ -1554,38 +1198,14 @@
 
     "content-hero-module": {
       "p": {
-        "width": [
-          "auto",
-          "grid.md.5",
-          "grid.lg.5"
-        ],
-        "textAlign": [
-          "left",
-          "left",
-          "center"
-        ],
-        "my": [
-          0,
-          0,
-          "xxs"
-        ],
-        "px": [
-          0,
-          0,
-          "md"
-        ],
-        "display": [
-          "inline",
-          "inline",
-          "block"
-        ]
+        "width": ["auto", "grid.md.5", "grid.lg.5"],
+        "textAlign": ["left", "left", "center"],
+        "my": [0, 0, "xxs"],
+        "px": [0, 0, "md"],
+        "display": ["inline", "inline", "block"]
       },
       "a": {
-        "fontSize": [
-          "base",
-          "base",
-          "lg"
-        ],
+        "fontSize": ["base", "base", "lg"],
         "textDecoration": "underline"
       },
       "form": {
@@ -1609,11 +1229,7 @@
       "col": {
         "position": "relative",
         "&:first-of-type": {
-          "pr": [
-            0,
-            0,
-            "xxl"
-          ],
+          "pr": [0, 0, "xxl"],
           "::after": {
             "content": "''",
             "position": "absolute",
@@ -1621,20 +1237,12 @@
             "height": "72px",
             "top": 0,
             "right": "-10px",
-            "display": [
-              "none",
-              "none",
-              "block"
-            ],
+            "display": ["none", "none", "block"],
             "backgroundColor": "grey-30"
           }
         },
         "&:last-of-type": {
-          "pl": [
-            0,
-            0,
-            "xxl"
-          ]
+          "pl": [0, 0, "xxl"]
         }
       }
     },

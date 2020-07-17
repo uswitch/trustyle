@@ -249,12 +249,12 @@
   },
 
   "----------------------------- Variants": "-----------------------------",
-  
+
   "elements": {
     "overlay": {
       "backgroundColor": "overlay-bg"
     },
-    
+
     "modal": {
       "base": {
         "backgroundColor": "#FFFFFF"
@@ -302,7 +302,7 @@
           "fontWeight": "base",
           "fontStyle": "normal"
         },
-        "image":{
+        "image": {
           "height": [40, 56]
         }
       }
@@ -539,7 +539,7 @@
         "backgroundColor": "azure"
       }
     },
-  
+
     "breadcrumbs": {
       "base": {
         "main": {
@@ -597,7 +597,7 @@
         "fontSize": "xxs"
       }
     },
-    
+
     "funnel-progress": {
       "base": {
         "display": "flex",
@@ -718,7 +718,7 @@
         }
       }
     },
-    
+
     "call-out": {
       "main": {
         "backgroundColor": "light-2"
@@ -730,7 +730,7 @@
         "backgroundColor": "dark-1"
       }
     },
-  
+
     "cta": {
       "main": {
         "borderWidth": 1,
@@ -745,7 +745,7 @@
         "width": "auto"
       }
     },
-    
+
     "buttons": {
       "base": {
         "boxSizing": "border-box",
@@ -777,7 +777,7 @@
             ":hover": {
               "backgroundColor": "grey-70"
             }
-          },  
+          },
           ":disabled": {
             "backgroundColor": "grey-20",
             "cursor": "not-allowed"
@@ -861,7 +861,7 @@
       "md": { "minHeight": 280, "pb": 56 },
       "lg": { "minHeight": 438, "pb": 82 }
     },
-  
+
     "drop-down": {
       "placeholder": {
         "color": "grey-60",
@@ -903,12 +903,12 @@
       "sm": {
         "image": { "width": "100%", "height": "auto" }
       },
-  
+
       "lg": {
         "image": { "width": 278, "height": 230 }
       }
     },
-    
+
     "accordion": {
       "base": {
         "button": {
@@ -1018,7 +1018,7 @@
       "sm": { "pt": "xl" },
       "lg": { "pt": "xl" }
     },
-  
+
     "image-callout": {
       "imageSize": { "height": 337, "width": 477 },
       "sm": { "display": "flex", "width": 320, "mx": "auto" },
@@ -1034,7 +1034,7 @@
       "left": { "flexDirection": "row", "alignItems": "flex-start" },
       "column": { "flexDirection": "column", "alignItems": "center" }
     },
-    
+
     "content-hero-module": {
       "h1": {
         "mb": "sm",
@@ -1103,5 +1103,4 @@
       "hero": { "maxWidth": 1024, "mx": "auto", "px": 60 }
     }
   }
-
 }
