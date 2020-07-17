@@ -1245,6 +1245,28 @@
   },
 
   "compounds": {
+    "authorsGroup": {
+      "writtenBy": {
+        "date": {
+          "color": "grey-50"
+        },
+        "text": { "color": "grey-60" }
+      },
+      "condensed": {
+        "writtenBy": {
+          "display": ["block", "none"]
+        },
+        "authors": {
+          "flexDirection": ["column", "row"],
+          ">div": {
+            "marginRight": "xxl"
+          }
+        },
+        "updatedOn": {
+          "display": ["none", "block"]
+        }
+      }
+    },
     "product-table": {
       "row": {
         "main": {
