@@ -306,6 +306,38 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "author": {
+      "link": {
+        "fontWeight": "base"
+      },
+      "title": {
+        "a": {
+          "fontWeight": "bold",
+          "color": "grey-100",
+          "fontSize": ["sm", "lg"]
+        }
+      },
+      "subtitle": {
+        "fontSize": ["xxs", "sm"],
+        "lineHeight": ["base", "heading"],
+        "a": {
+          "fontWeight": "bold",
+          "color": "plum"
+        }
+      },
+      "condensed": {
+        "title": {
+          "a": {
+            "variant": "elements.author.title.a",
+            "fontSize": "sm"
+          }
+        },
+        "subtitle": {
+          "variant": "elements.author.title.a",
+          "fontSize": "xxs"
+        }
+      }
+    },
     "progress-bar": {
       "main": {
         "height": [5, 10],
@@ -369,19 +401,6 @@
         }
       }
     },
-
-    "author": {
-      "heading": {
-        "color": "grey-80"
-      },
-      "link": {
-        "color": "grey-80",
-        ":hover": {
-          "color": "plum"
-        }
-      }
-    },
-
     "logo-collection": {
       "base": {
         "inner": {
