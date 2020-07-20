@@ -530,7 +530,8 @@
         "boxSizing": "border-box",
         "display": "flex",
         "position": "relative",
-        "borderRadius": "4px"
+        "borderRadius": "4px",
+        "boxShadow": "none"
       },
       "default": {
         "color": "grey-40"
@@ -823,7 +824,7 @@
             "fontSize": "md"
           },
           "small": {
-            "paddingX": 40,
+            "paddingX": "lg",
             "paddingY": 13,
             "fontSize": "sm"
           }
