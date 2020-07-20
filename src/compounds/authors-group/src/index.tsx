@@ -17,7 +17,7 @@ interface AuthorProps extends React.HTMLAttributes<HTMLDivElement> {
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   authors: AuthorProps[]
   date: number
-  variant?: string
+  variant?: 'condensed' | string
   className?: string
 }
 
