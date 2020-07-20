@@ -229,12 +229,25 @@
         "title": {
           "a": {
             "variant": "elements.author.title.a",
-            "fontSize": "sm"
+            "fontSize": ["sm", "sm"]
           }
         },
         "subtitle": {
-          "variant": "elements.author.title.a",
-          "fontSize": "xs"
+          "paddingBottom": 0,
+          "a": {
+            "variant": "elements.author.subtitle.a",
+            "fontSize": ["xs", "xs"]
+          }
+        },
+        "imageLink": {
+          "width": [40, 40],
+          "height": [40, 40]
+        },
+        "base": {
+          "a": { "variant": "elements.author.base.a" },
+          "h5": {
+            "marginBottom": [0, 0]
+          }
         }
       }
     },
