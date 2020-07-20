@@ -13,7 +13,7 @@ interface ListLinkProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const styles = (variant: Variant, element?: string) =>
-  `elements.linkList.variants.${variant}${element ? `.${element}` : ''}`
+  `elements.link-list.variants.${variant}${element ? `.${element}` : ''}`
 
 export const LinkList: React.FC<ListLinkProps> = ({
   children,
@@ -91,6 +91,7 @@ export const LinkListItem: React.FC<ListLinkItemProps> = ({
         href={href}
         sx={{
           textDecoration: 'none',
+          borderBottom: 0,
           ':hover': {
             textDecoration: 'underline'
           }

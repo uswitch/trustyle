@@ -60,7 +60,7 @@ export const Button: React.FC<Props> = ({
   ...props
 }) => {
   const { theme }: any = useThemeUI()
-  const variantStyle = get(theme, `buttons.variants.${variant}`)
+  const variantStyle = get(theme, `elements.buttons.variants.${variant}`)
   const chosenStyle = inverse ? invertTheme(theme, variantStyle) : variantStyle
 
   return (
@@ -70,10 +70,22 @@ export const Button: React.FC<Props> = ({
         backgroundImage: 'none',
         fontFamily: 'base',
 
-        fontSize: get(theme, `buttons.base.btnSize.${size}.fontSize`, 'base'),
-        paddingX: get(theme, `buttons.base.btnSize.${size}.paddingX`, 'sm'),
-        paddingY: get(theme, `buttons.base.btnSize.${size}.paddingY`, 'base'),
-        variant: get(theme, `buttons.variants.${variant}`),
+        fontSize: get(
+          theme,
+          `elements.buttons.base.btnSize.${size}.fontSize`,
+          'base'
+        ),
+        paddingX: get(
+          theme,
+          `elements.buttons.base.btnSize.${size}.paddingX`,
+          'sm'
+        ),
+        paddingY: get(
+          theme,
+          `elements.buttons.base.btnSize.${size}.paddingY`,
+          'base'
+        ),
+        variant: get(theme, `elements.buttons.variants.${variant}`),
 
         justifyContent: 'center',
         alignItems: 'center',

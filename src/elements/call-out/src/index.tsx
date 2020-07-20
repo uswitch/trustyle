@@ -31,7 +31,7 @@ const CallOut: React.FC<Props> = ({
           sx={{
             marginTop: '-3px',
             marginBottom: 'xxs',
-            variant: 'callOut.heading'
+            variant: 'elements.call-out.heading'
           }}
         >
           {title}
@@ -41,7 +41,7 @@ const CallOut: React.FC<Props> = ({
         as={Styled.p}
         sx={{
           marginY: 0,
-          variant: 'callOut.text',
+          variant: 'elements.call-out.text',
           fontWeight: bold ? 'bold' : 'normal'
         }}
         px={{
@@ -60,7 +60,7 @@ const CallOut: React.FC<Props> = ({
         borderRadius: 4,
         paddingX: 'sm',
         paddingY: 'sm',
-        variant: 'callOut.main'
+        variant: 'elements.call-out.main'
       }}
       px={{
         backgroundColor: 'accentColor'
@@ -81,14 +81,14 @@ const CallOut: React.FC<Props> = ({
               flexBasis: ({ space }: any) => space.sm,
               marginRight: 'xs',
               marginBottom: 'sm',
-              variant: 'callOut.icon-container'
+              variant: 'elements.call-out.icon-container'
             }}
           >
             <div
               sx={{
                 borderRadius: '50%',
                 padding: '20%',
-                variant: 'callOut.icon'
+                variant: 'elements.call-out.icon'
               }}
             >
               <Icon color="white" glyph={icon} />

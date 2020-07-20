@@ -16,7 +16,7 @@ export const ProgressBar: React.FC<Props> = ({ current, max, className }) => {
         display: 'block',
         height: ['3px', '7.4px'],
         width: '100%',
-        variant: 'progressBar.main'
+        variant: 'elements.progress-bar.main'
       }}
       className={className}
       role="progressbar"
@@ -29,7 +29,7 @@ export const ProgressBar: React.FC<Props> = ({ current, max, className }) => {
           display: 'block',
           height: '100%',
           width: `${(current / max) * 100}%`,
-          variant: 'progressBar.progress'
+          variant: 'elements.progress-bar.progress'
         }}
       />
     </span>

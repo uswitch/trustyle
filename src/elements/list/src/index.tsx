@@ -72,16 +72,14 @@ export const ListItem: React.FC<ListItemProps> = ({
   if (listType === 'bullet') {
     sx['::before'] = {
       content: '"• "',
-      color:
-        theme.list && theme.list.bullet ? theme.list.bullet.color : 'black',
+      color: element && element.bullet ? element.bullet.color : 'black',
       ...sx['::before'],
       ...before
     }
   } else if (listType === 'numeric') {
     sx['::before'] = {
       content: 'counter(li)',
-      color:
-        theme.list && theme.list.numeric ? theme.list.numeric.color : 'black',
+      color: element && element.numeric ? element.numeric.color : 'black',
       ...sx['::before'],
       ...before
     }

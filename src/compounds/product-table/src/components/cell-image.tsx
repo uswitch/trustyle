@@ -11,7 +11,7 @@ export const ProductTableCellImage: React.FC = ({ children }) => (
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      variant: 'productTable.cellImage.main'
+      variant: 'compounds.product-table.cellImage.main'
     }}
   >
     <div

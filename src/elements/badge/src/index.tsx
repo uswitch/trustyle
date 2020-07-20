@@ -17,7 +17,7 @@ const Badge: React.FC<Props> = ({
     <div
       sx={{
         display: 'inline-block',
-        variant: `badge.variants.${variant}`
+        variant: `elements.badge.variants.${variant}`
       }}
       {...props}
     >

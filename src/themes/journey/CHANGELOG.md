@@ -1,0 +1,27 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [2.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.0.1...@uswitch/trustyle.journey-theme@2.1.0) (2020-07-20)
+
+
+### Features
+
+* add form and rich text block panel styling to theme migration ([10c9e3f](https://github.com/uswitch/trustyle/commit/10c9e3f))
+
+
+
+
+
+## [2.0.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.0.0...@uswitch/trustyle.journey-theme@2.0.1) (2020-07-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.journey-theme
+
+
+
+
+
+# [2.0.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@1.4.0...@uswitch/trustyle.journey-theme@2.0.0) (2020-07-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.journey-theme
