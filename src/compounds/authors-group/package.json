@@ -1,0 +1,18 @@
+{
+  "name": "@uswitch/trustyle.authors-group",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "ts:main": "src/index.tsx",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.10",
+    "react": "^16.7.0"
+  },
+  "dependencies": {
+    "@uswitch/trustyle.author": "file:../../../../uswitch-trustyle.author-0.4.1.tgz",
+    "@uswitch/trustyle.date": "0.0.9"
+  }
+}
