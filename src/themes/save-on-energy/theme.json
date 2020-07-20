@@ -120,6 +120,7 @@
     "battleshipGrey": "#65717B",
     "veryLightGrey": "#E9EBED",
     "uswitch-navy": "#141424",
+    "grey-50": "#A0A2A6",
     "grey-60": "#6D6F73"
   },
 
@@ -487,6 +488,41 @@
   },
 
   "compounds": {
+    "authorsGroup": {
+      "writtenBy": {
+        "date": {
+          "color": "grey-50"
+        },
+        "text": {
+          "color": "grey-50",
+          "fontSize": "md",
+          "marginTop": 0,
+          "marginBottom": "xs"
+        }
+      },
+      "condensed": {
+        "writtenBy": {
+          "display": ["block", "none"],
+          "date": {
+            "variant": "compounds.authorsGroup.writtenBy.date"
+          },
+          "text": {
+            "variant": "compounds.authorsGroup.writtenBy.text"
+          }
+        },
+        "authors": {
+          "flexDirection": ["column", "row"],
+          ">div": {
+            "marginRight": "xxl"
+          }
+        },
+        "updatedOn": {
+          "display": ["none", "block"],
+          "fontSize": ["xxs", "xxs"],
+          "color": "grey-60"
+        }
+      }
+    },
     "card": {
       "base": {
         "display": "inline-flex !important",

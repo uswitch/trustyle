@@ -678,7 +678,8 @@
           "color": "grey-50",
           "fontSize": "md",
           "marginTop": 0,
-          "marginBottom": "xs"
+          "marginBottom": "xs",
+          "fontWeight": "bold"
         }
       },
       "condensed": {
