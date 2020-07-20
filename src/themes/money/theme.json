@@ -1036,6 +1036,37 @@
   },
 
   "compounds": {
+    "authorsGroup": {
+      "writtenBy": {
+        "date": {
+          "color": "grey-60"
+        },
+        "text": { "color": "grey-60", "fontWeight": "bold" }
+      },
+      "condensed": {
+        "writtenBy": {
+          "date": {
+            "variant": "compounds.authorsGroup.writtenBy.date"
+          },
+          "text": {
+            "variant": "compounds.authorsGroup.writtenBy.text"
+          },
+          "display": ["block", "none"]
+        },
+        "authors": {
+          "flexDirection": ["column", "row"],
+          ">div": {
+            "marginRight": "xxl"
+          }
+        },
+        "updatedOn": {
+          "display": ["none", "block"],
+          "color": "grey-60",
+          "marginTop": "sm",
+          "paddingTop": "xxs"
+        }
+      }
+    },
     "product-table": {
       "row": {
         "main": {
