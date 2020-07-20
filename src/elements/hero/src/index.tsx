@@ -42,7 +42,7 @@ const Hero: React.FC<Props> = ({
   className
 }) => {
   const { theme }: any = useThemeUI()
-  const breadcrumbVariant = get(theme, 'hero.breadcrumbs.variant')
+  const breadcrumbVariant = get(theme, 'elements.hero.breadcrumbs.variant')
   const breadcrumbWithVariant =
     breadcrumbs &&
     React.cloneElement(breadcrumbs, { variant: breadcrumbVariant })
