@@ -60,6 +60,8 @@ const Overlay: React.FC<OverlayProps> = ({
     let withinModal = false
     let node: Node | null = event.target as Node
 
+    event.stopPropagation()
+
     do {
       withinModal = withinModal || node === modalRef.current
       node = node?.parentNode
