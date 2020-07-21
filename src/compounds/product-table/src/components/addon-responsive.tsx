@@ -60,7 +60,6 @@ const ProductTableAddonResponsive: Addon<AddonProps> = {
           order: gridOrder,
           extraRules: {
             display: positionsToDisplay(positions, 'grid'),
-            marginTop: [0, -6],
             marginBottom: [0, 'sm']
           }
         }}
