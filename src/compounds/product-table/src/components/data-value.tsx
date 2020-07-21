@@ -19,7 +19,7 @@ const ProductTableDataValue: React.FC<DataValueProps> = ({
     <span>
       {numberFormatter(value, unit)}
       {typeof value === 'number' && subscript ? (
-        <small>{` ${subscript}`}</small>
+        <span sx={{ fontSize: ['xs', 'md'] }}>{` ${subscript}`}</span>
       ) : null}
     </span>
   )
