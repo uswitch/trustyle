@@ -42,7 +42,8 @@ const Overlay: React.FC<OverlayProps> = ({
 }) => {
   const holdingRef = useRef<HTMLDivElement>()
   const closeButtonRef = useRef<HTMLButtonElement>()
-  const modalRef = useCallback(node => {
+  const modalRef = useRef<HTMLDivElement | null>(null)
+  const scrollRegionRef = useCallback(node => {
     if (node !== null) {
       // @ts-ignore: Read only prop error
       holdingRef.current = node
@@ -60,7 +61,7 @@ const Overlay: React.FC<OverlayProps> = ({
     let node: Node | null = event.target as Node
 
     do {
-      withinModal = withinModal || node === holdingRef.current
+      withinModal = withinModal || node === modalRef.current
       node = node?.parentNode
     } while (node?.parentNode)
 
@@ -104,9 +105,12 @@ const Overlay: React.FC<OverlayProps> = ({
             right: 0,
             bottom: 0,
             overflowY: 'auto',
+            // Enable momentum scrolling on Safari (on iOS) <= 12. No longer required in Safari 13.
+            WebkitOverflowScrolling: 'touch',
             display: 'flex',
             flexFlow: 'column'
           }}
+          ref={scrollRegionRef}
         >
           {/* Mobile: push down the modal if it is partial height, UNLESS the content overflows
             in which case this shrinks to 0px. */}
@@ -115,7 +119,6 @@ const Overlay: React.FC<OverlayProps> = ({
           <div
             sx={{
               flex: 1,
-              WebkitOverflowScrolling: 'touch',
               width: '100%',
               height: 'auto',
               variant: `elements.modal.variants.${height}`
