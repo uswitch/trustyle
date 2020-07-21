@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.1.1...@uswitch/trustyle.money-theme@1.1.2) (2020-07-21)
+
+
+### Bug Fixes
+
+* center margins on logo collection for Money ([461ff00](https://github.com/uswitch/trustyle/commit/461ff00))
+
+
+
+
+
 # [1.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.0.2...@uswitch/trustyle.money-theme@1.1.0) (2020-07-20)
 
 
