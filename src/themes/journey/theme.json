@@ -12,7 +12,8 @@
 
   "shadows": {
     "box": "2px 2px 25px #0004",
-    "linkInset": "inset 0 0 0 1px #141424"
+    "linkInset": "inset 0 0 0 1px #141424",
+    "formInput": "inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)"
   },
 
   "fonts": {
@@ -378,7 +379,7 @@
         "color": "tomato"
       },
       "formInput": {
-        "boxShadow": "inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)"
+        "boxShadow": "formInput"
       },
       "affix": {
         "base": {

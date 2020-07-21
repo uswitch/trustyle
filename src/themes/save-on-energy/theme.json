@@ -20,6 +20,10 @@
     "md": "26px"
   },
 
+  "shadows": {
+    "formInput": "inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)"
+  },
+
   "fontSizes": {
     "base": 16,
     "xxs": 12,
@@ -305,7 +309,7 @@
         }
       },
       "formInput": {
-        "boxShadow": "inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)"
+        "boxShadow": "formInput"
       },
       "default": {
         "color": "uswitch-navy"
