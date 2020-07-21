@@ -417,7 +417,8 @@
     "logo-collection": {
       "base": {
         "inner": {
-          "mr": ["lg", "lg", "md"],
+          "ml": ["sm", "sm", "0px"],
+          "mr": ["sm", "sm", "md"],
           "img": {
             "maxWidth": "100px",
             "height": "64px"
