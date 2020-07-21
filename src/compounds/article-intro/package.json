@@ -13,5 +13,8 @@
   },
   "devDependencies": {
     "@uswitch/trustyle.author": "^1.0.0"
+  },
+  "dependencies": {
+    "@uswitch/trustyle.date": "0.0.9"
   }
 }
