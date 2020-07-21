@@ -97,6 +97,7 @@
     "frozen-bg": "#F6F6F6",
     "battleshipGrey": "#65717B",
     "veryLightGrey": "#E9EBED",
+    "tomato": "#DB1818",
 
     "experimental-text": "#29335C",
     "button-secondary": "#FFFFFF",
@@ -336,6 +337,18 @@
           "backgroundColor": "veryLightGrey"
         }
       },
+      "default": {
+        "color": "grey-90"
+      },
+      "error": {
+        "color": "tomato"
+      },
+      "focus": {
+        "color": "grey-90"
+      },
+      "formInput": {
+        "boxShadow": "inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)"
+      },
       "frozen": {
         "base": {
           "backgroundColor": "frozen-bg",
@@ -397,7 +410,7 @@
       "position": "relative",
       "borderRadius": "sm",
       "notificationColor": "#65717B",
-      "alertColor": "#DB1818",
+      "alertColor": "tomato",
       "before": {
         "position": "absolute",
         "content": "''",
