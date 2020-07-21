@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.modal@2.0.0...@uswitch/trustyle.modal@2.0.1) (2020-07-21)
+
+
+### Bug Fixes
+
+* Fix scrolling on Safari on iOS ([6548efc](https://github.com/uswitch/trustyle/commit/6548efc))
+
+
+
+
+
 # [2.0.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.modal@1.0.0...@uswitch/trustyle.modal@2.0.0) (2020-07-17)
 
 
