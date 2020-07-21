@@ -24,7 +24,7 @@ const Author: React.FC<Props> = ({
 }) => {
   const getVariant = (element: string) =>
     `elements.author.${variant ? variant + '.' + element : element}`
-  console.log('TT', getVariant('base'))
+
   return (
     <div
       sx={{

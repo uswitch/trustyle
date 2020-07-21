@@ -739,23 +739,6 @@
         }
       }
     },
-    "author": {
-      "heading": {
-        "color": "grey-80"
-      },
-      "image-link": {
-        "borderBottom": 0
-      },
-      "link": {
-        "fontWeight": "inherit"
-      },
-      "text": {
-        "color": "grey-70"
-      },
-      "main": {
-        "marginBottom": "sm"
-      }
-    },
     "logo-collection": {
       "base": {
         "outer": {
