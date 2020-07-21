@@ -375,6 +375,56 @@
   },
   "----------------------------- Variants": "-----------------------------",
   "elements": {
+    "author": {
+      "link": {
+        "fontWeight": "base"
+      },
+      "title": {
+        "a": {
+          "fontWeight": "xbold",
+          "color": "uswitch-navy",
+          "fontSize": ["sm", "md"]
+        }
+      },
+      "subtitle": {
+        "lineHeight": ["base", "heading"],
+        "paddingBottom": 0,
+        "a": {
+          "fontSize": ["xxs", "sm"],
+          "fontWeight": "xbold",
+          "border": "none",
+          "color": "grey-60"
+        }
+      },
+      "base": {
+        "a": {
+          "border": "none"
+        }
+      },
+      "condensed": {
+        "title": {
+          "h5": {
+            "marginBottom": 0
+          },
+          "a": {
+            "variant": "elements.author.title.a",
+            "fontSize": ["sm", "sm"]
+          }
+        },
+        "subtitle": {
+          "paddingBottom": 0,
+          "a": {
+            "variant": "elements.author.subtitle.a",
+            "fontSize": ["xxs", "xxs"]
+          }
+        },
+        "imageLink": {
+          "width": [40, 40],
+          "height": [40, 40]
+        },
+        "base": { "a": { "variant": "elements.author.base.a" } }
+      }
+    },
     "overlay": {
       "backgroundColor": "overlay-bg"
     },
@@ -687,23 +737,6 @@
           "border": "2px solid #ACAAFF",
           "borderRadius": "3px"
         }
-      }
-    },
-    "author": {
-      "heading": {
-        "color": "grey-80"
-      },
-      "image-link": {
-        "borderBottom": 0
-      },
-      "link": {
-        "fontWeight": "inherit"
-      },
-      "text": {
-        "color": "grey-70"
-      },
-      "main": {
-        "marginBottom": "sm"
       }
     },
     "logo-collection": {

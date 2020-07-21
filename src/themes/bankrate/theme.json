@@ -244,6 +244,51 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "author": {
+      "link": {
+        "fontWeight": "base"
+      },
+      "title": {
+        "a": {
+          "fontWeight": "bold",
+          "color": "uswitch-navy",
+          "fontSize": ["md", "xl"]
+        }
+      },
+      "subtitle": {
+        "fontSize": ["xs", "md"],
+        "lineHeight": ["base", "heading"],
+        "a": {
+          "fontWeight": "bold",
+          "color": "grey-60"
+        }
+      },
+      "condensed": {
+        "title": {
+          "a": {
+            "variant": "elements.author.title.a",
+            "fontSize": ["md", "md"]
+          }
+        },
+        "subtitle": {
+          "paddingBottom": 0,
+          "a": {
+            "variant": "elements.author.subtitle.a",
+            "fontSize": ["xs", "xs"]
+          }
+        },
+        "imageLink": {
+          "width": [40, 40],
+          "height": [40, 40]
+        },
+        "base": {
+          "a": { "variant": "elements.author.base.a" },
+          "h5": {
+            "marginBottom": [0, 0]
+          }
+        }
+      }
+    },
     "sponsored-by-tag": {
       "base": {
         "wrapper": {
@@ -361,21 +406,6 @@
         "borderBottomStyle": "solid"
       }
     },
-
-    "author": {
-      "heading": {},
-      "image-link": {
-        "height": [48, 48],
-        "width": [48, 48]
-      },
-      "link": {
-        "fontWeight": "base"
-      },
-      "text": {
-        "fontWeight": "base"
-      }
-    },
-
     "toggle-switch": {
       "base": {
         "base": {
