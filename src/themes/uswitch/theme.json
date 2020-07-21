@@ -1071,7 +1071,8 @@
           "textAlign": "center",
           "boxSizing": "border-box",
           "alignItems": "center",
-          "display": "flex"
+          "display": "flex",
+          "color": "text"
         },
         "prefix": {
           "variant": "elements.input.affix.base",
