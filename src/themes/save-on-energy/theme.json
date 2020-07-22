@@ -20,6 +20,10 @@
     "md": "26px"
   },
 
+  "shadows": {
+    "formInput": "inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)"
+  },
+
   "fontSizes": {
     "base": 16,
     "xxs": 12,
@@ -120,7 +124,8 @@
     "battleshipGrey": "#65717B",
     "veryLightGrey": "#E9EBED",
     "uswitch-navy": "#141424",
-    "grey-60": "#6D6F73"
+    "grey-60": "#6D6F73",
+    "error": "#DB1818"
   },
 
   "radii": {
@@ -303,6 +308,18 @@
           "backgroundColor": "veryLightGrey"
         }
       },
+      "formInput": {
+        "boxShadow": "formInput"
+      },
+      "default": {
+        "color": "uswitch-navy"
+      },
+      "error": {
+        "color": "error"
+      },
+      "focus": {
+        "color": "uswitch-navy"
+      },
       "wrapper": {
         "backgroundColor": "white",
         "boxSizing": "border-box",
@@ -340,7 +357,8 @@
           "textAlign": "center",
           "boxSizing": "border-box",
           "alignItems": "center",
-          "display": "flex"
+          "display": "flex",
+          "color": "text"
         },
         "prefix": {
           "variant": "elements.input.affix.base",
@@ -364,7 +382,7 @@
       "position": "relative",
       "borderRadius": "sm",
       "notificationColor": "#65717B",
-      "alertColor": "#DB1818",
+      "alertColor": "error",
       "before": {
         "position": "absolute",
         "content": "''",

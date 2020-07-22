@@ -12,7 +12,8 @@
 
   "shadows": {
     "box": "2px 2px 25px #0004",
-    "linkInset": "inset 0 0 0 1px #141424"
+    "linkInset": "inset 0 0 0 1px #141424",
+    "formInput": "inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)"
   },
 
   "fonts": {
@@ -155,6 +156,7 @@
     "anakiwa": "#99e2ff",
     "uswitch-navy": "#141424",
     "veryLightGrey": "#E9EBED",
+    "tomato": "#DB1818",
 
     "frozen-bg": "#f6f6f6",
 
@@ -367,7 +369,17 @@
       },
       "focus": {
         "outline": "2px solid",
-        "outline-color": "orange"
+        "outline-color": "orange",
+        "color": "primary"
+      },
+      "default": {
+        "color": "primary"
+      },
+      "error": {
+        "color": "tomato"
+      },
+      "formInput": {
+        "boxShadow": "formInput"
       },
       "affix": {
         "base": {
@@ -377,7 +389,8 @@
           "textAlign": "center",
           "boxSizing": "border-box",
           "alignItems": "center",
-          "display": "flex"
+          "display": "flex",
+          "color": "text"
         },
         "prefix": {
           "variant": "elements.input.affix.base",

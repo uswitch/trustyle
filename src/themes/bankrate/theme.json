@@ -13,7 +13,8 @@
   "shadows": {
     "box": "2px 2px 25px #0004",
     "linkInset": "inset 0 0 0 1px #008fe9",
-    "card": "rgba(0, 0, 72, 0.28) 0px 23px 28px -16px, rgba(0, 0, 72, 0.06) 0px -2px 11px 0px"
+    "card": "rgba(0, 0, 72, 0.28) 0px 23px 28px -16px, rgba(0, 0, 72, 0.06) 0px -2px 11px 0px",
+    "formInput": "inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)"
   },
 
   "fonts": {
@@ -97,6 +98,7 @@
     "frozen-bg": "#F6F6F6",
     "battleshipGrey": "#65717B",
     "veryLightGrey": "#E9EBED",
+    "tomato": "#DB1818",
 
     "experimental-text": "#29335C",
     "button-secondary": "#FFFFFF",
@@ -336,6 +338,18 @@
           "backgroundColor": "veryLightGrey"
         }
       },
+      "default": {
+        "color": "grey-90"
+      },
+      "error": {
+        "color": "tomato"
+      },
+      "focus": {
+        "color": "grey-90"
+      },
+      "formInput": {
+        "boxShadow": "formInput"
+      },
       "frozen": {
         "base": {
           "backgroundColor": "frozen-bg",
@@ -373,7 +387,8 @@
           "textAlign": "center",
           "boxSizing": "border-box",
           "alignItems": "center",
-          "display": "flex"
+          "display": "flex",
+          "color": "text"
         },
         "prefix": {
           "variant": "elements.input.affix.base",
@@ -397,7 +412,7 @@
       "position": "relative",
       "borderRadius": "sm",
       "notificationColor": "#65717B",
-      "alertColor": "#DB1818",
+      "alertColor": "tomato",
       "before": {
         "position": "absolute",
         "content": "''",

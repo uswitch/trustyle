@@ -572,6 +572,12 @@
       "error": {
         "color": "error"
       },
+      "focus": {
+        "color": "plum"
+      },
+      "formInput": {
+        "boxShadow": "none"
+      },
       "frozen": {
         "base": {
           "backgroundColor": "grey-10",
@@ -598,9 +604,6 @@
         "hidden": {
           "display": "none"
         }
-      },
-      "focus": {
-        "color": "plum"
       },
       "affix": {
         "base": {

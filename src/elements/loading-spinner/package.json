@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.loading-spinner",
-  "version": "0.3.2",
+  "version": "0.3.4",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
