@@ -1254,7 +1254,13 @@
       },
       "condensed": {
         "writtenBy": {
-          "display": ["block", "none"]
+          "display": ["block", "none"],
+          "date": {
+            "variant": "compounds.authorsGroup.writtenBy.date"
+          },
+          "text": {
+            "variant": "compounds.authorsGroup.writtenBy.text"
+          }
         },
         "authors": {
           "flexDirection": ["column", "row"],
@@ -1263,7 +1269,9 @@
           }
         },
         "updatedOn": {
-          "display": ["none", "block"]
+          "display": ["none", "block"],
+          "fontSize": [null, "xxs"],
+          "color": "grey-60"
         }
       }
     },
