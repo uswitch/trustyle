@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.authors-group",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
