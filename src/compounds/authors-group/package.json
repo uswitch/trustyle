@@ -12,7 +12,7 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.author": "file:../../../../uswitch-trustyle.author-0.4.1.tgz",
+    "@uswitch/trustyle.author": "2.0.0",
     "@uswitch/trustyle.date": "0.0.9"
   }
 }

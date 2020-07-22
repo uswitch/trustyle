@@ -71,7 +71,7 @@ const AuthorsGroup: React.FC<Props> = ({
             key={key}
             sx={{ paddingBottom: 'sm', variant: getVariant('author') }}
           >
-            <Author {...author} />
+            <Author variant={variant} {...author} />
           </div>
         ))}
       </div>
