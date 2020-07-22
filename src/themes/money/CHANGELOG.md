@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.1.2...@uswitch/trustyle.money-theme@1.3.0) (2020-07-22)
+
+
+### Features
+
+* add form input colors and boxshadow to themes ([6a020c5](https://github.com/uswitch/trustyle/commit/6a020c5))
+
+
+
+
+
 # [1.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.1.2...@uswitch/trustyle.money-theme@1.2.0) (2020-07-22)
 
 
