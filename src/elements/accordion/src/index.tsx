@@ -3,6 +3,7 @@
 import React, { useContext, useState } from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
+import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 
 interface ContextProps {
   open: number
@@ -22,7 +23,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   isInitiallyOpen?: boolean
   className?: string
-  icon?: React.ReactNode
+  icon?: string
 }
 
 interface TitleProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -85,10 +86,19 @@ const Accordion: React.FC<Props> & {
             <div
               sx={{
                 marginRight: '13px',
-                display: 'flex'
+                height: '36px',
+                width: '32px'
               }}
             >
-              {icon}
+              <ImgixImage
+                src={icon}
+                imgixParams={{ fit: 'clip' }}
+                critical
+                sx={{
+                  width: '100%',
+                  height: '100%'
+                }}
+              />
             </div>
             {title}
           </div>
