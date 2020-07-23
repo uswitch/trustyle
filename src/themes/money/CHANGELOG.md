@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.3.0...@uswitch/trustyle.money-theme@1.4.0) (2020-07-23)
+
+
+### Bug Fixes
+
+* match product table to designs ([8127f3e](https://github.com/uswitch/trustyle/commit/8127f3e))
+
+
+### Features
+
+* add secondary cell that displays as row on mobile, column on desktop ([ddf145a](https://github.com/uswitch/trustyle/commit/ddf145a))
+
+
+
+
+
 # [1.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.1.2...@uswitch/trustyle.money-theme@1.3.0) (2020-07-22)
 
 

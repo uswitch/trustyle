@@ -1082,7 +1082,11 @@
         "label": {
           "color": "grey-60"
         },
-        "content": {},
+        "content": {
+          "fontFamily": "heading",
+          "color": "grey-80",
+          "fontSize": ["xl", "xxl"]
+        },
         "accent": {
           "backgroundColor": "grey-05"
         },
@@ -1092,7 +1096,10 @@
             "label": {
               "color": "grey-60"
             },
-            "content": {},
+            "content": {
+              "fontFamily": "heading",
+              "fontSize": "md"
+            },
             "accent": {
               "backgroundColor": "grey-05"
             }
@@ -1102,7 +1109,10 @@
       "cellCta": {
         "buttonWrapper": {
           "a, button": {
-            "width": "100%"
+            "paddingY": [12, 16],
+            "fontSize": ["sm", "md"],
+            "width": "100%",
+            "marginTop": [20, 0]
           }
         }
       }
