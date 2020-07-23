@@ -109,8 +109,16 @@ export const ListItem: React.FC<ListItemProps> = ({
 
   return (
     <li sx={sx} {...props}>
-      {variant === 'pros' && <Icon color="green" glyph="tick" size={24} />}
-      {variant === 'cons' && <Icon color="red" glyph="cross" size={24} />}
+      {variant === 'pros' && (
+        <Icon color={theme.elements?.list?.pros.color} glyph="tick" size={24} />
+      )}
+      {variant === 'cons' && (
+        <Icon
+          color={theme.elements?.list?.cons.color}
+          glyph="cross"
+          size={24}
+        />
+      )}
       {children}
     </li>
   )
