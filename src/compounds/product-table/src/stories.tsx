@@ -356,9 +356,6 @@ export const ExampleWithAddons = () => {
         <ProductTable.cells.Content label="Fixed rate contract">
           14 months
         </ProductTable.cells.Content>
-        <ProductTable.cells.Content label="Early exit fee">
-          £30 per fuel
-        </ProductTable.cells.Content>
       </ProductTable.cells.Split>
       <ProductTable.cells.Content label="Annual saving" accent>
         <ProductTable.data.Range from={30} to={260} unit="pounds" />

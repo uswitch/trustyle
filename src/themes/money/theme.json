@@ -1076,7 +1076,7 @@
             "paddingY": [12, 16],
             "fontSize": ["sm", "md"],
             "width": "100%",
-            "marginTop": [0, 20]
+            "marginTop": [20, 0]
           }
         }
       }
