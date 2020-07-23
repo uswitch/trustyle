@@ -834,6 +834,8 @@
     },
 
     "list": {
+      "pros": { "color": "green" },
+      "cons": { "color": "red" },
       "pros-and-cons": {
         "base": {
           "backgroundColor": "grey-05",

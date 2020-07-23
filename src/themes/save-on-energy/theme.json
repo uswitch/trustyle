@@ -212,6 +212,8 @@
 
   "elements": {
     "list": {
+      "pros": { "color": "green" },
+      "cons": { "color": "red" },
       "pros-and-cons": {
         "title": {
           "color": "grey-60",
