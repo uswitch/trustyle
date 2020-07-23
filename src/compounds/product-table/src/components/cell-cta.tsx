@@ -14,6 +14,7 @@ const ProductTableCellCta: React.FC<CellCtaProps> = ({
 }) => {
   const buttonWrapperStyling = {
     flex: [1, undefined, 'initial'],
+    width: ['auto', '100%'],
     display: ['flex', undefined, 'block'],
     variant: 'compounds.product-table.cellCta.buttonWrapper'
   }
