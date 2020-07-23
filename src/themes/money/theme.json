@@ -1162,11 +1162,7 @@
         "titleIcon": {
           "marginRight": "13px",
           "height": 36,
-          "width": 32,
-          "icon": {
-            "height": "100%",
-            "width": "100%"
-          }
+          "width": 32
         }
       }
     },

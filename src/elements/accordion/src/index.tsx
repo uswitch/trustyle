@@ -93,7 +93,8 @@ const Accordion: React.FC<Props> & {
                 imgixParams={{ fit: 'clip' }}
                 critical
                 sx={{
-                  variant: 'compounds.accordion.variants.titleIcon.icon'
+                  height: '100%',
+                  width: '100%'
                 }}
               />
             </div>
