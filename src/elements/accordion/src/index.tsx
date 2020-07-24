@@ -3,6 +3,7 @@
 import React, { useContext, useState } from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
+import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 
 interface ContextProps {
   open: number
@@ -22,6 +23,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   isInitiallyOpen?: boolean
   className?: string
+  icon?: string
 }
 
 interface TitleProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -38,7 +40,7 @@ interface GroupProps {
 const Accordion: React.FC<Props> & {
   Group: React.FC<GroupProps>
   Title: React.FC<TitleProps>
-} = ({ index, title, isInitiallyOpen = false, children, className }) => {
+} = ({ index, title, isInitiallyOpen = false, children, className, icon }) => {
   const {
     theme: {
       compounds: { accordion: accordionTheme = {} },
@@ -72,14 +74,43 @@ const Accordion: React.FC<Props> & {
         }}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div
-          sx={{
-            flex: '1',
-            textAlign: 'left'
-          }}
-        >
-          {title}
-        </div>
+        {icon ? (
+          <div
+            sx={{
+              flex: '1',
+              textAlign: 'left',
+              alignItems: 'center',
+              display: 'flex'
+            }}
+          >
+            <div
+              sx={{
+                variant: 'compounds.accordion.variants.titleIcon'
+              }}
+            >
+              <ImgixImage
+                src={icon}
+                imgixParams={{ fit: 'clip' }}
+                critical
+                sx={{
+                  height: '100%',
+                  width: '100%'
+                }}
+              />
+            </div>
+            {title}
+          </div>
+        ) : (
+          <div
+            sx={{
+              flex: '1',
+              textAlign: 'left'
+            }}
+          >
+            {title}
+          </div>
+        )}
+
         {accordionContext.iconClosed && accordionContext.iconOpen ? (
           <Icon
             color={

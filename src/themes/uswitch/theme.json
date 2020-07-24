@@ -1575,6 +1575,11 @@
           "caret": {
             "variant": "compounds.accordion.base.caret"
           }
+        },
+        "titleIcon": {
+          "marginRight": "13px",
+          "height": 36,
+          "width": 32
         }
       }
     },
