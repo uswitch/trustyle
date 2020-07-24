@@ -424,7 +424,11 @@
           "width": [40, 40],
           "height": [40, 40]
         },
-        "base": { "a": { "variant": "elements.author.base.a" } }
+        "base": {
+          "a": {
+            "variant": "elements.author.base.a"
+          }
+        }
       }
     },
     "overlay": {
@@ -1639,7 +1643,7 @@
           "display": "flex",
           "alignItems": "start",
           "image": {
-            "width": [32, 34, 44],
+            "width": [132, 384, 474],
             "mr": 32
           },
           "content": {
