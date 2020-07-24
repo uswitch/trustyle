@@ -1044,7 +1044,9 @@
             "outline": "2px solid",
             "outlineColor": "#008fe9"
           },
-          "&::-moz-focus-inner": { "border": 0 }
+          "&::-moz-focus-inner": {
+            "border": 0
+          }
         },
         "hidden": {
           "display": "none"
@@ -1252,6 +1254,54 @@
         },
         "image": {
           "height": [40, 56]
+        }
+      }
+    },
+    "sponsorship": {
+      "base": {
+        "alignItems": "center",
+        "display": "flex",
+        "flex": "none",
+        "order": 0,
+        "fontSize": "md",
+        "alignSelf": "center",
+        "margin": "8px 0px",
+        "image": {
+          "position": "static",
+          "width": 39.24,
+          "order": 1,
+          "marginBottom": "2px",
+          "alignSelf": "center"
+        },
+        "content": {
+          "padding": 0,
+          "position": "static",
+          "height": 27,
+          "left": 0,
+          "top": 0,
+          "color": "grey-60"
+        }
+      },
+      "variants": {
+        "leftAligned": {
+          "variant": "elements.sponsorship.base",
+          "justifyContent": "flex-start",
+          "content": {
+            "variant": "elements.sponsorship.base.content"
+          },
+          "image": {
+            "variant": "elements.sponsorship.base.image"
+          }
+        },
+        "rightAligned": {
+          "variant": "elements.sponsorship.base",
+          "justifyContent": "flex-end",
+          "image": {
+            "variant": "elements.sponsorship.base.image"
+          },
+          "content": {
+            "variant": "elements.sponsorship.base.content"
+          }
         }
       }
     }
@@ -1584,7 +1634,7 @@
           "display": "flex",
           "alignItems": "start",
           "image": {
-            "width": [132, 384, 474],
+            "width": [32, 34, 44],
             "mr": 32
           },
           "content": {
