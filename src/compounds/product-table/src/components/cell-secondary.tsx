@@ -15,11 +15,12 @@ const ProductTableCellSecondary: React.FC<CellSecondaryProps> = ({
 }) => (
   <CellBase
     sx={{
-      height: 'auto',
+      height: ['auto', '100%'],
+      padding: ['', 'sm'],
       display: 'grid',
       alignItems: 'center',
-      gridTemplateColumns: ['auto auto', '100%'],
-      msGridColumns: ['auto auto', '100%'],
+      gridTemplateColumns: ['repeat(2, 1fr)', '100%'],
+      msGridColumns: ['repeat(2, 1fr)', '100%'],
       gridTemplateRows: ['100%', 'auto auto'],
       msGridRows: ['100%', 'auto auto'],
       variant: [
@@ -57,7 +58,8 @@ const ProductTableCellSecondary: React.FC<CellSecondaryProps> = ({
         msGridColumn: ['2', '1'],
         msGridColumnSpan: '1',
         fontSize: 'xxl',
-        marginTop: ['sm', ''],
+        paddingLeft: ['sm', '0px'],
+        marginTop: ['sm', '0px'],
         small: {
           fontSize: 'sm'
         },
