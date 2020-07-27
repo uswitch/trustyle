@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.5.0...@uswitch/trustyle.money-theme@1.6.0) (2020-07-27)
+
+
+### Features
+
+* move form styling to themes ([3a1b83d](https://github.com/uswitch/trustyle/commit/3a1b83d))
+
+
+
+
+
 # [1.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.4.0...@uswitch/trustyle.money-theme@1.5.0) (2020-07-24)
 
 
