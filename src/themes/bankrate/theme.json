@@ -430,7 +430,7 @@
         "fontSize": "base",
         "lineHeight": 1.33,
         "color": "text",
-        "borderRadius": "4px",
+        "borderRadius": "3px",
         "appearance": "none",
         "border": "solid 1px",
         "boxSizing": "border-box",
@@ -440,7 +440,7 @@
         "verticalAlign": "middle",
         "width": "100%",
         "boxShadow": "formInput",
-        "borderColor": "primary",
+        "borderColor": "grey-90",
         "backgroundColor": "white",
         "padding": "16px",
         "&:focus": {

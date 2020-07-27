@@ -1246,11 +1246,10 @@
         "boxShadow": "formInput",
         "borderColor": "primary",
         "backgroundColor": "white",
-        "borderRadius": "none",
+        "borderRadius": "0px",
         "padding": "16px",
         "&:focus": {
-          "outline": "2px solid",
-          "outline-color": "orange",
+          "outline": "none",
           "color": "primary",
           "borderColor": "primary",
           "boxShadow": "focusInput"

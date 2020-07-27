@@ -563,7 +563,7 @@
         "boxShadow": "formInput",
         "borderColor": "primary",
         "backgroundColor": "white",
-        "borderRadius": "none",
+        "borderRadius": "0px",
         "padding": "16px",
         "&:focus": {
           "outline": "none",
