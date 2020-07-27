@@ -1267,7 +1267,7 @@
         "display": "flex",
         "flex": "none",
         "order": 0,
-        "fontSize": "md",
+        "fontSize": "sm",
         "alignSelf": "center",
         "margin": "8px 0px",
         "image": {
