@@ -21,7 +21,9 @@
   },
 
   "shadows": {
-    "formInput": "inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)"
+    "formInput": "inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)",
+    "focusInput": "inset 0 0 0 1px #141424",
+    "errorInput": "inset 0 0 0 1px #DB1818"
   },
 
   "fontSizes": {
@@ -389,6 +391,46 @@
         "width": 0,
         "height": 0,
         "borderBottomStyle": "solid"
+      }
+    },
+
+    "simple-input": {
+      "base": {
+        "fontFamily": "base",
+        "fontSize": "base",
+        "lineHeight": 1.33,
+        "color": "text",
+        "borderRadius": "4px",
+        "appearance": "none",
+        "border": "solid 1px",
+        "background": "none",
+        "boxSizing": "border-box",
+        "display": "flex",
+        "flex": 1,
+        "position": "relative",
+        "verticalAlign": "middle",
+        "width": "100%",
+        "borderColor": "uswitch-navy",
+        "backgroundColor": "white",
+        "padding": "16px",
+        "&:focus": {
+          "outline": "none",
+          "borderColor": "uswitch-navy",
+          "boxShadow": "focusInput"
+        },
+        "&:disabled": {
+          "outline": "none",
+          "border": "none",
+          "color": "battleshipGrey",
+          "backgroundColor": "veryLightGrey"
+        }
+      },
+      "variants": {
+        "error": {
+          "variant": "elements.simple-input.base",
+          "borderColor": "error",
+          "boxShadow": "errorInput"
+        }
       }
     },
 
