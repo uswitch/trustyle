@@ -88,6 +88,32 @@ FullOverflowingContent.story = {
   }
 }
 
+export const NestedModals = () => (
+  <Modal
+    height="partial"
+    ariaLabel="Top level"
+    onClose={action('Clicked close top')}
+  >
+    <div>Top level modal</div>
+    <div>Top level modal</div>
+    <div>Top level modal</div>
+    <div>Top level modal</div>
+    <Modal
+      height="partial"
+      ariaLabel="Inner"
+      onClose={action('Clicked close inner')}
+    >
+      <div>Inner modal</div>
+    </Modal>
+  </Modal>
+)
+
+NestedModals.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => (
   <AllThemes themes={['uswitch']}>
     <Modal

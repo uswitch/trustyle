@@ -202,7 +202,8 @@
     "frozen-bg": "#F6F6F6",
     "battleshipGrey": "#65717B",
     "veryLightGrey": "#E9EBED",
-    "tomato": "#DB1818"
+    "tomato": "#DB1818",
+    "overlay-bg": "rgba(20, 20, 36, 0.5)"
   },
   "radii": {
     "sm": 0,
