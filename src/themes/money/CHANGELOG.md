@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.4.0...@uswitch/trustyle.money-theme@1.5.0) (2020-07-24)
+
+
+### Features
+
+* move icon styling to themes ([5002464](https://github.com/uswitch/trustyle/commit/5002464))
+* move image sizing to component ([0294f4d](https://github.com/uswitch/trustyle/commit/0294f4d))
+
+
+
+
+
 # [1.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.3.0...@uswitch/trustyle.money-theme@1.4.0) (2020-07-23)
 
 ### Bug Fixes

@@ -977,6 +977,14 @@
         "caret": {
           "color": "light-1"
         }
+      },
+
+      "variants": {
+        "titleIcon": {
+          "marginRight": "13px",
+          "height": 36,
+          "width": 32
+        }
       }
     },
 

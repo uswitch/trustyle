@@ -1204,6 +1204,11 @@
           "caret": {
             "color": "fuschia"
           }
+        },
+        "titleIcon": {
+          "marginRight": "13px",
+          "height": 36,
+          "width": 32
         }
       }
     },
