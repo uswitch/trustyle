@@ -1085,7 +1085,8 @@
           "borderRadius": 4
         },
         "header": {
-          "borderBottomColor": "grey-20"
+          "borderBottomColor": "grey-20",
+          "fontFamily": "heading"
         },
         "pretitle": {
           "color": "grey-60"
