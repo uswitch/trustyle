@@ -13,7 +13,9 @@
   "shadows": {
     "box": "2px 2px 25px #0004",
     "linkInset": "inset 0 0 0 1px #141424",
-    "formInput": "inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)"
+    "formInput": "inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)",
+    "focusInput": "inset 0 0 0 1px #141424",
+    "errorInput": "inset 0 0 0 1px #DB1818"
   },
 
   "fonts": {
@@ -544,6 +546,47 @@
       }
     },
 
+    "simple-input": {
+      "base": {
+        "fontFamily": "base",
+        "fontSize": "base",
+        "lineHeight": 1.33,
+        "color": "text",
+        "appearance": "none",
+        "border": "solid 1px",
+        "boxSizing": "border-box",
+        "display": "flex",
+        "flex": 1,
+        "position": "relative",
+        "verticalAlign": "middle",
+        "width": "100%",
+        "boxShadow": "formInput",
+        "borderColor": "primary",
+        "backgroundColor": "white",
+        "borderRadius": "0px",
+        "padding": "16px",
+        "&:focus": {
+          "outline": "none",
+          "color": "primary",
+          "borderColor": "primary",
+          "boxShadow": "focusInput"
+        },
+        "&:disabled": {
+          "outline": "none",
+          "border": "none",
+          "color": "battleship-grey",
+          "backgroundColor": "veryLightGrey"
+        }
+      },
+      "variants": {
+        "error": {
+          "variant": "elements.simple-input.base",
+          "borderColor": "tomato",
+          "boxShadow": "errorInput"
+        }
+      }
+    },
+
     "progress-bar": {
       "main": {
         "backgroundColor": "progress-bg"
@@ -976,6 +1019,14 @@
         },
         "caret": {
           "color": "light-1"
+        }
+      },
+
+      "variants": {
+        "titleIcon": {
+          "marginRight": "13px",
+          "height": 36,
+          "width": 32
         }
       }
     },

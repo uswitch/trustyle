@@ -8,7 +8,9 @@
   },
   "shadows": {
     "box": "2px 2px 25px #0004",
-    "formInput": "inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)"
+    "formInput": "inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)",
+    "focusInput": "inset 0 0 0 1px #141424",
+    "errorInput": "inset 0 0 0 1px #DB1818"
   },
   "fonts": {
     "base": "Helvetica Now Text,Helvetica Neue,Helvetica,Arial,sans-serif",
@@ -1227,6 +1229,47 @@
       }
     },
 
+    "simple-input": {
+      "base": {
+        "fontFamily": "base",
+        "fontSize": "base",
+        "lineHeight": 1.33,
+        "color": "text",
+        "appearance": "none",
+        "border": "solid 1px",
+        "boxSizing": "border-box",
+        "display": "flex",
+        "flex": 1,
+        "position": "relative",
+        "verticalAlign": "middle",
+        "width": "100%",
+        "boxShadow": "formInput",
+        "borderColor": "primary",
+        "backgroundColor": "white",
+        "borderRadius": "0px",
+        "padding": "16px",
+        "&:focus": {
+          "outline": "none",
+          "color": "primary",
+          "borderColor": "primary",
+          "boxShadow": "focusInput"
+        },
+        "&:disabled": {
+          "outline": "none",
+          "border": "none",
+          "color": "battleshipGrey",
+          "backgroundColor": "veryLightGrey"
+        }
+      },
+      "variants": {
+        "error": {
+          "variant": "elements.simple-input.base",
+          "borderColor": "tomato",
+          "boxShadow": "errorInput"
+        }
+      }
+    },
+
     "logo": {
       "height": ["icon.lg", "icon.xl"],
       "img": {
@@ -1525,6 +1568,11 @@
           "caret": {
             "variant": "compounds.accordion.base.caret"
           }
+        },
+        "titleIcon": {
+          "marginRight": "13px",
+          "height": 36,
+          "width": 32
         }
       }
     },

@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.4.0...@uswitch/trustyle.journey-theme@2.5.0) (2020-07-27)
+
+
+### Bug Fixes
+
+* styling fixes in theme ([9d2db2f](https://github.com/uswitch/trustyle/commit/9d2db2f))
+
+
+### Features
+
+* move form styling to themes ([3a1b83d](https://github.com/uswitch/trustyle/commit/3a1b83d))
+
+
+
+
+
+# [2.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.3.0...@uswitch/trustyle.journey-theme@2.4.0) (2020-07-24)
+
+
+### Features
+
+* move icon styling to themes ([5002464](https://github.com/uswitch/trustyle/commit/5002464))
+* move image sizing to component ([0294f4d](https://github.com/uswitch/trustyle/commit/0294f4d))
+
+
+
+
+
 # [2.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.1.0...@uswitch/trustyle.journey-theme@2.3.0) (2020-07-22)
 
 
