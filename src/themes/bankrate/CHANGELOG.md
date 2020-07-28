@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.4.0...@uswitch/trustyle.bankrate-theme@2.5.0) (2020-07-27)
+
+
+### Bug Fixes
+
+* styling fixes in theme ([9d2db2f](https://github.com/uswitch/trustyle/commit/9d2db2f))
+
+
+### Features
+
+* move form styling to themes ([3a1b83d](https://github.com/uswitch/trustyle/commit/3a1b83d))
+
+
+
+
+
 # [2.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.3.0...@uswitch/trustyle.bankrate-theme@2.4.0) (2020-07-24)
 
 

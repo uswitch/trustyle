@@ -109,9 +109,12 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
     <div
       sx={{
         ...grid('column', 1, 1),
-        ...grid('row', 2, 1),
+        gridRow: ['1 / span 2', '2 / span 1'],
+        msGridRow: ['1', '2'],
+        msGridRowSpan: ['2', '1'],
+        alignSelf: ['baseline', 'auto'],
         fontSize: 'xs',
-        marginTop: 'sm',
+        marginTop: ['xl', 'sm'],
         variant: 'compounds.product-table.cellContent.label'
       }}
     >
