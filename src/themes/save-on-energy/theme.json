@@ -213,6 +213,66 @@
   "----------------------------- Variants": "-----------------------------",
 
   "elements": {
+    "list": {
+      "pros": { "color": "green" },
+      "cons": { "color": "red" },
+      "pros-and-cons": {
+        "title": {
+          "color": "grey-60",
+          "fontSize": "sm",
+          "fontWeight": "bold",
+          "lineHeight": "md",
+          "marginX": "xxs"
+        },
+        "base": {
+          "margin": "xxs",
+          "paddingY": "md",
+          "paddingX": ["sm", "md"],
+          "backgroundColor": "grey-05",
+          "li": {
+            "paddingLeft": 0,
+            "fontWeight": "bold",
+            "marginBottom": "xs",
+            "lineHeight": "md",
+            "fontSize": "sm",
+            "display": "flex",
+            "alignItems": "center",
+            "::before": { "display": "none" }
+          },
+          ":last-child": {
+            "marginBottom": "0"
+          }
+        },
+        "icon": {
+          "display": "inline",
+          "marginRight": "xxs"
+        }
+      },
+      "variants": {
+        "pros": {
+          "title": {
+            "variant": "elements.list.pros-and-cons.title"
+          },
+          "base": {
+            "variant": "elements.list.pros-and-cons.base",
+            "svg": {
+              "variant": "elements.list.pros-and-cons.icon"
+            }
+          }
+        },
+        "cons": {
+          "title": {
+            "variant": "elements.list.pros-and-cons.title"
+          },
+          "base": {
+            "variant": "elements.list.pros-and-cons.base",
+            "svg": {
+              "variant": "elements.list.pros-and-cons.icon"
+            }
+          }
+        }
+      }
+    },
     "author": {
       "link": {
         "fontWeight": "base"
@@ -374,7 +434,26 @@
         }
       }
     },
-
+    "sponsoredByTag": {
+      "base": {
+        "wrapper": {
+          "display": "flex",
+          "alignItems": "center",
+          "justifyContent": "space-between",
+          "paddingY": 4
+        },
+        "text": {
+          "color": "grey-60",
+          "fontSize": "xs",
+          "fontFamily": "base",
+          "fontWeight": "base",
+          "fontStyle": "normal"
+        },
+        "image": {
+          "height": [40, 56]
+        }
+      }
+    },
     "input-alert": {
       "fontFamily": "base",
       "fontSize": "base",
