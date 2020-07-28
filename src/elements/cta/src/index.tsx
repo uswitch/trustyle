@@ -6,7 +6,7 @@ import { ButtonLink } from '@uswitch/trustyle.button-link'
 import get from '@uswitch/trustyle-utils.get'
 
 const lookup = (variant: string) =>
-  variant === 'base' ? 'cta2.base' : `cta2.variants.${variant}`
+  variant === 'base' ? 'elements.cta.base' : `elements.cta.variants.${variant}`
 
 interface CTAProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string

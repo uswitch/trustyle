@@ -113,6 +113,8 @@ export interface Theme extends Omit<StyledSystemTheme, 'colors'> {
   styles?: {
     [P in StyledTags]?: SystemStyleObject
   }
+
+  elements: any
 }
 
 /**

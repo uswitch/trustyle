@@ -66,7 +66,7 @@ export const ExampleWithPalette = () => {
   const applyPalette = boolean('Apply palette?', false, 'Palette')
   const accentColor = color(
     'accentColor',
-    theme().callOut?.main?.backgroundColor,
+    theme().elements['call-out']?.main?.backgroundColor,
     'Palette'
   )
 

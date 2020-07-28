@@ -18,7 +18,7 @@ export default {
 export const AllVariants = () => (
   <div css={css({ padding: number('Padding', 10) })}>
     {theme() &&
-      Object.keys(theme().buttons.variants).map((key, index) => (
+      Object.keys(theme().elements.buttons.variants).map((key, index) => (
         <React.Fragment key={index}>
           <ButtonLink
             variant={key}

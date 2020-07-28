@@ -20,7 +20,7 @@ const ProductTableAddonFooter: Addon = {
             paddingTop: 'sm',
             marginTop: 'xs',
             marginBottom: -6,
-            variant: 'productTable.addonFooter.main'
+            variant: 'compounds.product-table.addonFooter.main'
           }
         }}
       >

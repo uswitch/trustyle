@@ -17,7 +17,10 @@ const ProductTableDataRange: React.FC<DataRangeProps> = ({
   return (
     <div>
       {numberFormatter(from, unit)}
-      <small> to {numberFormatter(to, unit)}</small>
+      <span sx={{ fontSize: ['xs', 'md'] }}>
+        {' '}
+        to {numberFormatter(to, unit)}
+      </span>
     </div>
   )
 }

@@ -13,7 +13,9 @@ import { Close } from './close'
 import { Conversation } from './conversation'
 import { Cross } from './cross'
 import { Edit } from './edit'
+import { EditJourney } from './edit-journey'
 import { Email } from './email'
+import { Error as ErrorIcon } from './error'
 import { FilledArrow } from './filled-arrow'
 import { Filters } from './filters'
 import { Four } from './four'
@@ -35,7 +37,6 @@ import { Three } from './three'
 import { Tick } from './tick'
 import { Tv } from './tv'
 import { Two } from './two'
-import { EditJourney } from './edit-journey'
 
 export type Glyph =
   | 'arrow'
@@ -49,6 +50,7 @@ export type Glyph =
   | 'cross'
   | 'edit'
   | 'email'
+  | 'error'
   | 'filled-arrow'
   | 'filters'
   | 'four'
@@ -115,6 +117,8 @@ export const Icon: React.FC<Props> = ({
       return <Edit color={color} size={size} />
     case 'email':
       return <Email color={color} size={size} />
+    case 'error':
+      return <ErrorIcon color={color} size={size} />
     case 'filled-arrow':
       return <FilledArrow color={color} size={size} />
     case 'filters':
