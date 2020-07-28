@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.9.1 (2020-07-28)
+
+**Note:** Version bump only for package @uswitch/trustyle.icon
+
+
+
+
+
 # [1.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.8.6...@uswitch/trustyle.icon@1.9.0) (2020-07-15)
 
 
