@@ -368,21 +368,22 @@
       "base": {
         "wrapper": {
           "display": "flex",
-          "alignItems": "center",
+          "alignItems": "flex-end",
           "justifyContent": "flex-end",
-          "paddingY": "xxs"
+          "paddingY": "xxs",
+          "pt": "md"
         },
         "text": {
           "color": "white",
           "fontSize": "xs",
           "fontFamily": "base",
           "fontWeight": "base",
-          "fontStyle": "normal"
+          "fontStyle": "normal",
+          "lineHeight": "1"
         },
         "image": {
           "maxHeight": "32px",
-          "maxWidth": "76px",
-          "pb": [0, "sm"],
+          "maxWidth": ["88px", "104px"],
           "ml": "xs"
         }
       }
