@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.5.0...@uswitch/trustyle.bankrate-theme@2.6.0) (2020-07-28)
+
+
+### Bug Fixes
+
+* update packages, rebased on master ([0d7a48d](https://github.com/uswitch/trustyle/commit/0d7a48d))
+
+
+### Features
+
+* Implement icon color through theme.json ([2d3020f](https://github.com/uswitch/trustyle/commit/2d3020f))
+* Implement icon color through theme.json ([f0fb94e](https://github.com/uswitch/trustyle/commit/f0fb94e))
+
+
+
+
+
 # [2.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.4.0...@uswitch/trustyle.bankrate-theme@2.5.0) (2020-07-27)
 
 
