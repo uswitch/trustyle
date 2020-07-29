@@ -14,7 +14,9 @@
     "box": "2px 2px 25px #0004",
     "linkInset": "inset 0 0 0 1px #008fe9",
     "card": "rgba(0, 0, 72, 0.28) 0px 23px 28px -16px, rgba(0, 0, 72, 0.06) 0px -2px 11px 0px",
-    "formInput": "inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)"
+    "formInput": "inset 0 2px 5px 0 rgba(0, 0, 0, 0.1)",
+    "focusInput": "inset 0 0 0 1px #141424",
+    "errorInput": "inset 0 0 0 1px #DB1818"
   },
 
   "fonts": {
@@ -26,7 +28,8 @@
   },
 
   "lineHeights": {
-    "base": "1.5"
+    "base": "1.5",
+    "heading": "1.3"
   },
 
   "fontSizes": {
@@ -323,9 +326,120 @@
         "image": {
           "height": [40, 56]
         }
+      },
+      "pros": { "color": "green" },
+      "cons": { "color": "red" },
+      "pros-and-cons": {
+        "title": {
+          "color": "grey-60",
+          "fontSize": "md",
+          "fontWeight": "bold",
+          "lineHeight": "heading"
+        },
+        "base": {
+          "paddingY": "md",
+          "paddingX": ["sm", "md"],
+          "backgroundColor": "grey-05",
+          "li": {
+            "paddingLeft": 0,
+            "fontWeight": "bold",
+            "marginBottom": "xs",
+            "lineHeight": "heading",
+            "fontSize": "md",
+            "display": "flex",
+            "alignItems": "center",
+            "::before": { "display": "none" }
+          },
+          ":last-child": {
+            "marginBottom": "0"
+          }
+        },
+        "icon": {
+          "display": "inline",
+          "marginRight": "xxs"
+        }
+      },
+      "variants": {
+        "pros": {
+          "title": {
+            "variant": "elements.list.pros-and-cons.title"
+          },
+          "base": {
+            "variant": "elements.list.pros-and-cons.base",
+            "svg": {
+              "variant": "elements.list.pros-and-cons.icon"
+            }
+          }
+        },
+        "cons": {
+          "title": {
+            "variant": "elements.list.pros-and-cons.title"
+          },
+          "base": {
+            "variant": "elements.list.pros-and-cons.base",
+            "svg": {
+              "variant": "elements.list.pros-and-cons.icon"
+            }
+          }
+        }
+      },
+      "pros": { "color": "green" },
+      "cons": { "color": "red" },
+      "pros-and-cons": {
+        "title": {
+          "color": "grey-60",
+          "fontSize": "md",
+          "fontWeight": "bold",
+          "lineHeight": "heading"
+        },
+        "base": {
+          "paddingY": "md",
+          "paddingX": ["sm", "md"],
+          "backgroundColor": "grey-05",
+          "li": {
+            "paddingLeft": 0,
+            "fontWeight": "bold",
+            "marginBottom": "xs",
+            "lineHeight": "heading",
+            "fontSize": "md",
+            "display": "flex",
+            "alignItems": "center",
+            "::before": { "display": "none" }
+          },
+          ":last-child": {
+            "marginBottom": "0"
+          }
+        },
+        "icon": {
+          "display": "inline",
+          "marginRight": "xxs"
+        }
+      },
+      "variants": {
+        "pros": {
+          "title": {
+            "variant": "elements.list.pros-and-cons.title"
+          },
+          "base": {
+            "variant": "elements.list.pros-and-cons.base",
+            "svg": {
+              "variant": "elements.list.pros-and-cons.icon"
+            }
+          }
+        },
+        "cons": {
+          "title": {
+            "variant": "elements.list.pros-and-cons.title"
+          },
+          "base": {
+            "variant": "elements.list.pros-and-cons.base",
+            "svg": {
+              "variant": "elements.list.pros-and-cons.icon"
+            }
+          }
+        }
       }
     },
-
     "input": {
       "base": {
         "fontFamily": "base",
@@ -437,6 +551,47 @@
         "borderBottomStyle": "solid"
       }
     },
+
+    "simple-input": {
+      "base": {
+        "fontFamily": "base",
+        "fontSize": "base",
+        "lineHeight": 1.33,
+        "color": "text",
+        "borderRadius": "3px",
+        "appearance": "none",
+        "border": "solid 1px",
+        "boxSizing": "border-box",
+        "display": "flex",
+        "flex": 1,
+        "position": "relative",
+        "verticalAlign": "middle",
+        "width": "100%",
+        "boxShadow": "formInput",
+        "borderColor": "grey-90",
+        "backgroundColor": "white",
+        "padding": "16px",
+        "&:focus": {
+          "outline": "none",
+          "borderColor": "grey-90",
+          "boxShadow": "focusInput"
+        },
+        "&:disabled": {
+          "outline": "none",
+          "border": "none",
+          "color": "battleshipGrey",
+          "backgroundColor": "veryLightGrey"
+        }
+      },
+      "variants": {
+        "error": {
+          "variant": "elements.simple-input.base",
+          "borderColor": "tomato",
+          "boxShadow": "errorInput"
+        }
+      }
+    },
+
     "toggle-switch": {
       "base": {
         "base": {
@@ -662,6 +817,62 @@
           "content": "\" - \" counter(li)",
           "left": "-2em",
           "width": "2.5em"
+        }
+      },
+      "pros": { "color": "green" },
+      "cons": { "color": "red" },
+      "pros-and-cons": {
+        "title": {
+          "color": "grey-60",
+          "fontSize": "md",
+          "fontWeight": "bold",
+          "lineHeight": "heading"
+        },
+        "base": {
+          "paddingY": "md",
+          "paddingX": ["sm", "md"],
+          "backgroundColor": "grey-05",
+          "li": {
+            "paddingLeft": 0,
+            "fontWeight": "bold",
+            "marginBottom": "xs",
+            "lineHeight": "heading",
+            "fontSize": "md",
+            "display": "flex",
+            "alignItems": "center",
+            "::before": { "display": "none" }
+          },
+          ":last-child": {
+            "marginBottom": "0"
+          }
+        },
+        "icon": {
+          "display": "inline",
+          "marginRight": "xxs"
+        }
+      },
+      "variants": {
+        "pros": {
+          "title": {
+            "variant": "elements.list.pros-and-cons.title"
+          },
+          "base": {
+            "variant": "elements.list.pros-and-cons.base",
+            "svg": {
+              "variant": "elements.list.pros-and-cons.icon"
+            }
+          }
+        },
+        "cons": {
+          "title": {
+            "variant": "elements.list.pros-and-cons.title"
+          },
+          "base": {
+            "variant": "elements.list.pros-and-cons.base",
+            "svg": {
+              "variant": "elements.list.pros-and-cons.icon"
+            }
+          }
         }
       }
     },

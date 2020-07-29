@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.list",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -15,5 +15,8 @@
     "@mdx-js/react": "^1.5.3",
     "react": "^16.7.0",
     "theme-ui": "^0.2.52"
+  },
+  "dependencies": {
+    "@uswitch/trustyle.icon": "^1.9.0"
   }
 }

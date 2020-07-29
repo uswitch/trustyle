@@ -13,7 +13,8 @@
   "shadows": {
     "box": "2px 2px 25px #0004",
     "linkInset": "inset 0 0 0 1px #008fe9",
-    "plumInset": "inset 0 0 0 1px #924A8B"
+    "plumInset": "inset 0 0 0 1px #924A8B",
+    "errorInset": "inset 0 0 0 1px #D64226"
   },
 
   "fonts": {
@@ -381,21 +382,22 @@
       "base": {
         "wrapper": {
           "display": "flex",
-          "alignItems": "center",
+          "alignItems": "flex-end",
           "justifyContent": "flex-end",
-          "paddingY": "xxs"
+          "paddingY": "xxs",
+          "pt": "md"
         },
         "text": {
           "color": "white",
           "fontSize": "xs",
           "fontFamily": "base",
           "fontWeight": "base",
-          "fontStyle": "normal"
+          "fontStyle": "normal",
+          "lineHeight": "1"
         },
         "image": {
           "maxHeight": "32px",
-          "maxWidth": "76px",
-          "pb": [0, "sm"],
+          "maxWidth": ["88px", "104px"],
           "ml": "xs"
         }
       }
@@ -780,6 +782,44 @@
       }
     },
 
+    "simple-input": {
+      "base": {
+        "fontFamily": "base",
+        "fontSize": "base",
+        "lineHeight": 1.33,
+        "color": "text",
+        "appearance": "none",
+        "border": "solid 1px",
+        "boxSizing": "border-box",
+        "display": "flex",
+        "flex": 1,
+        "position": "relative",
+        "verticalAlign": "middle",
+        "width": "100%",
+        "borderColor": "grey-40",
+        "backgroundColor": "white",
+        "borderRadius": "4px",
+        "padding": "16px",
+        "&:focus": {
+          "outline": "none",
+          "borderColor": "plum",
+          "boxShadow": "plumInset"
+        },
+        "&:disabled": {
+          "outline": "none",
+          "color": "grey-60",
+          "backgroundColor": "grey-20"
+        }
+      },
+      "variants": {
+        "error": {
+          "variant": "elements.simple-input.base",
+          "borderColor": "error",
+          "boxShadow": "errorInset"
+        }
+      }
+    },
+
     "icon-tile": {
       "text": {
         "color": "grey-80"
@@ -850,6 +890,52 @@
     },
 
     "list": {
+      "pros": { "color": "green" },
+      "cons": { "color": "red" },
+      "pros-and-cons": {
+        "base": {
+          "backgroundColor": "grey-05",
+          "padding": "sm",
+          "li": {
+            "display": "flex",
+            "alignItems": "center",
+            "paddingLeft": 0,
+            "marginBottom": "xs",
+            "::before": { "display": "none" }
+          },
+          ":last-child": {
+            "marginBottom": "0"
+          },
+          "icon": {
+            "display": "inline",
+            "marginRight": "xs"
+          }
+        }
+      },
+      "variants": {
+        "pros": {
+          "title": {
+            "variant": "elements.list.pros-and-cons.title"
+          },
+          "base": {
+            "variant": "elements.list.pros-and-cons.base",
+            "svg": {
+              "variant": "elements.list.pros-and-cons.icon"
+            }
+          }
+        },
+        "cons": {
+          "title": {
+            "variant": "elements.list.pros-and-cons.title"
+          },
+          "base": {
+            "variant": "elements.list.pros-and-cons.base",
+            "svg": {
+              "variant": "elements.list.pros-and-cons.icon"
+            }
+          }
+        }
+      },
       "bullet": {
         "color": "jaffa"
       },
@@ -1112,7 +1198,8 @@
           "borderRadius": 4
         },
         "header": {
-          "borderBottomColor": "grey-20"
+          "borderBottomColor": "grey-20",
+          "fontFamily": "heading"
         },
         "pretitle": {
           "color": "grey-60"

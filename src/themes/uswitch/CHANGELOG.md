@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@1.4.0...@uswitch/trustyle.uswitch-theme@1.5.0) (2020-07-28)
+
+
+### Features
+
+* For nested modals, only render the top-most modal ([fdbcd1e](https://github.com/uswitch/trustyle/commit/fdbcd1e))
+* Implement icon color through theme.json ([2d3020f](https://github.com/uswitch/trustyle/commit/2d3020f))
+
+
+
+
+
+# [1.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@1.3.0...@uswitch/trustyle.uswitch-theme@1.4.0) (2020-07-27)
+
+
+### Bug Fixes
+
+* styling fixes in theme ([9d2db2f](https://github.com/uswitch/trustyle/commit/9d2db2f))
+
+
+### Features
+
+* move form styling to themes ([3a1b83d](https://github.com/uswitch/trustyle/commit/3a1b83d))
+
+
+
+
+
 # [1.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@1.2.0...@uswitch/trustyle.uswitch-theme@1.3.0) (2020-07-24)
 
 
