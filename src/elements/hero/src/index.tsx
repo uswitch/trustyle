@@ -1,12 +1,13 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, useThemeUI } from 'theme-ui'
+import get from '@uswitch/trustyle-utils.get'
 
 type ArrayOrNot<T> = T | T[]
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  breadcrumbs?: React.ReactNode
+  breadcrumbs?: React.ReactElement
   container?: React.FC<any>
   fgImage?: string
   fgImageType?: 'background' | 'img'
@@ -40,15 +41,25 @@ const Hero: React.FC<Props> = ({
   children,
   className
 }) => {
+  const { theme }: any = useThemeUI()
+  const breadcrumbVariant = get(theme, 'elements.hero.breadcrumbs.variant')
+  const breadcrumbWithVariant =
+    breadcrumbs &&
+    React.cloneElement(breadcrumbs, { variant: breadcrumbVariant })
+
   return (
     <div
-      sx={{ position: 'relative', overflow: 'hidden', variant: 'hero.wrapper' }}
+      sx={{
+        position: 'relative',
+        overflow: 'hidden',
+        variant: 'elements.hero.wrapper'
+      }}
       className={className}
     >
       <Container>
         {breadcrumbs && (
-          <div sx={{ paddingTop: 'sm', variant: 'hero.breadcrumbs' }}>
-            {breadcrumbs}
+          <div sx={{ paddingTop: 'sm', variant: 'elements.hero.breadcrumbs' }}>
+            {breadcrumbWithVariant}
           </div>
         )}
         <div
@@ -92,7 +103,7 @@ const Hero: React.FC<Props> = ({
               position: 'relative',
               paddingTop: ['sm', 'xxl'],
               paddingBottom: ['sm', 'xxl'],
-              variant: 'hero.content'
+              variant: 'elements.hero.content'
             }}
           >
             {children}

@@ -16,7 +16,7 @@ const LogoCollection: React.FC<Props> = ({ logoImage, className }) => {
         flexWrap: 'wrap',
         alignItems: 'center',
         justifyContent: 'center',
-        variant: 'logoCollection.base.outer'
+        variant: 'elements.logo-collection.base.outer'
       }}
       className={className}
     >
@@ -24,7 +24,7 @@ const LogoCollection: React.FC<Props> = ({ logoImage, className }) => {
         <div
           key={img.key || i}
           sx={{
-            variant: 'logoCollection.base.inner'
+            variant: 'elements.logo-collection.base.inner'
           }}
         >
           {img}

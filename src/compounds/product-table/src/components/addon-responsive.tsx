@@ -33,8 +33,7 @@ const ProductTableAddonResponsive: Addon<AddonProps> = {
           order: bodyOrder,
           extraRules: {
             display: positionsToDisplay(positions, 'body'),
-            marginTop: [0, -6],
-            marginBottom: [0, 'sm']
+            marginBottom: 0
           }
         }}
       >
@@ -61,7 +60,6 @@ const ProductTableAddonResponsive: Addon<AddonProps> = {
           order: gridOrder,
           extraRules: {
             display: positionsToDisplay(positions, 'grid'),
-            marginTop: [0, -6],
             marginBottom: [0, 'sm']
           }
         }}

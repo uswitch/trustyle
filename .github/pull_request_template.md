@@ -19,4 +19,3 @@ Definition of done:
 - [ ] If new component, designer has approved screenshot
 - [ ] If the change will affect other teams, that team knows about this change
 - [ ] If introducing a new component behaviour, added a story to cover that case.
-- [ ] If component change, version updated

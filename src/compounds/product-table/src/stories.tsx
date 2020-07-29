@@ -150,9 +150,9 @@ export const ExampleWithKnobs = () => {
       addon: ProductTable.addons.footer,
       component: (
         <ProductTable.cells.Base sx={{ display: 'block' }} mobileOrder={100}>
-          <small sx={{ fontSize: 'xs' }}>
+          <div sx={{ fontSize: ['xxs', 'xs'] }}>
             Representative example: Assumed borrowing of £10,000 over...
-          </small>
+          </div>
         </ProductTable.cells.Base>
       )
     })
@@ -344,9 +344,9 @@ export const ExampleWithAddons = () => {
           addon: ProductTable.addons.footer,
           component: (
             <ProductTable.cells.Base sx={{ display: 'block' }}>
-              <small sx={{ fontSize: 'xs' }}>
+              <div sx={{ fontSize: ['xxs', 'xs'] }}>
                 Representative example: Assumed borrowing of £10,000 over...
-              </small>
+              </div>
             </ProductTable.cells.Base>
           )
         }
@@ -355,9 +355,6 @@ export const ExampleWithAddons = () => {
       <ProductTable.cells.Split>
         <ProductTable.cells.Content label="Fixed rate contract">
           14 months
-        </ProductTable.cells.Content>
-        <ProductTable.cells.Content label="Early exit fee">
-          £30 per fuel
         </ProductTable.cells.Content>
       </ProductTable.cells.Split>
       <ProductTable.cells.Content label="Annual saving" accent>

@@ -44,7 +44,13 @@ const ProductTableDataAuto: React.FC<DataAutoProps> = ({ text }) => {
   return (
     <div>
       {autoFormat(text).map(({ word, size }, index) =>
-        size === 'small' ? <small key={index}>{word}</small> : word
+        size === 'small' ? (
+          <span sx={{ fontSize: ['xs', 'md'] }} key={index}>
+            {word}
+          </span>
+        ) : (
+          word
+        )
       )}
     </div>
   )

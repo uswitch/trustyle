@@ -44,7 +44,9 @@ const SideNav: React.FC<Props> = ({
                     }`
                   }}
                 >
-                  <a href={url}>{text}</a>
+                  <a href={url} sx={{ borderBottom: 0 }}>
+                    {text}
+                  </a>
                 </li>
               )
             })}
@@ -62,7 +64,9 @@ const SideNav: React.FC<Props> = ({
                     variant: 'compounds.side-nav.additionalLink'
                   }}
                 >
-                  <Styled.a href={url}>{text}</Styled.a>
+                  <Styled.a href={url} sx={{ borderBottom: 0 }}>
+                    {text}
+                  </Styled.a>
                 </li>
               ))}
             </ul>

@@ -1,47 +1,67 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, useThemeUI } from 'theme-ui'
+import { jsx, Styled, useThemeUI } from 'theme-ui'
+import { Icon } from '@uswitch/trustyle.icon'
+
+type Variant = 'pros' | 'cons'
 
 interface ListProps extends React.OlHTMLAttributes<HTMLUListElement> {
   listType?: 'numeric' | 'bullet'
+  variant?: Variant
+  title?: string
 }
 
 export const List: React.FC<ListProps> = ({
   children,
+  variant,
+  title,
   listType = 'bullet',
   ...props
 }) => {
+  const getVariant = (element: string) =>
+    `elements.list.${variant ? `variants.${variant}.${element}` : element}`
+
   const sx: any = {
     listStyle: 'none',
     paddingLeft: 'sm',
-    marginY: 'sm'
+    marginY: 'sm',
+    variant: getVariant('base')
   }
 
   const childrenWithProps = React.Children.map(
     children,
     (childComponent: any) => {
-      return React.cloneElement(childComponent, { listType })
+      return React.cloneElement(childComponent, { listType, variant })
     }
   )
 
-  return listType === 'numeric' ? (
-    <ol {...props} sx={sx}>
-      {childrenWithProps}
-    </ol>
-  ) : (
-    <ul {...props} sx={sx}>
-      {children}
-    </ul>
+  return (
+    <div>
+      {title && (
+        <Styled.h6 sx={{ variant: getVariant('title') }}>{title}</Styled.h6>
+      )}
+      {listType === 'numeric' ? (
+        <ol {...props} sx={sx}>
+          {childrenWithProps}
+        </ol>
+      ) : (
+        <ul {...props} sx={sx}>
+          {childrenWithProps}
+        </ul>
+      )}
+    </div>
   )
 }
 
 interface ListItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
   listType?: 'numeric' | 'bullet'
+  variant?: Variant
 }
 
 export const ListItem: React.FC<ListItemProps> = ({
   children,
+  variant,
   listType = 'bullet',
   ...props
 }) => {
@@ -72,16 +92,14 @@ export const ListItem: React.FC<ListItemProps> = ({
   if (listType === 'bullet') {
     sx['::before'] = {
       content: '"• "',
-      color:
-        theme.list && theme.list.bullet ? theme.list.bullet.color : 'black',
+      color: element && element.bullet ? element.bullet.color : 'black',
       ...sx['::before'],
       ...before
     }
   } else if (listType === 'numeric') {
     sx['::before'] = {
       content: 'counter(li)',
-      color:
-        theme.list && theme.list.numeric ? theme.list.numeric.color : 'black',
+      color: element && element.numeric ? element.numeric.color : 'black',
       ...sx['::before'],
       ...before
     }
@@ -89,6 +107,16 @@ export const ListItem: React.FC<ListItemProps> = ({
 
   return (
     <li sx={sx} {...props}>
+      {variant === 'pros' && (
+        <Icon color={theme.elements?.list?.pros.color} glyph="tick" size={24} />
+      )}
+      {variant === 'cons' && (
+        <Icon
+          color={theme.elements?.list?.cons.color}
+          glyph="cross"
+          size={24}
+        />
+      )}
       {children}
     </li>
   )
