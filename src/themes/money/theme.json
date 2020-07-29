@@ -1064,7 +1064,7 @@
         "order": 0,
         "fontSize": "md",
         "alignSelf": "center",
-        "margin": "8px 0px",
+        "margin": "8px 8px",
         "image": {
           "position": "static",
           "width": 39.24,
@@ -1076,7 +1076,6 @@
           "position": "static",
           "height": 27,
           "left": 0,
-          "top": 0,
           "color": "grey-60"
         }
       },

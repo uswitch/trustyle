@@ -1267,14 +1267,13 @@
         "display": "flex",
         "flex": "none",
         "order": 0,
-        "fontSize": "sm",
+        "fontSize": "md",
         "alignSelf": "center",
-        "margin": "8px 0px",
+        "margin": "8px 8px",
         "image": {
           "position": "static",
           "width": 39.24,
           "order": 1,
-          "marginBottom": "2px",
           "alignSelf": "center"
         },
         "content": {
@@ -1282,7 +1281,6 @@
           "position": "static",
           "height": 27,
           "left": 0,
-          "top": 0,
           "color": "grey-60"
         }
       },

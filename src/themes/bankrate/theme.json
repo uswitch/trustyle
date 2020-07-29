@@ -707,20 +707,20 @@
         "display": "flex",
         "flex": "none",
         "order": 0,
-        "font-size": "md",
-        "align-self": "center",
-        "margin": "8px 0px",
+        "fontSize": "md",
+        "alignSelf": "center",
+        "margin": "8px 8px",
         "image": {
           "position": "static",
           "width": 39.24,
-          "top": 1.5
+          "order": 1,
+          "alignSelf": "center"
         },
         "content": {
           "padding": 0,
           "position": "static",
           "height": 27,
           "left": 0,
-          "top": 0,
           "color": "grey-60"
         }
       },
