@@ -742,6 +742,27 @@
     "click-out-form": {
       "flexDirection": ["column", "row", "row"],
       "width": "100%"
+    },
+    "header": {
+      "container": {
+        "backgroundColor": "hero",
+        "color": ["white", "white", "brand"],
+        "a": {
+          "color": ["white", "white", "brand"],
+          "&:hover": {
+            "color": ["white", "white", "brand"]
+          },
+          "&:visited": {
+            "color": ["white", "white", "brand"]
+          }
+        }
+      },
+      "navMenuItem": {
+        "isLink": {
+          "color": ["accent-1", "accent-1", "white"]
+        },
+        "color": "white"
+      }
     }
   },
 
