@@ -1,15 +1,14 @@
 {
   "name": "Bankrate",
-
   "useLocalStorage": false,
-
-  "breakpoints": ["768px", "990px"],
-
+  "breakpoints": [
+    "768px",
+    "990px"
+  ],
   "zIndices": {
     "min": 0,
     "max": 100
   },
-
   "shadows": {
     "box": "2px 2px 25px #0004",
     "linkInset": "inset 0 0 0 1px #008fe9",
@@ -18,7 +17,6 @@
     "focusInput": "inset 0 0 0 1px #141424",
     "errorInput": "inset 0 0 0 1px #DB1818"
   },
-
   "fonts": {
     "base": "Roboto, -apple-system, system-ui, system-ui, Arial, sans-serif",
     "body": "Roboto, -apple-system, system-ui, system-ui, Arial, sans-serif",
@@ -26,12 +24,10 @@
     "monospace": "Menlo, monospace",
     "link": "Roboto, -apple-system, system-ui, system-ui, Arial, sans-serif"
   },
-
   "lineHeights": {
     "base": "1.5",
     "heading": "1.3"
   },
-
   "fontSizes": {
     "base": 16,
     "xxs": 12,
@@ -43,14 +39,12 @@
     "xxl": 30,
     "xxxl": 36
   },
-
   "fontWeights": {
     "base": 400,
     "light": 300,
     "bold": 600,
     "heading": 500
   },
-
   "space": {
     "gutter": 14,
     "base": 16,
@@ -63,23 +57,28 @@
     "xxl": 64,
     "xxxl": 96
   },
-
   "sizes": {
-    "hero": { "width": 1024 },
-    "label": { "width": 280 },
-    "input": { "height": 58 },
-    "button": { "width": 264 },
-    "footer": { "width": 576 }
+    "hero": {
+      "width": 1024
+    },
+    "label": {
+      "width": 280
+    },
+    "input": {
+      "height": 58
+    },
+    "button": {
+      "width": 264
+    },
+    "footer": {
+      "width": 576
+    }
   },
-
   "useCustomProperties": false,
-
   "useBodyStyles": false,
-
   "colors": {
     "brand": "#0157FF",
     "text": "#4c4c4c",
-
     "grey-0": "#FFFFFF",
     "grey-05": "#F7F7F7",
     "grey-10": "#F2F2F7",
@@ -92,29 +91,24 @@
     "grey-80": "#24262A",
     "grey-90": "#141424",
     "grey-100": "#050505",
-
     "primary": "#0157FF",
     "primary--dark": "rgb(0, 70, 212);",
     "secondary": "#924A8B",
     "secondary--dark": "#f9f9f9",
-
     "frozen-bg": "#F6F6F6",
     "battleshipGrey": "#65717B",
     "veryLightGrey": "#E9EBED",
     "tomato": "#DB1818",
-
     "experimental-text": "#29335C",
     "button-secondary": "#FFFFFF",
     "button-secondary--hover": "#f0f1f3"
   },
-
   "radii": {
     "sm": 3,
     "md": 6,
     "lg": 16,
     "xl": 30
   },
-
   "srOnly": {
     "position": "absolute",
     "width": 1,
@@ -125,9 +119,7 @@
     "clip": "rect(0, 0, 0, 0)",
     "border": 0
   },
-
   "----------------------------- Base Styles": "-----------------------------",
-
   "styles": {
     "heading": {
       "fontFamily": "heading",
@@ -136,48 +128,55 @@
       "fontWeight": "heading",
       "m": 0
     },
-
     "h1": {
       "variant": "styles.heading",
-      "fontSize": ["xxl", "xxxl"],
+      "fontSize": [
+        "xxl",
+        "xxxl"
+      ],
       "my": "md"
     },
-
     "h2": {
       "variant": "styles.heading",
-      "fontSize": ["xl", "xxl"],
+      "fontSize": [
+        "xl",
+        "xxl"
+      ],
       "my": "md"
     },
-
     "h3": {
       "variant": "styles.heading",
-      "fontSize": ["lg", "xl"],
+      "fontSize": [
+        "lg",
+        "xl"
+      ],
       "my": "sm"
     },
-
     "h4": {
       "variant": "styles.heading",
-      "fontSize": ["md", "lg"],
+      "fontSize": [
+        "md",
+        "lg"
+      ],
       "my": "sm"
     },
-
     "h5": {
       "variant": "styles.heading",
-      "fontSize": ["sm", "md"],
+      "fontSize": [
+        "sm",
+        "md"
+      ],
       "my": "sm"
     },
-
     "h6": {
       "variant": "styles.heading",
       "fontSize": "sm",
       "my": "sm"
     },
-
     "p": {
       "mb": "sm",
       "lineHeight": "base"
     },
-
     "root": {
       "fontFamily": "base",
       "fontSize": "md",
@@ -187,22 +186,21 @@
       "-webkit-font-smoothing": "antialiased",
       "-moz-osx-font-smoothing": "grayscale"
     },
-
     "a": {
       "color": "brand",
       "stroke": "currentColor",
       "textDecoration": "underline",
       "transition": "opacity 0.2s ease",
-      ":hover": { "opacity": 0.8 }
+      ":hover": {
+        "opacity": 0.8
+      }
     },
-
     "blockquote": {
       "backgroundColor": "grey-10",
       "px": "md",
       "py": "sm",
       "mx": 0,
       "borderLeft": "none",
-
       "p": {
         "pl": "sm",
         "py": "xs",
@@ -214,7 +212,6 @@
         "fontStyle": "normal"
       }
     },
-
     "table": {
       "borderSpacing": 0,
       "width": "100%",
@@ -224,7 +221,6 @@
       "borderRadius": "3px",
       "mb": "base"
     },
-
     "th": {
       "m": 0,
       "p": "16px",
@@ -232,22 +228,18 @@
       "textAlign": "left",
       "color": "experimental-text"
     },
-
     "td": {
       "m": 0,
       "p": "16px",
       "fontSize": "xs"
     },
-
     "tr": {
       ":nth-of-type(even)": {
         "backgroundColor": "grey-05"
       }
     }
   },
-
   "----------------------------- Variants": "-----------------------------",
-
   "elements": {
     "author": {
       "link": {
@@ -257,12 +249,21 @@
         "a": {
           "fontWeight": "bold",
           "color": "uswitch-navy",
-          "fontSize": ["md", "xl"]
+          "fontSize": [
+            "md",
+            "xl"
+          ]
         }
       },
       "subtitle": {
-        "fontSize": ["xs", "md"],
-        "lineHeight": ["base", "heading"],
+        "fontSize": [
+          "xs",
+          "md"
+        ],
+        "lineHeight": [
+          "base",
+          "heading"
+        ],
         "a": {
           "fontWeight": "bold",
           "color": "grey-60"
@@ -272,24 +273,41 @@
         "title": {
           "a": {
             "variant": "elements.author.title.a",
-            "fontSize": ["md", "md"]
+            "fontSize": [
+              "md",
+              "md"
+            ]
           }
         },
         "subtitle": {
           "paddingBottom": 0,
           "a": {
             "variant": "elements.author.subtitle.a",
-            "fontSize": ["xs", "xs"]
+            "fontSize": [
+              "xs",
+              "xs"
+            ]
           }
         },
         "imageLink": {
-          "width": [40, 40],
-          "height": [40, 40]
+          "width": [
+            40,
+            40
+          ],
+          "height": [
+            40,
+            40
+          ]
         },
         "base": {
-          "a": { "variant": "elements.author.base.a" },
+          "a": {
+            "variant": "elements.author.base.a"
+          },
           "h5": {
-            "marginBottom": [0, 0]
+            "marginBottom": [
+              0,
+              0
+            ]
           }
         }
       }
@@ -310,11 +328,18 @@
           "fontStyle": "normal"
         },
         "image": {
-          "height": [40, 56]
+          "height": [
+            40,
+            56
+          ]
         }
       },
-      "pros": { "color": "green" },
-      "cons": { "color": "red" },
+      "pros": {
+        "color": "green"
+      },
+      "cons": {
+        "color": "red"
+      },
       "pros-and-cons": {
         "title": {
           "color": "grey-60",
@@ -324,7 +349,10 @@
         },
         "base": {
           "paddingY": "md",
-          "paddingX": ["sm", "md"],
+          "paddingX": [
+            "sm",
+            "md"
+          ],
           "backgroundColor": "grey-05",
           "li": {
             "paddingLeft": 0,
@@ -334,7 +362,9 @@
             "fontSize": "md",
             "display": "flex",
             "alignItems": "center",
-            "::before": { "display": "none" }
+            "::before": {
+              "display": "none"
+            }
           },
           ":last-child": {
             "marginBottom": "0"
@@ -369,8 +399,12 @@
           }
         }
       },
-      "pros": { "color": "green" },
-      "cons": { "color": "red" },
+      "pros": {
+        "color": "green"
+      },
+      "cons": {
+        "color": "red"
+      },
       "pros-and-cons": {
         "title": {
           "color": "grey-60",
@@ -380,7 +414,10 @@
         },
         "base": {
           "paddingY": "md",
-          "paddingX": ["sm", "md"],
+          "paddingX": [
+            "sm",
+            "md"
+          ],
           "backgroundColor": "grey-05",
           "li": {
             "paddingLeft": 0,
@@ -390,7 +427,9 @@
             "fontSize": "md",
             "display": "flex",
             "alignItems": "center",
-            "::before": { "display": "none" }
+            "::before": {
+              "display": "none"
+            }
           },
           ":last-child": {
             "marginBottom": "0"
@@ -480,7 +519,9 @@
             "outline": "2px solid",
             "outlineColor": "#008fe9"
           },
-          "&::-moz-focus-inner": { "border": 0 }
+          "&::-moz-focus-inner": {
+            "border": 0
+          }
         },
         "hidden": {
           "display": "none"
@@ -516,7 +557,6 @@
         }
       }
     },
-
     "input-alert": {
       "fontFamily": "base",
       "fontSize": "base",
@@ -535,7 +575,6 @@
         "borderBottomStyle": "solid"
       }
     },
-
     "simple-input": {
       "base": {
         "fontFamily": "base",
@@ -575,7 +614,6 @@
         }
       }
     },
-
     "toggle-switch": {
       "base": {
         "base": {
@@ -626,7 +664,6 @@
         }
       }
     },
-
     "breadcrumbs": {
       "base": {
         "main": {
@@ -656,7 +693,6 @@
         }
       }
     },
-
     "category": {
       "main": {
         "bg": "primary",
@@ -672,17 +708,18 @@
         "variant": "light"
       }
     },
-
     "call-out": {
       "main": {
         "backgroundColor": "grey-10",
-        "px": ["sm", "md"]
+        "px": [
+          "sm",
+          "md"
+        ]
       },
       "icon": {
         "backgroundColor": "grey-80"
       }
     },
-
     "cta": {
       "base": {
         "main": {
@@ -693,10 +730,16 @@
           "fontWeight": "bold"
         },
         "text": {
-          "mb": [null, 0]
+          "mb": [
+            null,
+            0
+          ]
         },
         "button": {
-          "ml": [null, "md"]
+          "ml": [
+            null,
+            "md"
+          ]
         }
       },
       "variants": {
@@ -732,7 +775,6 @@
         }
       }
     },
-
     "buttons": {
       "base": {
         "fontWeight": "bold",
@@ -756,7 +798,6 @@
           }
         }
       },
-
       "variants": {
         "primary": {
           "variant": "elements.buttons.base",
@@ -772,7 +813,6 @@
             "backgroundColor": "primary--dark"
           }
         },
-
         "secondary": {
           "variant": "elements.buttons.base",
           "color": "grey-70",
@@ -790,7 +830,6 @@
         }
       }
     },
-
     "list": {
       "bullet": {
         "color": "grey-80"
@@ -803,8 +842,12 @@
           "width": "2.5em"
         }
       },
-      "pros": { "color": "green" },
-      "cons": { "color": "red" },
+      "pros": {
+        "color": "green"
+      },
+      "cons": {
+        "color": "red"
+      },
       "pros-and-cons": {
         "title": {
           "color": "grey-60",
@@ -814,7 +857,10 @@
         },
         "base": {
           "paddingY": "md",
-          "paddingX": ["sm", "md"],
+          "paddingX": [
+            "sm",
+            "md"
+          ],
           "backgroundColor": "grey-05",
           "li": {
             "paddingLeft": 0,
@@ -824,7 +870,9 @@
             "fontSize": "md",
             "display": "flex",
             "alignItems": "center",
-            "::before": { "display": "none" }
+            "::before": {
+              "display": "none"
+            }
           },
           ":last-child": {
             "marginBottom": "0"
@@ -860,43 +908,98 @@
         }
       }
     },
-
     "form": {
       "label": {
         "variant": "styles.h4",
         "color": "grey-80",
         "display": "block",
-        ":not(:first-child)": { "mt": "sm" }
+        ":not(:first-child)": {
+          "mt": "sm"
+        }
       },
       "button": {
         "my": "sm"
       }
     },
-
     "rich-text-block": {
       "base": {
-        "*:first-child": { "mt": 0 }
+        "*:first-child": {
+          "mt": 0
+        }
       },
       "variants": {
         "panel-primary": {
           "py": "lg",
-          "px": ["sm", "xl"],
+          "px": [
+            "sm",
+            "xl"
+          ],
           "bg": "grey-0",
           "color": "grey-80",
           "p": {
-            "textAlign": ["center", "left"],
+            "textAlign": [
+              "center",
+              "left"
+            ],
             "mb": 0
           },
           "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
           "borderRadius": "md"
         }
       }
+    },
+    "sponsorship": {
+      "base": {
+        "alignItems": "center",
+        "display": "flex",
+        "flex": "none",
+        "order": 0,
+        "fontSize": "md",
+        "alignSelf": "center",
+        "margin": "8px 8px",
+        "image": {
+          "position": "static",
+          "width": 39.24,
+          "order": 1,
+          "alignSelf": "center"
+        },
+        "content": {
+          "padding": 0,
+          "position": "static",
+          "height": 27,
+          "left": 0,
+          "color": "grey-60"
+        }
+      },
+      "variants": {
+        "leftAligned": {
+          "variant": "elements.sponsorship.base",
+          "justifyContent": "flex-start",
+          "content": {
+            "variant": "elements.sponsorship.base.content"
+          },
+          "image": {
+            "variant": "elements.sponsorship.base.image"
+          }
+        },
+        "rightAligned": {
+          "variant": "elements.sponsorship.base",
+          "justifyContent": "flex-end",
+          "image": {
+            "variant": "elements.sponsorship.base.image"
+          },
+          "content": {
+            "variant": "elements.sponsorship.base.content"
+          }
+        }
+      }
     }
   },
-
   "compounds": {
     "card": {
-      "itemsPerRow": [1],
+      "itemsPerRow": [
+        1
+      ],
       "base": {
         "backgroundColor": "grey-10",
         "transition": "all 0.3s ease",
@@ -910,7 +1013,11 @@
         "img": {
           "width": "100%"
         },
-        "p": { "fontSize": 16, "lineHeight": "base", "color": "grey-80" },
+        "p": {
+          "fontSize": 16,
+          "lineHeight": "base",
+          "color": "grey-80"
+        },
         "h3": {
           "fontSize": 18,
           "minHeight": 0,
@@ -940,15 +1047,12 @@
           "tag": {
             "variant": "compounds.card.base.tag"
           },
-
           "superScript": {
             "variant": "compounds.card.base.superScript"
           },
-
           "meta": {
             "variant": "compounds.card.base.meta"
           },
-
           "content": {
             "variant": "compounds.card.base.content",
             "pt": "sm",
@@ -968,7 +1072,6 @@
             "pt": "lg",
             "width": 250
           },
-
           "content": {
             "width": 670,
             "variant": "compounds.card.base.content"
@@ -979,7 +1082,6 @@
         }
       }
     },
-
     "accordion": {
       "base": {
         "mt": "sm",
@@ -1026,23 +1128,32 @@
         }
       }
     },
-
     "breadcrumbs": {
       "py": "xxs",
       "position": "relative",
       "flex-grow": "1"
     },
-
     "side-nav": {
       "paddingLeft": 0,
       "marginLeft": 0,
       "border": 0,
       "layout": {
-        "flexDirection": ["column-reverse", "column-reverse", "column-reverse"],
-        "text": [12, 12, 12],
-        "nav": [12, 12, 12]
+        "flexDirection": [
+          "column-reverse",
+          "column-reverse",
+          "column-reverse"
+        ],
+        "text": [
+          12,
+          12,
+          12
+        ],
+        "nav": [
+          12,
+          12,
+          12
+        ]
       },
-
       "internalLinkList": {
         "listStyle": "none",
         "pl": 0,
@@ -1089,15 +1200,17 @@
         "textDecoration": "none"
       }
     },
-
     "breadcrumb": {
       "my": "sm",
       "mx": 0
     },
-
     "cookie-banner": {
       "heading": {
-        "mt": [0, "xs", "xs"],
+        "mt": [
+          0,
+          "xs",
+          "xs"
+        ],
         "color": "grey-80"
       },
       "hr": {
@@ -1106,7 +1219,11 @@
         "bg": "grey-20"
       },
       "copy": {
-        "mb": ["md", "sm", null],
+        "mb": [
+          "md",
+          "sm",
+          null
+        ],
         "mt": "base"
       },
       "accept-all-button": {
@@ -1129,13 +1246,11 @@
       }
     }
   },
-
   "modules": {
     "rich-text": {
       "contentCols": 12,
       "contentSpan": 8
     },
-
     "hero-with-background-image": {
       "::before": {
         "background-image": "linear-gradient(90deg, rgba(0, 2, 11, 0.75) 0%, rgba(0, 2, 11, 0) 100%)",
@@ -1166,12 +1281,14 @@
       "pt": "xs"
     }
   },
-
   "layout": {
     "container": {
-      "lg": { "maxWidth": 1210, "mx": "auto", "px": "md" }
+      "lg": {
+        "maxWidth": 1210,
+        "mx": "auto",
+        "px": "md"
+      }
     },
-
     "flex-grid": {
       "sizes": {
         "gutter": "gutter",

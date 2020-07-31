@@ -381,10 +381,17 @@
   "----------------------------- Variants": "-----------------------------",
   "elements": {
     "list": {
-      "pros": { "color": "green" },
-      "cons": { "color": "red" },
+      "pros": {
+        "color": "green"
+      },
+      "cons": {
+        "color": "red"
+      },
       "pros-and-cons": {
-        "title": { "color": "grey-60", "fontSize": "sm" },
+        "title": {
+          "color": "grey-60",
+          "fontSize": "sm"
+        },
         "base": {
           "paddingY": "sm",
           "paddingLeft": [0, 0],
@@ -396,7 +403,9 @@
             "lineHeight": "sm",
             "display": "flex",
             "alignItems": "center",
-            "::before": { "display": "none" }
+            "::before": {
+              "display": "none"
+            }
           },
           ":last-child": {
             "marginBottom": "0"
@@ -479,7 +488,11 @@
           "width": [40, 40],
           "height": [40, 40]
         },
-        "base": { "a": { "variant": "elements.author.base.a" } }
+        "base": {
+          "a": {
+            "variant": "elements.author.base.a"
+          }
+        }
       }
     },
     "overlay": {
@@ -1099,7 +1112,9 @@
             "outline": "2px solid",
             "outlineColor": "#008fe9"
           },
-          "&::-moz-focus-inner": { "border": 0 }
+          "&::-moz-focus-inner": {
+            "border": 0
+          }
         },
         "hidden": {
           "display": "none"
@@ -1348,6 +1363,52 @@
         },
         "image": {
           "height": [40, 56]
+        }
+      }
+    },
+    "sponsorship": {
+      "base": {
+        "alignItems": "center",
+        "display": "flex",
+        "flex": "none",
+        "order": 0,
+        "fontSize": "md",
+        "alignSelf": "center",
+        "margin": "8px 8px",
+        "image": {
+          "position": "static",
+          "width": 39.24,
+          "order": 1,
+          "alignSelf": "center"
+        },
+        "content": {
+          "padding": 0,
+          "position": "static",
+          "height": 27,
+          "left": 0,
+          "color": "grey-60"
+        }
+      },
+      "variants": {
+        "leftAligned": {
+          "variant": "elements.sponsorship.base",
+          "justifyContent": "flex-start",
+          "content": {
+            "variant": "elements.sponsorship.base.content"
+          },
+          "image": {
+            "variant": "elements.sponsorship.base.image"
+          }
+        },
+        "rightAligned": {
+          "variant": "elements.sponsorship.base",
+          "justifyContent": "flex-end",
+          "image": {
+            "variant": "elements.sponsorship.base.image"
+          },
+          "content": {
+            "variant": "elements.sponsorship.base.content"
+          }
         }
       }
     }
