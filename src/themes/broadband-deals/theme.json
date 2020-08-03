@@ -88,6 +88,7 @@
     "grey-80": "#24262A",
     "grey-90": "#111317",
     "grey-100": "#000000",
+    "----figma colour------": "--------------",
     "primary": "#520861",
     "primary--dark": "#520861",
     "secondary": "#F35760",
@@ -123,17 +124,25 @@
     "clip": "rect(0, 0, 0, 0)",
     "border": 0
   },
-  "grid": {
-    "sizes": {
-      "gutter": "gutter",
-      "verticalGutter": "sm"
-    },
-    "container": {
-      "maxWidth": 1248
+  "layout": {
+    "flex-grid": {
+      "sizes": {
+        "gutter": "gutter",
+        "verticalGutter": "sm"
+      },
+      "container": {
+        "maxWidth": 1248
+      }
     }
   },
   "----------------------------- Variants": "-----------------------------",
   "modules": {
+    "footer": {
+      "base": {
+        "backgroundColor": "light-grey",
+        "minHeight": 688
+      }
+    },
     "hero-with-background-image": {
       "::before": {
         "background-image": "linear-gradient(90deg, rgba(0, 2, 11, 0.75) 0%, rgba(0, 2, 11, 0) 100%)",
