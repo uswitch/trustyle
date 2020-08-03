@@ -5,48 +5,52 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.5.0...@uswitch/trustyle.bankrate-theme@2.6.0) (2020-07-28)
 
-
 ### Bug Fixes
 
-* update packages, rebased on master ([0d7a48d](https://github.com/uswitch/trustyle/commit/0d7a48d))
-
+- update packages, rebased on master ([0d7a48d](https://github.com/uswitch/trustyle/commit/0d7a48d))
 
 ### Features
 
-* Implement icon color through theme.json ([2d3020f](https://github.com/uswitch/trustyle/commit/2d3020f))
-* Implement icon color through theme.json ([f0fb94e](https://github.com/uswitch/trustyle/commit/f0fb94e))
-
-
-
-
+- Implement icon color through theme.json ([2d3020f](https://github.com/uswitch/trustyle/commit/2d3020f))
+- Implement icon color through theme.json ([f0fb94e](https://github.com/uswitch/trustyle/commit/f0fb94e))
 
 # [2.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.4.0...@uswitch/trustyle.bankrate-theme@2.5.0) (2020-07-27)
 
-
 ### Bug Fixes
 
-* styling fixes in theme ([9d2db2f](https://github.com/uswitch/trustyle/commit/9d2db2f))
-
+- styling fixes in theme ([9d2db2f](https://github.com/uswitch/trustyle/commit/9d2db2f))
 
 ### Features
 
-* move form styling to themes ([3a1b83d](https://github.com/uswitch/trustyle/commit/3a1b83d))
-
-
-
-
+- move form styling to themes ([3a1b83d](https://github.com/uswitch/trustyle/commit/3a1b83d))
 
 # [2.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.3.0...@uswitch/trustyle.bankrate-theme@2.4.0) (2020-07-24)
 
+### Bug Fixes
+
+- update packages, rebased on master ([0d7a48d](https://github.com/uswitch/trustyle/commit/0d7a48d))
 
 ### Features
 
-* move icon styling to themes ([5002464](https://github.com/uswitch/trustyle/commit/5002464))
-* move image sizing to component ([0294f4d](https://github.com/uswitch/trustyle/commit/0294f4d))
+- Implement icon color through theme.json ([2d3020f](https://github.com/uswitch/trustyle/commit/2d3020f))
+- Implement icon color through theme.json ([f0fb94e](https://github.com/uswitch/trustyle/commit/f0fb94e))
 
+# [2.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.4.0...@uswitch/trustyle.bankrate-theme@2.5.0) (2020-07-27)
 
+### Bug Fixes
 
+- styling fixes in theme ([9d2db2f](https://github.com/uswitch/trustyle/commit/9d2db2f))
 
+### Features
+
+- move form styling to themes ([3a1b83d](https://github.com/uswitch/trustyle/commit/3a1b83d))
+
+# [2.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.3.0...@uswitch/trustyle.bankrate-theme@2.4.0) (2020-07-24)
+
+### Features
+
+- move icon styling to themes ([5002464](https://github.com/uswitch/trustyle/commit/5002464))
+- move image sizing to component ([0294f4d](https://github.com/uswitch/trustyle/commit/0294f4d))
 
 # [2.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.1.2...@uswitch/trustyle.bankrate-theme@2.3.0) (2020-07-22)
 
