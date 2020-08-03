@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.7.0...@uswitch/trustyle.money-theme@1.7.2) (2020-08-03)
+
+
+### Bug Fixes
+
+* update money theme to increase powered by logo size ([0910de9](https://github.com/uswitch/trustyle/commit/0910de9))
+
+
+
+
+
 ## [1.7.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.7.0...@uswitch/trustyle.money-theme@1.7.1) (2020-07-28)
 
 
