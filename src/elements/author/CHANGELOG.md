@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.author@2.0.0...@uswitch/trustyle.author@2.2.0) (2020-08-03)
+
+
+### Features
+
+* bbdeals ([79ff8f8](https://github.com/uswitch/trustyle/commit/79ff8f8))
+
+
+
+
+
 # [2.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.author@2.0.0...@uswitch/trustyle.author@2.1.0) (2020-08-03)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.7.0...@uswitch/trustyle.money-theme@1.9.0) (2020-08-03)
+
+
+### Features
+
+* bbdeals ([79ff8f8](https://github.com/uswitch/trustyle/commit/79ff8f8))
+
+
+
+
+
 # [1.8.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.7.1...@uswitch/trustyle.money-theme@1.8.0) (2020-08-03)
 
 
