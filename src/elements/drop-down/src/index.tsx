@@ -67,9 +67,9 @@ export const DropDown = forwardRef(
     const [hasFocus, setHasFocus] = useState(false)
     const option = options.find(_ => _.value === value)
     const frozenText = option && option.text
-    const inputRef: React.MutableRefObject<HTMLSelectElement | null> = useRef(
-      null
-    )
+    const inputRef =
+      (ref as React.MutableRefObject<HTMLSelectElement | null>) ||
+      useRef<HTMLSelectElement | null>(null)
 
     useImperativeHandle(ref, () => ({
       focus: () => inputRef.current && inputRef.current.focus(),
