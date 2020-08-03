@@ -318,7 +318,6 @@
       "textDecoration": "none",
       "borderBottom": "1px dashed #898991",
       "lineHeight": "31px",
-      "fontSize": ["base", "md"],
       "fontWeight": "bold",
       "& svg": {
         "fill": "light-1",
