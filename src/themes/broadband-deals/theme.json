@@ -300,12 +300,10 @@
           "p": "sm",
           "color": "pure-black",
           "fontSize": ["sm", "lg"],
-          "span": {
-            "&,svg": {
-              "display": "inline",
-              "verticalAlign": "bottom",
-              "mr": "xs"
-            }
+          "svg": {
+            "display": "inline",
+            "verticalAlign": "bottom",
+            "mr": "xs"
           }
         }
       },

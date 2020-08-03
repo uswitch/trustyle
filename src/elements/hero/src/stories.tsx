@@ -8,7 +8,6 @@ import { Button } from '../../button/src'
 import { Col, Container, Row } from '../../../layout/flex-grid/src'
 import IconTile from '../../icon-tile/src'
 import AllThemes from '../../../utils/all-themes'
-import Author from '../../../elements/author/src'
 
 import Hero from './'
 
@@ -97,9 +96,7 @@ export const ExampleWithKnobs = () => {
       >
         <Row>
           <Col span={[12, 5]}>
-            <Styled.h1 sx={{ marginTop: 0, fontSize: ['lg', 'xl', 'xxl'] }}>
-              {headline}
-            </Styled.h1>
+            <Styled.h1 sx={{ marginTop: 0 }}>{headline}</Styled.h1>
             <div sx={{ backgroundColor: 'white', padding: 20 }}>
               <Styled.p sx={{ marginTop: 0 }}>
                 Lorem ipsum, or lipsum as it is sometimes known, is dummy text
@@ -203,73 +200,11 @@ MoneyHomepageHero.story = {
   }
 }
 
-const bbDealsHero = {
-  img: require('../../../../static/hero/mTilted.svg')
-}
-const breadcrumbs = (
-  <Breadcrumbs
-    crumbs={crumbs}
-    title="Understanding energy bills and electricity bills - FAQs and more"
-    variant="light"
-  />
-)
-const image = <img src="https://placekitten.com/200/200?image=9" alt="Salman" />
-const bottomImageOverflow = '33%'
-
-export const BBDealsExample = () => (
-  <div>
-    <Hero
-      container={Container}
-      fgImage={bbDealsHero.img}
-      breadcrumbs={breadcrumbs}
-      bottomImageOverflow={bottomImageOverflow}
-    >
-      <div
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          flexDirection: 'column',
-          height: 'fit-content',
-          paddingBottom: bottomImageOverflow
-        }}
-      >
-        <Styled.p sx={{ color: 'pure-white', fontSize: 'base' }}>
-          13th March 2020
-        </Styled.p>
-        <Styled.h1
-          sx={{
-            fontSize: ['lg', 'xl'],
-            color: 'pure-white',
-            marginTop: 0,
-            maxWidth: ['80%', '60%']
-          }}
-        >
-          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
-          laying out print, graphic or web designs.
-        </Styled.h1>
-        <Author
-          variant="primary"
-          title="Jane smith"
-          titleUrl="https://www.jonathanfielding.com/"
-          authorImage={image}
-          subtitle="Broadband Deals Expert"
-        />
-      </div>
-    </Hero>
-  </div>
-)
-
-BBDealsExample.story = {
-  parameters: {
-    percy: { skip: true }
-  }
-}
 // @todo test with more than one image and position
 export const AutomatedTests = () => {
   return (
-    <AllThemes themes={['uswitch', 'money', 'broadband-deals']}>
+    <AllThemes themes={['uswitch', 'money']}>
       <ExampleWithKnobs />
-      <BBDealsExample />
     </AllThemes>
   )
 }

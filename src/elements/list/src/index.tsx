@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
-import { Glyph, Icon } from '@uswitch/trustyle.icon'
+import { Icon } from '@uswitch/trustyle.icon'
 
 type Variant = 'pros' | 'cons'
 
@@ -10,21 +10,6 @@ interface ListProps extends React.OlHTMLAttributes<HTMLUListElement> {
   listType?: 'numeric' | 'bullet'
   variant?: Variant
   title?: string
-}
-
-const getTitleIcon = (variant?: Variant) => {
-  const { theme }: any = useThemeUI()
-  let titleIcon: Glyph | undefined
-  if (variant === 'pros') titleIcon = 'thumb-up'
-  if (variant === 'cons') titleIcon = 'thumb-down'
-
-  return variant && titleIcon ? (
-    <Icon
-      color={theme.elements?.list && theme.elements.list[variant].color}
-      glyph={titleIcon}
-      size={24}
-    />
-  ) : null
 }
 
 export const List: React.FC<ListProps> = ({
@@ -54,10 +39,7 @@ export const List: React.FC<ListProps> = ({
   return (
     <div>
       {title && (
-        <Styled.h6 sx={{ variant: getVariant('title') }}>
-          <span sx={{ display: 'none' }}>{getTitleIcon(variant)}</span>
-          {title}
-        </Styled.h6>
+        <Styled.h6 sx={{ variant: getVariant('title') }}>{title}</Styled.h6>
       )}
       {listType === 'numeric' ? (
         <ol {...props} sx={sx}>

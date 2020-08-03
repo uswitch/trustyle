@@ -79,25 +79,23 @@ const Author: React.FC<Props> = ({
             {title}
           </a>
         </Styled.h5>
-        {subtitle && (
-          <Styled.p
+        <Styled.p
+          sx={{
+            fontSize: 'xxs',
+            marginY: 0,
+            variant: getVariant('subtitle')
+          }}
+        >
+          <Styled.a
+            href={subtitleUrl}
             sx={{
-              fontSize: 'xxs',
-              marginY: 0,
-              variant: getVariant('subtitle')
+              textDecoration: 'none',
+              variant: getVariant('link')
             }}
           >
-            <Styled.a
-              href={subtitleUrl}
-              sx={{
-                textDecoration: 'none',
-                variant: getVariant('link')
-              }}
-            >
-              {subtitle}
-            </Styled.a>
-          </Styled.p>
-        )}
+            {subtitle}
+          </Styled.a>
+        </Styled.p>
       </div>
     </div>
   )
