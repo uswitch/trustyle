@@ -25,6 +25,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
       }
   fgImageOnMobile?: boolean
   className?: string
+  bottomImageOverflow?: number | string
 }
 
 const DefaultContainer: React.FC = ({ children }) => (
@@ -39,6 +40,7 @@ const Hero: React.FC<Props> = ({
   fgImagePosition,
   fgImageOnMobile = true,
   children,
+  bottomImageOverflow = '-33%',
   className
 }) => {
   const { theme }: any = useThemeUI()
@@ -48,68 +50,86 @@ const Hero: React.FC<Props> = ({
     React.cloneElement(breadcrumbs, { variant: breadcrumbVariant })
 
   return (
-    <div
-      sx={{
-        position: 'relative',
-        overflow: 'hidden',
-        variant: 'elements.hero.wrapper'
-      }}
-      className={className}
-    >
-      <Container>
-        {breadcrumbs && (
-          <div sx={{ paddingTop: 'sm', variant: 'elements.hero.breadcrumbs' }}>
-            {breadcrumbWithVariant}
-          </div>
-        )}
-        <div
-          sx={{
-            position: 'relative',
-            display: 'block',
-            flexDirection: 'row-reverse'
-          }}
-        >
-          <div
-            sx={{
-              position: 'absolute',
-              left: [0, '45%'],
-              right: 0,
-              top: 0,
-              bottom: 0,
-              display: fgImageOnMobile ? 'block' : ['none', 'block'],
-              ...(fgImageType === 'background'
-                ? {
-                    backgroundImage: `url(${fgImage})`,
-                    backgroundRepeat: 'no-repeat',
-                    ...fgImagePosition
-                  }
-                : undefined)
-            }}
-          >
-            {fgImageType === 'img' && (
-              <img
-                sx={{
-                  maxWidth: '100%',
-                  position: 'absolute',
-                  ...fgImagePosition
-                }}
-                src={fgImage}
-                role="presentation"
-              />
-            )}
-          </div>
+    <div>
+      <div
+        sx={{
+          position: 'relative',
+          overflow: 'hidden',
+          variant: 'elements.hero.wrapper'
+        }}
+        className={className}
+      >
+        <Container>
+          {breadcrumbs && (
+            <div
+              sx={{ paddingTop: 'sm', variant: 'elements.hero.breadcrumbs' }}
+            >
+              {breadcrumbWithVariant}
+            </div>
+          )}
           <div
             sx={{
               position: 'relative',
-              paddingTop: ['sm', 'xxl'],
-              paddingBottom: ['sm', 'xxl'],
-              variant: 'elements.hero.content'
+              display: 'block',
+              flexDirection: 'row-reverse'
             }}
           >
-            {children}
+            <div
+              sx={{
+                position: 'absolute',
+                left: [0, '45%'],
+                right: 0,
+                top: 0,
+                bottom: 0,
+                display: fgImageOnMobile ? 'block' : ['none', 'block'],
+                ...(fgImageType === 'background'
+                  ? {
+                      backgroundImage: `url(${fgImage})`,
+                      backgroundRepeat: 'no-repeat',
+                      ...fgImagePosition
+                    }
+                  : undefined),
+                variant: 'elements.hero.image'
+              }}
+            >
+              {fgImageType === 'img' && (
+                <img
+                  sx={{
+                    maxWidth: '100%',
+                    position: 'absolute',
+                    ...fgImagePosition
+                  }}
+                  src={fgImage}
+                  role="presentation"
+                />
+              )}
+            </div>
+            <div
+              sx={{
+                position: 'relative',
+                paddingTop: ['sm', 'xxl'],
+                paddingBottom: ['sm', 'xxl'],
+                variant: 'elements.hero.content'
+              }}
+            >
+              {children}
+            </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
+      <img
+        sx={{
+          maxWidth: '100%',
+          position: 'relative',
+          display: 'none',
+          marginTop: `-${bottomImageOverflow}`,
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          variant: 'elements.hero.bottomImage'
+        }}
+        src={fgImage}
+        role="presentation"
+      />
     </div>
   )
 }

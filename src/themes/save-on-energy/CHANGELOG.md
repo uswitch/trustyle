@@ -16,36 +16,45 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.4.0...@uswitch/trustyle.save-on-energy-theme@1.5.0) (2020-07-28)
 
-
 ### Bug Fixes
 
-* update packages, rebased on master ([0d7a48d](https://github.com/uswitch/trustyle/commit/0d7a48d))
-
+- update packages, rebased on master ([0d7a48d](https://github.com/uswitch/trustyle/commit/0d7a48d))
 
 ### Features
 
-* Implement icon color through theme.json ([2d3020f](https://github.com/uswitch/trustyle/commit/2d3020f))
-* Implement icon color through theme.json ([f0fb94e](https://github.com/uswitch/trustyle/commit/f0fb94e))
-
-
-
-
+- Implement icon color through theme.json ([2d3020f](https://github.com/uswitch/trustyle/commit/2d3020f))
+- Implement icon color through theme.json ([f0fb94e](https://github.com/uswitch/trustyle/commit/f0fb94e))
 
 # [1.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.3.0...@uswitch/trustyle.save-on-energy-theme@1.4.0) (2020-07-27)
 
-
 ### Bug Fixes
 
-* styling fixes in theme ([9d2db2f](https://github.com/uswitch/trustyle/commit/9d2db2f))
-
+- styling fixes in theme ([9d2db2f](https://github.com/uswitch/trustyle/commit/9d2db2f))
 
 ### Features
 
-* move form styling to themes ([3a1b83d](https://github.com/uswitch/trustyle/commit/3a1b83d))
+- move form styling to themes ([3a1b83d](https://github.com/uswitch/trustyle/commit/3a1b83d))
 
+# [1.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.1.1...@uswitch/trustyle.save-on-energy-theme@1.3.0) (2020-07-22)
 
+### Bug Fixes
 
+- update packages, rebased on master ([0d7a48d](https://github.com/uswitch/trustyle/commit/0d7a48d))
 
+### Features
+
+- Implement icon color through theme.json ([2d3020f](https://github.com/uswitch/trustyle/commit/2d3020f))
+- Implement icon color through theme.json ([f0fb94e](https://github.com/uswitch/trustyle/commit/f0fb94e))
+
+# [1.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.3.0...@uswitch/trustyle.save-on-energy-theme@1.4.0) (2020-07-27)
+
+### Bug Fixes
+
+- styling fixes in theme ([9d2db2f](https://github.com/uswitch/trustyle/commit/9d2db2f))
+
+### Features
+
+- move form styling to themes ([3a1b83d](https://github.com/uswitch/trustyle/commit/3a1b83d))
 
 # [1.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.1.1...@uswitch/trustyle.save-on-energy-theme@1.3.0) (2020-07-22)
 
