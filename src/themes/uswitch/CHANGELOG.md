@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@1.5.1...@uswitch/trustyle.uswitch-theme@1.5.2) (2020-08-03)
+
+
+### Bug Fixes
+
+* breadcrumb sizing ([17d4fbd](https://github.com/uswitch/trustyle/commit/17d4fbd))
+
+
+
+
+
 ## [1.5.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@1.5.0...@uswitch/trustyle.uswitch-theme@1.5.1) (2020-08-03)
 
 
