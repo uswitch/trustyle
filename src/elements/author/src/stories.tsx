@@ -79,11 +79,51 @@ CondensedExample.story = {
   }
 }
 
+export const VariantsExample = () => {
+  const title = text('Title', 'Salman')
+  const subtitle = text('Subtitle', 'Job title')
+  const titleUrl = text('Title url', 'https://www.jonathanfielding.com/')
+  const subtitleUrl = text('Subtitle url', 'https://www.jonathanfielding.com/')
+  const image = (
+    <img src="https://placekitten.com/200/200?image=9" alt="Salman" />
+  )
+
+  return (
+    <div>
+      <h3>Primary</h3>
+      <Author
+        variant="primary"
+        title={title}
+        authorImage={image}
+        titleUrl={titleUrl}
+        subtitleUrl={subtitleUrl}
+        subtitle={subtitle}
+      />
+      <h3>Secondary</h3>
+      <Author
+        variant="secondary"
+        title={title}
+        subtitle={subtitle}
+        authorImage={image}
+        titleUrl={titleUrl}
+        subtitleUrl={subtitleUrl}
+      />
+    </div>
+  )
+}
+
+VariantsExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
     <AllThemes>
       <Example />
       <CondensedExample />
+      <VariantsExample />
     </AllThemes>
   )
 }

@@ -13,7 +13,8 @@ const AllThemes: React.FC<Props> = ({ themes = [], children }) => {
     'money',
     'journey',
     'save-on-energy',
-    'bankrate'
+    'bankrate',
+    'broadband-deals'
   ]
   const themeKeys = themes.length
     ? availableThemes.filter(theme => themes.includes(theme))
