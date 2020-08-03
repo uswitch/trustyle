@@ -267,9 +267,13 @@ BBDealsExample.story = {
 // @todo test with more than one image and position
 export const AutomatedTests = () => {
   return (
-    <AllThemes themes={['uswitch', 'money', 'broadband-deals']}>
-      <ExampleWithKnobs />
-      <BBDealsExample />
-    </AllThemes>
+    <React.Fragment>
+      <AllThemes themes={['uswitch', 'money']}>
+        <ExampleWithKnobs />
+      </AllThemes>
+      <AllThemes themes={['broadband-deals']}>
+        <BBDealsExample />
+      </AllThemes>
+    </React.Fragment>
   )
 }
