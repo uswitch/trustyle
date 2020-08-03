@@ -984,6 +984,11 @@
             "paddingX": "lg",
             "paddingY": 13,
             "fontSize": "sm"
+          },
+          "xxl": {
+            "paddingX": "4xl",
+            "paddingY": "base",
+            "fontSize": "md"
           }
         }
       },
@@ -1160,12 +1165,29 @@
         "fontWeight": "bold",
         "color": "grey-80",
         "display": "block",
-        ":not(:first-child)": {
-          "mt": "sm"
+        ":not(:first-child)": { "mt": "sm" },
+        "variants": {
+          "calculator": {
+            "variant": "styles.h6",
+            "fontWeight": "bold",
+            "color": "grey-80",
+            "display": "block",
+            ":not(:first-child)": { "mt": "sm" }    
+          }
         }
       },
       "button": {
-        "my": "sm"
+        "my": "sm",
+        "wrapper": {
+          "base": {
+            "textAlign": "left"
+          },
+          "variants": {
+            "calculator": {
+              "textAlign": "left"
+            }
+          }
+        }
       }
     },
     "rich-text-block": {
