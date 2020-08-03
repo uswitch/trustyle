@@ -1,10 +1,7 @@
 {
   "name": "Bankrate",
   "useLocalStorage": false,
-  "breakpoints": [
-    "768px",
-    "990px"
-  ],
+  "breakpoints": ["768px", "990px"],
   "zIndices": {
     "min": 0,
     "max": 100
@@ -130,42 +127,27 @@
     },
     "h1": {
       "variant": "styles.heading",
-      "fontSize": [
-        "xxl",
-        "xxxl"
-      ],
+      "fontSize": ["xxl", "xxxl"],
       "my": "md"
     },
     "h2": {
       "variant": "styles.heading",
-      "fontSize": [
-        "xl",
-        "xxl"
-      ],
+      "fontSize": ["xl", "xxl"],
       "my": "md"
     },
     "h3": {
       "variant": "styles.heading",
-      "fontSize": [
-        "lg",
-        "xl"
-      ],
+      "fontSize": ["lg", "xl"],
       "my": "sm"
     },
     "h4": {
       "variant": "styles.heading",
-      "fontSize": [
-        "md",
-        "lg"
-      ],
+      "fontSize": ["md", "lg"],
       "my": "sm"
     },
     "h5": {
       "variant": "styles.heading",
-      "fontSize": [
-        "sm",
-        "md"
-      ],
+      "fontSize": ["sm", "md"],
       "my": "sm"
     },
     "h6": {
@@ -249,21 +231,12 @@
         "a": {
           "fontWeight": "bold",
           "color": "uswitch-navy",
-          "fontSize": [
-            "md",
-            "xl"
-          ]
+          "fontSize": ["md", "xl"]
         }
       },
       "subtitle": {
-        "fontSize": [
-          "xs",
-          "md"
-        ],
-        "lineHeight": [
-          "base",
-          "heading"
-        ],
+        "fontSize": ["xs", "md"],
+        "lineHeight": ["base", "heading"],
         "a": {
           "fontWeight": "bold",
           "color": "grey-60"
@@ -273,41 +246,26 @@
         "title": {
           "a": {
             "variant": "elements.author.title.a",
-            "fontSize": [
-              "md",
-              "md"
-            ]
+            "fontSize": ["md", "md"]
           }
         },
         "subtitle": {
           "paddingBottom": 0,
           "a": {
             "variant": "elements.author.subtitle.a",
-            "fontSize": [
-              "xs",
-              "xs"
-            ]
+            "fontSize": ["xs", "xs"]
           }
         },
         "imageLink": {
-          "width": [
-            40,
-            40
-          ],
-          "height": [
-            40,
-            40
-          ]
+          "width": [40, 40],
+          "height": [40, 40]
         },
         "base": {
           "a": {
             "variant": "elements.author.base.a"
           },
           "h5": {
-            "marginBottom": [
-              0,
-              0
-            ]
+            "marginBottom": [0, 0]
           }
         }
       }
@@ -328,10 +286,7 @@
           "fontStyle": "normal"
         },
         "image": {
-          "height": [
-            40,
-            56
-          ]
+          "height": [40, 56]
         }
       },
       "pros": {
@@ -349,10 +304,7 @@
         },
         "base": {
           "paddingY": "md",
-          "paddingX": [
-            "sm",
-            "md"
-          ],
+          "paddingX": ["sm", "md"],
           "backgroundColor": "grey-05",
           "li": {
             "paddingLeft": 0,
@@ -414,10 +366,7 @@
         },
         "base": {
           "paddingY": "md",
-          "paddingX": [
-            "sm",
-            "md"
-          ],
+          "paddingX": ["sm", "md"],
           "backgroundColor": "grey-05",
           "li": {
             "paddingLeft": 0,
@@ -711,10 +660,7 @@
     "call-out": {
       "main": {
         "backgroundColor": "grey-10",
-        "px": [
-          "sm",
-          "md"
-        ]
+        "px": ["sm", "md"]
       },
       "icon": {
         "backgroundColor": "grey-80"
@@ -730,16 +676,10 @@
           "fontWeight": "bold"
         },
         "text": {
-          "mb": [
-            null,
-            0
-          ]
+          "mb": [null, 0]
         },
         "button": {
-          "ml": [
-            null,
-            "md"
-          ]
+          "ml": [null, "md"]
         }
       },
       "variants": {
@@ -857,10 +797,7 @@
         },
         "base": {
           "paddingY": "md",
-          "paddingX": [
-            "sm",
-            "md"
-          ],
+          "paddingX": ["sm", "md"],
           "backgroundColor": "grey-05",
           "li": {
             "paddingLeft": 0,
@@ -930,17 +867,11 @@
       "variants": {
         "panel-primary": {
           "py": "lg",
-          "px": [
-            "sm",
-            "xl"
-          ],
+          "px": ["sm", "xl"],
           "bg": "grey-0",
           "color": "grey-80",
           "p": {
-            "textAlign": [
-              "center",
-              "left"
-            ],
+            "textAlign": ["center", "left"],
             "mb": 0
           },
           "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
@@ -997,9 +928,7 @@
   },
   "compounds": {
     "card": {
-      "itemsPerRow": [
-        1
-      ],
+      "itemsPerRow": [1],
       "base": {
         "backgroundColor": "grey-10",
         "transition": "all 0.3s ease",
@@ -1138,21 +1067,9 @@
       "marginLeft": 0,
       "border": 0,
       "layout": {
-        "flexDirection": [
-          "column-reverse",
-          "column-reverse",
-          "column-reverse"
-        ],
-        "text": [
-          12,
-          12,
-          12
-        ],
-        "nav": [
-          12,
-          12,
-          12
-        ]
+        "flexDirection": ["column-reverse", "column-reverse", "column-reverse"],
+        "text": [12, 12, 12],
+        "nav": [12, 12, 12]
       },
       "internalLinkList": {
         "listStyle": "none",
@@ -1206,11 +1123,7 @@
     },
     "cookie-banner": {
       "heading": {
-        "mt": [
-          0,
-          "xs",
-          "xs"
-        ],
+        "mt": [0, "xs", "xs"],
         "color": "grey-80"
       },
       "hr": {
@@ -1219,11 +1132,7 @@
         "bg": "grey-20"
       },
       "copy": {
-        "mb": [
-          "md",
-          "sm",
-          null
-        ],
+        "mb": ["md", "sm", null],
         "mt": "base"
       },
       "accept-all-button": {
