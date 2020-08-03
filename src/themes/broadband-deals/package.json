@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.broadband-deals-theme",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Theme file for broadband deals",
   "main": "index.js",
   "scripts": {
