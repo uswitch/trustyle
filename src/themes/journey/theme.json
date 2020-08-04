@@ -577,15 +577,6 @@
         "borderColor": "primary",
         "backgroundColor": "white",
         "borderRadius": "0px",
-        "&:focus-within": {
-          "outline": "none",
-          "color": "primary",
-          "borderColor": "primary",
-          "boxShadow": "focusInput",
-          "span": {
-            "color": "primary"
-          }
-        },
         "&:disabled": {
           "outline": "none",
           "border": "none",
@@ -615,6 +606,16 @@
           "variant": "elements.simple-input.wrapper",
           "borderColor": "tomato",
           "boxShadow": "errorInput"
+        },
+        "focus": {
+          "variant": "elements.simple-input.wrapper",
+          "outline": "none",
+          "color": "primary",
+          "borderColor": "primary",
+          "boxShadow": "focusInput",
+          "span": {
+            "color": "primary"
+          }
         }
       }
     },

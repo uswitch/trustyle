@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import * as React from 'react'
+import React, { useState } from 'react'
 import { jsx } from 'theme-ui'
 
 export interface Props {
@@ -24,13 +24,17 @@ export const SimpleInput = React.forwardRef(
       defaultValue,
       prefix
     } = props
+    const [hasFocus, setHasFocus] = useState(false)
 
     return (
       <div
         sx={{
-          variant: hasError
-            ? 'elements.simple-input.variants.error'
-            : 'elements.simple-input.wrapper'
+          variant:
+            hasError && !hasFocus
+              ? 'elements.simple-input.variants.error'
+              : hasFocus
+              ? 'elements.simple-input.variants.focus'
+              : 'elements.simple-input.wrapper'
         }}
       >
         {prefix && (
@@ -48,6 +52,8 @@ export const SimpleInput = React.forwardRef(
           ref={ref}
           onChange={onChange}
           defaultValue={defaultValue}
+          onFocus={() => setHasFocus(true)}
+          onBlur={() => setHasFocus(false)}
         />
       </div>
     )

@@ -493,14 +493,6 @@
         "boxShadow": "formInput",
         "borderColor": "grey-90",
         "backgroundColor": "white",
-        "&:focus-within": {
-          "outline": "none",
-          "borderColor": "grey-90",
-          "boxShadow": "focusInput",
-          "span": {
-            "color": "grey-90"
-          }
-        },
         "&:disabled": {
           "outline": "none",
           "border": "none",
@@ -530,6 +522,15 @@
           "variant": "elements.simple-input.wrapper",
           "borderColor": "tomato",
           "boxShadow": "errorInput"
+        },
+        "focus": {
+          "variant": "elements.simple-input.wrapper",
+          "outline": "none",
+          "borderColor": "grey-90",
+          "boxShadow": "focusInput",
+          "span": {
+            "color": "grey-90"
+          }
         }
       }
     },

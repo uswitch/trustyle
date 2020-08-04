@@ -530,14 +530,6 @@
         "boxShadow": "formInput",
         "borderColor": "uswitch-navy",
         "backgroundColor": "white",
-        "&:focus-within": {
-          "outline": "none",
-          "borderColor": "uswitch-navy",
-          "boxShadow": "focusInput",
-          "span": {
-            "color": "uswitch-navy"
-          }
-        },
         "&:disabled": {
           "outline": "none",
           "border": "none",
@@ -567,6 +559,15 @@
           "variant": "elements.simple-input.wrapper",
           "borderColor": "error",
           "boxShadow": "errorInput"
+        },
+        "focus": {
+          "variant": "elements.simple-input.wrapper",
+          "outline": "none",
+          "borderColor": "uswitch-navy",
+          "boxShadow": "focusInput",
+          "span": {
+            "color": "uswitch-navy"
+          }
         }
       }
     },

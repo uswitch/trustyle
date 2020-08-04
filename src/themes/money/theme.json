@@ -766,14 +766,6 @@
         "borderColor": "grey-40",
         "backgroundColor": "white",
         "borderRadius": "4px",
-        "&:focus-within": {
-          "outline": "none",
-          "borderColor": "plum",
-          "boxShadow": "plumInset",
-          "span": {
-            "color": "plum"
-          }
-        },
         "&:disabled": {
           "outline": "none",
           "color": "grey-60",
@@ -802,6 +794,15 @@
           "boxShadow": "errorInset",
           "span": {
             "color": "error"
+          }
+        },
+        "focus": {
+          "variant": "elements.simple-input.wrapper",
+          "outline": "none",
+          "borderColor": "plum",
+          "boxShadow": "plumInset",
+          "span": {
+            "color": "plum"
           }
         }
       }
