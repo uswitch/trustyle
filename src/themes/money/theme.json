@@ -1103,6 +1103,27 @@
       }
     },
 
+    "form-section": {
+      "height": "100px",
+      "backgroundColor": "white",
+      "borderRadius": "4px",
+      "mb": "lg",
+      "color": "plum",
+      "display": "flex",
+      "alignItems": "center",
+      "padding": "32px",
+      "active": {
+        "opacity": 1,
+        "backgroundColor": "#FFF",
+        "borderRadius": "4px",
+        "padding": "32px",
+        "mb": "lg"
+      },
+      "inactive": {
+        "display": "none"
+      }
+    },
+
     "rich-text-block": {
       "base": {
         "*:first-child": { "mt": 0 }
