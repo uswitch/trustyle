@@ -40,6 +40,8 @@ const glyphChoices: Glyph[] = [
   'tick',
   'tv',
   'two',
+  'thumb-down',
+  'thumb-up',
   'edit-journey'
 ]
 
@@ -51,12 +53,14 @@ storiesOf('Elements|Icon', module).add(
     const theme = themeSelector()
 
     return (
-      <Icon
-        glyph={select('glyph', glyphChoices, 'arrow')}
-        color={select('color', theme.colors, 'link')}
-        direction={select('direction', directionChoices, 'up')}
-        size={number('Size', 0)}
-      />
+      theme && (
+        <Icon
+          glyph={select('glyph', glyphChoices, 'arrow')}
+          color={select('color', theme.colors, 'link')}
+          direction={select('direction', directionChoices, 'up')}
+          size={number('Size', 0)}
+        />
+      )
     )
   }
 )

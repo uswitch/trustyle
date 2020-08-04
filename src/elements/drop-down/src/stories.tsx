@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
 
 import AllThemes from '../../../utils/all-themes'
@@ -74,6 +74,27 @@ const SelectWithOverlay = () => {
   )
 }
 
+const SelectWithRef = () => {
+  const [val, setVal] = useState()
+  const [placeholder, setPlaceholder] = useState('ref is not working')
+  const inputRef = React.useRef<HTMLInputElement>(null)
+  React.useEffect(() => {
+    if (inputRef.current) setPlaceholder('ref is working')
+  })
+
+  return (
+    <DropDown
+      name="example"
+      placeholder={placeholder}
+      onBlur={() => {}}
+      onChange={setVal}
+      options={options}
+      value={val}
+      ref={inputRef}
+    />
+  )
+}
+
 export const Example = () => (
   <div>
     <ColourSelect />
@@ -96,6 +117,10 @@ export const Example = () => (
     <Spacer />
 
     <SelectWithOverlay />
+
+    <Spacer />
+
+    <SelectWithRef />
   </div>
 )
 

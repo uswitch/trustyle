@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero@3.1.0...@uswitch/trustyle.hero@3.2.0) (2020-08-03)
+
+
+### Bug Fixes
+
+* fix bbdeals hero story ([fd07f67](https://github.com/uswitch/trustyle/commit/fd07f67))
+
+
+### Features
+
+* bbdeals ([79ff8f8](https://github.com/uswitch/trustyle/commit/79ff8f8))
+
+
+
+
+
 # [3.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero@3.0.0...@uswitch/trustyle.hero@3.1.0) (2020-07-20)
 
 

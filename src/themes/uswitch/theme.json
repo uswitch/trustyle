@@ -318,7 +318,6 @@
       "textDecoration": "none",
       "borderBottom": "1px dashed #898991",
       "lineHeight": "31px",
-      "fontSize": ["base", "md"],
       "fontWeight": "bold",
       "& svg": {
         "fill": "light-1",
@@ -1979,6 +1978,13 @@
       }
     },
     "side-nav": {
+      "accordion": {
+        "button": {
+          "fontSize": "sm",
+          "backgroundColor": "grey-05",
+          "paddingX": "sm"
+        }
+      },
       "internalLinkList": {
         "listStyle": "none",
         "paddingLeft": 0,
@@ -2002,10 +2008,10 @@
           }
         },
         "isActive": {
-          "variant": "sideNav.internalLinkListItem.base",
+          "variant": "compounds.side-nav.internalLinkListItem.base",
           "color": "primary",
           "::after": {
-            "variant": "sideNav.internalLinkListItem.base.::after",
+            "variant": "compounds.side-nav.internalLinkListItem.base.::after",
             "content": "\"\"",
             "position": "absolute",
             "top": "0",
@@ -2016,7 +2022,7 @@
             "backgroundColor": "primary"
           },
           ">a": {
-            "variant": "sideNav.internalLinkListItem.base.>a",
+            "variant": "compounds.side-nav.internalLinkListItem.base.>a",
             "color": "primary",
             ":visited": {
               "color": "primary"
@@ -2026,11 +2032,17 @@
       },
       "additionalLink": {
         "display": "block",
-        "marginBottom": "xxs",
         "color": "grey-80",
-        "paddingTop": "xxs",
-        "paddingBottom": "xxs",
-        "textDecoration": "none"
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "paddingLeft": "0",
+        "borderWidth": "1px 0 0 0",
+        "borderStyle": "solid",
+        "borderColor": "grey-20",
+        "fontSize": "sm",
+        "a": {
+          "textDecoration": "none"
+        }
       }
     }
   },

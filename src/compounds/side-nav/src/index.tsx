@@ -28,7 +28,12 @@ const SideNav: React.FC<Props> = ({
   return (
     <nav className={className}>
       <Accordion.Group>
-        <Accordion title={internalLinks.title}>
+        <Accordion
+          title={internalLinks.title}
+          sx={{
+            variant: 'compounds.side-nav.accordion'
+          }}
+        >
           <ul
             sx={{
               variant: 'compounds.side-nav.internalLinkList'
@@ -53,7 +58,13 @@ const SideNav: React.FC<Props> = ({
           </ul>
         </Accordion>
         {additionalLinks.map(({ title, links = [] }, index) => (
-          <Accordion key={index} title={title}>
+          <Accordion
+            key={index}
+            title={title}
+            sx={{
+              variant: 'compounds.side-nav.accordion'
+            }}
+          >
             <ul sx={{ padding: 0, margin: 0 }}>
               {links.map(({ text, url }, index) => (
                 <li
