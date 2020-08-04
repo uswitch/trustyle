@@ -1172,7 +1172,10 @@
             "fontWeight": "bold",
             "color": "grey-80",
             "display": "block",
-            ":not(:first-child)": { "mt": "sm" }    
+            "mb": "xs",
+            ":not(:first-child)": { 
+              "mt": "xl"
+            }
           }
         }
       },
@@ -1181,11 +1184,12 @@
         "wrapper": {
           "base": {
             "textAlign": "left"
-          },
-          "variants": {
-            "calculator": {
-              "textAlign": "left"
-            }
+          }
+        },
+        "variants": {
+          "calculator": {
+            "mb": "sm",
+            "mt": "md"
           }
         }
       }
