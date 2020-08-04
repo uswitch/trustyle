@@ -792,9 +792,7 @@
           "px": "12px"
         },
         "prefix": {
-          "variant": "elements.simple-input.affix.base",
-          "borderRightStyle": "solid",
-          "borderRightWidth": 1
+          "variant": "elements.simple-input.affix.base"
         }
       },
       "variants": {
