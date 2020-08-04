@@ -44,7 +44,8 @@ export const VerticalCards = () => {
           title={title}
           description={content}
           linkHref="https://www.uswitch.com"
-          tag="Credit Card"
+          linkText="Read More"
+          tag={text('Tag', 'Credit Card')}
         />
       </Container>
 
