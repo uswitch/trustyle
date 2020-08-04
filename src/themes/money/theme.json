@@ -742,33 +742,69 @@
         "lineHeight": 1.33,
         "color": "text",
         "appearance": "none",
-        "border": "solid 1px",
+        "border": "none",
+        "background": "none",
         "boxSizing": "border-box",
         "display": "flex",
         "flex": 1,
         "position": "relative",
         "verticalAlign": "middle",
         "width": "100%",
+        "padding": "sm",
+        "&:focus": {
+          "outline": "none"
+        },
+        "&:disabled": {
+          "outline": "none"
+        }
+      },
+      "wrapper": {
+        "border": "solid 1px",
+        "boxSizing": "border-box",
+        "display": "flex",
+        "position": "relative",
         "borderColor": "grey-40",
         "backgroundColor": "white",
         "borderRadius": "4px",
-        "padding": "16px",
-        "&:focus": {
+        "&:focus-within": {
           "outline": "none",
           "borderColor": "plum",
-          "boxShadow": "plumInset"
+          "boxShadow": "plumInset",
+          "span": {
+            "color": "plum"
+          }
         },
         "&:disabled": {
           "outline": "none",
           "color": "grey-60",
-          "backgroundColor": "grey-20"
+          "backgroundColor": "grey-20",
+          "span": {
+            "color": "grey-60"
+          }
+        }
+      },
+      "affix": {
+        "base": {
+          "alignItems": "center",
+          "display": "flex",
+          "color": "text",
+          "my": "xs",
+          "px": "12px"
+        },
+        "prefix": {
+          "variant": "elements.simple-input.affix.base",
+          "borderRightStyle": "solid",
+          "borderRightWidth": 1
         }
       },
       "variants": {
         "error": {
-          "variant": "elements.simple-input.base",
+          "variant": "elements.simple-input.wrapper",
           "borderColor": "error",
-          "boxShadow": "errorInset"
+          "boxShadow": "errorInset",
+          "span": {
+            "color": "error"
+          }
         }
       }
     },
