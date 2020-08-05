@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.6.0...@uswitch/trustyle.journey-theme@2.7.0) (2020-08-05)
+
+
+### Features
+
+* Add gas-electricity Icon ([dc4e461](https://github.com/uswitch/trustyle/commit/dc4e461))
+
+
+
+
+
 # [2.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.5.0...@uswitch/trustyle.journey-theme@2.6.0) (2020-08-05)
 
 
