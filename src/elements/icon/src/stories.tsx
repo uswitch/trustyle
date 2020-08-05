@@ -22,6 +22,7 @@ const glyphChoices: Glyph[] = [
   'filled-arrow',
   'filters',
   'four',
+  'gas-electricity',
   'home',
   'letter',
   'location',

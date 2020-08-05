@@ -19,6 +19,7 @@ import { Error as ErrorIcon } from './error'
 import { FilledArrow } from './filled-arrow'
 import { Filters } from './filters'
 import { Four } from './four'
+import { GasElectricity } from './gas-electricity'
 import { Home } from './home'
 import { Letter } from './letter'
 import { Location } from './location'
@@ -56,6 +57,7 @@ export type Glyph =
   | 'filled-arrow'
   | 'filters'
   | 'four'
+  | 'gas-electricity'
   | 'home'
   | 'letter'
   | 'location'
@@ -130,6 +132,8 @@ export const Icon: React.FC<Props> = ({
       return <Filters color={color} size={size} />
     case 'four':
       return <Four color={color} size={size} />
+    case 'gas-electricity':
+      return <GasElectricity color={color} size={size} />
     case 'home':
       return <Home color={color} size={size} />
     case 'letter':
