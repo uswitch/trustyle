@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.simple-input@0.1.0...@uswitch/trustyle.simple-input@0.2.0) (2020-08-05)
+
+
+### Features
+
+* add focus handling ([4215516](https://github.com/uswitch/trustyle/commit/4215516))
+* add prefix to simple input component ([f9799ec](https://github.com/uswitch/trustyle/commit/f9799ec))
+
+
+
+
+
 # 0.1.0 (2020-07-27)
 
 

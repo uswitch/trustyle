@@ -468,36 +468,69 @@
         "fontSize": "base",
         "lineHeight": 1.33,
         "color": "text",
-        "borderRadius": "3px",
         "appearance": "none",
-        "border": "solid 1px",
+        "border": "none",
+        "background": "none",
         "boxSizing": "border-box",
         "display": "flex",
         "flex": 1,
         "position": "relative",
         "verticalAlign": "middle",
         "width": "100%",
+        "padding": "sm",
+        "&:focus": {
+          "outline": "none"
+        },
+        "&:disabled": {
+          "outline": "none"
+        }
+      },
+      "wrapper": {
+        "borderRadius": "3px",
+        "border": "solid 1px",
+        "display": "flex",
+        "position": "relative",
         "boxShadow": "formInput",
         "borderColor": "grey-90",
         "backgroundColor": "white",
-        "padding": "16px",
-        "&:focus": {
-          "outline": "none",
-          "borderColor": "grey-90",
-          "boxShadow": "focusInput"
-        },
         "&:disabled": {
           "outline": "none",
           "border": "none",
           "color": "battleshipGrey",
-          "backgroundColor": "veryLightGrey"
+          "backgroundColor": "veryLightGrey",
+          "span": {
+            "color": "battleshipGrey"
+          }
+        }
+      },
+      "affix": {
+        "base": {
+          "alignItems": "center",
+          "display": "flex",
+          "color": "text",
+          "my": "xs",
+          "px": "12px"
+        },
+        "prefix": {
+          "variant": "elements.simple-input.affix.base",
+          "borderRightStyle": "solid",
+          "borderRightWidth": 1
         }
       },
       "variants": {
         "error": {
-          "variant": "elements.simple-input.base",
+          "variant": "elements.simple-input.wrapper",
           "borderColor": "tomato",
           "boxShadow": "errorInput"
+        },
+        "focus": {
+          "variant": "elements.simple-input.wrapper",
+          "outline": "none",
+          "borderColor": "grey-90",
+          "boxShadow": "focusInput",
+          "span": {
+            "color": "grey-90"
+          }
         }
       }
     },
