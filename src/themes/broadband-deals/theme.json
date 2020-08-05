@@ -430,6 +430,10 @@
         ">div": {
           "px": 0
         },
+        "tag": {
+          "color": "black",
+          "fontSize": "xxs"
+        },
         "h3": {
           "fontSize": ["md", "lg"],
           "lineHeight": "md",
@@ -467,12 +471,10 @@
       },
       "variants": {
         "vertical": {
-          "&:hover": {
-            "box-shadow": "rgba(0,0,72,0.28) 0px 23px 28px -16px, rgba(0,0,72,0.06) 0px -2px 11px 0px",
-            "opacity": 1
-          },
+          "&:hover": {},
           "tag": {
-            "variant": "compounds.card.base.tag"
+            "variant": "compounds.card.base.tag",
+            "mb": "sm"
           },
           "meta": {
             "variant": "compounds.card.base.meta"
@@ -486,7 +488,8 @@
             "px": "sm"
           },
           "link": {
-            "variant": "compounds.card.base.link"
+            "variant": "compounds.card.base.link",
+            "pt": "md"
           },
           "superScript": {
             "variant": "compounds.card.base.superScript"
