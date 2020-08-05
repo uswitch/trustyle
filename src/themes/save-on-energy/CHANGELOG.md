@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.7.0...@uswitch/trustyle.save-on-energy-theme@1.8.0) (2020-08-05)
+
+
+### Bug Fixes
+
+* fixed formatting of theme.json files ([16e04cd](https://github.com/uswitch/trustyle/commit/16e04cd))
+
+
+### Features
+
+* add focus handling ([4215516](https://github.com/uswitch/trustyle/commit/4215516))
+* add prefix to simple input component ([f9799ec](https://github.com/uswitch/trustyle/commit/f9799ec))
+* added sponsorship-tag-and-logo design to trustyle themes ([edb5442](https://github.com/uswitch/trustyle/commit/edb5442))
+* merge with master ([8061e27](https://github.com/uswitch/trustyle/commit/8061e27))
+
+
+
+
+
 # [1.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.6.0...@uswitch/trustyle.save-on-energy-theme@1.7.0) (2020-08-03)
 
 
