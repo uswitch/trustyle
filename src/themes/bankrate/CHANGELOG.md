@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.8.0...@uswitch/trustyle.bankrate-theme@2.9.0) (2020-08-06)
+
+
+### Features
+
+* add suffix to simple input component ([0dfae68](https://github.com/uswitch/trustyle/commit/0dfae68))
+
+
+
+
+
 # [2.8.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.7.0...@uswitch/trustyle.bankrate-theme@2.8.0) (2020-08-05)
 
 

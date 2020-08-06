@@ -552,6 +552,11 @@
           "variant": "elements.simple-input.affix.base",
           "borderRightStyle": "solid",
           "borderRightWidth": 1
+        },
+        "suffix": {
+          "variant": "elements.simple-input.affix.base",
+          "borderLeftStyle": "solid",
+          "borderLeftWidth": 1
         }
       },
       "variants": {
