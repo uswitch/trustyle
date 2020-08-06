@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.3.0...@uswitch/trustyle.broadband-deals-theme@1.5.0) (2020-08-06)
+
+
+### Features
+
+* update card for bbdeals ([4b6ca9c](https://github.com/uswitch/trustyle/commit/4b6ca9c))
+
+
+
+
+
 # [1.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.3.0...@uswitch/trustyle.broadband-deals-theme@1.4.0) (2020-08-06)
 
 
