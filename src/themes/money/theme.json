@@ -779,7 +779,8 @@
         "base": {
           "alignItems": "center",
           "display": "flex",
-          "color": "text",
+          "color": "grey-80",
+          "fontWeight": "bold",
           "my": "xs",
           "px": "12px"
         },
@@ -794,19 +795,13 @@
         "error": {
           "variant": "elements.simple-input.wrapper",
           "borderColor": "error",
-          "boxShadow": "errorInset",
-          "span": {
-            "color": "error"
-          }
+          "boxShadow": "errorInset"
         },
         "focus": {
           "variant": "elements.simple-input.wrapper",
           "outline": "none",
           "borderColor": "plum",
-          "boxShadow": "plumInset",
-          "span": {
-            "color": "plum"
-          }
+          "boxShadow": "plumInset"
         }
       }
     },
