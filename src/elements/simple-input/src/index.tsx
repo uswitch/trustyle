@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { jsx } from 'theme-ui'
 
-export interface Props {
+export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   hasError?: boolean | undefined
   type: string
   placeholder?: string
@@ -11,18 +11,18 @@ export interface Props {
   onChange?: any
   defaultValue?: string
   prefix?: string
+  suffix?: string
 }
 
 export const SimpleInput = React.forwardRef(
   (props: Props, ref?: React.Ref<HTMLInputElement>) => {
     const {
       hasError,
-      type,
       placeholder,
-      name,
       onChange,
       defaultValue,
-      prefix
+      prefix,
+      suffix
     } = props
     const [hasFocus, setHasFocus] = useState(false)
 
@@ -46,15 +46,19 @@ export const SimpleInput = React.forwardRef(
           sx={{
             variant: 'elements.simple-input.base'
           }}
-          name={name}
-          type={type}
           placeholder={placeholder}
           ref={ref}
           onChange={onChange}
           defaultValue={defaultValue}
           onFocus={() => setHasFocus(true)}
           onBlur={() => setHasFocus(false)}
+          {...props}
         />
+        {suffix && (
+          <span sx={{ variant: 'elements.simple-input.affix.suffix' }}>
+            {suffix}
+          </span>
+        )}
       </div>
     )
   }

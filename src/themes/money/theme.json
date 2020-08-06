@@ -785,6 +785,9 @@
         },
         "prefix": {
           "variant": "elements.simple-input.affix.base"
+        },
+        "suffix": {
+          "variant": "elements.simple-input.affix.base"
         }
       },
       "variants": {

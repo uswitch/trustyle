@@ -30,6 +30,14 @@ export const Example = () => {
       <SimpleInput prefix="£" name="example" type="text" />
       <Spacer />
       <SimpleInput
+        suffix="years"
+        name="example"
+        type="number"
+        min="1"
+        max="5"
+      />
+      <Spacer />
+      <SimpleInput
         hasError
         prefix="£"
         name="example"
