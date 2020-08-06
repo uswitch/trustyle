@@ -8,7 +8,7 @@ import AllThemes from '../../../utils/all-themes'
 import AuthorProfile from './'
 
 export default {
-  title: 'Elements|AuthorProfile'
+  title: 'Elements/AuthorProfile'
 }
 
 export const ExampleWithKnobs = () => {

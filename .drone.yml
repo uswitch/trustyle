@@ -14,13 +14,36 @@ pipeline:
       - npm install
       - npx lerna bootstrap --no-ci
 
-  code_checks:
+  build-storybook:
     when:
       event: [push]
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
     commands:
+      - npm run build-storybook
+
+  eslint:
+    when:
+      event: [push]
+    image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    group: checks
+    commands:
       - npm run eslint:check
+
+  prettier:
+    when:
+      event: [push]
+    image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    group: checks
+    commands:
       - npm run prettier:check
+
+  a11y:
+    when:
+      event: [push]
+    image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    group: checks
+    commands:
+      - npm run a11y
 
   build:
     when:

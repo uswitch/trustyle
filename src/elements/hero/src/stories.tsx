@@ -13,7 +13,7 @@ import Author from '../../../elements/author/src'
 import Hero from './'
 
 export default {
-  title: 'Elements|Hero'
+  title: 'Elements/Hero'
 }
 
 type Variant = 'base' | 'light'

@@ -6,7 +6,12 @@ module.exports = ({ config }) => {
     test: /\.tsx?$/,
     loader: 'babel-loader',
     options: {
-      presets: ['@babel/typescript', '@babel/preset-react', '@babel/preset-env']
+      presets: [
+        '@babel/typescript',
+        '@babel/preset-react',
+        '@babel/preset-env'
+      ],
+      plugins: ['emotion']
     }
   })
   config.resolve.extensions.push('.ts', '.tsx')

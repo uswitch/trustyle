@@ -8,7 +8,7 @@ import AllThemes from '../../../utils/all-themes'
 import SponsoredByTag from '.'
 
 export default {
-  title: 'Elements|Sponsored by tag'
+  title: 'Elements/Sponsored by tag'
 }
 
 export const ExampleWithDefaultText = () => {

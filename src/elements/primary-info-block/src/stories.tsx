@@ -8,7 +8,7 @@ import AllThemes from '../../../utils/all-themes'
 import PrimaryInfoBlock from './'
 
 export default {
-  title: 'Elements|Primary Info Block'
+  title: 'Elements/Primary Info Block'
 }
 
 export const Example = () => {

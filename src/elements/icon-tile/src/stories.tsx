@@ -9,7 +9,7 @@ import AllThemes from '../../../utils/all-themes'
 import IconTile, { DisplayVariant } from './'
 
 export default {
-  title: 'Elements|Icon Tile'
+  title: 'Elements/Icon Tile'
 }
 
 export const ExampleWithKnobs = () => {

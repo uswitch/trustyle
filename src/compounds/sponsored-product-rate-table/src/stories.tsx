@@ -8,7 +8,7 @@ import AllThemes from '../../../utils/all-themes'
 import SponsoredRateTable from '.'
 
 export default {
-  title: 'Compounds|Sponsored Product Rate Table'
+  title: 'Compounds/Sponsored Product Rate Table'
 }
 
 export const ExampleWithKnobs = () => {

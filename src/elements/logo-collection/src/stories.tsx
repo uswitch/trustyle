@@ -5,7 +5,7 @@ import { jsx } from 'theme-ui'
 import LogoCollection from '.'
 
 export default {
-  title: 'Elements|Logo Collection'
+  title: 'Elements/Logo Collection'
 }
 
 const images = [

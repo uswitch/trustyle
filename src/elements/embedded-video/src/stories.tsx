@@ -8,7 +8,7 @@ import EmbeddedVideo from './'
 const UswitchAdvert = 'https://www.youtube.com/embed/1cy0Buice_0'
 const vimeoVid = 'https://player.vimeo.com/video/182592195'
 
-storiesOf('Elements|Embedded-video', module)
+storiesOf('Elements/Embedded-video', module)
   .addParameters({ percy: { skip: true } })
   .add('primary variant', () => (
     <EmbeddedVideo

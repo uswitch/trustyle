@@ -9,7 +9,7 @@ import AllThemes from '../../../utils/all-themes'
 import Card from './'
 
 export default {
-  title: 'Elements|Card'
+  title: 'Elements/Card'
 }
 
 export const VerticalCards = () => {

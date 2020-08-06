@@ -10,7 +10,7 @@ import { FilledArrow } from '../../../elements/icon/src/filled-arrow'
 import HeroCard from '.'
 
 export default {
-  title: 'Compounds|HeroCard'
+  title: 'Compounds/HeroCard'
 }
 
 const title: string = text(

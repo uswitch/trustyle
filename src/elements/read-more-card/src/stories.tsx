@@ -8,7 +8,7 @@ import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
 import ReadMoreCard from './'
 
 export default {
-  title: 'Elements|Read More Card'
+  title: 'Elements/Read More Card'
 }
 
 export const ExampleWithKnobs = () => {

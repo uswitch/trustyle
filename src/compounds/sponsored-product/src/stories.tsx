@@ -8,7 +8,7 @@ import AllThemes from '../../../utils/all-themes'
 import SponsoredProduct from '.'
 
 export default {
-  title: 'Compounds|Sponsored product'
+  title: 'Compounds/Sponsored product'
 }
 
 export const ExampleWithKnobs = () => {
