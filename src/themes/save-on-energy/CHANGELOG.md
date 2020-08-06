@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.8.0...@uswitch/trustyle.save-on-energy-theme@1.9.0) (2020-08-06)
+
+
+### Features
+
+* add suffix to simple input component ([0dfae68](https://github.com/uswitch/trustyle/commit/0dfae68))
+
+
+
+
+
 # [1.8.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.7.0...@uswitch/trustyle.save-on-energy-theme@1.8.0) (2020-08-05)
 
 
