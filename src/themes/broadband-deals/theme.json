@@ -999,7 +999,7 @@
     },
     "root": {
       "fontFamily": "base",
-      "fontSize": "md",
+      "fontSize": "base",
       "fontWeight": "base",
       "lineHeight": "base",
       "color": "grey-80",
