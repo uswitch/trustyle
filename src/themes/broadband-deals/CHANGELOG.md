@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.4.1...@uswitch/trustyle.broadband-deals-theme@1.4.2) (2020-08-07)
+
+
+### Bug Fixes
+
+* bbdeals font size base ([3f2b239](https://github.com/uswitch/trustyle/commit/3f2b239))
+
+
+
+
+
 ## [1.4.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.4.0...@uswitch/trustyle.broadband-deals-theme@1.4.1) (2020-08-06)
 
 
