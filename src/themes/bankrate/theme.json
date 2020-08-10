@@ -932,6 +932,13 @@
           }
         }
       }
+    },
+    "calculator": {
+      "label":{
+        "variant": "styles.h3",
+        "textAlign": ["left", "center"], 
+        "mb": "24px"
+      }
     }
   },
   "compounds": {
