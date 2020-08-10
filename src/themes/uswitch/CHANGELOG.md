@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.1-alpha.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@1.8.0...@uswitch/trustyle.uswitch-theme@1.8.1-alpha.0) (2020-08-10)
+
+
+### Bug Fixes
+
+* various theme fixes for leafeon ([458313f](https://github.com/uswitch/trustyle/commit/458313f))
+
+
+
+
+
 # [1.8.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@1.6.0...@uswitch/trustyle.uswitch-theme@1.8.0) (2020-08-06)
 
 
