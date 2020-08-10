@@ -426,26 +426,26 @@
       },
       "title": {
         "a": {
-          "fontWeight": "xbold",
-          "color": "uswitch-navy",
-          "fontSize": ["sm", "md"]
+          "fontWeight": "bold",
+          "color": "grey-80",
+          "fontSize": "xxs"
         }
       },
       "subtitle": {
         "lineHeight": ["base", "heading"],
         "paddingBottom": 0,
         "a": {
-          "fontSize": ["xxs", "sm"],
-          "fontWeight": "xbold",
+          "fontSize": "xxs",
+          "fontWeight": "base",
           "border": "none",
-          "color": "grey-60"
+          "color": "grey-70"
         }
       },
       "base": {
         "a": {
           "border": "none"
         },
-        "mb": "xs"
+        "mb": "sm"
       },
       "condensed": {
         "title": {
