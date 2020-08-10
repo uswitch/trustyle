@@ -1097,19 +1097,32 @@
       },
       "drop-down": {
         "select": {
-          "fontFamily": "base",
-          "fontSize": "base",
-          "lineHeight": "1.33",
-          "appearance": "none",
-          "backgroundColor": "white",
-          "boxSizing": "border-box",
-          "padding": 16,
-          "paddingRight": 48,
-          "verticalAlign": "middle",
-          "borderRadius": 0,
-          "width": "100%",
-          "&::-ms-expand": {
-            "display": "none"
+          "base": {
+            "cursor": "pointer",
+            "fontFamily": "base",
+            "fontSize": "base",
+            "lineHeight": "1.33",
+            "appearance": "none",
+            "backgroundColor": "white",
+            "boxSizing": "border-box",
+            "padding": 16,
+            "paddingRight": 48,
+            "verticalAlign": "middle",
+            "borderRadius": 0,
+            "width": "100%",
+            "&::-ms-expand": {
+              "display": "none"
+            }
+          },
+          "error": {
+            "variant": "elements.form.drop-down.select.base",
+            "border": "2px solid",
+            "borderColor": "error",
+            "outlineColor": "error"
+          },
+          "focus": {
+            "variant": "elements.form.drop-down.select.base",
+            "outlineColor": "plum"
           }
         },
         "span": {
