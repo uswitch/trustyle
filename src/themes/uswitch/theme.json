@@ -965,8 +965,9 @@
     },
     "call-out": {
       "main": {
-        "backgroundColor": "light-1",
-        "padding": 0,
+        "backgroundColor": "grey-05",
+        "px": ["md"],
+        "py": ["md"],
         "fontSize": [16, 16, 18]
       },
       "heading": {
