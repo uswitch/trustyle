@@ -708,26 +708,17 @@
       "base": {
         "main": {
           "position": "relative",
-          "borderWidth": 1,
-          "borderStyle": "solid",
-          "borderColor": "grey-10",
+          "backgroundColor": "grey-05",
           "paddingRight": ["md", "lg"],
           "paddingLeft": [34, 42],
           "paddingY": "md",
-          "mb": "sm",
-          "::before": {
-            "position": "absolute",
-            "top": "0",
-            "left": "0",
-            "content": "\" \"",
-            "display": "block",
-            "width": 8,
-            "height": "100%",
-            "backgroundColor": "blue-75"
-          }
+          "mb": "sm"
         },
         "button": {
           "buttonVariant": "primary",
+          "&:hover": {
+            "color": "white"
+          },
           "width": "auto"
         }
       },
