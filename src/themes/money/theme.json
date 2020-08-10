@@ -1094,6 +1094,33 @@
       },
       "button": {
         "my": "sm"
+      },
+      "drop-down": {
+        "select": {
+          "fontFamily": "base",
+          "fontSize": "base",
+          "lineHeight": "1.33",
+          "appearance": "none",
+          "backgroundColor": "white",
+          "boxSizing": "border-box",
+          "padding": 16,
+          "paddingRight": 48,
+          "verticalAlign": "middle",
+          "borderRadius": 0,
+          "width": "100%",
+          "&::-ms-expand": {
+            "display": "none"
+          }
+        },
+        "span": {
+          "height": 15,
+          "width": 15,
+          "pointerEvents": "none",
+          "position": "absolute",
+          "right": 16,
+          "top": "calc(50% - 15px / 2)",
+          "variant": "elements.drop-down.icon"
+        }
       }
     },
     "rich-text-block": {
