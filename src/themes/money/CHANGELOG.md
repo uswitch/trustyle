@@ -3,7 +3,72 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.7.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.7.0...@uswitch/trustyle.money-theme@1.7.1) (2020-07-28)
+# [1.11.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.8.0...@uswitch/trustyle.money-theme@1.11.0) (2020-08-06)
+
+
+### Bug Fixes
+
+* fixed formatting of theme.json files ([16e04cd](https://github.com/uswitch/trustyle/commit/16e04cd))
+
+
+### Features
+
+* add focus handling ([4215516](https://github.com/uswitch/trustyle/commit/4215516))
+* add prefix to simple input component ([f9799ec](https://github.com/uswitch/trustyle/commit/f9799ec))
+* add suffix to simple input component ([68f766d](https://github.com/uswitch/trustyle/commit/68f766d))
+* added sponsorship-tag-and-logo design to trustyle themes ([edb5442](https://github.com/uswitch/trustyle/commit/edb5442))
+* merge with master ([8061e27](https://github.com/uswitch/trustyle/commit/8061e27))
+* remove prefix border from Money ([37563be](https://github.com/uswitch/trustyle/commit/37563be))
+* update prefix and suffix designs for Money ([735b844](https://github.com/uswitch/trustyle/commit/735b844))
+
+
+
+
+
+# [1.10.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.9.0...@uswitch/trustyle.money-theme@1.10.0) (2020-08-06)
+
+
+### Features
+
+* add suffix to simple input component ([0dfae68](https://github.com/uswitch/trustyle/commit/0dfae68))
+* update prefix and suffix designs for Money ([98fc672](https://github.com/uswitch/trustyle/commit/98fc672))
+
+
+
+
+
+# [1.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.8.0...@uswitch/trustyle.money-theme@1.9.0) (2020-08-05)
+
+
+### Bug Fixes
+
+* fixed formatting of theme.json files ([16e04cd](https://github.com/uswitch/trustyle/commit/16e04cd))
+
+
+### Features
+
+* add focus handling ([4215516](https://github.com/uswitch/trustyle/commit/4215516))
+* add prefix to simple input component ([f9799ec](https://github.com/uswitch/trustyle/commit/f9799ec))
+* added sponsorship-tag-and-logo design to trustyle themes ([edb5442](https://github.com/uswitch/trustyle/commit/edb5442))
+* merge with master ([8061e27](https://github.com/uswitch/trustyle/commit/8061e27))
+* remove prefix border from Money ([37563be](https://github.com/uswitch/trustyle/commit/37563be))
+
+
+
+
+
+# [1.8.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.7.1...@uswitch/trustyle.money-theme@1.8.0) (2020-08-03)
+
+
+### Features
+
+* bbdeals ([79ff8f8](https://github.com/uswitch/trustyle/commit/79ff8f8))
+
+
+
+
+
+## [1.7.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.7.0...@uswitch/trustyle.money-theme@1.7.2) (2020-08-03)
 
 
 ### Bug Fixes
@@ -14,56 +79,70 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [1.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.6.1...@uswitch/trustyle.money-theme@1.7.0) (2020-07-28)
-
+## [1.7.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.7.0...@uswitch/trustyle.money-theme@1.7.1) (2020-07-28)
 
 ### Bug Fixes
 
-* update packages, rebased on master ([0d7a48d](https://github.com/uswitch/trustyle/commit/0d7a48d))
+- update money theme to increase powered by logo size ([0910de9](https://github.com/uswitch/trustyle/commit/0910de9))
 
+# [1.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.6.1...@uswitch/trustyle.money-theme@1.7.0) (2020-07-28)
+
+### Bug Fixes
+
+- update packages, rebased on master ([0d7a48d](https://github.com/uswitch/trustyle/commit/0d7a48d))
 
 ### Features
 
-* Implement icon color through theme.json ([2d3020f](https://github.com/uswitch/trustyle/commit/2d3020f))
-* Implement icon color through theme.json ([f0fb94e](https://github.com/uswitch/trustyle/commit/f0fb94e))
-
-
-
-
+- Implement icon color through theme.json ([2d3020f](https://github.com/uswitch/trustyle/commit/2d3020f))
+- Implement icon color through theme.json ([f0fb94e](https://github.com/uswitch/trustyle/commit/f0fb94e))
 
 ## [1.6.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.6.0...@uswitch/trustyle.money-theme@1.6.1) (2020-07-27)
 
-
 ### Bug Fixes
 
-* product table cell positioning tweaks ([832f87d](https://github.com/uswitch/trustyle/commit/832f87d))
-
-
-
-
+- product table cell positioning tweaks ([832f87d](https://github.com/uswitch/trustyle/commit/832f87d))
 
 # [1.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.5.0...@uswitch/trustyle.money-theme@1.6.0) (2020-07-27)
 
-
 ### Features
 
-* move form styling to themes ([3a1b83d](https://github.com/uswitch/trustyle/commit/3a1b83d))
-
-
-
-
+- move form styling to themes ([3a1b83d](https://github.com/uswitch/trustyle/commit/3a1b83d))
 
 # [1.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.4.0...@uswitch/trustyle.money-theme@1.5.0) (2020-07-24)
 
+### Bug Fixes
+
+- update money theme to increase powered by logo size ([0910de9](https://github.com/uswitch/trustyle/commit/0910de9))
+
+# [1.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.6.1...@uswitch/trustyle.money-theme@1.7.0) (2020-07-28)
+
+### Bug Fixes
+
+- update packages, rebased on master ([0d7a48d](https://github.com/uswitch/trustyle/commit/0d7a48d))
 
 ### Features
 
-* move icon styling to themes ([5002464](https://github.com/uswitch/trustyle/commit/5002464))
-* move image sizing to component ([0294f4d](https://github.com/uswitch/trustyle/commit/0294f4d))
+- Implement icon color through theme.json ([2d3020f](https://github.com/uswitch/trustyle/commit/2d3020f))
+- Implement icon color through theme.json ([f0fb94e](https://github.com/uswitch/trustyle/commit/f0fb94e))
 
+## [1.6.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.6.0...@uswitch/trustyle.money-theme@1.6.1) (2020-07-27)
 
+### Bug Fixes
 
+- product table cell positioning tweaks ([832f87d](https://github.com/uswitch/trustyle/commit/832f87d))
 
+# [1.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.5.0...@uswitch/trustyle.money-theme@1.6.0) (2020-07-27)
+
+### Features
+
+- move form styling to themes ([3a1b83d](https://github.com/uswitch/trustyle/commit/3a1b83d))
+
+# [1.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.4.0...@uswitch/trustyle.money-theme@1.5.0) (2020-07-24)
+
+### Features
+
+- move icon styling to themes ([5002464](https://github.com/uswitch/trustyle/commit/5002464))
+- move image sizing to component ([0294f4d](https://github.com/uswitch/trustyle/commit/0294f4d))
 
 # [1.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.3.0...@uswitch/trustyle.money-theme@1.4.0) (2020-07-23)
 

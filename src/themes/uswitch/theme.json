@@ -318,7 +318,6 @@
       "textDecoration": "none",
       "borderBottom": "1px dashed #898991",
       "lineHeight": "31px",
-      "fontSize": ["base", "md"],
       "fontWeight": "bold",
       "& svg": {
         "fill": "light-1",
@@ -381,10 +380,17 @@
   "----------------------------- Variants": "-----------------------------",
   "elements": {
     "list": {
-      "pros": { "color": "green" },
-      "cons": { "color": "red" },
+      "pros": {
+        "color": "green"
+      },
+      "cons": {
+        "color": "red"
+      },
       "pros-and-cons": {
-        "title": { "color": "grey-60", "fontSize": "sm" },
+        "title": {
+          "color": "grey-60",
+          "fontSize": "sm"
+        },
         "base": {
           "paddingY": "sm",
           "paddingLeft": [0, 0],
@@ -396,7 +402,9 @@
             "lineHeight": "sm",
             "display": "flex",
             "alignItems": "center",
-            "::before": { "display": "none" }
+            "::before": {
+              "display": "none"
+            }
           },
           ":last-child": {
             "marginBottom": "0"
@@ -479,7 +487,11 @@
           "width": [40, 40],
           "height": [40, 40]
         },
-        "base": { "a": { "variant": "elements.author.base.a" } }
+        "base": {
+          "a": {
+            "variant": "elements.author.base.a"
+          }
+        }
       }
     },
     "overlay": {
@@ -1099,7 +1111,9 @@
             "outline": "2px solid",
             "outlineColor": "#008fe9"
           },
-          "&::-moz-focus-inner": { "border": 0 }
+          "&::-moz-focus-inner": {
+            "border": 0
+          }
         },
         "hidden": {
           "display": "none"
@@ -1289,36 +1303,74 @@
         "lineHeight": 1.33,
         "color": "text",
         "appearance": "none",
-        "border": "solid 1px",
+        "border": "none",
+        "background": "none",
         "boxSizing": "border-box",
         "display": "flex",
         "flex": 1,
         "position": "relative",
         "verticalAlign": "middle",
         "width": "100%",
+        "padding": "sm",
+        "&:focus": {
+          "outline": "none"
+        },
+        "&:disabled": {
+          "outline": "none"
+        }
+      },
+      "wrapper": {
+        "border": "solid 1px",
+        "display": "flex",
+        "position": "relative",
         "boxShadow": "formInput",
         "borderColor": "primary",
         "backgroundColor": "white",
         "borderRadius": "0px",
-        "padding": "16px",
-        "&:focus": {
-          "outline": "none",
-          "color": "primary",
-          "borderColor": "primary",
-          "boxShadow": "focusInput"
-        },
         "&:disabled": {
           "outline": "none",
           "border": "none",
           "color": "battleshipGrey",
-          "backgroundColor": "veryLightGrey"
+          "backgroundColor": "veryLightGrey",
+          "span": {
+            "color": "battleshipGrey"
+          }
+        }
+      },
+      "affix": {
+        "base": {
+          "alignItems": "center",
+          "display": "flex",
+          "color": "text",
+          "my": "xxs",
+          "px": "xs"
+        },
+        "prefix": {
+          "variant": "elements.simple-input.affix.base",
+          "borderRightStyle": "solid",
+          "borderRightWidth": 1
+        },
+        "suffix": {
+          "variant": "elements.simple-input.affix.base",
+          "borderLeftStyle": "solid",
+          "borderLeftWidth": 1
         }
       },
       "variants": {
         "error": {
-          "variant": "elements.simple-input.base",
+          "variant": "elements.simple-input.wrapper",
           "borderColor": "tomato",
           "boxShadow": "errorInput"
+        },
+        "focus": {
+          "variant": "elements.simple-input.wrapper",
+          "outline": "none",
+          "color": "primary",
+          "borderColor": "primary",
+          "boxShadow": "focusInput",
+          "span": {
+            "color": "primary"
+          }
         }
       }
     },
@@ -1348,6 +1400,52 @@
         },
         "image": {
           "height": [40, 56]
+        }
+      }
+    },
+    "sponsorship": {
+      "base": {
+        "alignItems": "center",
+        "display": "flex",
+        "flex": "none",
+        "order": 0,
+        "fontSize": "md",
+        "alignSelf": "center",
+        "margin": "8px 8px",
+        "image": {
+          "position": "static",
+          "width": 39.24,
+          "order": 1,
+          "alignSelf": "center"
+        },
+        "content": {
+          "padding": 0,
+          "position": "static",
+          "height": 27,
+          "left": 0,
+          "color": "grey-60"
+        }
+      },
+      "variants": {
+        "leftAligned": {
+          "variant": "elements.sponsorship.base",
+          "justifyContent": "flex-start",
+          "content": {
+            "variant": "elements.sponsorship.base.content"
+          },
+          "image": {
+            "variant": "elements.sponsorship.base.image"
+          }
+        },
+        "rightAligned": {
+          "variant": "elements.sponsorship.base",
+          "justifyContent": "flex-end",
+          "image": {
+            "variant": "elements.sponsorship.base.image"
+          },
+          "content": {
+            "variant": "elements.sponsorship.base.content"
+          }
         }
       }
     }
@@ -1918,6 +2016,13 @@
       }
     },
     "side-nav": {
+      "accordion": {
+        "button": {
+          "fontSize": "sm",
+          "backgroundColor": "grey-05",
+          "paddingX": "sm"
+        }
+      },
       "internalLinkList": {
         "listStyle": "none",
         "paddingLeft": 0,
@@ -1941,10 +2046,10 @@
           }
         },
         "isActive": {
-          "variant": "sideNav.internalLinkListItem.base",
+          "variant": "compounds.side-nav.internalLinkListItem.base",
           "color": "primary",
           "::after": {
-            "variant": "sideNav.internalLinkListItem.base.::after",
+            "variant": "compounds.side-nav.internalLinkListItem.base.::after",
             "content": "\"\"",
             "position": "absolute",
             "top": "0",
@@ -1955,7 +2060,7 @@
             "backgroundColor": "primary"
           },
           ">a": {
-            "variant": "sideNav.internalLinkListItem.base.>a",
+            "variant": "compounds.side-nav.internalLinkListItem.base.>a",
             "color": "primary",
             ":visited": {
               "color": "primary"
@@ -1965,11 +2070,17 @@
       },
       "additionalLink": {
         "display": "block",
-        "marginBottom": "xxs",
         "color": "grey-80",
-        "paddingTop": "xxs",
-        "paddingBottom": "xxs",
-        "textDecoration": "none"
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "paddingLeft": "0",
+        "borderWidth": "1px 0 0 0",
+        "borderStyle": "solid",
+        "borderColor": "grey-20",
+        "fontSize": "sm",
+        "a": {
+          "textDecoration": "none"
+        }
       }
     }
   },

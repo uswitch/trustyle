@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.7.0...@uswitch/trustyle.journey-theme@2.9.0) (2020-08-06)
+
+
+### Features
+
+* add suffix to simple input component ([68f766d](https://github.com/uswitch/trustyle/commit/68f766d))
+
+
+
+
+
+# [2.8.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.7.0...@uswitch/trustyle.journey-theme@2.8.0) (2020-08-06)
+
+
+### Features
+
+* add suffix to simple input component ([0dfae68](https://github.com/uswitch/trustyle/commit/0dfae68))
+
+
+
+
+
+# [2.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.6.0...@uswitch/trustyle.journey-theme@2.7.0) (2020-08-05)
+
+
+### Features
+
+* Add gas-electricity Icon ([dc4e461](https://github.com/uswitch/trustyle/commit/dc4e461))
+
+
+
+
+
+# [2.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.5.0...@uswitch/trustyle.journey-theme@2.6.0) (2020-08-05)
+
+
+### Features
+
+* add focus handling ([4215516](https://github.com/uswitch/trustyle/commit/4215516))
+* add prefix to simple input component ([f9799ec](https://github.com/uswitch/trustyle/commit/f9799ec))
+
+
+
+
+
 # [2.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.4.0...@uswitch/trustyle.journey-theme@2.5.0) (2020-07-27)
 
 

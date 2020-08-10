@@ -3,6 +3,69 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@1.6.0...@uswitch/trustyle.uswitch-theme@1.8.0) (2020-08-06)
+
+
+### Features
+
+* add suffix to simple input component ([68f766d](https://github.com/uswitch/trustyle/commit/68f766d))
+
+
+
+
+
+# [1.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@1.6.0...@uswitch/trustyle.uswitch-theme@1.7.0) (2020-08-06)
+
+
+### Features
+
+* add suffix to simple input component ([0dfae68](https://github.com/uswitch/trustyle/commit/0dfae68))
+
+
+
+
+
+# [1.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@1.5.2...@uswitch/trustyle.uswitch-theme@1.6.0) (2020-08-05)
+
+
+### Bug Fixes
+
+* fixed formatting of theme.json files ([16e04cd](https://github.com/uswitch/trustyle/commit/16e04cd))
+
+
+### Features
+
+* add focus handling ([4215516](https://github.com/uswitch/trustyle/commit/4215516))
+* add prefix to simple input component ([f9799ec](https://github.com/uswitch/trustyle/commit/f9799ec))
+* added sponsorship-tag-and-logo design to trustyle themes ([edb5442](https://github.com/uswitch/trustyle/commit/edb5442))
+* merge with master ([8061e27](https://github.com/uswitch/trustyle/commit/8061e27))
+
+
+
+
+
+## [1.5.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@1.5.1...@uswitch/trustyle.uswitch-theme@1.5.2) (2020-08-03)
+
+
+### Bug Fixes
+
+* breadcrumb sizing ([17d4fbd](https://github.com/uswitch/trustyle/commit/17d4fbd))
+
+
+
+
+
+## [1.5.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@1.5.0...@uswitch/trustyle.uswitch-theme@1.5.1) (2020-08-03)
+
+
+### Bug Fixes
+
+* issue with broken side nav on uswitch ([5225314](https://github.com/uswitch/trustyle/commit/5225314))
+
+
+
+
+
 # [1.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@1.4.0...@uswitch/trustyle.uswitch-theme@1.5.0) (2020-07-28)
 
 

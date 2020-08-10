@@ -55,8 +55,8 @@ export const Button: React.FC<Props> = ({
   variant,
   iconPosition = null,
   onClick,
-  size = 'large',
   inverse = false,
+  size = 'large',
   ...props
 }) => {
   const { theme }: any = useThemeUI()
