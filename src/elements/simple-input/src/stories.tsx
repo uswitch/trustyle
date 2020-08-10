@@ -27,6 +27,24 @@ export const Example = () => {
       <Spacer />
       <SimpleInput hasError name="example" type="text" defaultValue="Error" />
       <Spacer />
+      <SimpleInput prefix="£" name="example" type="text" />
+      <Spacer />
+      <SimpleInput
+        suffix="years"
+        name="example"
+        type="number"
+        min="1"
+        max="5"
+      />
+      <Spacer />
+      <SimpleInput
+        hasError
+        prefix="£"
+        name="example"
+        type="text"
+        defaultValue="Error"
+      />
+      <Spacer />
       <SimpleInput
         ref={inputRef}
         name="example"

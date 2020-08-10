@@ -3,38 +3,119 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.4.0...@uswitch/trustyle.save-on-energy-theme@1.5.0) (2020-07-28)
+# [1.10.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.7.0...@uswitch/trustyle.save-on-energy-theme@1.10.0) (2020-08-06)
 
 
 ### Bug Fixes
 
-* update packages, rebased on master ([0d7a48d](https://github.com/uswitch/trustyle/commit/0d7a48d))
+* fixed formatting of theme.json files ([16e04cd](https://github.com/uswitch/trustyle/commit/16e04cd))
 
 
 ### Features
 
-* Implement icon color through theme.json ([2d3020f](https://github.com/uswitch/trustyle/commit/2d3020f))
-* Implement icon color through theme.json ([f0fb94e](https://github.com/uswitch/trustyle/commit/f0fb94e))
+* add focus handling ([4215516](https://github.com/uswitch/trustyle/commit/4215516))
+* add prefix to simple input component ([f9799ec](https://github.com/uswitch/trustyle/commit/f9799ec))
+* add suffix to simple input component ([68f766d](https://github.com/uswitch/trustyle/commit/68f766d))
+* added sponsorship-tag-and-logo design to trustyle themes ([edb5442](https://github.com/uswitch/trustyle/commit/edb5442))
+* merge with master ([8061e27](https://github.com/uswitch/trustyle/commit/8061e27))
 
 
 
 
+
+# [1.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.8.0...@uswitch/trustyle.save-on-energy-theme@1.9.0) (2020-08-06)
+
+
+### Features
+
+* add suffix to simple input component ([0dfae68](https://github.com/uswitch/trustyle/commit/0dfae68))
+
+
+
+
+
+# [1.8.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.7.0...@uswitch/trustyle.save-on-energy-theme@1.8.0) (2020-08-05)
+
+
+### Bug Fixes
+
+* fixed formatting of theme.json files ([16e04cd](https://github.com/uswitch/trustyle/commit/16e04cd))
+
+
+### Features
+
+* add focus handling ([4215516](https://github.com/uswitch/trustyle/commit/4215516))
+* add prefix to simple input component ([f9799ec](https://github.com/uswitch/trustyle/commit/f9799ec))
+* added sponsorship-tag-and-logo design to trustyle themes ([edb5442](https://github.com/uswitch/trustyle/commit/edb5442))
+* merge with master ([8061e27](https://github.com/uswitch/trustyle/commit/8061e27))
+
+
+
+
+
+# [1.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.6.0...@uswitch/trustyle.save-on-energy-theme@1.7.0) (2020-08-03)
+
+
+### Features
+
+* bbdeals ([79ff8f8](https://github.com/uswitch/trustyle/commit/79ff8f8))
+
+
+
+
+
+# [1.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.5.0...@uswitch/trustyle.save-on-energy-theme@1.6.0) (2020-08-03)
+
+
+### Features
+
+* add header theme to soe ([b31481b](https://github.com/uswitch/trustyle/commit/b31481b))
+
+
+
+
+
+# [1.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.4.0...@uswitch/trustyle.save-on-energy-theme@1.5.0) (2020-07-28)
+
+### Bug Fixes
+
+- update packages, rebased on master ([0d7a48d](https://github.com/uswitch/trustyle/commit/0d7a48d))
+
+### Features
+
+- Implement icon color through theme.json ([2d3020f](https://github.com/uswitch/trustyle/commit/2d3020f))
+- Implement icon color through theme.json ([f0fb94e](https://github.com/uswitch/trustyle/commit/f0fb94e))
 
 # [1.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.3.0...@uswitch/trustyle.save-on-energy-theme@1.4.0) (2020-07-27)
 
-
 ### Bug Fixes
 
-* styling fixes in theme ([9d2db2f](https://github.com/uswitch/trustyle/commit/9d2db2f))
-
+- styling fixes in theme ([9d2db2f](https://github.com/uswitch/trustyle/commit/9d2db2f))
 
 ### Features
 
-* move form styling to themes ([3a1b83d](https://github.com/uswitch/trustyle/commit/3a1b83d))
+- move form styling to themes ([3a1b83d](https://github.com/uswitch/trustyle/commit/3a1b83d))
 
+# [1.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.1.1...@uswitch/trustyle.save-on-energy-theme@1.3.0) (2020-07-22)
 
+### Bug Fixes
 
+- update packages, rebased on master ([0d7a48d](https://github.com/uswitch/trustyle/commit/0d7a48d))
 
+### Features
+
+- Implement icon color through theme.json ([2d3020f](https://github.com/uswitch/trustyle/commit/2d3020f))
+- Implement icon color through theme.json ([f0fb94e](https://github.com/uswitch/trustyle/commit/f0fb94e))
+
+# [1.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.3.0...@uswitch/trustyle.save-on-energy-theme@1.4.0) (2020-07-27)
+
+### Bug Fixes
+
+- styling fixes in theme ([9d2db2f](https://github.com/uswitch/trustyle/commit/9d2db2f))
+
+### Features
+
+- move form styling to themes ([3a1b83d](https://github.com/uswitch/trustyle/commit/3a1b83d))
 
 # [1.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.1.1...@uswitch/trustyle.save-on-energy-theme@1.3.0) (2020-07-22)
 

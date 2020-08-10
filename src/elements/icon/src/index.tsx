@@ -19,6 +19,7 @@ import { Error as ErrorIcon } from './error'
 import { FilledArrow } from './filled-arrow'
 import { Filters } from './filters'
 import { Four } from './four'
+import { GasElectricity } from './gas-electricity'
 import { Home } from './home'
 import { Letter } from './letter'
 import { Location } from './location'
@@ -37,6 +38,8 @@ import { Three } from './three'
 import { Tick } from './tick'
 import { Tv } from './tv'
 import { Two } from './two'
+import { ThumbUp } from './thumb-up'
+import { ThumbDown } from './thumb-down'
 
 export type Glyph =
   | 'arrow'
@@ -54,6 +57,7 @@ export type Glyph =
   | 'filled-arrow'
   | 'filters'
   | 'four'
+  | 'gas-electricity'
   | 'home'
   | 'letter'
   | 'location'
@@ -72,6 +76,9 @@ export type Glyph =
   | 'tick'
   | 'tv'
   | 'two'
+  | 'thumb-up'
+  | 'thumb-down'
+
   // temporary icons
   | 'edit-journey'
 
@@ -125,6 +132,8 @@ export const Icon: React.FC<Props> = ({
       return <Filters color={color} size={size} />
     case 'four':
       return <Four color={color} size={size} />
+    case 'gas-electricity':
+      return <GasElectricity color={color} size={size} />
     case 'home':
       return <Home color={color} size={size} />
     case 'letter':
@@ -161,9 +170,14 @@ export const Icon: React.FC<Props> = ({
       return <Tv color={color} size={size} />
     case 'two':
       return <Two color={color} size={size} />
+    case 'thumb-up':
+      return <ThumbUp color={color} size={size} />
+    case 'thumb-down':
+      return <ThumbDown color={color} size={size} />
     // Temporary icons
     case 'edit-journey':
       return <EditJourney color={color} size={size} />
+
     default:
       return assertNever('glyph', glyph)
   }
