@@ -40,6 +40,8 @@ import { Tv } from './tv'
 import { Two } from './two'
 import { ThumbUp } from './thumb-up'
 import { ThumbDown } from './thumb-down'
+import { StarFilled } from './star-filled'
+import { StarOutlined } from './star-outlined'
 
 export type Glyph =
   | 'arrow'
@@ -78,6 +80,8 @@ export type Glyph =
   | 'two'
   | 'thumb-up'
   | 'thumb-down'
+  | 'star-outlined'
+  | 'star-filled'
 
   // temporary icons
   | 'edit-journey'
@@ -174,6 +178,11 @@ export const Icon: React.FC<Props> = ({
       return <ThumbUp color={color} size={size} />
     case 'thumb-down':
       return <ThumbDown color={color} size={size} />
+    case 'star-filled':
+      return <StarFilled color={color} size={size} />
+    case 'star-outlined':
+      return <StarOutlined color={color} size={size} />
+
     // Temporary icons
     case 'edit-journey':
       return <EditJourney color={color} size={size} />

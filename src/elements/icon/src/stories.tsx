@@ -43,7 +43,9 @@ const glyphChoices: Glyph[] = [
   'two',
   'thumb-down',
   'thumb-up',
-  'edit-journey'
+  'edit-journey',
+  'star-outlined',
+  'star-filled'
 ]
 
 const directionChoices: Direction[] = ['up', 'down', 'right', 'left']
