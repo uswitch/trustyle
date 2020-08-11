@@ -233,6 +233,8 @@
     }
   },
   "accordion": {
+    "iconOpen": "minus",
+    "iconClosed": "plus",
     "base": {
       "content": {
         "mb": "lg",
