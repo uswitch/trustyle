@@ -1,5 +1,4 @@
 /** @jsx jsx */
-
 import { forwardRef, useEffect, useRef, useState } from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
 import { FrozenInput } from '@uswitch/trustyle.frozen-input'
