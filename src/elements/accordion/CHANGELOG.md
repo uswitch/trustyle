@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.6.3...@uswitch/trustyle.accordion@0.6.4) (2020-08-11)
+
+
+### Bug Fixes
+
+* get accordion values from correct part of theme ([a8c2d25](https://github.com/uswitch/trustyle/commit/a8c2d25))
+
+
+
+
+
 ## [0.6.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.6.0...@uswitch/trustyle.accordion@0.6.3) (2020-08-10)
 
 **Note:** Version bump only for package @uswitch/trustyle.accordion
