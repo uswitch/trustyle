@@ -4,7 +4,7 @@ import * as React from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
 
-type Variant = 'pros' | 'cons'
+type Variant = 'pros' | 'cons' | 'checklist'
 
 interface ListProps extends React.OlHTMLAttributes<HTMLUListElement> {
   listType?: 'numeric' | 'bullet'
@@ -125,13 +125,10 @@ export const ListItem: React.FC<ListItemProps> = ({
 
   return (
     <li sx={sx} {...props}>
-      {variant === 'pros' && (
-        <Icon color={theme.elements?.list?.pros.color} glyph="tick" size={24} />
-      )}
-      {variant === 'cons' && (
+      {variant && (
         <Icon
-          color={theme.elements?.list?.cons.color}
-          glyph="cross"
+          color={theme.elements?.list[variant]?.color}
+          glyph={theme.elements?.list[variant]?.glyph}
           size={24}
         />
       )}

@@ -98,6 +98,7 @@
     "watermelon-red": "#F35760",
     "blue-sky": "#1695E2",
     "dark-grey": "#686887",
+    "dark-grey-03": "rgba(104,104,135,0.3)",
     "light-grey": "#E6E6F6",
     "pure-white": "#FFFFFF",
     "pure-black": "#000000"
@@ -263,10 +264,16 @@
         }
       },
       "pros": {
-        "color": "#22ACFF"
+        "color": "blue-sky",
+        "glyph": "tick"
       },
       "cons": {
-        "color": "red"
+        "color": "red",
+        "glyph": "cross"
+      },
+      "checklist": {
+        "color": "blue-sky",
+        "glyph": "tick"
       },
       "pros-and-cons": {
         "base": {
@@ -312,6 +319,31 @@
         }
       },
       "variants": {
+        "checklist": {
+          "base": {
+            "li": {
+              "pl": 0,
+              "::before": {
+                "content": "none"
+              },
+              "svg": {
+                "display": "inline",
+                "mr": ["sm", "md"],
+                "verticalAlign": "middle"
+              }
+            },
+            "border": "1px solid",
+            "borderColor": "dark-grey-03",
+            "borderRadius": "sm",
+            "py": ["sm", "md"],
+            "px": ["md", "lg"]
+          },
+          "title": {
+            "color": "pure-black",
+            "fontWeight": "bold",
+            "fontSize": ["md", "lg"]
+          }
+        },
         "pros": {
           "title": {
             "variant": "elements.list.pros-and-cons.title"
