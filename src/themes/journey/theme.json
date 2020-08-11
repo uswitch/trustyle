@@ -1103,10 +1103,33 @@
         "variant": "styles.h4",
         "color": "grey-80",
         "display": "block",
-        ":not(:first-child)": { "mt": "sm" }
+        ":not(:first-child)": { "mt": "sm" },
+        "variants": {
+          "calculator": {
+            "variant": "styles.h6",
+            "fontWeight": "bold",
+            "color": "grey-80",
+            "display": "block",
+            "mb": "xs",
+            ":not(:first-child)": { 
+              "mt": "xl"
+            }
+          }
+        }
       },
       "button": {
-        "my": "sm"
+        "my": "sm",
+        "wrapper": {
+          "base": {
+            "textAlign": "left"
+          }
+        },
+        "variants": {
+          "calculator": {
+            "mb": "sm",
+            "mt": "md"
+          }
+        }
       }
     },
 
