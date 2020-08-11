@@ -409,6 +409,23 @@
             "color": "grape-purple"
           }
         }
+      },
+      "centered": {
+        "base": {
+          "variant": "elements.author.base",
+          "backgroundColor": "transparent",
+          "justifyContent": "center"
+        },
+        "title": {
+          "variant": "elements.author.title",
+          "color": "pepper-purple"
+        },
+        "subtitle": {
+          "variant": "elements.author.subtitle",
+          "a": {
+            "color": "grape-purple"
+          }
+        }
       }
     }
   },
