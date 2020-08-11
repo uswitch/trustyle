@@ -381,10 +381,16 @@
   "elements": {
     "list": {
       "pros": {
-        "color": "green"
+        "color": "green",
+        "glyph": "tick"
       },
       "cons": {
-        "color": "red"
+        "color": "red",
+        "glyph": "cross"
+      },
+      "checklist": {
+        "color": "green",
+        "glyph": "tick"
       },
       "pros-and-cons": {
         "title": {
@@ -416,6 +422,31 @@
         }
       },
       "variants": {
+        "checklist": {
+          "base": {
+            "li": {
+              "pl": 0,
+              "::before": {
+                "content": "none"
+              },
+              "svg": {
+                "display": "inline",
+                "mr": ["sm", "md"],
+                "verticalAlign": "middle"
+              }
+            },
+            "border": "1px solid",
+            "borderColor": "rgba(104,104,135,0.3)",
+            "borderRadius": "sm",
+            "py": ["sm", "md"],
+            "px": ["md", "lg"]
+          },
+          "title": {
+            "color": "pure-black",
+            "fontWeight": "bold",
+            "fontSize": ["md", "lg"]
+          }
+        },
         "pros": {
           "title": {
             "variant": "elements.list.pros-and-cons.title"
