@@ -1111,7 +1111,7 @@
             "color": "grey-80",
             "display": "block",
             "mb": "xs",
-            ":not(:first-child)": { 
+            ":not(:first-child)": {
               "mt": "xl"
             }
           }
@@ -1154,9 +1154,9 @@
     },
 
     "calculator": {
-      "label":{
+      "label": {
         "variant": "styles.h3",
-        "textAlign": ["left", "center"], 
+        "textAlign": ["left", "center"],
         "mb": "24px"
       },
       "modal": {
@@ -1173,7 +1173,7 @@
           "color": "grey-60"
         },
         "content": {
-          "padding": "lg", 
+          "padding": "lg",
           "pt": "xl",
           "textAlign": "left",
           "h2": {
