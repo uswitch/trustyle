@@ -774,6 +774,13 @@
         "variant": "styles.h3",
         "textAlign": ["left", "center"], 
         "mb": "24px"
+      },
+      "modal": {
+        "textAlign": "center",
+        "cursor": "pointer",
+        "textDecorationLine": "underline",
+        "fontSize": "14px",
+        "color": "grey-60"
       }
     }
   },
