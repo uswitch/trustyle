@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.sponsored-product",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -12,16 +12,16 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.arrangement": "^2.0.16",
-    "@uswitch/trustyle.awards-tag": "^0.0.6",
-    "@uswitch/trustyle.badge": "^2.0.1",
-    "@uswitch/trustyle.button-link": "^2.0.1",
+    "@uswitch/trustyle.arrangement": "^2.0.17",
+    "@uswitch/trustyle.awards-tag": "^0.0.7",
+    "@uswitch/trustyle.badge": "^2.0.2",
+    "@uswitch/trustyle.button-link": "^2.0.2",
     "@uswitch/trustyle.flex-grid": "^0.2.1",
-    "@uswitch/trustyle.grid": "^2.0.9",
-    "@uswitch/trustyle.icon": "^1.12.1",
-    "@uswitch/trustyle.imgix-image": "^0.1.37",
-    "@uswitch/trustyle.primary-info-block": "^0.2.15",
-    "@uswitch/trustyle.sponsored-by-tag": "^2.0.1",
-    "@uswitch/trustyle.usp-tag": "^0.1.1"
+    "@uswitch/trustyle.grid": "^2.0.10",
+    "@uswitch/trustyle.icon": "^1.12.2",
+    "@uswitch/trustyle.imgix-image": "^0.1.38",
+    "@uswitch/trustyle.primary-info-block": "^0.2.16",
+    "@uswitch/trustyle.sponsored-by-tag": "^2.0.2",
+    "@uswitch/trustyle.usp-tag": "^0.1.2"
   }
 }
