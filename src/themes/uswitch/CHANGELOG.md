@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0-alpha.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@1.10.0...@uswitch/trustyle.uswitch-theme@1.11.0-alpha.0) (2020-08-11)
+
+
+### Bug Fixes
+
+* accordion ([3aba324](https://github.com/uswitch/trustyle/commit/3aba324))
+* fixes for uswitch theme ([63bbfdb](https://github.com/uswitch/trustyle/commit/63bbfdb))
+* more uswitch theme fixes ([66adaf6](https://github.com/uswitch/trustyle/commit/66adaf6))
+
+
+
+
+
 # [1.10.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@1.9.2...@uswitch/trustyle.uswitch-theme@1.10.0) (2020-08-11)
 
 
