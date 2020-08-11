@@ -5,7 +5,6 @@ import { jsx } from 'theme-ui'
 import AllThemes from '../../../utils/all-themes'
 
 import { List, ListItem } from './'
-import { BBDealsExample } from '../../hero/src/stories'
 
 export default {
   title: 'Elements|List'
