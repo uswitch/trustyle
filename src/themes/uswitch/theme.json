@@ -227,7 +227,10 @@
       "fontSize": "base",
       "fontWeight": "base",
       "lineHeight": "base",
-      "color": "text"
+      "color": "text",
+      "*": {
+        "boxSizing": "border-box"
+      }
     },
     "headings": {
       "fontFamily": "heading",
@@ -639,7 +642,8 @@
     },
     "category": {
       "main": {
-        "backgroundColor": "blue-50"
+        "backgroundColor": "blue-50",
+        "px": 0
       },
       "heading": {
         "color": "primary"
@@ -853,7 +857,6 @@
     },
     "buttons": {
       "base": {
-        "boxSizing": "border-box",
         "paddingX": "lg",
         "textAlign": "center",
         "fontWeight": "bold",
@@ -1101,7 +1104,6 @@
         "appearance": "none",
         "border": "none",
         "background": "none",
-        "boxSizing": "border-box",
         "display": "flex",
         "flex": 1,
         "position": "relative",
@@ -1119,7 +1121,6 @@
       },
       "wrapper": {
         "backgroundColor": "white",
-        "boxSizing": "border-box",
         "display": "flex",
         "position": "relative",
         "borderRadius": "0px"
@@ -1168,7 +1169,6 @@
           "fontSize": "base",
           "lineHeight": "base",
           "textAlign": "center",
-          "boxSizing": "border-box",
           "alignItems": "center",
           "display": "flex",
           "color": "text"
@@ -1334,7 +1334,6 @@
         "appearance": "none",
         "border": "none",
         "background": "none",
-        "boxSizing": "border-box",
         "display": "flex",
         "flex": 1,
         "position": "relative",
@@ -1754,8 +1753,9 @@
           "lineHeight": "sm"
         },
         "content": {
-          "pt": "lg",
-          "mt": "lg"
+          "& :first-child": {
+            "mt": "xs"
+          }
         },
         "button": {
           "padding": "0",
@@ -1814,7 +1814,6 @@
       "base": {
         "width": "100%",
         "height": "100%",
-        "boxSizing": "border-box",
         "mb": "sm",
         "a": {
           "borderBottom": "none"
