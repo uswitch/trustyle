@@ -64,7 +64,7 @@ const Accordion: React.FC<Props> & {
   }
 
   return (
-    <div sx={{ variant: 'accordion' }} className={className}>
+    <div sx={{ variant: 'compounds.accordion' }} className={className}>
       <button
         sx={{
           cursor: 'pointer',
@@ -152,7 +152,7 @@ const Accordion: React.FC<Props> & {
           '> p:last-child': {
             marginBottom: 'xs'
           },
-          variant: 'accordion.base.content'
+          variant: 'compounds.accordion.base.content'
         }}
       >
         {children}
