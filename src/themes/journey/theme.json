@@ -1103,10 +1103,33 @@
         "variant": "styles.h4",
         "color": "grey-80",
         "display": "block",
-        ":not(:first-child)": { "mt": "sm" }
+        ":not(:first-child)": { "mt": "sm" },
+        "variants": {
+          "calculator": {
+            "variant": "styles.h6",
+            "fontWeight": "bold",
+            "color": "grey-80",
+            "display": "block",
+            "mb": "xs",
+            ":not(:first-child)": {
+              "mt": "xl"
+            }
+          }
+        }
       },
       "button": {
-        "my": "sm"
+        "my": "sm",
+        "wrapper": {
+          "base": {
+            "textAlign": "left"
+          }
+        },
+        "variants": {
+          "calculator": {
+            "mb": "sm",
+            "mt": "md"
+          }
+        }
       }
     },
 
@@ -1126,6 +1149,36 @@
           },
           "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
           "borderRadius": "md"
+        }
+      }
+    },
+
+    "calculator": {
+      "label": {
+        "variant": "styles.h3",
+        "textAlign": ["left", "center"],
+        "mb": "24px"
+      },
+      "modal": {
+        "wrapper": {
+          "width": ["90%", "50%"],
+          "maxHeight": "100%",
+          "backgroundColor": "white"
+        },
+        "label": {
+          "textAlign": "center",
+          "cursor": "pointer",
+          "textDecorationLine": "underline",
+          "fontSize": "sm",
+          "color": "grey-60"
+        },
+        "content": {
+          "padding": "lg",
+          "pt": "xl",
+          "textAlign": "left",
+          "h2": {
+            "variant": "styles.h5"
+          }
         }
       }
     }

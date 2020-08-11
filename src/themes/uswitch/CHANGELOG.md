@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@1.9.2...@uswitch/trustyle.uswitch-theme@1.10.0) (2020-08-11)
+
+
+### Features
+
+* add calculator modal styling to themes ([e51a481](https://github.com/uswitch/trustyle/commit/e51a481))
+* add calculator styling to form and button to all themes ([88db44c](https://github.com/uswitch/trustyle/commit/88db44c))
+* additional modal styles ([f52edd0](https://github.com/uswitch/trustyle/commit/f52edd0))
+* update button size on mobile ([ee5de2e](https://github.com/uswitch/trustyle/commit/ee5de2e))
+
+
+
+
+
 ## [1.9.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@1.9.1...@uswitch/trustyle.uswitch-theme@1.9.2) (2020-08-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
