@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.ad-banner",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -12,8 +12,8 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.badge": "^2.0.0",
-    "@uswitch/trustyle.button-link": "^2.0.0",
-    "@uswitch/trustyle.imgix-image": "^0.1.36"
+    "@uswitch/trustyle.badge": "^2.0.2",
+    "@uswitch/trustyle.button-link": "^2.0.2",
+    "@uswitch/trustyle.imgix-image": "^0.1.38"
   }
 }
