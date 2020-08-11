@@ -1268,11 +1268,30 @@
         "mb": "24px"
       },
       "modal": {
-        "textAlign": "center",
-        "cursor": "pointer",
-        "textDecorationLine": "underline",
-        "fontSize": "14px",
-        "color": "grey-60"
+        "wrapper": {
+          "width": ["90%", "50%"],
+          "maxHeight": "100%",
+          "backgroundColor": "white"
+        },
+        "label": {
+          "textAlign": "center",
+          "cursor": "pointer",
+          "textDecorationLine": "underline",
+          "fontSize": "14px",
+          "color": "grey-60"
+        },
+        "content": {
+          "padding": "lg", 
+          "pt": "xl",
+          "textAlign": "left",
+          "p": {
+            "fontSize": ["xs", "sm"],
+            "color": "grey-80"
+          },
+          "h2": {
+            "variant": "styles.h5"
+          }
+        }
       }
     }
   },
