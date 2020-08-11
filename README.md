@@ -13,19 +13,19 @@ To add a new element, copy the template to the src/elements directory, update th
  
 ## Publishing
 
-Publishing is done through an automated process using Lerna and GitHub Actions. The next version is determined by the commit messages in the PR following the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) approach.
+**Do not do this until you are ready to merge and your PR has been approved!** Justification below.
 
-Here is an example of the release type that will be done based on a commit messages:
+To preview which packages have changed, you can run `npx lerna changed` without publishing.
 
-| Commit message                                                                                                                                                                                   | Release type               |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
-| `fix: adjust width to match design`                                                                                                                             | Patch Release              |
-| `feat: add icon to buttons`                                                                                                                                                       | Feature Release  |
-| `major: remove variant prop`<br><br>`BREAKING CHANGE: You can no longer add a variant prop to buttons, this is handled by the theme prop`| Breaking Release |
-| `chore: Add new check for commits`| N/A |
-| `docs: Update docs to include information about automatic publishing`| N/A |
+Once happy with the code changes, run `npx lerna version` and bump the versions accordingly.
 
-DangedJS is setup to check commits inside PRs to ensure that they follow the rules above.
+Lerna will generate a publish commit. Push that commit to your remote branch and once it gets merged to master, CI will publish the new versions to `npm`.
+
+Why you shouldn't publish until ready to merge:
+
+- You will block anyone else who wants to change that package or any dependents or dependencies until your PR is merged.
+- If changes are requested, you will have to update the version again after making the changes.
+- If you have to merge in master, you will have to update the version again.
 
 ## TODO:
 
