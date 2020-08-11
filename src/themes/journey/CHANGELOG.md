@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.9.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.9.0...@uswitch/trustyle.journey-theme@2.9.1) (2020-08-11)
+
+
+### Bug Fixes
+
+* add list style for journey theme ([05b031f](https://github.com/uswitch/trustyle/commit/05b031f))
+
+
+
+
+
+
 # [2.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.7.0...@uswitch/trustyle.journey-theme@2.9.0) (2020-08-06)
 
 

@@ -12,6 +12,11 @@ export default {
 
 export const Example = () => (
   <div>
+    <List title="Checklist" variant="checklist">
+      <ListItem>First item</ListItem>
+      <ListItem>Second item</ListItem>
+      <ListItem>Third item</ListItem>
+    </List>
     <List title="Pros" variant="pros">
       <ListItem>First item</ListItem>
       <ListItem>Second item</ListItem>

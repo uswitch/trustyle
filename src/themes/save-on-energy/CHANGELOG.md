@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.10.0...@uswitch/trustyle.save-on-energy-theme@1.11.0) (2020-08-11)
+
+
+### Bug Fixes
+
+* add dark grey color with opacity ([18d8e44](https://github.com/uswitch/trustyle/commit/18d8e44))
+
+
+### Features
+
+* add checklist variant to list ([dc9b102](https://github.com/uswitch/trustyle/commit/dc9b102))
+
+
+
+
+
+
 # [1.10.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.7.0...@uswitch/trustyle.save-on-energy-theme@1.10.0) (2020-08-06)
 
 
