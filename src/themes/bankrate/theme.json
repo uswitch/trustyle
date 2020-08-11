@@ -98,7 +98,8 @@
     "tomato": "#DB1818",
     "experimental-text": "#29335C",
     "button-secondary": "#FFFFFF",
-    "button-secondary--hover": "#f0f1f3"
+    "button-secondary--hover": "#f0f1f3",
+    "dark-grey-03": "rgba(104,104,135,0.3)"
   },
   "radii": {
     "sm": 3,
@@ -817,7 +818,7 @@
               }
             },
             "border": "1px solid",
-            "borderColor": "rgba(104,104,135,0.3)",
+            "borderColor": "dark-grey-03",
             "borderRadius": "sm",
             "py": ["sm", "md"],
             "px": ["md", "lg"]

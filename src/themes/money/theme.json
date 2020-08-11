@@ -148,7 +148,8 @@
     "button-secondary": "#34454E",
     "button-secondary--hover": "#5D6A72",
     "button-hollow--hover": "#FFF6E2",
-    "quick-link-bg": "#F1F1F3"
+    "quick-link-bg": "#F1F1F3",
+    "dark-grey-03": "rgba(104,104,135,0.3)"
   },
   "radii": {
     "sm": 3,
@@ -921,7 +922,7 @@
               }
             },
             "border": "1px solid",
-            "borderColor": "rgba(104,104,135,0.3)",
+            "borderColor": "dark-grey-03",
             "borderRadius": "sm",
             "py": ["sm", "md"],
             "px": ["md", "lg"]

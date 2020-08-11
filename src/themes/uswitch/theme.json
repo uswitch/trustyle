@@ -203,7 +203,8 @@
     "battleshipGrey": "#65717B",
     "veryLightGrey": "#E9EBED",
     "tomato": "#DB1818",
-    "overlay-bg": "rgba(20, 20, 36, 0.5)"
+    "overlay-bg": "rgba(20, 20, 36, 0.5)",
+    "dark-grey-03": "rgba(104,104,135,0.3)"
   },
   "radii": {
     "sm": 0,
@@ -436,7 +437,7 @@
               }
             },
             "border": "1px solid",
-            "borderColor": "rgba(104,104,135,0.3)",
+            "borderColor": "dark-grey-03",
             "borderRadius": "sm",
             "py": ["sm", "md"],
             "px": ["md", "lg"]

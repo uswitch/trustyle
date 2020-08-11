@@ -137,7 +137,8 @@
     "veryLightGrey": "#E9EBED",
     "uswitch-navy": "#141424",
     "grey-60": "#6D6F73",
-    "error": "#DB1818"
+    "error": "#DB1818",
+    "dark-grey-03": "rgba(104,104,135,0.3)"
   },
 
   "radii": {
@@ -291,7 +292,7 @@
               }
             },
             "border": "1px solid",
-            "borderColor": "rgba(104,104,135,0.3)",
+            "borderColor": "dark-grey-03",
             "borderRadius": "sm",
             "py": ["sm", "md"],
             "px": ["md", "lg"]
