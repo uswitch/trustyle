@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.0.5...@uswitch/trustyle.input@2.0.6) (2020-08-11)
+
+
+### Bug Fixes
+
+* make the box shadow on the input element fully configurable in the theme. ([615f5c1](https://github.com/uswitch/trustyle/commit/615f5c1))
+
+
+
+
+
 ## [2.0.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.0.2...@uswitch/trustyle.input@2.0.5) (2020-08-10)
 
 **Note:** Version bump only for package @uswitch/trustyle.input
