@@ -1746,26 +1746,23 @@
       }
     },
     "accordion": {
-      "iconOpen": "minus",
-      "iconClosed": "plus",
       "base": {
         "title": {
           "marginTop": "0",
           "fontFamily": "heading",
           "fontSize": "sm",
-          "lineHeight": "sm",
-          "fontWeight": "xbold",
-          "color": "grey-60"
+          "lineHeight": "sm"
         },
-        "content": {},
+        "content": {
+          "pt": "lg",
+          "mt": "lg"
+        },
         "button": {
           "padding": "0",
-          "paddingY": ["sm", "md", "md"],
+          "paddingY": ["xs", "xs", "xs"],
           "bg": "transparent",
-          "fontFamily": "heading",
-          "fontSize": ["sm", "md", "lg"],
+          "fontSize": ["xs", "xs", "sm"],
           "fontWeight": "bold",
-          "color": "heading",
           "alignItems": "center",
           "borderWidth": "0 0 1px 0",
           "borderStyle": "solid",
