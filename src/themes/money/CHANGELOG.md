@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.12.2...@uswitch/trustyle.money-theme@1.13.0) (2020-08-11)
+
+
+### Features
+
+* add form dropdown to money theme ([f999fb6](https://github.com/uswitch/trustyle/commit/f999fb6))
+* move from dropdown to simple dropdown ([18bf24d](https://github.com/uswitch/trustyle/commit/18bf24d))
+* update styles on form dropdown ([6853869](https://github.com/uswitch/trustyle/commit/6853869))
+
+
+
+
+
 ## [1.12.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.12.1...@uswitch/trustyle.money-theme@1.12.2) (2020-08-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme
