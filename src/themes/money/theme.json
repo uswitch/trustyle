@@ -1124,57 +1124,61 @@
     },
 
     "form-section": {
-      "base": {
-        "wrapper": {
-          "backgroundColor": "white",
-          "borderRadius": "4px",
-          "mb": "lg",
-          "color": "plum",
-          "paddingX": "32px",
-          "paddingY": 0,
-          "opacity": 1
-        },
-
-        "fields": {
-          "display": "none"
-        },
-  
-        "heading": {
-          "opacity": 0.4,
-          "display": "flex",
-          "alignItems": "center"
-        }
+      "default": {
+ 
       },
-
-      "variants": {
-        "isActive": {
+      "panel": {
+        "elements": {
           "wrapper": {
-            "variant": "elements.form-section.base.wrapper",
-            "paddingY": "md"
-          },
-          "heading": {
-            "variant": "elements.form-section.base.heading",
-            "display": "none"
-          },
-          "fields": {
-            "display": "block"
-          }
-        },
-        "isComplete": {
-          "wrapper": {
-            "variant": "elements.form-section.base.wrapper"
-          },
-          "heading": {
-            "variant": "elements.form-section.base.heading",
+            "backgroundColor": "white",
+            "borderRadius": "4px",
+            "mb": "lg",
+            "color": "plum",
+            "paddingX": "32px",
+            "paddingY": 0,
             "opacity": 1
           },
+  
           "fields": {
             "display": "none"
+          },
+    
+          "heading": {
+            "opacity": 0.4,
+            "display": "flex",
+            "alignItems": "center"
+          }
+        },
+  
+        "states": {
+          "isActive": {
+            "wrapper": {
+              "variant": "elements.form-section.panel.elements.wrapper",
+              "paddingY": "md"
+            },
+            "heading": {
+              "variant": "elements.form-section.panel.elements.heading",
+              "display": "none"
+            },
+            "fields": {
+              "display": "block"
+            }
+          },
+          "isComplete": {
+            "wrapper": {
+              "variant": "elements.form-section.panel.elements.wrapper"
+            },
+            "heading": {
+              "variant": "elements.form-section.panel.elements.heading",
+              "opacity": 1
+            },
+            "fields": {
+              "display": "none"
+            }
           }
         }
       }
     }
-
   },
 
   "compounds": {
