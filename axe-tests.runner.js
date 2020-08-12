@@ -30,7 +30,6 @@ const BROKEN_STORIES = [
   'Elements/Accordion',
   'Elements/Author',
   'Elements/Breadcrumbs',
-  'Elements/Bullet List Timeline',
   'Elements/Button Link',
   'Elements/Button',
   'Elements/Call Out',
