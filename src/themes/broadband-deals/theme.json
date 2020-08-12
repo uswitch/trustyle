@@ -426,6 +426,18 @@
         },
         "subtitle": {
           "variant": "elements.author.subtitle"
+        },
+        "centered" : {
+          "base": {
+            "variant": "elements.author.base",
+            "justifyContent": "center"
+          },
+          "title": {
+            "variant": "elements.author.title"
+          },
+          "subtitle": {
+            "variant": "elements.author.subtitle"
+          }
         }
       },
       "secondary": {
@@ -442,22 +454,17 @@
           "a": {
             "color": "grape-purple"
           }
-        }
-      },
-      "centered": {
-        "base": {
-          "variant": "elements.author.base",
-          "backgroundColor": "transparent",
-          "justifyContent": "center"
         },
-        "title": {
-          "variant": "elements.author.title",
-          "color": "pepper-purple"
-        },
-        "subtitle": {
-          "variant": "elements.author.subtitle",
-          "a": {
-            "color": "grape-purple"
+        "centered" : {
+          "base": {
+            "variant": "elements.author.secondary.base",
+            "justifyContent": "center"
+          },
+          "title": {
+            "variant": "elements.author.secondary.title"
+          },
+          "subtitle": {
+            "variant": "elements.author.secondary.subtitle"
           }
         }
       }
