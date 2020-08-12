@@ -160,6 +160,46 @@ export const HorizontalCards = () => {
   )
 }
 
+export const HeaderChildrenExample = () => {
+  const title = text('Title', '')
+  const content = text(
+    'Content',
+    'its a card with a picture of a really cute kitten'
+  )
+
+  const imageSize = select(
+    'Image Size',
+    { cover: 'cover', contain: 'contain' },
+    'cover'
+  )
+
+  const img =
+    'https://uswitch-contentful.imgix.net/t014ej9w3ur1/YPnGDSG9aTIPmg1rlWsZu/94483e7cec0dd6ac947e1f974650210f/800.jpg'
+
+  return (
+    <div>
+      <Container>
+        <Card
+          imgSrc={img}
+          imgAlt="Picture of a cute kitten"
+          imgSizes="(max-width: 33vw), 33vw"
+          imageSize={imageSize}
+          title={title}
+          description={content}
+          linkHref="https://www.uswitch.com"
+          variant="headerImage"
+          headerChildren={
+            <div>
+              <h2>Header elements</h2>
+              <span sx={{ color: 'red' }}>comes here</span>
+            </div>
+          }
+        />
+      </Container>
+    </div>
+  )
+}
+
 HorizontalCards.story = {
   parameters: {
     percy: { skip: true }
@@ -172,11 +212,18 @@ VerticalCards.story = {
   }
 }
 
+HeaderChildrenExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
-    <AllThemes themes={['uswitch', 'money']}>
+    <AllThemes themes={['uswitch', 'money', 'broadband-deals']}>
       <VerticalCards />
       <HorizontalCards />
+      <HeaderChildrenExample />
     </AllThemes>
   )
 }

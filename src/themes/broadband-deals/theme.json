@@ -501,6 +501,11 @@
           "lineHeight": "md"
         }
       },
+      "headerChildren": {
+        "display": "flex",
+        "flexDirection": ["column-reverse", "row-reverse"],
+        "justifyContent": "space-between"
+      },
       "variants": {
         "vertical": {
           "&:hover": {},
@@ -525,6 +530,9 @@
           },
           "superScript": {
             "variant": "compounds.card.base.superScript"
+          },
+          "headerChildren": {
+            "variant": "compounds.card.headerChildren"
           },
           "variant": "compounds.card.base"
         },
@@ -553,6 +561,37 @@
             "variant": "compounds.card.base.superScript",
             "pb": "xxs",
             "mt": 0
+          },
+          "headerChildren": {
+            "variant": "compounds.card.headerChildren"
+          }
+        },
+        "headerImage": {
+          "variant": "compounds.card.variants.vertical",
+          "headerChildren": {
+            "variant": "compounds.card.headerChildren"
+          },
+          "tag": {
+            "variant": "compounds.card.base.tag",
+            "mb": "sm"
+          },
+          "meta": {
+            "variant": "compounds.card.base.meta"
+          },
+          "image": {
+            "variant": "compounds.card.base.image"
+          },
+          "content": {
+            "variant": "compounds.card.base.content",
+            "pt": "sm",
+            "px": "sm"
+          },
+          "link": {
+            "variant": "compounds.card.base.link",
+            "pt": "md"
+          },
+          "superScript": {
+            "variant": "compounds.card.base.superScript"
           }
         }
       }

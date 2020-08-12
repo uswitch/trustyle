@@ -17,7 +17,9 @@ interface Props {
   linkText?: string
   superScript?: string
   tag?: string
-  title: string
+  title?: string
+  variant?: string
+  headerChildren?: React.ReactNode
 }
 
 const makeStyles = (variant: string) => (element?: string) =>
@@ -36,9 +38,20 @@ const Card: React.FC<Props> = ({
   linkText,
   superScript,
   tag,
-  title
+  title,
+  variant,
+  headerChildren
 }) => {
-  const styles = makeStyles(horizontal ? 'horizontal' : 'vertical')
+  const styles = makeStyles(
+    variant || (horizontal ? 'horizontal' : 'vertical')
+  )
+
+  const HeaderWrapper = (children: React.ReactNode) =>
+    headerChildren ? (
+      <div sx={{ variant: styles('headerChildren') }}>{children}</div>
+    ) : (
+      <React.Fragment>{children}</React.Fragment>
+    )
 
   return (
     <div
@@ -47,20 +60,26 @@ const Card: React.FC<Props> = ({
         variant: styles()
       }}
     >
-      <Styled.a sx={{ variant: styles('image') }} href={linkHref}>
-        <ImgixImage
-          alt={imgAlt}
-          src={imgSrc}
-          sizes={imgSizes}
-          imgixParams={{
-            fit: imageSize === 'cover' ? 'crop' : 'fill',
-            crop: 'faces,entropy',
-            ar: '16:9',
-            fill: 'solid'
-          }}
-          critical={critical}
-        />
-      </Styled.a>
+      {HeaderWrapper(
+        <React.Fragment>
+          <div sx={{ variant: styles('headerChildren') }}>{headerChildren}</div>
+          <Styled.a sx={{ variant: styles('image') }} href={linkHref}>
+            <ImgixImage
+              alt={imgAlt}
+              src={imgSrc}
+              sizes={imgSizes}
+              imgixParams={{
+                fit: imageSize === 'cover' ? 'crop' : 'fill',
+                crop: 'faces,entropy',
+                ar: '16:9',
+                fill: 'solid'
+              }}
+              critical={critical}
+            />
+          </Styled.a>
+        </React.Fragment>
+      )}
+
       <div
         sx={{
           display: 'flex',
@@ -88,9 +107,11 @@ const Card: React.FC<Props> = ({
           )}
         </div>
 
-        <Styled.h3 sx={{ margin: '0' }}>
-          <Styled.a href={linkHref}>{title}</Styled.a>
-        </Styled.h3>
+        {title && (
+          <Styled.h3 sx={{ margin: '0' }}>
+            <Styled.a href={linkHref}>{title}</Styled.a>
+          </Styled.h3>
+        )}
         {description && <Styled.p>{description}</Styled.p>}
         {linkText && (
           <Styled.a
