@@ -106,7 +106,7 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
         sx={{
           marginTop: [-48, 0],
           marginRight: ['xs', 0],
-          height: [96, 104]
+          height: 'auto'
         }}
         alt={alt}
         src={src}
