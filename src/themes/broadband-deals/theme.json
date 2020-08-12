@@ -427,7 +427,7 @@
         "subtitle": {
           "variant": "elements.author.subtitle"
         },
-        "centered" : {
+        "centered": {
           "base": {
             "variant": "elements.author.base",
             "justifyContent": "center"
@@ -455,7 +455,7 @@
             "color": "grape-purple"
           }
         },
-        "centered" : {
+        "centered": {
           "base": {
             "variant": "elements.author.secondary.base",
             "justifyContent": "center"
