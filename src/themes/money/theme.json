@@ -984,6 +984,11 @@
             "paddingX": "lg",
             "paddingY": 13,
             "fontSize": "sm"
+          },
+          "xxl": {
+            "paddingX": ["xxl", "4xl"],
+            "paddingY": "base",
+            "fontSize": ["sm", "md"]
           }
         }
       },
@@ -1114,18 +1119,79 @@
         }
       }
     },
+    "simple-drop-down": {
+      "select": {
+        "base": {
+          "cursor": "pointer",
+          "fontFamily": "base",
+          "fontSize": "base",
+          "lineHeight": "1.33",
+          "appearance": "none",
+          "backgroundColor": "white",
+          "boxSizing": "border-box",
+          "padding": 16,
+          "paddingRight": 48,
+          "verticalAlign": "middle",
+          "borderRadius": 0,
+          "width": "100%",
+          "&::-ms-expand": {
+            "display": "none"
+          }
+        },
+        "error": {
+          "variant": "elements.simple-drop-down.select.base",
+          "border": "2px solid",
+          "borderColor": "error",
+          "outlineColor": "error"
+        },
+        "focus": {
+          "variant": "elements.simple-drop-down.select.base",
+          "outlineColor": "plum"
+        }
+      },
+      "span": {
+        "height": 15,
+        "width": 15,
+        "pointerEvents": "none",
+        "position": "absolute",
+        "right": 16,
+        "top": "calc(50% - 15px / 2)",
+        "variant": "elements.drop-down.icon"
+      }
+    },
     "form": {
       "label": {
         "variant": "styles.h4",
         "fontWeight": "bold",
         "color": "grey-80",
         "display": "block",
-        ":not(:first-child)": {
-          "mt": "sm"
+        ":not(:first-child)": { "mt": "sm" },
+        "variants": {
+          "calculator": {
+            "variant": "styles.h6",
+            "fontWeight": "bold",
+            "color": "grey-80",
+            "display": "block",
+            "mb": "xs",
+            ":not(:first-child)": {
+              "mt": "xl"
+            }
+          }
         }
       },
       "button": {
-        "my": "sm"
+        "my": "sm",
+        "wrapper": {
+          "base": {
+            "textAlign": "left"
+          }
+        },
+        "variants": {
+          "calculator": {
+            "mb": "sm",
+            "mt": "md"
+          }
+        }
       }
     },
     "rich-text-block": {
@@ -1191,6 +1257,39 @@
           },
           "content": {
             "variant": "elements.sponsorship.base.content"
+          }
+        }
+      }
+    },
+    "calculator": {
+      "label": {
+        "variant": "styles.h3",
+        "textAlign": ["left", "center"],
+        "mb": "24px"
+      },
+      "modal": {
+        "wrapper": {
+          "width": ["90%", "50%"],
+          "maxHeight": "100%",
+          "backgroundColor": "white"
+        },
+        "label": {
+          "textAlign": "center",
+          "cursor": "pointer",
+          "textDecorationLine": "underline",
+          "fontSize": "14px",
+          "color": "grey-60"
+        },
+        "content": {
+          "padding": "lg",
+          "pt": "xl",
+          "textAlign": "left",
+          "p": {
+            "fontSize": ["xs", "sm"],
+            "color": "grey-80"
+          },
+          "h2": {
+            "variant": "styles.h5"
           }
         }
       }
