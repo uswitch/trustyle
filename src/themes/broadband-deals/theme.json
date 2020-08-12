@@ -234,6 +234,8 @@
     }
   },
   "accordion": {
+    "iconOpen": "minus",
+    "iconClosed": "plus",
     "base": {
       "content": {
         "mb": "lg",
@@ -424,6 +426,18 @@
         },
         "subtitle": {
           "variant": "elements.author.subtitle"
+        },
+        "centered": {
+          "base": {
+            "variant": "elements.author.base",
+            "justifyContent": "center"
+          },
+          "title": {
+            "variant": "elements.author.title"
+          },
+          "subtitle": {
+            "variant": "elements.author.subtitle"
+          }
         }
       },
       "secondary": {
@@ -439,6 +453,18 @@
           "variant": "elements.author.subtitle",
           "a": {
             "color": "grape-purple"
+          }
+        },
+        "centered": {
+          "base": {
+            "variant": "elements.author.secondary.base",
+            "justifyContent": "center"
+          },
+          "title": {
+            "variant": "elements.author.secondary.title"
+          },
+          "subtitle": {
+            "variant": "elements.author.secondary.subtitle"
           }
         }
       }
