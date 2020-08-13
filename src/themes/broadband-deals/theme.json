@@ -567,6 +567,7 @@
           }
         },
         "headerImage": {
+          "imgSizes": "(max-width: 33vw), 33vw",
           "variant": "compounds.card.variants.vertical",
           "headerChildren": {
             "variant": "compounds.card.headerChildren"
