@@ -42,9 +42,7 @@ const Card: React.FC<Props> = ({
   variant,
   headerChildren
 }) => {
-  const styles = makeStyles(
-    variant || (horizontal ? 'horizontal' : 'vertical')
-  )
+  const styles = makeStyles(variant || (horizontal ? 'horizontal' : 'vertical'))
 
   const HeaderWrapper = (children: React.ReactNode) =>
     headerChildren ? (
