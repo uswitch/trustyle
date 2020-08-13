@@ -246,11 +246,15 @@
     },
     "h1": {
       "variant": "styles.headings",
-      "fontSize": ["lg", "xl", "xxl"]
+      "fontSize": ["lg", "xl", "xxl"],
+      "mt": "lg",
+      "mb": "md"
     },
     "h2": {
       "variant": "styles.headings",
-      "fontSize": ["md", "lg", "xl"]
+      "fontSize": ["md", "lg", "xl"],
+      "mt": "lg",
+      "mb": "md"
     },
     "h3": {
       "variant": "styles.headings",
@@ -462,18 +466,20 @@
       "title": {
         "a": {
           "fontWeight": "bold",
-          "color": "grey-80",
-          "fontSize": "xxs"
+          "fontSize": "md"
         }
       },
       "subtitle": {
         "lineHeight": ["base", "heading"],
         "paddingBottom": 0,
         "a": {
-          "fontSize": "xxs",
-          "fontWeight": "base",
+          "fontSize": "sm",
+          "fontWeight": "bold",
           "border": "none",
-          "color": "grey-70"
+          "color": "grey-70",
+          "&:visited": {
+            "color": "grey-70"
+          }
         }
       },
       "base": {
@@ -2084,14 +2090,15 @@
         "button": {
           "fontSize": "sm",
           "backgroundColor": "grey-05",
-          "paddingX": "sm"
+          "p": "sm",
+          "border": "none"
         }
       },
       "internalLinkList": {
         "listStyle": "none",
         "paddingLeft": 0,
-        "paddingTop": "xxs",
-        "paddingBottom": "xxs",
+        "paddingTop": 0,
+        "paddingBottom": 0,
         "margin": 0
       },
       "internalLinkListItem": {
@@ -2102,8 +2109,9 @@
             "display": "block",
             "color": "grey-70",
             "textDecoration": "none",
-            "fontSize": "sm",
-            "padding": "12px 16px",
+            "fontSize": "xs",
+            "pb": "xs",
+            "px": "sm",
             ":visited": {
               "color": "grey-70"
             }
