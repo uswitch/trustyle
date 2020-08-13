@@ -367,6 +367,7 @@
       }
     },
     "hero": {
+      "bottomImageOverflow": "200px",
       "wrapper": {
         "backgroundColor": "grape-purple",
         "pt": ["md", "lg"],
