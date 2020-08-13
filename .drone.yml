@@ -19,8 +19,16 @@ pipeline:
       event: [push]
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
     commands:
-      - npm run eslint:check
-      - npm run prettier:check
+      - ./scripts/check_code.sh
+
+  send-code-check-failures-to-slack:
+    when:
+      event: [push]
+      status: [failure]
+    image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    secrets: [slack_webhook]
+    commands:
+      - node ./scripts/slack_code_check_failed.js
 
   build:
     when:
