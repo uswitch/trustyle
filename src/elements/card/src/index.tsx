@@ -106,7 +106,7 @@ const Card: React.FC<Props> = ({
         </div>
 
         {title && (
-          <Styled.h3 sx={{ margin: '0' }}>
+          <Styled.h3 sx={{ margin: '0', variant: styles('heading') }}>
             <Styled.a href={linkHref}>{title}</Styled.a>
           </Styled.h3>
         )}
