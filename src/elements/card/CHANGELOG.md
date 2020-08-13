@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.1.0...@uswitch/trustyle.card@1.2.0) (2020-08-13)
+
+
+### Features
+
+* card heading styles from theme ([5dabbe1](https://github.com/uswitch/trustyle/commit/5dabbe1))
+
+
+
+
+
 # [1.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.0.2...@uswitch/trustyle.card@1.1.0) (2020-08-13)
 
 
