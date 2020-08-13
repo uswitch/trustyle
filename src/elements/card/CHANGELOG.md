@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.0.2...@uswitch/trustyle.card@1.1.0) (2020-08-13)
+
+
+### Bug Fixes
+
+* files formatting ([3164899](https://github.com/uswitch/trustyle/commit/3164899))
+
+
+### Features
+
+* add header content children prop ([5612ca1](https://github.com/uswitch/trustyle/commit/5612ca1))
+
+
+
+
+
+
 ## [1.0.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.0.1...@uswitch/trustyle.card@1.0.2) (2020-08-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.card
