@@ -160,6 +160,40 @@ export const HorizontalCards = () => {
   )
 }
 
+export const BBDealsCard = () => {
+  const title = text('Title', 'This is a card title')
+  const content = text(
+    'Content',
+    'its a card with a picture of a really cute kitten'
+  )
+
+  const imageSize = select(
+    'Image Size',
+    { cover: 'cover', contain: 'contain' },
+    'cover'
+  )
+
+  const img =
+    'https://uswitch-contentful.imgix.net/t014ej9w3ur1/YPnGDSG9aTIPmg1rlWsZu/94483e7cec0dd6ac947e1f974650210f/800.jpg'
+
+  return (
+    <div>
+      <Container>
+        <Card
+          imgSrc={img}
+          imgAlt="Picture of a cute kitten"
+          imgSizes="(max-width: 1200px) 100vw, 1200px"
+          imageSize={imageSize}
+          title={title}
+          description={content}
+          linkHref="https://www.uswitch.com"
+          variant="bbdeals-card"
+        />     
+      </Container>
+    </div>
+  )
+}
+
 export const HeaderChildrenExample = () => {
   const title = text('Title', '')
   const content = text(
