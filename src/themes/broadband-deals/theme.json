@@ -251,6 +251,23 @@
     }
   },
   "elements": {
+    "starRating": {
+      "centered": {
+        "base": {
+          "justifyContent": "center"
+        }
+      },
+      "variants": {
+        "hero": {
+          "base": {
+            "variant": "elements.starRating.centered.base"
+          },
+          "value": {
+            "color": "pure-white"
+          }
+        }
+      }
+    },
     "list": {
       "bullet": {
         "color": "grey-80"
