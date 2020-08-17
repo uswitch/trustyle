@@ -570,7 +570,7 @@
           "alignItems": "start",
           "h3": {
             "variant": "compounds.card.base.h3",
-            "fontSize": ["xs", "sm"]
+            "fontSize": ["lg", "xl"]
           },
           "image": {
             "variant": "compounds.card.base.image",
@@ -591,6 +591,81 @@
           },
           "headerChildren": {
             "variant": "compounds.card.headerChildren"
+          }
+        },
+        "responsive": {
+          "variant": [
+            "compounds.card.variants.vertical",
+            "compounds.card.variants.horizontal"
+          ],
+          "image": {
+            "variant": [
+              "compounds.card.variants.vertical.image",
+              "compounds.card.variants.horizontal.image"
+            ]
+          },
+          "h3": {
+            "variant": [
+              "compounds.card.variants.vertical.h3",
+              "compounds.card.variants.horizontal.h3"
+            ]
+          },
+
+          "content": {
+            "variant": [
+              "compounds.card.variants.vertical.content",
+              "compounds.card.variants.horizontal.content"
+            ]
+          },
+          "link": {
+            "variant": [
+              "compounds.card.variants.vertical.link",
+              "compounds.card.variants.horizontal.link"
+            ]
+          },
+          "superScript": {
+            "variant": [
+              "compounds.card.variants.vertical.superScript",
+              "compounds.card.variants.horizontal.superScript"
+            ]
+          },
+          "headerChildren": {
+            "variant": [
+              "compounds.card.variants.vertical.headerChildren",
+              "compounds.card.variants.horizontal.headerChildren"
+            ]
+          }
+        },
+        "featured": {
+          "variant": "compounds.card.variants.responsive",
+          "tag": {
+            "variant": "compounds.card.variants.responsive.tag"
+          },
+          "meta": {
+            "variant": "compounds.card.variants.responsive.meta"
+          },
+          "image": {
+            "variant": "compounds.card.variants.responsive.image"
+          },
+          "content": {
+            "variant": "compounds.card.variants.responsive.content"
+          },
+          "link": {
+            "variant": "compounds.card.variants.responsive.link"
+          },
+          "superScript": {
+            "variant": "compounds.card.variants.responsive.superScript",
+            "border": "1px solid",
+            "borderRadius": "sm",
+            "borderImageSlice": 1,
+            "borderImageSource": "linear-gradient(90deg, #22ACFF, #FF5A63)",
+            "backgroundClip": "padding-box",
+            "px": "xs",
+            "py": "xxs",
+            "color": ["grape-purple", "grape-purple"]
+          },
+          "headerChildren": {
+            "variant": "compounds.card.variants.responsive.headerChildren"
           }
         },
         "headerImage": {

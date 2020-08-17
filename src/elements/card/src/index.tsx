@@ -18,8 +18,14 @@ interface Props {
   superScript?: string
   tag?: string
   title?: string
-  variant?: string
+  variant?:
+    | 'horizontal'
+    | 'vertical'
+    | 'headerImage'
+    | 'responsive'
+    | 'featured'
   headerChildren?: React.ReactNode
+  contentChildren?: React.ReactNode
 }
 
 const makeStyles = (variant: string) => (element?: string) =>
@@ -40,13 +46,17 @@ const Card: React.FC<Props> = ({
   tag,
   title,
   variant,
-  headerChildren
+  headerChildren,
+  contentChildren
 }) => {
   const styles = makeStyles(variant || (horizontal ? 'horizontal' : 'vertical'))
 
   const HeaderWrapper = (children: React.ReactNode) =>
     headerChildren ? (
-      <div sx={{ variant: styles('headerChildren') }}>{children}</div>
+      <div sx={{ variant: styles('headerChildren') }}>
+        <div sx={{ variant: styles('headerChildren') }}>{headerChildren}</div>
+        <span>{children}</span>
+      </div>
     ) : (
       <React.Fragment>{children}</React.Fragment>
     )
@@ -60,7 +70,6 @@ const Card: React.FC<Props> = ({
     >
       {HeaderWrapper(
         <React.Fragment>
-          <div sx={{ variant: styles('headerChildren') }}>{headerChildren}</div>
           <Styled.a sx={{ variant: styles('image') }} href={linkHref}>
             <ImgixImage
               alt={imgAlt}
@@ -104,7 +113,11 @@ const Card: React.FC<Props> = ({
             </Styled.p>
           )}
         </div>
-
+        {contentChildren && (
+          <div sx={{ variant: styles('contentChildren') }}>
+            {contentChildren}
+          </div>
+        )}
         {title && (
           <Styled.h3 sx={{ margin: '0', variant: styles('heading') }}>
             <Styled.a href={linkHref}>{title}</Styled.a>
