@@ -1136,7 +1136,11 @@
       "lineHeight": "base",
       "color": "grey-80",
       "webkitFontSmoothing": "antialiased",
-      "mozOsxFontSmoothing": "grayscale"
+      "mozOsxFontSmoothing": "grayscale",
+      "boxSizing": "border-box",
+      "*": {
+        "boxSizing": "inherit"
+      }
     },
     "a": {
       "color": "brand",
