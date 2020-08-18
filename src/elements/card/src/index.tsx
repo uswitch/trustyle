@@ -112,12 +112,12 @@ const Card: React.FC<Props> = ({
               {superScript}
             </Styled.p>
           )}
+          {contentChildren && (
+            <div sx={{ variant: styles('contentChildren') }}>
+              {contentChildren}
+            </div>
+          )}
         </div>
-        {contentChildren && (
-          <div sx={{ variant: styles('contentChildren') }}>
-            {contentChildren}
-          </div>
-        )}
         {title && (
           <Styled.h3 sx={{ margin: '0', variant: styles('heading') }}>
             <Styled.a href={linkHref}>{title}</Styled.a>
