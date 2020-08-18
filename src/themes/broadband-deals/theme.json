@@ -476,7 +476,11 @@
           "mx": ["-8px"]
         },
         "inner": {
-          "width": ["calc(50% - 16px)", "calc(25% - 16px)", "calc(16.66% - 16px)"],
+          "width": [
+            "calc(50% - 16px)",
+            "calc(25% - 16px)",
+            "calc(16.66% - 16px)"
+          ],
           "height": "133px",
           "mx": ["xs"],
           "my": ["xs"],
@@ -496,7 +500,6 @@
         }
       }
     }
-
   },
   "compounds": {
     "card": {
