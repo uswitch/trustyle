@@ -6,12 +6,6 @@ import { Glyph, Icon } from '@uswitch/trustyle.icon'
 
 type Variant = 'pros' | 'cons' | 'checklist'
 
-interface ListProps extends React.OlHTMLAttributes<HTMLUListElement> {
-  listType?: 'numeric' | 'bullet'
-  variant?: Variant
-  title?: string
-}
-
 const getTitleIcon = (variant?: Variant) => {
   const { theme }: any = useThemeUI()
   let titleIcon: Glyph | undefined
@@ -25,51 +19,6 @@ const getTitleIcon = (variant?: Variant) => {
       size={24}
     />
   ) : null
-}
-
-export const List: React.FC<ListProps> = ({
-  children,
-  variant,
-  title,
-  listType = 'bullet',
-  ...props
-}) => {
-  const getVariant = (element: string) =>
-    `elements.list.${variant ? `variants.${variant}.${element}` : element}`
-
-  const sx: any = {
-    listStyle: 'none',
-    paddingLeft: 'sm',
-    marginY: 'sm',
-    variant: getVariant('base')
-  }
-
-  const childrenWithProps = React.Children.map(
-    children,
-    (childComponent: any) => {
-      return React.cloneElement(childComponent, { listType, variant })
-    }
-  )
-
-  return (
-    <div>
-      {title && (
-        <Styled.h6 sx={{ variant: getVariant('title') }}>
-          <span sx={{ display: 'none' }}>{getTitleIcon(variant)}</span>
-          {title}
-        </Styled.h6>
-      )}
-      {listType === 'numeric' ? (
-        <ol {...props} sx={sx}>
-          {childrenWithProps}
-        </ol>
-      ) : (
-        <ul {...props} sx={sx}>
-          {childrenWithProps}
-        </ul>
-      )}
-    </div>
-  )
 }
 
 interface ListItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
@@ -134,5 +83,69 @@ export const ListItem: React.FC<ListItemProps> = ({
       )}
       {children}
     </li>
+  )
+}
+
+interface ListProps extends React.OlHTMLAttributes<HTMLUListElement> {
+  listType?: 'numeric' | 'bullet'
+  variant?: Variant
+  title?: string
+  items?: any[]
+}
+
+export const List: React.FC<ListProps> = ({
+  children,
+  variant,
+  title,
+  listType = 'bullet',
+  items = [],
+  ...props
+}) => {
+  const getVariant = (element: string) =>
+    `elements.list.${variant ? `variants.${variant}.${element}` : element}`
+
+  const sx: any = {
+    listStyle: 'none',
+    paddingLeft: 'sm',
+    marginY: 'sm',
+    variant: getVariant('base')
+  }
+
+  const h6 = (
+    <Styled.h6 sx={{ variant: getVariant('title') }}>
+      <span sx={{ display: 'none' }}>{getTitleIcon(variant)}</span>
+      {title}
+    </Styled.h6>
+  )
+
+  const childrenWithProps = () => {
+    return React.Children.map(children, (childComponent: any) => {
+      return React.cloneElement(childComponent, { listType, variant })
+    })
+  }
+
+  const listItems = () => {
+    return items.map((item, i) => (
+      <ListItem key={i} listType={listType} variant={variant}>
+        {item}
+      </ListItem>
+    ))
+  }
+
+  const Items = items.length ? listItems() : childrenWithProps()
+
+  return (
+    <div>
+      {title && h6}
+      {listType === 'numeric' ? (
+        <ol {...props} sx={sx}>
+          {Items}
+        </ol>
+      ) : (
+        <ul {...props} sx={sx}>
+          {Items}
+        </ul>
+      )}
+    </div>
   )
 }
