@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.6.0...@uswitch/trustyle.broadband-deals-theme@1.7.0) (2020-08-18)
+
+
+### Bug Fixes
+
+* lint ([b5ef319](https://github.com/uswitch/trustyle/commit/b5ef319))
+
+
+### Features
+
+* logo collection styles ([033d884](https://github.com/uswitch/trustyle/commit/033d884))
+
+
+
+
+
 # [1.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.5.2...@uswitch/trustyle.broadband-deals-theme@1.6.0) (2020-08-13)
 
 
