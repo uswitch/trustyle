@@ -10,7 +10,8 @@ import IconTile from '../../icon-tile/src'
 import HeroWithBackgroundImage from './'
 
 const images = {
-  wallet: require('../../../../static/hero-with-background-image/wallet.png')
+  wallet: require('../../../../static/hero-with-background-image/wallet.png'),
+  bbDeals: require('../../../../static/hero-with-background-image/bb-deals.png')
 }
 
 export default {
@@ -74,6 +75,26 @@ const content = (
     </Row>
   </React.Fragment>
 )
+
+export const BBDealsHomepage = () => {
+  return (
+    <HeroWithBackgroundImage imageUrl={images.bbDeals}>
+      <Row>
+        <Col span={12}>
+          <Styled.h1>
+            Find the right broadband for you using real reviews
+          </Styled.h1>
+        </Col>
+      </Row>
+    </HeroWithBackgroundImage>
+  )
+}
+
+BBDealsHomepage.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
 
 export const HeroWithCustomContainer = () => {
   return (
