@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.14.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.14.0...@uswitch/trustyle.money-theme@1.14.1) (2020-08-18)
+
+
+### Bug Fixes
+
+* add responsive card variant ([5799839](https://github.com/uswitch/trustyle/commit/5799839))
+
+
+
+
+
+
 # [1.14.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.13.0...@uswitch/trustyle.money-theme@1.14.0) (2020-08-11)
 
 
