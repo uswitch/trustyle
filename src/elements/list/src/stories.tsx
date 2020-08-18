@@ -10,54 +10,22 @@ export default {
   title: 'Elements|List'
 }
 
+const arr1 = ['First item', 'Second item', 'Third item']
+const arr2 = ['Fourth item', 'Fifth item', 'Sixth item']
+const pTag = <p>Item with a block element inside</p>
+
 export const Example = () => (
   <div>
-    <List title="Checklist" variant="checklist">
-      <ListItem>First item</ListItem>
-      <ListItem>Second item</ListItem>
-      <ListItem>Third item</ListItem>
-    </List>
-    <List title="Pros" variant="pros">
-      <ListItem>First item</ListItem>
-      <ListItem>Second item</ListItem>
-      <ListItem>Third item</ListItem>
-    </List>
+    <List title="Checklist" variant="checklist" items={arr1} />
+    <List title="Pros" variant="pros" items={arr1} />
+    <List listType="numeric" items={[...arr1, ...arr2, pTag]} />
 
-    <List listType="numeric">
-      <ListItem>First item</ListItem>
-      <ListItem>Second item</ListItem>
-      <ListItem>Third item</ListItem>
-      <ListItem>Fourth item</ListItem>
-      <ListItem>Fifth item</ListItem>
-      <ListItem>Sixth item</ListItem>
-      <ListItem>Seventh item</ListItem>
-      <ListItem>Eighth item</ListItem>
-      <ListItem>Ninth item</ListItem>
-      <ListItem>Tenth item</ListItem>
-      <ListItem>
-        <p>Item with a block element inside</p>
-      </ListItem>
-    </List>
+    <List title="bullet" items={arr1} />
 
     <List listType="bullet">
-      <ListItem>First item</ListItem>
-      <ListItem>Second item</ListItem>
-      <ListItem>Third item</ListItem>
-    </List>
-
-    <List listType="bullet">
-      <ListItem>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </ListItem>
-      <ListItem>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </ListItem>
-      <ListItem>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </ListItem>
+      <ListItem>First child</ListItem>
+      <ListItem>Second child</ListItem>
+      <ListItem>Third child</ListItem>
     </List>
   </div>
 )
