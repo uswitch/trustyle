@@ -144,6 +144,25 @@
         "minHeight": 688
       }
     },
+    "assuranceBar": {
+      "base": {
+        "backgroundColor": "brand",
+        "color": "light-1"
+      },
+      "variant": {
+        "withBackground": {
+          "backgroundColor": "grape-purple",
+          "color": "white",
+          "div": {
+            "pb": 0
+          },
+          "img": {
+            "height": "30px",
+            "width": "30px"
+          }
+        }
+      }
+    },
     "hero-with-background-image": {
       "::before": {
         "background-image": "linear-gradient(90deg, rgba(0, 2, 11, 0.75) 0%, rgba(0, 2, 11, 0) 100%)",
