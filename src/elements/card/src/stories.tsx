@@ -188,7 +188,7 @@ export const BBDealsCard = () => {
           description={content}
           linkHref="https://www.uswitch.com"
           variant="bbdeals-card"
-        />     
+        />
       </Container>
     </div>
   )

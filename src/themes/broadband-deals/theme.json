@@ -798,12 +798,12 @@
             "variant": "compounds.card.base.tag"
           },
           "h3": {
-            "variant": "compounds.card.base.h3",    
+            "variant": "compounds.card.base.h3",
             "a": {
               "color": "grape-purple",
               "textDecoration": "none",
               "fontSize": "md"
-            },            
+            },
             "pb": ["sm", "md"],
             "pt": ["sm", "md"],
             "pl": ["md", "lg"],
@@ -811,7 +811,7 @@
             "width": "100%"
           },
           "content": {
-           "variant": "compounds.card.base.content",
+            "variant": "compounds.card.base.content",
             "p": {
               "color": "dark-grey",
               "pb": ["xs", "sm"],
@@ -828,7 +828,7 @@
           },
           "superScript": {
             "variant": "compounds.card.base.superScript"
-          } 
+          }
         }
       }
     },
