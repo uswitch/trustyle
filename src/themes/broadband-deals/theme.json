@@ -469,6 +469,36 @@
           }
         }
       }
+    },
+    "logo-collection": {
+      "base": {
+        "outer": {
+          "mx": ["-8px"]
+        },
+        "inner": {
+          "width": [
+            "calc(50% - 16px)",
+            "calc(25% - 16px)",
+            "calc(16.66% - 16px)"
+          ],
+          "height": "133px",
+          "mx": ["xs"],
+          "my": ["xs"],
+          "px": ["lg"],
+          "py": ["lg"],
+          "border": "1px solid #E5E5E5",
+          "borderRadius": "sm",
+          "display": "flex",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "img": {
+            "width": "auto",
+            "maxWidth": "100%",
+            "height": "auto",
+            "maxHeight": "100%"
+          }
+        }
+      }
     }
   },
   "compounds": {
@@ -1191,7 +1221,11 @@
       "lineHeight": "base",
       "color": "grey-80",
       "webkitFontSmoothing": "antialiased",
-      "mozOsxFontSmoothing": "grayscale"
+      "mozOsxFontSmoothing": "grayscale",
+      "boxSizing": "border-box",
+      "*": {
+        "boxSizing": "inherit"
+      }
     },
     "a": {
       "color": "brand",

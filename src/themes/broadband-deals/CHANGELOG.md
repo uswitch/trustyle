@@ -3,14 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.6.0...@uswitch/trustyle.broadband-deals-theme@1.7.0) (2020-08-18)
+# [1.8.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.6.0...@uswitch/trustyle.broadband-deals-theme@1.8.0) (2020-08-18)
+
+
+### Bug Fixes
+
+* lint ([b5ef319](https://github.com/uswitch/trustyle/commit/b5ef319))
 
 
 ### Features
 
-* add content children to card ([56f2eb0](https://github.com/uswitch/trustyle/commit/56f2eb0))
-* add content children to card interface ([6bc595e](https://github.com/uswitch/trustyle/commit/6bc595e))
+* logo collection styles ([033d884](https://github.com/uswitch/trustyle/commit/033d884))
 
+
+
+
+
+# [1.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.6.0...@uswitch/trustyle.broadband-deals-theme@1.7.0) (2020-08-18)
+
+
+### Bug Fixes
+
+* lint ([b5ef319](https://github.com/uswitch/trustyle/commit/b5ef319))
+
+
+### Features
+
+* logo collection styles ([033d884](https://github.com/uswitch/trustyle/commit/033d884))
 
 
 
