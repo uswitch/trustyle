@@ -486,6 +486,36 @@
           }
         }
       }
+    },
+    "logo-collection": {
+      "base": {
+        "outer": {
+          "mx": ["-8px"]
+        },
+        "inner": {
+          "width": [
+            "calc(50% - 16px)",
+            "calc(25% - 16px)",
+            "calc(16.66% - 16px)"
+          ],
+          "height": "133px",
+          "mx": ["xs"],
+          "my": ["xs"],
+          "px": ["lg"],
+          "py": ["lg"],
+          "border": "1px solid #E5E5E5",
+          "borderRadius": "sm",
+          "display": "flex",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "img": {
+            "width": "auto",
+            "maxWidth": "100%",
+            "height": "auto",
+            "maxHeight": "100%"
+          }
+        }
+      }
     }
   },
   "compounds": {
@@ -548,7 +578,8 @@
       "headerChildren": {
         "display": "flex",
         "flexDirection": ["column-reverse", "row-reverse"],
-        "justifyContent": "space-between"
+        "justifyContent": "space-between",
+        "alignItems": "center"
       },
       "variants": {
         "vertical": {
@@ -587,7 +618,7 @@
           "alignItems": "start",
           "h3": {
             "variant": "compounds.card.base.h3",
-            "fontSize": ["xs", "sm"]
+            "fontSize": ["lg", "xl"]
           },
           "image": {
             "variant": "compounds.card.base.image",
@@ -608,6 +639,87 @@
           },
           "headerChildren": {
             "variant": "compounds.card.headerChildren"
+          }
+        },
+        "responsive": {
+          "variant": [
+            "compounds.card.variants.vertical",
+            "compounds.card.variants.horizontal"
+          ],
+          "image": {
+            "variant": [
+              "compounds.card.variants.vertical.image",
+              "compounds.card.variants.horizontal.image"
+            ]
+          },
+          "h3": {
+            "variant": [
+              "compounds.card.variants.vertical.h3",
+              "compounds.card.variants.horizontal.h3"
+            ]
+          },
+
+          "content": {
+            "variant": [
+              "compounds.card.variants.vertical.content",
+              "compounds.card.variants.horizontal.content"
+            ]
+          },
+          "link": {
+            "variant": [
+              "compounds.card.variants.vertical.link",
+              "compounds.card.variants.horizontal.link"
+            ]
+          },
+          "superScript": {
+            "variant": [
+              "compounds.card.variants.vertical.superScript",
+              "compounds.card.variants.horizontal.superScript"
+            ]
+          },
+          "headerChildren": {
+            "variant": [
+              "compounds.card.variants.vertical.headerChildren",
+              "compounds.card.variants.horizontal.headerChildren"
+            ]
+          }
+        },
+        "featured": {
+          "imgSizes": "100%, 608px",
+          "variant": "compounds.card.variants.responsive",
+          "tag": {
+            "variant": "compounds.card.variants.responsive.tag"
+          },
+          "meta": {
+            "variant": "compounds.card.variants.responsive.meta",
+            "display": "flex",
+            "flexDirection": ["row", "column"],
+            "justifyContent": ["space-between", null],
+            "alignItems": ["center", "flex-start"]
+          },
+          "image": {
+            "variant": "compounds.card.variants.responsive.image"
+          },
+          "content": {
+            "variant": "compounds.card.variants.responsive.content"
+          },
+          "link": {
+            "variant": "compounds.card.variants.responsive.link"
+          },
+          "h3": {
+            "variant": "compounds.card.base.h3"
+          },
+          "superScript": {
+            "variant": "compounds.card.variants.responsive.superScript",
+            "border": "1px solid",
+            "borderRadius": "sm",
+            "borderImageSlice": 1,
+            "borderImageSource": "linear-gradient(90deg, #22ACFF, #FF5A63)",
+            "backgroundClip": "padding-box",
+            "px": "xs",
+            "py": "xxs",
+            "color": ["grape-purple", "grape-purple"],
+            "mr": ["sm", null]
           }
         },
         "headerImage": {
@@ -1180,7 +1292,11 @@
       "lineHeight": "base",
       "color": "grey-80",
       "webkitFontSmoothing": "antialiased",
-      "mozOsxFontSmoothing": "grayscale"
+      "mozOsxFontSmoothing": "grayscale",
+      "boxSizing": "border-box",
+      "*": {
+        "boxSizing": "inherit"
+      }
     },
     "a": {
       "color": "brand",
