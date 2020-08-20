@@ -128,7 +128,7 @@ export const HorizontalCards = () => {
           title={title}
           description={content}
           linkHref="https://www.uswitch.com"
-          horizontal
+          variant="horizontal"
         />
 
         <Card
@@ -139,7 +139,7 @@ export const HorizontalCards = () => {
           title={title}
           description={content}
           linkHref="https://www.uswitch.com"
-          horizontal
+          variant="horizontal"
           tag="Credit Card"
         />
 
@@ -152,7 +152,7 @@ export const HorizontalCards = () => {
           title={title}
           description={content}
           linkHref="https://www.uswitch.com"
-          horizontal
+          variant="horizontal"
           tag="Credit Card"
         />
       </Container>
