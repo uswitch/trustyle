@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.14.3...@uswitch/trustyle.money-theme@1.15.0) (2020-08-20)
+
+
+### Features
+
+* remove arrows for number input types ([2a1edd5](https://github.com/uswitch/trustyle/commit/2a1edd5))
+* remove autofill styling ([dcc0d4c](https://github.com/uswitch/trustyle/commit/dcc0d4c))
+
+
+
+
+
 ## [1.14.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.14.1...@uswitch/trustyle.money-theme@1.14.3) (2020-08-20)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme
