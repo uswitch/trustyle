@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.10.0...@uswitch/trustyle.broadband-deals-theme@1.10.1) (2020-08-20)
+
+
+### Bug Fixes
+
+* create bbdeals homepage hero variant ([cda31e4](https://github.com/uswitch/trustyle/commit/cda31e4))
+* inner container ([cccfce3](https://github.com/uswitch/trustyle/commit/cccfce3))
+* run eslint and prettier ([c041ffd](https://github.com/uswitch/trustyle/commit/c041ffd))
+
+
+
+
+
 # [1.10.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.8.0...@uswitch/trustyle.broadband-deals-theme@1.10.0) (2020-08-20)
 
 
