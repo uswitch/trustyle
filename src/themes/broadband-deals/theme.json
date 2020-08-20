@@ -3,10 +3,7 @@
   "useLocalStorage": false,
   "useCustomProperties": false,
   "useBodyStyles": false,
-  "breakpoints": [
-    "768px",
-    "990px"
-  ],
+  "breakpoints": ["768px", "990px"],
   "zIndices": {
     "min": 0,
     "max": 100
@@ -164,46 +161,22 @@
       "container": {
         "display": "flex",
         "flexDirection": "column",
-        "justifyContent": [
-          "flex-end",
-          "flex-end",
-          "center"
-        ],
-        "height": [
-          526,
-          514,
-          542
-        ],
-        "pb": [
-          60,
-          63,
-          0
-        ]
+        "justifyContent": ["flex-end", "flex-end", "center"],
+        "height": [526, 514, 542],
+        "pb": [60, 63, 0]
       },
       "container-child": {
         "height": "auto"
       },
-      "background-position": [
-        "top",
-        null,
-        "top right"
-      ],
-      "background-size": [
-        null,
-        null,
-        "60%"
-      ],
+      "background-position": ["top", null, "top right"],
+      "background-size": [null, null, "60%"],
       "position": "relative",
       "color": "white",
       "h1,h2,h3,h4,h5,h6,p": {
         "color": "pure-white",
         "margin": 0,
         "line-height": "1.1",
-        "width": [
-          "100%",
-          380,
-          418
-        ]
+        "width": ["100%", 380, 418]
       },
       "boxSizing": "border-box",
       "*": {
@@ -286,10 +259,7 @@
         "color": "dark-grey",
         "borderBottom": "1px solid rgba(39, 7, 55, 0.3)",
         ">p": {
-          "pb": [
-            "lg",
-            "xl"
-          ],
+          "pb": ["lg", "xl"],
           "mb": "xxs"
         }
       }
@@ -353,10 +323,7 @@
           "mb": 0,
           "p": "sm",
           "color": "pure-black",
-          "fontSize": [
-            "sm",
-            "lg"
-          ],
+          "fontSize": ["sm", "lg"],
           "span": {
             "&,svg": {
               "display": "inline",
@@ -376,32 +343,20 @@
               },
               "svg": {
                 "display": "inline",
-                "mr": [
-                  "sm",
-                  "md"
-                ],
+                "mr": ["sm", "md"],
                 "verticalAlign": "middle"
               }
             },
             "border": "1px solid",
             "borderColor": "dark-grey-03",
             "borderRadius": "sm",
-            "py": [
-              "sm",
-              "md"
-            ],
-            "px": [
-              "md",
-              "lg"
-            ]
+            "py": ["sm", "md"],
+            "px": ["md", "lg"]
           },
           "title": {
             "color": "pure-black",
             "fontWeight": "bold",
-            "fontSize": [
-              "md",
-              "lg"
-            ]
+            "fontSize": ["md", "lg"]
           }
         },
         "pros": {
@@ -432,14 +387,8 @@
       "bottomImageOverflow": "200px",
       "wrapper": {
         "backgroundColor": "grape-purple",
-        "pt": [
-          "md",
-          "lg"
-        ],
-        "px": [
-          "sm",
-          "xxxl"
-        ]
+        "pt": ["md", "lg"],
+        "px": ["sm", "xxxl"]
       },
       "breadcrumbs": {
         "color": "pure-white",
@@ -475,10 +424,7 @@
         },
         "fontWeight": "medium",
         "fontSize": "xxs",
-        "display": [
-          "inline-block",
-          "inline"
-        ],
+        "display": ["inline-block", "inline"],
         "borderRadius": "xs",
         "border": "1px solid",
         "backgroundClip": "padding-box",
@@ -542,11 +488,7 @@
   },
   "compounds": {
     "card": {
-      "itemsPerRow": [
-        1,
-        1,
-        3
-      ],
+      "itemsPerRow": [1, 1, 3],
       "base": {
         "px": "xxs",
         "background": "transparent",
@@ -554,14 +496,8 @@
         "width": "100%",
         "height": "100%",
         "mb": "sm",
-        "pb": [
-          "xl",
-          "xxl"
-        ],
-        "pt": [
-          "sm",
-          "md"
-        ],
+        "pb": ["xl", "xxl"],
+        "pt": ["sm", "md"],
         "img": {
           "width": "100%"
         },
@@ -573,10 +509,7 @@
           "fontSize": "xxs"
         },
         "h3": {
-          "fontSize": [
-            "md",
-            "lg"
-          ],
+          "fontSize": ["md", "lg"],
           "lineHeight": "md",
           "a": {
             "color": "pure-black",
@@ -584,10 +517,7 @@
           }
         },
         "content": {
-          "pt": [
-            "sm",
-            "md"
-          ],
+          "pt": ["sm", "md"],
           "color": "dark-grey",
           "fontSize": "xs",
           "lineHeight": "md"
@@ -609,19 +539,13 @@
           "fontSize": "xxs",
           "color": "pure-black",
           "fontWeight": "medium",
-          "pb": [
-            "xxs",
-            "xs"
-          ],
+          "pb": ["xxs", "xs"],
           "lineHeight": "md"
         }
       },
       "headerChildren": {
         "display": "flex",
-        "flexDirection": [
-          "column-reverse",
-          "row-reverse"
-        ],
+        "flexDirection": ["column-reverse", "row-reverse"],
         "justifyContent": "space-between"
       },
       "variants": {
@@ -661,25 +585,16 @@
           "alignItems": "start",
           "h3": {
             "variant": "compounds.card.base.h3",
-            "fontSize": [
-              "xs",
-              "sm"
-            ]
+            "fontSize": ["xs", "sm"]
           },
           "image": {
             "variant": "compounds.card.base.image",
-            "pr": [
-              "sm",
-              "md"
-            ],
+            "pr": ["sm", "md"],
             "max-width": "40%"
           },
           "content": {
             "variant": "compounds.card.base.content",
-            "pt": [
-              0,
-              0
-            ]
+            "pt": [0, 0]
           },
           "link": {
             "variant": "compounds.card.base.link"
@@ -698,14 +613,8 @@
           "border": "1px solid",
           "borderColor": "dark-grey-03",
           "borderRadius": "sm",
-          "px": [
-            "sm",
-            "md"
-          ],
-          "py": [
-            "md",
-            "lg"
-          ],
+          "px": ["sm", "md"],
+          "py": ["md", "lg"],
           "imgSizes": "(max-width: 104px), 104px",
           "boxSizing": "border-box",
           "headerChildren": {
@@ -741,10 +650,7 @@
         "button": {
           "p": 0,
           "pb": "lg",
-          "pr": [
-            "xs",
-            "sm"
-          ],
+          "pr": ["xs", "sm"],
           "bg": "transparent",
           "fontFamily": "heading",
           "fontSize": "sm",
@@ -763,10 +669,7 @@
         },
         "title": {
           "mb": "xl",
-          "fontSize": [
-            "lg",
-            "lg"
-          ]
+          "fontSize": ["lg", "lg"]
         }
       },
       "variants": {
@@ -787,21 +690,9 @@
       "marginLeft": 0,
       "border": 0,
       "layout": {
-        "flexDirection": [
-          "column-reverse",
-          "column-reverse",
-          "column-reverse"
-        ],
-        "text": [
-          12,
-          12,
-          12
-        ],
-        "nav": [
-          12,
-          12,
-          12
-        ]
+        "flexDirection": ["column-reverse", "column-reverse", "column-reverse"],
+        "text": [12, 12, 12],
+        "nav": [12, 12, 12]
       },
       "internalLinkList": {
         "listStyle": "none",
@@ -855,11 +746,7 @@
     },
     "cookie-banner": {
       "heading": {
-        "mt": [
-          0,
-          "xs",
-          "xs"
-        ],
+        "mt": [0, "xs", "xs"],
         "color": "grey-80"
       },
       "hr": {
@@ -868,11 +755,7 @@
         "bg": "grey-20"
       },
       "copy": {
-        "mb": [
-          "md",
-          "sm",
-          null
-        ],
+        "mb": ["md", "sm", null],
         "mt": "base"
       },
       "accept-all-button": {
@@ -985,10 +868,7 @@
   "callOut": {
     "main": {
       "backgroundColor": "grey-10",
-      "px": [
-        "sm",
-        "md"
-      ]
+      "px": ["sm", "md"]
     },
     "icon": {
       "backgroundColor": "grey-80"
@@ -1004,16 +884,10 @@
         "fontWeight": "bold"
       },
       "text": {
-        "mb": [
-          null,
-          0
-        ]
+        "mb": [null, 0]
       },
       "button": {
-        "ml": [
-          null,
-          "md"
-        ]
+        "ml": [null, "md"]
       }
     },
     "variants": {
@@ -1107,14 +981,8 @@
   "author": {
     "heading": {},
     "image-link": {
-      "height": [
-        48,
-        48
-      ],
-      "width": [
-        48,
-        48
-      ]
+      "height": [48, 48],
+      "width": [48, 48]
     },
     "link": {
       "fontWeight": "base"
@@ -1217,47 +1085,27 @@
     },
     "h1": {
       "variant": "styles.heading",
-      "fontSize": [
-        "xl",
-        "xxl",
-        "xxxl"
-      ],
+      "fontSize": ["xl", "xxl", "xxxl"],
       "my": "lg"
     },
     "h2": {
       "variant": "styles.heading",
-      "fontSize": [
-        "lg",
-        "xl",
-        "xxl"
-      ],
+      "fontSize": ["lg", "xl", "xxl"],
       "my": "md"
     },
     "h3": {
       "variant": "styles.heading",
-      "fontSize": [
-        "md",
-        "lg",
-        "xl"
-      ],
+      "fontSize": ["md", "lg", "xl"],
       "my": "sm"
     },
     "h4": {
       "variant": "styles.heading",
-      "fontSize": [
-        "sm",
-        "md",
-        "lg"
-      ],
+      "fontSize": ["sm", "md", "lg"],
       "my": "sm"
     },
     "h5": {
       "variant": "styles.heading",
-      "fontSize": [
-        "xs",
-        "sm",
-        "md"
-      ],
+      "fontSize": ["xs", "sm", "md"],
       "my": "sm"
     },
     "h6": {
