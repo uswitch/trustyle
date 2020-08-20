@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.13.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.12.3...@uswitch/trustyle.bankrate-theme@2.13.0) (2020-08-20)
+
+
+### Features
+
+* remove arrows for number input types ([2a1edd5](https://github.com/uswitch/trustyle/commit/2a1edd5))
+* remove autofill styling ([dcc0d4c](https://github.com/uswitch/trustyle/commit/dcc0d4c))
+
+
+
+
+
+## [2.12.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.12.1...@uswitch/trustyle.bankrate-theme@2.12.3) (2020-08-20)
+
+**Note:** Version bump only for package @uswitch/trustyle.bankrate-theme
+
+
+
+
+
+## [2.12.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.12.1...@uswitch/trustyle.bankrate-theme@2.12.2) (2020-08-19)
+
+**Note:** Version bump only for package @uswitch/trustyle.bankrate-theme
+
+
+
+
+
+## [2.12.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.12.0...@uswitch/trustyle.bankrate-theme@2.12.1) (2020-08-18)
+
+
+### Bug Fixes
+
+* add responsive card variant ([5799839](https://github.com/uswitch/trustyle/commit/5799839))
+
+
+
+
+
+
 # [2.12.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.11.2...@uswitch/trustyle.bankrate-theme@2.12.0) (2020-08-11)
 
 

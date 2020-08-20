@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.5.0...@uswitch/trustyle.card@1.5.1) (2020-08-20)
+
+
+### Bug Fixes
+
+* amend stories for cards ([aff0eb5](https://github.com/uswitch/trustyle/commit/aff0eb5))
+* remove horizontal prop from card ([d805a37](https://github.com/uswitch/trustyle/commit/d805a37))
+
+
+
+
+
+# [1.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.4.0...@uswitch/trustyle.card@1.5.0) (2020-08-20)
+
+
+### Features
+
+* added theme for assurance-bar ([60e0a25](https://github.com/uswitch/trustyle/commit/60e0a25))
+
+
+
+
+
+## [1.4.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.4.0...@uswitch/trustyle.card@1.4.1) (2020-08-19)
+
+**Note:** Version bump only for package @uswitch/trustyle.card
+
+
+
+
+
+# [1.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.3.0...@uswitch/trustyle.card@1.4.0) (2020-08-18)
+
+
+### Features
+
+* add content children to card ([56f2eb0](https://github.com/uswitch/trustyle/commit/56f2eb0))
+* add content children to card interface ([6bc595e](https://github.com/uswitch/trustyle/commit/6bc595e))
+
+
+
+
+
+
 # [1.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.1.0...@uswitch/trustyle.card@1.3.0) (2020-08-13)
 
 

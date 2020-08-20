@@ -8,7 +8,6 @@ interface Props {
   className?: string
   critical?: boolean
   description?: string
-  horizontal?: boolean
   imageSize?: 'cover' | 'contain'
   imgAlt: string
   imgSizes?: string
@@ -18,8 +17,15 @@ interface Props {
   superScript?: string
   tag?: string
   title?: string
-  variant?: string
+  variant?:
+    | 'horizontal'
+    | 'vertical'
+    | 'headerImage'
+    | 'responsive'
+    | 'featured'
+    | 'bbdeals-card'
   headerChildren?: React.ReactNode
+  contentChildren?: React.ReactNode
 }
 
 const makeStyles = (variant: string) => (element?: string) =>
@@ -29,7 +35,6 @@ const Card: React.FC<Props> = ({
   className = '',
   critical = true,
   description,
-  horizontal = false,
   imageSize = 'cover',
   imgAlt,
   imgSizes = '768px',
@@ -39,14 +44,18 @@ const Card: React.FC<Props> = ({
   superScript,
   tag,
   title,
-  variant,
-  headerChildren
+  variant = 'vertical',
+  headerChildren,
+  contentChildren
 }) => {
-  const styles = makeStyles(variant || (horizontal ? 'horizontal' : 'vertical'))
+  const styles = makeStyles(variant)
 
   const HeaderWrapper = (children: React.ReactNode) =>
     headerChildren ? (
-      <div sx={{ variant: styles('headerChildren') }}>{children}</div>
+      <div sx={{ variant: styles('headerChildren') }}>
+        <div sx={{ variant: styles('headerChildren') }}>{headerChildren}</div>
+        <span>{children}</span>
+      </div>
     ) : (
       <React.Fragment>{children}</React.Fragment>
     )
@@ -60,7 +69,6 @@ const Card: React.FC<Props> = ({
     >
       {HeaderWrapper(
         <React.Fragment>
-          <div sx={{ variant: styles('headerChildren') }}>{headerChildren}</div>
           <Styled.a sx={{ variant: styles('image') }} href={linkHref}>
             <ImgixImage
               alt={imgAlt}
@@ -103,8 +111,12 @@ const Card: React.FC<Props> = ({
               {superScript}
             </Styled.p>
           )}
+          {contentChildren && (
+            <div sx={{ variant: styles('contentChildren') }}>
+              {contentChildren}
+            </div>
+          )}
         </div>
-
         {title && (
           <Styled.h3 sx={{ margin: '0', variant: styles('heading') }}>
             <Styled.a href={linkHref}>{title}</Styled.a>
