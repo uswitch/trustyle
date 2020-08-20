@@ -150,9 +150,9 @@
     "hero-with-background-image": {
       "::before": {
         "background-image": [
-          "linear-gradient(to top, #520861 6.32%, rgba(196, 196, 196, 0) 94.12%)",
+          "linear-gradient(to top, #520861 7%, rgba(196, 196, 196, 0) 94%)",
           null,
-          "linear-gradient(to right, #520861 40%, rgba(196, 196, 196, 0) 94.12%)"
+          "linear-gradient(to right, #520861 40%, rgba(196, 196, 196, 0) 94%)"
         ],
         "position": "absolute",
         "left": 0,
@@ -161,13 +161,28 @@
         "right": 0,
         "content": "''"
       },
-      "display": "flex",
-      "flex-direction": "column",
-      "justify-content": [
-        "flex-end",
-        null,
-        "center"
-      ],
+      "container": {
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": [
+          "flex-end",
+          "flex-end",
+          "center"
+        ],
+        "height": [
+          526,
+          514,
+          542
+        ],
+        "pb": [
+          60,
+          63,
+          0
+        ]
+      },
+      "container-child": {
+        "height": "auto"
+      },
       "background-position": [
         "top",
         null,
@@ -190,28 +205,15 @@
           418
         ]
       },
-      "height": [
-        526,
-        514,
-        542
-      ],
       "boxSizing": "border-box",
       "*": {
-        "zIndex": 1
+        "zIndex": 1,
+        "padding": 0
       },
-      "> *": {
-        "display": "flex",
-        "flex-direction": "column"
-      },
-      "padding": [
-        "md",
-        84,
-        102
-      ],
-      "pb": [
-        40,
-        63
-      ]
+      "padding": 0,
+      "script[data-content-type=\"richTextModule\"] + div": {
+        "padding": 0
+      }
     }
   },
   "sideNav": {
