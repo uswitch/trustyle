@@ -669,6 +669,10 @@
         "verticalAlign": "middle",
         "width": "100%",
         "padding": "sm",
+        "&::-webkit-inner-spin-button, -webkit-outer-spin-button": {
+          "-webkit-appearance": "none",
+          "margin": 0
+        },
         "&:focus": {
           "outline": "none"
         },
