@@ -165,7 +165,11 @@
     },
     "hero-with-background-image": {
       "::before": {
-        "background-image": "linear-gradient(90deg, rgba(0, 2, 11, 0.75) 0%, rgba(0, 2, 11, 0) 100%)",
+        "background-image": [
+          "linear-gradient(to top, #520861 7%, rgba(196, 196, 196, 0) 94%)",
+          null,
+          "linear-gradient(to right, #520861 40%, rgba(196, 196, 196, 0) 94%)"
+        ],
         "position": "absolute",
         "left": 0,
         "top": 0,
@@ -173,24 +177,35 @@
         "right": 0,
         "content": "''"
       },
+      "container": {
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": ["flex-end", "flex-end", "center"],
+        "height": [526, 514, 542],
+        "pb": [60, 63, 0]
+      },
+      "container-child": {
+        "height": "auto"
+      },
+      "background-position": ["top", null, "top right"],
+      "background-size": [null, null, "60%"],
       "position": "relative",
       "color": "white",
       "h1,h2,h3,h4,h5,h6,p": {
-        "color": "white"
+        "color": "pure-white",
+        "margin": 0,
+        "line-height": "1.1",
+        "width": ["100%", 380, 418]
       },
-      "height": 420,
       "boxSizing": "border-box",
       "*": {
-        "zIndex": 1
+        "zIndex": 1,
+        "padding": 0
       },
-      "> *": {
-        "height": "100%",
-        "display": "flex",
-        "flex-direction": "column"
-      },
-      "mb": "xl",
-      "pb": "xl",
-      "pt": "xs"
+      "padding": 0,
+      "script[data-content-type=\"richTextModule\"] + div": {
+        "padding": 0
+      }
     }
   },
   "sideNav": {
