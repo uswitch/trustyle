@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.4.0...@uswitch/trustyle.card@1.5.0) (2020-08-20)
+
+
+### Features
+
+* added theme for assurance-bar ([60e0a25](https://github.com/uswitch/trustyle/commit/60e0a25))
+
+
+
+
+
 ## [1.4.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.4.0...@uswitch/trustyle.card@1.4.1) (2020-08-19)
 
 **Note:** Version bump only for package @uswitch/trustyle.card

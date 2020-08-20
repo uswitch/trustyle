@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.8.0...@uswitch/trustyle.broadband-deals-theme@1.10.0) (2020-08-20)
+
+
+### Bug Fixes
+
+* add star rating component design ([5b45d57](https://github.com/uswitch/trustyle/commit/5b45d57))
+* run linter ([4d81b9f](https://github.com/uswitch/trustyle/commit/4d81b9f))
+
+
+### Features
+
+* add content children to card ([56f2eb0](https://github.com/uswitch/trustyle/commit/56f2eb0))
+* add content children to card interface ([6bc595e](https://github.com/uswitch/trustyle/commit/6bc595e))
+* added bbdeals card variant and story ([458faeb](https://github.com/uswitch/trustyle/commit/458faeb))
+* added theme for assurance-bar ([60e0a25](https://github.com/uswitch/trustyle/commit/60e0a25))
+
+
+
+
+
 # [1.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.8.0...@uswitch/trustyle.broadband-deals-theme@1.9.0) (2020-08-19)
 
 
