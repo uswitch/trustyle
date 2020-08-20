@@ -8,7 +8,6 @@ interface Props {
   className?: string
   critical?: boolean
   description?: string
-  horizontal?: boolean
   imageSize?: 'cover' | 'contain'
   imgAlt: string
   imgSizes?: string
@@ -24,6 +23,7 @@ interface Props {
     | 'headerImage'
     | 'responsive'
     | 'featured'
+    | 'bbdeals-card'
   headerChildren?: React.ReactNode
   contentChildren?: React.ReactNode
 }
@@ -35,7 +35,6 @@ const Card: React.FC<Props> = ({
   className = '',
   critical = true,
   description,
-  horizontal = false,
   imageSize = 'cover',
   imgAlt,
   imgSizes = '768px',
@@ -45,11 +44,11 @@ const Card: React.FC<Props> = ({
   superScript,
   tag,
   title,
-  variant,
+  variant = 'vertical',
   headerChildren,
   contentChildren
 }) => {
-  const styles = makeStyles(variant || (horizontal ? 'horizontal' : 'vertical'))
+  const styles = makeStyles(variant)
 
   const HeaderWrapper = (children: React.ReactNode) =>
     headerChildren ? (
