@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.16.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.15.0...@uswitch/trustyle.money-theme@1.16.0) (2020-08-20)
+
+
+### Features
+
+* add simple-radio to money theme ([469f2f6](https://github.com/uswitch/trustyle/commit/469f2f6))
+
+
+
+
+
 # [1.15.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.14.3...@uswitch/trustyle.money-theme@1.15.0) (2020-08-20)
 
 
