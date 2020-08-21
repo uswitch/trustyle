@@ -13,6 +13,7 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   rowTitle?: React.ReactNode
   subtitle?: React.ReactNode
   addons?: AddonArg[]
+  clickableRow?: string
 }
 
 const ProductTableRow: React.FC<RowProps> = ({
@@ -22,7 +23,8 @@ const ProductTableRow: React.FC<RowProps> = ({
   subtitle,
   addons = [],
   children,
-  id
+  id,
+  clickableRow
 }) => {
   const addonsFor = (key: keyof Addon): React.ReactNode[] =>
     addons.map(({ addon, component, options }, i) => {
@@ -67,154 +69,161 @@ const ProductTableRow: React.FC<RowProps> = ({
    */
 
   return (
-    <section
-      id={id}
-      sx={{
-        position: 'relative',
-        border: '1px solid',
-        paddingX: ['sm', 'md'],
-        paddingY: 'md',
-        marginTop: badges.length ? [10, 15] : 0,
-        marginBottom: 'md',
-        ':last-of-type': {
-          marginBottom: 0
-        },
-        variant: 'compounds.product-table.row.main'
-      }}
-    >
-      {!!badges.length && (
-        <div
-          sx={{ position: 'absolute', top: 0, transform: 'translateY(-50%)' }}
-        >
-          {badges.map((badge, i) => (
-            <span sx={{ marginRight: 'sm' }} key={i}>
-              {badge}
-            </span>
-          ))}
-        </div>
-      )}
-      <div
+    <a href={clickableRow}>
+      <section
+        id={id}
         sx={{
-          display: 'grid',
-          gridTemplateColumns: [
-            'repeat(2, 1fr)',
-            undefined,
-            `repeat(${cols}, 1fr)`
-          ],
-          msGridColumns: ['(1fr)[2]', undefined, `(1fr)[${cols}]`],
-          gridTemplateRows: [
-            'auto',
-            undefined,
-            `repeat(3, auto) repeat(${ROWS}, 1fr) repeat(3, auto)`
-          ],
-          msGridRows: ['auto', undefined, `(auto)[3] (1fr)[${ROWS}] (auto)[3]`],
-          marginX: -8,
-          marginY: -6,
-          variant: 'compounds.product-table.row.grid',
-
-          // Flex in mobile IE11 (?!) as auto-layout for grid isn't supported
-          '@media all and (max-width: 990px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
-            display: 'flex',
-            flexDirection: 'column'
-          }
-        }}
-        // @ts-ignore
-        css={{
-          display: '-ms-grid'
+          position: 'relative',
+          border: '1px solid',
+          paddingX: ['sm', 'md'],
+          paddingY: 'md',
+          marginTop: badges.length ? [10, 15] : 0,
+          marginBottom: 'md',
+          ':last-of-type': {
+            marginBottom: 0
+          },
+          variant: 'compounds.product-table.row.main'
         }}
       >
-        {rowTitle && (
+        {!!badges.length && (
+          <div
+            sx={{ position: 'absolute', top: 0, transform: 'translateY(-50%)' }}
+          >
+            {badges.map((badge, i) => (
+              <span sx={{ marginRight: 'sm' }} key={i}>
+                {badge}
+              </span>
+            ))}
+          </div>
+        )}
+        <div
+          sx={{
+            display: 'grid',
+            gridTemplateColumns: [
+              'repeat(2, 1fr)',
+              undefined,
+              `repeat(${cols}, 1fr)`
+            ],
+            msGridColumns: ['(1fr)[2]', undefined, `(1fr)[${cols}]`],
+            gridTemplateRows: [
+              'auto',
+              undefined,
+              `repeat(3, auto) repeat(${ROWS}, 1fr) repeat(3, auto)`
+            ],
+            msGridRows: [
+              'auto',
+              undefined,
+              `(auto)[3] (1fr)[${ROWS}] (auto)[3]`
+            ],
+            marginX: -8,
+            marginY: -6,
+            variant: 'compounds.product-table.row.grid',
+
+            // Flex in mobile IE11 (?!) as auto-layout for grid isn't supported
+            '@media all and (max-width: 990px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
+              display: 'flex',
+              flexDirection: 'column'
+            }
+          }}
+          // @ts-ignore
+          css={{
+            display: '-ms-grid'
+          }}
+        >
+          {rowTitle && (
+            <CellContext.Provider
+              value={{
+                gridRowStart: 2,
+                gridRowSpan: 1,
+                gridColumnStart: 1,
+                gridColumnSpan: cols
+              }}
+            >
+              <CellBase
+                sx={{
+                  borderBottom: '1px solid',
+                  paddingBottom: 'sm',
+                  marginTop: badges.length ? 0 : -6,
+                  variant: 'compounds.product-table.row.header'
+                }}
+                mobileOrder={-100}
+              >
+                <CellContext.Provider value={{ inFlexbox: true }}>
+                  <div
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      marginX: -8,
+                      marginY: -6
+                    }}
+                  >
+                    <CellBase extraRules={{ marginRight: 'auto' }}>
+                      {preTitle && (
+                        <span
+                          sx={{
+                            fontSize: 'xs',
+                            variant: 'compounds.product-table.row.pretitle'
+                          }}
+                        >
+                          {preTitle}
+                        </span>
+                      )}
+                      <h3
+                        sx={{
+                          margin: 0,
+                          variant: 'compounds.product-table.row.title'
+                        }}
+                      >
+                        {rowTitle}
+                      </h3>
+                      {subtitle && (
+                        <span
+                          sx={{
+                            fontSize: 'xs',
+                            variant: 'compounds.product-table.row.subtitle'
+                          }}
+                        >
+                          {subtitle}
+                        </span>
+                      )}
+                    </CellBase>
+                    {addonsFor('header')}
+                  </div>
+                </CellContext.Provider>
+              </CellBase>
+            </CellContext.Provider>
+          )}
+
+          {nonNullChildren.map((child, index) => (
+            <CellContext.Provider
+              value={{
+                gridRowStart: 4,
+                gridRowSpan: ROWS,
+                gridColumnStart: index + 1,
+                gridColumnSpan: 1,
+                accentCellCount: accentCells.length,
+                accentCellIndex:
+                  child.props.accent && accentCells.indexOf(child)
+              }}
+              key={index}
+            >
+              {child}
+            </CellContext.Provider>
+          ))}
+
           <CellContext.Provider
             value={{
-              gridRowStart: 2,
-              gridRowSpan: 1,
+              gridRowStart: 1,
+              gridRowSpan: ROWS,
               gridColumnStart: 1,
               gridColumnSpan: cols
             }}
           >
-            <CellBase
-              sx={{
-                borderBottom: '1px solid',
-                paddingBottom: 'sm',
-                marginTop: badges.length ? 0 : -6,
-                variant: 'compounds.product-table.row.header'
-              }}
-              mobileOrder={-100}
-            >
-              <CellContext.Provider value={{ inFlexbox: true }}>
-                <div
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    marginX: -8,
-                    marginY: -6
-                  }}
-                >
-                  <CellBase extraRules={{ marginRight: 'auto' }}>
-                    {preTitle && (
-                      <span
-                        sx={{
-                          fontSize: 'xs',
-                          variant: 'compounds.product-table.row.pretitle'
-                        }}
-                      >
-                        {preTitle}
-                      </span>
-                    )}
-                    <h3
-                      sx={{
-                        margin: 0,
-                        variant: 'compounds.product-table.row.title'
-                      }}
-                    >
-                      {rowTitle}
-                    </h3>
-                    {subtitle && (
-                      <span
-                        sx={{
-                          fontSize: 'xs',
-                          variant: 'compounds.product-table.row.subtitle'
-                        }}
-                      >
-                        {subtitle}
-                      </span>
-                    )}
-                  </CellBase>
-                  {addonsFor('header')}
-                </div>
-              </CellContext.Provider>
-            </CellBase>
+            {addonsFor('body')}
           </CellContext.Provider>
-        )}
-
-        {nonNullChildren.map((child, index) => (
-          <CellContext.Provider
-            value={{
-              gridRowStart: 4,
-              gridRowSpan: ROWS,
-              gridColumnStart: index + 1,
-              gridColumnSpan: 1,
-              accentCellCount: accentCells.length,
-              accentCellIndex: child.props.accent && accentCells.indexOf(child)
-            }}
-            key={index}
-          >
-            {child}
-          </CellContext.Provider>
-        ))}
-
-        <CellContext.Provider
-          value={{
-            gridRowStart: 1,
-            gridRowSpan: ROWS,
-            gridColumnStart: 1,
-            gridColumnSpan: cols
-          }}
-        >
-          {addonsFor('body')}
-        </CellContext.Provider>
-      </div>
-    </section>
+        </div>
+      </section>
+    </a>
   )
 }
 
