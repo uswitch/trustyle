@@ -23,7 +23,7 @@ interface Props {
   children: React.ReactNode
   closeButtonProps?: any
   height?: ModalMobileHeight
-  onClose: OnCloseFn
+  onClose?: OnCloseFn
   role?: ModalRole
   focusLockProps?: FocusLockProps
 }
@@ -33,7 +33,7 @@ interface OverlayProps {
   children: React.ReactNode
   closeButtonProps?: any
   height: ModalMobileHeight
-  onClose: OnCloseFn
+  onClose?: OnCloseFn
   role: ModalRole
   focusLockProps: FocusLockProps
 }
@@ -94,29 +94,33 @@ const Overlay: React.FC<OverlayProps> = ({
     }
   }, [])
 
-  const onBackgroundClick = (event: React.MouseEvent<HTMLElement>): void => {
-    let withinModal = false
-    let node: Node | null = event.target as Node
+  const onBackgroundClick =
+    onClose &&
+    ((event: React.MouseEvent<HTMLElement>): void => {
+      let withinModal = false
+      let node: Node | null = event.target as Node
 
-    event.stopPropagation()
+      event.stopPropagation()
 
-    do {
-      withinModal = withinModal || node === modalRef.current
-      node = node?.parentNode
-    } while (node?.parentNode)
+      do {
+        withinModal = withinModal || node === modalRef.current
+        node = node?.parentNode
+      } while (node?.parentNode)
 
-    if (!withinModal) {
-      if (closeButtonRef.current) {
-        closeButtonRef.current.focus()
+      if (!withinModal) {
+        if (closeButtonRef.current) {
+          closeButtonRef.current.focus()
+        }
+        onClose()
       }
-      onClose()
-    }
-  }
+    })
 
-  const onKeyDown = (event: React.KeyboardEvent<HTMLElement>): void => {
-    if (event.keyCode === 27) onClose() // close on esc
-    event.stopPropagation()
-  }
+  const onKeyDown =
+    onClose &&
+    ((event: React.KeyboardEvent<HTMLElement>): void => {
+      if (event.keyCode === 27) onClose() // close on esc
+      event.stopPropagation()
+    })
 
   return createPortal(
     <aside
@@ -142,7 +146,7 @@ const Overlay: React.FC<OverlayProps> = ({
       <OverlayIndexingContext.Provider
         value={{ index: index + 1, indexes, setIndexes }}
       >
-        <FocusLock autoFocus returnFocus>
+        <FocusLock autoFocus={!!onClose} returnFocus>
           <div
             sx={{
               position: 'fixed',
@@ -190,17 +194,19 @@ const Overlay: React.FC<OverlayProps> = ({
                 {({ measureRef }) => (
                   <div ref={measureRef}>
                     <div sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                      <button
-                        ref={closeButtonRef}
-                        aria-label="Close Modal"
-                        onClick={onClose}
-                        sx={{
-                          variant: 'elements.modal.closeButton'
-                        }}
-                        {...closeButtonProps}
-                      >
-                        <Icon glyph="close" color="#141424" size={18} />
-                      </button>
+                      {onClose && (
+                        <button
+                          ref={closeButtonRef}
+                          aria-label="Close Modal"
+                          onClick={onClose}
+                          sx={{
+                            variant: 'elements.modal.closeButton'
+                          }}
+                          {...closeButtonProps}
+                        >
+                          <Icon glyph="close" color="#141424" size={18} />
+                        </button>
+                      )}
                     </div>
                     <div>{children}</div>
                   </div>
