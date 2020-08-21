@@ -1126,6 +1126,31 @@
         }
       }
     },
+    "simple-checkbox": {
+      "base": {
+        "variant": "elements.input.checkbox.label",
+        "mb": "md",
+        "alignItems": "center",
+        "boxSizing": "border-box",
+        "cursor": "pointer",
+        "display": "flex",
+        "padding": "base",
+        "paddingLeft": 0,
+        "width": "100%",
+        "userSelect": "none",
+        "&::before": {
+          "borderRadius": "50%",
+          "borderStyle": "solid",
+          "borderWidth": "2px",
+          "content": "' '",
+          "display": "block",
+          "height": "17px",
+          "marginLeft": "base",
+          "marginRight": "base",
+          "width": "17px"
+        }
+      }
+    },
     "simple-radio": {
       "span": {
         "variant": "elements.input.radio.label",

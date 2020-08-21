@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.17.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.16.0...@uswitch/trustyle.money-theme@1.17.0) (2020-08-21)
+
+
+### Features
+
+* add simple checkbox styles ([ff29cb2](https://github.com/uswitch/trustyle/commit/ff29cb2))
+
+
+
+
+
 # [1.16.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.15.0...@uswitch/trustyle.money-theme@1.16.0) (2020-08-20)
 
 
