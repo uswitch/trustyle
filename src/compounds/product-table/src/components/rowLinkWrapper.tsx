@@ -9,7 +9,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const RowLinkWrapper: React.FC<Props> = ({ link, wrapper, children }) => {
-  return link ? wrapper(children) : children
+  return link !== '' ? wrapper(children) : children
 }
 
 export default RowLinkWrapper

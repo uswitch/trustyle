@@ -580,7 +580,11 @@ export const ClickableExample = () => {
         />
       </ProductTable.Row>
 
-      <ProductTable.Row preTitle="Sponsored" rowTitle="Non-clickable Row">
+      <ProductTable.Row
+        preTitle="Sponsored"
+        rowTitle="Non-clickable Row"
+        clickableRow=""
+      >
         <ProductTable.cells.Image>
           <img
             src="https://placekitten.com/200/75?image=1"
