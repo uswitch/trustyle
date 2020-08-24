@@ -645,6 +645,37 @@
           },
           "variant": "compounds.card.base"
         },
+        "assuranceBar": {
+          "display": "flex",
+          "flexDirection": "row",
+          "alignItems": "center",
+          "py": 0,
+          "h3": {
+            "fontSize": "sm",
+            "fontWeight": "bold",
+            "a": {
+              "textDecoration": "none"
+            }
+          },
+          "image": {
+            "img": {
+              "width": "auto",
+              "mr": "md",
+              "pr": "xxs",
+              "mt": "xs"
+            }
+          },
+          "content": {
+            "fontSize": ["xs", "xs"],
+            "p": {
+              "mt": "xxs",
+              "mb": 0
+            }
+          },
+          "link": {
+            "variant": "compounds.card.base.link"
+          }
+        },
         "horizontal": {
           "variant": "compounds.card.base",
           "display": "flex",
