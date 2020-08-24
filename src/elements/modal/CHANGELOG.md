@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.modal@2.2.4...@uswitch/trustyle.modal@2.3.0) (2020-08-21)
+
+
+### Features
+
+* non-closable modals ([4f41ca1](https://github.com/uswitch/trustyle/commit/4f41ca1))
+
+
+
+
+
 ## [2.2.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.modal@2.2.3...@uswitch/trustyle.modal@2.2.4) (2020-08-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.modal
