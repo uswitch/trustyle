@@ -100,7 +100,11 @@ const ProductTableRow: React.FC<RowProps> = ({
       >
         {!!badges.length && (
           <div
-            sx={{ position: 'absolute', top: 0, transform: 'translateY(-50%)' }}
+            sx={{
+              position: 'absolute',
+              top: 0,
+              transform: 'translateY(-50%)'
+            }}
           >
             {badges.map((badge, i) => (
               <span sx={{ marginRight: 'sm' }} key={i}>
