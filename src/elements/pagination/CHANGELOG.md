@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.pagination@1.0.5...@uswitch/trustyle.pagination@1.2.0) (2020-08-25)
+
+
+### Features
+
+* made design changes for pagination for bbdeals theme ([8a2d63c](https://github.com/uswitch/trustyle/commit/8a2d63c))
+
+
+
+
+
 # [1.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.pagination@1.0.5...@uswitch/trustyle.pagination@1.1.0) (2020-08-25)
 
 
