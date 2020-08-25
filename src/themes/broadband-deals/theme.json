@@ -592,6 +592,7 @@
   },
   "compounds": {
     "card": {
+      "scoreColor": "pepper-purple",
       "itemsPerRow": [1, 1, 3],
       "base": {
         "px": "xxs",
@@ -788,8 +789,10 @@
           }
         },
         "featured": {
-          "imgSizes": "100%, 608px",
           "variant": "compounds.card.variants.responsive",
+          "&": {
+            "pb": "xxs"
+          },
           "tag": {
             "variant": "compounds.card.variants.responsive.tag"
           },
@@ -801,16 +804,30 @@
             "alignItems": ["center", "flex-start"]
           },
           "image": {
-            "variant": "compounds.card.variants.responsive.image"
+            "variant": "compounds.card.variants.responsive.image",
+            "cursor": "pointer",
+            "img": {
+              "max-width": ["100%", 624],
+              "pr": [null, "md"],
+              "width": "100%"
+            }
           },
           "content": {
             "variant": "compounds.card.variants.responsive.content"
           },
           "link": {
-            "variant": "compounds.card.variants.responsive.link"
+            "variant": "compounds.card.variants.responsive.link",
+            "cursor": "pointer"
           },
           "h3": {
-            "variant": "compounds.card.base.h3"
+            "variant": "compounds.card.base.h3",
+            "cursor": "pointer",
+            "&:hover": {
+              "textDecoration": "underline"
+            },
+            "a": {
+              "color": "pepper-purple"
+            }
           },
           "superScript": {
             "variant": "compounds.card.variants.responsive.superScript",
