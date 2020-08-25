@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.1.3...@uswitch/trustyle.product-table@2.2.0) (2020-08-25)
+
+
+### Bug Fixes
+
+* fix clickableRow link logic ([665c25a](https://github.com/uswitch/trustyle/commit/665c25a))
+* remove fragment ([5e16577](https://github.com/uswitch/trustyle/commit/5e16577))
+* update clickableRow link logic ([288460d](https://github.com/uswitch/trustyle/commit/288460d))
+
+
+### Features
+
+* add optional clickable row to product table ([e65d5e7](https://github.com/uswitch/trustyle/commit/e65d5e7))
+* add RowLinkWrapper ([e811758](https://github.com/uswitch/trustyle/commit/e811758))
+
+
+
+
+
 ## [2.1.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.1.2...@uswitch/trustyle.product-table@2.1.3) (2020-08-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.product-table
