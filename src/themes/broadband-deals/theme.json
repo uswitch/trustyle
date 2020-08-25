@@ -752,6 +752,9 @@
         "featured": {
           "imgSizes": "100%, 608px",
           "variant": "compounds.card.variants.responsive",
+          "&": {
+            "pb": "xxs"
+          },
           "tag": {
             "variant": "compounds.card.variants.responsive.tag"
           },
