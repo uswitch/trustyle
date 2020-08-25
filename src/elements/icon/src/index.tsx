@@ -23,6 +23,7 @@ import { Filters } from './filters'
 import { Four } from './four'
 import { GasElectricity } from './gas-electricity'
 import { Home } from './home'
+import { Information } from './information'
 import { Letter } from './letter'
 import { Location } from './location'
 import { Minus } from './minus'
@@ -66,6 +67,7 @@ export type Glyph =
   | 'four'
   | 'gas-electricity'
   | 'home'
+  | 'information'
   | 'letter'
   | 'location'
   | 'minus'
@@ -150,6 +152,8 @@ export const Icon: React.FC<Props> = ({
       return <GasElectricity color={color} size={size} />
     case 'home':
       return <Home color={color} size={size} />
+    case 'information':
+      return <Information color={color} size={size} />
     case 'letter':
       return <Letter color={color} size={size} />
     case 'location':
