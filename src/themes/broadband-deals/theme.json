@@ -304,6 +304,44 @@
         }
       }
     },
+    "pagination": {
+      "display": "inline-flex",
+      "justifyContent": "flex-end",
+      "width": "100%",
+      "li": {
+        "height": "40px",
+        "width": "40px",
+        "display": "inline-flex",
+        "justifyContent": "center",
+        "alignItems": "center"
+      },
+      "span": {
+        "display": "flex"
+      },
+      "fontSize": "base",
+      "color": "grape-purple",
+      "arrow": {
+        "color": "grape-purple"
+      },
+      "arrowDisabled": {
+        "visibility": "hidden",
+        "display": "none"
+      },
+      "currentPage": {
+        "justifyContent": "center",
+        "alignContent": "center",
+        "backgroundColor": "grape-purple",
+        "height": "40px",
+        "width": "40px",
+        "borderRadius": "50%",
+        "color": "white",
+        "fontSize": "base"
+      },
+      "nonCurrentPage": {
+        "color": "grape-purple",
+        "fontSize": "xs"
+      }
+    },
     "list": {
       "bullet": {
         "color": "grey-80"

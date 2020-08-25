@@ -115,7 +115,7 @@ const Pagination: React.FC<Props> = ({
         listStyleType: 'none',
         marginLeft: 0,
         paddingLeft: 0,
-        variant: 'elements.pagination.main'
+        variant: 'elements.pagination'
       }}
       className={className}
     >
