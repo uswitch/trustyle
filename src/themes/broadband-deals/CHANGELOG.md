@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.10.1...@uswitch/trustyle.broadband-deals-theme@1.12.0) (2020-08-25)
+
+
+### Features
+
+* made design changes for pagination for bbdeals theme ([8a2d63c](https://github.com/uswitch/trustyle/commit/8a2d63c))
+
+
+
+
+
+# [1.11.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.10.1...@uswitch/trustyle.broadband-deals-theme@1.11.0) (2020-08-25)
+
+
+### Features
+
+* made design changes for pagination for bbdeals theme ([8a2d63c](https://github.com/uswitch/trustyle/commit/8a2d63c))
+
+
+
+
+
 ## [1.10.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.10.0...@uswitch/trustyle.broadband-deals-theme@1.10.1) (2020-08-20)
 
 

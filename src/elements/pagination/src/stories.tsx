@@ -9,7 +9,7 @@ import AllThemes from '../../../utils/all-themes'
 import Pagination from './'
 
 const PaginationStory = ({ type }: any) => {
-  const currentPageKnob = number('Current page', 5)
+  const currentPageKnob = number('Current page', 1)
   const totalPages = number('Total pages', 10)
 
   const [currentPage, setCurrentPage] = React.useState(currentPageKnob)
@@ -68,7 +68,7 @@ ExampleWithBoth.story = {
 
 export const AutomatedTests = () => {
   return (
-    <AllThemes themes={['uswitch', 'money', 'journey']}>
+    <AllThemes themes={['uswitch', 'money', 'journey', 'broadband-deals']}>
       <PaginationStory type="onClick" />
     </AllThemes>
   )
