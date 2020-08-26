@@ -140,22 +140,20 @@
   "modules": {
     "footer": {
       "base": {
-        "base": {
-          "backgroundColor": "light-grey",
-          "pt": "xxl",
-          "pb": "xxxl",
-          "p": {
-            "fontFamily": "base"
-          },
-          "a": {
-            "color": "pepper-purple"
-          },
-          "h4": {
-            "fontSize": "sm"
-          },
-          "h6": {
-            "fontSize": "sm"
-          }
+        "backgroundColor": "light-grey",
+        "pt": "xxl",
+        "pb": "xxxl",
+        "p": {
+          "fontFamily": "base"
+        },
+        "a": {
+          "color": "pepper-purple"
+        },
+        "h4": {
+          "fontSize": "sm"
+        },
+        "h6": {
+          "fontSize": "sm"
         }
       }
     },
