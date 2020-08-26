@@ -99,7 +99,7 @@
     "blue-sky": "#1695E2",
     "dark-grey": "#686887",
     "dark-grey-03": "rgba(104,104,135,0.3)",
-    "light-grey": "#E6E6F6",
+    "light-grey": "#F2F2FA",
     "pure-white": "#FFFFFF",
     "pure-black": "#000000"
   },
@@ -140,8 +140,23 @@
   "modules": {
     "footer": {
       "base": {
-        "backgroundColor": "light-grey",
-        "minHeight": 688
+        "base": {
+          "backgroundColor": "light-grey",
+          "pt": "xxl",
+          "pb": "xxxl",
+          "p": {
+            "fontFamily": "base"
+          },
+          "a": {
+            "color": "pepper-purple"
+          },
+          "h4": {
+            "fontSize": "sm"
+          },
+          "h6": {
+            "fontSize": "sm"
+          }
+        }
       }
     },
     "assuranceBar": {
