@@ -1403,7 +1403,8 @@
     },
     "p": {
       "mb": "sm",
-      "lineHeight": "base"
+      "lineHeight": "base",
+      "color": "dark-grey"
     },
     "root": {
       "fontFamily": "base",
