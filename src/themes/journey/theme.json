@@ -670,7 +670,8 @@
         "width": "100%",
         "padding": "sm",
         "&:-webkit-autofill": {
-          "transition": "background-color 5000s ease-in-out 0s"
+          "padding": "15px",
+          "margin": "1px"
         },
         "&::-webkit-inner-spin-button, -webkit-outer-spin-button": {
           "-webkit-appearance": "none",
