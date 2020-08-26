@@ -3,6 +3,48 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.1.3...@uswitch/trustyle.product-table@2.3.0) (2020-08-25)
+
+
+### Bug Fixes
+
+* fix clickableRow link logic ([17ba8cb](https://github.com/uswitch/trustyle/commit/17ba8cb))
+* fix clickableRow link logic ([bf2f463](https://github.com/uswitch/trustyle/commit/bf2f463))
+* remove fragment ([a678bb8](https://github.com/uswitch/trustyle/commit/a678bb8))
+* update clickableRow link logic ([3bc23bc](https://github.com/uswitch/trustyle/commit/3bc23bc))
+* update clickableRow link logic ([92ea714](https://github.com/uswitch/trustyle/commit/92ea714))
+
+
+### Features
+
+* add optional clickable row to product table ([0341def](https://github.com/uswitch/trustyle/commit/0341def))
+* add optional clickable row to product table ([0289972](https://github.com/uswitch/trustyle/commit/0289972))
+* add RowLinkWrapper ([cccc0ec](https://github.com/uswitch/trustyle/commit/cccc0ec))
+* add RowLinkWrapper ([9c7ef4c](https://github.com/uswitch/trustyle/commit/9c7ef4c))
+
+
+
+
+
+# [2.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.1.3...@uswitch/trustyle.product-table@2.2.0) (2020-08-25)
+
+
+### Bug Fixes
+
+* fix clickableRow link logic ([665c25a](https://github.com/uswitch/trustyle/commit/665c25a))
+* remove fragment ([5e16577](https://github.com/uswitch/trustyle/commit/5e16577))
+* update clickableRow link logic ([288460d](https://github.com/uswitch/trustyle/commit/288460d))
+
+
+### Features
+
+* add optional clickable row to product table ([e65d5e7](https://github.com/uswitch/trustyle/commit/e65d5e7))
+* add RowLinkWrapper ([e811758](https://github.com/uswitch/trustyle/commit/e811758))
+
+
+
+
+
 ## [2.1.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.1.2...@uswitch/trustyle.product-table@2.1.3) (2020-08-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.product-table
