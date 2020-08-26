@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.icon",
-  "version": "1.12.2",
+  "version": "1.13.0",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
