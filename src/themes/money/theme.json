@@ -1237,15 +1237,20 @@
       },
       "button": {
         "my": "sm",
-        "wrapper": {
-          "base": {
-            "textAlign": "left"
-          }
-        },
         "variants": {
           "calculator": {
             "mb": "sm",
-            "mt": "md"
+            "mt": "lg"
+          }
+        }
+      },
+      "wrapper": {
+        "base": {
+          "pb": 0
+        },
+        "variants": {
+          "calculator": {
+            "pb": ["xs", 0]
           }
         }
       }
@@ -1334,7 +1339,8 @@
           "cursor": "pointer",
           "textDecorationLine": "underline",
           "fontSize": "14px",
-          "color": "grey-60"
+          "color": "grey-60",
+          "mb": "sm"
         },
         "content": {
           "padding": "lg",
