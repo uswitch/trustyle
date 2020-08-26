@@ -353,11 +353,11 @@
         }
       },
       "pros": {
-        "color": "blue-sky",
+        "color": "transparent",
         "glyph": "tick"
       },
       "cons": {
-        "color": "red",
+        "color": "transparent",
         "glyph": "cross"
       },
       "checklist": {
