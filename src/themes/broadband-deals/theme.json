@@ -110,6 +110,7 @@
     "gradient-2-45": "linear-gradient(146deg, #22ACFF, #FF5A63);"
   },
   "radii": {
+    "xs": 3,
     "sm": 4,
     "md": 8,
     "lg": 16,
@@ -831,15 +832,32 @@
           },
           "superScript": {
             "variant": "compounds.card.variants.responsive.superScript",
-            "border": "1px solid",
-            "borderRadius": "sm",
-            "borderImageSlice": 1,
-            "borderImageSource": "linear-gradient(90deg, #22ACFF, #FF5A63)",
-            "backgroundClip": "padding-box",
-            "px": "xs",
-            "py": "xxs",
+            "position": "relative",
+            "mr": ["sm", null],
             "color": ["grape-purple", "grape-purple"],
-            "mr": ["sm", null]
+            ">div": {
+              "backgroundClip": "border-box",
+              "boxSizing": "border-box",
+              "border": "1px solid transparent",
+              "px": "xs",
+              "py": "xxs",
+              "zIndex": 0,
+              "borderRadius": "xs",
+              "backgroundColor": "pure-white",
+              "height": "100%"
+            },
+            "::before": {
+              "content": "''",
+              "position": "absolute",
+              "top": 0,
+              "bottom": "xxs",
+              "left": 0,
+              "right": 0,
+              "background": "linear-gradient(90deg, #22ACFF, #FF5A63)",
+              "zIndex": -1,
+              "borderRadius": "xs",
+              "m": -1
+            }
           }
         },
         "headerImage": {
