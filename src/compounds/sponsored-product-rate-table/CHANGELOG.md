@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@2.0.6...@uswitch/trustyle.sponsored-product-rate-table@2.0.7) (2020-08-27)
+
+
+### Bug Fixes
+
+* updates button dependency for sponsored product rate table ([b883055](https://github.com/uswitch/trustyle/commit/b883055))
+
+
+
+
+
 ## [2.0.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@2.0.5...@uswitch/trustyle.sponsored-product-rate-table@2.0.6) (2020-08-25)
 
 **Note:** Version bump only for package @uswitch/trustyle.sponsored-product-rate-table
