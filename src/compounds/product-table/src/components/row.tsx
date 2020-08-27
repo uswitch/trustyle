@@ -74,7 +74,14 @@ const ProductTableRow: React.FC<RowProps> = ({
       link={clickableRow}
       wrapper={(children?: React.ReactNode) => (
         <a
-          sx={{ textDecoration: 'none' }}
+          sx={{
+            textDecoration: 'none',
+            ':not(:last-child)': {
+              section: {
+                marginBottom: 'md'
+              }
+            }
+          }}
           href={clickableRow}
           target="_blank"
           rel="noopener noreferrer"
@@ -92,7 +99,7 @@ const ProductTableRow: React.FC<RowProps> = ({
           paddingY: 'md',
           marginTop: badges.length ? [10, 15] : 0,
           marginBottom: 'md',
-          ':last-of-type': {
+          ':last-child': {
             marginBottom: 0
           },
           variant: 'compounds.product-table.row.main'
