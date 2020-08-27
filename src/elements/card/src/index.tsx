@@ -24,6 +24,7 @@ interface Props {
     | 'responsive'
     | 'featured'
     | 'bbdeals-card'
+    | 'assuranceBar'
   headerChildren?: React.ReactNode
   contentChildren?: React.ReactNode
 }
@@ -108,7 +109,7 @@ const Card: React.FC<Props> = ({
           )}
           {superScript && (
             <Styled.p sx={{ variant: styles('superScript') }}>
-              {superScript}
+              <div>{superScript}</div>
             </Styled.p>
           )}
           {contentChildren && (

@@ -4,12 +4,14 @@ import * as React from 'react'
 import { jsx } from '@emotion/core'
 
 import { Arrow } from './arrow'
+import { ArrowCircle } from './arrow-circle'
 import { Bill } from './bill'
 import { Calendar } from './calendar'
 import { Caret } from './caret'
 import { Check } from './check'
 import { Clock } from './clock'
 import { Close } from './close'
+import { Checkmark } from './checkmark'
 import { Conversation } from './conversation'
 import { Cross } from './cross'
 import { Edit } from './edit'
@@ -21,6 +23,7 @@ import { Filters } from './filters'
 import { Four } from './four'
 import { GasElectricity } from './gas-electricity'
 import { Home } from './home'
+import { Information } from './information'
 import { Letter } from './letter'
 import { Location } from './location'
 import { Minus } from './minus'
@@ -42,15 +45,18 @@ import { ThumbUp } from './thumb-up'
 import { ThumbDown } from './thumb-down'
 import { StarFilled } from './star-filled'
 import { StarOutlined } from './star-outlined'
+import { Warning } from './warning'
 
 export type Glyph =
   | 'arrow'
+  | 'arrow-circle'
   | 'bill'
   | 'calendar'
   | 'caret'
   | 'check'
   | 'clock'
   | 'close'
+  | 'checkmark'
   | 'conversation'
   | 'cross'
   | 'edit'
@@ -61,6 +67,7 @@ export type Glyph =
   | 'four'
   | 'gas-electricity'
   | 'home'
+  | 'information'
   | 'letter'
   | 'location'
   | 'minus'
@@ -82,6 +89,7 @@ export type Glyph =
   | 'thumb-down'
   | 'star-outlined'
   | 'star-filled'
+  | 'warning'
 
   // temporary icons
   | 'edit-journey'
@@ -108,6 +116,8 @@ export const Icon: React.FC<Props> = ({
   switch (glyph) {
     case 'arrow':
       return <Arrow color={color} direction={direction} size={size} />
+    case 'arrow-circle':
+      return <ArrowCircle color={color} size={size} />
     case 'bill':
       return <Bill color={color} size={size} />
     case 'calendar':
@@ -120,6 +130,8 @@ export const Icon: React.FC<Props> = ({
       return <Clock color={color} size={size} />
     case 'close':
       return <Close color={color} size={size} />
+    case 'checkmark':
+      return <Checkmark color={color} size={size} />
     case 'conversation':
       return <Conversation color={color} size={size} />
     case 'cross':
@@ -140,6 +152,8 @@ export const Icon: React.FC<Props> = ({
       return <GasElectricity color={color} size={size} />
     case 'home':
       return <Home color={color} size={size} />
+    case 'information':
+      return <Information color={color} size={size} />
     case 'letter':
       return <Letter color={color} size={size} />
     case 'location':
@@ -182,6 +196,8 @@ export const Icon: React.FC<Props> = ({
       return <StarFilled color={color} size={size} />
     case 'star-outlined':
       return <StarOutlined color={color} size={size} />
+    case 'warning':
+      return <Warning color={color} size={size} />
 
     // Temporary icons
     case 'edit-journey':
