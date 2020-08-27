@@ -753,7 +753,8 @@
         "width": "100%",
         "padding": "sm",
         "&:-webkit-autofill": {
-          "transition": "background-color 5000s ease-in-out 0s"
+          "padding": "15px",
+          "margin": "1px"
         },
         "&::-webkit-inner-spin-button, -webkit-outer-spin-button": {
           "-webkit-appearance": "none",
@@ -1237,15 +1238,20 @@
       },
       "button": {
         "my": "sm",
-        "wrapper": {
-          "base": {
-            "textAlign": "left"
-          }
-        },
         "variants": {
           "calculator": {
             "mb": "sm",
-            "mt": "md"
+            "mt": "lg"
+          }
+        }
+      },
+      "wrapper": {
+        "base": {
+          "pb": 0
+        },
+        "variants": {
+          "calculator": {
+            "pb": ["xs", 0]
           }
         }
       }
@@ -1334,7 +1340,8 @@
           "cursor": "pointer",
           "textDecorationLine": "underline",
           "fontSize": "14px",
-          "color": "grey-60"
+          "color": "grey-60",
+          "mb": "sm"
         },
         "content": {
           "padding": "lg",
