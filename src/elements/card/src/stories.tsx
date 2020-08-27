@@ -234,7 +234,7 @@ export const HeaderChildrenExample = () => {
   )
 }
 
-export const FeaturedExample = () => {
+export const VariantsExample = () => {
   const title = text('Title', 'Title')
   const linkText = text('Link text', 'Read more')
   const superScript = text('Superscript', 'Superscript')
@@ -256,6 +256,7 @@ export const FeaturedExample = () => {
   return (
     <div>
       <Container>
+        <h2>Featured Variant</h2>
         <Card
           imgSrc={img}
           imgAlt="Picture of a cute kitten"
@@ -290,6 +291,17 @@ export const FeaturedExample = () => {
             </div>
           }
         />
+        <h2>Assurance Bar Variant</h2>
+        <Card
+          imgSrc={img}
+          imgAlt="Picture of a cute kitten"
+          imageSize={imageSize}
+          imgSizes="35px, 35px"
+          title={title}
+          description={content}
+          linkHref="https://www.uswitch.com"
+          variant="assuranceBar"
+        />
       </Container>
     </div>
   )
@@ -313,7 +325,7 @@ HeaderChildrenExample.story = {
   }
 }
 
-FeaturedExample.story = {
+VariantsExample.story = {
   parameters: {
     percy: { skip: true }
   }
@@ -325,7 +337,7 @@ export const AutomatedTests = () => {
       <VerticalCards />
       <HorizontalCards />
       <HeaderChildrenExample />
-      <FeaturedExample />
+      <VariantsExample />
     </AllThemes>
   )
 }
