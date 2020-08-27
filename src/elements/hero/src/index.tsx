@@ -29,7 +29,11 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const DefaultContainer: React.FC = ({ children }) => (
-  <div sx={{ maxWidth: 1024, margin: '0 auto', paddingX: 10 }}>{children}</div>
+  <div
+    sx={{ margin: '0 auto', paddingX: 10, variant: 'elements.hero.container' }}
+  >
+    {children}
+  </div>
 )
 
 const Hero: React.FC<Props> = ({
