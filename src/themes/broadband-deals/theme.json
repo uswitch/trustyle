@@ -94,7 +94,9 @@
     "secondary": "#F35760",
     "secondary--dark": "#F35760",
     "grape-purple": "#520861",
+    "grape-purple-005": "rgba(82, 8, 97, 0.05)",
     "pepper-purple": "#270737",
+    "pepper-purple-03": "rgba(39, 7, 55, 0.3)",
     "watermelon-red": "#F35760",
     "blue-sky": "#1695E2",
     "dark-grey": "#686887",
@@ -967,9 +969,13 @@
     "accordion": {
       "base": {
         "button": {
+          "svg:hover": {
+            "fill": "grape-purple"
+          },
           "p": 0,
           "pb": "lg",
           "pr": ["xs", "sm"],
+          "pt": "xxs",
           "bg": "transparent",
           "fontFamily": "heading",
           "fontSize": "sm",
@@ -981,7 +987,10 @@
           "flexDirection": "row",
           "width": "100%",
           "lineHeight": "md",
-          "outline": "none"
+          ":hover": {
+            "backgroundColor": "grape-purple-005",
+            ">div": { "color": "grape-purple" }
+          }
         },
         "caret": {
           "color": "pepper-purple"
@@ -989,6 +998,11 @@
         "title": {
           "mb": "xl",
           "fontSize": ["lg", "lg"]
+        },
+        "content": {
+          "borderBottom": "1px solid",
+          "borderBottomColor": "pepper-purple-03",
+          "color": "dark-grey"
         }
       },
       "variants": {
