@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.5.1...@uswitch/trustyle.card@1.5.2) (2020-08-27)
+
+
+### Bug Fixes
+
+* add assurance bar variant for card component ([cdf0310](https://github.com/uswitch/trustyle/commit/cdf0310))
+* add border radius to card superscript ([91190d2](https://github.com/uswitch/trustyle/commit/91190d2))
+
+
+
+
+
+
 ## [1.5.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.5.0...@uswitch/trustyle.card@1.5.1) (2020-08-20)
 
 
