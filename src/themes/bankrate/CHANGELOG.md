@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.13.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.13.0...@uswitch/trustyle.bankrate-theme@2.13.1) (2020-08-27)
+
+
+### Bug Fixes
+
+* fix autofill styling on simple input ([ee0f509](https://github.com/uswitch/trustyle/commit/ee0f509))
+* style changes to calculator in themes ([322ae40](https://github.com/uswitch/trustyle/commit/322ae40))
+
+
+
+
+
 # [2.13.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.12.3...@uswitch/trustyle.bankrate-theme@2.13.0) (2020-08-20)
 
 
