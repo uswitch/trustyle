@@ -3,11 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.10.1...@uswitch/trustyle.broadband-deals-theme@1.11.0) (2020-08-25)
 # [1.13.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.12.0...@uswitch/trustyle.broadband-deals-theme@1.13.0) (2020-08-26)
 
 
 ### Bug Fixes
 
+* accordion bbdeals theming ([301798b](https://github.com/uswitch/trustyle/commit/301798b))
 * fixed footer bugs ([7a61753](https://github.com/uswitch/trustyle/commit/7a61753))
 * formatted json ([5bc1226](https://github.com/uswitch/trustyle/commit/5bc1226))
 * make default hero text color white ([0f79312](https://github.com/uswitch/trustyle/commit/0f79312))
