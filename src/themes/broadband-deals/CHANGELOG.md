@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.13.2...@uswitch/trustyle.broadband-deals-theme@1.14.0) (2020-08-28)
+
+
+### Bug Fixes
+
+* card title color and hover state ([78223f7](https://github.com/uswitch/trustyle/commit/78223f7))
+* change card superscript HTML structure ([dfe5e17](https://github.com/uswitch/trustyle/commit/dfe5e17))
+* logo collection hover and paddings update ([1186bb0](https://github.com/uswitch/trustyle/commit/1186bb0))
+
+
+### Features
+
+* update rich-text-mod styling ([d9d93a1](https://github.com/uswitch/trustyle/commit/d9d93a1))
+
+
+
+
+
 ## [1.13.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.13.0...@uswitch/trustyle.broadband-deals-theme@1.13.2) (2020-08-27)
 
 
