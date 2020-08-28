@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.3.1...@uswitch/trustyle.product-table@2.3.1) (2020-08-28)
+
+
+### Bug Fixes
+
+* remove clickable row from trustyle product table ([9aa6a5b](https://github.com/uswitch/trustyle/commit/9aa6a5b))
+
+
+
+
+
 # [2.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.1.3...@uswitch/trustyle.product-table@2.3.0) (2020-08-25)
 
 
