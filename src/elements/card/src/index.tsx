@@ -12,7 +12,7 @@ interface Props {
   imgAlt: string
   imgSizes?: string
   imgSrc: string
-  linkHref?: string
+  linkHref: string
   linkText?: string
   superScript?: string
   tag?: string
@@ -120,7 +120,7 @@ const Card: React.FC<Props> = ({
         </div>
         {title && (
           <Styled.h3 sx={{ margin: '0', variant: styles('heading') }}>
-            {linkHref ? <Styled.a href={linkHref}>{title}</Styled.a> : title}
+            <Styled.a href={linkHref}>{title}</Styled.a>
           </Styled.h3>
         )}
         {description && <Styled.p>{description}</Styled.p>}
