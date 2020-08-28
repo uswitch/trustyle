@@ -858,7 +858,7 @@
             "position": "relative",
             "mr": ["sm", null],
             "color": ["grape-purple", "grape-purple"],
-            ">div": {
+            ">p": {
               "backgroundClip": "border-box",
               "boxSizing": "border-box",
               "border": "1px solid transparent",
@@ -872,10 +872,10 @@
             "::before": {
               "content": "''",
               "position": "absolute",
-              "top": 0,
-              "bottom": "xxs",
-              "left": 0,
-              "right": 0,
+              "top": 13,
+              "bottom": 19,
+              "left": -1,
+              "right": -1,
               "background": "linear-gradient(90deg, #22ACFF, #FF5A63)",
               "zIndex": -1,
               "borderRadius": "xs",
