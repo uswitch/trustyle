@@ -142,6 +142,10 @@
   },
   "----------------------------- Variants": "-----------------------------",
   "modules": {
+    "rich-text": {
+      "contentCols": 12,
+      "contentSpan": 8
+    },
     "footer": {
       "base": {
         "backgroundColor": "light-grey",
@@ -1410,10 +1414,6 @@
         }
       }
     }
-  },
-  "richTextModule": {
-    "contentCols": 12,
-    "contentSpan": 8
   },
   "styles": {
     "heading": {
