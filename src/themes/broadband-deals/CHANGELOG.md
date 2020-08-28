@@ -3,28 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.13.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.13.0...@uswitch/trustyle.broadband-deals-theme@1.13.1) (2020-08-27)
+## [1.13.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.13.0...@uswitch/trustyle.broadband-deals-theme@1.13.2) (2020-08-27)
 
 
 ### Bug Fixes
 
+* accordion bbdeals theming ([301798b](https://github.com/uswitch/trustyle/commit/301798b))
 * add assurance bar variant for card component ([cdf0310](https://github.com/uswitch/trustyle/commit/cdf0310))
 * add border radius to card superscript ([91190d2](https://github.com/uswitch/trustyle/commit/91190d2))
 * change p tag color ([cee5e0d](https://github.com/uswitch/trustyle/commit/cee5e0d))
 * change pros and cons thumb icons fill ([c08ccc7](https://github.com/uswitch/trustyle/commit/c08ccc7))
 * featured card design ([929d79f](https://github.com/uswitch/trustyle/commit/929d79f))
-* logo collection hover and paddings update ([1186bb0](https://github.com/uswitch/trustyle/commit/1186bb0))
 
 
 
 
 
-
+# [1.11.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.10.1...@uswitch/trustyle.broadband-deals-theme@1.11.0) (2020-08-25)
 # [1.13.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.12.0...@uswitch/trustyle.broadband-deals-theme@1.13.0) (2020-08-26)
 
 
 ### Bug Fixes
 
+* accordion bbdeals theming ([301798b](https://github.com/uswitch/trustyle/commit/301798b))
 * fixed footer bugs ([7a61753](https://github.com/uswitch/trustyle/commit/7a61753))
 * formatted json ([5bc1226](https://github.com/uswitch/trustyle/commit/5bc1226))
 * make default hero text color white ([0f79312](https://github.com/uswitch/trustyle/commit/0f79312))
