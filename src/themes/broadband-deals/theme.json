@@ -590,6 +590,9 @@
           "mx": ["-8px"]
         },
         "inner": {
+          "a": {
+            "height": "100%"
+          },
           "width": [
             "calc(50% - 16px)",
             "calc(25% - 16px)",
