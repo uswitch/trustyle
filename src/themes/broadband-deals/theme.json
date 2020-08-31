@@ -640,18 +640,6 @@
           "color": "black",
           "fontSize": "xxs"
         },
-        "h3": {
-          "fontSize": ["md", "lg"],
-          "lineHeight": "md",
-          "a": {
-            "textDecoration": "none",
-            "color": "pepper-purple"
-          },
-          "cursor": "pointer",
-          "&:hover": {
-            "textDecoration": "underline"
-          }
-        },
         "content": {
           "pt": ["sm", "md"],
           "color": "dark-grey",
@@ -665,6 +653,18 @@
           "textDecoration": "underline",
           "fontWeight": "medium",
           "pt": "sm"
+        },
+        "h3": {
+          "fontSize": ["md", "lg"],
+          "lineHeight": "md",
+          "a": {
+            "textDecoration": ["none", "none"],
+            "color": "pepper-purple"
+          },
+          "cursor": "pointer",
+          "&:hover": {
+            "textDecoration": "underline"
+          }
         },
         "image": {
           "img": {
@@ -857,7 +857,8 @@
               "textDecoration": "underline"
             },
             "a": {
-              "color": "pepper-purple"
+              "color": "pepper-purple",
+              "textDecoration": "none"
             }
           },
           "superScript": {
