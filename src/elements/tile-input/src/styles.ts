@@ -81,7 +81,7 @@ export const content: SxStyleProp = {
   left: 0,
   right: 0,
   bottom: 0,
-  padding: 'xs',
+  padding: ['xxs', 'xs'],
   display: 'flex',
   alignItems: 'center',
   textAlign: 'center',
