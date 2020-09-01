@@ -1411,6 +1411,78 @@
           }
         }
       }
+    },
+    "eligibility-criteria": {
+      "base": {
+        "height": "100%",
+        "box-sizing": "border-box",
+        "backgroundColor": "grey-0",
+        "py": "lg",
+        "px": "md",
+        ":last-child": {
+          "mr": "md"
+        }
+      },
+      "title": {
+        "variant": "styles.h4",
+        "color": "experimental-text",
+        "fontWeight": "bold",
+        "fontSize": "lg",
+        "mb": "md",
+        "display": "block"
+      },
+      "subtitle": {
+        "fontSize": "sm",
+        "fontWeight": "bold",
+        "mb": "xs",
+        "display": "flex",
+        "borderTop": "solid 1px",
+        "borderTopColor": "grey-20",
+        "pt": "sm"
+      },
+      "subscript": {
+        "fontSize": "sm"
+      },
+      "label": {
+        "mb": "md",
+        "fontSize": "sm",
+        "display": "block"
+      },
+      "item": {
+        "base": {
+          "display": "flex",
+          "justifyContent": "space-between",
+          "borderTop": "solid 1px",
+          "borderTopColor": "grey-20",
+          "mt": "xs",
+          "pt": "sm",
+          "pb": "xs"
+        },
+        "title": {
+          "color": "grey-80",
+          "fontWeight": "bold",
+          "fontSize": "sm"
+        },
+        "value": {
+          "textAlign": "right",
+          "fontSize": "sm"
+        },
+        "additional": {
+          "fontSize": "sm",
+          "paddingInlineStart": 0,
+          "listStyle": "none",
+          "li": {
+            "mb": "sm",
+            "::before": {
+              "content": "'• '",
+              "color": "sunshine",
+              "display": "inline-block",
+              "width": "1em",
+              "left": "-1em"
+            }
+          }
+        }
+      }
     }
   },
   "compounds": {
@@ -1544,6 +1616,22 @@
           "marginRight": "13px",
           "height": 36,
           "width": 32
+        },
+        "eligibility-criteria": {
+          "variant": "compounds.accordion.base",
+          "backgroundColor": "grey-05",
+          "color": "grey-80",
+          "fontSize": "md",
+          "title": {
+            "textAlign": "center",
+            "flex": "none",
+            "mr": "sm"
+          },
+          "button": {
+            "variant": "compounds.accordion.base.button",
+            "justifyContent": "center",
+            "py": "md"
+          }
         }
       }
     },
