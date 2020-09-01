@@ -1277,6 +1277,61 @@
         }
       }
     },
+    "form-section": {
+      "default": {},
+      "panel": {
+        "elements": {
+          "wrapper": {
+            "backgroundColor": "white",
+            "borderRadius": "4px",
+            "mb": "lg",
+            "color": "plum",
+            "paddingX": "32px",
+            "paddingY": 0,
+            "opacity": 1
+          },
+
+          "fields": {
+            "display": "none"
+          },
+
+          "heading": {
+            "opacity": 0.4,
+            "display": "flex",
+            "alignItems": "center"
+          }
+        },
+
+        "states": {
+          "isActive": {
+            "wrapper": {
+              "variant": "elements.form-section.panel.elements.wrapper",
+              "paddingY": "md"
+            },
+            "heading": {
+              "variant": "elements.form-section.panel.elements.heading",
+              "display": "none"
+            },
+            "fields": {
+              "display": "block"
+            }
+          },
+          "isComplete": {
+            "wrapper": {
+              "variant": "elements.form-section.panel.elements.wrapper"
+            },
+            "heading": {
+              "variant": "elements.form-section.panel.elements.heading",
+              "opacity": 1,
+              "justifyContent": "space-between"
+            },
+            "fields": {
+              "display": "none"
+            }
+          }
+        }
+      }
+    },
     "sponsorship": {
       "base": {
         "alignItems": "center",
