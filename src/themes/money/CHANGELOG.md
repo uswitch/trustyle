@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.19.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.18.1...@uswitch/trustyle.money-theme@1.19.0) (2020-09-01)
+
+
+### Features
+
+* add form styles for multi section panels ([35f2a35](https://github.com/uswitch/trustyle/commit/35f2a35))
+
+
+
+
+
 ## [1.17.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.17.4...@uswitch/trustyle.money-theme@1.17.4) (2020-08-28)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme
