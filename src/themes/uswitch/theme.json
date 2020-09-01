@@ -1307,6 +1307,7 @@
         "borderWidth": "2px",
         "color": "slate-grey",
         "fontWeight": "normal",
+        "fontSize": ["14px", "16px"],
         "before": {
           "content": "' '",
           "borderColor": "light-grey-blue",
