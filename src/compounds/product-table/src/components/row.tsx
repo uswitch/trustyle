@@ -6,7 +6,7 @@ import { Addon, AddonArg, CellContext } from '../generics'
 
 import CellBase from './cell-base'
 import { ROWS } from './cell-split'
-import RowLinkWrapper from './rowLinkWrapper'
+import RowWrapper from './rowWrapper'
 
 export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   badges?: React.ReactNode[]
@@ -85,19 +85,7 @@ const ProductTableRow: React.FC<RowProps> = ({
         variant: 'compounds.product-table.row.main'
       }}
     >
-      <RowLinkWrapper
-        link={clickableRow}
-        wrapper={(children?: React.ReactNode) => (
-          <a
-            sx={{ textDecoration: 'none' }}
-            href={clickableRow}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {children}
-          </a>
-        )}
-      >
+      <RowWrapper link={clickableRow}>
         {!!badges.length && (
           <div
             sx={{
@@ -239,7 +227,7 @@ const ProductTableRow: React.FC<RowProps> = ({
             {addonsFor('body')}
           </CellContext.Provider>
         </div>
-      </RowLinkWrapper>
+      </RowWrapper>
     </section>
   )
 }
