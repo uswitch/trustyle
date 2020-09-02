@@ -8,18 +8,38 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode
 }
 
-const RowWrapper: React.FC<Props> = ({ link, children }) => {
-  return link ? (
+const linkWrapper = (link: string, children: React.ReactNode) => {
+  return (
     <a
       sx={{ textDecoration: 'none' }}
       href={link}
       target="_blank"
       rel="noopener noreferrer"
     >
-      {children}
+      <div
+        sx={{
+          paddingX: ['sm', 'md'],
+          paddingY: 'md'
+        }}
+      >
+        {children}
+      </div>
     </a>
+  )
+}
+
+const RowWrapper: React.FC<Props> = ({ link, children }) => {
+  return link ? (
+    linkWrapper(link, children)
   ) : (
-    <div>{children}</div>
+    <div
+      sx={{
+        paddingX: ['sm', 'md'],
+        paddingY: 'md'
+      }}
+    >
+      {children}
+    </div>
   )
 }
 
