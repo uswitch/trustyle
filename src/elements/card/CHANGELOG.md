@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.6.1...@uswitch/trustyle.card@1.7.0) (2020-09-02)
+
+
+### Features
+
+* image props for card ([25af9e4](https://github.com/uswitch/trustyle/commit/25af9e4))
+
+
+
+
+
 ## [1.5.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.5.3...@uswitch/trustyle.card@1.5.4) (2020-08-28)
 
 
