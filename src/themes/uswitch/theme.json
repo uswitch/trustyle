@@ -1781,6 +1781,7 @@
           "padding": "0",
           "paddingY": ["xs", "xs", "xs"],
           "bg": "transparent",
+          "color": "primary",
           "fontSize": ["xs", "xs", "sm"],
           "fontWeight": "bold",
           "alignItems": "center",
