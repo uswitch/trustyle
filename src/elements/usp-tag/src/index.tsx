@@ -22,7 +22,7 @@ const UspTag: React.FC<Props> = ({
         backgroundColor: backgroundColor,
         textAlign: 'left',
         paddingX: 12,
-        paddingY: 'xxs',
+        paddingY: 4,
         '::before': {
           content: '""',
           position: 'relative',
@@ -37,7 +37,7 @@ const UspTag: React.FC<Props> = ({
         sx={{
           fontFamily: 'base',
           fontWeight: 'bold',
-          fontSize: 'xs',
+          fontSize: 'xxs',
           color: 'grey-80',
           lineHeight: 1.3
         }}

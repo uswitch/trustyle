@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.1.2...@uswitch/trustyle.uswitch-theme@2.1.3) (2020-09-02)
+
+
+### Bug Fixes
+
+* Fix accordion text colour ([dd15e29](https://github.com/uswitch/trustyle/commit/dd15e29))
+
+
+
+
+
+## [2.1.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.1.1...@uswitch/trustyle.uswitch-theme@2.1.2) (2020-09-01)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.1.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.1.0...@uswitch/trustyle.uswitch-theme@2.1.1) (2020-08-27)
+
+
+### Bug Fixes
+
+* fix autofill styling on simple input ([ee0f509](https://github.com/uswitch/trustyle/commit/ee0f509))
+* style changes to calculator in themes ([322ae40](https://github.com/uswitch/trustyle/commit/322ae40))
+
+
+
+
+
 # [2.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.0.4...@uswitch/trustyle.uswitch-theme@2.1.0) (2020-08-20)
 
 

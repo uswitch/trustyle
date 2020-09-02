@@ -12,6 +12,7 @@ interface Props {
   imgAlt: string
   imgSizes?: string
   imgSrc: string
+  imageProps?: any
   linkHref: string
   linkText?: string
   superScript?: string
@@ -24,6 +25,7 @@ interface Props {
     | 'responsive'
     | 'featured'
     | 'bbdeals-card'
+    | 'assuranceBar'
   headerChildren?: React.ReactNode
   contentChildren?: React.ReactNode
 }
@@ -39,6 +41,7 @@ const Card: React.FC<Props> = ({
   imgAlt,
   imgSizes = '768px',
   imgSrc,
+  imageProps = {},
   linkHref,
   linkText,
   superScript,
@@ -74,13 +77,15 @@ const Card: React.FC<Props> = ({
               alt={imgAlt}
               src={imgSrc}
               sizes={imgSizes}
+              critical={critical}
+              {...imageProps}
               imgixParams={{
                 fit: imageSize === 'cover' ? 'crop' : 'fill',
                 crop: 'faces,entropy',
                 ar: '16:9',
-                fill: 'solid'
+                fill: 'solid',
+                ...(imageProps.imgixParams || {})
               }}
-              critical={critical}
             />
           </Styled.a>
         </React.Fragment>
@@ -107,8 +112,8 @@ const Card: React.FC<Props> = ({
             </span>
           )}
           {superScript && (
-            <Styled.p sx={{ variant: styles('superScript') }}>
-              {superScript}
+            <Styled.p as="div" sx={{ variant: styles('superScript') }}>
+              <p>{superScript}</p>
             </Styled.p>
           )}
           {contentChildren && (

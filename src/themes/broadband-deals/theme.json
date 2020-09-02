@@ -94,12 +94,15 @@
     "secondary": "#F35760",
     "secondary--dark": "#F35760",
     "grape-purple": "#520861",
+    "grape-purple-05": "rgba(82,8,97,0.05)",
     "pepper-purple": "#270737",
+    "pepper-purple-5": "rgba(39,7,55,0.5)",
+    "pepper-purple-03": "rgba(39, 7, 55, 0.3)",
     "watermelon-red": "#F35760",
     "blue-sky": "#1695E2",
     "dark-grey": "#686887",
     "dark-grey-03": "rgba(104,104,135,0.3)",
-    "light-grey": "#E6E6F6",
+    "light-grey": "#F2F2FA",
     "pure-white": "#FFFFFF",
     "pure-black": "#000000"
   },
@@ -110,6 +113,7 @@
     "gradient-2-45": "linear-gradient(146deg, #22ACFF, #FF5A63);"
   },
   "radii": {
+    "xs": 3,
     "sm": 4,
     "md": 8,
     "lg": 16,
@@ -138,10 +142,27 @@
   },
   "----------------------------- Variants": "-----------------------------",
   "modules": {
+    "rich-text": {
+      "contentCols": 12,
+      "contentSpan": 8
+    },
     "footer": {
       "base": {
         "backgroundColor": "light-grey",
-        "minHeight": 688
+        "pt": "xxl",
+        "pb": "xxxl",
+        "p": {
+          "fontFamily": "base"
+        },
+        "a": {
+          "color": "pepper-purple"
+        },
+        "h4": {
+          "fontSize": "sm"
+        },
+        "h6": {
+          "fontSize": "sm"
+        }
       }
     },
     "assuranceBar": {
@@ -353,11 +374,11 @@
         }
       },
       "pros": {
-        "color": "blue-sky",
+        "color": "transparent",
         "glyph": "tick"
       },
       "cons": {
-        "color": "red",
+        "color": "transparent",
         "glyph": "cross"
       },
       "checklist": {
@@ -476,8 +497,12 @@
       "bottomImage": {
         "display": "block"
       },
-      "h1": {
+      "h1, h2, h3, h4, h5, h6, p": {
         "color": "pure-white"
+      },
+      "container": {
+        "maxWidth": "layout.container.maxWidth",
+        "px": "gutter"
       }
     },
     "author": {
@@ -571,10 +596,8 @@
             "calc(16.66% - 16px)"
           ],
           "height": "133px",
-          "mx": ["xs"],
-          "my": ["xs"],
-          "px": ["lg"],
-          "py": ["lg"],
+          "m": ["xs"],
+          "p": ["md", "lg"],
           "border": "1px solid #E5E5E5",
           "borderRadius": "sm",
           "display": "flex",
@@ -585,6 +608,10 @@
             "maxWidth": "100%",
             "height": "auto",
             "maxHeight": "100%"
+          },
+          ":hover": {
+            "backgroundColor": "grape-purple-05",
+            "borderColor": "pepper-purple-5"
           }
         }
       }
@@ -592,6 +619,7 @@
   },
   "compounds": {
     "card": {
+      "scoreColor": "pepper-purple",
       "itemsPerRow": [1, 1, 3],
       "base": {
         "px": "xxs",
@@ -616,8 +644,12 @@
           "fontSize": ["md", "lg"],
           "lineHeight": "md",
           "a": {
-            "color": "pure-black",
-            "textDecoration": "none"
+            "textDecoration": "none",
+            "color": "pepper-purple"
+          },
+          "cursor": "pointer",
+          "&:hover": {
+            "textDecoration": "underline"
           }
         },
         "content": {
@@ -682,6 +714,37 @@
             "variant": "compounds.card.headerChildren"
           },
           "variant": "compounds.card.base"
+        },
+        "assuranceBar": {
+          "display": "flex",
+          "flexDirection": "row",
+          "alignItems": "center",
+          "py": 0,
+          "h3": {
+            "fontSize": "sm",
+            "fontWeight": "bold",
+            "a": {
+              "textDecoration": "none"
+            }
+          },
+          "image": {
+            "img": {
+              "width": "auto",
+              "mr": "md",
+              "pr": "xxs",
+              "mt": "xs"
+            }
+          },
+          "content": {
+            "fontSize": ["xs", "xs"],
+            "p": {
+              "mt": "xxs",
+              "mb": 0
+            }
+          },
+          "link": {
+            "variant": "compounds.card.base.link"
+          }
         },
         "horizontal": {
           "variant": "compounds.card.base",
@@ -757,8 +820,10 @@
           }
         },
         "featured": {
-          "imgSizes": "100%, 608px",
           "variant": "compounds.card.variants.responsive",
+          "&": {
+            "pb": "xxs"
+          },
           "tag": {
             "variant": "compounds.card.variants.responsive.tag"
           },
@@ -770,28 +835,52 @@
             "alignItems": ["center", "flex-start"]
           },
           "image": {
-            "variant": "compounds.card.variants.responsive.image"
+            "variant": "compounds.card.variants.responsive.image",
+            "cursor": "pointer",
+            "img": {
+              "max-width": ["100%", 624],
+              "pr": [null, "md"],
+              "width": "100%"
+            }
           },
           "content": {
             "variant": "compounds.card.variants.responsive.content"
           },
           "link": {
-            "variant": "compounds.card.variants.responsive.link"
+            "variant": "compounds.card.variants.responsive.link",
+            "cursor": "pointer"
           },
           "h3": {
             "variant": "compounds.card.base.h3"
           },
           "superScript": {
             "variant": "compounds.card.variants.responsive.superScript",
-            "border": "1px solid",
-            "borderRadius": "sm",
-            "borderImageSlice": 1,
-            "borderImageSource": "linear-gradient(90deg, #22ACFF, #FF5A63)",
-            "backgroundClip": "padding-box",
-            "px": "xs",
-            "py": "xxs",
+            "position": "relative",
+            "mr": ["sm", null],
             "color": ["grape-purple", "grape-purple"],
-            "mr": ["sm", null]
+            ">p": {
+              "backgroundClip": "border-box",
+              "boxSizing": "border-box",
+              "border": "1px solid transparent",
+              "px": "xs",
+              "py": "xxs",
+              "zIndex": 0,
+              "borderRadius": "xs",
+              "backgroundColor": "pure-white",
+              "height": "100%"
+            },
+            "::before": {
+              "content": "''",
+              "position": "absolute",
+              "top": 13,
+              "bottom": 19,
+              "left": -1,
+              "right": -1,
+              "background": "linear-gradient(90deg, #22ACFF, #FF5A63)",
+              "zIndex": -1,
+              "borderRadius": "xs",
+              "m": -1
+            }
           }
         },
         "headerImage": {
@@ -888,9 +977,13 @@
     "accordion": {
       "base": {
         "button": {
+          "svg:hover": {
+            "fill": "grape-purple"
+          },
           "p": 0,
           "pb": "lg",
           "pr": ["xs", "sm"],
+          "pt": "xxs",
           "bg": "transparent",
           "fontFamily": "heading",
           "fontSize": "sm",
@@ -902,7 +995,10 @@
           "flexDirection": "row",
           "width": "100%",
           "lineHeight": "md",
-          "outline": "none"
+          ":hover": {
+            "backgroundColor": "grape-purple-05",
+            ">div": { "color": "grape-purple" }
+          }
         },
         "caret": {
           "color": "pepper-purple"
@@ -910,6 +1006,11 @@
         "title": {
           "mb": "xl",
           "fontSize": ["lg", "lg"]
+        },
+        "content": {
+          "borderBottom": "1px solid",
+          "borderBottomColor": "pepper-purple-03",
+          "color": "dark-grey"
         }
       },
       "variants": {
@@ -1311,10 +1412,6 @@
       }
     }
   },
-  "richTextModule": {
-    "contentCols": 12,
-    "contentSpan": 8
-  },
   "styles": {
     "heading": {
       "fontFamily": "heading",
@@ -1355,7 +1452,8 @@
     },
     "p": {
       "mb": "sm",
-      "lineHeight": "base"
+      "lineHeight": "base",
+      "color": "dark-grey"
     },
     "root": {
       "fontFamily": "base",
