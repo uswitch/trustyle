@@ -258,7 +258,7 @@
     },
     "h3": {
       "variant": "styles.headings",
-      "fontSize": ["md", "lg", "xl"]
+      "fontSize": ["sm", "md", "lg"]
     },
     "h4": {
       "variant": "styles.headings",
