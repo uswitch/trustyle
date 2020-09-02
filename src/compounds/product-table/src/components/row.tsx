@@ -70,33 +70,33 @@ const ProductTableRow: React.FC<RowProps> = ({
    */
 
   return (
-    <RowLinkWrapper
-      link={clickableRow}
-      wrapper={(children?: React.ReactNode) => (
-        <a
-          sx={{ textDecoration: 'none' }}
-          href={clickableRow}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {children}
-        </a>
-      )}
+    <section
+      id={id}
+      sx={{
+        position: 'relative',
+        border: '1px solid',
+        paddingX: ['sm', 'md'],
+        paddingY: 'md',
+        marginTop: badges.length ? [10, 15] : 0,
+        marginBottom: 'md',
+        ':last-of-type': {
+          marginBottom: 0
+        },
+        variant: 'compounds.product-table.row.main'
+      }}
     >
-      <section
-        id={id}
-        sx={{
-          position: 'relative',
-          border: '1px solid',
-          paddingX: ['sm', 'md'],
-          paddingY: 'md',
-          marginTop: badges.length ? [10, 15] : 0,
-          marginBottom: 'md',
-          ':last-of-type': {
-            marginBottom: 0
-          },
-          variant: 'compounds.product-table.row.main'
-        }}
+      <RowLinkWrapper
+        link={clickableRow}
+        wrapper={(children?: React.ReactNode) => (
+          <a
+            sx={{ textDecoration: 'none' }}
+            href={clickableRow}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {children}
+          </a>
+        )}
       >
         {!!badges.length && (
           <div
@@ -239,8 +239,8 @@ const ProductTableRow: React.FC<RowProps> = ({
             {addonsFor('body')}
           </CellContext.Provider>
         </div>
-      </section>
-    </RowLinkWrapper>
+      </RowLinkWrapper>
+    </section>
   )
 }
 
