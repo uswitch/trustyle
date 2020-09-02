@@ -11,7 +11,11 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 const linkWrapper = (link: string, children: React.ReactNode) => {
   return (
     <a
-      sx={{ textDecoration: 'none' }}
+      sx={{
+        textDecoration: 'none',
+        color: 'inherit',
+        variant: 'compounds.product-table.row.linkWrapper'
+      }}
       href={link}
       target="_blank"
       rel="noopener noreferrer"

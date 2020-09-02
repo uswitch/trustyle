@@ -1545,6 +1545,13 @@
         },
         "subtitle": {
           "color": "grey-80"
+        },
+        "linkWrapper": {
+          "stroke": "none",
+          "textDecoration": "none",
+          "marginBottom": 0,
+          "borderBottom": "none",
+          "fontWeight": "normal"
         }
       },
       "cellBase": {
