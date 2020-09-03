@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.1.3...@uswitch/trustyle.uswitch-theme@2.2.0) (2020-09-03)
+
+
+### Features
+
+* update uswitch them h3 size ([6ba873c](https://github.com/uswitch/trustyle/commit/6ba873c))
+
+
+
+
+
 ## [2.1.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.1.2...@uswitch/trustyle.uswitch-theme@2.1.3) (2020-09-02)
 
 
