@@ -14,20 +14,16 @@ const linkWrapper = (link: string, children: React.ReactNode) => {
       sx={{
         textDecoration: 'none',
         color: 'inherit',
-        variant: 'compounds.product-table.row.linkWrapper'
+        variant: 'compounds.product-table.row.linkWrapper',
+        paddingX: ['sm', 'md'],
+        paddingY: 'md',
+        display: 'block'
       }}
       href={link}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div
-        sx={{
-          paddingX: ['sm', 'md'],
-          paddingY: 'md'
-        }}
-      >
-        {children}
-      </div>
+      {children}
     </a>
   )
 }
