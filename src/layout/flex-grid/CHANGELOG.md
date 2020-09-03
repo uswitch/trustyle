@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.flex-grid@3.0.2...@uswitch/trustyle.flex-grid@3.1.0) (2020-09-03)
+
+
+### Features
+
+* update flex-grid Container to accept responsive (array) values for cols and span ([04e96bd](https://github.com/uswitch/trustyle/commit/04e96bd))
+
+
+
+
+
 ## [3.0.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.flex-grid@3.0.1...@uswitch/trustyle.flex-grid@3.0.2) (2020-08-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.flex-grid

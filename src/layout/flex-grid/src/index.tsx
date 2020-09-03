@@ -41,6 +41,8 @@ interface ContainerProps {
 
 export const Container: React.FC<ContainerProps &
   React.HTMLAttributes<any>> = ({ children, cols, span, ...props }) => {
+  const colsArray = castArray(cols)
+  const spanArray = castArray(span)
   return (
     <div
       sx={{
@@ -50,7 +52,9 @@ export const Container: React.FC<ContainerProps &
         maxWidth: (theme: any) =>
           uncastArrayIfSingle(
             castArray(getContainerSize(theme)).map(
-              (maxWidth: number) => maxWidth * (cols && span ? span / cols : 1)
+              (maxWidth: number, i: number) =>
+                maxWidth *
+                (colsArray[i] && spanArray[i] ? spanArray[i] / colsArray[i] : 1)
             )
           )
       }}
