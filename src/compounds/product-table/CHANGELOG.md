@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.3.3...@uswitch/trustyle.product-table@2.4.0) (2020-09-03)
+
+
+### Bug Fixes
+
+* move padding inside rowWrapper ([275c63a](https://github.com/uswitch/trustyle/commit/275c63a))
+* refactor rowLinkWrapper ([aff8eab](https://github.com/uswitch/trustyle/commit/aff8eab))
+* spacing between panels ([35eaa9d](https://github.com/uswitch/trustyle/commit/35eaa9d))
+
+
+### Features
+
+* add clickable row styling to themes ([600615f](https://github.com/uswitch/trustyle/commit/600615f))
+
+
+
+
+
 ## [2.3.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.3.1...@uswitch/trustyle.product-table@2.3.1) (2020-08-28)
 
 
