@@ -1433,6 +1433,12 @@
         },
         "subtitle": {
           "color": "grey-60"
+        },
+        "linkWrapper": {
+          "color": "inherit",
+          "stroke": "none",
+          "textDecoration": "none",
+          "transition": "none"
         }
       },
       "addonFooter": {

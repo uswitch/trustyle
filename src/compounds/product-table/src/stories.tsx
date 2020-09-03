@@ -544,6 +544,83 @@ ExampleStacked.story = {
   }
 }
 
+const clickableRow = 'https://www.money.co.uk'
+
+export const ClickableExample = () => {
+  return (
+    <React.Fragment>
+      <ProductTable.Row
+        preTitle="Sponsored"
+        rowTitle="Clickable Row"
+        clickableRow={clickableRow}
+      >
+        <ProductTable.cells.Image>
+          <img
+            src="https://placekitten.com/200/75?image=1"
+            alt="Salman"
+            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          />
+        </ProductTable.cells.Image>
+        <ProductTable.cells.Split>
+          <ProductTable.cells.Content label="Fixed rate contract">
+            14 months
+          </ProductTable.cells.Content>
+          <ProductTable.cells.Content label="Early exit fee">
+            £30 per fuel
+          </ProductTable.cells.Content>
+        </ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Cta
+          primary={<ButtonLink variant="primary">Button</ButtonLink>}
+        />
+      </ProductTable.Row>
+
+      <ProductTable.Row
+        preTitle="Sponsored"
+        rowTitle="Clickable Row"
+        clickableRow={clickableRow}
+      >
+        <ProductTable.cells.Image>
+          <img
+            src="https://placekitten.com/200/75?image=1"
+            alt="Salman"
+            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          />
+        </ProductTable.cells.Image>
+        <ProductTable.cells.Split>
+          <ProductTable.cells.Content label="Fixed rate contract">
+            14 months
+          </ProductTable.cells.Content>
+          <ProductTable.cells.Content label="Early exit fee">
+            £30 per fuel
+          </ProductTable.cells.Content>
+        </ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Cta
+          primary={<ButtonLink variant="primary">Button</ButtonLink>}
+          secondary={<ButtonLink variant="link">Plan info</ButtonLink>}
+        />
+      </ProductTable.Row>
+    </React.Fragment>
+  )
+}
+
+ClickableExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 const Spacer = () => <div sx={{ minHeight: 20 }} />
 
 export const AutomatedTests = () => {

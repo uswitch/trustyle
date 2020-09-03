@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.2.0...@uswitch/trustyle.uswitch-theme@2.3.0) (2020-09-03)
+
+
+### Features
+
+* add clickable row styling to themes ([600615f](https://github.com/uswitch/trustyle/commit/600615f))
+
+
+
+
+
 # [2.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.1.3...@uswitch/trustyle.uswitch-theme@2.2.0) (2020-09-03)
 
 
