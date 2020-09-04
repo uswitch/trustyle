@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.simple-input@0.4.2...@uswitch/trustyle.simple-input@0.4.3) (2020-09-04)
+
+
+### Bug Fixes
+
+* remove props being spread to input ([f5f7283](https://github.com/uswitch/trustyle/commit/f5f7283))
+
+
+
+
+
 ## [0.4.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.simple-input@0.4.1...@uswitch/trustyle.simple-input@0.4.2) (2020-08-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.simple-input
