@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.4.0...@uswitch/trustyle.product-table@2.5.0) (2020-09-04)
+
+
+### Features
+
+* add info addon to product table ([0b2e84f](https://github.com/uswitch/trustyle/commit/0b2e84f))
+
+
+
+
+
 # [2.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.3.3...@uswitch/trustyle.product-table@2.4.0) (2020-09-03)
 
 
