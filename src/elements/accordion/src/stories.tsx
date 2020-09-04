@@ -27,6 +27,23 @@ SingleAccordion.story = {
   }
 }
 
+export const SingleAccordionWithVariant = () => {
+  const title = text('Title', 'This is an example title')
+  const content = text('Content', 'This is some example content')
+  const variant = text('Variant', 'eligibility-criteria')
+  return (
+    <Accordion title={title} variant={variant}>
+      <p>{content}</p>
+    </Accordion>
+  )
+}
+
+SingleAccordionWithVariant.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AccordionGroup = () => {
   const groupTitle = text('Group title', 'Example group title')
   const title = text('First title', 'This is an example title')

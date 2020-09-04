@@ -1349,6 +1349,41 @@
           }
         }
       }
+    },
+    "eligibility-criteria": {
+      "base": {
+        "backgroundColor": "grey-0",
+        "py": "lg",
+        "px": "md",
+        "ml": "md",
+        "my": "md",
+        ":last-child": {
+          "mr": "md"
+        }
+      },
+      "title": {
+        "variant": "styles.h4",
+        "color": "experimental-text",
+        "fontWeight": "bold",
+        "fontSize": "lg",
+        "mb": "md",
+        "display": "block"
+      },
+      "label": {
+        "mb": "sm",
+        "fontSize": "sm"
+      },
+      "item": {
+        "title": {
+          "color": "grey-80",
+          "fontWeight": "bold",
+          "fontSize": "sm"
+        },
+        "value": {
+          "textAlign": "right",
+          "fontSize": "sm"
+        }
+      }
     }
   },
   "compounds": {
@@ -1476,6 +1511,15 @@
           "marginRight": "13px",
           "height": 36,
           "width": 32
+        },
+        "eligibility-criteria": {
+          "variant": "compounds.accordion.base",
+          "backgroundColor": "grey-05",
+          "color": "grey-80",
+          "fontSize": "md",
+          "title": {
+            "textAlign": "center"
+          }
         }
       }
     },

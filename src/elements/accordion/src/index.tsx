@@ -24,6 +24,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   isInitiallyOpen?: boolean
   className?: string
   icon?: string
+  variant?: string
 }
 
 interface TitleProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -40,7 +41,15 @@ interface GroupProps {
 const Accordion: React.FC<Props> & {
   Group: React.FC<GroupProps>
   Title: React.FC<TitleProps>
-} = ({ index, title, isInitiallyOpen = false, children, className, icon }) => {
+} = ({
+  index,
+  title,
+  isInitiallyOpen = false,
+  children,
+  className,
+  icon,
+  variant
+}) => {
   const {
     theme: {
       compounds: { accordion: accordionTheme = {} },
@@ -64,7 +73,14 @@ const Accordion: React.FC<Props> & {
   }
 
   return (
-    <div sx={{ variant: 'compounds.accordion' }} className={className}>
+    <div
+      sx={{
+        variant: variant
+          ? `compounds.accordion.variants.${variant}`
+          : 'compounds.accordion'
+      }}
+      className={className}
+    >
       <button
         sx={{
           cursor: 'pointer',
@@ -80,7 +96,8 @@ const Accordion: React.FC<Props> & {
               flex: '1',
               textAlign: 'left',
               alignItems: 'center',
-              display: 'flex'
+              display: 'flex',
+              variant: `compounds.accordion.variants.${variant}.title`
             }}
           >
             <div
@@ -104,7 +121,8 @@ const Accordion: React.FC<Props> & {
           <div
             sx={{
               flex: '1',
-              textAlign: 'left'
+              textAlign: 'left',
+              variant: `compounds.accordion.variants.${variant}.title`
             }}
           >
             {title}
