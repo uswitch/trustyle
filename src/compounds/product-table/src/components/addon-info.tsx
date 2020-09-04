@@ -6,27 +6,26 @@ import { Addon, AddonContext, CellContext } from '../generics'
 
 import { ROWS } from './cell-split'
 
-const ProductTableAddonFooter: Addon = {
+const ProductTableAddonInfo: Addon = {
   body: ({ children }) => {
     const { gridColumnSpan } = React.useContext(CellContext)
 
     return (
       <AddonContext.Provider
         value={{
-          inAddon: 'footer',
-          order: 100,
+          inAddon: 'info',
+          order: 99, // should appear above footer on mobile
           extraRules: {
-            borderTop: '1px solid',
             paddingTop: 'sm',
             marginTop: 'xs',
             marginBottom: -6,
-            variant: 'compounds.product-table.addonFooter.main'
+            variant: 'compounds.product-table.addonInfo.main'
           }
         }}
       >
         <CellContext.Provider
           value={{
-            gridRowStart: ROWS + 6,
+            gridRowStart: ROWS + 5, // should appear above footer on desktop
             gridRowSpan: 1,
             gridColumnStart: 1,
             gridColumnSpan
@@ -39,4 +38,4 @@ const ProductTableAddonFooter: Addon = {
   }
 }
 
-export default ProductTableAddonFooter
+export default ProductTableAddonInfo
