@@ -15,14 +15,14 @@ const ProductTableAddonAccordion: Addon = {
     return (
       <AddonContext.Provider
         value={{
-          inAddon: 'footer',
+          inAddon: 'accordion',
           order: 100,
           extraRules: {
             borderTop: '1px solid',
             paddingTop: 'sm',
             marginTop: 'xs',
             marginBottom: -6,
-            variant: 'compounds.product-table.addonFooter.main'
+            variant: 'compounds.product-table.accordion.main'
           }
         }}
       >
