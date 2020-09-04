@@ -24,6 +24,7 @@ export const SimpleInput = React.forwardRef(
       prefix,
       suffix
     } = props
+
     const [hasFocus, setHasFocus] = useState(false)
 
     return (
@@ -52,7 +53,6 @@ export const SimpleInput = React.forwardRef(
           defaultValue={defaultValue}
           onFocus={() => setHasFocus(true)}
           onBlur={() => setHasFocus(false)}
-          {...props}
         />
         {suffix && (
           <span sx={{ variant: 'elements.simple-input.affix.suffix' }}>
