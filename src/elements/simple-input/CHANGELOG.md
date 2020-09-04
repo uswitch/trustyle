@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.simple-input@0.4.3...@uswitch/trustyle.simple-input@0.5.0) (2020-09-04)
+
+
+### Features
+
+* add props back to simple input ([e18181b](https://github.com/uswitch/trustyle/commit/e18181b))
+
+
+
+
+
 ## [0.4.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.simple-input@0.4.2...@uswitch/trustyle.simple-input@0.4.3) (2020-09-04)
 
 
