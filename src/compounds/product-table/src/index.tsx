@@ -3,6 +3,7 @@ import * as React from 'react'
 import ProductTableRow from './components/row'
 import ProductTableAddonResponsive from './components/addon-responsive'
 import ProductTableAddonFooter from './components/addon-footer'
+import ProductTableAddonInfo from './components/addon-info'
 import ProductTableCellBase from './components/cell-base'
 import ProductTableCellImage from './components/cell-image'
 import ProductTableCellSplit from './components/cell-split'
@@ -34,7 +35,8 @@ const ProductTable = {
   Row: ProductTableRow,
   addons: {
     footer: ProductTableAddonFooter,
-    responsive: ProductTableAddonResponsive
+    responsive: ProductTableAddonResponsive,
+    info: ProductTableAddonInfo
   },
   cells: {
     Base: ProductTableCellBase,

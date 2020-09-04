@@ -43,6 +43,7 @@ export const ExampleWithKnobs = () => {
   const unsplitColumns = columns.filter(col => !col.includes('Split'))
   const headerAddon = select('Header addon', unsplitColumns, 'None')
   const footerAddon = boolean('Show footer via addon?', true)
+  const infoAddon = boolean('Show info via addon?', true)
 
   const firstCol = select('First column', columns, 'Image')
   const secondCol = select('Second column', columns, 'Split Content')
@@ -152,6 +153,19 @@ export const ExampleWithKnobs = () => {
         <ProductTable.cells.Base sx={{ display: 'block' }} mobileOrder={100}>
           <div sx={{ fontSize: ['xxs', 'xs'] }}>
             Representative example: Assumed borrowing of £10,000 over...
+          </div>
+        </ProductTable.cells.Base>
+      )
+    })
+  }
+
+  if (infoAddon) {
+    addons.push({
+      addon: ProductTable.addons.info,
+      component: (
+        <ProductTable.cells.Base sx={{ display: 'block' }} mobileOrder={100}>
+          <div sx={{ fontSize: ['xxs', 'xs'] }}>
+            Here&apos;s some extra info...
           </div>
         </ProductTable.cells.Base>
       )
