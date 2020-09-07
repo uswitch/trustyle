@@ -60,7 +60,7 @@ const Card: React.FC<Props> = ({
         <span>{children}</span>
       </div>
     ) : (
-      <React.Fragment>{children}</React.Fragment>
+      <div sx={{ variant: styles('headerChildren') }}>{children}</div>
     )
 
   return (

@@ -132,16 +132,16 @@ ThemedIcon.addIcons = (newIcons: any) => {
 
 // Not sure if this should be in here permanently - it adds every icon from
 // every theme into the bundle
-const allIcons = require.context('./icons', true, /\.svg$/)
-allIcons.keys().forEach((path: any) => {
-  const theme = path.split('/')[1]
-  const { default: icon } = allIcons(path)
+// const allIcons = require.context('./icons', true, /\.svg$/)
+// allIcons.keys().forEach((path: any) => {
+//   const theme = path.split('/')[1]
+//   const { default: icon } = allIcons(path)
 
-  if (!icons[theme]) {
-    icons[theme] = {}
-  }
+//   if (!icons[theme]) {
+//     icons[theme] = {}
+//   }
 
-  icons[theme][icon.id] = icon
-})
+//   icons[theme][icon.id] = icon
+// })
 
 export default ThemedIcon
