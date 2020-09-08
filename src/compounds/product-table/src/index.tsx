@@ -30,13 +30,15 @@ import {
   CellContext,
   CellContextProps
 } from './generics'
+import ProductTableAddonAccordion from './components/addon-accordion'
 
 const ProductTable = {
   Row: ProductTableRow,
   addons: {
     footer: ProductTableAddonFooter,
     responsive: ProductTableAddonResponsive,
-    info: ProductTableAddonInfo
+    info: ProductTableAddonInfo,
+    accordion: ProductTableAddonAccordion
   },
   cells: {
     Base: ProductTableCellBase,
