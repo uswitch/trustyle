@@ -919,7 +919,8 @@
             "mb": 0
           },
           "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
-          "borderRadius": "md"
+          "borderRadius": "md",
+          "boxSizing": "border-box"
         }
       }
     },
