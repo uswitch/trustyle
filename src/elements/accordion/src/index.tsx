@@ -80,6 +80,7 @@ const Accordion: React.FC<Props> & {
           : 'compounds.accordion'
       }}
       className={className}
+      data-target="accordion" // this is a hack to stop clicking propagating to the product table
     >
       <button
         sx={{

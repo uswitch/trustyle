@@ -28,7 +28,7 @@ const ProductTableAddonAccordion: Addon = {
       >
         <CellContext.Provider
           value={{
-            gridRowStart: ROWS + 6,
+            gridRowStart: ROWS + 7,
             gridRowSpan: 1,
             gridColumnStart: 1,
             gridColumnSpan
