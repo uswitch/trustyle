@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.21.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.20.0...@uswitch/trustyle.money-theme@1.21.0) (2020-09-08)
+
+
+### Features
+
+* Add accordion addon to product table and eligibility-criteria styling ([7af5b1a](https://github.com/uswitch/trustyle/commit/7af5b1a))
+
+
+
+
+
 # [1.20.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.19.0...@uswitch/trustyle.money-theme@1.20.0) (2020-09-03)
 
 

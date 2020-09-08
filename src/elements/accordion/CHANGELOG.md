@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.6.7...@uswitch/trustyle.accordion@0.7.0) (2020-09-08)
+
+
+### Features
+
+* Add accordion addon to product table and eligibility-criteria styling ([7af5b1a](https://github.com/uswitch/trustyle/commit/7af5b1a))
+
+
+
+
+
 ## [0.6.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.6.6...@uswitch/trustyle.accordion@0.6.7) (2020-08-25)
 
 **Note:** Version bump only for package @uswitch/trustyle.accordion
