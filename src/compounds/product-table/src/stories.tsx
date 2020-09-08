@@ -363,6 +363,14 @@ export const ExampleWithAddons = () => {
               </div>
             </ProductTable.cells.Base>
           )
+        },
+        {
+          addon: ProductTable.addons.accordion,
+          component: (
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontSize: ['xxs', 'xs'] }}>More info</div>
+            </ProductTable.cells.Base>
+          )
         }
       ]}
     >
