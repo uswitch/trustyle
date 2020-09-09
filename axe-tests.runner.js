@@ -43,7 +43,6 @@ const BROKEN_STORIES = [
   'Elements/Pagination',
   'Elements/Simple Input',
   'Elements/Slide Reveal',
-  'Elements/Sponsored by tag',
   'Elements/Text Input',
   'Global Styles/Typography',
   'Layout/Arrangement',

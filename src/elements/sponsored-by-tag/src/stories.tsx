@@ -12,15 +12,22 @@ export default {
 }
 
 export const ExampleWithDefaultText = () => {
+  const providerName: string = text('Provider name', 'Three')
   const providerLogo: string = text(
     'Provider logo url',
     'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/5eyE4LyswwqIYk0mIsE820/dc0774e3e62d7b39ddeb1729d823a8da/Logo_-_three.png'
   )
 
-  return <SponsoredByTag providerLogoSrc={providerLogo} />
+  return (
+    <SponsoredByTag
+      providerLogoSrc={providerLogo}
+      providerName={providerName}
+    />
+  )
 }
 
 export const ExampleWithTextProp = () => {
+  const providerName: string = text('Provider name', 'Three')
   const providerLogo: string = text(
     'Provider logo url',
     'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/5eyE4LyswwqIYk0mIsE820/dc0774e3e62d7b39ddeb1729d823a8da/Logo_-_three.png'
@@ -32,6 +39,7 @@ export const ExampleWithTextProp = () => {
       <SponsoredByTag
         providerLogoSrc={providerLogo}
         providerText={providerText}
+        providerName={providerName}
       />
     </React.Fragment>
   )
