@@ -1418,10 +1418,7 @@
         "box-sizing": "border-box",
         "backgroundColor": "grey-0",
         "py": "lg",
-        "px": "md",
-        ":last-child": {
-          "mr": "md"
-        }
+        "px": "md"
       },
       "title": {
         "variant": "styles.h4",

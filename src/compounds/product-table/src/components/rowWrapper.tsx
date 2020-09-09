@@ -23,7 +23,7 @@ const checkClickTargetIsAccordion = (n: number, e: any) => {
 
 const linkWrapper = (link: string, children: React.ReactNode) => {
   const handleClick = (e: any) => {
-    if (checkClickTargetIsAccordion(5, e)) {
+    if (checkClickTargetIsAccordion(10, e)) {
       e.preventDefault()
     }
   }
