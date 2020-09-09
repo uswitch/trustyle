@@ -27,7 +27,7 @@ export const ExampleWithKnobs = () => {
   )
 
   const iconImg = (
-    <img src={require(`../../../../static/money-icons/${icon}.svg`)} />
+    <img alt="" src={require(`../../../../static/money-icons/${icon}.svg`)} />
   )
   const justTile = (
     <IconTile icon={iconImg} displayVariant={displayVariant}>
@@ -58,7 +58,7 @@ ExampleWithKnobs.story = {
 
 export const AutomatedTests = () => {
   const iconImg = (icon: string) => (
-    <img src={require(`../../../../static/money-icons/${icon}.svg`)} />
+    <img alt="" src={require(`../../../../static/money-icons/${icon}.svg`)} />
   )
   const getTile = (icon: string, text: string) => (
     <IconTile icon={iconImg(icon)}>{text}</IconTile>

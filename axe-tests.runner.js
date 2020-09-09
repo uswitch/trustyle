@@ -39,7 +39,6 @@ const BROKEN_STORIES = [
   'Elements/Embedded-video',
   'Elements/Hero',
   'Elements/HeroWithBackgroundImage',
-  'Elements/Icon Tile',
   'Elements/Link List',
   'Elements/Pagination',
   'Elements/Simple Input',
