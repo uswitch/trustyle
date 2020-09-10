@@ -28,6 +28,7 @@ interface Props {
     | 'assuranceBar'
   headerChildren?: React.ReactNode
   contentChildren?: React.ReactNode
+  sx?: object
 }
 
 const makeStyles = (variant: string) => (element?: string) =>
@@ -49,6 +50,7 @@ const Card: React.FC<Props> = ({
   variant = 'vertical',
   headerChildren,
   contentChildren,
+  sx,
   ...props
 }) => {
   const styles = makeStyles(variant)
@@ -67,6 +69,7 @@ const Card: React.FC<Props> = ({
     <Styled.div
       {...props}
       sx={{
+        ...sx,
         variant: styles()
       }}
     >

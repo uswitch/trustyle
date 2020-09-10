@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.8.0...@uswitch/trustyle.card@1.9.0) (2020-09-10)
+
+
+### Features
+
+* pass sx from props to card component ([6a134d4](https://github.com/uswitch/trustyle/commit/6a134d4))
+
+
+
+
+
+
 # [1.8.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.7.1...@uswitch/trustyle.card@1.8.0) (2020-09-08)
 
 
