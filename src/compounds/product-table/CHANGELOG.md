@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.6.1...@uswitch/trustyle.product-table@2.6.2) (2020-09-09)
+
+
+### Bug Fixes
+
+* section margin and target check times ([24891a4](https://github.com/uswitch/trustyle/commit/24891a4))
+
+
+
+
+
+## [2.6.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.6.0...@uswitch/trustyle.product-table@2.6.1) (2020-09-09)
+
+
+### Bug Fixes
+
+* Stop accordion from propagating click events to product table ([a251461](https://github.com/uswitch/trustyle/commit/a251461))
+
+
+
+
+
 # [2.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.5.0...@uswitch/trustyle.product-table@2.6.0) (2020-09-08)
 
 

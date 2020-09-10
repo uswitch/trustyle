@@ -8,7 +8,26 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode
 }
 
+const checkClickTargetIsAccordion = (n: number, e: any) => {
+  let parent = e.target.parentElement
+  while (parent && n > 0) {
+    if (parent.dataset.target === 'accordion') {
+      return true
+    } else {
+      parent = parent.parentElement
+      n--
+    }
+  }
+  return false
+}
+
 const linkWrapper = (link: string, children: React.ReactNode) => {
+  const handleClick = (e: any) => {
+    if (checkClickTargetIsAccordion(10, e)) {
+      e.preventDefault()
+    }
+  }
+
   return (
     <a
       sx={{
@@ -22,6 +41,7 @@ const linkWrapper = (link: string, children: React.ReactNode) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={handleClick}
     >
       {children}
     </a>
