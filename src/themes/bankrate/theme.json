@@ -224,6 +224,18 @@
   },
   "----------------------------- Variants": "-----------------------------",
   "elements": {
+    "logo-collection": {
+      "base": {
+        "inner": {
+          "ml": ["xs", "xs", "0px"],
+          "mr": ["xs", "xs", "xs"],
+          "flex": "1 1 0px",
+          "img": {
+            "maxWidth": "100px"
+          }
+        }
+      }
+    },
     "author": {
       "link": {
         "fontWeight": "base"
