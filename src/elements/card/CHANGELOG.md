@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.9.1-alpha.0...@uswitch/trustyle.card@1.9.1) (2020-09-10)
+
+**Note:** Version bump only for package @uswitch/trustyle.card
+
+
+
+
+
+## [1.9.1-alpha.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.9.0...@uswitch/trustyle.card@1.9.1-alpha.0) (2020-09-10)
+
+
+### Bug Fixes
+
+* revert forwarding sx prop ([f0c2950](https://github.com/uswitch/trustyle/commit/f0c2950))
+
+
+
+
+
 # [1.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.8.0...@uswitch/trustyle.card@1.9.0) (2020-09-10)
 
 
