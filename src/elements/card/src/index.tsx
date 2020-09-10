@@ -34,7 +34,6 @@ const makeStyles = (variant: string) => (element?: string) =>
   `compounds.card.variants.${variant}${element ? `.${element}` : ''}`
 
 const Card: React.FC<Props> = ({
-  className = '',
   critical = true,
   description,
   imageSize = 'cover',
@@ -49,7 +48,8 @@ const Card: React.FC<Props> = ({
   title,
   variant = 'vertical',
   headerChildren,
-  contentChildren
+  contentChildren,
+  ...props
 }) => {
   const styles = makeStyles(variant)
 
@@ -65,7 +65,7 @@ const Card: React.FC<Props> = ({
 
   return (
     <Styled.div
-      className={className}
+      {...props}
       sx={{
         variant: styles()
       }}
