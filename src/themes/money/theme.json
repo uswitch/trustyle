@@ -149,7 +149,8 @@
     "button-secondary--hover": "#5D6A72",
     "button-hollow--hover": "#FFF6E2",
     "quick-link-bg": "#F1F1F3",
-    "dark-grey-03": "rgba(104,104,135,0.3)"
+    "dark-grey-03": "rgba(104,104,135,0.3)",
+    "opaque-plum-01": "rgba(146, 73, 139, 0.1)"
   },
   "radii": {
     "sm": 3,
@@ -1410,6 +1411,15 @@
             "variant": "styles.h5"
           }
         }
+      }
+    },
+    "progress-circle": {
+      "stroke": "berry",
+      "inner-circle": {
+        "stroke": "grey-10"
+      },
+      "path": {
+        "fill": "berry"
       }
     },
     "eligibility-criteria": {
