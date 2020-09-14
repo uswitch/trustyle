@@ -93,11 +93,11 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
     sx={{
       height: accent ? '100%' : 'auto',
       display: 'grid',
-      alignItems: 'center',
+      alignItems: 'start',
       gridTemplateColumns: '100%',
       msGridColumns: '100%',
-      gridTemplateRows: 'auto auto',
-      msGridRows: 'auto auto',
+      gridTemplateRows: '1fr',
+      msGridRows: '1fr',
       padding: accent ? 'sm' : '',
       variant: `compounds.product-table.cellContent.${
         accent ? 'accent' : 'main'
