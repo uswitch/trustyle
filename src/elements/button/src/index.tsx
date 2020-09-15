@@ -10,6 +10,8 @@ export type Variant =
   | 'secondary'
   | 'continue'
   | 'inverse'
+  | 'hero'
+  | 'hero.centered'
   | 'reversed'
   | 'link'
 type IconPosition = 'left' | 'center' | 'right' | null
@@ -64,51 +66,57 @@ export const Button: React.FC<Props> = ({
   const chosenStyle = inverse ? invertTheme(theme, variantStyle) : variantStyle
 
   return (
-    <button
+    <div
       sx={{
-        cursor: 'pointer',
-        backgroundImage: 'none',
-        fontFamily: 'base',
-
-        fontSize: get(
-          theme,
-          `elements.buttons.base.btnSize.${size}.fontSize`,
-          'base'
-        ),
-        paddingX: get(
-          theme,
-          `elements.buttons.base.btnSize.${size}.paddingX`,
-          'sm'
-        ),
-        paddingY: get(
-          theme,
-          `elements.buttons.base.btnSize.${size}.paddingY`,
-          'base'
-        ),
-        variant: get(theme, `elements.buttons.variants.${variant}`),
-
-        justifyContent: 'center',
-        alignItems: 'center',
-        ...chosenStyle,
-
-        ...(iconPosition
-          ? {
-              display: 'flex',
-              justifyContent:
-                iconPosition === 'left'
-                  ? 'flex-start'
-                  : iconPosition === 'right'
-                  ? 'space-between'
-                  : 'center'
-            }
-          : {})
+        variant: `elements.buttons.variants.${variant}.container`
       }}
-      disabled={disabled}
-      type={onClick ? 'button' : 'submit'}
-      onClick={onClick}
-      {...props}
     >
-      {children}
-    </button>
+      <button
+        sx={{
+          cursor: 'pointer',
+          backgroundImage: 'none',
+          fontFamily: 'base',
+
+          fontSize: get(
+            theme,
+            `elements.buttons.base.btnSize.${size}.fontSize`,
+            'base'
+          ),
+          paddingX: get(
+            theme,
+            `elements.buttons.base.btnSize.${size}.paddingX`,
+            'sm'
+          ),
+          paddingY: get(
+            theme,
+            `elements.buttons.base.btnSize.${size}.paddingY`,
+            'base'
+          ),
+          variant: get(theme, `elements.buttons.variants.${variant}`),
+
+          justifyContent: 'center',
+          alignItems: 'center',
+          ...chosenStyle,
+
+          ...(iconPosition
+            ? {
+                display: 'flex',
+                justifyContent:
+                  iconPosition === 'left'
+                    ? 'flex-start'
+                    : iconPosition === 'right'
+                    ? 'space-between'
+                    : 'center'
+              }
+            : {})
+        }}
+        disabled={disabled}
+        type={onClick ? 'button' : 'submit'}
+        onClick={onClick}
+        {...props}
+      >
+        {children}
+      </button>
+    </div>
   )
 }
