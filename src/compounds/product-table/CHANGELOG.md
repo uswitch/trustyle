@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.6.2...@uswitch/trustyle.product-table@2.6.4) (2020-09-15)
+
+
+### Bug Fixes
+
+* alignment for secondary cells too ([98c02f8](https://github.com/uswitch/trustyle/commit/98c02f8))
+* make all columns equal height and align value text to start ([c0387e5](https://github.com/uswitch/trustyle/commit/c0387e5))
+* spacing on formatters ([be4c1b0](https://github.com/uswitch/trustyle/commit/be4c1b0))
+
+
+
+
+
 ## [2.6.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.6.2...@uswitch/trustyle.product-table@2.6.3) (2020-09-14)
 
 **Note:** Version bump only for package @uswitch/trustyle.product-table
