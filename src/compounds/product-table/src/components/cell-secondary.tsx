@@ -18,11 +18,11 @@ const ProductTableCellSecondary: React.FC<CellSecondaryProps> = ({
       height: ['auto', '100%'],
       padding: ['', 'sm'],
       display: 'grid',
-      alignItems: 'center',
+      alignItems: ['center', 'start'],
       gridTemplateColumns: ['repeat(2, 1fr)', '100%'],
       msGridColumns: ['repeat(2, 1fr)', '100%'],
-      gridTemplateRows: ['100%', 'auto auto'],
-      msGridRows: ['100%', 'auto auto'],
+      gridTemplateRows: ['100%', '1fr'],
+      msGridRows: ['100%', '1fr'],
       variant: [
         'compounds.product-table.cellContent.variants.inSplit.main',
         'compounds.product-table.cellContent.main'
