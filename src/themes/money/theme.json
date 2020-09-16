@@ -1546,7 +1546,7 @@
         "content": {
           "fontFamily": "heading",
           "color": "grey-80",
-          "fontSize": ["xl", "xxl"]
+          "fontSize": ["xl", "xl"]
         },
         "accent": {
           "backgroundColor": "grey-05"

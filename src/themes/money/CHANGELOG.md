@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.23.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.22.0...@uswitch/trustyle.money-theme@1.23.0) (2020-09-16)
+
+
+### Features
+
+* money product table font size ([8b49dc7](https://github.com/uswitch/trustyle/commit/8b49dc7))
+
+
+
+
+
 # [1.22.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.21.2...@uswitch/trustyle.money-theme@1.22.0) (2020-09-14)
 
 
