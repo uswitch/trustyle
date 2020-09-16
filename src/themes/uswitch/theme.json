@@ -29,6 +29,7 @@
   },
   "fontSizes": {
     "base": 16,
+    "xxxs": 12,
     "xxs": 14,
     "xs": 16,
     "sm": 18,
@@ -203,7 +204,8 @@
     "veryLightGrey": "#E9EBED",
     "tomato": "#DB1818",
     "overlay-bg": "rgba(20, 20, 36, 0.5)",
-    "dark-grey-03": "rgba(104,104,135,0.3)"
+    "dark-grey-03": "rgba(104,104,135,0.3)",
+    "secondary-blue": "#E9F7FC"
   },
   "radii": {
     "sm": 0,
@@ -609,6 +611,18 @@
           },
           "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
           "borderRadius": "md"
+        },
+        "assurance-text": {
+          "padding": "md",
+          "textAlign": "center",
+          "backgroundColor": "secondary-blue",
+          "variants": "container.content",
+          "p": {
+            "fontSize": "xxxs"
+          },
+          "span:last-of-type p": {
+            "mb": 0
+          }
         }
       }
     },
@@ -1861,6 +1875,44 @@
         }
       },
       "variants": {
+        "assuranceBar": {
+          "display": "flex",
+          "flexDirection": ["row", "column", "row"],
+          "flexWrap": "wrap",
+          "alignItems": ["flex-start", "center", "flex-start"],
+          "textAlign": ["left", "center", "left"],
+          "py": 0,
+          "h3": {
+            "fontSize": ["sm", "sm", "lg"],
+            "fontWeight": "bold"
+          },
+          "p": {
+            "fontSize": ["xs", "xs", "sm"],
+            "mt": "xxs",
+            "mb": 0
+          },
+          "image": {
+            "box-sizing": "border-box",
+            "img": {
+              "width": [24, 30],
+              "mr": ["sm", 0, "md"]
+            }
+          },
+          "link": {
+            "variant": "compounds.card.base.link"
+          },
+          "a": {
+            "textDecoration": "none",
+            "borderBottom": "initial",
+            "mt": [9, 6],
+            "mb": 0
+          },
+          "& a:hover": {
+            "color": "inherit",
+            "stroke": "initial",
+            "opacity": "initial"
+          }
+        },
         "vertical": {
           "variant": "compounds.card.base",
           "content": {
