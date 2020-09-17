@@ -4,6 +4,7 @@ import * as React from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
 import { darken } from '@theme-ui/color'
 import get from '@uswitch/trustyle-utils.get'
+
 import { Glyph, Icon } from '../../icon/src'
 
 export type Variant =
@@ -21,8 +22,8 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant: Variant
   iconPosition?: IconPosition
   inverse?: boolean
-  size?: string,
-  beforeIcon?: string,
+  size?: string
+  beforeIcon?: string
   afterIcon?: string
 }
 
@@ -120,13 +121,13 @@ export const Button: React.FC<Props> = ({
         onClick={onClick}
         {...props}
       >
-        {beforeIcon && 
-          <Icon color="white" glyph={beforeIcon as Glyph} direction='left' />
-        }
-        {children}        
-        {afterIcon && 
-          <Icon color="white" glyph={afterIcon  as Glyph} direction='right' />
-        }
+        {beforeIcon && (
+          <Icon color="white" glyph={beforeIcon as Glyph} direction="left" />
+        )}
+        {children}
+        {afterIcon && (
+          <Icon color="white" glyph={afterIcon as Glyph} direction="right" />
+        )}
       </button>
     </div>
   )
