@@ -22,7 +22,7 @@ const sizeOptions = {
 }
 
 export const BBDealsVariant = () => {
-  return <Button variant="hero">Find your deal</Button>
+  return <Button variant="hero" afterIcon="arrow">Find your deal</Button>
 }
 
 export const AllVariants = () => {
