@@ -62,7 +62,7 @@ StyledComponentAsProp.story = {
 
 export const AutomatedTests = () => {
   const permutations = permutationsGenerator({
-    variant: ['primary', 'secondary', 'hero', 'hero.centered'],
+    variant: ['primary', 'secondary'],
     as: [{}, { as: CustomLink, to: 'special-url' }]
   })
 
