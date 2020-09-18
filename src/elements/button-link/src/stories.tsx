@@ -25,7 +25,7 @@ export const AllVariants = () => (
             href="https://www.uswitch.com"
             target="_blank"
           >
-            Text 
+            Text
             {text(`${key} label`, `${key} link button`)}
           </ButtonLink>
           <Spacer />
@@ -71,7 +71,7 @@ export const AutomatedTests = () => {
       {permutations.map((p, i) => (
         <React.Fragment key={i}>
           <ButtonLink variant={p.variant} {...p.as}>
-           {p.variant} {p.as.as ? ' using `as` prop' : ''}
+            {p.variant} {p.as.as ? ' using `as` prop' : ''}
           </ButtonLink>
           <Spacer />
         </React.Fragment>
