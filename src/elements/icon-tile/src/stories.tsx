@@ -20,13 +20,17 @@ export const ExampleWithKnobs = () => {
     ['carInsurance', 'creditCards', 'loans', 'mortgages'],
     'carInsurance'
   )
-  const alignVertically = boolean('Vertically align icon and text?', false)
+  const displayVariant = select(
+    'Display Variant',
+    ['horizontal', 'vertical'],
+    'horizontal'
+  )
 
   const iconImg = (
     <img src={require(`../../../../static/money-icons/${icon}.svg`)} />
   )
   const justTile = (
-    <IconTile icon={iconImg} alignVertically={alignVertically}>
+    <IconTile icon={iconImg} displayVariant={displayVariant}>
       {tileText}
     </IconTile>
   )

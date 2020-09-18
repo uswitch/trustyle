@@ -6,23 +6,26 @@ import { jsx, Styled } from 'theme-ui'
 interface Props extends React.HTMLAttributes<any> {
   icon: React.ReactNode
   className?: string
-  alignVertically?: boolean
+  displayVariant?: string
 }
 const IconTile: React.FC<Props> = ({
   icon,
   children,
   className,
-  alignVertically
+  displayVariant
 }) => {
   return (
     <div
       sx={{
         boxSizing: 'border-box',
         display: 'flex',
-        flexDirection: alignVertically ? 'column' : ['column', 'column', 'row'],
-        height: alignVertically ? 136 : [136, 136, 95],
+        flexDirection:
+          displayVariant === 'vertical'
+            ? 'column'
+            : ['column', 'column', 'row'],
+        height: displayVariant === 'vertical' ? 136 : [136, 136, 95],
         backgroundColor: 'white',
-        padding: alignVertically ? 'sm' : ['sm', 'sm', 'lg'],
+        padding: displayVariant === 'vertical' ? 'sm' : ['sm', 'sm', 'lg'],
         paddingTop: 0,
         textAlign: 'center',
         borderRadius: 8,
@@ -38,7 +41,7 @@ const IconTile: React.FC<Props> = ({
     >
       <div
         sx={{
-          flex: alignVertically ? 1 : [1, null, 0],
+          flex: displayVariant === 'vertical' ? 1 : [1, null, 0],
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
@@ -48,7 +51,7 @@ const IconTile: React.FC<Props> = ({
       </div>
       <Styled.p
         sx={{
-          flex: alignVertically ? null : [null, null, 1],
+          flex: displayVariant === 'vertical' ? null : [null, null, 1],
           fontSize: 'md',
           marginY: 0,
           variant: 'elements.icon-tile.text'
