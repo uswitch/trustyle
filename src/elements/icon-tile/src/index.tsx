@@ -3,11 +3,16 @@
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
 
+enum DisplayVariant {
+  Horizontal = 'horizontal',
+  Vertical = 'vertical'
+}
 interface Props extends React.HTMLAttributes<any> {
   icon: React.ReactNode
   className?: string
-  displayVariant?: string
+  displayVariant?: DisplayVariant
 }
+
 const IconTile: React.FC<Props> = ({
   icon,
   children,
@@ -20,12 +25,16 @@ const IconTile: React.FC<Props> = ({
         boxSizing: 'border-box',
         display: 'flex',
         flexDirection:
-          displayVariant === 'vertical'
+          displayVariant === DisplayVariant.Vertical
             ? 'column'
             : ['column', 'column', 'row'],
-        height: displayVariant === 'vertical' ? 136 : [136, 136, 95],
+        height:
+          displayVariant === DisplayVariant.Vertical ? 136 : [136, 136, 95],
         backgroundColor: 'white',
-        padding: displayVariant === 'vertical' ? 'sm' : ['sm', 'sm', 'lg'],
+        padding:
+          displayVariant === DisplayVariant.Vertical
+            ? 'sm'
+            : ['sm', 'sm', 'lg'],
         paddingTop: 0,
         textAlign: 'center',
         borderRadius: 8,
@@ -41,7 +50,7 @@ const IconTile: React.FC<Props> = ({
     >
       <div
         sx={{
-          flex: displayVariant === 'vertical' ? 1 : [1, null, 0],
+          flex: displayVariant === DisplayVariant.Vertical ? 1 : [1, null, 0],
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
@@ -51,7 +60,8 @@ const IconTile: React.FC<Props> = ({
       </div>
       <Styled.p
         sx={{
-          flex: displayVariant === 'vertical' ? null : [null, null, 1],
+          flex:
+            displayVariant === DisplayVariant.Vertical ? null : [null, null, 1],
           fontSize: 'md',
           marginY: 0,
           variant: 'elements.icon-tile.text'
