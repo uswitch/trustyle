@@ -6,17 +6,23 @@ import { jsx, Styled } from 'theme-ui'
 interface Props extends React.HTMLAttributes<any> {
   icon: React.ReactNode
   className?: string
+  alignVertically?: boolean
 }
-const IconTile: React.FC<Props> = ({ icon, children, className }) => {
+const IconTile: React.FC<Props> = ({
+  icon,
+  children,
+  className,
+  alignVertically
+}) => {
   return (
     <div
       sx={{
         boxSizing: 'border-box',
         display: 'flex',
-        flexDirection: ['column', 'column', 'row'],
-        height: [136, 136, 95],
+        flexDirection: alignVertically ? 'column' : ['column', 'column', 'row'],
+        height: alignVertically ? 136 : [136, 136, 95],
         backgroundColor: 'white',
-        padding: ['sm', 'sm', 'lg'],
+        padding: alignVertically ? 'sm' : ['sm', 'sm', 'lg'],
         paddingTop: 0,
         textAlign: 'center',
         borderRadius: 8,
@@ -32,7 +38,7 @@ const IconTile: React.FC<Props> = ({ icon, children, className }) => {
     >
       <div
         sx={{
-          flex: [1, null, 0],
+          flex: alignVertically ? 1 : [1, null, 0],
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
@@ -42,7 +48,7 @@ const IconTile: React.FC<Props> = ({ icon, children, className }) => {
       </div>
       <Styled.p
         sx={{
-          flex: [null, null, 1],
+          flex: alignVertically ? null : [null, null, 1],
           fontSize: 'md',
           marginY: 0,
           variant: 'elements.icon-tile.text'

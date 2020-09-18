@@ -20,11 +20,16 @@ export const ExampleWithKnobs = () => {
     ['carInsurance', 'creditCards', 'loans', 'mortgages'],
     'carInsurance'
   )
+  const alignVertically = boolean('Vertically align icon and text?', false)
 
   const iconImg = (
     <img src={require(`../../../../static/money-icons/${icon}.svg`)} />
   )
-  const justTile = <IconTile icon={iconImg}>{tileText}</IconTile>
+  const justTile = (
+    <IconTile icon={iconImg} alignVertically={alignVertically}>
+      {tileText}
+    </IconTile>
+  )
 
   return layoutStory ? (
     <div sx={{ margin: -10, backgroundColor: '#924A8B', paddingY: 'md' }}>
