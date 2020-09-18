@@ -28,11 +28,10 @@ export const ButtonLink = <
   const { theme }: any = useThemeUI()
 
   return (
-    <div
-      sx={{
-        variant: `elements.buttons.variants.${variant}.container`
-      }}
-    >
+    <Styled.a    
+    sx={{
+      variant: `elements.buttons.variants.${variant}.container`
+    }}>
       <Styled.a
         sx={{
           cursor: 'pointer',
@@ -65,7 +64,8 @@ export const ButtonLink = <
         {...props}
       >
         <div>{children}</div>
+       
       </Styled.a>
-    </div>
+      </Styled.a> 
   )
 }
