@@ -151,8 +151,10 @@
       "mx": "auto",
       "px": "gutter",
       "contentStyle": {
-        "width": ["100%", "grid.md.12", "grid.lg.8"],
-        "maxWidth": "100%"
+        "hr": {
+          "maxWidth": 400,
+          "mx": "auto"
+        }
       }
     },
     "hero": {
@@ -235,6 +237,7 @@
       }
     },
     "headings": {
+      "whiteSpace": "pre-wrap",
       "fontFamily": "heading",
       "color": "heading",
       "fontWeight": "bold",
@@ -260,7 +263,11 @@
     },
     "h3": {
       "variant": "styles.headings",
-      "fontSize": ["sm", "md", "lg"]
+      "color": "grey-50",
+      "fontSize": ["sm", "md", "lg"],
+      "b": {
+        "color": "primary"
+      }
     },
     "h4": {
       "variant": "styles.headings",
@@ -273,6 +280,10 @@
     "h6": {
       "variant": "styles.headings",
       "fontSize": "sm"
+    },
+    "strong": {
+      "color": "primary",
+      "backgroundColor": "#FFEAAA"
     },
     "p": {
       "fontSize": ["base", "base", "sm"],
@@ -600,6 +611,32 @@
         }
       },
       "variants": {
+        "center": {
+          "textAlign": "center"
+        },
+        "heading": {
+          "mx": "auto",
+          "width": ["100%", 688, 760],
+          "textAlign":["left", "center"],
+          "h1": {
+            "fontWeight":["xbold", "bold"],
+            "fontSize": ["lg", "xxl", "xxxl"]
+          },
+          "h3": {
+            "fontSize": ["xs", "md"],
+            "mx": "auto",
+            "width": 548,
+            "width": ["100%", 650, 548],
+            "mb": 0
+          },
+          "form": {
+            "pt": "md",
+            "maxWidth": 555,
+            "input": {
+              "py": ["md", "lg"]
+            }
+          }
+        },
         "panel-primary": {
           "py": "lg",
           "px": ["sm", "xl"],
@@ -869,12 +906,15 @@
       "base": {
         "outer": {
           "justifyContent": "flex-start",
-          "alignItems": "flex-start"
+          "alignItems": "center",
+          "mx": ["-24px", "-36px", "-36px"]
         },
         "inner": {
-          "mr": ["lg", "lg", "md"],
+          "width": ["33.33%", "25%", "16.66%"],
+          "px": ["md", "lg", "lg"],
+          "py": ["sm", "lg", "lg"],
           "img": {
-            "maxWidth": "250px",
+            "maxWidth": "100%",
             "maxHeight": "150px"
           }
         }
