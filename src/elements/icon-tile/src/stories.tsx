@@ -6,7 +6,7 @@ import { boolean, select, text } from '@storybook/addon-knobs'
 import { Col, Container, Row } from '../../../layout/flex-grid/src'
 import AllThemes from '../../../utils/all-themes'
 
-import IconTile from './'
+import IconTile, { DisplayVariant } from './'
 
 export default {
   title: 'Elements|Icon Tile'
@@ -20,11 +20,20 @@ export const ExampleWithKnobs = () => {
     ['carInsurance', 'creditCards', 'loans', 'mortgages'],
     'carInsurance'
   )
+  const displayVariant = select(
+    'Display Variant',
+    DisplayVariant,
+    DisplayVariant.Horizontal
+  )
 
   const iconImg = (
     <img src={require(`../../../../static/money-icons/${icon}.svg`)} />
   )
-  const justTile = <IconTile icon={iconImg}>{tileText}</IconTile>
+  const justTile = (
+    <IconTile icon={iconImg} displayVariant={displayVariant}>
+      {tileText}
+    </IconTile>
+  )
 
   return layoutStory ? (
     <div sx={{ margin: -10, backgroundColor: '#924A8B', paddingY: 'md' }}>
