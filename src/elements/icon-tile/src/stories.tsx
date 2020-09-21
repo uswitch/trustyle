@@ -6,9 +6,7 @@ import { boolean, select, text } from '@storybook/addon-knobs'
 import { Col, Container, Row } from '../../../layout/flex-grid/src'
 import AllThemes from '../../../utils/all-themes'
 
-import IconTile from './'
-
-import { DisplayVariant } from './'
+import IconTile, { DisplayVariant } from './'
 
 export default {
   title: 'Elements|Icon Tile'
