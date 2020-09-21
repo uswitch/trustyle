@@ -31,6 +31,7 @@ export const ButtonLink = <
     <Styled.a
       sx={{
         textDecoration: 'none',
+        borderBottom: 'none',
         variant: `elements.buttons.${variant}.container`
       }}
     >
