@@ -26,7 +26,10 @@ const HeroCard: React.FC<Props> = ({ title, ctaText, children }) => {
         <ButtonLink
           variant="primary"
           size="small"
-          sx={{ variant: styles('buttonLink'), display: ['none', 'inline-block'] }}
+          sx={{
+            variant: styles('buttonLink'),
+            display: ['none', 'inline-block']
+          }}
         >
           {ctaText}
         </ButtonLink>
@@ -41,7 +44,10 @@ const HeroCard: React.FC<Props> = ({ title, ctaText, children }) => {
       <ButtonLink
         variant="primary"
         size="small"
-        sx={{ variant: styles('buttonLink'), display: ['inline-block', 'none'] }}
+        sx={{
+          variant: styles('buttonLink'),
+          display: ['inline-block', 'none']
+        }}
       >
         {ctaText}
       </ButtonLink>
