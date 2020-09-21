@@ -24,6 +24,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
         transform?: ArrayOrNot<string>
       }
   fgImageOnMobile?: boolean
+  customBgColor?: string
   className?: string
   bottomImageOverflow?: number | string
 }
@@ -39,6 +40,7 @@ const Hero: React.FC<Props> = ({
   fgImageType = 'background',
   fgImagePosition,
   fgImageOnMobile = true,
+  customBgColor = '',
   children,
   bottomImageOverflow = '-33%',
   className
@@ -55,7 +57,8 @@ const Hero: React.FC<Props> = ({
         sx={{
           position: 'relative',
           overflow: 'hidden',
-          variant: 'elements.hero.wrapper'
+          variant: 'elements.hero.wrapper',
+          ...(customBgColor && { backgroundColor: customBgColor })
         }}
         className={className}
       >

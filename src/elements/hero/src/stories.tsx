@@ -75,6 +75,8 @@ export const ExampleWithKnobs = () => {
     Object.keys(people),
     'Jumping guy'
   )
+
+  const bgColor = text('Custom Color', '')
   const fgImage = people[fgImageKey]
   const imageOnMobile = boolean('Display foreground image on mobile?', true)
 
@@ -93,6 +95,7 @@ export const ExampleWithKnobs = () => {
         fgImage={fgImage.img}
         fgImagePosition={fgImage.position}
         fgImageOnMobile={imageOnMobile}
+        customBgColor={bgColor}
         breadcrumbs={breadcrumbs}
       >
         <Row>
