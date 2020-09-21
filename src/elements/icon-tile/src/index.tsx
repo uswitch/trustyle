@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
 
-enum DisplayVariant {
+export enum DisplayVariant {
   Horizontal = 'horizontal',
   Vertical = 'vertical'
 }

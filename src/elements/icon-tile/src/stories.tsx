@@ -8,6 +8,8 @@ import AllThemes from '../../../utils/all-themes'
 
 import IconTile from './'
 
+import { DisplayVariant } from './'
+
 export default {
   title: 'Elements|Icon Tile'
 }
@@ -22,8 +24,8 @@ export const ExampleWithKnobs = () => {
   )
   const displayVariant = select(
     'Display Variant',
-    ['horizontal', 'vertical'],
-    'horizontal'
+    DisplayVariant,
+    DisplayVariant.Horizontal
   )
 
   const iconImg = (
