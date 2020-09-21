@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.sponsored-product",
-  "version": "2.0.8",
+  "version": "2.0.10",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@uswitch/trustyle.arrangement": "^2.0.17",
-    "@uswitch/trustyle.awards-tag": "^0.0.7",
+    "@uswitch/trustyle.awards-tag": "^0.1.1",
     "@uswitch/trustyle.badge": "^2.0.2",
     "@uswitch/trustyle.button-link": "^2.0.2",
     "@uswitch/trustyle.flex-grid": "^0.2.1",
