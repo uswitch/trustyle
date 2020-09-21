@@ -24,6 +24,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
         transform?: ArrayOrNot<string>
       }
   fgImageOnMobile?: boolean
+  fgImageOnTablet?: boolean
   customBgColor?: string
   className?: string
   bottomImageOverflow?: number | string
@@ -40,6 +41,7 @@ const Hero: React.FC<Props> = ({
   fgImageType = 'background',
   fgImagePosition,
   fgImageOnMobile = true,
+  fgImageOnTablet = true,
   customBgColor = '',
   children,
   bottomImageOverflow = '-33%',
@@ -50,6 +52,18 @@ const Hero: React.FC<Props> = ({
   const breadcrumbWithVariant =
     breadcrumbs &&
     React.cloneElement(breadcrumbs, { variant: breadcrumbVariant })
+
+  const getDeviceDisplay = () => {
+    if (fgImageOnMobile && fgImageOnTablet) {
+      return 'block'
+    } else if (!fgImageOnMobile && fgImageOnTablet) {
+      return ['none', 'block']
+    } else if (fgImageOnMobile && !fgImageOnTablet) {
+      return ['block', 'none', 'block']
+    }
+
+    return ['none', 'none', 'block']
+  }
 
   return (
     <div>
@@ -84,7 +98,7 @@ const Hero: React.FC<Props> = ({
                 right: 0,
                 top: 0,
                 bottom: 0,
-                display: fgImageOnMobile ? 'block' : ['none', 'block'],
+                display: getDeviceDisplay(),
                 ...(fgImageType === 'background'
                   ? {
                       backgroundImage: `url(${fgImage})`,
