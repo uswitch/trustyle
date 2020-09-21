@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.awards-tag",
-  "version": "0.0.7",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
