@@ -53,18 +53,6 @@ const Hero: React.FC<Props> = ({
     breadcrumbs &&
     React.cloneElement(breadcrumbs, { variant: breadcrumbVariant })
 
-  const getDeviceDisplay = () => {
-    if (fgImageOnMobile && fgImageOnTablet) {
-      return 'block'
-    } else if (!fgImageOnMobile && fgImageOnTablet) {
-      return ['none', 'block']
-    } else if (fgImageOnMobile && !fgImageOnTablet) {
-      return ['block', 'none', 'block']
-    }
-
-    return ['none', 'none', 'block']
-  }
-
   return (
     <div>
       <div
@@ -72,7 +60,7 @@ const Hero: React.FC<Props> = ({
           position: 'relative',
           overflow: 'hidden',
           variant: 'elements.hero.wrapper',
-          ...(customBgColor && { backgroundColor: customBgColor })
+          backgroundColor: customBgColor || undefined
         }}
         className={className}
       >
@@ -98,7 +86,11 @@ const Hero: React.FC<Props> = ({
                 right: 0,
                 top: 0,
                 bottom: 0,
-                display: getDeviceDisplay(),
+                display: [
+                  fgImageOnMobile ? 'block' : 'none',
+                  fgImageOnTablet ? 'block' : 'none',
+                  'block'
+                ],
                 ...(fgImageType === 'background'
                   ? {
                       backgroundImage: `url(${fgImage})`,
