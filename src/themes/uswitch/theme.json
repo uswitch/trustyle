@@ -2005,8 +2005,7 @@
         }
       },
       "award": {
-        "mt": [0, "xs"],
-        "mb": ["md", 0],
+        "mt": "xs",
         "borderRadius": "0",
         "order": [1, 2]
       }

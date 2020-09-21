@@ -17,6 +17,12 @@ export const ExampleWithKnobs = () => {
   return <AwardsTag award={awardTitle} />
 }
 
+export const InlineWithKnobs = () => {
+  const awardTitle: string = text('Award', 'Uswitch Manufacturer of the Year')
+
+  return <AwardsTag award={awardTitle} inline />
+}
+
 ExampleWithKnobs.story = {
   parameters: {
     percy: { skip: true }
@@ -27,6 +33,8 @@ export const AutomatedTests = () => {
   return (
     <AllThemes>
       <ExampleWithKnobs />
+      <br />
+      <InlineWithKnobs />
     </AllThemes>
   )
 }

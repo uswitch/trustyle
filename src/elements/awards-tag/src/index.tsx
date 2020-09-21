@@ -6,21 +6,27 @@ import { jsx } from 'theme-ui'
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   award: string
   className?: string
+  inline?: boolean
 }
 
-const AwardsTag: React.FC<Props> = ({ award, className = '' }) =>
+const AwardsTag: React.FC<Props> = ({
+  award,
+  className = '',
+  inline = false
+}) =>
   award ? (
     <div
       className={className}
       sx={{
-        display: 'flex',
+        display: inline ? 'inline-flex' : 'flex',
         alignItems: 'center',
         borderColor: '#ACAAFF',
         borderStyle: 'solid',
         borderWidth: 2,
         borderRadius: 3,
         height: 27,
-        paddingLeft: 5
+        paddingLeft: 5,
+        paddingRight: 5
       }}
     >
       <svg
