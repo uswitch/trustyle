@@ -30,6 +30,7 @@ export const ButtonLink = <
   return (
     <Styled.a
       sx={{
+        display: "inline-block",
         textDecoration: 'none',
         borderBottom: 'none',
         variant: `elements.buttons.${variant}.container`
