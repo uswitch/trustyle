@@ -33,6 +33,7 @@ export const ButtonLink = <
         display: 'inline-block',
         textDecoration: 'none',
         borderBottom: 'none',
+        marginBottom: '0px',
         variant: `elements.buttons.${variant}.container`
       }}
     >

@@ -25,7 +25,6 @@ export const AllVariants = () => (
             href="https://www.uswitch.com"
             target="_blank"
           >
-            Text
             {text(`${key} label`, `${key} link button`)}
           </ButtonLink>
           <Spacer />
