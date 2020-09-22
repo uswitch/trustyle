@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.3.1...@uswitch/trustyle.uswitch-theme@2.3.2) (2020-09-22)
+
+
+### Bug Fixes
+
+* remove gap between tabs and hairline ([3294ada](https://github.com/uswitch/trustyle/commit/3294ada))
+
+
+
+
+
 # [2.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.2.0...@uswitch/trustyle.uswitch-theme@2.3.0) (2020-09-03)
 
 
