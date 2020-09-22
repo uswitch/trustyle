@@ -4,6 +4,7 @@ import * as React from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
 import { darken } from '@theme-ui/color'
 import get from '@uswitch/trustyle-utils.get'
+
 import { Glyph, Icon } from '../../icon/src'
 
 export type Variant =
