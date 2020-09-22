@@ -979,6 +979,9 @@
         "primary": {
           "variant": "elements.buttons.base",
           "backgroundColor": "uswitch-navy",
+          "container": {
+            "width": "100%"
+          },
           "color": "white",
           "width": ["100%"],
           "border": "none",
@@ -1001,6 +1004,9 @@
           "background": "none",
           "border": "none",
           "borderColor": "uswitch-navy",
+          "container": {
+            "width": "100%"
+          },
           "width": ["100%"],
           "@media (hover: hover)": {
             ":hover": {

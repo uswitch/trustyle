@@ -29,12 +29,13 @@ export const ButtonLink = <
 
   return (
     <Styled.a
+      as="span"
       sx={{
         display: 'inline-block',
         textDecoration: 'none',
         borderBottom: 'none',
         marginBottom: '0px',
-        variant: `elements.buttons.${variant}.container`
+        variant: `elements.buttons.variants.${variant}.container`
       }}
     >
       <Styled.a
