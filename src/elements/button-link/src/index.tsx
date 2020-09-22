@@ -29,7 +29,6 @@ export const ButtonLink = <
 
   return (
     <Styled.a
-      as="span"
       sx={{
         display: 'inline-block',
         textDecoration: 'none',
