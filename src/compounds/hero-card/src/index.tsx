@@ -29,7 +29,7 @@ const HeroCard: React.FC<Props> = ({ title, ctaText, children }) => {
           sx={{
             variant: styles('buttonLink'),
             display: ['none', 'inline-block'],
-            width: "fit-content"
+            width: 'fit-content'
           }}
         >
           {ctaText}
