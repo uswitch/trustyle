@@ -1653,6 +1653,7 @@
         "container": {
           "h6": {
             "py": "xs",
+            "mb": 0,
             "fontSize": ["base", 14, "sm"],
             "color": "grey-60"
           }
@@ -1663,6 +1664,7 @@
           "container": {
             "h6": {
               "py": "xs",
+              "mb": 0,
               "borderBottomStyle": "solid",
               "borderBottomWidth": 2,
               "borderBottomColor": "dark-1",
