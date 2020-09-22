@@ -309,7 +309,7 @@ const SponsoredProduct: React.FC<Props> = ({
             target={target}
             sx={{
               padding: 0,
-              width: 32,
+              width: "32px !important",
               height: 48,
               display: ['flex', 'none'],
               flexShrink: 0,
