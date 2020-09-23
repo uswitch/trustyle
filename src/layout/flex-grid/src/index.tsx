@@ -40,7 +40,13 @@ interface ContainerProps {
 }
 
 export const Container: React.FC<ContainerProps &
-  React.HTMLAttributes<any>> = ({ children, cols, span, ...props }) => {
+  React.HTMLAttributes<any>> = ({
+  children,
+  cols,
+  span,
+  className,
+  ...props
+}) => {
   const colsArray = castArray(cols)
   const spanArray = castArray(span)
   return (
@@ -59,6 +65,7 @@ export const Container: React.FC<ContainerProps &
           )
       }}
       {...props}
+      className={`flex-grid-container ${className}`}
     >
       {children}
     </div>
@@ -275,7 +282,7 @@ export const GridFromJson: React.FC<FromJsonProps> = ({
             {layout.map(({ key, ...colProps }) => {
               if (key === '*') {
                 return getWildcardChildren().map(({ id, component }) => (
-                  <Col {...colProps} key={id}>
+                  <Col {...colProps} key={id} className="json-grid-col">
                     {component}
                   </Col>
                 ))
@@ -283,7 +290,7 @@ export const GridFromJson: React.FC<FromJsonProps> = ({
 
               const { id, component } = getChildFromKey(key)
               return (
-                <Col {...colProps} key={id}>
+                <Col {...colProps} key={id} className="json-grid-col">
                   {component}
                 </Col>
               )
