@@ -1018,6 +1018,24 @@
           ":visited": {
             "color": "primary"
           }
+        },
+        "icon": {
+          "display": "flex",
+          "flexDirection": ["column", "row", "row"],
+          "button": {
+            "variant": "elements.buttons.variants.primary",
+            "mb": ["md", 0],
+            "span": {
+              "display": "flex",
+              "flexDirection": "row-reverse",
+              "justifyContent": "space-between",
+              "alignItems": "center",
+              "textAlign": "center"
+            },
+            "img": {
+              "maxHeight": "45px"
+            }
+          }
         }
       }
     },
