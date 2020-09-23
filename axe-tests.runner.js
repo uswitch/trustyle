@@ -6,18 +6,18 @@ import { axeTest } from '@storybook/addon-storyshots-puppeteer'
 import { logger } from '@storybook/node-logger'
 
 const getStorybookUrl = () => {
-  if (process.env.USE_DEV_SERVER) {
-    return 'http://localhost:6006'
+  if (process.env.USE_STATIC_STORYBOOK) {
+    const pathToStorybookStatic = path.join(__dirname, 'storybook-static')
+    if (!fs.existsSync(pathToStorybookStatic)) {
+      logger.error(
+        'You are running puppeteer tests without having the static build of storybook. Please run "npm run build-storybook" before running tests.'
+      )
+      return null
+    }
+    return `file://${pathToStorybookStatic}`
   }
 
-  const pathToStorybookStatic = path.join(__dirname, 'storybook-static')
-  if (!fs.existsSync(pathToStorybookStatic)) {
-    logger.error(
-      'You are running puppeteer tests without having the static build of storybook. Please run "npm run build-storybook" before running tests.'
-    )
-    return null
-  }
-  return `file://${pathToStorybookStatic}`
+  return 'http://localhost:6006'
 }
 
 const BROKEN_STORIES = [
