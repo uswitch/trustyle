@@ -1366,5 +1366,17 @@
         "maxWidth": 1248
       }
     }
+  },
+  "page": {
+    "handover-page": {
+      "base": {
+        "hero": {
+          "bg": "light-grey"
+        },
+        "side-bar": {
+          "boxShadow": "card"
+        }
+      }
+    }
   }
 }
