@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.flex-grid@3.2.0...@uswitch/trustyle.flex-grid@3.4.0) (2020-09-23)
+
+
+### Features
+
+* add class name to container ([d143d90](https://github.com/uswitch/trustyle/commit/d143d90))
+
+
+
+
+
 # [3.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.flex-grid@3.2.0...@uswitch/trustyle.flex-grid@3.3.0) (2020-09-23)
 
 
