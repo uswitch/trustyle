@@ -2484,5 +2484,19 @@
         "maxWidth": 1200
       }
     }
+  },
+
+  "page": {
+    "handover-page": {
+      "base": {
+        "hero": {
+          "background": "linear-gradient(90deg, #A3BCFF 0%, #9EDDEF 100%);"
+        },
+        "side-bar": {
+          "padding": 4,
+          "background": "linear-gradient(90deg, #84A6FF 0%, #7ED2E9 100%);"
+        }
+      }
+    }
   }
 }
