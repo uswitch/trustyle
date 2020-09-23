@@ -111,7 +111,6 @@ interface ColProps {
   cols?: number | number[]
   span?: number | number[]
   offset?: number | number[]
-  heroGrid?: boolean
 }
 
 export const Col: React.FC<ColProps & React.HTMLAttributes<any>> = ({
@@ -119,7 +118,6 @@ export const Col: React.FC<ColProps & React.HTMLAttributes<any>> = ({
   cols = 12,
   span,
   offset,
-  heroGrid = false,
   ...props
 }) => {
   if (Array.isArray(span) && !Array.isArray(cols)) {
@@ -141,7 +139,7 @@ export const Col: React.FC<ColProps & React.HTMLAttributes<any>> = ({
               .map(getHalf)
               .map(toPx)
           ),
-        mb: heroGrid ? 0 : getVerticalGutterSize,
+        mb: getVerticalGutterSize,
         flexGrow: span ? 0 : 1,
         flexShrink: 0,
         flexBasis: `auto`,
@@ -220,13 +218,11 @@ export type LayoutJson = (RowProps & { layout: Layout[] })[]
 interface FromJsonProps extends React.HTMLAttributes<any> {
   json: LayoutJson
   childrenArray: React.ReactNode[]
-  heroGrid?: boolean
 }
 
 export const GridFromJson: React.FC<FromJsonProps> = ({
   json,
-  childrenArray,
-  heroGrid = false
+  childrenArray
 }) => {
   const flatLayout = json.reduce<Layout[]>(
     (cells, { layout }) => cells.concat(layout),
@@ -279,7 +275,7 @@ export const GridFromJson: React.FC<FromJsonProps> = ({
             {layout.map(({ key, ...colProps }) => {
               if (key === '*') {
                 return getWildcardChildren().map(({ id, component }) => (
-                  <Col {...colProps} key={id} heroGrid={heroGrid}>
+                  <Col {...colProps} key={id} className="json-grid-col">
                     {component}
                   </Col>
                 ))
@@ -287,7 +283,7 @@ export const GridFromJson: React.FC<FromJsonProps> = ({
 
               const { id, component } = getChildFromKey(key)
               return (
-                <Col {...colProps} key={id} heroGrid={heroGrid}>
+                <Col {...colProps} key={id} className="json-grid-col">
                   {component}
                 </Col>
               )
