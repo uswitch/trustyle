@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.cta",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -12,7 +12,7 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle-utils.get": "^1.0.7",
-    "@uswitch/trustyle.button-link": "^2.1.1"
+    "@uswitch/trustyle-utils.get": "^1.0.9",
+    "@uswitch/trustyle.button-link": "^2.1.3"
   }
 }
