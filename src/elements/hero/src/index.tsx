@@ -91,7 +91,7 @@ const Hero: React.FC<Props> = ({
                   fgImageOnTablet ? 'block' : 'none',
                   'block'
                 ],
-                ...(fgImageType === 'background'
+                ...(fgImage && fgImageType === 'background'
                   ? {
                       backgroundImage: `url(${fgImage})`,
                       backgroundRepeat: 'no-repeat',
@@ -101,7 +101,7 @@ const Hero: React.FC<Props> = ({
                 variant: 'elements.hero.image'
               }}
             >
-              {fgImageType === 'img' && (
+              {fgImage && fgImageType === 'img' && (
                 <img
                   sx={{
                     maxWidth: '100%',
@@ -126,19 +126,21 @@ const Hero: React.FC<Props> = ({
           </div>
         </Container>
       </div>
-      <img
-        sx={{
-          maxWidth: '100%',
-          position: 'relative',
-          display: 'none',
-          marginTop: `-${bottomImageOverflow}`,
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          variant: 'elements.hero.bottomImage'
-        }}
-        src={fgImage}
-        role="presentation"
-      />
+      {fgImage && (
+        <img
+          sx={{
+            maxWidth: '100%',
+            position: 'relative',
+            display: 'none',
+            marginTop: `-${bottomImageOverflow}`,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            variant: 'elements.hero.bottomImage'
+          }}
+          src={fgImage}
+          role="presentation"
+        />
+      )}
     </div>
   )
 }
