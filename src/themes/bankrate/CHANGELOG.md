@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.20.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.19.0...@uswitch/trustyle.bankrate-theme@2.20.0) (2020-09-23)
+
+
+### Features
+
+* Add rich text block primary panel centered text ([08ec154](https://github.com/uswitch/trustyle/commit/08ec154))
+
+
+
+
+
 # [2.19.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.17.0...@uswitch/trustyle.bankrate-theme@2.19.0) (2020-09-23)
 
 
