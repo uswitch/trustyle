@@ -49,9 +49,6 @@ export const Container: React.FC<ContainerProps &
         mx: 'auto',
         boxSizing: 'border-box',
         px: getGutterSize,
-        '.flex-grid-container': {
-          px: 0
-        },
         maxWidth: (theme: any) =>
           uncastArrayIfSingle(
             castArray(getContainerSize(theme)).map(
