@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.18.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.16.0...@uswitch/trustyle.bankrate-theme@2.18.0) (2020-09-23)
+
+
+### Features
+
+* bankrate theming for handover page ([dcf1e8d](https://github.com/uswitch/trustyle/commit/dcf1e8d))
+
+
+
+
+
+# [2.17.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.16.0...@uswitch/trustyle.bankrate-theme@2.17.0) (2020-09-23)
+
+
+### Features
+
+* bankrate theming for handover page ([dcf1e8d](https://github.com/uswitch/trustyle/commit/dcf1e8d))
+
+
+
+
+
 # [2.16.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.15.0...@uswitch/trustyle.bankrate-theme@2.16.0) (2020-09-23)
 
 
