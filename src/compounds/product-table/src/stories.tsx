@@ -12,7 +12,7 @@ import AllThemes from '../../../utils/all-themes'
 import ProductTable, { AddonArg } from './index'
 
 export default {
-  title: 'Compounds|Product Table'
+  title: 'Compounds/Product Table'
 }
 
 type Column =

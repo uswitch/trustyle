@@ -10,7 +10,7 @@ import { ButtonLink } from '../../button-link/src'
 import { LinkList, LinkListItem } from './'
 
 export default {
-  title: 'Elements|Link List'
+  title: 'Elements/Link List'
 }
 
 export const PrimaryVariant = () => (

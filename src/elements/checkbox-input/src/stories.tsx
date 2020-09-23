@@ -10,7 +10,7 @@ import { Fieldset } from '../../fieldset/src'
 import { CheckboxInput } from './.'
 
 export default {
-  title: 'Elements|CheckboxInput'
+  title: 'Elements/CheckboxInput'
 }
 
 const initialValues = {

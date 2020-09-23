@@ -8,7 +8,7 @@ import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
 import FunnelProgress from './'
 
 export default {
-  title: 'Elements|Funnel Progress'
+  title: 'Elements/Funnel Progress'
 }
 
 const phases = [

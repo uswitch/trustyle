@@ -7,7 +7,7 @@ import AllThemes from '../../../utils/all-themes'
 import Table from './'
 
 export default {
-  title: 'Elements|Table'
+  title: 'Elements/Table'
 }
 
 export const Example = () => (

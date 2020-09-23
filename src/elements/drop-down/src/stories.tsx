@@ -8,7 +8,7 @@ import ThemedIcon from '../../themed-icon/src'
 import { DropDown } from './'
 
 export default {
-  title: 'Elements|Dropdown'
+  title: 'Elements/Dropdown'
 }
 
 const options = [

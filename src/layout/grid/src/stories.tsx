@@ -22,7 +22,7 @@ const exampleRowStyle = css({
 
 const globalStyles = { body: { margin: 0 } }
 
-storiesOf('Layout|Grid', module).add('Basic Example', () => (
+storiesOf('Layout/Grid', module).add('Basic Example', () => (
   <React.Fragment>
     <Global styles={globalStyles} />
     <Container
@@ -75,7 +75,7 @@ storiesOf('Layout|Grid', module).add('Basic Example', () => (
   </React.Fragment>
 ))
 
-storiesOf('Layout|Grid', module).add('Custom gutters', () => {
+storiesOf('Layout/Grid', module).add('Custom gutters', () => {
   const gutterWidths = [8, 16, 24]
   return (
     <React.Fragment>
@@ -106,7 +106,7 @@ storiesOf('Layout|Grid', module).add('Custom gutters', () => {
   )
 })
 
-storiesOf('Layout|Grid', module).add('Example 1 - basics', () => (
+storiesOf('Layout/Grid', module).add('Example 1 - basics', () => (
   <React.Fragment>
     <Global styles={globalStyles} />
     <Container
@@ -155,7 +155,7 @@ storiesOf('Layout|Grid', module).add('Example 1 - basics', () => (
   </React.Fragment>
 ))
 
-storiesOf('Layout|Grid', module).add('Example 2 - center', () => (
+storiesOf('Layout/Grid', module).add('Example 2 - center', () => (
   <React.Fragment>
     <Global styles={globalStyles} />
     <Container css={{ backgroundColor: colors.offWhite }}>
@@ -171,7 +171,7 @@ storiesOf('Layout|Grid', module).add('Example 2 - center', () => (
   </React.Fragment>
 ))
 
-storiesOf('Layout|Grid', module).add('Example 3 - nested grids', () => (
+storiesOf('Layout/Grid', module).add('Example 3 - nested grids', () => (
   <React.Fragment>
     <Global styles={globalStyles} />
     <Container css={{ backgroundColor: colors.offWhite }}>
@@ -196,7 +196,7 @@ storiesOf('Layout|Grid', module).add('Example 3 - nested grids', () => (
   </React.Fragment>
 ))
 
-storiesOf('Layout|Grid', module).add('Example 4 - passing screen sizes', () => (
+storiesOf('Layout/Grid', module).add('Example 4 - passing screen sizes', () => (
   <React.Fragment>
     <Global styles={globalStyles} />
     <Container

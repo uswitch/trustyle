@@ -8,7 +8,7 @@ import AllThemes from '../../../utils/all-themes'
 import { Input } from './.'
 
 export default {
-  title: 'Elements|Text Input'
+  title: 'Elements/Text Input'
 }
 
 const Spacer = ({ height }: { height: number }) => (

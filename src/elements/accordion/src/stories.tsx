@@ -8,7 +8,7 @@ import AllThemes from '../../../utils/all-themes'
 import Accordion from './'
 
 export default {
-  title: 'Elements|Accordion'
+  title: 'Elements/Accordion'
 }
 
 export const SingleAccordion = () => {

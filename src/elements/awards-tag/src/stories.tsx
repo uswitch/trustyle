@@ -8,7 +8,7 @@ import AllThemes from '../../../utils/all-themes'
 import AwardsTag from './'
 
 export default {
-  title: 'Elements|Awards Tag'
+  title: 'Elements/Awards Tag'
 }
 
 export const ExampleWithKnobs = () => {

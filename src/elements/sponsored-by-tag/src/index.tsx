@@ -8,12 +8,14 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   providerLogoSrc: string
   className?: string
   providerText?: string
+  providerName: string
 }
 
 const SponsoredByTag: React.FC<Props> = ({
   providerLogoSrc,
   className = '',
-  providerText = 'Sponsored by'
+  providerText = 'Sponsored by',
+  providerName
 }) => (
   <div
     className={className}
@@ -31,6 +33,7 @@ const SponsoredByTag: React.FC<Props> = ({
 
     <ImgixImage
       src={providerLogoSrc}
+      alt={providerName}
       imgixParams={{ fit: 'clip' }}
       critical
       sx={{

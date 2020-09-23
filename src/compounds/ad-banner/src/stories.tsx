@@ -8,7 +8,7 @@ import AllThemes from '../../../utils/all-themes'
 import AdBanner from './'
 
 export default {
-  title: 'compounds|AdBanner'
+  title: 'Compounds/AdBanner'
 }
 
 export const ExampleWithKnobs = () => {
