@@ -36,7 +36,6 @@ const BROKEN_STORIES = [
   'Elements/Card',
   'Elements/Category',
   'Elements/Drawer',
-  'Elements/Embedded-video',
   'Elements/Hero',
   'Elements/HeroWithBackgroundImage',
   'Elements/Link List',
