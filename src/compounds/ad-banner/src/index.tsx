@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
-import Badge from '@uswitch/trustyle.badge'
+import AwardsTag from '@uswitch/trustyle.awards-tag'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
@@ -11,16 +11,15 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   content?: React.ReactElement
   usp: string
   sponsor: { logo: string; name: string }
-  label: string
+  awardLabel?: string
   backgroundColor?: string
+  textColor?: string
   backgroundImage: string
   backgroundSize?: string[]
   backgroundPosition?: string[]
-  additionalImage?: string
-  additionalImageTag?: string
+  desktopAwardImage?: string
+  desktopAwardImageTag?: string
   href: string
-  badgeIcon?: React.ReactElement
-  badgeVariant?: string
   imageCritical?: boolean
   className?: string
 }
@@ -31,15 +30,14 @@ const AdBanner: React.FC<Props> = ({
   usp,
   sponsor,
   backgroundColor = 'black',
+  textColor = 'white',
   backgroundImage,
   backgroundSize = ['100%'],
   backgroundPosition = ['center'],
-  label,
-  additionalImage = '',
-  additionalImageTag = '',
+  awardLabel,
+  desktopAwardImage = '',
+  desktopAwardImageTag = '',
   href,
-  badgeIcon,
-  badgeVariant = 'inverse',
   imageCritical = true,
   className
 }) => {
@@ -96,20 +94,7 @@ const AdBanner: React.FC<Props> = ({
             zIndex: '1'
           }}
         >
-          <Badge variant={badgeVariant}>
-            <div
-              sx={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                px: 'xxs'
-              }}
-            >
-              {badgeIcon}
-              {label}
-            </div>
-          </Badge>
+        <AwardsTag award={awardLabel} />
         </div>
         <div
           sx={{
@@ -134,8 +119,8 @@ const AdBanner: React.FC<Props> = ({
           </div>
           <div>
             <ImgixImage
-              src={additionalImage}
-              alt={additionalImageTag}
+              src={desktopAwardImage}
+              alt={desktopAwardImageTag}
               height={60}
               sx={{
                 maxWidth: '100%',
@@ -165,7 +150,7 @@ const AdBanner: React.FC<Props> = ({
               fontSize: ['lg', 'xxl'],
               marginTop: 0,
               marginBottom: 'sm',
-              color: 'white',
+              color: textColor,
               lineHeight: 1
             }}
           >
@@ -177,7 +162,8 @@ const AdBanner: React.FC<Props> = ({
               fontWeight: 'bold',
               marginBottom: 'sm',
               marginTop: 0,
-              textAlign: ['center', 'left']
+              textAlign: ['center', 'left'],
+              color: textColor
             }}
           >
             {content}
@@ -187,7 +173,8 @@ const AdBanner: React.FC<Props> = ({
               fontSize: 'xs',
               marginY: 0,
               fontWeight: 'light',
-              marginBottom: ['sm', 0]
+              marginBottom: ['sm', 0],
+              color: textColor
             }}
           >
             {usp}

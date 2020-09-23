@@ -63,6 +63,7 @@ export const ExampleWithKnobs = () => {
   const href = text('href', 'https://www.google.com')
   const backgroundImage = text('background Image', 'https://bit.ly/2TTd2SZ')
   const backgroundColor = text('background color', 'black')
+  const textColor = text('text color', 'white')
   const additionalImage = text(
     'optional additional image',
     'https://uswitch-cms.imgix.net/uswitch-assets-eu/mobiles-comparison-uf/uswitch-manufacturer-award-image.png'
@@ -80,13 +81,14 @@ export const ExampleWithKnobs = () => {
       content={content}
       usp={usp}
       sponsor={sponsor}
-      label={label}
+      awardLabel={label}
       backgroundImage={backgroundImage}
       backgroundColor={backgroundColor}
-      additionalImage={additionalImage}
-      additionalImageTag={additionalImageTag}
+      desktopAwardImage={additionalImage}
+      desktopAwardImageTag={additionalImageTag}
       href={href}
       badgeIcon={badgeIcon}
+      textColor={textColor}
     />
   )
 }
