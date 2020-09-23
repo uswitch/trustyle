@@ -101,7 +101,8 @@
     "button-secondary--hover": "#f0f1f3",
     "dark-grey-03": "rgba(104,104,135,0.3)",
     "light-grey": "#F2F2F6",
-    "light-grey-content": "#202020"
+    "light-grey-content": "#202020",
+    "border-light-grey": "#E9E9EC"
   },
   "radii": {
     "sm": 3,
@@ -956,6 +957,21 @@
           },
           "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
           "borderRadius": "md"
+        },
+        "panel-primary-text-align-center": {
+          "variant": "elements.rich-text-block.variants.panel-primary",
+          "textAlign": ["center", "center"],
+          "p": {
+            "textAlign": ["center", "center"],
+            "mb": "md",
+            "mt": "sm"
+          },
+          "paddingY": "sm",
+          "paddingX": "sm",
+          "borderWidth": "1px",
+          "borderStyle": "solid",
+          "borderColor": "border-light-grey",
+          "boxShadow": "0px 4px 10px rgba(0, 0, 0, 0.05)"
         },
         "grey-box": {
           "variant": "elements.rich-text-block.base",
