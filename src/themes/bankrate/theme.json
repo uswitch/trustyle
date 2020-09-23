@@ -765,7 +765,7 @@
             "backgroundColor": "button-secondary--hover"
           }
         },
-        "landing-page": {
+        "icon": {
           "display": "flex",
           "flexDirection": ["column", "row", "row"],
           "button": {
