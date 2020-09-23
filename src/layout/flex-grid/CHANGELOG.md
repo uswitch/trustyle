@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.flex-grid@3.1.0...@uswitch/trustyle.flex-grid@3.2.0) (2020-09-23)
+
+
+### Features
+
+* remove margin bottom if grid is inside a hero ([de2aae1](https://github.com/uswitch/trustyle/commit/de2aae1))
+* use class names and theme ([095d687](https://github.com/uswitch/trustyle/commit/095d687))
+
+
+
+
+
 # [3.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.flex-grid@3.0.2...@uswitch/trustyle.flex-grid@3.1.0) (2020-09-03)
 
 

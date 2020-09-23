@@ -275,7 +275,7 @@ export const GridFromJson: React.FC<FromJsonProps> = ({
             {layout.map(({ key, ...colProps }) => {
               if (key === '*') {
                 return getWildcardChildren().map(({ id, component }) => (
-                  <Col {...colProps} key={id}>
+                  <Col {...colProps} key={id} className="json-grid-col">
                     {component}
                   </Col>
                 ))
@@ -283,7 +283,7 @@ export const GridFromJson: React.FC<FromJsonProps> = ({
 
               const { id, component } = getChildFromKey(key)
               return (
-                <Col {...colProps} key={id}>
+                <Col {...colProps} key={id} className="json-grid-col">
                   {component}
                 </Col>
               )
