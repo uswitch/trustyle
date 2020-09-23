@@ -28,6 +28,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   customBgColor?: string
   className?: string
   bottomImageOverflow?: number | string
+  extraRules?: object
 }
 
 const DefaultContainer: React.FC = ({ children }) => (
@@ -45,7 +46,8 @@ const Hero: React.FC<Props> = ({
   customBgColor = '',
   children,
   bottomImageOverflow = '-33%',
-  className
+  className,
+  extraRules
 }) => {
   const { theme }: any = useThemeUI()
   const breadcrumbVariant = get(theme, 'elements.hero.breadcrumbs.variant')
@@ -60,7 +62,8 @@ const Hero: React.FC<Props> = ({
           position: 'relative',
           overflow: 'hidden',
           variant: 'elements.hero.wrapper',
-          backgroundColor: customBgColor || undefined
+          backgroundColor: customBgColor || undefined,
+          ...extraRules
         }}
         className={className}
       >
@@ -126,19 +129,21 @@ const Hero: React.FC<Props> = ({
           </div>
         </Container>
       </div>
-      <img
-        sx={{
-          maxWidth: '100%',
-          position: 'relative',
-          display: 'none',
-          marginTop: `-${bottomImageOverflow}`,
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          variant: 'elements.hero.bottomImage'
-        }}
-        src={fgImage}
-        role="presentation"
-      />
+      {fgImage && (
+        <img
+          sx={{
+            maxWidth: '100%',
+            position: 'relative',
+            display: 'none',
+            marginTop: `-${bottomImageOverflow}`,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            variant: 'elements.hero.bottomImage'
+          }}
+          src={fgImage}
+          role="presentation"
+        />
+      )}
     </div>
   )
 }
