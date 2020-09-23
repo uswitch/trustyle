@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.testimonial-card",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -12,9 +12,9 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.icon": "^1.13.1"
+    "@uswitch/trustyle.icon": "^1.13.3"
   },
   "devDependencies": {
-    "@uswitch/trustyle.carousel": "^1.1.2"
+    "@uswitch/trustyle.carousel": "^1.1.4"
   }
 }
