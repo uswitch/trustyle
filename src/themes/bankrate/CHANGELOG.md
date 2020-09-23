@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.16.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.15.0...@uswitch/trustyle.bankrate-theme@2.16.0) (2020-09-23)
+
+
+### Features
+
+* Add grey box variant to rich text block for uswitch and bankrate ([7ed1d26](https://github.com/uswitch/trustyle/commit/7ed1d26))
+
+
+
+
+
+# [2.15.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.14.1...@uswitch/trustyle.bankrate-theme@2.15.0) (2020-09-23)
+
+
+### Features
+
+* add styles for zoopla landing page buttons ([5d78145](https://github.com/uswitch/trustyle/commit/5d78145))
+* change width to max width ([c6348bf](https://github.com/uswitch/trustyle/commit/c6348bf))
+* update mobile styles ([0845c34](https://github.com/uswitch/trustyle/commit/0845c34))
+* use better name ([6d24871](https://github.com/uswitch/trustyle/commit/6d24871))
+
+
+
+
+
 ## [2.14.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.14.0...@uswitch/trustyle.bankrate-theme@2.14.1) (2020-09-14)
 
 **Note:** Version bump only for package @uswitch/trustyle.bankrate-theme

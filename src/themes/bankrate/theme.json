@@ -99,7 +99,9 @@
     "experimental-text": "#29335C",
     "button-secondary": "#FFFFFF",
     "button-secondary--hover": "#f0f1f3",
-    "dark-grey-03": "rgba(104,104,135,0.3)"
+    "dark-grey-03": "rgba(104,104,135,0.3)",
+    "light-grey": "#F2F2F6",
+    "light-grey-content": "#202020"
   },
   "radii": {
     "sm": 3,
@@ -764,6 +766,26 @@
           ":active": {
             "backgroundColor": "button-secondary--hover"
           }
+        },
+        "icon": {
+          "display": "flex",
+          "flexDirection": ["column", "row", "row"],
+          "button": {
+            "variant": "elements.buttons.variants.secondary",
+            "mb": ["md", 0],
+            "maxWidth": ["100%", "218px"],
+            "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
+            "span": {
+              "display": "flex",
+              "flexDirection": "column",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "textAlign": "center"
+            },
+            "img": {
+              "maxHeight": "45px"
+            }
+          }
         }
       }
     },
@@ -918,10 +940,12 @@
       "base": {
         "*:first-child": {
           "mt": 0
-        }
+        },
+        "boxSizing": "border-box"
       },
       "variants": {
         "panel-primary": {
+          "variant": "elements.rich-text-block.base",
           "py": "lg",
           "px": ["sm", "xl"],
           "bg": "grey-0",
@@ -932,6 +956,13 @@
           },
           "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
           "borderRadius": "md"
+        },
+        "grey-box": {
+          "variant": "elements.rich-text-block.base",
+          "color": "light-grey-content",
+          "bg": "light-grey",
+          "py": "md",
+          "px": ["md", "lg"]
         }
       }
     },

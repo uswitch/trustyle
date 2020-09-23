@@ -21,12 +21,7 @@ const sizeOptions = {
   Small: 'small'
 }
 
-export const BBDealsVariant = () => {
-  return <Button variant="hero">Find your deal</Button>
-}
-
 export const AllVariants = () => {
-  console.log(theme())
   return (
     <div css={css({ padding: number('Padding', 10) })}>
       {theme() &&

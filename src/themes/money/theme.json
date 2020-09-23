@@ -1052,6 +1052,9 @@
         "color": "white",
         "h1, h2, h3, h4, h5, h6": {
           "color": "inherit"
+        },
+        "& .json-grid-col": {
+          "mb": 0
         }
       },
       "breadcrumbs": {
@@ -1546,7 +1549,7 @@
         "content": {
           "fontFamily": "heading",
           "color": "grey-80",
-          "fontSize": ["xl", "xxl"]
+          "fontSize": ["xl", "xl"]
         },
         "accent": {
           "backgroundColor": "grey-05"

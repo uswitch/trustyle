@@ -28,44 +28,38 @@ export const ButtonLink = <
   const { theme }: any = useThemeUI()
 
   return (
-    <div
+    <Styled.a
       sx={{
-        variant: `elements.buttons.variants.${variant}.container`
+        cursor: 'pointer',
+        backgroundImage: 'none',
+        fontFamily: 'base',
+        fontSize: get(
+          theme,
+          `elements.buttons.base.btnSize.${size}.fontSize`,
+          'base'
+        ),
+        paddingX: get(
+          theme,
+          `elements.buttons.base.btnSize.${size}.paddingX`,
+          'sm'
+        ),
+        paddingY: get(
+          theme,
+          `elements.buttons.base.btnSize.${size}.paddingY`,
+          'base'
+        ),
+        height: get(
+          theme,
+          `elements.buttons.base.btnSize.${size}.height`,
+          'base'
+        ),
+        display: 'inline-block',
+        textDecoration: 'none',
+        variant: `elements.buttons.variants.${variant}`
       }}
+      {...props}
     >
-      <Styled.a
-        sx={{
-          cursor: 'pointer',
-          backgroundImage: 'none',
-          fontFamily: 'base',
-          fontSize: get(
-            theme,
-            `elements.buttons.base.btnSize.${size}.fontSize`,
-            'base'
-          ),
-          paddingX: get(
-            theme,
-            `elements.buttons.base.btnSize.${size}.paddingX`,
-            'sm'
-          ),
-          paddingY: get(
-            theme,
-            `elements.buttons.base.btnSize.${size}.paddingY`,
-            'base'
-          ),
-          height: get(
-            theme,
-            `elements.buttons.base.btnSize.${size}.height`,
-            'base'
-          ),
-          display: 'inline-block',
-          textDecoration: 'none',
-          variant: `elements.buttons.variants.${variant}`
-        }}
-        {...props}
-      >
-        <div>{children}</div>
-      </Styled.a>
-    </div>
+      {children}
+    </Styled.a>
   )
 }

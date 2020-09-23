@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero@3.4.0...@uswitch/trustyle.hero@3.4.2) (2020-09-23)
+
+
+### Bug Fixes
+
+* hero image elements are hidden if fgImage is not provided. ([67a0948](https://github.com/uswitch/trustyle/commit/67a0948))
+
+
+
+
+
+## [3.4.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero@3.4.0...@uswitch/trustyle.hero@3.4.1) (2020-09-23)
+
+
+### Bug Fixes
+
+* hero image elements are hidden if fgImage is not provided. ([67a0948](https://github.com/uswitch/trustyle/commit/67a0948))
+
+
+
+
+
+# [3.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero@3.3.1...@uswitch/trustyle.hero@3.4.0) (2020-09-21)
+
+
+### Bug Fixes
+
+* cleans up code in trustyle hero component. ([bd6622c](https://github.com/uswitch/trustyle/commit/bd6622c))
+
+
+### Features
+
+* adds ability to hide fgImage on Tablet. ([9e066bd](https://github.com/uswitch/trustyle/commit/9e066bd))
+* adds ability to pass custom background color to hero. ([65687c6](https://github.com/uswitch/trustyle/commit/65687c6))
+
+
+
+
+
 ## [3.2.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero@3.2.4...@uswitch/trustyle.hero@3.2.3) (2020-08-28)
 
 **Note:** Version bump only for package @uswitch/trustyle.hero

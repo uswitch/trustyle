@@ -5,15 +5,17 @@ import { jsx, useThemeUI } from 'theme-ui'
 import { darken } from '@theme-ui/color'
 import get from '@uswitch/trustyle-utils.get'
 
+import { Glyph, Icon } from '../../icon/src'
+
 export type Variant =
   | 'primary'
   | 'secondary'
   | 'continue'
   | 'inverse'
-  | 'hero'
-  | 'hero.centered'
   | 'reversed'
   | 'link'
+  | 'hero'
+  | 'hero.centered'
 type IconPosition = 'left' | 'center' | 'right' | null
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -21,6 +23,8 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   iconPosition?: IconPosition
   inverse?: boolean
   size?: string
+  beforeIcon?: string
+  afterIcon?: string
 }
 
 const invertTheme = (theme: any, variant: any = {}) => {
@@ -59,6 +63,8 @@ export const Button: React.FC<Props> = ({
   onClick,
   size = 'large',
   inverse = false,
+  beforeIcon,
+  afterIcon,
   ...props
 }) => {
   const { theme }: any = useThemeUI()
@@ -66,57 +72,57 @@ export const Button: React.FC<Props> = ({
   const chosenStyle = inverse ? invertTheme(theme, variantStyle) : variantStyle
 
   return (
-    <div
+    <button
       sx={{
-        variant: `elements.buttons.variants.${variant}.container`
+        cursor: 'pointer',
+        backgroundImage: 'none',
+        fontFamily: 'base',
+
+        fontSize: get(
+          theme,
+          `elements.buttons.base.btnSize.${size}.fontSize`,
+          'base'
+        ),
+        paddingX: get(
+          theme,
+          `elements.buttons.base.btnSize.${size}.paddingX`,
+          'sm'
+        ),
+        paddingY: get(
+          theme,
+          `elements.buttons.base.btnSize.${size}.paddingY`,
+          'base'
+        ),
+        variant: get(theme, `elements.buttons.variants.${variant}`),
+
+        justifyContent: 'center',
+        alignItems: 'center',
+        ...chosenStyle,
+
+        ...(iconPosition
+          ? {
+              display: 'flex',
+              justifyContent:
+                iconPosition === 'left'
+                  ? 'flex-start'
+                  : iconPosition === 'right'
+                  ? 'space-between'
+                  : 'center'
+            }
+          : {})
       }}
+      disabled={disabled}
+      type={onClick ? 'button' : 'submit'}
+      onClick={onClick}
+      {...props}
     >
-      <button
-        sx={{
-          cursor: 'pointer',
-          backgroundImage: 'none',
-          fontFamily: 'base',
-
-          fontSize: get(
-            theme,
-            `elements.buttons.base.btnSize.${size}.fontSize`,
-            'base'
-          ),
-          paddingX: get(
-            theme,
-            `elements.buttons.base.btnSize.${size}.paddingX`,
-            'sm'
-          ),
-          paddingY: get(
-            theme,
-            `elements.buttons.base.btnSize.${size}.paddingY`,
-            'base'
-          ),
-          variant: get(theme, `elements.buttons.variants.${variant}`),
-
-          justifyContent: 'center',
-          alignItems: 'center',
-          ...chosenStyle,
-
-          ...(iconPosition
-            ? {
-                display: 'flex',
-                justifyContent:
-                  iconPosition === 'left'
-                    ? 'flex-start'
-                    : iconPosition === 'right'
-                    ? 'space-between'
-                    : 'center'
-              }
-            : {})
-        }}
-        disabled={disabled}
-        type={onClick ? 'button' : 'submit'}
-        onClick={onClick}
-        {...props}
-      >
-        {children}
-      </button>
-    </div>
+      {beforeIcon && (
+        <Icon color="white" glyph={beforeIcon as Glyph} direction="left" />
+      )}
+      {children}
+      {afterIcon && (
+        <Icon color="white" glyph={afterIcon as Glyph} direction="right" />
+      )}
+    </button>
   )
 }

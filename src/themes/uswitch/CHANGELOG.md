@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.3.4...@uswitch/trustyle.uswitch-theme@2.4.0) (2020-09-23)
+
+
+### Features
+
+* Add grey box variant to rich text block for uswitch and bankrate ([7ed1d26](https://github.com/uswitch/trustyle/commit/7ed1d26))
+
+
+
+
+
+## [2.3.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.3.2...@uswitch/trustyle.uswitch-theme@2.3.4) (2020-09-23)
+
+
+### Bug Fixes
+
+* page movement when using interative tabs ([80c9e06](https://github.com/uswitch/trustyle/commit/80c9e06))
+
+
+
+
+
+## [2.3.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.3.2...@uswitch/trustyle.uswitch-theme@2.3.3) (2020-09-23)
+
+
+### Bug Fixes
+
+* page movement when using interative tabs ([80c9e06](https://github.com/uswitch/trustyle/commit/80c9e06))
+
+
+
+
+
+## [2.3.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.3.1...@uswitch/trustyle.uswitch-theme@2.3.2) (2020-09-22)
+
+
+### Bug Fixes
+
+* remove gap between tabs and hairline ([3294ada](https://github.com/uswitch/trustyle/commit/3294ada))
+
+
+
+
+
 # [2.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.2.0...@uswitch/trustyle.uswitch-theme@2.3.0) (2020-09-03)
 
 

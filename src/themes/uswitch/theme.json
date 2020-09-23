@@ -203,7 +203,9 @@
     "veryLightGrey": "#E9EBED",
     "tomato": "#DB1818",
     "overlay-bg": "rgba(20, 20, 36, 0.5)",
-    "dark-grey-03": "rgba(104,104,135,0.3)"
+    "dark-grey-03": "rgba(104,104,135,0.3)",
+    "light-grey": "#F2F2F6",
+    "light-grey-content": "#202020"
   },
   "radii": {
     "sm": 0,
@@ -609,6 +611,14 @@
           },
           "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
           "borderRadius": "md"
+        },
+        "grey-box": {
+          "variant": "elements.rich-text-block.base",
+          "color": "light-grey-content",
+          "bg": "light-grey",
+          "py": "md",
+          "px": ["md", "lg"],
+          "boxSizing": "border-box"
         }
       }
     },
@@ -1653,6 +1663,7 @@
         "container": {
           "h6": {
             "py": "xs",
+            "mb": 0,
             "fontSize": ["base", 14, "sm"],
             "color": "grey-60"
           }
@@ -1663,6 +1674,7 @@
           "container": {
             "h6": {
               "py": "xs",
+              "mb": 0,
               "borderBottomStyle": "solid",
               "borderBottomWidth": 2,
               "borderBottomColor": "dark-1",
@@ -1714,7 +1726,7 @@
           },
           "color": "grey-60",
           "iconColor": "grey-60",
-          "padding": "md",
+          "padding": 24,
           "mb": [0, "md"],
           "display": "flex",
           "flexDirection": "row",
@@ -1731,6 +1743,7 @@
             "iconColor": "dark-1",
             "position": "relative",
             "mx": ["auto", 0],
+            "padding": "24px 24px 20px 24px",
             "width": ["calc(100% - 48px)", "auto"],
             "backgroundColor": "light-1",
             "boxShadow": [
@@ -2005,8 +2018,7 @@
         }
       },
       "award": {
-        "mt": [0, "xs"],
-        "mb": ["md", 0],
+        "mt": "xs",
         "borderRadius": "0",
         "order": [1, 2]
       }

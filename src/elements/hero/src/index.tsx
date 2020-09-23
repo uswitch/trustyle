@@ -24,6 +24,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
         transform?: ArrayOrNot<string>
       }
   fgImageOnMobile?: boolean
+  fgImageOnTablet?: boolean
+  customBgColor?: string
   className?: string
   bottomImageOverflow?: number | string
 }
@@ -39,6 +41,8 @@ const Hero: React.FC<Props> = ({
   fgImageType = 'background',
   fgImagePosition,
   fgImageOnMobile = true,
+  fgImageOnTablet = true,
+  customBgColor = '',
   children,
   bottomImageOverflow = '-33%',
   className
@@ -55,7 +59,8 @@ const Hero: React.FC<Props> = ({
         sx={{
           position: 'relative',
           overflow: 'hidden',
-          variant: 'elements.hero.wrapper'
+          variant: 'elements.hero.wrapper',
+          backgroundColor: customBgColor || undefined
         }}
         className={className}
       >
@@ -81,8 +86,12 @@ const Hero: React.FC<Props> = ({
                 right: 0,
                 top: 0,
                 bottom: 0,
-                display: fgImageOnMobile ? 'block' : ['none', 'block'],
-                ...(fgImageType === 'background'
+                display: [
+                  fgImageOnMobile ? 'block' : 'none',
+                  fgImageOnTablet ? 'block' : 'none',
+                  'block'
+                ],
+                ...(fgImage && fgImageType === 'background'
                   ? {
                       backgroundImage: `url(${fgImage})`,
                       backgroundRepeat: 'no-repeat',
@@ -92,7 +101,7 @@ const Hero: React.FC<Props> = ({
                 variant: 'elements.hero.image'
               }}
             >
-              {fgImageType === 'img' && (
+              {fgImage && fgImageType === 'img' && (
                 <img
                   sx={{
                     maxWidth: '100%',
@@ -117,19 +126,21 @@ const Hero: React.FC<Props> = ({
           </div>
         </Container>
       </div>
-      <img
-        sx={{
-          maxWidth: '100%',
-          position: 'relative',
-          display: 'none',
-          marginTop: `-${bottomImageOverflow}`,
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          variant: 'elements.hero.bottomImage'
-        }}
-        src={fgImage}
-        role="presentation"
-      />
+      {fgImage && (
+        <img
+          sx={{
+            maxWidth: '100%',
+            position: 'relative',
+            display: 'none',
+            marginTop: `-${bottomImageOverflow}`,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            variant: 'elements.hero.bottomImage'
+          }}
+          src={fgImage}
+          role="presentation"
+        />
+      )}
     </div>
   )
 }
