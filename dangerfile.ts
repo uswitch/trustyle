@@ -13,7 +13,7 @@ message('Removed files in this PR: \n - ' + removedFiles)
 danger.git.commits.forEach(commit => {
   if (
     !commit.message.match(
-      /^(feat:)|(fix:)|(major:)|(chore:)|(docs:)|Merge branch 'master'/g
+      /^(feat:)|(fix:)|(major:)|(chore:)|(docs:)|Merge branch/g
     )
   ) {
     fail(

@@ -24,6 +24,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   href: string
   target: string
   sponsorSrc: string
+  sponsorName: string
   award?: string
   enhancedImgSrc: string
   brandCaption?: string
@@ -150,6 +151,7 @@ const SponsoredProduct: React.FC<Props> = ({
   href,
   target,
   sponsorSrc,
+  sponsorName,
   award,
   enhancedImgSrc,
   brandCaption,
@@ -223,6 +225,7 @@ const SponsoredProduct: React.FC<Props> = ({
             >
               <ImgixImage
                 src={sponsorSrc}
+                alt={sponsorName}
                 imgixParams={{ fit: 'clip', trim: 'color' }}
                 width={44}
                 height={88}
@@ -373,6 +376,7 @@ const SponsoredProduct: React.FC<Props> = ({
           <div sx={{ display: ['block', 'none'] }}>
             {award && <AwardsTag award={award} sx={{ marginTop: 'xs' }} />}
             <SponsoredByTag
+              providerName={sponsorName}
               providerLogoSrc={sponsorSrc}
               sx={{ marginTop: 'xs' }}
             />

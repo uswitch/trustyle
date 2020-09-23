@@ -15,7 +15,7 @@ const images = {
 }
 
 export default {
-  title: 'Elements|HeroWithBackgroundImage'
+  title: 'Elements/HeroWithBackgroundImage'
 }
 
 interface PanelHelperProps extends React.HTMLAttributes<any> {

@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.bullet-list-timeline",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -8,7 +8,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@uswitch/trustyle.styles": "^0.5.3"
+    "@uswitch/trustyle.styles": "^0.5.4"
   },
   "devDependencies": {
     "typescript": "^3.6.2"

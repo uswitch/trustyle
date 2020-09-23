@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import React from 'react'
 import { addDecorator, addParameters } from '@storybook/react'
-import { withA11y } from '@storybook/addon-a11y'
 import { withKnobs } from '@storybook/addon-knobs'
 import { Styled, jsx, ThemeProvider } from 'theme-ui'
 import { Global } from '@emotion/core'
@@ -35,7 +34,6 @@ const withTheme = (story, { name }) => {
 }
 
 addDecorator(withTheme)
-addDecorator(withA11y)
 addDecorator(
   withKnobs({
     escapeHTML: false
@@ -95,5 +93,13 @@ addParameters({
     sortStoriesByKind: true,
     hierarchyRootSeparator: '|',
     hierarchySeparator: /\/|\./
+  },
+  a11y: {
+    options: {
+      runOnly: {
+        type: 'tag',
+        values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']
+      }
+    }
   }
 })

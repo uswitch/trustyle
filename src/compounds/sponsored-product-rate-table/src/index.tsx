@@ -23,6 +23,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   href: string
   target: string
   sponsorLogoSrc: string
+  sponsorName: string
   award: string
   campaignImgSrc: string
   campaignImgHeight?: string
@@ -151,6 +152,7 @@ const SponsoredRateTable: React.FC<Props> = ({
   href,
   target,
   sponsorLogoSrc,
+  sponsorName,
   award,
   campaignImgSrc,
   campaignImgHeight = '144px',
@@ -288,6 +290,7 @@ const SponsoredRateTable: React.FC<Props> = ({
           <AwardsTag award={award} sx={{ display: [null, 'none'] }} />
 
           <SponsoredByTag
+            providerName={sponsorName}
             providerLogoSrc={sponsorLogoSrc}
             sx={{ display: [null, 'none'] }}
           />
@@ -309,6 +312,7 @@ const SponsoredRateTable: React.FC<Props> = ({
           </Button>
 
           <SponsoredByTag
+            providerName={sponsorName}
             providerLogoSrc={sponsorLogoSrc}
             sx={{ display: ['none', 'flex'], flexDirection: 'column' }}
           />

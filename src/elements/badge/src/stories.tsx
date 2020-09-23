@@ -8,7 +8,7 @@ import AllThemes from '../../../utils/all-themes'
 import Badge from '.'
 
 export default {
-  title: 'Elements|Badge'
+  title: 'Elements/Badge'
 }
 
 export const ExampleWithKnobs = () => {

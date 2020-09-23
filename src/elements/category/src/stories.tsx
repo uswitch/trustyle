@@ -9,7 +9,7 @@ import AllThemes from '../../../utils/all-themes'
 import Category from './'
 
 export default {
-  title: 'Elements|Category'
+  title: 'Elements/Category'
 }
 
 export const ExampleWithText = () => {

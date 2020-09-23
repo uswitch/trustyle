@@ -8,7 +8,7 @@ import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
 import MyComponent from './'
 
 export default {
-  title: 'Elements|MyComponent'
+  title: 'Elements/MyComponent'
 }
 
 export const ExampleWithKnobs = () => {

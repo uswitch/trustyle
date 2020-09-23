@@ -8,7 +8,7 @@ import AllThemes from '../../../utils/all-themes'
 import Author from './'
 
 export default {
-  title: 'Elements|Author'
+  title: 'Elements/Author'
 }
 
 export const Example = () => {

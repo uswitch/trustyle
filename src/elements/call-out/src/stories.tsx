@@ -10,7 +10,7 @@ import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
 import CallOut from './'
 
 export default {
-  title: 'Elements|Call Out'
+  title: 'Elements/Call Out'
 }
 
 export const Example = () => {
