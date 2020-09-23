@@ -138,7 +138,9 @@
     "uswitch-navy": "#141424",
     "grey-60": "#6D6F73",
     "error": "#DB1818",
-    "dark-grey-03": "rgba(104,104,135,0.3)"
+    "dark-grey-03": "rgba(104,104,135,0.3)",
+    "medium-grey": "#545454",
+    "black": "#000000"
   },
 
   "radii": {
@@ -918,10 +920,64 @@
               "compounds.card.variants.horizontal.headerChildren"
             ]
           }
+        },
+        "featured": {
+          "tag": {
+            "variant": "compounds.card.variants.responsive.tag"
+          },
+          "meta": {
+            "variant": "compounds.card.variants.responsive.meta",
+            "display": "flex",
+            "flexDirection": ["row", "column"],
+            "justifyContent": ["space-between", null],
+            "alignItems": ["center", "flex-start"]
+          },
+          "image": {
+            "variant": "compounds.card.variants.responsive.image",
+            "cursor": "pointer",
+            "width": ["100%", "58%"],
+            "pr": [null, "md"],
+            "mr": [null, "xxs"],
+            "img": {
+              "width": "100%"
+            }
+          },
+          "content": {
+            "variant": "compounds.card.variants.responsive.content",
+            "color": "medium-grey",
+            "px": ["xxs", null],
+            ">p": {
+              "my": "xxs"
+            }
+          },
+          "link": {
+            "variant": "compounds.card.variants.responsive.link",
+            "cursor": "pointer"
+          },
+          "heading": {
+            "a": {
+              "textDecoration": "none",
+              "color": "black",
+              "fontSize": ["sm", "md"],
+              "fontWeight": "base",
+              "lineHeight": "base"
+            },
+            ":hover": {
+              "textDecoration": "underline"
+            }
+          },
+          "superScript": {
+            "variant": "compounds.card.variants.responsive.superScript"
+          },
+          "variant": "compounds.card.variants.responsive",
+          "flexDirection": ["column", "row"],
+          "alignItems": ["flex-start", "center"],
+          "border": "1px solid",
+          "borderColor": "light-3",
+          "p": "xxs"
         }
       }
     },
-
     "click-out-form": {
       "flexDirection": ["column", "row", "row"],
       "width": "100%"
