@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero@3.4.0...@uswitch/trustyle.hero@3.4.1) (2020-09-23)
+
+
+### Bug Fixes
+
+* hero image elements are hidden if fgImage is not provided. ([67a0948](https://github.com/uswitch/trustyle/commit/67a0948))
+
+
+
+
+
 # [3.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero@3.3.1...@uswitch/trustyle.hero@3.4.0) (2020-09-21)
 
 
