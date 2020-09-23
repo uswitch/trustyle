@@ -7,7 +7,7 @@ import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
 import { Carousel } from './'
 
 export default {
-  title: 'Compounds|Carousel'
+  title: 'Compounds/Carousel'
 }
 
 export const ResponsiveCarousel = () => {

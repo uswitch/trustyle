@@ -27,8 +27,9 @@ Why you shouldn't publish until ready to merge:
 - If changes are requested, you will have to update the version again after making the changes.
 - If you have to merge in master, you will have to update the version again.
 
-## TODO:
+## Accessibility checks
 
-- Make grid columns automatically take space. so 3 columns would automatically render 1/3 on each column, each device by default.
-- Make grid s={1/2} auto populate the rest of the sizes. so if you do s={1/2} and leave m and l blank, m and l should also be 1/2
-- Generate column sizes based on number of columns and gutter widths.
+We run automated accessibility tests as part of our pre-merge CI checks. You can run these tests locally as follows:
+
+1. Run storybook: `npm run storybook`
+2. Run the tests: `npm run a11y`

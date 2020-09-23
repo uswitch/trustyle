@@ -7,7 +7,7 @@ import theme from '../../../utils/theme-selector'
 import ThemedIcon, { Direction } from './'
 
 export default {
-  title: 'Elements|Themed Icon'
+  title: 'Elements/Themed Icon'
 }
 
 const getIconNames = (): string[] => {

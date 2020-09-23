@@ -8,7 +8,7 @@ import { RadioInput } from './.'
 const wrapper = css({ padding: number('Padding', 10), marginTop: 5 })
 
 export default {
-  title: 'Elements|Radio Input'
+  title: 'Elements/Radio Input'
 }
 
 export const AllVariants = () => (

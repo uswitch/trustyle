@@ -8,7 +8,7 @@ import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
 import SlideReveal from './'
 
 export default {
-  title: 'Elements|Slide Reveal'
+  title: 'Elements/Slide Reveal'
 }
 
 export const ExampleWithKnobs = () => {
