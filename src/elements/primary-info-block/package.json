@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.primary-info-block",
-  "version": "0.2.18",
+  "version": "0.2.19",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",

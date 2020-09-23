@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.frozen-input",
-  "version": "3.0.9",
+  "version": "3.0.10",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",

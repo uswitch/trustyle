@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.bullet-list-highlight",
-  "version": "0.3.10",
+  "version": "0.3.11",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",

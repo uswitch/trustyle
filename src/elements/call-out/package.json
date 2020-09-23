@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.call-out",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
