@@ -859,12 +859,7 @@
                 "mr": ["sm", "md"],
                 "verticalAlign": "middle"
               }
-            },
-            "border": "1px solid",
-            "borderColor": "dark-grey-03",
-            "borderRadius": "sm",
-            "py": ["sm", "md"],
-            "px": ["md", "lg"]
+            }
           },
           "title": {
             "color": "pure-black",
