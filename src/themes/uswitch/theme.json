@@ -1716,7 +1716,7 @@
           },
           "color": "grey-60",
           "iconColor": "grey-60",
-          "padding": "md",
+          "padding": 24,
           "mb": [0, "md"],
           "display": "flex",
           "flexDirection": "row",
@@ -1733,6 +1733,7 @@
             "iconColor": "dark-1",
             "position": "relative",
             "mx": ["auto", 0],
+            "padding": "24px 24px 20px 24px",
             "width": ["calc(100% - 48px)", "auto"],
             "backgroundColor": "light-1",
             "boxShadow": [
