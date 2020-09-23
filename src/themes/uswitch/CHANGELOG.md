@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.3.4...@uswitch/trustyle.uswitch-theme@2.4.0) (2020-09-23)
+
+
+### Features
+
+* Add grey box variant to rich text block for uswitch and bankrate ([7ed1d26](https://github.com/uswitch/trustyle/commit/7ed1d26))
+
+
+
+
+
 ## [2.3.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.3.2...@uswitch/trustyle.uswitch-theme@2.3.4) (2020-09-23)
 
 
