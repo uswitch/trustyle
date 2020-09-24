@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.8.2...@uswitch/trustyle.uswitch-theme@2.9.0) (2020-09-24)
+
+
+### Features
+
+* Added grey-0 color to uswitch (full white) ([6e79571](https://github.com/uswitch/trustyle/commit/6e79571))
+
+
+
+
+
 # [2.8.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.6.0...@uswitch/trustyle.uswitch-theme@2.8.0) (2020-09-23)
 
 
