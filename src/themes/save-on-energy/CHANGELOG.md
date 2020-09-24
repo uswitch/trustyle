@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.13.3...@uswitch/trustyle.save-on-energy-theme@1.13.4) (2020-09-24)
+
+
+### Bug Fixes
+
+* add featured card variant for save-on-energy ([feb1c67](https://github.com/uswitch/trustyle/commit/feb1c67))
+
+
+
+
+
+
 ## [1.13.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.13.0...@uswitch/trustyle.save-on-energy-theme@1.13.1) (2020-08-27)
 
 
