@@ -22,7 +22,7 @@ const greyColStyling = {
 }
 
 export default {
-  title: 'Layout|Flex Grid'
+  title: 'Layout/Flex Grid'
 }
 
 export const BasicExample = () => (

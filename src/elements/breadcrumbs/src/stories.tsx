@@ -12,7 +12,7 @@ type Variant = 'base' | 'light'
 const variants = ['base', 'light']
 
 export default {
-  title: 'Elements|Breadcrumbs'
+  title: 'Elements/Breadcrumbs'
 }
 
 const crumbs = [

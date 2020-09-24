@@ -7,7 +7,7 @@ import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
 import { InteractiveTab, InteractiveTabs } from './'
 
 export default {
-  title: 'Compounds|InteractiveTabs'
+  title: 'Compounds/InteractiveTabs'
 }
 
 const interactiveTab = (imageUrl: string) => (

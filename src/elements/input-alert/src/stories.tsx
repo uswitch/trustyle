@@ -6,7 +6,7 @@ import AllThemes from '../../../utils/all-themes'
 import { InputAlert } from '.'
 
 export default {
-  title: 'Elements|InputAlert'
+  title: 'Elements/InputAlert'
 }
 
 export const Notification = () => (

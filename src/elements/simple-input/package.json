@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.simple-input",
-  "version": "0.5.0",
+  "version": "0.5.2",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",

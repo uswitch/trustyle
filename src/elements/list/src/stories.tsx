@@ -7,7 +7,7 @@ import AllThemes from '../../../utils/all-themes'
 import { List, ListItem } from './'
 
 export default {
-  title: 'Elements|List'
+  title: 'Elements/List'
 }
 
 const arr1 = ['First item', 'Second item', 'Third item']

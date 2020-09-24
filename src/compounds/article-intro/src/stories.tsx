@@ -10,7 +10,7 @@ import AllThemes from '../../../utils/all-themes'
 import ArticleIntro from './'
 
 export default {
-  title: 'Compounds|ArticleIntro'
+  title: 'Compounds/ArticleIntro'
 }
 
 export const ExampleWithKnobs = () => {
