@@ -54,7 +54,7 @@ const glyphChoices: Glyph[] = [
 
 const directionChoices: Direction[] = ['up', 'down', 'right', 'left']
 
-storiesOf('Elements|Icon', module).add(
+storiesOf('Elements/Icon', module).add(
   'With selectable glyph and color',
   () => {
     const theme = themeSelector()

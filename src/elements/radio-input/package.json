@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.radio-input",
-  "version": "3.0.2",
+  "version": "3.0.5",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -8,7 +8,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@uswitch/trustyle.styles": "^0.5.3"
+    "@uswitch/trustyle.styles": "^0.5.6"
   },
   "devDependencies": {
     "typescript": "^3.6.2"

@@ -14,7 +14,7 @@ const exampleRow = css({
   borderRadius: '1px'
 })
 
-storiesOf('Layout|Arrangement', module).add('Stacking elements', () => (
+storiesOf('Layout/Arrangement', module).add('Stacking elements', () => (
   <Stack spacing={[8, 16]}>
     <div css={exampleRow}>full width row 1</div>
     <div css={exampleRow}>full width row 2</div>
@@ -25,7 +25,7 @@ storiesOf('Layout|Arrangement', module).add('Stacking elements', () => (
   </Stack>
 ))
 
-storiesOf('Layout|Arrangement', module).add('Inlining elements', () => (
+storiesOf('Layout/Arrangement', module).add('Inlining elements', () => (
   <Inline spacing={[8, 16]}>
     <div css={exampleRow}>full width row 1</div>
     <div css={exampleRow}>full width row 2</div>

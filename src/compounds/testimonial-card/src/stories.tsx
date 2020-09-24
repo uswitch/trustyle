@@ -9,7 +9,7 @@ import AllThemes from '../../../utils/all-themes'
 import TestimonialCard from './'
 
 export default {
-  title: 'Compounds|Testimonial Card'
+  title: 'Compounds/Testimonial Card'
 }
 const quote = text(
   'Quote',

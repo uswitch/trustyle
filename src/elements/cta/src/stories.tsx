@@ -11,7 +11,7 @@ type Variant = 'base' | 'hero' | 'hero-white-bg'
 const variants = ['base', 'hero', 'hero-white-bg']
 
 export default {
-  title: 'Elements|CTA'
+  title: 'Elements/CTA'
 }
 
 export const Example = () => {

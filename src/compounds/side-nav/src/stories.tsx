@@ -7,7 +7,7 @@ import AllThemes from '../../../utils/all-themes'
 import SideNav from '../src'
 
 export default {
-  title: 'Compounds|Side Nav'
+  title: 'Compounds/Side Nav'
 }
 
 const defaultInternalLinks = [

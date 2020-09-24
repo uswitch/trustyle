@@ -7,7 +7,7 @@ import AllThemes from '../../../utils/all-themes'
 import { SimpleInput } from '.'
 
 export default {
-  title: 'Elements|Simple Input'
+  title: 'Elements/Simple Input'
 }
 
 const Spacer = () => <div sx={{ height: 10 }} />

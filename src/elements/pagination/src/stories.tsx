@@ -39,7 +39,7 @@ const PaginationStory = ({ type }: any) => {
 }
 
 export default {
-  title: 'Elements|Pagination'
+  title: 'Elements/Pagination'
 }
 
 export const ExampleWithOnclick = () => <PaginationStory type="onClick" />

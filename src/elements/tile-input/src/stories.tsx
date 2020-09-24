@@ -67,7 +67,7 @@ const Form = ({
 }
 
 export default {
-  title: 'Elements|TileInput'
+  title: 'Elements/TileInput'
 }
 
 export const Radio = () => <Form type="radio" useHooks />

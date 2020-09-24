@@ -8,7 +8,7 @@ import AllThemes from '../../../utils/all-themes'
 import UspTag from './'
 
 export default {
-  title: 'Elements|Usp tag'
+  title: 'Elements/Usp tag'
 }
 
 const exampleUsps = [

@@ -13,7 +13,7 @@ import { checkedIcon, uncheckedIcon } from './assets'
 import ToggleSwitch from './'
 
 export default {
-  title: 'Elements|Toggle Switch'
+  title: 'Elements/Toggle Switch'
 }
 
 export const ExampleWithState = () => {

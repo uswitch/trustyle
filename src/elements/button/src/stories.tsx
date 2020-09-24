@@ -13,7 +13,7 @@ import { Button, Variant } from './'
 const Spacer = () => <div css={css({ minHeight: 20 })} />
 
 export default {
-  title: 'Elements|Button'
+  title: 'Elements/Button'
 }
 
 const sizeOptions = {
@@ -22,7 +22,6 @@ const sizeOptions = {
 }
 
 export const AllVariants = () => {
-  console.log(theme())
   return (
     <div css={css({ padding: number('Padding', 10) })}>
       {theme() &&

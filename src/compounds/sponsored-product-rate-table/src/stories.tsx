@@ -8,7 +8,7 @@ import AllThemes from '../../../utils/all-themes'
 import SponsoredRateTable from '.'
 
 export default {
-  title: 'Compounds|Sponsored Product Rate Table'
+  title: 'Compounds/Sponsored Product Rate Table'
 }
 
 export const ExampleWithKnobs = () => {
@@ -27,6 +27,7 @@ export const ExampleWithKnobs = () => {
   ]
   const href = text('href', 'https://www.uswitch.com/mobiles/')
   const target = text('target', '_blank')
+  const sponsorName = text('Sponsor name', 'Three')
   const sponsorSrc = text(
     'Sponsor url',
     'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/5eyE4LyswwqIYk0mIsE820/dc0774e3e62d7b39ddeb1729d823a8da/Logo_-_three.png'
@@ -60,6 +61,7 @@ export const ExampleWithKnobs = () => {
         usps={usps}
         href={href}
         target={target}
+        sponsorName={sponsorName}
         sponsorLogoSrc={sponsorSrc}
         award={award}
         campaignImgSrc={campaignImage}
