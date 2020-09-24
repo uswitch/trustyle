@@ -10,7 +10,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   content?: React.ReactElement
   usp: string
-  sponsor: { logo: string; name: string; width: number }
+  sponsor: { logo: string; name: string }
   awardLabel?: string
   backgroundColor?: string
   textColor?: string
