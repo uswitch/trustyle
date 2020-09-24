@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
-import Badge from '@uswitch/trustyle.badge'
+import AwardsTag from '@uswitch/trustyle.awards-tag'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
@@ -11,16 +11,15 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   content?: React.ReactElement
   usp: string
   sponsor: { logo: string; name: string }
-  label: string
+  awardLabel?: string
   backgroundColor?: string
+  textColor?: string
   backgroundImage: string
-  backgroundSize?: string[]
-  backgroundPosition?: string[]
-  additionalImage?: string
-  additionalImageTag?: string
+  desktopAwardImage?: string
+  desktopAwardImageTag?: string
+  buttonLabel?: string
+  buttonVariant?: string
   href: string
-  badgeIcon?: React.ReactElement
-  badgeVariant?: string
   imageCritical?: boolean
   className?: string
 }
@@ -31,15 +30,14 @@ const AdBanner: React.FC<Props> = ({
   usp,
   sponsor,
   backgroundColor = 'black',
+  textColor = 'white',
   backgroundImage,
-  backgroundSize = ['100%'],
-  backgroundPosition = ['center'],
-  label,
-  additionalImage = '',
-  additionalImageTag = '',
+  awardLabel,
+  desktopAwardImage = '',
+  desktopAwardImageTag = '',
+  buttonLabel = 'Learn more',
+  buttonVariant = 'inverse',
   href,
-  badgeIcon,
-  badgeVariant = 'inverse',
   imageCritical = true,
   className
 }) => {
@@ -50,9 +48,7 @@ const AdBanner: React.FC<Props> = ({
         backgroundColor: backgroundColor,
         color: 'white',
         position: 'relative',
-        px: ['sm', 'md'],
-        pb: ['sm', 'md'],
-        paddingTop: ['210px', 'lg']
+        variant: 'compounds.ad-banner.wrapper'
       }}
     >
       <div
@@ -61,14 +57,9 @@ const AdBanner: React.FC<Props> = ({
           top: '0',
           left: '0',
           right: '0',
-          maxHeight: '100%',
-          height: '230px',
           bottom: ['', '0'],
           backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: backgroundSize,
-          backgroundPosition: backgroundPosition,
-          backgroundRepeat: 'no-repeat',
-          zIndex: '0'
+          variant: 'compounds.ad-banner.background-image'
         }}
       ></div>
       <div
@@ -96,20 +87,7 @@ const AdBanner: React.FC<Props> = ({
             zIndex: '1'
           }}
         >
-          <Badge variant={badgeVariant}>
-            <div
-              sx={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                px: 'xxs'
-              }}
-            >
-              {badgeIcon}
-              {label}
-            </div>
-          </Badge>
+          <AwardsTag award={awardLabel} />
         </div>
         <div
           sx={{
@@ -134,8 +112,8 @@ const AdBanner: React.FC<Props> = ({
           </div>
           <div>
             <ImgixImage
-              src={additionalImage}
-              alt={additionalImageTag}
+              src={desktopAwardImage}
+              alt={desktopAwardImageTag}
               height={60}
               sx={{
                 maxWidth: '100%',
@@ -160,34 +138,24 @@ const AdBanner: React.FC<Props> = ({
         >
           <h1
             sx={{
-              fontStyle: 'normal',
-              fontWeight: 'bold',
-              fontSize: ['lg', 'xxl'],
-              marginTop: 0,
-              marginBottom: 'sm',
-              color: 'white',
-              lineHeight: 1
+              color: textColor,
+              variant: 'compounds.ad-banner.title'
             }}
           >
             {title}
           </h1>
           <p
             sx={{
-              fontSize: 'xs',
-              fontWeight: 'bold',
-              marginBottom: 'sm',
-              marginTop: 0,
-              textAlign: ['center', 'left']
+              color: textColor,
+              variant: 'compounds.ad-banner.content'
             }}
           >
             {content}
           </p>
           <p
             sx={{
-              fontSize: 'xs',
-              marginY: 0,
-              fontWeight: 'light',
-              marginBottom: ['sm', 0]
+              variant: 'compounds.ad-banner.usp',
+              color: textColor
             }}
           >
             {usp}
@@ -202,14 +170,12 @@ const AdBanner: React.FC<Props> = ({
         >
           <ButtonLink
             sx={{
-              maxWidth: '200px',
-              paddingY: 'xs',
-              paddingX: 'md'
+              variant: 'compounds.ad-banner.button'
             }}
-            variant="inverse"
+            variant={buttonVariant}
             href={href}
           >
-            Learn more
+            {buttonLabel}
           </ButtonLink>
         </div>
       </div>
