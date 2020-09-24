@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.10.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.9.0...@uswitch/trustyle.uswitch-theme@2.10.0) (2020-09-24)
+
+
+### Features
+
+* fix spacing in theme to make prettier happy ([d7b5b66](https://github.com/uswitch/trustyle/commit/d7b5b66))
+* move some of styling out into theme variant ([3ee599c](https://github.com/uswitch/trustyle/commit/3ee599c))
+
+
+
+
+
 # [2.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.8.2...@uswitch/trustyle.uswitch-theme@2.9.0) (2020-09-24)
 
 
