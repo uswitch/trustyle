@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.3.3...@uswitch/trustyle.button@2.3.4) (2020-09-24)
+
+
+### Bug Fixes
+
+* eslint fix ([8982cb4](https://github.com/uswitch/trustyle/commit/8982cb4))
+* fixed broken import ([5e8fac7](https://github.com/uswitch/trustyle/commit/5e8fac7))
+
+
+
+
+
+
 # [2.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.0.2...@uswitch/trustyle.button@2.3.0) (2020-09-23)
 
 
