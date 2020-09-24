@@ -1583,7 +1583,7 @@
   },
 
   "compounds": {
-    "ad-banner":{
+    "ad-banner": {
       "wrapper": {
         "px": ["sm", "md"],
         "pb": ["sm", "md"],
@@ -1605,7 +1605,7 @@
         "marginBottom": "sm",
         "lineHeight": 1
       },
-      "content":{
+      "content": {
         "fontSize": "xs",
         "fontWeight": "bold",
         "marginBottom": "sm",
