@@ -1539,6 +1539,47 @@
   },
 
   "compounds": {
+    "ad-banner":{
+      "wrapper": {
+        "px": ["sm", "md"],
+        "pb": ["sm", "md"],
+        "paddingTop": ["210px", "lg"]
+      },
+      "background-image": {
+        "backgroundSize": "100%",
+        "backgroundPosition": "center",
+        "backgroundRepeat": "no-repeat",
+        "zIndex": 0,
+        "maxHeight": "100%",
+        "height": "230px"
+      },
+      "title": {
+        "fontStyle": "normal",
+        "fontWeight": "bold",
+        "fontSize": ["lg", "xxl"],
+        "marginTop": 0,
+        "marginBottom": "sm",
+        "lineHeight": 1
+      },
+      "content":{
+        "fontSize": "xs",
+        "fontWeight": "bold",
+        "marginBottom": "sm",
+        "marginTop": 0,
+        "textAlign": ["center", "left"]
+      },
+      "usp": {
+        "fontSize": "xs",
+        "marginY": 0,
+        "fontWeight": "light",
+        "marginBottom": ["sm", 0]
+      },
+      "button": {
+        "maxWidth": "200px",
+        "paddingY": "xs",
+        "paddingX": "md"
+      }
+    },
     "product-table": {
       "row": {
         "main": {
