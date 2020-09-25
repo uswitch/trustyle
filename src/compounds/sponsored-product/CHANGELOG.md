@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@2.0.14...@uswitch/trustyle.sponsored-product@3.0.0) (2020-09-25)
+
+
+### Features
+
+* make sponsored product more useable for BB. ([0e586c9](https://github.com/uswitch/trustyle/commit/0e586c9))
+* update story to include BB example. ([193999a](https://github.com/uswitch/trustyle/commit/193999a))
+
+
+### BREAKING CHANGES
+
+* removed a tag which wrapped component.
+
+
+
+
+
 ## [2.0.14](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@2.0.13...@uswitch/trustyle.sponsored-product@2.0.14) (2020-09-24)
 
 **Note:** Version bump only for package @uswitch/trustyle.sponsored-product
