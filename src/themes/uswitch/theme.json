@@ -1025,6 +1025,10 @@
           "flexDirection": ["column", "row", "row"],
           "button": {
             "variant": "elements.buttons.variants.primary",
+            ":hover": {
+              "backgroundColor": "#232332",
+              "color": "light-1"
+            },
             "mb": ["md", 0],
             "span": {
               "display": "flex",
