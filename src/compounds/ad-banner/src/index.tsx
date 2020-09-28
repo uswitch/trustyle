@@ -54,8 +54,9 @@ const AdBanner: React.FC<Props> = ({
       <div
         sx={{
           position: 'absolute',
+          width: ['', '50%'],
           top: '0',
-          left: '0',
+          left: ['0', ''],
           right: '0',
           bottom: ['', '0'],
           backgroundImage: `url(${backgroundImage})`,
@@ -92,7 +93,8 @@ const AdBanner: React.FC<Props> = ({
         <div
           sx={{
             maxWidth: '200px',
-            marginLeft: [0, 'sm']
+            marginLeft: [0, 'sm'],
+            zIndex: '1'
           }}
         >
           <div
