@@ -26,7 +26,10 @@ export const ExampleWithKnobs = () => {
   const sponsorName = text('Sponsor Name', 'Samsung')
   const label = text('Badge Label', 'Uswitch Manufacturer of the Year')
   const href = text('href', 'https://www.google.com')
-  const backgroundImage = text('background Image', 'https://bit.ly/2TTd2SZ')
+  const backgroundImage = text(
+    'background Image',
+    'https://images.ctfassets.net/qhi9fkhtpbo3/4mUmLgY9T5KN9XO6lTmejM/f0f8d98b68fd0f5773c1adf2dbd45fc2/Samsung_Galaxy_DaVinci_IRE_D2_Launch_KV_A3_L_CMYK.jpg'
+  )
   const backgroundColor = text('background color', 'black')
   const textColor = text('text color', 'white')
   const additionalImage = text(
