@@ -1024,6 +1024,7 @@
           "display": "flex",
           "flexDirection": ["column", "row", "row"],
           "button": {
+            "maxWidth": ["100%", "270px"],
             "variant": "elements.buttons.variants.primary",
             ":hover": {
               "backgroundColor": "#232332",
