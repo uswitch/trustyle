@@ -54,10 +54,11 @@ const AdBanner: React.FC<Props> = ({
       <div
         sx={{
           position: 'absolute',
+          width: ['', '', '50%'],
           top: '0',
-          left: '0',
+          left: ['0', '0', 'auto'],
           right: '0',
-          bottom: ['', '0'],
+          bottom: ['', '', '0'],
           backgroundImage: `url(${backgroundImage})`,
           variant: 'compounds.ad-banner.background-image'
         }}
@@ -75,15 +76,15 @@ const AdBanner: React.FC<Props> = ({
       <div
         sx={{
           display: 'flex',
-          flexDirection: ['column', 'row', 'row'],
-          alignItems: ['center', 'flex-start'],
+          flexDirection: ['column', 'column', 'row'],
+          alignItems: ['center', 'center', 'flex-start'],
           zIndex: '1'
         }}
       >
         <div
           sx={{
             mb: 'sm',
-            display: ['flex', 'none'],
+            display: ['flex', 'flex', 'none'],
             zIndex: '1'
           }}
         >
@@ -92,7 +93,8 @@ const AdBanner: React.FC<Props> = ({
         <div
           sx={{
             maxWidth: '200px',
-            marginLeft: [0, 'sm']
+            marginLeft: ['0', '0', 'sm'],
+            zIndex: '1'
           }}
         >
           <div
@@ -117,7 +119,7 @@ const AdBanner: React.FC<Props> = ({
               height={60}
               sx={{
                 maxWidth: '100%',
-                display: ['none', 'block']
+                display: ['none', 'none', 'block']
               }}
               imgixParams={{
                 fit: 'fillmax'
@@ -131,8 +133,8 @@ const AdBanner: React.FC<Props> = ({
             display: 'flex',
             flexDirection: 'column',
             flexGrow: 1,
-            alignItems: ['center', 'flex-start'],
-            px: ['0', 'lg'],
+            alignItems: ['center', 'center', 'flex-start'],
+            px: ['0', '0', 'lg'],
             zIndex: '1'
           }}
         >
@@ -164,7 +166,7 @@ const AdBanner: React.FC<Props> = ({
         <div
           sx={{
             flexShrink: 0,
-            alignSelf: ['center', 'flex-end'],
+            alignSelf: ['center', 'center', 'flex-end'],
             zIndex: 1
           }}
         >
