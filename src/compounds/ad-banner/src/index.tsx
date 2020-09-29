@@ -56,7 +56,7 @@ const AdBanner: React.FC<Props> = ({
           position: 'absolute',
           width: ['', '', '50%'],
           top: '0',
-          left: ['0', '0', ''],
+          left: ['0', '0', 'auto'],
           right: '0',
           bottom: ['', '', '0'],
           backgroundImage: `url(${backgroundImage})`,
