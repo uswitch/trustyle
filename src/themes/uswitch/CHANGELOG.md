@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.12.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.11.0...@uswitch/trustyle.uswitch-theme@2.12.0) (2020-09-29)
+
+
+### Features
+
+* add label styles ([b1af9d3](https://github.com/uswitch/trustyle/commit/b1af9d3))
+* set max width for buttons ([bc7af84](https://github.com/uswitch/trustyle/commit/bc7af84))
+
+
+
+
+
 # [2.11.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.10.1...@uswitch/trustyle.uswitch-theme@2.11.0) (2020-09-29)
 
 
