@@ -169,8 +169,8 @@
       "fontWeight": "base",
       "lineHeight": "base",
       "color": "grey-80",
-      "webkitFontSmoothing": "antialiased",
-      "mozOsxFontSmoothing": "grayscale"
+      "-webkit-font-smoothing": "antialiased",
+      "-moz-osx-font-smoothing": "grayscale"
     },
     "a": {
       "color": "brand",
@@ -773,18 +773,22 @@
           "flexDirection": ["column", "row", "row"],
           "button": {
             "variant": "elements.buttons.variants.secondary",
-            "mb": ["md", 0],
+            "mb": ["sm", 0],
             "maxWidth": ["100%", "218px"],
             "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
             "span": {
               "display": "flex",
-              "flexDirection": "column",
-              "justifyContent": "center",
+              "flexDirection": ["row", "column"],
+              "justifyContent": ["flex-start", "center"],
               "alignItems": "center",
-              "textAlign": "center"
+              "textAlign": "center",
+              "fontWeight": "heading",
+              "minHeight": [55, "auto"]
             },
             "img": {
-              "maxHeight": "45px"
+              "maxHeight": ["inherit", 45],
+              "maxWidth": [50, "inherit"],
+              "mr": ["md", 0]
             }
           }
         }
