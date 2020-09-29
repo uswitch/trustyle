@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.ad-banner@2.1.0...@uswitch/trustyle.ad-banner@2.2.0) (2020-09-29)
+
+
+### Features
+
+* make tablet view same as mobiles and position background image on desktop to the right ([9930edc](https://github.com/uswitch/trustyle/commit/9930edc))
+* update story background image ([ebb641c](https://github.com/uswitch/trustyle/commit/ebb641c))
+
+
+
+
+
 # [2.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.ad-banner@2.0.6...@uswitch/trustyle.ad-banner@2.1.0) (2020-09-24)
 
 
