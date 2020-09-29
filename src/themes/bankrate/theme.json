@@ -169,8 +169,8 @@
       "fontWeight": "base",
       "lineHeight": "base",
       "color": "grey-80",
-      "webkitFontSmoothing": "antialiased",
-      "mozOsxFontSmoothing": "grayscale"
+      "-webkit-font-smoothing": "antialiased",
+      "-moz-osx-font-smoothing": "grayscale"
     },
     "a": {
       "color": "brand",
