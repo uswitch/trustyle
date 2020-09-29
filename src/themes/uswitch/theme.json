@@ -2,10 +2,7 @@
   "name": "Uswitch",
   "useBodyStyles": false,
   "useCustomProperties": false,
-  "breakpoints": [
-    "768px",
-    "992px"
-  ],
+  "breakpoints": ["768px", "992px"],
   "zIndices": {
     "min": 0,
     "max": 100
@@ -153,11 +150,7 @@
       "mx": "auto",
       "px": "gutter",
       "contentStyle": {
-        "width": [
-          "100%",
-          "grid.md.12",
-          "grid.lg.8"
-        ],
+        "width": ["100%", "grid.md.12", "grid.lg.8"],
         "maxWidth": "100%"
       }
     },
@@ -257,57 +250,34 @@
     },
     "h1": {
       "variant": "styles.headings",
-      "fontSize": [
-        "lg",
-        "xl",
-        "xxl"
-      ],
+      "fontSize": ["lg", "xl", "xxl"],
       "mt": "lg",
       "mb": "md"
     },
     "h2": {
       "variant": "styles.headings",
-      "fontSize": [
-        "md",
-        "lg",
-        "xl"
-      ],
+      "fontSize": ["md", "lg", "xl"],
       "mt": "lg",
       "mb": "md"
     },
     "h3": {
       "variant": "styles.headings",
-      "fontSize": [
-        "sm",
-        "md",
-        "lg"
-      ]
+      "fontSize": ["sm", "md", "lg"]
     },
     "h4": {
       "variant": "styles.headings",
-      "fontSize": [
-        21,
-        "lg",
-        "lg"
-      ]
+      "fontSize": [21, "lg", "lg"]
     },
     "h5": {
       "variant": "styles.headings",
-      "fontSize": [
-        20,
-        "md"
-      ]
+      "fontSize": [20, "md"]
     },
     "h6": {
       "variant": "styles.headings",
       "fontSize": "sm"
     },
     "p": {
-      "fontSize": [
-        "base",
-        "base",
-        "sm"
-      ],
+      "fontSize": ["base", "base", "sm"],
       "mt": 0,
       "mb": "sm",
       "color": "grey-80"
@@ -401,10 +371,7 @@
         },
         "base": {
           "paddingY": "sm",
-          "paddingLeft": [
-            0,
-            0
-          ],
+          "paddingLeft": [0, 0],
           "li": {
             "paddingLeft": 0,
             "fontWeight": "bold",
@@ -436,32 +403,20 @@
               },
               "svg": {
                 "display": "inline",
-                "mr": [
-                  "sm",
-                  "md"
-                ],
+                "mr": ["sm", "md"],
                 "verticalAlign": "middle"
               }
             },
             "border": "1px solid",
             "borderColor": "dark-grey-03",
             "borderRadius": "sm",
-            "py": [
-              "sm",
-              "md"
-            ],
-            "px": [
-              "md",
-              "lg"
-            ]
+            "py": ["sm", "md"],
+            "px": ["md", "lg"]
           },
           "title": {
             "color": "pure-black",
             "fontWeight": "bold",
-            "fontSize": [
-              "md",
-              "lg"
-            ]
+            "fontSize": ["md", "lg"]
           }
         },
         "pros": {
@@ -518,10 +473,7 @@
         }
       },
       "subtitle": {
-        "lineHeight": [
-          "base",
-          "heading"
-        ],
+        "lineHeight": ["base", "heading"],
         "paddingBottom": 0,
         "a": {
           "fontSize": "sm",
@@ -546,31 +498,19 @@
           },
           "a": {
             "variant": "elements.author.title.a",
-            "fontSize": [
-              "sm",
-              "sm"
-            ]
+            "fontSize": ["sm", "sm"]
           }
         },
         "subtitle": {
           "paddingBottom": 0,
           "a": {
             "variant": "elements.author.subtitle.a",
-            "fontSize": [
-              "xxs",
-              "xxs"
-            ]
+            "fontSize": ["xxs", "xxs"]
           }
         },
         "imageLink": {
-          "width": [
-            40,
-            40
-          ],
-          "height": [
-            40,
-            40
-          ]
+          "width": [40, 40],
+          "height": [40, 40]
         },
         "base": {
           "a": {
@@ -589,31 +529,14 @@
       "variants": {
         "full": {
           "variant": "elements.modal.base",
-          "maxWidth": [
-            "none",
-            "30em",
-            "38em"
-          ],
-          "margin": [
-            "auto",
-            "100px auto"
-          ],
-          "flexGrow": [
-            1,
-            0
-          ]
+          "maxWidth": ["none", "30em", "38em"],
+          "margin": ["auto", "100px auto"],
+          "flexGrow": [1, 0]
         },
         "partial": {
           "variant": "elements.modal.base",
-          "maxWidth": [
-            "none",
-            "30em",
-            "38em"
-          ],
-          "margin": [
-            "auto",
-            "100px auto"
-          ],
+          "maxWidth": ["none", "30em", "38em"],
+          "margin": ["auto", "100px auto"],
           "flexGrow": "0"
         }
       },
@@ -666,10 +589,7 @@
         },
         "variants": {
           "calculator": {
-            "pb": [
-              "xs",
-              0
-            ]
+            "pb": ["xs", 0]
           }
         }
       }
@@ -683,17 +603,11 @@
       "variants": {
         "panel-primary": {
           "py": "lg",
-          "px": [
-            "sm",
-            "xl"
-          ],
+          "px": ["sm", "xl"],
           "backgroundColor": "grey-0",
           "color": "grey-80",
           "p": {
-            "textAlign": [
-              "center",
-              "left"
-            ],
+            "textAlign": ["center", "left"],
             "mb": 0
           },
           "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
@@ -701,15 +615,9 @@
         },
         "panel-primary-text-align-center": {
           "variant": "elements.rich-text-block.variants.panel-primary",
-          "textAlign": [
-            "center",
-            "center"
-          ],
+          "textAlign": ["center", "center"],
           "p": {
-            "textAlign": [
-              "center",
-              "center"
-            ],
+            "textAlign": ["center", "center"],
             "mb": "md",
             "mt": "sm"
           },
@@ -725,10 +633,7 @@
           "color": "light-grey-content",
           "bg": "light-grey",
           "py": "md",
-          "px": [
-            "md",
-            "lg"
-          ],
+          "px": ["md", "lg"],
           "boxSizing": "border-box"
         }
       }
@@ -900,14 +805,8 @@
         "main": {
           "position": "relative",
           "backgroundColor": "grey-05",
-          "paddingRight": [
-            "md",
-            "lg"
-          ],
-          "paddingLeft": [
-            34,
-            42
-          ],
+          "paddingRight": ["md", "lg"],
+          "paddingLeft": [34, 42],
           "paddingY": "md",
           "mb": "sm"
         },
@@ -924,10 +823,7 @@
           "variant": "elements.cta.base.main",
           "borderWidth": 0,
           "backgroundColor": "none",
-          "paddingLeft": [
-            "md",
-            "lg"
-          ],
+          "paddingLeft": ["md", "lg"],
           "::before": {
             "display": "none"
           },
@@ -948,14 +844,8 @@
     },
     "badge": {
       "base": {
-        "paddingX": [
-          14,
-          23
-        ],
-        "paddingY": [
-          3,
-          7
-        ],
+        "paddingX": [14, 23],
+        "paddingY": [3, 7],
         "fontSize": "xs",
         "fontWeight": "bold"
       },
@@ -976,14 +866,8 @@
         },
         "inverse": {
           "variant": "elements.badge.base",
-          "paddingX": [
-            "xxs",
-            "xs"
-          ],
-          "paddingY": [
-            "0",
-            "0"
-          ],
+          "paddingX": ["xxs", "xs"],
+          "paddingY": ["0", "0"],
           "fontSize": "xxs",
           "color": "dark-1",
           "fontWeight": "bold",
@@ -1000,11 +884,7 @@
           "alignItems": "flex-start"
         },
         "inner": {
-          "mr": [
-            "lg",
-            "lg",
-            "md"
-          ],
+          "mr": ["lg", "lg", "md"],
           "img": {
             "maxWidth": "250px",
             "maxHeight": "150px"
@@ -1054,11 +934,7 @@
         },
         "secondary": {
           "variant": "elements.buttons.base",
-          "paddingX": [
-            0,
-            0,
-            "md"
-          ],
+          "paddingX": [0, 0, "md"],
           "color": "primary",
           "backgroundColor": "grey-05",
           "border": "none",
@@ -1145,21 +1021,14 @@
         },
         "icon": {
           "display": "flex",
-          "flexDirection": [
-            "column",
-            "row",
-            "row"
-          ],
+          "flexDirection": ["column", "row", "row"],
           "button": {
             "variant": "elements.buttons.variants.primary",
             ":hover": {
               "backgroundColor": "#232332",
               "color": "light-1"
             },
-            "mb": [
-              "md",
-              0
-            ],
+            "mb": ["md", 0],
             "span": {
               "display": "flex",
               "flexDirection": "row-reverse",
@@ -1214,59 +1083,27 @@
     "call-out": {
       "main": {
         "backgroundColor": "grey-05",
-        "px": [
-          "md"
-        ],
-        "py": [
-          "md"
-        ],
-        "fontSize": [
-          16,
-          16,
-          18
-        ]
+        "px": ["md"],
+        "py": ["md"],
+        "fontSize": [16, 16, 18]
       },
       "heading": {
-        "fontSize": [
-          20,
-          20,
-          28
-        ],
+        "fontSize": [20, 20, 28],
         "mb": 0,
-        "pb": [
-          8,
-          8,
-          16
-        ]
+        "pb": [8, 8, 16]
       },
       "icon-container": {
-        "mr": [
-          20,
-          20,
-          28
-        ],
+        "mr": [20, 20, 28],
         "flexBasis": 32
       },
       "icon": {
         "backgroundColor": "transparent",
         "borderRadius": 0,
         "padding": 0,
-        "mr": [
-          20,
-          20,
-          28
-        ],
+        "mr": [20, 20, 28],
         "> svg": {
-          "width": [
-            24,
-            24,
-            32
-          ],
-          "height": [
-            24,
-            24,
-            32
-          ],
+          "width": [24, 24, 32],
+          "height": [24, 24, 32],
           "stroke": "dark-1",
           "fill": "dark-1"
         }
@@ -1518,10 +1355,7 @@
         "borderWidth": "2px",
         "color": "slate-grey",
         "fontWeight": "normal",
-        "fontSize": [
-          "14px",
-          "16px"
-        ],
+        "fontSize": ["14px", "16px"],
         "before": {
           "content": "' '",
           "borderColor": "light-grey-blue",
@@ -1635,15 +1469,9 @@
       }
     },
     "logo": {
-      "height": [
-        "icon.lg",
-        "icon.xl"
-      ],
+      "height": ["icon.lg", "icon.xl"],
       "img": {
-        "maxHeight": [
-          "icon.lg",
-          "icon.xl"
-        ],
+        "maxHeight": ["icon.lg", "icon.xl"],
         "maxWidth": 110,
         "width": "auto"
       }
@@ -1664,10 +1492,7 @@
           "fontStyle": "normal"
         },
         "image": {
-          "height": [
-            40,
-            56
-          ]
+          "height": [40, 56]
         }
       }
     },
@@ -1720,18 +1545,12 @@
     "calculator": {
       "label": {
         "variant": "styles.h3",
-        "textAlign": [
-          "left",
-          "center"
-        ],
+        "textAlign": ["left", "center"],
         "mb": "24px"
       },
       "modal": {
         "wrapper": {
-          "width": [
-            "90%",
-            "50%"
-          ],
+          "width": ["90%", "50%"],
           "maxHeight": "100%",
           "backgroundColor": "white"
         },
@@ -1756,11 +1575,7 @@
       "variants": {
         "base": {
           "a": {
-            "fontSize": [
-              "base",
-              "base",
-              "sm"
-            ],
+            "fontSize": ["base", "base", "sm"],
             "m": 0
           }
         }
@@ -1771,48 +1586,21 @@
     "ad-banner": {
       "wrapper": {
         "zIndex": -1,
-        "px": [
-          "sm",
-          "sm",
-          "md"
-        ],
-        "pb": [
-          "sm",
-          "sm",
-          "md"
-        ],
-        "paddingTop": [
-          "210px",
-          "210px",
-          "lg"
-        ]
+        "px": ["sm", "sm", "md"],
+        "pb": ["sm", "sm", "md"],
+        "paddingTop": ["210px", "210px", "lg"]
       },
       "background-image": {
-        "backgroundSize": [
-          "cover",
-          "cover",
-          "contain"
-        ],
-        "backgroundPosition": [
-          "center",
-          "center",
-          "right"
-        ],
+        "backgroundSize": ["cover", "cover", "contain"],
+        "backgroundPosition": ["center", "center", "right"],
         "backgroundRepeat": "no-repeat",
         "maxHeight": "100%",
-        "height": [
-          "230px",
-          "230px",
-          "270px"
-        ]
+        "height": ["230px", "230px", "270px"]
       },
       "title": {
         "fontStyle": "normal",
         "fontWeight": "bold",
-        "fontSize": [
-          "lg",
-          "xxl"
-        ],
+        "fontSize": ["lg", "lg", "xxl"],
         "marginTop": 0,
         "marginBottom": "sm",
         "lineHeight": 1
@@ -1822,19 +1610,13 @@
         "fontWeight": "bold",
         "marginBottom": "sm",
         "marginTop": 0,
-        "textAlign": [
-          "center",
-          "left"
-        ]
+        "textAlign": ["center", "center", "left"]
       },
       "usp": {
         "fontSize": "xs",
         "marginY": 0,
         "fontWeight": "light",
-        "marginBottom": [
-          "sm",
-          0
-        ]
+        "marginBottom": ["sm", "sm", 0]
       },
       "button": {
         "maxWidth": "200px",
@@ -1932,11 +1714,7 @@
       "paddingRight": "0",
       "paddingBottom": "md",
       "slide": {
-        "mr": [
-          0,
-          "sm",
-          "sm"
-        ]
+        "mr": [0, "sm", "sm"]
       },
       ".glider-contain": {
         ".glider.draggable": {
@@ -1945,16 +1723,10 @@
         },
         ".glider-dots": {
           "mt": "xl",
-          "mb": [
-            0,
-            "xl"
-          ]
+          "mb": [0, "xl"]
         },
         ".glider-slide": {
-          "px": [
-            "sm",
-            0
-          ],
+          "px": ["sm", 0],
           "&:first-of-type": {
             "pl": "sm"
           }
@@ -1967,11 +1739,7 @@
           "h6": {
             "py": "xs",
             "mb": 0,
-            "fontSize": [
-              "base",
-              14,
-              "sm"
-            ],
+            "fontSize": ["base", 14, "sm"],
             "color": "grey-60"
           }
         }
@@ -1985,20 +1753,13 @@
               "borderBottomStyle": "solid",
               "borderBottomWidth": 2,
               "borderBottomColor": "dark-1",
-              "fontSize": [
-                "base",
-                14,
-                "sm"
-              ],
+              "fontSize": ["base", 14, "sm"],
               "color": "dark-1"
             }
           }
         },
         "tabSpacing": {
-          "mr": [
-            "md",
-            "lg"
-          ],
+          "mr": ["md", "lg"],
           "mb": 0
         },
         "tabContentSpacing": {
@@ -2041,10 +1802,7 @@
           "color": "grey-60",
           "iconColor": "grey-60",
           "padding": 24,
-          "mb": [
-            0,
-            "md"
-          ],
+          "mb": [0, "md"],
           "display": "flex",
           "flexDirection": "row",
           "svg": {
@@ -2059,24 +1817,15 @@
             "variant": "compounds.interactiveTabs.base.link",
             "iconColor": "dark-1",
             "position": "relative",
-            "mx": [
-              "auto",
-              0
-            ],
+            "mx": ["auto", 0],
             "padding": "24px 24px 20px 24px",
-            "width": [
-              "calc(100% - 48px)",
-              "auto"
-            ],
+            "width": ["calc(100% - 48px)", "auto"],
             "backgroundColor": "light-1",
             "boxShadow": [
               "0px 0px 16px rgba(0, 0, 0, 0.15)",
               "0px 8px 16px rgba(0, 0, 0, 0.15)"
             ],
-            "mb": [
-              0,
-              "md"
-            ],
+            "mb": [0, "md"],
             "h5": {
               "color": "primary",
               "mt": 0
@@ -2093,20 +1842,11 @@
               "position": "absolute",
               "width": 24,
               "height": 24,
-              "left": [
-                "calc(50% - 24px/2)",
-                -12
-              ],
-              "top": [
-                -10,
-                "calc(50% - 18px)"
-              ],
+              "left": ["calc(50% - 24px/2)", -12],
+              "top": [-10, "calc(50% - 18px)"],
               "backgroundColor": "light-1",
               "transform": "rotate(45deg)",
-              "boxShadow": [
-                "none",
-                "-8px 10px 16px -6px rgba(0, 0, 0, 0.15)"
-              ]
+              "boxShadow": ["none", "-8px 10px 16px -6px rgba(0, 0, 0, 0.15)"]
             }
           }
         }
@@ -2134,18 +1874,10 @@
         },
         "button": {
           "padding": "0",
-          "paddingY": [
-            "xs",
-            "xs",
-            "xs"
-          ],
+          "paddingY": ["xs", "xs", "xs"],
           "bg": "transparent",
           "color": "primary",
-          "fontSize": [
-            "xs",
-            "xs",
-            "sm"
-          ],
+          "fontSize": ["xs", "xs", "sm"],
           "fontWeight": "bold",
           "alignItems": "center",
           "borderWidth": "0 0 1px 0",
@@ -2179,35 +1911,22 @@
     "link-with-label": {
       "wrapper": {
         "display": "flex",
-        "flexDirection": [
-          "column",
-          "row"
-        ],
-        "alignItems": [
-          "flex-start",
-          "center"
-        ],
+        "flexDirection": ["column", "row"],
+        "alignItems": ["flex-start", "center"],
         "height": "100%"
       },
       "column": {
         "flexDirection": "column",
         "flex": 1,
         "& p": {
-          "display": [
-            "none",
-            "block"
-          ],
+          "display": ["none", "block"],
           "fontSize": "xxs",
           "m": 0
         }
       }
     },
     "card": {
-      "itemsPerRow": [
-        1,
-        2,
-        3
-      ],
+      "itemsPerRow": [1, 2, 3],
       "base": {
         "width": "100%",
         "height": "100%",
@@ -2244,19 +1963,11 @@
           "display": "flex",
           "alignItems": "start",
           "image": {
-            "width": [
-              132,
-              384,
-              474
-            ],
+            "width": [132, 384, 474],
             "mr": 32
           },
           "content": {
-            "width": [
-              132,
-              544,
-              670
-            ],
+            "width": [132, 544, 670],
             "variant": "compounds.card.base.content"
           },
           "link": {
@@ -2331,14 +2042,8 @@
         }
       },
       "author-image-container": {
-        "height": [
-          "48px",
-          "56px"
-        ],
-        "width": [
-          "48px",
-          "56px"
-        ],
+        "height": ["48px", "56px"],
+        "width": ["48px", "56px"],
         "marginRight": "sm",
         "> img": {
           "maxHeight": "100%",
@@ -2357,38 +2062,25 @@
       }
     },
     "supplierRow": {
-      "mt": [
-        "32px",
-        "44px"
-      ],
+      "mt": ["32px", "44px"],
       "borderBottomWidth": "1px",
       "borderBottomStyle": "solid",
       "borderBottomColor": "grey-20",
       "> div": {
-        "mb": [
-          "32px",
-          "44px"
-        ],
+        "mb": ["32px", "44px"],
         "> img": {
           "maxWidth": "80%"
         }
       },
       "description": {
-        "pr": [
-          0,
-          0,
-          "xl"
-        ],
+        "pr": [0, 0, "xl"],
         "mt": 0,
         "color": "grey-50"
       },
       "compare": {
         "display": "flex",
         "flexDirection": "row",
-        "order": [
-          2,
-          1
-        ],
+        "order": [2, 1],
         "> div:first-of-type": {
           "flex": 1,
           "mr": "xs",
@@ -2402,10 +2094,7 @@
       "award": {
         "mt": "xs",
         "borderRadius": "0",
-        "order": [
-          1,
-          2
-        ]
+        "order": [1, 2]
       }
     },
     "numberedCallouts": {
@@ -2450,10 +2139,7 @@
       "my": 0,
       "backgroundColor": "light-1",
       "py": "md",
-      "mx": [
-        -20,
-        0
-      ],
+      "mx": [-20, 0],
       "& input, & button": {
         "fontSize": "sm",
         "width": "100%",
@@ -2511,10 +2197,7 @@
     },
     "two-tone-heading": {
       "base": {
-        "textAlign": [
-          "left",
-          "center"
-        ],
+        "textAlign": ["left", "center"],
         "mx": "auto"
       },
       "variants": {
@@ -2526,11 +2209,7 @@
     },
     "cookie-banner": {
       "heading": {
-        "mt": [
-          0,
-          "md",
-          "md"
-        ]
+        "mt": [0, "md", "md"]
       },
       "hr": {
         "border": 0,
@@ -2538,11 +2217,7 @@
         "backgroundColor": "grey-20"
       },
       "copy": {
-        "mb": [
-          "md",
-          "sm",
-          null
-        ],
+        "mb": ["md", "sm", null],
         "mt": "base"
       },
       "accept-all-button": {
@@ -2634,10 +2309,7 @@
     "article-intro": {
       "base": {
         "heading": {
-          "mt": [
-            "md",
-            "lg"
-          ],
+          "mt": ["md", "lg"],
           "mb": "md"
         },
         "description": {
@@ -2652,353 +2324,151 @@
         "wrapper": {
           "display": "flex",
           "justifyContent": "space-between",
-          "pb": [
-            74,
-            38
-          ],
+          "pb": [74, 38],
           "&.image-callout + .image-callout": {
             "marginTop": 0
           }
         },
         "inner": {
           "display": "flex",
-          "justifyContent": [
-            "flex-start",
-            "flex-start",
-            "space-between"
-          ],
-          "width": [
-            null,
-            768,
-            1200
-          ]
+          "justifyContent": ["flex-start", "flex-start", "space-between"],
+          "width": [null, 768, 1200]
         },
         "image-container": {
           "position": "relative",
-          "flexBasis": [
-            null,
-            "50%"
-          ],
-          "mt": [
-            null,
-            -30,
-            20
-          ],
-          "mb": [
-            10,
-            90
-          ]
+          "flexBasis": [null, "50%"],
+          "mt": [null, -30, 20],
+          "mb": [10, 90]
         },
         "image": {
           "position": "relative",
           "zIndex": 2,
           "mt": -64,
-          "maxWidth": [
-            "100%",
-            "grid.md.6",
-            "100%"
-          ],
+          "maxWidth": ["100%", "grid.md.6", "100%"],
           "imgixWidth": 608,
           "imgixParams": {
             "fill": "fillmax"
           }
         },
         "content": {
-          "flexBasis": [
-            null,
-            "40%"
-          ],
-          "maxWidth": [
-            "100%",
-            "100%",
-            "grid.lg.5"
-          ],
+          "flexBasis": [null, "40%"],
+          "maxWidth": ["100%", "100%", "grid.lg.5"],
           "h4": {
-            "width": [
-              "60%",
-              "100%",
-              "66%"
-            ],
-            "pb": [
-              24,
-              24,
-              32
-            ]
+            "width": ["60%", "100%", "66%"],
+            "pb": [24, 24, 32]
           },
           "> p": {
-            "mb": [
-              40,
-              70,
-              96
-            ]
+            "mb": [40, 70, 96]
           }
         },
         "colorBlock": {
           "width": "100%",
-          "height": [
-            "100%",
-            "100%",
-            "93%"
-          ],
+          "height": ["100%", "100%", "93%"],
           "position": "absolute",
-          "top": [
-            0,
-            0,
-            21
-          ],
+          "top": [0, 0, 21],
           "zIndex": 1
         }
       },
       "variants": {
         "solidColorImageLeft": {
           "wrapper": {
-            "pb": [
-              74,
-              100
-            ],
+            "pb": [74, 100],
             "px": 0
           },
           "inner": {
-            "flexDirection": [
-              "column",
-              "row"
-            ],
-            "alignItems": [
-              "center",
-              "center",
-              "flex-start"
-            ],
+            "flexDirection": ["column", "row"],
+            "alignItems": ["center", "center", "flex-start"],
             "px": 0
           },
           "colorBlock": {
             "backgroundColor": "grey-05",
-            "top": [
-              0,
-              77,
-              148
-            ],
-            "right": [
-              0,
-              100,
-              170
-            ],
-            "height": [
-              "85%",
-              "100%"
-            ]
+            "top": [0, 77, 148],
+            "right": [0, 100, 170],
+            "height": ["85%", "100%"]
           },
           "image-container": {
-            "alignSelf": [
-              "auto",
-              "flex-start",
-              "auto"
-            ],
-            "mt": [
-              null,
-              0,
-              20
-            ],
+            "alignSelf": ["auto", "flex-start", "auto"],
+            "mt": [null, 0, 20],
             "px": 0,
-            "py": [
-              45,
-              0
-            ]
+            "py": [45, 0]
           },
           "content": {
             "alignSelf": "center",
-            "px": [
-              20,
-              20,
-              0
-            ],
-            "maxWidth": [
-              "100%",
-              "grid.md.7",
-              "grid.md.8"
-            ],
-            "flexBasis": [
-              null,
-              "45%"
-            ],
+            "px": [20, 20, 0],
+            "maxWidth": ["100%", "grid.md.7", "grid.md.8"],
+            "flexBasis": [null, "45%"],
             "h4": {
               "width": "100%"
             }
           },
           "image": {
-            "mt": [
-              0,
-              -40,
-              0
-            ],
-            "maxWidth": [
-              "100%",
-              "100%"
-            ]
+            "mt": [0, -40, 0],
+            "maxWidth": ["100%", "100%"]
           }
         },
         "solidColorImageRight": {
           "colorBlock": {
             "backgroundColor": "orange-25",
-            "top": [
-              0,
-              14,
-              -84
-            ],
-            "left": [
-              0,
-              15,
-              119
-            ],
-            "height": [
-              "100%",
-              "85%",
-              "95%"
-            ]
+            "top": [0, 14, -84],
+            "left": [0, 15, 119],
+            "height": ["100%", "85%", "95%"]
           },
           "inner": {
-            "flexDirection": [
-              "column",
-              "row-reverse"
-            ],
-            "alignItems": [
-              "center",
-              "center",
-              "flex-start"
-            ],
-            "px": [
-              0,
-              15,
-              0
-            ],
-            "mb": [
-              30
-            ]
+            "flexDirection": ["column", "row-reverse"],
+            "alignItems": ["center", "center", "flex-start"],
+            "px": [0, 15, 0],
+            "mb": [30]
           },
           "content": {
             "alignSelf": "flex-start",
-            "mt": [
-              0,
-              0,
-              120
-            ],
-            "px": [
-              20,
-              20,
-              15
-            ],
-            "maxWidth": [
-              "100%",
-              "grid.lg.4",
-              "grid.md.9"
-            ],
-            "flexBasis": [
-              null,
-              "45%"
-            ],
+            "mt": [0, 0, 120],
+            "px": [20, 20, 15],
+            "maxWidth": ["100%", "grid.lg.4", "grid.md.9"],
+            "flexBasis": [null, "45%"],
             "h1": {
-              "width": [
-                null,
-                null,
-                "95%"
-              ]
+              "width": [null, null, "95%"]
             }
           },
           "image": {
-            "mt": [
-              0,
-              53,
-              0
-            ],
+            "mt": [0, 53, 0],
             "maxWidth": "100%"
           },
           "image-container": {
-            "mt": [
-              null,
-              0,
-              20
-            ],
-            "px": [
-              20,
-              0
-            ],
-            "py": [
-              45,
-              0
-            ]
+            "mt": [null, 0, 20],
+            "px": [20, 0],
+            "py": [45, 0]
           }
         },
         "gradientImageLeft": {
           "inner": {
-            "flexDirection": [
-              "column",
-              "row"
-            ],
-            "alignItems": [
-              "center",
-              "center",
-              "flex-start"
-            ]
+            "flexDirection": ["column", "row"],
+            "alignItems": ["center", "center", "flex-start"]
           },
           "colorBlock": {
             "background": "linear-gradient(90deg, #C1D3FF 0%, #BEE8F3 100%)"
           },
           "content": {
-            "pl": [
-              null,
-              50,
-              0
-            ]
+            "pl": [null, 50, 0]
           }
         },
         "gradientImageRight": {
           "inner": {
-            "flexDirection": [
-              "column",
-              "row-reverse"
-            ],
-            "alignItems": [
-              "center",
-              "center",
-              "flex-start"
-            ]
+            "flexDirection": ["column", "row-reverse"],
+            "alignItems": ["center", "center", "flex-start"]
           },
           "image-container": {
-            "alignSelf": [
-              "auto",
-              "auto",
-              "center"
-            ]
+            "alignSelf": ["auto", "auto", "center"]
           },
           "colorBlock": {
             "background": "linear-gradient(90deg, #AC96DE 0%, #ACAAFF 100%)",
-            "height": [
-              "98%",
-              "98%",
-              "95%"
-            ]
+            "height": ["98%", "98%", "95%"]
           },
           "content": {
-            "flexBasis": [
-              null,
-              "50%",
-              "45%"
-            ],
-            "maxWidth": [
-              "100%",
-              "100%",
-              "grid.lg.5"
-            ],
-            "px": [
-              null,
-              0,
-              0
-            ],
+            "flexBasis": [null, "50%", "45%"],
+            "maxWidth": ["100%", "100%", "grid.lg.5"],
+            "px": [null, 0, 0],
             "h4": {
-              "width": [
-                "70%",
-                "100%",
-                "100%"
-              ]
+              "width": ["70%", "100%", "100%"]
             },
             "> div": {
               "px": 0
@@ -3009,38 +2479,14 @@
     },
     "content-hero-module": {
       "p": {
-        "width": [
-          "auto",
-          "grid.md.5",
-          "grid.lg.5"
-        ],
-        "textAlign": [
-          "left",
-          "left",
-          "center"
-        ],
-        "my": [
-          0,
-          0,
-          "xxs"
-        ],
-        "px": [
-          0,
-          0,
-          "md"
-        ],
-        "display": [
-          "inline",
-          "inline",
-          "block"
-        ]
+        "width": ["auto", "grid.md.5", "grid.lg.5"],
+        "textAlign": ["left", "left", "center"],
+        "my": [0, 0, "xxs"],
+        "px": [0, 0, "md"],
+        "display": ["inline", "inline", "block"]
       },
       "a": {
-        "fontSize": [
-          "base",
-          "base",
-          "lg"
-        ],
+        "fontSize": ["base", "base", "lg"],
         "textDecoration": "underline"
       },
       "form": {
@@ -3064,11 +2510,7 @@
       "col": {
         "position": "relative",
         "&:first-of-type": {
-          "pr": [
-            0,
-            0,
-            "xxl"
-          ],
+          "pr": [0, 0, "xxl"],
           "::after": {
             "content": "''",
             "position": "absolute",
@@ -3076,20 +2518,12 @@
             "height": "72px",
             "top": 0,
             "right": "-10px",
-            "display": [
-              "none",
-              "none",
-              "block"
-            ],
+            "display": ["none", "none", "block"],
             "backgroundColor": "grey-30"
           }
         },
         "&:last-of-type": {
-          "pl": [
-            0,
-            0,
-            "xxl"
-          ]
+          "pl": [0, 0, "xxl"]
         }
       }
     },
