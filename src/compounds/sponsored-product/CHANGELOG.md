@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.0.0...@uswitch/trustyle.sponsored-product@3.1.0) (2020-09-29)
+
+
+### Features
+
+* adds ability to pass obj to sx prop in info-block and usps. ([2a001eb](https://github.com/uswitch/trustyle/commit/2a001eb))
+
+
+
+
+
 # [3.0.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@2.0.14...@uswitch/trustyle.sponsored-product@3.0.0) (2020-09-25)
 
 

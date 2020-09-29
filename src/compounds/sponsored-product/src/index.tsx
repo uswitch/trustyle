@@ -32,6 +32,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   enhancedImgHeight?: string
   className?: string
   showSponsoredByTag?: boolean
+  uspSx?: object
+  infoBlockSx?: object
 }
 
 interface Detail {
@@ -43,9 +45,13 @@ interface Detail {
 
 interface InformationBlocksProps {
   details: Detail[]
+  infoBlockSx?: object
 }
 
-const InformationBlocks: React.FC<InformationBlocksProps> = ({ details }) => (
+const InformationBlocks: React.FC<InformationBlocksProps> = ({
+  details,
+  infoBlockSx = {}
+}) => (
   <React.Fragment>
     {details.map((obj, index) => (
       <PrimaryInfoBlock
@@ -54,7 +60,7 @@ const InformationBlocks: React.FC<InformationBlocksProps> = ({ details }) => (
         suffix={obj.suffix}
         label={obj.label}
         key={index}
-        sx={{ padding: [null, 'xs'] }}
+        sx={{ padding: [null, 'xs'], ...infoBlockSx }}
       />
     ))}
   </React.Fragment>
@@ -64,9 +70,15 @@ interface UspTagsProps {
   usps: string[]
   uspColor: string
   beforeColor: string
+  uspSx?: object
 }
 
-const UspTags: React.FC<UspTagsProps> = ({ usps, uspColor, beforeColor }) => (
+const UspTags: React.FC<UspTagsProps> = ({
+  usps,
+  uspColor,
+  beforeColor,
+  uspSx = {}
+}) => (
   <React.Fragment>
     {usps.map((obj, index) => (
       <UspTag
@@ -74,6 +86,7 @@ const UspTags: React.FC<UspTagsProps> = ({ usps, uspColor, beforeColor }) => (
         backgroundColor={uspColor}
         beforeColor={beforeColor}
         key={index}
+        sx={uspSx}
       />
     ))}
   </React.Fragment>
@@ -159,7 +172,9 @@ const SponsoredProduct: React.FC<Props> = ({
   brandCaption,
   backgroundColor = 'white',
   enhancedImgHeight = '144px',
-  className
+  className,
+  uspSx = {},
+  infoBlockSx = {}
 }) => (
   <div
     className={className}
@@ -357,7 +372,10 @@ const SponsoredProduct: React.FC<Props> = ({
                 gridTemplateColumns: '1fr 1fr'
               }}
             >
-              <InformationBlocks details={informationDetails} />
+              <InformationBlocks
+                details={informationDetails}
+                infoBlockSx={infoBlockSx}
+              />
             </div>
           )}
 
@@ -366,6 +384,7 @@ const SponsoredProduct: React.FC<Props> = ({
               usps={usps}
               uspColor={uspBackgroundColor}
               beforeColor={uspBeforeColor}
+              uspSx={uspSx}
             />
           )}
         </Stack>

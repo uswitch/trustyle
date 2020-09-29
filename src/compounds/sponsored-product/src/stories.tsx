@@ -108,6 +108,16 @@ export const ExampleWithKnobs = () => {
                   label: 'per month'
                 }
               ]}
+              uspSx={{
+                span: {
+                  fontSize: 12
+                }
+              }}
+              infoBlockSx={{
+                p: {
+                  fontSize: 12
+                }
+              }}
             />
           </Col>
         </Row>
