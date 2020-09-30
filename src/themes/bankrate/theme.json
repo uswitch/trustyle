@@ -1055,6 +1055,9 @@
           }
         }
       }
+    },
+    "landing-page-logo": {
+      "mt": ["7px", "0"]
     }
   },
   "compounds": {
