@@ -1389,7 +1389,10 @@
           "bg": "light-grey"
         },
         "side-bar": {
-          "boxShadow": "card"
+          "px": "xs",
+          "bg": "white",
+          "boxShadow": "card",
+          "mt": "xs"
         }
       }
     }
