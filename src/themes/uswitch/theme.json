@@ -1596,7 +1596,7 @@
     "ad-banner": {
       "wrapper": {
         "px": ["lg"],
-        "pb": ["sm", "sm", "md"],
+        "pb": ["sm", "sm", "lg"],
         "pt": ["150px", "215px", "lg"]
       },
       "background-image": {
