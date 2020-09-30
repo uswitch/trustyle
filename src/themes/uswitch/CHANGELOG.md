@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.13.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.12.0...@uswitch/trustyle.uswitch-theme@2.13.0) (2020-09-30)
+
+
+### Features
+
+* nav width ([731c79d](https://github.com/uswitch/trustyle/commit/731c79d))
+
+
+
+
+
 # [2.12.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.11.0...@uswitch/trustyle.uswitch-theme@2.12.0) (2020-09-29)
 
 
