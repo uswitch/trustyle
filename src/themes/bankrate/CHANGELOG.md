@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.21.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.21.3...@uswitch/trustyle.bankrate-theme@2.21.4) (2020-09-30)
+
+**Note:** Version bump only for package @uswitch/trustyle.bankrate-theme
+
+
+
+
+
 ## [2.21.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.21.2...@uswitch/trustyle.bankrate-theme@2.21.3) (2020-09-29)
 
 **Note:** Version bump only for package @uswitch/trustyle.bankrate-theme
