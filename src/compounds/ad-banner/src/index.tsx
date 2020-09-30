@@ -22,6 +22,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   href: string
   imageCritical?: boolean
   className?: string
+  targetAttribute?: string
 }
 
 const AdBanner: React.FC<Props> = ({
@@ -39,7 +40,8 @@ const AdBanner: React.FC<Props> = ({
   buttonVariant = 'inverse',
   href,
   imageCritical = true,
-  className
+  className,
+  targetAttribute = ''
 }) => {
   return (
     <div
@@ -65,9 +67,9 @@ const AdBanner: React.FC<Props> = ({
       ></div>
       <div
         sx={{
-          top: 'lg',
-          right: 'lg',
-          fontSize: 'sm',
+          top: ['sm', 'sm', 'lg'],
+          right: ['sm', 'sm', 'lg'],
+          fontSize: 'xxs',
           position: 'absolute'
         }}
       >
@@ -176,6 +178,7 @@ const AdBanner: React.FC<Props> = ({
             }}
             variant={buttonVariant}
             href={href}
+            target={targetAttribute}
           >
             {buttonLabel}
           </ButtonLink>
