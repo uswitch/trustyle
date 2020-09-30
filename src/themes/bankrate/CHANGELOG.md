@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.22.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.22.0...@uswitch/trustyle.bankrate-theme@2.22.1) (2020-09-30)
+
+
+### Bug Fixes
+
+* tentative hack to add base padding to bankrate buttons for the cookie banner ([8eee488](https://github.com/uswitch/trustyle/commit/8eee488))
+
+
+
+
+
 # [2.22.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.21.4...@uswitch/trustyle.bankrate-theme@2.22.0) (2020-09-30)
 
 
