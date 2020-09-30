@@ -717,6 +717,8 @@
     },
     "buttons": {
       "base": {
+        "px": "sm",
+        "py": "sm",
         "fontWeight": "bold",
         "border": "none",
         "fontFamily": "heading",
