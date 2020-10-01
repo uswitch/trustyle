@@ -47,6 +47,7 @@
     "@storybook/addon-viewport": "6.0.3",
     "@storybook/addons": "6.0.3",
     "@storybook/react": "6.0.3",
+    "@storybook/storybook-deployer": "^2.8.6",
     "@types/body-scroll-lock": "^2.6.1",
     "@types/facepaint": "^1.2.1",
     "@types/lodash.debounce": "^4.0.6",
