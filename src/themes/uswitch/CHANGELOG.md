@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.15.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.13.0...@uswitch/trustyle.uswitch-theme@2.15.0) (2020-10-01)
+
+
+### Features
+
+* add content-hero-module styling to uswitch ([8c6df5f](https://github.com/uswitch/trustyle/commit/8c6df5f))
+
+
+
+
+
 # [2.14.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.13.0...@uswitch/trustyle.uswitch-theme@2.14.0) (2020-10-01)
 
 
