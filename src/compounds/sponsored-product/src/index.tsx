@@ -209,7 +209,8 @@ const SponsoredProduct: React.FC<Props> = ({
         sx={{
           display: 'flex',
           flexDirection: [null, 'column'],
-          width: [null, '45%']
+          width: [null, '45%'],
+          justifyContent: imgSrc ? 'flex-start' : 'space-between'
         }}
       >
         <div
@@ -255,14 +256,14 @@ const SponsoredProduct: React.FC<Props> = ({
         {award && (
           <div
             sx={{
-              width: 106,
+              width: imgSrc ? 106 : 120,
               display: ['none', 'flex'],
               alignItems: 'center',
               marginTop: 'xs'
             }}
           >
             <svg
-              height="48"
+              height={imgSrc ? '48' : '60'}
               viewBox="0 0 22 23"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
