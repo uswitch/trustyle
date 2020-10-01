@@ -2648,12 +2648,7 @@
         "mx": "auto",
         "px": "gutter",
         "contentStyle": {
-          "width": [
-            "grid.lg.7",
-            "grid.md.12",
-            "100%",
-            "grid.md.12"
-          ],
+          "width": ["grid.lg.7", "grid.md.12", "100%", "grid.md.12"],
           "maxWidth": "100%"
         }
       },
