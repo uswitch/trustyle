@@ -23,6 +23,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   imageCritical?: boolean
   className?: string
   targetAttribute?: string
+  uspColor?: string
 }
 
 const AdBanner: React.FC<Props> = ({
@@ -41,7 +42,8 @@ const AdBanner: React.FC<Props> = ({
   href,
   imageCritical = true,
   className,
-  targetAttribute = ''
+  targetAttribute = '',
+  uspColor = ''
 }) => {
   return (
     <div
@@ -158,7 +160,7 @@ const AdBanner: React.FC<Props> = ({
           <p
             sx={{
               variant: 'compounds.ad-banner.usp',
-              color: textColor || 'white'
+              color: uspColor || textColor || 'white'
             }}
           >
             {usp}
