@@ -22,6 +22,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   href: string
   imageCritical?: boolean
   className?: string
+  targetAttribute?: string
+  uspColor?: string
 }
 
 const AdBanner: React.FC<Props> = ({
@@ -29,8 +31,8 @@ const AdBanner: React.FC<Props> = ({
   content,
   usp,
   sponsor,
-  backgroundColor = 'black',
-  textColor = 'white',
+  backgroundColor = '',
+  textColor = '',
   backgroundImage,
   awardLabel,
   desktopAwardImage = '',
@@ -39,16 +41,18 @@ const AdBanner: React.FC<Props> = ({
   buttonVariant = 'inverse',
   href,
   imageCritical = true,
-  className
+  className,
+  targetAttribute = '',
+  uspColor = ''
 }) => {
   return (
     <div
       className={className}
       sx={{
-        backgroundColor: backgroundColor,
         color: 'white',
         position: 'relative',
-        variant: 'compounds.ad-banner.wrapper'
+        variant: 'compounds.ad-banner.wrapper',
+        backgroundColor: backgroundColor || 'black'
       }}
     >
       <div
@@ -65,9 +69,9 @@ const AdBanner: React.FC<Props> = ({
       ></div>
       <div
         sx={{
-          top: 'lg',
-          right: 'lg',
-          fontSize: 'sm',
+          top: ['sm', 'sm', 'lg'],
+          right: ['sm', 'sm', 'lg'],
+          fontSize: 'xxs',
           position: 'absolute'
         }}
       >
@@ -83,7 +87,6 @@ const AdBanner: React.FC<Props> = ({
       >
         <div
           sx={{
-            mb: 'sm',
             display: ['flex', 'flex', 'none'],
             zIndex: '1'
           }}
@@ -93,13 +96,13 @@ const AdBanner: React.FC<Props> = ({
         <div
           sx={{
             maxWidth: '200px',
-            marginLeft: ['0', '0', 'sm'],
             zIndex: '1'
           }}
         >
           <div
             sx={{
-              marginBottom: 'sm'
+              mt: awardLabel ? ['sm', 'sm', 'auto'] : ['lg', 'lg', 'auto'],
+              mb: ['sm', 'sm', 'lg']
             }}
           >
             <ImgixImage
@@ -140,7 +143,7 @@ const AdBanner: React.FC<Props> = ({
         >
           <h1
             sx={{
-              color: textColor,
+              color: textColor || 'white',
               variant: 'compounds.ad-banner.title'
             }}
           >
@@ -148,7 +151,7 @@ const AdBanner: React.FC<Props> = ({
           </h1>
           <p
             sx={{
-              color: textColor,
+              color: textColor || 'white',
               variant: 'compounds.ad-banner.content'
             }}
           >
@@ -157,7 +160,7 @@ const AdBanner: React.FC<Props> = ({
           <p
             sx={{
               variant: 'compounds.ad-banner.usp',
-              color: textColor
+              color: uspColor || textColor || 'white'
             }}
           >
             {usp}
@@ -176,6 +179,7 @@ const AdBanner: React.FC<Props> = ({
             }}
             variant={buttonVariant}
             href={href}
+            target={targetAttribute}
           >
             {buttonLabel}
           </ButtonLink>

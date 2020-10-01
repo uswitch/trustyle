@@ -1598,40 +1598,41 @@
   "compounds": {
     "ad-banner": {
       "wrapper": {
-        "zIndex": -1,
-        "px": ["sm", "sm", "md"],
-        "pb": ["sm", "sm", "md"],
-        "paddingTop": ["210px", "210px", "lg"]
+        "px": ["lg"],
+        "pb": ["md", "md", "lg"],
+        "pt": ["150px", "215px", "lg"]
       },
       "background-image": {
         "backgroundSize": ["cover", "cover", "contain"],
         "backgroundPosition": ["center", "center", "right"],
         "backgroundRepeat": "no-repeat",
         "maxHeight": "100%",
-        "height": ["230px", "230px", "270px"]
+        "height": ["165px", "230px", "270px"]
       },
       "title": {
         "fontStyle": "normal",
-        "fontWeight": "bold",
-        "fontSize": ["lg", "lg", "xxl"],
+        "fontWeight": "xbold",
+        "fontSize": ["sm", "md", "xl"],
         "marginTop": 0,
         "marginBottom": "sm",
         "lineHeight": 1
       },
       "content": {
-        "fontSize": "xs",
+        "fontSize": ["xxs", "xs", "sm"],
         "fontWeight": "bold",
         "marginBottom": "sm",
         "marginTop": 0,
-        "textAlign": ["center", "center", "left"]
+        "textAlign": ["center", "center", "left"],
+        "whiteSpace": [null, null, "pre"]
       },
       "usp": {
-        "fontSize": "xs",
+        "fontSize": ["xxs", "xs", "sm"],
         "marginY": 0,
         "fontWeight": "light",
         "marginBottom": ["sm", "sm", 0]
       },
       "button": {
+        "marginBottom": 0,
         "maxWidth": "200px",
         "paddingY": "xs",
         "paddingX": "md"

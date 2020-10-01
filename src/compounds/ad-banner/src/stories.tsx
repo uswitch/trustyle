@@ -30,8 +30,8 @@ export const ExampleWithKnobs = () => {
     'background Image',
     'https://images.ctfassets.net/qhi9fkhtpbo3/4mUmLgY9T5KN9XO6lTmejM/f0f8d98b68fd0f5773c1adf2dbd45fc2/Samsung_Galaxy_DaVinci_IRE_D2_Launch_KV_A3_L_CMYK.jpg'
   )
-  const backgroundColor = text('background color', 'black')
-  const textColor = text('text color', 'white')
+  const backgroundColor = text('background color', '')
+  const textColor = text('text color', '')
   const additionalImage = text(
     'optional additional image',
     'https://uswitch-cms.imgix.net/uswitch-assets-eu/mobiles-comparison-uf/uswitch-manufacturer-award-image.png'
@@ -42,6 +42,7 @@ export const ExampleWithKnobs = () => {
   )
   const sponsor = { logo: sponsorLogo, name: sponsorName }
   const content = <React.Fragment>{contentText}</React.Fragment>
+  const uspColor = text('usp color', '')
 
   return (
     <AdBanner
@@ -56,6 +57,7 @@ export const ExampleWithKnobs = () => {
       desktopAwardImageTag={additionalImageTag}
       href={href}
       textColor={textColor}
+      uspColor={uspColor}
     />
   )
 }

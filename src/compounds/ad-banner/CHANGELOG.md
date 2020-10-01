@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.ad-banner@2.2.0...@uswitch/trustyle.ad-banner@2.3.0) (2020-10-01)
+
+
+### Features
+
+* add optional usp color prop ([dd64264](https://github.com/uswitch/trustyle/commit/dd64264))
+* add target attribute to cta link ([f741ee4](https://github.com/uswitch/trustyle/commit/f741ee4))
+* fix spacing when no award label given and colours when none provided ([735bc93](https://github.com/uswitch/trustyle/commit/735bc93))
+
+
+
+
+
 # [2.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.ad-banner@2.1.0...@uswitch/trustyle.ad-banner@2.2.0) (2020-09-29)
 
 

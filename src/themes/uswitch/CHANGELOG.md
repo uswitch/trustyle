@@ -19,7 +19,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* add content-hero-module styling to uswitch ([8c6df5f](https://github.com/uswitch/trustyle/commit/8c6df5f))
+* adjust padding, font size and height of bg image ([7480477](https://github.com/uswitch/trustyle/commit/7480477))
+* fix spacing when no award label given and colours when none provided ([735bc93](https://github.com/uswitch/trustyle/commit/735bc93))
+* make padding bottom same as top for desktop ([9bf094f](https://github.com/uswitch/trustyle/commit/9bf094f))
 
 
 
