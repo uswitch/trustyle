@@ -717,6 +717,8 @@
     },
     "buttons": {
       "base": {
+        "px": "sm",
+        "py": "sm",
         "fontWeight": "bold",
         "border": "none",
         "fontFamily": "heading",
@@ -1058,6 +1060,9 @@
     },
     "landing-page-logo": {
       "mt": ["7px", "0"]
+    },
+    "landing-page-nav": {
+      "width": ["100%", "132px"]
     }
   },
   "compounds": {

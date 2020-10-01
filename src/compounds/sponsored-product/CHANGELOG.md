@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.1.0...@uswitch/trustyle.sponsored-product@3.1.1) (2020-10-01)
+
+
+### Bug Fixes
+
+* adjust position of award if product img is not provided. ([a701c5d](https://github.com/uswitch/trustyle/commit/a701c5d))
+* update second usp in story so as not to be the same. ([d0c7ed4](https://github.com/uswitch/trustyle/commit/d0c7ed4))
+
+
+
+
+
 # [3.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.0.0...@uswitch/trustyle.sponsored-product@3.1.0) (2020-09-29)
 
 
