@@ -1596,7 +1596,7 @@
     "ad-banner": {
       "wrapper": {
         "px": ["lg"],
-        "pb": ["sm", "sm", "lg"],
+        "pb": ["md", "md", "lg"],
         "pt": ["150px", "215px", "lg"]
       },
       "background-image": {
@@ -1629,6 +1629,7 @@
         "marginBottom": ["sm", "sm", 0]
       },
       "button": {
+        "marginBottom": 0,
         "maxWidth": "200px",
         "paddingY": "xs",
         "paddingX": "md"
