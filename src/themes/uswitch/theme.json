@@ -2509,6 +2509,51 @@
           "margin": "auto",
           "mb": "20px"
         }
+      },
+      "h1": {
+        "mb": "sm",
+        "mt": 0,
+        "pt": ["sm", "sm", "lg"]
+      },
+      "h4": {
+        "fontSize": "sm",
+        "fontWeight": "base"
+      },
+      "content": {
+        "display": "flex",
+        "alignItems": "flex-end",
+        "modules": {
+          "width": ["100%", "50%", "50%"],
+          "mb": "lg"
+        },
+        "image": {
+          "height": [0, 0, 320],
+          "width": [0, 0, "50%"],
+          "mx": "auto",
+          "backgroundSize": 500,
+          "backgroundPosition": "bottom"
+        }
+      },
+      "header-out-of-form": {
+        "header": {
+          "fontSize": "lg",
+          "lineHeight": "1.3em",
+          "width": ["75%", "grid.md.6", "grid.md.6"],
+          "mb": [0, "md", "md"]
+        },
+        "sub-header": {
+          "display": ["none", "block", "block"],
+          "lineHeight": 1.618,
+          "width": ["50%", "50%", "grid.md.6"]
+        },
+        "image": {
+          "display": ["none", "block", "block"],
+          "maxWidth": [200, "100%"],
+          "height": "auto",
+          "maxHeight": [210, "90%"],
+          "bottom": 0,
+          "right": [-20, 0]
+        }
       }
     },
     "collectionGrid": {
@@ -2570,6 +2615,52 @@
       },
       "container": {
         "maxWidth": 1200
+      }
+    },
+    "container": {
+      "sm": {
+        "maxWidth": 768,
+        "mx": "auto",
+        "px": "gutter",
+        "minHeight": 250
+      },
+      "md": {
+        "maxWidth": 992,
+        "mx": "auto",
+        "px": "gutter",
+        "minHeight": 400
+      },
+      "article": {
+        "maxWidth": 1200,
+        "mx": "auto",
+        "py": "sm",
+        "px": "gutter"
+      },
+      "lg": {
+        "maxWidth": 1200,
+        "mx": "auto",
+        "px": "gutter",
+        "my": "auto",
+        "minHeight": 400
+      },
+      "content": {
+        "maxWidth": 1200,
+        "mx": "auto",
+        "px": "gutter",
+        "contentStyle": {
+          "width": [
+            "grid.lg.7",
+            "grid.md.12",
+            "100%",
+            "grid.md.12"
+          ],
+          "maxWidth": "100%"
+        }
+      },
+      "hero": {
+        "maxWidth": 1200,
+        "mx": "auto",
+        "px": 60
       }
     }
   },
