@@ -16,6 +16,7 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   subtitle?: React.ReactNode
   addons?: AddonArg[]
   clickableRow?: string
+  image?: React.ReactNode
 }
 
 const ProductTableRow: React.FC<RowProps> = ({
@@ -26,7 +27,8 @@ const ProductTableRow: React.FC<RowProps> = ({
   addons = [],
   children,
   id,
-  clickableRow
+  clickableRow,
+  image
 }) => {
   const addonsFor = (key: keyof Addon): React.ReactNode[] =>
     addons.map(({ addon, component, options }, i) => {
@@ -136,12 +138,24 @@ const ProductTableRow: React.FC<RowProps> = ({
               display: '-ms-grid'
             }}
           >
-            {rowTitle && (
+            {image && (
               <CellContext.Provider
                 value={{
                   gridRowStart: 2,
                   gridRowSpan: 1,
                   gridColumnStart: 1,
+                  gridColumnSpan: cols
+                }}
+              >
+                {image}
+              </CellContext.Provider>
+            )}
+            {rowTitle && (
+              <CellContext.Provider
+                value={{
+                  gridRowStart: 2,
+                  gridRowSpan: 1,
+                  gridColumnStart: image ? 2 : 1,
                   gridColumnSpan: cols
                 }}
               >
