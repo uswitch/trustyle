@@ -5,7 +5,7 @@ import * as React from 'react'
 // https://github.com/DefinitelyTyped/DefinitelyTyped/pull/41567
 // @ts-ignore
 import { css, jsx, useThemeUI } from 'theme-ui'
-import { Direction, Icon } from '@uswitch/trustyle.icon'
+import { Direction, Glyph, Icon } from '@uswitch/trustyle.icon'
 
 type PaginationNumbers = (number | '...')[]
 
@@ -58,8 +58,15 @@ function getNumbers(
   return numbers
 }
 
-const InlineIcon = ({ direction }: { direction: Direction }) => {
+const InlineIcon = ({
+  direction,
+  glyph = 'caret'
+}: {
+  direction: Direction
+  glyph?: Glyph
+}) => {
   const { theme }: any = useThemeUI()
+  console.log(glyph)
 
   let color = 'black'
   if (theme.elements.pagination) {
@@ -72,7 +79,7 @@ const InlineIcon = ({ direction }: { direction: Direction }) => {
 
   return (
     <span sx={{ svg: { display: 'inline-block' } }}>
-      <Icon glyph="caret" color={color} direction={direction} size={14} />
+      <Icon glyph={glyph} color={color} direction={direction} size={14} />
     </span>
   )
 }
@@ -82,6 +89,7 @@ interface Props extends React.HTMLAttributes<HTMLUListElement> {
   totalPages: number
   onPageChange?: (number: number, e?: React.MouseEvent) => any
   numberToLink?: (number: number) => string
+  showFirstAndLastArrows?: boolean
   className?: string
 }
 
@@ -90,6 +98,7 @@ const Pagination: React.FC<Props> = ({
   totalPages,
   onPageChange = () => {},
   numberToLink,
+  showFirstAndLastArrows = false,
   className
 }) => {
   const { theme }: any = useThemeUI()
@@ -119,6 +128,26 @@ const Pagination: React.FC<Props> = ({
       }}
       className={className}
     >
+      {showFirstAndLastArrows && (
+        <li
+          sx={{
+            ...(currentPage === 1 && theme.elements.pagination?.arrowDisabled),
+            ...liStyling
+          }}
+        >
+          {currentPage === 1 ? (
+            <InlineIcon direction="left" glyph="caretFinal" />
+          ) : (
+            <a
+              onClick={e => onPageChange(1, e)}
+              href={numberToLink && numberToLink(1)}
+              sx={anchorStyling}
+            >
+              <InlineIcon direction="left" glyph="caretFinal" />
+            </a>
+          )}
+        </li>
+      )}
       <li
         sx={{
           ...(currentPage === 1 && theme.elements.pagination?.arrowDisabled),
@@ -179,6 +208,27 @@ const Pagination: React.FC<Props> = ({
           </a>
         )}
       </li>
+      {showFirstAndLastArrows && (
+        <li
+          sx={{
+            ...(currentPage === totalPages &&
+              theme.elements.pagination?.arrowDisabled),
+            ...liStyling
+          }}
+        >
+          {currentPage === totalPages ? (
+            <InlineIcon direction="right" glyph="caretFinal" />
+          ) : (
+            <a
+              onClick={e => onPageChange(totalPages, e)}
+              href={numberToLink && numberToLink(totalPages)}
+              sx={anchorStyling}
+            >
+              <InlineIcon direction="right" glyph="caretFinal" />
+            </a>
+          )}
+        </li>
+      )}
     </ul>
   )
 }
