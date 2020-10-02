@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
-import { boolean, number, select, text } from '@storybook/addon-knobs'
+import { boolean, color, number, select, text } from '@storybook/addon-knobs'
 import { Global } from '@emotion/core'
+import { PaletteProvider } from '@uswitch/trustyle-utils.palette'
 
 import { ButtonLink } from '../../../elements/button-link/src'
 import Badge from '../../../elements/badge/src'
@@ -638,6 +639,108 @@ export const ClickableExample = () => {
 }
 
 ClickableExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const MoneyRedesignExample = () => {
+  const applyPalette = boolean('Apply palette?', false, 'Palette')
+  const accentColor = color('accentColor', 'purple', 'Palette')
+
+  return (
+    <PaletteProvider
+      value={{
+        accentColor: applyPalette ? accentColor : null
+      }}
+    >
+      <ProductTable.Row
+        rowTitle="Santander Standard Loan (Online)"
+        subtitle="Personal Loan"
+        addons={[
+          {
+            addon: ProductTable.addons.responsive,
+            component: (
+              <ProductTable.cells.Content label="Eligibility">
+                <div
+                  sx={{
+                    textAlign: 'center',
+                    maxWidth: 300,
+                    minWidth: [0, 200],
+                    marginLeft: 'auto'
+                  }}
+                >
+                  <span
+                    sx={{ display: 'block', fontSize: 14, marginBottom: 'xs' }}
+                  >
+                    <strong>70%</strong> chance of approval
+                  </span>
+                  <ProgressBar current={70} max={100} />
+                </div>
+              </ProductTable.cells.Content>
+            ),
+            options: {
+              bodyOrder: 1
+            }
+          },
+          {
+            addon: ProductTable.addons.responsive,
+            component: (
+              <ProductTable.cells.Image>
+                <img
+                  src="https://placekitten.com/200/75?image=9"
+                  alt="Salman"
+                  sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+                />
+              </ProductTable.cells.Image>
+            ),
+            options: {
+              headerOrder: -1,
+              gridOrder: -1,
+              positions: ['header', 'grid']
+            }
+          },
+          {
+            addon: ProductTable.addons.footer,
+            component: (
+              <ProductTable.cells.Base sx={{ display: 'block' }}>
+                <div sx={{ fontSize: ['xxs', 'xs'] }}>
+                  Representative example: Assumed borrowing of £10,000 over...
+                </div>
+              </ProductTable.cells.Base>
+            )
+          },
+          {
+            addon: ProductTable.addons.accordion,
+            component: (
+              <ProductTable.cells.Base sx={{ display: 'block' }}>
+                <div sx={{ fontSize: ['xxs', 'xs'] }}>More info</div>
+              </ProductTable.cells.Base>
+            )
+          }
+        ]}
+      >
+        <ProductTable.cells.Split>
+          <ProductTable.cells.Content label="Fixed rate contract">
+            14 months
+          </ProductTable.cells.Content>
+        </ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Cta
+          primary={<ButtonLink variant="primary">Apply now</ButtonLink>}
+          secondary={<ButtonLink variant="link">More details</ButtonLink>}
+        />
+      </ProductTable.Row>
+    </PaletteProvider>
+  )
+}
+
+MoneyRedesignExample.story = {
   parameters: {
     percy: { skip: true }
   }
