@@ -101,9 +101,8 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
       gridTemplateRows: '1fr',
       msGridRows: '1fr',
       padding: accent ? 'sm' : '',
-      variant: `compounds.product-table.cellContent.${
-        accent ? 'accent' : 'main'
-      }`
+      variant: `compounds.product-table.${headerImage &&
+        'variants.redesign.'}cellContent.${accent ? 'accent' : 'main'}`
     }}
     // @ts-ignore
     css={{ display: '-ms-grid' }}
@@ -118,8 +117,9 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
         msGridRowSpan: ['2', '1'],
         alignSelf: ['baseline', 'auto'],
         fontSize: 'xs',
-        marginTop: ['xl', 'sm'],
-        variant: 'compounds.product-table.cellContent.label'
+        marginTop: ['xl', headerImage ? 0 : 'sm'],
+        variant: `compounds.product-table.${headerImage &&
+          'variants.redesign.'}cellContent.label`
       }}
     >
       {label}
@@ -133,7 +133,8 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
           fontSize: 'sm'
         },
         lineHeight: 1,
-        variant: 'compounds.product-table.cellContent.content'
+        variant: `compounds.product-table.${headerImage &&
+          'variants.redesign.'}cellContent.content`
       }}
     >
       {children}

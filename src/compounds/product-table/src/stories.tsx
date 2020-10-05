@@ -696,7 +696,7 @@ export const MoneyRedesignExample = () => {
         }
       ]}
     >
-      <ProductTable.cells.Content label="Loan Amount">
+      <ProductTable.cells.Content label="Loan Amount" headerImage>
         <ProductTable.data.Range from={1000} to={10000} unit="pounds" />
       </ProductTable.cells.Content>
       <ProductTable.cells.Content label="Representative  APR" headerImage>

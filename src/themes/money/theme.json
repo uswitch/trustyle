@@ -1596,6 +1596,43 @@
             "marginTop": [20, 0]
           }
         }
+      },
+      "variants": {
+        "redesign": {
+          "cellContent": {
+            "main": {
+              "borderLeft": "1px solid",
+              "borderLeftColor": "grey-30",
+              "pl": "sm"
+            },
+            "label": {
+              "color": "grey-90",
+              "py": "xs",
+              "fontSize": "sm"
+            },
+            "content": {
+              "fontSize": "sm",
+              "pb": "xs",
+              "color": "plum"
+            },
+            "accent": {
+              "backgroundColor": "grey-05",
+              "pl": "sm"
+            },
+            "variants": {
+              "inSplit": {
+                "main": {},
+                "label": {
+                  "color": "grey-80"
+                },
+                "content": {},
+                "accent": {
+                  "backgroundColor": "grey-05"
+                }
+              }
+            }
+          }
+        }
       }
     },
     "accordion": {

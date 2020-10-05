@@ -1730,6 +1730,41 @@
             "width": "100%"
           }
         }
+      },
+      "variants": {
+        "redesign": {
+          "cellContent": {
+            "main": {
+              "borderLeft": "1px solid",
+              "borderLeftColor": "grey-20",
+              "pl": "sm"
+            },
+            "label": {
+              "color": "grey-90",
+              "py": "xxs"
+            },
+            "content": {
+              "fontWeight": "xbold",
+              "fontSize": "xs",
+              "pb": "xxs"
+            },
+            "accent": {
+              "backgroundColor": "grey-05"
+            },
+            "variants": {
+              "inSplit": {
+                "main": {},
+                "label": {
+                  "color": "grey-80"
+                },
+                "content": {},
+                "accent": {
+                  "backgroundColor": "grey-05"
+                }
+              }
+            }
+          }
+        }
       }
     },
     "stepper": {
