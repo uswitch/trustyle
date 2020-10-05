@@ -144,7 +144,7 @@ const ProductTableRow: React.FC<RowProps> = ({
                   gridRowStart: 2,
                   gridRowSpan: 1,
                   gridColumnStart: 1,
-                  gridColumnSpan: cols
+                  gridColumnSpan: 1
                 }}
               >
                 {image}

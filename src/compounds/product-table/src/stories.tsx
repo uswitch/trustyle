@@ -658,14 +658,33 @@ export const MoneyRedesignExample = () => {
       }
       addons={[
         {
+          addon: ProductTable.addons.info,
+          component: (
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontWeight: 'bold' }}>Additional Information:</div>
+              <div sx={{ fontSize: ['xxs', 'xs'] }}>
+                Here is some extra information. Here is even more extra
+                information. And more extra information.
+              </div>
+            </ProductTable.cells.Base>
+          ),
+          options: {
+            split: true
+          }
+        },
+        {
           addon: ProductTable.addons.footer,
           component: (
             <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontWeight: 'bold' }}>Representative example:</div>
               <div sx={{ fontSize: ['xxs', 'xs'] }}>
-                Representative example: Assumed borrowing of £10,000 over...
+                Assumed borrowing of £10,000 over...
               </div>
             </ProductTable.cells.Base>
-          )
+          ),
+          options: {
+            split: true
+          }
         },
         {
           addon: ProductTable.addons.accordion,

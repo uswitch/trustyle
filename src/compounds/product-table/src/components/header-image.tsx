@@ -9,9 +9,8 @@ export const ProductTableHeaderImage: React.FC = ({ children }) => (
     mobileOrder={0}
     sx={{
       display: 'flex',
-      alignItems: 'left',
-      justifyContent: 'left',
-      variant: 'compounds.product-table.cellImage.main'
+      alignItems: 'center',
+      justifyContent: 'center'
     }}
   >
     <div
@@ -27,6 +26,8 @@ export const ProductTableHeaderImage: React.FC = ({ children }) => (
           left: 0,
           right: 0,
           bottom: 0,
+          maxWidth: '100%',
+          maxHeight: '100%',
           margin: 'auto',
           objectFit: 'contain'
         }

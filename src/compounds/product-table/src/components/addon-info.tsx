@@ -7,7 +7,7 @@ import { Addon, AddonContext, CellContext } from '../generics'
 import { ROWS } from './cell-split'
 
 const ProductTableAddonInfo: Addon = {
-  body: ({ children }) => {
+  body: ({ children, split }) => {
     const { gridColumnSpan } = React.useContext(CellContext)
 
     return (
@@ -28,7 +28,7 @@ const ProductTableAddonInfo: Addon = {
             gridRowStart: ROWS + 5, // should appear above footer on desktop
             gridRowSpan: 1,
             gridColumnStart: 1,
-            gridColumnSpan
+            gridColumnSpan: split ? 2 : gridColumnSpan
           }}
         >
           {children}
