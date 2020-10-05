@@ -3,14 +3,16 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { number } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
+import { useResponsiveValue } from '@theme-ui/match-media'
 
 import AllThemes from '../../../utils/all-themes'
 
 import Pagination from './'
 
 const PaginationStory = ({ type }: any) => {
-  const currentPageKnob = number('Current page', 1)
-  const totalPages = number('Total pages', 10)
+  const currentPageKnob = number('Current page', 15)
+  const totalPages = number('Total pages', 100)
+  const isMinimized = useResponsiveValue([true, false])
 
   const [currentPage, setCurrentPage] = React.useState(currentPageKnob)
 
@@ -34,7 +36,13 @@ const PaginationStory = ({ type }: any) => {
   }
 
   return (
-    <Pagination currentPage={currentPage} totalPages={totalPages} {...props} />
+    <Pagination
+      currentPage={currentPage}
+      totalPages={totalPages}
+      showFirstAndLastArrows
+      minimized={isMinimized}
+      {...props}
+    />
   )
 }
 

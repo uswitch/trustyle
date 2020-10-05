@@ -5,19 +5,29 @@ import * as React from 'react'
 // https://github.com/DefinitelyTyped/DefinitelyTyped/pull/41567
 // @ts-ignore
 import { css, jsx, useThemeUI } from 'theme-ui'
+// import { useResponsiveValue, useBreakpointIndex } from '@theme-ui/match-media'
 import { Direction, Glyph, Icon } from '@uswitch/trustyle.icon'
 
 type PaginationNumbers = (number | '...')[]
 
 function getNumbers(
   currentPage: number,
-  totalPages: number
+  totalPages: number,
+  isMinimized: boolean = false
 ): PaginationNumbers {
   const AROUND_CURRENT = 1
   const END_LENGTH = 5 + AROUND_CURRENT * 2
 
   if (totalPages <= END_LENGTH) {
     return new Array(totalPages).fill('').map((_, i) => i + 1)
+  }
+
+  if (isMinimized) {
+    return currentPage < totalPages - 1
+      ? [currentPage, currentPage + 1, '...']
+      : currentPage === totalPages - 1
+      ? ['...', currentPage, currentPage + 1]
+      : ['...', currentPage - 1, currentPage]
   }
 
   const numbers: PaginationNumbers = [1]
@@ -66,7 +76,6 @@ const InlineIcon = ({
   glyph?: Glyph
 }) => {
   const { theme }: any = useThemeUI()
-  console.log(glyph)
 
   let color = 'black'
   if (theme.elements.pagination) {
@@ -90,6 +99,7 @@ interface Props extends React.HTMLAttributes<HTMLUListElement> {
   onPageChange?: (number: number, e?: React.MouseEvent) => any
   numberToLink?: (number: number) => string
   showFirstAndLastArrows?: boolean
+  minimized?: boolean
   className?: string
 }
 
@@ -99,11 +109,12 @@ const Pagination: React.FC<Props> = ({
   onPageChange = () => {},
   numberToLink,
   showFirstAndLastArrows = false,
+  minimized = false,
   className
 }) => {
   const { theme }: any = useThemeUI()
 
-  const numbers = getNumbers(currentPage, totalPages)
+  const numbers = getNumbers(currentPage, totalPages, minimized)
 
   const liStyling = {
     display: 'inline-block',
@@ -131,7 +142,9 @@ const Pagination: React.FC<Props> = ({
       {showFirstAndLastArrows && (
         <li
           sx={{
-            ...(currentPage === 1 && theme.elements.pagination?.arrowDisabled),
+            ...theme.elements.pagination?.[
+              currentPage === 1 ? 'arrowDisabled' : 'arrow'
+            ],
             ...liStyling
           }}
         >
@@ -148,9 +161,12 @@ const Pagination: React.FC<Props> = ({
           )}
         </li>
       )}
+
       <li
         sx={{
-          ...(currentPage === 1 && theme.elements.pagination?.arrowDisabled),
+          ...theme.elements.pagination?.[
+            currentPage === 1 ? 'arrowDisabled' : 'arrow'
+          ],
           ...liStyling
         }}
       >
@@ -166,6 +182,7 @@ const Pagination: React.FC<Props> = ({
           </a>
         )}
       </li>
+
       {numbers.map((number, i) => (
         <li
           key={i}
@@ -189,10 +206,12 @@ const Pagination: React.FC<Props> = ({
           )}
         </li>
       ))}
+
       <li
         sx={{
-          ...(currentPage === totalPages &&
-            theme.elements.pagination?.arrowDisabled),
+          ...theme.elements.pagination?.[
+            currentPage === totalPages ? 'arrowDisabled' : 'arrow'
+          ],
           ...liStyling
         }}
       >
@@ -208,11 +227,13 @@ const Pagination: React.FC<Props> = ({
           </a>
         )}
       </li>
+
       {showFirstAndLastArrows && (
         <li
           sx={{
-            ...(currentPage === totalPages &&
-              theme.elements.pagination?.arrowDisabled),
+            ...theme.elements.pagination?.[
+              currentPage === totalPages ? 'arrowDisabled' : 'arrow'
+            ],
             ...liStyling
           }}
         >

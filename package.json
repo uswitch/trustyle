@@ -114,6 +114,7 @@
   },
   "dependencies": {
     "@styled-system/css": "^5.1.5",
+    "@theme-ui/match-media": "^0.3.1",
     "@types/styled-system__css": "^5.0.5",
     "@types/theme-ui": "file:types/theme-ui",
     "styled-system": "^5.1.5",
