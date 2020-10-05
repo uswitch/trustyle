@@ -161,7 +161,7 @@ const ProductTableRow: React.FC<RowProps> = ({
               >
                 <CellBase
                   sx={{
-                    borderBottom: '1px solid',
+                    borderBottom: image ? 'none' : '1px solid',
                     paddingBottom: 'sm',
                     marginTop: badges.length ? 0 : -6,
                     variant: 'compounds.product-table.row.header'

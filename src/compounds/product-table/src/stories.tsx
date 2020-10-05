@@ -677,16 +677,14 @@ export const MoneyRedesignExample = () => {
         }
       ]}
     >
-      <ProductTable.cells.Split>
-        <ProductTable.cells.Content label="Fixed rate contract">
-          14 months
-        </ProductTable.cells.Content>
-      </ProductTable.cells.Split>
-      <ProductTable.cells.Content label="Annual saving" accent>
-        <ProductTable.data.Range from={30} to={260} unit="pounds" />
+      <ProductTable.cells.Content label="Loan Amount">
+        <ProductTable.data.Range from={1000} to={10000} unit="pounds" />
       </ProductTable.cells.Content>
-      <ProductTable.cells.Content label="Annual saving" accent>
-        <ProductTable.data.Range from={30} to={260} unit="pounds" />
+      <ProductTable.cells.Content label="Representative  APR" headerImage>
+        49.9% APR (£1,000 to £10,000)
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Content label="Loan Term" headerImage>
+        <ProductTable.data.Range from={1} to={5} unit="years" />
       </ProductTable.cells.Content>
       <ProductTable.cells.Cta
         primary={<ButtonLink variant="primary">Apply now</ButtonLink>}
