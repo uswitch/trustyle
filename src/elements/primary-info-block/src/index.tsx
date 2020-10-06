@@ -44,7 +44,7 @@ const PrimaryInfoBlock: React.FC<Props> = ({
         sx={{
           fontFamily: 'heading',
           fontSize: ['xl', 'md'],
-          lineHeight: 'sm'
+          lineHeight: 1
         }}
       >
         {prefix}

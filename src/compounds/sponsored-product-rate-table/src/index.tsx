@@ -20,14 +20,13 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   usps: string[]
   uspBackgroundColor?: string
   uspBeforeColor?: string
-  href: string
-  target: string
   sponsorLogoSrc: string
   sponsorName: string
   award: string
   campaignImgSrc: string
   campaignImgHeight?: string
   className?: string
+  ctaText?: string
 }
 
 interface Detail {
@@ -149,179 +148,170 @@ const SponsoredRateTable: React.FC<Props> = ({
   usps,
   uspBackgroundColor = 'rgba(132,166,255,0.3)',
   uspBeforeColor = '#84A6FF',
-  href,
-  target,
   sponsorLogoSrc,
   sponsorName,
   award,
   campaignImgSrc,
   campaignImgHeight = '144px',
-  className
+  ctaText = 'See Deal'
 }) => (
-  <a
-    href={href}
-    target={target}
+  <div
     sx={{
-      textDecoration: 'none',
-      color: 'inherit',
-      '&:hover': { color: 'inherit' }
+      borderWidth: 1,
+      borderStyle: 'solid',
+      borderColor: 'grey-30',
+      '@media (hover: hover)': {
+        ':hover': {
+          borderColor: 'primary'
+        }
+      }
     }}
-    className={className}
   >
     <div
       sx={{
-        borderWidth: 1,
-        borderStyle: 'solid',
-        borderColor: 'grey-30'
+        height: campaignImgHeight,
+        width: '100%',
+        display: ['block', 'none'],
+        backgroundImage: `url(${campaignImgSrc})`,
+        backgroundPosition: 'left bottom',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover'
+      }}
+    />
+
+    <Container
+      sx={{
+        padding: [12, 'sm'],
+        display: [null, 'grid'],
+        gridTemplateColumns: [null, '1.5fr 1fr 0.5fr'],
+        gridGap: [null, 12]
       }}
     >
-      <div
-        sx={{
-          height: campaignImgHeight,
-          width: '100%',
-          display: ['block', 'none'],
-          backgroundImage: `url(${campaignImgSrc})`,
-          backgroundPosition: 'left bottom',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover'
-        }}
-      />
-
-      <Container
-        sx={{
-          padding: [12, 'sm'],
-          display: [null, 'grid'],
-          gridTemplateColumns: [null, '1.5fr 1fr 0.5fr'],
-          gridGap: [null, 12]
-        }}
-      >
-        <div>
-          <div
-            sx={{
-              height: campaignImgHeight,
-              width: '100%',
-              backgroundImage: `url(${campaignImgSrc})`,
-              backgroundPosition: 'left bottom',
-              display: ['none', 'block'],
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover'
-            }}
-          />
-
-          <div sx={{ display: 'flex', alignItems: 'center' }}>
-            <ProductImage src={productImgSrc} alt={productImgAlt} />
-
-            <span
-              sx={{
-                fontFamily: 'heading',
-                fontWeight: 'bold',
-                lineHeight: 'heading',
-                display: ['none', 'inline-block']
-              }}
-            >
-              {productName}
-            </span>
-          </div>
-        </div>
-
+      <div>
         <div
           sx={{
-            display: ['flex', 'none'],
-            marginBottom: 'sm',
-            marginTop: 12,
-            justifyContent: 'space-between'
+            height: campaignImgHeight,
+            width: '100%',
+            backgroundImage: `url(${campaignImgSrc})`,
+            backgroundPosition: 'left bottom',
+            display: ['none', 'block'],
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover'
           }}
-        >
-          <div
+        />
+
+        <div sx={{ display: 'flex', alignItems: 'center' }}>
+          <ProductImage src={productImgSrc} alt={productImgAlt} />
+
+          <span
             sx={{
               fontFamily: 'heading',
               fontWeight: 'bold',
-              lineHeight: 'heading',
-              marginRight: 'xs'
+              display: ['none', 'inline-block'],
+              marginTop: [null, productImgSrc ? null : 'sm']
             }}
           >
             {productName}
-          </div>
+          </span>
+        </div>
+      </div>
 
-          <Button
-            variant="primary"
-            sx={{
-              padding: 0,
-              width: 32,
-              height: 48,
-              display: 'flex',
-              flexShrink: 0,
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}
-          >
-            <Icon
-              color="white"
-              direction="right"
-              glyph="caret"
-              size={20}
-              sx={{
-                flexShrink: 0
-              }}
-            />
-          </Button>
+      <div
+        sx={{
+          display: ['flex', 'none'],
+          marginBottom: 'sm',
+          marginTop: 12,
+          justifyContent: 'space-between'
+        }}
+      >
+        <div
+          sx={{
+            fontFamily: 'heading',
+            fontWeight: 'bold',
+            marginRight: 'xs'
+          }}
+        >
+          {productName}
         </div>
 
-        <Stack spacing={[8]}>
-          <div
+        <Button
+          variant="primary"
+          sx={{
+            padding: 0,
+            width: 32,
+            height: 48,
+            display: 'flex',
+            flexShrink: 0,
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}
+        >
+          <Icon
+            color="white"
+            direction="right"
+            glyph="caret"
+            size={20}
             sx={{
-              display: 'grid',
-              gridGap: ['xs', 12],
-              gridTemplateColumns: '1fr 1fr',
-              height: [92, campaignImgHeight]
+              flexShrink: 0
             }}
-          >
-            <InformationBlocks details={informationDetails} />
-          </div>
-
-          {usps && (
-            <UspTags
-              usps={usps}
-              uspColor={uspBackgroundColor}
-              beforeColor={uspBeforeColor}
-            />
-          )}
-
-          <AwardsTag award={award} sx={{ display: [null, 'none'] }} />
-
-          <SponsoredByTag
-            providerName={sponsorName}
-            providerLogoSrc={sponsorLogoSrc}
-            sx={{ display: [null, 'none'] }}
           />
-        </Stack>
+        </Button>
+      </div>
 
-        <Stack spacing={[16]} sx={{ display: ['none', 'block'] }}>
-          <Button
-            variant="primary"
-            sx={{
-              padding: 0,
-              width: '100%',
-              height: 48,
-              display: ['none', 'flex'],
-              justifyContent: 'space-evenly',
-              alignItems: 'center'
-            }}
-          >
-            <span>See Deal</span>
-          </Button>
+      <Stack spacing={[8]}>
+        <div
+          sx={{
+            display: 'grid',
+            gridGap: ['xs', 12],
+            gridTemplateColumns: '1fr 1fr',
+            height: [92, campaignImgHeight]
+          }}
+        >
+          <InformationBlocks details={informationDetails} />
+        </div>
 
-          <SponsoredByTag
-            providerName={sponsorName}
-            providerLogoSrc={sponsorLogoSrc}
-            sx={{ display: ['none', 'flex'], flexDirection: 'column' }}
+        {usps && (
+          <UspTags
+            usps={usps}
+            uspColor={uspBackgroundColor}
+            beforeColor={uspBeforeColor}
           />
-          {/* todo: make into separate element */}
-          {award && <AwardBadge awardName={award} />}
-        </Stack>
-      </Container>
-    </div>
-  </a>
+        )}
+
+        <AwardsTag award={award} sx={{ display: [null, 'none'] }} />
+
+        <SponsoredByTag
+          providerName={sponsorName}
+          providerLogoSrc={sponsorLogoSrc}
+          sx={{ display: [null, 'none'] }}
+        />
+      </Stack>
+
+      <Stack spacing={[16]} sx={{ display: ['none', 'block'] }}>
+        <Button
+          variant="primary"
+          sx={{
+            padding: 0,
+            width: '100%',
+            height: 48,
+            display: ['none', 'flex'],
+            justifyContent: 'space-evenly',
+            alignItems: 'center'
+          }}
+        >
+          <span>{ctaText}</span>
+        </Button>
+
+        <SponsoredByTag
+          providerName={sponsorName}
+          providerLogoSrc={sponsorLogoSrc}
+          sx={{ display: ['none', 'flex'], flexDirection: 'column' }}
+        />
+        {/* todo: make into separate element */}
+        {award && <AwardBadge awardName={award} />}
+      </Stack>
+    </Container>
+  </div>
 )
 
 export default SponsoredRateTable
