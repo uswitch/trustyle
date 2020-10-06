@@ -57,7 +57,8 @@ const AuthorProfile: React.FC<Props> = ({
             width: '87px',
             marginRight: 'sm',
             alignSelf: 'baseline',
-            borderBottom: 0
+            borderBottom: 0,
+            paddingRight: '0px !important'
           }}
         >
           <authorImage.type
@@ -99,81 +100,81 @@ const AuthorProfile: React.FC<Props> = ({
             <span>{role}</span>
           </a>
         </Styled.h2>
-        <Styled.p
-          sx={{
-            fontSize: 'sm',
-            marginY: 0,
-            width: ['100%', '75%', '60%']
-          }}
-        >
-          {bio}
-        </Styled.p>
-        <div
-          sx={{
-            variant: styles('details'),
-            marginTop: 'sm',
-            paddingLeft: 'xs'
-          }}
-        >
-          {email && (
-            <Styled.a
-              href={'mailto:' + email}
+      </div>
+      <Styled.p
+        sx={{
+          fontSize: 'sm',
+          marginY: 0,
+          width: ['100%', '75%', '60%']
+        }}
+      >
+        {bio}
+      </Styled.p>
+      <div
+        sx={{
+          variant: styles('details'),
+          marginTop: 'sm',
+          paddingLeft: 'xs'
+        }}
+      >
+        {email && (
+          <Styled.a
+            href={'mailto:' + email}
+            sx={{
+              textDecoration: 'none',
+              cursor: 'pointer',
+              borderBottom: 0
+            }}
+          >
+            <div
               sx={{
-                textDecoration: 'none',
-                cursor: 'pointer',
-                borderBottom: 0
+                display: 'flex'
               }}
             >
-              <div
-                sx={{
-                  display: 'flex'
-                }}
-              >
-                <Icon glyph="email-filled" size={22} color="grey-80" />
-                {showDetails && <span>{email}</span>}
-              </div>
-            </Styled.a>
-          )}
+              <Icon glyph="email-filled" size={22} color="grey-80" />
+              {showDetails && <span>{email}</span>}
+            </div>
+          </Styled.a>
+        )}
 
-          {twitterLink && (
-            <Styled.a
-              href={twitterLink}
+        {twitterLink && (
+          <Styled.a
+            href={twitterLink}
+            sx={{
+              textDecoration: 'none',
+              cursor: 'pointer',
+              borderBottom: 0
+            }}
+          >
+            <div
               sx={{
-                textDecoration: 'none',
-                cursor: 'pointer',
-                borderBottom: 0
+                display: 'flex'
               }}
             >
-              <div
-                sx={{
-                  display: 'flex'
-                }}
-              >
-                <Icon glyph="twitter" size={22} color="grey-80" />
-                {showDetails && <span>{twitterLink}</span>}
-              </div>
-            </Styled.a>
-          )}
-          {linkedInLink && (
-            <Styled.a
-              href={linkedInLink}
+              <Icon glyph="twitter" size={22} color="grey-80" />
+              {showDetails && <span>{twitterLink}</span>}
+            </div>
+          </Styled.a>
+        )}
+        {linkedInLink && (
+          <Styled.a
+            href={linkedInLink}
+            sx={{
+              textDecoration: 'none',
+              cursor: 'pointer',
+              borderBottom: 0
+            }}
+          >
+            <div
               sx={{
-                textDecoration: 'none',
-                cursor: 'pointer',
-                borderBottom: 0
+                display: 'flex'
               }}
             >
-              <div
-                sx={{
-                  display: 'flex'
-                }}
-              >
-                <Icon glyph="linkedIn" size={22} color="grey-80" />
-                {showDetails && <span>{linkedInLink}</span>}
-              </div>
-            </Styled.a>
-          )}
-        </div>
+              <Icon glyph="linkedIn" size={22} color="grey-80" />
+              {showDetails && <span>{linkedInLink}</span>}
+            </div>
+          </Styled.a>
+        )}
       </div>
     </div>
   )
