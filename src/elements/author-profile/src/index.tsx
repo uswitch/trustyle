@@ -131,11 +131,7 @@ const AuthorProfile: React.FC<Props> = ({
                 display: 'flex'
               }}
             >
-              <Icon
-                glyph="email-filled"
-                size={22}
-                color="grey-80"
-              />
+              <Icon glyph="email-filled" size={22} color="grey-80" />
               {showDetails && <span>{email}</span>}
             </div>
           </Styled.a>
