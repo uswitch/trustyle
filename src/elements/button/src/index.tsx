@@ -5,6 +5,8 @@ import { jsx, useThemeUI } from 'theme-ui'
 import { darken } from '@theme-ui/color'
 import get from '@uswitch/trustyle-utils.get'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
+// @ts-ignore
+export { theme } from './theme'
 
 export type Variant =
   | 'primary'
