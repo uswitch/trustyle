@@ -5,10 +5,12 @@ import * as React from 'react'
 // https://github.com/DefinitelyTyped/DefinitelyTyped/pull/41567
 // @ts-ignore
 import { css, jsx, useThemeUI } from 'theme-ui'
-// import { useResponsiveValue, useBreakpointIndex } from '@theme-ui/match-media'
 import { Direction, Glyph, Icon } from '@uswitch/trustyle.icon'
 
 type PaginationNumbers = (number | '...')[]
+interface SelectPages {
+  [key: number]: number[]
+}
 
 function getNumbers(
   currentPage: number,
@@ -96,7 +98,10 @@ const InlineIcon = ({
 interface Props extends React.HTMLAttributes<HTMLUListElement> {
   currentPage: number
   totalPages: number
-  onPageChange?: (number: number, e?: React.MouseEvent) => any
+  onPageChange?: (
+    number: number,
+    e?: React.MouseEvent | React.ChangeEvent
+  ) => any
   numberToLink?: (number: number) => string
   showFirstAndLastArrows?: boolean
   minimized?: boolean
@@ -113,8 +118,32 @@ const Pagination: React.FC<Props> = ({
   className
 }) => {
   const { theme }: any = useThemeUI()
+  const morePage = React.useRef<HTMLSelectElement | null>(null)
 
   const numbers = getNumbers(currentPage, totalPages, minimized)
+
+  const selectReducer = (numbers: (number | '...')[]): SelectPages =>
+    numbers.reduce<SelectPages>((r, current, i) => {
+      if (current === '...') {
+        const start = numbers[i - 1] ? (numbers[i - 1] as number) + 1 : 1
+        const end = numbers[i + 1] ? (numbers[i + 1] as number) : totalPages
+
+        r[i] = Array.from<number>({ length: end - start }).map(
+          (v, i) => i + start
+        )
+      }
+
+      return r
+    }, {})
+
+  const [selectPages, setSelectPages] = React.useState<SelectPages>(
+    selectReducer(numbers)
+  )
+
+  React.useEffect(() => setSelectPages(selectReducer(numbers)), [
+    minimized,
+    currentPage
+  ])
 
   const liStyling = {
     display: 'inline-block',
@@ -127,6 +156,24 @@ const Pagination: React.FC<Props> = ({
     textDecoration: 'none',
     borderBottom: 0,
     cursor: 'pointer'
+  }
+
+  const selectStyling = {
+    appearance: 'none',
+    border: 'none',
+    backgroundColor: 'transparent',
+    mx: 0,
+    cursor: 'pointer',
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    color: 'transparent',
+    ':focus': {
+      outline: 'none'
+    },
+    ':hover': {
+      color: 'transparent'
+    }
   }
 
   return (
@@ -194,7 +241,36 @@ const Pagination: React.FC<Props> = ({
           }}
         >
           {number === '...' ? (
-            number
+            <div
+              sx={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                position: 'relative'
+              }}
+            >
+              {number}
+
+              <select
+                ref={morePage}
+                onChange={e => {
+                  onPageChange(parseInt(e.currentTarget.value), e)
+                  e.currentTarget.value = '...'
+                }}
+                sx={{
+                  ...theme.elements.pagination?.nonCurrentPage,
+                  ...selectStyling
+                }}
+              >
+                {selectPages[i]?.map(option => (
+                  <option value={option} key={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            </div>
           ) : (
             <a
               onClick={e => onPageChange(number, e)}
