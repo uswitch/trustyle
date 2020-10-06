@@ -37,6 +37,7 @@
   "fontWeights": {
     "base": 400,
     "light": 300,
+    "semiBold": 500,
     "bold": 600
   },
   "space": {
@@ -1610,7 +1611,7 @@
             },
             "label": {
               "fontFamily": "heading",
-              "fontWeight": "bold",
+              "fontWeight": "semiBold",
               "color": "grey-90",
               "py": "xs",
               "fontSize": "sm"
@@ -1618,7 +1619,7 @@
             "content": {
               "fontSize": "lg",
               "fontFamily": "heading",
-              "fontWeight": "bold",
+              "fontWeight": "semiBold",
               "pb": "xs",
               "color": "plum",
               "small": {
