@@ -388,6 +388,9 @@
           "marginBottom": "xl",
           "span:nth-of-type(1):after": {
             "content": "', '"
+          },
+          "span": {
+            "color": "black"
           }
         }
       },
