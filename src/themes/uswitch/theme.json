@@ -350,7 +350,6 @@
     "author-profile": {
       "base": {
         "main": {
-          "marginBottom": "xl",
           "span:nth-of-type(1):after": {
             "content": "', '"
           }
