@@ -135,7 +135,6 @@ const AuthorProfile: React.FC<Props> = ({
                 glyph="email-filled"
                 size={22}
                 color="grey-80"
-                fill="black"
               />
               {showDetails && <span>{email}</span>}
             </div>
