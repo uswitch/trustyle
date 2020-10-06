@@ -39,13 +39,24 @@ function autoFormat(text?: string): FormattedText[] {
 
 export interface DataAutoProps extends React.HTMLAttributes<HTMLDivElement> {
   text: string
+  headerImage?: boolean
 }
-const ProductTableDataAuto: React.FC<DataAutoProps> = ({ text }) => {
+const ProductTableDataAuto: React.FC<DataAutoProps> = ({
+  text,
+  headerImage
+}) => {
   return (
     <div>
       {autoFormat(text).map(({ word, size }, index) =>
         size === 'small' ? (
-          <span sx={{ margin: '0 5px', fontSize: ['xs', 'md'] }} key={index}>
+          <span
+            sx={{
+              margin: '0 5px',
+              variant: `compounds.product-table.${headerImage &&
+                'variants.redesign.'}cellContent.content.small`
+            }}
+            key={index}
+          >
             {word}
           </span>
         ) : (

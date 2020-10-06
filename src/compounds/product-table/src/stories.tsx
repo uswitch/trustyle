@@ -697,13 +697,13 @@ export const MoneyRedesignExample = () => {
       ]}
     >
       <ProductTable.cells.Content label="Loan Amount" headerImage>
-        <ProductTable.data.Range from={1000} to={10000} unit="pounds" />
+        <ProductTable.data.Auto text="£1000 to £10000" headerImage />
       </ProductTable.cells.Content>
       <ProductTable.cells.Content label="Representative  APR" headerImage>
         49.9% APR (£1,000 to £10,000)
       </ProductTable.cells.Content>
       <ProductTable.cells.Content label="Loan Term" headerImage>
-        <ProductTable.data.Range from={1} to={5} unit="years" />
+        <ProductTable.data.Auto text="1 to 5 years" headerImage />
       </ProductTable.cells.Content>
       <ProductTable.cells.Cta
         primary={<ButtonLink variant="primary">Apply now</ButtonLink>}

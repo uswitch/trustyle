@@ -1566,7 +1566,10 @@
         "content": {
           "fontFamily": "heading",
           "color": "grey-80",
-          "fontSize": ["xl", "xl"]
+          "fontSize": ["xl", "xl"],
+          "small": {
+            "fontSize": ["xs", "md"]
+          }
         },
         "accent": {
           "backgroundColor": "grey-05"
@@ -1606,14 +1609,22 @@
               "pl": "sm"
             },
             "label": {
+              "fontFamily": "heading",
+              "fontWeight": "bold",
               "color": "grey-90",
               "py": "xs",
               "fontSize": "sm"
             },
             "content": {
-              "fontSize": "sm",
+              "fontSize": "lg",
+              "fontFamily": "heading",
+              "fontWeight": "bold",
               "pb": "xs",
-              "color": "plum"
+              "color": "plum",
+              "small": {
+                "fontWeight": "base",
+                "fontSize": "sm"
+              }
             },
             "accent": {
               "backgroundColor": "grey-05",
