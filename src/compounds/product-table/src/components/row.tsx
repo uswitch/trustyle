@@ -4,9 +4,9 @@ import { jsx } from 'theme-ui'
 
 import { Addon, AddonArg, CellContext } from '../generics'
 
-import CellBase from './cell-base'
 import { ROWS } from './cell-split'
 import RowWrapper from './rowWrapper'
+import Header from './header'
 
 export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   badges?: React.ReactNode[]
@@ -72,7 +72,7 @@ const ProductTableRow: React.FC<RowProps> = ({
    */
 
   return (
-    <section
+    <section 
       id={id}
       sx={{
         position: 'relative',
@@ -101,6 +101,13 @@ const ProductTableRow: React.FC<RowProps> = ({
             ))}
           </div>
         )}
+        <Header 
+          image={image}
+          preTitle={preTitle}
+          rowTitle={rowTitle}
+          subtitle={subtitle}
+          addons={addonsFor('header')}
+        />
         <div
           sx={{
             display: 'grid',
@@ -135,19 +142,7 @@ const ProductTableRow: React.FC<RowProps> = ({
             display: '-ms-grid'
           }}
         >
-          {image && (
-            <CellContext.Provider
-              value={{
-                gridRowStart: 2,
-                gridRowSpan: 1,
-                gridColumnStart: 1,
-                gridColumnSpan: 1
-              }}
-            >
-              {image}
-            </CellContext.Provider>
-          )}
-          {rowTitle && (
+          {/* {rowTitle && (
             <CellContext.Provider
               value={{
                 gridRowStart: 2,
@@ -209,7 +204,7 @@ const ProductTableRow: React.FC<RowProps> = ({
                 </CellContext.Provider>
               </CellBase>
             </CellContext.Provider>
-          )}
+          )} */}
 
           {nonNullChildren.map((child, index) => (
             <CellContext.Provider
