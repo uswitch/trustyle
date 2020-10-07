@@ -21,15 +21,37 @@ export const Example = () => {
   return (
     <React.Fragment>
       <Spacer />
-      <SimpleInput name="example" type="text" placeholder="Placeholder" />
-      <Spacer />
-      <SimpleInput name="example" type="text" defaultValue="Default Value" />
-      <Spacer />
-      <SimpleInput hasError name="example" type="text" defaultValue="Error" />
-      <Spacer />
-      <SimpleInput prefix="£" name="example" type="text" />
+      <SimpleInput
+        aria-label="Simple input"
+        name="example"
+        type="text"
+        placeholder="Placeholder"
+      />
       <Spacer />
       <SimpleInput
+        aria-label="Simple input"
+        name="example"
+        type="text"
+        defaultValue="Default Value"
+      />
+      <Spacer />
+      <SimpleInput
+        aria-label="Simple input"
+        hasError
+        name="example"
+        type="text"
+        defaultValue="Error"
+      />
+      <Spacer />
+      <SimpleInput
+        aria-label="Simple input"
+        prefix="£"
+        name="example"
+        type="text"
+      />
+      <Spacer />
+      <SimpleInput
+        aria-label="Simple input"
         suffix="years"
         name="example"
         type="number"
@@ -38,6 +60,7 @@ export const Example = () => {
       />
       <Spacer />
       <SimpleInput
+        aria-label="Simple input"
         hasError
         prefix="£"
         name="example"
@@ -46,6 +69,7 @@ export const Example = () => {
       />
       <Spacer />
       <SimpleInput
+        aria-label="Simple input"
         ref={inputRef}
         name="example"
         type="text"
