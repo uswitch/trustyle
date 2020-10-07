@@ -19,56 +19,61 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
   rowTitle,
   subtitle,
   addons = [],
-  image,
+  image
 }) => {
-  
   return (
-    <div sx={{
-      overflow: "hidden",
-      borderBottom: image ? 'none' : '1px solid',
-      paddingBottom: 'sm',
-      marginTop: badges.length ? 0 : -6,
-      variant: 'compounds.product-table.row.header',
-      display: 'flex',
-      alignItems: 'center'
-    }}>
-      {image && (
-        <span
+    <div sx={{ pb: 12 }}>
+      <div
         sx={{
-          // display: "flex",
+          borderBottom: image ? 'none' : '1px solid',
+          paddingBottom: 'sm',
+          marginTop: badges.length ? 0 : -6,
+          variant: 'compounds.product-table.row.header',
+          display: 'flex',
+          alignItems: 'center'
         }}
       >
-        {image}</span>
-      )}
-      <CellBase>
-        <span
-          sx={{
-            fontSize: 'xs',
-            variant: 'compounds.product-table.row.pretitle'
-          }}
-        >
-          {preTitle}
-        </span>
-        <h3
-          sx={{
-            margin: 0,
-            variant: 'compounds.product-table.row.title'
-          }}
-        >
-          {rowTitle}
-        </h3>
-        <span
-          sx={{
-            fontSize: 'xs',
-            variant: 'compounds.product-table.row.subtitle'
-          }}
-        >
-          {subtitle}
-        </span>
-      </CellBase>
-      {addons}
+        {image && <span>{image}</span>}
+        {rowTitle && (
+          <CellBase
+            sx={{
+              marginX: -8,
+              marginY: -6
+            }}
+          >
+            {preTitle && (
+              <span
+                sx={{
+                  fontSize: 'xs',
+                  variant: 'compounds.product-table.row.pretitle'
+                }}
+              >
+                {preTitle}
+              </span>
+            )}
+            <h3
+              sx={{
+                margin: 0,
+                variant: 'compounds.product-table.row.title'
+              }}
+            >
+              {rowTitle}
+            </h3>
+            {subtitle && (
+              <span
+                sx={{
+                  fontSize: 'xs',
+                  variant: 'compounds.product-table.row.subtitle'
+                }}
+              >
+                {subtitle}
+              </span>
+            )}
+          </CellBase>
+        )}
+        {addons}
+      </div>
     </div>
-    
   )
 }
 

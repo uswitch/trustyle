@@ -72,7 +72,7 @@ const ProductTableRow: React.FC<RowProps> = ({
    */
 
   return (
-    <section 
+    <section
       id={id}
       sx={{
         position: 'relative',
@@ -101,7 +101,7 @@ const ProductTableRow: React.FC<RowProps> = ({
             ))}
           </div>
         )}
-        <Header 
+        <Header
           image={image}
           preTitle={preTitle}
           rowTitle={rowTitle}
@@ -142,70 +142,6 @@ const ProductTableRow: React.FC<RowProps> = ({
             display: '-ms-grid'
           }}
         >
-          {/* {rowTitle && (
-            <CellContext.Provider
-              value={{
-                gridRowStart: 2,
-                gridRowSpan: 1,
-                gridColumnStart: image ? 2 : 1,
-                gridColumnSpan: cols
-              }}
-            >
-              <CellBase
-                sx={{
-                  borderBottom: image ? 'none' : '1px solid',
-                  paddingBottom: 'sm',
-                  marginTop: badges.length ? 0 : -6,
-                  variant: 'compounds.product-table.row.header'
-                }}
-                mobileOrder={-100}
-              >
-                <CellContext.Provider value={{ inFlexbox: true }}>
-                  <div
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      marginX: -8,
-                      marginY: -6
-                    }}
-                  >
-                    <CellBase extraRules={{ marginRight: 'auto' }}>
-                      {preTitle && (
-                        <span
-                          sx={{
-                            fontSize: 'xs',
-                            variant: 'compounds.product-table.row.pretitle'
-                          }}
-                        >
-                          {preTitle}
-                        </span>
-                      )}
-                      <h3
-                        sx={{
-                          margin: 0,
-                          variant: 'compounds.product-table.row.title'
-                        }}
-                      >
-                        {rowTitle}
-                      </h3>
-                      {subtitle && (
-                        <span
-                          sx={{
-                            fontSize: 'xs',
-                            variant: 'compounds.product-table.row.subtitle'
-                          }}
-                        >
-                          {subtitle}
-                        </span>
-                      )}
-                    </CellBase>
-                    {addonsFor('header')}
-                  </div>
-                </CellContext.Provider>
-              </CellBase>
-            </CellContext.Provider>
-          )} */}
-
           {nonNullChildren.map((child, index) => (
             <CellContext.Provider
               value={{
