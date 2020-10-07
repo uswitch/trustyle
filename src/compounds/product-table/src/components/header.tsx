@@ -33,7 +33,7 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
           alignItems: 'center'
         }}
       >
-        {image && <span>{image}</span>}
+        {image && image}
         {rowTitle && (
           <CellBase
             sx={{
