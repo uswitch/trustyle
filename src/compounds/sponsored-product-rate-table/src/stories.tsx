@@ -25,6 +25,8 @@ export const ExampleWithKnobs = () => {
     text('USP', 'Free insurance for 2 months'),
     text('USP2', 'Second USP')
   ]
+  const href = text('href', 'https://www.uswitch.com/mobiles/')
+  const target = text('target', '_blank')
   const sponsorName = text('Sponsor name', 'Three')
   const sponsorSrc = text(
     'Sponsor url',
@@ -35,7 +37,6 @@ export const ExampleWithKnobs = () => {
     'Enhanced image url',
     'https://academy.alchemysystems.com/wp-content/uploads/2017/03/roundtable-banner-image-1400x350.jpg'
   )
-  const ctaText = text('CTA Text', 'See Deal')
 
   return (
     <div>
@@ -58,12 +59,13 @@ export const ExampleWithKnobs = () => {
           }
         ]}
         usps={usps}
+        href={href}
+        target={target}
         sponsorName={sponsorName}
         sponsorLogoSrc={sponsorSrc}
         award={award}
         campaignImgSrc={campaignImage}
         campaignImgHeight={'160px'}
-        ctaText={ctaText}
       />
     </div>
   )

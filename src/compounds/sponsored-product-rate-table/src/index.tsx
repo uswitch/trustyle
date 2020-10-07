@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 import AwardsTag from '@uswitch/trustyle.awards-tag'
-import { Button } from '@uswitch/trustyle.button'
+import { ButtonLink } from '@uswitch/trustyle.button-link'
 import { Container } from '@uswitch/trustyle.flex-grid'
 import { Icon } from '@uswitch/trustyle.icon'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
@@ -20,6 +20,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   usps: string[]
   uspBackgroundColor?: string
   uspBeforeColor?: string
+  href: string
+  target: string
   sponsorLogoSrc: string
   sponsorName: string
   award: string
@@ -148,6 +150,8 @@ const SponsoredRateTable: React.FC<Props> = ({
   usps,
   uspBackgroundColor = 'rgba(132,166,255,0.3)',
   uspBeforeColor = '#84A6FF',
+  href,
+  target,
   sponsorLogoSrc,
   sponsorName,
   award,
@@ -234,28 +238,32 @@ const SponsoredRateTable: React.FC<Props> = ({
           {productName}
         </div>
 
-        <Button
-          variant="primary"
-          sx={{
-            padding: 0,
-            width: 32,
-            height: 48,
-            display: 'flex',
-            flexShrink: 0,
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}
-        >
-          <Icon
-            color="white"
-            direction="right"
-            glyph="caret"
-            size={20}
+        {href && target && (
+          <ButtonLink
+            variant="primary"
+            href={href}
+            target={target}
             sx={{
-              flexShrink: 0
+              padding: 0,
+              width: 32,
+              height: 48,
+              display: 'flex',
+              flexShrink: 0,
+              justifyContent: 'center',
+              alignItems: 'center'
             }}
-          />
-        </Button>
+          >
+            <Icon
+              color="white"
+              direction="right"
+              glyph="caret"
+              size={20}
+              sx={{
+                flexShrink: 0
+              }}
+            />
+          </ButtonLink>
+        )}
       </div>
 
       <Stack spacing={[8]}>
@@ -288,8 +296,10 @@ const SponsoredRateTable: React.FC<Props> = ({
       </Stack>
 
       <Stack spacing={[16]} sx={{ display: ['none', 'block'] }}>
-        <Button
+        <ButtonLink
           variant="primary"
+          href={href}
+          target={target}
           sx={{
             padding: 0,
             width: '100%',
@@ -300,7 +310,7 @@ const SponsoredRateTable: React.FC<Props> = ({
           }}
         >
           <span>{ctaText}</span>
-        </Button>
+        </ButtonLink>
 
         <SponsoredByTag
           providerName={sponsorName}
