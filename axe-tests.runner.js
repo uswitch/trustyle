@@ -40,7 +40,6 @@ const BROKEN_STORIES = [
   'Elements/HeroWithBackgroundImage',
   'Elements/Link List',
   'Elements/Pagination',
-  'Elements/Simple Input',
   'Elements/Text Input',
   'Global Styles/Typography',
   'Layout/Arrangement',
