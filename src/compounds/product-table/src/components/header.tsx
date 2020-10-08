@@ -22,13 +22,12 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
   image
 }) => {
   return (
-    <div sx={{ pb: 12 }}>
+    <div sx={{ pb: image ? '' : 'xs' }}>
       <div
         sx={{
           borderBottom: image ? 'none' : '1px solid',
-          paddingBottom: 'sm',
+          paddingBottom: image ? ['sm', 'xxs'] : 'sm',
           marginTop: badges.length ? 0 : -6,
-          variant: 'compounds.product-table.row.header',
           display: 'flex',
           alignItems: 'center'
         }}
@@ -54,7 +53,8 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
             <h3
               sx={{
                 margin: 0,
-                variant: 'compounds.product-table.row.title'
+                variant: `compounds.product-table.${image &&
+                  'variants.redesign.'}row.title`
               }}
             >
               {rowTitle}

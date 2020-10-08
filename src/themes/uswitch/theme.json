@@ -1741,6 +1741,10 @@
             "main": {
               "border": "2px solid",
               "borderColor": "grey-20"
+            },
+            "title": {
+              "fontSize": "sm",
+              "fontWeight": "xbold"
             }
           },
           "cellContent": {

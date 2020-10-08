@@ -1611,6 +1611,11 @@
               "borderLeftColor": ["grey-20", "plum"],
               "borderTop": ["4px solid", "2px solid"],
               "borderTopColor": ["plum", "grey-20"]
+            },
+            "title": {
+              "fontSize": ["sm", "md"],
+              "fontWeight": "semiBold",
+              "color": "grey-100"
             }
           },
           "cellContent": {
