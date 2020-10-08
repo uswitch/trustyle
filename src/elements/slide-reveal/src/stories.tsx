@@ -21,6 +21,7 @@ export const ExampleWithKnobs = () => {
       <img
         src="https://placekitten.com/408/287?image=5"
         sx={{ maxWidth: '100%' }}
+        alt="Cat"
       />
       <p>test content</p>
     </SlideReveal>

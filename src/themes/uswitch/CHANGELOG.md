@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.16.1...@uswitch/trustyle.uswitch-theme@2.16.2) (2020-10-07)
+
+
+### Bug Fixes
+
+* Fix btn link dark text on dark bg ([37a817b](https://github.com/uswitch/trustyle/commit/37a817b))
+
+
+
+
+
+# [2.16.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.15.0...@uswitch/trustyle.uswitch-theme@2.16.0) (2020-10-07)
+
+
+### Features
+
+* adjust padding, font size and height of bg image ([7480477](https://github.com/uswitch/trustyle/commit/7480477))
+* fix spacing when no award label given and colours when none provided ([735bc93](https://github.com/uswitch/trustyle/commit/735bc93))
+* make padding bottom same as top for desktop ([9bf094f](https://github.com/uswitch/trustyle/commit/9bf094f))
+
+
+
+
+
 # [2.15.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.13.0...@uswitch/trustyle.uswitch-theme@2.15.0) (2020-10-01)
 
 

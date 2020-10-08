@@ -941,6 +941,7 @@
           "backgroundColor": "primary",
           "color": "light-1",
           ":hover": {
+            "color": "light-1",
             "backgroundColor": "grey-70"
           },
           ":disabled": {
@@ -1008,6 +1009,7 @@
           "border": "2px solid",
           "borderColor": "light-1",
           ":hover": {
+            "color": "light-1",
             "backgroundColor": "grey-80"
           },
           ":disabled": {
