@@ -1618,6 +1618,12 @@
               "color": "grey-100"
             }
           },
+          "addonFooter": {
+            "main": {
+              "borderTopColor": "grey-20",
+              "fontSize": "sm"
+            }
+          },
           "cellContent": {
             "main": {
               "borderLeft": "1px solid",

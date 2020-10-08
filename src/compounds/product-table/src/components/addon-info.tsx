@@ -7,7 +7,7 @@ import { Addon, AddonContext, CellContext } from '../generics'
 import { ROWS } from './cell-split'
 
 const ProductTableAddonInfo: Addon = {
-  body: ({ children, split }) => {
+  body: ({ children, split, headerImage }) => {
     const { gridColumnSpan } = React.useContext(CellContext)
 
     return (
@@ -19,7 +19,8 @@ const ProductTableAddonInfo: Addon = {
             paddingTop: 'sm',
             marginTop: 'xs',
             marginBottom: -6,
-            variant: 'compounds.product-table.addonInfo.main'
+            variant: `compounds.product-table.${headerImage &&
+              'variants.redesign.'}addonInfo.main`
           }
         }}
       >

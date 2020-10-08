@@ -1747,6 +1747,16 @@
               "fontWeight": "xbold"
             }
           },
+          "addonFooter": {
+            "main": {
+              "color": "grey-70"
+            }
+          },
+          "addonInfo": {
+            "main": {
+              "color": "grey-70"
+            }
+          },
           "cellContent": {
             "main": {
               "borderLeft": "1px solid",

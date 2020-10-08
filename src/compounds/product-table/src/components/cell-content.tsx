@@ -101,8 +101,11 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
       gridTemplateRows: '1fr',
       msGridRows: '1fr',
       padding: accent ? 'sm' : '',
-      variant: `compounds.product-table.${headerImage &&
-        'variants.redesign.'}cellContent.${accent ? 'accent' : 'main'}`
+      variant: headerImage
+        ? `compounds.product-table.variants.redesign.cellContent.${
+            accent ? 'accent' : 'main'
+          }`
+        : `compounds.product-table.cellContent.${accent ? 'accent' : 'main'}`
     }}
     // @ts-ignore
     css={{ display: '-ms-grid' }}
