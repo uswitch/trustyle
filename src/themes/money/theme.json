@@ -383,8 +383,25 @@
       }
     },
     "author-profile": {
-      "main": {
-        "marginBottom": "xl"
+      "base": {
+        "main": {
+          "marginBottom": "xl",
+          "span:nth-of-type(1):after": {
+            "content": "', '"
+          },
+          "span": {
+            "color": "black"
+          }
+        }
+      },
+      "variants": {
+        "left": {
+          "main": {
+            "span:nth-of-type(1):after": {
+              "content": "', '"
+            }
+          }
+        }
       },
       "name": {
         "a": {
