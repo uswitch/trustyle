@@ -62,6 +62,7 @@ const EmbeddedVideo: React.FC<Props> = ({
         frameBorder="0"
         allowFullScreen={allowFullScreen}
         allow="autoplay"
+        title="Video"
       />
     </div>
     {hasAccordion && (

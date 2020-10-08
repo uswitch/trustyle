@@ -347,6 +347,29 @@
   },
   "----------------------------- Variants": "-----------------------------",
   "elements": {
+    "author-profile": {
+      "base": {
+        "main": {
+          "span:nth-of-type(1):after": {
+            "content": "', '"
+          }
+        }
+      },
+      "variants": {
+        "left": {
+          "main": {
+            "span:nth-of-type(1):after": {
+              "content": "', '"
+            }
+          }
+        }
+      },
+      "name": {
+        "a": {
+          "color": "grey-80"
+        }
+      }
+    },
     "list": {
       "base": {
         "my": 0,
@@ -918,6 +941,7 @@
           "backgroundColor": "primary",
           "color": "light-1",
           ":hover": {
+            "color": "light-1",
             "backgroundColor": "grey-70"
           },
           ":disabled": {
@@ -985,6 +1009,7 @@
           "border": "2px solid",
           "borderColor": "light-1",
           ":hover": {
+            "color": "light-1",
             "backgroundColor": "grey-80"
           },
           ":disabled": {

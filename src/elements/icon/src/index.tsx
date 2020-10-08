@@ -18,6 +18,7 @@ import { Cross } from './cross'
 import { Edit } from './edit'
 import { EditJourney } from './edit-journey'
 import { Email } from './email'
+import { EmailFilled } from './email-filled'
 import { Error as ErrorIcon } from './error'
 import { FilledArrow } from './filled-arrow'
 import { Filters } from './filters'
@@ -26,6 +27,7 @@ import { GasElectricity } from './gas-electricity'
 import { Home } from './home'
 import { Information } from './information'
 import { Letter } from './letter'
+import { LinkedIn } from './linkedIn'
 import { Location } from './location'
 import { Minus } from './minus'
 import { Mobile } from './mobile'
@@ -34,6 +36,7 @@ import { One } from './one'
 import { Person } from './person'
 import { Phone } from './phone'
 import { Plus } from './plus'
+import { Twitter } from './twitter'
 import { Question } from './question'
 import { Smile } from './smile'
 import { Sms } from './sms'
@@ -63,6 +66,7 @@ export type Glyph =
   | 'cross'
   | 'edit'
   | 'email'
+  | 'email-filled'
   | 'error'
   | 'filled-arrow'
   | 'filters'
@@ -71,6 +75,7 @@ export type Glyph =
   | 'home'
   | 'information'
   | 'letter'
+  | 'linkedIn'
   | 'location'
   | 'minus'
   | 'mobile'
@@ -89,6 +94,7 @@ export type Glyph =
   | 'two'
   | 'thumb-up'
   | 'thumb-down'
+  | 'twitter'
   | 'star-outlined'
   | 'star-filled'
   | 'warning'
@@ -144,6 +150,8 @@ export const Icon: React.FC<Props> = ({
       return <Edit color={color} size={size} />
     case 'email':
       return <Email color={color} size={size} />
+    case 'email-filled':
+      return <EmailFilled color={color} size={size} />
     case 'error':
       return <ErrorIcon color={color} size={size} />
     case 'filled-arrow':
@@ -160,6 +168,8 @@ export const Icon: React.FC<Props> = ({
       return <Information color={color} size={size} />
     case 'letter':
       return <Letter color={color} size={size} />
+    case 'linkedIn':
+      return <LinkedIn color={color} size={size} />
     case 'location':
       return <Location color={color} size={size} />
     case 'minus':
@@ -196,6 +206,8 @@ export const Icon: React.FC<Props> = ({
       return <ThumbUp color={color} size={size} />
     case 'thumb-down':
       return <ThumbDown color={color} size={size} />
+    case 'twitter':
+      return <Twitter color={color} size={size} />
     case 'star-filled':
       return <StarFilled color={color} size={size} />
     case 'star-outlined':
