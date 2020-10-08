@@ -1737,6 +1737,12 @@
       },
       "variants": {
         "redesign": {
+          "row": {
+            "main": {
+              "border": "2px solid",
+              "borderColor": "grey-20"
+            }
+          },
           "cellContent": {
             "main": {
               "borderLeft": "1px solid",

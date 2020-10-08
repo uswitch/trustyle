@@ -1603,6 +1603,16 @@
       },
       "variants": {
         "redesign": {
+          "row": {
+            "main": {
+              "border": "2px solid",
+              "borderColor": "grey-20",
+              "borderLeft": ["2px solid", "4px solid"],
+              "borderLeftColor": ["grey-20", "plum"],
+              "borderTop": ["4px solid", "2px solid"],
+              "borderTopColor": ["plum", "grey-20"]
+            }
+          },
           "cellContent": {
             "main": {
               "borderLeft": "1px solid",
