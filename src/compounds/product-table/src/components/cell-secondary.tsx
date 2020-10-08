@@ -59,7 +59,7 @@ const ProductTableCellSecondary: React.FC<CellSecondaryProps> = ({
     </div>
     <div
       sx={{
-        gridRow: headerImage ? '2 / span 1' : '1 / span 1',
+        gridRow: headerImage ? ['1 / span 1', '2 / span 1'] : '1 / span 1',
         msGridRow: headerImage ? '2' : '1',
         msGridRowSpan: '1',
         gridColumn: ['2 / span 1', '1 / span 1'],
@@ -67,7 +67,7 @@ const ProductTableCellSecondary: React.FC<CellSecondaryProps> = ({
         msGridColumnSpan: '1',
         fontSize: 'xxl',
         paddingLeft: ['sm', '0px'],
-        marginTop: ['sm', '0px'],
+        marginTop: headerImage ? '0px' : ['sm', '0px'],
         small: {
           fontSize: 'sm'
         },

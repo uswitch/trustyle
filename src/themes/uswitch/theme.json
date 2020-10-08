@@ -1741,6 +1741,7 @@
             "main": {
               "borderLeft": "1px solid",
               "borderLeftColor": "grey-20",
+              "borderTop": "none",
               "pl": "sm"
             },
             "label": {
@@ -1753,6 +1754,7 @@
               "fontSize": "sm",
               "fontFamily": "heading",
               "pb": "xxs",
+              "textAlign": "left",
               "small": {
                 "fontSize": "xs"
               }
@@ -1762,11 +1764,23 @@
             },
             "variants": {
               "inSplit": {
-                "main": {},
-                "label": {
-                  "color": "grey-80"
+                "main": {
+                  "borderTop": "solid 1px",
+                  "borderTopColor": "grey-20",
+                  "py": "sm"
                 },
-                "content": {},
+                "label": {
+                },
+                "content": {
+                  "fontWeight": "xbold",
+                  "fontSize": "sm",
+                  "fontFamily": "heading",
+                  "textAlign": "right",
+                  "small": {
+                    "fontSize": "xs",
+                    "fontFamily": "base"
+                  }
+                },
                 "accent": {
                   "backgroundColor": "grey-05"
                 }

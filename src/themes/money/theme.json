@@ -1607,12 +1607,13 @@
             "main": {
               "borderLeft": "1px solid",
               "borderLeftColor": "grey-30",
+              "borderTop": "none",
               "pl": "sm"
             },
             "label": {
               "fontFamily": "heading",
               "fontWeight": "semiBold",
-              "color": "grey-90",
+              "color": "grey-80",
               "py": "xs",
               "fontSize": "sm"
             },
@@ -1621,6 +1622,7 @@
               "fontFamily": "heading",
               "fontWeight": "semiBold",
               "pb": "xs",
+              "textAlign": "left",
               "color": "plum",
               "small": {
                 "fontWeight": "base",
@@ -1633,11 +1635,26 @@
             },
             "variants": {
               "inSplit": {
-                "main": {},
-                "label": {
-                  "color": "grey-80"
+                "main": {
+                  "borderTop": "solid 1px",
+                  "borderTopColor": "grey-30",
+                  "py": "sm"
                 },
-                "content": {},
+                "label": {
+                  "color": "grey-80",
+                  "fontWeight": "semiBold"
+                },
+                "content": {
+                  "fontSize": "md",
+                  "fontFamily": "heading",
+                  "fontWeight": "bold",
+                  "textAlign": "right",
+                  "color": "plum",
+                  "small": {
+                    "fontWeight": "base",
+                    "fontSize": "sm"
+                  }
+                },
                 "accent": {
                   "backgroundColor": "grey-05"
                 }
