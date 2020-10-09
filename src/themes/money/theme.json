@@ -1624,6 +1624,12 @@
               "fontSize": "sm"
             }
           },
+          "addonInfo": {
+            "main": {
+              "borderTopColor": "grey-20",
+              "fontSize": "sm"
+            }
+          },
           "cellContent": {
             "main": {
               "borderLeft": "1px solid",

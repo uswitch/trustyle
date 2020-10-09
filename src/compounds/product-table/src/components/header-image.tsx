@@ -18,9 +18,9 @@ export const ProductTableHeaderImage: React.FC = ({ children }) => (
         position: 'relative',
         height: '100%',
         width: '100%',
-        maxHeight: 67,
-        maxWidth: [121, 174],
         img: {
+          maxHeight: 67,
+          maxWidth: [121, 174],
           margin: 'auto',
           objectFit: 'contain'
         }
