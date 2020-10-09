@@ -1789,8 +1789,7 @@
                   "borderTopColor": "grey-20",
                   "py": "sm"
                 },
-                "label": {
-                },
+                "label": {},
                 "content": {
                   "fontWeight": "xbold",
                   "fontSize": "sm",
