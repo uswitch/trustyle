@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.16.2...@uswitch/trustyle.uswitch-theme@2.16.3) (2020-10-09)
+
+
+### Bug Fixes
+
+* changed color of author's name and role ([a5b0859](https://github.com/uswitch/trustyle/commit/a5b0859))
+* fixed name and title color, fixed margin bottom ([b18125a](https://github.com/uswitch/trustyle/commit/b18125a))
+* fixed name display ([fcdd991](https://github.com/uswitch/trustyle/commit/fcdd991))
+* removed marginBottom for author-profile from uswitch theme ([d509511](https://github.com/uswitch/trustyle/commit/d509511))
+
+
+
+
+
+
 ## [2.16.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.16.1...@uswitch/trustyle.uswitch-theme@2.16.2) (2020-10-07)
 
 
