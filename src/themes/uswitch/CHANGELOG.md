@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.17.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.16.3...@uswitch/trustyle.uswitch-theme@2.17.0) (2020-10-09)
+
+
+### Features
+
+* add redesign stlying to cell content data auto ([042e0de](https://github.com/uswitch/trustyle/commit/042e0de))
+* add redesign variant to product table cell content ([40eff71](https://github.com/uswitch/trustyle/commit/40eff71))
+* border redesign ([ba13113](https://github.com/uswitch/trustyle/commit/ba13113))
+* header title and image stlying ([f00544f](https://github.com/uswitch/trustyle/commit/f00544f))
+* mobile content styling ([3384401](https://github.com/uswitch/trustyle/commit/3384401))
+
+
+
+
+
 ## [2.16.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.16.2...@uswitch/trustyle.uswitch-theme@2.16.3) (2020-10-09)
 
 

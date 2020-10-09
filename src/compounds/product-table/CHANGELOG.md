@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.6.6...@uswitch/trustyle.product-table@2.7.0) (2020-10-09)
+
+
+### Bug Fixes
+
+* header design ([9d363b2](https://github.com/uswitch/trustyle/commit/9d363b2))
+* image sizing ([0f76c25](https://github.com/uswitch/trustyle/commit/0f76c25))
+* row border color bug ([d92ece2](https://github.com/uswitch/trustyle/commit/d92ece2))
+
+
+### Features
+
+* add header ([7e0ac21](https://github.com/uswitch/trustyle/commit/7e0ac21))
+* add header image to product table and remove palette ([35b574c](https://github.com/uswitch/trustyle/commit/35b574c))
+* add layout to cell secondary for split ([a012be6](https://github.com/uswitch/trustyle/commit/a012be6))
+* add option to split info and footer addons ([a2f0fb7](https://github.com/uswitch/trustyle/commit/a2f0fb7))
+* add palette to product table row ([aaf23e8](https://github.com/uswitch/trustyle/commit/aaf23e8))
+* add redesign stlying to cell content data auto ([042e0de](https://github.com/uswitch/trustyle/commit/042e0de))
+* add redesign variant to product table cell content ([40eff71](https://github.com/uswitch/trustyle/commit/40eff71))
+* border redesign ([ba13113](https://github.com/uswitch/trustyle/commit/ba13113))
+* header title and image stlying ([f00544f](https://github.com/uswitch/trustyle/commit/f00544f))
+* mobile content styling ([3384401](https://github.com/uswitch/trustyle/commit/3384401))
+* move label above content in cell block content ([e71f5b0](https://github.com/uswitch/trustyle/commit/e71f5b0))
+* remove palette from product table ([9f7a248](https://github.com/uswitch/trustyle/commit/9f7a248))
+
+
+
+
+
 ## [2.6.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.6.2...@uswitch/trustyle.product-table@2.6.4) (2020-09-15)
 
 
