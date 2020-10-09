@@ -1707,7 +1707,11 @@
         "label": {
           "color": "grey-80"
         },
-        "content": {},
+        "content": {
+          "small": {
+            "fontSize": ["xs", "md"]
+          }
+        },
         "accent": {
           "backgroundColor": "grey-05"
         },
@@ -1728,6 +1732,79 @@
         "buttonWrapper": {
           "a, button": {
             "width": "100%"
+          }
+        }
+      },
+      "variants": {
+        "redesign": {
+          "row": {
+            "main": {
+              "border": "2px solid",
+              "borderColor": "grey-20"
+            },
+            "title": {
+              "fontSize": "sm",
+              "fontWeight": "xbold"
+            }
+          },
+          "addonFooter": {
+            "main": {
+              "color": "grey-70"
+            }
+          },
+          "addonInfo": {
+            "main": {
+              "color": "grey-70"
+            }
+          },
+          "cellContent": {
+            "main": {
+              "borderLeft": "1px solid",
+              "borderLeftColor": "grey-20",
+              "borderTop": "none",
+              "pl": "sm"
+            },
+            "label": {
+              "fontFamily": "heading",
+              "color": "grey-90",
+              "py": "xxs"
+            },
+            "content": {
+              "fontWeight": "xbold",
+              "fontSize": "sm",
+              "fontFamily": "heading",
+              "pb": "xxs",
+              "textAlign": "left",
+              "small": {
+                "fontSize": "xs"
+              }
+            },
+            "accent": {
+              "backgroundColor": "grey-05"
+            },
+            "variants": {
+              "inSplit": {
+                "main": {
+                  "borderTop": "solid 1px",
+                  "borderTopColor": "grey-20",
+                  "py": "sm"
+                },
+                "label": {},
+                "content": {
+                  "fontWeight": "xbold",
+                  "fontSize": "sm",
+                  "fontFamily": "heading",
+                  "textAlign": "right",
+                  "small": {
+                    "fontSize": "xs",
+                    "fontFamily": "base"
+                  }
+                },
+                "accent": {
+                  "backgroundColor": "grey-05"
+                }
+              }
+            }
           }
         }
       }

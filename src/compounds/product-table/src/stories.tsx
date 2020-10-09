@@ -643,6 +643,93 @@ ClickableExample.story = {
   }
 }
 
+export const MoneyRedesignExample = () => {
+  return (
+    <ProductTable.Row
+      rowTitle="Santander Standard Loan (Online)"
+      image={
+        <ProductTable.cells.HeaderImage>
+          <img
+            src="https://placekitten.com/200/75?image=9"
+            alt="Salman"
+            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          />
+        </ProductTable.cells.HeaderImage>
+      }
+      addons={[
+        {
+          addon: ProductTable.addons.info,
+          component: (
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontWeight: 'bold' }}>Additional Information:</div>
+              <div sx={{ fontSize: ['xxs', 'xs'] }}>
+                Here is some extra information. Here is even more extra
+                information. And more extra information.
+              </div>
+            </ProductTable.cells.Base>
+          ),
+          options: {
+            split: true,
+            headerImage: true
+          }
+        },
+        {
+          addon: ProductTable.addons.footer,
+          component: (
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontWeight: 'bold' }}>Representative example:</div>
+              <div sx={{ fontSize: ['xxs', 'xs'] }}>
+                Assumed borrowing of £10,000 over...
+              </div>
+            </ProductTable.cells.Base>
+          ),
+          options: {
+            split: true,
+            headerImage: true
+          }
+        },
+        {
+          addon: ProductTable.addons.accordion,
+          component: (
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontSize: ['xxs', 'xs'] }}>More info</div>
+            </ProductTable.cells.Base>
+          )
+        }
+      ]}
+    >
+      <ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Loan Amount" headerImage>
+          <ProductTable.data.Auto text="£1000 to £10000" headerImage />
+        </ProductTable.cells.Content>
+      </ProductTable.cells.Split>
+      <ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Representative APR" headerImage>
+          <ProductTable.data.TextSubscript
+            text="49.9% APR"
+            subscript="(£1,000 to £10,000)"
+            headerImage
+          />
+        </ProductTable.cells.Content>
+      </ProductTable.cells.Split>
+      <ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Loan Term" headerImage>
+          <ProductTable.data.Auto text="1 year to 5 years" headerImage />
+        </ProductTable.cells.Content>
+      </ProductTable.cells.Split>
+      <ProductTable.cells.Cta
+        primary={<ButtonLink variant="primary">Apply now</ButtonLink>}
+      />
+    </ProductTable.Row>
+  )
+}
+
+MoneyRedesignExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 const Spacer = () => <div sx={{ minHeight: 20 }} />
 
 export const AutomatedTests = () => {

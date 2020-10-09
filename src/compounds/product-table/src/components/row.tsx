@@ -4,9 +4,9 @@ import { jsx } from 'theme-ui'
 
 import { Addon, AddonArg, CellContext } from '../generics'
 
-import CellBase from './cell-base'
 import { ROWS } from './cell-split'
 import RowWrapper from './rowWrapper'
+import Header from './header'
 
 export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   badges?: React.ReactNode[]
@@ -15,6 +15,7 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   subtitle?: React.ReactNode
   addons?: AddonArg[]
   clickableRow?: string
+  image?: React.ReactNode
 }
 
 const ProductTableRow: React.FC<RowProps> = ({
@@ -25,7 +26,8 @@ const ProductTableRow: React.FC<RowProps> = ({
   addons = [],
   children,
   id,
-  clickableRow
+  clickableRow,
+  image
 }) => {
   const addonsFor = (key: keyof Addon): React.ReactNode[] =>
     addons.map(({ addon, component, options }, i) => {
@@ -80,7 +82,9 @@ const ProductTableRow: React.FC<RowProps> = ({
         ':last-of-type': {
           marginBottom: 0
         },
-        variant: 'compounds.product-table.row.main'
+        variant: image
+          ? 'compounds.product-table.variants.redesign.row.main'
+          : 'compounds.product-table.row.main'
       }}
     >
       <RowWrapper link={clickableRow}>
@@ -99,6 +103,13 @@ const ProductTableRow: React.FC<RowProps> = ({
             ))}
           </div>
         )}
+        <Header
+          image={image}
+          preTitle={preTitle}
+          rowTitle={rowTitle}
+          subtitle={subtitle}
+          addons={addonsFor('header')}
+        />
         <div
           sx={{
             display: 'grid',
@@ -133,70 +144,6 @@ const ProductTableRow: React.FC<RowProps> = ({
             display: '-ms-grid'
           }}
         >
-          {rowTitle && (
-            <CellContext.Provider
-              value={{
-                gridRowStart: 2,
-                gridRowSpan: 1,
-                gridColumnStart: 1,
-                gridColumnSpan: cols
-              }}
-            >
-              <CellBase
-                sx={{
-                  borderBottom: '1px solid',
-                  paddingBottom: 'sm',
-                  marginTop: badges.length ? 0 : -6,
-                  variant: 'compounds.product-table.row.header'
-                }}
-                mobileOrder={-100}
-              >
-                <CellContext.Provider value={{ inFlexbox: true }}>
-                  <div
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      marginX: -8,
-                      marginY: -6
-                    }}
-                  >
-                    <CellBase extraRules={{ marginRight: 'auto' }}>
-                      {preTitle && (
-                        <span
-                          sx={{
-                            fontSize: 'xs',
-                            variant: 'compounds.product-table.row.pretitle'
-                          }}
-                        >
-                          {preTitle}
-                        </span>
-                      )}
-                      <h3
-                        sx={{
-                          margin: 0,
-                          variant: 'compounds.product-table.row.title'
-                        }}
-                      >
-                        {rowTitle}
-                      </h3>
-                      {subtitle && (
-                        <span
-                          sx={{
-                            fontSize: 'xs',
-                            variant: 'compounds.product-table.row.subtitle'
-                          }}
-                        >
-                          {subtitle}
-                        </span>
-                      )}
-                    </CellBase>
-                    {addonsFor('header')}
-                  </div>
-                </CellContext.Provider>
-              </CellBase>
-            </CellContext.Provider>
-          )}
-
           {nonNullChildren.map((child, index) => (
             <CellContext.Provider
               value={{

@@ -37,6 +37,7 @@
   "fontWeights": {
     "base": 400,
     "light": 300,
+    "semiBold": 500,
     "bold": 600
   },
   "space": {
@@ -1566,7 +1567,10 @@
         "content": {
           "fontFamily": "heading",
           "color": "grey-80",
-          "fontSize": ["xl", "xl"]
+          "fontSize": ["xl", "xl"],
+          "small": {
+            "fontSize": ["xs", "md"]
+          }
         },
         "accent": {
           "backgroundColor": "grey-05"
@@ -1594,6 +1598,95 @@
             "fontSize": ["sm", "md"],
             "width": "100%",
             "marginTop": [20, 0]
+          }
+        }
+      },
+      "variants": {
+        "redesign": {
+          "row": {
+            "main": {
+              "border": "2px solid",
+              "borderColor": "grey-20",
+              "borderLeft": ["2px solid", "4px solid"],
+              "borderLeftColor": ["grey-20", "plum"],
+              "borderTop": ["4px solid", "2px solid"],
+              "borderTopColor": ["plum", "grey-20"]
+            },
+            "title": {
+              "fontSize": ["sm", "md"],
+              "fontWeight": "semiBold",
+              "color": "grey-100"
+            }
+          },
+          "addonFooter": {
+            "main": {
+              "borderTopColor": "grey-20",
+              "fontSize": "sm"
+            }
+          },
+          "addonInfo": {
+            "main": {
+              "borderTopColor": "grey-20",
+              "fontSize": "sm"
+            }
+          },
+          "cellContent": {
+            "main": {
+              "borderLeft": "1px solid",
+              "borderLeftColor": "grey-30",
+              "borderTop": "none",
+              "pl": "sm"
+            },
+            "label": {
+              "fontFamily": "heading",
+              "fontWeight": "semiBold",
+              "color": "grey-80",
+              "py": "xs",
+              "fontSize": "sm"
+            },
+            "content": {
+              "fontSize": "lg",
+              "fontFamily": "heading",
+              "fontWeight": "semiBold",
+              "pb": "xs",
+              "textAlign": "left",
+              "color": "plum",
+              "small": {
+                "fontWeight": "base",
+                "fontSize": "sm"
+              }
+            },
+            "accent": {
+              "backgroundColor": "grey-05",
+              "pl": "sm"
+            },
+            "variants": {
+              "inSplit": {
+                "main": {
+                  "borderTop": "solid 1px",
+                  "borderTopColor": "grey-30",
+                  "py": "sm"
+                },
+                "label": {
+                  "color": "grey-80",
+                  "fontWeight": "semiBold"
+                },
+                "content": {
+                  "fontSize": "md",
+                  "fontFamily": "heading",
+                  "fontWeight": "bold",
+                  "textAlign": "right",
+                  "color": "plum",
+                  "small": {
+                    "fontWeight": "base",
+                    "fontSize": "sm"
+                  }
+                },
+                "accent": {
+                  "backgroundColor": "grey-05"
+                }
+              }
+            }
           }
         }
       }
