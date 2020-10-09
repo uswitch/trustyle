@@ -82,8 +82,9 @@ const ProductTableRow: React.FC<RowProps> = ({
         ':last-of-type': {
           marginBottom: 0
         },
-        variant: `compounds.product-table.${image &&
-          'variants.redesign.'}row.main`
+        variant: image
+          ? 'compounds.product-table.variants.redesign.row.main'
+          : 'compounds.product-table.row.main'
       }}
     >
       <RowWrapper link={clickableRow}>
