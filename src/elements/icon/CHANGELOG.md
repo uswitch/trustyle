@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.13.3...@uswitch/trustyle.icon@1.14.0) (2020-10-09)
+
+
+### Features
+
+* added icons for author-profile, changed structure of author-profile module ([aff0527](https://github.com/uswitch/trustyle/commit/aff0527))
+
+
+
+
+
+
 # [1.13.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.12.2...@uswitch/trustyle.icon@1.13.0) (2020-08-25)
 
 

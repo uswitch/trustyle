@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.24.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.24.2...@uswitch/trustyle.money-theme@1.24.3) (2020-10-09)
+
+
+### Bug Fixes
+
+* fixed name and title color, fixed margin bottom ([b18125a](https://github.com/uswitch/trustyle/commit/b18125a))
+* fixed name display ([fcdd991](https://github.com/uswitch/trustyle/commit/fcdd991))
+
+
+
+
+
+
 # [1.24.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.23.0...@uswitch/trustyle.money-theme@1.24.0) (2020-09-23)
 
 
