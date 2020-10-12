@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.14.2...@uswitch/trustyle.icon@1.15.0) (2020-10-12)
+
+
+### Bug Fixes
+
+* add half filled star icon ([ec63c0c](https://github.com/uswitch/trustyle/commit/ec63c0c))
+
+
+### Features
+
+* add first and last arrows to pagination ([dc9efdc](https://github.com/uswitch/trustyle/commit/dc9efdc))
+
+
+
+
+
 ## [1.14.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.14.0...@uswitch/trustyle.icon@1.14.2) (2020-10-12)
 
 
