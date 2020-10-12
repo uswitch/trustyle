@@ -16,10 +16,11 @@ const ProductTableAddonFooter: Addon = {
           inAddon: 'footer',
           order: 100,
           extraRules: {
-            borderTop: split ? 'none' : '1px solid',
+            borderTop: split || headerImage ? 'none' : '1px solid',
             paddingTop: 'sm',
             marginTop: 'xs',
             marginBottom: -6,
+            fontSize: 'sm',
             variant: `compounds.product-table.${headerImage &&
               'variants.redesign.'}addonFooter.main`
           }

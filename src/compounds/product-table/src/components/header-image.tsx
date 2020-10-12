@@ -18,6 +18,7 @@ export const ProductTableHeaderImage: React.FC = ({ children }) => (
         position: 'relative',
         height: '100%',
         width: '100%',
+        marginBottom: -6,
         img: {
           maxHeight: 67,
           maxWidth: [121, 174],
