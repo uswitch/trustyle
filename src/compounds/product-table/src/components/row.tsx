@@ -153,7 +153,10 @@ const ProductTableRow: React.FC<RowProps> = ({
                 gridColumnSpan: 1,
                 accentCellCount: accentCells.length,
                 accentCellIndex:
-                  child.props.accent && accentCells.indexOf(child)
+                  child.props.accent && accentCells.indexOf(child),
+                extraRules: {
+                  alignItems: image && 'baseline'
+                }
               }}
               key={index}
             >
