@@ -1072,7 +1072,7 @@
             "color": "primary"
           }
         },
-        "true-speeds" : {
+        "true-speeds": {
           "variant": "elements.buttons.base",
           "padding": 4,
           "backgroundColor": "light-1",
