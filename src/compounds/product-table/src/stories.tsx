@@ -746,6 +746,8 @@ export const AutomatedTests = () => {
       <ExampleWithMultipleAccents />
       <Spacer />
       <ExampleStacked />
+      <Spacer />
+      <MoneyRedesignExample />
     </AllThemes>
   )
 }
