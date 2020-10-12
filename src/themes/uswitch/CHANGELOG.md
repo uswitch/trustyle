@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.18.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.17.0...@uswitch/trustyle.uswitch-theme@2.18.0) (2020-10-12)
+
+
+### Features
+
+* override maxHeight being set to 0 for uswitch slide reveal ([675e4c5](https://github.com/uswitch/trustyle/commit/675e4c5))
+* override via variant ([961afbc](https://github.com/uswitch/trustyle/commit/961afbc))
+
+
+
+
+
 # [2.17.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.16.3...@uswitch/trustyle.uswitch-theme@2.17.0) (2020-10-09)
 
 
