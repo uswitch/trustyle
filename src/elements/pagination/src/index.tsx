@@ -5,19 +5,50 @@ import * as React from 'react'
 // https://github.com/DefinitelyTyped/DefinitelyTyped/pull/41567
 // @ts-ignore
 import { css, jsx, useThemeUI } from 'theme-ui'
-import { Direction, Icon } from '@uswitch/trustyle.icon'
+import { Direction, Glyph, Icon } from '@uswitch/trustyle.icon'
 
 type PaginationNumbers = (number | '...')[]
+interface SelectPages {
+  [key: number]: number[]
+}
+
+const selectReducer = (
+  pageNumbers: (number | '...')[],
+  totalPages: number
+): SelectPages =>
+  pageNumbers.reduce<SelectPages>((r, current, i) => {
+    if (current === '...') {
+      const start = pageNumbers[i - 1] ? (pageNumbers[i - 1] as number) + 1 : 1
+      const end = pageNumbers[i + 1]
+        ? (pageNumbers[i + 1] as number)
+        : totalPages
+
+      r[i] = Array.from<number>({ length: end - start }).map(
+        (v, i) => i + start
+      )
+    }
+
+    return r
+  }, {})
 
 function getNumbers(
   currentPage: number,
-  totalPages: number
+  totalPages: number,
+  isMinimized: boolean = false
 ): PaginationNumbers {
   const AROUND_CURRENT = 1
   const END_LENGTH = 5 + AROUND_CURRENT * 2
 
   if (totalPages <= END_LENGTH) {
     return new Array(totalPages).fill('').map((_, i) => i + 1)
+  }
+
+  if (isMinimized) {
+    return currentPage < totalPages - 1
+      ? [currentPage, currentPage + 1, '...']
+      : currentPage === totalPages - 1
+      ? ['...', currentPage, currentPage + 1]
+      : ['...', currentPage - 1, currentPage]
   }
 
   const numbers: PaginationNumbers = [1]
@@ -58,7 +89,13 @@ function getNumbers(
   return numbers
 }
 
-const InlineIcon = ({ direction }: { direction: Direction }) => {
+const InlineIcon = ({
+  direction,
+  glyph = 'caret'
+}: {
+  direction: Direction
+  glyph?: Glyph
+}) => {
   const { theme }: any = useThemeUI()
 
   let color = 'black'
@@ -72,7 +109,7 @@ const InlineIcon = ({ direction }: { direction: Direction }) => {
 
   return (
     <span sx={{ svg: { display: 'inline-block' } }}>
-      <Icon glyph="caret" color={color} direction={direction} size={14} />
+      <Icon glyph={glyph} color={color} direction={direction} size={14} />
     </span>
   )
 }
@@ -80,8 +117,13 @@ const InlineIcon = ({ direction }: { direction: Direction }) => {
 interface Props extends React.HTMLAttributes<HTMLUListElement> {
   currentPage: number
   totalPages: number
-  onPageChange?: (number: number, e?: React.MouseEvent) => any
+  onPageChange?: (
+    number: number,
+    e?: React.MouseEvent | React.ChangeEvent
+  ) => any
   numberToLink?: (number: number) => string
+  showFirstAndLastArrows?: boolean
+  minimized?: boolean
   className?: string
 }
 
@@ -90,11 +132,23 @@ const Pagination: React.FC<Props> = ({
   totalPages,
   onPageChange = () => {},
   numberToLink,
+  showFirstAndLastArrows = false,
+  minimized = false,
   className
 }) => {
   const { theme }: any = useThemeUI()
+  const morePage = React.useRef<HTMLSelectElement | null>(null)
 
-  const numbers = getNumbers(currentPage, totalPages)
+  const numbers = getNumbers(currentPage, totalPages, minimized)
+
+  const [selectPages, setSelectPages] = React.useState<SelectPages>(
+    selectReducer(numbers, totalPages)
+  )
+
+  React.useEffect(() => setSelectPages(selectReducer(numbers, totalPages)), [
+    minimized,
+    currentPage
+  ])
 
   const liStyling = {
     display: 'inline-block',
@@ -109,6 +163,24 @@ const Pagination: React.FC<Props> = ({
     cursor: 'pointer'
   }
 
+  const selectStyling = {
+    appearance: 'none',
+    border: 'none',
+    backgroundColor: 'transparent',
+    mx: 0,
+    cursor: 'pointer',
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    color: 'transparent',
+    ':focus': {
+      outline: 'none'
+    },
+    ':hover': {
+      color: 'transparent'
+    }
+  }
+
   return (
     <ul
       sx={{
@@ -119,9 +191,34 @@ const Pagination: React.FC<Props> = ({
       }}
       className={className}
     >
+      {showFirstAndLastArrows && (
+        <li
+          sx={{
+            ...theme.elements.pagination?.[
+              currentPage === 1 ? 'arrowDisabled' : 'arrow'
+            ],
+            ...liStyling
+          }}
+        >
+          {currentPage === 1 ? (
+            <InlineIcon direction="left" glyph="caretFinal" />
+          ) : (
+            <a
+              onClick={e => onPageChange(1, e)}
+              href={numberToLink && numberToLink(1)}
+              sx={anchorStyling}
+            >
+              <InlineIcon direction="left" glyph="caretFinal" />
+            </a>
+          )}
+        </li>
+      )}
+
       <li
         sx={{
-          ...(currentPage === 1 && theme.elements.pagination?.arrowDisabled),
+          ...theme.elements.pagination?.[
+            currentPage === 1 ? 'arrowDisabled' : 'arrow'
+          ],
           ...liStyling
         }}
       >
@@ -137,6 +234,7 @@ const Pagination: React.FC<Props> = ({
           </a>
         )}
       </li>
+
       {numbers.map((number, i) => (
         <li
           key={i}
@@ -148,7 +246,36 @@ const Pagination: React.FC<Props> = ({
           }}
         >
           {number === '...' ? (
-            number
+            <div
+              sx={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                position: 'relative'
+              }}
+            >
+              {number}
+
+              <select
+                ref={morePage}
+                onChange={e => {
+                  onPageChange(parseInt(e.currentTarget.value), e)
+                  e.currentTarget.value = '...'
+                }}
+                sx={{
+                  ...theme.elements.pagination?.nonCurrentPage,
+                  ...selectStyling
+                }}
+              >
+                {selectPages[i]?.map(option => (
+                  <option value={option} key={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            </div>
           ) : (
             <a
               onClick={e => onPageChange(number, e)}
@@ -160,10 +287,12 @@ const Pagination: React.FC<Props> = ({
           )}
         </li>
       ))}
+
       <li
         sx={{
-          ...(currentPage === totalPages &&
-            theme.elements.pagination?.arrowDisabled),
+          ...theme.elements.pagination?.[
+            currentPage === totalPages ? 'arrowDisabled' : 'arrow'
+          ],
           ...liStyling
         }}
       >
@@ -179,6 +308,29 @@ const Pagination: React.FC<Props> = ({
           </a>
         )}
       </li>
+
+      {showFirstAndLastArrows && (
+        <li
+          sx={{
+            ...theme.elements.pagination?.[
+              currentPage === totalPages ? 'arrowDisabled' : 'arrow'
+            ],
+            ...liStyling
+          }}
+        >
+          {currentPage === totalPages ? (
+            <InlineIcon direction="right" glyph="caretFinal" />
+          ) : (
+            <a
+              onClick={e => onPageChange(totalPages, e)}
+              href={numberToLink && numberToLink(totalPages)}
+              sx={anchorStyling}
+            >
+              <InlineIcon direction="right" glyph="caretFinal" />
+            </a>
+          )}
+        </li>
+      )}
     </ul>
   )
 }
