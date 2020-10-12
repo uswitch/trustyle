@@ -1923,7 +1923,7 @@
         "true-speeds": {
           "border": "2px solid #2AAA5B",
           "title": {
-            "fontSize": ["sm", "18px", "18px"],
+            "fontSize": ["xs", "sm", "sm"],
             "lineHeight": "sm",
             "fontFamily": "heading"
           },
