@@ -26,7 +26,10 @@ const PaginationStory = ({ type }: any) => {
     props.numberToLink = (number: number) => `http://uswitch.com/page/${number}`
 
     if (type === 'both') {
-      props.onPageChange = (number: number, e: React.MouseEvent) => {
+      props.onPageChange = (
+        number: number,
+        e: React.MouseEvent | React.ChangeEvent
+      ) => {
         e.preventDefault()
         handlePageChange(number)
       }
