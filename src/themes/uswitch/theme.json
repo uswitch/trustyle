@@ -1078,7 +1078,7 @@
           "backgroundColor": "light-1",
           "border": "2px solid",
           "borderColor": "success-green",
-          "fontSize": "14px !important",
+          "fontSize": "14px",
           "fontStyle": "normal",
           "lineHeight": "21px"
         }
