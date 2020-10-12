@@ -12,6 +12,25 @@ interface SelectPages {
   [key: number]: number[]
 }
 
+const selectReducer = (
+  pageNumbers: (number | '...')[],
+  totalPages: number
+): SelectPages =>
+  pageNumbers.reduce<SelectPages>((r, current, i) => {
+    if (current === '...') {
+      const start = pageNumbers[i - 1] ? (pageNumbers[i - 1] as number) + 1 : 1
+      const end = pageNumbers[i + 1]
+        ? (pageNumbers[i + 1] as number)
+        : totalPages
+
+      r[i] = Array.from<number>({ length: end - start }).map(
+        (v, i) => i + start
+      )
+    }
+
+    return r
+  }, {})
+
 function getNumbers(
   currentPage: number,
   totalPages: number,
@@ -122,25 +141,11 @@ const Pagination: React.FC<Props> = ({
 
   const numbers = getNumbers(currentPage, totalPages, minimized)
 
-  const selectReducer = (numbers: (number | '...')[]): SelectPages =>
-    numbers.reduce<SelectPages>((r, current, i) => {
-      if (current === '...') {
-        const start = numbers[i - 1] ? (numbers[i - 1] as number) + 1 : 1
-        const end = numbers[i + 1] ? (numbers[i + 1] as number) : totalPages
-
-        r[i] = Array.from<number>({ length: end - start }).map(
-          (v, i) => i + start
-        )
-      }
-
-      return r
-    }, {})
-
   const [selectPages, setSelectPages] = React.useState<SelectPages>(
-    selectReducer(numbers)
+    selectReducer(numbers, totalPages)
   )
 
-  React.useEffect(() => setSelectPages(selectReducer(numbers)), [
+  React.useEffect(() => setSelectPages(selectReducer(numbers, totalPages)), [
     minimized,
     currentPage
   ])
