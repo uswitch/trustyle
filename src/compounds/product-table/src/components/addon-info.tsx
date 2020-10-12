@@ -19,6 +19,7 @@ const ProductTableAddonInfo: Addon = {
             paddingTop: 'sm',
             marginTop: 'xs',
             marginBottom: -6,
+            fontSize: 'sm',
             variant: `compounds.product-table.${headerImage &&
               'variants.redesign.'}addonInfo.main`
           }
