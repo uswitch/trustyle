@@ -1576,6 +1576,11 @@
         }
       }
     },
+    "slideReveal": {
+      "maxHeight": {
+        "max-height": "100%"
+      }
+    },
     "calculator": {
       "label": {
         "variant": "styles.h3",
