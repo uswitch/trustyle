@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.19.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.18.0...@uswitch/trustyle.uswitch-theme@2.19.0) (2020-10-12)
+
+
+### Features
+
+* add ability to pass in glyph for icon and true-speeds variant ([c865e08](https://github.com/uswitch/trustyle/commit/c865e08))
+* make title font size xs for mobile view ([2e2cc3e](https://github.com/uswitch/trustyle/commit/2e2cc3e))
+
+
+
+
+
 # [2.18.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.17.0...@uswitch/trustyle.uswitch-theme@2.18.0) (2020-10-12)
 
 
