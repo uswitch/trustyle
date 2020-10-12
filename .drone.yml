@@ -1,4 +1,20 @@
 pipeline:
+  prettier:
+    when:
+      event: [push]
+    image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    group: checks
+    commands:
+      - npm run prettier:check
+
+  eslint:
+    when:
+      event: [push]
+    image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    group: checks
+    commands:
+      - npm run eslint:check
+
   fetch_tags:
     when:
       event: [push]
@@ -21,27 +37,10 @@ pipeline:
     commands:
       - npm run build-storybook
 
-  eslint:
-    when:
-      event: [push]
-    image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
-    group: checks
-    commands:
-      - npm run eslint:check
-
-  prettier:
-    when:
-      event: [push]
-    image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
-    group: checks
-    commands:
-      - npm run prettier:check
-
   a11y:
     when:
       event: [push]
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
-    group: checks
     commands:
       - USE_STATIC_STORYBOOK=true npm run a11y
 
