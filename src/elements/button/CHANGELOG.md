@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.3.9...@uswitch/trustyle.button@2.4.0) (2020-10-12)
+
+
+### Features
+
+* add true-speeds theme variant to button. ([df2a701](https://github.com/uswitch/trustyle/commit/df2a701))
+
+
+
+
+
 ## [2.3.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.3.7...@uswitch/trustyle.button@2.3.9) (2020-10-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.button
