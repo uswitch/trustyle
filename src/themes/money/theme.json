@@ -1615,7 +1615,8 @@
             "title": {
               "fontSize": ["sm", "md"],
               "fontWeight": "semiBold",
-              "color": "grey-100"
+              "color": "grey-100",
+              "fontFamily": "heading"
             }
           },
           "addonFooter": {
