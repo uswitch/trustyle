@@ -49,6 +49,7 @@ const glyphChoices: Glyph[] = [
   'edit-journey',
   'star-outlined',
   'star-filled',
+  'star-half-filled',
   'warning'
 ]
 

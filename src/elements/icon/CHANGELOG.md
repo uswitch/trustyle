@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.14.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.14.0...@uswitch/trustyle.icon@1.14.2) (2020-10-12)
+
+
+### Bug Fixes
+
+* remove fill and stroke colour from path so that colour prop works ([ee147c9](https://github.com/uswitch/trustyle/commit/ee147c9))
+
+
+
+
+
+## [1.14.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.14.0...@uswitch/trustyle.icon@1.14.1) (2020-10-12)
+
+
+### Bug Fixes
+
+* remove fill and stroke colour from path so that colour prop works ([ee147c9](https://github.com/uswitch/trustyle/commit/ee147c9))
+
+
+
+
+
+# [1.14.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.13.3...@uswitch/trustyle.icon@1.14.0) (2020-10-09)
+
+
+### Features
+
+* added icons for author-profile, changed structure of author-profile module ([aff0527](https://github.com/uswitch/trustyle/commit/aff0527))
+
+
+
+
+
+
 # [1.13.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.12.2...@uswitch/trustyle.icon@1.13.0) (2020-08-25)
 
 

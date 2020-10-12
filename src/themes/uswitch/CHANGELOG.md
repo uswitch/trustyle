@@ -3,6 +3,83 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.20.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.20.0...@uswitch/trustyle.uswitch-theme@2.20.1) (2020-10-12)
+
+
+### Bug Fixes
+
+* redesign styling changes ([2448cde](https://github.com/uswitch/trustyle/commit/2448cde))
+
+
+
+
+
+# [2.20.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.18.0...@uswitch/trustyle.uswitch-theme@2.20.0) (2020-10-12)
+
+
+### Features
+
+* add ability to pass in glyph for icon and true-speeds variant ([c865e08](https://github.com/uswitch/trustyle/commit/c865e08))
+* make title font size xs for mobile view ([2e2cc3e](https://github.com/uswitch/trustyle/commit/2e2cc3e))
+
+
+
+
+
+# [2.19.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.18.0...@uswitch/trustyle.uswitch-theme@2.19.0) (2020-10-12)
+
+
+### Features
+
+* add ability to pass in glyph for icon and true-speeds variant ([c865e08](https://github.com/uswitch/trustyle/commit/c865e08))
+* make title font size xs for mobile view ([2e2cc3e](https://github.com/uswitch/trustyle/commit/2e2cc3e))
+
+
+
+
+
+# [2.18.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.17.0...@uswitch/trustyle.uswitch-theme@2.18.0) (2020-10-12)
+
+
+### Features
+
+* override maxHeight being set to 0 for uswitch slide reveal ([675e4c5](https://github.com/uswitch/trustyle/commit/675e4c5))
+* override via variant ([961afbc](https://github.com/uswitch/trustyle/commit/961afbc))
+
+
+
+
+
+# [2.17.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.16.3...@uswitch/trustyle.uswitch-theme@2.17.0) (2020-10-09)
+
+
+### Features
+
+* add redesign stlying to cell content data auto ([042e0de](https://github.com/uswitch/trustyle/commit/042e0de))
+* add redesign variant to product table cell content ([40eff71](https://github.com/uswitch/trustyle/commit/40eff71))
+* border redesign ([ba13113](https://github.com/uswitch/trustyle/commit/ba13113))
+* header title and image stlying ([f00544f](https://github.com/uswitch/trustyle/commit/f00544f))
+* mobile content styling ([3384401](https://github.com/uswitch/trustyle/commit/3384401))
+
+
+
+
+
+## [2.16.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.16.2...@uswitch/trustyle.uswitch-theme@2.16.3) (2020-10-09)
+
+
+### Bug Fixes
+
+* changed color of author's name and role ([a5b0859](https://github.com/uswitch/trustyle/commit/a5b0859))
+* fixed name and title color, fixed margin bottom ([b18125a](https://github.com/uswitch/trustyle/commit/b18125a))
+* fixed name display ([fcdd991](https://github.com/uswitch/trustyle/commit/fcdd991))
+* removed marginBottom for author-profile from uswitch theme ([d509511](https://github.com/uswitch/trustyle/commit/d509511))
+
+
+
+
+
+
 ## [2.16.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.16.1...@uswitch/trustyle.uswitch-theme@2.16.2) (2020-10-07)
 
 

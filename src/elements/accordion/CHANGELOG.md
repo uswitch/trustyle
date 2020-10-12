@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.7.5...@uswitch/trustyle.accordion@0.9.0) (2020-10-12)
+
+
+### Features
+
+* add ability to pass in glyph for icon and true-speeds variant ([c865e08](https://github.com/uswitch/trustyle/commit/c865e08))
+
+
+
+
+
+# [0.8.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.7.5...@uswitch/trustyle.accordion@0.8.0) (2020-10-12)
+
+
+### Features
+
+* add ability to pass in glyph for icon and true-speeds variant ([c865e08](https://github.com/uswitch/trustyle/commit/c865e08))
+
+
+
+
+
+## [0.7.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.7.4...@uswitch/trustyle.accordion@0.7.5) (2020-10-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.accordion
+
+
+
+
+
+
 ## [0.7.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.7.0...@uswitch/trustyle.accordion@0.7.1) (2020-09-09)
 
 

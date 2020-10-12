@@ -6,6 +6,7 @@ import ProductTableAddonFooter from './components/addon-footer'
 import ProductTableAddonInfo from './components/addon-info'
 import ProductTableCellBase from './components/cell-base'
 import ProductTableCellImage from './components/cell-image'
+import ProductTableHeaderImage from './components/header-image'
 import ProductTableCellSplit from './components/cell-split'
 import ProductTableCellPlaceholder from './components/cell-placeholder'
 import ProductTableCellContent from './components/cell-content'
@@ -46,7 +47,8 @@ const ProductTable = {
     Split: ProductTableCellSplit,
     Placeholder: ProductTableCellPlaceholder,
     Content: ProductTableCellContent,
-    Cta: ProductTableCellCta
+    Cta: ProductTableCellCta,
+    HeaderImage: ProductTableHeaderImage
   },
   text: {
     Range: PlainProductTableDataRange,
