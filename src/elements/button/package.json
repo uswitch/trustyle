@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.button",
-  "version": "2.3.8",
+  "version": "2.3.9",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -19,6 +19,6 @@
     "@theme-ui/color": "^0.3.1",
     "@types/theme-ui__color": "0.3.0",
     "@uswitch/trustyle-utils.get": "^1.0.7",
-    "@uswitch/trustyle.icon": "^1.15.0"
+    "@uswitch/trustyle.icon": "^1.16.0"
   }
 }
