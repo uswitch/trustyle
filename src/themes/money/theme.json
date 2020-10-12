@@ -1620,14 +1620,16 @@
           },
           "addonFooter": {
             "main": {
-              "borderTopColor": "grey-20",
-              "fontSize": "sm"
+              "fontSize": "sm",
+              "pt": "0px",
+              "color": "grey-100"
             }
           },
           "addonInfo": {
             "main": {
-              "borderTopColor": "grey-20",
-              "fontSize": "sm"
+              "fontSize": "sm",
+              "pt": "0px",
+              "color": "grey-100"
             }
           },
           "cellContent": {
@@ -1750,7 +1752,8 @@
           "button": {
             "variant": "compounds.accordion.base.button",
             "justifyContent": "center",
-            "py": "md"
+            "py": "md",
+            "borderTopColor": "transparent"
           }
         }
       }
