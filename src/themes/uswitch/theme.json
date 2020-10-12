@@ -1754,12 +1754,14 @@
           },
           "addonFooter": {
             "main": {
-              "color": "grey-70"
+              "color": "grey-70",
+              "pt": "0px"
             }
           },
           "addonInfo": {
             "main": {
-              "color": "grey-70"
+              "color": "grey-70",
+              "pt": "0px"
             }
           },
           "cellContent": {

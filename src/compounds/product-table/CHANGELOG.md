@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.7.0...@uswitch/trustyle.product-table@2.7.1) (2020-10-12)
+
+
+### Bug Fixes
+
+* header spacing ([1acf640](https://github.com/uswitch/trustyle/commit/1acf640))
+* mobile header spacing ([36cdb74](https://github.com/uswitch/trustyle/commit/36cdb74))
+* percy screenshot ([ff5a453](https://github.com/uswitch/trustyle/commit/ff5a453))
+* redesign styling changes ([2448cde](https://github.com/uswitch/trustyle/commit/2448cde))
+
+
+
+
+
 # [2.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.6.6...@uswitch/trustyle.product-table@2.7.0) (2020-10-09)
 
 
