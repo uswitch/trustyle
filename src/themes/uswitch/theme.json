@@ -2026,6 +2026,21 @@
           "marginRight": "13px",
           "height": 36,
           "width": 32
+        },
+        "true-speeds": {
+          "border": "2px solid #2AAA5B",
+          "title": {
+            "fontSize": ["xs", "sm", "sm"],
+            "lineHeight": "sm",
+            "fontFamily": "heading"
+          },
+          "glyph": {
+            "marginLeft": "12px",
+            "marginRight": "xxs"
+          },
+          "caret": {
+            "marginRight": "xs"
+          }
         }
       }
     },

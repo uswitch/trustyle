@@ -24,6 +24,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   isInitiallyOpen?: boolean
   className?: string
   icon?: string
+  glyph?: Glyph
+  glyphColor?: string
   variant?: string
 }
 
@@ -47,7 +49,9 @@ const Accordion: React.FC<Props> & {
   isInitiallyOpen = false,
   children,
   className,
-  icon,
+  icon = '',
+  glyph,
+  glyphColor = '',
   variant
 }) => {
   const {
@@ -91,7 +95,7 @@ const Accordion: React.FC<Props> & {
         }}
         onClick={() => setIsOpen(!isOpen)}
       >
-        {icon ? (
+        {icon || glyph ? (
           <div
             sx={{
               flex: '1',
@@ -101,21 +105,31 @@ const Accordion: React.FC<Props> & {
               variant: `compounds.accordion.variants.${variant}.title`
             }}
           >
-            <div
-              sx={{
-                variant: 'compounds.accordion.variants.titleIcon'
-              }}
-            >
-              <ImgixImage
-                src={icon}
-                imgixParams={{ fit: 'clip' }}
-                critical
+            {glyph ? (
+              <div
                 sx={{
-                  height: '100%',
-                  width: '100%'
+                  variant: `compounds.accordion.variants.${variant}.glyph`
                 }}
-              />
-            </div>
+              >
+                <Icon color={glyphColor} glyph={glyph} size={20} />
+              </div>
+            ) : (
+              <div
+                sx={{
+                  variant: 'compounds.accordion.variants.titleIcon'
+                }}
+              >
+                <ImgixImage
+                  src={icon}
+                  imgixParams={{ fit: 'clip' }}
+                  critical
+                  sx={{
+                    height: '100%',
+                    width: '100%'
+                  }}
+                />
+              </div>
+            )}
             {title}
           </div>
         ) : (
@@ -131,28 +145,36 @@ const Accordion: React.FC<Props> & {
         )}
 
         {accordionContext.iconClosed && accordionContext.iconOpen ? (
-          <Icon
-            color={
-              isOpen
-                ? colors[accordionTheme?.variants?.isActive?.caret?.color]
-                : colors[accordionTheme?.base?.caret?.color]
-            }
-            glyph={
-              isOpen ? accordionContext.iconOpen : accordionContext.iconClosed
-            }
-            size={16}
-          />
+          <div
+            sx={{ variant: `compounds.accordion.variants.${variant}.caret` }}
+          >
+            <Icon
+              color={
+                isOpen
+                  ? colors[accordionTheme?.variants?.isActive?.caret?.color]
+                  : colors[accordionTheme?.base?.caret?.color]
+              }
+              glyph={
+                isOpen ? accordionContext.iconOpen : accordionContext.iconClosed
+              }
+              size={16}
+            />
+          </div>
         ) : (
-          <Icon
-            color={
-              isOpen
-                ? colors[accordionTheme?.variants?.isActive?.caret?.color]
-                : colors[accordionTheme?.base?.caret?.color]
-            }
-            glyph="caret"
-            direction={isOpen ? 'up' : 'down'}
-            size={16}
-          />
+          <div
+            sx={{ variant: `compounds.accordion.variants.${variant}.caret` }}
+          >
+            <Icon
+              color={
+                isOpen
+                  ? colors[accordionTheme?.variants?.isActive?.caret?.color]
+                  : colors[accordionTheme?.base?.caret?.color]
+              }
+              glyph="caret"
+              direction={isOpen ? 'up' : 'down'}
+              size={16}
+            />
+          </div>
         )}
       </button>
       <div
