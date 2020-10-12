@@ -26,7 +26,7 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
       <div
         sx={{
           borderBottom: image ? 'none' : '1px solid',
-          paddingBottom: image ? ['sm', 'xs'] : 'sm',
+          paddingBottom: image ? ['none', 'xs'] : 'sm',
           marginTop: badges.length ? 0 : -6,
           display: 'flex',
           alignItems: 'center'
