@@ -71,8 +71,9 @@ const SlideReveal: React.FC<Props> = ({ open, children, className }) => {
           ? {}
           : {
               maxHeight: delayedOpen ? height + buffer : 0,
-              transition: 'max-height 0.4s',
-              overflow: 'hidden'
+              overflow: 'hidden',
+              transform: 'max-height 0.4s',
+              variant: 'elements.slide-reveal.maxHeight'
             }
       }
       onTransitionEnd={() => setTransitioning(false)}
