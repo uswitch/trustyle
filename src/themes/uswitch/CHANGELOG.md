@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.21.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.20.1...@uswitch/trustyle.uswitch-theme@2.21.0) (2020-10-12)
+
+
+### Bug Fixes
+
+* remove unnecessary important css attribute. ([603e9b2](https://github.com/uswitch/trustyle/commit/603e9b2))
+
+
+### Features
+
+* add true-speeds theme variant to button. ([df2a701](https://github.com/uswitch/trustyle/commit/df2a701))
+* make prettier happy. ([71bd0b4](https://github.com/uswitch/trustyle/commit/71bd0b4))
+
+
+
+
+
 ## [2.20.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.20.0...@uswitch/trustyle.uswitch-theme@2.20.1) (2020-10-12)
 
 
