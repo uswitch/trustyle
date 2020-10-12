@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.25.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.24.3...@uswitch/trustyle.money-theme@1.25.0) (2020-10-09)
+
+
+### Bug Fixes
+
+* image sizing ([0f76c25](https://github.com/uswitch/trustyle/commit/0f76c25))
+
+
+### Features
+
+* add redesign stlying to cell content data auto ([042e0de](https://github.com/uswitch/trustyle/commit/042e0de))
+* add redesign variant to product table cell content ([40eff71](https://github.com/uswitch/trustyle/commit/40eff71))
+* add semi-bold font weight to Money theme ([2942d1f](https://github.com/uswitch/trustyle/commit/2942d1f))
+* border redesign ([ba13113](https://github.com/uswitch/trustyle/commit/ba13113))
+* header title and image stlying ([f00544f](https://github.com/uswitch/trustyle/commit/f00544f))
+* mobile content styling ([3384401](https://github.com/uswitch/trustyle/commit/3384401))
+
+
+
+
+
+## [1.24.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.24.2...@uswitch/trustyle.money-theme@1.24.3) (2020-10-09)
+
+
+### Bug Fixes
+
+* fixed name and title color, fixed margin bottom ([b18125a](https://github.com/uswitch/trustyle/commit/b18125a))
+* fixed name display ([fcdd991](https://github.com/uswitch/trustyle/commit/fcdd991))
+
+
+
+
+
+
 # [1.24.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.23.0...@uswitch/trustyle.money-theme@1.24.0) (2020-09-23)
 
 

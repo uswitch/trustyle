@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.17.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.16.3...@uswitch/trustyle.uswitch-theme@2.17.0) (2020-10-09)
+
+
+### Features
+
+* add redesign stlying to cell content data auto ([042e0de](https://github.com/uswitch/trustyle/commit/042e0de))
+* add redesign variant to product table cell content ([40eff71](https://github.com/uswitch/trustyle/commit/40eff71))
+* border redesign ([ba13113](https://github.com/uswitch/trustyle/commit/ba13113))
+* header title and image stlying ([f00544f](https://github.com/uswitch/trustyle/commit/f00544f))
+* mobile content styling ([3384401](https://github.com/uswitch/trustyle/commit/3384401))
+
+
+
+
+
+## [2.16.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.16.2...@uswitch/trustyle.uswitch-theme@2.16.3) (2020-10-09)
+
+
+### Bug Fixes
+
+* changed color of author's name and role ([a5b0859](https://github.com/uswitch/trustyle/commit/a5b0859))
+* fixed name and title color, fixed margin bottom ([b18125a](https://github.com/uswitch/trustyle/commit/b18125a))
+* fixed name display ([fcdd991](https://github.com/uswitch/trustyle/commit/fcdd991))
+* removed marginBottom for author-profile from uswitch theme ([d509511](https://github.com/uswitch/trustyle/commit/d509511))
+
+
+
+
+
+
+## [2.16.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.16.1...@uswitch/trustyle.uswitch-theme@2.16.2) (2020-10-07)
+
+
+### Bug Fixes
+
+* Fix btn link dark text on dark bg ([37a817b](https://github.com/uswitch/trustyle/commit/37a817b))
+
+
+
+
+
 # [2.16.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.15.0...@uswitch/trustyle.uswitch-theme@2.16.0) (2020-10-07)
 
 

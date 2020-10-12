@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.read-more-card@1.3.10...@uswitch/trustyle.read-more-card@1.3.11) (2020-10-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.read-more-card
+
+
+
+
+
+
 ## [1.3.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.read-more-card@1.3.6...@uswitch/trustyle.read-more-card@1.3.7) (2020-08-25)
 
 **Note:** Version bump only for package @uswitch/trustyle.read-more-card
