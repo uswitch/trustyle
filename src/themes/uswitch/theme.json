@@ -1576,7 +1576,7 @@
         }
       }
     },
-    "slideReveal": {
+    "slide-reveal": {
       "maxHeight": {
         "max-height": "100%"
       }

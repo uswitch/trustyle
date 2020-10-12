@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, useThemeUI } from 'theme-ui'
+import { jsx } from 'theme-ui'
 
 // Extra pixels just in case something minor changes and isn't caught by onLoad
 // or useEffect
@@ -21,14 +21,6 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const SlideReveal: React.FC<Props> = ({ open, children, className }) => {
-  const {
-    theme: {
-      elements: { slideReveal = {} }
-    }
-  }: any = useThemeUI()
-
-  const maximumHeight = slideReveal.maxHeight
-
   const contentsWrapperEl = React.useRef<HTMLDivElement>(null)
   const [height, setHeight] = React.useState(0)
 
@@ -79,9 +71,9 @@ const SlideReveal: React.FC<Props> = ({ open, children, className }) => {
           ? {}
           : {
               maxHeight: delayedOpen ? height + buffer : 0,
-              ...maximumHeight,
               overflow: 'hidden',
-              transform: 'max-height 0.4s'
+              transform: 'max-height 0.4s',
+              variant: 'elements.slide-reveal.maxHeight'
             }
       }
       onTransitionEnd={() => setTransitioning(false)}
