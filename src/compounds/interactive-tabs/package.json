@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.interactive-tabs",
-  "version": "2.0.14",
+  "version": "2.0.16",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -15,6 +15,6 @@
     "@uswitch/trustyle-utils.get": "^1.0.9",
     "@uswitch/trustyle.carousel": "^1.1.4",
     "@uswitch/trustyle.flex-grid": "^3.4.2",
-    "@uswitch/trustyle.icon": "^1.14.0"
+    "@uswitch/trustyle.icon": "^1.14.2"
   }
 }
