@@ -48,6 +48,7 @@ import { ThumbUp } from './thumb-up'
 import { ThumbDown } from './thumb-down'
 import { StarFilled } from './star-filled'
 import { StarOutlined } from './star-outlined'
+import { StarHalfFilled } from './star-half-filled'
 import { Warning } from './warning'
 
 export type Glyph =
@@ -95,6 +96,7 @@ export type Glyph =
   | 'twitter'
   | 'star-outlined'
   | 'star-filled'
+  | 'star-half-filled'
   | 'warning'
 
   // temporary icons
@@ -208,6 +210,8 @@ export const Icon: React.FC<Props> = ({
       return <StarFilled color={color} size={size} />
     case 'star-outlined':
       return <StarOutlined color={color} size={size} />
+    case 'star-half-filled':
+      return <StarHalfFilled color={color} size={size} />
     case 'warning':
       return <Warning color={color} size={size} />
 
