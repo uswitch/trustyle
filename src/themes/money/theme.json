@@ -1615,20 +1615,22 @@
             "title": {
               "fontSize": ["sm", "md"],
               "fontWeight": "semiBold",
-              "color": "grey-100"
+              "color": "grey-100",
+              "fontFamily": "heading",
+              "pl": "xxs"
             }
           },
           "addonFooter": {
             "main": {
               "fontSize": "sm",
-              "pt": "0px",
+              "pt": "xs",
               "color": "grey-100"
             }
           },
           "addonInfo": {
             "main": {
               "fontSize": "sm",
-              "pt": "0px",
+              "pt": "xs",
               "color": "grey-100"
             }
           },
@@ -1667,11 +1669,14 @@
                 "main": {
                   "borderTop": "solid 1px",
                   "borderTopColor": "grey-30",
-                  "py": "sm"
+                  "pt": "sm",
+                  "pb": "xxs"
                 },
                 "label": {
                   "color": "grey-80",
-                  "fontWeight": "semiBold"
+                  "fontWeight": "semiBold",
+                  "fontFamily": "heading",
+                  "fontSize": "sm"
                 },
                 "content": {
                   "fontSize": "md",
@@ -1687,6 +1692,16 @@
                 "accent": {
                   "backgroundColor": "grey-05"
                 }
+              }
+            }
+          },
+          "cellCta": {
+            "buttonWrapper": {
+              "a, button": {
+                "paddingY": [12, 16],
+                "fontSize": ["sm", "md"],
+                "width": "100%",
+                "marginTop": ["xs", 0]
               }
             }
           }

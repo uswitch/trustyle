@@ -719,6 +719,7 @@ export const MoneyRedesignExample = () => {
       </ProductTable.cells.Split>
       <ProductTable.cells.Cta
         primary={<ButtonLink variant="primary">Apply now</ButtonLink>}
+        headerImage
       />
     </ProductTable.Row>
   )
