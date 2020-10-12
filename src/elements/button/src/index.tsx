@@ -12,6 +12,7 @@ export type Variant =
   | 'continue'
   | 'inverse'
   | 'reversed'
+  | 'true-speeds'
   | 'link'
   | 'hero'
   | 'hero.centered'

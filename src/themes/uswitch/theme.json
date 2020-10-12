@@ -1071,6 +1071,16 @@
             "fontFamily": "heading",
             "color": "primary"
           }
+        },
+        "true-speeds" : {
+          "variant": "elements.buttons.base",
+          "padding": 4,
+          "backgroundColor": "light-1",
+          "border": "2px solid",
+          "borderColor": "success-green",
+          "fontSize": "14px !important",
+          "fontStyle": "normal",
+          "lineHeight": "21px"
         }
       }
     },
