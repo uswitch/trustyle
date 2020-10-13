@@ -1624,14 +1624,16 @@
             "main": {
               "fontSize": "sm",
               "pt": "xs",
-              "color": "grey-100"
+              "color": "grey-100",
+              "fontFamily": "heading"
             }
           },
           "addonInfo": {
             "main": {
               "fontSize": "sm",
               "pt": "xs",
-              "color": "grey-100"
+              "color": "grey-100",
+              "fontFamily": "heading"
             }
           },
           "cellContent": {

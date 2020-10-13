@@ -705,9 +705,8 @@ export const MoneyRedesignExample = () => {
       </ProductTable.cells.Split>
       <ProductTable.cells.Split>
         <ProductTable.cells.Content label="Representative APR" headerImage>
-          <ProductTable.data.TextSubscript
-            text="49.9% APR"
-            subscript="(£1,000 to £10,000)"
+          <ProductTable.data.Auto
+            text="49.9% APR (£1,000 to £10,000)"
             headerImage
           />
         </ProductTable.cells.Content>
