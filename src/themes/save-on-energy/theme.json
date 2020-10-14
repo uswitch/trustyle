@@ -950,9 +950,9 @@
   },
 
   "modules": {
-    "hero-with-background-image":{
-      "background-image":{
-        "opacity":0.3
+    "hero-with-background-image": {
+      "background-image": {
+        "opacity": 0.3
       }
     },
     "image-callout-content": {
