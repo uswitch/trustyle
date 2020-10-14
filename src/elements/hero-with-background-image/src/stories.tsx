@@ -127,8 +127,7 @@ HeroWithFlexGridContainer.story = {
 export const AutomatedTests = () => {
   return (
     <AllThemes>
-      <HeroWithCustomContainer />
-      <HeroWithFlexGridContainer />
+      <HeroWithBackgroundImage />
     </AllThemes>
   )
 }
