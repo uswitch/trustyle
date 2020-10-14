@@ -8,12 +8,12 @@
     "access": "public"
   },
   "peerDependencies": {
+    "@uswitch/trustyle.icon": "^1.16.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "theme-ui": "^0.2.52"
   },
   "dependencies": {
-    "@uswitch/trustyle.icon": "^1.16.0",
     "body-scroll-lock": "^3.0.3",
     "react-focus-lock": "^2.4.0",
     "react-measure": "^2.3.0"

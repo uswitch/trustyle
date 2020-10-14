@@ -4,7 +4,7 @@ import { css, jsx } from '@emotion/core'
 import { number, select } from '@storybook/addon-knobs'
 
 import AllThemes from '../../../utils/all-themes'
-import { FilledArrow } from '../../call-out/node_modules/@uswitch/trustyle.icon/src/filled-arrow'
+import { FilledArrow } from '../../icon/src/filled-arrow'
 import { ButtonLink } from '../../button-link/src'
 
 import { LinkList, LinkListItem } from './'
