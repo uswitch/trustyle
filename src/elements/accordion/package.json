@@ -13,10 +13,10 @@
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0",
-    "theme-ui": "^0.2.52"
+    "theme-ui": "^0.2.52",
+    "@uswitch/trustyle.icon": "^1.16.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.icon": "^1.16.0",
     "@uswitch/trustyle.imgix-image": "^0.1.40"
   }
 }
