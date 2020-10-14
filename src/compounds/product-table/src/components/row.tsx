@@ -131,6 +131,7 @@ const ProductTableRow: React.FC<RowProps> = ({
             ],
             marginX: -8,
             marginY: -6,
+            marginTop: image ? 0 : -6,
             variant: 'compounds.product-table.row.grid',
 
             // Flex in mobile IE11 (?!) as auto-layout for grid isn't supported
@@ -155,7 +156,10 @@ const ProductTableRow: React.FC<RowProps> = ({
                 accentCellIndex:
                   child.props.accent && accentCells.indexOf(child),
                 extraRules: {
-                  alignItems: image && 'baseline'
+                  variant:
+                    image &&
+                    child.type.name !== 'ProductTableCellCta' &&
+                    'compounds.product-table.variants.redesign.cellContext.main'
                 }
               }}
               key={index}

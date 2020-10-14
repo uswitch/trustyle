@@ -1637,24 +1637,20 @@
             }
           },
           "cellContent": {
-            "main": {
-              "borderLeft": "1px solid",
-              "borderLeftColor": "grey-30",
-              "borderTop": "none",
-              "pl": "sm"
-            },
+            "main": {},
             "label": {
               "fontFamily": "heading",
               "fontWeight": "semiBold",
               "color": "grey-80",
-              "py": "xs",
+              "pb": "xs",
+              "pt": 0,
+              "lineHeight": 1,
               "fontSize": "sm"
             },
             "content": {
               "fontSize": "lg",
               "fontFamily": "heading",
               "fontWeight": "semiBold",
-              "pb": "xs",
               "textAlign": "left",
               "color": "plum",
               "small": {
@@ -1668,12 +1664,7 @@
             },
             "variants": {
               "inSplit": {
-                "main": {
-                  "borderTop": "solid 1px",
-                  "borderTopColor": "grey-30",
-                  "pt": "sm",
-                  "pb": "xxs"
-                },
+                "main": {},
                 "label": {
                   "color": "grey-80",
                   "fontWeight": "semiBold",
@@ -1703,7 +1694,28 @@
                 "paddingY": [12, 16],
                 "fontSize": ["sm", "md"],
                 "width": "100%",
-                "marginTop": ["xs", 0]
+                "marginTop": ["xs", 0],
+                "marginBototm": 0
+              },
+              "marginY": -6
+            }
+          },
+          "cellContext": {
+            "main": {
+              "alignItems": "baseline",
+              "position": "relative",
+              "pl": ["none", "sm"],
+              "py": ["sm", "xs"],
+              "borderTop": ["1px solid", "none"],
+              "borderTopColor": "grey-30",
+              "::before": {
+                "position": "absolute",
+                "display": "block",
+                "height": "100%",
+                "content": "' '",
+                "borderLeft": ["none", "1px solid #C2C4C8"],
+                "left": 0,
+                "top": 0
               }
             }
           }
