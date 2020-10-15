@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.8.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.7.2...@uswitch/trustyle.product-table@2.8.0) (2020-10-15)
+
+
+### Bug Fixes
+
+* additional product table redesign changes ([de2e063](https://github.com/uswitch/trustyle/commit/de2e063))
+* refactor cta cell border handling ([b9a9321](https://github.com/uswitch/trustyle/commit/b9a9321))
+
+
+### Features
+
+* update product table cell auto formatter ([4dd9df5](https://github.com/uswitch/trustyle/commit/4dd9df5))
+
+
+
+
+
 ## [2.7.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.7.1...@uswitch/trustyle.product-table@2.7.2) (2020-10-12)
 
 
