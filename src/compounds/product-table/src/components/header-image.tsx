@@ -10,7 +10,8 @@ export const ProductTableHeaderImage: React.FC = ({ children }) => (
     sx={{
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      marginLeft: -8
     }}
   >
     <div

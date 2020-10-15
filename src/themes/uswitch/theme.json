@@ -1759,38 +1759,39 @@
             },
             "title": {
               "fontSize": "sm",
-              "fontWeight": "xbold"
+              "fontWeight": "xbold",
+              "pl": "xxs"
             }
           },
           "addonFooter": {
             "main": {
               "color": "grey-70",
-              "pt": "0px"
+              "pt": "0px",
+              "fontSize": "xs",
+              "fontFamily": "heading"
             }
           },
           "addonInfo": {
             "main": {
               "color": "grey-70",
-              "pt": "0px"
+              "pt": "0px",
+              "fontSize": "xs",
+              "fontFamily": "heading"
             }
           },
           "cellContent": {
-            "main": {
-              "borderLeft": "1px solid",
-              "borderLeftColor": "grey-20",
-              "borderTop": "none",
-              "pl": "sm"
-            },
+            "main": {},
             "label": {
               "fontFamily": "heading",
               "color": "grey-90",
-              "py": "xxs"
+              "pb": "xxs",
+              "pt": 0,
+              "lineHeight": 1
             },
             "content": {
               "fontWeight": "xbold",
               "fontSize": "sm",
               "fontFamily": "heading",
-              "pb": "xxs",
               "textAlign": "left",
               "small": {
                 "fontSize": "xs"
@@ -1801,12 +1802,10 @@
             },
             "variants": {
               "inSplit": {
-                "main": {
-                  "borderTop": "solid 1px",
-                  "borderTopColor": "grey-20",
-                  "py": "sm"
+                "main": {},
+                "label": {
+                  "fontFamily": "heading"
                 },
-                "label": {},
                 "content": {
                   "fontWeight": "xbold",
                   "fontSize": "sm",
@@ -1820,6 +1819,33 @@
                 "accent": {
                   "backgroundColor": "grey-05"
                 }
+              }
+            }
+          },
+          "cellCta": {
+            "buttonWrapper": {
+              "a, button": {
+                "mb": 0
+              },
+              "marginY": -6
+            }
+          },
+          "cellContext": {
+            "main": {
+              "alignItems": "baseline",
+              "position": "relative",
+              "pl": ["none", "sm"],
+              "py": ["sm", "xxs"],
+              "borderTop": ["1px solid", "none"],
+              "borderTopColor": "grey-20",
+              "::before": {
+                "position": "absolute",
+                "display": "block",
+                "height": "100%",
+                "content": "' '",
+                "borderLeft": ["none", "1px solid #D0D0D3"],
+                "left": 0,
+                "top": 0
               }
             }
           }
