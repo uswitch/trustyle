@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.21.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.21.0...@uswitch/trustyle.uswitch-theme@2.21.1) (2020-10-15)
+
+
+### Bug Fixes
+
+* additional product table redesign changes ([de2e063](https://github.com/uswitch/trustyle/commit/de2e063))
+
+
+
+
+
 # [2.21.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.20.1...@uswitch/trustyle.uswitch-theme@2.21.0) (2020-10-12)
 
 
