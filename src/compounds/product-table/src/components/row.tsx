@@ -61,6 +61,8 @@ const ProductTableRow: React.FC<RowProps> = ({
 
   const cols = nonNullChildren.length
 
+  const lastCell = (index: number) => index === cols - 1
+
   /**
    * Row numbers explained:
    *
@@ -158,7 +160,7 @@ const ProductTableRow: React.FC<RowProps> = ({
                 extraRules: {
                   variant:
                     image &&
-                    child.type.name !== 'ProductTableCellCta' &&
+                    !lastCell(index) &&
                     'compounds.product-table.variants.redesign.cellContext.main'
                 }
               }}
