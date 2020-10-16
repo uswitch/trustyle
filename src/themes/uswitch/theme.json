@@ -1678,6 +1678,12 @@
         "paddingX": "md"
       }
     },
+    "container": {
+      "flex": {
+        "display": "flex",
+        "flexDirection": "column"
+      }
+    },
     "product-table": {
       "row": {
         "main": {
@@ -1751,6 +1757,17 @@
         }
       },
       "variants": {
+        "ordering": {
+          "first": {
+            "order": -1
+          },
+          "second": {
+            "order": 1
+          },
+          "third": {
+            "order": 2
+          }
+        },
         "redesign": {
           "row": {
             "main": {
