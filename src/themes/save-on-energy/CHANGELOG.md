@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.13.3...@uswitch/trustyle.save-on-energy-theme@1.13.5) (2020-10-16)
+
+
+### Bug Fixes
+
+* hero with bg image stories fix, run prettier ([0f45724](https://github.com/uswitch/trustyle/commit/0f45724))
+* hero with bg img opacity option ([9f16b9b](https://github.com/uswitch/trustyle/commit/9f16b9b))
+
+
+
+
+
 ## [1.13.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.13.3...@uswitch/trustyle.save-on-energy-theme@1.13.4) (2020-10-15)
 
 

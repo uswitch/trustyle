@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.22.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.21.1...@uswitch/trustyle.uswitch-theme@2.22.0) (2020-10-16)
+
+
+### Features
+
+* add ordering to product table ([3cac876](https://github.com/uswitch/trustyle/commit/3cac876))
+
+
+
+
+
 ## [2.21.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.21.0...@uswitch/trustyle.uswitch-theme@2.21.1) (2020-10-15)
 
 

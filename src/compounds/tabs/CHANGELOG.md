@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.tabs@1.0.8...@uswitch/trustyle.tabs@1.0.9) (2020-10-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.tabs
+
+
+
+
+
 ## [1.0.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.tabs@1.0.4...@uswitch/trustyle.tabs@1.0.6) (2020-09-23)
 
 **Note:** Version bump only for package @uswitch/trustyle.tabs
