@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.flex-grid@3.4.2...@uswitch/trustyle.flex-grid@3.5.0) (2020-10-16)
+
+
+### Features
+
+* add ordering to product table ([3cac876](https://github.com/uswitch/trustyle/commit/3cac876))
+
+
+
+
+
 # [3.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.flex-grid@3.2.0...@uswitch/trustyle.flex-grid@3.4.0) (2020-09-23)
 
 
