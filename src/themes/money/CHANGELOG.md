@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.27.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.26.0...@uswitch/trustyle.money-theme@1.27.0) (2020-10-19)
+
+
+### Features
+
+* product table redesign changes v3 ([fb765b2](https://github.com/uswitch/trustyle/commit/fb765b2))
+
+
+
+
+
 # [1.26.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.25.2...@uswitch/trustyle.money-theme@1.26.0) (2020-10-15)
 
 
