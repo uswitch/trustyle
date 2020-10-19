@@ -582,7 +582,9 @@
         "wrapper": {
           "display": "flex",
           "mr": "lg",
-          "width": "30%"
+          "mb": "lg",
+          "width": "30%",
+          "justifyContent": "space-between"
         }
       },
       "label": {
@@ -593,16 +595,7 @@
           "mt": "sm"
         },
         "variants": {
-          "calculator": {
-            "variant": "styles.h6",
-            "fontWeight": "bold",
-            "color": "grey-80",
-            "display": "block",
-            "mb": "xs",
-            ":not(:first-child)": {
-              "mt": "xl"
-            }
-          }
+          "calculator": {}
         }
       },
       "button": {
@@ -1182,6 +1175,9 @@
         "&:focus": {
           "outline": "2px primary solid"
         }
+      },
+      "container": {
+        "width": "220px"
       },
       "select": {
         "base": {
