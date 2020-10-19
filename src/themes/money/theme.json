@@ -1608,9 +1608,9 @@
         "redesign": {
           "row": {
             "main": {
-              "border": "2px solid",
-              "borderColor": "grey-20",
-              "borderLeft": ["2px solid", "4px solid"],
+              "border": ["1px solid", "2px solid"],
+              "borderColor": ["grey-20", "grey-20"],
+              "borderLeft": ["1px solid", "4px solid"],
               "borderLeftColor": ["grey-20", "plum"],
               "borderTop": ["4px solid", "2px solid"],
               "borderTopColor": ["plum", "grey-20"]
@@ -1625,18 +1625,20 @@
           },
           "addonFooter": {
             "main": {
-              "fontSize": "sm",
+              "fontSize": ["xs", "sm"],
               "pt": "xs",
-              "color": "grey-100",
-              "fontFamily": "heading"
+              "color": ["grey-60", "grey-100"],
+              "fontFamily": "heading",
+              "marginTop": ["xs", "md"]
             }
           },
           "addonInfo": {
             "main": {
-              "fontSize": "sm",
+              "fontSize": ["xs", "sm"],
               "pt": "xs",
-              "color": "grey-100",
-              "fontFamily": "heading"
+              "color": ["grey-60", "grey-100"],
+              "fontFamily": "heading",
+              "marginTop": ["sm", "md"]
             }
           },
           "cellContent": {
@@ -1651,9 +1653,9 @@
               "fontSize": "sm"
             },
             "content": {
-              "fontSize": "lg",
+              "fontSize": ["md", "lg"],
               "fontFamily": "heading",
-              "fontWeight": "semiBold",
+              "fontWeight": ["bold", "semiBold"],
               "textAlign": "left",
               "color": "plum",
               "small": {
@@ -1667,12 +1669,14 @@
             },
             "variants": {
               "inSplit": {
-                "main": {},
+                "main": {
+                  "py": ["xxs"]
+                },
                 "label": {
-                  "color": "grey-80",
+                  "color": "grey-70",
                   "fontWeight": "semiBold",
                   "fontFamily": "heading",
-                  "fontSize": "sm"
+                  "fontSize": "xs"
                 },
                 "content": {
                   "fontSize": "md",
@@ -1697,9 +1701,10 @@
                 "paddingY": [12, 16],
                 "fontSize": ["sm", "md"],
                 "width": "100%",
-                "marginTop": ["xs", 0],
+                "marginTop": ["sm", 0],
                 "marginBototm": 0
               },
+              "width": ["100%", ""],
               "marginY": -6
             }
           },
@@ -1708,9 +1713,9 @@
               "alignItems": "baseline",
               "position": "relative",
               "pl": ["none", "sm"],
-              "py": ["sm", "xs"],
+              "py": ["xs", "xs"],
               "borderTop": ["1px solid", "none"],
-              "borderTopColor": "grey-30",
+              "borderTopColor": ["grey-20", "grey-30"],
               "::before": {
                 "position": "absolute",
                 "display": "block",
