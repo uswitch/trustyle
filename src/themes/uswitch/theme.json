@@ -1660,7 +1660,7 @@
         },
         "focus": {
           "variant": "elements.simple-drop-down.select.base",
-          "outlineColor": "plum"
+          "outlineColor": "blue"
         }
       },
       "span": {
