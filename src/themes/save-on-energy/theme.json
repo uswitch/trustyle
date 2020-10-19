@@ -957,11 +957,14 @@
           "borderColor": "light-3"
         },
         "title": {
-          "py": ["md", 32]
+          "py": [20, 32],
+          "mb": 0,
+          "fontSize": ["sm", "md"]
         },
         "content": {
-          "marginBottom": ["md", 32],
+          "marginBottom": 0,
           "fontSize": "base",
+          "fontWeight": "light",
           "color": "link",
           "> p:last-child": {
             "mb": 0
@@ -990,8 +993,8 @@
         "isActive": {
           "button": {
             "variant": "accordion.base.button",
-            "& ~ *": {
-              "mb": 0
+            "~ div": {
+              "mb": ["md", 32]
             }
           },
           "caret": {
