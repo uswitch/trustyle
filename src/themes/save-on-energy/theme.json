@@ -183,18 +183,14 @@
     "base": {
       "fontSize": "sm",
       "fontWeight": "normal",
-      "color": "text",
-      "paddingTop": 64,
-      "paddingBottom": "xxs",
-      "maxWidth": 712
+      "color": "text"
     }
   },
 
   "linkListItem": {
     "base": {
       "paddingY": 7,
-      "borderColor": "light-3",
-      "maxWidth": 712
+      "borderColor": "light-3"
     }
   },
 
