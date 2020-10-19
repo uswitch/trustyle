@@ -75,7 +75,6 @@ export const LinkListItem: React.FC<ListLinkItemProps> = ({
   return (
     <li
       sx={{
-        variant: 'linkListItem.base',
         borderTopWidth: '1px',
         borderTopStyle: 'solid',
         borderTopColor: 'grey-20',
@@ -91,7 +90,6 @@ export const LinkListItem: React.FC<ListLinkItemProps> = ({
       <Styled.a
         href={href}
         sx={{
-          variant: 'linkListLink.base',
           textDecoration: 'none',
           borderBottom: 0,
           ':hover': {

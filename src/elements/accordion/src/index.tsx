@@ -180,7 +180,6 @@ const Accordion: React.FC<Props> & {
       <div
         sx={{
           overflow: 'hidden',
-          display: isOpen ? 'block' : 'none',
           height: isOpen ? 'auto' : '0',
           marginBottom: isOpen
             ? accordionTheme?.base?.content?.marginBottom
