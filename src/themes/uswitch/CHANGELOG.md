@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.23.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.22.0...@uswitch/trustyle.uswitch-theme@2.23.0) (2020-10-19)
+
+
+### Features
+
+* adjust ordering values ([e382625](https://github.com/uswitch/trustyle/commit/e382625))
+
+
+
+
+
 # [2.22.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.21.1...@uswitch/trustyle.uswitch-theme@2.22.0) (2020-10-16)
 
 
