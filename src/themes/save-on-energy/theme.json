@@ -948,6 +948,8 @@
       }
     },
     "accordion": {
+      "iconOpen": "minus",
+      "iconClosed": "plus",
       "base": {
         ":last-of-type": {
           "borderWidth": "0 0 1px 0",
