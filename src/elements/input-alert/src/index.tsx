@@ -1,26 +1,44 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { css, jsx } from '@emotion/core'
-
-import { alert, notification, root } from './styles'
+import { jsx, useThemeUI } from 'theme-ui'
+import get from '@uswitch/trustyle-utils.get'
 
 type Type = 'notification' | 'alert'
 export type ErrorMessages = string | { [index: string]: ErrorMessages }
 
-interface Props {
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
   type: Type
   children: React.ReactNode
 }
 
-export const InputAlert: React.FC<Props> = ({ type, children }) => (
-  <div
-    css={css([
-      root,
-      type === 'notification' && notification,
-      type === 'alert' && alert
-    ])}
-  >
-    {children}
-  </div>
-)
+const ARROW_SIZE = 8
+
+export const InputAlert: React.FC<Props> = ({ type, children, ...props }) => {
+  const { theme }: any = useThemeUI()
+
+  const padding = get(theme, 'elements.input-alert.padding')
+  const notificationColor = get(theme, 'elements.input-alert.notificationColor')
+  const alertColor = get(theme, 'elements.input-alert.alertColor')
+
+  return (
+    <div
+      {...props}
+      sx={{
+        variant: 'elements.input-alert',
+        marginTop: `calc(${ARROW_SIZE}px + ${padding}px)`,
+        backgroundColor: type === 'alert' ? alertColor : notificationColor,
+        '&:before': {
+          variant: 'elements.input-alert.before',
+          top: -ARROW_SIZE,
+          borderLeft: `${ARROW_SIZE}px solid transparent`,
+          borderRight: `${ARROW_SIZE}px solid transparent`,
+          borderBottomWidth: ARROW_SIZE,
+          borderBottomColor: type === 'alert' ? alertColor : notificationColor
+        }
+      }}
+    >
+      {children}
+    </div>
+  )
+}

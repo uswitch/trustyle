@@ -13,8 +13,8 @@ const grid = (rowOrCol: 'row' | 'column', start: number, span: number) => {
   const rowOrColCap = capitalise(rowOrCol)
   return {
     [`grid${rowOrColCap}`]: `${start} / span ${span}`,
-    [`-ms-grid-${rowOrCol}`]: `${start}`,
-    [`-ms-grid-${rowOrCol}-span`]: `${span}`
+    [`msGrid${rowOrColCap}`]: `${start}`,
+    [`msGrid${rowOrColCap}Span`]: `${span}`
   }
 }
 
@@ -22,6 +22,7 @@ export interface CellPrimaryProps extends React.HTMLAttributes<HTMLDivElement> {
   label: string
   accent?: boolean
   mobileOrder?: number
+  headerImage?: boolean
 }
 
 export interface ContentRowProps extends CellPrimaryProps {
@@ -46,7 +47,7 @@ const RowContent: React.FC<ContentRowProps> = ({
       msGridColumns: 'auto auto',
       gridTemplateRows: '100%',
       msGridRows: '100%',
-      variant: `productTable.cellContent.variants.inSplit.${
+      variant: `compounds.product-table.cellContent.variants.inSplit.${
         accent ? 'accent' : 'main'
       }`
     }}
@@ -60,7 +61,7 @@ const RowContent: React.FC<ContentRowProps> = ({
         ...grid('row', 1, 1),
         fontSize: 'xs',
         marginTop: '',
-        variant: 'productTable.cellContent.variants.inSplit.label'
+        variant: 'compounds.product-table.cellContent.variants.inSplit.label'
       }}
     >
       {label}
@@ -74,7 +75,7 @@ const RowContent: React.FC<ContentRowProps> = ({
         small: {
           fontSize: 'sm'
         },
-        variant: 'productTable.cellContent.variants.inSplit.content'
+        variant: 'compounds.product-table.cellContent.variants.inSplit.content'
       }}
     >
       {children}
@@ -86,20 +87,25 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
   label,
   accent,
   mobileOrder,
-  children
+  children,
+  headerImage
 }) => (
   <CellBase
     mobileOrder={mobileOrder || (accent ? 1 : 2)}
     sx={{
-      height: 'auto',
+      height: accent ? '100%' : 'auto',
       display: 'grid',
-      alignItems: 'center',
+      alignItems: 'start',
       gridTemplateColumns: '100%',
       msGridColumns: '100%',
-      gridTemplateRows: 'auto auto',
-      msGridRows: 'auto auto',
+      gridTemplateRows: '1fr',
+      msGridRows: '1fr',
       padding: accent ? 'sm' : '',
-      variant: `productTable.cellContent.${accent ? 'accent' : 'main'}`
+      variant: headerImage
+        ? `compounds.product-table.variants.redesign.cellContent.${
+            accent ? 'accent' : 'main'
+          }`
+        : `compounds.product-table.cellContent.${accent ? 'accent' : 'main'}`
     }}
     // @ts-ignore
     css={{ display: '-ms-grid' }}
@@ -107,10 +113,16 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
     <div
       sx={{
         ...grid('column', 1, 1),
-        ...grid('row', 2, 1),
+        gridRow: headerImage
+          ? ['1 / span 2', '1 / span 1']
+          : ['1 / span 2', '2 / span 1'],
+        msGridRow: ['1', '2'],
+        msGridRowSpan: ['2', '1'],
+        alignSelf: ['baseline', 'auto'],
         fontSize: 'xs',
-        marginTop: 'sm',
-        variant: 'productTable.cellContent.label'
+        marginTop: ['xl', headerImage ? 0 : 'sm'],
+        variant: `compounds.product-table.${headerImage &&
+          'variants.redesign.'}cellContent.label`
       }}
     >
       {label}
@@ -118,12 +130,14 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
     <div
       sx={{
         ...grid('column', 1, 1),
-        ...grid('row', 1, 1),
-        fontSize: 'xxxl',
+        ...grid('row', headerImage ? 2 : 1, 1),
+        fontSize: 'xxl',
         small: {
           fontSize: 'sm'
         },
-        variant: 'productTable.cellContent.content'
+        lineHeight: 1,
+        variant: `compounds.product-table.${headerImage &&
+          'variants.redesign.'}cellContent.content`
       }}
     >
       {children}

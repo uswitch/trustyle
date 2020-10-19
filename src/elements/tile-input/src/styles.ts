@@ -16,12 +16,13 @@ export const input = (type: 'radio' | 'checkbox') => (
   let inputColor = 'black'
 
   if (
-    theme.input &&
-    theme.input.tile &&
-    theme.input.tile.inputColor &&
-    typeof theme.input.tile.inputColor === 'string'
+    theme.elements &&
+    theme.elements.input &&
+    theme.elements.input.tile &&
+    theme.elements.input.tile.inputColor &&
+    typeof theme.elements.input.tile.inputColor === 'string'
   ) {
-    inputColor = theme.input.tile.inputColor
+    inputColor = theme.elements.input.tile.inputColor
   }
 
   return {
@@ -69,9 +70,9 @@ export const container = (type: 'radio' | 'checkbox') => (): SxStyleProp => ({
     height: '17px',
     margin: '11px 0 0 11px',
     width: '17px',
-    variant: 'input.tile.before'
+    variant: 'elements.input.tile.before'
   },
-  variant: 'input.tile'
+  variant: 'elements.input.tile'
 })
 
 export const content: SxStyleProp = {
@@ -80,7 +81,7 @@ export const content: SxStyleProp = {
   left: 0,
   right: 0,
   bottom: 0,
-  padding: 'xs',
+  padding: ['xxs', 'xs'],
   display: 'flex',
   alignItems: 'center',
   textAlign: 'center',

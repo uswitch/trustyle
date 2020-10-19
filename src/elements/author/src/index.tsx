@@ -2,47 +2,48 @@
 
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
-import dayjs from '@uswitch/trustyle.date'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  name: string
-  role: string
-  editorName?: string
-  editorRole?: string
+  title: string
+  subtitle?: string
   authorImage?: React.ReactElement
-  date: number
-  authorUrl: string
-  editorUrl?: string
+  titleUrl: string
+  variant?: string | 'condensed'
+  subtitleUrl?: string
+  className?: string
 }
 
 const Author: React.FC<Props> = ({
-  name,
-  role,
-  editorName,
-  editorRole,
+  title,
+  subtitle,
   authorImage,
-  date,
-  authorUrl,
-  editorUrl
+  titleUrl,
+  variant,
+  subtitleUrl,
+  className
 }) => {
+  const getVariant = (element: string) =>
+    `elements.author.${variant ? variant + '.' + element : element}`
+
   return (
     <div
       sx={{
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'row',
-        variant: 'author.main'
+        variant: getVariant('base')
       }}
+      className={className}
     >
       {authorImage && (
         <Styled.a
-          href={authorUrl}
+          href={titleUrl}
           sx={{
-            variant: 'author.link',
             flexShrink: 0,
-            height: ['48px', '56px'],
-            width: ['48px', '56px'],
-            marginRight: 'sm'
+            height: [40, 64],
+            width: [40, 64],
+            marginRight: 'sm',
+            variant: getVariant('imageLink')
           }}
         >
           <authorImage.type
@@ -51,52 +52,52 @@ const Author: React.FC<Props> = ({
               maxHeight: '100%',
               maxWidth: '100%',
               borderRadius: '50%',
-              variant: 'author.image'
+              variant: getVariant('image')
             }}
           />
         </Styled.a>
       )}
 
       <div>
-        <Styled.h6
+        <Styled.h5
           sx={{
             marginTop: 0,
-            marginBottom: 'xxs',
             fontWeight: 'bold',
             paddingBottom: 0,
-            variant: 'author.heading'
+            marginBottom: [0, 'xxs'],
+            variant: getVariant('title')
           }}
-          as="h2"
         >
           <a
-            href={authorUrl}
+            href={titleUrl}
             sx={{
+              color: 'inherit',
               textDecoration: 'none',
-              variant: 'author.link'
+              variant: getVariant('link')
             }}
           >
-            Written by {name}, {role}
+            {title}
           </a>
-        </Styled.h6>
-        <Styled.p
-          sx={{
-            fontSize: 'xxs',
-            marginY: 0,
-            variant: 'author.text'
-          }}
-        >
-          <Styled.a
-            href={editorUrl}
+        </Styled.h5>
+        {subtitle && (
+          <Styled.p
             sx={{
-              textDecoration: 'none',
-              variant: 'author.link'
+              fontSize: 'xxs',
+              marginY: 0,
+              variant: getVariant('subtitle')
             }}
           >
-            {editorName &&
-              `Edited by ${editorName}${editorRole ? `, ${editorRole}` : ''}, `}
-          </Styled.a>
-          {dayjs(date).format('LL')}
-        </Styled.p>
+            <Styled.a
+              href={subtitleUrl}
+              sx={{
+                textDecoration: 'none',
+                variant: getVariant('link')
+              }}
+            >
+              {subtitle}
+            </Styled.a>
+          </Styled.p>
+        )}
       </div>
     </div>
   )

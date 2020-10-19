@@ -3,10 +3,12 @@
 import { css, jsx } from '@emotion/core'
 import { text } from '@storybook/addon-knobs'
 
+import AllThemes from '../../../utils/all-themes'
+
 import PrimaryInfoBlock from './'
 
 export default {
-  title: 'Elements|Primary Info Block'
+  title: 'Elements/Primary Info Block'
 }
 
 export const Example = () => {
@@ -51,5 +53,18 @@ export const Example = () => {
         {allVariants}
       </div>
     </div>
+  )
+}
+
+Example.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+export const AutomatedTests = () => {
+  return (
+    <AllThemes>
+      <Example />
+    </AllThemes>
   )
 }

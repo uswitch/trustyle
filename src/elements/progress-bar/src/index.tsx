@@ -6,17 +6,19 @@ import { jsx } from 'theme-ui'
 interface Props {
   current: number
   max: number
+  className?: string
 }
 
-export const ProgressBar: React.FC<Props> = ({ current, max }) => {
+export const ProgressBar: React.FC<Props> = ({ current, max, className }) => {
   return (
     <span
       sx={{
         display: 'block',
         height: ['3px', '7.4px'],
         width: '100%',
-        variant: 'progressBar.main'
+        variant: 'elements.progress-bar.main'
       }}
+      className={className}
       role="progressbar"
       aria-valuenow={current + 1}
       aria-valuemin={1}
@@ -27,7 +29,7 @@ export const ProgressBar: React.FC<Props> = ({ current, max }) => {
           display: 'block',
           height: '100%',
           width: `${(current / max) * 100}%`,
-          variant: 'progressBar.progress'
+          variant: 'elements.progress-bar.progress'
         }}
       />
     </span>

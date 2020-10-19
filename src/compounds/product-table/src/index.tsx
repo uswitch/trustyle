@@ -3,15 +3,26 @@ import * as React from 'react'
 import ProductTableRow from './components/row'
 import ProductTableAddonResponsive from './components/addon-responsive'
 import ProductTableAddonFooter from './components/addon-footer'
+import ProductTableAddonInfo from './components/addon-info'
 import ProductTableCellBase from './components/cell-base'
 import ProductTableCellImage from './components/cell-image'
+import ProductTableHeaderImage from './components/header-image'
 import ProductTableCellSplit from './components/cell-split'
 import ProductTableCellPlaceholder from './components/cell-placeholder'
 import ProductTableCellContent from './components/cell-content'
 import ProductTableCellCta from './components/cell-cta'
-import ProductTableDataRange from './components/data-range'
-import ProductTableDataValue from './components/data-value'
-import ProductTableDataTextSubscript from './components/data-text-subscript'
+import ProductTableDataRange, {
+  Plain as PlainProductTableDataRange
+} from './components/data-range'
+import ProductTableDataValue, {
+  Plain as PlainProductTableDataValue
+} from './components/data-value'
+import ProductTableDataTextSubscript, {
+  Plain as PlainProductTableDataTextSubscript
+} from './components/data-text-subscript'
+import ProductTableDataAuto, {
+  Plain as PlainProductTableDataAuto
+} from './components/data-auto'
 import {
   Addon,
   AddonArg,
@@ -20,12 +31,15 @@ import {
   CellContext,
   CellContextProps
 } from './generics'
+import ProductTableAddonAccordion from './components/addon-accordion'
 
 const ProductTable = {
   Row: ProductTableRow,
   addons: {
     footer: ProductTableAddonFooter,
-    responsive: ProductTableAddonResponsive
+    responsive: ProductTableAddonResponsive,
+    info: ProductTableAddonInfo,
+    accordion: ProductTableAddonAccordion
   },
   cells: {
     Base: ProductTableCellBase,
@@ -33,12 +47,20 @@ const ProductTable = {
     Split: ProductTableCellSplit,
     Placeholder: ProductTableCellPlaceholder,
     Content: ProductTableCellContent,
-    Cta: ProductTableCellCta
+    Cta: ProductTableCellCta,
+    HeaderImage: ProductTableHeaderImage
+  },
+  text: {
+    Range: PlainProductTableDataRange,
+    TextSubscript: PlainProductTableDataTextSubscript,
+    Value: PlainProductTableDataValue,
+    Auto: PlainProductTableDataAuto
   },
   data: {
     Range: ProductTableDataRange,
     TextSubscript: ProductTableDataTextSubscript,
-    Value: ProductTableDataValue
+    Value: ProductTableDataValue,
+    Auto: ProductTableDataAuto
   }
 }
 

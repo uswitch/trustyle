@@ -4,13 +4,15 @@ import { jsx } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
 import { select } from '@storybook/addon-knobs'
 
+import AllThemes from '../../../utils/all-themes'
+
 import Breadcrumbs from './'
 
 type Variant = 'base' | 'light'
 const variants = ['base', 'light']
 
 export default {
-  title: 'Elements|Breadcrumbs'
+  title: 'Elements/Breadcrumbs'
 }
 
 const crumbs = [
@@ -46,10 +48,22 @@ export const ExampleWithTitle = () => {
   )
 }
 
+ExampleWithTitle.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const ExampleWithoutTitle = () => {
   const variant = select('Variant', variants, 'base') as Variant
 
   return <Breadcrumbs crumbs={crumbs} variant={variant} />
+}
+
+ExampleWithoutTitle.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const NoCrumbsAndTitle = () => {
@@ -64,10 +78,22 @@ export const NoCrumbsAndTitle = () => {
   )
 }
 
+NoCrumbsAndTitle.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const NoCrumbsAndNoTitle = () => {
   const variant = select('Variant', variants, 'base') as Variant
 
   return <Breadcrumbs crumbs={[]} variant={variant} />
+}
+
+NoCrumbsAndNoTitle.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const AllWithCustomSeparator = () => {
@@ -106,6 +132,12 @@ export const AllWithCustomSeparator = () => {
   )
 }
 
+AllWithCustomSeparator.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const NothingWithCustomSeparator = () => {
   const variant = select('Variant', variants, 'base') as Variant
 
@@ -141,6 +173,12 @@ export const NothingWithCustomSeparator = () => {
   )
 }
 
+NothingWithCustomSeparator.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const CustomHomeIcon = () => {
   const variant = select('Variant', variants, 'base') as Variant
 
@@ -153,5 +191,35 @@ export const CustomHomeIcon = () => {
       customHomeIcon={homeIcon}
       variant={variant}
     />
+  )
+}
+
+CustomHomeIcon.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+const Spacer = () => (
+  <div sx={{ marginY: 10, borderTop: '1px #efefef solid' }} />
+)
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes>
+      <ExampleWithTitle />
+      <Spacer />
+      <ExampleWithoutTitle />
+      <Spacer />
+      <NoCrumbsAndTitle />
+      <Spacer />
+      <NoCrumbsAndNoTitle />
+      <Spacer />
+      <AllWithCustomSeparator />
+      <Spacer />
+      <NothingWithCustomSeparator />
+      <Spacer />
+      <CustomHomeIcon />
+    </AllThemes>
   )
 }

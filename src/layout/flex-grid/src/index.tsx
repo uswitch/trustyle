@@ -4,15 +4,15 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 
 const getGutterSize = (theme: any): any =>
-  theme?.sizes?.grid?.gutter || theme?.grid?.sizes?.gutter
+  theme?.layout && theme?.layout['flex-grid'].sizes?.gutter
 
 const getVerticalGutterSize = (
   theme: any
 ): string | number | (string | number)[] =>
-  theme?.sizes?.grid?.verticalGutter || theme?.grid?.sizes?.verticalGutter
+  theme?.layout && theme?.layout['flex-grid'].sizes?.verticalGutter
 
 const getContainerSize = (theme: any): number | number[] =>
-  theme?.sizes?.grid?.container?.maxWidth || theme?.grid?.container?.maxWidth
+  theme?.layout && theme?.layout['flex-grid']?.container?.maxWidth
 
 const castArray = (valueOrArray: any): any => [].concat(valueOrArray) // wiiilllllson
 
@@ -40,7 +40,15 @@ interface ContainerProps {
 }
 
 export const Container: React.FC<ContainerProps &
-  React.HTMLAttributes<any>> = ({ children, cols, span, ...props }) => {
+  React.HTMLAttributes<any>> = ({
+  children,
+  cols,
+  span,
+  className,
+  ...props
+}) => {
+  const colsArray = castArray(cols)
+  const spanArray = castArray(span)
   return (
     <div
       sx={{
@@ -50,11 +58,15 @@ export const Container: React.FC<ContainerProps &
         maxWidth: (theme: any) =>
           uncastArrayIfSingle(
             castArray(getContainerSize(theme)).map(
-              (maxWidth: number) => maxWidth * (cols && span ? span / cols : 1)
+              (maxWidth: number, i: number) =>
+                maxWidth *
+                (colsArray[i] && spanArray[i] ? spanArray[i] / colsArray[i] : 1)
             )
-          )
+          ),
+        variant: 'compounds.container.flex'
       }}
       {...props}
+      className={`flex-grid-container ${className}`}
     >
       {children}
     </div>
@@ -79,7 +91,6 @@ export const Row: React.FC<RowProps & React.HTMLAttributes<any>> = ({
   return (
     <div
       sx={{
-        variant: `grid.row`,
         mx: (theme: any): any =>
           uncastArrayIfSingle(
             castArray(getGutterSize(theme))
@@ -94,9 +105,9 @@ export const Row: React.FC<RowProps & React.HTMLAttributes<any>> = ({
       }}
       {...props}
     >
-      {childrenArray.map((child: React.ReactNode) =>
+      {childrenArray.map((child: React.ReactNode, key) =>
         React.isValidElement(child)
-          ? React.cloneElement(child, { cols })
+          ? React.cloneElement(child, { cols, key })
           : child
       )}
     </div>
@@ -128,7 +139,6 @@ export const Col: React.FC<ColProps & React.HTMLAttributes<any>> = ({
   return (
     <div
       sx={{
-        variant: `grid.col`,
         boxSizing: 'border-box',
         mr: (theme: any) =>
           uncastArrayIfSingle(
@@ -212,10 +222,9 @@ export const Col: React.FC<ColProps & React.HTMLAttributes<any>> = ({
 
 type LayoutKey = number | '*'
 type Layout = ColProps & { key?: LayoutKey }
+export type LayoutJson = (RowProps & { layout: Layout[] })[]
 interface FromJsonProps extends React.HTMLAttributes<any> {
-  json: (RowProps & {
-    layout: Layout[]
-  })[]
+  json: LayoutJson
   childrenArray: React.ReactNode[]
 }
 
@@ -274,7 +283,7 @@ export const GridFromJson: React.FC<FromJsonProps> = ({
             {layout.map(({ key, ...colProps }) => {
               if (key === '*') {
                 return getWildcardChildren().map(({ id, component }) => (
-                  <Col {...colProps} key={id}>
+                  <Col {...colProps} key={id} className="json-grid-col">
                     {component}
                   </Col>
                 ))
@@ -282,7 +291,7 @@ export const GridFromJson: React.FC<FromJsonProps> = ({
 
               const { id, component } = getChildFromKey(key)
               return (
-                <Col {...colProps} key={id}>
+                <Col {...colProps} key={id} className="json-grid-col">
                   {component}
                 </Col>
               )

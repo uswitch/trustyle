@@ -1,8 +1,7 @@
 /** @jsx jsx */
 
-import * as React from 'react'
+import React, { Fragment } from 'react'
 import { jsx } from 'theme-ui'
-import { Icon } from '@uswitch/trustyle.icon'
 
 type PhaseIconVariant = 'open' | 'complete' | 'incomplete'
 
@@ -31,13 +30,20 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   phases: Phase[]
   currentPhaseKey: string
   progress: number
+  hideProgressBar?: boolean
 }
 
 const PhaseIcon: React.FC<PhaseIconProps> = ({ variant, step }) => (
-  <div sx={{ variant: `funnelProgress.base.phaseIcon.variants.${variant}` }}>
+  <div
+    sx={{
+      variant: `elements.funnel-progress.base.phaseIcon.variants.${variant}`
+    }}
+  >
     {variant === 'complete' ? (
-      <div sx={{ variant: 'funnelProgress.base.phaseCompleteIcon.base' }}>
-        <Icon glyph="check" color="#FFFFFF" />
+      <div
+        sx={{ variant: 'elements.funnel-progress.base.phaseCompleteIcon.base' }}
+      >
+        {step}
       </div>
     ) : (
       step
@@ -49,40 +55,28 @@ const FunnelPhase: React.FC<FunnelPhaseProps> = ({
   step,
   open,
   complete,
-  progress,
   phase: { title }
 }) => (
   <div
     sx={{
       variant: !open
-        ? 'funnelProgress.base.phase.base'
-        : 'funnelProgress.base.phase.variants.open'
+        ? 'elements.funnel-progress.base.phase.base'
+        : 'elements.funnel-progress.base.phase.variants.open'
     }}
   >
-    <div
-      sx={{
-        variant:
-          progress !== 0 || !open
-            ? 'funnelProgress.base.progress.base'
-            : 'funnelProgress.base.progress.variants.start'
-      }}
-      style={{
-        width:
-          progress !== 0 || !open
-            ? `${STARTING_PROGRESS * 100 +
-                progress * (1 - STARTING_PROGRESS) * 100}%`
-            : '0%'
-      }}
-    />
-    <div sx={{ variant: 'funnelProgress.base.phaseLabel.base' }}>
-      <div sx={{ variant: 'funnelProgress.base.phaseLabelPart.base' }}>
+    <div sx={{ variant: 'elements.funnel-progress.base.phaseLabel.base' }}>
+      <div
+        sx={{ variant: 'elements.funnel-progress.base.phaseLabelPart.base' }}
+      >
         <PhaseIcon
           step={step}
           variant={open ? 'open' : complete ? 'complete' : 'incomplete'}
         />
       </div>
       {open && (
-        <div sx={{ variant: 'funnelProgress.base.phaseLabelPart.base' }}>
+        <div
+          sx={{ variant: 'elements.funnel-progress.base.phaseLabelPart.base' }}
+        >
           {title}
         </div>
       )}
@@ -94,6 +88,7 @@ const FunnelProgress: React.FC<Props> = ({
   phases,
   currentPhaseKey,
   progress,
+  hideProgressBar,
   ...rest
 }) => {
   const currentPhaseIndex = phases.findIndex(
@@ -101,18 +96,48 @@ const FunnelProgress: React.FC<Props> = ({
   )
 
   return (
-    <div {...rest} sx={{ variant: 'funnelProgress.base' }}>
-      {phases.map((phase, ind) => (
-        <FunnelPhase
-          key={ind}
-          step={ind + 1}
-          open={ind === currentPhaseIndex}
-          complete={ind < currentPhaseIndex}
-          progress={progress}
-          phase={phase}
-        />
-      ))}
-    </div>
+    <Fragment>
+      <div {...rest} sx={{ variant: 'elements.funnel-progress.base' }}>
+        {phases.map((phase, ind) => (
+          <FunnelPhase
+            key={ind}
+            step={ind + 1}
+            open={ind === currentPhaseIndex}
+            complete={ind < currentPhaseIndex}
+            progress={progress}
+            phase={phase}
+          />
+        ))}
+      </div>
+      {!hideProgressBar && (
+        <div
+          sx={{
+            variant: 'elements.funnel-progress.base.progess.back',
+            height: '4px',
+            width: '100%',
+            position: 'relative',
+            backgroundColor: 'progress-bg',
+            marginTop: '13px'
+          }}
+        >
+          <div
+            sx={{
+              variant:
+                progress !== 0
+                  ? 'elements.funnel-progress.base.progress.base'
+                  : 'elements.funnel-progress.base.progress.variants.start'
+            }}
+            style={{
+              width:
+                progress !== 0
+                  ? `${STARTING_PROGRESS * 100 +
+                      progress * (1 - STARTING_PROGRESS) * 100}%`
+                  : '0%'
+            }}
+          />
+        </div>
+      )}
+    </Fragment>
   )
 }
 

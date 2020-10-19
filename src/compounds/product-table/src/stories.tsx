@@ -7,11 +7,12 @@ import { Global } from '@emotion/core'
 import { ButtonLink } from '../../../elements/button-link/src'
 import Badge from '../../../elements/badge/src'
 import { ProgressBar } from '../../../elements/progress-bar/src'
+import AllThemes from '../../../utils/all-themes'
 
 import ProductTable, { AddonArg } from './index'
 
 export default {
-  title: 'Compounds|Product Table'
+  title: 'Compounds/Product Table'
 }
 
 type Column =
@@ -42,6 +43,7 @@ export const ExampleWithKnobs = () => {
   const unsplitColumns = columns.filter(col => !col.includes('Split'))
   const headerAddon = select('Header addon', unsplitColumns, 'None')
   const footerAddon = boolean('Show footer via addon?', true)
+  const infoAddon = boolean('Show info via addon?', true)
 
   const firstCol = select('First column', columns, 'Image')
   const secondCol = select('Second column', columns, 'Split Content')
@@ -55,7 +57,8 @@ export const ExampleWithKnobs = () => {
     ),
     Value: (
       <ProductTable.data.Value value={300} unit="pounds" subscript="/ month" />
-    )
+    ),
+    Auto: <ProductTable.data.Auto text="£10 - £20/month" />
   }
 
   const dataFormatterKey = select(
@@ -148,9 +151,22 @@ export const ExampleWithKnobs = () => {
       addon: ProductTable.addons.footer,
       component: (
         <ProductTable.cells.Base sx={{ display: 'block' }} mobileOrder={100}>
-          <small sx={{ fontSize: 'xs' }}>
+          <div sx={{ fontSize: ['xxs', 'xs'] }}>
             Representative example: Assumed borrowing of £10,000 over...
-          </small>
+          </div>
+        </ProductTable.cells.Base>
+      )
+    })
+  }
+
+  if (infoAddon) {
+    addons.push({
+      addon: ProductTable.addons.info,
+      component: (
+        <ProductTable.cells.Base sx={{ display: 'block' }} mobileOrder={100}>
+          <div sx={{ fontSize: ['xxs', 'xs'] }}>
+            Here&apos;s some extra info...
+          </div>
         </ProductTable.cells.Base>
       )
     })
@@ -166,6 +182,7 @@ export const ExampleWithKnobs = () => {
         }}
       />
       <ProductTable.Row
+        id="deal-1"
         badges={badges}
         preTitle={preTitle}
         rowTitle={rowTitle}
@@ -177,12 +194,26 @@ export const ExampleWithKnobs = () => {
         {getColumn(thirdCol)}
         {getColumn(fourthCol)}
         <ProductTable.cells.Cta
-          primary={<ButtonLink variant="primary">{buttonText}</ButtonLink>}
-          secondary={<ButtonLink variant="link">{linkText}</ButtonLink>}
+          primary={
+            <ButtonLink variant="primary" size="small">
+              {buttonText}
+            </ButtonLink>
+          }
+          secondary={
+            <ButtonLink variant="link" size="small">
+              {linkText}
+            </ButtonLink>
+          }
         />
       </ProductTable.Row>
     </React.Fragment>
   )
+}
+
+ExampleWithKnobs.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const Example1 = () => {
@@ -216,6 +247,12 @@ export const Example1 = () => {
       />
     </ProductTable.Row>
   )
+}
+
+Example1.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const Example2 = () => {
@@ -261,6 +298,12 @@ export const Example2 = () => {
       </ProductTable.Row>
     </React.Fragment>
   )
+}
+
+Example2.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const ExampleWithAddons = () => {
@@ -315,9 +358,17 @@ export const ExampleWithAddons = () => {
           addon: ProductTable.addons.footer,
           component: (
             <ProductTable.cells.Base sx={{ display: 'block' }}>
-              <small sx={{ fontSize: 'xs' }}>
+              <div sx={{ fontSize: ['xxs', 'xs'] }}>
                 Representative example: Assumed borrowing of £10,000 over...
-              </small>
+              </div>
+            </ProductTable.cells.Base>
+          )
+        },
+        {
+          addon: ProductTable.addons.accordion,
+          component: (
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontSize: ['xxs', 'xs'] }}>More info</div>
             </ProductTable.cells.Base>
           )
         }
@@ -326,9 +377,6 @@ export const ExampleWithAddons = () => {
       <ProductTable.cells.Split>
         <ProductTable.cells.Content label="Fixed rate contract">
           14 months
-        </ProductTable.cells.Content>
-        <ProductTable.cells.Content label="Early exit fee">
-          £30 per fuel
         </ProductTable.cells.Content>
       </ProductTable.cells.Split>
       <ProductTable.cells.Content label="Annual saving" accent>
@@ -343,6 +391,12 @@ export const ExampleWithAddons = () => {
       />
     </ProductTable.Row>
   )
+}
+
+ExampleWithAddons.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const ExampleWithNumberFormatters = () => {
@@ -394,11 +448,17 @@ export const ExampleWithNumberFormatters = () => {
           />
         </ProductTable.cells.Content>
         <ProductTable.cells.Content label="No formatter" accent>
-          <ProductTable.data.Value value={1000} unit={null} subscript="" />
+          <ProductTable.data.Value value={1000} unit="" subscript="" />
         </ProductTable.cells.Content>
       </ProductTable.Row>
     </React.Fragment>
   )
+}
+
+ExampleWithNumberFormatters.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const ExampleWithMultipleAccents = () => {
@@ -433,9 +493,15 @@ export const ExampleWithMultipleAccents = () => {
   )
 }
 
+ExampleWithMultipleAccents.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const ExampleStacked = () => {
   return (
-    <>
+    <React.Fragment>
       <ProductTable.Row preTitle="Sponsored" rowTitle="Super Saver April 2021">
         <ProductTable.cells.Image>
           <img
@@ -460,7 +526,6 @@ export const ExampleStacked = () => {
         </ProductTable.cells.Content>
         <ProductTable.cells.Cta
           primary={<ButtonLink variant="primary">Button</ButtonLink>}
-          secondary={<ButtonLink variant="link">Plan info</ButtonLink>}
         />
       </ProductTable.Row>
 
@@ -491,6 +556,198 @@ export const ExampleStacked = () => {
           secondary={<ButtonLink variant="link">Plan info</ButtonLink>}
         />
       </ProductTable.Row>
-    </>
+    </React.Fragment>
+  )
+}
+
+ExampleStacked.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+const clickableRow = 'https://www.money.co.uk'
+
+export const ClickableExample = () => {
+  return (
+    <React.Fragment>
+      <ProductTable.Row
+        preTitle="Sponsored"
+        rowTitle="Clickable Row"
+        clickableRow={clickableRow}
+      >
+        <ProductTable.cells.Image>
+          <img
+            src="https://placekitten.com/200/75?image=1"
+            alt="Salman"
+            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          />
+        </ProductTable.cells.Image>
+        <ProductTable.cells.Split>
+          <ProductTable.cells.Content label="Fixed rate contract">
+            14 months
+          </ProductTable.cells.Content>
+          <ProductTable.cells.Content label="Early exit fee">
+            £30 per fuel
+          </ProductTable.cells.Content>
+        </ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Cta
+          primary={<ButtonLink variant="primary">Button</ButtonLink>}
+        />
+      </ProductTable.Row>
+
+      <ProductTable.Row
+        preTitle="Sponsored"
+        rowTitle="Clickable Row"
+        clickableRow={clickableRow}
+      >
+        <ProductTable.cells.Image>
+          <img
+            src="https://placekitten.com/200/75?image=1"
+            alt="Salman"
+            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          />
+        </ProductTable.cells.Image>
+        <ProductTable.cells.Split>
+          <ProductTable.cells.Content label="Fixed rate contract">
+            14 months
+          </ProductTable.cells.Content>
+          <ProductTable.cells.Content label="Early exit fee">
+            £30 per fuel
+          </ProductTable.cells.Content>
+        </ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Content label="Annual saving" accent>
+          <ProductTable.data.Range from={30} to={260} unit="pounds" />
+        </ProductTable.cells.Content>
+        <ProductTable.cells.Cta
+          primary={<ButtonLink variant="primary">Button</ButtonLink>}
+          secondary={<ButtonLink variant="link">Plan info</ButtonLink>}
+        />
+      </ProductTable.Row>
+    </React.Fragment>
+  )
+}
+
+ClickableExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const MoneyRedesignExample = () => {
+  return (
+    <ProductTable.Row
+      rowTitle="Santander Standard Loan (Online)"
+      image={
+        <ProductTable.cells.HeaderImage>
+          <img
+            src="https://placekitten.com/200/75?image=9"
+            alt="Salman"
+            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          />
+        </ProductTable.cells.HeaderImage>
+      }
+      addons={[
+        {
+          addon: ProductTable.addons.info,
+          component: (
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontWeight: 'bold' }}>Additional Information:</div>
+              <div sx={{ fontSize: ['xxs', 'xs'] }}>
+                Here is some extra information. Here is even more extra
+                information. And more extra information.
+              </div>
+            </ProductTable.cells.Base>
+          ),
+          options: {
+            split: true,
+            headerImage: true
+          }
+        },
+        {
+          addon: ProductTable.addons.footer,
+          component: (
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontWeight: 'bold' }}>Representative example:</div>
+              <div sx={{ fontSize: ['xxs', 'xs'] }}>
+                Assumed borrowing of £10,000 over...
+              </div>
+            </ProductTable.cells.Base>
+          ),
+          options: {
+            split: true,
+            headerImage: true
+          }
+        },
+        {
+          addon: ProductTable.addons.accordion,
+          component: (
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontSize: ['xxs', 'xs'] }}>More info</div>
+            </ProductTable.cells.Base>
+          )
+        }
+      ]}
+    >
+      <ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Loan Amount" headerImage>
+          <ProductTable.data.Auto text="£1000 to £10000" headerImage />
+        </ProductTable.cells.Content>
+      </ProductTable.cells.Split>
+      <ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Representative APR" headerImage>
+          <ProductTable.data.Auto
+            text="49.9% APR (£1,000 to £10,000)"
+            headerImage
+          />
+        </ProductTable.cells.Content>
+      </ProductTable.cells.Split>
+      <ProductTable.cells.Split>
+        <ProductTable.cells.Content label="Loan Term" headerImage>
+          <ProductTable.data.Auto text="1 year to 5 years" headerImage />
+        </ProductTable.cells.Content>
+      </ProductTable.cells.Split>
+      <ProductTable.cells.Cta
+        primary={<ButtonLink variant="primary">Apply now</ButtonLink>}
+        headerImage
+      />
+    </ProductTable.Row>
+  )
+}
+
+MoneyRedesignExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+const Spacer = () => <div sx={{ minHeight: 20 }} />
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes themes={['uswitch', 'money']}>
+      <Example1 />
+      <Spacer />
+      <Example2 />
+      <Spacer />
+      <ExampleWithAddons />
+      <Spacer />
+      <ExampleWithNumberFormatters />
+      <Spacer />
+      <ExampleWithMultipleAccents />
+      <Spacer />
+      <ExampleStacked />
+      <Spacer />
+      <MoneyRedesignExample />
+    </AllThemes>
   )
 }

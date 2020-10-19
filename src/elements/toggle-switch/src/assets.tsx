@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const checkedIcon: any = (
+export const checkedIcon = (compact: boolean): any => (
   <svg
     width="24"
     height="24"
@@ -8,7 +8,11 @@ export const checkedIcon: any = (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M3 11L9 17L20 6" stroke="#141424" strokeWidth="2" />
+    <path
+      d="M3 11L9 17L20 6"
+      stroke={compact ? 'white' : '#141424'}
+      strokeWidth="2"
+    />
   </svg>
 )
 

@@ -3,6 +3,7 @@
 import React, { useContext, useState } from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
+import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 
 interface ContextProps {
   open: number
@@ -21,23 +22,43 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   index?: number
   title: string
   isInitiallyOpen?: boolean
+  className?: string
+  icon?: string
+  glyph?: Glyph
+  glyphColor?: string
+  variant?: string
 }
 
 interface TitleProps extends React.HTMLAttributes<HTMLDivElement> {
   as?: React.ElementType
+  className?: string
 }
 
 interface GroupProps {
   iconClosed?: Glyph
   iconOpen?: Glyph
+  className?: string
 }
 
 const Accordion: React.FC<Props> & {
   Group: React.FC<GroupProps>
   Title: React.FC<TitleProps>
-} = ({ index, title, isInitiallyOpen = false, children }) => {
+} = ({
+  index,
+  title,
+  isInitiallyOpen = false,
+  children,
+  className,
+  icon = '',
+  glyph,
+  glyphColor = '',
+  variant
+}) => {
   const {
-    theme: { accordion: accordionTheme = {}, colors = {} }
+    theme: {
+      compounds: { accordion: accordionTheme = {} },
+      colors = {}
+    }
   }: any = useThemeUI()
   const [isOpenState, setIsOpenState] = useState(isInitiallyOpen)
   const accordionContext = useContext(AccordionContext)
@@ -56,52 +77,108 @@ const Accordion: React.FC<Props> & {
   }
 
   return (
-    <div sx={{ variant: 'accordion.base' }}>
+    <div
+      sx={{
+        variant: variant
+          ? `compounds.accordion.variants.${variant}`
+          : 'compounds.accordion'
+      }}
+      className={className}
+      data-target="accordion" // this is a hack to stop clicking propagating to the product table
+    >
       <button
         sx={{
           cursor: 'pointer',
           variant: !isOpen
-            ? 'accordion.base.button'
-            : 'accordion.variants.isActive.button'
+            ? 'compounds.accordion.base.button'
+            : 'compounds.accordion.variants.isActive.button'
         }}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div
-          sx={{
-            flex: '1',
-            textAlign: 'left'
-          }}
-        >
-          {title}
-        </div>
-        {accordionContext.iconClosed && accordionContext.iconOpen ? (
-          <Icon
-            color={
-              isOpen
-                ? colors[accordionTheme?.variants?.isActive?.caret?.color]
-                : colors[accordionTheme?.base?.caret?.color]
-            }
-            glyph={
-              isOpen ? accordionContext.iconOpen : accordionContext.iconClosed
-            }
-            size={16}
-          />
+        {icon || glyph ? (
+          <div
+            sx={{
+              flex: '1',
+              textAlign: 'left',
+              alignItems: 'center',
+              display: 'flex',
+              variant: `compounds.accordion.variants.${variant}.title`
+            }}
+          >
+            {glyph ? (
+              <div
+                sx={{
+                  variant: `compounds.accordion.variants.${variant}.glyph`
+                }}
+              >
+                <Icon color={glyphColor} glyph={glyph} size={20} />
+              </div>
+            ) : (
+              <div
+                sx={{
+                  variant: 'compounds.accordion.variants.titleIcon'
+                }}
+              >
+                <ImgixImage
+                  src={icon}
+                  imgixParams={{ fit: 'clip' }}
+                  critical
+                  sx={{
+                    height: '100%',
+                    width: '100%'
+                  }}
+                />
+              </div>
+            )}
+            {title}
+          </div>
         ) : (
-          <Icon
-            color={
-              isOpen
-                ? colors[accordionTheme?.variants?.isActive?.caret?.color]
-                : colors[accordionTheme?.base?.caret?.color]
-            }
-            glyph="caret"
-            direction={isOpen ? 'up' : 'down'}
-            size={16}
-          />
+          <div
+            sx={{
+              flex: '1',
+              textAlign: 'left',
+              variant: `compounds.accordion.variants.${variant}.title`
+            }}
+          >
+            {title}
+          </div>
+        )}
+
+        {accordionContext.iconClosed && accordionContext.iconOpen ? (
+          <div
+            sx={{ variant: `compounds.accordion.variants.${variant}.caret` }}
+          >
+            <Icon
+              color={
+                isOpen
+                  ? colors[accordionTheme?.variants?.isActive?.caret?.color]
+                  : colors[accordionTheme?.base?.caret?.color]
+              }
+              glyph={
+                isOpen ? accordionContext.iconOpen : accordionContext.iconClosed
+              }
+              size={16}
+            />
+          </div>
+        ) : (
+          <div
+            sx={{ variant: `compounds.accordion.variants.${variant}.caret` }}
+          >
+            <Icon
+              color={
+                isOpen
+                  ? colors[accordionTheme?.variants?.isActive?.caret?.color]
+                  : colors[accordionTheme?.base?.caret?.color]
+              }
+              glyph="caret"
+              direction={isOpen ? 'up' : 'down'}
+              size={16}
+            />
+          </div>
         )}
       </button>
       <div
         sx={{
-          variant: 'accordion.base.content',
           overflow: 'hidden',
           display: isOpen ? 'block' : 'none',
           height: isOpen ? 'auto' : '0',
@@ -116,7 +193,8 @@ const Accordion: React.FC<Props> & {
           },
           '> p:last-child': {
             marginBottom: 'xs'
-          }
+          },
+          variant: 'compounds.accordion.base.content'
         }}
       >
         {children}
@@ -127,7 +205,7 @@ const Accordion: React.FC<Props> & {
 
 export default Accordion
 
-Accordion.Group = ({ children, iconClosed, iconOpen }) => {
+Accordion.Group = ({ children, iconClosed, iconOpen, className }) => {
   const [openId, setOpenId] = useState(0)
 
   const childrenWithIndexes = React.Children.map(children, (child, index) => {
@@ -142,8 +220,10 @@ Accordion.Group = ({ children, iconClosed, iconOpen }) => {
     <div
       sx={{
         marginTop: 'sm',
-        marginBottom: 'sm'
+        marginBottom: 'sm',
+        variant: 'compounds.accordion.base'
       }}
+      className={className}
     >
       <AccordionContext.Provider
         value={{ open: openId, setOpenId, iconClosed, iconOpen }}
@@ -154,13 +234,14 @@ Accordion.Group = ({ children, iconClosed, iconOpen }) => {
   )
 }
 
-Accordion.Title = ({ children, as = 'h2' }) => {
+Accordion.Title = ({ children, as = 'h2', className }) => {
   return (
     <Styled.h3
       as={as}
       sx={{
-        variant: 'accordion.base.title'
+        variant: 'compounds.accordion.base.title'
       }}
+      className={className}
     >
       {children}
     </Styled.h3>

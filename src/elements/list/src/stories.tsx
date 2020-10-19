@@ -1,45 +1,45 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { css, jsx } from '@emotion/core'
-import { storiesOf } from '@storybook/react'
-import { number } from '@storybook/addon-knobs'
-import { ThemeProvider } from 'theme-ui'
+import { jsx } from 'theme-ui'
 
-import theme from '../../../utils/theme-selector'
+import AllThemes from '../../../utils/all-themes'
 
 import { List, ListItem } from './'
 
-storiesOf('Elements|List', module)
-  .addDecorator(Story => {
-    return <ThemeProvider theme={theme()}>{Story()}</ThemeProvider>
-  })
-  .add('primary variant', () => (
-    <div css={css({ padding: number('Padding', 10) })}>
-      <List listType="numeric">
-        <ListItem>First item</ListItem>
-        <ListItem>Second item</ListItem>
-        <ListItem>Third item</ListItem>
-      </List>
+export default {
+  title: 'Elements/List'
+}
 
-      <List listType="bullet">
-        <ListItem>First item</ListItem>
-        <ListItem>Second item</ListItem>
-        <ListItem>Third item</ListItem>
-      </List>
+const arr1 = ['First item', 'Second item', 'Third item']
+const arr2 = ['Fourth item', 'Fifth item', 'Sixth item']
+const pTag = <p>Item with a block element inside</p>
 
-      <List listType="bullet">
-        <ListItem>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </ListItem>
-        <ListItem>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </ListItem>
-        <ListItem>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </ListItem>
-      </List>
-    </div>
-  ))
+export const Example = () => (
+  <div>
+    <List title="Checklist" variant="checklist" items={arr1} />
+    <List title="Pros" variant="pros" items={arr1} />
+    <List listType="numeric" items={[...arr1, ...arr2, pTag]} />
+
+    <List title="bullet" items={arr1} />
+
+    <List listType="bullet">
+      <ListItem>First child</ListItem>
+      <ListItem>Second child</ListItem>
+      <ListItem>Third child</ListItem>
+    </List>
+  </div>
+)
+
+Example.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes>
+      <Example />
+    </AllThemes>
+  )
+}

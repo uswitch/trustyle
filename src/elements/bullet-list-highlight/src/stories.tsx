@@ -3,7 +3,7 @@ import * as React from 'react'
 import { BulletListHighlight } from './'
 
 export default {
-  title: 'Elements|Bullet List Highlight'
+  title: 'Elements/Bullet List Highlight'
 }
 
 export const Example = () => (

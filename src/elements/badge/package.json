@@ -1,16 +1,11 @@
 {
   "name": "@uswitch/trustyle.badge",
-  "version": "1.0.1",
+  "version": "2.0.4",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "--------------- BUILDING": "----------------------",
-    "clean": "rm -rf lib",
-    "build": "npm run clean && tsc"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",

@@ -1,0 +1,30 @@
+{
+  "name": "@uswitch/trustyle.themed-icon",
+  "version": "1.1.5",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "ts:main": "src/index.tsx",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "--------------- BUILDING": "----------------------",
+    "clean": "rm -rf lib",
+    "build": "npm run clean && webpack && mv ./lib/elements/themed-icon/src/index.d.ts ./lib"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.27",
+    "react": "^16.7.0"
+  },
+  "dependencies": {
+    "svg-sprite-loader": "^5.0.0",
+    "svg-transform-loader": "^2.0.13",
+    "svgo-loader": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/webpack-env": "^1.15.2",
+    "ts-loader": "^7.0.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
