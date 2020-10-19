@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.24.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.23.0...@uswitch/trustyle.uswitch-theme@2.24.0) (2020-10-19)
+
+
+### Features
+
+* add simple dropdown to uswitch theme ([4a92b35](https://github.com/uswitch/trustyle/commit/4a92b35))
+* eiffel 65 ([7f835d4](https://github.com/uswitch/trustyle/commit/7f835d4))
+
+
+
+
+
 # [2.23.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.22.0...@uswitch/trustyle.uswitch-theme@2.23.0) (2020-10-19)
 
 
