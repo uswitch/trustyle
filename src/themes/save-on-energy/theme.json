@@ -119,7 +119,7 @@
     "primary": "#446db5",
     "secondary": "#00aa4e",
     "heading": "#443160",
-    "link": "#009fbb",
+    "link": "#545454",
     "brand": "#443160",
     "accent-1": "#00aa4e",
     "accent-2": "#6abd45",
@@ -945,6 +945,57 @@
           "color": ["accent-1", "accent-1", "white"]
         },
         "color": "white"
+      }
+    },
+    "accordion": {
+      "base": {
+        ":last-of-type": {
+          "borderWidth": "0 0 1px 0",
+          "borderStyle": "solid",
+          "borderColor": "light-3"
+        },
+        "title": {
+          "py": ["md", 32]
+        },
+        "content": {
+          "marginBottom": ["md", 32],
+          "fontSize": "base",
+          "color": "link",
+          "> p:last-child": {
+            "mb": 0
+          }
+        },
+        "button": {
+          "padding": "0",
+          "paddingTop": ["sm", 32],
+          "paddingBottom": ["sm", 32],
+          "bg": "transparent",
+          "fontFamily": "base",
+          "fontSize": ["base", "md"],
+          "color": "text",
+          "alignItems": "center",
+          "borderWidth": "1px 0 0 0",
+          "borderStyle": "solid",
+          "borderColor": "light-3",
+          "display": "flex",
+          "width": "100%"
+        },
+        "caret": {
+          "color": "primary"
+        }
+      },
+      "variants": {
+        "isActive": {
+          "button": {
+            "variant": "accordion.base.button",
+            "& ~ *": {
+              "mb": 0
+            }
+          },
+          "caret": {
+            "color": "primary--dark"
+          }
+        }
       }
     }
   },

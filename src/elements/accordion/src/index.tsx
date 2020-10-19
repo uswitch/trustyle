@@ -183,7 +183,7 @@ const Accordion: React.FC<Props> & {
           height: isOpen ? 'auto' : '0',
           marginBottom: isOpen
             ? accordionTheme?.base?.content?.marginBottom
-            : '0',
+            : [0, 0, 0],
           '> *:first-child': {
             marginTop: 0
           },
