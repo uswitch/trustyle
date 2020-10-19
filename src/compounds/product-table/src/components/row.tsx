@@ -89,7 +89,7 @@ const ProductTableRow: React.FC<RowProps> = ({
           : 'compounds.product-table.row.main'
       }}
     >
-      <RowWrapper link={clickableRow}>
+      <RowWrapper link={clickableRow} headerImage={image}>
         {!!badges.length && (
           <div
             sx={{

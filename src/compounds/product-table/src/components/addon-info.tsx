@@ -17,7 +17,7 @@ const ProductTableAddonInfo: Addon = {
           order: 99, // should appear above footer on mobile
           extraRules: {
             paddingTop: 'sm',
-            marginTop: headerImage ? 'md' : 'xs',
+            marginTop: headerImage ? ['sm', 'md'] : 'xs',
             marginBottom: -6,
             fontSize: 'sm',
             variant: `compounds.product-table.${headerImage &&

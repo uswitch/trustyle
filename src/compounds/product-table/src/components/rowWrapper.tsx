@@ -6,6 +6,7 @@ import { jsx } from 'theme-ui'
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   link?: string
   children?: React.ReactNode
+  headerImage?: React.ReactNode
 }
 
 const checkClickTargetIsAccordion = (n: number, e: any) => {
@@ -21,7 +22,11 @@ const checkClickTargetIsAccordion = (n: number, e: any) => {
   return false
 }
 
-const linkWrapper = (link: string, children: React.ReactNode) => {
+const linkWrapper = (
+  link: string,
+  children: React.ReactNode,
+  headerImage?: React.ReactNode
+) => {
   const handleClick = (e: any) => {
     if (checkClickTargetIsAccordion(10, e)) {
       e.preventDefault()
@@ -36,6 +41,7 @@ const linkWrapper = (link: string, children: React.ReactNode) => {
         variant: 'compounds.product-table.row.linkWrapper',
         paddingX: ['sm', 'md'],
         paddingY: 'md',
+        paddingTop: headerImage && ['sm', 'md'],
         display: 'block'
       }}
       href={link}
@@ -48,14 +54,15 @@ const linkWrapper = (link: string, children: React.ReactNode) => {
   )
 }
 
-const RowWrapper: React.FC<Props> = ({ link, children }) => {
+const RowWrapper: React.FC<Props> = ({ link, children, headerImage }) => {
   return link ? (
-    linkWrapper(link, children)
+    linkWrapper(link, children, headerImage)
   ) : (
     <div
       sx={{
         paddingX: ['sm', 'md'],
-        paddingY: 'md'
+        paddingY: 'md',
+        paddingTop: headerImage && ['sm', 'md']
       }}
     >
       {children}
