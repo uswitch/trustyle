@@ -7,16 +7,24 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   author: React.ReactNode
   description: string
+  className?: string
 }
 
-const ArticleIntro: React.FC<Props> = ({ title, author, description }) => {
+const ArticleIntro: React.FC<Props> = ({
+  title,
+  author,
+  description,
+  className
+}) => {
   return (
-    <div>
-      <Styled.h1 sx={{ variant: 'articleIntro.base.heading' }}>
+    <div className={className}>
+      <Styled.h1 sx={{ variant: 'compounds.article-intro.base.heading' }}>
         {title}
       </Styled.h1>
       {author}
-      <p sx={{ variant: 'articleIntro.base.description' }}>{description}</p>
+      <p sx={{ variant: 'compounds.article-intro.base.description' }}>
+        {description}
+      </p>
     </div>
   )
 }

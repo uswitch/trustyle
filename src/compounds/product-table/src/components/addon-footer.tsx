@@ -7,7 +7,7 @@ import { Addon, AddonContext, CellContext } from '../generics'
 import { ROWS } from './cell-split'
 
 const ProductTableAddonFooter: Addon = {
-  body: ({ children }) => {
+  body: ({ children, split, headerImage }) => {
     const { gridColumnSpan } = React.useContext(CellContext)
 
     return (
@@ -16,20 +16,22 @@ const ProductTableAddonFooter: Addon = {
           inAddon: 'footer',
           order: 100,
           extraRules: {
-            borderTop: '1px solid',
+            borderTop: split || headerImage ? 'none' : '1px solid',
             paddingTop: 'sm',
-            marginTop: 'xs',
+            marginTop: headerImage ? 'md' : 'xs',
             marginBottom: -6,
-            variant: 'productTable.addonFooter.main'
+            fontSize: 'sm',
+            variant: `compounds.product-table.${headerImage &&
+              'variants.redesign.'}addonFooter.main`
           }
         }}
       >
         <CellContext.Provider
           value={{
-            gridRowStart: ROWS + 5,
+            gridRowStart: ROWS + (split ? 5 : 6),
             gridRowSpan: 1,
-            gridColumnStart: 1,
-            gridColumnSpan
+            gridColumnStart: split ? 3 : 1,
+            gridColumnSpan: split ? 2 : gridColumnSpan
           }}
         >
           {children}

@@ -1,7 +1,8 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { css, jsx } from '@emotion/core'
+import { jsx } from 'theme-ui'
+import css from '@emotion/css'
 import { colors } from '@uswitch/trustyle.styles'
 
 import * as st from './styles'
@@ -15,11 +16,12 @@ interface BulletProps {
 
 interface Props {
   stages: React.ReactNode[]
+  className?: string
 }
 
 const EmailSVG = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-    <g fill="none" fillRule="evenodd">
+    <g fill="none">
       <ellipse cx="17.848" cy="17.864" fill="#008FE9" rx="17.848" ry="17.864" />
       <path
         fill={colors.white}
@@ -27,64 +29,39 @@ const EmailSVG = () => (
       />
       <path
         fill={colors.azure}
-        d="M17.958 20.225a1.78 1.78 0 0 1-1.108-.383l-5.156-4.099.744-.892 5.155 4.098c.212.168.52.168.73-.001l5.126-4.097.746.892-5.124 4.096a1.782 1.782 0 0 1-1.113.386"
+        d="M17.958 20.225a1.78 1.78 0 01-1.108-.383l-5.156-4.099.744-.892 5.155 4.098a.59.59 0 00.73-.001l5.126-4.097.746.892-5.124 4.096a1.782 1.782 0 01-1.113.386"
       />
     </g>
   </svg>
 )
 
 const CalSVG = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-    <defs>
-      <filter
-        id="a"
-        width="220.8%"
-        height="228.3%"
-        x="-60.4%"
-        y="-61.5%"
-        filterUnits="objectBoundingBox"
-      >
-        <feMerge>
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>
-      </filter>
-    </defs>
-    <g fill="none" fillRule="evenodd">
-      <circle cx="18" cy="18" r="18" fill={colors.blueGrey} />
-      <g fill={colors.white} filter="url(#a)" transform="translate(9.31 9.287)">
-        <path d="M2.268 15.071h12.595V7.076H2.268v7.995zM16.297 3.417H.834c-.37 0-.668.286-.668.64v12.387c0 .354.299.64.668.64h15.463c.37 0 .669-.286.669-.64V4.057c0-.354-.3-.64-.67-.64zM3.062 2.278H4.8V0H3.062zM12.91 2.278h1.738V0H12.91z" />
-      </g>
-    </g>
+  <svg width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M18 36c9.941 0 18-8.059 18-18S27.941 0 18 0 0 8.059 0 18s8.059 18 18 18z"
+      fill={colors.blueGrey}
+    />
+    <path
+      d="M11.578 24.358h12.595v-7.995H11.578v7.995zm14.029-11.654H10.144a.653.653 0 00-.668.64v12.387c0 .354.299.64.668.64h15.463c.37 0 .669-.286.669-.64V13.344c0-.354-.3-.64-.67-.64h.001zm-13.235-1.139h1.738V9.287h-1.738v2.278zm9.848 0h1.738V9.287H22.22v2.278z"
+      fill={colors.white}
+    />
   </svg>
 )
 
 const CheckSVG = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-    <defs>
-      <filter
-        id="a"
-        width="207.1%"
-        height="207.1%"
-        x="-53%"
-        y="-53%"
-        filterUnits="objectBoundingBox"
-      >
-        <feMerge>
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>
-      </filter>
-    </defs>
-    <g fill="none" fillRule="evenodd">
-      <circle cx="18" cy="18" r="18" fill={colors.blueGrey} />
-      <g filter="url(#a)" transform="translate(8.1 8.1)">
-        <circle cx="9.9" cy="9.9" r="9.9" fill="#FFF" />
-        <path
-          fill={colors.blueGrey}
-          fillRule="nonzero"
-          d="M13.352 6.6l1.498 1.399-5.952 6.026-3.948-3.808 1.559-1.342 2.45 2.364z"
-        />
-      </g>
-    </g>
+  <svg width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M18 36c9.941 0 18-8.059 18-18S27.941 0 18 0 0 8.059 0 18s8.059 18 18 18z"
+      fill={colors.blueGrey}
+    />
+    <path
+      d="M18 27.9c5.468 0 9.9-4.432 9.9-9.9S23.468 8.1 18 8.1 8.1 12.532 8.1 18s4.432 9.9 9.9 9.9z"
+      fill={colors.white}
+    />
+    <path
+      d="M21.452 14.7l1.498 1.399-5.952 6.026-3.948-3.808 1.559-1.342 2.45 2.364 4.393-4.639z"
+      fill={colors.blueGrey}
+    />
   </svg>
 )
 
@@ -101,8 +78,8 @@ const Bullet: React.FC<BulletProps> = ({ position, children }) => (
   </li>
 )
 
-export const BulletListTimeline: React.FC<Props> = ({ stages }) => (
-  <ul css={st.highlights}>
+export const BulletListTimeline: React.FC<Props> = ({ stages, className }) => (
+  <ul css={st.highlights} className={className}>
     {stages.map((stage, index) => {
       const isFirst = index === 0
       const isLast = index === stages.length - 1
@@ -117,3 +94,5 @@ export const BulletListTimeline: React.FC<Props> = ({ stages }) => (
     })}
   </ul>
 )
+
+export default BulletListTimeline

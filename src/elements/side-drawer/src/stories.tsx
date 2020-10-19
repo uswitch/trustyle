@@ -54,7 +54,7 @@ const ExampleDrawer = () => {
   )
 }
 
-storiesOf('Elements|Drawer', module).add('Example', () => {
+storiesOf('Elements/Drawer', module).add('Example', () => {
   return (
     <Padding>
       <LoremIpsum />

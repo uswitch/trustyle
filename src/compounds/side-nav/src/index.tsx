@@ -20,14 +20,23 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   additionalLinks?: LinkGroup[]
 }
 
-const SideNav: React.FC<Props> = ({ internalLinks, additionalLinks = [] }) => {
+const SideNav: React.FC<Props> = ({
+  internalLinks,
+  additionalLinks = [],
+  className
+}) => {
   return (
-    <nav>
+    <nav className={className}>
       <Accordion.Group>
-        <Accordion title={internalLinks.title}>
+        <Accordion
+          title={internalLinks.title}
+          sx={{
+            variant: 'compounds.side-nav.accordion'
+          }}
+        >
           <ul
             sx={{
-              variant: 'sideNav.internalLinkList'
+              variant: 'compounds.side-nav.internalLinkList'
             }}
           >
             {internalLinks?.links?.map(({ text, url, isActive }) => {
@@ -35,19 +44,27 @@ const SideNav: React.FC<Props> = ({ internalLinks, additionalLinks = [] }) => {
                 <li
                   key={url}
                   sx={{
-                    variant: `sideNav.internalLinkListItem.${
+                    variant: `compounds.side-nav.internalLinkListItem.${
                       isActive ? 'isActive' : 'base'
                     }`
                   }}
                 >
-                  <a href={url}>{text}</a>
+                  <a href={url} sx={{ borderBottom: 0 }}>
+                    {text}
+                  </a>
                 </li>
               )
             })}
           </ul>
         </Accordion>
         {additionalLinks.map(({ title, links = [] }, index) => (
-          <Accordion key={index} title={title}>
+          <Accordion
+            key={index}
+            title={title}
+            sx={{
+              variant: 'compounds.side-nav.accordion'
+            }}
+          >
             <ul sx={{ padding: 0, margin: 0 }}>
               {links.map(({ text, url }, index) => (
                 <li
@@ -55,10 +72,12 @@ const SideNav: React.FC<Props> = ({ internalLinks, additionalLinks = [] }) => {
                   sx={{
                     marginBottom: 0,
                     paddingBottom: 0,
-                    variant: 'sideNav.additionalLink'
+                    variant: 'compounds.side-nav.additionalLink'
                   }}
                 >
-                  <Styled.a href={url}>{text}</Styled.a>
+                  <Styled.a href={url} sx={{ borderBottom: 0 }}>
+                    {text}
+                  </Styled.a>
                 </li>
               ))}
             </ul>

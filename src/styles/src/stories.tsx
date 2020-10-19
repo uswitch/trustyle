@@ -13,7 +13,7 @@ const swatch = css({
   fontFamily: 'monospace'
 })
 
-storiesOf('Legacy Styles|Colours', module).add('Swatches', () => (
+storiesOf('Legacy Styles/Colours', module).add('Swatches', () => (
   <React.Fragment>
     {Object.entries(colors).map(([key, value]) => (
       <div key={key} css={swatch}>
@@ -30,7 +30,7 @@ storiesOf('Legacy Styles|Colours', module).add('Swatches', () => (
   </React.Fragment>
 ))
 
-storiesOf('Legacy Styles|Typography', module).add('Types', () => (
+storiesOf('Legacy Styles/Typography', module).add('Types', () => (
   <React.Fragment>
     {Object.entries(types).map(([key, value]) => (
       <p key={key} css={value}>

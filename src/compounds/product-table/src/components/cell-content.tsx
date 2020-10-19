@@ -13,8 +13,8 @@ const grid = (rowOrCol: 'row' | 'column', start: number, span: number) => {
   const rowOrColCap = capitalise(rowOrCol)
   return {
     [`grid${rowOrColCap}`]: `${start} / span ${span}`,
-    [`-ms-grid-${rowOrCol}`]: `${start}`,
-    [`-ms-grid-${rowOrCol}-span`]: `${span}`
+    [`msGrid${rowOrColCap}`]: `${start}`,
+    [`msGrid${rowOrColCap}Span`]: `${span}`
   }
 }
 
@@ -22,65 +22,145 @@ export interface CellPrimaryProps extends React.HTMLAttributes<HTMLDivElement> {
   label: string
   accent?: boolean
   mobileOrder?: number
+  headerImage?: boolean
 }
-const ProductTableCellContent: React.FC<CellPrimaryProps> = ({
+
+export interface ContentRowProps extends CellPrimaryProps {
+  inAddon: string | boolean
+}
+
+const RowContent: React.FC<ContentRowProps> = ({
+  accent,
+  children,
+  inAddon,
   label,
-  accent = false,
+  mobileOrder
+}) => (
+  <CellBase
+    mobileOrder={mobileOrder || (accent ? 1 : 2)}
+    sx={{
+      height: 'auto',
+      display: 'grid',
+      alignItems: 'center',
+      gridGap: 'sm',
+      gridTemplateColumns: 'auto auto',
+      msGridColumns: 'auto auto',
+      gridTemplateRows: '100%',
+      msGridRows: '100%',
+      variant: `compounds.product-table.cellContent.variants.inSplit.${
+        accent ? 'accent' : 'main'
+      }`
+    }}
+    // @ts-ignore
+    css={{ display: '-ms-grid' }}
+  >
+    <div
+      sx={{
+        display: inAddon ? [undefined, 'none'] : undefined,
+        ...grid('column', 1, 1),
+        ...grid('row', 1, 1),
+        fontSize: 'xs',
+        marginTop: '',
+        variant: 'compounds.product-table.cellContent.variants.inSplit.label'
+      }}
+    >
+      {label}
+    </div>
+    <div
+      sx={{
+        ...grid('column', 2, 1),
+        ...grid('row', 1, 1),
+        fontSize: 'sm',
+        textAlign: 'right',
+        small: {
+          fontSize: 'sm'
+        },
+        variant: 'compounds.product-table.cellContent.variants.inSplit.content'
+      }}
+    >
+      {children}
+    </div>
+  </CellBase>
+)
+
+const BlockContent: React.FC<CellPrimaryProps> = ({
+  label,
+  accent,
   mobileOrder,
-  children
+  children,
+  headerImage
+}) => (
+  <CellBase
+    mobileOrder={mobileOrder || (accent ? 1 : 2)}
+    sx={{
+      height: accent ? '100%' : 'auto',
+      display: 'grid',
+      alignItems: 'start',
+      gridTemplateColumns: '100%',
+      msGridColumns: '100%',
+      gridTemplateRows: '1fr',
+      msGridRows: '1fr',
+      padding: accent ? 'sm' : '',
+      variant: headerImage
+        ? `compounds.product-table.variants.redesign.cellContent.${
+            accent ? 'accent' : 'main'
+          }`
+        : `compounds.product-table.cellContent.${accent ? 'accent' : 'main'}`
+    }}
+    // @ts-ignore
+    css={{ display: '-ms-grid' }}
+  >
+    <div
+      sx={{
+        ...grid('column', 1, 1),
+        gridRow: headerImage
+          ? ['1 / span 2', '1 / span 1']
+          : ['1 / span 2', '2 / span 1'],
+        msGridRow: ['1', '2'],
+        msGridRowSpan: ['2', '1'],
+        alignSelf: ['baseline', 'auto'],
+        fontSize: 'xs',
+        marginTop: ['xl', headerImage ? 0 : 'sm'],
+        variant: `compounds.product-table.${headerImage &&
+          'variants.redesign.'}cellContent.label`
+      }}
+    >
+      {label}
+    </div>
+    <div
+      sx={{
+        ...grid('column', 1, 1),
+        ...grid('row', headerImage ? 2 : 1, 1),
+        fontSize: 'xxl',
+        small: {
+          fontSize: 'sm'
+        },
+        lineHeight: 1,
+        variant: `compounds.product-table.${headerImage &&
+          'variants.redesign.'}cellContent.content`
+      }}
+    >
+      {children}
+    </div>
+  </CellBase>
+)
+
+const ProductTableCellContent: React.FC<CellPrimaryProps> = ({
+  children,
+  ...props
 }) => {
   const { inSplit } = React.useContext(CellContext)
   const { inAddon } = React.useContext(AddonContext)
 
-  const isRow = inSplit || inAddon
-
-  const rows =
-    inAddon && inAddon !== 'body-responsive' ? 'auto auto' : '1fr 1fr'
-
-  return (
-    <CellBase
-      mobileOrder={mobileOrder || (accent ? 1 : 2)}
-      sx={{
-        height: 'auto',
-        display: 'grid',
-        gridTemplateColumns: isRow ? rows : '100%',
-        '-ms-grid-columns': isRow ? rows : '100%',
-        gridTemplateRows: isRow ? '100%' : 'auto auto',
-        '-ms-grid-rows': isRow ? '100%' : 'auto auto',
-        padding: accent && !isRow ? 'sm' : '',
-        variant: accent
-          ? 'productTable.cellContent.main.variants.accent'
-          : 'productTable.cellContent.main.base'
-      }}
-      // @ts-ignore
-      css={{ display: '-ms-grid' }}
-    >
-      <div
-        sx={{
-          display: inAddon ? [undefined, 'none'] : undefined,
-          ...grid('column', 1, 1),
-          ...grid('row', isRow ? 1 : 2, 1),
-          fontSize: 'xs',
-          marginTop: isRow ? '' : 'sm',
-          variant: 'productTable.cellContent.label'
-        }}
-      >
-        {label}
-      </div>
-      <div
-        sx={{
-          ...grid('column', isRow ? 2 : 1, 1),
-          ...grid('row', 1, 1),
-          fontSize: isRow ? 'sm' : 'xxxl',
-          small: {
-            fontSize: 'sm'
-          }
-        }}
-      >
+  if (inSplit || inAddon) {
+    return (
+      <RowContent inAddon={inAddon} {...props}>
         {children}
-      </div>
-    </CellBase>
-  )
+      </RowContent>
+    )
+  }
+
+  return <BlockContent {...props}>{children}</BlockContent>
 }
 
 export default ProductTableCellContent

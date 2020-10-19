@@ -1,16 +1,11 @@
 {
   "name": "@uswitch/trustyle.global-styles",
-  "version": "0.3.9",
+  "version": "0.3.16",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "--------------- BUILDING": "----------------------",
-    "clean": "rm -rf lib",
-    "build": "npm run clean && tsc"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"

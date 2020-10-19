@@ -44,7 +44,7 @@ const ProductTableCellBase: React.FC<CellBaseProps> = ({
     justifyContent: 'center',
     marginX: 8, // sm / 2
     paddingY: 6, // xs / 2
-    order: order ?? [mobileOrder, 'initial'],
+    order: order ?? [mobileOrder, undefined, 'initial'],
     ...extraRules
   }
 
@@ -54,20 +54,21 @@ const ProductTableCellBase: React.FC<CellBaseProps> = ({
         typeof accentCellIndex === 'number' && accentCellCount === 2
           ? `${accentCellIndex + 1} / span 1`
           : '1 / -1',
+        undefined,
         `${gridColumnStart} / span ${gridColumnSpan}`
       ],
-      '-ms-grid-column': `${gridColumnStart}`,
-      '-ms-grid-column-span': `${gridColumnSpan}`,
-      gridRow: ['initial', `${gridRowStart} / span ${gridRowSpan}`],
-      '-ms-grid-row': ['initial', `${gridRowStart}`],
-      '-ms-grid-row-span': ['initial', `${gridRowSpan}`]
+      msGridColumn: `${gridColumnStart}`,
+      msGridColumnSpan: `${gridColumnSpan}`,
+      gridRow: ['initial', undefined, `${gridRowStart} / span ${gridRowSpan}`],
+      msGridRow: ['initial', undefined, `${gridRowStart}`],
+      msGridRowSpan: ['initial', undefined, `${gridRowSpan}`]
     })
   }
 
   if (inSplit) {
     sx['+ .in-split:not(.first-in-split)'] = {
       borderTop: '1px solid',
-      variant: 'productTable.cellBase.variants.inSplit'
+      variant: 'compounds.product-table.cellBase.variants.inSplit'
     }
   }
 
@@ -81,7 +82,9 @@ const ProductTableCellBase: React.FC<CellBaseProps> = ({
     >
       <div
         sx={{
-          flex: 1,
+          flexGrow: 1,
+          flexShrink: 1,
+          flexBasis: 'auto',
           height: '100%',
           boxSizing: 'border-box'
         }}

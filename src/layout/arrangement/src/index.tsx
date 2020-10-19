@@ -8,7 +8,7 @@ interface Props {
   spacing: number[]
 }
 
-export const Stack: React.FC<Props> = styled.div(({ spacing }) =>
+export const Stack = styled.div<Props>(({ spacing }) =>
   mq({
     '& > *': {
       marginBottom: spacing.map(space => pxToRem(space))
@@ -19,7 +19,7 @@ export const Stack: React.FC<Props> = styled.div(({ spacing }) =>
   })
 )
 
-export const Inline: React.FC<Props> = styled.div(({ spacing }) =>
+export const Inline = styled.div<Props>(({ spacing }) =>
   mq({
     '& > *': {
       display: 'inline',

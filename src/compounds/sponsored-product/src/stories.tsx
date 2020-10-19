@@ -3,10 +3,13 @@ import * as React from 'react'
 import { jsx } from '@emotion/core'
 import { text } from '@storybook/addon-knobs'
 
+import { Col, Container, Row } from '../../../layout/flex-grid/src/index'
+import AllThemes from '../../../utils/all-themes'
+
 import SponsoredProduct from '.'
 
 export default {
-  title: 'Compounds|Sponsored product'
+  title: 'Compounds/Sponsored product'
 }
 
 export const ExampleWithKnobs = () => {
@@ -22,6 +25,7 @@ export const ExampleWithKnobs = () => {
   ]
   const href = text('href', 'https://www.uswitch.com/mobiles/')
   const target = text('target', '_blank')
+  const sponsorName = text('Sponsor name', 'Three')
   const sponsorSrc = text(
     'Sponsor url',
     'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/5eyE4LyswwqIYk0mIsE820/dc0774e3e62d7b39ddeb1729d823a8da/Logo_-_three.png'
@@ -37,33 +41,99 @@ export const ExampleWithKnobs = () => {
   )
 
   return (
-    <div>
-      <SponsoredProduct
-        title={title}
-        imgSrc={imgSrc}
-        imgAlt={imgAlt}
-        usps={usps}
-        href={href}
-        target={target}
-        sponsorSrc={sponsorSrc}
-        award={award}
-        enhancedImgSrc={enhanced}
-        brandCaption={brandCaptionText}
-        informationDetails={[
-          {
-            prefix: '',
-            value: text('value', '30'),
-            suffix: text('suffix', 'GB'),
-            label: 'data'
-          },
-          {
-            prefix: '£',
-            value: '30.00',
-            suffix: '',
-            label: 'per month'
-          }
-        ]}
-      />
-    </div>
+    <React.Fragment>
+      <div>
+        <SponsoredProduct
+          title={title}
+          imgSrc={imgSrc}
+          imgAlt={imgAlt}
+          usps={usps}
+          href={href}
+          target={target}
+          sponsorName={sponsorName}
+          sponsorSrc={sponsorSrc}
+          award={award}
+          enhancedImgSrc={enhanced}
+          brandCaption={brandCaptionText}
+          informationDetails={[
+            {
+              prefix: '',
+              value: text('value', '30'),
+              suffix: text('suffix', 'GB'),
+              label: 'data'
+            },
+            {
+              prefix: '£',
+              value: '30.00',
+              suffix: '',
+              label: 'per month'
+            }
+          ]}
+        />
+      </div>
+      <Container
+        sx={{
+          backgroundColor: 'blue',
+          py: 'sm'
+        }}
+      >
+        <Row
+          cols={[4, 8, 8]}
+          sx={{
+            mt: 40,
+            pt: 50,
+            pb: 70
+          }}
+        >
+          <Col offset={[0.05, 2, 2]} span={[4, 4, 4]}>
+            <SponsoredProduct
+              title={'Sky Superfast Broadband'}
+              usps={['£22 p/m & no setup cost', 'Best Broadband ever']}
+              sponsorName={'Sky'}
+              sponsorSrc={
+                'https://uswitch-cms.imgix.net/uswitch-assets-eu/broadband/images/providers/sky.png?auto=compress%2Cformat&amp;fit=clip&amp;ixlib=react-9.0.1&amp;w=120'
+              }
+              award={award}
+              informationDetails={[
+                {
+                  prefix: '',
+                  value: '76',
+                  suffix: 'Mb',
+                  label: 'up to* speed'
+                },
+                {
+                  prefix: '£',
+                  value: '22.00',
+                  suffix: '',
+                  label: 'per month'
+                }
+              ]}
+              uspSx={{
+                span: {
+                  fontSize: 12
+                }
+              }}
+              infoBlockSx={{
+                p: {
+                  fontSize: 12
+                }
+              }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </React.Fragment>
+  )
+}
+ExampleWithKnobs.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+export const AutomatedTests = () => {
+  return (
+    <AllThemes>
+      <ExampleWithKnobs />
+    </AllThemes>
   )
 }

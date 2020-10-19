@@ -1,16 +1,20 @@
 /** @jsx jsx */
 import { ChangeEvent, useState } from 'react'
 import { jsx } from '@emotion/core'
-import { storiesOf } from '@storybook/react'
 import { boolean } from '@storybook/addon-knobs'
-import { Column, Container, Row } from '@uswitch/trustyle.grid'
+import { Stack } from '@uswitch/trustyle.arrangement'
 
+import AllThemes from '../../../utils/all-themes'
 import { Fieldset } from '../../fieldset/src'
 
 import { CheckboxInput } from './.'
 
+export default {
+  title: 'Elements/CheckboxInput'
+}
+
 const initialValues = {
-  a: false,
+  a: true,
   b: false,
   c: false,
   d: false
@@ -25,27 +29,38 @@ const Form = () => {
   }
 
   return (
-    <Container css={{ marginTop: '4px' }}>
-      <Fieldset label="Example checkboxes">
-        <Row>
-          {Object.entries(values).map(([value, checked]) => (
-            <Column key={value}>
-              <CheckboxInput
-                name="example"
-                checked={checked}
-                onChange={changeHandler}
-                value={value}
-                label={value.toUpperCase()}
-                slim={slim}
-              />
-            </Column>
-          ))}
-        </Row>
-      </Fieldset>
-    </Container>
+    <Fieldset label="Example checkboxes">
+      <Stack spacing={[8]}>
+        {Object.entries(values).map(([value, checked], ind) => (
+          <CheckboxInput
+            key={ind}
+            name="example"
+            checked={checked}
+            onChange={changeHandler}
+            value={value}
+            label={value.toUpperCase()}
+            slim={slim}
+          />
+        ))}
+      </Stack>
+    </Fieldset>
   )
 }
 
-storiesOf('Elements|CheckboxInput', module).add('Example', () => {
+export const Example = () => {
   return <Form />
-})
+}
+
+Example.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const AutomatedTests = () => {
+  return (
+    <AllThemes>
+      <Example />
+    </AllThemes>
+  )
+}

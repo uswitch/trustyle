@@ -1,10 +1,9 @@
 {
   "name": "@uswitch/trustyle.money-theme",
-  "version": "0.10.4",
+  "version": "1.26.0",
   "license": "MIT",
   "main": "index.js",
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {}
+  }
 }

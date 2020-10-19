@@ -33,13 +33,29 @@ export const ButtonLink = <
         cursor: 'pointer',
         backgroundImage: 'none',
         fontFamily: 'base',
-        fontSize: get(theme, `buttons.base.btnSize.${size}.fontSize`, 'base'),
-        paddingX: get(theme, `buttons.base.btnSize.${size}.paddingX`, 'sm'),
-        paddingY: get(theme, `buttons.base.btnSize.${size}.paddingY`, 'base'),
-        height: get(theme, `buttons.base.btnSize.${size}.height`, 'base'),
+        fontSize: get(
+          theme,
+          `elements.buttons.base.btnSize.${size}.fontSize`,
+          'base'
+        ),
+        paddingX: get(
+          theme,
+          `elements.buttons.base.btnSize.${size}.paddingX`,
+          'sm'
+        ),
+        paddingY: get(
+          theme,
+          `elements.buttons.base.btnSize.${size}.paddingY`,
+          'base'
+        ),
+        height: get(
+          theme,
+          `elements.buttons.base.btnSize.${size}.height`,
+          'base'
+        ),
         display: 'inline-block',
         textDecoration: 'none',
-        variant: `buttons.variants.${variant}`
+        variant: `elements.buttons.variants.${variant}`
       }}
       {...props}
     >

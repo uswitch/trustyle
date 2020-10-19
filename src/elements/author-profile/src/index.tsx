@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
+import { Icon } from '@uswitch/trustyle.icon'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   name: string
@@ -9,7 +10,12 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   authorImage?: React.ReactElement
   authorUrl: string
   bio: string
+  email?: string
+  twitterLink?: string
+  linkedInLink?: string
   className?: string
+  showDetails?: boolean
+  variant: string
 }
 
 const AuthorProfile: React.FC<Props> = ({
@@ -18,8 +24,20 @@ const AuthorProfile: React.FC<Props> = ({
   authorImage,
   authorUrl,
   bio,
-  className = ''
+  email,
+  twitterLink,
+  linkedInLink,
+  showDetails = false,
+  className = '',
+  variant
 }) => {
+  const makeStyles = (variant: string) => (element?: string) =>
+    `elements.author-profile${variant ? `.variants.${variant}` : `.base`}${
+      element ? `.${element}` : ''
+    }`
+
+  const styles = makeStyles(variant)
+
   return (
     <div
       className={className}
@@ -27,7 +45,7 @@ const AuthorProfile: React.FC<Props> = ({
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'row',
-        variant: 'authorProfile.main'
+        variant: styles('main')
       }}
     >
       {authorImage && (
@@ -38,7 +56,8 @@ const AuthorProfile: React.FC<Props> = ({
             height: '87px',
             width: '87px',
             marginRight: 'sm',
-            alignSelf: 'baseline'
+            alignSelf: 'baseline',
+            borderBottom: 0
           }}
         >
           <authorImage.type
@@ -46,7 +65,9 @@ const AuthorProfile: React.FC<Props> = ({
             sx={{
               maxHeight: '100%',
               maxWidth: '100%',
-              borderRadius: '50%'
+              borderRadius: '50%',
+              objectFit: 'cover',
+              height: '100%'
             }}
           />
         </Styled.a>
@@ -63,17 +84,19 @@ const AuthorProfile: React.FC<Props> = ({
             marginBottom: 'xxs',
             fontWeight: 'bold',
             paddingBottom: 0,
-            variant: 'authorProfile.name'
+            variant: styles('name')
           }}
           as="h2"
         >
           <a
             href={authorUrl}
             sx={{
-              textDecoration: 'none'
+              textDecoration: 'none',
+              borderBottom: 0
             }}
           >
-            {name}, {role}
+            <span>{name}</span>
+            <span>{role}</span>
           </a>
         </Styled.h2>
         <Styled.p
@@ -85,6 +108,72 @@ const AuthorProfile: React.FC<Props> = ({
         >
           {bio}
         </Styled.p>
+        <div
+          sx={{
+            variant: styles('details'),
+            marginTop: 'sm',
+            paddingLeft: 'xs'
+          }}
+        >
+          {email && (
+            <Styled.a
+              href={'mailto:' + email}
+              sx={{
+                textDecoration: 'none',
+                cursor: 'pointer',
+                borderBottom: 0
+              }}
+            >
+              <div
+                sx={{
+                  display: 'flex'
+                }}
+              >
+                <Icon glyph="email-filled" size={22} color="grey-80" />
+                {showDetails && <span>{email}</span>}
+              </div>
+            </Styled.a>
+          )}
+
+          {twitterLink && (
+            <Styled.a
+              href={twitterLink}
+              sx={{
+                textDecoration: 'none',
+                cursor: 'pointer',
+                borderBottom: 0
+              }}
+            >
+              <div
+                sx={{
+                  display: 'flex'
+                }}
+              >
+                <Icon glyph="twitter" size={22} color="grey-80" />
+                {showDetails && <span>{twitterLink}</span>}
+              </div>
+            </Styled.a>
+          )}
+          {linkedInLink && (
+            <Styled.a
+              href={linkedInLink}
+              sx={{
+                textDecoration: 'none',
+                cursor: 'pointer',
+                borderBottom: 0
+              }}
+            >
+              <div
+                sx={{
+                  display: 'flex'
+                }}
+              >
+                <Icon glyph="linkedIn" size={22} color="grey-80" />
+                {showDetails && <span>{linkedInLink}</span>}
+              </div>
+            </Styled.a>
+          )}
+        </div>
       </div>
     </div>
   )

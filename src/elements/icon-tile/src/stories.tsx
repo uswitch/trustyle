@@ -4,11 +4,12 @@ import { jsx } from 'theme-ui'
 import { boolean, select, text } from '@storybook/addon-knobs'
 
 import { Col, Container, Row } from '../../../layout/flex-grid/src'
+import AllThemes from '../../../utils/all-themes'
 
-import IconTile from './'
+import IconTile, { DisplayVariant } from './'
 
 export default {
-  title: 'Elements|Icon Tile'
+  title: 'Elements/Icon Tile'
 }
 
 export const ExampleWithKnobs = () => {
@@ -19,11 +20,20 @@ export const ExampleWithKnobs = () => {
     ['carInsurance', 'creditCards', 'loans', 'mortgages'],
     'carInsurance'
   )
+  const displayVariant = select(
+    'Display Variant',
+    DisplayVariant,
+    DisplayVariant.Horizontal
+  )
 
   const iconImg = (
-    <img src={require(`../../../../static/money-icons/${icon}.svg`)} />
+    <img alt="" src={require(`../../../../static/money-icons/${icon}.svg`)} />
   )
-  const justTile = <IconTile icon={iconImg}>{tileText}</IconTile>
+  const justTile = (
+    <IconTile icon={iconImg} displayVariant={displayVariant}>
+      {tileText}
+    </IconTile>
+  )
 
   return layoutStory ? (
     <div sx={{ margin: -10, backgroundColor: '#924A8B', paddingY: 'md' }}>
@@ -37,5 +47,35 @@ export const ExampleWithKnobs = () => {
     </div>
   ) : (
     justTile
+  )
+}
+
+ExampleWithKnobs.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const AutomatedTests = () => {
+  const iconImg = (icon: string) => (
+    <img alt="" src={require(`../../../../static/money-icons/${icon}.svg`)} />
+  )
+  const getTile = (icon: string, text: string) => (
+    <IconTile icon={iconImg(icon)}>{text}</IconTile>
+  )
+
+  return (
+    <AllThemes themes={['uswitch', 'money']}>
+      <div sx={{ margin: -10, backgroundColor: '#924A8B', paddingY: 'md' }}>
+        <Container>
+          <Row direction="row">
+            <Col span={4} offset={2}>
+              {getTile('carInsurance', 'Cat insurance')}
+            </Col>
+            <Col span={4}>{getTile('creditCards', 'Credit cards')}</Col>
+          </Row>
+        </Container>
+      </div>
+    </AllThemes>
   )
 }

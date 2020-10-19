@@ -6,22 +6,19 @@ import { boolean, color } from '@storybook/addon-knobs'
 import { PaletteProvider } from '@uswitch/trustyle-utils.palette'
 
 import theme from '../../../utils/theme-selector'
+import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
 
 import { checkedIcon, uncheckedIcon } from './assets'
 
 import ToggleSwitch from './'
 
 export default {
-  title: 'Elements|Toggle Switch'
-}
-
-const icons = {
-  checked: checkedIcon,
-  unchecked: uncheckedIcon
+  title: 'Elements/Toggle Switch'
 }
 
 export const ExampleWithState = () => {
   const [toggleState, setToggleState] = useState(true)
+  const compact = boolean('Compact', false)
 
   const handleOnChange = () => {
     const newState = !toggleState
@@ -29,6 +26,13 @@ export const ExampleWithState = () => {
     action('Toggle changed')(newState)
   }
 
+  const icons = {
+    checked: checkedIcon(compact),
+    unchecked: uncheckedIcon
+  }
+
+  const themeNode =
+    (theme().elemments && theme().elemments['toggle-switch']) || {}
   const applyPalette = boolean('Apply palette?', false, 'Palette')
 
   return (
@@ -38,7 +42,7 @@ export const ExampleWithState = () => {
           featureColor: applyPalette
             ? color(
                 'featureColor',
-                theme().toggleSwitch?.checked?.backgroundColor,
+                themeNode?.checked?.backgroundColor,
                 'Palette'
               )
             : null
@@ -47,6 +51,7 @@ export const ExampleWithState = () => {
         <ToggleSwitch
           aria-label="toggle-1"
           checked={toggleState}
+          compact={compact}
           onChange={handleOnChange}
           icons={icons}
         />
@@ -58,10 +63,48 @@ export const ExampleWithState = () => {
   )
 }
 
-export const ToggleOn = () => {
-  return <ToggleSwitch checked />
+ExampleWithState.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
-export const ToggleOff = () => {
-  return <ToggleSwitch checked={false} />
+const Spacer = () => <div sx={{ minHeight: 20 }} />
+
+export const AutomatedTests = () => {
+  const permutations = permutationsGenerator({
+    compact: [false, true],
+    featureColor: [null, '#ffced3'],
+    checked: [true, false],
+    icons: [true, false]
+  })
+
+  return (
+    <AllThemes themes={['uswitch', 'money', 'save-on-energy', 'bankrate']}>
+      {permutations.map((p, i) => (
+        <Fragment key={i}>
+          <PaletteProvider value={{ featureColor: p.featureColor }}>
+            <ToggleSwitch
+              aria-label="toggle-1"
+              checked={p.checked}
+              compact={p.compact}
+              icons={
+                p.icons
+                  ? {
+                      checked: checkedIcon(p.compact),
+                      unchecked: uncheckedIcon
+                    }
+                  : undefined
+              }
+            />
+            <label sx={{ marginLeft: 10 }} htmlFor="toggle-1">
+              {p.compact && 'compact'} {p.checked ? 'checked' : 'unchecked'}
+              {p.icons && ' with icons'} {p.featureColor && 'with palette'}
+            </label>
+          </PaletteProvider>
+          <Spacer />
+        </Fragment>
+      ))}
+    </AllThemes>
+  )
 }

@@ -7,16 +7,20 @@ import CellBase from './cell-base'
 export interface CellCtaProps extends React.HTMLAttributes<HTMLDivElement> {
   primary: React.ReactNode
   secondary?: React.ReactNode
+  headerImage?: boolean
 }
 const ProductTableCellCta: React.FC<CellCtaProps> = ({
   primary,
-  secondary
+  secondary,
+  headerImage
 }) => {
   const buttonWrapperStyling = {
-    flex: [1, 'initial'],
-    width: '100%',
-    display: ['flex', 'block'],
-    variant: 'productTable.cellCta.buttonWrapper'
+    flex: [1, undefined, 'initial'],
+    width: ['auto', '100%'],
+    display: ['flex', undefined, 'block'],
+    variant: headerImage
+      ? 'compounds.product-table.variants.redesign.cellCta.buttonWrapper'
+      : 'compounds.product-table.cellCta.buttonWrapper'
   }
   return (
     <CellBase
@@ -24,7 +28,7 @@ const ProductTableCellCta: React.FC<CellCtaProps> = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        flexDirection: ['row', 'column']
+        flexDirection: ['column', 'row', 'column']
       }}
     >
       <div sx={{ ...buttonWrapperStyling }}>{primary}</div>

@@ -1,16 +1,11 @@
 {
   "name": "@uswitch/trustyle.imgix-image",
-  "version": "0.1.35",
+  "version": "0.1.40",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "--------------- BUILDING": "----------------------",
-    "clean": "rm -rf lib",
-    "build": "npm run clean && tsc"
   },
   "dependencies": {
     "react-imgix": "^8.6.1"

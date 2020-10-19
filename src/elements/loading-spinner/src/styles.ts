@@ -33,7 +33,7 @@ const round = keyframes`
 `
 
 export const rotate: SerializedStyles = css({
-  color: colors.azure,
+  color: colors.periwinkle,
   fontSize: pxToRem(spacers.orange),
   textIndent: '-9999rem',
   overflow: 'hidden',

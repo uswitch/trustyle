@@ -1,16 +1,11 @@
 {
   "name": "@uswitch/trustyle.flex-grid",
-  "version": "2.2.1",
+  "version": "3.5.0",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "--------------- BUILDING": "----------------------",
-    "clean": "rm -rf lib",
-    "build": "npm run clean && tsc"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",

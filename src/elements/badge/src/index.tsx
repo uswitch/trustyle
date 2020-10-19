@@ -8,13 +8,18 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   variant?: string
 }
 
-const Badge: React.FC<Props> = ({ children, variant = 'primary' }) => {
+const Badge: React.FC<Props> = ({
+  children,
+  variant = 'primary',
+  ...props
+}) => {
   return (
     <div
       sx={{
         display: 'inline-block',
-        variant: `badge.variants.${variant}`
+        variant: `elements.badge.variants.${variant}`
       }}
+      {...props}
     >
       {children}
     </div>

@@ -9,9 +9,21 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   icon?: Glyph
   title?: string
   text: string
+  orientation?: string
+  bold?: boolean
+  className?: string
 }
 
-const CallOut: React.FC<Props> = ({ title, text, icon }) => {
+const CallOut: React.FC<Props> = ({
+  title,
+  text,
+  icon,
+  orientation = 'left',
+  bold = false,
+  className
+}) => {
+  const flexDirection = orientation === 'left' ? 'row' : 'column'
+
   const mainText = (
     <React.Fragment>
       {title && (
@@ -19,7 +31,7 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
           sx={{
             marginTop: '-3px',
             marginBottom: 'xxs',
-            variant: 'callOut.heading'
+            variant: 'elements.call-out.heading'
           }}
         >
           {title}
@@ -29,7 +41,8 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
         as={Styled.p}
         sx={{
           marginY: 0,
-          variant: 'callOut.text'
+          variant: 'elements.call-out.text',
+          fontWeight: bold ? 'bold' : 'normal'
         }}
         px={{
           color: 'accentColorText'
@@ -47,29 +60,35 @@ const CallOut: React.FC<Props> = ({ title, text, icon }) => {
         borderRadius: 4,
         paddingX: 'sm',
         paddingY: 'sm',
-        marginTop: 'xs',
-        marginBottom: 'md',
-        variant: 'callOut.main'
+        variant: 'elements.call-out.main'
       }}
       px={{
         backgroundColor: 'accentColor'
       }}
+      className={className}
     >
       {icon ? (
-        <div sx={{ display: 'flex' }}>
+        <div
+          sx={{
+            display: 'flex',
+            flexDirection: flexDirection
+          }}
+        >
           <div
             sx={{
               flexGrow: 0,
               flexShrink: 0,
               flexBasis: ({ space }: any) => space.sm,
-              marginRight: 'xs'
+              marginRight: 'xs',
+              marginBottom: 'sm',
+              variant: 'elements.call-out.icon-container'
             }}
           >
             <div
               sx={{
                 borderRadius: '50%',
                 padding: '20%',
-                variant: 'callOut.icon'
+                variant: 'elements.call-out.icon'
               }}
             >
               <Icon color="white" glyph={icon} />

@@ -4,8 +4,9 @@ import { jsx } from 'theme-ui'
 
 import { Addon, AddonArg, CellContext } from '../generics'
 
-import CellBase from './cell-base'
 import { ROWS } from './cell-split'
+import RowWrapper from './rowWrapper'
+import Header from './header'
 
 export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   badges?: React.ReactNode[]
@@ -13,6 +14,8 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   rowTitle?: React.ReactNode
   subtitle?: React.ReactNode
   addons?: AddonArg[]
+  clickableRow?: string
+  image?: React.ReactNode
 }
 
 const ProductTableRow: React.FC<RowProps> = ({
@@ -21,7 +24,10 @@ const ProductTableRow: React.FC<RowProps> = ({
   rowTitle,
   subtitle,
   addons = [],
-  children
+  children,
+  id,
+  clickableRow,
+  image
 }) => {
   const addonsFor = (key: keyof Addon): React.ReactNode[] =>
     addons.map(({ addon, component, options }, i) => {
@@ -55,6 +61,8 @@ const ProductTableRow: React.FC<RowProps> = ({
 
   const cols = nonNullChildren.length
 
+  const lastCell = (index: number) => index === cols - 1
+
   /**
    * Row numbers explained:
    *
@@ -67,137 +75,113 @@ const ProductTableRow: React.FC<RowProps> = ({
 
   return (
     <section
+      id={id}
       sx={{
         position: 'relative',
         border: '1px solid',
-        paddingX: ['sm', 'md'],
-        paddingY: 'md',
         marginTop: badges.length ? [10, 15] : 0,
-        variant: 'productTable.row.main'
+        marginBottom: 'md',
+        ':last-of-type': {
+          marginBottom: 0
+        },
+        variant: image
+          ? 'compounds.product-table.variants.redesign.row.main'
+          : 'compounds.product-table.row.main'
       }}
     >
-      {!!badges.length && (
+      <RowWrapper link={clickableRow}>
+        {!!badges.length && (
+          <div
+            sx={{
+              position: 'absolute',
+              top: 0,
+              transform: 'translateY(-50%)'
+            }}
+          >
+            {badges.map((badge, i) => (
+              <span sx={{ marginRight: 'sm' }} key={i}>
+                {badge}
+              </span>
+            ))}
+          </div>
+        )}
+        <Header
+          image={image}
+          preTitle={preTitle}
+          rowTitle={rowTitle}
+          subtitle={subtitle}
+          addons={addonsFor('header')}
+        />
         <div
-          sx={{ position: 'absolute', top: 0, transform: 'translateY(-50%)' }}
-        >
-          {badges.map((badge, i) => (
-            <span sx={{ marginRight: 'sm' }} key={i}>
-              {badge}
-            </span>
-          ))}
-        </div>
-      )}
-      <div
-        sx={{
-          display: 'grid',
-          gridTemplateColumns: ['repeat(2, 1fr)', `repeat(${cols}, 1fr)`],
-          '-ms-grid-columns': ['(1fr)[2]', `(1fr)[${cols}]`],
-          gridTemplateRows: [
-            'auto',
-            `repeat(3, auto) repeat(${ROWS}, 1fr) repeat(3, auto)`
-          ],
-          '-ms-grid-rows': ['auto', `(auto)[3] (1fr)[${ROWS}] (auto)[3]`],
-          marginX: -8,
-          marginY: -6,
-          variant: 'productTable.row.grid',
+          sx={{
+            display: 'grid',
+            gridTemplateColumns: [
+              'repeat(2, 1fr)',
+              undefined,
+              `repeat(${cols}, 1fr)`
+            ],
+            msGridColumns: ['(1fr)[2]', undefined, `(1fr)[${cols}]`],
+            gridTemplateRows: [
+              'auto',
+              undefined,
+              `repeat(3, auto) repeat(${ROWS}, 1fr) repeat(3, auto)`
+            ],
+            msGridRows: [
+              'auto',
+              undefined,
+              `(auto)[3] (1fr)[${ROWS}] (auto)[3]`
+            ],
+            marginX: -8,
+            marginY: -6,
+            marginTop: image ? 0 : -6,
+            variant: 'compounds.product-table.row.grid',
 
-          // Flex in mobile IE11 (?!) as auto-layout for grid isn't supported
-          '@media all and (max-width: 768px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
-            display: 'flex',
-            flexDirection: 'column'
-          }
-        }}
-        // @ts-ignore
-        css={{
-          display: '-ms-grid'
-        }}
-      >
-        {rowTitle && (
+            // Flex in mobile IE11 (?!) as auto-layout for grid isn't supported
+            '@media all and (max-width: 990px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
+              display: 'flex',
+              flexDirection: 'column'
+            }
+          }}
+          // @ts-ignore
+          css={{
+            display: '-ms-grid'
+          }}
+        >
+          {nonNullChildren.map((child, index) => (
+            <CellContext.Provider
+              value={{
+                gridRowStart: 4,
+                gridRowSpan: ROWS,
+                gridColumnStart: index + 1,
+                gridColumnSpan: 1,
+                accentCellCount: accentCells.length,
+                accentCellIndex:
+                  child.props.accent && accentCells.indexOf(child),
+                extraRules: {
+                  variant:
+                    image &&
+                    !lastCell(index) &&
+                    'compounds.product-table.variants.redesign.cellContext.main'
+                }
+              }}
+              key={index}
+            >
+              {child}
+            </CellContext.Provider>
+          ))}
+
           <CellContext.Provider
             value={{
-              gridRowStart: 2,
-              gridRowSpan: 1,
+              gridRowStart: 1,
+              gridRowSpan: ROWS,
               gridColumnStart: 1,
               gridColumnSpan: cols
             }}
           >
-            <CellBase
-              sx={{
-                borderBottom: '1px solid',
-                paddingBottom: 'sm',
-                marginTop: badges.length ? 0 : -6,
-                variant: 'productTable.row.header'
-              }}
-              mobileOrder={-100}
-            >
-              <CellContext.Provider value={{ inFlexbox: true }}>
-                <div
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    marginX: -8,
-                    marginY: -6
-                  }}
-                >
-                  <CellBase extraRules={{ marginRight: 'auto' }}>
-                    {preTitle && (
-                      <span
-                        sx={{
-                          fontSize: 'xs',
-                          variant: 'productTable.row.pretitle'
-                        }}
-                      >
-                        {preTitle}
-                      </span>
-                    )}
-                    <h3 sx={{ margin: 0, variant: 'productTable.row.title' }}>
-                      {rowTitle}
-                    </h3>
-                    {subtitle && (
-                      <span
-                        sx={{
-                          fontSize: 'xs',
-                          variant: 'productTable.row.subtitle'
-                        }}
-                      >
-                        {subtitle}
-                      </span>
-                    )}
-                  </CellBase>
-                  {addonsFor('header')}
-                </div>
-              </CellContext.Provider>
-            </CellBase>
+            {addonsFor('body')}
           </CellContext.Provider>
-        )}
-
-        {nonNullChildren.map((child, index) => (
-          <CellContext.Provider
-            value={{
-              gridRowStart: 4,
-              gridRowSpan: ROWS,
-              gridColumnStart: index + 1,
-              gridColumnSpan: 1,
-              accentCellCount: accentCells.length,
-              accentCellIndex: child.props.accent && accentCells.indexOf(child)
-            }}
-            key={index}
-          >
-            {child}
-          </CellContext.Provider>
-        ))}
-
-        <CellContext.Provider
-          value={{
-            gridRowStart: 1,
-            gridRowSpan: ROWS,
-            gridColumnStart: 1,
-            gridColumnSpan: cols
-          }}
-        >
-          {addonsFor('body')}
-        </CellContext.Provider>
-      </div>
+        </div>
+      </RowWrapper>
     </section>
   )
 }
