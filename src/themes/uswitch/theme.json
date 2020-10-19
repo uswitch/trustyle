@@ -1632,6 +1632,46 @@
     },
     "landing-page-nav": {
       "width": ["100%", "145px"]
+    },
+    "simple-drop-down": {
+      "select": {
+        "base": {
+          "cursor": "pointer",
+          "fontFamily": "base",
+          "fontSize": "base",
+          "lineHeight": "1.33",
+          "appearance": "none",
+          "backgroundColor": "white",
+          "boxSizing": "border-box",
+          "padding": 16,
+          "paddingRight": 48,
+          "verticalAlign": "middle",
+          "borderRadius": 0,
+          "width": "100%",
+          "&::-ms-expand": {
+            "display": "none"
+          }
+        },
+        "error": {
+          "variant": "elements.simple-drop-down.select.base",
+          "border": "2px solid",
+          "borderColor": "error",
+          "outlineColor": "error"
+        },
+        "focus": {
+          "variant": "elements.simple-drop-down.select.base",
+          "outlineColor": "plum"
+        }
+      },
+      "span": {
+        "height": 15,
+        "width": 15,
+        "pointerEvents": "none",
+        "position": "absolute",
+        "right": 16,
+        "top": "calc(50% - 15px / 2)",
+        "variant": "elements.drop-down.icon"
+      }
     }
   },
 
