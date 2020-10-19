@@ -18,7 +18,7 @@ const ProductTableAddonFooter: Addon = {
           extraRules: {
             borderTop: split || headerImage ? 'none' : '1px solid',
             paddingTop: 'sm',
-            marginTop: headerImage ? 'md' : 'xs',
+            marginTop: headerImage ? ['xs', 'md'] : 'xs',
             marginBottom: -6,
             fontSize: 'sm',
             variant: `compounds.product-table.${headerImage &&

@@ -662,7 +662,7 @@ export const MoneyRedesignExample = () => {
           component: (
             <ProductTable.cells.Base sx={{ display: 'block' }}>
               <div sx={{ fontWeight: 'bold' }}>Additional Information:</div>
-              <div sx={{ fontSize: ['xxs', 'xs'] }}>
+              <div sx={{ fontSize: 'xs' }}>
                 Here is some extra information. Here is even more extra
                 information. And more extra information.
               </div>
@@ -678,7 +678,7 @@ export const MoneyRedesignExample = () => {
           component: (
             <ProductTable.cells.Base sx={{ display: 'block' }}>
               <div sx={{ fontWeight: 'bold' }}>Representative example:</div>
-              <div sx={{ fontSize: ['xxs', 'xs'] }}>
+              <div sx={{ fontSize: 'xs' }}>
                 Assumed borrowing of £10,000 over...
               </div>
             </ProductTable.cells.Base>
