@@ -1713,6 +1713,9 @@
               "py": ["xs", "xs"],
               "borderTop": ["1px solid", "none"],
               "borderTopColor": ["grey-20", "grey-30"],
+              ":first-child": {
+                "borderTop": "none"
+              },
               "::before": {
                 "position": "absolute",
                 "display": "block",
