@@ -1650,7 +1650,7 @@
               "pb": ["xxs", "xs"],
               "pt": 0,
               "lineHeight": 1,
-              "fontSize": "sm",
+              "fontSize": ["xs", "sm"],
               "textAlign": ["center", "left"]
             },
             "content": {
