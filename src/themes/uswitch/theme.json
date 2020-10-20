@@ -581,9 +581,9 @@
       "input": {
         "wrapper": {
           "display": "flex",
-          "mr": "lg",
+          "mr": ["0", "lg"],
           "mb": "lg",
-          "width": "30%",
+          "width": ["100%", "30%"],
           "justifyContent": "space-between",
           "alignItems": "center"
         }
@@ -597,7 +597,7 @@
         },
         "variants": {
           "calculator": {
-            "flex": "1 1 0%",
+            "flex": "1 1 0px",
             "mr": "md"
           }
         }
@@ -618,7 +618,8 @@
         "variants": {
           "calculator": {
             "pb": ["xs", 0],
-            "flexDirection": "column"
+            "flexDirection": "column",
+            "flex": "1 1 0px"
           }
         }
       }
@@ -1182,7 +1183,7 @@
         }
       },
       "container": {
-        "width": "234px"
+        "flex": "1 1 0px"
       },
       "select": {
         "base": {
@@ -1688,7 +1689,8 @@
           "wrapper": {},
           "fields": {
             "display": "flex",
-            "flexWrap": "wrap"
+            "flexWrap": "wrap",
+            "flexDirection": ["column", "row"]
           },
           "heading": {
             "opacity": 0.4,
