@@ -37,7 +37,7 @@ function getNumbers(
   isMinimized: boolean = false
 ): PaginationNumbers {
   const AROUND_CURRENT = 1
-  const END_LENGTH = 5 + AROUND_CURRENT * 2
+  const END_LENGTH = isMinimized ? 2 : 5 + AROUND_CURRENT * 2
 
   if (totalPages <= END_LENGTH) {
     return new Array(totalPages).fill('').map((_, i) => i + 1)
