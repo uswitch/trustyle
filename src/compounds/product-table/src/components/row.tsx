@@ -4,6 +4,8 @@ import { jsx } from 'theme-ui'
 
 import { Addon, AddonArg, CellContext } from '../generics'
 
+import ProductTableCellBase from './cell-base'
+import ProductTableCellCta from './cell-cta'
 import { ROWS } from './cell-split'
 import RowWrapper from './rowWrapper'
 import Header from './header'
@@ -16,6 +18,7 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   addons?: AddonArg[]
   clickableRow?: string
   image?: React.ReactNode
+  disabled?: boolean
 }
 
 const ProductTableRow: React.FC<RowProps> = ({
@@ -27,7 +30,8 @@ const ProductTableRow: React.FC<RowProps> = ({
   children,
   id,
   clickableRow,
-  image
+  image,
+  disabled
 }) => {
   const addonsFor = (key: keyof Addon): React.ReactNode[] =>
     addons.map(({ addon, component, options }, i) => {
@@ -49,9 +53,18 @@ const ProductTableRow: React.FC<RowProps> = ({
     })
 
   // @todo All addons go at the start - is there a better way to do this?
-  const nonNullChildren = addonsFor('grid')
+  let nonNullChildren = addonsFor('grid')
     .concat(React.Children.toArray(children))
     .filter(c => c) as React.ReactElement[]
+
+  // When disabled, replace CTA with empty base cell
+  if (disabled) {
+    nonNullChildren = nonNullChildren.filter(
+      child => child.type !== ProductTableCellCta
+    )
+    // eslint-disable-next-line react/jsx-key
+    nonNullChildren = [...nonNullChildren, <ProductTableCellBase />]
+  }
 
   const accentCells = nonNullChildren.filter(child => child.props.accent)
 
@@ -86,7 +99,9 @@ const ProductTableRow: React.FC<RowProps> = ({
         },
         variant: image
           ? 'compounds.product-table.variants.redesign.row.main'
-          : 'compounds.product-table.row.main'
+          : 'compounds.product-table.row.main',
+        pointerEvents: disabled ? 'none' : null,
+        opacity: disabled ? '0.7' : '1'
       }}
     >
       <RowWrapper link={clickableRow} headerImage={image}>
