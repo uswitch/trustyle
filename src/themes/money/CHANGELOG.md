@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.27.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.27.0...@uswitch/trustyle.money-theme@1.27.1) (2020-10-20)
+
+
+### Bug Fixes
+
+* provider logo maxHeight ([3b2d4ae](https://github.com/uswitch/trustyle/commit/3b2d4ae))
+
+
+
+
+
 # [1.27.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.26.0...@uswitch/trustyle.money-theme@1.27.0) (2020-10-19)
 
 
