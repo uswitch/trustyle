@@ -1784,7 +1784,7 @@
           "backgroundColor": "grey-05",
           "color": "grey-80",
           "fontSize": "md",
-          "pt": ["xxs", ""],
+          "pt": ["xxs", 0],
           "title": {
             "textAlign": "center",
             "flex": "none",
@@ -1796,7 +1796,7 @@
             "variant": "compounds.accordion.base.button",
             "justifyContent": "center",
             "py": ["xs", "md"],
-            "mb": ["xxs", ""],
+            "mb": ["xxs", 0],
             "borderTopColor": "transparent"
           }
         }
