@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.27.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.27.1...@uswitch/trustyle.money-theme@1.27.2) (2020-10-20)
+
+
+### Bug Fixes
+
+* remove border top from mobile first child ([8805aa5](https://github.com/uswitch/trustyle/commit/8805aa5))
+* replace empty strings in theme ([276635a](https://github.com/uswitch/trustyle/commit/276635a))
+* update eligibility info mobile styling in theme ([f9269d7](https://github.com/uswitch/trustyle/commit/f9269d7))
+
+
+
+
+
 ## [1.27.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.27.0...@uswitch/trustyle.money-theme@1.27.1) (2020-10-20)
 
 
