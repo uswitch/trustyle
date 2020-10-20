@@ -114,13 +114,13 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
       sx={{
         ...grid('column', 1, 1),
         gridRow: headerImage
-          ? ['1 / span 2', '1 / span 1']
+          ? ['1 / span 1', '1 / span 1']
           : ['1 / span 2', '2 / span 1'],
         msGridRow: ['1', '2'],
         msGridRowSpan: ['2', '1'],
         alignSelf: ['baseline', 'auto'],
         fontSize: 'xs',
-        marginTop: ['xl', headerImage ? 0 : 'sm'],
+        marginTop: headerImage ? 0 : ['xl', 'sm'],
         variant: `compounds.product-table.${headerImage &&
           'variants.redesign.'}cellContent.label`
       }}

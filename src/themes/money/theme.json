@@ -1647,16 +1647,17 @@
               "fontFamily": "heading",
               "fontWeight": "semiBold",
               "color": "grey-80",
-              "pb": "xs",
+              "pb": ["xxs", "xs"],
               "pt": 0,
               "lineHeight": 1,
-              "fontSize": "sm"
+              "fontSize": "sm",
+              "textAlign": ["center", "left"]
             },
             "content": {
               "fontSize": ["md", "lg"],
               "fontFamily": "heading",
               "fontWeight": ["bold", "semiBold"],
-              "textAlign": "left",
+              "textAlign": ["center", "left"],
               "color": "plum",
               "small": {
                 "fontWeight": "base",
@@ -1701,11 +1702,12 @@
                 "paddingY": [12, 16],
                 "fontSize": ["sm", "md"],
                 "width": "100%",
-                "marginTop": ["sm", 0],
+                "marginTop": ["xs", 0],
                 "marginBototm": 0
               },
               "width": ["100%", ""],
-              "marginY": -6
+              "marginY": -6,
+              "paddingTop": "xxs"
             }
           },
           "cellContext": {
@@ -1713,7 +1715,7 @@
               "alignItems": "baseline",
               "position": "relative",
               "pl": ["none", "sm"],
-              "py": ["xs", "xs"],
+              "py": ["12px", "xs"],
               "borderTop": ["1px solid", "none"],
               "borderTopColor": ["grey-20", "grey-30"],
               ":first-child": {
