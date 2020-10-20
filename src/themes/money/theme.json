@@ -1781,15 +1781,19 @@
           "backgroundColor": "grey-05",
           "color": "grey-80",
           "fontSize": "md",
+          "pt": ["xxs", ""],
           "title": {
             "textAlign": "center",
             "flex": "none",
-            "mr": "sm"
+            "mr": "sm",
+            "fontSize": ["xs", "md"],
+            "color": ["grey-70", "grey-80"]
           },
           "button": {
             "variant": "compounds.accordion.base.button",
             "justifyContent": "center",
-            "py": "md",
+            "py": ["xs", "md"],
+            "mb": ["xxs", ""],
             "borderTopColor": "transparent"
           }
         }
