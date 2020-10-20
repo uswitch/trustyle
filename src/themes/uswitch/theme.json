@@ -617,7 +617,8 @@
         },
         "variants": {
           "calculator": {
-            "pb": ["xs", 0]
+            "pb": ["xs", 0],
+            "flexDirection": "column"
           }
         }
       }
