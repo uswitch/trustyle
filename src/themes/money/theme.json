@@ -1713,6 +1713,9 @@
               "py": ["xs", "xs"],
               "borderTop": ["1px solid", "none"],
               "borderTopColor": ["grey-20", "grey-30"],
+              ":first-child": {
+                "borderTop": "none"
+              },
               "::before": {
                 "position": "absolute",
                 "display": "block",
@@ -1778,15 +1781,19 @@
           "backgroundColor": "grey-05",
           "color": "grey-80",
           "fontSize": "md",
+          "pt": ["xxs", 0],
           "title": {
             "textAlign": "center",
             "flex": "none",
-            "mr": "sm"
+            "mr": "sm",
+            "fontSize": ["xs", "md"],
+            "color": ["grey-70", "grey-80"]
           },
           "button": {
             "variant": "compounds.accordion.base.button",
             "justifyContent": "center",
-            "py": "md",
+            "py": ["xs", "md"],
+            "mb": ["xxs", 0],
             "borderTopColor": "transparent"
           }
         }
