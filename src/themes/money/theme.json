@@ -417,7 +417,7 @@
           "mr": ["sm", "sm", "md"],
           "img": {
             "maxWidth": "100px",
-            "height": "64px"
+            "maxHeight": "64px"
           }
         }
       }
