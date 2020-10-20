@@ -584,7 +584,8 @@
           "mr": "lg",
           "mb": "lg",
           "width": "30%",
-          "justifyContent": "space-between"
+          "justifyContent": "space-between",
+          "alignItems": "center"
         }
       },
       "label": {
@@ -595,7 +596,10 @@
           "mt": "sm"
         },
         "variants": {
-          "calculator": {}
+          "calculator": {
+            "flex": "1 1 0%",
+            "mr": "md"
+          }
         }
       },
       "button": {
@@ -1177,7 +1181,7 @@
         }
       },
       "container": {
-        "width": "220px"
+        "width": "234px"
       },
       "select": {
         "base": {
