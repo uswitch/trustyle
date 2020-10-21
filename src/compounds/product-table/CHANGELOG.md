@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.10.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.9.0...@uswitch/trustyle.product-table@2.10.0) (2020-10-21)
+
+
+### Features
+
+* disable product table row ([77ede31](https://github.com/uswitch/trustyle/commit/77ede31))
+
+
+
+
+
 # [2.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.8.0...@uswitch/trustyle.product-table@2.9.0) (2020-10-19)
 
 
