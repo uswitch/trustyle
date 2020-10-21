@@ -583,9 +583,13 @@
           "display": "flex",
           "mr": ["0", "lg"],
           "mb": "lg",
-          "width": ["100%", "30%"],
+          "width": ["100%", "100%", "300px"],
           "justifyContent": "space-between",
           "alignItems": "center"
+        },
+        "error": {
+          "position": "absolute",
+          "margin": "0"
         }
       },
       "label": {
@@ -597,18 +601,14 @@
         },
         "variants": {
           "calculator": {
-            "flex": "1 1 0px",
-            "mr": "md"
+            "flex": "1 1 0px"
           }
         }
       },
       "button": {
         "my": "sm",
         "variants": {
-          "calculator": {
-            "mb": "sm",
-            "mt": "lg"
-          }
+          "calculator": {}
         }
       },
       "wrapper": {
@@ -619,7 +619,8 @@
           "calculator": {
             "pb": ["xs", 0],
             "flexDirection": "column",
-            "flex": "1 1 0px"
+            "flex": "1 1 0px",
+            "min-width": "176px"
           }
         }
       }
@@ -1183,7 +1184,8 @@
         }
       },
       "container": {
-        "flex": "1 1 0px"
+        "flex": "1 1 0px",
+        "min-width": "176px"
       },
       "select": {
         "base": {
@@ -1690,6 +1692,7 @@
           "fields": {
             "display": "flex",
             "flexWrap": "wrap",
+            "justifyContent": "center",
             "flexDirection": ["column", "row"]
           },
           "heading": {
@@ -1776,7 +1779,8 @@
     "container": {
       "flex": {
         "display": "flex",
-        "flexDirection": "column"
+        "flexDirection": "column",
+        "p": 0
       }
     },
     "product-table": {
