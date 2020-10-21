@@ -1779,8 +1779,7 @@
     "container": {
       "flex": {
         "display": "flex",
-        "flexDirection": "column",
-        "p": 0
+        "flexDirection": "column"
       }
     },
     "product-table": {
