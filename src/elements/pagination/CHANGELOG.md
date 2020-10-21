@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.pagination@1.5.0...@uswitch/trustyle.pagination@1.5.1) (2020-10-21)
+
+
+### Bug Fixes
+
+* mobile pagination not triggering ([f80eea9](https://github.com/uswitch/trustyle/commit/f80eea9))
+
+
+
+
+
 # [1.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.pagination@1.3.7...@uswitch/trustyle.pagination@1.5.0) (2020-10-12)
 
 
