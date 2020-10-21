@@ -578,6 +578,20 @@
       }
     },
     "form": {
+      "input": {
+        "wrapper": {
+          "display": "flex",
+          "mr": ["0", "lg"],
+          "mb": "lg",
+          "width": ["100%", "100%", "300px"],
+          "justifyContent": "space-between",
+          "alignItems": "center"
+        },
+        "error": {
+          "position": "absolute",
+          "margin": "0"
+        }
+      },
       "label": {
         "variant": "styles.h4",
         "color": "grey-80",
@@ -587,24 +601,14 @@
         },
         "variants": {
           "calculator": {
-            "variant": "styles.h6",
-            "fontWeight": "bold",
-            "color": "grey-80",
-            "display": "block",
-            "mb": "xs",
-            ":not(:first-child)": {
-              "mt": "xl"
-            }
+            "flex": "1 1 0px"
           }
         }
       },
       "button": {
         "my": "sm",
         "variants": {
-          "calculator": {
-            "mb": "sm",
-            "mt": "lg"
-          }
+          "calculator": {}
         }
       },
       "wrapper": {
@@ -613,7 +617,10 @@
         },
         "variants": {
           "calculator": {
-            "pb": ["xs", 0]
+            "pb": ["xs", 0],
+            "flexDirection": "column",
+            "flex": "1 1 0px",
+            "min-width": "176px"
           }
         }
       }
@@ -1176,6 +1183,10 @@
           "outline": "2px primary solid"
         }
       },
+      "container": {
+        "flex": "1 1 0px",
+        "min-width": "176px"
+      },
       "select": {
         "base": {
           "border": "1px solid",
@@ -1671,6 +1682,53 @@
         "right": 16,
         "top": "calc(50% - 15px / 2)",
         "variant": "elements.drop-down.icon"
+      }
+    },
+    "form-section": {
+      "default": {},
+      "panel": {
+        "elements": {
+          "wrapper": {},
+          "fields": {
+            "display": "flex",
+            "flexWrap": "wrap",
+            "justifyContent": "center",
+            "flexDirection": ["column", "row"]
+          },
+          "heading": {
+            "opacity": 0.4,
+            "display": "flex",
+            "alignItems": "center"
+          }
+        },
+        "states": {
+          "isActive": {
+            "wrapper": {
+              "variant": "elements.form-section.panel.elements.wrapper",
+              "paddingY": "md"
+            },
+            "heading": {
+              "variant": "elements.form-section.panel.elements.heading",
+              "display": "none"
+            },
+            "fields": {
+              "display": "block"
+            }
+          },
+          "isComplete": {
+            "wrapper": {
+              "variant": "elements.form-section.panel.elements.wrapper"
+            },
+            "heading": {
+              "variant": "elements.form-section.panel.elements.heading",
+              "opacity": 1,
+              "justifyContent": "space-between"
+            },
+            "fields": {
+              "display": "none"
+            }
+          }
+        }
       }
     }
   },
