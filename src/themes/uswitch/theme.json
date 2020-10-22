@@ -1603,9 +1603,7 @@
       }
     },
     "calculator": {
-      "wrapper": {
 
-      },
       "label": {
         "variant": "styles.h3",
         "textAlign": ["left", "center"],
