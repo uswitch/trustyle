@@ -1603,7 +1603,6 @@
       }
     },
     "calculator": {
-
       "label": {
         "variant": "styles.h3",
         "textAlign": ["left", "center"],
@@ -1689,8 +1688,7 @@
       "default": {},
       "panel": {
         "elements": {
-          "wrapper": {
-          },
+          "wrapper": {},
           "fields": {},
           "heading": {
             "opacity": 0.4,
@@ -1709,7 +1707,7 @@
               "display": "none"
             },
             "fields": {
-              "display":"block",
+              "display": "block",
               "calculator": {
                 "display": "flex",
                 "flexWrap": "wrap",

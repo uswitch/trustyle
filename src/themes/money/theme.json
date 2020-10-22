@@ -1401,9 +1401,9 @@
       }
     },
     "calculator": {
-        "wrapper": {
-          "mx": ["0px", "300px"] 
-        },
+      "wrapper": {
+        "mx": ["0px", "300px"]
+      },
       "label": {
         "variant": "styles.h3",
         "textAlign": ["left", "center"],
