@@ -1603,6 +1603,9 @@
       }
     },
     "calculator": {
+      "wrapper": {
+
+      },
       "label": {
         "variant": "styles.h3",
         "textAlign": ["left", "center"],
@@ -1688,13 +1691,9 @@
       "default": {},
       "panel": {
         "elements": {
-          "wrapper": {},
-          "fields": {
-            "display": "flex",
-            "flexWrap": "wrap",
-            "justifyContent": "center",
-            "flexDirection": ["column", "row"]
+          "wrapper": {
           },
+          "fields": {},
           "heading": {
             "opacity": 0.4,
             "display": "flex",
@@ -1712,7 +1711,13 @@
               "display": "none"
             },
             "fields": {
-              "display": "block"
+              "display":"block",
+              "calculator": {
+                "display": "flex",
+                "flexWrap": "wrap",
+                "justifyContent": "center",
+                "flexDirection": ["column", "row"]
+              }
             }
           },
           "isComplete": {
