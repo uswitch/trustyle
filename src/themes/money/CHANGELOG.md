@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.28.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.27.2...@uswitch/trustyle.money-theme@1.28.0) (2020-10-22)
+
+
+### Features
+
+* lint ([225a3b9](https://github.com/uswitch/trustyle/commit/225a3b9))
+* style calc for uswitch mortgages ([4c57e17](https://github.com/uswitch/trustyle/commit/4c57e17))
+
+
+
+
+
 ## [1.27.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.27.1...@uswitch/trustyle.money-theme@1.27.2) (2020-10-20)
 
 
