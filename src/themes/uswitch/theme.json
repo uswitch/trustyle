@@ -1689,12 +1689,7 @@
       "panel": {
         "elements": {
           "wrapper": {},
-          "fields": {
-            "display": "flex",
-            "flexWrap": "wrap",
-            "justifyContent": "center",
-            "flexDirection": ["column", "row"]
-          },
+          "fields": {},
           "heading": {
             "opacity": 0.4,
             "display": "flex",
@@ -1712,7 +1707,13 @@
               "display": "none"
             },
             "fields": {
-              "display": "block"
+              "display": "block",
+              "calculator": {
+                "display": "flex",
+                "flexWrap": "wrap",
+                "justifyContent": "center",
+                "flexDirection": ["column", "row"]
+              }
             }
           },
           "isComplete": {

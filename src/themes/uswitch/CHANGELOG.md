@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.26.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.25.0...@uswitch/trustyle.uswitch-theme@2.26.0) (2020-10-22)
+
+
+### Features
+
+* lint ([225a3b9](https://github.com/uswitch/trustyle/commit/225a3b9))
+* remove unused wrapper ([a6d8f67](https://github.com/uswitch/trustyle/commit/a6d8f67))
+* style calc for uswitch mortgages ([4c57e17](https://github.com/uswitch/trustyle/commit/4c57e17))
+
+
+
+
+
 # [2.25.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.24.0...@uswitch/trustyle.uswitch-theme@2.25.0) (2020-10-21)
 
 
