@@ -2622,6 +2622,7 @@
         },
         "inner": {
           "display": "flex",
+          "flexDirection": ["column", "row"],
           "justifyContent": ["flex-start", "flex-start", "space-between"],
           "width": [null, 768, 1200]
         },
@@ -2731,15 +2732,71 @@
           }
         },
         "gradientImageLeft": {
-          "inner": {
-            "flexDirection": ["column", "row"],
-            "alignItems": ["center", "center", "flex-start"]
+          "wrapper": {
+            "pt": ["xxl", 0, 124],
+            "pb": ["xxs", "xs", "xl"]
           },
-          "colorBlock": {
-            "background": "linear-gradient(90deg, #C1D3FF 0%, #BEE8F3 100%)"
+          "image": {
+            "mt": 0,
+            "width": "fit-content",
+            "maxHeight": "inherit",
+            "objectFit": "cover"
+          },
+          "image-container": {
+            "maxWidth": ["100%", "100%", "grid.lg.6"],
+            "position": "relative",
+            "maxHeight": [383, 850, 970],
+            "width": "100%",
+            "height": "auto",
+            "my": [0, 0, 0],
+            "alignSelf": ["auto", "auto", "center"]
           },
           "content": {
-            "pl": [null, 50, 0]
+            "maxWidth": ["100%", "100%", "grid.lg.5"],
+            "h2": {
+              "color": "grey-20",
+              "mb": ["md", "md", "xxl"],
+              "pb": "sm",
+              "mt": ["lg", null, 0]
+            },
+            "span > div": {
+              "display": "flex",
+              "mb": ["md", "md", "xl"],
+              "pb": ["sm", "sm", 0],
+              ">a:first-of-type": {
+                "mr": ["sm", "sm", "md"],
+                "borderBottom": "none",
+                "color": "white",
+                "img,svg": {
+                  "filter": "invert(100%) sepia(0%) saturate(2%) hue-rotate(234deg) brightness(104%) contrast(101%)",
+                  "width": "auto",
+                  "height": [24, 24, 28],
+                  "mt": [2, 4, 4]
+                }
+              }
+            },
+            "h3": {
+              "&,&>a": {
+                "color": "white",
+                "borderBottom": "none"
+              }
+            },
+            "p": {
+              "color": "grey-20",
+              "mb": 0
+            }
+          },
+          "colorBlock": {
+            "background": "linear-gradient(90deg, #AC96DE 0%, #ACAAFF 100%)",
+            "left": [-40, -40, -104],
+            "top": [-40, -40, -104],
+            "width": ["98%", "98%", "95%"]
+          },
+          "inner": {
+            "display": "flex",
+            "flexDirection": ["column", "row", "row"],
+            "justifyContent": ["flex-start", "space-between"],
+            "alignItems": ["center", null, null]
           }
         },
         "gradientImageRight": {
