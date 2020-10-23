@@ -698,24 +698,18 @@ export const MoneyRedesignExample = () => {
         }
       ]}
     >
-      <ProductTable.cells.Split>
-        <ProductTable.cells.Content label="Loan Amount" headerImage>
-          <ProductTable.data.Auto text="£1000 to £10000" headerImage />
-        </ProductTable.cells.Content>
-      </ProductTable.cells.Split>
-      <ProductTable.cells.Split>
-        <ProductTable.cells.Content label="Representative APR" headerImage>
-          <ProductTable.data.Auto
-            text="49.9% APR (£1,000 to £10,000)"
-            headerImage
-          />
-        </ProductTable.cells.Content>
-      </ProductTable.cells.Split>
-      <ProductTable.cells.Split>
-        <ProductTable.cells.Content label="Loan Term" headerImage>
-          <ProductTable.data.Auto text="1 year to 5 years" headerImage />
-        </ProductTable.cells.Content>
-      </ProductTable.cells.Split>
+      <ProductTable.cells.Content label="Loan Amount" headerImage>
+        <ProductTable.data.Auto text="£1000 to £10000" headerImage />
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Content label="Representative APR" headerImage>
+        <ProductTable.data.Auto
+          text="49.9% APR (£1,000 to £10,000)"
+          headerImage
+        />
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Content label="Loan Term" headerImage>
+        <ProductTable.data.Auto text="1 year to 5 years" headerImage />
+      </ProductTable.cells.Content>
       <ProductTable.cells.Cta
         primary={<ButtonLink variant="primary">Apply now</ButtonLink>}
         headerImage
