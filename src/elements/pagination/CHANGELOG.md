@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.pagination@1.5.1...@uswitch/trustyle.pagination@1.5.2) (2020-10-23)
+
+
+### Bug Fixes
+
+* cant select default checked option on mac os ([11ae774](https://github.com/uswitch/trustyle/commit/11ae774))
+* page and select numbers not updating ([3d55e44](https://github.com/uswitch/trustyle/commit/3d55e44))
+
+
+
+
+
 ## [1.5.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.pagination@1.5.0...@uswitch/trustyle.pagination@1.5.1) (2020-10-21)
 
 
