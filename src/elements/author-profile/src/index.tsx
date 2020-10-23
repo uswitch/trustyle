@@ -110,9 +110,9 @@ const AuthorProfile: React.FC<Props> = ({
         </Styled.p>
         <div
           sx={{
-            variant: styles('details'),
             marginTop: 'sm',
-            paddingLeft: 'xs'
+            paddingLeft: 'xs',
+            variant: styles('details')
           }}
         >
           {email && (
