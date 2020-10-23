@@ -156,6 +156,10 @@ const Pagination: React.FC<Props> = ({
     numbers
   ])
 
+  React.useEffect(() => {
+    if (morePage.current) morePage.current.value = ''
+  }, [selectPages])
+
   const liStyling = {
     display: 'inline-block',
     padding: 'xs',
@@ -266,6 +270,8 @@ const Pagination: React.FC<Props> = ({
 
               <select
                 ref={morePage}
+                defaultChecked={false}
+                defaultValue={''}
                 onChange={e => {
                   onPageChange(parseInt(e.currentTarget.value), e)
                   e.currentTarget.value = '...'
