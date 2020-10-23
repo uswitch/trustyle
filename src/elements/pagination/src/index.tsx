@@ -21,7 +21,7 @@ const selectReducer = (
       const start = pageNumbers[i - 1] ? (pageNumbers[i - 1] as number) + 1 : 1
       const end = pageNumbers[i + 1]
         ? (pageNumbers[i + 1] as number)
-        : totalPages
+        : totalPages + 1
 
       r[i] = Array.from<number>({ length: end - start }).map(
         (v, i) => i + start
@@ -139,15 +139,21 @@ const Pagination: React.FC<Props> = ({
   const { theme }: any = useThemeUI()
   const morePage = React.useRef<HTMLSelectElement | null>(null)
 
-  const numbers = getNumbers(currentPage, totalPages, minimized)
+  const [numbers, setNumbers] = React.useState<PaginationNumbers>(
+    getNumbers(currentPage, totalPages, minimized)
+  )
 
   const [selectPages, setSelectPages] = React.useState<SelectPages>(
     selectReducer(numbers, totalPages)
   )
 
+  React.useEffect(
+    () => setNumbers(getNumbers(currentPage, totalPages, minimized)),
+    [minimized, currentPage]
+  )
+
   React.useEffect(() => setSelectPages(selectReducer(numbers, totalPages)), [
-    minimized,
-    currentPage
+    numbers
   ])
 
   const liStyling = {
