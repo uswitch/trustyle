@@ -1549,6 +1549,21 @@
         "image": {
           "height": [40, 56]
         }
+      },
+      "variants": {
+        "hero": {
+          "wrapper": {
+            "variant": "elements.sponsored-by-tag.base.wrapper",
+            "justifyContent": "flex-start"
+          },
+          "text": {
+            "variant": "elements.sponsored-by-tag.base.text"
+          },
+          "image": {
+            "variant": "elements.sponsored-by-tag.base.image",
+            "height": [40, 24]
+          }
+        }
       }
     },
     "sponsorship": {
