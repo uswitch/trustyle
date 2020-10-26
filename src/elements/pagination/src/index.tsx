@@ -140,7 +140,7 @@ const Pagination: React.FC<Props> = ({
   const morePage = React.useRef<HTMLSelectElement | null>(null)
 
   const [numbers, setNumbers] = React.useState<PaginationNumbers>(
-    getNumbers(currentPage, totalPages, minimized)
+    getNumbers(currentPage, totalPages, false)
   )
 
   const [selectPages, setSelectPages] = React.useState<SelectPages>(
