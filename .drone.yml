@@ -12,7 +12,7 @@ pipeline:
     image: registry.usw.co/drone/cache:latest
     restore: true
     mount:
-      - /npm-cache
+      - /drone/npm-cache
     s3:
       bucket: uswitch-ci-cache
       region: eu-west-1
@@ -22,11 +22,11 @@ pipeline:
       event: [push]
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
     commands:
-      - mkdir /npm-cache
-      - npm set cache /npm-cache
-      - npm ci --prefer-offline
+      - mkdir /drone/npm-cache
+      - npm set cache /drone/npm-cache
+      - npm ci --prefer-offline --no-audit
       - npx lerna bootstrap --no-ci
-      - ls /npm-cache
+      - ls /drone/npm-cache
 
   build-storybook:
     when:
@@ -71,7 +71,7 @@ pipeline:
       event: [push]
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
     commands:
-      - ls -a /npm-cache
+      - ls -a /drone/npm-cache
 
   publish:
     when:
@@ -120,7 +120,7 @@ pipeline:
     image: registry.usw.co/drone/cache:latest
     rebuild: true
     mount:
-      - /npm-cache
+      - /drone/npm-cache
     s3:
       bucket: uswitch-ci-cache
       region: eu-west-1
