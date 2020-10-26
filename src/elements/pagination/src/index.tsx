@@ -142,7 +142,7 @@ const Pagination: React.FC<Props> = ({
   const isMinimized = useResponsiveValue(minimized)
 
   const [numbers, setNumbers] = React.useState<PaginationNumbers>(
-    getNumbers(currentPage, totalPages, isMinimized)
+    getNumbers(currentPage, totalPages, false)
   )
 
   const [selectPages, setSelectPages] = React.useState<SelectPages>(
@@ -249,7 +249,7 @@ const Pagination: React.FC<Props> = ({
 
       {numbers.map((number, i) => (
         <li
-          key={i}
+          key={`${number}-${i}`}
           sx={{
             ...(number === currentPage
               ? theme.elements.pagination?.currentPage
