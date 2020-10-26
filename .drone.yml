@@ -25,7 +25,6 @@ pipeline:
       - npm set cache /drone/npm-cache
       - npm ci --prefer-offline --no-audit
       - npx lerna bootstrap --no-ci
-      - ls /drone/npm-cache
 
   build-storybook:
     when:
