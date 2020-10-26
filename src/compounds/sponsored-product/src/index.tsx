@@ -146,7 +146,7 @@ const EnhancedImage = ({ src, height }: { src: string; height: string }) => (
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover'
         }}
-      ></div>
+      />
     )}
   </React.Fragment>
 )
@@ -193,7 +193,7 @@ const SponsoredProduct: React.FC<Props> = ({
         marginBottom: 'xs'
       }}
     >
-      <Badge variant={'sponsored'}>Sponsored</Badge>
+      <Badge variant="sponsored">Sponsored</Badge>
     </div>
 
     <Container

@@ -25,8 +25,8 @@ export const AllVariants = () => {
   return (
     <div css={css({ padding: number('Padding', 10) })}>
       <Button
-        variant={'true-speeds'}
-        size={'small'}
+        variant="true-speeds"
+        size="small"
         onClick={action('true-speeds-click')}
       >
         <div
@@ -34,9 +34,9 @@ export const AllVariants = () => {
             display: 'flex'
           })}
         >
-          <Icon color={'green'} glyph={'checkmark'} size={20} />
+          <Icon color="green" glyph="checkmark" size={20} />
           <span css={css({ padding: '0px 5px' })}>Checked by Uswitch</span>
-          <Icon color={'black'} glyph={'question'} size={20} />
+          <Icon color="black" glyph="question" size={20} />
         </div>
       </Button>
       <Spacer />

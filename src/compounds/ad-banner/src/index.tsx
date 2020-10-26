@@ -66,7 +66,7 @@ const AdBanner: React.FC<Props> = ({
           backgroundImage: `url(${backgroundImage})`,
           variant: 'compounds.ad-banner.background-image'
         }}
-      ></div>
+      />
       <div
         sx={{
           top: ['sm', 'sm', 'lg'],

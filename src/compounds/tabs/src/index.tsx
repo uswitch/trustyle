@@ -11,7 +11,7 @@ interface TabLinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
 const TabLink: React.FC<TabLinkProps> = ({ title, isActive, ...props }) => {
   return (
     <a
-      href={'#tab'}
+      href="#tab"
       sx={{
         textDecoration: 'none'
       }}

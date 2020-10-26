@@ -161,10 +161,10 @@ export const SingleAccordionWithIcon = () => {
     <Accordion.Group>
       <Accordion
         title={title}
-        variant={'true-speeds'}
+        variant="true-speeds"
         isInitiallyOpen
-        glyph={'checkmark'}
-        glyphColor={'#2AAA5B'}
+        glyph="checkmark"
+        glyphColor="#2AAA5B"
       >
         <div sx={{ marginX: 'sm', fontSize: ['16px', '18px', '18px'] }}>
           <p>{content}</p>

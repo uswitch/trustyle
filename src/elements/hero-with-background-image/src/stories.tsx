@@ -32,7 +32,7 @@ const content = (
   <React.Fragment>
     <Row>
       <Col span={[12, 6]}>
-        <Styled.h1 sx={{ marginTop: 0 }}></Styled.h1>
+        <Styled.h1 sx={{ marginTop: 0 }} />
         <Button variant="primary">Compare investment ISAs</Button>
       </Col>
     </Row>

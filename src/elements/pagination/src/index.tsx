@@ -271,7 +271,7 @@ const Pagination: React.FC<Props> = ({
               <select
                 ref={morePage}
                 defaultChecked={false}
-                defaultValue={''}
+                defaultValue=""
                 onChange={e => {
                   onPageChange(parseInt(e.currentTarget.value), e)
                   e.currentTarget.value = '...'
