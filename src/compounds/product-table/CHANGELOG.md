@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.11.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.10.1...@uswitch/trustyle.product-table@2.11.0) (2020-10-23)
+
+
+### Features
+
+* vertically align product table data on mobile ([34c20a7](https://github.com/uswitch/trustyle/commit/34c20a7))
+
+
+
+
+
 ## [2.10.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.10.0...@uswitch/trustyle.product-table@2.10.1) (2020-10-21)
 
 
