@@ -31,9 +31,7 @@
     ],
 
 
-    "@typescript-eslint/explicit-function-return-type": [
-      "ignore"
-    ],
+    "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
@@ -41,12 +39,12 @@
         "varsIgnorePattern": "^React$"
       }
     ],
-    "@typescript-eslint/no-explicit-any": [
-      "ignore"
-    ],
-    "react/prop-types": false,
-    "react/display-name": false,
-    "react/no-array-index-key": true,
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "react/no-array-index-key": "warn",
+    "react/jsx-pascal-case": "off",
+    "react/jsx-fragments": "off",
     "sort-imports": ["error", {
       "ignoreCase": true,
       "ignoreDeclarationSort": true
