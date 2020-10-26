@@ -1628,7 +1628,8 @@
               "fontWeight": "semiBold",
               "color": ["#296595", "grey-100"],
               "fontFamily": "heading",
-              "pl": "xxs"
+              "pl": [0, "xxs"],
+              "marginLeft": [-16, 0]
             }
           },
           "addonFooter": {
@@ -1642,7 +1643,12 @@
               "fontWeight": ["bold", "base"],
               "backgroundColor": ["grey-05", "transparent"],
               "px": ["sm", 0],
-              "mx": [-6, 0]
+              "mx": [-6, 0],
+              "display": ["inline", "block"]
+            },
+            "label": {
+              "fontWeight": "bold",
+              "display": ["inline", "block"]
             }
           },
           "addonInfo": {
@@ -1652,6 +1658,10 @@
               "color": ["grey-60", "grey-100"],
               "fontFamily": ["base", "heading"],
               "marginTop": ["sm", "md"]
+            },
+            "label": {
+              "fontWeight": "bold",
+              "display": ["none", "block"]
             }
           },
           "cellContent": {
@@ -1714,7 +1724,7 @@
                 "width": "100%",
                 "marginTop": ["xs", 0],
                 "marginBototm": 0,
-                "background": ["linear-gradient(90deg, rgba(146,74,139,1) 5%, rgba(219,77,117,1) 95%)", "none"],
+                "background": ["linear-gradient(90deg, #924A8B 5%, #DB4D75 95%)", "none"],
                 "backgroundColor": ["", "primary"],
                 "color": ["grey-0", "inherit"]
               },
@@ -1745,6 +1755,10 @@
                 "backgroundColor": ["#F9EDF1", "transparent"],
                 "borderBottomColor": "#E7BBC8",
                 "color": ["fuschia", "grey-80"]
+              },
+              ":nth-child(4)": {
+                "borderBottom": "none",
+                "display": ["block", "none"]
               },
               "::before": {
                 "position": "absolute",
@@ -1811,7 +1825,6 @@
           "backgroundColor": "grey-05",
           "color": "grey-80",
           "fontSize": "md",
-          "pt": ["xxs", 0],
           "title": {
             "textAlign": "center",
             "flex": "none",
@@ -1825,6 +1838,29 @@
             "py": ["xs", "md"],
             "mb": ["xxs", 0],
             "borderTopColor": "transparent"
+          }
+        },
+        "eligibility-criteria-redesign": {
+          "variant": "compounds.accordion.base",
+          "backgroundColor": ["grey-10", "grey-05"],
+          "color": "grey-80",
+          "fontSize": "md",
+          "borderBottom": ["2px dashed", "none"],
+          "borderBottomColor": "grey-40",
+          "marginTop": [0, "xs"],
+          "title": {
+            "textAlign": "center",
+            "flex": "none",
+            "mr": "sm",
+            "fontSize": ["13px", "md"],
+            "color": ["grey-70", "grey-80"]
+          },
+          "button": {
+            "variant": "compounds.accordion.base.button",
+            "justifyContent": "center",
+            "pt": ["12px", "md"],
+            "pb": ["xxs", "md"],
+            "borderTop": "none"
           }
         }
       }

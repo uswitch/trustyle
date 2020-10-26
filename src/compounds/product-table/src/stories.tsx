@@ -661,8 +661,10 @@ export const MoneyRedesignExample = () => {
           addon: ProductTable.addons.info,
           component: (
             <ProductTable.cells.Base sx={{ display: 'block' }}>
-              <div sx={{ fontWeight: 'bold' }}>Additional Information:</div>
-              <div sx={{ fontSize: 'xs' }}>
+              <div sx={{ fontWeight: 'bold', display: ['none', 'block'] }}>
+                Additional information:
+              </div>
+              <div>
                 Here is some extra information. Here is even more extra
                 information. And more extra information.
               </div>
@@ -677,10 +679,10 @@ export const MoneyRedesignExample = () => {
           addon: ProductTable.addons.footer,
           component: (
             <ProductTable.cells.Base sx={{ display: 'block' }}>
-              <div sx={{ fontWeight: 'bold' }}>Representative example:</div>
-              <div sx={{ fontSize: 'xs' }}>
-                Assumed borrowing of £10,000 over...
+              <div sx={{ fontWeight: 'bold', display: ['inline', 'block'] }}>
+                Representative example:
               </div>
+              <div>Assumed borrowing of £10,000 over...</div>
             </ProductTable.cells.Base>
           ),
           options: {
@@ -710,6 +712,13 @@ export const MoneyRedesignExample = () => {
       <ProductTable.cells.Content label="Loan Term" headerImage>
         <ProductTable.data.Auto text="1 year to 5 years" headerImage />
       </ProductTable.cells.Content>
+      <ProductTable.cells.Image headerImage>
+        <img
+          src="https://placekitten.com/200/75?image=1"
+          alt="Salman"
+          sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+        />
+      </ProductTable.cells.Image>
       <ProductTable.cells.Cta
         primary={<ButtonLink variant="primary">Apply now</ButtonLink>}
         headerImage

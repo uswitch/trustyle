@@ -4,14 +4,21 @@ import { jsx } from 'theme-ui'
 
 import CellBase from './cell-base'
 
-export const ProductTableCellImage: React.FC = ({ children }) => (
+export interface Props extends React.HTMLAttributes<HTMLDivElement> {
+  headerImage?: boolean
+}
+
+export const ProductTableCellImage: React.FC<Props> = (
+  { children },
+  headerImage
+) => (
   <CellBase
-    mobileOrder={0}
+    mobileOrder={!headerImage ? 0 : 2}
     sx={{
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      variant: 'compounds.product-table.cellImage.main'
+      variant: `compounds.product-table.${'variants.redesign.'}cellImage.main`
     }}
   >
     <div
