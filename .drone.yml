@@ -26,6 +26,13 @@ pipeline:
       - npm ci --prefer-offline
       - npx lerna bootstrap --no-ci
 
+  build-storybook:
+    when:
+      event: [push]
+    image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    commands:
+      - npm run build-storybook
+
   eslint:
     when:
       event: [push]
@@ -66,14 +73,6 @@ pipeline:
     commands:
       - npm config set '//registry.npmjs.org/:_authToken' $NPM_TOKEN
       - npx lerna publish from-package --yes
-
-  build-storybook:
-    when:
-      event: [push]
-    image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
-    group: post
-    commands:
-      - npm run build-storybook
 
   send-percy-changed:
     when:
