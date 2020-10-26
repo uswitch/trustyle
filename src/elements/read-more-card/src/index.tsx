@@ -89,7 +89,7 @@ const ReadMoreCard: React.FC<Props> = ({ text, href, className, variant }) => {
     <a href={href} sx={style.outer} className={className}>
       <div sx={style.text}>{text}</div>
       <div sx={style.icon}>
-        <Icon glyph={'arrow'} color={'primary'} direction={'right'} size={18} />
+        <Icon glyph="arrow" color="primary" direction="right" size={18} />
       </div>
     </a>
   )

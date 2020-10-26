@@ -146,7 +146,7 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
         )}
       </li>
 
-      {crumbs.map(({ fields: fields = {} }, i) => (
+      {crumbs.map(({ fields = {} }, i) => (
         <li sx={liStyling} key={i}>
           <Styled.a sx={anchorStyling} href={fields.path}>
             {fields.displayText}

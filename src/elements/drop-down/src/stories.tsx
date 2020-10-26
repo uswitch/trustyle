@@ -111,7 +111,7 @@ export const Example = () => (
       onBlur={() => {}}
       onChange={() => {}}
       options={[{ value: '', text: 'Incorrect' }]}
-      value={''}
+      value=""
     />
 
     <Spacer />

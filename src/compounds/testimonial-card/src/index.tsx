@@ -32,7 +32,7 @@ const TestimonialCard: React.FC<Props> = ({
           <div
             sx={{ variant: 'compounds.testimonial-card.author-placeholder' }}
           >
-            <Icon glyph={'person'} color={'#141424'} size={24} />
+            <Icon glyph="person" color="#141424" size={24} />
           </div>
         )}
       </div>
