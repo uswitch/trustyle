@@ -66,13 +66,6 @@ pipeline:
     commands:
       - NODE_ENV=production npm run build
 
-  debug:
-    when:
-      event: [push]
-    image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
-    commands:
-      - ls -a /drone/npm-cache
-
   publish:
     when:
       branch: master
