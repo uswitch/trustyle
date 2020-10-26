@@ -9,6 +9,7 @@
     "plugin:jest/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "standard",
     "standard-jsx",
     "prettier",
@@ -45,7 +46,7 @@
     ],
     "react/prop-types": false,
     "react/display-name": false,
-
+    "react/no-array-index-key": true,
     "sort-imports": ["error", {
       "ignoreCase": true,
       "ignoreDeclarationSort": true
