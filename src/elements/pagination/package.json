@@ -12,6 +12,7 @@
     "react": "^16.7.0"
   },
   "dependencies": {
+    "@theme-ui/match-media": "^0.3.1",
     "@uswitch/trustyle.icon": "^1.16.0"
   }
 }

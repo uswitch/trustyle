@@ -6,6 +6,7 @@ import * as React from 'react'
 // @ts-ignore
 import { css, jsx, useThemeUI } from 'theme-ui'
 import { Direction, Glyph, Icon } from '@uswitch/trustyle.icon'
+import { useResponsiveValue } from '@theme-ui/match-media'
 
 type PaginationNumbers = (number | '...')[]
 interface SelectPages {
@@ -123,7 +124,7 @@ interface Props extends React.HTMLAttributes<HTMLUListElement> {
   ) => any
   numberToLink?: (number: number) => string
   showFirstAndLastArrows?: boolean
-  minimized?: boolean
+  minimized?: boolean | boolean[]
   className?: string
 }
 
@@ -138,9 +139,10 @@ const Pagination: React.FC<Props> = ({
 }) => {
   const { theme }: any = useThemeUI()
   const morePage = React.useRef<HTMLSelectElement | null>(null)
+  const isMinimized = useResponsiveValue(minimized)
 
   const [numbers, setNumbers] = React.useState<PaginationNumbers>(
-    getNumbers(currentPage, totalPages, minimized)
+    getNumbers(currentPage, totalPages, isMinimized)
   )
 
   const [selectPages, setSelectPages] = React.useState<SelectPages>(
@@ -148,8 +150,8 @@ const Pagination: React.FC<Props> = ({
   )
 
   React.useEffect(
-    () => setNumbers(getNumbers(currentPage, totalPages, minimized)),
-    [minimized, currentPage]
+    () => setNumbers(getNumbers(currentPage, totalPages, isMinimized)),
+    [isMinimized, currentPage]
   )
 
   React.useEffect(() => setSelectPages(selectReducer(numbers, totalPages)), [
