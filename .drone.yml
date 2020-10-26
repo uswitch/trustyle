@@ -6,12 +6,23 @@ pipeline:
     commands:
       - git fetch --tags
 
+  cache-restore:
+    when:
+      event: push
+    image: registry.usw.co/drone/cache:latest
+    restore: true
+    mount:
+      - /npm-cache
+    s3:
+      bucket: uswitch-ci-cache
+      region: eu-west-1
+
   install:
     when:
       event: [push]
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
     commands:
-      - npm install
+      - npm ci --cache /npm-cache
       - npx lerna bootstrap --no-ci
 
   build-storybook:
@@ -56,6 +67,7 @@ pipeline:
     when:
       branch: master
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    group: post
     secrets: ['npm_token']
     commands:
       - npm config set '//registry.npmjs.org/:_authToken' $NPM_TOKEN
@@ -67,6 +79,7 @@ pipeline:
       branch:
         exclude: master
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    group: post
     secrets: [percy_token]
     commands:
       - npm run snapshot:changed
@@ -76,6 +89,7 @@ pipeline:
       event: [push]
       branch: master
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    group: post
     secrets: [percy_token]
     commands:
       - npm run snapshot
@@ -85,6 +99,18 @@ pipeline:
       event: [push]
       branch: master
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    group: post
     secrets: [slack_webhook]
     commands:
       - node ./scripts/slack-unpublished.js
+
+  cache-rebuild:
+    when:
+      event: push
+    image: registry.usw.co/drone/cache:latest
+    rebuild: true
+    mount:
+      - /npm-cache
+    s3:
+      bucket: uswitch-ci-cache
+      region: eu-west-1
