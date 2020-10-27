@@ -39,7 +39,7 @@ export const Palette = ({ children, className, px = {}, ...props }: any) => {
     <props.as
       {...props}
       className={`palette ${className}`}
-      sx={{ py: '0.05px', ...sx }}
+      sx={{ py: '0.05px', '&.palette': { ...sx } }}
     >
       {children}
     </props.as>
