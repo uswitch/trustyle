@@ -96,7 +96,7 @@ const Accordion: React.FC<Props> & {
             : 'compounds.accordion.variants.isActive.button'
         }}
         px={{
-          color: "textColor"
+          color: 'textColor'
         }}
         onClick={() => setIsOpen(!isOpen)}
       >
@@ -201,7 +201,7 @@ const Accordion: React.FC<Props> & {
           },
           variant: 'compounds.accordion.base.content'
         }}
-        px={{color: "textColor"}}
+        px={{ color: 'textColor' }}
       >
         {children}
       </Palette>
