@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import { css, jsx, SxStyleProp, useThemeUI } from 'theme-ui'
-import { cx, css as eCss } from 'emotion'
+import { jsx, SxStyleProp } from 'theme-ui'
 import { createContext, useContext } from 'react'
 
 const sw = (cases: Record<string, Function>) => (
@@ -33,25 +32,15 @@ const createSx = (
 }
 
 export const Palette = ({ children, className, px = {}, ...props }: any) => {
-  const theme = useThemeUI().theme
   const palette = useContext(PaletteContext)
   const sx = createSx(palette, px)
 
-  const defaultStyles = css({ py: '0.05px' })(theme)
-  const paletteStyles = css({ '&.palette': sx })(theme)
-
-  const defaultStylesClassName = eCss(defaultStyles)
-  const paletteClassName = eCss(paletteStyles)
-
-  const finalClassName = cx(
-    'palette',
-    defaultStylesClassName,
-    className,
-    paletteClassName
-  )
-
   return (
-    <props.as {...props} className={finalClassName}>
+    <props.as
+      {...props}
+      className={`palette ${className}`}
+      sx={{ py: '0.05px', '&.palette': sx }}
+    >
       {children}
     </props.as>
   )
