@@ -1483,7 +1483,6 @@
         "fontSize": "sm"
       },
       "label": {
-        "mb": "md",
         "fontSize": "sm",
         "display": "block"
       },
@@ -1518,6 +1517,59 @@
               "display": "inline-block",
               "width": "1em",
               "left": "-1em"
+            }
+          }
+        }
+      },
+      "variants": {
+        "redesign": {
+          "base": {
+            "variant": "elements.eligibility-criteria.base",
+            "backgroundColor": ["transparent", "grey-0"],
+            "py": ["sm", "lg"],
+            "px": ["sm", "md"]
+          },
+          "title": {
+            "variant": "elements.eligibility-criteria.title",
+            "color": ["#858F94", "experimental-text"],
+            "fontSize": ["xs", "lg"],
+            "fontWeight": ["base", "bold"],
+            "mb": ["xs", "md"]
+          },
+          "label": {
+            "variant": "elements.eligibility-criteria.label",
+            "mb": [0, "md"]
+          },
+          "item": {
+            "base": {
+              "variant": "elements.eligibility-criteria.item.base",
+              "borderTop": ["none", "solid 1px"],
+              "borderTopColor": ["grey-20", "grey-20"],
+              "mt": [0, "xs"],
+              "pt": [0, "sm"],
+              "pb": [0, "xs"]
+            },
+            "title": {
+              "variant": "elements.eligibility-criteria.item.title",
+              "backgroundColor": ["grey-0","transparent"],
+              "color": ["grey-70", "grey-80"],
+              "fontWeight": ["base", "bold"],
+              "fontSize": ["13px", "sm"],
+              "padding": ["xs", 0],
+              "width": ["50%", ""],
+              "mb": [1, 0],
+              "mr": [1, 0]
+            },
+            "value": {
+              "variant": "elements.eligibility-criteria.item.value",
+              "backgroundColor": ["grey-0","transparent"],
+              "textAlign": ["left", "right"],
+              "fontSize": ["13px", "sm"],
+              "fontWeight": ["bold", "base"],
+              "color": ["plum", "grey-80"],
+              "padding": ["xs", 0],
+              "width": ["50%", ""],
+              "mb": [1, 0]
             }
           }
         }
