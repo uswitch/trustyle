@@ -1658,6 +1658,7 @@
             "main": {
               "fontSize": ["12px", "sm"],
               "pt": "xs",
+              "pb": ["sm", 6],
               "color": ["grey-50", "grey-100"],
               "fontFamily": ["base", "heading"],
               "marginTop": ["sm", "md"]
@@ -1739,7 +1740,8 @@
                 "marginBottom": ["xs", 0],
                 "background": ["linear-gradient(90deg, #924A8B 5%, #DB4D75 95%)", "none"],
                 "backgroundColor": ["", "primary"],
-                "color": ["grey-0", "inherit"]
+                "color": ["grey-0", "inherit"],
+                "fontWeight": ["base", "bold"]
               },
               "marginY": -6,
               "paddingTop": [0, "xxs"]
@@ -1875,6 +1877,14 @@
             "pt": ["12px", "md"],
             "pb": ["xxs", "md"],
             "borderTop": "none"
+          },
+          "isActive": {
+            "button": {
+              "variant": "compounds.accordion.base.button"
+            },
+            "caret": {
+              "color": "button-secondary"
+            }
           }
         }
       }
