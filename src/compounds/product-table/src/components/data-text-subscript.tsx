@@ -27,7 +27,7 @@ const ProductTableDataTextSubscript: React.FC<DataTextSubscriptProps> = ({
       ) : (
         text
       )}
-      <span sx={{ fontSize: ['xs', headerImage ? 'sm' : 'md'] }}>
+      <span sx={{ fontSize: headerImage ? 'sm' : ['xs', 'md'] }}>
         {' ' + subscript}
       </span>
     </div>
