@@ -31,7 +31,12 @@ const createSx = (
   }, {})
 }
 
-export const Palette = ({ children, className, px = {}, ...props }: any) => {
+export const Palette = ({
+  children,
+  className = '',
+  px = {},
+  ...props
+}: any) => {
   const palette = useContext(PaletteContext)
   const sx = createSx(palette, px)
 
