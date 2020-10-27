@@ -1645,18 +1645,20 @@
               "backgroundColor": ["grey-05", "transparent"],
               "px": ["sm", 0],
               "mx": [-8, 0],
-              "display": ["inline", "block"]
+              "display": ["inline", "block"],
+              "textAlign": ["center", "left"]
             },
             "label": {
-              "fontWeight": "bold",
-              "display": ["inline", "block"]
+              "fontWeight": ["bold", "bold"],
+              "display": ["inline", "block"],
+              "textAlign": ["center", "left"]
             }
           },
           "addonInfo": {
             "main": {
               "fontSize": ["12px", "sm"],
               "pt": "xs",
-              "color": ["grey-60", "grey-100"],
+              "color": ["grey-50", "grey-100"],
               "fontFamily": ["base", "heading"],
               "marginTop": ["sm", "md"]
             },
@@ -1666,9 +1668,13 @@
             }
           },
           "cellImage": {
-            "main": {
-              "py": "sm",
-              "my": "xxs"
+            "main": {},
+            "imageWrapper": {
+              "my": [-2, 0]
+            },
+            "image": {
+              "height": "90px",
+              "width": "120px"
             }
           },
           "cellContent": {
@@ -1860,7 +1866,8 @@
             "flex": "none",
             "mr": "sm",
             "fontSize": ["13px", "md"],
-            "color": ["grey-70", "grey-80"]
+            "color": ["button-secondary", "grey-80"],
+            "fontWeight": ["base", "bold"]
           },
           "button": {
             "variant": "compounds.accordion.base.button",

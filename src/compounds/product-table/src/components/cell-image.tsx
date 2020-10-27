@@ -18,7 +18,8 @@ export const ProductTableCellImage: React.FC<Props> = (
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      variant: `compounds.product-table.${'variants.redesign.'}cellImage.main`
+      variant: `compounds.product-table.${headerImage &&
+        'variants.redesign.'}cellImage.main`
     }}
   >
     <div
@@ -26,8 +27,10 @@ export const ProductTableCellImage: React.FC<Props> = (
         position: 'relative',
         height: '100%',
         width: '100%',
-        minHeight: 75,
-        minWidth: 100,
+        minHeight: headerImage ? 90 : 75,
+        minWidth: headerImage ? 120 : 100,
+        variant: `compounds.product-table.${headerImage &&
+          'variants.redesign.'}cellImage.imageWrapper`,
         img: {
           position: 'absolute',
           top: 0,
@@ -37,7 +40,9 @@ export const ProductTableCellImage: React.FC<Props> = (
           maxWidth: '100%',
           maxHeight: '100%',
           margin: 'auto',
-          objectFit: 'contain'
+          objectFit: 'contain',
+          variant: `compounds.product-table.${headerImage &&
+            'variants.redesign.'}cellImage.image`
         }
       }}
     >
