@@ -1561,7 +1561,8 @@
           },
           "image": {
             "variant": "elements.sponsored-by-tag.base.image",
-            "height": [40, 24]
+            "height": [40, 24],
+            "ml": "xxs"
           }
         }
       }
