@@ -1816,7 +1816,8 @@
               },
               "marginY": -6,
               "paddingTop": [0, "xxs"],
-              "borderTop": "none"
+              "borderTop": "none",
+              "width": ["", "100%"]
             }
           },
           "cellContext": {
