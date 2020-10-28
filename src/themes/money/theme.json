@@ -1552,7 +1552,7 @@
             },
             "title": {
               "variant": "elements.eligibility-criteria.item.title",
-              "backgroundColor": ["grey-0","transparent"],
+              "backgroundColor": ["grey-0", "transparent"],
               "color": ["grey-70", "grey-80"],
               "fontWeight": ["base", "bold"],
               "fontSize": ["13px", "sm"],
@@ -1563,7 +1563,7 @@
             },
             "value": {
               "variant": "elements.eligibility-criteria.item.value",
-              "backgroundColor": ["grey-0","transparent"],
+              "backgroundColor": ["grey-0", "transparent"],
               "textAlign": ["left", "right"],
               "fontSize": ["13px", "sm"],
               "fontWeight": ["bold", "base"],
