@@ -29,6 +29,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   campaignImgHeight?: string
   className?: string
   ctaText?: string
+  backgroundColor?: string
 }
 
 interface Detail {
@@ -147,6 +148,7 @@ const SponsoredRateTable: React.FC<Props> = ({
   productImgSrc,
   productImgAlt,
   informationDetails,
+  backgroundColor,
   usps,
   uspBackgroundColor = 'rgba(132,166,255,0.3)',
   uspBeforeColor = '#84A6FF',
@@ -197,6 +199,7 @@ const SponsoredRateTable: React.FC<Props> = ({
             height: campaignImgHeight,
             width: '100%',
             backgroundImage: `url(${campaignImgSrc})`,
+            backgroundColor: backgroundColor,
             backgroundPosition: 'left bottom',
             display: ['none', 'block'],
             backgroundRepeat: 'no-repeat',
