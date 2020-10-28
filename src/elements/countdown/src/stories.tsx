@@ -4,15 +4,17 @@ import { jsx } from 'theme-ui'
 
 import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
 
-import MyComponent from './'
+import Countdown from './'
 
 export default {
-  title: 'Elements/MyComponent'
+  title: 'Elements/Countdown'
 }
 
 export const ExampleWithKnobs = () => {
-  const until: number = new Date('December 17, 2020 03:24:00').getTime()
-  return <MyComponent until={until} />
+  const until = new Date()
+  until.setDate(until.getDate() + 2)
+
+  return <Countdown until={until.getTime()} />
 }
 
 ExampleWithKnobs.story = {
@@ -26,10 +28,13 @@ export const AutomatedTests = () => {
     variant: ['primary', 'secondary']
   })
 
+  const now = new Date()
+  now.setDate(now.getDate() + 2)
+
   return (
     <AllThemes>
       {permutations.map((p, i) => (
-        <MyComponent someText="Some text" variant={p.variant} key={i} />
+        <Countdown until={now.getTime()} key={i} />
       ))}
     </AllThemes>
   )

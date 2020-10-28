@@ -4,10 +4,10 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 
 interface TimeLeft {
-  days?: number | undefined
-  hours?: number | undefined
-  minutes?: number | undefined
-  seconds?: number | undefined
+  days: number
+  hours: number
+  minutes: number
+  seconds: number
 }
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   until: number
@@ -18,14 +18,19 @@ const style = (variant?: string) => `elements.countdown.${variant || 'base'}`
 const calculateTimeLeft = (until: number): TimeLeft => {
   const difference = +new Date(until) - +new Date()
 
-  return difference
+  return difference < 1
     ? {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+      }
+    : {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
         seconds: Math.floor((difference / 1000) % 60)
       }
-    : {}
 }
 
 const Countdown: React.FC<Props> = ({ until }) => {
