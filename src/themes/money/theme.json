@@ -1526,8 +1526,9 @@
           "base": {
             "variant": "elements.eligibility-criteria.base",
             "backgroundColor": ["transparent", "grey-0"],
-            "py": ["sm", "lg"],
-            "px": ["sm", "md"]
+            "px": ["sm", "md"],
+            "pt": ["sm", "lg"],
+            "pb": [0, "lg"]
           },
           "title": {
             "variant": "elements.eligibility-criteria.title",
@@ -1569,7 +1570,22 @@
               "color": ["plum", "grey-80"],
               "padding": ["xs", 0],
               "width": ["50%", ""],
-              "mb": [1, 0]
+              "mb": [1, 0],
+              "icon": {
+                "display": ["block", "none"]
+              },
+              "text": {
+                "display": ["none", "block"]
+              }
+            },
+            "cta": {
+              "display": ["block", "none"],
+              "background": "linear-gradient(90deg, #924A8B 5%, #DB4D75 95%)",
+              "color": "grey-0",
+              "fontWeight": "base",
+              "fontSize": "14px",
+              "py": "10px",
+              "mb": "sm"
             }
           }
         }
@@ -1799,7 +1815,8 @@
                 "fontWeight": ["base", "bold"]
               },
               "marginY": -6,
-              "paddingTop": [0, "xxs"]
+              "paddingTop": [0, "xxs"],
+              "borderTop": "none"
             }
           },
           "cellContext": {
