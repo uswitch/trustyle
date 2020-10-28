@@ -170,7 +170,9 @@ const ProductTableRow: React.FC<RowProps> = ({
                 gridRowStart: 4,
                 gridRowSpan: ROWS,
                 gridColumnStart:
-                  child.type === ProductTableCellCta ? index : index + 1,
+                  image && child.type === ProductTableCellCta
+                    ? index
+                    : index + 1,
                 gridColumnSpan: 1,
                 accentCellCount: accentCells.length,
                 accentCellIndex:
