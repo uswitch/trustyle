@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.12.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.11.0...@uswitch/trustyle.product-table@2.12.0) (2020-10-28)
+
+
+### Bug Fixes
+
+* correctly pass headerImage prop in cell-image ([72dfa78](https://github.com/uswitch/trustyle/commit/72dfa78))
+* cta cell bug ([cdde098](https://github.com/uswitch/trustyle/commit/cdde098))
+* image sizing and additional design tweaks ([6cd5bd0](https://github.com/uswitch/trustyle/commit/6cd5bd0))
+* subtext font size ([ae18f89](https://github.com/uswitch/trustyle/commit/ae18f89))
+
+
+### Features
+
+* move provider logo below cells on mobile" ([3fe70dd](https://github.com/uswitch/trustyle/commit/3fe70dd))
+
+
+
+
+
 # [2.11.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.10.1...@uswitch/trustyle.product-table@2.11.0) (2020-10-23)
 
 
