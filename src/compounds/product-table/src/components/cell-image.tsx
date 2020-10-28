@@ -8,10 +8,10 @@ export interface Props extends React.HTMLAttributes<HTMLDivElement> {
   headerImage?: boolean
 }
 
-export const ProductTableCellImage: React.FC<Props> = (
-  { children },
+export const ProductTableCellImage: React.FC<Props> = ({
+  children,
   headerImage
-) => (
+}) => (
   <CellBase
     mobileOrder={!headerImage ? 0 : 2}
     sx={{
