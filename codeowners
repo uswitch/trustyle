@@ -1,0 +1,3 @@
+# Uswitch own all of the project currently
+CODEOWNERS @domtronn @phelma @jonathan-fielding @barneyfoxuk
+*	@uswitch/uswitch-devs
