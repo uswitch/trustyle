@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.pagination@1.5.2...@uswitch/trustyle.pagination@1.5.3) (2020-10-26)
+
+
+### Bug Fixes
+
+* force first render to befor desktop ([8a1c49d](https://github.com/uswitch/trustyle/commit/8a1c49d))
+
+
+
+
+
 ## [1.5.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.pagination@1.5.1...@uswitch/trustyle.pagination@1.5.2) (2020-10-23)
 
 

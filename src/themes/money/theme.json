@@ -1245,6 +1245,7 @@
         "color": "grey-80",
         "display": "block",
         ":not(:first-child)": { "mt": "sm" },
+        "mb": "xs",
         "variants": {
           "calculator": {
             "variant": "styles.h6",
@@ -1258,8 +1259,15 @@
           }
         }
       },
+      "step-field": {
+        "mb": "xl"
+      },
+      "description": {
+        "color": "grey-80",
+        "display": "block",
+        "mb": "xs"
+      },
       "button": {
-        "my": "sm",
         "variants": {
           "calculator": {
             "mb": "sm",
