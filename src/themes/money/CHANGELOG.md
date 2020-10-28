@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.31.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.30.1...@uswitch/trustyle.money-theme@1.31.0) (2020-10-28)
+
+
+### Bug Fixes
+
+* add redesign styles for eligibility information data ([3c800e5](https://github.com/uswitch/trustyle/commit/3c800e5))
+* add redesign variant styling to accordion ([101f5a7](https://github.com/uswitch/trustyle/commit/101f5a7))
+* additional eligibility-criteria styling ([f0e53c4](https://github.com/uswitch/trustyle/commit/f0e53c4))
+* image sizing and additional design tweaks ([6cd5bd0](https://github.com/uswitch/trustyle/commit/6cd5bd0))
+* update mobile styling for cta button, image, and title ([d05e249](https://github.com/uswitch/trustyle/commit/d05e249))
+* update money mobile theme to match original design ([1a9ca1b](https://github.com/uswitch/trustyle/commit/1a9ca1b))
+* update uswitch theme and cell cta width ([b43763d](https://github.com/uswitch/trustyle/commit/b43763d))
+
+
+### Features
+
+* move provider logo below cells on mobile" ([3fe70dd](https://github.com/uswitch/trustyle/commit/3fe70dd))
+
+
+
+
+
 ## [1.30.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.30.0...@uswitch/trustyle.money-theme@1.30.1) (2020-10-28)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme

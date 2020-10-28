@@ -1977,6 +1977,9 @@
                 "borderLeft": ["none", "1px solid #D0D0D3"],
                 "left": 0,
                 "top": 0
+              },
+              ":nth-child(4)": {
+                "display": ["block", "none"]
               }
             }
           }

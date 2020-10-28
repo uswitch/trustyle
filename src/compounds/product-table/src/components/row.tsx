@@ -74,8 +74,6 @@ const ProductTableRow: React.FC<RowProps> = ({
 
   const cols = nonNullChildren.length
 
-  const lastCell = (index: number) => index === cols - 1
-
   /**
    * Row numbers explained:
    *
@@ -133,9 +131,13 @@ const ProductTableRow: React.FC<RowProps> = ({
             gridTemplateColumns: [
               'repeat(2, 1fr)',
               undefined,
-              `repeat(${cols}, 1fr)`
+              `repeat(${image ? cols - 1 : cols}, 1fr)`
             ],
-            msGridColumns: ['(1fr)[2]', undefined, `(1fr)[${cols}]`],
+            msGridColumns: [
+              '(1fr)[2]',
+              undefined,
+              `(1fr)[${image ? cols - 1 : cols}]`
+            ],
             gridTemplateRows: [
               'auto',
               undefined,
@@ -167,7 +169,10 @@ const ProductTableRow: React.FC<RowProps> = ({
               value={{
                 gridRowStart: 4,
                 gridRowSpan: ROWS,
-                gridColumnStart: index + 1,
+                gridColumnStart:
+                  image && child.type === ProductTableCellCta
+                    ? index
+                    : index + 1,
                 gridColumnSpan: 1,
                 accentCellCount: accentCells.length,
                 accentCellIndex:
@@ -175,7 +180,7 @@ const ProductTableRow: React.FC<RowProps> = ({
                 extraRules: {
                   variant:
                     image &&
-                    !lastCell(index) &&
+                    child.type !== ProductTableCellCta &&
                     'compounds.product-table.variants.redesign.cellContext.main'
                 }
               }}

@@ -171,7 +171,9 @@ const Accordion: React.FC<Props> & {
           >
             <Icon
               color={
-                isOpen
+                variant === 'eligibility-criteria-redesign'
+                  ? colors['button-secondary']
+                  : isOpen
                   ? colors[accordionTheme?.variants?.isActive?.caret?.color]
                   : colors[accordionTheme?.base?.caret?.color]
               }
