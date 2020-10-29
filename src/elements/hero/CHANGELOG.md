@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero@3.4.4...@uswitch/trustyle.hero@3.5.0) (2020-10-29)
+
+
+### Features
+
+* allow hero to be styled with palette ([9863bfb](https://github.com/uswitch/trustyle/commit/9863bfb))
+
+
+
+
+
 ## [3.4.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero@3.4.0...@uswitch/trustyle.hero@3.4.2) (2020-09-23)
 
 
