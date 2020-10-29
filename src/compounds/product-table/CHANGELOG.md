@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.12.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.1...@uswitch/trustyle.product-table@2.12.2) (2020-10-29)
+
+
+### Bug Fixes
+
+* refactor cellimage variant ([e63fb10](https://github.com/uswitch/trustyle/commit/e63fb10))
+
+
+
+
+
 # [2.12.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.11.0...@uswitch/trustyle.product-table@2.12.0) (2020-10-28)
 
 
