@@ -3,6 +3,7 @@
 import * as React from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
 import get from '@uswitch/trustyle-utils.get'
+import { Palette } from '@uswitch/trustyle-utils.palette'
 
 type ArrayOrNot<T> = T | T[]
 
@@ -55,77 +56,82 @@ const Hero: React.FC<Props> = ({
 
   return (
     <div>
-      <div
-        sx={{
-          position: 'relative',
-          overflow: 'hidden',
-          variant: 'elements.hero.wrapper',
-          backgroundColor: customBgColor || undefined
-        }}
-        className={className}
+      <Palette
+        as="div"
+        sx={{ variant: 'elements.hero.wrapper', overflow: 'hidden' }}
+        px={{ backgroundColor: 'backgroundColor' }}
       >
-        <Container>
-          {breadcrumbs && (
-            <div
-              sx={{ paddingTop: 'sm', variant: 'elements.hero.breadcrumbs' }}
-            >
-              {breadcrumbWithVariant}
-            </div>
-          )}
-          <div
-            sx={{
-              position: 'relative',
-              display: 'block',
-              flexDirection: 'row-reverse'
-            }}
-          >
-            <div
-              sx={{
-                position: 'absolute',
-                left: [0, '45%'],
-                right: 0,
-                top: 0,
-                bottom: 0,
-                display: [
-                  fgImageOnMobile ? 'block' : 'none',
-                  fgImageOnTablet ? 'block' : 'none',
-                  'block'
-                ],
-                ...(fgImage && fgImageType === 'background'
-                  ? {
-                      backgroundImage: `url(${fgImage})`,
-                      backgroundRepeat: 'no-repeat',
-                      ...fgImagePosition
-                    }
-                  : undefined),
-                variant: 'elements.hero.image'
-              }}
-            >
-              {fgImage && fgImageType === 'img' && (
-                <img
-                  sx={{
-                    maxWidth: '100%',
-                    position: 'absolute',
-                    ...fgImagePosition
-                  }}
-                  src={fgImage}
-                  role="presentation"
-                />
-              )}
-            </div>
+        <div
+          sx={{
+            position: 'relative',
+            overflow: 'hidden',
+            backgroundColor: customBgColor || undefined
+          }}
+          className={className}
+        >
+          <Container>
+            {breadcrumbs && (
+              <div
+                sx={{ paddingTop: 'sm', variant: 'elements.hero.breadcrumbs' }}
+              >
+                {breadcrumbWithVariant}
+              </div>
+            )}
             <div
               sx={{
                 position: 'relative',
-                paddingTop: ['sm', 'xxl'],
-                paddingBottom: ['sm', 'xxl'],
-                variant: 'elements.hero.content'
+                display: 'block',
+                flexDirection: 'row-reverse'
               }}
             >
-              {children}
+              <div
+                sx={{
+                  position: 'absolute',
+                  left: [0, '45%'],
+                  right: 0,
+                  top: 0,
+                  bottom: 0,
+                  display: [
+                    fgImageOnMobile ? 'block' : 'none',
+                    fgImageOnTablet ? 'block' : 'none',
+                    'block'
+                  ],
+                  ...(fgImage && fgImageType === 'background'
+                    ? {
+                        backgroundImage: `url(${fgImage})`,
+                        backgroundRepeat: 'no-repeat',
+                        ...fgImagePosition
+                      }
+                    : undefined),
+                  variant: 'elements.hero.image'
+                }}
+              >
+                {fgImage && fgImageType === 'img' && (
+                  <img
+                    sx={{
+                      maxWidth: '100%',
+                      position: 'absolute',
+                      ...fgImagePosition
+                    }}
+                    src={fgImage}
+                    role="presentation"
+                  />
+                )}
+              </div>
+              <div
+                sx={{
+                  position: 'relative',
+                  paddingTop: ['sm', 'xxl'],
+                  paddingBottom: ['sm', 'xxl'],
+                  variant: 'elements.hero.content'
+                }}
+              >
+                {children}
+              </div>
             </div>
-          </div>
-        </Container>
-      </div>
+          </Container>
+        </div>
+      </Palette>
       {fgImage && (
         <img
           sx={{
