@@ -25,6 +25,7 @@ export const ExampleWithKnobs = () => {
     text('USP', 'Free insurance for 2 months'),
     text('USP2', 'Second USP')
   ]
+  const backgroundColor = text('Background Colour', '#ff55c4')
   const href = text('href', 'https://www.uswitch.com/mobiles/')
   const target = text('target', '_blank')
   const sponsorName = text('Sponsor name', 'Three')
@@ -65,6 +66,7 @@ export const ExampleWithKnobs = () => {
         sponsorLogoSrc={sponsorSrc}
         award={award}
         campaignImgSrc={campaignImage}
+        backgroundColor={backgroundColor}
         campaignImgHeight={'160px'}
       />
     </div>
