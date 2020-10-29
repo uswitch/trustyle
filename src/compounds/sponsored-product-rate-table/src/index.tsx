@@ -149,7 +149,7 @@ const SponsoredRateTable: React.FC<Props> = ({
   productImgAlt,
   informationDetails,
   usps,
-  backgroundColor,
+  backgroundColor = '#FFFFFF',
   uspBackgroundColor = 'rgba(132,166,255,0.3)',
   uspBeforeColor = '#84A6FF',
   href,
