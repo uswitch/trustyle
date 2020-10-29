@@ -131,22 +131,22 @@ const Hero: React.FC<Props> = ({
             </div>
           </Container>
         </div>
-        {fgImage && (
-          <img
-            sx={{
-              maxWidth: '100%',
-              position: 'relative',
-              display: 'none',
-              marginTop: `-${bottomImageOverflow}`,
-              marginLeft: 'auto',
-              marginRight: 'auto',
-              variant: 'elements.hero.bottomImage'
-            }}
-            src={fgImage}
-            role="presentation"
-          />
-        )}
       </Palette>
+      {fgImage && (
+        <img
+          sx={{
+            maxWidth: '100%',
+            position: 'relative',
+            display: 'none',
+            marginTop: `-${bottomImageOverflow}`,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            variant: 'elements.hero.bottomImage'
+          }}
+          src={fgImage}
+          role="presentation"
+        />
+      )}
     </div>
   )
 }
