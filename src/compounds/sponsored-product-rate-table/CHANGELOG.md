@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@3.1.10...@uswitch/trustyle.sponsored-product-rate-table@3.1.11) (2020-11-03)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product-rate-table
+
+
+
+
+
 ## [3.1.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@3.1.8...@uswitch/trustyle.sponsored-product-rate-table@3.1.10) (2020-10-29)
 
 
