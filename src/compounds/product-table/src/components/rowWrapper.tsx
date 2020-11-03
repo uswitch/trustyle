@@ -34,13 +34,11 @@ const linkWrapper = (
   headerImage?: React.ReactNode
 ) => {
   const handleClick = (e: any) => {
-    if (checkClickTargetIsLink(e)) {
-      return e
-    }
-
-    if (checkClickTargetIsAccordion(10, e)) {
+    if (checkClickTargetIsAccordion(10, e) && !checkClickTargetIsLink(e)) {
       e.preventDefault()
     }
+
+    return e
   }
 
   return (
