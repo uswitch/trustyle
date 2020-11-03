@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.hero-card",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -13,6 +13,6 @@
   },
   "dependencies": {
     "@uswitch/trustyle-utils.get": "^1.0.9",
-    "@uswitch/trustyle.button-link": "^2.1.3"
+    "@uswitch/trustyle.button-link": "^2.1.4"
   }
 }
