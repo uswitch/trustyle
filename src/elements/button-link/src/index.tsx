@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
+import { Glyph, Icon } from '@uswitch/trustyle.icon'
 import get from '@uswitch/trustyle-utils.get'
 
 type Overwrite<T, U> = Omit<T, keyof U> & U
@@ -12,6 +13,8 @@ type Props<T extends React.ComponentType<any>> = Overwrite<
     variant: string
     children: React.ReactNode
     size?: 'small' | 'large'
+    beforeIcon?: string
+    afterIcon?: string
   }
 >
 
@@ -23,6 +26,8 @@ export const ButtonLink = <
   children,
   variant,
   size = 'large',
+  beforeIcon,
+  afterIcon,
   ...props
 }: Props<T>) => {
   const { theme }: any = useThemeUI()
@@ -59,7 +64,21 @@ export const ButtonLink = <
       }}
       {...props}
     >
+      {beforeIcon && (
+        <span
+          sx={{ variant: `elements.buttons.variants.${variant}.beforeIcon` }}
+        >
+          <Icon color="white" glyph={beforeIcon as Glyph} direction="left" />
+        </span>
+      )}
       {children}
+      {afterIcon && (
+        <span
+          sx={{ variant: `elements.buttons.variants.${variant}.afterIcon` }}
+        >
+          <Icon color="white" glyph={afterIcon as Glyph} direction="right" />
+        </span>
+      )}
     </Styled.a>
   )
 }
