@@ -1860,7 +1860,7 @@
                 ":nth-child(4)": {
                   "borderBottom": "none",
                   "display": ["block", "none"]
-                }  
+                }
               }
             }
           }
