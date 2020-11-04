@@ -1844,10 +1844,6 @@
                 "borderBottomColor": "#E7BBC8",
                 "color": ["fuschia", "grey-80"]
               },
-              ":nth-child(4)": {
-                "borderBottom": "none",
-                "display": ["block", "none"]
-              },
               "::before": {
                 "position": "absolute",
                 "display": "block",
@@ -1856,6 +1852,15 @@
                 "borderLeft": ["none", "1px solid #C2C4C8"],
                 "left": 0,
                 "top": 0
+              }
+            },
+            "variants": {
+              "cellImage": {
+                "variant": "compounds.product-table.variants.redesign.cellContext.main",
+                ":nth-child(4)": {
+                  "borderBottom": "none",
+                  "display": ["block", "none"]
+                }
               }
             }
           }
