@@ -6,6 +6,7 @@ import { Addon, AddonArg, CellContext } from '../generics'
 
 import ProductTableCellBase from './cell-base'
 import ProductTableCellCta from './cell-cta'
+import ProductTableCellImage from './cell-image'
 import { ROWS } from './cell-split'
 import RowWrapper from './rowWrapper'
 import Header from './header'
@@ -73,6 +74,10 @@ const ProductTableRow: React.FC<RowProps> = ({
   }
 
   const cols = nonNullChildren.length
+
+  const hasCellImage = nonNullChildren
+    .map((child: any) => child.type)
+    .includes(ProductTableCellImage)
 
   /**
    * Row numbers explained:
@@ -170,7 +175,7 @@ const ProductTableRow: React.FC<RowProps> = ({
                 gridRowStart: 4,
                 gridRowSpan: ROWS,
                 gridColumnStart:
-                  image && child.type === ProductTableCellCta
+                  image && hasCellImage && child.type === ProductTableCellCta
                     ? index
                     : index + 1,
                 gridColumnSpan: 1,
@@ -181,7 +186,9 @@ const ProductTableRow: React.FC<RowProps> = ({
                   variant:
                     image &&
                     child.type !== ProductTableCellCta &&
-                    'compounds.product-table.variants.redesign.cellContext.main'
+                    `compounds.product-table.variants.redesign.cellContext.${
+                      hasCellImage ? 'variants.cellImage' : 'main'
+                    }`
                 }
               }}
               key={index}
