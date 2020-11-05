@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@uswitch/trustyle.flex-grid": "^3.5.0",
-    "@uswitch/trustyle.imgix-image": "^0.1.40"
+    "@uswitch/trustyle.imgix-image": "^0.1.40",
+    "@uswitch/trustyle.icon": "^1.16.0"
   }
 }

@@ -6,6 +6,7 @@ import { jsx } from '@emotion/core'
 import { Arrow } from './arrow'
 import { ArrowCircle } from './arrow-circle'
 import { Bill } from './bill'
+import { Book } from './book'
 import { Calendar } from './calendar'
 import { Caret } from './caret'
 import { CaretFinal } from './caretFinal'
@@ -56,6 +57,7 @@ export type Glyph =
   | 'arrow'
   | 'arrow-circle'
   | 'bill'
+  | 'book'
   | 'calendar'
   | 'caret'
   | 'caretFinal'
@@ -130,6 +132,8 @@ export const Icon: React.FC<Props> = ({
       return <ArrowCircle color={color} size={size} />
     case 'bill':
       return <Bill color={color} size={size} />
+    case 'book':
+      return <Book color={color} size={size} />
     case 'calendar':
       return <Calendar color={color} size={size} />
     case 'caret':
