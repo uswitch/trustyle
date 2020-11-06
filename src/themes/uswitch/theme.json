@@ -2167,7 +2167,7 @@
           "lineHeight": "sm"
         },
         "content": {
-          "& :first-child": {
+          "& > :first-child": {
             "mt": "xs"
           }
         },
@@ -2228,7 +2228,8 @@
             "display": "block",
             "borderWidth": "1px 0 0 0",
             "borderStyle": "solid",
-            "borderColor": "grey-20"
+            "borderColor": "grey-20",
+            "overflowAnchor": "none"
           },
           "title": {
             "textAlign": "center"
