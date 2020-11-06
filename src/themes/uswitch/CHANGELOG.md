@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.28.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.27.5...@uswitch/trustyle.uswitch-theme@2.28.0) (2020-11-06)
+
+
+### Features
+
+* Add 'reverse' accordion that expands content upwards ([322a9e7](https://github.com/uswitch/trustyle/commit/322a9e7))
+
+
+
+
+
 ## [2.27.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.27.4...@uswitch/trustyle.uswitch-theme@2.27.5) (2020-11-04)
 
 
