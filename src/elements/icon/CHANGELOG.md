@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.16.0...@uswitch/trustyle.icon@1.16.1) (2020-11-06)
+
+
+### Bug Fixes
+
+* add facebook ans simple-phone icons, update twitter icon ([15de231](https://github.com/uswitch/trustyle/commit/15de231))
+
+
+
+
+
 # [1.16.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.14.2...@uswitch/trustyle.icon@1.16.0) (2020-10-12)
 
 

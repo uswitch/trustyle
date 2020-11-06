@@ -22,6 +22,7 @@ const AccordionContext = React.createContext<Partial<ContextProps>>({
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   index?: number
   title: string
+  openedTitle?: string
   isInitiallyOpen?: boolean
   className?: string
   icon?: string
@@ -46,7 +47,8 @@ const Accordion: React.FC<Props> & {
   Title: React.FC<TitleProps>
 } = ({
   index,
-  title,
+  title: closedTitle,
+  openedTitle,
   isInitiallyOpen = false,
   children,
   className,
@@ -76,6 +78,9 @@ const Accordion: React.FC<Props> & {
       // @ts-ignore - I have no idea why this is required
       accordionContext.setOpenId(isOpen ? (index as number) : -1)
   }
+
+  const title =
+    typeof openedTitle !== 'undefined' && isOpen ? openedTitle : closedTitle
 
   return (
     <div
