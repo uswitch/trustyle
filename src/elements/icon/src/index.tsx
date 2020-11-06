@@ -51,6 +51,8 @@ import { StarFilled } from './star-filled'
 import { StarOutlined } from './star-outlined'
 import { StarHalfFilled } from './star-half-filled'
 import { Warning } from './warning'
+import { Facebook } from './facebook'
+import { PhoneSimple } from './phone-simple'
 
 export type Glyph =
   | 'arrow'
@@ -69,6 +71,7 @@ export type Glyph =
   | 'email'
   | 'email-filled'
   | 'error'
+  | 'facebook'
   | 'filled-arrow'
   | 'filters'
   | 'four'
@@ -84,6 +87,7 @@ export type Glyph =
   | 'one'
   | 'person'
   | 'phone'
+  | 'phone-simple'
   | 'plus'
   | 'question'
   | 'smile'
@@ -156,6 +160,8 @@ export const Icon: React.FC<Props> = ({
       return <EmailFilled color={color} size={size} />
     case 'error':
       return <ErrorIcon color={color} size={size} />
+    case 'facebook':
+      return <Facebook color={color} size={size} />
     case 'filled-arrow':
       return <FilledArrow color={color} size={size} />
     case 'filters':
@@ -186,6 +192,8 @@ export const Icon: React.FC<Props> = ({
       return <Person color={color} size={size} />
     case 'phone':
       return <Phone color={color} size={size} />
+    case 'phone-simple':
+      return <PhoneSimple color={color} size={size} />
     case 'plus':
       return <Plus color={color} size={size} />
     case 'question':
