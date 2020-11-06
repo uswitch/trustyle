@@ -2219,6 +2219,27 @@
           "caret": {
             "marginRight": "xs"
           }
+        },
+        "reverse": {
+          "display": "flex",
+          "flexFlow": "column",
+          "& > button": {
+            "order": 2,
+            "display": "block",
+            "borderWidth": "1px 0 0 0",
+            "borderStyle": "solid",
+            "borderColor": "grey-20"
+          },
+          "title": {
+            "textAlign": "center"
+          },
+          "caret": {
+            "textAlign": "center",
+            "marginTop": "xs",
+            "svg": {
+              "display": "inline-block"
+            }
+          }
         }
       }
     },
