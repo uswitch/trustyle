@@ -36,9 +36,10 @@ export const ReverseAccordion = () => (
       openedTitle={'Show less'}
       variant="reverse"
     >
-      <p style={{ marginTop: 0 }}>Recommendation 2</p>
+      <p style={{ marginTop: 0, marginBottom: '2000px' }}>Recommendation 2</p>
       <p>Recommendation 3</p>
     </Accordion>
+    <p style={{ marginTop: '2000px' }}>Content below</p>
   </React.Fragment>
 )
 
