@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.9.7...@uswitch/trustyle.card@1.10.0) (2020-11-09)
+
+
+### Features
+
+* add icon to card ([d27f138](https://github.com/uswitch/trustyle/commit/d27f138))
+
+
+
+
+
 ## [1.9.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.9.6...@uswitch/trustyle.card@1.9.7) (2020-10-16)
 
 **Note:** Version bump only for package @uswitch/trustyle.card
