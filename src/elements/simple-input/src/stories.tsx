@@ -75,6 +75,23 @@ export const Example = () => {
         type="text"
         defaultValue="Ref isn't working"
       />
+      <Spacer />
+      <SimpleInput
+        aria-label="Simple input"
+        name="example"
+        type="text"
+        suffix="years"
+        defaultValue="100"
+        inputSize="sm"
+      />
+      <Spacer />
+      <SimpleInput
+        aria-label="Simple input"
+        name="example"
+        type="text"
+        defaultValue="sm"
+        inputSize="sm"
+      />
     </React.Fragment>
   )
 }
