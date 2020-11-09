@@ -2598,6 +2598,7 @@
             "color": "grey-70",
             "textDecoration": "none",
             "fontSize": "xs",
+            "pt": "xs",
             "pb": "xs",
             "px": "sm",
             ":visited": {
