@@ -55,7 +55,7 @@ export const SimpleInput = React.forwardRef(
     }
 
     return (
-      <span
+      <div
         sx={{
           width: setWidth(inputSize),
           variant:
@@ -101,7 +101,7 @@ export const SimpleInput = React.forwardRef(
             {suffix}
           </span>
         )}
-      </span>
+      </div>
     )
   }
 )
