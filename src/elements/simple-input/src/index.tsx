@@ -78,7 +78,8 @@ export const SimpleInput = React.forwardRef(
         )}
         <input
           sx={{
-            variant: 'elements.simple-input.base'
+            variant: 'elements.simple-input.base',
+            textAlign: inputSize === 'sm' ? 'center' : 'left'
           }}
           placeholder={placeholder}
           ref={ref}
