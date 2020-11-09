@@ -67,7 +67,7 @@
     "babel-plugin-require-context-hook": "^1.0.0",
     "better-ajv-errors": "^0.6.7",
     "common-prefix": "^1.1.0",
-    "csstype": "^2.6.5",
+    "csstype": "^2.6.13",
     "danger": "^10.2.1",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
