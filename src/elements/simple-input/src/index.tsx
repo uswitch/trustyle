@@ -69,9 +69,7 @@ export const SimpleInput = React.forwardRef(
         {prefix && (
           <span
             ref={prefixRef}
-            sx={{
-              variant: 'elements.simple-input.affix.prefix'
-            }}
+            sx={{ variant: 'elements.simple-input.affix.prefix' }}
           >
             {prefix}
           </span>
@@ -92,11 +90,7 @@ export const SimpleInput = React.forwardRef(
         {suffix && (
           <span
             ref={suffixRef}
-            className="suffix"
-            sx={{
-              variant: 'elements.simple-input.affix.suffix',
-              float: 'right'
-            }}
+            sx={{ variant: 'elements.simple-input.affix.suffix' }}
           >
             {suffix}
           </span>
