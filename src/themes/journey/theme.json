@@ -721,6 +721,9 @@
           "borderLeftWidth": 1
         }
       },
+      "inputWidth": {
+        "small": 64
+      },
       "variants": {
         "error": {
           "variant": "elements.simple-input.wrapper",

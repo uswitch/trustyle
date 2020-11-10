@@ -39,7 +39,7 @@ export const SimpleInput = React.forwardRef(
     useEffect(() => {
       setPrefixWidth(prefixRef?.current?.offsetWidth || 0)
       setSuffixWidth(suffixRef?.current?.offsetWidth || 0)
-    }, [suffixRef])
+    }, [prefixRef, suffixRef])
 
     const setWidth = (inputSize: InputSize) => {
       const { theme }: any = useThemeUI()
