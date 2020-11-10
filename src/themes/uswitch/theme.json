@@ -1627,6 +1627,19 @@
         "textAlign": ["left", "center"],
         "mb": "24px"
       },
+      "container": {
+        "marginY": "md",
+        "padding": "md",
+        "backgroundColor": "grey-05",
+        "width": "100vw",
+        "marginLeft": [0, null, "calc(-50vw + 586px)"],
+        "marginTop": -24,
+        "> div": {
+          "variant": "sizes.grid.container",
+          "paddingX": "lg",
+          "marginX": "auto"
+        }
+      },
       "modal": {
         "wrapper": {
           "width": ["90%", "50%"],
