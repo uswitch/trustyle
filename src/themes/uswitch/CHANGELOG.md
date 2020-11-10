@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.29.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.28.1...@uswitch/trustyle.uswitch-theme@2.29.0) (2020-11-10)
+
+
+### Features
+
+* add inputSize to simple input ([96cde8d](https://github.com/uswitch/trustyle/commit/96cde8d))
+
+
+
+
+
 ## [2.28.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.28.0...@uswitch/trustyle.uswitch-theme@2.28.1) (2020-11-09)
 
 
