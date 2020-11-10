@@ -1,4 +1,4 @@
-import { danger, fail, message } from 'danger'
+import { danger, message } from 'danger'
 
 const modifiedMD = danger.git.modified_files.join('- ')
 message('Changed Files in this PR: \n - ' + modifiedMD)
@@ -16,7 +16,7 @@ danger.git.commits.forEach(commit => {
       /^(feat:)|(fix:)|(major:)|(chore:)|(docs:)|Merge branch/g
     )
   ) {
-    fail(
+    message(
       `Commit message '${commit.message}' does match the correct format. Please follow [conventional commits](https://www.conventionalcommits.org)`
     )
   }
