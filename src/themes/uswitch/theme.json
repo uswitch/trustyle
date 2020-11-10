@@ -167,7 +167,7 @@
     }
   },
   "colors": {
-    "page-background": "#ffffff",
+    "page-background": "transparent",
     "primary": "#141424",
     "heading": "#141424",
     "hero": "#bee8f3",
