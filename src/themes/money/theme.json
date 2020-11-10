@@ -1417,6 +1417,12 @@
         "textAlign": ["left", "center"],
         "mb": "24px"
       },
+      "container": {
+        "marginY": 0,
+        "padding": "md",
+        "backgroundColor": "grey-05",
+        "borderRadius": 3
+      },
       "modal": {
         "wrapper": {
           "width": ["90%", "50%"],
