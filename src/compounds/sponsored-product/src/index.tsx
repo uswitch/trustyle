@@ -210,7 +210,7 @@ const SponsoredProduct: React.FC<Props> = ({
           display: 'flex',
           flexDirection: [null, 'column'],
           width: [null, '45%'],
-          justifyContent: imgSrc ? 'flex-start' : 'space-between'
+          justifyContent: 'flex-start'
         }}
       >
         <div
