@@ -19,7 +19,7 @@ const UspTag: React.FC<Props> = ({
   usp ? (
     <div
       sx={{
-        backgroundColor: backgroundColor,
+        background: backgroundColor,
         textAlign: 'left',
         paddingX: 12,
         paddingY: 4,
