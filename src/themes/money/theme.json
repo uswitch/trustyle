@@ -819,6 +819,9 @@
           "variant": "elements.simple-input.affix.base"
         }
       },
+      "inputWidth": {
+        "small": 64
+      },
       "variants": {
         "error": {
           "variant": "elements.simple-input.wrapper",
