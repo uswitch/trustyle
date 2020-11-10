@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.simple-input@0.5.2...@uswitch/trustyle.simple-input@0.6.0) (2020-11-10)
+
+
+### Bug Fixes
+
+* formatting ([db58001](https://github.com/uswitch/trustyle/commit/db58001))
+* revert div ([5891653](https://github.com/uswitch/trustyle/commit/5891653))
+* update all themes ([b82e6c7](https://github.com/uswitch/trustyle/commit/b82e6c7))
+
+
+### Features
+
+* add inputSize to simple input ([96cde8d](https://github.com/uswitch/trustyle/commit/96cde8d))
+* center align text on small input ([db38cb1](https://github.com/uswitch/trustyle/commit/db38cb1))
+
+
+
+
+
 # [0.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.simple-input@0.4.3...@uswitch/trustyle.simple-input@0.5.0) (2020-09-04)
 
 
