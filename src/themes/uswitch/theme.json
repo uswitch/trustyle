@@ -693,6 +693,9 @@
           },
           "input-container": {
             "position": "relative",
+            "input": {
+              "maxWidth": [null, null, "320px"]
+            },
             "div": {
               "height": [177, null, 88],
               "alignItems": ["flex-start", null, "center"],
