@@ -34,6 +34,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   showSponsoredByTag?: boolean
   uspSx?: object
   infoBlockSx?: object
+  boxShadowColor?: string
+  badgeVariant?: string
 }
 
 interface Detail {
@@ -159,9 +161,11 @@ const SponsoredProduct: React.FC<Props> = ({
   imgSrc = '',
   imgAlt = '',
   informationDetails,
+  badgeVariant = 'sponsored',
   usps,
   uspBackgroundColor = 'rgba(132,166,255,0.3)',
   uspBeforeColor = '#84A6FF',
+  boxShadowColor = 'rgba(20, 20, 36, 0.15)',
   href = '',
   target = '',
   sponsorSrc,
@@ -193,7 +197,7 @@ const SponsoredProduct: React.FC<Props> = ({
         marginBottom: 'xs'
       }}
     >
-      <Badge variant={'sponsored'}>Sponsored</Badge>
+      <Badge variant={badgeVariant}>Sponsored</Badge>
     </div>
 
     <Container
@@ -201,7 +205,7 @@ const SponsoredProduct: React.FC<Props> = ({
         padding: [12, 'sm'],
         display: [null, 'flex'],
         justifyContent: [null, 'space-between'],
-        boxShadow: ['none', '12px 12px 0px rgba(20, 20, 36, 0.15)'],
+        boxShadow: ['none', `12px 12px 0px ${boxShadowColor}`],
         backgroundColor: backgroundColor
       }}
     >
@@ -210,7 +214,7 @@ const SponsoredProduct: React.FC<Props> = ({
           display: 'flex',
           flexDirection: [null, 'column'],
           width: [null, '45%'],
-          justifyContent: imgSrc ? 'flex-start' : 'space-between'
+          justifyContent: 'flex-start'
         }}
       >
         <div

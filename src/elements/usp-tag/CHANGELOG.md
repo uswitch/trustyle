@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.usp-tag@0.1.5...@uswitch/trustyle.usp-tag@0.1.6) (2020-11-11)
+
+
+### Bug Fixes
+
+* allows for linear gradient to be passed as bg to usp tags ([c93141c](https://github.com/uswitch/trustyle/commit/c93141c))
+
+
+
+
+
 ## [0.1.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.usp-tag@0.1.2...@uswitch/trustyle.usp-tag@0.1.3) (2020-08-27)
 
 
