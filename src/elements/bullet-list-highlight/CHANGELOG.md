@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.20](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bullet-list-highlight@0.3.19...@uswitch/trustyle.bullet-list-highlight@0.3.20) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.bullet-list-highlight
+
+
+
+
+
 ## [0.3.19](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bullet-list-highlight@0.3.18...@uswitch/trustyle.bullet-list-highlight@0.3.19) (2020-11-09)
 
 **Note:** Version bump only for package @uswitch/trustyle.bullet-list-highlight
