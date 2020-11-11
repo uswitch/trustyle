@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.30.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.30.0...@uswitch/trustyle.uswitch-theme@2.30.1) (2020-11-10)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+# [2.30.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.29.1...@uswitch/trustyle.uswitch-theme@2.30.0) (2020-11-10)
+
+
+### Bug Fixes
+
+* add author-profile styles ([95ba9e4](https://github.com/uswitch/trustyle/commit/95ba9e4))
+* change white bg to transparent ([cf98fd8](https://github.com/uswitch/trustyle/commit/cf98fd8))
+
+
+### Features
+
+* merge leafeon theme back into trustyle ([4a038d1](https://github.com/uswitch/trustyle/commit/4a038d1))
+
+
+
+
+
 ## [2.29.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.29.0...@uswitch/trustyle.uswitch-theme@2.29.1) (2020-11-10)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
