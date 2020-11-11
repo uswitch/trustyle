@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.0.16...@uswitch/trustyle.breadcrumbs@2.0.17) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.breadcrumbs
+
+
+
+
+
 ## [2.0.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.0.15...@uswitch/trustyle.breadcrumbs@2.0.16) (2020-11-09)
 
 **Note:** Version bump only for package @uswitch/trustyle.breadcrumbs
