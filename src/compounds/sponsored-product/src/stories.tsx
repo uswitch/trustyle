@@ -88,7 +88,7 @@ export const ExampleWithKnobs = () => {
           <Col offset={[0.05, 2, 2]} span={[4, 4, 4]}>
             <SponsoredProduct
               title={'Sky Superfast Broadband'}
-              usps={['£22 p/m & no setup cost', 'Best Broadband ever']}
+              usps={['£22 p/m & no setup cost', 'Superfast Broadband ever']}
               boxShadowColor={'#AC96DE'}
               sponsorName={'Sky'}
               sponsorSrc={
