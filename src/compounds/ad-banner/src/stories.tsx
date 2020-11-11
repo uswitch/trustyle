@@ -14,7 +14,7 @@ export default {
 export const ExampleWithKnobs = () => {
   const title = text('title', 'Galaxy S20 Series')
   const contentText = text(
-    'content',
+    'content test',
     'A revolutionary camera with 8K video. Future-ready 5G. More memory for your memories.'
   )
 
