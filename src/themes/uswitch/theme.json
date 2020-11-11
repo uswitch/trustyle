@@ -1033,6 +1033,10 @@
           "backgroundColor": "primary",
           "color": "light-1"
         },
+        "black-friday": {
+          "variant": "elements.badge.variants.sponsored",
+          "backgroundColor": "grey-70"
+        },
         "inverse": {
           "variant": "elements.badge.base",
           "paddingX": ["xxs", "xs"],
@@ -1340,6 +1344,13 @@
     "hero": {
       "wrapper": {
         "backgroundColor": "blue-50"
+      },
+      "breadcrumbs": {
+        "paddingTop": 0
+      },
+      "content": {
+        "paddingTop": 0,
+        "paddingBottom": 0
       },
       "sm": {
         "minHeight": 360,
