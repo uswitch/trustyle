@@ -89,6 +89,7 @@ export const ExampleWithKnobs = () => {
             <SponsoredProduct
               title={'Sky Superfast Broadband'}
               usps={['£22 p/m & no setup cost', 'Best Broadband ever']}
+              boxShadowColor={'#AC96DE'}
               sponsorName={'Sky'}
               sponsorSrc={
                 'https://uswitch-cms.imgix.net/uswitch-assets-eu/broadband/images/providers/sky.png?auto=compress%2Cformat&amp;fit=clip&amp;ixlib=react-9.0.1&amp;w=120'
