@@ -9,6 +9,7 @@ import { Bill } from './bill'
 import { Book } from './book'
 import { Calendar } from './calendar'
 import { Caret } from './caret'
+import { Car } from './car'
 import { CaretFinal } from './caretFinal'
 import { Check } from './check'
 import { Clock } from './clock'
@@ -61,6 +62,7 @@ export type Glyph =
   | 'bill'
   | 'book'
   | 'calendar'
+  | 'car'
   | 'caret'
   | 'caretFinal'
   | 'check'
@@ -140,6 +142,8 @@ export const Icon: React.FC<Props> = ({
       return <Book color={color} size={size} />
     case 'calendar':
       return <Calendar color={color} size={size} />
+    case 'car':
+      return <Car color={color} size={size} />
     case 'caret':
       return <Caret color={color} direction={direction} size={size} />
     case 'caretFinal':
