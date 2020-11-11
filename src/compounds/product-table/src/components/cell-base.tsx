@@ -2,7 +2,12 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-import { AddonContext, CellContext } from '../generics'
+import {
+  AddonContext,
+  CardContext,
+  CellContext,
+  forceMobile
+} from '../generics'
 
 export interface CellBaseProps extends React.HTMLAttributes<HTMLDivElement> {
   mobileOrder?: number
@@ -28,6 +33,10 @@ const ProductTableCellBase: React.FC<CellBaseProps> = ({
     extraRules: extraRulesCellContext
   } = React.useContext(CellContext)
 
+  const { isCard } = React.useContext(CardContext)
+
+  const forcedMobile = forceMobile(isCard)
+
   const { order, extraRules: extraRulesAddonContext } = React.useContext(
     AddonContext
   )
@@ -44,24 +53,28 @@ const ProductTableCellBase: React.FC<CellBaseProps> = ({
     justifyContent: 'center',
     marginX: 8, // sm / 2
     paddingY: 6, // xs / 2
-    order: order ?? [mobileOrder, undefined, 'initial'],
+    order: order ?? forcedMobile([mobileOrder, undefined, 'initial']),
     ...extraRules
   }
 
   if (!inFlexbox) {
     Object.assign(sx, {
-      gridColumn: [
+      gridColumn: forcedMobile([
         typeof accentCellIndex === 'number' && accentCellCount === 2
           ? `${accentCellIndex + 1} / span 1`
           : '1 / -1',
         undefined,
         `${gridColumnStart} / span ${gridColumnSpan}`
-      ],
+      ]),
       msGridColumn: `${gridColumnStart}`,
       msGridColumnSpan: `${gridColumnSpan}`,
-      gridRow: ['initial', undefined, `${gridRowStart} / span ${gridRowSpan}`],
-      msGridRow: ['initial', undefined, `${gridRowStart}`],
-      msGridRowSpan: ['initial', undefined, `${gridRowSpan}`]
+      gridRow: forcedMobile([
+        'initial',
+        undefined,
+        `${gridRowStart} / span ${gridRowSpan}`
+      ]),
+      msGridRow: forcedMobile(['initial', undefined, `${gridRowStart}`]),
+      msGridRowSpan: forcedMobile(['initial', undefined, `${gridRowSpan}`])
     })
   }
 
