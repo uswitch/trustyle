@@ -2256,7 +2256,8 @@
             "justifyContent": "center",
             "pt": ["12px", "md"],
             "pb": ["xxs", "md"],
-            "borderTop": "none"
+            "borderTop": "none",
+            "border": 0
           }
         },
         "reverse": {
