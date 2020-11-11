@@ -2440,6 +2440,30 @@
             "marginRight": "xs"
           }
         },
+        "eligibility-criteria-redesign": {
+          "variant": "compounds.accordion.base",
+          "backgroundColor": ["grey-10", "grey-05"],
+          "marginBottom": 15,
+          "color": "grey-80",
+          "fontSize": "xs",
+          "marginTop": "md",
+          "title": {
+            "textAlign": "center",
+            "flex": "none",
+            "mr": "sm",
+            "fontSize": "xs",
+            "color": "primary",
+            "fontWeight": "bold"
+          },
+          "button": {
+            "variant": "compounds.accordion.base.button",
+            "justifyContent": "center",
+            "pt": ["12px", "md"],
+            "pb": ["xxs", "md"],
+            "borderTop": "none",
+            "border": 0
+          }
+        },
         "reverse": {
           "display": "flex",
           "flexFlow": "column",
