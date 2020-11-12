@@ -2,7 +2,12 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-import { AddonContext, CellContext } from '../generics'
+import {
+  AddonContext,
+  CardContext,
+  CellContext,
+  forceMobile
+} from '../generics'
 
 import CellBase from './cell-base'
 
@@ -23,10 +28,12 @@ export interface CellPrimaryProps extends React.HTMLAttributes<HTMLDivElement> {
   accent?: boolean
   mobileOrder?: number
   headerImage?: boolean
+  isCard?: boolean
 }
 
 export interface ContentRowProps extends CellPrimaryProps {
   inAddon: string | boolean
+  isCard?: boolean
 }
 
 const RowContent: React.FC<ContentRowProps> = ({
@@ -34,7 +41,8 @@ const RowContent: React.FC<ContentRowProps> = ({
   children,
   inAddon,
   label,
-  mobileOrder
+  mobileOrder,
+  isCard
 }) => (
   <CellBase
     mobileOrder={mobileOrder || (accent ? 1 : 2)}
@@ -56,7 +64,7 @@ const RowContent: React.FC<ContentRowProps> = ({
   >
     <div
       sx={{
-        display: inAddon ? [undefined, 'none'] : undefined,
+        display: inAddon ? forceMobile(isCard)([undefined, 'none']) : undefined,
         ...grid('column', 1, 1),
         ...grid('row', 1, 1),
         fontSize: 'xs',
@@ -88,7 +96,8 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
   accent,
   mobileOrder,
   children,
-  headerImage
+  headerImage,
+  isCard
 }) => (
   <CellBase
     mobileOrder={mobileOrder || (accent ? 1 : 2)}
@@ -114,13 +123,13 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
       sx={{
         ...grid('column', 1, 1),
         gridRow: headerImage
-          ? ['1 / span 1', '1 / span 1']
-          : ['1 / span 2', '2 / span 1'],
-        msGridRow: ['1', '2'],
-        msGridRowSpan: ['2', '1'],
-        alignSelf: ['baseline', 'auto'],
+          ? forceMobile(isCard)(['1 / span 1', '1 / span 1'])
+          : forceMobile(isCard)(['1 / span 2', '2 / span 1']),
+        msGridRow: forceMobile(isCard)(['1', '2']),
+        msGridRowSpan: forceMobile(isCard)(['2', '1']),
+        alignSelf: forceMobile(isCard)(['baseline', 'auto']),
         fontSize: 'xs',
-        marginTop: headerImage ? 0 : ['xl', 'sm'],
+        marginTop: headerImage ? 0 : forceMobile(isCard)(['xl', 'sm']),
         variant: `compounds.product-table.${headerImage &&
           'variants.redesign.'}cellContent.label`
       }}
@@ -151,16 +160,21 @@ const ProductTableCellContent: React.FC<CellPrimaryProps> = ({
 }) => {
   const { inSplit } = React.useContext(CellContext)
   const { inAddon } = React.useContext(AddonContext)
+  const { isCard } = React.useContext(CardContext)
 
   if (inSplit || inAddon) {
     return (
-      <RowContent inAddon={inAddon} {...props}>
+      <RowContent inAddon={inAddon} isCard={isCard} {...props}>
         {children}
       </RowContent>
     )
   }
 
-  return <BlockContent {...props}>{children}</BlockContent>
+  return (
+    <BlockContent isCard={isCard} {...props}>
+      {children}
+    </BlockContent>
+  )
 }
 
 export default ProductTableCellContent
