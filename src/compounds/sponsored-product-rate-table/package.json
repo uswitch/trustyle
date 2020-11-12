@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.sponsored-product-rate-table",
-  "version": "3.1.15",
+  "version": "3.1.16",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -14,7 +14,7 @@
   "dependencies": {
     "@uswitch/trustyle.arrangement": "^2.0.20",
     "@uswitch/trustyle.awards-tag": "^0.2.0",
-    "@uswitch/trustyle.button": "^2.4.3",
+    "@uswitch/trustyle.button": "^2.4.4",
     "@uswitch/trustyle.button-link": "^2.1.7",
     "@uswitch/trustyle.flex-grid": "^1.2.1",
     "@uswitch/trustyle.icon": "^1.17.1",
