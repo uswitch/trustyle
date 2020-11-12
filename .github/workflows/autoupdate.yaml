@@ -1,6 +1,5 @@
 name: autoupdate
-on:
-  push: {}
+on: [push, pull_request]
 jobs:
   autoupdate:
     name: autoupdate
