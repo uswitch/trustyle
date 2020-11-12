@@ -23,6 +23,7 @@ type Column =
   | 'Split Placeholder'
   | 'Split Content'
   | 'None'
+
 const columns: Column[] = [
   'Placeholder',
   'Image',
@@ -79,6 +80,8 @@ export const ExampleWithKnobs = () => {
   const badges = badgeText
     ? [<Badge key="award-winner">{badgeText}</Badge>]
     : []
+
+  const card = boolean('Card', false)
 
   const getColumn = (col: Column): React.ReactNode => {
     if (col === 'Placeholder') {
@@ -188,6 +191,7 @@ export const ExampleWithKnobs = () => {
         rowTitle={rowTitle}
         subtitle={subtitle}
         addons={addons}
+        card={card}
       >
         {getColumn(firstCol)}
         {getColumn(secondCol)}
