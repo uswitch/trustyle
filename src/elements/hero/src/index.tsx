@@ -65,7 +65,7 @@ const Hero: React.FC<Props> = ({
           sx={{
             position: 'relative',
             overflow: 'hidden',
-            backgroundColor: customBgColor || undefined
+            background: customBgColor || undefined
           }}
           className={className}
         >

@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.1.17...@uswitch/trustyle.sponsored-product@3.2.0) (2020-11-11)
+
+
+### Bug Fixes
+
+* postion of Uswitch Award on sponsored product. ([fa388a8](https://github.com/uswitch/trustyle/commit/fa388a8))
+
+
+### Features
+
+* adds ability to choose boxshadow color and badge variant. ([8b62c40](https://github.com/uswitch/trustyle/commit/8b62c40))
+
+
+
+
+
+## [3.1.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.1.16...@uswitch/trustyle.sponsored-product@3.1.17) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
 ## [3.1.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.1.15...@uswitch/trustyle.sponsored-product@3.1.16) (2020-11-09)
 
 **Note:** Version bump only for package @uswitch/trustyle.sponsored-product
