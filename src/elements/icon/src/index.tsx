@@ -29,6 +29,7 @@ import { Information } from './information'
 import { Letter } from './letter'
 import { LinkedIn } from './linkedIn'
 import { Location } from './location'
+import { Magnifier } from './magnifier'
 import { Minus } from './minus'
 import { Mobile } from './mobile'
 import { MoneyFilter } from './money-filter'
@@ -78,6 +79,7 @@ export type Glyph =
   | 'letter'
   | 'linkedIn'
   | 'location'
+  | 'magnifier'
   | 'minus'
   | 'mobile'
   | 'money-filter'
@@ -174,6 +176,8 @@ export const Icon: React.FC<Props> = ({
       return <LinkedIn color={color} size={size} />
     case 'location':
       return <Location color={color} size={size} />
+    case 'magnifier':
+      return <Magnifier color={color} size={size} />
     case 'minus':
       return <Minus color={color} size={size} />
     case 'mobile':
