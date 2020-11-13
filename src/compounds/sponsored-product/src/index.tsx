@@ -13,12 +13,18 @@ import { Stack } from '@uswitch/trustyle.arrangement'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import { Container } from '@uswitch/trustyle.flex-grid'
 
+interface Usp {
+  text: string
+  color?: string
+  beforeColor?: string
+}
+
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   imgSrc?: string
   imgAlt?: string
   informationDetails?: Detail[]
-  usps?: string[]
+  usps?: Usp[]
   uspBackgroundColor?: string
   uspBeforeColor?: string
   href?: string
@@ -69,24 +75,17 @@ const InformationBlocks: React.FC<InformationBlocksProps> = ({
 )
 
 interface UspTagsProps {
-  usps: string[]
-  uspColor: string
-  beforeColor: string
+  usps: Usp[]
   uspSx?: object
 }
 
-const UspTags: React.FC<UspTagsProps> = ({
-  usps,
-  uspColor,
-  beforeColor,
-  uspSx = {}
-}) => (
+const UspTags: React.FC<UspTagsProps> = ({ usps, uspSx = {} }) => (
   <React.Fragment>
-    {usps.map((obj, index) => (
+    {usps.map((usp, index) => (
       <UspTag
-        usp={obj}
-        backgroundColor={uspColor}
-        beforeColor={beforeColor}
+        usp={usp.text}
+        backgroundColor={usp.color}
+        beforeColor={usp.beforeColor}
         key={index}
         sx={uspSx}
       />
