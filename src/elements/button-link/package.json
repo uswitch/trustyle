@@ -17,7 +17,6 @@
     "theme-ui": "^0.2.52"
   },
   "dependencies": {
-    "@uswitch/trustyle-utils.get": "^1.0.9",
-    "@uswitch/trustyle.icon": "^1.17.1"
+    "@uswitch/trustyle-utils.get": "^1.0.9"
   }
 }
