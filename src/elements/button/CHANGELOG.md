@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.4.5...@uswitch/trustyle.button@3.0.0) (2020-11-13)
+
+
+### Features
+
+* remove unused icon dependency ([bcbfc03](https://github.com/uswitch/trustyle/commit/bcbfc03))
+
+
+### BREAKING CHANGES
+
+* Buttons will no longer accept before/after Icon properties
+
+
+
+
+
 ## [2.4.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.4.4...@uswitch/trustyle.button@2.4.5) (2020-11-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.button
