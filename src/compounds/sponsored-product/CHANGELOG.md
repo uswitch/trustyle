@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.2.0...@uswitch/trustyle.sponsored-product@3.3.0) (2020-11-13)
+
+
+### Bug Fixes
+
+* Remove unused props. ([559afae](https://github.com/uswitch/trustyle/commit/559afae))
+
+
+### Features
+
+* usps now array of usps. Means you can pass color for specfic usp. ([1ac8f25](https://github.com/uswitch/trustyle/commit/1ac8f25))
+
+
+
+
+
 # [3.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.1.17...@uswitch/trustyle.sponsored-product@3.2.0) (2020-11-11)
 
 
