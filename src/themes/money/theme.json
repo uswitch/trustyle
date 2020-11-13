@@ -1341,13 +1341,27 @@
                   "mt": 0
                 }
               }
+            },
+            "submit": {
+              "opacity": 0.5,
+              "pointerEvents": "none",
+              "py": "lg",
+              "fontSize": "xs",
+              "color": "grey-80",
+              "textAlign": "left",
+              "a": {
+                "color": "grey-80"
+              }
             }
           },
 
           "heading": {
             "opacity": 0.4,
             "display": "flex",
-            "alignItems": "center"
+            "alignItems": "center",
+            "submit": {
+              "display": "none"
+            }
           },
 
           "buttonWrapper": {
@@ -1365,7 +1379,10 @@
             },
             "heading": {
               "variant": "elements.form-section.panel.elements.heading",
-              "display": "none"
+              "display": "none",
+              "submit": {
+                "display": "none"
+              }
             },
             "fields": {
               "display": "block",
@@ -1373,6 +1390,9 @@
                 "label": {
                   "mt": 0
                 }
+              },
+              "submit": {
+                "opacity": 1
               }
             },
             "buttonWrapper": {
