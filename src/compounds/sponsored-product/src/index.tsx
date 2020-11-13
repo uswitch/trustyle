@@ -25,8 +25,6 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   imgAlt?: string
   informationDetails?: Detail[]
   usps?: Usp[]
-  uspBackgroundColor?: string
-  uspBeforeColor?: string
   href?: string
   target?: string
   sponsorSrc: string
@@ -162,8 +160,6 @@ const SponsoredProduct: React.FC<Props> = ({
   informationDetails,
   badgeVariant = 'sponsored',
   usps,
-  uspBackgroundColor = 'rgba(132,166,255,0.3)',
-  uspBeforeColor = '#84A6FF',
   boxShadowColor = 'rgba(20, 20, 36, 0.15)',
   href = '',
   target = '',
@@ -383,14 +379,7 @@ const SponsoredProduct: React.FC<Props> = ({
             </div>
           )}
 
-          {usps && (
-            <UspTags
-              usps={usps}
-              uspColor={uspBackgroundColor}
-              beforeColor={uspBeforeColor}
-              uspSx={uspSx}
-            />
-          )}
+          {usps && <UspTags usps={usps} uspSx={uspSx} />}
         </Stack>
 
         <div sx={{ display: ['block', 'none'] }}>
