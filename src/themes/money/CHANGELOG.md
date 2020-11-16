@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.33.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.32.4...@uswitch/trustyle.money-theme@1.33.0) (2020-11-16)
+
+
+### Bug Fixes
+
+* add margin to form button ([b4c159b](https://github.com/uswitch/trustyle/commit/b4c159b))
+
+
+### Features
+
+* add form submit section styling to money theme ([dfbfffa](https://github.com/uswitch/trustyle/commit/dfbfffa))
+* add submit section wrapper styling ([850d227](https://github.com/uswitch/trustyle/commit/850d227))
+
+
+
+
+
 ## [1.32.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.32.3...@uswitch/trustyle.money-theme@1.32.4) (2020-11-16)
 
 
