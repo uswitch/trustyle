@@ -1325,7 +1325,17 @@
             "mb": "lg",
             "color": "plum",
             "paddingX": "lg",
-            "paddingY": 0
+            "paddingY": 0,
+            "opacity": 0.8,
+            "submit": {
+              "backgroundColor": "white",
+              "borderRadius": "4px",
+              "mb": "lg",
+              "color": "plum",
+              "paddingX": "lg",
+              "paddingY": "md",
+              "opacity": 0.8
+            }
           },
 
           "fields": {
@@ -1341,18 +1351,34 @@
                   "mt": 0
                 }
               }
+            },
+            "submit": {
+              "opacity": 0.8,
+              "pointerEvents": "none",
+              "fontSize": "xs",
+              "color": "grey-80",
+              "textAlign": "left",
+              "a": {
+                "color": "grey-80"
+              }
             }
           },
 
           "heading": {
-            "opacity": 0.4,
+            "opacity": 0.8,
             "display": "flex",
-            "alignItems": "center"
+            "alignItems": "center",
+            "submit": {
+              "display": "none"
+            }
           },
 
           "buttonWrapper": {
             "display": "none",
             "textAlign": "left",
+            "submit": {
+              "textAlign": "center"
+            },
             "calculator": {}
           }
         },
@@ -1361,17 +1387,34 @@
           "isActive": {
             "wrapper": {
               "variant": "elements.form-section.panel.elements.wrapper",
-              "paddingY": "md"
+              "paddingY": "md",
+              "opacity": 1,
+              "submit": {
+                "variant": "elements.form-section.panel.elements.wrapper.submit",
+                "opacity": 1
+              }
             },
             "heading": {
               "variant": "elements.form-section.panel.elements.heading",
-              "display": "none"
+              "display": "none",
+              "submit": {
+                "display": "none"
+              }
             },
             "fields": {
               "display": "block",
               ">:first-child": {
                 "label": {
                   "mt": 0
+                }
+              },
+              "submit": {
+                "opacity": 1,
+                "fontSize": "xs",
+                "color": "grey-80",
+                "textAlign": "left",
+                "a": {
+                  "color": "grey-80"
                 }
               }
             },
