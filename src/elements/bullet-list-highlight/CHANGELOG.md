@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bullet-list-highlight@0.3.20...@uswitch/trustyle.bullet-list-highlight@0.4.0) (2020-11-16)
+
+
+### Features
+
+* move icons to peer deps ([695a6bd](https://github.com/uswitch/trustyle/commit/695a6bd))
+
+
+
+
+
 ## [0.3.20](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bullet-list-highlight@0.3.19...@uswitch/trustyle.bullet-list-highlight@0.3.20) (2020-11-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.bullet-list-highlight

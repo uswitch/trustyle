@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-drawer@0.2.77...@uswitch/trustyle.side-drawer@0.3.0) (2020-11-16)
+
+
+### Features
+
+* move icons to peer deps ([695a6bd](https://github.com/uswitch/trustyle/commit/695a6bd))
+
+
+
+
+
 ## [0.2.77](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-drawer@0.2.76...@uswitch/trustyle.side-drawer@0.2.77) (2020-11-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.side-drawer
