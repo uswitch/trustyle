@@ -1345,7 +1345,6 @@
             "submit": {
               "opacity": 0.5,
               "pointerEvents": "none",
-              "py": "lg",
               "fontSize": "xs",
               "color": "grey-80",
               "textAlign": "left",
@@ -1367,6 +1366,9 @@
           "buttonWrapper": {
             "display": "none",
             "textAlign": "left",
+            "submit": {
+              "textAlign": "center"
+            },
             "calculator": {}
           }
         },
@@ -1392,7 +1394,13 @@
                 }
               },
               "submit": {
-                "opacity": 1
+                "opacity": 1,
+                "fontSize": "xs",
+                "color": "grey-80",
+                "textAlign": "left",
+                "a": {
+                  "color": "grey-80"
+                }
               }
             },
             "buttonWrapper": {
