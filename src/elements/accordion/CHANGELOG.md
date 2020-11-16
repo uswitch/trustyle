@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.10.2...@uswitch/trustyle.accordion@0.11.0) (2020-11-16)
+
+
+### Features
+
+* move icons to peer deps ([695a6bd](https://github.com/uswitch/trustyle/commit/695a6bd))
+
+
+
+
+
 ## [0.10.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.10.1...@uswitch/trustyle.accordion@0.10.2) (2020-11-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.accordion

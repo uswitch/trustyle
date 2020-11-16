@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.0.23...@uswitch/trustyle.input@2.1.0) (2020-11-16)
+
+
+### Features
+
+* move icons to peer deps ([695a6bd](https://github.com/uswitch/trustyle/commit/695a6bd))
+
+
+
+
+
+## [2.0.23](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.0.22...@uswitch/trustyle.input@2.0.23) (2020-11-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.input
+
+
+
+
+
+## [2.0.22](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.0.21...@uswitch/trustyle.input@2.0.22) (2020-11-13)
+
+**Note:** Version bump only for package @uswitch/trustyle.input
+
+
+
+
+
 ## [2.0.21](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.0.20...@uswitch/trustyle.input@2.0.21) (2020-11-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.input

@@ -839,6 +839,11 @@
     "icon-tile": {
       "text": {
         "color": "grey-80"
+      },
+      "vertical": {
+        "img": {
+          "maxWidth": "100%"
+        }
       }
     },
     "call-out": {

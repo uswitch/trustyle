@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.button-link",
-  "version": "2.1.7",
+  "version": "3.0.0",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -17,7 +17,6 @@
     "theme-ui": "^0.2.52"
   },
   "dependencies": {
-    "@uswitch/trustyle-utils.get": "^1.0.9",
-    "@uswitch/trustyle.icon": "^1.17.1"
+    "@uswitch/trustyle-utils.get": "^1.0.9"
   }
 }

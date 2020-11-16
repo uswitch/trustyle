@@ -20,8 +20,8 @@ export const ExampleWithKnobs = () => {
   )
   const imgAlt = text('Image Alt', 'iPhone 11')
   const usps = [
-    text('USP', 'Free insurance for 2 months'),
-    text('USP2', 'Uswitch Award')
+    { text: text('USP', 'Free insurance for 2 months') },
+    { text: text('USP2', 'Uswitch Award') }
   ]
   const href = text('href', 'https://www.uswitch.com/mobiles/')
   const target = text('target', '_blank')
@@ -88,7 +88,15 @@ export const ExampleWithKnobs = () => {
           <Col offset={[0.05, 2, 2]} span={[4, 4, 4]}>
             <SponsoredProduct
               title={'Sky Superfast Broadband'}
-              usps={['£22 p/m & no setup cost', 'Best Broadband ever']}
+              usps={[
+                { text: '£22 p/m & no setup cost' },
+                {
+                  text: 'Superfast Broadband ever',
+                  color: 'linear-gradient(90deg, #C1B0E6 0%, #C1C0FF 100%)',
+                  beforeColor: '#141424'
+                }
+              ]}
+              boxShadowColor={'#AC96DE'}
               sponsorName={'Sky'}
               sponsorSrc={
                 'https://uswitch-cms.imgix.net/uswitch-assets-eu/broadband/images/providers/sky.png?auto=compress%2Cformat&amp;fit=clip&amp;ixlib=react-9.0.1&amp;w=120'
