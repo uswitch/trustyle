@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.3.1...@uswitch/trustyle.sponsored-product@3.3.2) (2020-11-16)
+
+
+### Bug Fixes
+
+* revert using /src/ import for icons as it breaks packages ([8a36d29](https://github.com/uswitch/trustyle/commit/8a36d29))
+
+
+
+
+
 ## [3.3.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.3.0...@uswitch/trustyle.sponsored-product@3.3.1) (2020-11-13)
 
 **Note:** Version bump only for package @uswitch/trustyle.sponsored-product
