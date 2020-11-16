@@ -6,8 +6,10 @@ import { jsx } from '@emotion/core'
 import { Arrow } from './arrow'
 import { ArrowCircle } from './arrow-circle'
 import { Bill } from './bill'
+import { Book } from './book'
 import { Calendar } from './calendar'
 import { Caret } from './caret'
+import { Car } from './car'
 import { CaretFinal } from './caretFinal'
 import { Check } from './check'
 import { Clock } from './clock'
@@ -52,12 +54,16 @@ import { StarFilled } from './star-filled'
 import { StarOutlined } from './star-outlined'
 import { StarHalfFilled } from './star-half-filled'
 import { Warning } from './warning'
+import { Facebook } from './facebook'
+import { PhoneSimple } from './phone-simple'
 
 export type Glyph =
   | 'arrow'
   | 'arrow-circle'
   | 'bill'
+  | 'book'
   | 'calendar'
+  | 'car'
   | 'caret'
   | 'caretFinal'
   | 'check'
@@ -70,6 +76,7 @@ export type Glyph =
   | 'email'
   | 'email-filled'
   | 'error'
+  | 'facebook'
   | 'filled-arrow'
   | 'filters'
   | 'four'
@@ -86,6 +93,7 @@ export type Glyph =
   | 'one'
   | 'person'
   | 'phone'
+  | 'phone-simple'
   | 'plus'
   | 'question'
   | 'smile'
@@ -132,8 +140,12 @@ export const Icon: React.FC<Props> = ({
       return <ArrowCircle color={color} size={size} />
     case 'bill':
       return <Bill color={color} size={size} />
+    case 'book':
+      return <Book color={color} size={size} />
     case 'calendar':
       return <Calendar color={color} size={size} />
+    case 'car':
+      return <Car color={color} size={size} />
     case 'caret':
       return <Caret color={color} direction={direction} size={size} />
     case 'caretFinal':
@@ -158,6 +170,8 @@ export const Icon: React.FC<Props> = ({
       return <EmailFilled color={color} size={size} />
     case 'error':
       return <ErrorIcon color={color} size={size} />
+    case 'facebook':
+      return <Facebook color={color} size={size} />
     case 'filled-arrow':
       return <FilledArrow color={color} size={size} />
     case 'filters':
@@ -190,6 +204,8 @@ export const Icon: React.FC<Props> = ({
       return <Person color={color} size={size} />
     case 'phone':
       return <Phone color={color} size={size} />
+    case 'phone-simple':
+      return <PhoneSimple color={color} size={size} />
     case 'plus':
       return <Plus color={color} size={size} />
     case 'question':

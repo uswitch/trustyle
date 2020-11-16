@@ -819,6 +819,9 @@
           "variant": "elements.simple-input.affix.base"
         }
       },
+      "inputWidth": {
+        "small": 64
+      },
       "variants": {
         "error": {
           "variant": "elements.simple-input.wrapper",
@@ -836,6 +839,11 @@
     "icon-tile": {
       "text": {
         "color": "grey-80"
+      },
+      "vertical": {
+        "img": {
+          "maxWidth": "100%"
+        }
       }
     },
     "call-out": {
@@ -1417,6 +1425,12 @@
         "textAlign": ["left", "center"],
         "mb": "24px"
       },
+      "container": {
+        "marginY": 0,
+        "padding": "md",
+        "backgroundColor": "grey-05",
+        "borderRadius": 3
+      },
       "modal": {
         "wrapper": {
           "width": ["90%", "50%"],
@@ -1844,10 +1858,6 @@
                 "borderBottomColor": "#E7BBC8",
                 "color": ["fuschia", "grey-80"]
               },
-              ":nth-child(4)": {
-                "borderBottom": "none",
-                "display": ["block", "none"]
-              },
               "::before": {
                 "position": "absolute",
                 "display": "block",
@@ -1856,6 +1866,15 @@
                 "borderLeft": ["none", "1px solid #C2C4C8"],
                 "left": 0,
                 "top": 0
+              }
+            },
+            "variants": {
+              "cellImage": {
+                "variant": "compounds.product-table.variants.redesign.cellContext.main",
+                ":nth-child(4)": {
+                  "borderBottom": "none",
+                  "display": ["block", "none"]
+                }
               }
             }
           }

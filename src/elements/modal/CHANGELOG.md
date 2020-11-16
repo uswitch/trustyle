@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.modal@2.3.12...@uswitch/trustyle.modal@2.4.0) (2020-11-16)
+
+
+### Features
+
+* move icons to peer deps ([695a6bd](https://github.com/uswitch/trustyle/commit/695a6bd))
+
+
+
+
+
+## [2.3.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.modal@2.3.11...@uswitch/trustyle.modal@2.3.12) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.modal
+
+
+
+
+
+## [2.3.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.modal@2.3.10...@uswitch/trustyle.modal@2.3.11) (2020-11-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.modal
+
+
+
+
+
+## [2.3.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.modal@2.3.9...@uswitch/trustyle.modal@2.3.10) (2020-11-06)
+
+**Note:** Version bump only for package @uswitch/trustyle.modal
+
+
+
+
+
 ## [2.3.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.modal@2.3.7...@uswitch/trustyle.modal@2.3.9) (2020-10-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.modal

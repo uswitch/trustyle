@@ -13,14 +13,18 @@ import { Stack } from '@uswitch/trustyle.arrangement'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import { Container } from '@uswitch/trustyle.flex-grid'
 
+interface Usp {
+  text: string
+  color?: string
+  beforeColor?: string
+}
+
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   imgSrc?: string
   imgAlt?: string
   informationDetails?: Detail[]
-  usps?: string[]
-  uspBackgroundColor?: string
-  uspBeforeColor?: string
+  usps?: Usp[]
   href?: string
   target?: string
   sponsorSrc: string
@@ -34,6 +38,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   showSponsoredByTag?: boolean
   uspSx?: object
   infoBlockSx?: object
+  boxShadowColor?: string
+  badgeVariant?: string
 }
 
 interface Detail {
@@ -67,24 +73,17 @@ const InformationBlocks: React.FC<InformationBlocksProps> = ({
 )
 
 interface UspTagsProps {
-  usps: string[]
-  uspColor: string
-  beforeColor: string
+  usps: Usp[]
   uspSx?: object
 }
 
-const UspTags: React.FC<UspTagsProps> = ({
-  usps,
-  uspColor,
-  beforeColor,
-  uspSx = {}
-}) => (
+const UspTags: React.FC<UspTagsProps> = ({ usps, uspSx = {} }) => (
   <React.Fragment>
-    {usps.map((obj, index) => (
+    {usps.map((usp, index) => (
       <UspTag
-        usp={obj}
-        backgroundColor={uspColor}
-        beforeColor={beforeColor}
+        usp={usp.text}
+        backgroundColor={usp.color}
+        beforeColor={usp.beforeColor}
         key={index}
         sx={uspSx}
       />
@@ -159,9 +158,9 @@ const SponsoredProduct: React.FC<Props> = ({
   imgSrc = '',
   imgAlt = '',
   informationDetails,
+  badgeVariant = 'sponsored',
   usps,
-  uspBackgroundColor = 'rgba(132,166,255,0.3)',
-  uspBeforeColor = '#84A6FF',
+  boxShadowColor = 'rgba(20, 20, 36, 0.15)',
   href = '',
   target = '',
   sponsorSrc,
@@ -193,7 +192,7 @@ const SponsoredProduct: React.FC<Props> = ({
         marginBottom: 'xs'
       }}
     >
-      <Badge variant={'sponsored'}>Sponsored</Badge>
+      <Badge variant={badgeVariant}>Sponsored</Badge>
     </div>
 
     <Container
@@ -201,7 +200,7 @@ const SponsoredProduct: React.FC<Props> = ({
         padding: [12, 'sm'],
         display: [null, 'flex'],
         justifyContent: [null, 'space-between'],
-        boxShadow: ['none', '12px 12px 0px rgba(20, 20, 36, 0.15)'],
+        boxShadow: ['none', `12px 12px 0px ${boxShadowColor}`],
         backgroundColor: backgroundColor
       }}
     >
@@ -210,7 +209,7 @@ const SponsoredProduct: React.FC<Props> = ({
           display: 'flex',
           flexDirection: [null, 'column'],
           width: [null, '45%'],
-          justifyContent: imgSrc ? 'flex-start' : 'space-between'
+          justifyContent: 'flex-start'
         }}
       >
         <div
@@ -380,14 +379,7 @@ const SponsoredProduct: React.FC<Props> = ({
             </div>
           )}
 
-          {usps && (
-            <UspTags
-              usps={usps}
-              uspColor={uspBackgroundColor}
-              beforeColor={uspBeforeColor}
-              uspSx={uspSx}
-            />
-          )}
+          {usps && <UspTags usps={usps} uspSx={uspSx} />}
         </Stack>
 
         <div sx={{ display: ['block', 'none'] }}>

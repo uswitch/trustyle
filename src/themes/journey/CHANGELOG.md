@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.11.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.11.3...@uswitch/trustyle.journey-theme@2.11.4) (2020-11-10)
+
+
+### Bug Fixes
+
+* update all themes ([b82e6c7](https://github.com/uswitch/trustyle/commit/b82e6c7))
+
+
+
+
+
 ## [2.11.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.11.0...@uswitch/trustyle.journey-theme@2.11.1) (2020-08-27)
 
 
