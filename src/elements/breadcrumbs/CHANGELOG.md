@@ -3,6 +3,82 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.0.17...@uswitch/trustyle.breadcrumbs@2.1.0) (2020-11-16)
+
+
+### Features
+
+* move icons to peer deps ([695a6bd](https://github.com/uswitch/trustyle/commit/695a6bd))
+
+
+
+
+
+## [2.0.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.0.16...@uswitch/trustyle.breadcrumbs@2.0.17) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.breadcrumbs
+
+
+
+
+
+## [2.0.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.0.15...@uswitch/trustyle.breadcrumbs@2.0.16) (2020-11-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.breadcrumbs
+
+
+
+
+
+## [2.0.15](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.0.14...@uswitch/trustyle.breadcrumbs@2.0.15) (2020-11-06)
+
+**Note:** Version bump only for package @uswitch/trustyle.breadcrumbs
+
+
+
+
+
+## [2.0.14](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.0.12...@uswitch/trustyle.breadcrumbs@2.0.14) (2020-10-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.breadcrumbs
+
+
+
+
+
+## [2.0.13](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.0.12...@uswitch/trustyle.breadcrumbs@2.0.13) (2020-10-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.breadcrumbs
+
+
+
+
+
+## [2.0.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.0.10...@uswitch/trustyle.breadcrumbs@2.0.12) (2020-10-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.breadcrumbs
+
+
+
+
+
+## [2.0.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.0.10...@uswitch/trustyle.breadcrumbs@2.0.11) (2020-10-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.breadcrumbs
+
+
+
+
+
+## [2.0.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.0.9...@uswitch/trustyle.breadcrumbs@2.0.10) (2020-10-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.breadcrumbs
+
+
+
+
+
+
 ## [2.0.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.0.5...@uswitch/trustyle.breadcrumbs@2.0.6) (2020-08-25)
 
 **Note:** Version bump only for package @uswitch/trustyle.breadcrumbs

@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { jsx } from '@emotion/core'
+// import { jsx } from '@emotion/core'
+import { jsx } from 'theme-ui'
 import { text } from '@storybook/addon-knobs'
 
 import AllThemes from '../../../utils/all-themes'
@@ -22,6 +23,27 @@ export const SingleAccordion = () => {
 }
 
 SingleAccordion.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const ReverseAccordion = () => (
+  <React.Fragment>
+    <p>Recommendation 1</p>
+    <Accordion
+      title={'Show more recommendations'}
+      openedTitle={'Show less'}
+      variant="reverse"
+    >
+      <p style={{ marginTop: 0, marginBottom: '2000px' }}>Recommendation 2</p>
+      <p>Recommendation 3</p>
+    </Accordion>
+    <p style={{ marginTop: '2000px' }}>Content below</p>
+  </React.Fragment>
+)
+
+ReverseAccordion.story = {
   parameters: {
     percy: { skip: true }
   }
@@ -147,5 +169,32 @@ export const AutomatedTests = () => {
       <AccordionGroup />
       <AccordionGroupWithIcons />
     </AllThemes>
+  )
+}
+
+export const SingleAccordionWithIcon = () => {
+  const title = text('Title', 'What is ‘Checked’ by Uswitch?')
+  const content = text(
+    'Content',
+    'The only way you can be confident the speeds you see are available at your home is to look for the ‘Checked by Uswitch’ label.'
+  )
+  return (
+    <Accordion.Group>
+      <Accordion
+        title={title}
+        variant={'true-speeds'}
+        isInitiallyOpen
+        glyph={'checkmark'}
+        glyphColor={'#2AAA5B'}
+      >
+        <div sx={{ marginX: 'sm', fontSize: ['16px', '18px', '18px'] }}>
+          <p>{content}</p>
+          <p>
+            Other deals show an average speed that might not be available to
+            you.
+          </p>
+        </div>
+      </Accordion>
+    </Accordion.Group>
   )
 }

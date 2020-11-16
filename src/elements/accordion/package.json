@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.accordion",
-  "version": "0.7.4",
+  "version": "0.11.0",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -8,15 +8,17 @@
     "access": "public"
   },
   "devDependencies": {
+    "@uswitch/trustyle.icon": "^1.17.1",
     "typescript": "^3.6.2"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
+    "@uswitch/trustyle.icon": "^1.17.1",
     "react": "^16.7.0",
     "theme-ui": "^0.2.52"
   },
   "dependencies": {
-    "@uswitch/trustyle.icon": "^1.13.3",
+    "@uswitch/trustyle-utils.palette": "^2.0.3",
     "@uswitch/trustyle.imgix-image": "^0.1.40"
   }
 }

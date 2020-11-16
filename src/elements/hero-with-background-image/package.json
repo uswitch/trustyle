@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.hero-with-background-image",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",

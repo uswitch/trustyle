@@ -6,15 +6,30 @@ export interface DataTextSubscriptProps
   extends React.HTMLAttributes<HTMLDivElement> {
   text: string
   subscript: string
+  headerImage?: boolean
 }
 const ProductTableDataTextSubscript: React.FC<DataTextSubscriptProps> = ({
   text,
-  subscript
+  subscript,
+  headerImage
 }) => {
   return (
     <div>
-      {text}
-      <span sx={{ fontSize: ['xs', 'md'] }}>{' ' + subscript}</span>
+      {headerImage ? (
+        <span
+          sx={{
+            variant:
+              'compounds.product-table.variants.redesign.cellContent.content'
+          }}
+        >
+          {text}
+        </span>
+      ) : (
+        text
+      )}
+      <span sx={{ fontSize: headerImage ? 'sm' : ['xs', 'md'] }}>
+        {' ' + subscript}
+      </span>
     </div>
   )
 }

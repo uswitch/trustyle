@@ -3,6 +3,228 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.32.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.32.2...@uswitch/trustyle.money-theme@1.32.3) (2020-11-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.32.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.32.1...@uswitch/trustyle.money-theme@1.32.2) (2020-11-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.32.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.32.0...@uswitch/trustyle.money-theme@1.32.1) (2020-11-10)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+# [1.32.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.31.2...@uswitch/trustyle.money-theme@1.32.0) (2020-11-10)
+
+
+### Features
+
+* add inputSize to simple input ([96cde8d](https://github.com/uswitch/trustyle/commit/96cde8d))
+
+
+
+
+
+## [1.31.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.31.1...@uswitch/trustyle.money-theme@1.31.2) (2020-11-04)
+
+
+### Bug Fixes
+
+* fourth column on product tables ([fd18f09](https://github.com/uswitch/trustyle/commit/fd18f09))
+
+
+
+
+
+# [1.31.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.30.1...@uswitch/trustyle.money-theme@1.31.0) (2020-10-28)
+
+
+### Bug Fixes
+
+* add redesign styles for eligibility information data ([3c800e5](https://github.com/uswitch/trustyle/commit/3c800e5))
+* add redesign variant styling to accordion ([101f5a7](https://github.com/uswitch/trustyle/commit/101f5a7))
+* additional eligibility-criteria styling ([f0e53c4](https://github.com/uswitch/trustyle/commit/f0e53c4))
+* image sizing and additional design tweaks ([6cd5bd0](https://github.com/uswitch/trustyle/commit/6cd5bd0))
+* update mobile styling for cta button, image, and title ([d05e249](https://github.com/uswitch/trustyle/commit/d05e249))
+* update money mobile theme to match original design ([1a9ca1b](https://github.com/uswitch/trustyle/commit/1a9ca1b))
+* update uswitch theme and cell cta width ([b43763d](https://github.com/uswitch/trustyle/commit/b43763d))
+
+
+### Features
+
+* move provider logo below cells on mobile" ([3fe70dd](https://github.com/uswitch/trustyle/commit/3fe70dd))
+
+
+
+
+
+## [1.30.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.30.0...@uswitch/trustyle.money-theme@1.30.1) (2020-10-28)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+# [1.30.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.29.0...@uswitch/trustyle.money-theme@1.30.0) (2020-10-28)
+
+
+### Features
+
+* update money theme for forms ([08648b0](https://github.com/uswitch/trustyle/commit/08648b0))
+
+
+
+
+
+# [1.29.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.28.0...@uswitch/trustyle.money-theme@1.29.0) (2020-10-23)
+
+
+### Bug Fixes
+
+* adjust mobile label font size ([99337f5](https://github.com/uswitch/trustyle/commit/99337f5))
+
+
+### Features
+
+* vertically align product table data on mobile ([34c20a7](https://github.com/uswitch/trustyle/commit/34c20a7))
+
+
+
+
+
+# [1.28.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.27.2...@uswitch/trustyle.money-theme@1.28.0) (2020-10-22)
+
+
+### Features
+
+* lint ([225a3b9](https://github.com/uswitch/trustyle/commit/225a3b9))
+* style calc for uswitch mortgages ([4c57e17](https://github.com/uswitch/trustyle/commit/4c57e17))
+
+
+
+
+
+## [1.27.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.27.1...@uswitch/trustyle.money-theme@1.27.2) (2020-10-20)
+
+
+### Bug Fixes
+
+* remove border top from mobile first child ([8805aa5](https://github.com/uswitch/trustyle/commit/8805aa5))
+* replace empty strings in theme ([276635a](https://github.com/uswitch/trustyle/commit/276635a))
+* update eligibility info mobile styling in theme ([f9269d7](https://github.com/uswitch/trustyle/commit/f9269d7))
+
+
+
+
+
+## [1.27.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.27.0...@uswitch/trustyle.money-theme@1.27.1) (2020-10-20)
+
+
+### Bug Fixes
+
+* provider logo maxHeight ([3b2d4ae](https://github.com/uswitch/trustyle/commit/3b2d4ae))
+
+
+
+
+
+# [1.27.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.26.0...@uswitch/trustyle.money-theme@1.27.0) (2020-10-19)
+
+
+### Features
+
+* product table redesign changes v3 ([fb765b2](https://github.com/uswitch/trustyle/commit/fb765b2))
+
+
+
+
+
+# [1.26.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.25.2...@uswitch/trustyle.money-theme@1.26.0) (2020-10-15)
+
+
+### Bug Fixes
+
+* additional product table redesign changes ([de2e063](https://github.com/uswitch/trustyle/commit/de2e063))
+
+
+### Features
+
+* update product table cell auto formatter ([4dd9df5](https://github.com/uswitch/trustyle/commit/4dd9df5))
+
+
+
+
+
+## [1.25.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.25.1...@uswitch/trustyle.money-theme@1.25.2) (2020-10-12)
+
+
+### Bug Fixes
+
+* styling changes for product table redesign ([d5ac82f](https://github.com/uswitch/trustyle/commit/d5ac82f))
+
+
+
+
+
+## [1.25.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.25.0...@uswitch/trustyle.money-theme@1.25.1) (2020-10-12)
+
+
+### Bug Fixes
+
+* redesign styling changes ([2448cde](https://github.com/uswitch/trustyle/commit/2448cde))
+
+
+
+
+
+# [1.25.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.24.3...@uswitch/trustyle.money-theme@1.25.0) (2020-10-09)
+
+
+### Bug Fixes
+
+* image sizing ([0f76c25](https://github.com/uswitch/trustyle/commit/0f76c25))
+
+
+### Features
+
+* add redesign stlying to cell content data auto ([042e0de](https://github.com/uswitch/trustyle/commit/042e0de))
+* add redesign variant to product table cell content ([40eff71](https://github.com/uswitch/trustyle/commit/40eff71))
+* add semi-bold font weight to Money theme ([2942d1f](https://github.com/uswitch/trustyle/commit/2942d1f))
+* border redesign ([ba13113](https://github.com/uswitch/trustyle/commit/ba13113))
+* header title and image stlying ([f00544f](https://github.com/uswitch/trustyle/commit/f00544f))
+* mobile content styling ([3384401](https://github.com/uswitch/trustyle/commit/3384401))
+
+
+
+
+
+## [1.24.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.24.2...@uswitch/trustyle.money-theme@1.24.3) (2020-10-09)
+
+
+### Bug Fixes
+
+* fixed name and title color, fixed margin bottom ([b18125a](https://github.com/uswitch/trustyle/commit/b18125a))
+* fixed name display ([fcdd991](https://github.com/uswitch/trustyle/commit/fcdd991))
+
+
+
+
+
+
 # [1.24.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.23.0...@uswitch/trustyle.money-theme@1.24.0) (2020-09-23)
 
 

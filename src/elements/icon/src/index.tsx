@@ -6,8 +6,11 @@ import { jsx } from '@emotion/core'
 import { Arrow } from './arrow'
 import { ArrowCircle } from './arrow-circle'
 import { Bill } from './bill'
+import { Book } from './book'
 import { Calendar } from './calendar'
 import { Caret } from './caret'
+import { Car } from './car'
+import { CaretFinal } from './caretFinal'
 import { Check } from './check'
 import { Clock } from './clock'
 import { Close } from './close'
@@ -17,6 +20,7 @@ import { Cross } from './cross'
 import { Edit } from './edit'
 import { EditJourney } from './edit-journey'
 import { Email } from './email'
+import { EmailFilled } from './email-filled'
 import { Error as ErrorIcon } from './error'
 import { FilledArrow } from './filled-arrow'
 import { Filters } from './filters'
@@ -25,6 +29,7 @@ import { GasElectricity } from './gas-electricity'
 import { Home } from './home'
 import { Information } from './information'
 import { Letter } from './letter'
+import { LinkedIn } from './linkedIn'
 import { Location } from './location'
 import { Minus } from './minus'
 import { Mobile } from './mobile'
@@ -33,6 +38,7 @@ import { One } from './one'
 import { Person } from './person'
 import { Phone } from './phone'
 import { Plus } from './plus'
+import { Twitter } from './twitter'
 import { Question } from './question'
 import { Smile } from './smile'
 import { Sms } from './sms'
@@ -45,14 +51,20 @@ import { ThumbUp } from './thumb-up'
 import { ThumbDown } from './thumb-down'
 import { StarFilled } from './star-filled'
 import { StarOutlined } from './star-outlined'
+import { StarHalfFilled } from './star-half-filled'
 import { Warning } from './warning'
+import { Facebook } from './facebook'
+import { PhoneSimple } from './phone-simple'
 
 export type Glyph =
   | 'arrow'
   | 'arrow-circle'
   | 'bill'
+  | 'book'
   | 'calendar'
+  | 'car'
   | 'caret'
+  | 'caretFinal'
   | 'check'
   | 'clock'
   | 'close'
@@ -61,7 +73,9 @@ export type Glyph =
   | 'cross'
   | 'edit'
   | 'email'
+  | 'email-filled'
   | 'error'
+  | 'facebook'
   | 'filled-arrow'
   | 'filters'
   | 'four'
@@ -69,6 +83,7 @@ export type Glyph =
   | 'home'
   | 'information'
   | 'letter'
+  | 'linkedIn'
   | 'location'
   | 'minus'
   | 'mobile'
@@ -76,6 +91,7 @@ export type Glyph =
   | 'one'
   | 'person'
   | 'phone'
+  | 'phone-simple'
   | 'plus'
   | 'question'
   | 'smile'
@@ -87,8 +103,10 @@ export type Glyph =
   | 'two'
   | 'thumb-up'
   | 'thumb-down'
+  | 'twitter'
   | 'star-outlined'
   | 'star-filled'
+  | 'star-half-filled'
   | 'warning'
 
   // temporary icons
@@ -120,10 +138,16 @@ export const Icon: React.FC<Props> = ({
       return <ArrowCircle color={color} size={size} />
     case 'bill':
       return <Bill color={color} size={size} />
+    case 'book':
+      return <Book color={color} size={size} />
     case 'calendar':
       return <Calendar color={color} size={size} />
+    case 'car':
+      return <Car color={color} size={size} />
     case 'caret':
       return <Caret color={color} direction={direction} size={size} />
+    case 'caretFinal':
+      return <CaretFinal color={color} direction={direction} size={size} />
     case 'check':
       return <Check color={color} size={size} />
     case 'clock':
@@ -140,8 +164,12 @@ export const Icon: React.FC<Props> = ({
       return <Edit color={color} size={size} />
     case 'email':
       return <Email color={color} size={size} />
+    case 'email-filled':
+      return <EmailFilled color={color} size={size} />
     case 'error':
       return <ErrorIcon color={color} size={size} />
+    case 'facebook':
+      return <Facebook color={color} size={size} />
     case 'filled-arrow':
       return <FilledArrow color={color} size={size} />
     case 'filters':
@@ -156,6 +184,8 @@ export const Icon: React.FC<Props> = ({
       return <Information color={color} size={size} />
     case 'letter':
       return <Letter color={color} size={size} />
+    case 'linkedIn':
+      return <LinkedIn color={color} size={size} />
     case 'location':
       return <Location color={color} size={size} />
     case 'minus':
@@ -170,6 +200,8 @@ export const Icon: React.FC<Props> = ({
       return <Person color={color} size={size} />
     case 'phone':
       return <Phone color={color} size={size} />
+    case 'phone-simple':
+      return <PhoneSimple color={color} size={size} />
     case 'plus':
       return <Plus color={color} size={size} />
     case 'question':
@@ -192,10 +224,14 @@ export const Icon: React.FC<Props> = ({
       return <ThumbUp color={color} size={size} />
     case 'thumb-down':
       return <ThumbDown color={color} size={size} />
+    case 'twitter':
+      return <Twitter color={color} size={size} />
     case 'star-filled':
       return <StarFilled color={color} size={size} />
     case 'star-outlined':
       return <StarOutlined color={color} size={size} />
+    case 'star-half-filled':
+      return <StarHalfFilled color={color} size={size} />
     case 'warning':
       return <Warning color={color} size={size} />
 

@@ -2,11 +2,20 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-import { Addon, AddonArg, CellContext } from '../generics'
+import {
+  Addon,
+  AddonArg,
+  CardContext,
+  CellContext,
+  forceMobile
+} from '../generics'
 
-import CellBase from './cell-base'
+import ProductTableCellBase from './cell-base'
+import ProductTableCellCta from './cell-cta'
+import ProductTableCellImage from './cell-image'
 import { ROWS } from './cell-split'
 import RowWrapper from './rowWrapper'
+import Header from './header'
 
 export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   badges?: React.ReactNode[]
@@ -15,6 +24,9 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   subtitle?: React.ReactNode
   addons?: AddonArg[]
   clickableRow?: string
+  image?: React.ReactNode
+  disabled?: boolean
+  card?: boolean
 }
 
 const ProductTableRow: React.FC<RowProps> = ({
@@ -25,8 +37,13 @@ const ProductTableRow: React.FC<RowProps> = ({
   addons = [],
   children,
   id,
-  clickableRow
+  clickableRow,
+  image,
+  disabled,
+  card = false
 }) => {
+  const forcedMobile = forceMobile(card)
+
   const addonsFor = (key: keyof Addon): React.ReactNode[] =>
     addons.map(({ addon, component, options }, i) => {
       options = Object.assign({}, addon.defaultArguments, options)
@@ -47,9 +64,18 @@ const ProductTableRow: React.FC<RowProps> = ({
     })
 
   // @todo All addons go at the start - is there a better way to do this?
-  const nonNullChildren = addonsFor('grid')
+  let nonNullChildren = addonsFor('grid')
     .concat(React.Children.toArray(children))
     .filter(c => c) as React.ReactElement[]
+
+  // When disabled, replace CTA with empty base cell
+  if (disabled) {
+    nonNullChildren = nonNullChildren.filter(
+      child => child.type !== ProductTableCellCta
+    )
+    // eslint-disable-next-line react/jsx-key
+    nonNullChildren = [...nonNullChildren, <ProductTableCellBase />]
+  }
 
   const accentCells = nonNullChildren.filter(child => child.props.accent)
 
@@ -58,6 +84,10 @@ const ProductTableRow: React.FC<RowProps> = ({
   }
 
   const cols = nonNullChildren.length
+
+  const hasCellImage = nonNullChildren
+    .map((child: any) => child.type)
+    .includes(ProductTableCellImage)
 
   /**
    * Row numbers explained:
@@ -70,163 +100,128 @@ const ProductTableRow: React.FC<RowProps> = ({
    */
 
   return (
-    <section
-      id={id}
-      sx={{
-        position: 'relative',
-        border: '1px solid',
-        marginTop: badges.length ? [10, 15] : 0,
-        marginBottom: 'md',
-        ':last-of-type': {
-          marginBottom: 0
-        },
-        variant: 'compounds.product-table.row.main'
-      }}
-    >
-      <RowWrapper link={clickableRow}>
-        {!!badges.length && (
+    <CardContext.Provider value={{ isCard: card }}>
+      <section
+        id={id}
+        sx={{
+          position: 'relative',
+          border: '1px solid',
+          marginTop: badges.length ? [10, 15] : 0,
+          marginBottom: 'md',
+          ':last-of-type': {
+            marginBottom: 0
+          },
+          variant: image
+            ? 'compounds.product-table.variants.redesign.row.main'
+            : 'compounds.product-table.row.main',
+          pointerEvents: disabled ? 'none' : null,
+          opacity: disabled ? '0.5' : '1'
+        }}
+      >
+        <RowWrapper link={clickableRow} headerImage={image}>
+          {!!badges.length && (
+            <div
+              sx={{
+                position: 'absolute',
+                top: 0,
+                transform: 'translateY(-50%)'
+              }}
+            >
+              {badges.map((badge, i) => (
+                <span sx={{ marginRight: 'sm' }} key={i}>
+                  {badge}
+                </span>
+              ))}
+            </div>
+          )}
+          <Header
+            image={image}
+            preTitle={preTitle}
+            rowTitle={rowTitle}
+            subtitle={subtitle}
+            addons={addonsFor('header')}
+          />
           <div
             sx={{
-              position: 'absolute',
-              top: 0,
-              transform: 'translateY(-50%)'
+              display: 'grid',
+              gridTemplateColumns: forcedMobile([
+                'repeat(2, 1fr)',
+                undefined,
+                `repeat(${image ? cols - 1 : cols}, 1fr)`
+              ]),
+              msGridColumns: forcedMobile([
+                '(1fr)[2]',
+                undefined,
+                `(1fr)[${image ? cols - 1 : cols}]`
+              ]),
+              gridTemplateRows: forcedMobile([
+                'auto',
+                undefined,
+                `repeat(3, auto) repeat(${ROWS}, 1fr) repeat(3, auto)`
+              ]),
+              msGridRows: forcedMobile([
+                'auto',
+                undefined,
+                `(auto)[3] (1fr)[${ROWS}] (auto)[3]`
+              ]),
+              marginX: -8,
+              marginY: -6,
+              marginTop: image ? 0 : -6,
+              variant: 'compounds.product-table.row.grid',
+
+              // Flex in mobile IE11 (?!) as auto-layout for grid isn't supported
+              '@media all and (max-width: 990px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
+                display: 'flex',
+                flexDirection: 'column'
+              }
+            }}
+            // @ts-ignore
+            css={{
+              display: '-ms-grid'
             }}
           >
-            {badges.map((badge, i) => (
-              <span sx={{ marginRight: 'sm' }} key={i}>
-                {badge}
-              </span>
+            {nonNullChildren.map((child, index) => (
+              <CellContext.Provider
+                value={{
+                  gridRowStart: 4,
+                  gridRowSpan: ROWS,
+                  gridColumnStart:
+                    image && hasCellImage && child.type === ProductTableCellCta
+                      ? index
+                      : index + 1,
+                  gridColumnSpan: 1,
+                  accentCellCount: accentCells.length,
+                  accentCellIndex:
+                    child.props.accent && accentCells.indexOf(child),
+                  extraRules: {
+                    variant:
+                      image &&
+                      child.type !== ProductTableCellCta &&
+                      `compounds.product-table.variants.redesign.cellContext.${
+                        hasCellImage ? 'variants.cellImage' : 'main'
+                      }`
+                  }
+                }}
+                key={index}
+              >
+                {child}
+              </CellContext.Provider>
             ))}
-          </div>
-        )}
-        <div
-          sx={{
-            display: 'grid',
-            gridTemplateColumns: [
-              'repeat(2, 1fr)',
-              undefined,
-              `repeat(${cols}, 1fr)`
-            ],
-            msGridColumns: ['(1fr)[2]', undefined, `(1fr)[${cols}]`],
-            gridTemplateRows: [
-              'auto',
-              undefined,
-              `repeat(3, auto) repeat(${ROWS}, 1fr) repeat(3, auto)`
-            ],
-            msGridRows: [
-              'auto',
-              undefined,
-              `(auto)[3] (1fr)[${ROWS}] (auto)[3]`
-            ],
-            marginX: -8,
-            marginY: -6,
-            variant: 'compounds.product-table.row.grid',
 
-            // Flex in mobile IE11 (?!) as auto-layout for grid isn't supported
-            '@media all and (max-width: 990px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
-              display: 'flex',
-              flexDirection: 'column'
-            }
-          }}
-          // @ts-ignore
-          css={{
-            display: '-ms-grid'
-          }}
-        >
-          {rowTitle && (
             <CellContext.Provider
               value={{
-                gridRowStart: 2,
-                gridRowSpan: 1,
+                gridRowStart: 1,
+                gridRowSpan: ROWS,
                 gridColumnStart: 1,
                 gridColumnSpan: cols
               }}
             >
-              <CellBase
-                sx={{
-                  borderBottom: '1px solid',
-                  paddingBottom: 'sm',
-                  marginTop: badges.length ? 0 : -6,
-                  variant: 'compounds.product-table.row.header'
-                }}
-                mobileOrder={-100}
-              >
-                <CellContext.Provider value={{ inFlexbox: true }}>
-                  <div
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      marginX: -8,
-                      marginY: -6
-                    }}
-                  >
-                    <CellBase extraRules={{ marginRight: 'auto' }}>
-                      {preTitle && (
-                        <span
-                          sx={{
-                            fontSize: 'xs',
-                            variant: 'compounds.product-table.row.pretitle'
-                          }}
-                        >
-                          {preTitle}
-                        </span>
-                      )}
-                      <h3
-                        sx={{
-                          margin: 0,
-                          variant: 'compounds.product-table.row.title'
-                        }}
-                      >
-                        {rowTitle}
-                      </h3>
-                      {subtitle && (
-                        <span
-                          sx={{
-                            fontSize: 'xs',
-                            variant: 'compounds.product-table.row.subtitle'
-                          }}
-                        >
-                          {subtitle}
-                        </span>
-                      )}
-                    </CellBase>
-                    {addonsFor('header')}
-                  </div>
-                </CellContext.Provider>
-              </CellBase>
+              {addonsFor('body')}
             </CellContext.Provider>
-          )}
-
-          {nonNullChildren.map((child, index) => (
-            <CellContext.Provider
-              value={{
-                gridRowStart: 4,
-                gridRowSpan: ROWS,
-                gridColumnStart: index + 1,
-                gridColumnSpan: 1,
-                accentCellCount: accentCells.length,
-                accentCellIndex:
-                  child.props.accent && accentCells.indexOf(child)
-              }}
-              key={index}
-            >
-              {child}
-            </CellContext.Provider>
-          ))}
-
-          <CellContext.Provider
-            value={{
-              gridRowStart: 1,
-              gridRowSpan: ROWS,
-              gridColumnStart: 1,
-              gridColumnSpan: cols
-            }}
-          >
-            {addonsFor('body')}
-          </CellContext.Provider>
-        </div>
-      </RowWrapper>
-    </section>
+          </div>
+        </RowWrapper>
+      </section>
+    </CardContext.Provider>
   )
 }
 

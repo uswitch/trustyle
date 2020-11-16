@@ -3,6 +3,117 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.4.5...@uswitch/trustyle.button@3.0.0) (2020-11-13)
+
+
+### Features
+
+* remove unused icon dependency ([bcbfc03](https://github.com/uswitch/trustyle/commit/bcbfc03))
+
+
+### BREAKING CHANGES
+
+* Buttons will no longer accept before/after Icon properties
+
+
+
+
+
+## [2.4.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.4.4...@uswitch/trustyle.button@2.4.5) (2020-11-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.button
+
+
+
+
+
+## [2.4.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.4.3...@uswitch/trustyle.button@2.4.4) (2020-11-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.button
+
+
+
+
+
+## [2.4.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.4.2...@uswitch/trustyle.button@2.4.3) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.button
+
+
+
+
+
+## [2.4.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.4.1...@uswitch/trustyle.button@2.4.2) (2020-11-09)
+
+
+### Bug Fixes
+
+* build broken due to breaking @theme-ui/color change ([d7215ce](https://github.com/uswitch/trustyle/commit/d7215ce))
+
+
+
+
+
+## [2.4.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.4.0...@uswitch/trustyle.button@2.4.1) (2020-11-06)
+
+**Note:** Version bump only for package @uswitch/trustyle.button
+
+
+
+
+
+# [2.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.3.9...@uswitch/trustyle.button@2.4.0) (2020-10-12)
+
+
+### Features
+
+* add true-speeds theme variant to button. ([df2a701](https://github.com/uswitch/trustyle/commit/df2a701))
+
+
+
+
+
+## [2.3.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.3.7...@uswitch/trustyle.button@2.3.9) (2020-10-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.button
+
+
+
+
+
+## [2.3.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.3.7...@uswitch/trustyle.button@2.3.8) (2020-10-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.button
+
+
+
+
+
+## [2.3.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.3.5...@uswitch/trustyle.button@2.3.7) (2020-10-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.button
+
+
+
+
+
+## [2.3.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.3.5...@uswitch/trustyle.button@2.3.6) (2020-10-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.button
+
+
+
+
+
+## [2.3.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.3.4...@uswitch/trustyle.button@2.3.5) (2020-10-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.button
+
+
+
+
+
+
 ## [2.3.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.3.3...@uswitch/trustyle.button@2.3.4) (2020-09-24)
 
 

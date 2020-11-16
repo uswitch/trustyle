@@ -31,7 +31,12 @@ const createSx = (
   }, {})
 }
 
-export const Palette = ({ children, className, px = {}, ...props }: any) => {
+export const Palette = ({
+  children,
+  className = '',
+  px = {},
+  ...props
+}: any) => {
   const palette = useContext(PaletteContext)
   const sx = createSx(palette, px)
 
@@ -39,7 +44,7 @@ export const Palette = ({ children, className, px = {}, ...props }: any) => {
     <props.as
       {...props}
       className={`palette ${className}`}
-      sx={{ '&.palette': { ...sx, overflow: 'hidden' } }}
+      sx={{ py: '0.05px', '&.palette': sx }}
     >
       {children}
     </props.as>

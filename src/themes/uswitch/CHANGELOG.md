@@ -3,6 +3,331 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.30.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.30.2...@uswitch/trustyle.uswitch-theme@2.30.3) (2020-11-11)
+
+
+### Bug Fixes
+
+* adds black friday variant to badges. fixes visual issues with hero. ([a81f239](https://github.com/uswitch/trustyle/commit/a81f239))
+
+
+
+
+
+## [2.30.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.30.1...@uswitch/trustyle.uswitch-theme@2.30.2) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.30.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.30.0...@uswitch/trustyle.uswitch-theme@2.30.1) (2020-11-10)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+# [2.30.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.29.1...@uswitch/trustyle.uswitch-theme@2.30.0) (2020-11-10)
+
+
+### Bug Fixes
+
+* add author-profile styles ([95ba9e4](https://github.com/uswitch/trustyle/commit/95ba9e4))
+* change white bg to transparent ([cf98fd8](https://github.com/uswitch/trustyle/commit/cf98fd8))
+
+
+### Features
+
+* merge leafeon theme back into trustyle ([4a038d1](https://github.com/uswitch/trustyle/commit/4a038d1))
+
+
+
+
+
+## [2.29.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.29.0...@uswitch/trustyle.uswitch-theme@2.29.1) (2020-11-10)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+# [2.29.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.28.1...@uswitch/trustyle.uswitch-theme@2.29.0) (2020-11-10)
+
+
+### Features
+
+* add inputSize to simple input ([96cde8d](https://github.com/uswitch/trustyle/commit/96cde8d))
+
+
+
+
+
+## [2.28.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.28.0...@uswitch/trustyle.uswitch-theme@2.28.1) (2020-11-09)
+
+
+### Bug Fixes
+
+* add padding to side nav theme ([f68b9d8](https://github.com/uswitch/trustyle/commit/f68b9d8))
+* set overflow-anchor on Accordion handle ([ee4f42a](https://github.com/uswitch/trustyle/commit/ee4f42a))
+
+
+
+
+
+# [2.28.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.27.5...@uswitch/trustyle.uswitch-theme@2.28.0) (2020-11-06)
+
+
+### Features
+
+* Add 'reverse' accordion that expands content upwards ([322a9e7](https://github.com/uswitch/trustyle/commit/322a9e7))
+
+
+
+
+
+## [2.27.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.27.4...@uswitch/trustyle.uswitch-theme@2.27.5) (2020-11-04)
+
+
+### Bug Fixes
+
+* fourth column on product tables ([fd18f09](https://github.com/uswitch/trustyle/commit/fd18f09))
+
+
+
+
+
+## [2.27.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.27.3...@uswitch/trustyle.uswitch-theme@2.27.4) (2020-10-29)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.27.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.27.2...@uswitch/trustyle.uswitch-theme@2.27.3) (2020-10-29)
+
+
+### Bug Fixes
+
+* margin left to uswitch sponsored by tag image ([9ebcd26](https://github.com/uswitch/trustyle/commit/9ebcd26))
+
+
+
+
+
+## [2.27.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.27.0...@uswitch/trustyle.uswitch-theme@2.27.1) (2020-10-28)
+
+
+### Bug Fixes
+
+* update uswitch theme and cell cta width ([b43763d](https://github.com/uswitch/trustyle/commit/b43763d))
+
+
+
+
+
+# [2.27.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.26.0...@uswitch/trustyle.uswitch-theme@2.27.0) (2020-10-28)
+
+
+### Features
+
+* hero variant for sponsored-by-tag ([2236321](https://github.com/uswitch/trustyle/commit/2236321))
+
+
+
+
+
+# [2.26.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.25.0...@uswitch/trustyle.uswitch-theme@2.26.0) (2020-10-22)
+
+
+### Features
+
+* lint ([225a3b9](https://github.com/uswitch/trustyle/commit/225a3b9))
+* remove unused wrapper ([a6d8f67](https://github.com/uswitch/trustyle/commit/a6d8f67))
+* style calc for uswitch mortgages ([4c57e17](https://github.com/uswitch/trustyle/commit/4c57e17))
+
+
+
+
+
+# [2.25.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.24.0...@uswitch/trustyle.uswitch-theme@2.25.0) (2020-10-21)
+
+
+### Features
+
+* form styles ([ed9825a](https://github.com/uswitch/trustyle/commit/ed9825a))
+
+
+
+
+
+# [2.24.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.23.0...@uswitch/trustyle.uswitch-theme@2.24.0) (2020-10-19)
+
+
+### Features
+
+* add simple dropdown to uswitch theme ([4a92b35](https://github.com/uswitch/trustyle/commit/4a92b35))
+* eiffel 65 ([7f835d4](https://github.com/uswitch/trustyle/commit/7f835d4))
+
+
+
+
+
+# [2.23.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.22.0...@uswitch/trustyle.uswitch-theme@2.23.0) (2020-10-19)
+
+
+### Features
+
+* adjust ordering values ([e382625](https://github.com/uswitch/trustyle/commit/e382625))
+
+
+
+
+
+# [2.22.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.21.1...@uswitch/trustyle.uswitch-theme@2.22.0) (2020-10-16)
+
+
+### Features
+
+* add ordering to product table ([3cac876](https://github.com/uswitch/trustyle/commit/3cac876))
+
+
+
+
+
+## [2.21.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.21.0...@uswitch/trustyle.uswitch-theme@2.21.1) (2020-10-15)
+
+
+### Bug Fixes
+
+* additional product table redesign changes ([de2e063](https://github.com/uswitch/trustyle/commit/de2e063))
+
+
+
+
+
+# [2.21.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.20.1...@uswitch/trustyle.uswitch-theme@2.21.0) (2020-10-12)
+
+
+### Bug Fixes
+
+* remove unnecessary important css attribute. ([603e9b2](https://github.com/uswitch/trustyle/commit/603e9b2))
+
+
+### Features
+
+* add true-speeds theme variant to button. ([df2a701](https://github.com/uswitch/trustyle/commit/df2a701))
+* make prettier happy. ([71bd0b4](https://github.com/uswitch/trustyle/commit/71bd0b4))
+
+
+
+
+
+## [2.20.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.20.0...@uswitch/trustyle.uswitch-theme@2.20.1) (2020-10-12)
+
+
+### Bug Fixes
+
+* redesign styling changes ([2448cde](https://github.com/uswitch/trustyle/commit/2448cde))
+
+
+
+
+
+# [2.20.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.18.0...@uswitch/trustyle.uswitch-theme@2.20.0) (2020-10-12)
+
+
+### Features
+
+* add ability to pass in glyph for icon and true-speeds variant ([c865e08](https://github.com/uswitch/trustyle/commit/c865e08))
+* make title font size xs for mobile view ([2e2cc3e](https://github.com/uswitch/trustyle/commit/2e2cc3e))
+
+
+
+
+
+# [2.19.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.18.0...@uswitch/trustyle.uswitch-theme@2.19.0) (2020-10-12)
+
+
+### Features
+
+* add ability to pass in glyph for icon and true-speeds variant ([c865e08](https://github.com/uswitch/trustyle/commit/c865e08))
+* make title font size xs for mobile view ([2e2cc3e](https://github.com/uswitch/trustyle/commit/2e2cc3e))
+
+
+
+
+
+# [2.18.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.17.0...@uswitch/trustyle.uswitch-theme@2.18.0) (2020-10-12)
+
+
+### Features
+
+* override maxHeight being set to 0 for uswitch slide reveal ([675e4c5](https://github.com/uswitch/trustyle/commit/675e4c5))
+* override via variant ([961afbc](https://github.com/uswitch/trustyle/commit/961afbc))
+
+
+
+
+
+# [2.17.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.16.3...@uswitch/trustyle.uswitch-theme@2.17.0) (2020-10-09)
+
+
+### Features
+
+* add redesign stlying to cell content data auto ([042e0de](https://github.com/uswitch/trustyle/commit/042e0de))
+* add redesign variant to product table cell content ([40eff71](https://github.com/uswitch/trustyle/commit/40eff71))
+* border redesign ([ba13113](https://github.com/uswitch/trustyle/commit/ba13113))
+* header title and image stlying ([f00544f](https://github.com/uswitch/trustyle/commit/f00544f))
+* mobile content styling ([3384401](https://github.com/uswitch/trustyle/commit/3384401))
+
+
+
+
+
+## [2.16.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.16.2...@uswitch/trustyle.uswitch-theme@2.16.3) (2020-10-09)
+
+
+### Bug Fixes
+
+* changed color of author's name and role ([a5b0859](https://github.com/uswitch/trustyle/commit/a5b0859))
+* fixed name and title color, fixed margin bottom ([b18125a](https://github.com/uswitch/trustyle/commit/b18125a))
+* fixed name display ([fcdd991](https://github.com/uswitch/trustyle/commit/fcdd991))
+* removed marginBottom for author-profile from uswitch theme ([d509511](https://github.com/uswitch/trustyle/commit/d509511))
+
+
+
+
+
+
+## [2.16.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.16.1...@uswitch/trustyle.uswitch-theme@2.16.2) (2020-10-07)
+
+
+### Bug Fixes
+
+* Fix btn link dark text on dark bg ([37a817b](https://github.com/uswitch/trustyle/commit/37a817b))
+
+
+
+
+
+# [2.16.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.15.0...@uswitch/trustyle.uswitch-theme@2.16.0) (2020-10-07)
+
+
+### Features
+
+* adjust padding, font size and height of bg image ([7480477](https://github.com/uswitch/trustyle/commit/7480477))
+* fix spacing when no award label given and colours when none provided ([735bc93](https://github.com/uswitch/trustyle/commit/735bc93))
+* make padding bottom same as top for desktop ([9bf094f](https://github.com/uswitch/trustyle/commit/9bf094f))
+
+
+
+
+
 # [2.15.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.13.0...@uswitch/trustyle.uswitch-theme@2.15.0) (2020-10-01)
 
 

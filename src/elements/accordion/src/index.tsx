@@ -4,6 +4,7 @@ import React, { useContext, useState } from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
+import { Palette } from '@uswitch/trustyle-utils.palette'
 
 interface ContextProps {
   open: number
@@ -21,9 +22,12 @@ const AccordionContext = React.createContext<Partial<ContextProps>>({
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   index?: number
   title: string
+  openedTitle?: string
   isInitiallyOpen?: boolean
   className?: string
   icon?: string
+  glyph?: Glyph
+  glyphColor?: string
   variant?: string
 }
 
@@ -43,11 +47,14 @@ const Accordion: React.FC<Props> & {
   Title: React.FC<TitleProps>
 } = ({
   index,
-  title,
+  title: closedTitle,
+  openedTitle,
   isInitiallyOpen = false,
   children,
   className,
-  icon,
+  icon = '',
+  glyph,
+  glyphColor = '',
   variant
 }) => {
   const {
@@ -72,6 +79,9 @@ const Accordion: React.FC<Props> & {
       accordionContext.setOpenId(isOpen ? (index as number) : -1)
   }
 
+  const title =
+    typeof openedTitle !== 'undefined' && isOpen ? openedTitle : closedTitle
+
   return (
     <div
       sx={{
@@ -82,16 +92,20 @@ const Accordion: React.FC<Props> & {
       className={className}
       data-target="accordion" // this is a hack to stop clicking propagating to the product table
     >
-      <button
+      <Palette
+        as="button"
         sx={{
           cursor: 'pointer',
           variant: !isOpen
             ? 'compounds.accordion.base.button'
             : 'compounds.accordion.variants.isActive.button'
         }}
+        px={{
+          color: 'textColor'
+        }}
         onClick={() => setIsOpen(!isOpen)}
       >
-        {icon ? (
+        {icon || glyph ? (
           <div
             sx={{
               flex: '1',
@@ -101,21 +115,31 @@ const Accordion: React.FC<Props> & {
               variant: `compounds.accordion.variants.${variant}.title`
             }}
           >
-            <div
-              sx={{
-                variant: 'compounds.accordion.variants.titleIcon'
-              }}
-            >
-              <ImgixImage
-                src={icon}
-                imgixParams={{ fit: 'clip' }}
-                critical
+            {glyph ? (
+              <div
                 sx={{
-                  height: '100%',
-                  width: '100%'
+                  variant: `compounds.accordion.variants.${variant}.glyph`
                 }}
-              />
-            </div>
+              >
+                <Icon color={glyphColor} glyph={glyph} size={20} />
+              </div>
+            ) : (
+              <div
+                sx={{
+                  variant: 'compounds.accordion.variants.titleIcon'
+                }}
+              >
+                <ImgixImage
+                  src={icon}
+                  imgixParams={{ fit: 'clip' }}
+                  critical
+                  sx={{
+                    height: '100%',
+                    width: '100%'
+                  }}
+                />
+              </div>
+            )}
             {title}
           </div>
         ) : (
@@ -131,31 +155,42 @@ const Accordion: React.FC<Props> & {
         )}
 
         {accordionContext.iconClosed && accordionContext.iconOpen ? (
-          <Icon
-            color={
-              isOpen
-                ? colors[accordionTheme?.variants?.isActive?.caret?.color]
-                : colors[accordionTheme?.base?.caret?.color]
-            }
-            glyph={
-              isOpen ? accordionContext.iconOpen : accordionContext.iconClosed
-            }
-            size={16}
-          />
+          <div
+            sx={{ variant: `compounds.accordion.variants.${variant}.caret` }}
+          >
+            <Icon
+              color={
+                isOpen
+                  ? colors[accordionTheme?.variants?.isActive?.caret?.color]
+                  : colors[accordionTheme?.base?.caret?.color]
+              }
+              glyph={
+                isOpen ? accordionContext.iconOpen : accordionContext.iconClosed
+              }
+              size={16}
+            />
+          </div>
         ) : (
-          <Icon
-            color={
-              isOpen
-                ? colors[accordionTheme?.variants?.isActive?.caret?.color]
-                : colors[accordionTheme?.base?.caret?.color]
-            }
-            glyph="caret"
-            direction={isOpen ? 'up' : 'down'}
-            size={16}
-          />
+          <div
+            sx={{ variant: `compounds.accordion.variants.${variant}.caret` }}
+          >
+            <Icon
+              color={
+                variant === 'eligibility-criteria-redesign'
+                  ? colors['button-secondary']
+                  : isOpen
+                  ? colors[accordionTheme?.variants?.isActive?.caret?.color]
+                  : colors[accordionTheme?.base?.caret?.color]
+              }
+              glyph="caret"
+              direction={isOpen ? 'up' : 'down'}
+              size={16}
+            />
+          </div>
         )}
-      </button>
-      <div
+      </Palette>
+      <Palette
+        as="div"
         sx={{
           overflow: 'hidden',
           height: isOpen ? 'auto' : '0',
@@ -173,9 +208,10 @@ const Accordion: React.FC<Props> & {
           },
           variant: 'compounds.accordion.base.content'
         }}
+        px={{ color: 'textColor' }}
       >
         {children}
-      </div>
+      </Palette>
     </div>
   )
 }

@@ -7,7 +7,7 @@ import { Addon, AddonContext, CellContext } from '../generics'
 import { ROWS } from './cell-split'
 
 const ProductTableAddonInfo: Addon = {
-  body: ({ children }) => {
+  body: ({ children, split, headerImage }) => {
     const { gridColumnSpan } = React.useContext(CellContext)
 
     return (
@@ -17,9 +17,11 @@ const ProductTableAddonInfo: Addon = {
           order: 99, // should appear above footer on mobile
           extraRules: {
             paddingTop: 'sm',
-            marginTop: 'xs',
+            marginTop: headerImage ? ['sm', 'md'] : 'xs',
             marginBottom: -6,
-            variant: 'compounds.product-table.addonInfo.main'
+            fontSize: 'sm',
+            variant: `compounds.product-table.${headerImage &&
+              'variants.redesign.'}addonInfo.main`
           }
         }}
       >
@@ -28,7 +30,7 @@ const ProductTableAddonInfo: Addon = {
             gridRowStart: ROWS + 5, // should appear above footer on desktop
             gridRowSpan: 1,
             gridColumnStart: 1,
-            gridColumnSpan
+            gridColumnSpan: split ? 2 : gridColumnSpan
           }}
         >
           {children}

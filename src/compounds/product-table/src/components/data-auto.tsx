@@ -2,6 +2,8 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
+import ProductTable from '../index'
+
 interface FormattedText {
   size: 'big' | 'small'
   word: string
@@ -37,21 +39,56 @@ function autoFormat(text?: string): FormattedText[] {
     }, [] as FormattedText[])
 }
 
+const hasSubscript = (text: string) => {
+  const subscript = /\(([^)]+)\)/.exec(text)
+  return subscript
+}
+
+function formatSubscript(text: string, headerImage?: boolean) {
+  const subscript = /\(([^)]+)\)/.exec(text)
+  if (subscript === null) {
+    return [{ size: 'big', word: text }]
+  }
+
+  const subscriptText = subscript[0]
+
+  return (
+    <ProductTable.data.TextSubscript
+      text={text.replace(subscriptText, '').trim()}
+      subscript={subscriptText}
+      headerImage={headerImage}
+    />
+  )
+}
+
 export interface DataAutoProps extends React.HTMLAttributes<HTMLDivElement> {
   text: string
+  headerImage?: boolean
 }
-const ProductTableDataAuto: React.FC<DataAutoProps> = ({ text }) => {
+const ProductTableDataAuto: React.FC<DataAutoProps> = ({
+  text,
+  headerImage
+}) => {
   return (
     <div>
-      {autoFormat(text).map(({ word, size }, index) =>
-        size === 'small' ? (
-          <span sx={{ margin: '0 5px', fontSize: ['xs', 'md'] }} key={index}>
-            {word}
-          </span>
-        ) : (
-          word
-        )
-      )}
+      {hasSubscript(text)
+        ? formatSubscript(text, headerImage)
+        : autoFormat(text).map(({ word, size }, index) =>
+            size === 'small' ? (
+              <span
+                sx={{
+                  margin: '0 5px',
+                  variant: `compounds.product-table.${headerImage &&
+                    'variants.redesign.'}cellContent.content.small`
+                }}
+                key={index}
+              >
+                {word}
+              </span>
+            ) : (
+              word
+            )
+          )}
     </div>
   )
 }

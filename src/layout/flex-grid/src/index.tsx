@@ -62,7 +62,8 @@ export const Container: React.FC<ContainerProps &
                 maxWidth *
                 (colsArray[i] && spanArray[i] ? spanArray[i] / colsArray[i] : 1)
             )
-          )
+          ),
+        variant: 'compounds.container.flex'
       }}
       {...props}
       className={`flex-grid-container ${className}`}

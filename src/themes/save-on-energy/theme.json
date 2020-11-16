@@ -599,6 +599,9 @@
           "borderLeftWidth": 1
         }
       },
+      "inputWidth": {
+        "small": 64
+      },
       "variants": {
         "error": {
           "variant": "elements.simple-input.wrapper",
@@ -950,6 +953,11 @@
   },
 
   "modules": {
+    "hero-with-background-image": {
+      "background-image": {
+        "opacity": 0.3
+      }
+    },
     "image-callout-content": {
       "sm": {
         "pt": "xl"

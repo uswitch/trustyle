@@ -12,6 +12,8 @@ type Props<T extends React.ComponentType<any>> = Overwrite<
     variant: string
     children: React.ReactNode
     size?: 'small' | 'large'
+    beforeIcon?: string
+    afterIcon?: string
   }
 >
 

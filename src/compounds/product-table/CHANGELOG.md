@@ -3,6 +3,182 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.12.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.4...@uswitch/trustyle.product-table@2.12.5) (2020-11-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.12.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.3...@uswitch/trustyle.product-table@2.12.4) (2020-11-04)
+
+
+### Bug Fixes
+
+* fourth column on product tables ([fd18f09](https://github.com/uswitch/trustyle/commit/fd18f09))
+
+
+
+
+
+## [2.12.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.2...@uswitch/trustyle.product-table@2.12.3) (2020-11-03)
+
+
+### Bug Fixes
+
+* allow button to be clicked inside of eligibility criteria ([3d31db4](https://github.com/uswitch/trustyle/commit/3d31db4))
+* refactor handleClick ([75db3a7](https://github.com/uswitch/trustyle/commit/75db3a7))
+
+
+
+
+
+## [2.12.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.1...@uswitch/trustyle.product-table@2.12.2) (2020-10-29)
+
+
+### Bug Fixes
+
+* refactor cellimage variant ([e63fb10](https://github.com/uswitch/trustyle/commit/e63fb10))
+
+
+
+
+
+# [2.12.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.11.0...@uswitch/trustyle.product-table@2.12.0) (2020-10-28)
+
+
+### Bug Fixes
+
+* correctly pass headerImage prop in cell-image ([72dfa78](https://github.com/uswitch/trustyle/commit/72dfa78))
+* cta cell bug ([cdde098](https://github.com/uswitch/trustyle/commit/cdde098))
+* image sizing and additional design tweaks ([6cd5bd0](https://github.com/uswitch/trustyle/commit/6cd5bd0))
+* subtext font size ([ae18f89](https://github.com/uswitch/trustyle/commit/ae18f89))
+
+
+### Features
+
+* move provider logo below cells on mobile" ([3fe70dd](https://github.com/uswitch/trustyle/commit/3fe70dd))
+
+
+
+
+
+# [2.11.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.10.1...@uswitch/trustyle.product-table@2.11.0) (2020-10-23)
+
+
+### Features
+
+* vertically align product table data on mobile ([34c20a7](https://github.com/uswitch/trustyle/commit/34c20a7))
+
+
+
+
+
+## [2.10.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.10.0...@uswitch/trustyle.product-table@2.10.1) (2020-10-21)
+
+
+### Bug Fixes
+
+* disabled product opacity ([1468fe4](https://github.com/uswitch/trustyle/commit/1468fe4))
+
+
+
+
+
+# [2.10.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.9.0...@uswitch/trustyle.product-table@2.10.0) (2020-10-21)
+
+
+### Features
+
+* disable product table row ([77ede31](https://github.com/uswitch/trustyle/commit/77ede31))
+
+
+
+
+
+# [2.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.8.0...@uswitch/trustyle.product-table@2.9.0) (2020-10-19)
+
+
+### Features
+
+* product table redesign changes v3 ([fb765b2](https://github.com/uswitch/trustyle/commit/fb765b2))
+
+
+
+
+
+# [2.8.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.7.2...@uswitch/trustyle.product-table@2.8.0) (2020-10-15)
+
+
+### Bug Fixes
+
+* additional product table redesign changes ([de2e063](https://github.com/uswitch/trustyle/commit/de2e063))
+* refactor cta cell border handling ([b9a9321](https://github.com/uswitch/trustyle/commit/b9a9321))
+
+
+### Features
+
+* update product table cell auto formatter ([4dd9df5](https://github.com/uswitch/trustyle/commit/4dd9df5))
+
+
+
+
+
+## [2.7.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.7.1...@uswitch/trustyle.product-table@2.7.2) (2020-10-12)
+
+
+### Bug Fixes
+
+* styling changes for product table redesign ([d5ac82f](https://github.com/uswitch/trustyle/commit/d5ac82f))
+
+
+
+
+
+## [2.7.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.7.0...@uswitch/trustyle.product-table@2.7.1) (2020-10-12)
+
+
+### Bug Fixes
+
+* header spacing ([1acf640](https://github.com/uswitch/trustyle/commit/1acf640))
+* mobile header spacing ([36cdb74](https://github.com/uswitch/trustyle/commit/36cdb74))
+* percy screenshot ([ff5a453](https://github.com/uswitch/trustyle/commit/ff5a453))
+* redesign styling changes ([2448cde](https://github.com/uswitch/trustyle/commit/2448cde))
+
+
+
+
+
+# [2.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.6.6...@uswitch/trustyle.product-table@2.7.0) (2020-10-09)
+
+
+### Bug Fixes
+
+* header design ([9d363b2](https://github.com/uswitch/trustyle/commit/9d363b2))
+* image sizing ([0f76c25](https://github.com/uswitch/trustyle/commit/0f76c25))
+* row border color bug ([d92ece2](https://github.com/uswitch/trustyle/commit/d92ece2))
+
+
+### Features
+
+* add header ([7e0ac21](https://github.com/uswitch/trustyle/commit/7e0ac21))
+* add header image to product table and remove palette ([35b574c](https://github.com/uswitch/trustyle/commit/35b574c))
+* add layout to cell secondary for split ([a012be6](https://github.com/uswitch/trustyle/commit/a012be6))
+* add option to split info and footer addons ([a2f0fb7](https://github.com/uswitch/trustyle/commit/a2f0fb7))
+* add palette to product table row ([aaf23e8](https://github.com/uswitch/trustyle/commit/aaf23e8))
+* add redesign stlying to cell content data auto ([042e0de](https://github.com/uswitch/trustyle/commit/042e0de))
+* add redesign variant to product table cell content ([40eff71](https://github.com/uswitch/trustyle/commit/40eff71))
+* border redesign ([ba13113](https://github.com/uswitch/trustyle/commit/ba13113))
+* header title and image stlying ([f00544f](https://github.com/uswitch/trustyle/commit/f00544f))
+* mobile content styling ([3384401](https://github.com/uswitch/trustyle/commit/3384401))
+* move label above content in cell block content ([e71f5b0](https://github.com/uswitch/trustyle/commit/e71f5b0))
+* remove palette from product table ([9f7a248](https://github.com/uswitch/trustyle/commit/9f7a248))
+
+
+
+
+
 ## [2.6.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.6.2...@uswitch/trustyle.product-table@2.6.4) (2020-09-15)
 
 
