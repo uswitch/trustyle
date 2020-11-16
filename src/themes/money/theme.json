@@ -1252,8 +1252,9 @@
         "fontWeight": "bold",
         "color": "grey-80",
         "display": "block",
-        ":not(:first-child)": { "mt": "sm" },
+        "mt": "sm",
         "mb": "xs",
+        "textAlign": "left",
         "variants": {
           "calculator": {
             "variant": "styles.h6",
@@ -1261,9 +1262,7 @@
             "color": "grey-80",
             "display": "block",
             "mb": "xs",
-            ":not(:first-child)": {
-              "mt": "xl"
-            }
+            "mt": "xl"
           }
         }
       },
@@ -1276,6 +1275,7 @@
         "mb": "xs"
       },
       "button": {
+        "mt": "sm",
         "variants": {
           "calculator": {
             "mb": "sm",
@@ -1324,19 +1324,36 @@
             "borderRadius": "4px",
             "mb": "lg",
             "color": "plum",
-            "paddingX": "32px",
-            "paddingY": 0,
-            "opacity": 1
+            "paddingX": "lg",
+            "paddingY": 0
           },
 
           "fields": {
-            "display": "none"
+            "display": "none",
+            ">:first-child": {
+              "label": {
+                "mt": 0
+              }
+            },
+            "calculator": {
+              ">:first-child": {
+                "label": {
+                  "mt": 0
+                }
+              }
+            }
           },
 
           "heading": {
             "opacity": 0.4,
             "display": "flex",
             "alignItems": "center"
+          },
+
+          "buttonWrapper": {
+            "display": "none",
+            "textAlign": "left",
+            "calculator": {}
           }
         },
 
@@ -1351,6 +1368,14 @@
               "display": "none"
             },
             "fields": {
+              "display": "block",
+              ">:first-child": {
+                "label": {
+                  "mt": 0
+                }
+              }
+            },
+            "buttonWrapper": {
               "display": "block"
             }
           },
@@ -1364,6 +1389,9 @@
               "justifyContent": "space-between"
             },
             "fields": {
+              "display": "none"
+            },
+            "buttonWrapper": {
               "display": "none"
             }
           }

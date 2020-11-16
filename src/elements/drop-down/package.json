@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.drop-down",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -9,11 +9,11 @@
   },
   "dependencies": {
     "@uswitch/trustyle-utils.get": "^1.0.9",
-    "@uswitch/trustyle.frozen-input": "^3.1.0",
+    "@uswitch/trustyle.frozen-input": "^3.1.1",
     "@uswitch/trustyle.styles": "^0.5.6"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.17.1",
+    "@uswitch/trustyle.icon": "^1.18.0",
     "typescript": "^3.6.2"
   },
   "peerDependencies": {

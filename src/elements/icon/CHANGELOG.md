@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.18.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.17.1...@uswitch/trustyle.icon@1.18.0) (2020-11-16)
+
+
+### Bug Fixes
+
+* magnifier icon ([7550467](https://github.com/uswitch/trustyle/commit/7550467))
+
+
+### Features
+
+* add magnifier icon ([174dab2](https://github.com/uswitch/trustyle/commit/174dab2))
+
+
+
+
+
 ## [1.17.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.17.0...@uswitch/trustyle.icon@1.17.1) (2020-11-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.icon

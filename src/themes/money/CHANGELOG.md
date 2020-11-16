@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.32.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.32.3...@uswitch/trustyle.money-theme@1.32.4) (2020-11-16)
+
+
+### Bug Fixes
+
+* form margin and padding ([8b3ee9b](https://github.com/uswitch/trustyle/commit/8b3ee9b))
+
+
+
+
+
 ## [1.32.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.32.2...@uswitch/trustyle.money-theme@1.32.3) (2020-11-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme
