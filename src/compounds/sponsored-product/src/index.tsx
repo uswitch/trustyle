@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { jsx } from 'theme-ui'
-import { Caret } from '@uswitch/trustyle.icon/src/caret'
+import { Icon } from '@uswitch/trustyle.icon'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
 import PrimaryInfoBlock from '@uswitch/trustyle.primary-info-block'
 import UspTag from '@uswitch/trustyle.usp-tag'
@@ -331,9 +331,10 @@ const SponsoredProduct: React.FC<Props> = ({
                 marginBottom: 'sm'
               }}
             >
-              <Caret
+              <Icon
                 color="white"
                 direction="right"
+                glyph="caret"
                 size={20}
                 sx={{
                   flexShrink: 0
