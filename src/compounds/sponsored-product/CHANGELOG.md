@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.3.2...@uswitch/trustyle.sponsored-product@3.4.0) (2020-11-16)
+
+
+### Features
+
+* move icons to peer deps ([695a6bd](https://github.com/uswitch/trustyle/commit/695a6bd))
+
+
+
+
+
 ## [3.3.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.3.1...@uswitch/trustyle.sponsored-product@3.3.2) (2020-11-16)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.list@1.4.14...@uswitch/trustyle.list@1.5.0) (2020-11-16)
+
+
+### Features
+
+* move icons to peer deps ([695a6bd](https://github.com/uswitch/trustyle/commit/695a6bd))
+
+
+
+
+
 ## [1.4.14](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.list@1.4.13...@uswitch/trustyle.list@1.4.14) (2020-11-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.list

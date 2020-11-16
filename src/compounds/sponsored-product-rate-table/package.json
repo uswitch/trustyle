@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.sponsored-product-rate-table",
-  "version": "3.1.18",
+  "version": "3.2.0",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -9,8 +9,8 @@
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
-    "react": "^16.7.0",
-    "@uswitch/trustyle.icon": "^1.17.1"
+    "@uswitch/trustyle.icon": "^1.17.1",
+    "react": "^16.7.0"
   },
   "dependencies": {
     "@uswitch/trustyle.arrangement": "^2.0.20",
