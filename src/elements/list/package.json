@@ -8,15 +8,14 @@
     "access": "public"
   },
   "devDependencies": {
-    "typescript": "^3.6.2"
+    "typescript": "^3.6.2",
+    "@uswitch/trustyle.icon": "^1.17.1"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "@mdx-js/react": "^1.5.3",
     "react": "^16.7.0",
-    "theme-ui": "^0.2.52"
-  },
-  "dependencies": {
+    "theme-ui": "^0.2.52",
     "@uswitch/trustyle.icon": "^1.17.1"
   }
 }

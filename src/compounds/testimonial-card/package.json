@@ -9,12 +9,11 @@
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
-    "react": "^16.7.0"
-  },
-  "dependencies": {
+    "react": "^16.7.0",
     "@uswitch/trustyle.icon": "^1.17.1"
   },
   "devDependencies": {
-    "@uswitch/trustyle.carousel": "^1.1.4"
+    "@uswitch/trustyle.carousel": "^1.1.4",
+    "@uswitch/trustyle.icon": "^1.17.1"
   }
 }

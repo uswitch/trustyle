@@ -8,17 +8,18 @@
     "access": "public"
   },
   "dependencies": {
-    "@uswitch/trustyle.icon": "^1.17.1",
     "@uswitch/trustyle.styles": "^0.5.6",
     "focus-trap-react": "^6.0.0",
     "react-dom": "^16.7.0",
     "react-transition-group": "^4.2.2"
   },
   "devDependencies": {
-    "typescript": "^3.6.2"
+    "typescript": "^3.6.2",
+    "@uswitch/trustyle.icon": "^1.17.1"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
-    "react": "^16.7.0"
+    "react": "^16.7.0",
+    "@uswitch/trustyle.icon": "^1.17.1"
   }
 }

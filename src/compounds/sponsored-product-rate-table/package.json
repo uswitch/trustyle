@@ -9,7 +9,8 @@
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
-    "react": "^16.7.0"
+    "react": "^16.7.0",
+    "@uswitch/trustyle.icon": "^1.17.1"
   },
   "dependencies": {
     "@uswitch/trustyle.arrangement": "^2.0.20",
@@ -17,10 +18,12 @@
     "@uswitch/trustyle.button": "^3.0.0",
     "@uswitch/trustyle.button-link": "^3.0.0",
     "@uswitch/trustyle.flex-grid": "^1.2.1",
-    "@uswitch/trustyle.icon": "^1.17.1",
     "@uswitch/trustyle.imgix-image": "^0.1.40",
     "@uswitch/trustyle.primary-info-block": "^1.0.6",
     "@uswitch/trustyle.sponsored-by-tag": "^2.1.0",
     "@uswitch/trustyle.usp-tag": "^0.1.6"
+  },
+  "devDependencies": {
+    "@uswitch/trustyle.icon": "^1.17.1"
   }
 }
