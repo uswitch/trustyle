@@ -9,7 +9,9 @@ const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
     <div
       sx={{
         margin: '15px 0',
-        paddingLeft: [0, '145px']
+        paddingLeft: [0, '145px'],
+        fontSize: '12px',
+        color: '#858f94'
       }}
     >
       {children}
@@ -24,12 +26,12 @@ const RepresentativeExample: React.FC<React.HTMLAttributes<any>> = ({
     <footer
       sx={{
         marginTop: '5px',
-        padding: '5px 20px 10px',
+        padding: ['5px 20px 10px', '5px 40px 10px'],
         backgroundColor: '#f7f7f7',
         fontSize: '14px',
         fontWeight: 600,
         color: '#924a8b',
-        textlign: 'center',
+        textAlign: 'center',
         lineHeight: 'normal'
       }}
     >
@@ -47,7 +49,9 @@ const Header: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
           pl: ['15px', '145px'],
           pr: ['15px', 0],
           py: '15px',
-          mb: 0
+          mb: 0,
+          fontSize: '18px',
+          fontFamily: 'Varela Round,Arial,sans-serif'
         }}
       >
         {children}
@@ -94,12 +98,14 @@ export const ImageCell: React.FC<React.HTMLAttributes<any>> = ({
 interface DataCellProps extends React.HTMLAttributes<HTMLDivElement> {
   backgroundColor?: string
   borderBottomColor?: string
+  label?: string
 }
 
 export const DataCell: React.FC<DataCellProps> = ({
   children,
   backgroundColor,
-  borderBottomColor
+  borderBottomColor,
+  label
 }) => {
   return (
     <BaseCell
@@ -108,12 +114,24 @@ export const DataCell: React.FC<DataCellProps> = ({
         borderStyle: 'solid',
         backgroundColor,
         borderBottomColor,
-        margin: '2px',
+        margin: ['2px 0', '2px'],
         '> strong': {
           background: 'none'
-        }
+        },
+        fontFamily: 'Varela Round,Arial,sans-serif',
+        color: '#191919'
       }}
     >
+      <strong
+        sx={{
+          fontFamily: 'Open Sans,Arial,sans-serif',
+          fontSize: '11px',
+          color: borderBottomColor
+        }}
+      >
+        {label}
+      </strong>
+
       {children}
     </BaseCell>
   )
@@ -125,10 +143,22 @@ export const CtaCell: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
       sx={{
         flex: 0,
         flexBasis: 'auto',
-        margin: 'auto'
+        margin: 'auto',
+        marginLeft: '15px'
       }}
     >
-      <Button variant="primary">{children}</Button>
+      <Button
+        variant="primary"
+        size="small"
+        sx={{
+          background: 'linear-gradient(90deg, #924A8B 5%, #DB4D75 95%)',
+          color: '#fff',
+          fontSize: '16px',
+          fontWeight: 400
+        }}
+      >
+        {children}
+      </Button>
     </BaseCell>
   )
 }
@@ -150,19 +180,33 @@ const LegacyProductTable: React.FC<React.HTMLAttributes<any>> = ({
   return (
     <article
       sx={{
-        border: '1px solid #dadadb',
+        border: ['none', '1px solid #dadadb'],
         marginBottom: '60px',
         background: '#fff'
       }}
     >
-      <a href="#" sx={{ textDecoration: 'none' }}>
+      <a
+        href="#"
+        sx={{
+          textDecoration: 'none',
+          ':hover:not(:disabled)': {
+            button: {
+              background: '#db4d75'
+            },
+            header: {
+              textDecoration: 'underline',
+              textDecorationColor: '#069'
+            }
+          }
+        }}
+      >
         <Header>Lowest representative APR</Header>
 
         <div
           sx={{
             display: ['initial', 'flex'],
             width: '100%',
-            padding: '0 15px 10px',
+            padding: ['0 15px 10px', '0 15px 10px'],
             boxSizing: 'border-box'
           }}
         >
