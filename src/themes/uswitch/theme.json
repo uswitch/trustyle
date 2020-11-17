@@ -2575,6 +2575,83 @@
         }
       },
       "variants": {
+        "noImage": {
+          "position": "relative",
+          "itemsPerRow": 4,
+          "textAlign": "left",
+          "height": "100%",
+          "boxShadow": "card",
+          "border": "1px solid",
+          "borderColor": "grey-10",
+          "px": "sm",
+          "py": ["md", "md"],
+
+          "content": {
+            "position": "relative",
+            "height": "100%",
+            "pb": "xl"
+          },
+
+          "headerChildren": {
+            "position": "absolute",
+            "width": 22,
+            "right": 8,
+            "top": 20
+          },
+
+          "image": {
+            "display": "none"
+          },
+
+          "heading": {
+            "mb": "xxs",
+            "mr": "lg",
+            "mt": "xxs",
+            "a": {
+              "fontSize": "sm",
+              "fontWeight": "xxbold",
+              "color": "text",
+              "borderBottom": "none",
+              "textDecoration": "none"
+            }
+          },
+
+          "link": {
+            "backgroundColor": "grey-05",
+            "color": "uswitch-navy",
+            "py": "xs",
+            "borderBottom": "none",
+            "textDecoration": "none",
+            "textAlign": "center",
+            "fontWeight": "xbold",
+            "fontSize": "base",
+            "width": "100%",
+            "position": "absolute",
+            "bottom": 0,
+            "mb": "xxs",
+            "hovered": {
+              "backgroundColor": "uswitch-navy",
+              "color": "white"
+            }
+          },
+
+          "superScript": { "display": "none" },
+
+          "p": {
+            "fontSize": "base",
+            "color": "grey-60",
+            "fontWeight": "base"
+          },
+
+          "&:hover": {
+            "borderColor": "uswitch-navy",
+            "borderWidth": 2,
+
+            "div > a:last-of-type": {
+              "variant": "compounds.card.variants.noImage.link.hovered"
+            }
+          }
+        },
         "assuranceBar": {
           "display": "flex",
           "flexDirection": ["row", "column", "row"],
