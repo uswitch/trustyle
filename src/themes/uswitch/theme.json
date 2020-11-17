@@ -125,6 +125,23 @@
     },
     "footer": {
       "width": 576
+    },
+    "card": {
+      "variants": {
+        "provider": {
+          "height": {
+            "desktop": 192,
+            "tablet": 150
+          },
+          "image": {
+            "maxWidth": {
+              "desktop": 170,
+              "tablet": 160,
+              "mobile": 132
+            }
+          }
+        }
+      }
     }
   },
   "container": {
@@ -2705,6 +2722,48 @@
               "width": "auto",
               "height": [21, 28, 28],
               "mt": [4, 3, 3]
+            }
+          }
+        },
+        "provider": {
+          "display": "flex",
+          "width": "100%",
+          "height": [
+            "card.variants.provider.height.desktop",
+            "card.variants.provider.height.tablet",
+            "card.variants.provider.height.desktop"
+          ],
+          "flexDirection": "column",
+          "alignItems": "center",
+          "border": "1px solid",
+          "borderColor": "grey-20",
+          "image": {
+            "flex": 4,
+            "display": "flex",
+            "borderBottom": "none",
+            "textDecoration": "none",
+            "mb": 0,
+            "maxWidth": [
+              "card.variants.provider.image.maxWidth.mobile",
+              "card.variants.provider.image.maxWidth.tablet",
+              "card.variants.provider.image.maxWidth.desktop"
+            ],
+            "img": {
+              "objectFit": "contain",
+              "mx": "auto",
+              "display": "block",
+              "maxWidth": "inherit"
+            }
+          },
+          "content": {
+            "flex": 1,
+            "display": "flex",
+            "alignItems": "center",
+            "justifyContent": "center",
+            "p": {
+              "variant": "styles.p",
+              "color": "grey-60",
+              "mb": "md"
             }
           }
         }
