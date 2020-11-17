@@ -32,6 +32,7 @@ const glyphChoices: Glyph[] = [
   'information',
   'letter',
   'location',
+  'magnifier',
   'minus',
   'money-filter',
   'mobile',
