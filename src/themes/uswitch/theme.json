@@ -3504,13 +3504,28 @@
     },
     "collectionCarousel": {
       "base": {
-        "pb": ["lg", "xxxl"]
+        "pb": ["lg", "xxxl"],
+        ".glider-dots": {
+          "mt": "lg",
+          "pt": "xs",
+          ".glider-dot": {
+            "backgroundColor": "grey-20",
+            "&.active": {
+              "backgroundColor": "uswitch-navy"
+            }
+          }
+        }
       },
       "container": {
         "variant": "modules.collectionCarousel.base",
         "maxWidth": 1200,
         "mx": "auto",
-        "position": "relative"
+        "position": "relative",
+        ".glider-slide": {
+          ".flex-grid-container": {
+            "px": "xxs"
+          }
+        }
       }
     }
   },
