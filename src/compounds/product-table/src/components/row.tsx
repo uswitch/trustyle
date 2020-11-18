@@ -120,7 +120,7 @@ const ProductTableRow: React.FC<RowProps> = ({
       >
         <RowWrapper link={clickableRow} headerImage={image}>
           {!!badges.length && (
-            <div sx={{ mb: 8 }}>
+            <div sx={{ mb: 'xs' }}>
               <div
                 sx={{
                   position: 'absolute',
