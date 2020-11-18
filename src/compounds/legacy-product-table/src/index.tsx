@@ -20,9 +20,7 @@ const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   )
 }
 
-const Footer: React.FC<React.HTMLAttributes<any>> = ({
-  children
-}) => {
+const Footer: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   return (
     <footer
       sx={{
@@ -138,7 +136,11 @@ export const DataCell: React.FC<DataCellProps> = ({
   )
 }
 
-export const CtaCell: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
+interface CtaCellProps extends React.HTMLAttributes<HTMLDivElement> {
+  styles?: any
+}
+
+export const CtaCell: React.FC<CtaCellProps> = ({ children, styles }) => {
   return (
     <BaseCell
       sx={{
@@ -155,7 +157,8 @@ export const CtaCell: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
           background: 'linear-gradient(90deg, #924A8B 5%, #DB4D75 95%)',
           color: '#fff',
           fontSize: '16px',
-          fontWeight: 400
+          fontWeight: 400,
+          ...styles
         }}
       >
         {children}
@@ -164,29 +167,45 @@ export const CtaCell: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   )
 }
 
-
-const MobileEligibility: React.FC<React.HTMLAttributes<any>> = ({ children, className }) => {
+const MobileEligibility: React.FC<React.HTMLAttributes<any>> = ({
+  children,
+  className
+}) => {
   const [open, setOpen] = React.useState(false)
 
   return (
     <div className={className}>
-      <div 
+      <div
         sx={{
-          background: '#f2f3f4', 
+          background: '#f2f3f4',
           alignItems: 'center',
-          height: open ? '100px' : '0px',
-          transition: "height .4s ease-in-out",
+          height: open ? 'auto' : '0px',
+          transition: 'height .4s ease-in-out',
           fontSize: '14px',
           overflow: 'hidden',
           boxSizing: 'border-box',
           display: 'block',
           margin: 0
-      }}
+        }}
       >
-        {children}
+        <div sx={{ padding: '15px 20px 10px' }}>
+          <div
+            sx={{
+              fontSize: '14px',
+              color: '#858f94',
+              marginBottom: '5px'
+            }}
+          >
+            Eligibility
+          </div>
+
+          {children}
+        </div>
+
+        <CtaCell styles={{ width: '100%', fontSize: '14px' }}>See Deal</CtaCell>
       </div>
 
-      <button 
+      <button
         sx={{
           background: '#f2f3f4',
           border: 'none',
@@ -195,74 +214,130 @@ const MobileEligibility: React.FC<React.HTMLAttributes<any>> = ({ children, clas
           margin: 'auto',
           padding: '8px',
           lineHeight: '1.618em',
-          color: "#34454E",
+          color: '#34454E',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           fontSize: '13px',
           boxSizing: 'border-box'
-      }}
+        }}
         onClick={() => setOpen(!open)}
       >
-        <div sx={{ pr: '15px'}}>More information</div>
-        <Icon color="#34454E" glyph={'caret'} direction={open ? 'up' : 'down'} size={10} />
+        <div sx={{ pr: '15px' }}>More information</div>
+        <Icon
+          color="#34454E"
+          glyph={'caret'}
+          direction={open ? 'up' : 'down'}
+          size={10}
+        />
       </button>
     </div>
-  ) 
+  )
 }
-
 
 interface DesktopEligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
   hover: boolean
 }
 
-const DesktopEligibility: React.FC<DesktopEligibilityProps> = ({ children, hover, className }) => {
+const DesktopEligibility: React.FC<DesktopEligibilityProps> = ({
+  children,
+  hover
+}) => {
   return (
-    <div sx={{
-      display: ['none', hover ? 'block' : 'none'],
-      position: 'absolute',
-      top: '100%',
-      width: '400px',
-      left: '50%',
-      marginLeft: '-200px',
-      marginTop: '10px',
-      border: '1px solid #000',
-      padding: '5px',
-      zIndex: 1,
-      backgroundColor: 'white',
-      '::before': {
-        bottom: '100%',
-        left: '50%',
-        border: 'solid transparent',
-        content: '""',
-        height: '0',
-        width: '0',
+    <div
+      sx={{
+        display: ['none', hover ? 'block' : 'none'],
         position: 'absolute',
-        pointerEvents: 'none',
-        borderColor: 'rgba(255, 255, 255, 0)',
-        borderBottomColor: '#fff',
-        borderWidth: '10px',
-        marginLeft: '-10px',
+        top: '100%',
+        width: '400px',
+        left: '50%',
+        marginLeft: '-200px',
+        marginTop: '10px',
+        border: '1px solid #000',
+        padding: '5px',
         zIndex: 1,
-      },
-      '::after': {
-        bottom: '100%',
-        left: '50%',
-        border: 'solid transparent',
-        content: '""',
-        height: '0',
-        width: '0',
-        position: 'absolute',
-        pointerEvents: 'none',
-        borderColor: 'rgba(0, 0, 0, 0)',
-        borderBottomColor: '#000',
-        borderWidth: '11px',
-        marginLeft: '-11px',
-      }
-    }}>
+        backgroundColor: 'white',
+        '::before': {
+          bottom: '100%',
+          left: '50%',
+          border: 'solid transparent',
+          content: '""',
+          height: '0',
+          width: '0',
+          position: 'absolute',
+          pointerEvents: 'none',
+          borderColor: 'rgba(255, 255, 255, 0)',
+          borderBottomColor: '#fff',
+          borderWidth: '10px',
+          marginLeft: '-10px',
+          zIndex: 1
+        },
+        '::after': {
+          bottom: '100%',
+          left: '50%',
+          border: 'solid transparent',
+          content: '""',
+          height: '0',
+          width: '0',
+          position: 'absolute',
+          pointerEvents: 'none',
+          borderColor: 'rgba(0, 0, 0, 0)',
+          borderBottomColor: '#000',
+          borderWidth: '11px',
+          marginLeft: '-11px'
+        }
+      }}
+    >
       {children}
     </div>
-  ) 
+  )
+}
+
+interface EligibilityContentRowProps
+  extends React.HTMLAttributes<HTMLDivElement> {
+  label?: string
+  value?: string
+}
+
+const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
+  label,
+  value
+}) => {
+  return (
+    <div
+      sx={{
+        fontSize: '13px',
+        display: 'flex',
+        width: '100%'
+      }}
+    >
+      <label
+        sx={{
+          width: '40%',
+          borderBottom: '2px solid #f7f7f7',
+          borderRight: '1px solid #f7f7f7',
+          background: '#fff',
+          fontFamily: 'Open Sans,Arial,sans-serif',
+          fontSize: '13px',
+          color: '#333',
+          display: 'block'
+        }}
+      >
+        {label}
+      </label>
+      <div
+        sx={{
+          width: '60%',
+          borderBottom: '2px solid #f7f7f7',
+          color: '#924a8b',
+          fontWeight: 600,
+          background: '#fff'
+        }}
+      >
+        {value}
+      </div>
+    </div>
+  )
 }
 
 interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -270,14 +345,16 @@ interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Eligibility: React.FC<EligibilityProps> = ({ children, hover }) => {
-  const [open, setOpen] = React.useState(false)
-
   return (
     <div>
-      <MobileEligibility  sx={{ display: ['block', 'none'] }}>{children}</MobileEligibility>
-      <DesktopEligibility sx={{ display: ['none', 'block'] }} hover={hover}>{children}</DesktopEligibility>
+      <MobileEligibility sx={{ display: ['block', 'none'] }}>
+        {children}
+      </MobileEligibility>
+      <DesktopEligibility sx={{ display: ['none', 'block'] }} hover={hover}>
+        {children}
+      </DesktopEligibility>
     </div>
-  ) 
+  )
 }
 interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   representativeExample: string
@@ -289,7 +366,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   representativeExample,
   info
 }) => {
-  const [hover, setHover] = React.useState(false);
+  const [hover, setHover] = React.useState(false)
 
   return (
     <article
@@ -299,9 +376,12 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         background: '#fff',
         position: 'relative'
       }}
-
-      onMouseEnter={() => { setHover(true)}}
-      onMouseLeave={() => { setHover(false)}}
+      onMouseEnter={() => {
+        setHover(true)
+      }}
+      onMouseLeave={() => {
+        setHover(false)
+      }}
     >
       <a
         href="#"
@@ -333,20 +413,18 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
 
         <AdditionalInfo>
           {info.map((item, key) => {
-            return (<div key={key}>{item}</div>)
+            return <div key={key}>{item}</div>
           })}
         </AdditionalInfo>
 
-        <Footer>
-          {representativeExample}
-        </Footer>
+        <Footer>{representativeExample}</Footer>
       </a>
 
       <Eligibility hover={hover}>
-        hello<br/>
-        hello<br/>
-        hello<br/>
-        hello<br/>
+        <EligibilityContentRow label="UK resident" value="Yes" />
+        <EligibilityContentRow label="Guarantor Required" value="Yes" />
+        <EligibilityContentRow label="Minimum age" value="18 years" />
+        <EligibilityContentRow label="Credit Rating Accepted" value="poor" />
       </Eligibility>
     </article>
   )

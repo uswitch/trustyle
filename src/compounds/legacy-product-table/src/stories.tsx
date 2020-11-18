@@ -18,7 +18,7 @@ in total.`
 const info = [
   'Both applicant and guarantor must be homeowners.',
   'You must be a homeowner to apply for this loan.'
-];
+]
 
 const ExampleProductTable = () => {
   return (
