@@ -184,8 +184,7 @@ const MobileEligibility: React.FC<React.HTMLAttributes<any>> = ({
           fontSize: '14px',
           overflow: 'hidden',
           boxSizing: 'border-box',
-          display: 'block',
-          margin: 0
+          display: 'block'
         }}
       >
         <div sx={{ padding: '15px 20px 10px' }}>
@@ -202,7 +201,11 @@ const MobileEligibility: React.FC<React.HTMLAttributes<any>> = ({
           {children}
         </div>
 
-        <CtaCell styles={{ width: '100%', fontSize: '14px' }}>See Deal</CtaCell>
+        <div sx={{ width: '100%' }}>
+          <CtaCell styles={{ width: '100%', fontSize: '14px', mx: '20px' }}>
+            See Deal
+          </CtaCell>
+        </div>
       </div>
 
       <button
@@ -288,6 +291,29 @@ const DesktopEligibility: React.FC<DesktopEligibilityProps> = ({
         }
       }}
     >
+      <div
+        sx={{
+          color: '#924a8b',
+          fontSize: '18px',
+          px: '5px',
+          py: '5px',
+          fontWeight: 400,
+          fontFamily: 'Open Sans,Arial,sans-serif'
+        }}
+      >
+        Before you continue...
+      </div>
+      <div
+        sx={{
+          color: '#333',
+          fontSize: '13px',
+          px: '5px',
+          pb: '10px',
+          fontFamily: 'Open Sans,Arial,sans-serif'
+        }}
+      >
+        Please make sure you meet the following criteria:
+      </div>
       {children}
     </div>
   )
@@ -303,6 +329,19 @@ const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
   label,
   value
 }) => {
+  const formatValue = (value: string | boolean | undefined) => {
+    if (
+      value === true ||
+      value === 'Yes' ||
+      value === 'yes' ||
+      value === 'true'
+    ) {
+      return <Icon glyph="tick" color={'#6bab51'} size={18} />
+    }
+
+    return value
+  }
+
   return (
     <div
       sx={{
@@ -320,7 +359,8 @@ const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
           fontFamily: 'Open Sans,Arial,sans-serif',
           fontSize: '13px',
           color: '#333',
-          display: 'block'
+          display: 'block',
+          padding: '5px 10px'
         }}
       >
         {label}
@@ -331,10 +371,12 @@ const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
           borderBottom: '2px solid #f7f7f7',
           color: '#924a8b',
           fontWeight: 600,
-          background: '#fff'
+          background: '#fff',
+          padding: '5px 10px',
+          fontSize: '13px'
         }}
       >
-        {value}
+        {formatValue(value)}
       </div>
     </div>
   )
