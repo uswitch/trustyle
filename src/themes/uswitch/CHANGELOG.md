@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.30.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.30.3...@uswitch/trustyle.uswitch-theme@2.30.4) (2020-11-18)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
 ## [2.30.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.30.2...@uswitch/trustyle.uswitch-theme@2.30.3) (2020-11-11)
 
 
