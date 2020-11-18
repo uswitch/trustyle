@@ -10,9 +10,19 @@ export default {
   title: 'Compounds/Legacy Product Table'
 }
 
-export const Example = () => {
+const repExample = `Representative Example: The representative rate is 29% APR (fixed) so
+if you borrow £4,000 over 3 years at a rate of 17% p.a. (fixed) plus a
+service fee of 8.74% p.a. you will repay £160.61 per month & £5,781.96
+in total.`
+
+const info = [
+  'Both applicant and guarantor must be homeowners.',
+  'You must be a homeowner to apply for this loan.'
+];
+
+const ExampleProductTable = () => {
   return (
-    <LegacyProductTable>
+    <LegacyProductTable representativeExample={repExample} info={info}>
       <DataCell
         backgroundColor="#fef6ed"
         borderBottomColor="#fcdbb7"
@@ -45,6 +55,20 @@ export const Example = () => {
 
       <CtaCell>See Deal</CtaCell>
     </LegacyProductTable>
+  )
+}
+
+export const Example = () => {
+  return (
+    <div>
+      <ExampleProductTable />
+      <ExampleProductTable />
+      <ExampleProductTable />
+      <ExampleProductTable />
+      <ExampleProductTable />
+      <ExampleProductTable />
+      <ExampleProductTable />
+    </div>
   )
 }
 

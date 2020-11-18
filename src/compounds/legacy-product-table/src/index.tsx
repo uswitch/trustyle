@@ -3,6 +3,7 @@
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
 import { Button } from '@uswitch/trustyle.button'
+import { Icon } from '@uswitch/trustyle.icon'
 
 const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   return (
@@ -19,7 +20,7 @@ const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   )
 }
 
-const RepresentativeExample: React.FC<React.HTMLAttributes<any>> = ({
+const Footer: React.FC<React.HTMLAttributes<any>> = ({
   children
 }) => {
   return (
@@ -163,27 +164,144 @@ export const CtaCell: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   )
 }
 
-const Eligibility: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
+
+const MobileEligibility: React.FC<React.HTMLAttributes<any>> = ({ children, className }) => {
   const [open, setOpen] = React.useState(false)
 
   return (
-    <div sx={{ display: ['block', 'none'] }}>
-      <button onClick={() => setOpen(!open)}>More information</button>
-      {open && <div>{children}</div>}
+    <div className={className}>
+      <div 
+        sx={{
+          background: '#f2f3f4', 
+          alignItems: 'center',
+          height: open ? '100px' : '0px',
+          transition: "height .4s ease-in-out",
+          fontSize: '14px',
+          overflow: 'hidden',
+          boxSizing: 'border-box',
+          display: 'block',
+          margin: 0
+      }}
+      >
+        {children}
+      </div>
+
+      <button 
+        sx={{
+          background: '#f2f3f4',
+          border: 'none',
+          borderBottom: '1px dashed #b1b1b1',
+          width: '100%',
+          margin: 'auto',
+          padding: '8px',
+          lineHeight: '1.618em',
+          color: "#34454E",
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontSize: '13px',
+          boxSizing: 'border-box'
+      }}
+        onClick={() => setOpen(!open)}
+      >
+        <div sx={{ pr: '15px'}}>More information</div>
+        <Icon color="#34454E" glyph={'caret'} direction={open ? 'up' : 'down'} size={10} />
+      </button>
     </div>
-  )
+  ) 
 }
 
-const LegacyProductTable: React.FC<React.HTMLAttributes<any>> = ({
-  children
+
+interface DesktopEligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
+  hover: boolean
+}
+
+const DesktopEligibility: React.FC<DesktopEligibilityProps> = ({ children, hover, className }) => {
+  return (
+    <div sx={{
+      display: ['none', hover ? 'block' : 'none'],
+      position: 'absolute',
+      top: '100%',
+      width: '400px',
+      left: '50%',
+      marginLeft: '-200px',
+      marginTop: '10px',
+      border: '1px solid #000',
+      padding: '5px',
+      zIndex: 1,
+      backgroundColor: 'white',
+      '::before': {
+        bottom: '100%',
+        left: '50%',
+        border: 'solid transparent',
+        content: '""',
+        height: '0',
+        width: '0',
+        position: 'absolute',
+        pointerEvents: 'none',
+        borderColor: 'rgba(255, 255, 255, 0)',
+        borderBottomColor: '#fff',
+        borderWidth: '10px',
+        marginLeft: '-10px',
+        zIndex: 1,
+      },
+      '::after': {
+        bottom: '100%',
+        left: '50%',
+        border: 'solid transparent',
+        content: '""',
+        height: '0',
+        width: '0',
+        position: 'absolute',
+        pointerEvents: 'none',
+        borderColor: 'rgba(0, 0, 0, 0)',
+        borderBottomColor: '#000',
+        borderWidth: '11px',
+        marginLeft: '-11px',
+      }
+    }}>
+      {children}
+    </div>
+  ) 
+}
+
+interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
+  hover: boolean
+}
+
+const Eligibility: React.FC<EligibilityProps> = ({ children, hover }) => {
+  const [open, setOpen] = React.useState(false)
+
+  return (
+    <div>
+      <MobileEligibility  sx={{ display: ['block', 'none'] }}>{children}</MobileEligibility>
+      <DesktopEligibility sx={{ display: ['none', 'block'] }} hover={hover}>{children}</DesktopEligibility>
+    </div>
+  ) 
+}
+interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
+  representativeExample: string
+  info: string[]
+}
+
+const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
+  children,
+  representativeExample,
+  info
 }) => {
+  const [hover, setHover] = React.useState(false);
+
   return (
     <article
       sx={{
         border: ['none', '1px solid #dadadb'],
-        marginBottom: '60px',
-        background: '#fff'
+        marginBottom: '24px',
+        background: '#fff',
+        position: 'relative'
       }}
+
+      onMouseEnter={() => { setHover(true)}}
+      onMouseLeave={() => { setHover(false)}}
     >
       <a
         href="#"
@@ -214,20 +332,22 @@ const LegacyProductTable: React.FC<React.HTMLAttributes<any>> = ({
         </div>
 
         <AdditionalInfo>
-          Both applicant and guarantor must be homeowners.
-          <br />
-          You must be a homeowner to apply for this loan.
+          {info.map((item, key) => {
+            return (<div key={key}>{item}</div>)
+          })}
         </AdditionalInfo>
 
-        <RepresentativeExample>
-          Representative Example: The representative rate is 29% APR (fixed) so
-          if you borrow £4,000 over 3 years at a rate of 17% p.a. (fixed) plus a
-          service fee of 8.74% p.a. you will repay £160.61 per month & £5,781.96
-          in total.
-        </RepresentativeExample>
+        <Footer>
+          {representativeExample}
+        </Footer>
       </a>
 
-      <Eligibility>hello</Eligibility>
+      <Eligibility hover={hover}>
+        hello<br/>
+        hello<br/>
+        hello<br/>
+        hello<br/>
+      </Eligibility>
     </article>
   )
 }
