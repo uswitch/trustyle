@@ -648,7 +648,8 @@
         },
         "error": {
           "variant": "elements.input.radioish.label",
-          "color": "error"
+          "color": "error",
+          "textAlign": "left"
         },
         "variants": {
           "normal": {
