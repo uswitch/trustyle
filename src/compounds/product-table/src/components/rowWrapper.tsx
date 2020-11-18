@@ -62,7 +62,13 @@ const linkWrapper = (
   )
 }
 
-const RowWrapper: React.FC<Props> = ({ link, children, headerImage }) => {
+const RowWrapper: React.FC<Props> = ({
+  link,
+  children,
+  headerImage,
+  sx = {},
+  className
+}) => {
   return link ? (
     linkWrapper(link, children, headerImage)
   ) : (
@@ -70,8 +76,10 @@ const RowWrapper: React.FC<Props> = ({ link, children, headerImage }) => {
       sx={{
         paddingX: ['sm', 'md'],
         paddingY: 'md',
-        paddingTop: headerImage && ['sm', 'md']
+        paddingTop: headerImage && ['sm', 'md'],
+        ...sx
       }}
+      className={className}
     >
       {children}
     </div>

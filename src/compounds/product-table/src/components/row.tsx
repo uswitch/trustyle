@@ -106,8 +106,8 @@ const ProductTableRow: React.FC<RowProps> = ({
         sx={{
           position: 'relative',
           border: '1px solid',
-          marginTop: badges.length ? [10, 15] : 0,
-          marginBottom: 'md',
+          marginTop: badges.length ? [20, 40] : 0,
+          marginBottom: badges.length ? 0 : 'md',
           ':last-of-type': {
             marginBottom: 0
           },
@@ -120,18 +120,20 @@ const ProductTableRow: React.FC<RowProps> = ({
       >
         <RowWrapper link={clickableRow} headerImage={image}>
           {!!badges.length && (
-            <div
-              sx={{
-                position: 'absolute',
-                top: 0,
-                transform: 'translateY(-50%)'
-              }}
-            >
-              {badges.map((badge, i) => (
-                <span sx={{ marginRight: 'sm' }} key={i}>
-                  {badge}
-                </span>
-              ))}
+            <div sx={{ mb: 'xs' }}>
+              <div
+                sx={{
+                  position: 'absolute',
+                  top: 0,
+                  transform: 'translateY(-50%)'
+                }}
+              >
+                {badges.map((badge, i) => (
+                  <span sx={{ marginRight: 'sm' }} key={i}>
+                    {badge}
+                  </span>
+                ))}
+              </div>
             </div>
           )}
           <Header
