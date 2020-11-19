@@ -49,7 +49,8 @@ export interface AddonArg {
 }
 
 const formatters: { [unit: string]: (value: number) => string } = {
-  pounds: value => `£${value}`,
+  pounds: value =>
+    value % 1 === 0 ? `£${value}` : `£${Number(value).toFixed(2)}`,
 
   percent: value => `${value}%`,
 

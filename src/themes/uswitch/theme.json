@@ -2213,19 +2213,9 @@
             "main": {
               "alignItems": "baseline",
               "position": "relative",
-              "pl": ["none", "sm"],
               "py": ["sm", "xxs"],
               "borderTop": ["1px solid", "none"],
-              "borderTopColor": "grey-20",
-              "::before": {
-                "position": "absolute",
-                "display": "block",
-                "height": "100%",
-                "content": "' '",
-                "borderLeft": ["none", "1px solid #D0D0D3"],
-                "left": 0,
-                "top": 0
-              }
+              "borderTopColor": "grey-20"
             },
             "variants": {
               "cellImage": {
