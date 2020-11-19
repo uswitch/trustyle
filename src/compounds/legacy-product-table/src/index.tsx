@@ -67,7 +67,6 @@ const BaseCell: React.FC<React.HTMLAttributes<any>> = ({
     flex: 1,
     transition: 'background-color 1s ease',
     textAlign: 'center',
-    // padding: '5px 0 10px',
     order: 2
   }
 
@@ -363,7 +362,7 @@ interface EligibilityContentRowProps
   value?: string
 }
 
-const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
+export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
   label,
   value
 }) => {
@@ -419,17 +418,22 @@ const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
 }
 
 interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
-  hover: boolean
+  hover: boolean,
+  eligibilityContent: React.ReactNode[]
 }
 
-const Eligibility: React.FC<EligibilityProps> = ({ children, hover }) => {
+const Eligibility: React.FC<EligibilityProps> = ({ hover, eligibilityContent }) => {
   return (
     <div>
       <MobileEligibility sx={{ display: ['block', 'none'] }}>
-        {children}
+        {eligibilityContent.map((item) => {
+          return item
+        })}
       </MobileEligibility>
       <DesktopEligibility sx={{ display: ['none', 'block'] }} hover={hover}>
-        {children}
+        {eligibilityContent.map((item) => {
+          return item
+        })}
       </DesktopEligibility>
     </div>
   )
@@ -438,13 +442,15 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   representativeExample: string
   info: string[]
   title: string
+  eligibilityContent: React.ReactNode[]
 }
 
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   children,
   representativeExample,
   info,
-  title
+  title,
+  eligibilityContent
 }) => {
   const [hover, setHover] = React.useState(false)
 
@@ -500,12 +506,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         <Footer>{representativeExample}</Footer>
       </a>
 
-      <Eligibility hover={hover}>
-        <EligibilityContentRow label="UK resident" value="Yes" />
-        <EligibilityContentRow label="Guarantor Required" value="Yes" />
-        <EligibilityContentRow label="Minimum age" value="18 years" />
-        <EligibilityContentRow label="Credit Rating Accepted" value="poor" />
-      </Eligibility>
+      <Eligibility hover={hover} eligibilityContent={eligibilityContent} />
     </article>
   )
 }

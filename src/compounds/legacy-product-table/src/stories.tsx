@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui'
 
 import AllThemes from '../../../utils/all-themes'
 
-import LegacyProductTable, { CtaCell, DataCell, ImageCell } from '.'
+import LegacyProductTable, { CtaCell, DataCell, ImageCell, EligibilityContentRow} from '.'
 
 export default {
   title: 'Compounds/Legacy Product Table'
@@ -21,12 +21,20 @@ const info = [
 ]
 const title = 'Lowest representative APR'
 
+const eligibilityContent = [
+  <EligibilityContentRow label="UK resident" value="Yes" />,
+  <EligibilityContentRow label="Guarantor Required" value="Yes" />,
+  <EligibilityContentRow label="Minimum age" value="18 years" />,
+  <EligibilityContentRow label="Credit Rating Accepted" value="poor" />
+]
+
 const ExampleProductTable = () => {
   return (
     <LegacyProductTable
       representativeExample={repExample}
       info={info}
       title={title}
+      eligibilityContent={eligibilityContent}
     >
       <DataCell
         backgroundColor="#fef6ed"
