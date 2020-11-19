@@ -10,7 +10,7 @@ const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
     <div
       sx={{
         margin: '15px 0',
-        paddingLeft: [0, '145px'],
+        paddingLeft: [0, '160px'],
         fontSize: '12px',
         color: '#858f94'
       }}
@@ -39,13 +39,13 @@ const Footer: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   )
 }
 
-const Header: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
+export const Header: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   return (
     <header>
       <Styled.h5
         sx={{
           color: '#069',
-          pl: ['15px', '145px'],
+          pl: ['15px', '160px'],
           pr: ['15px', 0],
           py: '15px',
           mb: 0,
@@ -67,7 +67,7 @@ const BaseCell: React.FC<React.HTMLAttributes<any>> = ({
     flex: 1,
     transition: 'background-color 1s ease',
     textAlign: 'center',
-    padding: '5px 0 10px',
+    // padding: '5px 0 10px',
     order: 2
   }
 
@@ -85,8 +85,15 @@ export const ImageCell: React.FC<React.HTMLAttributes<any>> = ({
     <BaseCell
       sx={{
         order: 1,
-        maxWidth: 130,
-        margin: 'auto'
+        maxWidth: ['120px', '130px'],
+        margin: 'auto',
+        marginRight: ['auto', '15px'],
+        py: ['10px', 0],
+        '>:first-child': {
+          margin: 'auto',
+          display: 'block',
+          maxWidth: '130px'
+        }
       }}
     >
       {children}
@@ -113,6 +120,7 @@ export const DataCell: React.FC<DataCellProps> = ({
         borderStyle: 'solid',
         backgroundColor,
         borderBottomColor,
+        padding: '5px 0px 10px',
         margin: ['2px 0', '2px'],
         '> strong': {
           background: 'none'
@@ -125,13 +133,23 @@ export const DataCell: React.FC<DataCellProps> = ({
         sx={{
           fontFamily: 'Open Sans,Arial,sans-serif',
           fontSize: '11px',
+          display: 'flex',
+          justifyContent: 'center',
+          padding: '5px 5px 0px',
           color: borderBottomColor
         }}
       >
         {label}
       </strong>
-
-      {children}
+      <div
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          padding: '5px'
+        }}
+      >
+        {children}
+      </div>
     </BaseCell>
   )
 }
@@ -147,7 +165,7 @@ export const CtaCell: React.FC<CtaCellProps> = ({ children, styles }) => {
         flex: 0,
         flexBasis: 'auto',
         margin: 'auto',
-        marginLeft: '15px'
+        marginLeft: ['auto', '15px']
       }}
     >
       <Button
@@ -187,7 +205,7 @@ const MobileEligibility: React.FC<React.HTMLAttributes<any>> = ({
           display: 'block'
         }}
       >
-        <div sx={{ padding: '15px 20px 10px' }}>
+        <div sx={{ padding: '15px 20px 20px' }}>
           <div
             sx={{
               fontSize: '14px',
@@ -198,14 +216,25 @@ const MobileEligibility: React.FC<React.HTMLAttributes<any>> = ({
             Eligibility
           </div>
 
-          {children}
+          <div
+            sx={{
+              background: '#fff'
+            }}
+          >
+            {children}
+          </div>
         </div>
 
-        <div sx={{ width: '100%' }}>
-          <CtaCell styles={{ width: '100%', fontSize: '14px', mx: '20px' }}>
-            See Deal
-          </CtaCell>
-        </div>
+        <CtaCell
+          styles={{
+            width: '-webkit-fill-available',
+            fontSize: '14px',
+            mx: '20px',
+            padding: '.9em 1.85em'
+          }}
+        >
+          See Deal
+        </CtaCell>
       </div>
 
       <button
@@ -314,7 +343,16 @@ const DesktopEligibility: React.FC<DesktopEligibilityProps> = ({
       >
         Please make sure you meet the following criteria:
       </div>
-      {children}
+      <div
+        sx={{
+          padding: '5px',
+          '>:nth-child(odd)': {
+            background: '#f2f3f4'
+          }
+        }}
+      >
+        {children}
+      </div>
     </div>
   )
 }
@@ -352,10 +390,9 @@ const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
     >
       <label
         sx={{
-          width: '40%',
-          borderBottom: '2px solid #f7f7f7',
-          borderRight: '1px solid #f7f7f7',
-          background: '#fff',
+          width: ['40%', '75%'],
+          borderBottom: ['2px solid #f7f7f7', 'none'],
+          borderRight: ['1px solid #f7f7f7', 'none'],
           fontFamily: 'Open Sans,Arial,sans-serif',
           fontSize: '13px',
           color: '#333',
@@ -367,11 +404,10 @@ const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
       </label>
       <div
         sx={{
-          width: '60%',
-          borderBottom: '2px solid #f7f7f7',
+          width: ['60%', '25%'],
+          borderBottom: ['2px solid #f7f7f7', 'none'],
           color: '#924a8b',
           fontWeight: 600,
-          background: '#fff',
           padding: '5px 10px',
           fontSize: '13px'
         }}
@@ -401,12 +437,14 @@ const Eligibility: React.FC<EligibilityProps> = ({ children, hover }) => {
 interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   representativeExample: string
   info: string[]
+  title: string
 }
 
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   children,
   representativeExample,
-  info
+  info,
+  title
 }) => {
   const [hover, setHover] = React.useState(false)
 
@@ -440,13 +478,13 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           }
         }}
       >
-        <Header>Lowest representative APR</Header>
+        <Header>{title}</Header>
 
         <div
           sx={{
             display: ['initial', 'flex'],
             width: '100%',
-            padding: ['0 15px 10px', '0 15px 10px'],
+            padding: ['0', '0 15px 10px'],
             boxSizing: 'border-box'
           }}
         >

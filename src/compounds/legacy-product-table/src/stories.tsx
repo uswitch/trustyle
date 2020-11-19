@@ -19,16 +19,20 @@ const info = [
   'Both applicant and guarantor must be homeowners.',
   'You must be a homeowner to apply for this loan.'
 ]
+const title = 'Lowest representative APR'
 
 const ExampleProductTable = () => {
   return (
-    <LegacyProductTable representativeExample={repExample} info={info}>
+    <LegacyProductTable
+      representativeExample={repExample}
+      info={info}
+      title={title}
+    >
       <DataCell
         backgroundColor="#fef6ed"
         borderBottomColor="#fcdbb7"
         label="Loan amount"
       >
-        <br />
         £1,000 to £10,000
       </DataCell>
 
@@ -37,7 +41,6 @@ const ExampleProductTable = () => {
         borderBottomColor="#fac9b0"
         label="Representative APR"
       >
-        <br />
         29% APR (£1,000 to £10,000)
       </DataCell>
 
@@ -46,7 +49,7 @@ const ExampleProductTable = () => {
         borderBottomColor="#f0b9c8"
         label="Loan term"
       >
-        <br />1 year to 5 years
+        1 year to 5 years
       </DataCell>
 
       <ImageCell>
