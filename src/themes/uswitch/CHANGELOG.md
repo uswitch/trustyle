@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.30.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.30.3...@uswitch/trustyle.uswitch-theme@2.30.4) (2020-11-17)
+
+
+### Bug Fixes
+
+* add card noImage variant ([f9f8094](https://github.com/uswitch/trustyle/commit/f9f8094))
+* add card provider variant ([817f226](https://github.com/uswitch/trustyle/commit/817f226))
+* add carousel styling ([bf7e81f](https://github.com/uswitch/trustyle/commit/bf7e81f))
+
+
+
+
+
+
 ## [2.30.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.30.2...@uswitch/trustyle.uswitch-theme@2.30.3) (2020-11-11)
 
 
