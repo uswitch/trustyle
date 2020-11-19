@@ -10,8 +10,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-
-
 ## [2.12.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.5...@uswitch/trustyle.product-table@2.12.6) (2020-11-17)
 
 **Note:** Version bump only for package @uswitch/trustyle.product-table
