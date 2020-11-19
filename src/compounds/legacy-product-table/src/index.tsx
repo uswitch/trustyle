@@ -360,11 +360,13 @@ interface EligibilityContentRowProps
   extends React.HTMLAttributes<HTMLDivElement> {
   label?: string
   value?: string
+  key?: string
 }
 
 export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
   label,
-  value
+  value,
+  key = ''
 }) => {
   const formatValue = (value: string | boolean | undefined) => {
     if (
@@ -381,6 +383,7 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
 
   return (
     <div
+      key={key}
       sx={{
         fontSize: '13px',
         display: 'flex',
@@ -418,20 +421,23 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
 }
 
 interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
-  hover: boolean,
+  hover: boolean
   eligibilityContent: React.ReactNode[]
 }
 
-const Eligibility: React.FC<EligibilityProps> = ({ hover, eligibilityContent }) => {
+const Eligibility: React.FC<EligibilityProps> = ({
+  hover,
+  eligibilityContent
+}) => {
   return (
     <div>
       <MobileEligibility sx={{ display: ['block', 'none'] }}>
-        {eligibilityContent.map((item) => {
+        {eligibilityContent.map(item => {
           return item
         })}
       </MobileEligibility>
       <DesktopEligibility sx={{ display: ['none', 'block'] }} hover={hover}>
-        {eligibilityContent.map((item) => {
+        {eligibilityContent.map(item => {
           return item
         })}
       </DesktopEligibility>
