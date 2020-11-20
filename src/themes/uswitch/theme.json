@@ -288,7 +288,8 @@
     },
     "h2": {
       "variant": "styles.headings",
-      "fontSize": ["md", "lg", "xl"],
+      "fontSize": ["md", "xl", "xxl"],
+      "lineHeight": ["sm", "xs", "xs"],
       "mt": "lg",
       "mb": "md"
     },
