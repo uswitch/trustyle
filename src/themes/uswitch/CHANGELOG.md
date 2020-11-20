@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.30.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.30.6...@uswitch/trustyle.uswitch-theme@2.30.7) (2020-11-20)
+
+
+### Bug Fixes
+
+* h2 font size and line height update ([03972d2](https://github.com/uswitch/trustyle/commit/03972d2))
+
+
+
+
+
+
 ## [2.30.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.30.4...@uswitch/trustyle.uswitch-theme@2.30.6) (2020-11-19)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
