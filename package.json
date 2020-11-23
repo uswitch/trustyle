@@ -57,6 +57,7 @@
     "@types/react-input-mask": "^2.0.3",
     "@types/react-measure": "^2.0.6",
     "@types/react-transition-group": "^2.9.2",
+    "@types/theme-ui__color": "0.3.0",
     "@types/styled-system": "^5.1.9",
     "@types/webpack-env": "^1.15.2",
     "@typescript-eslint/eslint-plugin": "^1.10.2",
