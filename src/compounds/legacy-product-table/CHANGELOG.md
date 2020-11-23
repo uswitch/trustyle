@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.1.0...@uswitch/trustyle.legacy-product-table@0.1.1) (2020-11-20)
+
+
+### Bug Fixes
+
+* prettier ([2d6c008](https://github.com/uswitch/trustyle/commit/2d6c008))
+
+
+
+
+
+
 # 0.1.0 (2020-11-19)
 
 
