@@ -22,8 +22,13 @@ export const ExampleWithKnobs = () => {
   )
   const imgAlt = text('Image Alt', 'iPhone 11')
   const usps = [
-    text('USP', 'Free insurance for 2 months'),
-    text('USP2', 'Second USP')
+    { text: text('USP', 'Free insurance for 2 months') },
+    {
+      text: text('USP2', 'Second USP'),
+      color: 'linear-gradient(90deg, #C1B0E6 0%, #C1C0FF 100%)',
+      beforeColor: '#141424',
+      uspSx: { '> span': { color: '#141424' } }
+    }
   ]
   const backgroundColor = text('Background Colour', '#ff55c4')
   const href = text('href', 'https://www.uswitch.com/mobiles/')
