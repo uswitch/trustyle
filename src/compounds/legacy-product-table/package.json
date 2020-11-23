@@ -12,7 +12,7 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.button": "^3.0.1",
+    "@uswitch/trustyle.button-link": "^3.0.0",
     "@uswitch/trustyle.icon": "^1.18.0"
   }
 }
