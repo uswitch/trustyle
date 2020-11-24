@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.13.6...@uswitch/trustyle.save-on-energy-theme@1.13.7) (2020-11-24)
+
+
+### Bug Fixes
+
+* Add correct dimensions to provider img ([bc5b0c0](https://github.com/uswitch/trustyle/commit/bc5b0c0))
+
+
+
+
+
 ## [1.13.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.13.5...@uswitch/trustyle.save-on-energy-theme@1.13.6) (2020-11-10)
 
 

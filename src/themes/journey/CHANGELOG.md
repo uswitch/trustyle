@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.11.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.11.4...@uswitch/trustyle.journey-theme@2.11.5) (2020-11-24)
+
+
+### Bug Fixes
+
+* Add correct dimensions to provider img ([bc5b0c0](https://github.com/uswitch/trustyle/commit/bc5b0c0))
+
+
+
+
+
 ## [2.11.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.11.3...@uswitch/trustyle.journey-theme@2.11.4) (2020-11-10)
 
 

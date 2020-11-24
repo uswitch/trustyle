@@ -43,6 +43,8 @@ const SponsoredByTag: React.FC<Props> = ({
       alt={providerName}
       imgixParams={{ fit: 'clip' }}
       critical
+      height={46}
+      width={92}
       sx={{
         variant: `${lookup(variant)}.image`
       }}

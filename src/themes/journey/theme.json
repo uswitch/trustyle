@@ -414,7 +414,9 @@
           "fontStyle": "normal"
         },
         "image": {
-          "height": [40, 56]
+          "max-height": [42, 46],
+          "max-width": 92,
+          "margin-top": [null, "10px"]
         }
       }
     },
