@@ -90,7 +90,7 @@ export const ImageCell: React.FC<React.HTMLAttributes<any>> = ({
         margin: 'auto',
         marginRight: ['auto', '15px'],
         py: ['10px', 0],
-        ':first-of-type': {
+        '>:first-child': {
           margin: 'auto',
           display: 'block',
           maxWidth: '130px',
@@ -476,7 +476,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         marginBottom: '24px',
         background: '#fff',
         position: 'relative',
-        ':first-child': {
+        ':first-of-type': {
           marginTop: '10px'
         }
       }}
