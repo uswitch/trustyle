@@ -90,7 +90,7 @@ export const ImageCell: React.FC<React.HTMLAttributes<any>> = ({
         margin: 'auto',
         marginRight: ['auto', '15px'],
         py: ['10px', 0],
-        '>:first-child': {
+        ':first-of-type': {
           margin: 'auto',
           display: 'block',
           maxWidth: '130px',
