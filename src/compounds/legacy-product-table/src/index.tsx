@@ -93,7 +93,8 @@ export const ImageCell: React.FC<React.HTMLAttributes<any>> = ({
         '>:first-child': {
           margin: 'auto',
           display: 'block',
-          maxWidth: '130px'
+          maxWidth: '130px',
+          maxHeight: '90px'
         }
       }}
     >
@@ -474,7 +475,10 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         border: ['none', '1px solid #dadadb'],
         marginBottom: '24px',
         background: '#fff',
-        position: 'relative'
+        position: 'relative',
+        ':first-of-type': {
+          marginTop: '10px'
+        }
       }}
       onMouseEnter={() => {
         setHover(true)
