@@ -2,8 +2,10 @@
 
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
-import { Button } from '@uswitch/trustyle.button'
+import { ButtonLink } from '@uswitch/trustyle.button-link'
 import { Icon } from '@uswitch/trustyle.icon'
+
+import RowWrapper from './rowWrapper'
 
 const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   return (
@@ -91,7 +93,8 @@ export const ImageCell: React.FC<React.HTMLAttributes<any>> = ({
         '>:first-child': {
           margin: 'auto',
           display: 'block',
-          maxWidth: '130px'
+          maxWidth: '130px',
+          maxHeight: '90px'
         }
       }}
     >
@@ -155,9 +158,10 @@ export const DataCell: React.FC<DataCellProps> = ({
 
 interface CtaCellProps extends React.HTMLAttributes<HTMLDivElement> {
   styles?: any
+  href?: string
 }
 
-export const CtaCell: React.FC<CtaCellProps> = ({ children, styles }) => {
+export const CtaCell: React.FC<CtaCellProps> = ({ children, styles, href }) => {
   return (
     <BaseCell
       sx={{
@@ -167,8 +171,11 @@ export const CtaCell: React.FC<CtaCellProps> = ({ children, styles }) => {
         marginLeft: ['auto', '15px']
       }}
     >
-      <Button
+      <ButtonLink
         variant="primary"
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
         size="small"
         sx={{
           background: 'linear-gradient(90deg, #924A8B 5%, #DB4D75 95%)',
@@ -179,7 +186,7 @@ export const CtaCell: React.FC<CtaCellProps> = ({ children, styles }) => {
         }}
       >
         {children}
-      </Button>
+      </ButtonLink>
     </BaseCell>
   )
 }
@@ -449,6 +456,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   info: string[]
   title: string
   eligibilityContent: React.ReactNode[]
+  clickableRow?: string
 }
 
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
@@ -456,7 +464,8 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   representativeExample,
   info,
   title,
-  eligibilityContent
+  eligibilityContent,
+  clickableRow
 }) => {
   const [hover, setHover] = React.useState(false)
 
@@ -466,7 +475,10 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         border: ['none', '1px solid #dadadb'],
         marginBottom: '24px',
         background: '#fff',
-        position: 'relative'
+        position: 'relative',
+        ':first-of-type': {
+          marginTop: '10px'
+        }
       }}
       onMouseEnter={() => {
         setHover(true)
@@ -475,21 +487,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         setHover(false)
       }}
     >
-      <a
-        href="#"
-        sx={{
-          textDecoration: 'none',
-          ':hover:not(:disabled)': {
-            button: {
-              background: '#db4d75'
-            },
-            header: {
-              textDecoration: 'underline',
-              textDecorationColor: '#069'
-            }
-          }
-        }}
-      >
+      <RowWrapper link={clickableRow}>
         <Header>{title}</Header>
 
         <div
@@ -510,7 +508,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         </AdditionalInfo>
 
         <Footer>{representativeExample}</Footer>
-      </a>
+      </RowWrapper>
 
       <Eligibility hover={hover} eligibilityContent={eligibilityContent} />
     </article>

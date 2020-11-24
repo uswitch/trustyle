@@ -33,6 +33,8 @@ const eligibilityContent = [
   <EligibilityContentRow label="Credit Rating Accepted" value="poor" key="3" />
 ]
 
+const clickableRow = 'https://www.money.co.uk'
+
 const ExampleProductTable = () => {
   return (
     <LegacyProductTable
@@ -40,6 +42,7 @@ const ExampleProductTable = () => {
       info={info}
       title={title}
       eligibilityContent={eligibilityContent}
+      clickableRow={clickableRow}
     >
       <DataCell
         backgroundColor="#fef6ed"
@@ -69,7 +72,7 @@ const ExampleProductTable = () => {
         <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
       </ImageCell>
 
-      <CtaCell>See Deal</CtaCell>
+      <CtaCell href={clickableRow}>See Deal</CtaCell>
     </LegacyProductTable>
   )
 }
