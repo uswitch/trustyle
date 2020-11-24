@@ -5,6 +5,8 @@ import { jsx, Styled } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
 import { Icon } from '@uswitch/trustyle.icon'
 
+import RowWrapper from './rowWrapper'
+
 const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   return (
     <div
@@ -481,23 +483,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         setHover(false)
       }}
     >
-      <a
-        href={clickableRow}
-        target="_blank"
-        rel="noopener noreferrer"
-        sx={{
-          textDecoration: 'none',
-          ':hover:not(:disabled)': {
-            'a, button': {
-              background: '#db4d75'
-            },
-            header: {
-              textDecoration: 'underline',
-              textDecorationColor: '#069'
-            }
-          }
-        }}
-      >
+      <RowWrapper link={clickableRow}>
         <Header>{title}</Header>
 
         <div
@@ -518,7 +504,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         </AdditionalInfo>
 
         <Footer>{representativeExample}</Footer>
-      </a>
+      </RowWrapper>
 
       <Eligibility hover={hover} eligibilityContent={eligibilityContent} />
     </article>
