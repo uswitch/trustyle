@@ -17,6 +17,7 @@ interface Usp {
   text: string
   color?: string
   beforeColor?: string
+  sx?: object
 }
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
@@ -79,15 +80,18 @@ interface UspTagsProps {
 
 const UspTags: React.FC<UspTagsProps> = ({ usps, uspSx = {} }) => (
   <React.Fragment>
-    {usps.map((usp, index) => (
-      <UspTag
-        usp={usp.text}
-        backgroundColor={usp.color}
-        beforeColor={usp.beforeColor}
-        key={index}
-        sx={uspSx}
-      />
-    ))}
+    {usps.map((usp, index) => {
+      console.log({ ...uspSx, ...usp.sx })
+      return (
+        <UspTag
+          usp={usp.text}
+          backgroundColor={usp.color}
+          beforeColor={usp.beforeColor}
+          key={index}
+          sx={{ ...usp.sx, ...uspSx }}
+        />
+      )
+    })}
   </React.Fragment>
 )
 
