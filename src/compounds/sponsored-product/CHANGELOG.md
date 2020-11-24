@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.4.1...@uswitch/trustyle.sponsored-product@3.5.0) (2020-11-24)
+
+
+### Bug Fixes
+
+* put Icon back rather than Caret. ([1b4c65d](https://github.com/uswitch/trustyle/commit/1b4c65d))
+* remove console log ([646fcae](https://github.com/uswitch/trustyle/commit/646fcae))
+
+
+### Features
+
+* allow usps to pass in individual styling. ([55a893f](https://github.com/uswitch/trustyle/commit/55a893f))
+
+
+
+
+
 ## [3.4.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.4.0...@uswitch/trustyle.sponsored-product@3.4.1) (2020-11-16)
 
 **Note:** Version bump only for package @uswitch/trustyle.sponsored-product

@@ -93,7 +93,8 @@ export const ExampleWithKnobs = () => {
                 {
                   text: 'Superfast Broadband ever',
                   color: 'linear-gradient(90deg, #C1B0E6 0%, #C1C0FF 100%)',
-                  beforeColor: '#141424'
+                  beforeColor: '#141424',
+                  sx: { span: { color: '#141424' } }
                 }
               ]}
               boxShadowColor={'#AC96DE'}
@@ -117,7 +118,7 @@ export const ExampleWithKnobs = () => {
                 }
               ]}
               uspSx={{
-                span: {
+                '> span': {
                   fontSize: 12
                 }
               }}
