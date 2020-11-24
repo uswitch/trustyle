@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { jsx } from 'theme-ui'
-import { Icon } from '@uswitch/trustyle.icon'
+import { Caret } from '@uswitch/trustyle.icon/lib/caret'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
 import PrimaryInfoBlock from '@uswitch/trustyle.primary-info-block'
 import UspTag from '@uswitch/trustyle.usp-tag'
@@ -80,18 +80,15 @@ interface UspTagsProps {
 
 const UspTags: React.FC<UspTagsProps> = ({ usps, uspSx = {} }) => (
   <React.Fragment>
-    {usps.map((usp, index) => {
-      console.log({ ...uspSx, ...usp.sx })
-      return (
-        <UspTag
-          usp={usp.text}
-          backgroundColor={usp.color}
-          beforeColor={usp.beforeColor}
-          key={index}
-          sx={{ ...usp.sx, ...uspSx }}
-        />
-      )
-    })}
+    {usps.map((usp, index) => (
+      <UspTag
+        usp={usp.text}
+        backgroundColor={usp.color}
+        beforeColor={usp.beforeColor}
+        key={index}
+        sx={{ ...usp.sx, ...uspSx }}
+      />
+    ))}
   </React.Fragment>
 )
 
@@ -335,10 +332,9 @@ const SponsoredProduct: React.FC<Props> = ({
                 marginBottom: 'sm'
               }}
             >
-              <Icon
+              <Caret
                 color="white"
                 direction="right"
-                glyph="caret"
                 size={20}
                 sx={{
                   flexShrink: 0
