@@ -1293,15 +1293,15 @@
           }
         }
       },
-      "error": {	
-        "variant": "elements.form.input.wrapper",	
-        "color": "error",	
-        "mt": "xs",	
-        "textAlign": "left",	
-        "title": {	
-          "fontWeight": "bold",	
-          "mb": "xxs"	
-        }	
+      "error": {
+        "variant": "elements.form.input.wrapper",
+        "color": "error",
+        "mt": "xs",
+        "textAlign": "left",
+        "title": {
+          "fontWeight": "bold",
+          "mb": "xxs"
+        }
       }
     },
     "rich-text-block": {
