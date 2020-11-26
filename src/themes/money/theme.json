@@ -1292,16 +1292,6 @@
             "pb": ["xs", 0]
           }
         }
-      },
-      "error": {
-        "variant": "elements.form.input.wrapper",
-        "color": "error",
-        "mt": "xs",
-        "textAlign": "left",
-        "title": {
-          "fontWeight": "bold",
-          "mb": "xxs"
-        }
       }
     },
     "rich-text-block": {
@@ -1714,6 +1704,9 @@
           "textDecoration": "none",
           "transition": "none"
         }
+      },
+      "headerImage": {
+        "display": ["none", "flex"]
       },
       "addonFooter": {
         "main": {
