@@ -2722,48 +2722,6 @@
             "variant": "compounds.card.base.link"
           }
         },
-        "provider": {
-          "display": "flex",
-          "width": "100%",
-          "height": [
-            "card.variants.provider.height.desktop",
-            "card.variants.provider.height.tablet",
-            "card.variants.provider.height.desktop"
-          ],
-          "flexDirection": "column",
-          "alignItems": "center",
-          "border": "1px solid",
-          "borderColor": "grey-20",
-          "image": {
-            "flex": 4,
-            "display": "flex",
-            "borderBottom": "none",
-            "textDecoration": "none",
-            "mb": 0,
-            "maxWidth": [
-              "card.variants.provider.image.maxWidth.mobile",
-              "card.variants.provider.image.maxWidth.tablet",
-              "card.variants.provider.image.maxWidth.desktop"
-            ],
-            "img": {
-              "objectFit": "contain",
-              "mx": "auto",
-              "display": "block",
-              "maxWidth": "inherit"
-            }
-          },
-          "content": {
-            "flex": 1,
-            "display": "flex",
-            "alignItems": "center",
-            "justifyContent": "center",
-            "p": {
-              "variant": "styles.p",
-              "color": "grey-60",
-              "mb": "md"
-            }
-          }
-        },
         "horizontal": {
           "variant": "compounds.card.base",
           "display": "flex",
@@ -2851,7 +2809,49 @@
               "height": [21, 28, 28],
               "mt": [4, 3, 3]
             }
-          }
+          },
+          "provider": {
+            "display": "flex",
+            "width": "100%",
+            "height": [
+              "card.variants.provider.height.desktop",
+              "card.variants.provider.height.tablet",
+              "card.variants.provider.height.desktop"
+            ],
+            "flexDirection": "column",
+            "alignItems": "center",
+            "border": "1px solid",
+            "borderColor": "grey-20",
+            "image": {
+              "flex": 4,
+              "display": "flex",
+              "borderBottom": "none",
+              "textDecoration": "none",
+              "mb": 0,
+              "maxWidth": [
+                "card.variants.provider.image.maxWidth.mobile",
+                "card.variants.provider.image.maxWidth.tablet",
+                "card.variants.provider.image.maxWidth.desktop"
+              ],
+              "img": {
+                "objectFit": "contain",
+                "mx": "auto",
+                "display": "block",
+                "maxWidth": "inherit"
+              }
+            },
+            "content": {
+              "flex": 1,
+              "display": "flex",
+              "alignItems": "center",
+              "justifyContent": "center",
+              "p": {
+                "variant": "styles.p",
+                "color": "grey-60",
+                "mb": "md"
+              }
+            }
+          },
         }
       }
     },
@@ -3514,15 +3514,15 @@
     "collectionCarousel": {
       "base": {
         "pb": ["lg", "xxxl"],
-        ".glider-dots": {	
-          "mt": "lg",	
-          "pt": "xs",	
-          ".glider-dot": {	
-            "backgroundColor": "grey-20",	
-            "&.active": {	
-              "backgroundColor": "uswitch-navy"	
-            }	
-          }	
+        ".glider-dots": {
+          "mt": "lg",
+          "pt": "xs",
+          ".glider-dot": {
+            "backgroundColor": "grey-20",
+            "&.active": {
+              "backgroundColor": "uswitch-navy"
+            }
+          }
         }
       },
       "container": {
@@ -3530,10 +3530,10 @@
         "maxWidth": 1200,
         "mx": "auto",
         "position": "relative",
-        ".glider-slide": {	
-          ".flex-grid-container": {	
-            "px": "xxs"	
-          }	
+        ".glider-slide": {
+          ".flex-grid-container": {
+            "px": "xxs"
+          }
         }
       }
     }
