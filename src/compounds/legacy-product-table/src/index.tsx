@@ -106,6 +106,7 @@ export const ImageCell: React.FC<React.HTMLAttributes<any>> = ({
 interface DataCellProps extends React.HTMLAttributes<HTMLDivElement> {
   backgroundColor?: string
   borderBottomColor?: string
+  color?: string
   label?: string
 }
 
@@ -113,6 +114,7 @@ export const DataCell: React.FC<DataCellProps> = ({
   children,
   backgroundColor,
   borderBottomColor,
+  color,
   label
 }) => {
   return (
@@ -138,7 +140,7 @@ export const DataCell: React.FC<DataCellProps> = ({
           display: 'flex',
           justifyContent: 'center',
           padding: '5px 5px 0px',
-          color: borderBottomColor
+          color
         }}
       >
         {label}
@@ -191,14 +193,20 @@ export const CtaCell: React.FC<CtaCellProps> = ({ children, styles, href }) => {
   )
 }
 
-const MobileEligibility: React.FC<React.HTMLAttributes<any>> = ({
+interface MobileEligibilityProps
+  extends React.MapHTMLAttributes<HTMLDivElement> {
+  href?: string
+}
+
+const MobileEligibility: React.FC<MobileEligibilityProps> = ({
   children,
-  className
+  className,
+  href
 }) => {
   const [open, setOpen] = React.useState(false)
 
   return (
-    <div className={className}>
+    <div className={className} sx={{ display: ['block', 'none'] }}>
       <div
         sx={{
           background: '#f2f3f4',
@@ -208,7 +216,7 @@ const MobileEligibility: React.FC<React.HTMLAttributes<any>> = ({
           fontSize: '14px',
           overflow: 'hidden',
           boxSizing: 'border-box',
-          display: 'block'
+          display: ['block', 'none']
         }}
       >
         <div sx={{ padding: '15px 20px 20px' }}>
@@ -238,6 +246,7 @@ const MobileEligibility: React.FC<React.HTMLAttributes<any>> = ({
             mx: '20px',
             padding: '.9em 1.85em'
           }}
+          href={href}
         >
           See Deal
         </CtaCell>
@@ -253,7 +262,7 @@ const MobileEligibility: React.FC<React.HTMLAttributes<any>> = ({
           padding: '8px',
           lineHeight: '1.618em',
           color: '#34454E',
-          display: 'flex',
+          display: ['flex', 'none'],
           alignItems: 'center',
           justifyContent: 'center',
           fontSize: '13px',
@@ -430,15 +439,20 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
 interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
   hover: boolean
   eligibilityContent: React.ReactNode[]
+  clickableRow?: string
 }
 
 const Eligibility: React.FC<EligibilityProps> = ({
   hover,
-  eligibilityContent
+  eligibilityContent,
+  clickableRow
 }) => {
   return (
     <div>
-      <MobileEligibility sx={{ display: ['block', 'none'] }}>
+      <MobileEligibility
+        sx={{ display: ['block', 'none'] }}
+        href={clickableRow}
+      >
         {eligibilityContent.map(item => {
           return item
         })}
@@ -494,7 +508,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           sx={{
             display: ['initial', 'flex'],
             width: '100%',
-            padding: ['0', '0 15px 10px'],
+            paddingX: ['0', '15px'],
             boxSizing: 'border-box'
           }}
         >
@@ -510,7 +524,11 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         <Footer>{representativeExample}</Footer>
       </RowWrapper>
 
-      <Eligibility hover={hover} eligibilityContent={eligibilityContent} />
+      <Eligibility
+        hover={hover}
+        eligibilityContent={eligibilityContent}
+        clickableRow={clickableRow}
+      />
     </article>
   )
 }
