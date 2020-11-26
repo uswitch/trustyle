@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.2.1...@uswitch/trustyle.legacy-product-table@0.2.2) (2020-11-26)
+
+
+### Bug Fixes
+
+* eligibility bugs and data cell fonts ([3d27e1c](https://github.com/uswitch/trustyle/commit/3d27e1c))
+
+
+
+
+
 ## [0.2.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.2.0...@uswitch/trustyle.legacy-product-table@0.2.1) (2020-11-24)
 
 
