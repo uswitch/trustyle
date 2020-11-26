@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.save-on-energy-theme",
-  "version": "1.13.7",
+  "version": "1.13.8",
   "license": "MIT",
   "main": "index.js",
   "publishConfig": {
