@@ -22,15 +22,23 @@ const checkClickTargetIsAccordion = (n: number, e: any) => {
   return false
 }
 
+const checkClickTargetIsLink = (e: any) => {
+  if (e.target.nodeName.toLowerCase() === 'a') {
+    return true
+  }
+}
+
 const linkWrapper = (
   link: string,
   children: React.ReactNode,
   headerImage?: React.ReactNode
 ) => {
   const handleClick = (e: any) => {
-    if (checkClickTargetIsAccordion(10, e)) {
+    if (checkClickTargetIsAccordion(10, e) && !checkClickTargetIsLink(e)) {
       e.preventDefault()
     }
+
+    return e
   }
 
   return (

@@ -9,6 +9,7 @@ import { Bill } from './bill'
 import { Book } from './book'
 import { Calendar } from './calendar'
 import { Caret } from './caret'
+import { Car } from './car'
 import { CaretFinal } from './caretFinal'
 import { Check } from './check'
 import { Clock } from './clock'
@@ -30,6 +31,7 @@ import { Information } from './information'
 import { Letter } from './letter'
 import { LinkedIn } from './linkedIn'
 import { Location } from './location'
+import { Magnifier } from './magnifier'
 import { Minus } from './minus'
 import { Mobile } from './mobile'
 import { MoneyFilter } from './money-filter'
@@ -52,6 +54,8 @@ import { StarFilled } from './star-filled'
 import { StarOutlined } from './star-outlined'
 import { StarHalfFilled } from './star-half-filled'
 import { Warning } from './warning'
+import { Facebook } from './facebook'
+import { PhoneSimple } from './phone-simple'
 
 export type Glyph =
   | 'arrow'
@@ -59,6 +63,7 @@ export type Glyph =
   | 'bill'
   | 'book'
   | 'calendar'
+  | 'car'
   | 'caret'
   | 'caretFinal'
   | 'check'
@@ -71,6 +76,7 @@ export type Glyph =
   | 'email'
   | 'email-filled'
   | 'error'
+  | 'facebook'
   | 'filled-arrow'
   | 'filters'
   | 'four'
@@ -80,12 +86,14 @@ export type Glyph =
   | 'letter'
   | 'linkedIn'
   | 'location'
+  | 'magnifier'
   | 'minus'
   | 'mobile'
   | 'money-filter'
   | 'one'
   | 'person'
   | 'phone'
+  | 'phone-simple'
   | 'plus'
   | 'question'
   | 'smile'
@@ -136,6 +144,8 @@ export const Icon: React.FC<Props> = ({
       return <Book color={color} size={size} />
     case 'calendar':
       return <Calendar color={color} size={size} />
+    case 'car':
+      return <Car color={color} size={size} />
     case 'caret':
       return <Caret color={color} direction={direction} size={size} />
     case 'caretFinal':
@@ -160,6 +170,8 @@ export const Icon: React.FC<Props> = ({
       return <EmailFilled color={color} size={size} />
     case 'error':
       return <ErrorIcon color={color} size={size} />
+    case 'facebook':
+      return <Facebook color={color} size={size} />
     case 'filled-arrow':
       return <FilledArrow color={color} size={size} />
     case 'filters':
@@ -178,6 +190,8 @@ export const Icon: React.FC<Props> = ({
       return <LinkedIn color={color} size={size} />
     case 'location':
       return <Location color={color} size={size} />
+    case 'magnifier':
+      return <Magnifier color={color} size={size} />
     case 'minus':
       return <Minus color={color} size={size} />
     case 'mobile':
@@ -190,6 +204,8 @@ export const Icon: React.FC<Props> = ({
       return <Person color={color} size={size} />
     case 'phone':
       return <Phone color={color} size={size} />
+    case 'phone-simple':
+      return <PhoneSimple color={color} size={size} />
     case 'plus':
       return <Plus color={color} size={size} />
     case 'question':

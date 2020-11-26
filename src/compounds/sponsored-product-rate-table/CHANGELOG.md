@@ -3,6 +3,108 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@3.3.0...@uswitch/trustyle.sponsored-product-rate-table@3.3.1) (2020-11-24)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product-rate-table
+
+
+
+
+
+# [3.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@3.2.1...@uswitch/trustyle.sponsored-product-rate-table@3.3.0) (2020-11-23)
+
+
+### Features
+
+* update story for sponsored product rate table ([1226a5c](https://github.com/uswitch/trustyle/commit/1226a5c))
+
+
+
+
+
+## [3.2.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@3.2.0...@uswitch/trustyle.sponsored-product-rate-table@3.2.1) (2020-11-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product-rate-table
+
+
+
+
+
+# [3.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@3.1.18...@uswitch/trustyle.sponsored-product-rate-table@3.2.0) (2020-11-16)
+
+
+### Features
+
+* move icons to peer deps ([695a6bd](https://github.com/uswitch/trustyle/commit/695a6bd))
+
+
+
+
+
+## [3.1.18](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@3.1.17...@uswitch/trustyle.sponsored-product-rate-table@3.1.18) (2020-11-13)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product-rate-table
+
+
+
+
+
+## [3.1.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@3.1.16...@uswitch/trustyle.sponsored-product-rate-table@3.1.17) (2020-11-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product-rate-table
+
+
+
+
+
+## [3.1.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@3.1.15...@uswitch/trustyle.sponsored-product-rate-table@3.1.16) (2020-11-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product-rate-table
+
+
+
+
+
+## [3.1.15](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@3.1.14...@uswitch/trustyle.sponsored-product-rate-table@3.1.15) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product-rate-table
+
+
+
+
+
+## [3.1.14](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@3.1.13...@uswitch/trustyle.sponsored-product-rate-table@3.1.14) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product-rate-table
+
+
+
+
+
+## [3.1.13](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@3.1.12...@uswitch/trustyle.sponsored-product-rate-table@3.1.13) (2020-11-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product-rate-table
+
+
+
+
+
+## [3.1.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@3.1.11...@uswitch/trustyle.sponsored-product-rate-table@3.1.12) (2020-11-06)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product-rate-table
+
+
+
+
+
+## [3.1.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@3.1.10...@uswitch/trustyle.sponsored-product-rate-table@3.1.11) (2020-11-03)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product-rate-table
+
+
+
+
+
 ## [3.1.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@3.1.8...@uswitch/trustyle.sponsored-product-rate-table@3.1.10) (2020-10-29)
 
 

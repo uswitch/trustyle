@@ -3,6 +3,60 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.12.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.7...@uswitch/trustyle.product-table@2.12.8) (2020-11-19)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.12.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.6...@uswitch/trustyle.product-table@2.12.7) (2020-11-19)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+## [2.12.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.5...@uswitch/trustyle.product-table@2.12.6) (2020-11-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.12.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.4...@uswitch/trustyle.product-table@2.12.5) (2020-11-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.12.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.3...@uswitch/trustyle.product-table@2.12.4) (2020-11-04)
+
+
+### Bug Fixes
+
+* fourth column on product tables ([fd18f09](https://github.com/uswitch/trustyle/commit/fd18f09))
+
+
+
+
+
+## [2.12.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.2...@uswitch/trustyle.product-table@2.12.3) (2020-11-03)
+
+
+### Bug Fixes
+
+* allow button to be clicked inside of eligibility criteria ([3d31db4](https://github.com/uswitch/trustyle/commit/3d31db4))
+* refactor handleClick ([75db3a7](https://github.com/uswitch/trustyle/commit/75db3a7))
+
+
+
+
+
 ## [2.12.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.1...@uswitch/trustyle.product-table@2.12.2) (2020-10-29)
 
 

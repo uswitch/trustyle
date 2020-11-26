@@ -11,7 +11,8 @@ export const ProductTableHeaderImage: React.FC = ({ children }) => (
       display: ['none', 'flex'],
       alignItems: 'center',
       justifyContent: 'center',
-      marginLeft: -8
+      marginLeft: -8,
+      variant: 'compounds.product-table.headerImage'
     }}
   >
     <div

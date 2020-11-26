@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.testimonial-card@0.2.0...@uswitch/trustyle.testimonial-card@0.2.1) (2020-11-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.testimonial-card
+
+
+
+
+
+# [0.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.testimonial-card@0.1.20...@uswitch/trustyle.testimonial-card@0.2.0) (2020-11-16)
+
+
+### Features
+
+* move icons to peer deps ([695a6bd](https://github.com/uswitch/trustyle/commit/695a6bd))
+
+
+
+
+
+## [0.1.20](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.testimonial-card@0.1.19...@uswitch/trustyle.testimonial-card@0.1.20) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.testimonial-card
+
+
+
+
+
+## [0.1.19](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.testimonial-card@0.1.18...@uswitch/trustyle.testimonial-card@0.1.19) (2020-11-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.testimonial-card
+
+
+
+
+
+## [0.1.18](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.testimonial-card@0.1.17...@uswitch/trustyle.testimonial-card@0.1.18) (2020-11-06)
+
+**Note:** Version bump only for package @uswitch/trustyle.testimonial-card
+
+
+
+
+
 ## [0.1.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.testimonial-card@0.1.15...@uswitch/trustyle.testimonial-card@0.1.17) (2020-10-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.testimonial-card
