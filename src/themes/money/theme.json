@@ -1715,6 +1715,9 @@
           "transition": "none"
         }
       },
+      "headerImage": {
+        "display": ["none", "flex"]
+      },
       "addonFooter": {
         "main": {
           "borderTopColor": "grey-20",

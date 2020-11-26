@@ -288,7 +288,7 @@
     },
     "h2": {
       "variant": "styles.headings",
-      "fontSize": ["md", "xl", "xxl"],
+      "fontSize": ["md", "lg", "xl"],
       "lineHeight": ["sm", "xs", "xs"],
       "mt": "lg",
       "mb": "md"
@@ -1065,6 +1065,11 @@
           "backgroundColor": "light-1",
           "border": "2px solid #ACAAFF",
           "borderRadius": "3px"
+        },
+        "outlined": {
+          "variant": "elements.badge.base",
+          "border": "2px solid black",
+          "bg": "white"
         }
       }
     },
@@ -2069,6 +2074,9 @@
           "fontWeight": "normal"
         }
       },
+      "headerImage": {
+        "display": "flex"
+      },
       "cellBase": {
         "variants": {
           "inSplit": {
@@ -2140,7 +2148,7 @@
             "title": {
               "fontSize": "sm",
               "fontWeight": "xbold",
-              "pl": "xxs"
+              "pl": [0, "xxs"]
             }
           },
           "addonFooter": {
@@ -2164,13 +2172,13 @@
             "label": {
               "fontFamily": "heading",
               "color": "grey-90",
-              "pb": "xxs",
+              "pb": "xs",
               "pt": 0,
               "lineHeight": 1
             },
             "content": {
               "fontWeight": "xbold",
-              "fontSize": "sm",
+              "fontSize": "md",
               "fontFamily": "heading",
               "textAlign": "left",
               "small": {
@@ -2214,9 +2222,19 @@
             "main": {
               "alignItems": "baseline",
               "position": "relative",
+              "pl": ["none", "sm"],
               "py": ["sm", "xxs"],
               "borderTop": ["1px solid", "none"],
-              "borderTopColor": "grey-20"
+              "borderTopColor": "grey-20",
+              "::before": {
+                "position": "absolute",
+                "display": "block",
+                "height": "100%",
+                "content": "' '",
+                "borderLeft": ["none", "1px solid #D0D0D3"],
+                "left": 0,
+                "top": 0
+              }
             },
             "variants": {
               "cellImage": {
