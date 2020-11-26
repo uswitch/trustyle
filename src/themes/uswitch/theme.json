@@ -2713,6 +2713,15 @@
             "opacity": "initial"
           }
         },
+        "vertical": {
+          "variant": "compounds.card.base",
+          "content": {
+            "variant": "compounds.card.base.content"
+          },
+          "link": {
+            "variant": "compounds.card.base.link"
+          }
+        },
         "provider": {
           "display": "flex",
           "width": "100%",
@@ -2753,15 +2762,6 @@
               "color": "grey-60",
               "mb": "md"
             }
-          }
-        },
-        "vertical": {
-          "variant": "compounds.card.base",
-          "content": {
-            "variant": "compounds.card.base.content"
-          },
-          "link": {
-            "variant": "compounds.card.base.link"
           }
         },
         "horizontal": {
@@ -3513,13 +3513,28 @@
     },
     "collectionCarousel": {
       "base": {
-        "pb": ["lg", "xxxl"]
+        "pb": ["lg", "xxxl"],
+        ".glider-dots": {	
+          "mt": "lg",	
+          "pt": "xs",	
+          ".glider-dot": {	
+            "backgroundColor": "grey-20",	
+            "&.active": {	
+              "backgroundColor": "uswitch-navy"	
+            }	
+          }	
+        }
       },
       "container": {
         "variant": "modules.collectionCarousel.base",
         "maxWidth": 1200,
         "mx": "auto",
-        "position": "relative"
+        "position": "relative",
+        ".glider-slide": {	
+          ".flex-grid-container": {	
+            "px": "xxs"	
+          }	
+        }
       }
     }
   },
