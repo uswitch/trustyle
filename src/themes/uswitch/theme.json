@@ -2103,6 +2103,9 @@
         "accent": {
           "backgroundColor": "grey-05"
         },
+        "subscript": {
+          "fontSize": ["xs", "sm"]
+        },
         "variants": {
           "inSplit": {
             "main": {},
