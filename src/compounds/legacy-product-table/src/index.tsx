@@ -217,12 +217,16 @@ const MobileEligibility: React.FC<MobileEligibilityProps> = ({
           display: ['block', 'none']
         }}
       >
-        <div sx={{ padding: '15px 20px 20px' }}>
+        <div
+          sx={{ padding: '15px 20px 20px', lineHeight: ['1.618em', 'inherit'] }}
+        >
           <div
             sx={{
               fontSize: '14px',
               color: '#858f94',
-              marginBottom: '5px'
+              marginBottom: '5px',
+              textAlign: 'left',
+              fontWeight: 300
             }}
           >
             Eligibility
@@ -401,7 +405,8 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
       sx={{
         fontSize: '13px',
         display: 'flex',
-        width: '100%'
+        width: '100%',
+        textAlign: 'left'
       }}
     >
       <label
