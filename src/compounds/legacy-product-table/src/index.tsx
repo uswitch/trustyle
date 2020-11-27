@@ -125,15 +125,13 @@ export const DataCell: React.FC<DataCellProps> = ({
         backgroundColor,
         borderBottomColor,
         padding: '5px 0px 10px',
-        margin: ['2px 0', '2px'],
-        '> strong': {
-          background: 'none'
-        },
+        margin: ['4px 0', '2px'],
+        marginX: ['15px', '2px'],
         fontFamily: 'Varela Round,Arial,sans-serif',
         color: '#191919'
       }}
     >
-      <strong
+      <span
         sx={{
           fontFamily: 'Open Sans,Arial,sans-serif',
           fontSize: '11px',
@@ -144,7 +142,7 @@ export const DataCell: React.FC<DataCellProps> = ({
         }}
       >
         {label}
-      </strong>
+      </span>
       <div
         sx={{
           display: 'flex',
