@@ -14,7 +14,8 @@ const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
         margin: '15px 0',
         paddingLeft: [0, '160px'],
         fontSize: '12px',
-        color: '#858f94'
+        color: '#858f94',
+        fontWeight: '300'
       }}
     >
       {children}
@@ -22,7 +23,11 @@ const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   )
 }
 
-const Footer: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
+interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
+  label?: string
+}
+
+const Footer: React.FC<FooterProps> = ({ children, label }) => {
   return (
     <footer
       sx={{
@@ -36,6 +41,7 @@ const Footer: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
         lineHeight: 'normal'
       }}
     >
+      {label}
       {children}
     </footer>
   )
@@ -125,15 +131,13 @@ export const DataCell: React.FC<DataCellProps> = ({
         backgroundColor,
         borderBottomColor,
         padding: '5px 0px 10px',
-        margin: ['2px 0', '2px'],
-        '> strong': {
-          background: 'none'
-        },
+        margin: ['4px 0', '2px'],
+        marginX: ['15px', '2px'],
         fontFamily: 'Varela Round,Arial,sans-serif',
         color: '#191919'
       }}
     >
-      <strong
+      <span
         sx={{
           fontFamily: 'Open Sans,Arial,sans-serif',
           fontSize: '11px',
@@ -144,7 +148,7 @@ export const DataCell: React.FC<DataCellProps> = ({
         }}
       >
         {label}
-      </strong>
+      </span>
       <div
         sx={{
           display: 'flex',
@@ -183,7 +187,10 @@ export const CtaCell: React.FC<CtaCellProps> = ({ children, styles, href }) => {
           background: 'linear-gradient(90deg, #924A8B 5%, #DB4D75 95%)',
           color: '#fff',
           fontSize: '16px',
-          fontWeight: 400,
+          fontWeight: 300,
+          ':hover': {
+            opacity: 1
+          },
           ...styles
         }}
       >
@@ -219,12 +226,16 @@ const MobileEligibility: React.FC<MobileEligibilityProps> = ({
           display: ['block', 'none']
         }}
       >
-        <div sx={{ padding: '15px 20px 20px' }}>
+        <div
+          sx={{ padding: '15px 20px 20px', lineHeight: ['1.618em', 'inherit'] }}
+        >
           <div
             sx={{
               fontSize: '14px',
               color: '#858f94',
-              marginBottom: '5px'
+              marginBottom: '5px',
+              textAlign: 'left',
+              fontWeight: 300
             }}
           >
             Eligibility
@@ -403,7 +414,8 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
       sx={{
         fontSize: '13px',
         display: 'flex',
-        width: '100%'
+        width: '100%',
+        textAlign: 'left'
       }}
     >
       <label
@@ -467,6 +479,7 @@ const Eligibility: React.FC<EligibilityProps> = ({
 }
 interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   representativeExample: string
+  repExampleLabel?: string
   info: string[]
   title: string
   eligibilityContent: React.ReactNode[]
@@ -476,6 +489,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   children,
   representativeExample,
+  repExampleLabel,
   info,
   title,
   eligibilityContent,
@@ -521,7 +535,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           })}
         </AdditionalInfo>
 
-        <Footer>{representativeExample}</Footer>
+        <Footer label={repExampleLabel}>{representativeExample}</Footer>
       </RowWrapper>
 
       <Eligibility
