@@ -181,7 +181,10 @@ export const CtaCell: React.FC<CtaCellProps> = ({ children, styles, href }) => {
           background: 'linear-gradient(90deg, #924A8B 5%, #DB4D75 95%)',
           color: '#fff',
           fontSize: '16px',
-          fontWeight: 400,
+          fontWeight: 300,
+          ':hover': {
+            opacity: 1
+          },
           ...styles
         }}
       >
