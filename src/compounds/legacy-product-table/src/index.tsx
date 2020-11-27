@@ -14,7 +14,8 @@ const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
         margin: '15px 0',
         paddingLeft: [0, '160px'],
         fontSize: '12px',
-        color: '#858f94'
+        color: '#858f94',
+        fontWeight: '300'
       }}
     >
       {children}
@@ -22,7 +23,11 @@ const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   )
 }
 
-const Footer: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
+interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
+  label?: string
+}
+
+const Footer: React.FC<FooterProps> = ({ children, label }) => {
   return (
     <footer
       sx={{
@@ -36,6 +41,7 @@ const Footer: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
         lineHeight: 'normal'
       }}
     >
+      {label}
       {children}
     </footer>
   )
@@ -473,6 +479,7 @@ const Eligibility: React.FC<EligibilityProps> = ({
 }
 interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   representativeExample: string
+  repExampleLabel?: string
   info: string[]
   title: string
   eligibilityContent: React.ReactNode[]
@@ -482,6 +489,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   children,
   representativeExample,
+  repExampleLabel,
   info,
   title,
   eligibilityContent,
@@ -527,7 +535,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           })}
         </AdditionalInfo>
 
-        <Footer>{representativeExample}</Footer>
+        <Footer label={repExampleLabel}>{representativeExample}</Footer>
       </RowWrapper>
 
       <Eligibility
