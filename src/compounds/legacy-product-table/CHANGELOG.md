@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.2.2...@uswitch/trustyle.legacy-product-table@0.2.3) (2020-11-27)
+
+
+### Bug Fixes
+
+* eligibility stlying ([5d2aad7](https://github.com/uswitch/trustyle/commit/5d2aad7))
+* representative example label and additional info font ([8b2b48b](https://github.com/uswitch/trustyle/commit/8b2b48b))
+* update cta cell ([67e7d7f](https://github.com/uswitch/trustyle/commit/67e7d7f))
+* update datacell font and spacing ([013d1c0](https://github.com/uswitch/trustyle/commit/013d1c0))
+
+
+
+
+
 ## [0.2.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.2.1...@uswitch/trustyle.legacy-product-table@0.2.2) (2020-11-26)
 
 
