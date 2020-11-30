@@ -1275,11 +1275,23 @@
         "mb": "xs"
       },
       "button": {
-        "mt": "sm",
+        "base": {
+          "mt": "sm"
+        },
         "variants": {
           "calculator": {
             "mb": "sm",
             "mt": "lg"
+          },
+          "loading": {
+            "variant": "elements.form.button.base",
+            "paddingY": "10px",
+            "paddingX": "md",
+            "svg": {
+              "height": "32px",
+              "width": "32px",
+              "ml": "sm"
+            }
           }
         }
       },
