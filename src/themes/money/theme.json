@@ -1307,9 +1307,9 @@
         },
         "panel-primary-text-align-center": {
           "variant": "elements.rich-text-block.variants.panel-primary",
-          "textAlign": ["center", "center"],
+          "textAlign": "center",
           "p": {
-            "textAlign": ["center", "center"],
+            "textAlign": "center",
             "mb": "md",
             "mt": "sm"
           }
