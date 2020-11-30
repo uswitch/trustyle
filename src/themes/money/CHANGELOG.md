@@ -3,6 +3,136 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.36.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.36.1...@uswitch/trustyle.money-theme@1.36.2) (2020-11-26)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.36.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.36.0...@uswitch/trustyle.money-theme@1.36.1) (2020-11-19)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+# [1.36.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.33.0...@uswitch/trustyle.money-theme@1.36.0) (2020-11-19)
+
+
+### Bug Fixes
+
+* text align for form error state ([4bbe8d6](https://github.com/uswitch/trustyle/commit/4bbe8d6))
+
+
+### Features
+
+* form error state ([259d7ae](https://github.com/uswitch/trustyle/commit/259d7ae))
+
+
+# [1.35.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.33.0...@uswitch/trustyle.money-theme@1.35.0) (2020-11-18)
+
+
+### Bug Fixes
+
+* text align for form error state ([b02c2e3](https://github.com/uswitch/trustyle/commit/b02c2e3))
+
+
+### Features
+
+* form error state ([259d7ae](https://github.com/uswitch/trustyle/commit/259d7ae))
+
+
+
+
+
+# [1.34.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.33.0...@uswitch/trustyle.money-theme@1.34.0) (2020-11-18)
+
+
+### Features
+
+* form error state ([d728785](https://github.com/uswitch/trustyle/commit/d728785))
+
+
+
+
+
+# [1.33.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.32.4...@uswitch/trustyle.money-theme@1.33.0) (2020-11-16)
+
+
+### Bug Fixes
+
+* add margin to form button ([b4c159b](https://github.com/uswitch/trustyle/commit/b4c159b))
+
+
+### Features
+
+* add form submit section styling to money theme ([dfbfffa](https://github.com/uswitch/trustyle/commit/dfbfffa))
+* add submit section wrapper styling ([850d227](https://github.com/uswitch/trustyle/commit/850d227))
+
+
+
+
+
+## [1.32.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.32.3...@uswitch/trustyle.money-theme@1.32.4) (2020-11-16)
+
+
+### Bug Fixes
+
+* form margin and padding ([8b3ee9b](https://github.com/uswitch/trustyle/commit/8b3ee9b))
+
+
+
+
+
+## [1.32.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.32.2...@uswitch/trustyle.money-theme@1.32.3) (2020-11-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.32.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.32.1...@uswitch/trustyle.money-theme@1.32.2) (2020-11-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.32.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.32.0...@uswitch/trustyle.money-theme@1.32.1) (2020-11-10)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+# [1.32.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.31.2...@uswitch/trustyle.money-theme@1.32.0) (2020-11-10)
+
+
+### Features
+
+* add inputSize to simple input ([96cde8d](https://github.com/uswitch/trustyle/commit/96cde8d))
+
+
+
+
+
+## [1.31.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.31.1...@uswitch/trustyle.money-theme@1.31.2) (2020-11-04)
+
+
+### Bug Fixes
+
+* fourth column on product tables ([fd18f09](https://github.com/uswitch/trustyle/commit/fd18f09))
+
+
+
+
+
 # [1.31.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.30.1...@uswitch/trustyle.money-theme@1.31.0) (2020-10-28)
 
 

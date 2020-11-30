@@ -18,7 +18,12 @@ export interface CellContextProps {
   extraRules?: object
 }
 
+export interface CardContextProps {
+  isCard?: boolean
+}
+
 export const CellContext = React.createContext<CellContextProps>({})
+export const CardContext = React.createContext<CardContextProps>({})
 
 export interface AddonContextProps {
   inAddon: string | false
@@ -44,7 +49,8 @@ export interface AddonArg {
 }
 
 const formatters: { [unit: string]: (value: number) => string } = {
-  pounds: value => `£${value}`,
+  pounds: value =>
+    value % 1 === 0 ? `£${value}` : `£${Number(value).toFixed(2)}`,
 
   percent: value => `${value}%`,
 
@@ -81,4 +87,9 @@ export function numberFormatter(value: number | string, unit: string): string {
   return formatters[formatter]
     ? formatters[formatter](value)
     : `${value} ${unitValue}`.trim()
+}
+
+export const forceMobile = (force = false) => (styles: any[]) => {
+  if (!force) return styles
+  return styles[0]
 }

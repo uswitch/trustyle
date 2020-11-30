@@ -72,6 +72,7 @@ export const ExampleWithEmail = () => {
         email={email}
         twitterLink={twitterLink}
         linkedInLink={linkedInLink}
+        socialsHrefTarget="_blank"
         variant=""
       />
       <AuthorProfile

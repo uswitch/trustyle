@@ -41,8 +41,15 @@ const SponsoredByTag: React.FC<Props> = ({
     <ImgixImage
       src={providerLogoSrc}
       alt={providerName}
-      imgixParams={{ fit: 'clip' }}
+      imgixParams={{
+        fit: 'fill',
+        w: 92,
+        h: 45,
+        bg: '00FFFFFF' // weirdly, fixes size issues
+      }}
       critical
+      width={92}
+      height={46}
       sx={{
         variant: `${lookup(variant)}.image`
       }}

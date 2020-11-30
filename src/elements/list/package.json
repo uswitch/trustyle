@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.list",
-  "version": "1.4.11",
+  "version": "1.5.1",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -8,15 +8,14 @@
     "access": "public"
   },
   "devDependencies": {
+    "@uswitch/trustyle.icon": "^1.18.0",
     "typescript": "^3.6.2"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "@mdx-js/react": "^1.5.3",
+    "@uswitch/trustyle.icon": "^1.17.1",
     "react": "^16.7.0",
     "theme-ui": "^0.2.52"
-  },
-  "dependencies": {
-    "@uswitch/trustyle.icon": "^1.16.0"
   }
 }
