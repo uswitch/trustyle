@@ -1286,7 +1286,7 @@
           "loading": {
             "variant": "elements.form.button.base",
             "paddingY": "10px",
-            "paddingX": "24px",
+            "paddingX": "md",
             "svg": {
               "height": "32px",
               "width": "32px",
