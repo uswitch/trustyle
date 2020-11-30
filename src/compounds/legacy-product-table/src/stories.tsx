@@ -35,6 +35,16 @@ const eligibilityContent = [
 
 const clickableRow = 'https://www.money.co.uk'
 
+const onClickEligibility = (addon?: object) => {
+  console.log(addon)
+}
+
+const eligibilityAddon = {
+  action: { value: 'Test Banner Clickout' },
+  category: { value: 'Test Guarantor Loans' },
+  label: { value: 'Test More Information Banner' }
+}
+
 const ExampleProductTable = () => {
   return (
     <LegacyProductTable
@@ -44,6 +54,8 @@ const ExampleProductTable = () => {
       title={title}
       eligibilityContent={eligibilityContent}
       clickableRow={clickableRow}
+      onClickEligibility={onClickEligibility}
+      eligibilityAddon={eligibilityAddon}
     >
       <DataCell
         backgroundColor="#fef6ed"
