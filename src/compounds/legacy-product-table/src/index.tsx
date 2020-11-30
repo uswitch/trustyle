@@ -417,7 +417,7 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
       value === 'yes' ||
       value === 'true'
     ) {
-      return <Icon glyph="tick" color={'#6bab51'} size={18} />
+      return <Icon glyph="check" color={'#6bab51'} size={18} />
     }
 
     return value
