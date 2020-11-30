@@ -518,7 +518,8 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   eligibilityContent,
   clickableRow,
   onClickEligibility,
-  eligibilityAddon
+  eligibilityAddon,
+  ...props
 }) => {
   const [hover, setHover] = React.useState(false)
 
@@ -539,6 +540,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
       onMouseLeave={() => {
         setHover(false)
       }}
+      {...props}
     >
       <RowWrapper link={clickableRow}>
         <Header>{title}</Header>
