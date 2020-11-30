@@ -11,7 +11,7 @@ const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   return (
     <div
       sx={{
-        margin: '15px 0',
+        margin: ['15px', '15px 0'],
         paddingLeft: [0, '160px'],
         fontSize: '12px',
         color: '#858f94',
@@ -165,9 +165,15 @@ export const DataCell: React.FC<DataCellProps> = ({
 interface CtaCellProps extends React.HTMLAttributes<HTMLDivElement> {
   styles?: any
   href?: string
+  onClick?: (event?: any) => void
 }
 
-export const CtaCell: React.FC<CtaCellProps> = ({ children, styles, href }) => {
+export const CtaCell: React.FC<CtaCellProps> = ({
+  children,
+  styles,
+  href,
+  onClick
+}) => {
   return (
     <BaseCell
       sx={{
@@ -193,6 +199,7 @@ export const CtaCell: React.FC<CtaCellProps> = ({ children, styles, href }) => {
           },
           ...styles
         }}
+        onClick={onClick}
       >
         {children}
       </ButtonLink>
@@ -203,14 +210,21 @@ export const CtaCell: React.FC<CtaCellProps> = ({ children, styles, href }) => {
 interface MobileEligibilityProps
   extends React.MapHTMLAttributes<HTMLDivElement> {
   href?: string
+  onClickEligibility?: (addon?: object) => void
+  eligibilityAddon?: object
 }
 
 const MobileEligibility: React.FC<MobileEligibilityProps> = ({
   children,
   className,
-  href
+  href,
+  onClickEligibility,
+  eligibilityAddon
 }) => {
   const [open, setOpen] = React.useState(false)
+  const onClick = () => {
+    onClickEligibility && onClickEligibility(eligibilityAddon)
+  }
 
   return (
     <div className={className} sx={{ display: ['block', 'none'] }}>
@@ -258,6 +272,7 @@ const MobileEligibility: React.FC<MobileEligibilityProps> = ({
             padding: '.9em 1.85em'
           }}
           href={href}
+          onClick={() => onClick()}
         >
           See Deal
         </CtaCell>
@@ -452,18 +467,24 @@ interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
   hover: boolean
   eligibilityContent: React.ReactNode[]
   clickableRow?: string
+  onClickEligibility?: (addon?: object) => void
+  eligibilityAddon?: object
 }
 
 const Eligibility: React.FC<EligibilityProps> = ({
   hover,
   eligibilityContent,
-  clickableRow
+  clickableRow,
+  onClickEligibility,
+  eligibilityAddon
 }) => {
   return (
     <div>
       <MobileEligibility
         sx={{ display: ['block', 'none'] }}
         href={clickableRow}
+        onClickEligibility={onClickEligibility}
+        eligibilityAddon={eligibilityAddon}
       >
         {eligibilityContent.map(item => {
           return item
@@ -484,6 +505,8 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   eligibilityContent: React.ReactNode[]
   clickableRow?: string
+  onClickEligibility?: (addon?: object) => void
+  eligibilityAddon?: object
 }
 
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
@@ -493,7 +516,9 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   info,
   title,
   eligibilityContent,
-  clickableRow
+  clickableRow,
+  onClickEligibility,
+  eligibilityAddon
 }) => {
   const [hover, setHover] = React.useState(false)
 
@@ -542,6 +567,8 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         hover={hover}
         eligibilityContent={eligibilityContent}
         clickableRow={clickableRow}
+        onClickEligibility={onClickEligibility}
+        eligibilityAddon={eligibilityAddon}
       />
     </article>
   )
