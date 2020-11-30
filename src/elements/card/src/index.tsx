@@ -3,6 +3,7 @@
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
+import { Glyph, Icon } from '@uswitch/trustyle.icon'
 
 interface Props {
   className?: string
@@ -13,6 +14,7 @@ interface Props {
   imgSizes?: string
   imgSrc: string
   imageProps?: any
+  linkIcon?: Glyph
   linkHref: string
   linkText?: string
   superScript?: string
@@ -43,6 +45,7 @@ const Card: React.FC<Props> = ({
   imgSrc,
   imageProps = {},
   linkHref,
+  linkIcon,
   linkText,
   superScript,
   tag,
@@ -133,6 +136,7 @@ const Card: React.FC<Props> = ({
             href={linkHref}
             sx={{ textDecoration: 'underline', variant: styles('link') }}
           >
+            {linkIcon && <Icon glyph={linkIcon} color="brand" />}
             {linkText}
           </Styled.a>
         )}

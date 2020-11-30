@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.23.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.2...@uswitch/trustyle.bankrate-theme@2.23.3) (2020-11-25)
+
+
+### Bug Fixes
+
+* Load the correct sized sponsored img when in portrait ([296fa6f](https://github.com/uswitch/trustyle/commit/296fa6f))
+
+
+
+
+
+## [2.23.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.1...@uswitch/trustyle.bankrate-theme@2.23.2) (2020-11-24)
+
+
+### Bug Fixes
+
+* Add correct dimensions to provider img ([bc5b0c0](https://github.com/uswitch/trustyle/commit/bc5b0c0))
+
+
+
+
+
+## [2.23.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.0...@uswitch/trustyle.bankrate-theme@2.23.1) (2020-11-10)
+
+
+### Bug Fixes
+
+* update all themes ([b82e6c7](https://github.com/uswitch/trustyle/commit/b82e6c7))
+
+
+
+
+
 # [2.23.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.22.1...@uswitch/trustyle.bankrate-theme@2.23.0) (2020-09-30)
 
 

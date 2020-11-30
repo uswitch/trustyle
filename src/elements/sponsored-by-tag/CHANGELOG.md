@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-by-tag@2.1.1...@uswitch/trustyle.sponsored-by-tag@2.1.2) (2020-11-25)
+
+
+### Bug Fixes
+
+* Load the correct sized sponsored img when in portrait ([296fa6f](https://github.com/uswitch/trustyle/commit/296fa6f))
+
+
+
+
+
+## [2.1.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-by-tag@2.1.0...@uswitch/trustyle.sponsored-by-tag@2.1.1) (2020-11-24)
+
+
+### Bug Fixes
+
+* Add correct dimensions to provider img ([bc5b0c0](https://github.com/uswitch/trustyle/commit/bc5b0c0))
+
+
+
+
+
 # [2.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-by-tag@2.0.5...@uswitch/trustyle.sponsored-by-tag@2.1.0) (2020-10-28)
 
 

@@ -3,6 +3,68 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.frozen-input@3.1.0...@uswitch/trustyle.frozen-input@3.1.1) (2020-11-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.frozen-input
+
+
+
+
+
+# [3.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.frozen-input@3.0.21...@uswitch/trustyle.frozen-input@3.1.0) (2020-11-16)
+
+
+### Features
+
+* move icons to peer deps ([695a6bd](https://github.com/uswitch/trustyle/commit/695a6bd))
+
+
+
+
+
+## [3.0.21](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.frozen-input@3.0.20...@uswitch/trustyle.frozen-input@3.0.21) (2020-11-16)
+
+
+### Bug Fixes
+
+* revert using /src/ import for icons as it breaks packages ([8a36d29](https://github.com/uswitch/trustyle/commit/8a36d29))
+
+
+
+
+
+## [3.0.20](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.frozen-input@3.0.19...@uswitch/trustyle.frozen-input@3.0.20) (2020-11-13)
+
+**Note:** Version bump only for package @uswitch/trustyle.frozen-input
+
+
+
+
+
+## [3.0.19](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.frozen-input@3.0.18...@uswitch/trustyle.frozen-input@3.0.19) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.frozen-input
+
+
+
+
+
+## [3.0.18](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.frozen-input@3.0.17...@uswitch/trustyle.frozen-input@3.0.18) (2020-11-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.frozen-input
+
+
+
+
+
+## [3.0.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.frozen-input@3.0.16...@uswitch/trustyle.frozen-input@3.0.17) (2020-11-06)
+
+**Note:** Version bump only for package @uswitch/trustyle.frozen-input
+
+
+
+
+
 ## [3.0.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.frozen-input@3.0.14...@uswitch/trustyle.frozen-input@3.0.16) (2020-10-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.frozen-input

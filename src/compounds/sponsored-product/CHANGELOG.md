@@ -3,6 +3,141 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.5.1...@uswitch/trustyle.sponsored-product@3.5.2) (2020-11-25)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
+## [3.5.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.5.0...@uswitch/trustyle.sponsored-product@3.5.1) (2020-11-24)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
+# [3.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.4.1...@uswitch/trustyle.sponsored-product@3.5.0) (2020-11-24)
+
+
+### Bug Fixes
+
+* put Icon back rather than Caret. ([1b4c65d](https://github.com/uswitch/trustyle/commit/1b4c65d))
+* remove console log ([646fcae](https://github.com/uswitch/trustyle/commit/646fcae))
+
+
+### Features
+
+* allow usps to pass in individual styling. ([55a893f](https://github.com/uswitch/trustyle/commit/55a893f))
+
+
+
+
+
+## [3.4.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.4.0...@uswitch/trustyle.sponsored-product@3.4.1) (2020-11-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
+# [3.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.3.2...@uswitch/trustyle.sponsored-product@3.4.0) (2020-11-16)
+
+
+### Features
+
+* move icons to peer deps ([695a6bd](https://github.com/uswitch/trustyle/commit/695a6bd))
+
+
+
+
+
+## [3.3.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.3.1...@uswitch/trustyle.sponsored-product@3.3.2) (2020-11-16)
+
+
+### Bug Fixes
+
+* revert using /src/ import for icons as it breaks packages ([8a36d29](https://github.com/uswitch/trustyle/commit/8a36d29))
+
+
+
+
+
+## [3.3.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.3.0...@uswitch/trustyle.sponsored-product@3.3.1) (2020-11-13)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
+# [3.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.2.0...@uswitch/trustyle.sponsored-product@3.3.0) (2020-11-13)
+
+
+### Bug Fixes
+
+* Remove unused props. ([559afae](https://github.com/uswitch/trustyle/commit/559afae))
+
+
+### Features
+
+* usps now array of usps. Means you can pass color for specfic usp. ([1ac8f25](https://github.com/uswitch/trustyle/commit/1ac8f25))
+
+
+
+
+
+# [3.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.1.17...@uswitch/trustyle.sponsored-product@3.2.0) (2020-11-11)
+
+
+### Bug Fixes
+
+* postion of Uswitch Award on sponsored product. ([fa388a8](https://github.com/uswitch/trustyle/commit/fa388a8))
+
+
+### Features
+
+* adds ability to choose boxshadow color and badge variant. ([8b62c40](https://github.com/uswitch/trustyle/commit/8b62c40))
+
+
+
+
+
+## [3.1.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.1.16...@uswitch/trustyle.sponsored-product@3.1.17) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
+## [3.1.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.1.15...@uswitch/trustyle.sponsored-product@3.1.16) (2020-11-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
+## [3.1.15](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.1.14...@uswitch/trustyle.sponsored-product@3.1.15) (2020-11-06)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
+## [3.1.14](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.1.13...@uswitch/trustyle.sponsored-product@3.1.14) (2020-11-03)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
 ## [3.1.13](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.1.12...@uswitch/trustyle.sponsored-product@3.1.13) (2020-10-28)
 
 **Note:** Version bump only for package @uswitch/trustyle.sponsored-product

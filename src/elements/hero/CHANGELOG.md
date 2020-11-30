@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero@3.7.0...@uswitch/trustyle.hero@3.7.1) (2020-11-11)
+
+
+### Bug Fixes
+
+* adds black friday variant to badges. fixes visual issues with hero. ([a81f239](https://github.com/uswitch/trustyle/commit/a81f239))
+* allows linear gradient to be set as background on Hero component. ([ce6ee85](https://github.com/uswitch/trustyle/commit/ce6ee85))
+
+
+
+
+
+# [3.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero@3.4.4...@uswitch/trustyle.hero@3.7.0) (2020-11-03)
+
+
+### Bug Fixes
+
+* BBdeals foreground image ([a42ed8c](https://github.com/uswitch/trustyle/commit/a42ed8c))
+* palette version ([843f592](https://github.com/uswitch/trustyle/commit/843f592))
+
+
+### Features
+
+* allow hero to be styled with palette ([9863bfb](https://github.com/uswitch/trustyle/commit/9863bfb))
+
+
+
+
+
+# [3.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero@3.4.4...@uswitch/trustyle.hero@3.6.0) (2020-11-02)
+
+
+### Bug Fixes
+
+* BBdeals foreground image ([a42ed8c](https://github.com/uswitch/trustyle/commit/a42ed8c))
+* palette version ([843f592](https://github.com/uswitch/trustyle/commit/843f592))
+
+
+### Features
+
+* allow hero to be styled with palette ([9863bfb](https://github.com/uswitch/trustyle/commit/9863bfb))
+
+
+
+
+
 # [3.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero@3.4.4...@uswitch/trustyle.hero@3.5.0) (2020-10-29)
 
 
