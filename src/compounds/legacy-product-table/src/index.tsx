@@ -11,7 +11,7 @@ const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   return (
     <div
       sx={{
-        margin: '15px 0',
+        margin: ['15px', '15px 0'],
         paddingLeft: [0, '160px'],
         fontSize: '12px',
         color: '#858f94',
