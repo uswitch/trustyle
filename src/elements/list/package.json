@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.list",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -8,7 +8,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.18.0",
+    "@uswitch/trustyle.icon": "^1.18.1",
     "typescript": "^3.6.2"
   },
   "peerDependencies": {

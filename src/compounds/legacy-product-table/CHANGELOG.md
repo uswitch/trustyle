@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.2.3...@uswitch/trustyle.legacy-product-table@0.2.4) (2020-11-30)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+# [0.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.3.0...@uswitch/trustyle.legacy-product-table@0.4.0) (2020-11-30)
+
+
+### Bug Fixes
+
+* update legacy product table checkmark ([9ec3cce](https://github.com/uswitch/trustyle/commit/9ec3cce))
+
+
+### Features
+
+* spread props ([eace6a6](https://github.com/uswitch/trustyle/commit/eace6a6))
+
+
+
+
+
 # [0.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.2.3...@uswitch/trustyle.legacy-product-table@0.3.0) (2020-11-30)
 
 
