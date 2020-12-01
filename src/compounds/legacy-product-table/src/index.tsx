@@ -417,7 +417,7 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
       value === 'yes' ||
       value === 'true'
     ) {
-      return <Icon glyph="tick" color={'#6bab51'} size={18} />
+      return <Icon glyph="check" color={'#6bab51'} size={18} />
     }
 
     return value
@@ -518,7 +518,8 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   eligibilityContent,
   clickableRow,
   onClickEligibility,
-  eligibilityAddon
+  eligibilityAddon,
+  ...props
 }) => {
   const [hover, setHover] = React.useState(false)
 
@@ -539,6 +540,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
       onMouseLeave={() => {
         setHover(false)
       }}
+      {...props}
     >
       <RowWrapper link={clickableRow}>
         <Header>{title}</Header>
