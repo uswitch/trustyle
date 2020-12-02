@@ -3,6 +3,82 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.1.2...@uswitch/trustyle.input@2.1.3) (2020-12-02)
+
+**Note:** Version bump only for package @uswitch/trustyle.input
+
+
+
+
+
+## [2.1.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.1.1...@uswitch/trustyle.input@2.1.2) (2020-11-30)
+
+**Note:** Version bump only for package @uswitch/trustyle.input
+
+
+
+
+
+
+## [2.1.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.1.0...@uswitch/trustyle.input@2.1.1) (2020-11-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.input
+
+
+
+
+
+# [2.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.0.23...@uswitch/trustyle.input@2.1.0) (2020-11-16)
+
+
+### Features
+
+* move icons to peer deps ([695a6bd](https://github.com/uswitch/trustyle/commit/695a6bd))
+
+
+
+
+
+## [2.0.23](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.0.22...@uswitch/trustyle.input@2.0.23) (2020-11-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.input
+
+
+
+
+
+## [2.0.22](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.0.21...@uswitch/trustyle.input@2.0.22) (2020-11-13)
+
+**Note:** Version bump only for package @uswitch/trustyle.input
+
+
+
+
+
+## [2.0.21](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.0.20...@uswitch/trustyle.input@2.0.21) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.input
+
+
+
+
+
+## [2.0.20](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.0.19...@uswitch/trustyle.input@2.0.20) (2020-11-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.input
+
+
+
+
+
+## [2.0.19](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.0.18...@uswitch/trustyle.input@2.0.19) (2020-11-06)
+
+**Note:** Version bump only for package @uswitch/trustyle.input
+
+
+
+
+
 ## [2.0.18](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.0.16...@uswitch/trustyle.input@2.0.18) (2020-10-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.input

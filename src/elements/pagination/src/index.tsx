@@ -21,7 +21,7 @@ const selectReducer = (
       const start = pageNumbers[i - 1] ? (pageNumbers[i - 1] as number) + 1 : 1
       const end = pageNumbers[i + 1]
         ? (pageNumbers[i + 1] as number)
-        : totalPages
+        : totalPages + 1
 
       r[i] = Array.from<number>({ length: end - start }).map(
         (v, i) => i + start
@@ -37,7 +37,7 @@ function getNumbers(
   isMinimized: boolean = false
 ): PaginationNumbers {
   const AROUND_CURRENT = 1
-  const END_LENGTH = 5 + AROUND_CURRENT * 2
+  const END_LENGTH = isMinimized ? 2 : 5 + AROUND_CURRENT * 2
 
   if (totalPages <= END_LENGTH) {
     return new Array(totalPages).fill('').map((_, i) => i + 1)
@@ -139,16 +139,26 @@ const Pagination: React.FC<Props> = ({
   const { theme }: any = useThemeUI()
   const morePage = React.useRef<HTMLSelectElement | null>(null)
 
-  const numbers = getNumbers(currentPage, totalPages, minimized)
+  const [numbers, setNumbers] = React.useState<PaginationNumbers>(
+    getNumbers(currentPage, totalPages, false)
+  )
 
   const [selectPages, setSelectPages] = React.useState<SelectPages>(
     selectReducer(numbers, totalPages)
   )
 
+  React.useEffect(
+    () => setNumbers(getNumbers(currentPage, totalPages, minimized)),
+    [minimized, currentPage]
+  )
+
   React.useEffect(() => setSelectPages(selectReducer(numbers, totalPages)), [
-    minimized,
-    currentPage
+    numbers
   ])
+
+  React.useEffect(() => {
+    if (morePage.current) morePage.current.value = ''
+  }, [selectPages])
 
   const liStyling = {
     display: 'inline-block',
@@ -260,6 +270,8 @@ const Pagination: React.FC<Props> = ({
 
               <select
                 ref={morePage}
+                defaultChecked={false}
+                defaultValue={''}
                 onChange={e => {
                   onPageChange(parseInt(e.currentTarget.value), e)
                   e.currentTarget.value = '...'

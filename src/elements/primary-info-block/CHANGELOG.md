@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.primary-info-block@1.0.5...@uswitch/trustyle.primary-info-block@1.0.6) (2020-11-11)
+
+
+### Bug Fixes
+
+* sets the bg color for strong tag as transparent. ([b808da2](https://github.com/uswitch/trustyle/commit/b808da2))
+
+
+
+
+
+## [1.0.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.primary-info-block@1.0.4...@uswitch/trustyle.primary-info-block@1.0.5) (2020-10-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.primary-info-block
+
+
+
+
+
+## [1.0.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.primary-info-block@1.0.3...@uswitch/trustyle.primary-info-block@1.0.4) (2020-10-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.primary-info-block
+
+
+
+
+
 ## [1.0.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.primary-info-block@1.0.2...@uswitch/trustyle.primary-info-block@1.0.3) (2020-10-13)
 
 **Note:** Version bump only for package @uswitch/trustyle.primary-info-block

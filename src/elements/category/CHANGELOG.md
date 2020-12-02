@@ -3,6 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.26](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.category@2.0.25...@uswitch/trustyle.category@2.0.26) (2020-12-02)
+
+**Note:** Version bump only for package @uswitch/trustyle.category
+
+
+
+
+
+## [2.0.25](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.category@2.0.24...@uswitch/trustyle.category@2.0.25) (2020-11-30)
+
+**Note:** Version bump only for package @uswitch/trustyle.category
+
+
+
+
+
+
+## [2.0.24](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.category@2.0.23...@uswitch/trustyle.category@2.0.24) (2020-11-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.category
+
+
+
+
+
+## [2.0.23](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.category@2.0.22...@uswitch/trustyle.category@2.0.23) (2020-11-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.category
+
+
+
+
+
+## [2.0.22](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.category@2.0.21...@uswitch/trustyle.category@2.0.22) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.category
+
+
+
+
+
+## [2.0.21](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.category@2.0.20...@uswitch/trustyle.category@2.0.21) (2020-11-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.category
+
+
+
+
+
+## [2.0.20](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.category@2.0.19...@uswitch/trustyle.category@2.0.20) (2020-11-06)
+
+**Note:** Version bump only for package @uswitch/trustyle.category
+
+
+
+
+
 ## [2.0.19](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.category@2.0.18...@uswitch/trustyle.category@2.0.19) (2020-10-16)
 
 **Note:** Version bump only for package @uswitch/trustyle.category

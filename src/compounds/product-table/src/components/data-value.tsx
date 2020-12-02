@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-import { numberFormatter } from '../generics'
+import { CardContext, forceMobile, numberFormatter } from '../generics'
 
 export interface DataValueProps extends React.HTMLAttributes<HTMLSpanElement> {
   value: number | string
@@ -15,11 +15,21 @@ const ProductTableDataValue: React.FC<DataValueProps> = ({
   unit,
   subscript
 }) => {
+  const { isCard } = React.useContext(CardContext)
+  const forcedMobile = forceMobile(isCard)
   return (
     <span>
       {numberFormatter(value, unit)}
       {typeof value === 'number' && subscript ? (
-        <span sx={{ fontSize: ['xs', 'md'] }}>{`${subscript}`}</span>
+        <span
+          sx={{
+            fontSize: (theme: any) =>
+              forcedMobile(
+                theme.compounds['product-table'].cellContent?.subscript
+                  ?.fontSize || ['xs', 'md']
+              )
+          }}
+        >{`${subscript}`}</span>
       ) : null}
     </span>
   )

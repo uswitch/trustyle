@@ -3,6 +3,139 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.12.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.9...@uswitch/trustyle.product-table@2.12.10) (2020-12-02)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.12.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.8...@uswitch/trustyle.product-table@2.12.9) (2020-11-26)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.12.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.7...@uswitch/trustyle.product-table@2.12.8) (2020-11-19)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.12.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.6...@uswitch/trustyle.product-table@2.12.7) (2020-11-19)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+## [2.12.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.5...@uswitch/trustyle.product-table@2.12.6) (2020-11-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.12.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.4...@uswitch/trustyle.product-table@2.12.5) (2020-11-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.12.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.3...@uswitch/trustyle.product-table@2.12.4) (2020-11-04)
+
+
+### Bug Fixes
+
+* fourth column on product tables ([fd18f09](https://github.com/uswitch/trustyle/commit/fd18f09))
+
+
+
+
+
+## [2.12.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.2...@uswitch/trustyle.product-table@2.12.3) (2020-11-03)
+
+
+### Bug Fixes
+
+* allow button to be clicked inside of eligibility criteria ([3d31db4](https://github.com/uswitch/trustyle/commit/3d31db4))
+* refactor handleClick ([75db3a7](https://github.com/uswitch/trustyle/commit/75db3a7))
+
+
+
+
+
+## [2.12.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.1...@uswitch/trustyle.product-table@2.12.2) (2020-10-29)
+
+
+### Bug Fixes
+
+* refactor cellimage variant ([e63fb10](https://github.com/uswitch/trustyle/commit/e63fb10))
+
+
+
+
+
+# [2.12.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.11.0...@uswitch/trustyle.product-table@2.12.0) (2020-10-28)
+
+
+### Bug Fixes
+
+* correctly pass headerImage prop in cell-image ([72dfa78](https://github.com/uswitch/trustyle/commit/72dfa78))
+* cta cell bug ([cdde098](https://github.com/uswitch/trustyle/commit/cdde098))
+* image sizing and additional design tweaks ([6cd5bd0](https://github.com/uswitch/trustyle/commit/6cd5bd0))
+* subtext font size ([ae18f89](https://github.com/uswitch/trustyle/commit/ae18f89))
+
+
+### Features
+
+* move provider logo below cells on mobile" ([3fe70dd](https://github.com/uswitch/trustyle/commit/3fe70dd))
+
+
+
+
+
+# [2.11.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.10.1...@uswitch/trustyle.product-table@2.11.0) (2020-10-23)
+
+
+### Features
+
+* vertically align product table data on mobile ([34c20a7](https://github.com/uswitch/trustyle/commit/34c20a7))
+
+
+
+
+
+## [2.10.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.10.0...@uswitch/trustyle.product-table@2.10.1) (2020-10-21)
+
+
+### Bug Fixes
+
+* disabled product opacity ([1468fe4](https://github.com/uswitch/trustyle/commit/1468fe4))
+
+
+
+
+
+# [2.10.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.9.0...@uswitch/trustyle.product-table@2.10.0) (2020-10-21)
+
+
+### Features
+
+* disable product table row ([77ede31](https://github.com/uswitch/trustyle/commit/77ede31))
+
+
+
+
+
 # [2.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.8.0...@uswitch/trustyle.product-table@2.9.0) (2020-10-19)
 
 

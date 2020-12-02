@@ -4,6 +4,7 @@ import React, { useContext, useState } from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
+import { Palette } from '@uswitch/trustyle-utils.palette'
 
 interface ContextProps {
   open: number
@@ -21,6 +22,7 @@ const AccordionContext = React.createContext<Partial<ContextProps>>({
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   index?: number
   title: string
+  openedTitle?: string
   isInitiallyOpen?: boolean
   className?: string
   icon?: string
@@ -45,7 +47,8 @@ const Accordion: React.FC<Props> & {
   Title: React.FC<TitleProps>
 } = ({
   index,
-  title,
+  title: closedTitle,
+  openedTitle,
   isInitiallyOpen = false,
   children,
   className,
@@ -76,6 +79,9 @@ const Accordion: React.FC<Props> & {
       accordionContext.setOpenId(isOpen ? (index as number) : -1)
   }
 
+  const title =
+    typeof openedTitle !== 'undefined' && isOpen ? openedTitle : closedTitle
+
   return (
     <div
       sx={{
@@ -86,12 +92,16 @@ const Accordion: React.FC<Props> & {
       className={className}
       data-target="accordion" // this is a hack to stop clicking propagating to the product table
     >
-      <button
+      <Palette
+        as="button"
         sx={{
           cursor: 'pointer',
           variant: !isOpen
             ? 'compounds.accordion.base.button'
             : 'compounds.accordion.variants.isActive.button'
+        }}
+        px={{
+          color: 'textColor'
         }}
         onClick={() => setIsOpen(!isOpen)}
       >
@@ -166,7 +176,9 @@ const Accordion: React.FC<Props> & {
           >
             <Icon
               color={
-                isOpen
+                variant === 'eligibility-criteria-redesign'
+                  ? colors['button-secondary']
+                  : isOpen
                   ? colors[accordionTheme?.variants?.isActive?.caret?.color]
                   : colors[accordionTheme?.base?.caret?.color]
               }
@@ -176,8 +188,9 @@ const Accordion: React.FC<Props> & {
             />
           </div>
         )}
-      </button>
-      <div
+      </Palette>
+      <Palette
+        as="div"
         sx={{
           overflow: 'hidden',
           height: isOpen ? 'auto' : '0',
@@ -195,9 +208,10 @@ const Accordion: React.FC<Props> & {
           },
           variant: 'compounds.accordion.base.content'
         }}
+        px={{ color: 'textColor' }}
       >
         {children}
-      </div>
+      </Palette>
     </div>
   )
 }

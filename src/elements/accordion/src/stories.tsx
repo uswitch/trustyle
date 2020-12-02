@@ -28,6 +28,27 @@ SingleAccordion.story = {
   }
 }
 
+export const ReverseAccordion = () => (
+  <React.Fragment>
+    <p>Recommendation 1</p>
+    <Accordion
+      title={'Show more recommendations'}
+      openedTitle={'Show less'}
+      variant="reverse"
+    >
+      <p style={{ marginTop: 0, marginBottom: '2000px' }}>Recommendation 2</p>
+      <p>Recommendation 3</p>
+    </Accordion>
+    <p style={{ marginTop: '2000px' }}>Content below</p>
+  </React.Fragment>
+)
+
+ReverseAccordion.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const SingleAccordionWithVariant = () => {
   const title = text('Title', 'This is an example title')
   const content = text('Content', 'This is some example content')

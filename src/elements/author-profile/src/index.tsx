@@ -16,6 +16,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   className?: string
   showDetails?: boolean
   variant: string
+  socialsHrefTarget?: '_blank' | '_self' | '_parent' | '_top'
 }
 
 const AuthorProfile: React.FC<Props> = ({
@@ -29,7 +30,8 @@ const AuthorProfile: React.FC<Props> = ({
   linkedInLink,
   showDetails = false,
   className = '',
-  variant
+  variant,
+  socialsHrefTarget
 }) => {
   const makeStyles = (variant: string) => (element?: string) =>
     `elements.author-profile${variant ? `.variants.${variant}` : `.base`}${
@@ -110,9 +112,9 @@ const AuthorProfile: React.FC<Props> = ({
         </Styled.p>
         <div
           sx={{
-            variant: styles('details'),
             marginTop: 'sm',
-            paddingLeft: 'xs'
+            paddingLeft: 'xs',
+            variant: styles('details')
           }}
         >
           {email && (
@@ -138,6 +140,7 @@ const AuthorProfile: React.FC<Props> = ({
           {twitterLink && (
             <Styled.a
               href={twitterLink}
+              target={socialsHrefTarget}
               sx={{
                 textDecoration: 'none',
                 cursor: 'pointer',
@@ -157,6 +160,7 @@ const AuthorProfile: React.FC<Props> = ({
           {linkedInLink && (
             <Styled.a
               href={linkedInLink}
+              target={socialsHrefTarget}
               sx={{
                 textDecoration: 'none',
                 cursor: 'pointer',

@@ -3,6 +3,61 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.11.2...@uswitch/trustyle.card@1.11.3) (2020-12-02)
+
+**Note:** Version bump only for package @uswitch/trustyle.card
+
+
+
+
+
+## [1.11.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.11.1...@uswitch/trustyle.card@1.11.2) (2020-11-30)
+
+**Note:** Version bump only for package @uswitch/trustyle.card
+
+
+
+
+
+
+## [1.11.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.11.0...@uswitch/trustyle.card@1.11.1) (2020-11-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.card
+
+
+
+
+
+# [1.11.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.10.1...@uswitch/trustyle.card@1.11.0) (2020-11-16)
+
+
+### Features
+
+* move icons to peer deps ([695a6bd](https://github.com/uswitch/trustyle/commit/695a6bd))
+
+
+
+
+
+## [1.10.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.10.0...@uswitch/trustyle.card@1.10.1) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.card
+
+
+
+
+
+# [1.10.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.9.7...@uswitch/trustyle.card@1.10.0) (2020-11-09)
+
+
+### Features
+
+* add icon to card ([d27f138](https://github.com/uswitch/trustyle/commit/d27f138))
+
+
+
+
+
 ## [1.9.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.9.6...@uswitch/trustyle.card@1.9.7) (2020-10-16)
 
 **Note:** Version bump only for package @uswitch/trustyle.card
