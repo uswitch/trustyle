@@ -1950,6 +1950,11 @@
         },
         "states": {
           "isActive": {
+            "buttonWrapper": {
+              "calculator": {
+                "textAlign": "center"
+              }
+            },
             "wrapper": {
               "variant": "elements.form-section.panel.elements.wrapper",
               "paddingY": "md"
