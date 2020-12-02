@@ -625,7 +625,7 @@
           "display": "flex",
           "mr": ["0", "lg"],
           "mb": "lg",
-          "width": ["100%", "100%", "300px"],
+          "width": ["100%", "100%", "28%"],
           "justifyContent": "space-between",
           "alignItems": "center"
         },
@@ -1845,11 +1845,18 @@
         "padding": "md",
         "backgroundColor": "grey-05",
         "width": "100vw",
-        "marginLeft": [0, null, "calc(-50vw + 586px)"],
+        "marginLeft": [0, 0, "calc(-50vw + 585px)"],
+        "@media screen and (max-width: 1200px)": {
+          "width": "calc(100vw + 16px)",
+          "marginLeft": -16,
+          "paddingLeft": 32
+        },
+        "position": "relative",
+        "zIndex": 1,
         "marginTop": -24,
         "> div": {
           "variant": "sizes.grid.container",
-          "paddingX": "lg",
+          "paddingX": "sm",
           "marginX": "auto"
         }
       },
@@ -1953,6 +1960,7 @@
             },
             "fields": {
               "display": "block",
+              "textAlign": "center",
               "calculator": {
                 "display": "flex",
                 "flexWrap": "wrap",
@@ -2102,6 +2110,9 @@
         "content": {},
         "accent": {
           "backgroundColor": "grey-05"
+        },
+        "subscript": {
+          "fontSize": ["xs", "sm"]
         },
         "variants": {
           "inSplit": {
