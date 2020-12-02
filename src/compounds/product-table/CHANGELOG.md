@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.13.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.10...@uswitch/trustyle.product-table@2.13.0) (2020-12-02)
+
+
+### Features
+
+* alternative pounds formatter that always adds trailing zero ([7c0a3be](https://github.com/uswitch/trustyle/commit/7c0a3be))
+
+
+
+
+
 ## [2.12.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.9...@uswitch/trustyle.product-table@2.12.10) (2020-12-02)
 
 **Note:** Version bump only for package @uswitch/trustyle.product-table
