@@ -2228,6 +2228,7 @@
           },
           "cellCta": {
             "buttonWrapper": {
+              "justifyContent": "center",
               "a, button": {
                 "mb": 0
               },
