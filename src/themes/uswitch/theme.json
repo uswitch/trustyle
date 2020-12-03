@@ -2247,7 +2247,7 @@
                 "display": "block",
                 "height": "100%",
                 "content": "' '",
-                "borderLeft": ["none", "1px solid #D0D0D3"],
+                "borderLeft": ["none", "none", "1px solid #D0D0D3"],
                 "left": 0,
                 "top": 0
               }
