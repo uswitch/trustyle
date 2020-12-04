@@ -119,42 +119,29 @@ const ProductTableRow: React.FC<RowProps> = ({
         }}
       >
         <RowWrapper link={clickableRow} headerImage={image}>
-          {badges.length ? (
-            <React.Fragment>
-              <div
-                sx={{
-                  position: 'absolute',
-                  top: 0,
-                  transform: 'translateY(-50%)'
-                }}
-              >
-                {badges.map((badge, i) => {
-                  return (
-                    <span sx={{ marginRight: 'sm' }} key={i}>
-                      {badge}
-                    </span>
-                  )
-                })}
-              </div>
-              <div sx={{ variant: 'compounds.product-table.badge-wrapper' }}>
-                <Header
-                  image={image}
-                  preTitle={preTitle}
-                  rowTitle={rowTitle}
-                  subtitle={subtitle}
-                  addons={addonsFor('header')}
-                />
-              </div>
-            </React.Fragment>
-          ) : (
-            <Header
-              image={image}
-              preTitle={preTitle}
-              rowTitle={rowTitle}
-              subtitle={subtitle}
-              addons={addonsFor('header')}
-            />
+          {!!badges.length && (
+            <div
+              sx={{
+                position: 'absolute',
+                top: 0,
+                transform: 'translateY(-50%)'
+              }}
+            >
+              {badges.map((badge, i) => (
+                <span sx={{ marginRight: 'sm' }} key={i}>
+                  {badge}
+                </span>
+              ))}
+            </div>
           )}
+          <Header
+            badges={badges}
+            image={image}
+            preTitle={preTitle}
+            rowTitle={rowTitle}
+            subtitle={subtitle}
+            addons={addonsFor('header')}
+          />
           <div
             sx={{
               display: 'grid',

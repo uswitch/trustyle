@@ -2098,7 +2098,7 @@
         "display": "flex"
       },
       "badge-wrapper": {
-        "mt": "20px"
+        "mt": "xs"
       },
       "cellBase": {
         "variants": {
