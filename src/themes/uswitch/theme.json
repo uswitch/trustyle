@@ -322,7 +322,8 @@
       "fontSize": ["base", "base", "sm"],
       "mt": 0,
       "mb": "sm",
-      "color": "grey-80"
+      "color": "grey-80",
+      "whiteSpace": "pre-wrap"
     },
     "a": {
       "mt": 0,
@@ -385,6 +386,10 @@
       ":nth-of-type(even)": {
         "backgroundColor": "grey-05"
       }
+    },
+    "hr": {
+      "my": [32, 72],
+      "color": "grey-20"
     }
   },
   "----------------------------- Variants": "-----------------------------",
@@ -750,7 +755,9 @@
     "rich-text-block": {
       "base": {
         "*:first-child": {
-          "mt": 0
+          ":not(hr)": {
+            "mt": 0
+          }
         }
       },
       "variants": {
