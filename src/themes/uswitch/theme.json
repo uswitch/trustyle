@@ -2843,7 +2843,7 @@
           "display": "flex",
           "flexDirection": ["column-reverse", null, "row-reverse"],
           "justifyContent": ["none", null, "space-between"],
-          "&[class*='palette']": {
+          "&.palette": {
             "pt": 60,
             "pb": 50
           },
