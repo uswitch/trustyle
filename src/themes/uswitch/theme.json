@@ -2896,7 +2896,7 @@
             "mb": 0,
             "textDecoration": "none",
             "width": "fit-content",
-            "borderBottom":"1px dashed",
+            "borderBottom": "1px dashed",
             "borderBottomColor": "grey-50"
           }
         },
