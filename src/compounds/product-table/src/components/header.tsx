@@ -29,7 +29,8 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
           paddingBottom: image ? ['none', 'sm'] : 'sm',
           marginTop: badges.length ? 0 : -6,
           display: 'flex',
-          alignItems: 'center'
+          alignItems: 'center',
+          variant: badges.length && 'compounds.product-table.badge-wrapper'
         }}
       >
         {image && image}

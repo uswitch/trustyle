@@ -135,6 +135,7 @@ const ProductTableRow: React.FC<RowProps> = ({
             </div>
           )}
           <Header
+            badges={badges}
             image={image}
             preTitle={preTitle}
             rowTitle={rowTitle}
