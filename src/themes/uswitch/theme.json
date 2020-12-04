@@ -2097,6 +2097,9 @@
       "headerImage": {
         "display": "flex"
       },
+      "badge-wrapper": {
+        "mt": "20px"
+      },
       "cellBase": {
         "variants": {
           "inSplit": {
