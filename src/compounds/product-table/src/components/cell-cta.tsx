@@ -19,9 +19,9 @@ const ProductTableCellCta: React.FC<CellCtaProps> = ({
   const { isCard } = React.useContext(CardContext)
   const forcedMobile = forceMobile(isCard)
   const buttonWrapperStyling = {
-    flex: forcedMobile([1, undefined, 'initial']),
+    flex: forcedMobile([1, null, 'initial']),
     width: forcedMobile(['auto', '100%']),
-    display: forcedMobile(['flex', undefined, 'block']),
+    display: forcedMobile(['flex', null, 'block']),
     variant: headerImage
       ? 'compounds.product-table.variants.redesign.cellCta.buttonWrapper'
       : 'compounds.product-table.cellCta.buttonWrapper'
