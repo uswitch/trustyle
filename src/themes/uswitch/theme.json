@@ -2073,7 +2073,7 @@
       }
     },
     "product-table": {
-      "accordion":{
+      "accordion": {
         "main": {
           "pb": "7px"
         }
