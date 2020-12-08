@@ -2073,6 +2073,11 @@
       }
     },
     "product-table": {
+      "accordion":{
+        "main": {
+          "pb": "7px"
+        }
+      },
       "row": {
         "main": {
           "borderColor": "grey-30"
@@ -2110,6 +2115,11 @@
       "addonFooter": {
         "main": {
           "borderTopColor": "grey-20"
+        },
+        "text": {
+          "fontSize": "xxs",
+          "lineHeight": "sm",
+          "m": 0
         }
       },
       "cellImage": {
@@ -2183,6 +2193,9 @@
               "pt": "0px",
               "fontSize": "xs",
               "fontFamily": "heading"
+            },
+            "label": {
+              "fontWeight": "bold"
             }
           },
           "addonInfo": {
