@@ -628,7 +628,7 @@
       "input": {
         "wrapper": {
           "display": "flex",
-          "mb": "lg",
+          "mb": ["md", "lg"],
           "width": ["100%", "100%", "28%"],
           "justifyContent": "space-between",
           "alignItems": "center"
@@ -1850,6 +1850,7 @@
         "marginY": "md",
         "backgroundColor": "grey-05",
         "width": "100vw",
+        "pr": "sm",
         "marginLeft": [0, 0, "calc(-50vw + 585px)"],
         "@media screen and (max-width: 1200px)": {
           "width": "calc(100vw + 16px)",
