@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, useThemeUI } from 'theme-ui'
 
 import CellBase from './cell-base'
 
@@ -21,12 +21,22 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
   addons = [],
   image
 }) => {
+  const {
+    theme: {
+      compounds: {
+        'product-table': { padding: { paddingBottom = ['0', 'sm'] } = {} } = {}
+      }
+    }
+  }: any = useThemeUI()
+
+  const pb = paddingBottom || '0'
+
   return (
     <div sx={{ pb: image ? '' : 'xs' }}>
       <div
         sx={{
-          borderBottom: image ? 'none' : '1px solid',
-          paddingBottom: image ? ['none', 'sm'] : 'sm',
+          borderBottom: image ? '0' : '1px solid',
+          paddingBottom: image ? pb : 'sm',
           marginTop: badges.length ? 0 : -6,
           display: 'flex',
           alignItems: 'center',

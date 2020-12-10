@@ -2071,6 +2071,12 @@
       }
     },
     "product-table": {
+      "cta": {
+        "paddingY": ["md", "md", "0"]
+      },
+      "padding": {
+        "paddingBottom": "sm"
+      },
       "accordion": {
         "main": {
           "pb": "7px"
