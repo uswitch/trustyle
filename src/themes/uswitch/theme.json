@@ -233,7 +233,8 @@
     "uswitch-navy": "#141424",
     "light-grey": "#F2F2F6",
     "light-grey-content": "#202020",
-    "border-light-grey": "#E9E9EC"
+    "border-light-grey": "#E9E9EC",
+    "yellow-25": "#FFF4D5"
   },
   "radii": {
     "sm": 0,
@@ -829,6 +830,32 @@
           "span:last-of-type p": {
             "mb": 0
           }
+        },
+        "right": {
+            "a": {
+                "> img": {
+                  "height": 18,
+                  "objectFit": "contain",
+                  "marginTop": 7,
+                  "marginRight": 18
+                },
+                "variant": "styles.h6"
+            },
+            "p": {
+                "margin": 0,
+                "fontWeight": "normal"
+            },
+            "h4": {
+              "fontSize": "md",
+              "lineHeight": "sm"
+            },
+            ".palette": {
+              "mb": "md"
+            },
+            "border": "1px solid",
+            "height": "auto !important",
+            "padding": "md",
+            "borderColor": "grey-20"
         }
       }
     },
@@ -2892,6 +2919,33 @@
               "mb": "md"
             }
           }
+        },
+        "info": {
+          "variant": "compounds.card.variants.assuranceBar",
+          "backgroundColor": "yellow-25",
+          "px": "sm",
+          "&.palette": {
+            "py": "xxs",
+            "mb": 0,
+            "img": {
+              "mt": 0,
+              "mr": "xxs",
+              "height": 14
+            },
+            "> a": {
+              "mb": 0
+            }
+          },
+          "h3": {
+            "mt": 2,
+            "fontSize": "xxs",
+            "a": {
+              "fontFamily": "body",
+              "color": "grey-80",
+              "fontSize": "inherit",
+              "fontWeight": "bold"
+            }
+          }
         }
       }
     },
@@ -3493,6 +3547,14 @@
           "maxHeight": [210, "90%"],
           "bottom": 0,
           "right": [-20, 0]
+        }
+      }
+    },
+    "collection": {
+      "variants": {
+        "sidebar": {
+          "contentSpan": [6, 12, 8],
+          "sidebarSpan": [6, 12, 4]
         }
       }
     },
