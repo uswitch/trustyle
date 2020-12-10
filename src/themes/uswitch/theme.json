@@ -3147,6 +3147,9 @@
             "px": "sm",
             ":visited": {
               "color": "grey-70"
+            },
+            ":focus": {
+              "variant": "compounds.side-nav.isActive"
             }
           }
         },
