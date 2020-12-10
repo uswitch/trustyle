@@ -25,18 +25,20 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
     theme: {
       compounds: {
         'product-table': {
-          padding: { paddingBottom = ['none', 'sm'] }
-        }
+          padding: { paddingBottom = ['none', 'sm'] } = {}
+        } = {}
       }
     }
   }: any = useThemeUI()
+
+  const pb = paddingBottom || 'none'
 
   return (
     <div sx={{ pb: image ? '' : 'xs' }}>
       <div
         sx={{
           borderBottom: image ? 'none' : '1px solid',
-          paddingBottom: image ? paddingBottom : 'sm',
+          paddingBottom: image ? pb : 'sm',
           marginTop: badges.length ? 0 : -6,
           display: 'flex',
           alignItems: 'center',

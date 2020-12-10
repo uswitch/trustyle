@@ -32,7 +32,8 @@ const ProductTableCellCta: React.FC<CellCtaProps> = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        flexDirection: forcedMobile(['column', 'row', 'column'])
+        flexDirection: forcedMobile(['column', 'row', 'column']),
+        variant: 'compounds.product-table.cta'
       }}
     >
       <div sx={{ ...buttonWrapperStyling }}>{primary}</div>
