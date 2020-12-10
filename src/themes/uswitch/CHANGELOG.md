@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.31.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.31.3...@uswitch/trustyle.uswitch-theme@2.31.4) (2020-12-10)
+
+
+### Bug Fixes
+
+* add side-nav link focus state ([4199ebe](https://github.com/uswitch/trustyle/commit/4199ebe))
+
+
+
+
+
+
 ## [2.31.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.31.2...@uswitch/trustyle.uswitch-theme@2.31.3) (2020-12-09)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
