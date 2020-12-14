@@ -2867,6 +2867,9 @@
           "alignItems": "center",
           "border": "1px solid",
           "borderColor": "grey-20",
+          ":hover": {
+            "borderColor": "grey-40"
+          },
           "image": {
             "flex": 4,
             "display": "flex",
