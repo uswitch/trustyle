@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.card",
-  "version": "1.11.1",
+  "version": "1.11.3",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -16,6 +16,6 @@
     "@uswitch/trustyle.imgix-image": "^0.1.40"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.18.0"
+    "@uswitch/trustyle.icon": "^1.18.2"
   }
 }

@@ -3,6 +3,103 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.5.1...@uswitch/trustyle.legacy-product-table@0.5.2) (2020-12-10)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+
+
+
+
+## [0.5.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.5.0...@uswitch/trustyle.legacy-product-table@0.5.1) (2020-12-10)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+
+
+
+
+
+# [0.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.4.2...@uswitch/trustyle.legacy-product-table@0.5.0) (2020-12-08)
+
+
+### Features
+
+* pass onRowClick to legacy product table ([2d8ca19](https://github.com/uswitch/trustyle/commit/2d8ca19))
+
+
+
+
+
+## [0.4.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.4.0...@uswitch/trustyle.legacy-product-table@0.4.2) (2020-12-02)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+
+
+
+
+## [0.4.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.2.3...@uswitch/trustyle.legacy-product-table@0.2.4) (2020-11-30)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+# [0.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.3.0...@uswitch/trustyle.legacy-product-table@0.4.0) (2020-11-30)
+
+
+### Bug Fixes
+
+* update legacy product table checkmark ([9ec3cce](https://github.com/uswitch/trustyle/commit/9ec3cce))
+
+
+### Features
+
+* spread props ([eace6a6](https://github.com/uswitch/trustyle/commit/eace6a6))
+
+
+
+
+
+# [0.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.2.3...@uswitch/trustyle.legacy-product-table@0.3.0) (2020-11-30)
+
+
+### Bug Fixes
+
+* additional info margin ([68a370c](https://github.com/uswitch/trustyle/commit/68a370c))
+
+
+### Features
+
+* add onClick and eligibility add on to legacy product table ([d195657](https://github.com/uswitch/trustyle/commit/d195657))
+
+
+
+
+
+## [0.2.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.2.2...@uswitch/trustyle.legacy-product-table@0.2.3) (2020-11-27)
+
+
+### Bug Fixes
+
+* eligibility stlying ([5d2aad7](https://github.com/uswitch/trustyle/commit/5d2aad7))
+* representative example label and additional info font ([8b2b48b](https://github.com/uswitch/trustyle/commit/8b2b48b))
+* update cta cell ([67e7d7f](https://github.com/uswitch/trustyle/commit/67e7d7f))
+* update datacell font and spacing ([013d1c0](https://github.com/uswitch/trustyle/commit/013d1c0))
+
+
+
+
+
+## [0.2.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.2.1...@uswitch/trustyle.legacy-product-table@0.2.2) (2020-11-26)
+
+
+### Bug Fixes
+
+* eligibility bugs and data cell fonts ([3d27e1c](https://github.com/uswitch/trustyle/commit/3d27e1c))
+
+
+
+
+
 ## [0.2.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.2.0...@uswitch/trustyle.legacy-product-table@0.2.1) (2020-11-24)
 
 

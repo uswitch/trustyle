@@ -53,7 +53,7 @@ const ProductTableCellBase: React.FC<CellBaseProps> = ({
     justifyContent: 'center',
     marginX: 8, // sm / 2
     paddingY: 6, // xs / 2
-    order: order ?? forcedMobile([mobileOrder, undefined, 'initial']),
+    order: order ?? forcedMobile([mobileOrder, null, 'initial']),
     ...extraRules
   }
 
@@ -63,18 +63,18 @@ const ProductTableCellBase: React.FC<CellBaseProps> = ({
         typeof accentCellIndex === 'number' && accentCellCount === 2
           ? `${accentCellIndex + 1} / span 1`
           : '1 / -1',
-        undefined,
+        null,
         `${gridColumnStart} / span ${gridColumnSpan}`
       ]),
       msGridColumn: `${gridColumnStart}`,
       msGridColumnSpan: `${gridColumnSpan}`,
       gridRow: forcedMobile([
         'initial',
-        undefined,
+        null,
         `${gridRowStart} / span ${gridRowSpan}`
       ]),
-      msGridRow: forcedMobile(['initial', undefined, `${gridRowStart}`]),
-      msGridRowSpan: forcedMobile(['initial', undefined, `${gridRowSpan}`])
+      msGridRow: forcedMobile(['initial', null, `${gridRowStart}`]),
+      msGridRowSpan: forcedMobile(['initial', null, `${gridRowSpan}`])
     })
   }
 

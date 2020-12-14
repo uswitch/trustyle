@@ -1275,11 +1275,23 @@
         "mb": "xs"
       },
       "button": {
-        "mt": "sm",
+        "base": {
+          "mt": "sm"
+        },
         "variants": {
           "calculator": {
             "mb": "sm",
             "mt": "lg"
+          },
+          "loading": {
+            "variant": "elements.form.button.base",
+            "paddingY": "10px",
+            "paddingX": "md",
+            "svg": {
+              "height": "32px",
+              "width": "32px",
+              "ml": "sm"
+            }
           }
         }
       },
@@ -1322,6 +1334,18 @@
           },
           "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
           "borderRadius": "md"
+        },
+        "panel-primary-text-align-center": {
+          "variant": "elements.rich-text-block.variants.panel-primary",
+          "textAlign": "center",
+          "p": {
+            "textAlign": "center",
+            "mb": "md",
+            "mt": "sm"
+          }
+        },
+        "center": {
+          "textAlign": "center"
         }
       }
     },
@@ -1714,6 +1738,9 @@
           "textDecoration": "none",
           "transition": "none"
         }
+      },
+      "headerImage": {
+        "display": ["none", "flex"]
       },
       "addonFooter": {
         "main": {

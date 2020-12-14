@@ -15,7 +15,7 @@ export default {
   title: 'Compounds/Legacy Product Table'
 }
 
-const repExample = `Representative Example: The representative rate is 29% APR (fixed) so
+const repExample = `The representative rate is 29% APR (fixed) so
 if you borrow £4,000 over 3 years at a rate of 17% p.a. (fixed) plus a
 service fee of 8.74% p.a. you will repay £160.61 per month & £5,781.96
 in total.`
@@ -35,14 +35,27 @@ const eligibilityContent = [
 
 const clickableRow = 'https://www.money.co.uk'
 
+const onClickEligibility = (addon?: object) => {
+  console.log(addon)
+}
+
+const eligibilityAddon = {
+  action: { value: 'Test Banner Clickout' },
+  category: { value: 'Test Guarantor Loans' },
+  label: { value: 'Test More Information Banner' }
+}
+
 const ExampleProductTable = () => {
   return (
     <LegacyProductTable
       representativeExample={repExample}
+      repExampleLabel="Representative example: "
       info={info}
       title={title}
       eligibilityContent={eligibilityContent}
       clickableRow={clickableRow}
+      onClickEligibility={onClickEligibility}
+      eligibilityAddon={eligibilityAddon}
     >
       <DataCell
         backgroundColor="#fef6ed"

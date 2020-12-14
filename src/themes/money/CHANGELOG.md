@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.37.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.36.3...@uswitch/trustyle.money-theme@1.37.0) (2020-11-30)
+
+
+### Bug Fixes
+
+* remote tgz file ([9a1418f](https://github.com/uswitch/trustyle/commit/9a1418f))
+* replace spacing ([fd426fb](https://github.com/uswitch/trustyle/commit/fd426fb))
+
+
+### Features
+
+* add form loading state styles ([781d931](https://github.com/uswitch/trustyle/commit/781d931))
+
+
+
+
+
+## [1.36.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.36.2...@uswitch/trustyle.money-theme@1.36.3) (2020-11-30)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.36.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.36.1...@uswitch/trustyle.money-theme@1.36.2) (2020-11-26)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
 ## [1.36.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.36.0...@uswitch/trustyle.money-theme@1.36.1) (2020-11-19)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme

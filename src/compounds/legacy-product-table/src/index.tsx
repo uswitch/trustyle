@@ -11,10 +11,11 @@ const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   return (
     <div
       sx={{
-        margin: '15px 0',
+        margin: ['15px', '15px 0'],
         paddingLeft: [0, '160px'],
         fontSize: '12px',
-        color: '#858f94'
+        color: '#858f94',
+        fontWeight: '300'
       }}
     >
       {children}
@@ -22,7 +23,11 @@ const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   )
 }
 
-const Footer: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
+interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
+  label?: string
+}
+
+const Footer: React.FC<FooterProps> = ({ children, label }) => {
   return (
     <footer
       sx={{
@@ -36,6 +41,7 @@ const Footer: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
         lineHeight: 'normal'
       }}
     >
+      {label}
       {children}
     </footer>
   )
@@ -106,6 +112,7 @@ export const ImageCell: React.FC<React.HTMLAttributes<any>> = ({
 interface DataCellProps extends React.HTMLAttributes<HTMLDivElement> {
   backgroundColor?: string
   borderBottomColor?: string
+  color?: string
   label?: string
 }
 
@@ -113,6 +120,7 @@ export const DataCell: React.FC<DataCellProps> = ({
   children,
   backgroundColor,
   borderBottomColor,
+  color,
   label
 }) => {
   return (
@@ -123,26 +131,24 @@ export const DataCell: React.FC<DataCellProps> = ({
         backgroundColor,
         borderBottomColor,
         padding: '5px 0px 10px',
-        margin: ['2px 0', '2px'],
-        '> strong': {
-          background: 'none'
-        },
+        margin: ['4px 0', '2px'],
+        marginX: ['15px', '2px'],
         fontFamily: 'Varela Round,Arial,sans-serif',
         color: '#191919'
       }}
     >
-      <strong
+      <span
         sx={{
           fontFamily: 'Open Sans,Arial,sans-serif',
           fontSize: '11px',
           display: 'flex',
           justifyContent: 'center',
           padding: '5px 5px 0px',
-          color: borderBottomColor
+          color
         }}
       >
         {label}
-      </strong>
+      </span>
       <div
         sx={{
           display: 'flex',
@@ -159,9 +165,15 @@ export const DataCell: React.FC<DataCellProps> = ({
 interface CtaCellProps extends React.HTMLAttributes<HTMLDivElement> {
   styles?: any
   href?: string
+  onClick?: (event?: any) => void
 }
 
-export const CtaCell: React.FC<CtaCellProps> = ({ children, styles, href }) => {
+export const CtaCell: React.FC<CtaCellProps> = ({
+  children,
+  styles,
+  href,
+  onClick
+}) => {
   return (
     <BaseCell
       sx={{
@@ -181,9 +193,13 @@ export const CtaCell: React.FC<CtaCellProps> = ({ children, styles, href }) => {
           background: 'linear-gradient(90deg, #924A8B 5%, #DB4D75 95%)',
           color: '#fff',
           fontSize: '16px',
-          fontWeight: 400,
+          fontWeight: 300,
+          ':hover': {
+            opacity: 1
+          },
           ...styles
         }}
+        onClick={onClick}
       >
         {children}
       </ButtonLink>
@@ -191,14 +207,27 @@ export const CtaCell: React.FC<CtaCellProps> = ({ children, styles, href }) => {
   )
 }
 
-const MobileEligibility: React.FC<React.HTMLAttributes<any>> = ({
+interface MobileEligibilityProps
+  extends React.MapHTMLAttributes<HTMLDivElement> {
+  href?: string
+  onClickEligibility?: (addon?: object) => void
+  eligibilityAddon?: object
+}
+
+const MobileEligibility: React.FC<MobileEligibilityProps> = ({
   children,
-  className
+  className,
+  href,
+  onClickEligibility,
+  eligibilityAddon
 }) => {
   const [open, setOpen] = React.useState(false)
+  const onClick = () => {
+    onClickEligibility && onClickEligibility(eligibilityAddon)
+  }
 
   return (
-    <div className={className}>
+    <div className={className} sx={{ display: ['block', 'none'] }}>
       <div
         sx={{
           background: '#f2f3f4',
@@ -208,15 +237,19 @@ const MobileEligibility: React.FC<React.HTMLAttributes<any>> = ({
           fontSize: '14px',
           overflow: 'hidden',
           boxSizing: 'border-box',
-          display: 'block'
+          display: ['block', 'none']
         }}
       >
-        <div sx={{ padding: '15px 20px 20px' }}>
+        <div
+          sx={{ padding: '15px 20px 20px', lineHeight: ['1.618em', 'inherit'] }}
+        >
           <div
             sx={{
               fontSize: '14px',
               color: '#858f94',
-              marginBottom: '5px'
+              marginBottom: '5px',
+              textAlign: 'left',
+              fontWeight: 300
             }}
           >
             Eligibility
@@ -238,6 +271,8 @@ const MobileEligibility: React.FC<React.HTMLAttributes<any>> = ({
             mx: '20px',
             padding: '.9em 1.85em'
           }}
+          href={href}
+          onClick={() => onClick()}
         >
           See Deal
         </CtaCell>
@@ -253,7 +288,7 @@ const MobileEligibility: React.FC<React.HTMLAttributes<any>> = ({
           padding: '8px',
           lineHeight: '1.618em',
           color: '#34454E',
-          display: 'flex',
+          display: ['flex', 'none'],
           alignItems: 'center',
           justifyContent: 'center',
           fontSize: '13px',
@@ -382,7 +417,7 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
       value === 'yes' ||
       value === 'true'
     ) {
-      return <Icon glyph="tick" color={'#6bab51'} size={18} />
+      return <Icon glyph="check" color={'#6bab51'} size={18} />
     }
 
     return value
@@ -394,7 +429,8 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
       sx={{
         fontSize: '13px',
         display: 'flex',
-        width: '100%'
+        width: '100%',
+        textAlign: 'left'
       }}
     >
       <label
@@ -430,15 +466,26 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
 interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
   hover: boolean
   eligibilityContent: React.ReactNode[]
+  clickableRow?: string
+  onClickEligibility?: (addon?: object) => void
+  eligibilityAddon?: object
 }
 
 const Eligibility: React.FC<EligibilityProps> = ({
   hover,
-  eligibilityContent
+  eligibilityContent,
+  clickableRow,
+  onClickEligibility,
+  eligibilityAddon
 }) => {
   return (
     <div>
-      <MobileEligibility sx={{ display: ['block', 'none'] }}>
+      <MobileEligibility
+        sx={{ display: ['block', 'none'] }}
+        href={clickableRow}
+        onClickEligibility={onClickEligibility}
+        eligibilityAddon={eligibilityAddon}
+      >
         {eligibilityContent.map(item => {
           return item
         })}
@@ -453,19 +500,28 @@ const Eligibility: React.FC<EligibilityProps> = ({
 }
 interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   representativeExample: string
+  repExampleLabel?: string
   info: string[]
   title: string
   eligibilityContent: React.ReactNode[]
   clickableRow?: string
+  onClickEligibility?: (addon?: object) => void
+  eligibilityAddon?: object
+  onRowClick?: () => void
 }
 
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   children,
   representativeExample,
+  repExampleLabel,
   info,
   title,
   eligibilityContent,
-  clickableRow
+  clickableRow,
+  onClickEligibility,
+  eligibilityAddon,
+  onRowClick,
+  ...props
 }) => {
   const [hover, setHover] = React.useState(false)
 
@@ -486,15 +542,16 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
       onMouseLeave={() => {
         setHover(false)
       }}
+      {...props}
     >
-      <RowWrapper link={clickableRow}>
+      <RowWrapper link={clickableRow} onRowClick={onRowClick}>
         <Header>{title}</Header>
 
         <div
           sx={{
             display: ['initial', 'flex'],
             width: '100%',
-            padding: ['0', '0 15px 10px'],
+            paddingX: ['0', '15px'],
             boxSizing: 'border-box'
           }}
         >
@@ -507,10 +564,16 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           })}
         </AdditionalInfo>
 
-        <Footer>{representativeExample}</Footer>
+        <Footer label={repExampleLabel}>{representativeExample}</Footer>
       </RowWrapper>
 
-      <Eligibility hover={hover} eligibilityContent={eligibilityContent} />
+      <Eligibility
+        hover={hover}
+        eligibilityContent={eligibilityContent}
+        clickableRow={clickableRow}
+        onClickEligibility={onClickEligibility}
+        eligibilityAddon={eligibilityAddon}
+      />
     </article>
   )
 }

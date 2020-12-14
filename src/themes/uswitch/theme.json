@@ -288,7 +288,7 @@
     },
     "h2": {
       "variant": "styles.headings",
-      "fontSize": ["md", "xl", "xxl"],
+      "fontSize": ["md", "lg", "xl"],
       "lineHeight": ["sm", "xs", "xs"],
       "mt": "lg",
       "mb": "md"
@@ -322,7 +322,8 @@
       "fontSize": ["base", "base", "sm"],
       "mt": 0,
       "mb": "sm",
-      "color": "grey-80"
+      "color": "grey-80",
+      "whiteSpace": "pre-wrap"
     },
     "a": {
       "mt": 0,
@@ -385,6 +386,10 @@
       ":nth-of-type(even)": {
         "backgroundColor": "grey-05"
       }
+    },
+    "hr": {
+      "my": [32, 72],
+      "color": "grey-20"
     }
   },
   "----------------------------- Variants": "-----------------------------",
@@ -623,9 +628,8 @@
       "input": {
         "wrapper": {
           "display": "flex",
-          "mr": ["0", "lg"],
-          "mb": "lg",
-          "width": ["100%", "100%", "300px"],
+          "mb": ["md", "lg"],
+          "width": ["100%", "100%", "28%"],
           "justifyContent": "space-between",
           "alignItems": "center"
         },
@@ -643,7 +647,8 @@
         },
         "variants": {
           "calculator": {
-            "flex": "1 1 0px"
+            "flex": "1 1 0px",
+            "fontWeight": "600"
           }
         }
       },
@@ -750,7 +755,9 @@
     "rich-text-block": {
       "base": {
         "*:first-child": {
-          "mt": 0
+          ":not(hr)": {
+            "mt": 0
+          }
         }
       },
       "variants": {
@@ -788,9 +795,9 @@
         },
         "panel-primary-text-align-center": {
           "variant": "elements.rich-text-block.variants.panel-primary",
-          "textAlign": ["center", "center"],
+          "textAlign": "center",
           "p": {
-            "textAlign": ["center", "center"],
+            "textAlign": "center",
             "mb": "md",
             "mt": "sm"
           },
@@ -1065,6 +1072,11 @@
           "backgroundColor": "light-1",
           "border": "2px solid #ACAAFF",
           "borderRadius": "3px"
+        },
+        "outlined": {
+          "variant": "elements.badge.base",
+          "border": "2px solid black",
+          "bg": "white"
         }
       }
     },
@@ -1680,7 +1692,6 @@
         "border": "solid 1px",
         "display": "flex",
         "position": "relative",
-        "boxShadow": "formInput",
         "borderColor": "primary",
         "backgroundColor": "white",
         "borderRadius": "0px",
@@ -1758,8 +1769,6 @@
           "fontStyle": "normal"
         },
         "image": {
-          "max-height": [42, 46],
-          "max-width": 92,
           "margin-top": [null, "10px"]
         }
       },
@@ -1839,14 +1848,20 @@
       },
       "container": {
         "marginY": "md",
-        "padding": "md",
         "backgroundColor": "grey-05",
         "width": "100vw",
-        "marginLeft": [0, null, "calc(-50vw + 586px)"],
+        "pr": "sm",
+        "marginLeft": [0, 0, "calc(-50vw + 585px)"],
+        "@media screen and (max-width: 1200px)": {
+          "width": "calc(100vw + 16px)",
+          "marginLeft": -16
+        },
+        "position": "relative",
+        "zIndex": 1,
         "marginTop": -24,
         "> div": {
           "variant": "sizes.grid.container",
-          "paddingX": "lg",
+          "paddingX": "sm",
           "marginX": "auto"
         }
       },
@@ -1940,6 +1955,11 @@
         },
         "states": {
           "isActive": {
+            "buttonWrapper": {
+              "calculator": {
+                "textAlign": "center"
+              }
+            },
             "wrapper": {
               "variant": "elements.form-section.panel.elements.wrapper",
               "paddingY": "md"
@@ -1950,10 +1970,11 @@
             },
             "fields": {
               "display": "block",
+              "textAlign": "center",
               "calculator": {
                 "display": "flex",
                 "flexWrap": "wrap",
-                "justifyContent": "center",
+                "justifyContent": "space-between",
                 "flexDirection": ["column", "row"]
               }
             }
@@ -2050,6 +2071,17 @@
       }
     },
     "product-table": {
+      "cta": {
+        "paddingY": ["md", "md", "0"]
+      },
+      "padding": {
+        "paddingBottom": "sm"
+      },
+      "accordion": {
+        "main": {
+          "pb": "7px"
+        }
+      },
       "row": {
         "main": {
           "borderColor": "grey-30"
@@ -2071,6 +2103,12 @@
           "fontWeight": "normal"
         }
       },
+      "headerImage": {
+        "display": "flex"
+      },
+      "badge-wrapper": {
+        "mt": "xs"
+      },
       "cellBase": {
         "variants": {
           "inSplit": {
@@ -2081,6 +2119,11 @@
       "addonFooter": {
         "main": {
           "borderTopColor": "grey-20"
+        },
+        "text": {
+          "fontSize": "xxs",
+          "lineHeight": "sm",
+          "m": 0
         }
       },
       "cellImage": {
@@ -2096,6 +2139,9 @@
         "content": {},
         "accent": {
           "backgroundColor": "grey-05"
+        },
+        "subscript": {
+          "fontSize": ["xs", "sm"]
         },
         "variants": {
           "inSplit": {
@@ -2142,7 +2188,7 @@
             "title": {
               "fontSize": "sm",
               "fontWeight": "xbold",
-              "pl": "xxs"
+              "pl": [0, "xxs"]
             }
           },
           "addonFooter": {
@@ -2151,6 +2197,9 @@
               "pt": "0px",
               "fontSize": "xs",
               "fontFamily": "heading"
+            },
+            "label": {
+              "fontWeight": "bold"
             }
           },
           "addonInfo": {
@@ -2166,13 +2215,13 @@
             "label": {
               "fontFamily": "heading",
               "color": "grey-90",
-              "pb": "xxs",
+              "pb": "xs",
               "pt": 0,
               "lineHeight": 1
             },
             "content": {
               "fontWeight": "xbold",
-              "fontSize": "sm",
+              "fontSize": "md",
               "fontFamily": "heading",
               "textAlign": "left",
               "small": {
@@ -2206,6 +2255,7 @@
           },
           "cellCta": {
             "buttonWrapper": {
+              "justifyContent": "center",
               "a, button": {
                 "mb": 0
               },
@@ -2216,9 +2266,19 @@
             "main": {
               "alignItems": "baseline",
               "position": "relative",
+              "pl": ["none", "sm"],
               "py": ["sm", "xxs"],
               "borderTop": ["1px solid", "none"],
-              "borderTopColor": "grey-20"
+              "borderTopColor": "grey-20",
+              "::before": {
+                "position": "absolute",
+                "display": "block",
+                "height": "100%",
+                "content": "' '",
+                "borderLeft": ["none", "none", "1px solid #D0D0D3"],
+                "left": 0,
+                "top": 0
+              }
             },
             "variants": {
               "cellImage": {
@@ -3154,6 +3214,9 @@
             "px": "sm",
             ":visited": {
               "color": "grey-70"
+            },
+            ":focus": {
+              "variant": "compounds.side-nav.isActive"
             }
           }
         },

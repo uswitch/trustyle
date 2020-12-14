@@ -52,6 +52,9 @@ const formatters: { [unit: string]: (value: number) => string } = {
   pounds: value =>
     value % 1 === 0 ? `£${value}` : `£${Number(value).toFixed(2)}`,
 
+  // Alternative version of the pounds formatter that takes care of adding 0 as needed
+  'full-pounds': value => `£${value.toFixed(2)}`,
+
   percent: value => `${value}%`,
 
   /**

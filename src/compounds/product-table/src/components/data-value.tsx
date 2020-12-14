@@ -22,7 +22,13 @@ const ProductTableDataValue: React.FC<DataValueProps> = ({
       {numberFormatter(value, unit)}
       {typeof value === 'number' && subscript ? (
         <span
-          sx={{ fontSize: forcedMobile(['xs', 'md']) }}
+          sx={{
+            fontSize: (theme: any) =>
+              forcedMobile(
+                theme.compounds['product-table'].cellContent?.subscript
+                  ?.fontSize || ['xs', 'md']
+              )
+          }}
         >{`${subscript}`}</span>
       ) : null}
     </span>

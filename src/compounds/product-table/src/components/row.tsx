@@ -135,6 +135,7 @@ const ProductTableRow: React.FC<RowProps> = ({
             </div>
           )}
           <Header
+            badges={badges}
             image={image}
             preTitle={preTitle}
             rowTitle={rowTitle}
@@ -146,22 +147,22 @@ const ProductTableRow: React.FC<RowProps> = ({
               display: 'grid',
               gridTemplateColumns: forcedMobile([
                 'repeat(2, 1fr)',
-                undefined,
+                null,
                 `repeat(${image ? cols - 1 : cols}, 1fr)`
               ]),
               msGridColumns: forcedMobile([
                 '(1fr)[2]',
-                undefined,
+                null,
                 `(1fr)[${image ? cols - 1 : cols}]`
               ]),
               gridTemplateRows: forcedMobile([
                 'auto',
-                undefined,
+                null,
                 `repeat(3, auto) repeat(${ROWS}, 1fr) repeat(3, auto)`
               ]),
               msGridRows: forcedMobile([
                 'auto',
-                undefined,
+                null,
                 `(auto)[3] (1fr)[${ROWS}] (auto)[3]`
               ]),
               marginX: -8,

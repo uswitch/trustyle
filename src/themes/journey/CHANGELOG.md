@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.11.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.11.5...@uswitch/trustyle.journey-theme@2.11.6) (2020-11-25)
+
+
+### Bug Fixes
+
+* Load the correct sized sponsored img when in portrait ([296fa6f](https://github.com/uswitch/trustyle/commit/296fa6f))
+
+
+
+
+
 ## [2.11.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.11.4...@uswitch/trustyle.journey-theme@2.11.5) (2020-11-24)
 
 

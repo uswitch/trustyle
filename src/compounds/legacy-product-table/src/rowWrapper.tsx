@@ -6,9 +6,14 @@ import { jsx } from 'theme-ui'
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   link?: string
   children?: React.ReactNode
+  onRowClick?: () => void
 }
 
-const linkWrapper = (link: string, children: React.ReactNode) => {
+const linkWrapper = (
+  link: string,
+  children: React.ReactNode,
+  onRowClick?: () => void
+) => {
   return (
     <a
       sx={{
@@ -26,14 +31,15 @@ const linkWrapper = (link: string, children: React.ReactNode) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={onRowClick}
     >
       {children}
     </a>
   )
 }
 
-const RowWrapper: React.FC<Props> = ({ link, children }) => {
-  return link ? linkWrapper(link, children) : <div>{children}</div>
+const RowWrapper: React.FC<Props> = ({ link, children, onRowClick }) => {
+  return link ? linkWrapper(link, children, onRowClick) : <div>{children}</div>
 }
 
 export default RowWrapper
