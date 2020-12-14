@@ -2763,6 +2763,14 @@
           "content": {
             "variant": "compounds.card.base.content"
           },
+          "h3": {
+            "mt": "sm",
+            "mb": 20,
+            "lineHeight": "base",
+            "a": {
+              "borderBottom": "1px dashed #898991"
+            }
+          },
           "link": {
             "variant": "compounds.card.base.link"
           }
