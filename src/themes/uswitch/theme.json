@@ -2660,6 +2660,7 @@
             "mb": "xxs",
             "mr": "lg",
             "mt": "xxs",
+            "lineHeight": "24px",
             "a": {
               "fontSize": "sm",
               "fontWeight": "xxbold",
