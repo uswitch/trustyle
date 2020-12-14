@@ -2713,7 +2713,7 @@
           "alignItems": ["flex-start", "center", "flex-start"],
           "textAlign": ["left", "center", "left"],
           "py": 0,
-          "mb": "48px",
+          "mb": "sm",
           "h3": {
             "fontSize": [
               "20px !important",
