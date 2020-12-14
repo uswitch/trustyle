@@ -2866,6 +2866,7 @@
         },
         "provider": {
           "display": "flex",
+          "position": "relative",
           "width": "100%",
           "height": [
             "card.variants.provider.height.desktop",
@@ -2880,21 +2881,24 @@
             "borderColor": "grey-40"
           },
           "image": {
+            "position": "absolute",
+            "width": "100%",
+            "height": "100%",
+            "pb": "20%",
             "flex": 4,
             "display": "flex",
             "borderBottom": "none",
             "textDecoration": "none",
             "mb": 0,
-            "maxWidth": [
-              "card.variants.provider.image.maxWidth.mobile",
-              "card.variants.provider.image.maxWidth.tablet",
-              "card.variants.provider.image.maxWidth.desktop"
-            ],
             "img": {
               "objectFit": "contain",
               "mx": "auto",
               "display": "block",
-              "maxWidth": "inherit"
+              "maxWidth": [
+                "card.variants.provider.image.maxWidth.mobile",
+                "card.variants.provider.image.maxWidth.tablet",
+                "card.variants.provider.image.maxWidth.desktop"
+              ]
             }
           },
           "content": {
