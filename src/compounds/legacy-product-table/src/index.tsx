@@ -558,22 +558,28 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           {children}
         </div>
 
-        <AdditionalInfo>
-          {info.map((item, key) => {
-            return <div key={key}>{item}</div>
-          })}
-        </AdditionalInfo>
+        {info.length > 0 && (
+          <AdditionalInfo>
+            {info.map((item, key) => {
+              return <div key={key}>{item}</div>
+            })}
+          </AdditionalInfo>
+        )}
 
-        <Footer label={repExampleLabel}>{representativeExample}</Footer>
+        {representativeExample.length > 0 && (
+          <Footer label={repExampleLabel}>{representativeExample}</Footer>
+        )}
       </RowWrapper>
 
-      <Eligibility
-        hover={hover}
-        eligibilityContent={eligibilityContent}
-        clickableRow={clickableRow}
-        onClickEligibility={onClickEligibility}
-        eligibilityAddon={eligibilityAddon}
-      />
+      {eligibilityContent.length > 0 && (
+        <Eligibility
+          hover={hover}
+          eligibilityContent={eligibilityContent}
+          clickableRow={clickableRow}
+          onClickEligibility={onClickEligibility}
+          eligibilityAddon={eligibilityAddon}
+        />
+      )}
     </article>
   )
 }
