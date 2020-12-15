@@ -10,5 +10,8 @@
   "peerDependencies": {
     "@emotion/core": "^10.0.10",
     "react": "^16.7.0"
+  },
+  "dependencies": {
+    "@uswitch/trustyle-utils.palette": "^2.0.3"
   }
 }
