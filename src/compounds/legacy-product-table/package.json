@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.legacy-product-table",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -13,6 +13,6 @@
   },
   "dependencies": {
     "@uswitch/trustyle.button-link": "^3.0.2",
-    "@uswitch/trustyle.icon": "^1.18.2"
+    "@uswitch/trustyle.icon": "^1.18.4"
   }
 }
