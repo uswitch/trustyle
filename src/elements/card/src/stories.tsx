@@ -291,6 +291,23 @@ export const VariantsExample = () => {
             </div>
           }
         />
+        <h2>Featured Alternate Variant</h2>
+        <Card
+          imgSrc={img}
+          imgAlt="Picture of a cute kitten"
+          imgSizes="(max-width: 33vw), 33vw"
+          imageSize={imageSize}
+          title={title}
+          description={content}
+          linkHref="https://www.uswitch.com"
+          variant="featured-alternate"
+          contentChildren={
+            <div>
+              <h2>Content elements</h2>
+              <span sx={{ color: 'red' }}>comes here</span>
+            </div>
+          }
+        />
         <h2>Assurance Bar Variant</h2>
         <Card
           imgSrc={img}

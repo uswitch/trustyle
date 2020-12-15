@@ -507,6 +507,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   clickableRow?: string
   onClickEligibility?: (addon?: object) => void
   eligibilityAddon?: object
+  onRowClick?: () => void
 }
 
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
@@ -519,6 +520,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   clickableRow,
   onClickEligibility,
   eligibilityAddon,
+  onRowClick,
   ...props
 }) => {
   const [hover, setHover] = React.useState(false)
@@ -542,7 +544,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
       }}
       {...props}
     >
-      <RowWrapper link={clickableRow}>
+      <RowWrapper link={clickableRow} onRowClick={onRowClick}>
         <Header>{title}</Header>
 
         <div
