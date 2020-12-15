@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
+import { Palette } from '@uswitch/trustyle-utils.palette'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
@@ -59,7 +60,8 @@ const Author: React.FC<Props> = ({
       )}
 
       <div>
-        <Styled.h5
+        <Palette
+          as={Styled.h5}
           sx={{
             marginTop: 0,
             fontWeight: 'bold',
@@ -67,6 +69,7 @@ const Author: React.FC<Props> = ({
             marginBottom: [0, 'xxs'],
             variant: getVariant('title')
           }}
+          px={{ color: 'textColor' }}
         >
           <a
             href={titleUrl}
@@ -75,10 +78,10 @@ const Author: React.FC<Props> = ({
               textDecoration: 'none',
               variant: getVariant('link')
             }}
-          >
-            {title}
-          </a>
-        </Styled.h5>
+          ></a>
+          {title}
+        </Palette>
+
         {subtitle && (
           <Styled.p
             sx={{
@@ -87,15 +90,17 @@ const Author: React.FC<Props> = ({
               variant: getVariant('subtitle')
             }}
           >
-            <Styled.a
+            <Palette
+              as={Styled.a}
               href={subtitleUrl}
               sx={{
                 textDecoration: 'none',
                 variant: getVariant('link')
               }}
+              px={{ color: 'textColor' }}
             >
               {subtitle}
-            </Styled.a>
+            </Palette>
           </Styled.p>
         )}
       </div>
