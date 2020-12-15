@@ -26,6 +26,7 @@ interface Props {
     | 'headerImage'
     | 'responsive'
     | 'featured'
+    | 'featured-alternate'
     | 'bbdeals-card'
     | 'assuranceBar'
   headerChildren?: React.ReactNode

@@ -2912,6 +2912,73 @@
               "mb": "md"
             }
           }
+        },
+        "featured": {
+          "itemsPerRow": 1,
+          "backgroundColor": "grey-05",
+          "display": "flex",
+          "flexDirection": ["column-reverse", null, "row-reverse"],
+          "justifyContent": ["none", null, "space-between"],
+          "&.palette": {
+            "pt": 60,
+            "pb": 50
+          },
+          "content": {
+            "maxCharacters": 500,
+            "width": ["100%", null, "grid.lg.5"],
+            "flex": 1,
+            "mr": [0, null, 120],
+            "whiteSpace": "pre-wrap",
+            "fontSize": "md",
+            "lineHeight": "sm",
+            "mb": ["xxl", null, 0],
+            "p": {
+              "fontSize": "md",
+              "lineHeight": "sm"
+            }
+          },
+          "h3": {
+            "fontSize": "xxl",
+            "fontWeight": "xxbold",
+            "mb": "xxl",
+            "a": {
+              "borderBottom": "none"
+            }
+          },
+          "meta": {
+            "display": "none"
+          },
+          "image": {
+            "width": ["100%", null, "grid.lg.6"],
+            "height": 658,
+            "flex": 1,
+            "overflow": "hidden",
+            "img": {
+              "objectFit": "cover",
+              "width": "100%",
+              "height": "100%"
+            }
+          },
+          "> a": {
+            "borderBottom": "none",
+            "mb": 0
+          },
+          "link": {
+            "display": "grid",
+            "gridTemplateColumns": "auto auto",
+            "gridGap": "xxs",
+            "alignItems": "center",
+            "mt": ["xxl", null, "auto"],
+            "mb": 0,
+            "textDecoration": "none",
+            "width": "fit-content",
+            "borderBottom": "1px dashed",
+            "borderBottomColor": "grey-50"
+          }
+        },
+        "featured-alternate": {
+          "variant": "compounds.card.variants.featured",
+          "flexDirection": ["column", null, "row"]
         }
       }
     },
