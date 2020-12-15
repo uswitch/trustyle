@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-by-tag@2.1.2...@uswitch/trustyle.sponsored-by-tag@2.2.0) (2020-12-15)
+
+
+### Bug Fixes
+
+* remove logs ([165f6d5](https://github.com/uswitch/trustyle/commit/165f6d5))
+
+
+### Features
+
+* form variant for sponsored by tag ([e5216de](https://github.com/uswitch/trustyle/commit/e5216de))
+
+
+
+
+
 ## [2.1.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-by-tag@2.1.1...@uswitch/trustyle.sponsored-by-tag@2.1.2) (2020-11-25)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.modal",
-  "version": "2.4.3",
+  "version": "2.4.4",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -14,7 +14,7 @@
     "theme-ui": "^0.2.52"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.18.2"
+    "@uswitch/trustyle.icon": "^1.18.4"
   },
   "dependencies": {
     "body-scroll-lock": "^3.0.3",

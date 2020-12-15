@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.36](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.embedded-video@0.4.35...@uswitch/trustyle.embedded-video@0.4.36) (2020-12-15)
+
+**Note:** Version bump only for package @uswitch/trustyle.embedded-video
+
+
+
+
+
 ## [0.4.35](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.embedded-video@0.4.34...@uswitch/trustyle.embedded-video@0.4.35) (2020-12-02)
 
 **Note:** Version bump only for package @uswitch/trustyle.embedded-video
