@@ -30,7 +30,6 @@ const SponsoredByTag: React.FC<Props> = ({
       variant: `${lookup(variant)}.wrapper`
     }}
   >
-    {console.log(lookup(variant))}
     <span
       sx={{
         variant: `${lookup(variant)}.text`
