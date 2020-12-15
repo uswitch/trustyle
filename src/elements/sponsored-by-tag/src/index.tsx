@@ -14,7 +14,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   className?: string
   providerText?: string
   providerName: string
-  variant?: 'base' | 'hero'
+  variant?: 'base' | 'hero' | 'form'
 }
 
 const SponsoredByTag: React.FC<Props> = ({
@@ -30,6 +30,7 @@ const SponsoredByTag: React.FC<Props> = ({
       variant: `${lookup(variant)}.wrapper`
     }}
   >
+    {console.log(lookup(variant))}
     <span
       sx={{
         variant: `${lookup(variant)}.text`

@@ -365,6 +365,22 @@
           "maxWidth": ["88px", "104px"],
           "ml": "xs"
         }
+      },
+      "variants": {
+        "form": {
+          "wrapper": {
+            "backgroundColor": "grey-05",
+            "borderRadius": "xxs",
+            "display": "flex",
+            "alignItems": "center",
+            "justifyContent": "center",
+            "paddingY": "md",
+            "paddingX": "xl"
+          },
+          "image": {
+            "ml": "md"
+          }
+        }
       }
     },
     "badge": {
