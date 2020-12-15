@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.11.3...@uswitch/trustyle.card@1.12.0) (2020-12-15)
+
+
+### Features
+
+* add altered featured variant to card component ([fc7d30c](https://github.com/uswitch/trustyle/commit/fc7d30c))
+
+
+
+
+
 ## [1.11.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.11.2...@uswitch/trustyle.card@1.11.3) (2020-12-02)
 
 **Note:** Version bump only for package @uswitch/trustyle.card
