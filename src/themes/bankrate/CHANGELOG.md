@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.23.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.3...@uswitch/trustyle.bankrate-theme@2.23.5) (2020-12-16)
+
+
+### Bug Fixes
+
+* Centre the image for a author profile using traditional centering ([7f1b700](https://github.com/uswitch/trustyle/commit/7f1b700))
+
+
+
+
+
+## [2.23.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.3...@uswitch/trustyle.bankrate-theme@2.23.4) (2020-12-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.bankrate-theme
+
+
+
+
+
 ## [2.23.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.2...@uswitch/trustyle.bankrate-theme@2.23.3) (2020-11-25)
 
 

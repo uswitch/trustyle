@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle-utils.palette@2.0.3...@uswitch/trustyle-utils.palette@2.0.4) (2020-12-16)
+
+
+### Bug Fixes
+
+* Swap palette classname & SX props for more specificity on parent ([99ae45c](https://github.com/uswitch/trustyle/commit/99ae45c))
+
+
+
+
+
 ## [2.0.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle-utils.palette@2.0.2...@uswitch/trustyle-utils.palette@2.0.3) (2020-10-27)
 
 **Note:** Version bump only for package @uswitch/trustyle-utils.palette

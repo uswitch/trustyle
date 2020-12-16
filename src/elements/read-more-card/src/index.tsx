@@ -59,7 +59,7 @@ const variantStyles: { [key: string]: any } = {
   cupcard: {
     outer: {
       ...baseStyle.outer,
-      p: 'md',
+      padding: 'md',
       flexDirection: ['row', 'column'],
       alignItems: ['center', 'stretch'],
       height: [null, 176],
