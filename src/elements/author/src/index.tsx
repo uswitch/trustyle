@@ -60,8 +60,7 @@ const Author: React.FC<Props> = ({
       )}
 
       <div>
-        <Palette
-          as={Styled.h5}
+        <Styled.h5
           sx={{
             marginTop: 0,
             fontWeight: 'bold',
@@ -69,18 +68,20 @@ const Author: React.FC<Props> = ({
             marginBottom: [0, 'xxs'],
             variant: getVariant('title')
           }}
-          px={{ color: 'textColor' }}
         >
-          <a
+          <Palette
+            as={Styled.a}
             href={titleUrl}
             sx={{
               color: 'inherit',
               textDecoration: 'none',
               variant: getVariant('link')
             }}
-          ></a>
-          {title}
-        </Palette>
+            px={{ color: 'textColor' }}
+          >
+            {title}
+          </Palette>
+        </Styled.h5>
 
         {subtitle && (
           <Styled.p
