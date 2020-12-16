@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.23.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.3...@uswitch/trustyle.bankrate-theme@2.23.4) (2020-12-16)
+
+
+### Bug Fixes
+
+* update responsive card variant ([a5c5bba](https://github.com/uswitch/trustyle/commit/a5c5bba))
+
+
+
+
+
+
 ## [2.23.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.2...@uswitch/trustyle.bankrate-theme@2.23.3) (2020-11-25)
 
 
