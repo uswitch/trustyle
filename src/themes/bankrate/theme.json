@@ -1160,13 +1160,18 @@
             "variant": [
               "compounds.card.variants.vertical.image",
               "compounds.card.variants.horizontal.image"
-            ]
+            ],
+            "minWidth": ["100%", 270, 270]
           },
           "h3": {
             "variant": [
               "compounds.card.variants.vertical.h3",
               "compounds.card.variants.horizontal.h3"
-            ]
+            ],
+            "a": {
+              "color": "grey-100"
+            },
+            "mb": "xs"
           },
 
           "content": {
@@ -1192,7 +1197,9 @@
               "compounds.card.variants.vertical.headerChildren",
               "compounds.card.variants.horizontal.headerChildren"
             ]
-          }
+          },
+          "display": "flex",
+          "flexDirection": ["column-reverse", "row-reverse", "row-reverse"]
         }
       }
     },
