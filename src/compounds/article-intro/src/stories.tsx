@@ -10,7 +10,6 @@ import AllThemes from '../../../utils/all-themes'
 
 import ArticleIntro from './'
 
-
 export default {
   title: 'Compounds/ArticleIntro'
 }
@@ -67,7 +66,7 @@ export const ExampleWithPalette = () => {
   const title = text('Title', 'What is gadget insurance?')
   const description = text(
     'Description',
-    ' If you’ve ever dropped your mobile, you’ll know it can be expensive to repair or replace. Carrying your phone, laptop or camera around with you risks them being lost, stolen or damaged.'
+    ' If you have ever dropped your mobile, you’ll know it can be expensive to repair or replace. Carrying your phone, laptop or camera around with you risks them being lost, stolen or damaged.'
   )
 
   const updatedDate = date('Article date', new Date(2020, 2, 15))
