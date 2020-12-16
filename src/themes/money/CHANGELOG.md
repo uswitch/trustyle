@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.38.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.37.0...@uswitch/trustyle.money-theme@1.38.0) (2020-12-15)
+
+
+### Features
+
+* form variant for sponsored by tag ([e5216de](https://github.com/uswitch/trustyle/commit/e5216de))
+
+
+
+
+
 # [1.37.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.36.3...@uswitch/trustyle.money-theme@1.37.0) (2020-11-30)
 
 
