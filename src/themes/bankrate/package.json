@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.bankrate-theme",
-  "version": "2.23.6",
+  "version": "2.23.7",
   "license": "MIT",
   "main": "index.js",
   "publishConfig": {
