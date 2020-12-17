@@ -55,12 +55,8 @@ const Hero: React.FC<Props> = ({
     React.cloneElement(breadcrumbs, { variant: breadcrumbVariant })
 
   return (
-    <div>
-      <Palette
-        as="div"
-        sx={{ variant: 'elements.hero.wrapper', overflow: 'hidden' }}
-        px={{ backgroundColor: 'backgroundColor' }}
-      >
+    <div sx={{ variant: 'elements.hero.wrapper', overflow: 'hidden' }}>
+      <Palette as="div" px={{ backgroundColor: 'backgroundColor' }}>
         <div
           sx={{
             position: 'relative',
