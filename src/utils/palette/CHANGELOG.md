@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle-utils.palette@2.0.4...@uswitch/trustyle-utils.palette@4.0.0) (2020-12-17)
+
+
+### Bug Fixes
+
+* Remove the vertical padding from palette to use style tags ([0092184](https://github.com/uswitch/trustyle/commit/0092184))
+
+
+### BREAKING CHANGES
+
+* This fix requires a separate style tag to be added to anything that
+uses this version of the palette
+
+It ensures that the vertical padding needed to prevent margin collapse
+is the least specific thing available
+
+
+
+
+
 # [3.0.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle-utils.palette@2.0.4...@uswitch/trustyle-utils.palette@3.0.0) (2020-12-17)
 
 
