@@ -13,6 +13,6 @@
   },
   "dependencies": {
     "@uswitch/trustyle-utils.get": "^1.0.9",
-    "@uswitch/trustyle-utils.palette": "^2.0.4"
+    "@uswitch/trustyle-utils.palette": "^3.0.0"
   }
 }

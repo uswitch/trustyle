@@ -18,7 +18,7 @@
     "theme-ui": "^0.2.52"
   },
   "dependencies": {
-    "@uswitch/trustyle-utils.palette": "^2.0.4",
+    "@uswitch/trustyle-utils.palette": "^3.0.0",
     "@uswitch/trustyle.imgix-image": "^0.1.40"
   }
 }

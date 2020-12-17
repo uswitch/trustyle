@@ -15,7 +15,7 @@
     "@uswitch/trustyle.author": "^2.1.5"
   },
   "dependencies": {
-    "@uswitch/trustyle-utils.palette": "^2.0.3",
+    "@uswitch/trustyle-utils.palette": "^3.0.0",
     "@uswitch/trustyle.date": "^0.0.11"
   }
 }
