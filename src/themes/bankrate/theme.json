@@ -240,6 +240,21 @@
       }
     },
     "author": {
+      "imageLink": {
+        "borderRadius": "50%",
+        "position": "relative",
+        "overflow": "hidden"
+      },
+      "image": {
+        "position": "absolute",
+        "top": 0,
+        "bottom": 0,
+        "right": 0,
+        "left": "50%",
+        "height": "100%",
+        "maxWidth": "auto",
+        "transform": "translateX(-50%)"
+      },
       "link": {
         "fontWeight": "base"
       },
