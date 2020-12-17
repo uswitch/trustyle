@@ -1217,7 +1217,10 @@
             ]
           },
           "display": "flex",
-          "flexDirection": ["column-reverse", "row-reverse", "row-reverse"]
+          "flexDirection": ["column-reverse", "row-reverse", "row-reverse"],
+          "&": {
+            "backgroundColor": "transparent"
+          }
         }
       }
     },
