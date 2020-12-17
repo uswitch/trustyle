@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.toggle-switch",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -8,7 +8,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@uswitch/trustyle-utils.palette": "^3.0.0"
+    "@uswitch/trustyle-utils.palette": "^4.0.0"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",

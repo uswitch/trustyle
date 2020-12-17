@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.5.4...@uswitch/trustyle.legacy-product-table@0.6.0) (2020-12-17)
+
+
+### Features
+
+* add disabled row to legacy product table ([e0440b5](https://github.com/uswitch/trustyle/commit/e0440b5))
+
+
+
+
+
 ## [0.5.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.5.3...@uswitch/trustyle.legacy-product-table@0.5.4) (2020-12-15)
 
 
