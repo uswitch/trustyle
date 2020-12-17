@@ -1087,7 +1087,7 @@
     "card": {
       "itemsPerRow": [1],
       "base": {
-        "backgroundColor": "transparent",
+        "backgroundColor": "grey-10",
         "transition": "all 0.3s ease",
         "width": "100%",
         "height": "100%",
@@ -1151,6 +1151,9 @@
         },
         "horizontal": {
           "variant": "compounds.card.base",
+          "&:hover": {
+            "box-shadow": "none"
+          },
           "display": "flex",
           "flexDirection": "row-reverse",
           "alignItems": "start",
