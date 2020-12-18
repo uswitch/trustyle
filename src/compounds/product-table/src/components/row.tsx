@@ -141,6 +141,7 @@ const ProductTableRow: React.FC<RowProps> = ({
             rowTitle={rowTitle}
             subtitle={subtitle}
             addons={addonsFor('header')}
+            card={card}
           />
           <div
             sx={{

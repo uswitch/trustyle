@@ -11,6 +11,7 @@ export interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   subtitle?: React.ReactNode
   addons?: React.ReactNode[]
   image?: React.ReactNode
+  card?: React.ReactNode
 }
 
 const ProductTableHeader: React.FC<HeaderProps> = ({
@@ -19,7 +20,8 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
   rowTitle,
   subtitle,
   addons = [],
-  image
+  image,
+  card
 }) => {
   const {
     theme: {
@@ -30,16 +32,22 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
   }: any = useThemeUI()
 
   const pb = paddingBottom || '0'
+  const isCard = card === 'Card'
 
   return (
-    <div sx={{ pb: image ? '' : 'xs' }}>
+    <div
+      sx={{
+        pb: image ? '' : 'xs'
+      }}
+    >
       <div
         sx={{
           borderBottom: image ? '0' : '1px solid',
           paddingBottom: image ? pb : 'sm',
           marginTop: badges.length ? 0 : -6,
           display: 'flex',
-          alignItems: 'center',
+          alignItems: isCard ? 'baseline' : 'center',
+          flexDirection: isCard ? 'column' : 'row',
           variant: badges.length && 'compounds.product-table.badge-wrapper'
         }}
       >
