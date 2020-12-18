@@ -1151,6 +1151,9 @@
         },
         "horizontal": {
           "variant": "compounds.card.base",
+          "&:hover": {
+            "box-shadow": "none"
+          },
           "display": "flex",
           "flexDirection": "row-reverse",
           "alignItems": "start",
@@ -1214,7 +1217,10 @@
             ]
           },
           "display": "flex",
-          "flexDirection": ["column-reverse", "row-reverse", "row-reverse"]
+          "flexDirection": ["column-reverse", "row-reverse", "row-reverse"],
+          "&": {
+            "backgroundColor": "transparent"
+          }
         }
       }
     },

@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.23.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.9...@uswitch/trustyle.bankrate-theme@2.23.10) (2020-12-17)
+
+
+### Bug Fixes
+
+* remove horizontal card hover effect ([f01e52d](https://github.com/uswitch/trustyle/commit/f01e52d))
+* responsive card background ([f383319](https://github.com/uswitch/trustyle/commit/f383319))
+
+
+
+
+
+## [2.23.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.8...@uswitch/trustyle.bankrate-theme@2.23.9) (2020-12-17)
+
+
+### Bug Fixes
+
+* card background update ([5943679](https://github.com/uswitch/trustyle/commit/5943679))
+
+
+
+
+
+
 ## [2.23.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.6...@uswitch/trustyle.bankrate-theme@2.23.8) (2020-12-17)
 
 **Note:** Version bump only for package @uswitch/trustyle.bankrate-theme
