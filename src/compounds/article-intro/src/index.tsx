@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
+import { Palette } from '@uswitch/trustyle-utils.palette'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
@@ -18,13 +19,24 @@ const ArticleIntro: React.FC<Props> = ({
 }) => {
   return (
     <div className={className}>
-      <Styled.h1 sx={{ variant: 'compounds.article-intro.base.heading' }}>
+      <Palette
+        as={Styled.h1}
+        sx={{ variant: 'compounds.article-intro.base.heading' }}
+        px={{
+          color: (palette: any) => palette.headingColor || palette.textColor
+        }}
+      >
         {title}
-      </Styled.h1>
+      </Palette>
+
       {author}
-      <p sx={{ variant: 'compounds.article-intro.base.description' }}>
+      <Palette
+        as={Styled.p}
+        sx={{ variant: 'compounds.article-intro.base.description' }}
+        px={{ color: 'textColor' }}
+      >
         {description}
-      </p>
+      </Palette>
     </div>
   )
 }

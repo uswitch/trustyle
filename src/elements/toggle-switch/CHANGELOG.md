@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.toggle-switch@2.0.9...@uswitch/trustyle.toggle-switch@2.0.11) (2020-12-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.toggle-switch
+
+
+
+
+
+## [2.0.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.toggle-switch@2.0.9...@uswitch/trustyle.toggle-switch@2.0.10) (2020-12-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.toggle-switch
+
+
+
+
+
 ## [2.0.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.toggle-switch@2.0.8...@uswitch/trustyle.toggle-switch@2.0.9) (2020-12-16)
 
 **Note:** Version bump only for package @uswitch/trustyle.toggle-switch
