@@ -378,7 +378,9 @@
             "paddingX": "xl"
           },
           "image": {
-            "ml": "md"
+            "ml": "md",
+            "width": "149px",
+            "height": "auto"
           }
         }
       }
