@@ -21,7 +21,7 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
   subtitle,
   addons = [],
   image,
-  card
+  card = false
 }) => {
   const {
     theme: {
@@ -32,7 +32,6 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
   }: any = useThemeUI()
 
   const pb = paddingBottom || '0'
-  const isCard = card === 'Card'
 
   return (
     <div
@@ -46,8 +45,8 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
           paddingBottom: image ? pb : 'sm',
           marginTop: badges.length ? 0 : -6,
           display: 'flex',
-          alignItems: isCard ? 'baseline' : 'center',
-          flexDirection: isCard ? 'column' : 'row',
+          alignItems: card ? 'baseline' : 'center',
+          flexDirection: card ? 'column' : 'row',
           variant: badges.length && 'compounds.product-table.badge-wrapper'
         }}
       >
@@ -73,7 +72,8 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
               sx={{
                 margin: 0,
                 variant: `compounds.product-table.${image &&
-                  'variants.redesign.'}row.title`
+                  'variants.redesign.'}row.title`,
+                pl: card && '0 !important'
               }}
             >
               {rowTitle}
