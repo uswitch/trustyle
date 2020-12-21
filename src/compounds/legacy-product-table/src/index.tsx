@@ -166,13 +166,15 @@ interface CtaCellProps extends React.HTMLAttributes<HTMLDivElement> {
   styles?: any
   href?: string
   onClick?: (event?: any) => void
+  disabled?: boolean
 }
 
 export const CtaCell: React.FC<CtaCellProps> = ({
   children,
   styles,
   href,
-  onClick
+  onClick,
+  disabled
 }) => {
   return (
     <BaseCell
@@ -180,7 +182,8 @@ export const CtaCell: React.FC<CtaCellProps> = ({
         flex: 0,
         flexBasis: 'auto',
         margin: 'auto',
-        marginLeft: ['auto', '15px']
+        marginLeft: ['auto', '15px'],
+        visibility: disabled && 'hidden'
       }}
     >
       <ButtonLink
@@ -508,6 +511,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   onClickEligibility?: (addon?: object) => void
   eligibilityAddon?: object
   onRowClick?: () => void
+  disabled?: boolean
 }
 
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
@@ -521,6 +525,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   onClickEligibility,
   eligibilityAddon,
   onRowClick,
+  disabled,
   ...props
 }) => {
   const [hover, setHover] = React.useState(false)
@@ -534,7 +539,8 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         position: 'relative',
         ':first-of-type': {
           marginTop: '10px'
-        }
+        },
+        opacity: disabled ? '0.4' : 1
       }}
       onMouseEnter={() => {
         setHover(true)
@@ -544,7 +550,11 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
       }}
       {...props}
     >
-      <RowWrapper link={clickableRow} onRowClick={onRowClick}>
+      <RowWrapper
+        link={clickableRow}
+        onRowClick={onRowClick}
+        disabled={disabled}
+      >
         <Header>{title}</Header>
 
         <div
@@ -558,22 +568,28 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           {children}
         </div>
 
-        <AdditionalInfo>
-          {info.map((item, key) => {
-            return <div key={key}>{item}</div>
-          })}
-        </AdditionalInfo>
+        {info.length > 0 && (
+          <AdditionalInfo>
+            {info.map((item, key) => {
+              return <div key={key}>{item}</div>
+            })}
+          </AdditionalInfo>
+        )}
 
-        <Footer label={repExampleLabel}>{representativeExample}</Footer>
+        {representativeExample.length > 0 && (
+          <Footer label={repExampleLabel}>{representativeExample}</Footer>
+        )}
       </RowWrapper>
 
-      <Eligibility
-        hover={hover}
-        eligibilityContent={eligibilityContent}
-        clickableRow={clickableRow}
-        onClickEligibility={onClickEligibility}
-        eligibilityAddon={eligibilityAddon}
-      />
+      {eligibilityContent.length > 0 && !disabled && (
+        <Eligibility
+          hover={hover}
+          eligibilityContent={eligibilityContent}
+          clickableRow={clickableRow}
+          onClickEligibility={onClickEligibility}
+          eligibilityAddon={eligibilityAddon}
+        />
+      )}
     </article>
   )
 }

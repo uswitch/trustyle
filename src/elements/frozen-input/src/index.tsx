@@ -21,7 +21,6 @@ export const FrozenInput: React.FC<Props> = ({
 }) => {
   const [frozen, setFrozen] = useState(freezable && !!text)
   const { theme }: any = useThemeUI()
-  const iconGlyph = theme?.name === 'Journey' ? 'edit-journey' : 'edit'
   const iconColor =
     (theme && theme.colors[theme.elements.input?.frozen?.button?.color]) ||
     colors.UswitchNavy
@@ -58,7 +57,8 @@ export const FrozenInput: React.FC<Props> = ({
             padding: '0 24px',
             textOverflow: 'ellipsis',
             width: `calc(100% - ${editIconWidth}px)`,
-            variant: 'elements.input.frozen.text'
+            variant: 'elements.input.frozen.text',
+            m: 0
           }}
         >
           {text}
@@ -68,7 +68,7 @@ export const FrozenInput: React.FC<Props> = ({
           sx={{ variant: 'elements.input.frozen.button' }}
           onClick={() => setFrozen(false)}
         >
-          <Icon color={iconColor} glyph={iconGlyph} />
+          <Icon color={iconColor} glyph="edit" />
         </button>
       </div>
 
