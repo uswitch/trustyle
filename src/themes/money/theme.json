@@ -370,7 +370,7 @@
         "form": {
           "wrapper": {
             "backgroundColor": "grey-05",
-            "borderRadius": "xxs",
+            "borderRadius": "4px",
             "display": "flex",
             "alignItems": "center",
             "justifyContent": "center",
