@@ -75,7 +75,7 @@ export const ExampleWithFormVariant = () => {
   const providerText: string = text('Text to display', 'You selected:')
   return (
     <React.Fragment>
-      <div sx={{ backgroundColor: 'secondary', padding: 'sm', width: '400px' }}>
+      <div sx={{ backgroundColor: 'secondary', padding: 'sm', width: '500px' }}>
         <SponsoredByTag
           providerLogoSrc={providerLogo}
           providerText={providerText}

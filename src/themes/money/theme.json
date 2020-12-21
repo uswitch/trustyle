@@ -370,7 +370,7 @@
         "form": {
           "wrapper": {
             "backgroundColor": "grey-05",
-            "borderRadius": "xxs",
+            "borderRadius": "4px",
             "display": "flex",
             "alignItems": "center",
             "justifyContent": "center",
@@ -378,7 +378,9 @@
             "paddingX": "xl"
           },
           "image": {
-            "ml": "md"
+            "ml": "md",
+            "width": "149px",
+            "height": "auto"
           }
         }
       }
