@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.38.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.38.2...@uswitch/trustyle.money-theme@1.38.3) (2020-12-22)
+
+
+### Bug Fixes
+
+* form section spacing ([51fb000](https://github.com/uswitch/trustyle/commit/51fb000))
+
+
+
+
+
 ## [1.38.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.38.0...@uswitch/trustyle.money-theme@1.38.2) (2020-12-21)
 
 
