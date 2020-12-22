@@ -1336,7 +1336,7 @@
     },
     "rich-text-block": {
       "base": {
-        "*:first-child": {
+        "&:first-child": {
           "mt": 0
         }
       },
@@ -1368,7 +1368,13 @@
       }
     },
     "form-section": {
-      "default": {},
+      "default": {
+        "elements": {
+          "wrapper": {
+            "padding": 0
+          }
+        }
+      },
       "panel": {
         "elements": {
           "wrapper": {
