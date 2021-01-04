@@ -124,6 +124,13 @@ export const Example = () => (
   </div>
 )
 
+export const ExampleInRow = () => (
+  <div sx={{ display: 'flex', flexDirection: 'row' }}>
+    <ColourSelect />
+    <ColourSelect />
+  </div>
+)
+
 Example.story = {
   parameters: {
     percy: { skip: true }
