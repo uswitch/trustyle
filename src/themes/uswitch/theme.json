@@ -756,6 +756,13 @@
     },
     "rich-text-block": {
       "base": {
+        "h2": {
+          "fontSize": [32, 32],
+          "mb": 64
+        },
+        "h3": {
+          "fontSize": 28
+        },
         "*:first-child": {
           ":not(hr)": {
             "mt": 0
@@ -1511,8 +1518,8 @@
         "paddingTop": 0
       },
       "content": {
-        "paddingTop": 0,
-        "paddingBottom": 0
+        "paddingTop": [0, 0],
+        "paddingBottom": [0, 0]
       },
       "sm": {
         "minHeight": 360,
@@ -2728,6 +2735,8 @@
         }
       },
       "anchor": {
+        "display": "inline-flex",
+        "alignItems": "center",
         "pb": "xxs",
         "borderColor": "grey-50",
         "&:not([href*='tel'])": {
@@ -2850,12 +2859,12 @@
         },
         "assuranceBar": {
           "display": "flex",
-          "flexDirection": ["row", "column", "row"],
+          "flexDirection": "row",
           "flexWrap": "wrap",
-          "alignItems": ["flex-start", "center", "flex-start"],
-          "textAlign": ["left", "center", "left"],
+          "alignItems": "flex-start",
+          "textAlign": "left",
           "py": 0,
-          "mb": "sm",
+          "mb": "md",
           "h3": {
             "fontSize": [
               "20px !important",
@@ -2882,7 +2891,7 @@
             "box-sizing": "border-box",
             "img": {
               "width": [24, 30],
-              "mr": ["sm", 0, "md"]
+              "mr": ["sm", "md"]
             }
           },
           "link": {
@@ -3028,6 +3037,7 @@
             "width": "100%",
             "height": "100%",
             "pb": "20%",
+            "pt": "6%",
             "flex": 4,
             "display": "flex",
             "borderBottom": "none",
@@ -3041,7 +3051,8 @@
                 "card.variants.provider.image.maxWidth.mobile",
                 "card.variants.provider.image.maxWidth.tablet",
                 "card.variants.provider.image.maxWidth.desktop"
-              ]
+              ],
+              "maxHeight": 120
             }
           },
           "content": {
@@ -3059,6 +3070,7 @@
         },
         "featured": {
           "itemsPerRow": 1,
+          "imgSizes": "(max-width: 768px), 768px",
           "backgroundColor": "grey-05",
           "display": "flex",
           "flexDirection": ["column-reverse", null, "row-reverse"],
@@ -3094,11 +3106,11 @@
           },
           "image": {
             "width": ["100%", null, "grid.lg.6"],
-            "height": 658,
+            "height": ["auto", null, 658],
             "flex": 1,
             "overflow": "hidden",
             "img": {
-              "objectFit": "cover",
+              "objectFit": ["contain", "cover"],
               "width": "100%",
               "height": "100%"
             }
@@ -3537,7 +3549,7 @@
             "px": 0
           },
           "inner": {
-            "flexDirection": ["column", "row"],
+            "flexDirection": ["column", "column", "row"],
             "alignItems": ["center", "center", "flex-start"],
             "px": 0
           },
@@ -3551,20 +3563,37 @@
             "alignSelf": ["auto", "flex-start", "auto"],
             "mt": [null, 0, 20],
             "px": 0,
-            "py": [45, 0]
+            "py": [45, 0],
+            "height": [null, "100%"]
           },
           "content": {
             "alignSelf": "center",
-            "px": [20, 20, 0],
-            "maxWidth": ["100%", "grid.md.7", "grid.md.8"],
+            "px": [20, 0, 0],
+            "textAlign": "left",
+            "maxWidth": ["100%", null, "grid.md.8"],
+            "width": "100%",
             "flexBasis": [null, "45%"],
             "h4": {
               "width": "100%"
+            },
+            "h2": {
+              "fontSize": [32, 40],
+              "mb": 72
+            },
+            "span > h3": {
+              "fontSize": [28, 28],
+              "mb": 72
+            },
+            "p": {
+              "color": "grey-60",
+              "mt": 72
             }
           },
           "image": {
             "mt": [0, -40, 0],
-            "maxWidth": ["100%", "100%"]
+            "maxWidth": ["100%", "100%"],
+            "imgixWidth": 768,
+            "height": "100%"
           }
         },
         "solidColorImageRight": {

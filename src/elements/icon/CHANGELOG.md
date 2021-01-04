@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.19.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.18.4...@uswitch/trustyle.icon@1.19.0) (2020-12-18)
+
+
+### Features
+
+* Make uswitch themed freezable input look like latest designs ([4f92554](https://github.com/uswitch/trustyle/commit/4f92554))
+
+
+
+
+
 ## [1.18.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.18.2...@uswitch/trustyle.icon@1.18.4) (2020-12-15)
 
 

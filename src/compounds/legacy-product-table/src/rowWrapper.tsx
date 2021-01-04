@@ -7,6 +7,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   link?: string
   children?: React.ReactNode
   onRowClick?: () => void
+  disabled?: boolean
 }
 
 const linkWrapper = (
@@ -38,7 +39,15 @@ const linkWrapper = (
   )
 }
 
-const RowWrapper: React.FC<Props> = ({ link, children, onRowClick }) => {
+const RowWrapper: React.FC<Props> = ({
+  link,
+  children,
+  onRowClick,
+  disabled
+}) => {
+  if (disabled) {
+    return <div>{children}</div>
+  }
   return link ? linkWrapper(link, children, onRowClick) : <div>{children}</div>
 }
 
