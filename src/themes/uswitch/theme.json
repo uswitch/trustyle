@@ -1379,8 +1379,8 @@
         "paddingTop": 0
       },
       "content": {
-        "paddingTop": 0,
-        "paddingBottom": 0
+        "paddingTop": [0, 0],
+        "paddingBottom": [0, 0]
       },
       "sm": {
         "minHeight": 360,
