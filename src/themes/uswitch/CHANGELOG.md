@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.32.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.0...@uswitch/trustyle.uswitch-theme@2.32.1) (2021-01-04)
+
+
+### Bug Fixes
+
+* changes padding for hero in uswitch theme to array. ([1bc86ad](https://github.com/uswitch/trustyle/commit/1bc86ad))
+
+
+
+
+
 # [2.32.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.31.5...@uswitch/trustyle.uswitch-theme@2.32.0) (2020-12-15)
 
 
