@@ -1405,8 +1405,7 @@
         }
       },
       "container": {
-        "flex": "1 1 0px",
-        "min-width": "176px"
+        "flex": "1 1 0px"
       },
       "select": {
         "base": {
