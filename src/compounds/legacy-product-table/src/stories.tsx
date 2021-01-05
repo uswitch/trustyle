@@ -85,7 +85,7 @@ const ExampleProductTable = () => {
         <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
       </ImageCell>
 
-      <CtaCell href={null}>See Deal</CtaCell>
+      <CtaCell href={''}>See Deal</CtaCell>
     </LegacyProductTable>
   )
 }
