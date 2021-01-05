@@ -18,9 +18,15 @@ const usePrevious = <T extends {}>(value: T): T | undefined => {
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   open: boolean
   className?: string
+  initialOpen?: boolean
 }
 
-const SlideReveal: React.FC<Props> = ({ open, children, className }) => {
+const SlideReveal: React.FC<Props> = ({
+  open,
+  children,
+  className,
+  initialOpen = true
+}) => {
   const contentsWrapperEl = React.useRef<HTMLDivElement>(null)
   const [height, setHeight] = React.useState(0)
 
@@ -30,7 +36,7 @@ const SlideReveal: React.FC<Props> = ({ open, children, className }) => {
 
   // Initial is to make sure that content displays when JS is disabled and that
   // initially opened content doesn't animate open
-  const [initial, setInitial] = React.useState(true)
+  const [initial, setInitial] = React.useState(initialOpen)
 
   // Store whether we're transitioning or not so that when the slider is open
   // and not transitioning, we can remove the maxHeight to reduce the

@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.call-out",
-  "version": "2.1.7",
+  "version": "2.1.8",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -16,6 +16,6 @@
     "@uswitch/trustyle-utils.palette": "^4.0.0"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.18.4"
+    "@uswitch/trustyle.icon": "^1.19.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.read-more-card",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -13,6 +13,6 @@
     "react": "^16.7.0"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.18.4"
+    "@uswitch/trustyle.icon": "^1.19.0"
   }
 }
