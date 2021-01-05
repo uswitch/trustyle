@@ -18,7 +18,7 @@ export type Variant =
 type IconPosition = 'left' | 'center' | 'right' | null
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant: Variant
+  variant: Variant | string
   iconPosition?: IconPosition
   inverse?: boolean
   size?: string

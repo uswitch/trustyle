@@ -29,6 +29,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   glyph?: Glyph
   glyphColor?: string
   variant?: string
+  scrollToRef?: React.RefObject<HTMLElement>
 }
 
 interface TitleProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -55,6 +56,7 @@ const Accordion: React.FC<Props> & {
   icon = '',
   glyph,
   glyphColor = '',
+  scrollToRef,
   variant
 }) => {
   const {
@@ -103,7 +105,17 @@ const Accordion: React.FC<Props> & {
         px={{
           color: 'textColor'
         }}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => {
+          if (
+            isOpen &&
+            variant === 'reverse' &&
+            scrollToRef &&
+            scrollToRef.current
+          ) {
+            scrollToRef.current.scrollIntoView({ behavior: 'smooth' })
+          }
+          setIsOpen(!isOpen)
+        }}
       >
         {icon || glyph ? (
           <div

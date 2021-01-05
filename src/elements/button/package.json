@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.button",
-  "version": "3.0.2",
+  "version": "3.0.4",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",

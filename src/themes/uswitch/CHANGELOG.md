@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.32.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.3...@uswitch/trustyle.uswitch-theme@2.32.4) (2021-01-05)
+
+
+### Bug Fixes
+
+* provider styling ([c8be337](https://github.com/uswitch/trustyle/commit/c8be337))
+* styling issues ([1a341a7](https://github.com/uswitch/trustyle/commit/1a341a7))
+
+
+
+
+
+## [2.32.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.2...@uswitch/trustyle.uswitch-theme@2.32.3) (2021-01-05)
+
+
+### Bug Fixes
+
+* remove min width on dropdown ([5fa26e7](https://github.com/uswitch/trustyle/commit/5fa26e7))
+
+
+
+
+
 ## [2.32.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.1...@uswitch/trustyle.uswitch-theme@2.32.2) (2021-01-04)
 
 

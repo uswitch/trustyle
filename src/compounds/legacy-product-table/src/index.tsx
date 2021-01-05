@@ -3,6 +3,7 @@
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
+import { Button } from '@uswitch/trustyle.button'
 import { Icon } from '@uswitch/trustyle.icon'
 
 import RowWrapper from './rowWrapper'
@@ -176,6 +177,24 @@ export const CtaCell: React.FC<CtaCellProps> = ({
   onClick,
   disabled
 }) => {
+  const props = {
+    variant: 'primary',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+    size: 'small',
+    sx: {
+      background: 'linear-gradient(90deg, #924A8B 5%, #DB4D75 95%)',
+      color: '#fff',
+      fontSize: '16px',
+      fontWeight: 300,
+      ':hover': {
+        opacity: 1
+      },
+      ...styles
+    },
+    onClick
+  }
+
   return (
     <BaseCell
       sx={{
@@ -186,26 +205,13 @@ export const CtaCell: React.FC<CtaCellProps> = ({
         visibility: disabled && 'hidden'
       }}
     >
-      <ButtonLink
-        variant="primary"
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        size="small"
-        sx={{
-          background: 'linear-gradient(90deg, #924A8B 5%, #DB4D75 95%)',
-          color: '#fff',
-          fontSize: '16px',
-          fontWeight: 300,
-          ':hover': {
-            opacity: 1
-          },
-          ...styles
-        }}
-        onClick={onClick}
-      >
-        {children}
-      </ButtonLink>
+      {href ? (
+        <ButtonLink href={href} {...props}>
+          {children}
+        </ButtonLink>
+      ) : (
+        <Button {...props}>{children}</Button>
+      )}
     </BaseCell>
   )
 }
