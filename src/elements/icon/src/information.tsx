@@ -6,11 +6,11 @@ import { jsx } from 'theme-ui'
 import * as st from './styles'
 
 interface Props {
-  color: string
+  color?: string
   size?: number
 }
 
-export const Information: React.FC<Props> = ({ color, size }) => (
+export const Information: React.FC<Props> = ({ color = '#AC96DE', size }) => (
   <svg
     sx={{
       display: 'block',
