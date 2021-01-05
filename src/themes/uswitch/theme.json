@@ -298,8 +298,7 @@
       "fontSize": ["sm", "md", "lg"],
       "b": {
         "color": "primary"
-      },
-      "mb": "lg"
+      }
     },
     "h4": {
       "variant": "styles.headings",
