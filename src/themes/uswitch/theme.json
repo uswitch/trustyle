@@ -809,7 +809,7 @@
             "mt": "xxs"
           },
           "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)"
-         },
+        },
         "panel-primary-text-align-center": {
           "variant": "elements.rich-text-block.variants.panel-primary",
           "textAlign": "center",
@@ -826,7 +826,7 @@
           "boxShadow": "0px 4px 10px rgba(0, 0, 0, 0.05)"
         },
         "panel-secondary": {
-          "border":"1px solid",
+          "border": "1px solid",
           "borderColor": "grey-20",
           "padding": "md",
           "h4": {
@@ -2600,7 +2600,7 @@
     "accordion": {
       "iconOpen": "minus",
       "iconClosed": "plus",
-      "borderBottom":"1px solid #C4C4C4",
+      "borderBottom": "1px solid #C4C4C4",
       "base": {
         "mb": 72,
         "title": {
