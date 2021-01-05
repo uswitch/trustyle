@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.6.1...@uswitch/trustyle.legacy-product-table@0.8.0) (2021-01-05)
+
+
+### Features
+
+* add button to legacy product table ([88f84f6](https://github.com/uswitch/trustyle/commit/88f84f6))
+* disable the link on clickable rows ([8e91be0](https://github.com/uswitch/trustyle/commit/8e91be0))
+
+
+
+
+
+# [0.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.6.1...@uswitch/trustyle.legacy-product-table@0.7.0) (2021-01-05)
+
+
+### Features
+
+* add button to legacy product table ([7bf619d](https://github.com/uswitch/trustyle/commit/7bf619d))
+* disable the link on clickable rows ([8e433fc](https://github.com/uswitch/trustyle/commit/8e433fc))
+
+
+
+
+
 ## [0.6.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.6.0...@uswitch/trustyle.legacy-product-table@0.6.1) (2020-12-18)
 
 **Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
