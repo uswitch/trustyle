@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.list@1.5.5...@uswitch/trustyle.list@1.5.6) (2021-01-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.list
+
+
+
+
+
 ## [1.5.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.list@1.5.4...@uswitch/trustyle.list@1.5.5) (2020-12-18)
 
 **Note:** Version bump only for package @uswitch/trustyle.list
