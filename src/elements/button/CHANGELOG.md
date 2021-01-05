@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@3.0.2...@uswitch/trustyle.button@3.0.4) (2021-01-05)
+
+
+### Bug Fixes
+
+* type difference between button elements ([9cb1800](https://github.com/uswitch/trustyle/commit/9cb1800))
+
+
+
+
+
 ## [3.0.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@3.0.2...@uswitch/trustyle.button@3.0.3) (2021-01-05)
 
 
