@@ -28,20 +28,70 @@ SingleAccordion.story = {
   }
 }
 
-export const ReverseAccordion = () => (
-  <React.Fragment>
-    <p>Recommendation 1</p>
-    <Accordion
-      title={'Show more recommendations'}
-      openedTitle={'Show less'}
-      variant="reverse"
-    >
-      <p style={{ marginTop: 0, marginBottom: '2000px' }}>Recommendation 2</p>
-      <p>Recommendation 3</p>
-    </Accordion>
-    <p style={{ marginTop: '2000px' }}>Content below</p>
-  </React.Fragment>
-)
+export const ReverseAccordion = () => {
+  const scrollToRef = React.useRef<HTMLHeadingElement>(null)
+  return (
+    <React.Fragment>
+      <h3 ref={scrollToRef}>Recommendation 1</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu
+        fringilla quam. Fusce vulputate sit amet nisl quis cursus. Proin
+        vehicula lacinia elit quis pretium. Proin eget pellentesque dolor. Nulla
+        volutpat sapien placerat, ultrices libero ut, ornare dui. Donec a est
+        facilisis odio faucibus pretium vitae nec justo. Curabitur gravida diam
+        at sodales maximus. Nulla gravida luctus felis, ac sodales elit.
+      </p>
+      <Accordion
+        title={'Show more recommendations'}
+        openedTitle={'Show less'}
+        variant="reverse"
+        scrollToRef={scrollToRef}
+      >
+        <h3 style={{ marginTop: 0 }}>Recommendation 2</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu
+          fringilla quam. Fusce vulputate sit amet nisl quis cursus. Proin
+          vehicula lacinia elit quis pretium. Proin eget pellentesque dolor.
+          Nulla volutpat sapien placerat, ultrices libero ut, ornare dui. Donec
+          a est facilisis odio faucibus pretium vitae nec justo. Curabitur
+          gravida diam at sodales maximus. Nulla gravida luctus felis, ac
+          sodales elit.
+        </p>
+        <h3>Recommendation 3</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu
+          fringilla quam. Fusce vulputate sit amet nisl quis cursus. Proin
+          vehicula lacinia elit quis pretium. Proin eget pellentesque dolor.
+          Nulla volutpat sapien placerat, ultrices libero ut, ornare dui. Donec
+          a est facilisis odio faucibus pretium vitae nec justo. Curabitur
+          gravida diam at sodales maximus. Nulla gravida luctus felis, ac
+          sodales elit.
+        </p>
+      </Accordion>
+      <h3>Content below</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu
+        fringilla quam. Fusce vulputate sit amet nisl quis cursus. Proin
+        vehicula lacinia elit quis pretium. Proin eget pellentesque dolor. Nulla
+        volutpat sapien placerat, ultrices libero ut, ornare dui. Donec a est
+        facilisis odio faucibus pretium vitae nec justo. Curabitur gravida diam
+        at sodales maximus. Nulla gravida luctus felis, ac sodales elit.
+      </p>
+      <p>
+        Nullam eu sem nec tellus luctus luctus. Proin ullamcorper pretium ante
+        ut viverra. In in sapien nec ipsum consequat pulvinar eget feugiat
+        lorem. Ut purus ex, porttitor quis eros nec, efficitur mattis neque. Ut
+        aliquet sed lacus vitae fringilla. Nullam non pellentesque erat. Sed
+        rutrum eget mi at fringilla. Praesent efficitur tortor ac placerat
+        semper. Suspendisse rhoncus placerat ultricies. Donec accumsan nisi non
+        urna posuere, et accumsan eros congue. Proin quis imperdiet quam. Nulla
+        sodales et magna luctus dignissim. Integer in maximus ligula, eget
+        lacinia risus. Nam justo nulla, efficitur ac purus sed, molestie
+        faucibus enim.
+      </p>
+    </React.Fragment>
+  )
+}
 
 ReverseAccordion.story = {
   parameters: {
