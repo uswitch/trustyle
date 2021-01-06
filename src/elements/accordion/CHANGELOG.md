@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.11.10...@uswitch/trustyle.accordion@0.12.0) (2021-01-06)
+
+
+### Features
+
+* add `buttonProps` to accordion ([6176171](https://github.com/uswitch/trustyle/commit/6176171))
+
+
+
+
+
+## [0.11.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.11.9...@uswitch/trustyle.accordion@0.11.10) (2021-01-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.accordion
+
+
+
+
+
 ## [0.11.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.11.8...@uswitch/trustyle.accordion@0.11.9) (2021-01-05)
 
 **Note:** Version bump only for package @uswitch/trustyle.accordion

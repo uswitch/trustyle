@@ -30,7 +30,10 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   glyphColor?: string
   variant?: string
   scrollToRef?: React.RefObject<HTMLElement>
+  buttonProps?: object | ButtonPropsFn
 }
+
+type ButtonPropsFn = (args: { open: boolean; title: string }) => object
 
 interface TitleProps extends React.HTMLAttributes<HTMLDivElement> {
   as?: React.ElementType
@@ -57,7 +60,8 @@ const Accordion: React.FC<Props> & {
   glyph,
   glyphColor = '',
   scrollToRef,
-  variant
+  variant,
+  buttonProps: buttonPropsFn
 }) => {
   const {
     theme: {
@@ -83,6 +87,11 @@ const Accordion: React.FC<Props> & {
 
   const title =
     typeof openedTitle !== 'undefined' && isOpen ? openedTitle : closedTitle
+
+  const buttonProps =
+    typeof buttonPropsFn === 'function'
+      ? buttonPropsFn({ open: isOpen, title })
+      : buttonPropsFn
 
   return (
     <div
@@ -116,6 +125,7 @@ const Accordion: React.FC<Props> & {
           }
           setIsOpen(!isOpen)
         }}
+        {...buttonProps}
       >
         {icon || glyph ? (
           <div
