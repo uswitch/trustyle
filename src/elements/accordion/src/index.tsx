@@ -31,6 +31,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   variant?: string
   scrollToRef?: React.RefObject<HTMLElement>
   buttonProps?: object | ButtonPropsFn
+  sx?: object
 }
 
 type ButtonPropsFn = (args: { open: boolean; title: string }) => object
@@ -61,7 +62,8 @@ const Accordion: React.FC<Props> & {
   glyphColor = '',
   scrollToRef,
   variant,
-  buttonProps: buttonPropsFn
+  buttonProps: buttonPropsFn,
+  sx = {}
 }) => {
   const {
     theme: {
@@ -98,7 +100,8 @@ const Accordion: React.FC<Props> & {
       sx={{
         variant: variant
           ? `compounds.accordion.variants.${variant}`
-          : 'compounds.accordion'
+          : 'compounds.accordion',
+        ...sx
       }}
       className={className}
       data-target="accordion" // this is a hack to stop clicking propagating to the product table
