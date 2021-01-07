@@ -3101,7 +3101,7 @@
           "h3": {
             "fontSize": ["md", "xl", "xxl"],
             "fontWeight": "xxbold",
-            "mb":["lg", "xxl"],
+            "mb": ["lg", "xxl"],
             "a": {
               "borderBottom": "none",
               "font-weight": "inherit"
@@ -3457,7 +3457,6 @@
         }
       }
     }
-
   },
 
   "modules": {
