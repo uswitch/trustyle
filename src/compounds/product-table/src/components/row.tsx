@@ -115,7 +115,8 @@ const ProductTableRow: React.FC<RowProps> = ({
             ? 'compounds.product-table.variants.redesign.row.main'
             : 'compounds.product-table.row.main',
           pointerEvents: disabled ? 'none' : null,
-          opacity: disabled ? '0.5' : '1'
+          opacity: disabled ? '0.5' : '1',
+          pb: card ? '50px' : '0'
         }}
       >
         <RowWrapper link={clickableRow} headerImage={image}>
