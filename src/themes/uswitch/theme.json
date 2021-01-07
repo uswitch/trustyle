@@ -3600,8 +3600,7 @@
               "mb": 72
             },
             "p": {
-              "color": "grey-60",
-              "mt": 72
+             "color": "grey-60"
             }
           },
           "image": {
