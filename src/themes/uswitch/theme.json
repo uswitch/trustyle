@@ -2208,6 +2208,14 @@
       }
     },
     "product-table": {
+      "card": {
+        "flex": "1 1 0px",
+        "mr": ["0", "0", "md"]
+      },
+      "card-with-badge": {
+        "variant": "compounds.product-table.card",
+        "mt": "9px"
+      },
       "cta": {
         "paddingY": ["md", "md", "0"]
       },
@@ -2686,8 +2694,7 @@
           "button": {
             "variant": "compounds.accordion.base.button",
             "justifyContent": "center",
-            "pt": ["12px", "md"],
-            "pb": ["xxs", "md"],
+            "py": "12px !important",
             "borderTop": "none",
             "border": 0
           }
@@ -3092,11 +3099,12 @@
             }
           },
           "h3": {
-            "fontSize": "xxl",
+            "fontSize": ["md", "xl", "xxl"],
             "fontWeight": "xxbold",
-            "mb": "xxl",
+            "mb": ["lg", "xxl"],
             "a": {
-              "borderBottom": "none"
+              "borderBottom": "none",
+              "font-weight": "inherit"
             }
           },
           "meta": {
@@ -3179,6 +3187,7 @@
         "alignItems": "center"
       }
     },
+
     "supplierRow": {
       "mt": ["32px", "44px"],
       "borderBottomWidth": "1px",
@@ -3215,6 +3224,7 @@
         "order": [1, 2]
       }
     },
+
     "numberedCallouts": {
       "> div": {
         "& svg": {
@@ -3227,6 +3237,7 @@
         "pt": "xs"
       }
     },
+
     "card-award-nominee": {
       "backgroundColor": "light-1",
       "borderTopWidth": 5,
@@ -3253,6 +3264,7 @@
         "lineHeight": "1.25em"
       }
     },
+
     "click-out-form": {
       "my": 0,
       "backgroundColor": "light-1",
@@ -3280,6 +3292,7 @@
         "mb": 0
       }
     },
+
     "click-out-form-responsive": {
       "my": 0,
       "backgroundColor": "light-1",
@@ -3309,10 +3322,12 @@
         "mb": 0
       }
     },
+
     "breadcrumb": {
       "my": "sm",
       "mx": 0
     },
+
     "two-tone-heading": {
       "base": {
         "textAlign": ["left", "center"],
@@ -3325,6 +3340,7 @@
         }
       }
     },
+
     "cookie-banner": {
       "heading": {
         "mt": [0, "md", "md"]
@@ -3354,6 +3370,7 @@
         "borderColor": "primary"
       }
     },
+
     "side-nav": {
       "accordion": {
         "button": {
@@ -3428,6 +3445,7 @@
         }
       }
     },
+
     "article-intro": {
       "base": {
         "heading": {
@@ -3757,6 +3775,7 @@
         }
       }
     },
+
     "collectionGrid": {
       "wrapper": {
         "overflow": "hidden"
@@ -3773,6 +3792,7 @@
         }
       }
     },
+
     "secondary-cta-bar": {
       "col": {
         "position": "relative",
@@ -3794,14 +3814,17 @@
         }
       }
     },
+
     "assuranceBar": {
       "backgroundColor": "brand",
       "color": "light-1"
     },
+
     "assuranceText": {
       "backgroundColor": "brand",
       "color": "light-1"
     },
+
     "profile": {
       "img": {
         "width": "icon.xl",
@@ -3812,6 +3835,7 @@
         "fontWeight": "bold"
       }
     },
+
     "collectionCarousel": {
       "base": {
         "pb": ["lg", "xxxl"],
