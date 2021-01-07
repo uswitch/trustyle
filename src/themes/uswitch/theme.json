@@ -2694,8 +2694,7 @@
           "button": {
             "variant": "compounds.accordion.base.button",
             "justifyContent": "center",
-            "pt": ["12px", "md"],
-            "pb": ["xxs", "md"],
+            "py": "12px !important",
             "borderTop": "none",
             "border": 0
           }
