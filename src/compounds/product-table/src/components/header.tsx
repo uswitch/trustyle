@@ -47,7 +47,12 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
           display: 'flex',
           alignItems: card ? 'baseline' : 'center',
           flexDirection: card ? 'column' : 'row',
-          variant: badges.length && 'compounds.product-table.badge-wrapper'
+          variant:
+            badges.length && !card
+              ? 'compounds.product-table.badge-wrapper'
+              : badges.length && card
+              ? 'compounds.product-table.badge-wrapper.card'
+              : null
         }}
       >
         {image && image}

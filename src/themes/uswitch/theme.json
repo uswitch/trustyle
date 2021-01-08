@@ -2252,7 +2252,10 @@
         "display": "flex"
       },
       "badge-wrapper": {
-        "mt": "xs"
+        "mt": "xs",
+        "card": {
+          "mt": 0
+        }
       },
       "cellBase": {
         "variants": {
