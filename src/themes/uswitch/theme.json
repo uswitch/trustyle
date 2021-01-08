@@ -3098,11 +3098,12 @@
             }
           },
           "h3": {
-            "fontSize": "xxl",
+            "fontSize": ["md", "xl", "xxl"],
             "fontWeight": "xxbold",
-            "mb": "xxl",
+            "mb": ["lg", "xxl"],
             "a": {
-              "borderBottom": "none"
+              "borderBottom": "none",
+              "font-weight": "inherit"
             }
           },
           "meta": {
@@ -3185,6 +3186,7 @@
         "alignItems": "center"
       }
     },
+
     "supplierRow": {
       "mt": ["32px", "44px"],
       "borderBottomWidth": "1px",
@@ -3221,6 +3223,7 @@
         "order": [1, 2]
       }
     },
+
     "numberedCallouts": {
       "> div": {
         "& svg": {
@@ -3233,6 +3236,7 @@
         "pt": "xs"
       }
     },
+
     "card-award-nominee": {
       "backgroundColor": "light-1",
       "borderTopWidth": 5,
@@ -3259,6 +3263,7 @@
         "lineHeight": "1.25em"
       }
     },
+
     "click-out-form": {
       "my": 0,
       "backgroundColor": "light-1",
@@ -3286,6 +3291,7 @@
         "mb": 0
       }
     },
+
     "click-out-form-responsive": {
       "my": 0,
       "backgroundColor": "light-1",
@@ -3315,10 +3321,12 @@
         "mb": 0
       }
     },
+
     "breadcrumb": {
       "my": "sm",
       "mx": 0
     },
+
     "two-tone-heading": {
       "base": {
         "textAlign": ["left", "center"],
@@ -3331,6 +3339,7 @@
         }
       }
     },
+
     "cookie-banner": {
       "heading": {
         "mt": [0, "md", "md"]
@@ -3360,6 +3369,7 @@
         "borderColor": "primary"
       }
     },
+
     "side-nav": {
       "accordion": {
         "button": {
@@ -3434,6 +3444,7 @@
         }
       }
     },
+
     "article-intro": {
       "base": {
         "heading": {
@@ -3589,8 +3600,7 @@
               "mb": 72
             },
             "p": {
-              "color": "grey-60",
-              "mt": 72
+              "color": "grey-60"
             }
           },
           "image": {
@@ -3763,6 +3773,7 @@
         }
       }
     },
+
     "collectionGrid": {
       "wrapper": {
         "overflow": "hidden"
@@ -3779,6 +3790,7 @@
         }
       }
     },
+
     "secondary-cta-bar": {
       "col": {
         "position": "relative",
@@ -3800,14 +3812,17 @@
         }
       }
     },
+
     "assuranceBar": {
       "backgroundColor": "brand",
       "color": "light-1"
     },
+
     "assuranceText": {
       "backgroundColor": "brand",
       "color": "light-1"
     },
+
     "profile": {
       "img": {
         "width": "icon.xl",
@@ -3818,6 +3833,7 @@
         "fontWeight": "bold"
       }
     },
+
     "collectionCarousel": {
       "base": {
         "pb": ["lg", "xxxl"],
