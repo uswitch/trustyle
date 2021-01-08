@@ -1305,6 +1305,10 @@
             }
           }
         },
+        "card": {
+          "variant": "elements.buttons.variants.primary",
+          "width": "100%"
+        },
         "secondary": {
           "variant": "elements.buttons.base",
           "color": "primary",
@@ -2404,6 +2408,7 @@
           "cellCta": {
             "buttonWrapper": {
               "justifyContent": "center",
+              "width": "100%",
               "a, button": {
                 "mb": 0
               },
