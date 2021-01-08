@@ -388,7 +388,7 @@
       }
     },
     "hr": {
-      "my": [32, 72],
+      "py": 0,
       "borderColor": "grey-20",
       "borderWidth": "0 0 1px 0"
     }
@@ -756,7 +756,8 @@
     "rich-text-block": {
       "base": {
         "h2": {
-          "fontSize": [32, 32]
+          "fontSize": [32, 32],
+          "mb": 64
         },
         "h3": {
           "fontSize": 28
@@ -2455,7 +2456,6 @@
       "verticalAlign": "middle",
       "alignItems": "center",
       "paddingRight": "0",
-      "paddingBottom": "md",
       "slide": {
         "mr": [0, "sm", "sm"]
       },
@@ -2463,16 +2463,6 @@
         ".glider.draggable": {
           "overflow": "auto",
           "scrollbarWidth": "none"
-        },
-        ".glider-dots": {
-          "mt": "xl",
-          "mb": [0, "xl"]
-        },
-        ".glider-slide": {
-          "px": ["sm", 0],
-          "&:first-of-type": {
-            "pl": "sm"
-          }
         }
       }
     },
@@ -3600,7 +3590,8 @@
               "mb": 72
             },
             "p": {
-              "color": "grey-60"
+              "color": "grey-60",
+              "mt": 72
             }
           },
           "image": {
@@ -3836,10 +3827,11 @@
 
     "collectionCarousel": {
       "base": {
-        "pb": ["lg", "xxxl"],
+        "mb": ["lg", "xl", "xxl"],
+        "pb": 0,
         ".glider-dots": {
-          "mt": "lg",
-          "pt": "xs",
+          "mt": "sm",
+          "pt": 0,
           ".glider-dot": {
             "backgroundColor": "grey-20",
             "&.active": {
@@ -3852,12 +3844,7 @@
         "variant": "modules.collectionCarousel.base",
         "maxWidth": 1200,
         "mx": "auto",
-        "position": "relative",
-        ".glider-slide": {
-          ".flex-grid-container": {
-            "px": "xxs"
-          }
-        }
+        "position": "relative"
       },
       "item": {
         "mx": "7.5px"
