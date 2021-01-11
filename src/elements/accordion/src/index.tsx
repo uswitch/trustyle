@@ -97,7 +97,7 @@ const Accordion: React.FC<Props> & {
       ? buttonPropsFn({ open: isOpen, title })
       : buttonPropsFn
 
-  const cardAccordion = card
+  const hasBoxShadow = card
     ? {
         minHeight: isOpen ? '80%' : 'auto',
         boxShadow: isOpen
@@ -113,7 +113,7 @@ const Accordion: React.FC<Props> & {
           ? `compounds.accordion.variants.${variant}`
           : 'compounds.accordion',
         ...sx,
-        ...cardAccordion
+        ...hasBoxShadow
       }}
       className={className}
       data-target="accordion" // this is a hack to stop clicking propagating to the product table
