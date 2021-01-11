@@ -31,6 +31,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   variant?: string
   scrollToRef?: React.RefObject<HTMLElement>
   buttonProps?: object | ButtonPropsFn
+  sx?: object
+  card?: boolean
 }
 
 type ButtonPropsFn = (args: { open: boolean; title: string }) => object
@@ -61,7 +63,9 @@ const Accordion: React.FC<Props> & {
   glyphColor = '',
   scrollToRef,
   variant,
-  buttonProps: buttonPropsFn
+  buttonProps: buttonPropsFn,
+  sx = {},
+  card = false
 }) => {
   const {
     theme: {
@@ -93,12 +97,23 @@ const Accordion: React.FC<Props> & {
       ? buttonPropsFn({ open: isOpen, title })
       : buttonPropsFn
 
+  const hasBoxShadow = card
+    ? {
+        minHeight: isOpen ? '80%' : 'auto',
+        boxShadow: isOpen
+          ? '0px -1px 16px rgba(0, 0, 0, 0.15), 0px -159px 36px 4px rgba(255, 255, 255, 0.7)'
+          : 'none'
+      }
+    : {}
+
   return (
     <div
       sx={{
         variant: variant
           ? `compounds.accordion.variants.${variant}`
-          : 'compounds.accordion'
+          : 'compounds.accordion',
+        ...sx,
+        ...hasBoxShadow
       }}
       className={className}
       data-target="accordion" // this is a hack to stop clicking propagating to the product table
