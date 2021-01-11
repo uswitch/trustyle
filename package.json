@@ -118,7 +118,5 @@
       "eslint --fix"
     ]
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
