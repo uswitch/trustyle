@@ -1306,7 +1306,9 @@
         },
         "card": {
           "variant": "elements.buttons.variants.primary",
-          "width": "100%"
+          "width": "100%",
+          "bg": "grey-05",
+          "color": "black"
         },
         "secondary": {
           "variant": "elements.buttons.base",
