@@ -202,7 +202,11 @@ const ProductTableRow: React.FC<RowProps> = ({
                       image &&
                       child.type !== ProductTableCellCta &&
                       `compounds.product-table.variants.redesign.cellContext.${
-                        hasCellImage ? 'variants.cellImage' : 'main'
+                        hasCellImage
+                          ? 'variants.cellImage'
+                          : card
+                          ? 'variants.card'
+                          : 'main'
                       }`
                   }
                 }}

@@ -2439,6 +2439,13 @@
                 ":nth-child(4)": {
                   "display": ["block", "none"]
                 }
+              },
+              "card": {
+                "alignItems": "baseline",
+                "pl": ["none", "sm"],
+                "py": ["sm", "xxs"],
+                "borderTop": "1px solid",
+                "borderTopColor": "grey-20"
               }
             }
           }
