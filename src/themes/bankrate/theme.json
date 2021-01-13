@@ -1197,6 +1197,7 @@
               "compounds.card.variants.horizontal.content"
             ],
             "py": "md",
+            "px": 0,
             "p": { "mb": 0 }
           },
           "link": {
