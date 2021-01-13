@@ -1120,7 +1120,7 @@
         },
         "content": {
           "py": "lg",
-          "mr": "lg"
+          "mr": [0, "lg"]
         },
         "mr": "base"
       },
@@ -1191,12 +1191,13 @@
             },
             "mb": "xs"
           },
-
           "content": {
             "variant": [
               "compounds.card.variants.vertical.content",
               "compounds.card.variants.horizontal.content"
-            ]
+            ],
+            "py": "md",
+            "p": { "mb": 0 }
           },
           "link": {
             "variant": [
@@ -1218,6 +1219,7 @@
           },
           "display": "flex",
           "flexDirection": ["column-reverse", "row-reverse", "row-reverse"],
+          "mb": "xs",
           "&": {
             "backgroundColor": "transparent"
           }
