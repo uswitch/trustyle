@@ -898,7 +898,7 @@
           "position": "relative",
           "display": "flex",
           "flex-direction": ["column", "row"],
-          "alignItems": ["center", "initial"],
+          "alignItems": "center",
           "::before": {
             "content": "''",
             "zIndex": -1,
@@ -938,11 +938,18 @@
           },
           "img": {
             "width": "100%",
+            "maxWidth": [96, "grid.lg.2"],
             "height": "100%",
             "pb": 0
           },
           "h3": {
             "mb": ["xxs", "sm"]
+          },
+          "h2": {
+            "variant": "styles.h3",
+            "b": {
+              "fontSize": ["md", "xl"]
+            }
           },
           "p": {
             "mb": "xs",
