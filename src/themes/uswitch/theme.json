@@ -2639,6 +2639,9 @@
           "lineHeight": "sm",
           "color": "grey-60"
         },
+        "h2": {
+          "fontSize": ["sm", "md"]
+        },
         "content": {
           "p:last-of-type": {
             "mb": 32
