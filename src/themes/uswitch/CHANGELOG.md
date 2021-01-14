@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.32.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.11...@uswitch/trustyle.uswitch-theme@2.32.12) (2021-01-14)
+
+
+### Bug Fixes
+
+* accordion heading font size ([0b7aca8](https://github.com/uswitch/trustyle/commit/0b7aca8))
+* carousel margin and padding update ([0e54fa9](https://github.com/uswitch/trustyle/commit/0e54fa9))
+* rich-text-block variants update ([497b55f](https://github.com/uswitch/trustyle/commit/497b55f))
+
+
+
+
+
 ## [2.32.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.10...@uswitch/trustyle.uswitch-theme@2.32.11) (2021-01-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
