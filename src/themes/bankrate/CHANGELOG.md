@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.23.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.10...@uswitch/trustyle.bankrate-theme@2.23.11) (2021-01-13)
+
+
+### Bug Fixes
+
+* align responsive card text ([cb72054](https://github.com/uswitch/trustyle/commit/cb72054))
+* category guides module mobile layout ([b5e2c33](https://github.com/uswitch/trustyle/commit/b5e2c33))
+
+
+
+
+
+
 ## [2.23.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.9...@uswitch/trustyle.bankrate-theme@2.23.10) (2020-12-17)
 
 
