@@ -115,7 +115,9 @@ const ProductTableRow: React.FC<RowProps> = ({
             ? 'compounds.product-table.variants.redesign.row.main'
             : 'compounds.product-table.row.main',
           pointerEvents: disabled ? 'none' : null,
-          opacity: disabled ? '0.5' : '1'
+          opacity: disabled ? '0.5' : '1',
+          pb: card ? '50px' : '0',
+          overflow: card ? 'hidden' : 'visible'
         }}
       >
         <RowWrapper link={clickableRow} headerImage={image}>
@@ -200,7 +202,11 @@ const ProductTableRow: React.FC<RowProps> = ({
                       image &&
                       child.type !== ProductTableCellCta &&
                       `compounds.product-table.variants.redesign.cellContext.${
-                        hasCellImage ? 'variants.cellImage' : 'main'
+                        hasCellImage
+                          ? 'variants.cellImage'
+                          : card
+                          ? 'variants.card'
+                          : 'main'
                       }`
                   }
                 }}
