@@ -1991,30 +1991,34 @@
       }
     },
     "calculator": {
-      "label": {
-        "variant": "styles.h3",
-        "textAlign": ["left", "center"],
-        "mb": "24px"
-      },
-      "container": {
-        "marginY": "md",
-        "backgroundColor": "grey-05",
-        "width": "100vw",
-        "pr": "sm",
-        "marginLeft": [0, 0, "calc(-50vw + 585px)"],
-        "@media screen and (max-width: 1200px)": {
-          "width": "calc(100vw + 16px)",
-          "marginLeft": -16
+      "default": {
+        "container": {
+          "marginY": "md",
+          "backgroundColor": "grey-05",
+          "width": "100vw",
+          "pr": "sm",
+          "marginLeft": [0, 0, "calc(-50vw + 585px)"],
+          "@media screen and (max-width: 1200px)": {
+            "width": "calc(100vw + 16px)",
+            "marginLeft": -16
+          },
+          "position": "relative",
+          "zIndex": 1,
+          "marginTop": -24,
+          "> div": {
+            "variant": "sizes.grid.container",
+            "paddingX": "sm",
+            "marginX": "auto"
+          }
         },
-        "position": "relative",
-        "zIndex": 1,
-        "marginTop": -24,
-        "> div": {
-          "variant": "sizes.grid.container",
-          "paddingX": "sm",
-          "marginX": "auto"
-        }
+        "label": {
+          "variant": "styles.h3",
+          "textAlign": ["left", "center"],
+          "mb": "24px"
+        },
+        "wrapper": {}
       },
+      "panel": {},
       "modal": {
         "wrapper": {
           "width": ["90%", "50%"],
@@ -2092,17 +2096,7 @@
       }
     },
     "form-section": {
-      "default": {},
-      "panel": {
-        "elements": {
-          "wrapper": {},
-          "fields": {},
-          "heading": {
-            "opacity": 0.4,
-            "display": "flex",
-            "alignItems": "center"
-          }
-        },
+      "default": {
         "states": {
           "isActive": {
             "buttonWrapper": {
@@ -2141,6 +2135,17 @@
             "fields": {
               "display": "none"
             }
+          }
+        }
+      },
+      "panel": {
+        "elements": {
+          "wrapper": {},
+          "fields": {},
+          "heading": {
+            "opacity": 0.4,
+            "display": "flex",
+            "alignItems": "center"
           }
         }
       }
