@@ -3,12 +3,24 @@ import React, { RefObject, useEffect, useState } from 'react'
 import { jsx, Styled } from 'theme-ui'
 import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
 
+const makeStyles = (variant?: string) => (element?: string) =>
+  `compounds.collection-tabs${variant ? `.variants.${variant}` : `.base`}${
+    element ? `.${element}` : ''
+  }`
 interface TabLinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
   title: string
   isActive: boolean
+  variant?: string
 }
 
-const TabLink: React.FC<TabLinkProps> = ({ title, isActive, ...props }) => {
+const TabLink: React.FC<TabLinkProps> = ({
+  title,
+  isActive,
+  variant,
+  ...props
+}) => {
+  const styles = makeStyles(variant)
+
   return (
     <a
       href={'#tab'}
@@ -19,9 +31,7 @@ const TabLink: React.FC<TabLinkProps> = ({ title, isActive, ...props }) => {
     >
       <div
         sx={{
-          variant: isActive
-            ? 'compounds.collection-tabs.variants.isActive.container'
-            : 'compounds.collection-tabs.base.container'
+          variant: isActive ? styles('isActive.container') : styles('container')
         }}
       >
         <div>
@@ -34,13 +44,20 @@ const TabLink: React.FC<TabLinkProps> = ({ title, isActive, ...props }) => {
 
 interface TabContentProps extends React.HTMLAttributes<HTMLDivElement> {
   active: boolean
+  variant?: string
 }
 
-const TabContent: React.FC<TabContentProps> = ({ children, active }) => {
+const TabContent: React.FC<TabContentProps> = ({
+  children,
+  active,
+  variant
+}) => {
+  const styles = makeStyles(variant)
+
   return (
     <div
       sx={{
-        variant: 'compounds.collection-tabs.variants.tabContentSpacing',
+        variant: styles('tabContentSpacing'),
         display: active ? 'block' : 'none'
       }}
     >
@@ -59,9 +76,10 @@ export const Tab: React.FC<TabProps> = () => null
 
 interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactElement<TabProps>[]
+  variant?: string
 }
 
-export const Tabs: React.FC<TabsProps> = ({ children, className }) => {
+export const Tabs: React.FC<TabsProps> = ({ children, className, variant }) => {
   const [activeTab, setActiveTab] = useState(0)
   const [left, setLeft] = useState(0)
   const tabs: RefObject<HTMLDivElement> = React.createRef()
@@ -74,6 +92,7 @@ export const Tabs: React.FC<TabsProps> = ({ children, className }) => {
   const [showLeftBorder, setShowLeftBorder] = useState(false)
   const [showRightBorder, setShowRightBorder] = useState(false)
   const [scrollEnd, setScrollEnd] = useState(false)
+  const styles = makeStyles(variant)
 
   useEffect(() => {
     setPadding(tabs?.current?.offsetHeight || 0)
@@ -168,7 +187,7 @@ export const Tabs: React.FC<TabsProps> = ({ children, className }) => {
   return (
     <Container
       className={className}
-      sx={{ variant: 'compounds.collection-tabs.variants.containerPadding' }}
+      sx={{ variant: styles('containerPadding') }}
     >
       <div
         ref={tabWrap}
@@ -177,14 +196,14 @@ export const Tabs: React.FC<TabsProps> = ({ children, className }) => {
           paddingTop: `${padding}px`,
           position: 'relative',
           pointer: 'grab',
-          variant: 'compounds.collection-tabs.variants.borderBottom',
+          variant: styles('borderBottom'),
           '::after': {
             content: showRightBorder ? '""' : 'none',
-            variant: 'compounds.collection-tabs.variants.overflowBorderRight'
+            variant: styles('overflowBorderRight')
           },
           '::before': {
             content: showLeftBorder ? '""' : 'none',
-            variant: 'compounds.collection-tabs.variants.overflowBorderLeft'
+            variant: styles('overflowBorderLeft')
           }
         }}
       >
@@ -199,14 +218,18 @@ export const Tabs: React.FC<TabsProps> = ({ children, className }) => {
             position: 'absolute',
             left: `${left}px`,
             top: 0,
-            maxHeight: '54px'
+            maxHeight: '56px'
           }}
         >
-          <Row direction="row" wrap={false}>
+          <Row
+            direction="row"
+            wrap={false}
+            sx={{ variant: styles('tabsContainer') }}
+          >
             {React.Children.map(children, (child, index) => (
               <Col
                 sx={{
-                  variant: 'compounds.collection-tabs.variants.tabSpacing'
+                  variant: styles('tabSpacing')
                 }}
                 key={index}
               >
@@ -216,6 +239,7 @@ export const Tabs: React.FC<TabsProps> = ({ children, className }) => {
                     e.preventDefault()
                     setActiveTab(index)
                   }}
+                  variant={variant}
                   isActive={index === activeTab}
                 />
               </Col>
@@ -226,7 +250,11 @@ export const Tabs: React.FC<TabsProps> = ({ children, className }) => {
       <Row cols={12}>
         <Col span={12}>
           {React.Children.map(children, (child, index) => (
-            <TabContent key={index} active={index === activeTab}>
+            <TabContent
+              key={index}
+              active={index === activeTab}
+              variant={variant}
+            >
               {child.props.children}
             </TabContent>
           ))}
