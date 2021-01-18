@@ -800,8 +800,7 @@
     "rich-text-block": {
       "base": {
         "h2": {
-          "fontSize": [32, 32],
-          "mb": 64
+          "fontSize": [32, 32]
         },
         "h3": {
           "fontSize": 28
@@ -3700,8 +3699,7 @@
               "mb": 72
             },
             "p": {
-              "color": "grey-60",
-              "mt": 72
+              "color": "grey-60"
             }
           },
           "image": {
