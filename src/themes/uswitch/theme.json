@@ -626,53 +626,97 @@
       }
     },
     "form": {
-      "input": {
-        "wrapper": {
-          "display": "flex",
-          "mb": ["md", "lg"],
-          "width": ["100%", "100%", "28%"],
-          "justifyContent": "space-between",
-          "alignItems": "center"
-        },
-        "error": {
-          "position": "absolute",
-          "margin": "0"
-        }
-      },
-      "label": {
-        "variant": "styles.h4",
-        "color": "grey-80",
-        "display": "block",
-        ":not(:first-child)": {
-          "mt": "sm"
-        },
-        "variants": {
-          "calculator": {
-            "flex": "1 1 0px",
-            "fontWeight": "600"
-          }
-        }
-      },
-      "button": {
-        "my": "sm",
-        "variants": {
-          "calculator": {}
-        }
-      },
-      "wrapper": {
-        "base": {
-          "pb": 0
-        },
-        "variants": {
-          "calculator": {
-            "pb": ["xs", 0],
-            "flexDirection": "column",
-            "flex": "1 1 0px",
-            "min-width": "176px"
-          }
-        }
-      },
       "variants": {
+        "default": {
+          "label": {
+            "variant": "styles.h4",
+            "color": "grey-80",
+            "display": "block",
+            ":not(:first-child)": {
+              "mt": "sm"
+            },
+            "variants": {
+              "calculator": {
+                "flex": "1 1 0px",
+                "fontWeight": "600"
+              }
+            }
+          },
+          "button": {
+            "my": "sm",
+            "variants": {
+              "calculator": {}
+            }
+          },
+          "wrapper": {
+            "base": {
+              "pb": 0
+            },
+            "variants": {
+              "calculator": {
+                "pb": ["xs", 0],
+                "flexDirection": "column",
+                "flex": "1 1 0px",
+                "min-width": "176px"
+              }
+            }
+          },
+          "input": {
+            "wrapper": {
+              "display": "flex",
+              "mb": ["md", "lg"],
+              "width": ["100%", "100%", "28%"],
+              "justifyContent": "space-between",
+              "alignItems": "center"
+            },
+            "error": {
+              "position": "absolute",
+              "margin": "0"
+            }
+          }
+        },
+
+        "field-section": {
+          "label": {
+            "variant": "styles.h4",
+            "color": "grey-80",
+            "display": "block",
+            ":not(:first-child)": {
+              "mt": "sm"
+            },
+            "variants": {}
+          },
+          "button": {
+            "my": "sm",
+            "variants": {
+              "calculator": {}
+            }
+          },
+          "wrapper": {
+            "display": "block",
+            "base": {
+              "pb": 0
+            },
+            "variants": {
+              "calculator": {
+                "pb": ["xs", 0],
+                "flexDirection": "column",
+                "flex": "1 1 0px",
+                "min-width": "176px"
+              }
+            }
+          },
+          "input": {
+            "wrapper": {
+              "display": "block",
+              "mr": ["0", "md"]
+            },
+            "error": {
+              "position": "absolute",
+              "margin": "0"
+            }
+          }
+        },
         "email-capture": {
           "base": {
             "position": "relative",
@@ -2139,6 +2183,37 @@
         }
       },
       "panel": {
+        "states": {
+          "isActive": {
+            "buttonWrapper": {
+              "calculator": {
+                "mt": "23px",
+                "pl": ["0", "0", "42px"],
+                "textAlign": "center",
+                "> button": {
+                  "height": "55px"
+                }
+              }
+            },
+            "wrapper": {
+              "display": "flex",
+              "alignItems": "center",
+              "border": "1px solid",
+              "borderColor": "grey-20",
+              "p": ["24px", "24px 56px"],
+              "mb": "xxl",
+              "flexDirection": ["column", "column", "row"]
+            },
+            "fields": {
+              "calculator": {
+                "display": "flex",
+                "justifyContent": "space-between",
+                "flex": "1 1 0px",
+                "flexDirection": ["column", "column", "row"]
+              }
+            }
+          }
+        },
         "elements": {
           "wrapper": {},
           "fields": {},
