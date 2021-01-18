@@ -684,7 +684,12 @@
             ":not(:first-child)": {
               "mt": "sm"
             },
-            "variants": {}
+            "variants": {
+              "calculator": {
+                "flex": "1 1 0px",
+                "fontWeight": "600"
+              }
+            }
           },
           "button": {
             "my": "sm",
@@ -699,7 +704,7 @@
             },
             "variants": {
               "calculator": {
-                "pb": ["xs", 0],
+                "pb": ["md", "md", 0],
                 "flexDirection": "column",
                 "flex": "1 1 0px",
                 "min-width": "176px"
@@ -708,7 +713,8 @@
           },
           "input": {
             "wrapper": {
-              "display": "block",
+              "display": ["flex", "flex", "block"],
+              "justifyContent": "space-between",
               "mr": ["0", "md"]
             },
             "error": {
@@ -2190,11 +2196,13 @@
           "isActive": {
             "buttonWrapper": {
               "calculator": {
-                "mt": "23px",
+                "mt": ["0", "23px"],
                 "pl": ["0", "0", "42px"],
                 "textAlign": "center",
                 "> button": {
-                  "height": "55px"
+                  "height": "55px",
+                  "bg": "grey-05",
+                  "color": "black"
                 }
               }
             },
