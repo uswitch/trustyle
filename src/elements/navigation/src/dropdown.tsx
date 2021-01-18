@@ -16,7 +16,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 const Dropdown: React.FC<Props> = ({ item, ...props }) => {
   const { styles = makeStyles(), selected } = useNavigation()
   const { theme } = useThemeUI()
-  const { spacing = 0 } = theme.elements.navigation
+  const { spacing = 0 } = theme.elements?.navigation || {}
   const dropdown = useRef<HTMLDivElement>(null)
   const [offset, setOffset] = useState<number | null>(null)
   const [height, setHeight] = useState<number | null>(null)
@@ -55,6 +55,7 @@ const Dropdown: React.FC<Props> = ({ item, ...props }) => {
         overflowX: 'hidden',
         height: !selected ? 'auto' : height,
         transform: `translateX(${offset}px)`,
+        background: '#fff',
         boxShadow: '0px 0px 10px rgba(62, 84, 125, 0.25)',
         ':before': {
           content: "''",

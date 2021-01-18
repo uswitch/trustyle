@@ -121,6 +121,7 @@ const Navigation: React.FC<NavProps> = ({
             top: mobileHeaderHeight,
             left: 0,
             right: 0,
+            background: '#fff',
             transform: `translateX(${!open ? '100%' : '0%'})`,
             variant: styles('nav-tabs')
           }}
