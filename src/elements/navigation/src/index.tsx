@@ -2,9 +2,8 @@
 
 import React, { useState } from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
-
-import { Icon } from '../../icon/src'
-import { Button } from '../../button/src'
+import { Icon } from '@uswitch/trustyle.icon'
+import { Button } from '@uswitch/trustyle.button'
 
 import Mobile from './mobile'
 import Logo from './logo'
