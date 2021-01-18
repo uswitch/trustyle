@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.32.13](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.12...@uswitch/trustyle.uswitch-theme@2.32.13) (2021-01-18)
+
+
+### Bug Fixes
+
+* remove margin from h2 and p in image-callout ([f72c016](https://github.com/uswitch/trustyle/commit/f72c016))
+
+
+
+
+
+
 ## [2.32.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.11...@uswitch/trustyle.uswitch-theme@2.32.12) (2021-01-14)
 
 
