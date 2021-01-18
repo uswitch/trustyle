@@ -1131,8 +1131,7 @@
           }
         },
         "nav-dropdown": {
-          "borderRadius": "4px 4px 0px 0px",
-          "borderColor": ""
+          "borderRadius": "4px 4px 0px 0px"
         },
         "list-styling": {
           "list-style": "none",
