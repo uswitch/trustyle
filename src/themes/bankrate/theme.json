@@ -1087,6 +1087,7 @@
       "width": ["100%", "132px"]
     },
     "navigation": {
+      "spacing": 24,
       "icon": {
         "menu": {
           "open": "hamburger-simple",
@@ -1100,6 +1101,39 @@
       },
       "base": {
         "backgroundColor": "white",
+        "button": {
+          "border": "none",
+          "background": "none"
+        },
+        "desktop-container": {
+          "list-style": "none",
+          "padding": 0,
+          "margin": 0,
+          "display": "flex"
+        },
+        "content-separator": {
+          "title": {
+            "color": "dark-grey-blue"
+          }
+        },
+        "desktop-selector": {
+          ":hover": {
+            "h4": {
+              "color": "primary"
+            }
+          },
+          "h4": {
+            "fontFamily": "base",
+            "fontSize": "base",
+            "fontWeight": "base",
+            "lineHeight": "20px",
+            "margin": 0
+          }
+        },
+        "nav-dropdown": {
+          "borderRadius": "4px 4px 0px 0px",
+          "borderColor": ""
+        },
         "list-styling": {
           "list-style": "none",
           "padding": 0,

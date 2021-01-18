@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React, { HTMLAttributes, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 
@@ -60,7 +60,7 @@ interface ContentSeparatorProps extends React.LiHTMLAttributes<HTMLLIElement> {
   title?: string
 }
 
-interface NavTabsProps {
+interface MobileNavProps {
   items: NavItem[]
 }
 
@@ -92,7 +92,9 @@ const Logo: React.FC<LogoProps> = ({ logo, className }) => {
   )
 }
 
-const SelectedNavItem: React.FC<HTMLAttributes<HTMLDivElement>> = props => {
+const SelectedNavItem: React.FC<React.HTMLAttributes<
+  HTMLDivElement
+>> = props => {
   const { theme } = useThemeUI()
   const {
     mobile: { headerHeight = 56 } = {},
@@ -125,9 +127,9 @@ const SelectedNavItem: React.FC<HTMLAttributes<HTMLDivElement>> = props => {
   return (
     <div
       sx={{
-        position: 'fixed',
+        position: ['fixed', 'absolute'],
         boxSizing: 'border-box',
-        top: `${2 * headerHeight}px`,
+        top: [`${2 * headerHeight}px`, 0],
         right: 0,
         width: '100%',
         height: '100%',
@@ -259,8 +261,9 @@ const NavItem: React.FC<NavItemProps> = ({
       sx={{
         display: 'flex',
         alignItems: 'center',
-        fontSize: 'xs',
+        fontSize: ['xs', 'xs'],
         mb: minimized ? 'xs' : 'md',
+        cursor: 'pointer',
         variant: styles(`nav-item${minimized ? '.minimized' : '.base'}`)
       }}
       {...props}
@@ -301,7 +304,7 @@ const NavItem: React.FC<NavItemProps> = ({
         <Styled.h5
           sx={{
             fontWeight: minimized ? 'normal' : 'bold',
-            fontSize: 'xs',
+            fontSize: ['xs', 'xs'],
             lineHeight: '20px',
             my: 0,
             variant: styles(
@@ -355,11 +358,11 @@ const ContentSeparator: React.FC<ContentSeparatorProps> = ({
             textTransform: 'uppercase',
             fontFamily: 'base',
             fontWeight: 'bold',
-            color: 'dark-grey-blue',
-            fontSize: 10,
+            fontSize: [10, 10],
             opacity: 0.5,
             margin: 0,
-            mb: 'sm'
+            mb: 'sm',
+            variant: styles('content-separator.title')
           }}
         >
           {title}
@@ -413,7 +416,111 @@ const TabContent: React.FC<TabContentProps> = ({ content, ...props }) => {
   )
 }
 
-const NavTabs: React.FC<NavTabsProps> = ({ items, ...props }) => {
+interface DropdownProps extends React.HTMLAttributes<HTMLDivElement> {
+  item: NavItem
+}
+
+const Dropdown: React.FC<DropdownProps> = ({ item, ...props }) => {
+  const { styles = makeStyles() } = useNavigation()
+  const { theme } = useThemeUI()
+  const { spacing = 0 } = theme.elements.navigation
+  const dropdown = useRef<HTMLDivElement | null>(null)
+  const [offset, setOffset] = useState<number | null>(null)
+
+  React.useLayoutEffect(() => {
+    if (dropdown.current) {
+      const { left, right } = dropdown.current?.getBoundingClientRect()
+      const { innerWidth } = window
+
+      if (right >= innerWidth - spacing) setOffset(innerWidth - right - spacing)
+      if (left < spacing) setOffset(innerWidth - left - spacing)
+    }
+  }, [dropdown, window])
+
+  return (
+    <div
+      ref={dropdown}
+      sx={{
+        position: 'absolute',
+        top: '100%',
+        width: 504,
+        display: 'flex',
+        justifyContent: 'center',
+        overflowX: 'hidden',
+        height: 'fit-content',
+        transform: `translateX(${offset}px)`,
+        boxShadow: '0px 0px 10px rgba(62, 84, 125, 0.25)',
+        ':before': {
+          content: "''",
+          width: 12,
+          height: 12,
+          backgroundColor: '#fff',
+          transform: 'translateY(-6px) rotate(45deg)',
+          display: 'block',
+          position: 'absolute'
+        },
+        variant: styles('nav-dropdown')
+      }}
+      {...props}
+    >
+      <TabContent content={item.items || []} sx={{ width: '100%' }} />
+
+      <SelectedNavItem />
+    </div>
+  )
+}
+
+interface DesktopNavProps extends React.HTMLAttributes<HTMLUListElement> {
+  items: NavItem[]
+}
+
+const DesktopNav: React.FC<DesktopNavProps> = ({ items, ...props }) => {
+  const {
+    styles = makeStyles(),
+    setOpen,
+    setSelected: setCtxSelected
+  } = useNavigation()
+  const [selected, setSelected] = useState<number | null>(null)
+
+  // React.useEffect(() => {
+  //   if
+  // }, [selected])
+
+  const handleMouseOver = (i: number) => {
+    setCtxSelected && setCtxSelected(null)
+    setSelected(i)
+    setOpen && setOpen(true)
+  }
+
+  return (
+    <ul sx={{ variant: styles('desktop-container') }} {...props}>
+      {items.map((item, i) => (
+        <li
+          key={i}
+          sx={{
+            position: 'relative',
+            display: 'flex',
+            justifyContent: 'center',
+            variant: styles('desktop-selector')
+          }}
+          onMouseLeave={() => setSelected(null)}
+        >
+          <Button
+            variant="link"
+            onMouseOver={() => handleMouseOver(i)}
+            sx={{ padding: 'md', background: 'none', border: 'none' }}
+          >
+            <Styled.h4>{item.title}</Styled.h4>
+          </Button>
+
+          {selected === i && <Dropdown item={item} />}
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+const MobileNav: React.FC<MobileNavProps> = ({ items, ...props }) => {
   const { setSelected } = useNavigation()
 
   const handleClick = () => {
@@ -466,9 +573,9 @@ const Navigation: React.FC<NavProps> = ({
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          overflowX: 'hidden',
+          overflowX: ['hidden', 'initial'],
           position: 'relative',
-          height: mobileHeaderHeight,
+          height: [mobileHeaderHeight, 'auto'],
           maxHeight: '100vh',
           borderWidth: '0 0 1px',
           borderStyle: 'solid',
@@ -492,11 +599,11 @@ const Navigation: React.FC<NavProps> = ({
           variant="link"
           onClick={() => setOpen(!open)}
           sx={{
+            display: ['flex', 'none'],
             width: menuButtonSize,
             height: menuButtonSize,
             p: 'xxs',
             mx: 'gutter',
-            display: 'flex',
             justifyContent: 'center',
             alignItems: 'center'
           }}
@@ -508,9 +615,10 @@ const Navigation: React.FC<NavProps> = ({
           />
         </Button>
 
-        <NavTabs
+        <MobileNav
           items={items}
           sx={{
+            display: ['block', 'none'],
             position: 'fixed',
             height: '100%',
             top: mobileHeaderHeight,
@@ -521,7 +629,9 @@ const Navigation: React.FC<NavProps> = ({
           }}
         />
 
-        <SelectedNavItem />
+        <DesktopNav sx={{ display: ['none', 'flex'] }} items={items} />
+
+        <SelectedNavItem sx={{ display: ['block', 'none'] }} />
       </nav>
     </NavigationContext.Provider>
   )
