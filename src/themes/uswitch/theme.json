@@ -2062,7 +2062,11 @@
         },
         "wrapper": {}
       },
-      "panel": {},
+      "panel": {
+        "container": {
+          "my": "lg"
+        }
+      },
       "modal": {
         "wrapper": {
           "width": ["90%", "50%"],
