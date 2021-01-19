@@ -1265,32 +1265,58 @@
       }
     },
     "form": {
-      "label": {
-        "variant": "styles.h4",
-        "fontWeight": "bold",
-        "color": "grey-80",
-        "display": "block",
-        "mt": "sm",
-        "mb": "xs",
-        "textAlign": "left",
-        "variants": {
-          "calculator": {
-            "variant": "styles.h6",
+      "variants": {
+        "default": {
+          "label": {
+            "variant": "styles.h4",
             "fontWeight": "bold",
             "color": "grey-80",
             "display": "block",
+            "mt": "sm",
             "mb": "xs",
-            "mt": "xl"
+            "textAlign": "left",
+            "variants": {
+              "calculator": {
+                "variant": "styles.h6",
+                "fontWeight": "bold",
+                "color": "grey-80",
+                "display": "block",
+                "mb": "xs",
+                "mt": "xl"
+              }
+            }
+          },
+          "step-field": {
+            "mb": "xl"
+          },
+          "description": {
+            "color": "grey-80",
+            "display": "block",
+            "textAlign": "left",
+            "my": "xxs"
+          },
+          "input": {
+            "error": {
+              "color": "error",
+              "mt": "xs",
+              "textAlign": "left",
+              "title": {
+                "fontWeight": "bold",
+                "mb": "xxs"
+              }
+            }
+          },
+          "wrapper": {
+            "base": {
+              "pb": 0
+            },
+            "variants": {
+              "calculator": {
+                "pb": ["xs", 0]
+              }
+            }
           }
         }
-      },
-      "step-field": {
-        "mb": "xl"
-      },
-      "description": {
-        "color": "grey-80",
-        "display": "block",
-        "mb": "xs"
       },
       "button": {
         "base": {
@@ -1310,34 +1336,6 @@
               "width": "32px",
               "ml": "sm"
             }
-          }
-        }
-      },
-      "wrapper": {
-        "base": {
-          "pb": 0
-        },
-        "variants": {
-          "calculator": {
-            "pb": ["xs", 0]
-          }
-        }
-      },
-      "error": {
-        "variant": "elements.form.input.wrapper",
-        "color": "error",
-        "mt": "xs",
-        "textAlign": "left",
-        "title": {
-          "fontWeight": "bold",
-          "mb": "xxs"
-        }
-      },
-      "variants": {
-        "default": {
-          "description": {
-            "color": "grey-80",
-            "my": "xxs"
           }
         }
       }
