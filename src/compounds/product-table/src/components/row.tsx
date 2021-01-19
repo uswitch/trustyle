@@ -40,7 +40,8 @@ const ProductTableRow: React.FC<RowProps> = ({
   clickableRow,
   image,
   disabled,
-  card = false
+  card = false,
+  sx = {}
 }) => {
   const forcedMobile = forceMobile(card)
 
@@ -177,7 +178,8 @@ const ProductTableRow: React.FC<RowProps> = ({
               '@media all and (max-width: 990px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
                 display: 'flex',
                 flexDirection: 'column'
-              }
+              },
+              ...sx
             }}
             // @ts-ignore
             css={{
