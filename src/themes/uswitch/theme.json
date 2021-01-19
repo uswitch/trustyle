@@ -2069,8 +2069,8 @@
       },
       "panel": {
         "container": {
-          "mt": "sm",
-          "mb": "lg"
+          "pt": "sm",
+          "pb": "sm"
         }
       },
       "modal": {
