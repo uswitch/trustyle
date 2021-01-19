@@ -686,6 +686,9 @@
             },
             "variants": {
               "calculator": {
+                "display": "block",
+                "pb": ["0", "0", "xs"],
+                "pr": ["xs", "xs", "0"],
                 "flex": "1 1 0px",
                 "fontWeight": "600"
               }
@@ -2198,7 +2201,7 @@
           "isActive": {
             "buttonWrapper": {
               "calculator": {
-                "mt": ["0", "23px"],
+                "mt": ["0", "0", "35px"],
                 "pl": ["0", "0", "42px"],
                 "textAlign": "center",
                 "> button": {
