@@ -1332,6 +1332,14 @@
           "fontWeight": "bold",
           "mb": "xxs"
         }
+      },
+      "variants": {
+        "default": {
+          "description": {
+            "color":"grey-80",
+            "my": "xxs"
+          }
+        }
       }
     },
     "rich-text-block": {
@@ -1454,10 +1462,7 @@
             },
             "heading": {
               "variant": "elements.form-section.panel.elements.heading",
-              "display": "none",
-              "submit": {
-                "display": "none"
-              }
+              "opacity": 1
             },
             "fields": {
               "display": "block",
