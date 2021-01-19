@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.40.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.38.3...@uswitch/trustyle.money-theme@1.40.0) (2021-01-19)
+
+
+### Bug Fixes
+
+* prettier issues ([fee7f56](https://github.com/uswitch/trustyle/commit/fee7f56))
+
+
+### Features
+
+* form field description and section title ([1a26066](https://github.com/uswitch/trustyle/commit/1a26066))
+
+
+
+
+
 # [1.39.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.38.3...@uswitch/trustyle.money-theme@1.39.0) (2021-01-19)
 
 
