@@ -704,7 +704,6 @@
             },
             "variants": {
               "calculator": {
-                "pb": ["md", "md", 0],
                 "flexDirection": "column",
                 "flex": "1 1 0px",
                 "min-width": "176px"
@@ -715,6 +714,8 @@
             "wrapper": {
               "display": ["flex", "flex", "block"],
               "justifyContent": "space-between",
+              "alignItems": "center",
+              "pb": ["md", "md", 0],
               "mr": ["0", "md"]
             },
             "error": {
@@ -2213,7 +2214,7 @@
               "border": "1px solid",
               "borderColor": "grey-20",
               "p": ["24px", "24px 56px"],
-              "mb": "xxl",
+              "mb": ["sm", "sm", "xxl"],
               "flexDirection": ["column", "column", "row"]
             },
             "fields": {
