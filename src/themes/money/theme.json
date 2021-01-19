@@ -1336,7 +1336,7 @@
       "variants": {
         "default": {
           "description": {
-            "color":"grey-80",
+            "color": "grey-80",
             "my": "xxs"
           }
         }
