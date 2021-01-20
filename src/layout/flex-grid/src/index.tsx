@@ -29,7 +29,7 @@ const uncastArrayIfSingle = (arr: number[]): number | number[] =>
 const toPx = (value: number) => `${value}px`
 
 const getValueFromBreakpointIndex = (arr: number[], index: number): number => {
-  if (arr[index]) return arr[index]
+  if (arr[index] !== undefined) return arr[index]
   return arr[arr.length - 1]
 }
 
