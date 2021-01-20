@@ -1597,6 +1597,55 @@
       "lg": {
         "minHeight": 438,
         "pb": 82
+      },
+      "variants": {
+        "test": {
+          "wrapper": {
+            "position": "relative",
+            "overflow": "visible",
+            "minHeight": 413,
+            "mb": "md",
+            "textAlign": ["center", null, "left"],
+            "> div": {
+              "backgroundColor": "#F7F7FC"
+            },
+            "div": {
+              "overflow": "visible"
+            }
+          },
+          "breadcrumbs": {
+            "mb": "md"
+          },
+          "content": {
+            "variant": "elements.hero.content",
+            "position": "relative",
+            "minHeight": 280,
+            ".json-grid-col": {
+              ":first-of-type": {
+                "mb": "lg",
+                "maxWidth": [269, null, "auto"]
+              },
+              ":last-of-type": {
+                "position": [null, null, "absolute"],
+                "right": 0
+              }
+            },
+            "h2": {
+              "mb": ["xxs", null, "sm"]
+            },
+            "a": {
+              "mb": 0,
+              "fontSize": 16
+            }
+          },
+          "image": {
+            "position": "initial",
+            "width": 184,
+            "img": {
+              "position": ["initial", "initial", "absolute"]
+            }
+          }
+        }
       }
     },
     "drop-down": {
