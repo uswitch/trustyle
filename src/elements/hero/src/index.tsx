@@ -28,7 +28,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   fgImageOnTablet?: boolean
   customBgColor?: string
   className?: string
-  variant?: string
+  variant?: 'provider'
   bottomImageOverflow?: number | string
 }
 

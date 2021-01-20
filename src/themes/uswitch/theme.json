@@ -1599,7 +1599,7 @@
         "pb": 82
       },
       "variants": {
-        "test": {
+        "provider": {
           "wrapper": {
             "position": "relative",
             "overflow": "visible",
