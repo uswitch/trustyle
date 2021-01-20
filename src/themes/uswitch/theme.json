@@ -1613,21 +1613,71 @@
               "overflow": "visible"
             }
           },
+          "container": {
+            "display": ["flex", null, "block"],
+            "justifyContent": "center",
+            "alignContent": "center",
+            "fontFamily": "heading",
+            "> div": {
+              ":last-of-type": {
+                "display": ["flex", null, "block"],
+                "flexDirection": "column",
+                "justifyContent": "center",
+                "alignItems": "center"
+              }
+            }
+          },
           "breadcrumbs": {
-            "mb": "md"
+            "mb": "md",
+            "div": {
+              "display": "block"
+            }
           },
           "content": {
             "variant": "elements.hero.content",
             "position": "relative",
-            "minHeight": 280,
+            "minHeight": 220,
+            "> div": {
+              "alignItems": "center"
+            },
             ".json-grid-col": {
               ":first-of-type": {
                 "mb": "lg",
-                "maxWidth": [269, null, "auto"]
+                "pl": [null, null, "xxs"],
+                "maxWidth": [350, null, "none"]
               },
               ":last-of-type": {
                 "position": [null, null, "absolute"],
-                "right": 0
+                "top": 0,
+                "right": 0,
+                "> div": {
+                  "mr": 8,
+                  "ml": 17
+                },
+                "h5": {
+                  "mb": "sm"
+                },
+                "p": {
+                  "fontSize": "xxs",
+                  "mb": "sm"
+                },
+                "[class*='FormStepField']": {
+                  "span": {
+                    "border": "none",
+                    "width": 52,
+                    "display": "inline-flex",
+                    "justifyContent": "center"
+                  },
+                  "> div": {
+                    "borderColor": "#D0D0D3"
+                  },
+                  "input": {
+                    "pl": 0
+                  }
+                },
+                "button": {
+                  "mb": 0
+                }
               }
             },
             "h2": {
@@ -1635,12 +1685,19 @@
             },
             "a": {
               "mb": 0,
+              "mx": ["auto", null, 0],
+              "borderBottomWidth": 2,
               "fontSize": 16
+            },
+            "p": {
+              "mb": "lg",
+              "color": "grey-60"
             }
           },
           "image": {
             "position": "initial",
             "width": 184,
+            "mb": ["sm", null, 0],
             "img": {
               "position": ["initial", "initial", "absolute"]
             }

@@ -77,7 +77,7 @@ const Hero: React.FC<Props> = ({
           }}
           className={className}
         >
-          <Container>
+          <Container sx={{ variant: styles('container') }}>
             {breadcrumbs && (
               <div sx={{ paddingTop: 'sm', variant: styles('breadcrumbs') }}>
                 {breadcrumbWithVariant}
