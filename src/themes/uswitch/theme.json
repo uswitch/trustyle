@@ -627,6 +627,46 @@
     },
     "form": {
       "variants": {
+        "hero": {
+          "> div:first-child": {
+            "*": {
+              "fontSize": "sm"
+            },
+            "boxShadow": "0px 2px 20px rgba(20, 20, 36, 0.15)",
+            "flexDirection": ["column", "row", "row"],
+            "border": ["none", "none"],
+            "input": {
+              "borderBottom": ["solid 1px", "none"],
+              "borderBottomColor": "rgb(208, 208, 211)",
+              "py": ["md", "sm"],
+              "pr": ["md", "xs"],
+              "pl": ["xl", "lg"],
+              "outline": "none"
+            },
+            ">div": {
+              "position": ["absolute", "relative"]
+            },
+            "svg": {
+              "display": "inline",
+              "left": ["md", "auto"],
+              "ml": 0,
+              "top": [33, -2]
+            },
+
+            "button": {
+              "m": ["md", 0],
+              "py": "sm",
+              "fontWeight": "bold",
+              "svg": {
+                "position": "relative",
+                "display": "inline",
+                "mr": [0, "md", "md"],
+                "top": 0,
+                "left": ["auto", "md"]
+              }
+            }
+          }
+        },
         "default": {
           "label": {
             "variant": "styles.h4",
@@ -835,44 +875,8 @@
             "fontSize": ["sm", "sm", "md"],
             "mb": "sm"
           },
-
-          "form > div:first-child": {
-            "*": {
-              "fontSize": "sm"
-            },
-            "boxShadow": "0px 2px 20px rgba(20, 20, 36, 0.15)",
-            "flexDirection": ["column", "row", "row"],
-            "border": ["none", "none"],
-            "input": {
-              "borderBottom": ["solid 1px", "none"],
-              "borderBottomColor": "rgb(208, 208, 211)",
-              "py": ["md", "sm"],
-              "pr": ["md", "xs"],
-              "pl": ["xl", "lg"],
-              "outline": "none"
-            },
-            ">div": {
-              "position": ["absolute", "relative"]
-            },
-            "svg": {
-              "display": "inline",
-              "left": ["md", "auto"],
-              "ml": 0,
-              "top": [33, -2]
-            },
-
-            "button": {
-              "m": ["md", 0],
-              "py": "sm",
-              "fontWeight": "bold",
-              "svg": {
-                "position": "relative",
-                "display": "inline",
-                "mr": [0, "md", "md"],
-                "top": 0,
-                "left": ["auto", "md"]
-              }
-            }
+          "form": {
+            "variant": "elements.form.variants.hero"
           },
           ">div": {
             "&:nth-of-type(2)": {
