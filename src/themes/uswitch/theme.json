@@ -822,6 +822,38 @@
         }
       },
       "variants": {
+        "hero": {
+          "display": "flex",
+          "alignItems": "center",
+          "flexDirection": "column",
+          "textAlign": "center",
+          "h1": {
+            "mb": "xxs",
+            "fontSize": ["lg", "xxl", "xxxl"]
+          },
+          "h5": {
+            "fontSize": ["sm", "sm", "md"],
+            "mb": "sm"
+          },
+          ">div": {
+            "&:nth-of-type(2)": {
+              "width": "100%",
+              "div[class*=LeadCaptureForm]:first-of-type": {
+                "margin": "auto"
+              }
+            },
+            "&:nth-of-type(3)": {
+              "pt": 0,
+              "mt": ["sm", "md"],
+              "*": {
+                "fontSize": "base"
+              }
+            },
+            "&:last-of-type": {
+              "mb": ["xxs", "md", "md"]
+            }
+          }
+        },
         "center": {
           "textAlign": "center"
         },
