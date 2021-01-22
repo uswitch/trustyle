@@ -1369,7 +1369,8 @@
           "variant": "elements.buttons.variants.primary",
           "width": "100%",
           "bg": "grey-05",
-          "color": "black"
+          "color": "black",
+          "fontSize": "xs"
         },
         "secondary": {
           "variant": "elements.buttons.base",
