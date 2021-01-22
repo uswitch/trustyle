@@ -8,22 +8,24 @@ import {
   Row
 } from '@uswitch/trustyle.flex-grid'
 
-interface ListProps extends React.HTMLAttributes<HTMLDivElement> {
+interface CategoryProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   text?: string
   container?: React.FC
   breadcrumbs?: React.ReactElement
   image?: React.ReactElement
   className?: string
+  hideDescriptionMobile: boolean
 }
 
-const Category: React.FC<ListProps> = ({
+const Category: React.FC<CategoryProps> = ({
   title,
   text,
   container: Container = DefaultContainer,
   breadcrumbs: Breadcrumbs,
   image: Image,
-  className
+  className,
+  hideDescriptionMobile = false
 }) => {
   const { theme }: any = useThemeUI()
   const breadcrumbsVariant = theme.elements?.category?.breadcrumbs?.variant
@@ -70,7 +72,11 @@ const Category: React.FC<ListProps> = ({
             </Styled.h1>
             {text && (
               <Styled.p
-                sx={{ marginBottom: 0, variant: 'elements.category.text' }}
+                sx={{
+                  marginBottom: 0,
+                  variant: 'elements.category.text',
+                  display: hideDescriptionMobile ? ['none', 'block'] : 'block'
+                }}
               >
                 {text}
               </Styled.p>
