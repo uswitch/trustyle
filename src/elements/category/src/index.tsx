@@ -15,7 +15,7 @@ interface CategoryProps extends React.HTMLAttributes<HTMLDivElement> {
   breadcrumbs?: React.ReactElement
   image?: React.ReactElement
   className?: string
-  hideDescriptionMobile: boolean
+  hideDescriptionMobile?: boolean
 }
 
 const Category: React.FC<CategoryProps> = ({
