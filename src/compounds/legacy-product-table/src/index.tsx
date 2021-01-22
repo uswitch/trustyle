@@ -317,18 +317,14 @@ const MobileEligibility: React.FC<MobileEligibilityProps> = ({
   )
 }
 
-interface DesktopEligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
-  hover: boolean
-}
-
-const DesktopEligibility: React.FC<DesktopEligibilityProps> = ({
-  children,
-  hover
+const DesktopEligibility: React.FC<React.HTMLAttributes<HTMLElement>> = ({
+  className,
+  children
 }) => {
   return (
     <div
+      className={className}
       sx={{
-        display: ['none', hover ? 'block' : 'none'],
         position: 'absolute',
         top: '100%',
         width: '400px',
@@ -473,7 +469,6 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
 }
 
 interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
-  hover: boolean
   eligibilityContent: React.ReactNode[]
   clickableRow?: string
   onClickEligibility?: (addon?: object) => void
@@ -481,7 +476,6 @@ interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Eligibility: React.FC<EligibilityProps> = ({
-  hover,
   eligibilityContent,
   clickableRow,
   onClickEligibility,
@@ -499,7 +493,7 @@ const Eligibility: React.FC<EligibilityProps> = ({
           return item
         })}
       </MobileEligibility>
-      <DesktopEligibility sx={{ display: ['none', 'block'] }} hover={hover}>
+      <DesktopEligibility className="desktop-eligibility">
         {eligibilityContent.map(item => {
           return item
         })}
@@ -534,8 +528,6 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   disabled,
   ...props
 }) => {
-  const [hover, setHover] = React.useState(false)
-
   return (
     <article
       sx={{
@@ -546,13 +538,13 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         ':first-of-type': {
           marginTop: '10px'
         },
-        opacity: disabled ? '0.4' : 1
-      }}
-      onMouseEnter={() => {
-        setHover(true)
-      }}
-      onMouseLeave={() => {
-        setHover(false)
+        opacity: disabled ? '0.4' : 1,
+        '.desktop-eligibility': {
+          display: 'none'
+        },
+        ':hover .desktop-eligibility': {
+          display: ['none', 'block']
+        }
       }}
       {...props}
     >
@@ -589,7 +581,6 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
 
       {eligibilityContent.length > 0 && !disabled && (
         <Eligibility
-          hover={hover}
           eligibilityContent={eligibilityContent}
           clickableRow={clickableRow}
           onClickEligibility={onClickEligibility}
