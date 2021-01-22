@@ -182,9 +182,11 @@ const ProductTableRow: React.FC<RowProps> = ({
               }
             }}
             // @ts-ignore
-            css={{
-              display: '-ms-grid'
-            }}
+            css={
+              !card && {
+                display: '-ms-grid'
+              }
+            }
           >
             {nonNullChildren.map((child, index) => (
               <CellContext.Provider
