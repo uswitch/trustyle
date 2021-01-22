@@ -2075,7 +2075,9 @@
       "panel": {
         "container": {
           "pt": "sm",
-          "pb": "sm"
+          "pb": "sm",
+          "maxWidth": "1024px",
+          "m": "0 auto"
         }
       },
       "modal": {
@@ -2202,8 +2204,7 @@
           "isActive": {
             "buttonWrapper": {
               "calculator": {
-                "mt": ["0", "0", "35px"],
-                "pl": ["0", "0", "42px"],
+                "mt": ["0", "0", "51px"],
                 "textAlign": "center",
                 "> button": {
                   "height": "55px",
