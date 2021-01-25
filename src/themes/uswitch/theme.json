@@ -2525,7 +2525,7 @@
             "main": {
               "alignItems": "baseline",
               "position": "relative",
-              "pl": ["none", "sm"],
+              "pl": ["0", "sm"],
               "py": ["sm", "xxs"],
               "borderTop": ["1px solid", "none"],
               "borderTopColor": "grey-20",
@@ -2548,7 +2548,6 @@
               },
               "card": {
                 "alignItems": "baseline",
-                "pl": ["none", "sm"],
                 "py": ["sm", "xxs"],
                 "borderTop": "1px solid",
                 "borderTopColor": "grey-20"
