@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.13.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.13.11...@uswitch/trustyle.product-table@2.13.12) (2021-01-25)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
 ## [2.13.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.13.10...@uswitch/trustyle.product-table@2.13.11) (2021-01-25)
 
 **Note:** Version bump only for package @uswitch/trustyle.product-table
