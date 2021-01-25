@@ -27,6 +27,7 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   image?: React.ReactNode
   disabled?: boolean
   card?: boolean
+  extraStyles?: {}
 }
 
 const ProductTableRow: React.FC<RowProps> = ({
@@ -40,7 +41,8 @@ const ProductTableRow: React.FC<RowProps> = ({
   clickableRow,
   image,
   disabled,
-  card = false
+  card = false,
+  extraStyles = {}
 }) => {
   const forcedMobile = forceMobile(card)
 
@@ -172,7 +174,7 @@ const ProductTableRow: React.FC<RowProps> = ({
               marginY: -6,
               marginTop: image ? 0 : -6,
               variant: 'compounds.product-table.row.grid',
-
+              ...extraStyles,
               // Flex in mobile IE11 (?!) as auto-layout for grid isn't supported
               '@media all and (max-width: 990px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
                 display: 'flex',
@@ -180,9 +182,11 @@ const ProductTableRow: React.FC<RowProps> = ({
               }
             }}
             // @ts-ignore
-            css={{
-              display: '-ms-grid'
-            }}
+            css={
+              !card && {
+                display: '-ms-grid'
+              }
+            }
           >
             {nonNullChildren.map((child, index) => (
               <CellContext.Provider
@@ -202,7 +206,11 @@ const ProductTableRow: React.FC<RowProps> = ({
                       image &&
                       child.type !== ProductTableCellCta &&
                       `compounds.product-table.variants.redesign.cellContext.${
-                        hasCellImage ? 'variants.cellImage' : 'main'
+                        hasCellImage
+                          ? 'variants.cellImage'
+                          : card
+                          ? 'variants.card'
+                          : 'main'
                       }`
                   }
                 }}
