@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.19.0...@uswitch/trustyle.icon@1.19.1) (2021-01-05)
+
+
+### Bug Fixes
+
+* give color prop default ([e700e27](https://github.com/uswitch/trustyle/commit/e700e27))
+* remove fill colour from path so that can pass color through color prop ([0996638](https://github.com/uswitch/trustyle/commit/0996638))
+
+
+
+
+
 # [1.19.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.18.4...@uswitch/trustyle.icon@1.19.0) (2020-12-18)
 
 

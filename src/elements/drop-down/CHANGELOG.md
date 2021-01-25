@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.drop-down@2.4.6...@uswitch/trustyle.drop-down@2.5.0) (2021-01-15)
+
+
+### Features
+
+* add onClick to dropdown component ([bc0072b](https://github.com/uswitch/trustyle/commit/bc0072b))
+
+
+
+
+
+## [2.4.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.drop-down@2.4.5...@uswitch/trustyle.drop-down@2.4.6) (2021-01-05)
+
+
+### Bug Fixes
+
+* remove min width on dropdown ([5fa26e7](https://github.com/uswitch/trustyle/commit/5fa26e7))
+
+
+
+
+
 ## [2.4.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.drop-down@2.4.4...@uswitch/trustyle.drop-down@2.4.5) (2020-12-18)
 
 **Note:** Version bump only for package @uswitch/trustyle.drop-down

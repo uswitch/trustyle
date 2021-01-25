@@ -11,6 +11,7 @@ export interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   subtitle?: React.ReactNode
   addons?: React.ReactNode[]
   image?: React.ReactNode
+  card?: React.ReactNode
 }
 
 const ProductTableHeader: React.FC<HeaderProps> = ({
@@ -19,7 +20,8 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
   rowTitle,
   subtitle,
   addons = [],
-  image
+  image,
+  card = false
 }) => {
   const {
     theme: {
@@ -32,15 +34,25 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
   const pb = paddingBottom || '0'
 
   return (
-    <div sx={{ pb: image ? '' : 'xs' }}>
+    <div
+      sx={{
+        pb: image ? '' : 'xs'
+      }}
+    >
       <div
         sx={{
           borderBottom: image ? '0' : '1px solid',
           paddingBottom: image ? pb : 'sm',
           marginTop: badges.length ? 0 : -6,
           display: 'flex',
-          alignItems: 'center',
-          variant: badges.length && 'compounds.product-table.badge-wrapper'
+          alignItems: card ? 'baseline' : 'center',
+          flexDirection: card ? 'column' : 'row',
+          variant:
+            badges.length && !card
+              ? 'compounds.product-table.badge-wrapper'
+              : badges.length && card
+              ? 'compounds.product-table.badge-wrapper.card'
+              : null
         }}
       >
         {image && image}
@@ -65,7 +77,8 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
               sx={{
                 margin: 0,
                 variant: `compounds.product-table.${image &&
-                  'variants.redesign.'}row.title`
+                  'variants.redesign.'}row.title`,
+                pl: card && '0 !important'
               }}
             >
               {rowTitle}

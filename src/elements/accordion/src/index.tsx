@@ -29,7 +29,13 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   glyph?: Glyph
   glyphColor?: string
   variant?: string
+  scrollToRef?: React.RefObject<HTMLElement>
+  buttonProps?: object | ButtonPropsFn
+  sx?: object
+  card?: boolean
 }
+
+type ButtonPropsFn = (args: { open: boolean; title: string }) => object
 
 interface TitleProps extends React.HTMLAttributes<HTMLDivElement> {
   as?: React.ElementType
@@ -55,7 +61,11 @@ const Accordion: React.FC<Props> & {
   icon = '',
   glyph,
   glyphColor = '',
-  variant
+  scrollToRef,
+  variant,
+  buttonProps: buttonPropsFn,
+  sx = {},
+  card = false
 }) => {
   const {
     theme: {
@@ -82,12 +92,28 @@ const Accordion: React.FC<Props> & {
   const title =
     typeof openedTitle !== 'undefined' && isOpen ? openedTitle : closedTitle
 
+  const buttonProps =
+    typeof buttonPropsFn === 'function'
+      ? buttonPropsFn({ open: isOpen, title })
+      : buttonPropsFn
+
+  const hasBoxShadow = card
+    ? {
+        minHeight: isOpen ? '80%' : 'auto',
+        boxShadow: isOpen
+          ? '0px -1px 16px rgba(0, 0, 0, 0.15), 0px -159px 36px 4px rgba(255, 255, 255, 0.7)'
+          : 'none'
+      }
+    : {}
+
   return (
     <div
       sx={{
         variant: variant
           ? `compounds.accordion.variants.${variant}`
-          : 'compounds.accordion'
+          : 'compounds.accordion',
+        ...sx,
+        ...hasBoxShadow
       }}
       className={className}
       data-target="accordion" // this is a hack to stop clicking propagating to the product table
@@ -103,7 +129,18 @@ const Accordion: React.FC<Props> & {
         px={{
           color: 'textColor'
         }}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => {
+          if (
+            isOpen &&
+            variant === 'reverse' &&
+            scrollToRef &&
+            scrollToRef.current
+          ) {
+            scrollToRef.current.scrollIntoView({ behavior: 'smooth' })
+          }
+          setIsOpen(!isOpen)
+        }}
+        {...buttonProps}
       >
         {icon || glyph ? (
           <div

@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.legacy-product-table",
-  "version": "0.6.1",
+  "version": "0.8.4",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -9,10 +9,14 @@
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
+    "@uswitch/trustyle.button": "^3.0.4",
+    "@uswitch/trustyle.button-link": "^3.0.4",
+    "@uswitch/trustyle.icon": "^1.19.1",
     "react": "^16.7.0"
   },
-  "dependencies": {
-    "@uswitch/trustyle.button-link": "^3.0.2",
-    "@uswitch/trustyle.icon": "^1.19.0"
+  "devDependencies": {
+    "@uswitch/trustyle.button": "^3.0.4",
+    "@uswitch/trustyle.button-link": "^3.0.4",
+    "@uswitch/trustyle.icon": "^1.19.1"
   }
 }

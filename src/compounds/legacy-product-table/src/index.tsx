@@ -3,6 +3,7 @@
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
+import { Button } from '@uswitch/trustyle.button'
 import { Icon } from '@uswitch/trustyle.icon'
 
 import RowWrapper from './rowWrapper'
@@ -176,6 +177,24 @@ export const CtaCell: React.FC<CtaCellProps> = ({
   onClick,
   disabled
 }) => {
+  const props = {
+    variant: 'primary',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+    size: 'small',
+    sx: {
+      background: 'linear-gradient(90deg, #924A8B 5%, #DB4D75 95%)',
+      color: '#fff',
+      fontSize: '16px',
+      fontWeight: 300,
+      ':hover': {
+        opacity: 1
+      },
+      ...styles
+    },
+    onClick
+  }
+
   return (
     <BaseCell
       sx={{
@@ -186,26 +205,13 @@ export const CtaCell: React.FC<CtaCellProps> = ({
         visibility: disabled && 'hidden'
       }}
     >
-      <ButtonLink
-        variant="primary"
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        size="small"
-        sx={{
-          background: 'linear-gradient(90deg, #924A8B 5%, #DB4D75 95%)',
-          color: '#fff',
-          fontSize: '16px',
-          fontWeight: 300,
-          ':hover': {
-            opacity: 1
-          },
-          ...styles
-        }}
-        onClick={onClick}
-      >
-        {children}
-      </ButtonLink>
+      {href ? (
+        <ButtonLink href={href} {...props}>
+          {children}
+        </ButtonLink>
+      ) : (
+        <Button {...props}>{children}</Button>
+      )}
     </BaseCell>
   )
 }
@@ -311,18 +317,14 @@ const MobileEligibility: React.FC<MobileEligibilityProps> = ({
   )
 }
 
-interface DesktopEligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
-  hover: boolean
-}
-
-const DesktopEligibility: React.FC<DesktopEligibilityProps> = ({
-  children,
-  hover
+const DesktopEligibility: React.FC<React.HTMLAttributes<HTMLElement>> = ({
+  className,
+  children
 }) => {
   return (
     <div
+      className={className}
       sx={{
-        display: ['none', hover ? 'block' : 'none'],
         position: 'absolute',
         top: '100%',
         width: '400px',
@@ -467,7 +469,6 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
 }
 
 interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
-  hover: boolean
   eligibilityContent: React.ReactNode[]
   clickableRow?: string
   onClickEligibility?: (addon?: object) => void
@@ -475,7 +476,6 @@ interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Eligibility: React.FC<EligibilityProps> = ({
-  hover,
   eligibilityContent,
   clickableRow,
   onClickEligibility,
@@ -493,7 +493,7 @@ const Eligibility: React.FC<EligibilityProps> = ({
           return item
         })}
       </MobileEligibility>
-      <DesktopEligibility sx={{ display: ['none', 'block'] }} hover={hover}>
+      <DesktopEligibility className="desktop-eligibility">
         {eligibilityContent.map(item => {
           return item
         })}
@@ -528,8 +528,6 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   disabled,
   ...props
 }) => {
-  const [hover, setHover] = React.useState(false)
-
   return (
     <article
       sx={{
@@ -540,13 +538,13 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         ':first-of-type': {
           marginTop: '10px'
         },
-        opacity: disabled ? '0.4' : 1
-      }}
-      onMouseEnter={() => {
-        setHover(true)
-      }}
-      onMouseLeave={() => {
-        setHover(false)
+        opacity: disabled ? '0.4' : 1,
+        '.desktop-eligibility': {
+          display: 'none'
+        },
+        ':hover .desktop-eligibility': {
+          display: ['none', 'block']
+        }
       }}
       {...props}
     >
@@ -583,7 +581,6 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
 
       {eligibilityContent.length > 0 && !disabled && (
         <Eligibility
-          hover={hover}
           eligibilityContent={eligibilityContent}
           clickableRow={clickableRow}
           onClickEligibility={onClickEligibility}
