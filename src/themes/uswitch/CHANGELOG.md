@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.33.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.18...@uswitch/trustyle.uswitch-theme@2.33.0) (2021-01-25)
+
+
+### Bug Fixes
+
+* container styling ([f88cf7b](https://github.com/uswitch/trustyle/commit/f88cf7b))
+* labeling ([06ae72b](https://github.com/uswitch/trustyle/commit/06ae72b))
+
+
+### Features
+
+* update hero component with custom variant ([4a6913d](https://github.com/uswitch/trustyle/commit/4a6913d))
+
+
+
+
+
 ## [2.32.18](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.17...@uswitch/trustyle.uswitch-theme@2.32.18) (2021-01-25)
 
 
