@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.32.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.16...@uswitch/trustyle.uswitch-theme@2.32.17) (2021-01-22)
+
+
+### Bug Fixes
+
+* lead capture form styling ([0998293](https://github.com/uswitch/trustyle/commit/0998293))
+
+
+
+
+
+
 ## [2.32.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.15...@uswitch/trustyle.uswitch-theme@2.32.16) (2021-01-19)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
