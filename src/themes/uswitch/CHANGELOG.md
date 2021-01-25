@@ -3,6 +3,102 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.32.18](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.17...@uswitch/trustyle.uswitch-theme@2.32.18) (2021-01-25)
+
+
+### Bug Fixes
+
+* add rich-text-block hero variant ([cbf2bf0](https://github.com/uswitch/trustyle/commit/cbf2bf0))
+
+
+
+
+
+## [2.32.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.16...@uswitch/trustyle.uswitch-theme@2.32.17) (2021-01-22)
+
+
+### Bug Fixes
+
+* lead capture form styling ([0998293](https://github.com/uswitch/trustyle/commit/0998293))
+
+
+
+
+
+
+## [2.32.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.15...@uswitch/trustyle.uswitch-theme@2.32.16) (2021-01-19)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.32.15](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.14...@uswitch/trustyle.uswitch-theme@2.32.15) (2021-01-18)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.32.14](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.13...@uswitch/trustyle.uswitch-theme@2.32.14) (2021-01-18)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.32.13](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.12...@uswitch/trustyle.uswitch-theme@2.32.13) (2021-01-18)
+
+
+### Bug Fixes
+
+* remove margin from h2 and p in image-callout ([f72c016](https://github.com/uswitch/trustyle/commit/f72c016))
+
+
+
+
+
+
+## [2.32.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.11...@uswitch/trustyle.uswitch-theme@2.32.12) (2021-01-14)
+
+
+### Bug Fixes
+
+* accordion heading font size ([0b7aca8](https://github.com/uswitch/trustyle/commit/0b7aca8))
+* carousel margin and padding update ([0e54fa9](https://github.com/uswitch/trustyle/commit/0e54fa9))
+* rich-text-block variants update ([497b55f](https://github.com/uswitch/trustyle/commit/497b55f))
+
+
+
+
+
+## [2.32.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.10...@uswitch/trustyle.uswitch-theme@2.32.11) (2021-01-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.32.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.9...@uswitch/trustyle.uswitch-theme@2.32.10) (2021-01-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.32.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.8...@uswitch/trustyle.uswitch-theme@2.32.9) (2021-01-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
 ## [2.32.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.7...@uswitch/trustyle.uswitch-theme@2.32.8) (2021-01-08)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme

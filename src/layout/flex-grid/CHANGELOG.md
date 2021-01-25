@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.flex-grid@3.5.0...@uswitch/trustyle.flex-grid@3.5.1) (2021-01-20)
+
+
+### Bug Fixes
+
+* offset not working if equal to 0 ([390e6e9](https://github.com/uswitch/trustyle/commit/390e6e9))
+
+
+
+
+
 # [3.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.flex-grid@3.4.2...@uswitch/trustyle.flex-grid@3.5.0) (2020-10-16)
 
 

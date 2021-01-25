@@ -1265,32 +1265,58 @@
       }
     },
     "form": {
-      "label": {
-        "variant": "styles.h4",
-        "fontWeight": "bold",
-        "color": "grey-80",
-        "display": "block",
-        "mt": "sm",
-        "mb": "xs",
-        "textAlign": "left",
-        "variants": {
-          "calculator": {
-            "variant": "styles.h6",
+      "variants": {
+        "default": {
+          "label": {
+            "variant": "styles.h4",
             "fontWeight": "bold",
             "color": "grey-80",
             "display": "block",
+            "mt": "sm",
             "mb": "xs",
-            "mt": "xl"
+            "textAlign": "left",
+            "variants": {
+              "calculator": {
+                "variant": "styles.h6",
+                "fontWeight": "bold",
+                "color": "grey-80",
+                "display": "block",
+                "mb": "xs",
+                "mt": "xl"
+              }
+            }
+          },
+          "step-field": {
+            "mb": "xl"
+          },
+          "description": {
+            "color": "grey-80",
+            "display": "block",
+            "textAlign": "left",
+            "my": "xxs"
+          },
+          "input": {
+            "error": {
+              "color": "error",
+              "mt": "xs",
+              "textAlign": "left",
+              "title": {
+                "fontWeight": "bold",
+                "mb": "xxs"
+              }
+            }
+          },
+          "wrapper": {
+            "base": {
+              "pb": 0
+            },
+            "variants": {
+              "calculator": {
+                "pb": ["xs", 0]
+              }
+            }
           }
         }
-      },
-      "step-field": {
-        "mb": "xl"
-      },
-      "description": {
-        "color": "grey-80",
-        "display": "block",
-        "mb": "xs"
       },
       "button": {
         "base": {
@@ -1311,26 +1337,6 @@
               "ml": "sm"
             }
           }
-        }
-      },
-      "wrapper": {
-        "base": {
-          "pb": 0
-        },
-        "variants": {
-          "calculator": {
-            "pb": ["xs", 0]
-          }
-        }
-      },
-      "error": {
-        "variant": "elements.form.input.wrapper",
-        "color": "error",
-        "mt": "xs",
-        "textAlign": "left",
-        "title": {
-          "fontWeight": "bold",
-          "mb": "xxs"
         }
       }
     },
@@ -1369,13 +1375,6 @@
     },
     "form-section": {
       "default": {
-        "elements": {
-          "wrapper": {
-            "padding": 0
-          }
-        }
-      },
-      "panel": {
         "elements": {
           "wrapper": {
             "backgroundColor": "white",
@@ -1440,24 +1439,20 @@
             "calculator": {}
           }
         },
-
         "states": {
           "isActive": {
             "wrapper": {
-              "variant": "elements.form-section.panel.elements.wrapper",
+              "variant": "elements.form-section.default.elements.wrapper",
               "paddingY": "md",
               "opacity": 1,
               "submit": {
-                "variant": "elements.form-section.panel.elements.wrapper.submit",
+                "variant": "elements.form-section.default.elements.wrapper.submit",
                 "opacity": 1
               }
             },
             "heading": {
-              "variant": "elements.form-section.panel.elements.heading",
-              "display": "none",
-              "submit": {
-                "display": "none"
-              }
+              "variant": "elements.form-section.default.elements.heading",
+              "opacity": 1
             },
             "fields": {
               "display": "block",
@@ -1482,10 +1477,10 @@
           },
           "isComplete": {
             "wrapper": {
-              "variant": "elements.form-section.panel.elements.wrapper"
+              "variant": "elements.form-section.default.elements.wrapper"
             },
             "heading": {
-              "variant": "elements.form-section.panel.elements.heading",
+              "variant": "elements.form-section.default.elements.heading",
               "opacity": 1,
               "justifyContent": "space-between"
             },
