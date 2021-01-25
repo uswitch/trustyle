@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@3.0.2...@uswitch/trustyle.button@3.0.4) (2021-01-05)
+
+
+### Bug Fixes
+
+* type difference between button elements ([9cb1800](https://github.com/uswitch/trustyle/commit/9cb1800))
+
+
+
+
+
+## [3.0.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@3.0.2...@uswitch/trustyle.button@3.0.3) (2021-01-05)
+
+
+### Bug Fixes
+
+* type difference between button elements ([26b5374](https://github.com/uswitch/trustyle/commit/26b5374))
+
+
+
+
+
+## [3.0.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@3.0.1...@uswitch/trustyle.button@3.0.2) (2020-12-21)
+
+
+### Bug Fixes
+
+* ts check ([d20edf8](https://github.com/uswitch/trustyle/commit/d20edf8))
+
+
+
+
+
+## [3.0.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@3.0.0...@uswitch/trustyle.button@3.0.1) (2020-11-23)
+
+
+### Bug Fixes
+
+* add csstype dependency to button to fix build ([8219606](https://github.com/uswitch/trustyle/commit/8219606))
+* hoist types package in button dependencies to trustyle package json to fix build error ([2df5b89](https://github.com/uswitch/trustyle/commit/2df5b89))
+
+
+
+
+
 # [3.0.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button@2.4.5...@uswitch/trustyle.button@3.0.0) (2020-11-13)
 
 

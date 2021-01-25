@@ -7,6 +7,7 @@ import { Arrow } from './arrow'
 import { ArrowCircle } from './arrow-circle'
 import { Bill } from './bill'
 import { Book } from './book'
+import { BookClosed } from './book-closed'
 import { Calendar } from './calendar'
 import { Caret } from './caret'
 import { Car } from './car'
@@ -62,6 +63,7 @@ export type Glyph =
   | 'arrow-circle'
   | 'bill'
   | 'book'
+  | 'book-closed'
   | 'calendar'
   | 'car'
   | 'caret'
@@ -142,6 +144,9 @@ export const Icon: React.FC<Props> = ({
       return <Bill color={color} size={size} />
     case 'book':
       return <Book color={color} size={size} />
+    case 'book-closed':
+      return <BookClosed color={color} size={size} />
+
     case 'calendar':
       return <Calendar color={color} size={size} />
     case 'car':

@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.author@2.1.5...@uswitch/trustyle.author@2.1.7) (2020-12-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.author
+
+
+
+
+
+## [2.1.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.author@2.1.5...@uswitch/trustyle.author@2.1.6) (2020-12-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.author
+
+
+
+
+
+## [2.1.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.author@2.1.4...@uswitch/trustyle.author@2.1.5) (2020-12-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.author
+
+
+
+
+
 ## [2.1.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.author@2.1.1...@uswitch/trustyle.author@2.1.2) (2020-08-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.author

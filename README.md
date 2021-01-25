@@ -33,3 +33,17 @@ We run automated accessibility tests as part of our pre-merge CI checks. You can
 
 1. Run storybook: `npm run storybook`
 2. Run the tests: `npm run a11y`
+
+## Palette & Margin Collapse
+
+In order to prevent margin collapse on palette components, you should
+add the following snippet as high up in your document as possible
+
+```html
+<style>.palette{padding-top:0.05px;padding-bottom:0.05px;}</style>
+```
+
+This will be the least specific settings for `padding` properties, and
+will therefore prevent margin collapse for elements that don't have
+padding, but will also respect the padding of an element if it is
+already set
