@@ -92,6 +92,13 @@ export const Example = () => {
         defaultValue="sm"
         inputSize="sm"
       />
+      <SimpleInput
+        aria-label="Simple input"
+        name="example"
+        type="text"
+        uppercase
+        placeholder="Uppercase example"
+      />
     </React.Fragment>
   )
 }

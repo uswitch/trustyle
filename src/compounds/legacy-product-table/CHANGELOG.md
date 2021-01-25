@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.8.3...@uswitch/trustyle.legacy-product-table@0.8.4) (2021-01-22)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+
+
+
+
+## [0.8.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.8.2...@uswitch/trustyle.legacy-product-table@0.8.3) (2021-01-22)
+
+
+### Bug Fixes
+
+* desktop eligiblity through css ([49e875d](https://github.com/uswitch/trustyle/commit/49e875d))
+
+
+
+
+
 ## [0.8.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.8.1...@uswitch/trustyle.legacy-product-table@0.8.2) (2021-01-08)
 
 
