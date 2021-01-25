@@ -2454,9 +2454,11 @@
               "color": "grey-70",
               "pt": "0px",
               "fontSize": "xs",
-              "fontFamily": "heading"
+              "fontFamily": "heading",
+              "m": "0"
             },
             "label": {
+              "fontSize": "xs",
               "fontWeight": "bold"
             }
           },
@@ -2548,7 +2550,7 @@
               },
               "card": {
                 "alignItems": "baseline",
-                "py": ["sm", "xxs"],
+                "py": "xs",
                 "borderTop": "1px solid",
                 "borderTopColor": "grey-20"
               }
