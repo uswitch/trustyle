@@ -31,6 +31,19 @@ const createSx = (
   }, {})
 }
 
+/**
+   TODO:
+   To prevent margin collapse, which should use emotion utils to read
+   the parent styles and only set the vertical padding when a padding
+   is 0 or not set
+
+   Similarly, in order to prevent margin collapse for palettes, you
+   should add the following snippet as high up in your document as
+   possible
+
+   <style>.palette{padding-top:0.05px;padding-bottom:0.05px}</style>
+ */
+
 export const Palette = ({
   children,
   className = '',
@@ -43,8 +56,8 @@ export const Palette = ({
   return (
     <props.as
       {...props}
+      sx={{ '&.palette': sx }}
       className={`palette ${className}`}
-      sx={{ py: '0.05px', '&.palette': sx }}
     >
       {children}
     </props.as>

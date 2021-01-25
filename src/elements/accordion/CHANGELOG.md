@@ -3,6 +3,81 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.12.0...@uswitch/trustyle.accordion@0.12.1) (2021-01-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.accordion
+
+
+
+
+
+# [0.12.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.11.10...@uswitch/trustyle.accordion@0.12.0) (2021-01-06)
+
+
+### Features
+
+* add `buttonProps` to accordion ([6176171](https://github.com/uswitch/trustyle/commit/6176171))
+
+
+
+
+
+## [0.11.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.11.9...@uswitch/trustyle.accordion@0.11.10) (2021-01-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.accordion
+
+
+
+
+
+## [0.11.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.11.8...@uswitch/trustyle.accordion@0.11.9) (2021-01-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.accordion
+
+
+
+
+
+## [0.11.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.11.7...@uswitch/trustyle.accordion@0.11.8) (2020-12-18)
+
+**Note:** Version bump only for package @uswitch/trustyle.accordion
+
+
+
+
+
+## [0.11.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.11.5...@uswitch/trustyle.accordion@0.11.7) (2020-12-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.accordion
+
+
+
+
+
+## [0.11.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.11.5...@uswitch/trustyle.accordion@0.11.6) (2020-12-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.accordion
+
+
+
+
+
+## [0.11.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.11.4...@uswitch/trustyle.accordion@0.11.5) (2020-12-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.accordion
+
+
+
+
+
+## [0.11.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.11.3...@uswitch/trustyle.accordion@0.11.4) (2020-12-15)
+
+**Note:** Version bump only for package @uswitch/trustyle.accordion
+
+
+
+
+
 ## [0.11.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.11.2...@uswitch/trustyle.accordion@0.11.3) (2020-12-02)
 
 **Note:** Version bump only for package @uswitch/trustyle.accordion

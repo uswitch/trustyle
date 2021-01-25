@@ -16,6 +16,7 @@ export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   prefix?: string
   suffix?: string
   inputSize?: InputSize
+  uppercase?: boolean
 }
 
 export const SimpleInput = React.forwardRef(
@@ -27,7 +28,8 @@ export const SimpleInput = React.forwardRef(
       defaultValue,
       prefix,
       suffix,
-      inputSize
+      inputSize,
+      uppercase
     } = props
 
     const [hasFocus, setHasFocus] = useState(false)
@@ -77,7 +79,8 @@ export const SimpleInput = React.forwardRef(
         <input
           sx={{
             variant: 'elements.simple-input.base',
-            textAlign: inputSize === 'sm' ? 'center' : 'left'
+            textAlign: inputSize === 'sm' ? 'center' : 'left',
+            textTransform: uppercase && 'uppercase'
           }}
           placeholder={placeholder}
           ref={ref}

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.simple-input@0.6.0...@uswitch/trustyle.simple-input@0.6.1) (2021-01-14)
+
+
+### Bug Fixes
+
+* uppercase on text inputs ([3c16153](https://github.com/uswitch/trustyle/commit/3c16153))
+
+
+
+
+
 # [0.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.simple-input@0.5.2...@uswitch/trustyle.simple-input@0.6.0) (2020-11-10)
 
 

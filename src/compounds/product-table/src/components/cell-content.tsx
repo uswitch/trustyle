@@ -140,7 +140,8 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
       sx={{
         ...grid('column', 1, 1),
         ...grid('row', headerImage ? 2 : 1, 1),
-        fontSize: 'xxl',
+        fontSize: isCard ? 'sm' : 'xxl',
+        textAlign: isCard ? 'center' : 'left',
         small: {
           fontSize: 'sm'
         },

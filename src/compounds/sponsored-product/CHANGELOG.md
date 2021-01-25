@@ -3,6 +3,78 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.14](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.5.13...@uswitch/trustyle.sponsored-product@3.5.14) (2021-01-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
+## [3.5.13](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.5.11...@uswitch/trustyle.sponsored-product@3.5.13) (2021-01-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
+## [3.5.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.5.11...@uswitch/trustyle.sponsored-product@3.5.12) (2021-01-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
+## [3.5.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.5.10...@uswitch/trustyle.sponsored-product@3.5.11) (2020-12-18)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
+## [3.5.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.5.8...@uswitch/trustyle.sponsored-product@3.5.10) (2020-12-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
+## [3.5.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.5.8...@uswitch/trustyle.sponsored-product@3.5.9) (2020-12-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
+## [3.5.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.5.7...@uswitch/trustyle.sponsored-product@3.5.8) (2020-12-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
+## [3.5.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.5.6...@uswitch/trustyle.sponsored-product@3.5.7) (2020-12-15)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
+## [3.5.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.5.5...@uswitch/trustyle.sponsored-product@3.5.6) (2020-12-10)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
 ## [3.5.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.5.4...@uswitch/trustyle.sponsored-product@3.5.5) (2020-12-10)
 
 **Note:** Version bump only for package @uswitch/trustyle.sponsored-product

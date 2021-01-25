@@ -3,6 +3,7 @@
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
+import { Button } from '@uswitch/trustyle.button'
 import { Icon } from '@uswitch/trustyle.icon'
 
 import RowWrapper from './rowWrapper'
@@ -166,43 +167,51 @@ interface CtaCellProps extends React.HTMLAttributes<HTMLDivElement> {
   styles?: any
   href?: string
   onClick?: (event?: any) => void
+  disabled?: boolean
 }
 
 export const CtaCell: React.FC<CtaCellProps> = ({
   children,
   styles,
   href,
-  onClick
+  onClick,
+  disabled
 }) => {
+  const props = {
+    variant: 'primary',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+    size: 'small',
+    sx: {
+      background: 'linear-gradient(90deg, #924A8B 5%, #DB4D75 95%)',
+      color: '#fff',
+      fontSize: '16px',
+      fontWeight: 300,
+      ':hover': {
+        opacity: 1
+      },
+      ...styles
+    },
+    onClick
+  }
+
   return (
     <BaseCell
       sx={{
         flex: 0,
         flexBasis: 'auto',
         margin: 'auto',
-        marginLeft: ['auto', '15px']
+        marginLeft: ['auto', '15px'],
+        visibility: disabled && 'hidden'
       }}
     >
-      <ButtonLink
-        variant="primary"
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        size="small"
-        sx={{
-          background: 'linear-gradient(90deg, #924A8B 5%, #DB4D75 95%)',
-          color: '#fff',
-          fontSize: '16px',
-          fontWeight: 300,
-          ':hover': {
-            opacity: 1
-          },
-          ...styles
-        }}
-        onClick={onClick}
-      >
-        {children}
-      </ButtonLink>
+      {href ? (
+        <ButtonLink href={href} {...props}>
+          {children}
+        </ButtonLink>
+      ) : (
+        <Button {...props}>{children}</Button>
+      )}
     </BaseCell>
   )
 }
@@ -308,18 +317,14 @@ const MobileEligibility: React.FC<MobileEligibilityProps> = ({
   )
 }
 
-interface DesktopEligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
-  hover: boolean
-}
-
-const DesktopEligibility: React.FC<DesktopEligibilityProps> = ({
-  children,
-  hover
+const DesktopEligibility: React.FC<React.HTMLAttributes<HTMLElement>> = ({
+  className,
+  children
 }) => {
   return (
     <div
+      className={className}
       sx={{
-        display: ['none', hover ? 'block' : 'none'],
         position: 'absolute',
         top: '100%',
         width: '400px',
@@ -464,7 +469,6 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
 }
 
 interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
-  hover: boolean
   eligibilityContent: React.ReactNode[]
   clickableRow?: string
   onClickEligibility?: (addon?: object) => void
@@ -472,7 +476,6 @@ interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Eligibility: React.FC<EligibilityProps> = ({
-  hover,
   eligibilityContent,
   clickableRow,
   onClickEligibility,
@@ -490,7 +493,7 @@ const Eligibility: React.FC<EligibilityProps> = ({
           return item
         })}
       </MobileEligibility>
-      <DesktopEligibility sx={{ display: ['none', 'block'] }} hover={hover}>
+      <DesktopEligibility className="desktop-eligibility">
         {eligibilityContent.map(item => {
           return item
         })}
@@ -508,6 +511,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   onClickEligibility?: (addon?: object) => void
   eligibilityAddon?: object
   onRowClick?: () => void
+  disabled?: boolean
 }
 
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
@@ -521,10 +525,9 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   onClickEligibility,
   eligibilityAddon,
   onRowClick,
+  disabled,
   ...props
 }) => {
-  const [hover, setHover] = React.useState(false)
-
   return (
     <article
       sx={{
@@ -534,17 +537,22 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         position: 'relative',
         ':first-of-type': {
           marginTop: '10px'
+        },
+        opacity: disabled ? '0.4' : 1,
+        '.desktop-eligibility': {
+          display: 'none'
+        },
+        ':hover .desktop-eligibility': {
+          display: ['none', 'block']
         }
-      }}
-      onMouseEnter={() => {
-        setHover(true)
-      }}
-      onMouseLeave={() => {
-        setHover(false)
       }}
       {...props}
     >
-      <RowWrapper link={clickableRow} onRowClick={onRowClick}>
+      <RowWrapper
+        link={clickableRow}
+        onRowClick={onRowClick}
+        disabled={disabled}
+      >
         <Header>{title}</Header>
 
         <div
@@ -558,22 +566,27 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           {children}
         </div>
 
-        <AdditionalInfo>
-          {info.map((item, key) => {
-            return <div key={key}>{item}</div>
-          })}
-        </AdditionalInfo>
+        {info.length > 0 && (
+          <AdditionalInfo>
+            {info.map((item, key) => {
+              return <div key={key}>{item}</div>
+            })}
+          </AdditionalInfo>
+        )}
 
-        <Footer label={repExampleLabel}>{representativeExample}</Footer>
+        {representativeExample.length > 0 && (
+          <Footer label={repExampleLabel}>{representativeExample}</Footer>
+        )}
       </RowWrapper>
 
-      <Eligibility
-        hover={hover}
-        eligibilityContent={eligibilityContent}
-        clickableRow={clickableRow}
-        onClickEligibility={onClickEligibility}
-        eligibilityAddon={eligibilityAddon}
-      />
+      {eligibilityContent.length > 0 && !disabled && (
+        <Eligibility
+          eligibilityContent={eligibilityContent}
+          clickableRow={clickableRow}
+          onClickEligibility={onClickEligibility}
+          eligibilityAddon={eligibilityAddon}
+        />
+      )}
     </article>
   )
 }
