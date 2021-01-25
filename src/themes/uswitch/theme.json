@@ -1401,7 +1401,8 @@
           "variant": "elements.buttons.variants.primary",
           "width": "100%",
           "bg": "grey-05",
-          "color": "black"
+          "color": "black",
+          "fontSize": "xs"
         },
         "secondary": {
           "variant": "elements.buttons.base",
@@ -2212,7 +2213,9 @@
       "panel": {
         "container": {
           "pt": "sm",
-          "pb": "sm"
+          "pb": "sm",
+          "maxWidth": "1024px",
+          "m": "0 auto"
         }
       },
       "modal": {
@@ -2339,8 +2342,7 @@
           "isActive": {
             "buttonWrapper": {
               "calculator": {
-                "mt": ["0", "0", "35px"],
-                "pl": ["0", "0", "42px"],
+                "mt": ["0", "0", "51px"],
                 "textAlign": "center",
                 "> button": {
                   "height": "55px",
@@ -2590,9 +2592,11 @@
               "color": "grey-70",
               "pt": "0px",
               "fontSize": "xs",
-              "fontFamily": "heading"
+              "fontFamily": "heading",
+              "m": "0"
             },
             "label": {
+              "fontSize": "xs",
               "fontWeight": "bold"
             }
           },
@@ -2661,7 +2665,7 @@
             "main": {
               "alignItems": "baseline",
               "position": "relative",
-              "pl": ["none", "sm"],
+              "pl": ["0", "sm"],
               "py": ["sm", "xxs"],
               "borderTop": ["1px solid", "none"],
               "borderTopColor": "grey-20",
@@ -2684,8 +2688,7 @@
               },
               "card": {
                 "alignItems": "baseline",
-                "pl": ["none", "sm"],
-                "py": ["sm", "xxs"],
+                "py": "xs",
                 "borderTop": "1px solid",
                 "borderTopColor": "grey-20"
               }

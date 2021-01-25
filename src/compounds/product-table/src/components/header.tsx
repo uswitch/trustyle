@@ -47,6 +47,7 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
           display: 'flex',
           alignItems: card ? 'baseline' : 'center',
           flexDirection: card ? 'column' : 'row',
+          minHeight: card ? '160px' : '0',
           variant:
             badges.length && !card
               ? 'compounds.product-table.badge-wrapper'

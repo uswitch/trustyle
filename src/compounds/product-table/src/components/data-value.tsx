@@ -17,8 +17,10 @@ const ProductTableDataValue: React.FC<DataValueProps> = ({
 }) => {
   const { isCard } = React.useContext(CardContext)
   const forcedMobile = forceMobile(isCard)
+  const boldNumber = isCard ? { fontWeight: '600', whiteSpace: 'nowrap' } : {}
+  const removeBold = isCard ? { fontWeight: '400' } : {}
   return (
-    <span>
+    <span sx={boldNumber}>
       {numberFormatter(value, unit)}
       {typeof value === 'number' && subscript ? (
         <span
@@ -27,7 +29,8 @@ const ProductTableDataValue: React.FC<DataValueProps> = ({
               forcedMobile(
                 theme.compounds['product-table'].cellContent?.subscript
                   ?.fontSize || ['xs', 'md']
-              )
+              ),
+            ...removeBold
           }}
         >{`${subscript}`}</span>
       ) : null}
