@@ -3,6 +3,114 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.23.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.10...@uswitch/trustyle.bankrate-theme@2.23.11) (2021-01-13)
+
+
+### Bug Fixes
+
+* align responsive card text ([cb72054](https://github.com/uswitch/trustyle/commit/cb72054))
+* category guides module mobile layout ([b5e2c33](https://github.com/uswitch/trustyle/commit/b5e2c33))
+
+
+
+
+
+
+## [2.23.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.9...@uswitch/trustyle.bankrate-theme@2.23.10) (2020-12-17)
+
+
+### Bug Fixes
+
+* remove horizontal card hover effect ([f01e52d](https://github.com/uswitch/trustyle/commit/f01e52d))
+* responsive card background ([f383319](https://github.com/uswitch/trustyle/commit/f383319))
+
+
+
+
+
+## [2.23.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.8...@uswitch/trustyle.bankrate-theme@2.23.9) (2020-12-17)
+
+
+### Bug Fixes
+
+* card background update ([5943679](https://github.com/uswitch/trustyle/commit/5943679))
+
+
+
+
+
+
+## [2.23.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.6...@uswitch/trustyle.bankrate-theme@2.23.8) (2020-12-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.bankrate-theme
+
+
+
+
+
+## [2.23.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.6...@uswitch/trustyle.bankrate-theme@2.23.7) (2020-12-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.bankrate-theme
+
+
+
+
+
+## [2.23.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.5...@uswitch/trustyle.bankrate-theme@2.23.6) (2020-12-17)
+
+
+### Bug Fixes
+
+* update responsive card variant ([a5c5bba](https://github.com/uswitch/trustyle/commit/a5c5bba))
+
+
+
+
+
+
+## [2.23.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.3...@uswitch/trustyle.bankrate-theme@2.23.5) (2020-12-16)
+
+
+### Bug Fixes
+
+* update responsive card variant ([a5c5bba](https://github.com/uswitch/trustyle/commit/a5c5bba))
+
+* Centre the image for a author profile using traditional centering ([7f1b700](https://github.com/uswitch/trustyle/commit/7f1b700))
+
+
+
+
+
+## [2.23.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.3...@uswitch/trustyle.bankrate-theme@2.23.4) (2020-12-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.bankrate-theme
+
+
+
+
+
+## [2.23.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.2...@uswitch/trustyle.bankrate-theme@2.23.3) (2020-11-25)
+
+
+### Bug Fixes
+
+* Load the correct sized sponsored img when in portrait ([296fa6f](https://github.com/uswitch/trustyle/commit/296fa6f))
+
+
+
+
+
+## [2.23.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.1...@uswitch/trustyle.bankrate-theme@2.23.2) (2020-11-24)
+
+
+### Bug Fixes
+
+* Add correct dimensions to provider img ([bc5b0c0](https://github.com/uswitch/trustyle/commit/bc5b0c0))
+
+
+
+
+
 ## [2.23.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.0...@uswitch/trustyle.bankrate-theme@2.23.1) (2020-11-10)
 
 

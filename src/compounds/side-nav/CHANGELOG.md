@@ -3,6 +3,95 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.41](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.40...@uswitch/trustyle.side-nav@1.0.41) (2021-01-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-nav
+
+
+
+
+
+## [1.0.40](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.39...@uswitch/trustyle.side-nav@1.0.40) (2021-01-06)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-nav
+
+
+
+
+
+## [1.0.39](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.38...@uswitch/trustyle.side-nav@1.0.39) (2021-01-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-nav
+
+
+
+
+
+## [1.0.38](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.37...@uswitch/trustyle.side-nav@1.0.38) (2021-01-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-nav
+
+
+
+
+
+## [1.0.37](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.36...@uswitch/trustyle.side-nav@1.0.37) (2020-12-18)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-nav
+
+
+
+
+
+## [1.0.36](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.34...@uswitch/trustyle.side-nav@1.0.36) (2020-12-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-nav
+
+
+
+
+
+## [1.0.35](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.34...@uswitch/trustyle.side-nav@1.0.35) (2020-12-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-nav
+
+
+
+
+
+## [1.0.34](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.33...@uswitch/trustyle.side-nav@1.0.34) (2020-12-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-nav
+
+
+
+
+
+## [1.0.33](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.32...@uswitch/trustyle.side-nav@1.0.33) (2020-12-15)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-nav
+
+
+
+
+
+## [1.0.32](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.31...@uswitch/trustyle.side-nav@1.0.32) (2020-12-02)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-nav
+
+
+
+
+
+## [1.0.31](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.30...@uswitch/trustyle.side-nav@1.0.31) (2020-11-30)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-nav
+
+
+
+
+
+
 ## [1.0.30](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.29...@uswitch/trustyle.side-nav@1.0.30) (2020-11-16)
 
 **Note:** Version bump only for package @uswitch/trustyle.side-nav

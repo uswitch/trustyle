@@ -3,6 +3,113 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.13.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.13.9...@uswitch/trustyle.product-table@2.13.10) (2021-01-22)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.13.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.13.8...@uswitch/trustyle.product-table@2.13.9) (2021-01-22)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.13.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.13.7...@uswitch/trustyle.product-table@2.13.8) (2021-01-19)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.13.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.13.6...@uswitch/trustyle.product-table@2.13.7) (2021-01-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.13.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.13.5...@uswitch/trustyle.product-table@2.13.6) (2021-01-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.13.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.13.4...@uswitch/trustyle.product-table@2.13.5) (2021-01-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.13.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.13.3...@uswitch/trustyle.product-table@2.13.4) (2021-01-06)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.13.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.13.2...@uswitch/trustyle.product-table@2.13.3) (2020-12-10)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.13.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.13.1...@uswitch/trustyle.product-table@2.13.2) (2020-12-04)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.13.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.13.0...@uswitch/trustyle.product-table@2.13.1) (2020-12-04)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+# [2.13.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.10...@uswitch/trustyle.product-table@2.13.0) (2020-12-02)
+
+
+### Features
+
+* alternative pounds formatter that always adds trailing zero ([7c0a3be](https://github.com/uswitch/trustyle/commit/7c0a3be))
+
+
+
+
+
+## [2.12.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.9...@uswitch/trustyle.product-table@2.12.10) (2020-12-02)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.12.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.8...@uswitch/trustyle.product-table@2.12.9) (2020-11-26)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
 ## [2.12.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.12.7...@uswitch/trustyle.product-table@2.12.8) (2020-11-19)
 
 **Note:** Version bump only for package @uswitch/trustyle.product-table

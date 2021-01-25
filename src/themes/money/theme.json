@@ -365,6 +365,24 @@
           "maxWidth": ["88px", "104px"],
           "ml": "xs"
         }
+      },
+      "variants": {
+        "form": {
+          "wrapper": {
+            "backgroundColor": "grey-05",
+            "borderRadius": "4px",
+            "display": "flex",
+            "alignItems": "center",
+            "justifyContent": "center",
+            "paddingY": "md",
+            "paddingX": "xl"
+          },
+          "image": {
+            "ml": "md",
+            "width": "149px",
+            "height": "auto"
+          }
+        }
       }
     },
     "badge": {
@@ -1247,66 +1265,84 @@
       }
     },
     "form": {
-      "label": {
-        "variant": "styles.h4",
-        "fontWeight": "bold",
-        "color": "grey-80",
-        "display": "block",
-        "mt": "sm",
-        "mb": "xs",
-        "textAlign": "left",
-        "variants": {
-          "calculator": {
-            "variant": "styles.h6",
+      "variants": {
+        "default": {
+          "label": {
+            "variant": "styles.h4",
             "fontWeight": "bold",
             "color": "grey-80",
             "display": "block",
+            "mt": "sm",
             "mb": "xs",
-            "mt": "xl"
+            "textAlign": "left",
+            "variants": {
+              "calculator": {
+                "variant": "styles.h6",
+                "fontWeight": "bold",
+                "color": "grey-80",
+                "display": "block",
+                "mb": "xs",
+                "mt": "xl"
+              }
+            }
+          },
+          "step-field": {
+            "mb": "xl"
+          },
+          "description": {
+            "color": "grey-80",
+            "display": "block",
+            "textAlign": "left",
+            "my": "xxs"
+          },
+          "input": {
+            "error": {
+              "color": "error",
+              "mt": "xs",
+              "textAlign": "left",
+              "title": {
+                "fontWeight": "bold",
+                "mb": "xxs"
+              }
+            }
+          },
+          "wrapper": {
+            "base": {
+              "pb": 0
+            },
+            "variants": {
+              "calculator": {
+                "pb": ["xs", 0]
+              }
+            }
           }
         }
       },
-      "step-field": {
-        "mb": "xl"
-      },
-      "description": {
-        "color": "grey-80",
-        "display": "block",
-        "mb": "xs"
-      },
       "button": {
-        "mt": "sm",
+        "base": {
+          "mt": "sm"
+        },
         "variants": {
           "calculator": {
             "mb": "sm",
             "mt": "lg"
+          },
+          "loading": {
+            "variant": "elements.form.button.base",
+            "paddingY": "10px",
+            "paddingX": "md",
+            "svg": {
+              "height": "32px",
+              "width": "32px",
+              "ml": "sm"
+            }
           }
-        }
-      },
-      "wrapper": {
-        "base": {
-          "pb": 0
-        },
-        "variants": {
-          "calculator": {
-            "pb": ["xs", 0]
-          }
-        }
-      },
-      "error": {
-        "variant": "elements.form.input.wrapper",
-        "color": "error",
-        "mt": "xs",
-        "textAlign": "left",
-        "title": {
-          "fontWeight": "bold",
-          "mb": "xxs"
         }
       }
     },
     "rich-text-block": {
       "base": {
-        "*:first-child": {
+        "&:first-child": {
           "mt": 0
         }
       },
@@ -1322,12 +1358,23 @@
           },
           "boxShadow": "0px 2px 3px rgba(24, 24, 61, 0.06), 0px 5px 5px rgba(24, 24, 61, 0.06), 0px 8px 7px rgba(24, 24, 61, 0.06)",
           "borderRadius": "md"
+        },
+        "panel-primary-text-align-center": {
+          "variant": "elements.rich-text-block.variants.panel-primary",
+          "textAlign": "center",
+          "p": {
+            "textAlign": "center",
+            "mb": "md",
+            "mt": "sm"
+          }
+        },
+        "center": {
+          "textAlign": "center"
         }
       }
     },
     "form-section": {
-      "default": {},
-      "panel": {
+      "default": {
         "elements": {
           "wrapper": {
             "backgroundColor": "white",
@@ -1392,24 +1439,20 @@
             "calculator": {}
           }
         },
-
         "states": {
           "isActive": {
             "wrapper": {
-              "variant": "elements.form-section.panel.elements.wrapper",
+              "variant": "elements.form-section.default.elements.wrapper",
               "paddingY": "md",
               "opacity": 1,
               "submit": {
-                "variant": "elements.form-section.panel.elements.wrapper.submit",
+                "variant": "elements.form-section.default.elements.wrapper.submit",
                 "opacity": 1
               }
             },
             "heading": {
-              "variant": "elements.form-section.panel.elements.heading",
-              "display": "none",
-              "submit": {
-                "display": "none"
-              }
+              "variant": "elements.form-section.default.elements.heading",
+              "opacity": 1
             },
             "fields": {
               "display": "block",
@@ -1434,10 +1477,10 @@
           },
           "isComplete": {
             "wrapper": {
-              "variant": "elements.form-section.panel.elements.wrapper"
+              "variant": "elements.form-section.default.elements.wrapper"
             },
             "heading": {
-              "variant": "elements.form-section.panel.elements.heading",
+              "variant": "elements.form-section.default.elements.heading",
               "opacity": 1,
               "justifyContent": "space-between"
             },
@@ -1714,6 +1757,9 @@
           "textDecoration": "none",
           "transition": "none"
         }
+      },
+      "headerImage": {
+        "display": ["none", "flex"]
       },
       "addonFooter": {
         "main": {

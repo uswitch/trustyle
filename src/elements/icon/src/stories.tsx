@@ -11,6 +11,7 @@ const glyphChoices: Glyph[] = [
   'arrow-circle',
   'bill',
   'book',
+  'book-closed',
   'calendar',
   'car',
   'caret',

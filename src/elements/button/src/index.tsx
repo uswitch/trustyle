@@ -18,7 +18,7 @@ export type Variant =
 type IconPosition = 'left' | 'center' | 'right' | null
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant: Variant
+  variant: Variant | string
   iconPosition?: IconPosition
   inverse?: boolean
   size?: string
@@ -30,7 +30,7 @@ const invertTheme = (theme: any, variant: any = {}) => {
   const borderColor = color
 
   const hoverColor = theme.colors[backgroundColor]
-    ? darken(theme.colors[backgroundColor], 0.1)
+    ? darken(theme.colors[backgroundColor], '0.1')
     : null
 
   return {

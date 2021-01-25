@@ -15,7 +15,7 @@ export default {
   title: 'Compounds/Legacy Product Table'
 }
 
-const repExample = `Representative Example: The representative rate is 29% APR (fixed) so
+const repExample = `The representative rate is 29% APR (fixed) so
 if you borrow £4,000 over 3 years at a rate of 17% p.a. (fixed) plus a
 service fee of 8.74% p.a. you will repay £160.61 per month & £5,781.96
 in total.`
@@ -33,13 +33,29 @@ const eligibilityContent = [
   <EligibilityContentRow label="Credit Rating Accepted" value="poor" key="3" />
 ]
 
+const clickableRow = 'https://www.money.co.uk'
+
+const onClickEligibility = (addon?: object) => {
+  console.log(addon)
+}
+
+const eligibilityAddon = {
+  action: { value: 'Test Banner Clickout' },
+  category: { value: 'Test Guarantor Loans' },
+  label: { value: 'Test More Information Banner' }
+}
+
 const ExampleProductTable = () => {
   return (
     <LegacyProductTable
       representativeExample={repExample}
+      repExampleLabel="Representative example: "
       info={info}
       title={title}
       eligibilityContent={eligibilityContent}
+      clickableRow={clickableRow}
+      onClickEligibility={onClickEligibility}
+      eligibilityAddon={eligibilityAddon}
     >
       <DataCell
         backgroundColor="#fef6ed"
@@ -69,7 +85,7 @@ const ExampleProductTable = () => {
         <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
       </ImageCell>
 
-      <CtaCell>See Deal</CtaCell>
+      <CtaCell href={''}>See Deal</CtaCell>
     </LegacyProductTable>
   )
 }
@@ -94,10 +110,73 @@ Example.story = {
   }
 }
 
+const DisabledProductTable = () => {
+  return (
+    <LegacyProductTable
+      representativeExample={repExample}
+      repExampleLabel="Representative example: "
+      info={info}
+      title={title}
+      eligibilityContent={eligibilityContent}
+      clickableRow={clickableRow}
+      onClickEligibility={onClickEligibility}
+      eligibilityAddon={eligibilityAddon}
+      disabled
+    >
+      <DataCell
+        backgroundColor="#fef6ed"
+        borderBottomColor="#fcdbb7"
+        label="Loan amount"
+      >
+        £1,000 to £10,000
+      </DataCell>
+
+      <DataCell
+        backgroundColor="#fef1ec"
+        borderBottomColor="#fac9b0"
+        label="Representative APR"
+      >
+        29% APR (£1,000 to £10,000)
+      </DataCell>
+
+      <DataCell
+        backgroundColor="#fbedf1"
+        borderBottomColor="#f0b9c8"
+        label="Loan term"
+      >
+        1 year to 5 years
+      </DataCell>
+
+      <ImageCell>
+        <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
+      </ImageCell>
+
+      <CtaCell href={clickableRow} disabled>
+        See Deal
+      </CtaCell>
+    </LegacyProductTable>
+  )
+}
+
+export const DisabledExample = () => {
+  return (
+    <div>
+      <DisabledProductTable />
+    </div>
+  )
+}
+
+DisabledExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
     <AllThemes>
       <Example />
+      <DisabledExample />
     </AllThemes>
   )
 }

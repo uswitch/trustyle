@@ -3,6 +3,66 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.read-more-card@1.4.7...@uswitch/trustyle.read-more-card@1.4.8) (2021-01-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.read-more-card
+
+
+
+
+
+## [1.4.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.read-more-card@1.4.6...@uswitch/trustyle.read-more-card@1.4.7) (2020-12-18)
+
+**Note:** Version bump only for package @uswitch/trustyle.read-more-card
+
+
+
+
+
+## [1.4.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.read-more-card@1.4.4...@uswitch/trustyle.read-more-card@1.4.6) (2020-12-16)
+
+
+### Bug Fixes
+
+* Read more card doesn't seem to respect the short form padding ([65693f6](https://github.com/uswitch/trustyle/commit/65693f6))
+
+
+
+
+
+## [1.4.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.read-more-card@1.4.4...@uswitch/trustyle.read-more-card@1.4.5) (2020-12-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.read-more-card
+
+
+
+
+
+## [1.4.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.read-more-card@1.4.3...@uswitch/trustyle.read-more-card@1.4.4) (2020-12-15)
+
+**Note:** Version bump only for package @uswitch/trustyle.read-more-card
+
+
+
+
+
+## [1.4.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.read-more-card@1.4.2...@uswitch/trustyle.read-more-card@1.4.3) (2020-12-02)
+
+**Note:** Version bump only for package @uswitch/trustyle.read-more-card
+
+
+
+
+
+## [1.4.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.read-more-card@1.4.1...@uswitch/trustyle.read-more-card@1.4.2) (2020-11-30)
+
+**Note:** Version bump only for package @uswitch/trustyle.read-more-card
+
+
+
+
+
+
 ## [1.4.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.read-more-card@1.4.0...@uswitch/trustyle.read-more-card@1.4.1) (2020-11-16)
 
 **Note:** Version bump only for package @uswitch/trustyle.read-more-card

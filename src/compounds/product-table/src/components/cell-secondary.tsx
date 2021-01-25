@@ -22,17 +22,22 @@ const ProductTableCellSecondary: React.FC<CellSecondaryProps> = ({
   return (
     <CellBase
       sx={{
-        height: forcedMobile(['auto', headerImage ? 'auto' : '100%']),
-        padding: forcedMobile(['', headerImage ? 0 : 'sm']),
+        height: forcedMobile(['auto', null, headerImage ? 'auto' : '100%']),
+        padding: forcedMobile(['', null, headerImage ? 0 : 'sm']),
         display: 'grid',
-        alignItems: forcedMobile(['center', 'start']),
-        gridTemplateColumns: forcedMobile(['repeat(2, 1fr)', '100%']),
-        msGridColumns: forcedMobile(['repeat(2, 1fr)', '100%']),
-        gridTemplateRows: forcedMobile(['100%', headerImage ? 'auto' : '1fr']),
-        msGridRows: forcedMobile(['100%', headerImage ? 'auto' : '1fr']),
+        alignItems: forcedMobile(['center', null, 'start']),
+        gridTemplateColumns: forcedMobile(['repeat(2, 1fr)', null, '100%']),
+        msGridColumns: forcedMobile(['repeat(2, 1fr)', null, '100%']),
+        gridTemplateRows: forcedMobile([
+          '100%',
+          null,
+          headerImage ? 'auto' : '1fr'
+        ]),
+        msGridRows: forcedMobile(['100%', null, headerImage ? 'auto' : '1fr']),
         variant: forcedMobile([
           `compounds.product-table.${headerImage &&
             'variants.redesign.'}cellContent.variants.inSplit.main`,
+          null,
           `compounds.product-table.${headerImage &&
             'variants.redesign.'}cellContent.main`
         ])
@@ -46,15 +51,16 @@ const ProductTableCellSecondary: React.FC<CellSecondaryProps> = ({
           msGridColumn: '1',
           msGridColumnSpan: '1',
           gridRow: headerImage
-            ? forcedMobile(['1 / span 1', '1 / span 1'])
-            : forcedMobile(['1 / span 1', '2 / span 1']),
-          msGridRow: forcedMobile(['1', headerImage ? '1' : '2']),
+            ? forcedMobile(['1 / span 1', null, '1 / span 1'])
+            : forcedMobile(['1 / span 1', null, '2 / span 1']),
+          msGridRow: forcedMobile(['1', null, headerImage ? '1' : '2']),
           msGridRowSpan: '1',
           fontSize: 'xs',
           marginTop: headerImage ? 0 : 'sm',
           variant: forcedMobile([
             `compounds.product-table.${headerImage &&
               'variants.redesign.'}cellContent.variants.inSplit.label`,
+            null,
             `compounds.product-table.${headerImage &&
               'variants.redesign.'}cellContent.label`
           ])
@@ -65,16 +71,16 @@ const ProductTableCellSecondary: React.FC<CellSecondaryProps> = ({
       <div
         sx={{
           gridRow: headerImage
-            ? forcedMobile(['1 / span 1', '2 / span 1'])
+            ? forcedMobile(['1 / span 1', null, '2 / span 1'])
             : '1 / span 1',
           msGridRow: headerImage ? '2' : '1',
           msGridRowSpan: '1',
-          gridColumn: forcedMobile(['2 / span 1', '1 / span 1']),
-          msGridColumn: forcedMobile(['2', '1']),
+          gridColumn: forcedMobile(['2 / span 1', null, '1 / span 1']),
+          msGridColumn: forcedMobile(['2', null, '1']),
           msGridColumnSpan: '1',
           fontSize: 'xxl',
-          paddingLeft: forcedMobile(['sm', '0px']),
-          marginTop: headerImage ? '0px' : forcedMobile(['sm', '0px']),
+          paddingLeft: forcedMobile(['sm', null, '0px']),
+          marginTop: headerImage ? '0px' : forcedMobile(['sm', null, '0px']),
           small: {
             fontSize: 'sm'
           },
@@ -82,6 +88,7 @@ const ProductTableCellSecondary: React.FC<CellSecondaryProps> = ({
           variant: forcedMobile([
             `compounds.product-table.${headerImage &&
               'variants.redesign.'}cellContent.variants.inSplit.content`,
+            null,
             `compounds.product-table.${headerImage &&
               'variants.redesign.'}cellContent.content`
           ])
