@@ -28,8 +28,14 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   fgImageOnTablet?: boolean
   customBgColor?: string
   className?: string
+  variant?: 'provider'
   bottomImageOverflow?: number | string
 }
+
+const makeStyles = (variant?: string) => (element?: string) =>
+  `elements.hero${variant ? `.variants.${variant}` : ''}${
+    element ? `.${element}` : ''
+  }`
 
 const DefaultContainer: React.FC = ({ children }) => (
   <div sx={{ maxWidth: 1024, margin: '0 auto', paddingX: 10 }}>{children}</div>
@@ -45,11 +51,13 @@ const Hero: React.FC<Props> = ({
   fgImageOnTablet = true,
   customBgColor = '',
   children,
+  variant,
   bottomImageOverflow = '-33%',
   className
 }) => {
   const { theme }: any = useThemeUI()
-  const breadcrumbVariant = get(theme, 'elements.hero.breadcrumbs.variant')
+  const styles = makeStyles(variant)
+  const breadcrumbVariant = get(theme, styles('breadcrumbs.variant'))
   const breadcrumbWithVariant =
     breadcrumbs &&
     React.cloneElement(breadcrumbs, { variant: breadcrumbVariant })
@@ -58,7 +66,7 @@ const Hero: React.FC<Props> = ({
     <div>
       <Palette
         as="div"
-        sx={{ variant: 'elements.hero.wrapper', overflow: 'hidden' }}
+        sx={{ overflow: 'hidden', variant: styles('wrapper') }}
         px={{ backgroundColor: 'backgroundColor' }}
       >
         <div
@@ -69,11 +77,9 @@ const Hero: React.FC<Props> = ({
           }}
           className={className}
         >
-          <Container>
+          <Container sx={{ variant: styles('container') }}>
             {breadcrumbs && (
-              <div
-                sx={{ paddingTop: 'sm', variant: 'elements.hero.breadcrumbs' }}
-              >
+              <div sx={{ paddingTop: 'sm', variant: styles('breadcrumbs') }}>
                 {breadcrumbWithVariant}
               </div>
             )}
@@ -103,7 +109,7 @@ const Hero: React.FC<Props> = ({
                         ...fgImagePosition
                       }
                     : undefined),
-                  variant: 'elements.hero.image'
+                  variant: styles('image')
                 }}
               >
                 {fgImage && fgImageType === 'img' && (
@@ -123,7 +129,7 @@ const Hero: React.FC<Props> = ({
                   position: 'relative',
                   paddingTop: ['sm', 'xxl'],
                   paddingBottom: ['sm', 'xxl'],
-                  variant: 'elements.hero.content'
+                  variant: styles('content')
                 }}
               >
                 {children}
@@ -141,7 +147,7 @@ const Hero: React.FC<Props> = ({
             marginTop: `-${bottomImageOverflow}`,
             marginLeft: 'auto',
             marginRight: 'auto',
-            variant: 'elements.hero.bottomImage'
+            variant: styles('bottomImage')
           }}
           src={fgImage}
           role="presentation"
