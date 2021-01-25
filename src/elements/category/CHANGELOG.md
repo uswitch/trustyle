@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.category@2.0.30...@uswitch/trustyle.category@2.1.0) (2021-01-22)
+
+
+### Bug Fixes
+
+* types ([94e888b](https://github.com/uswitch/trustyle/commit/94e888b))
+
+
+### Features
+
+* allow hiding of description on mobile ([73d2362](https://github.com/uswitch/trustyle/commit/73d2362))
+
+
+
+
+
 ## [2.0.30](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.category@2.0.29...@uswitch/trustyle.category@2.0.30) (2021-01-20)
 
 **Note:** Version bump only for package @uswitch/trustyle.category

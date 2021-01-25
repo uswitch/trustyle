@@ -822,6 +822,38 @@
         }
       },
       "variants": {
+        "hero": {
+          "display": "flex",
+          "alignItems": "center",
+          "flexDirection": "column",
+          "textAlign": "center",
+          "h1": {
+            "mb": "xxs",
+            "fontSize": ["lg", "xxl", "xxxl"]
+          },
+          "h5": {
+            "fontSize": ["sm", "sm", "md"],
+            "mb": "sm"
+          },
+          ">div": {
+            "&:nth-of-type(2)": {
+              "width": "100%",
+              "div[class*=LeadCaptureForm]:first-of-type": {
+                "margin": "auto"
+              }
+            },
+            "&:nth-of-type(3)": {
+              "pt": 0,
+              "mt": ["sm", "md"],
+              "*": {
+                "fontSize": "base"
+              }
+            },
+            "&:last-of-type": {
+              "mb": ["xxs", "md", "md"]
+            }
+          }
+        },
         "center": {
           "textAlign": "center"
         },
@@ -3678,15 +3710,47 @@
 
   "modules": {
     "lead-capture-form": {
+      "base": {
+        "margin": ["auto", "auto"],
+        "width": ["100%", "100%"]
+      },
       "form": {
         "maxWidth": [555, 555, 555]
       },
+      "outer-container": {
+        "*": {
+          "fontSize": "sm"
+        },
+        "p": [0, "sm"],
+        "boxShadow": "0px 2px 20px rgba(20, 20, 36, 0.15)",
+        "flexDirection": ["column", "row", "row"],
+        "border": ["none", "none"]
+      },
+
+      "field-input": {
+        "borderBottom": ["solid 1px rgb(208, 208, 211)", "none"],
+        "pt": ["md", "sm"],
+        "pr": ["md", "xs"],
+        "pl": ["xl", "lg"],
+        "outline": "none"
+      },
+      "postcode-glyph": {
+        "display": "inline",
+        "left": ["md", "auto"],
+        "ml": 0,
+        "top": [33, 25]
+      },
+      "fieldset": {
+        "position": ["absolute", "relative"]
+      },
       "submit": {
-        "py": ["xs", "sm"],
-        "px": ["xs", "sm"],
-        "white-space": "nowrap",
+        "m": ["md", 0],
+        "py": "sm",
+        "fontSize": "sm",
+        "fontWeight": "bold",
+        "whiteSpace": "nowrap",
         "svg": {
-          "ml": 10
+          "ml": "sm"
         }
       }
     },

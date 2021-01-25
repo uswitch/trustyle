@@ -1377,13 +1377,6 @@
       "default": {
         "elements": {
           "wrapper": {
-            "padding": 0
-          }
-        }
-      },
-      "panel": {
-        "elements": {
-          "wrapper": {
             "backgroundColor": "white",
             "borderRadius": "4px",
             "mb": "lg",
@@ -1446,20 +1439,19 @@
             "calculator": {}
           }
         },
-
         "states": {
           "isActive": {
             "wrapper": {
-              "variant": "elements.form-section.panel.elements.wrapper",
+              "variant": "elements.form-section.default.elements.wrapper",
               "paddingY": "md",
               "opacity": 1,
               "submit": {
-                "variant": "elements.form-section.panel.elements.wrapper.submit",
+                "variant": "elements.form-section.default.elements.wrapper.submit",
                 "opacity": 1
               }
             },
             "heading": {
-              "variant": "elements.form-section.panel.elements.heading",
+              "variant": "elements.form-section.default.elements.heading",
               "opacity": 1
             },
             "fields": {
@@ -1485,10 +1477,10 @@
           },
           "isComplete": {
             "wrapper": {
-              "variant": "elements.form-section.panel.elements.wrapper"
+              "variant": "elements.form-section.default.elements.wrapper"
             },
             "heading": {
-              "variant": "elements.form-section.panel.elements.heading",
+              "variant": "elements.form-section.default.elements.heading",
               "opacity": 1,
               "justifyContent": "space-between"
             },
