@@ -2464,9 +2464,7 @@
         "variant": "compounds.product-table.card",
         "mt": "9px"
       },
-      "cta": {
-        "paddingY": ["md", "md", "0"]
-      },
+      "cta": {},
       "padding": {
         "paddingBottom": "sm"
       },

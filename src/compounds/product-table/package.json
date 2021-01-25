@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.product-table",
-  "version": "2.13.11",
+  "version": "2.13.12",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
