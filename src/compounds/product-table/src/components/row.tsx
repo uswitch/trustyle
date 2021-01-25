@@ -2,10 +2,17 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-import { Addon, AddonArg, CellContext } from '../generics'
+import {
+  Addon,
+  AddonArg,
+  CardContext,
+  CellContext,
+  forceMobile
+} from '../generics'
 
 import ProductTableCellBase from './cell-base'
 import ProductTableCellCta from './cell-cta'
+import ProductTableCellImage from './cell-image'
 import { ROWS } from './cell-split'
 import RowWrapper from './rowWrapper'
 import Header from './header'
@@ -19,6 +26,8 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   clickableRow?: string
   image?: React.ReactNode
   disabled?: boolean
+  card?: boolean
+  extraStyles?: {}
 }
 
 const ProductTableRow: React.FC<RowProps> = ({
@@ -31,8 +40,12 @@ const ProductTableRow: React.FC<RowProps> = ({
   id,
   clickableRow,
   image,
-  disabled
+  disabled,
+  card = false,
+  extraStyles = {}
 }) => {
+  const forcedMobile = forceMobile(card)
+
   const addonsFor = (key: keyof Addon): React.ReactNode[] =>
     addons.map(({ addon, component, options }, i) => {
       options = Object.assign({}, addon.defaultArguments, options)
@@ -74,7 +87,9 @@ const ProductTableRow: React.FC<RowProps> = ({
 
   const cols = nonNullChildren.length
 
-  const lastCell = (index: number) => index === cols - 1
+  const hasCellImage = nonNullChildren
+    .map((child: any) => child.type)
+    .includes(ProductTableCellImage)
 
   /**
    * Row numbers explained:
@@ -87,117 +102,138 @@ const ProductTableRow: React.FC<RowProps> = ({
    */
 
   return (
-    <section
-      id={id}
-      sx={{
-        position: 'relative',
-        border: '1px solid',
-        marginTop: badges.length ? [10, 15] : 0,
-        marginBottom: 'md',
-        ':last-of-type': {
-          marginBottom: 0
-        },
-        variant: image
-          ? 'compounds.product-table.variants.redesign.row.main'
-          : 'compounds.product-table.row.main',
-        pointerEvents: disabled ? 'none' : null,
-        opacity: disabled ? '0.5' : '1'
-      }}
-    >
-      <RowWrapper link={clickableRow} headerImage={image}>
-        {!!badges.length && (
+    <CardContext.Provider value={{ isCard: card }}>
+      <section
+        id={id}
+        sx={{
+          position: 'relative',
+          border: '1px solid',
+          marginTop: badges.length ? [10, 15] : 0,
+          marginBottom: 'md',
+          ':last-of-type': {
+            marginBottom: 0
+          },
+          variant: image
+            ? 'compounds.product-table.variants.redesign.row.main'
+            : 'compounds.product-table.row.main',
+          pointerEvents: disabled ? 'none' : null,
+          opacity: disabled ? '0.5' : '1',
+          pb: card ? '50px' : '0',
+          overflow: card ? 'hidden' : 'visible'
+        }}
+      >
+        <RowWrapper link={clickableRow} headerImage={image}>
+          {!!badges.length && (
+            <div
+              sx={{
+                position: 'absolute',
+                top: 0,
+                transform: 'translateY(-50%)'
+              }}
+            >
+              {badges.map((badge, i) => (
+                <span sx={{ marginRight: 'sm' }} key={i}>
+                  {badge}
+                </span>
+              ))}
+            </div>
+          )}
+          <Header
+            badges={badges}
+            image={image}
+            preTitle={preTitle}
+            rowTitle={rowTitle}
+            subtitle={subtitle}
+            addons={addonsFor('header')}
+            card={card}
+          />
           <div
             sx={{
-              position: 'absolute',
-              top: 0,
-              transform: 'translateY(-50%)'
+              display: 'grid',
+              gridTemplateColumns: forcedMobile([
+                'repeat(2, 1fr)',
+                null,
+                `repeat(${image ? cols - 1 : cols}, 1fr)`
+              ]),
+              msGridColumns: forcedMobile([
+                '(1fr)[2]',
+                null,
+                `(1fr)[${image ? cols - 1 : cols}]`
+              ]),
+              gridTemplateRows: forcedMobile([
+                'auto',
+                null,
+                `repeat(3, auto) repeat(${ROWS}, 1fr) repeat(3, auto)`
+              ]),
+              msGridRows: forcedMobile([
+                'auto',
+                null,
+                `(auto)[3] (1fr)[${ROWS}] (auto)[3]`
+              ]),
+              marginX: -8,
+              marginY: -6,
+              marginTop: image ? 0 : -6,
+              variant: 'compounds.product-table.row.grid',
+              ...extraStyles,
+              // Flex in mobile IE11 (?!) as auto-layout for grid isn't supported
+              '@media all and (max-width: 990px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
+                display: 'flex',
+                flexDirection: 'column'
+              }
             }}
-          >
-            {badges.map((badge, i) => (
-              <span sx={{ marginRight: 'sm' }} key={i}>
-                {badge}
-              </span>
-            ))}
-          </div>
-        )}
-        <Header
-          image={image}
-          preTitle={preTitle}
-          rowTitle={rowTitle}
-          subtitle={subtitle}
-          addons={addonsFor('header')}
-        />
-        <div
-          sx={{
-            display: 'grid',
-            gridTemplateColumns: [
-              'repeat(2, 1fr)',
-              undefined,
-              `repeat(${cols}, 1fr)`
-            ],
-            msGridColumns: ['(1fr)[2]', undefined, `(1fr)[${cols}]`],
-            gridTemplateRows: [
-              'auto',
-              undefined,
-              `repeat(3, auto) repeat(${ROWS}, 1fr) repeat(3, auto)`
-            ],
-            msGridRows: [
-              'auto',
-              undefined,
-              `(auto)[3] (1fr)[${ROWS}] (auto)[3]`
-            ],
-            marginX: -8,
-            marginY: -6,
-            marginTop: image ? 0 : -6,
-            variant: 'compounds.product-table.row.grid',
-
-            // Flex in mobile IE11 (?!) as auto-layout for grid isn't supported
-            '@media all and (max-width: 990px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
-              display: 'flex',
-              flexDirection: 'column'
+            // @ts-ignore
+            css={
+              !card && {
+                display: '-ms-grid'
+              }
             }
-          }}
-          // @ts-ignore
-          css={{
-            display: '-ms-grid'
-          }}
-        >
-          {nonNullChildren.map((child, index) => (
+          >
+            {nonNullChildren.map((child, index) => (
+              <CellContext.Provider
+                value={{
+                  gridRowStart: 4,
+                  gridRowSpan: ROWS,
+                  gridColumnStart:
+                    image && hasCellImage && child.type === ProductTableCellCta
+                      ? index
+                      : index + 1,
+                  gridColumnSpan: 1,
+                  accentCellCount: accentCells.length,
+                  accentCellIndex:
+                    child.props.accent && accentCells.indexOf(child),
+                  extraRules: {
+                    variant:
+                      image &&
+                      child.type !== ProductTableCellCta &&
+                      `compounds.product-table.variants.redesign.cellContext.${
+                        hasCellImage
+                          ? 'variants.cellImage'
+                          : card
+                          ? 'variants.card'
+                          : 'main'
+                      }`
+                  }
+                }}
+                key={index}
+              >
+                {child}
+              </CellContext.Provider>
+            ))}
+
             <CellContext.Provider
               value={{
-                gridRowStart: 4,
+                gridRowStart: 1,
                 gridRowSpan: ROWS,
-                gridColumnStart: index + 1,
-                gridColumnSpan: 1,
-                accentCellCount: accentCells.length,
-                accentCellIndex:
-                  child.props.accent && accentCells.indexOf(child),
-                extraRules: {
-                  variant:
-                    image &&
-                    !lastCell(index) &&
-                    'compounds.product-table.variants.redesign.cellContext.main'
-                }
+                gridColumnStart: 1,
+                gridColumnSpan: cols
               }}
-              key={index}
             >
-              {child}
+              {addonsFor('body')}
             </CellContext.Provider>
-          ))}
-
-          <CellContext.Provider
-            value={{
-              gridRowStart: 1,
-              gridRowSpan: ROWS,
-              gridColumnStart: 1,
-              gridColumnSpan: cols
-            }}
-          >
-            {addonsFor('body')}
-          </CellContext.Provider>
-        </div>
-      </RowWrapper>
-    </section>
+          </div>
+        </RowWrapper>
+      </section>
+    </CardContext.Provider>
   )
 }
 

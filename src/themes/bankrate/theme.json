@@ -240,6 +240,21 @@
       }
     },
     "author": {
+      "imageLink": {
+        "borderRadius": "50%",
+        "position": "relative",
+        "overflow": "hidden"
+      },
+      "image": {
+        "position": "absolute",
+        "top": 0,
+        "bottom": 0,
+        "right": 0,
+        "left": "50%",
+        "height": "100%",
+        "maxWidth": "auto",
+        "transform": "translateX(-50%)"
+      },
       "link": {
         "fontWeight": "base"
       },
@@ -302,7 +317,7 @@
           "fontStyle": "normal"
         },
         "image": {
-          "height": [40, 56]
+          "margin-top": [null, "10px"]
         }
       },
       "pros": {
@@ -545,6 +560,9 @@
           "borderLeftStyle": "solid",
           "borderLeftWidth": 1
         }
+      },
+      "inputWidth": {
+        "small": 64
       },
       "variants": {
         "error": {
@@ -1102,7 +1120,7 @@
         },
         "content": {
           "py": "lg",
-          "mr": "lg"
+          "mr": [0, "lg"]
         },
         "mr": "base"
       },
@@ -1133,6 +1151,9 @@
         },
         "horizontal": {
           "variant": "compounds.card.base",
+          "&:hover": {
+            "box-shadow": "none"
+          },
           "display": "flex",
           "flexDirection": "row-reverse",
           "alignItems": "start",
@@ -1157,20 +1178,27 @@
             "variant": [
               "compounds.card.variants.vertical.image",
               "compounds.card.variants.horizontal.image"
-            ]
+            ],
+            "minWidth": ["100%", 270, 270]
           },
           "h3": {
             "variant": [
               "compounds.card.variants.vertical.h3",
               "compounds.card.variants.horizontal.h3"
-            ]
+            ],
+            "a": {
+              "color": "grey-100"
+            },
+            "mb": "xs"
           },
-
           "content": {
             "variant": [
               "compounds.card.variants.vertical.content",
               "compounds.card.variants.horizontal.content"
-            ]
+            ],
+            "py": "md",
+            "px": 0,
+            "p": { "mb": 0 }
           },
           "link": {
             "variant": [
@@ -1189,6 +1217,12 @@
               "compounds.card.variants.vertical.headerChildren",
               "compounds.card.variants.horizontal.headerChildren"
             ]
+          },
+          "display": "flex",
+          "flexDirection": ["column-reverse", "row-reverse", "row-reverse"],
+          "mb": "xs",
+          "&": {
+            "backgroundColor": "transparent"
           }
         }
       }

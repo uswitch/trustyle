@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.modal",
-  "version": "2.3.9",
+  "version": "2.4.6",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -8,12 +8,15 @@
     "access": "public"
   },
   "peerDependencies": {
+    "@uswitch/trustyle.icon": "^1.17.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "theme-ui": "^0.2.52"
   },
+  "devDependencies": {
+    "@uswitch/trustyle.icon": "^1.19.1"
+  },
   "dependencies": {
-    "@uswitch/trustyle.icon": "^1.16.0",
     "body-scroll-lock": "^3.0.3",
     "react-focus-lock": "^2.4.0",
     "react-measure": "^2.3.0"

@@ -12,14 +12,14 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 
 const UspTag: React.FC<Props> = ({
   usp,
-  backgroundColor = 'blue-25',
+  backgroundColor = '#E0E9FF',
   beforeColor = '#84A6FF',
   className
 }) =>
   usp ? (
     <div
       sx={{
-        backgroundColor: backgroundColor,
+        background: backgroundColor,
         textAlign: 'left',
         paddingX: 12,
         paddingY: 4,

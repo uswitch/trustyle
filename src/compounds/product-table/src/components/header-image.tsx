@@ -8,10 +8,11 @@ export const ProductTableHeaderImage: React.FC = ({ children }) => (
   <CellBase
     mobileOrder={0}
     sx={{
-      display: 'flex',
+      display: ['none', 'flex'],
       alignItems: 'center',
       justifyContent: 'center',
-      marginLeft: -8
+      marginLeft: -8,
+      variant: 'compounds.product-table.headerImage'
     }}
   >
     <div

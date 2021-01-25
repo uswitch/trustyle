@@ -3,6 +3,90 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.list@1.5.5...@uswitch/trustyle.list@1.5.6) (2021-01-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.list
+
+
+
+
+
+## [1.5.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.list@1.5.4...@uswitch/trustyle.list@1.5.5) (2020-12-18)
+
+**Note:** Version bump only for package @uswitch/trustyle.list
+
+
+
+
+
+## [1.5.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.list@1.5.3...@uswitch/trustyle.list@1.5.4) (2020-12-15)
+
+**Note:** Version bump only for package @uswitch/trustyle.list
+
+
+
+
+
+## [1.5.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.list@1.5.2...@uswitch/trustyle.list@1.5.3) (2020-12-02)
+
+**Note:** Version bump only for package @uswitch/trustyle.list
+
+
+
+
+
+## [1.5.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.list@1.5.1...@uswitch/trustyle.list@1.5.2) (2020-11-30)
+
+**Note:** Version bump only for package @uswitch/trustyle.list
+
+
+
+
+
+
+## [1.5.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.list@1.5.0...@uswitch/trustyle.list@1.5.1) (2020-11-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.list
+
+
+
+
+
+# [1.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.list@1.4.14...@uswitch/trustyle.list@1.5.0) (2020-11-16)
+
+
+### Features
+
+* move icons to peer deps ([695a6bd](https://github.com/uswitch/trustyle/commit/695a6bd))
+
+
+
+
+
+## [1.4.14](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.list@1.4.13...@uswitch/trustyle.list@1.4.14) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.list
+
+
+
+
+
+## [1.4.13](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.list@1.4.12...@uswitch/trustyle.list@1.4.13) (2020-11-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.list
+
+
+
+
+
+## [1.4.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.list@1.4.11...@uswitch/trustyle.list@1.4.12) (2020-11-06)
+
+**Note:** Version bump only for package @uswitch/trustyle.list
+
+
+
+
+
 ## [1.4.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.list@1.4.9...@uswitch/trustyle.list@1.4.11) (2020-10-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.list

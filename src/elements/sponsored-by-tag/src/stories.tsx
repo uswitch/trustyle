@@ -45,6 +45,48 @@ export const ExampleWithTextProp = () => {
   )
 }
 
+export const ExampleWithHeroVariant = () => {
+  const providerName: string = text('Provider name', 'Three')
+  const providerLogo: string = text(
+    'Provider logo url',
+    'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/5eyE4LyswwqIYk0mIsE820/dc0774e3e62d7b39ddeb1729d823a8da/Logo_-_three.png'
+  )
+
+  const providerText: string = text('Text to display', 'This is example text')
+  return (
+    <React.Fragment>
+      <SponsoredByTag
+        providerLogoSrc={providerLogo}
+        providerText={providerText}
+        providerName={providerName}
+        variant="hero"
+      />
+    </React.Fragment>
+  )
+}
+
+export const ExampleWithFormVariant = () => {
+  const providerName: string = text('Provider name', 'Three')
+  const providerLogo: string = text(
+    'Provider logo url',
+    'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/5eyE4LyswwqIYk0mIsE820/dc0774e3e62d7b39ddeb1729d823a8da/Logo_-_three.png'
+  )
+
+  const providerText: string = text('Text to display', 'You selected:')
+  return (
+    <React.Fragment>
+      <div sx={{ backgroundColor: 'secondary', padding: 'sm', width: '500px' }}>
+        <SponsoredByTag
+          providerLogoSrc={providerLogo}
+          providerText={providerText}
+          providerName={providerName}
+          variant="form"
+        />
+      </div>
+    </React.Fragment>
+  )
+}
+
 ExampleWithDefaultText.story = {
   parameters: {
     percy: { skip: true }
@@ -57,11 +99,24 @@ ExampleWithTextProp.story = {
   }
 }
 
+ExampleWithHeroVariant.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+ExampleWithFormVariant.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
 export const AutomatedTests = () => {
   return (
     <AllThemes>
       <ExampleWithDefaultText />
       <ExampleWithTextProp />
+      <ExampleWithHeroVariant />
+      <ExampleWithFormVariant />
     </AllThemes>
   )
 }

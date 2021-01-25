@@ -3,6 +3,90 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-drawer@0.3.5...@uswitch/trustyle.side-drawer@0.3.6) (2021-01-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-drawer
+
+
+
+
+
+## [0.3.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-drawer@0.3.4...@uswitch/trustyle.side-drawer@0.3.5) (2020-12-18)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-drawer
+
+
+
+
+
+## [0.3.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-drawer@0.3.3...@uswitch/trustyle.side-drawer@0.3.4) (2020-12-15)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-drawer
+
+
+
+
+
+## [0.3.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-drawer@0.3.2...@uswitch/trustyle.side-drawer@0.3.3) (2020-12-02)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-drawer
+
+
+
+
+
+## [0.3.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-drawer@0.3.1...@uswitch/trustyle.side-drawer@0.3.2) (2020-11-30)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-drawer
+
+
+
+
+
+
+## [0.3.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-drawer@0.3.0...@uswitch/trustyle.side-drawer@0.3.1) (2020-11-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-drawer
+
+
+
+
+
+# [0.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-drawer@0.2.77...@uswitch/trustyle.side-drawer@0.3.0) (2020-11-16)
+
+
+### Features
+
+* move icons to peer deps ([695a6bd](https://github.com/uswitch/trustyle/commit/695a6bd))
+
+
+
+
+
+## [0.2.77](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-drawer@0.2.76...@uswitch/trustyle.side-drawer@0.2.77) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-drawer
+
+
+
+
+
+## [0.2.76](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-drawer@0.2.75...@uswitch/trustyle.side-drawer@0.2.76) (2020-11-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-drawer
+
+
+
+
+
+## [0.2.75](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-drawer@0.2.74...@uswitch/trustyle.side-drawer@0.2.75) (2020-11-06)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-drawer
+
+
+
+
+
 ## [0.2.74](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-drawer@0.2.72...@uswitch/trustyle.side-drawer@0.2.74) (2020-10-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.side-drawer

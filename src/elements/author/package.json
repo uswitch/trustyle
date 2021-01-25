@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.author",
-  "version": "2.1.4",
+  "version": "2.1.7",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -10,5 +10,8 @@
   "peerDependencies": {
     "@emotion/core": "^10.0.10",
     "react": "^16.7.0"
+  },
+  "dependencies": {
+    "@uswitch/trustyle-utils.palette": "^4.0.0"
   }
 }

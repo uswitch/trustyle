@@ -3,6 +3,98 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.interactive-tabs@2.1.6...@uswitch/trustyle.interactive-tabs@2.1.7) (2021-01-20)
+
+**Note:** Version bump only for package @uswitch/trustyle.interactive-tabs
+
+
+
+
+
+## [2.1.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.interactive-tabs@2.1.5...@uswitch/trustyle.interactive-tabs@2.1.6) (2021-01-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.interactive-tabs
+
+
+
+
+
+## [2.1.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.interactive-tabs@2.1.4...@uswitch/trustyle.interactive-tabs@2.1.5) (2020-12-18)
+
+**Note:** Version bump only for package @uswitch/trustyle.interactive-tabs
+
+
+
+
+
+## [2.1.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.interactive-tabs@2.1.3...@uswitch/trustyle.interactive-tabs@2.1.4) (2020-12-15)
+
+**Note:** Version bump only for package @uswitch/trustyle.interactive-tabs
+
+
+
+
+
+## [2.1.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.interactive-tabs@2.1.2...@uswitch/trustyle.interactive-tabs@2.1.3) (2020-12-02)
+
+**Note:** Version bump only for package @uswitch/trustyle.interactive-tabs
+
+
+
+
+
+## [2.1.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.interactive-tabs@2.1.1...@uswitch/trustyle.interactive-tabs@2.1.2) (2020-11-30)
+
+**Note:** Version bump only for package @uswitch/trustyle.interactive-tabs
+
+
+
+
+
+
+## [2.1.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.interactive-tabs@2.1.0...@uswitch/trustyle.interactive-tabs@2.1.1) (2020-11-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.interactive-tabs
+
+
+
+
+
+# [2.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.interactive-tabs@2.0.22...@uswitch/trustyle.interactive-tabs@2.1.0) (2020-11-16)
+
+
+### Features
+
+* move icons to peer deps ([695a6bd](https://github.com/uswitch/trustyle/commit/695a6bd))
+
+
+
+
+
+## [2.0.22](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.interactive-tabs@2.0.21...@uswitch/trustyle.interactive-tabs@2.0.22) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.interactive-tabs
+
+
+
+
+
+## [2.0.21](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.interactive-tabs@2.0.20...@uswitch/trustyle.interactive-tabs@2.0.21) (2020-11-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.interactive-tabs
+
+
+
+
+
+## [2.0.20](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.interactive-tabs@2.0.19...@uswitch/trustyle.interactive-tabs@2.0.20) (2020-11-06)
+
+**Note:** Version bump only for package @uswitch/trustyle.interactive-tabs
+
+
+
+
+
 ## [2.0.19](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.interactive-tabs@2.0.18...@uswitch/trustyle.interactive-tabs@2.0.19) (2020-10-16)
 
 **Note:** Version bump only for package @uswitch/trustyle.interactive-tabs

@@ -3,6 +3,305 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.41.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.41.1...@uswitch/trustyle.money-theme@1.41.2) (2021-01-20)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.41.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.41.0...@uswitch/trustyle.money-theme@1.41.1) (2021-01-20)
+
+
+### Bug Fixes
+
+* default form styles ([206cfd9](https://github.com/uswitch/trustyle/commit/206cfd9))
+
+
+
+
+
+# [1.41.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.38.3...@uswitch/trustyle.money-theme@1.41.0) (2021-01-19)
+
+
+### Bug Fixes
+
+* form default variant ([3d2b9dc](https://github.com/uswitch/trustyle/commit/3d2b9dc))
+* prettier issues ([fee7f56](https://github.com/uswitch/trustyle/commit/fee7f56))
+
+
+### Features
+
+* form field description and section title ([1a26066](https://github.com/uswitch/trustyle/commit/1a26066))
+
+
+
+
+
+# [1.40.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.38.3...@uswitch/trustyle.money-theme@1.40.0) (2021-01-19)
+
+
+### Bug Fixes
+
+* prettier issues ([fee7f56](https://github.com/uswitch/trustyle/commit/fee7f56))
+
+
+### Features
+
+* form field description and section title ([1a26066](https://github.com/uswitch/trustyle/commit/1a26066))
+
+
+
+
+
+# [1.39.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.38.3...@uswitch/trustyle.money-theme@1.39.0) (2021-01-19)
+
+
+### Bug Fixes
+
+* prettier issues ([fee7f56](https://github.com/uswitch/trustyle/commit/fee7f56))
+
+
+### Features
+
+* form field description and section title ([1a26066](https://github.com/uswitch/trustyle/commit/1a26066))
+
+
+
+
+
+## [1.38.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.38.2...@uswitch/trustyle.money-theme@1.38.3) (2020-12-22)
+
+
+### Bug Fixes
+
+* form section spacing ([51fb000](https://github.com/uswitch/trustyle/commit/51fb000))
+
+
+
+
+
+## [1.38.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.38.0...@uswitch/trustyle.money-theme@1.38.2) (2020-12-21)
+
+
+### Bug Fixes
+
+* border radius ([4c75384](https://github.com/uswitch/trustyle/commit/4c75384))
+* image size ([55e1905](https://github.com/uswitch/trustyle/commit/55e1905))
+
+
+
+
+
+## [1.38.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.38.0...@uswitch/trustyle.money-theme@1.38.1) (2020-12-21)
+
+
+### Bug Fixes
+
+* border radius ([e6c7cff](https://github.com/uswitch/trustyle/commit/e6c7cff))
+* image size ([4b3d745](https://github.com/uswitch/trustyle/commit/4b3d745))
+
+
+
+
+
+# [1.38.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.37.0...@uswitch/trustyle.money-theme@1.38.0) (2020-12-15)
+
+
+### Features
+
+* form variant for sponsored by tag ([e5216de](https://github.com/uswitch/trustyle/commit/e5216de))
+
+
+
+
+
+# [1.37.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.36.3...@uswitch/trustyle.money-theme@1.37.0) (2020-11-30)
+
+
+### Bug Fixes
+
+* remote tgz file ([9a1418f](https://github.com/uswitch/trustyle/commit/9a1418f))
+* replace spacing ([fd426fb](https://github.com/uswitch/trustyle/commit/fd426fb))
+
+
+### Features
+
+* add form loading state styles ([781d931](https://github.com/uswitch/trustyle/commit/781d931))
+
+
+
+
+
+## [1.36.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.36.2...@uswitch/trustyle.money-theme@1.36.3) (2020-11-30)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.36.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.36.1...@uswitch/trustyle.money-theme@1.36.2) (2020-11-26)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.36.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.36.0...@uswitch/trustyle.money-theme@1.36.1) (2020-11-19)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+# [1.36.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.33.0...@uswitch/trustyle.money-theme@1.36.0) (2020-11-19)
+
+
+### Bug Fixes
+
+* text align for form error state ([4bbe8d6](https://github.com/uswitch/trustyle/commit/4bbe8d6))
+
+
+### Features
+
+* form error state ([259d7ae](https://github.com/uswitch/trustyle/commit/259d7ae))
+
+
+# [1.35.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.33.0...@uswitch/trustyle.money-theme@1.35.0) (2020-11-18)
+
+
+### Bug Fixes
+
+* text align for form error state ([b02c2e3](https://github.com/uswitch/trustyle/commit/b02c2e3))
+
+
+### Features
+
+* form error state ([259d7ae](https://github.com/uswitch/trustyle/commit/259d7ae))
+
+
+
+
+
+# [1.34.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.33.0...@uswitch/trustyle.money-theme@1.34.0) (2020-11-18)
+
+
+### Features
+
+* form error state ([d728785](https://github.com/uswitch/trustyle/commit/d728785))
+
+
+
+
+
+# [1.33.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.32.4...@uswitch/trustyle.money-theme@1.33.0) (2020-11-16)
+
+
+### Bug Fixes
+
+* add margin to form button ([b4c159b](https://github.com/uswitch/trustyle/commit/b4c159b))
+
+
+### Features
+
+* add form submit section styling to money theme ([dfbfffa](https://github.com/uswitch/trustyle/commit/dfbfffa))
+* add submit section wrapper styling ([850d227](https://github.com/uswitch/trustyle/commit/850d227))
+
+
+
+
+
+## [1.32.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.32.3...@uswitch/trustyle.money-theme@1.32.4) (2020-11-16)
+
+
+### Bug Fixes
+
+* form margin and padding ([8b3ee9b](https://github.com/uswitch/trustyle/commit/8b3ee9b))
+
+
+
+
+
+## [1.32.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.32.2...@uswitch/trustyle.money-theme@1.32.3) (2020-11-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.32.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.32.1...@uswitch/trustyle.money-theme@1.32.2) (2020-11-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.32.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.32.0...@uswitch/trustyle.money-theme@1.32.1) (2020-11-10)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+# [1.32.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.31.2...@uswitch/trustyle.money-theme@1.32.0) (2020-11-10)
+
+
+### Features
+
+* add inputSize to simple input ([96cde8d](https://github.com/uswitch/trustyle/commit/96cde8d))
+
+
+
+
+
+## [1.31.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.31.1...@uswitch/trustyle.money-theme@1.31.2) (2020-11-04)
+
+
+### Bug Fixes
+
+* fourth column on product tables ([fd18f09](https://github.com/uswitch/trustyle/commit/fd18f09))
+
+
+
+
+
+# [1.31.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.30.1...@uswitch/trustyle.money-theme@1.31.0) (2020-10-28)
+
+
+### Bug Fixes
+
+* add redesign styles for eligibility information data ([3c800e5](https://github.com/uswitch/trustyle/commit/3c800e5))
+* add redesign variant styling to accordion ([101f5a7](https://github.com/uswitch/trustyle/commit/101f5a7))
+* additional eligibility-criteria styling ([f0e53c4](https://github.com/uswitch/trustyle/commit/f0e53c4))
+* image sizing and additional design tweaks ([6cd5bd0](https://github.com/uswitch/trustyle/commit/6cd5bd0))
+* update mobile styling for cta button, image, and title ([d05e249](https://github.com/uswitch/trustyle/commit/d05e249))
+* update money mobile theme to match original design ([1a9ca1b](https://github.com/uswitch/trustyle/commit/1a9ca1b))
+* update uswitch theme and cell cta width ([b43763d](https://github.com/uswitch/trustyle/commit/b43763d))
+
+
+### Features
+
+* move provider logo below cells on mobile" ([3fe70dd](https://github.com/uswitch/trustyle/commit/3fe70dd))
+
+
+
+
+
+## [1.30.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.30.0...@uswitch/trustyle.money-theme@1.30.1) (2020-10-28)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
 # [1.30.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.29.0...@uswitch/trustyle.money-theme@1.30.0) (2020-10-28)
 
 

@@ -3,6 +3,106 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.19.0...@uswitch/trustyle.icon@1.19.1) (2021-01-05)
+
+
+### Bug Fixes
+
+* give color prop default ([e700e27](https://github.com/uswitch/trustyle/commit/e700e27))
+* remove fill colour from path so that can pass color through color prop ([0996638](https://github.com/uswitch/trustyle/commit/0996638))
+
+
+
+
+
+# [1.19.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.18.4...@uswitch/trustyle.icon@1.19.0) (2020-12-18)
+
+
+### Features
+
+* Make uswitch themed freezable input look like latest designs ([4f92554](https://github.com/uswitch/trustyle/commit/4f92554))
+
+
+
+
+
+## [1.18.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.18.2...@uswitch/trustyle.icon@1.18.4) (2020-12-15)
+
+
+### Bug Fixes
+
+* icon version bump ([3b52854](https://github.com/uswitch/trustyle/commit/3b52854))
+
+
+
+
+
+## [1.18.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.18.1...@uswitch/trustyle.icon@1.18.2) (2020-12-02)
+
+**Note:** Version bump only for package @uswitch/trustyle.icon
+
+
+
+
+
+## [1.18.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.18.0...@uswitch/trustyle.icon@1.18.1) (2020-11-30)
+
+
+### Bug Fixes
+
+* add book closed icon ([4f4ac34](https://github.com/uswitch/trustyle/commit/4f4ac34))
+
+
+
+
+
+
+# [1.18.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.17.1...@uswitch/trustyle.icon@1.18.0) (2020-11-16)
+
+
+### Bug Fixes
+
+* magnifier icon ([7550467](https://github.com/uswitch/trustyle/commit/7550467))
+
+
+### Features
+
+* add magnifier icon ([174dab2](https://github.com/uswitch/trustyle/commit/174dab2))
+
+
+
+
+
+## [1.17.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.17.0...@uswitch/trustyle.icon@1.17.1) (2020-11-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.icon
+
+
+
+
+
+# [1.17.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.16.1...@uswitch/trustyle.icon@1.17.0) (2020-11-09)
+
+
+### Features
+
+* add icon to card ([d27f138](https://github.com/uswitch/trustyle/commit/d27f138))
+
+
+
+
+
+## [1.16.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.16.0...@uswitch/trustyle.icon@1.16.1) (2020-11-06)
+
+
+### Bug Fixes
+
+* add facebook ans simple-phone icons, update twitter icon ([15de231](https://github.com/uswitch/trustyle/commit/15de231))
+
+
+
+
+
 # [1.16.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.14.2...@uswitch/trustyle.icon@1.16.0) (2020-10-12)
 
 

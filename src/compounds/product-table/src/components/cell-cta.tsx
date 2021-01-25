@@ -2,6 +2,8 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
+import { CardContext, forceMobile } from '../generics'
+
 import CellBase from './cell-base'
 
 export interface CellCtaProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -14,10 +16,12 @@ const ProductTableCellCta: React.FC<CellCtaProps> = ({
   secondary,
   headerImage
 }) => {
+  const { isCard } = React.useContext(CardContext)
+  const forcedMobile = forceMobile(isCard)
   const buttonWrapperStyling = {
-    flex: [1, undefined, 'initial'],
-    width: ['auto', '100%'],
-    display: ['flex', undefined, 'block'],
+    flex: forcedMobile([1, null, 'initial']),
+    width: forcedMobile(['auto', '100%']),
+    display: forcedMobile(['flex', null, 'block']),
     variant: headerImage
       ? 'compounds.product-table.variants.redesign.cellCta.buttonWrapper'
       : 'compounds.product-table.cellCta.buttonWrapper'
@@ -28,7 +32,8 @@ const ProductTableCellCta: React.FC<CellCtaProps> = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        flexDirection: ['column', 'row', 'column']
+        flexDirection: forcedMobile(['column', 'row', 'column']),
+        variant: 'compounds.product-table.cta'
       }}
     >
       <div sx={{ ...buttonWrapperStyling }}>{primary}</div>

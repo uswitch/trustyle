@@ -17,9 +17,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   productImgSrc: string
   productImgAlt: string
   informationDetails: Detail[]
-  usps: string[]
-  uspBackgroundColor?: string
-  uspBeforeColor?: string
+  usps: Usp[]
   href: string
   target: string
   sponsorLogoSrc: string
@@ -29,6 +27,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   campaignImgHeight?: string
   className?: string
   ctaText?: string
+  backgroundColor?: string
 }
 
 interface Detail {
@@ -74,20 +73,26 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
   </React.Fragment>
 )
 
-interface UspTagsProps {
-  usps: string[]
-  uspColor: string
-  beforeColor: string
+interface Usp {
+  text: string
+  color?: string
+  beforeColor?: string
+  uspSx?: object
 }
 
-const UspTags: React.FC<UspTagsProps> = ({ usps, uspColor, beforeColor }) => (
+interface UspTagsProps {
+  usps: Usp[]
+}
+
+const UspTags: React.FC<UspTagsProps> = ({ usps }) => (
   <React.Fragment>
-    {usps.map((obj, index) => (
+    {usps.map((usp, index) => (
       <UspTag
-        usp={obj}
-        backgroundColor={uspColor}
-        beforeColor={beforeColor}
+        usp={usp.text}
+        backgroundColor={usp.color}
+        beforeColor={usp.beforeColor}
         key={index}
+        sx={usp.uspSx}
       />
     ))}
   </React.Fragment>
@@ -148,8 +153,7 @@ const SponsoredRateTable: React.FC<Props> = ({
   productImgAlt,
   informationDetails,
   usps,
-  uspBackgroundColor = 'rgba(132,166,255,0.3)',
-  uspBeforeColor = '#84A6FF',
+  backgroundColor = '#FFFFFF',
   href,
   target,
   sponsorLogoSrc,
@@ -198,6 +202,7 @@ const SponsoredRateTable: React.FC<Props> = ({
             width: '100%',
             backgroundImage: `url(${campaignImgSrc})`,
             backgroundPosition: 'left bottom',
+            backgroundColor: backgroundColor,
             display: ['none', 'block'],
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover'
@@ -278,13 +283,7 @@ const SponsoredRateTable: React.FC<Props> = ({
           <InformationBlocks details={informationDetails} />
         </div>
 
-        {usps && (
-          <UspTags
-            usps={usps}
-            uspColor={uspBackgroundColor}
-            beforeColor={uspBeforeColor}
-          />
-        )}
+        {usps && <UspTags usps={usps} />}
 
         <AwardsTag award={award} sx={{ display: [null, 'none'] }} />
 

@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
-import { boolean, select, text } from '@storybook/addon-knobs'
+import { boolean, color, select, text } from '@storybook/addon-knobs'
+import { PaletteProvider } from '@uswitch/trustyle-utils.palette'
 
 import Breadcrumbs from '../../breadcrumbs/src'
 import { Button } from '../../button/src'
@@ -9,6 +10,7 @@ import { Col, Container, Row } from '../../../layout/flex-grid/src'
 import IconTile from '../../icon-tile/src'
 import AllThemes from '../../../utils/all-themes'
 import Author from '../../../elements/author/src'
+import theme from '../../../utils/theme-selector'
 
 import Hero from './'
 
@@ -86,6 +88,9 @@ export const ExampleWithKnobs = () => {
       crumbs={crumbs}
       title="Understanding energy bills and electricity bills - FAQs and more"
       variant={breadcrumbsVariant}
+      sx={{
+        pt: 16
+      }}
     />
   )
 
@@ -269,6 +274,87 @@ BBDealsExample.story = {
     percy: { skip: true }
   }
 }
+
+export const ExampleWithPalette = () => {
+  const breadcrumbsVariant = select(
+    'Breadcrumbs variant',
+    variants,
+    'base'
+  ) as Variant
+  const headline = text(
+    'Headline',
+    'Short snappy headline that runs over two lines'
+  )
+  const fgImageKey = select(
+    'Foreground image',
+    Object.keys(people),
+    'Jumping guy'
+  )
+
+  const bgColor = text('Custom Color', '')
+  const fgImage = people[fgImageKey]
+  const imageOnMobile = boolean('Display foreground image on mobile?', true)
+  const imageOnTablet = boolean('Display foreground image on Tablet?', true)
+
+  const applyPalette = boolean('Apply palette?', false, 'Palette')
+  const backgroundColor = color(
+    'accentColor',
+    theme().elements['hero']?.wrapper?.backgroundColor,
+    'Palette'
+  )
+
+  const breadcrumbs = (
+    <Breadcrumbs
+      crumbs={crumbs}
+      title="Understanding energy bills and electricity bills - FAQs and more"
+      variant={breadcrumbsVariant}
+    />
+  )
+
+  return (
+    <div sx={{ margin: -10 }}>
+      <PaletteProvider
+        value={{
+          backgroundColor: applyPalette ? backgroundColor : null
+        }}
+      >
+        <Hero
+          container={Container}
+          fgImage={fgImage.img}
+          fgImagePosition={fgImage.position}
+          fgImageOnMobile={imageOnMobile}
+          fgImageOnTablet={imageOnTablet}
+          customBgColor={bgColor}
+          breadcrumbs={breadcrumbs}
+        >
+          <Row>
+            <Col span={[12, 5]}>
+              <Styled.h1 sx={{ marginTop: 0, fontSize: ['lg', 'xl', 'xxl'] }}>
+                {headline}
+              </Styled.h1>
+              <div sx={{ backgroundColor: 'white', padding: 20 }}>
+                <Styled.p sx={{ marginTop: 0 }}>
+                  Lorem ipsum, or lipsum as it is sometimes known, is dummy text
+                  used in laying out print, graphic or web designs.
+                </Styled.p>
+                <div sx={{ button: { width: 'auto' } }}>
+                  <Button variant="primary">Optional CTA</Button>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Hero>
+      </PaletteProvider>
+    </div>
+  )
+}
+
+ExampleWithPalette.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 // @todo test with more than one image and position
 export const AutomatedTests = () => {
   return (

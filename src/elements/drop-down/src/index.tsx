@@ -17,6 +17,7 @@ interface Props<V = any> {
   onBlur: () => void
   onChange: (value: V) => void
   onFocus?: () => void
+  onClick?: () => void
   name: string
   options: Option[]
   placeholder?: string
@@ -54,6 +55,7 @@ export const DropDown = forwardRef(
       onBlur = () => {},
       onChange,
       onFocus = () => {},
+      onClick = () => {},
       name,
       options,
       placeholder,
@@ -123,6 +125,7 @@ export const DropDown = forwardRef(
               onBlur()
             }}
             onChange={e => onChange(e.currentTarget.value)}
+            onClick={() => onClick()}
             sx={{
               opacity: overlay ? 0 : undefined,
               fontFamily: 'base',

@@ -23,6 +23,7 @@ type Column =
   | 'Split Placeholder'
   | 'Split Content'
   | 'None'
+
 const columns: Column[] = [
   'Placeholder',
   'Image',
@@ -79,6 +80,8 @@ export const ExampleWithKnobs = () => {
   const badges = badgeText
     ? [<Badge key="award-winner">{badgeText}</Badge>]
     : []
+
+  const card = boolean('Card', false)
 
   const getColumn = (col: Column): React.ReactNode => {
     if (col === 'Placeholder') {
@@ -188,6 +191,7 @@ export const ExampleWithKnobs = () => {
         rowTitle={rowTitle}
         subtitle={subtitle}
         addons={addons}
+        card={card}
       >
         {getColumn(firstCol)}
         {getColumn(secondCol)}
@@ -661,8 +665,10 @@ export const MoneyRedesignExample = () => {
           addon: ProductTable.addons.info,
           component: (
             <ProductTable.cells.Base sx={{ display: 'block' }}>
-              <div sx={{ fontWeight: 'bold' }}>Additional Information:</div>
-              <div sx={{ fontSize: 'xs' }}>
+              <div sx={{ fontWeight: 'bold', display: ['none', 'block'] }}>
+                Additional information:
+              </div>
+              <div>
                 Here is some extra information. Here is even more extra
                 information. And more extra information.
               </div>
@@ -677,10 +683,10 @@ export const MoneyRedesignExample = () => {
           addon: ProductTable.addons.footer,
           component: (
             <ProductTable.cells.Base sx={{ display: 'block' }}>
-              <div sx={{ fontWeight: 'bold' }}>Representative example:</div>
-              <div sx={{ fontSize: 'xs' }}>
-                Assumed borrowing of £10,000 over...
+              <div sx={{ fontWeight: 'bold', display: ['inline', 'block'] }}>
+                Representative example:
               </div>
+              <div>Assumed borrowing of £10,000 over...</div>
             </ProductTable.cells.Base>
           ),
           options: {
@@ -710,6 +716,13 @@ export const MoneyRedesignExample = () => {
       <ProductTable.cells.Content label="Loan Term" headerImage>
         <ProductTable.data.Auto text="1 year to 5 years" headerImage />
       </ProductTable.cells.Content>
+      <ProductTable.cells.Image headerImage>
+        <img
+          src="https://placekitten.com/200/75?image=1"
+          alt="Salman"
+          sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+        />
+      </ProductTable.cells.Image>
       <ProductTable.cells.Cta
         primary={<ButtonLink variant="primary">Apply now</ButtonLink>}
         headerImage
@@ -719,6 +732,92 @@ export const MoneyRedesignExample = () => {
 }
 
 MoneyRedesignExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const MoneyRedesignExampleNoImage = () => {
+  return (
+    <ProductTable.Row
+      rowTitle="Santander Standard Loan (Online)"
+      image={
+        <ProductTable.cells.HeaderImage>
+          <img
+            src="https://placekitten.com/200/75?image=9"
+            alt="Salman"
+            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          />
+        </ProductTable.cells.HeaderImage>
+      }
+      addons={[
+        {
+          addon: ProductTable.addons.info,
+          component: (
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontWeight: 'bold', display: ['none', 'block'] }}>
+                Additional information:
+              </div>
+              <div>
+                Here is some extra information. Here is even more extra
+                information. And more extra information.
+              </div>
+            </ProductTable.cells.Base>
+          ),
+          options: {
+            split: true,
+            headerImage: true
+          }
+        },
+        {
+          addon: ProductTable.addons.footer,
+          component: (
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontWeight: 'bold', display: ['inline', 'block'] }}>
+                Representative example:
+              </div>
+              <div>Assumed borrowing of £10,000 over...</div>
+            </ProductTable.cells.Base>
+          ),
+          options: {
+            split: true,
+            headerImage: true
+          }
+        },
+        {
+          addon: ProductTable.addons.accordion,
+          component: (
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontSize: ['xxs', 'xs'] }}>More info</div>
+            </ProductTable.cells.Base>
+          )
+        }
+      ]}
+    >
+      <ProductTable.cells.Content label="Loan Amount" headerImage>
+        <ProductTable.data.Auto text="£1000 to £10000" headerImage />
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Content label="Representative APR" headerImage>
+        <ProductTable.data.Auto
+          text="49.9% APR (£1,000 to £10,000)"
+          headerImage
+        />
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Content label="Loan Term" headerImage>
+        <ProductTable.data.Auto text="1 year to 5 years" headerImage />
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Content label="Monthly Cost" headerImage>
+        <ProductTable.data.Auto text="£100,000" headerImage />
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Cta
+        primary={<ButtonLink variant="primary">Apply now</ButtonLink>}
+        headerImage
+      />
+    </ProductTable.Row>
+  )
+}
+
+MoneyRedesignExampleNoImage.story = {
   parameters: {
     percy: { skip: true }
   }
