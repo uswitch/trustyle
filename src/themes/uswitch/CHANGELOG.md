@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.32.18](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.17...@uswitch/trustyle.uswitch-theme@2.32.18) (2021-01-25)
+
+
+### Bug Fixes
+
+* add rich-text-block hero variant ([cbf2bf0](https://github.com/uswitch/trustyle/commit/cbf2bf0))
+
+
+
+
+
 ## [2.32.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.16...@uswitch/trustyle.uswitch-theme@2.32.17) (2021-01-22)
 
 
