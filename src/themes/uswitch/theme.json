@@ -234,7 +234,14 @@
     "light-grey": "#F2F2F6",
     "light-grey-content": "#202020",
     "border-light-grey": "#E9E9EC",
-    "yellow-25": "#FFF4D5"
+    "primary-yellow-100": "#FFD555",
+    "primary-yellow-75": "#FFDF80",
+    "primary-yellow-50": "#FFEAAA",
+    "primary-yellow-25": "#FFF4D5",
+    "secondary-yellow-100": "#F7F146",
+    "secondary-yellow-75": "#F9F574",
+    "secondary-yellow-50": "#FAF7A2",
+    "secondary-yellow-25": "#FDFBD0"
   },
   "radii": {
     "sm": 0,
@@ -3394,7 +3401,7 @@
           "flexDirection": ["column", null, "row"]
         },
         "info": {
-          "backgroundColor": "yellow-25",
+          "backgroundColor": "primary-yellow-25",
           "display": "flex",
           "px": "sm",
           "py": "xxs",
