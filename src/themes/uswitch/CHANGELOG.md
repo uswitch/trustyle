@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.34.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.33.2...@uswitch/trustyle.uswitch-theme@2.34.0) (2021-01-26)
+
+
+### Bug Fixes
+
+* add all yellows ([2c756f0](https://github.com/uswitch/trustyle/commit/2c756f0))
+
+
+### Features
+
+* add info card variant ([138b171](https://github.com/uswitch/trustyle/commit/138b171))
+
+
+
+
+
 ## [2.33.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.33.1...@uswitch/trustyle.uswitch-theme@2.33.2) (2021-01-25)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
