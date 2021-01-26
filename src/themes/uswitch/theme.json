@@ -233,7 +233,8 @@
     "uswitch-navy": "#141424",
     "light-grey": "#F2F2F6",
     "light-grey-content": "#202020",
-    "border-light-grey": "#E9E9EC"
+    "border-light-grey": "#E9E9EC",
+    "yellow-25": "#FFF4D5"
   },
   "radii": {
     "sm": 0,
@@ -3391,6 +3392,31 @@
         "featured-alternate": {
           "variant": "compounds.card.variants.featured",
           "flexDirection": ["column", null, "row"]
+        },
+        "info": {
+          "backgroundColor": "yellow-25",
+          "display": "flex",
+          "px": "sm",
+          "py": "xxs",
+          "a": {
+            "borderBottom": "none",
+            "mb": 0
+          },
+          "img": {
+            "width": 14,
+            "mt": 0,
+            "mr": "xxs"
+          },
+          "h3": {
+            "fontSize": "xxs",
+            "fontWeight": "bold",
+            "lineHeight": "base",
+            "a": {
+              "fontSize": "inherit",
+              "fontWeight": "inherit",
+              "lineHeight": "inherit"
+            }
+          }
         }
       }
     },
