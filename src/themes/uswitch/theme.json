@@ -2372,7 +2372,9 @@
               "calculator": {
                 "display": "flex",
                 "justifyContent": "space-between",
-                "flex": "1 1 0px",
+                "flexGrow": "1",
+                "flexShrink": "1",
+                "flexBasis": "auto",
                 "flexDirection": ["column", "column", "row"]
               }
             }
@@ -2466,7 +2468,9 @@
     },
     "product-table": {
       "card": {
-        "flex": "1 1 0px"
+        "flexGrow": "1",
+        "flexShrink": "1",
+        "flexBasis": "auto"
       },
       "card-with-badge": {
         "variant": "compounds.product-table.card",
