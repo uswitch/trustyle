@@ -2350,7 +2350,7 @@
           "isActive": {
             "buttonWrapper": {
               "calculator": {
-                "mt": ["0", "0", "51px"],
+                "mt": ["0", "0", "35px"],
                 "textAlign": "center",
                 "> button": {
                   "height": "55px",
