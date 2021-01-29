@@ -1,12 +1,13 @@
 /** @jsx jsx */
 
-import * as React from 'react'
+import React, { useState } from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
 import {
   Col,
   Container as DefaultContainer,
   Row
 } from '@uswitch/trustyle.flex-grid'
+import { Glyph, Icon } from '@uswitch/trustyle.icon'
 
 interface CategoryProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
@@ -16,6 +17,8 @@ interface CategoryProps extends React.HTMLAttributes<HTMLDivElement> {
   image?: React.ReactElement
   className?: string
   hideDescriptionMobile?: boolean
+  icon?: Glyph
+  iconColor?: string
 }
 
 const Category: React.FC<CategoryProps> = ({
@@ -25,11 +28,15 @@ const Category: React.FC<CategoryProps> = ({
   breadcrumbs: Breadcrumbs,
   image: Image,
   className,
-  hideDescriptionMobile = false
+  hideDescriptionMobile = false,
+  icon,
+  iconColor = ''
 }) => {
   const { theme }: any = useThemeUI()
   const breadcrumbsVariant = theme.elements?.category?.breadcrumbs?.variant
   const contentSpan = theme.elements?.category?.contentSpan || 12
+
+  const [showDescription, setShowDescription] = useState(hideDescriptionMobile)
 
   return (
     <div
@@ -46,16 +53,29 @@ const Category: React.FC<CategoryProps> = ({
           variant: 'elements.category.container'
         }}
       >
-        {Breadcrumbs && (
+        {(Breadcrumbs || icon) && (
           <div
             sx={{
-              marginBottom: 'sm'
+              marginBottom: 'sm',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center'
             }}
           >
-            <Breadcrumbs.type
-              {...Breadcrumbs.props}
-              variant={breadcrumbsVariant}
-            />
+            {Breadcrumbs && (
+              <Breadcrumbs.type
+                {...Breadcrumbs.props}
+                variant={breadcrumbsVariant}
+              />
+            )}
+            {icon && (
+              <div
+                sx={{ display: ['block', 'none'] }}
+                onClick={() => setShowDescription(!showDescription)}
+              >
+                <Icon glyph={icon} color={iconColor} size={25} />
+              </div>
+            )}
           </div>
         )}
         <Row>
@@ -75,7 +95,9 @@ const Category: React.FC<CategoryProps> = ({
                 sx={{
                   marginBottom: 0,
                   variant: 'elements.category.text',
-                  display: hideDescriptionMobile ? ['none', 'block'] : 'block'
+                  maxHeight: showDescription ? ['0', '500px'] : '500px',
+                  transition: 'max-height 400ms ease-in-out 0ms',
+                  overflow: 'hidden'
                 }}
               >
                 {text}
@@ -83,7 +105,15 @@ const Category: React.FC<CategoryProps> = ({
             )}
           </Col>
           {Image ? (
-            <Col span={[12, 6]} sx={{ marginTop: ['sm', 0] }}>
+            <Col
+              span={[12, 6]}
+              sx={{
+                marginTop: ['sm', 0],
+                maxHeight: showDescription ? ['0', '500px'] : '500px',
+                transition: 'max-height 400ms ease-in-out 0ms',
+                overflow: 'hidden'
+              }}
+            >
               {Image}
             </Col>
           ) : null}
