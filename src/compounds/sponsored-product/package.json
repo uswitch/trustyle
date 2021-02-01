@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.sponsored-product",
-  "version": "3.5.14",
+  "version": "3.5.15",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -25,6 +25,6 @@
     "@uswitch/trustyle.usp-tag": "^0.1.6"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.19.1"
+    "@uswitch/trustyle.icon": "^1.20.0"
   }
 }
