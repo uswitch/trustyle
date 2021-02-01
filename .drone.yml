@@ -93,6 +93,7 @@ pipeline:
     when:
       event: push
       branch: master
-    image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    image: quay.io/uswitch/aws-cli:1.15.72
+    secrets: [ AWS_SECRET_ACCESS_KEY, AWS_ACCESS_KEY_ID ]
     commands:
       - "aws s3 cp --region eu-west-1 --recursive ./static/icons s3://trustyle-icons --cache-control max-age=604800 --metadata '{\"x-amz-meta-surrogate-control\": \"max-age=604800\"}' --acl=public-read"
