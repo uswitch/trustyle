@@ -151,7 +151,8 @@
     "button-hollow--hover": "#FFF6E2",
     "quick-link-bg": "#F1F1F3",
     "dark-grey-03": "rgba(104,104,135,0.3)",
-    "opaque-plum-01": "rgba(146, 73, 139, 0.1)"
+    "opaque-plum-01": "rgba(146, 73, 139, 0.1)",
+    "opaque-white-01": "rgba(255, 255, 255, 0.7)"
   },
   "radii": {
     "sm": 3,

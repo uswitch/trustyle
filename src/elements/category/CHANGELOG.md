@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.category@2.1.0...@uswitch/trustyle.category@2.2.0) (2021-01-29)
+
+
+### Features
+
+* hide description and image in category heading module on mobile ([3af7477](https://github.com/uswitch/trustyle/commit/3af7477))
+
+
+
+
+
 # [2.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.category@2.0.30...@uswitch/trustyle.category@2.1.0) (2021-01-22)
 
 

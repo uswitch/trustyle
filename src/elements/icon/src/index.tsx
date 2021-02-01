@@ -29,6 +29,7 @@ import { Four } from './four'
 import { GasElectricity } from './gas-electricity'
 import { HamburgerSimple } from './hamburger-simple'
 import { Home } from './home'
+import { Info } from './info'
 import { Information } from './information'
 import { Letter } from './letter'
 import { LinkedIn } from './linkedIn'
@@ -86,6 +87,7 @@ export type Glyph =
   | 'gas-electricity'
   | 'hamburger-simple'
   | 'home'
+  | 'info'
   | 'information'
   | 'letter'
   | 'linkedIn'
@@ -194,6 +196,8 @@ export const Icon: React.FC<Props> = ({
       return <HamburgerSimple color={color} size={size} />
     case 'home':
       return <Home color={color} size={size} />
+    case 'info':
+      return <Info color={color} size={size} />
     case 'information':
       return <Information color={color} size={size} />
     case 'letter':
