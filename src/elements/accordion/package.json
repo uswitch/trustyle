@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.accordion",
-  "version": "0.12.2",
+  "version": "0.12.3",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
