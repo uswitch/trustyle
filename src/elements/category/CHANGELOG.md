@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.category@2.2.0...@uswitch/trustyle.category@2.2.2) (2021-02-02)
+
+
+### Bug Fixes
+
+* don't show info button if hideOnModile is falsy ([a031282](https://github.com/uswitch/trustyle/commit/a031282))
+
+
+
+
+
 ## [2.2.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.category@2.2.0...@uswitch/trustyle.category@2.2.1) (2021-02-02)
 
 
