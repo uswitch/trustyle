@@ -68,7 +68,7 @@ const Category: React.FC<CategoryProps> = ({
                 variant={breadcrumbsVariant}
               />
             )}
-            {icon && (
+            {icon && hideDescriptionMobile && (
               <div
                 sx={{ display: ['block', 'none'] }}
                 onClick={() => setShowDescription(!showDescription)}
