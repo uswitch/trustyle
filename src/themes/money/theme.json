@@ -2098,6 +2098,14 @@
             "pb": ["xxs", "md"],
             "borderTop": "none"
           }
+        },
+        "legacy": {
+          "variant": "compounds.accordion.base",
+          "caret": {
+            
+            "backgroundColor": "fuschia",
+            "borderRadius": "0 3px 3px 0"
+          }
         }
       }
     },

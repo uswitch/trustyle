@@ -213,6 +213,23 @@ AccordionGroupWithTitleIcons.story = {
   }
 }
 
+export const LegacyAccordion = () => {
+  const title = text('First title', 'This is an example title')
+  const content = text('First content', 'This is some example content')
+
+  return (
+    <Accordion title={title} variant="legacy">
+      <p>{content}</p>
+    </Accordion>
+  )
+}
+
+LegacyAccordion.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
     <AllThemes themes={['uswitch', 'money']}>

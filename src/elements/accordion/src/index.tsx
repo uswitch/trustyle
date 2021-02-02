@@ -106,6 +106,8 @@ const Accordion: React.FC<Props> & {
       }
     : {}
 
+  const legacy = variant === 'legacy'
+
   return (
     <div
       sx={{
@@ -220,8 +222,8 @@ const Accordion: React.FC<Props> & {
                   : colors[accordionTheme?.base?.caret?.color]
               }
               glyph="caret"
-              direction={isOpen ? 'up' : 'down'}
-              size={16}
+              direction={legacy ? 'down' : isOpen ? 'up' : 'down'}
+              size={legacy ? 21 : 16}
             />
           </div>
         )}
