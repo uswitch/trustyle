@@ -1296,7 +1296,7 @@
     },
     "accordion": {
       "base": {
-        "button": {
+        "btn": {
           "svg:hover": {
             "fill": "grape-purple"
           },
@@ -1331,14 +1331,14 @@
           "borderBottom": "1px solid",
           "borderBottomColor": "pepper-purple-03",
           "color": "dark-grey"
+        },
+        "isActive": {
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          }
         }
       },
       "variants": {
-        "isActive": {
-          "button": {
-            "variant": "compounds.accordion.base.button"
-          }
-        }
       }
     },
     "breadcrumbs": {

@@ -1303,8 +1303,10 @@
     },
     "accordion": {
       "base": {
-        "mt": "sm",
-        "mb": "sm",
+        "wrapper": {
+          "mt": "sm",
+          "mb": "sm"
+        },
         "title": {
           "mt": "0",
           "mb": "xs"
@@ -1312,7 +1314,7 @@
         "content": {
           "mb": "xs"
         },
-        "button": {
+        "btn": {
           "p": "0",
           "pt": 10,
           "pb": 10,
@@ -1329,17 +1331,20 @@
         },
         "caret": {
           "color": "primary"
-        }
-      },
-      "variants": {
+        },
         "isActive": {
-          "button": {
-            "variant": "compounds.accordion.base.button"
+          "wrapper": {
+            "variant": "compounds.accordion.base.wrapper"
+          },
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
           },
           "caret": {
             "color": "primary--dark"
           }
-        },
+        }
+      },
+      "variants": {
         "titleIcon": {
           "marginRight": "13px",
           "height": 36,

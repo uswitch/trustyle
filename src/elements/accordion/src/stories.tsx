@@ -4,6 +4,7 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { text } from '@storybook/addon-knobs'
 
+import { ButtonLink } from '../../button-link'
 import AllThemes from '../../../utils/all-themes'
 
 import Accordion from './'
@@ -213,6 +214,52 @@ AccordionGroupWithTitleIcons.story = {
   }
 }
 
+export const LegacyAccordion = () => {
+  const title = text('First title', 'This is an example title')
+
+  return (
+    <div sx={{ bg: '#f1f1f1', padding: '20px' }}>
+      <Accordion title={title} variant="legacy">
+        <div>
+          <p>Most popular</p>
+          <ul>
+            <li>
+              <a>Loans</a>
+            </li>
+            <li>
+              <a>Personal</a>
+            </li>
+            <li>
+              <a>Bad credit</a>
+            </li>
+            <li>
+              <a>Secured</a>
+            </li>
+            <li>
+              <a>Guarantor</a>
+            </li>
+            <li>
+              <a>Secured debt consolidation</a>
+            </li>
+          </ul>
+        </div>
+        <ButtonLink variant="primary" name="Loans Guides">
+          Loans guides
+        </ButtonLink>
+        <ButtonLink variant="secondary" name="Who we compare">
+          Who we compare
+        </ButtonLink>
+      </Accordion>
+    </div>
+  )
+}
+
+LegacyAccordion.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
     <AllThemes
@@ -232,6 +279,7 @@ export const AutomatedTests = () => {
       <AccordionGroupWithIcons />
       <AccordionGroupWithTitleIcons />
       <SingleAccordionWithIcon />
+      <LegacyAccordion />
     </AllThemes>
   )
 }
