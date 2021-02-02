@@ -1,0 +1,11 @@
+<svg 
+  fill='none' 
+  stroke-linecap='square'
+  stroke-width='2' 
+  display='block' 
+  transform="rotate(180)" 
+  viewBox="0 0 17 13" 
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path d="M1,12l7.5-7.5L16,12 M16,1H1" />
+</svg>
