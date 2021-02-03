@@ -227,6 +227,78 @@
   },
   "----------------------------- Variants": "-----------------------------",
   "elements": {
+    "author-profile": {
+      "base": {
+        "details": {
+          "mt": "md",
+          "display": "flex",
+          "a": { "mr": "lg" }
+        },
+        "bio": {
+          "mt": "xs"
+        },
+        "name": {
+          "mb": "md",
+          "a": {
+            "display": "flex",
+            "flexDirection": "column",
+            "span:last-of-type": { "variant": "styles.h6", "mt": "xs", "mb": 0 }
+          }
+        }
+      },
+
+      "variants": {
+        "left": {
+          "main": {
+            "variant": "elements.author-profile.base"
+          },
+          "bio": {
+            "variant": "elements.author-profile.base.bio",
+            "pt": "md"
+          },
+          "image": {
+            "position": "absolute"
+          },
+          "details": {
+            "variant": "elements.author-profile.base.details"
+          },
+          "name": {
+            "variant": "elements.author-profile.base.name",
+            "ml": "xxxl",
+            "pl": "xs"
+          }
+        },
+        "centered": {
+          "main": {
+            "variant": "elements.author-profile.base",
+            "display": "flex",
+            "flexDirection": "column",
+            "alignItems": "center"
+          },
+          "bio": {
+            "variant": "elements.author-profile.base.bio",
+            "textAlign": "center"
+          },
+          "image": {
+            "alignSelf": "center",
+            "mx": 0
+          },
+          "content": {
+            "display": "flex",
+            "flexDirection": "column",
+            "alignItems": "center"
+          },
+          "details": {
+            "variant": "elements.author-profile.base.details",
+            "justifyContent": "center"
+          },
+          "name": {
+            "variant": "elements.author-profile.base.name",
+            "textAlign": "center"
+          }
+        }
+      }
+    },
     "logo-collection": {
       "base": {
         "inner": {
