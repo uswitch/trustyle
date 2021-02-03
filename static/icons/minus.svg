@@ -1,6 +1,7 @@
 <svg
   viewBox="0 0 24 2"
   xmlns="http://www.w3.org/2000/svg"
+  id='minus'
 >
   <rect x="24" width="2" height="24" transform="rotate(90 24 0)" />
 </svg>
