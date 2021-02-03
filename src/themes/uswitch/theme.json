@@ -865,6 +865,13 @@
         "center": {
           "textAlign": "center"
         },
+        "center-shrink": {
+          "variant": "elements.rich-text-block.variants.center",
+          "*": {
+            "width": "fit-content",
+            "margin": "auto"
+          }
+        },
         "heading": {
           "mx": "auto",
           "maxWidth": ["100%", 900, 900],
@@ -2995,6 +3002,7 @@
       "column": {
         "flexDirection": "column",
         "flex": 1,
+        "pr": [0, "lg"],
         "& p": {
           "display": ["none", "block"],
           "fontSize": "xxs",
