@@ -5,6 +5,7 @@
   display='block' 
   viewBox="0 0 17 13"
   xmlns="http://www.w3.org/2000/svg"
+  id='caretFinal'
 >
   <path d="M1,12l7.5-7.5L16,12 M16,1H1" />
 </svg>
