@@ -59,7 +59,8 @@ const AuthorProfile: React.FC<Props> = ({
             width: '87px',
             marginRight: 'sm',
             alignSelf: 'baseline',
-            borderBottom: 0
+            borderBottom: 0,
+            variant: styles('image')
           }}
         >
           <authorImage.type
@@ -77,7 +78,8 @@ const AuthorProfile: React.FC<Props> = ({
 
       <div
         sx={{
-          paddingY: 'xs'
+          paddingY: 'xs',
+          variant: styles('content')
         }}
       >
         <Styled.h2
@@ -98,14 +100,15 @@ const AuthorProfile: React.FC<Props> = ({
             }}
           >
             <span>{name}</span>
-            <span>{role}</span>
+            <span sx={{ variant: styles('role') }}>{role}</span>
           </a>
         </Styled.h2>
         <Styled.p
           sx={{
             fontSize: 'sm',
             marginY: 0,
-            width: ['100%', '75%', '60%']
+            width: ['100%', '75%', '60%'],
+            variant: styles('bio')
           }}
         >
           {bio}
