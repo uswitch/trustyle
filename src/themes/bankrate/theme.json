@@ -232,7 +232,8 @@
         "details": {
           "mt": "md",
           "display": "flex",
-          "a": { "mr": "lg" }
+          "px": 0,
+          "a": { "mx": "sm" }
         },
         "bio": {
           "mt": "xs"
@@ -250,7 +251,8 @@
       "variants": {
         "left": {
           "main": {
-            "variant": "elements.author-profile.base"
+            "variant": "elements.author-profile.base",
+            "a:first-child": { "ml": 0 }
           },
           "bio": {
             "variant": "elements.author-profile.base.bio",
