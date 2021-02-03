@@ -1,4 +1,4 @@
-  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" >
+  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" id='arrow-circle'>
     <circle cx="24" cy="24" r="23.5" fill="white" stroke="#141424" />
     <path
       d="M30.2669 24.7245H15.1914V24.2551H30.12H31.3154L30.476 23.404L25.5349 18.3943L25.8569 18.0722L32.2818 24.5632L25.8693 31.0418L25.5253 30.6732L30.6205 25.578L31.474 24.7245H30.2669Z"
