@@ -1,7 +1,9 @@
 /** @jsx jsx */
 
-import * as React from 'react'
+import React, { useContext } from 'react'
 import { jsx } from 'theme-ui'
+
+import { IconContext } from './context'
 
 export type Glyph =
   | 'arrow'
@@ -63,13 +65,19 @@ export type Glyph =
   | 'edit-journey'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  glyph: React.ReactNode
+  glyph: Glyph
   color: string
   size?: number
 }
 
 const SimpleIcon: React.FC<Props> = ({ glyph }) => {
-  return <div>{glyph}</div>
+  const context = useContext(IconContext)
+
+  return (
+    <svg>
+      <use xlinkHref={`${context.iconPath}${glyph}.svg#${glyph}`} />
+    </svg>
+  )
 }
 
 export default SimpleIcon
