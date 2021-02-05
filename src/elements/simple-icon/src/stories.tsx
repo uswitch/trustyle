@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
+import { IconContext } from './context'
 
 import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
 
@@ -11,7 +12,11 @@ export default {
 }
 
 export const ExampleWithKnobs = () => {
-  return <SimpleIcon glyph={'book-closed'} color="red" />
+  return (
+    <IconContext.Provider value={{ iconPath: '/'}}>
+      <SimpleIcon glyph={'book-closed'} color="red" size={100}/>
+    </IconContext.Provider>
+  )
 }
 
 ExampleWithKnobs.story = {
@@ -26,10 +31,12 @@ export const AutomatedTests = () => {
   })
 
   return (
-    <AllThemes>
-      {permutations.map((p, i) => (
-        <SimpleIcon glyph={'book-closed'} color="red" key={i} />
-      ))}
-    </AllThemes>
+    <IconContext.Provider value={{ iconPath: '/'}}>
+      <AllThemes>
+        {permutations.map((p, i) => (
+          <SimpleIcon glyph={'book-closed'} color="red" key={i} />
+        ))}
+      </AllThemes>
+    </IconContext.Provider>
   )
 }
