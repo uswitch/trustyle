@@ -1,10 +1,10 @@
 /** @jsx jsx */
 
 import React, { useContext } from 'react'
-import { jsx, SxStyleProp } from 'theme-ui'
-import { pxToRem } from '@uswitch/trustyle.styles'
+import { jsx } from 'theme-ui'
 
 import { IconContext } from './context'
+import * as st from './styles'
 
 export type Glyph =
   | 'arrow'
@@ -61,7 +61,6 @@ export type Glyph =
   | 'twitter'
   | 'two'
   | 'warning'
-
   // temporary icons
   | 'edit-journey'
 
@@ -72,27 +71,6 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   color: string
   size?: number
   direction?: Direction
-}
-
-const iconSize = (size: number | undefined): SxStyleProp =>
-  size
-    ? {
-        height: pxToRem(size),
-        width: pxToRem(size)
-      }
-    : {}
-
-const rotate = (direction: Direction): SxStyleProp => {
-  switch (direction) {
-    case 'right':
-      return { transform: 'rotate(0.25turn)' }
-    case 'down':
-      return { transform: 'rotate(0.5turn)' }
-    case 'left':
-      return { transform: 'rotate(0.75turn)' }
-    default:
-      return {}
-  }
 }
 
 const SimpleIcon: React.FC<Props> = ({
@@ -106,8 +84,8 @@ const SimpleIcon: React.FC<Props> = ({
   const styles = {
     fill: color,
     stroke: color,
-    ...iconSize(size),
-    ...rotate(direction)
+    ...st.iconSize(size),
+    ...st.rotate(direction)
   }
 
   return (
