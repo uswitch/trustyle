@@ -96,11 +96,19 @@ export const AutomatedTests = () => {
     variant: ['primary', 'secondary']
   })
 
+  const theme = themeSelector()
+
   return (
     <IconContext.Provider value={{ iconPath: '/' }}>
       <AllThemes>
         {permutations.map((p, i) => (
-          <SimpleIcon glyph={'book-closed'} color="red" key={i} />
+          <SimpleIcon
+            glyph={select('glyph', glyphChoices, 'arrow')}
+            color={select('color', theme.colors, 'link')}
+            size={number('Size', 0)}
+            direction={select('direction', directionChoices, 'up')}
+            key={i}
+          />
         ))}
       </AllThemes>
     </IconContext.Provider>
