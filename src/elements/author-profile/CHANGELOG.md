@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.author-profile@1.2.8...@uswitch/trustyle.author-profile@1.2.9) (2021-02-05)
+
+
+### Bug Fixes
+
+* add variant to author profile elements ([8a24ee6](https://github.com/uswitch/trustyle/commit/8a24ee6))
+
+
+
+
+
 ## [1.2.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.author-profile@1.2.7...@uswitch/trustyle.author-profile@1.2.8) (2021-01-29)
 
 **Note:** Version bump only for package @uswitch/trustyle.author-profile
