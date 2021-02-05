@@ -1,9 +1,8 @@
 /** @jsx jsx */
 
 import React, { useContext } from 'react'
-import { jsx , SxStyleProp } from 'theme-ui'
+import { jsx, SxStyleProp } from 'theme-ui'
 import { pxToRem } from '@uswitch/trustyle.styles'
-
 
 import { IconContext } from './context'
 
@@ -18,9 +17,9 @@ export type Glyph =
   | 'caret'
   | 'caretFinal'
   | 'check'
+  | 'checkmark'
   | 'clock'
   | 'close'
-  | 'checkmark'
   | 'conversation'
   | 'cross'
   | 'edit'
@@ -51,16 +50,16 @@ export type Glyph =
   | 'smile'
   | 'sms'
   | 'sort'
-  | 'three'
-  | 'tick'
-  | 'tv'
-  | 'two'
-  | 'thumb-up'
-  | 'thumb-down'
-  | 'twitter'
-  | 'star-outlined'
   | 'star-filled'
   | 'star-half-filled'
+  | 'star-outlined'
+  | 'three'
+  | 'thumb-down'
+  | 'thumb-up'
+  | 'tick'
+  | 'tv'
+  | 'twitter'
+  | 'two'
   | 'warning'
 
   // temporary icons
