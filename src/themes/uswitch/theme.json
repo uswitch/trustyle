@@ -2372,7 +2372,7 @@
               "border": "1px solid",
               "borderColor": "grey-20",
               "p": ["24px", "24px 56px"],
-              "mb": ["sm", "sm", "xxl"],
+              "mb": ["0", "sm", "xxl"],
               "flexDirection": ["column", "column", "row"]
             },
             "fields": {
