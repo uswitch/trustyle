@@ -128,7 +128,9 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
   }
 
   return (
-    <ul
+    <Palette
+      as={Styled.ul}
+      px={{ color: 'textColor' }}
       sx={{
         listStyleType: 'none',
         paddingLeft: 0,
@@ -138,9 +140,9 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
       }}
     >
       <li sx={liStyling}>
-        <Palette as={Styled.a} sx={anchorStyling} href={homePath}>
+        <Styled.a sx={anchorStyling} href={homePath}>
           {customHomeIcon || <HomeIcon variant={variant} />}
-        </Palette>
+        </Styled.a>
 
         {(crumbs.length || title) && (
           <span sx={separatorStyling}>
@@ -151,9 +153,9 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
 
       {crumbs.map(({ fields: fields = {} }, i) => (
         <li sx={liStyling} key={i}>
-          <Palette as={Styled.a} sx={anchorStyling} href={fields.path}>
+          <Styled.a sx={anchorStyling} href={fields.path}>
             {fields.displayText}
-          </Palette>
+          </Styled.a>
 
           {(i !== crumbs.length - 1 || title) && (
             <span sx={separatorStyling}>
@@ -164,11 +166,15 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
       ))}
 
       {title && (
-        <li sx={{ ...liStyling, variant: `${lookup(variant)}.title` }}>
+        <Palette
+          as={Styled.li}
+          px={{ color: 'textColor' }}
+          sx={{ ...liStyling, variant: `${lookup(variant)}.title` }}
+        >
           {title}
-        </li>
+        </Palette>
       )}
-    </ul>
+    </Palette>
   )
 }
 
