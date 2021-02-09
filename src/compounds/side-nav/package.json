@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.side-nav",
-  "version": "1.0.44",
+  "version": "1.0.45",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
