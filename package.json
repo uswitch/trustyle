@@ -13,7 +13,7 @@
     "start": "npm run storybook",
     "typescript:check": "tsc --noEmit",
     "typescript:watch": "tsc --noEmit --watch",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./static/icons -p 6006",
     "--------------- BUILDING": "----------------------",
     "build": "node fastbuild.js && npx lerna run build",
     "build-storybook": "build-storybook",
