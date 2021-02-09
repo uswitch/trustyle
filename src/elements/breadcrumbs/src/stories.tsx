@@ -2,11 +2,10 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
-import { color , select } from '@storybook/addon-knobs'
+import { color, select } from '@storybook/addon-knobs'
 import { PaletteProvider } from '@uswitch/trustyle-utils.palette'
 
 import AllThemes from '../../../utils/all-themes'
-
 
 import Breadcrumbs from './'
 

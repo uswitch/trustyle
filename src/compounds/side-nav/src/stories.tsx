@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from '@emotion/core'
-import { color, object , text } from '@storybook/addon-knobs'
+import { color, object, text } from '@storybook/addon-knobs'
 import { PaletteProvider } from '@uswitch/trustyle-utils.palette'
-
 
 import AllThemes from '../../../utils/all-themes'
 import SideNav from '../src'
