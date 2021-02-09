@@ -31,6 +31,11 @@ const createSx = (
   }, {})
 }
 
+export const usePalette = () => {
+  const palette = useContext(PaletteContext)
+  return palette
+}
+
 /**
    TODO:
    To prevent margin collapse, which should use emotion utils to read
@@ -50,7 +55,7 @@ export const Palette = ({
   px = {},
   ...props
 }: any) => {
-  const palette = useContext(PaletteContext)
+  const palette = usePalette()
   const sx = createSx(palette, px)
 
   return (

@@ -1,10 +1,9 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled, useThemeUI } from 'theme-ui'
-import get from '@uswitch/trustyle-utils.get'
+import { jsx, Styled } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
-import { Palette } from '@uswitch/trustyle-utils.palette'
+import { Palette, usePalette } from '@uswitch/trustyle-utils.palette'
 
 const lookup = (variant: string) =>
   variant === 'base'
@@ -16,9 +15,7 @@ interface HomeIconProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const HomeIcon: React.FC<HomeIconProps> = ({ variant = 'base' }) => {
-  const { theme }: any = useThemeUI()
-
-  const iconColor = get(theme, `${lookup(variant)}.homeIcon.color`)
+  const { textColor } = usePalette()
 
   return (
     <div
@@ -29,7 +26,7 @@ const HomeIcon: React.FC<HomeIconProps> = ({ variant = 'base' }) => {
         variant: `${lookup(variant)}.homeIcon`
       }}
     >
-      <Icon glyph="home" color={theme.colors[iconColor]} />
+      <Icon glyph="home" color={textColor} />
     </div>
   )
 }
