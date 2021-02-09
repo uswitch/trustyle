@@ -215,9 +215,23 @@ AccordionGroupWithTitleIcons.story = {
 
 export const AutomatedTests = () => {
   return (
-    <AllThemes themes={['uswitch', 'money']}>
+    <AllThemes
+      themes={[
+        'uswitch',
+        'money',
+        'bankrate',
+        'broadband-deals',
+        'journey',
+        'save-on-energy'
+      ]}
+    >
+      <SingleAccordion />
+      <ReverseAccordion />
+      <SingleAccordionWithVariant />
       <AccordionGroup />
       <AccordionGroupWithIcons />
+      <AccordionGroupWithTitleIcons />
+      <SingleAccordionWithIcon />
     </AllThemes>
   )
 }
