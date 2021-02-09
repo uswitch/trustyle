@@ -2226,11 +2226,23 @@
         "wrapper": {}
       },
       "panel": {
+        "title": {
+          "p": ["12px", "12px 24px", "12px 56px"],
+          "bg": "primary",
+          "color": "white"
+        },
         "container": {
           "pt": "sm",
           "pb": "sm",
           "maxWidth": "1024px",
           "m": "0 auto"
+        },
+        "label": {
+          "textAlign": "center",
+          "cursor": "pointer",
+          "textDecorationLine": "underline",
+          "fontSize": "sm",
+          "color": "grey-60"
         }
       },
       "modal": {
