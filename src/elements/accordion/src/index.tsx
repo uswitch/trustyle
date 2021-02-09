@@ -166,7 +166,7 @@ const Accordion: React.FC<Props> & {
   const titleDom = icon || glyph ? titleDomWithCustomIcon : defaultTitleDom
 
   // Icon for the accordion if custom icons for close/open state have been passed
-  let customIconGlyph = isOpen
+  let customIconGlyph: any = isOpen
     ? accordionContext.iconOpen
     : accordionContext.iconClosed
   if (inverted) {
