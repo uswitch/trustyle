@@ -16,7 +16,7 @@ interface HomeIconProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const HomeIcon: React.FC<HomeIconProps> = ({ variant = 'base' }) => {
-  const { textColor } = usePalette()
+  const { textColor }: any = usePalette()
   const { theme }: any = useThemeUI()
   const iconColor = get(theme, `${lookup(variant)}.homeIcon.color`)
 
