@@ -4,6 +4,7 @@ import * as React from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
 import get from '@uswitch/trustyle-utils.get'
 import { Icon } from '@uswitch/trustyle.icon'
+import { Palette } from '@uswitch/trustyle-utils.palette'
 
 const lookup = (variant: string) =>
   variant === 'base'
@@ -65,7 +66,8 @@ const MobileBreadcrumbs: React.FC<Props> = ({
   }
 
   return (
-    <Styled.a
+    <Palette
+      as={Styled.a}
       sx={{
         display: 'inline-block',
         color: 'inherit',
@@ -74,6 +76,7 @@ const MobileBreadcrumbs: React.FC<Props> = ({
         fontSize: 'xxs',
         variant: `${lookup(variant)}.mobileLink`
       }}
+      px={{ color: 'textColor' }}
       href={href}
     >
       <span
@@ -86,7 +89,7 @@ const MobileBreadcrumbs: React.FC<Props> = ({
       </span>
 
       {backTo}
-    </Styled.a>
+    </Palette>
   )
 }
 
@@ -135,9 +138,9 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
       }}
     >
       <li sx={liStyling}>
-        <Styled.a sx={anchorStyling} href={homePath}>
+        <Palette as={Styled.a} sx={anchorStyling} href={homePath}>
           {customHomeIcon || <HomeIcon variant={variant} />}
-        </Styled.a>
+        </Palette>
 
         {(crumbs.length || title) && (
           <span sx={separatorStyling}>
@@ -148,9 +151,9 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
 
       {crumbs.map(({ fields: fields = {} }, i) => (
         <li sx={liStyling} key={i}>
-          <Styled.a sx={anchorStyling} href={fields.path}>
+          <Palette as={Styled.a} sx={anchorStyling} href={fields.path}>
             {fields.displayText}
-          </Styled.a>
+          </Palette>
 
           {(i !== crumbs.length - 1 || title) && (
             <span sx={separatorStyling}>
