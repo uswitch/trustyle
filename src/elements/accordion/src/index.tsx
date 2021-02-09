@@ -33,6 +33,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   buttonProps?: object | ButtonPropsFn
   sx?: object
   card?: boolean
+  inverted?: boolean // Inverts the direction of the accordion icon
 }
 
 type ButtonPropsFn = (args: { open: boolean; title: string }) => object
@@ -65,193 +66,214 @@ const Accordion: React.FC<Props> & {
   variant,
   buttonProps: buttonPropsFn,
   sx = {},
-  card = false
+  card = false,
+  inverted = false,
 }) => {
-  const {
-    theme: {
-      compounds: { accordion: accordionTheme = {} },
-      colors = {}
+    const {
+      theme: {
+        compounds: { accordion: accordionTheme = {} },
+        colors = {}
+      }
+    }: any = useThemeUI()
+    const [isOpenState, setIsOpenState] = useState(isInitiallyOpen)
+    const accordionContext = useContext(AccordionContext)
+
+    let isOpen: boolean
+    let setIsOpen: (isOpen: boolean) => void
+
+    if (accordionContext.open === -2 || !accordionContext.setOpenId) {
+      isOpen = isOpenState
+      setIsOpen = setIsOpenState
+    } else {
+      isOpen = accordionContext.open === index
+      setIsOpen = isOpen =>
+        // @ts-ignore - I have no idea why this is required
+        accordionContext.setOpenId(isOpen ? (index as number) : -1)
     }
-  }: any = useThemeUI()
-  const [isOpenState, setIsOpenState] = useState(isInitiallyOpen)
-  const accordionContext = useContext(AccordionContext)
 
-  let isOpen: boolean
-  let setIsOpen: (isOpen: boolean) => void
+    const title =
+      typeof openedTitle !== 'undefined' && isOpen ? openedTitle : closedTitle
 
-  if (accordionContext.open === -2 || !accordionContext.setOpenId) {
-    isOpen = isOpenState
-    setIsOpen = setIsOpenState
-  } else {
-    isOpen = accordionContext.open === index
-    setIsOpen = isOpen =>
-      // @ts-ignore - I have no idea why this is required
-      accordionContext.setOpenId(isOpen ? (index as number) : -1)
-  }
+    const buttonProps =
+      typeof buttonPropsFn === 'function'
+        ? buttonPropsFn({ open: isOpen, title })
+        : buttonPropsFn
 
-  const title =
-    typeof openedTitle !== 'undefined' && isOpen ? openedTitle : closedTitle
-
-  const buttonProps =
-    typeof buttonPropsFn === 'function'
-      ? buttonPropsFn({ open: isOpen, title })
-      : buttonPropsFn
-
-  const hasBoxShadow = card
-    ? {
+    const hasBoxShadow = card
+      ? {
         minHeight: isOpen ? '80%' : 'auto',
         boxShadow: isOpen
           ? '0px -1px 16px rgba(0, 0, 0, 0.15), 0px -159px 36px 4px rgba(255, 255, 255, 0.7)'
           : 'none'
       }
-    : {}
+      : {}
 
-  return (
-    <div
-      sx={{
-        variant: variant
-          ? `compounds.accordion.variants.${variant}`
-          : 'compounds.accordion',
-        ...sx,
-        ...hasBoxShadow
-      }}
-      className={className}
-      data-target="accordion" // this is a hack to stop clicking propagating to the product table
-    >
-      <Palette
-        as="button"
+    // dom split in variables to make the flow of this component more readable
+
+    // Dom generated for the title if a custom icon of glyph has been passed
+    const titleDomWithCustomIcon =
+      <div
         sx={{
-          cursor: 'pointer',
-          variant: !isOpen
-            ? 'compounds.accordion.base.button'
-            : 'compounds.accordion.variants.isActive.button'
+          flex: '1',
+          textAlign: 'left',
+          alignItems: 'center',
+          display: 'flex',
+          variant: `compounds.accordion.variants.${variant}.title`
         }}
-        px={{
-          color: 'textColor'
+      >
+        {glyph ? (
+          <div
+            sx={{
+              variant: `compounds.accordion.variants.${variant}.glyph`
+            }}
+          >
+            <Icon color={glyphColor} glyph={glyph} size={20} />
+          </div>
+        ) : (
+            <div
+              sx={{
+                variant: 'compounds.accordion.variants.titleIcon'
+              }}
+            >
+              <ImgixImage
+                src={icon}
+                imgixParams={{ fit: 'clip' }}
+                critical
+                sx={{
+                  height: '100%',
+                  width: '100%'
+                }}
+              />
+            </div>
+          )}
+        {title}
+      </div>
+
+    // Normal title dom if no custom icon or glyph has been passed
+    const defaultTitleDom =
+      <div
+        sx={{
+          flex: '1',
+          textAlign: 'left',
+          variant: `compounds.accordion.variants.${variant}.title`
         }}
-        onClick={() => {
-          if (
-            isOpen &&
-            variant === 'reverse' &&
-            scrollToRef &&
-            scrollToRef.current
-          ) {
-            scrollToRef.current.scrollIntoView({ behavior: 'smooth' })
+      >
+        {title}
+      </div>
+
+    const titleDom = icon || glyph ? titleDomWithCustomIcon : defaultTitleDom
+
+    // Icon for the accordion if custom icons for close/open state have been passed
+    let customIconGlyph = isOpen ? accordionContext.iconOpen : accordionContext.iconClosed
+    if (inverted) {
+      customIconGlyph = isOpen ? accordionContext.iconClosed : accordionContext.iconOpen
+    }
+    const iconDomWithCustomIcons =
+      <div
+        sx={{ variant: `compounds.accordion.variants.${variant}.caret` }}
+      >
+        <Icon
+          color={
+            isOpen
+              ? colors[accordionTheme?.variants?.isActive?.caret?.color]
+              : colors[accordionTheme?.base?.caret?.color]
           }
-          setIsOpen(!isOpen)
-        }}
-        {...buttonProps}
-      >
-        {icon || glyph ? (
-          <div
-            sx={{
-              flex: '1',
-              textAlign: 'left',
-              alignItems: 'center',
-              display: 'flex',
-              variant: `compounds.accordion.variants.${variant}.title`
-            }}
-          >
-            {glyph ? (
-              <div
-                sx={{
-                  variant: `compounds.accordion.variants.${variant}.glyph`
-                }}
-              >
-                <Icon color={glyphColor} glyph={glyph} size={20} />
-              </div>
-            ) : (
-              <div
-                sx={{
-                  variant: 'compounds.accordion.variants.titleIcon'
-                }}
-              >
-                <ImgixImage
-                  src={icon}
-                  imgixParams={{ fit: 'clip' }}
-                  critical
-                  sx={{
-                    height: '100%',
-                    width: '100%'
-                  }}
-                />
-              </div>
-            )}
-            {title}
-          </div>
-        ) : (
-          <div
-            sx={{
-              flex: '1',
-              textAlign: 'left',
-              variant: `compounds.accordion.variants.${variant}.title`
-            }}
-          >
-            {title}
-          </div>
-        )}
+          glyph={customIconGlyph}
+          size={16}
+        />
+      </div>
 
-        {accordionContext.iconClosed && accordionContext.iconOpen ? (
-          <div
-            sx={{ variant: `compounds.accordion.variants.${variant}.caret` }}
-          >
-            <Icon
-              color={
-                isOpen
-                  ? colors[accordionTheme?.variants?.isActive?.caret?.color]
-                  : colors[accordionTheme?.base?.caret?.color]
-              }
-              glyph={
-                isOpen ? accordionContext.iconOpen : accordionContext.iconClosed
-              }
-              size={16}
-            />
-          </div>
-        ) : (
-          <div
-            sx={{ variant: `compounds.accordion.variants.${variant}.caret` }}
-          >
-            <Icon
-              color={
-                variant === 'eligibility-criteria-redesign'
-                  ? colors['button-secondary']
-                  : isOpen
-                  ? colors[accordionTheme?.variants?.isActive?.caret?.color]
-                  : colors[accordionTheme?.base?.caret?.color]
-              }
-              glyph="caret"
-              direction={isOpen ? 'up' : 'down'}
-              size={16}
-            />
-          </div>
-        )}
-      </Palette>
-      <Palette
-        as="div"
-        sx={{
-          overflow: 'hidden',
-          height: isOpen ? 'auto' : '0',
-          marginBottom: isOpen
-            ? accordionTheme?.base?.content?.marginBottom
-            : '0',
-          '> *:first-child': {
-            marginTop: 0
-          },
-          '> *:last-child': {
-            marginBottom: 0
-          },
-          '> p:last-child': {
-            marginBottom: 'xs'
-          },
-          variant: 'compounds.accordion.base.content'
-        }}
-        px={{ color: 'textColor' }}
+    // Icon for the accordion if no custom close/open icons have been passed
+    let direction = isOpen ? 'up' : 'down'
+    if (inverted) {
+      direction = isOpen ? 'down' : 'up'
+    }
+    const defaultIconDom =
+      <div
+        sx={{ variant: `compounds.accordion.variants.${variant}.caret` }}
       >
-        {children}
-      </Palette>
-    </div>
-  )
-}
+        <Icon
+          color={
+            variant === 'eligibility-criteria-redesign'
+              ? colors['button-secondary']
+              : isOpen
+                ? colors[accordionTheme?.variants?.isActive?.caret?.color]
+                : colors[accordionTheme?.base?.caret?.color]
+          }
+          glyph="caret"
+          direction={direction}
+          size={16}
+        />
+      </div>
+
+    const iconDom = accordionContext.iconClosed && accordionContext.iconOpen ? iconDomWithCustomIcons : defaultIconDom
+
+    return (
+      <div
+        sx={{
+          variant: variant
+            ? `compounds.accordion.variants.${variant}`
+            : 'compounds.accordion',
+          ...sx,
+          ...hasBoxShadow
+        }}
+        className={className}
+        data-target="accordion" // this is a hack to stop clicking propagating to the product table
+      >
+        <Palette
+          as="button"
+          sx={{
+            cursor: 'pointer',
+            variant: !isOpen
+              ? 'compounds.accordion.base.button'
+              : 'compounds.accordion.variants.isActive.button'
+          }}
+          px={{
+            color: 'textColor'
+          }}
+          onClick={() => {
+            if (
+              isOpen &&
+              variant === 'reverse' &&
+              scrollToRef &&
+              scrollToRef.current
+            ) {
+              scrollToRef.current.scrollIntoView({ behavior: 'smooth' })
+            }
+            setIsOpen(!isOpen)
+          }}
+          {...buttonProps}
+        >
+          {/* See just before the return for how titleDom and iconDom are generated */}
+          {titleDom}
+          {iconDom}
+        </Palette>
+        <Palette
+          as="div"
+          sx={{
+            overflow: 'hidden',
+            height: isOpen ? 'auto' : '0',
+            marginBottom: isOpen
+              ? accordionTheme?.base?.content?.marginBottom
+              : '0',
+            '> *:first-child': {
+              marginTop: 0
+            },
+            '> *:last-child': {
+              marginBottom: 0
+            },
+            '> p:last-child': {
+              marginBottom: 'xs'
+            },
+            variant: 'compounds.accordion.base.content'
+          }}
+          px={{ color: 'textColor' }}
+        >
+          {children}
+        </Palette>
+      </div>
+    )
+  }
 
 export default Accordion
 
