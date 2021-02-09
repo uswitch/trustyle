@@ -189,7 +189,7 @@ const Accordion: React.FC<Props> & {
   )
 
   // Icon for the accordion if no custom close/open icons have been passed
-  let direction = isOpen ? 'up' : 'down'
+  let direction: any = isOpen ? 'up' : 'down'
   if (inverted) {
     direction = isOpen ? 'down' : 'up'
   }
