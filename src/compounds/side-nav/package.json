@@ -12,6 +12,7 @@
     "react": "^16.7.0"
   },
   "dependencies": {
+    "@uswitch/trustyle-utils.palette": "^4.0.2",
     "@uswitch/trustyle.accordion": "^0.13.0"
   }
 }

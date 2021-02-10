@@ -6,17 +6,26 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 # [0.13.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.12.2...@uswitch/trustyle.accordion@0.13.0) (2021-02-09)
 
 
-### Bug Fixes
-
-* add all stories to the accordion ([d3691f0](https://github.com/uswitch/trustyle/commit/d3691f0))
-* another ts error ([02bacb5](https://github.com/uswitch/trustyle/commit/02bacb5))
-* prettier fixes ([44c8655](https://github.com/uswitch/trustyle/commit/44c8655))
-* typescript error ([c3d19c3](https://github.com/uswitch/trustyle/commit/c3d19c3))
-
-
 ### Features
 
 * add option to invert the direction of the accordion icon + refactored its code a bit to be more readable ([e66c81d](https://github.com/uswitch/trustyle/commit/e66c81d))
+## [0.12.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.12.2...@uswitch/trustyle.accordion@0.12.4) (2021-02-10)
+
+
+### Bug Fixes
+
+* add all stories to the accordion ([d3691f0](https://github.com/uswitch/trustyle/commit/d3691f0))
+
+
+
+
+
+## [0.12.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.12.2...@uswitch/trustyle.accordion@0.12.3) (2021-02-10)
+
+
+### Bug Fixes
+
+* add all stories to the accordion ([d3691f0](https://github.com/uswitch/trustyle/commit/d3691f0))
 
 
 

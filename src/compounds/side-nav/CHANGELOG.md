@@ -5,10 +5,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.0.45](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.42...@uswitch/trustyle.side-nav@1.0.45) (2021-02-09)
 
-
 ### Bug Fixes
 
 * increased package version of side-nav because it was one behind on master and broke the lerna version ([ebffce0](https://github.com/uswitch/trustyle/commit/ebffce0))
+
+
+
+## [1.0.44](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.42...@uswitch/trustyle.side-nav@1.0.44) (2021-02-10)
+
+### Bug Fixes
+
+* prettier ([5d1bdc8](https://github.com/uswitch/trustyle/commit/5d1bdc8))
 
 
 
