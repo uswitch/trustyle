@@ -2886,9 +2886,9 @@
       "iconOpen": "minus",
       "iconClosed": "plus",
       "base": {
+        "mb": 72,
         "wrapper": {
-          "borderBottom": "1px solid #C4C4C4",
-          "mb": 72
+          "borderBottom": "1px solid #C4C4C4"
         },
         "groupTitle": {
           "marginTop": "0",
@@ -3012,7 +3012,8 @@
           "wrapper": {
             "variant": "compounds.accordion.base.wrapper",
             "display": "flex",
-            "flexFlow": "column"
+            "flexFlow": "column",
+            "borderBottom": "none"
           },
           "btn": {
             "variant": "compounds.accordion.base.btn",

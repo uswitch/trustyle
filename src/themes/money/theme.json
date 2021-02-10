@@ -2182,6 +2182,32 @@
               "boxShadow": "none"
             }
           }
+        },
+        "true-speeds": {
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "content": {
+            "variant": "compounds.accordion.base.content"
+          },
+          "isActive": {
+            "btn": {
+              "variant": "compounds.accordion.variants.true-speeds.btn"
+            }
+          }
+        },
+        "reverse": {
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "content": {
+            "variant": "compounds.accordion.base.content"
+          },
+          "isActive": {
+            "btn": {
+              "variant": "compounds.accordion.variants.reverse.btn"
+            }
+          }
         }
       }
     },
