@@ -243,12 +243,8 @@ export const LegacyAccordion = () => {
             </li>
           </ul>
         </div>
-        <ButtonLink variant="primary" name="Loans Guides">
-          Loans guides
-        </ButtonLink>
-        <ButtonLink variant="secondary" name="Who we compare">
-          Who we compare
-        </ButtonLink>
+        <ButtonLink variant="primary">Loans guides</ButtonLink>
+        <ButtonLink variant="secondary">Who we compare</ButtonLink>
       </Accordion>
     </div>
   )
