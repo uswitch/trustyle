@@ -636,6 +636,20 @@
     "form": {
       "variants": {
         "default": {
+          "input": {
+            "wrapper": {
+              "display": "flex",
+              "mb": ["md", "lg"],
+              "width": ["100%", "100%", "28%"],
+              "justifyContent": "space-between",
+              "alignItems": "center",
+              "flexDirection": "column"
+            },
+            "error": {
+              "position": "absolute",
+              "margin": "0"
+            }
+          },
           "label": {
             "variant": "styles.h4",
             "color": "grey-80",
@@ -667,20 +681,6 @@
                 "flex": "1 1 0px",
                 "min-width": "176px"
               }
-            }
-          },
-          "input": {
-            "wrapper": {
-              "display": "flex",
-              "mb": ["md", "lg"],
-              "width": ["100%", "100%", "28%"],
-              "justifyContent": "space-between",
-              "alignItems": "center",
-              "flexDirection": "column"
-            },
-            "error": {
-              "position": "absolute",
-              "margin": "0"
             }
           }
         },
@@ -1936,6 +1936,7 @@
       },
       "checkbox": {
         "base": {
+          "border": "solid 1px black",
           "variant": "elements.input.radioish.base",
           "&:checked + span": {
             "variant": "elements.input.radioish.base.&:checked + span",
