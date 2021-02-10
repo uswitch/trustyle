@@ -3045,7 +3045,7 @@
         },
         "eligibility-criteria": {
           "variant": "compounds.accordion.base",
-          "btn" :{
+          "btn": {
             "variant": "compounds.accordion.base.btn"
           },
           "isActive": {
