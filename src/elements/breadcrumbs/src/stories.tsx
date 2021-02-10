@@ -2,7 +2,8 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
-import { select } from '@storybook/addon-knobs'
+import { color, select } from '@storybook/addon-knobs'
+import { PaletteProvider } from '@uswitch/trustyle-utils.palette'
 
 import AllThemes from '../../../utils/all-themes'
 
@@ -35,6 +36,26 @@ const crumbs = [
     }
   }
 ]
+
+export const ExampleWithTextColour = () => {
+  const textColor = color('Text colour', '#ff00ff')
+  const variant = select('Variant', variants, 'base') as Variant
+  return (
+    <PaletteProvider value={{ textColor: textColor }}>
+      <Breadcrumbs
+        crumbs={crumbs}
+        title="Understanding energy bills and electricity bills - FAQs and more"
+        variant={variant}
+      />
+    </PaletteProvider>
+  )
+}
+
+ExampleWithTextColour.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
 
 export const ExampleWithTitle = () => {
   const variant = select('Variant', variants, 'base') as Variant
