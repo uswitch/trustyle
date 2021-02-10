@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.1.7...@uswitch/trustyle.breadcrumbs@2.2.0) (2021-02-10)
+
+
+### Bug Fixes
+
+* declare type ([8f293b3](https://github.com/uswitch/trustyle/commit/8f293b3))
+* prettier ([5d1bdc8](https://github.com/uswitch/trustyle/commit/5d1bdc8))
+
+
+### Features
+
+* allow for no palette ([1bee2f6](https://github.com/uswitch/trustyle/commit/1bee2f6))
+
+
+
+
+
 ## [2.1.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.1.6...@uswitch/trustyle.breadcrumbs@2.1.7) (2021-01-29)
 
 **Note:** Version bump only for package @uswitch/trustyle.breadcrumbs
