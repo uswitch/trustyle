@@ -3,6 +3,7 @@
 import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
 import Accordion from '@uswitch/trustyle.accordion'
+import { Palette } from '@uswitch/trustyle-utils.palette'
 
 interface Link {
   text: string
@@ -49,9 +50,14 @@ const SideNav: React.FC<Props> = ({
                     }`
                   }}
                 >
-                  <a href={url} sx={{ borderBottom: 0 }}>
+                  <Palette
+                    as={'a'}
+                    px={{ color: 'textColor' }}
+                    href={url}
+                    sx={{ borderBottom: 0 }}
+                  >
                     {text}
-                  </a>
+                  </Palette>
                 </li>
               )
             })}
@@ -75,9 +81,14 @@ const SideNav: React.FC<Props> = ({
                     variant: 'compounds.side-nav.additionalLink'
                   }}
                 >
-                  <Styled.a href={url} sx={{ borderBottom: 0 }}>
+                  <Palette
+                    as={Styled.a}
+                    px={{ color: 'textColor' }}
+                    href={url}
+                    sx={{ borderBottom: 0 }}
+                  >
                     {text}
-                  </Styled.a>
+                  </Palette>
                 </li>
               ))}
             </ul>
