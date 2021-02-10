@@ -38,7 +38,7 @@ const makeStyles = (variant: string) => (element?: string) =>
 
 const Card: React.FC<Props> = ({
   className = '',
-  critical = true,
+  critical = false,
   description,
   imageSize = 'cover',
   imgAlt,
