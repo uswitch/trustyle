@@ -2045,7 +2045,7 @@
             "variant": "compounds.accordion.base.btn"
           },
           "caret": {
-            "color": "plum"
+            "color": "fuschia"
           }
         }
       },
@@ -2215,6 +2215,7 @@
       "accordion": {
         "marginY": 0,
         "button": {
+          "paddingX": 0,
           "paddingBottom": 0
         }
       },

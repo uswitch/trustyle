@@ -2953,6 +2953,9 @@
           "btn": {
             "variant": "compounds.accordion.base.btn"
           },
+          "content": {
+            "variant": "compounds.accordion.base.content"
+          },
           "title": {
             "fontSize": ["xs", "sm", "sm"],
             "lineHeight": "sm",

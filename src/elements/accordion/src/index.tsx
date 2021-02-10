@@ -194,7 +194,7 @@ const Accordion: React.FC<Props> & {
       <Icon
         color={
           isOpen
-            ? colors[accordionTheme?.variants?.isActive?.caret?.color]
+            ? colors[accordionTheme?.base?.isActive?.caret?.color]
             : colors[accordionTheme?.base?.caret?.color]
         }
         glyph={customIconGlyph}
@@ -210,6 +210,7 @@ const Accordion: React.FC<Props> & {
   }
   const defaultIconDom = (
     <div sx={{ variant: styles('caret') }}>
+      {console.log(colors[accordionTheme?.base?.caret?.color])}
       <Icon
         color={
           variant === 'eligibility-criteria-redesign'
@@ -217,7 +218,7 @@ const Accordion: React.FC<Props> & {
             : legacy
             ? 'grey-0'
             : isOpen
-            ? colors[accordionTheme?.variants?.isActive?.caret?.color]
+            ? colors[accordionTheme?.base?.isActive?.caret?.color]
             : colors[accordionTheme?.base?.caret?.color]
         }
         glyph="caret"
@@ -242,7 +243,6 @@ const Accordion: React.FC<Props> & {
       className={className}
       data-target="accordion" // this is a hack to stop clicking propagating to the product table
     >
-      {console.log(isOpen ? activeStyles('btn') : styles('btn'))}
       <Palette
         as="button"
         sx={{
