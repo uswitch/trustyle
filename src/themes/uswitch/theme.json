@@ -2985,7 +2985,8 @@
             "marginBottom": 15,
             "color": "grey-80",
             "fontSize": "xs",
-            "marginTop": "md"
+            "marginTop": "md",
+            "borderBottom": "none"
           },
           "title": {
             "textAlign": "center",
