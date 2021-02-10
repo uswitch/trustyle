@@ -33,6 +33,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   buttonProps?: object | ButtonPropsFn
   sx?: object
   card?: boolean
+  inverted?: boolean // Inverts the direction of the accordion icon
 }
 
 type ButtonPropsFn = (args: { open: boolean; title: string }) => object
@@ -65,7 +66,8 @@ const Accordion: React.FC<Props> & {
   variant = 'base',
   buttonProps: buttonPropsFn,
   sx = {},
-  card = false
+  card = false,
+  inverted = false
 }) => {
   const {
     theme: {
@@ -121,6 +123,115 @@ const Accordion: React.FC<Props> & {
 
   const styles = getVariant(variant)
   const activeStyles = getActiveVariant(variant)
+  // dom split in variables to make the flow of this component more readable
+
+  // Dom generated for the title if a custom icon of glyph has been passed
+  const titleDomWithCustomIcon = (
+    <div
+      sx={{
+        flex: '1',
+        textAlign: 'left',
+        alignItems: 'center',
+        display: 'flex',
+        variant: styles('title')
+      }}
+    >
+      {glyph ? (
+        <div
+          sx={{
+            variant: styles('glyph')
+          }}
+        >
+          <Icon color={glyphColor} glyph={glyph} size={20} />
+        </div>
+      ) : (
+        <div
+          sx={{
+            variant: 'compounds.accordion.variants.titleIcon'
+          }}
+        >
+          <ImgixImage
+            src={icon}
+            imgixParams={{ fit: 'clip' }}
+            critical
+            sx={{
+              height: '100%',
+              width: '100%'
+            }}
+          />
+        </div>
+      )}
+      {title}
+    </div>
+  )
+
+  // Normal title dom if no custom icon or glyph has been passed
+  const defaultTitleDom = (
+    <div
+      sx={{
+        flex: '1',
+        textAlign: 'left',
+        variant: styles('title')
+      }}
+    >
+      {title}
+    </div>
+  )
+
+  const titleDom = icon || glyph ? titleDomWithCustomIcon : defaultTitleDom
+
+  // Icon for the accordion if custom icons for close/open state have been passed
+  let customIconGlyph: any = isOpen
+    ? accordionContext.iconOpen
+    : accordionContext.iconClosed
+  if (inverted) {
+    customIconGlyph = isOpen
+      ? accordionContext.iconClosed
+      : accordionContext.iconOpen
+  }
+  const iconDomWithCustomIcons = (
+    <div sx={{ variant: styles('caret') }}>
+      <Icon
+        color={
+          isOpen
+            ? colors[accordionTheme?.variants?.isActive?.caret?.color]
+            : colors[accordionTheme?.base?.caret?.color]
+        }
+        glyph={customIconGlyph}
+        size={16}
+      />
+    </div>
+  )
+
+  // Icon for the accordion if no custom close/open icons have been passed
+  let direction: any = isOpen ? 'up' : 'down'
+  if (inverted) {
+    direction = isOpen ? 'down' : 'up'
+  }
+  const defaultIconDom = (
+    <div sx={{ variant: styles('caret') }}>
+      <Icon
+        color={
+          variant === 'eligibility-criteria-redesign'
+            ? colors['button-secondary']
+            : legacy
+            ? 'grey-0'
+            : isOpen
+            ? colors[accordionTheme?.variants?.isActive?.caret?.color]
+            : colors[accordionTheme?.base?.caret?.color]
+        }
+        glyph="caret"
+        direction={direction}
+        size={16}
+      />
+    </div>
+  )
+
+  const iconDom =
+    accordionContext.iconClosed && accordionContext.iconOpen
+      ? iconDomWithCustomIcons
+      : defaultIconDom
+
   return (
     <div
       sx={{
@@ -154,87 +265,9 @@ const Accordion: React.FC<Props> & {
         }}
         {...buttonProps}
       >
-        {icon || glyph ? (
-          <div
-            sx={{
-              flex: '1',
-              textAlign: 'left',
-              alignItems: 'center',
-              display: 'flex',
-              variant: styles('title')
-            }}
-          >
-            {glyph ? (
-              <div
-                sx={{
-                  variant: styles('glyph')
-                }}
-              >
-                <Icon color={glyphColor} glyph={glyph} size={20} />
-              </div>
-            ) : (
-              <div
-                sx={{
-                  variant: 'compounds.accordion.variants.titleIcon'
-                }}
-              >
-                <ImgixImage
-                  src={icon}
-                  imgixParams={{ fit: 'clip' }}
-                  critical
-                  sx={{
-                    height: '100%',
-                    width: '100%'
-                  }}
-                />
-              </div>
-            )}
-            {title}
-          </div>
-        ) : (
-          <div
-            sx={{
-              flex: '1',
-              textAlign: 'left',
-              variant: styles('title')
-            }}
-          >
-            {title}
-          </div>
-        )}
-
-        {accordionContext.iconClosed && accordionContext.iconOpen ? (
-          <div sx={{ variant: styles('caret') }}>
-            <Icon
-              color={
-                isOpen
-                  ? colors[accordionTheme?.variants?.isActive?.caret?.color]
-                  : colors[accordionTheme?.base?.caret?.color]
-              }
-              glyph={
-                isOpen ? accordionContext.iconOpen : accordionContext.iconClosed
-              }
-              size={16}
-            />
-          </div>
-        ) : (
-          <div sx={{ variant: styles('caret') }}>
-            <Icon
-              color={
-                variant === 'eligibility-criteria-redesign'
-                  ? colors['button-secondary']
-                  : legacy
-                  ? 'grey-0'
-                  : isOpen
-                  ? colors[accordionTheme?.base?.isActive?.caret?.color]
-                  : colors[accordionTheme?.base?.caret?.color]
-              }
-              glyph="caret"
-              direction={legacy ? 'down' : isOpen ? 'up' : 'down'}
-              size={legacy ? 21 : 16}
-            />
-          </div>
-        )}
+        {/* See just before the return for how titleDom and iconDom are generated */}
+        {titleDom}
+        {iconDom}
       </Palette>
       <Palette
         as="div"

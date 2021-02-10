@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.13.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.12.2...@uswitch/trustyle.accordion@0.13.0) (2021-02-09)
+
+
+### Features
+
+* add option to invert the direction of the accordion icon + refactored its code a bit to be more readable ([e66c81d](https://github.com/uswitch/trustyle/commit/e66c81d))
 ## [0.12.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.12.2...@uswitch/trustyle.accordion@0.12.4) (2021-02-10)
 
 

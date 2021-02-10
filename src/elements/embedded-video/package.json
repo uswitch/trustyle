@@ -17,6 +17,6 @@
     "theme-ui": "^0.2.52"
   },
   "dependencies": {
-    "@uswitch/trustyle.accordion": "^0.12.4"
+    "@uswitch/trustyle.accordion": "^0.13.0"
   }
 }
