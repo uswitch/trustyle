@@ -3042,6 +3042,17 @@
               "variant": "compounds.accordion.variants.reverse.btn"
             }
           }
+        },
+        "eligibility-criteria": {
+          "variant": "compounds.accordion.base",
+          "btn" :{
+            "variant": "compounds.accordion.base.btn"
+          },
+          "isActive": {
+            "btn": {
+              "variant": "compounds.accordion.variants.eligibility-criteria.btn"
+            }
+          }
         }
       }
     },
