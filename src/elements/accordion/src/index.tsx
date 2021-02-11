@@ -63,7 +63,7 @@ const Accordion: React.FC<Props> & {
   glyph,
   glyphColor = '',
   scrollToRef,
-  variant,
+  variant = 'base',
   buttonProps: buttonPropsFn,
   sx = {},
   card = false,
@@ -77,7 +77,6 @@ const Accordion: React.FC<Props> & {
   }: any = useThemeUI()
   const [isOpenState, setIsOpenState] = useState(isInitiallyOpen)
   const accordionContext = useContext(AccordionContext)
-
   let isOpen: boolean
   let setIsOpen: (isOpen: boolean) => void
 
@@ -108,6 +107,22 @@ const Accordion: React.FC<Props> & {
       }
     : {}
 
+  const legacy = variant === 'legacy'
+
+  const getVariant = (variant: string) => (element?: string) =>
+    `compounds.accordion${
+      variant && variant !== 'base' ? `.variants.${variant}` : '.base'
+    }${element ? `.${element}` : ''}`
+
+  const getActiveVariant = (variant: string) => (element?: string) =>
+    `compounds.accordion${
+      variant && variant !== 'base'
+        ? `.variants.${variant}.isActive`
+        : '.base.isActive'
+    }${element ? `.${element}` : ''}`
+
+  const styles = getVariant(variant)
+  const activeStyles = getActiveVariant(variant)
   // dom split in variables to make the flow of this component more readable
 
   // Dom generated for the title if a custom icon of glyph has been passed
@@ -118,13 +133,13 @@ const Accordion: React.FC<Props> & {
         textAlign: 'left',
         alignItems: 'center',
         display: 'flex',
-        variant: `compounds.accordion.variants.${variant}.title`
+        variant: styles('title')
       }}
     >
       {glyph ? (
         <div
           sx={{
-            variant: `compounds.accordion.variants.${variant}.glyph`
+            variant: styles('glyph')
           }}
         >
           <Icon color={glyphColor} glyph={glyph} size={20} />
@@ -156,7 +171,7 @@ const Accordion: React.FC<Props> & {
       sx={{
         flex: '1',
         textAlign: 'left',
-        variant: `compounds.accordion.variants.${variant}.title`
+        variant: styles('title')
       }}
     >
       {title}
@@ -175,11 +190,11 @@ const Accordion: React.FC<Props> & {
       : accordionContext.iconOpen
   }
   const iconDomWithCustomIcons = (
-    <div sx={{ variant: `compounds.accordion.variants.${variant}.caret` }}>
+    <div sx={{ variant: styles('caret') }}>
       <Icon
         color={
           isOpen
-            ? colors[accordionTheme?.variants?.isActive?.caret?.color]
+            ? colors[accordionTheme?.base?.isActive?.caret?.color]
             : colors[accordionTheme?.base?.caret?.color]
         }
         glyph={customIconGlyph}
@@ -194,13 +209,15 @@ const Accordion: React.FC<Props> & {
     direction = isOpen ? 'down' : 'up'
   }
   const defaultIconDom = (
-    <div sx={{ variant: `compounds.accordion.variants.${variant}.caret` }}>
+    <div sx={{ variant: styles('caret') }}>
       <Icon
         color={
           variant === 'eligibility-criteria-redesign'
             ? colors['button-secondary']
+            : legacy
+            ? 'grey-0'
             : isOpen
-            ? colors[accordionTheme?.variants?.isActive?.caret?.color]
+            ? colors[accordionTheme?.base?.isActive?.caret?.color]
             : colors[accordionTheme?.base?.caret?.color]
         }
         glyph="caret"
@@ -218,9 +235,7 @@ const Accordion: React.FC<Props> & {
   return (
     <div
       sx={{
-        variant: variant
-          ? `compounds.accordion.variants.${variant}`
-          : 'compounds.accordion',
+        variant: isOpen ? activeStyles('wrapper') : styles('wrapper'),
         ...sx,
         ...hasBoxShadow
       }}
@@ -231,9 +246,7 @@ const Accordion: React.FC<Props> & {
         as="button"
         sx={{
           cursor: 'pointer',
-          variant: !isOpen
-            ? 'compounds.accordion.base.button'
-            : 'compounds.accordion.variants.isActive.button'
+          variant: isOpen ? activeStyles('btn') : styles('btn')
         }}
         px={{
           color: 'textColor'
@@ -272,7 +285,7 @@ const Accordion: React.FC<Props> & {
           '> p:last-child': {
             marginBottom: 'xs'
           },
-          variant: 'compounds.accordion.base.content'
+          variant: styles('content')
         }}
         px={{ color: 'textColor' }}
       >
@@ -318,7 +331,7 @@ Accordion.Title = ({ children, as = 'h2', className }) => {
     <Styled.h3
       as={as}
       sx={{
-        variant: 'compounds.accordion.base.title'
+        variant: 'compounds.accordion.base.groupTitle'
       }}
       className={className}
     >

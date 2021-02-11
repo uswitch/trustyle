@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.35.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.34.6...@uswitch/trustyle.uswitch-theme@2.35.0) (2021-02-11)
+
+
+### Bug Fixes
+
+* border on eligibility-criteria-redesign on uswitch ([81f9f31](https://github.com/uswitch/trustyle/commit/81f9f31))
+* caret and content styles ([328940c](https://github.com/uswitch/trustyle/commit/328940c))
+* prettier issues ([ecc0c16](https://github.com/uswitch/trustyle/commit/ecc0c16))
+* refactor styles per percy ([6b3ade2](https://github.com/uswitch/trustyle/commit/6b3ade2))
+* uswitch eligibility-criteria ([ab59d65](https://github.com/uswitch/trustyle/commit/ab59d65))
+
+
+### Features
+
+* accordion legacy variant ([a8e6348](https://github.com/uswitch/trustyle/commit/a8e6348))
+
+
+
+
+
 ## [2.34.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.34.5...@uswitch/trustyle.uswitch-theme@2.34.6) (2021-02-09)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
