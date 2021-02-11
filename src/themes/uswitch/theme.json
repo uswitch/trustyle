@@ -2006,6 +2006,7 @@
       "lineHeight": 1.38,
       "position": "relative",
       "borderRadius": 0,
+      "zIndex": 999,
       "before": {
         "position": "absolute",
         "content": "''",
@@ -2226,11 +2227,23 @@
         "wrapper": {}
       },
       "panel": {
+        "title": {
+          "p": ["12px", "12px 24px", "12px 56px"],
+          "bg": "primary",
+          "color": "white"
+        },
         "container": {
           "pt": "sm",
           "pb": "sm",
           "maxWidth": "1024px",
           "m": "0 auto"
+        },
+        "label": {
+          "textAlign": "center",
+          "cursor": "pointer",
+          "textDecorationLine": "underline",
+          "fontSize": "sm",
+          "color": "grey-60"
         }
       },
       "modal": {
@@ -2372,7 +2385,7 @@
               "border": "1px solid",
               "borderColor": "grey-20",
               "p": ["24px", "24px 56px"],
-              "mb": ["sm", "sm", "xxl"],
+              "mb": ["0", "sm", "xxl"],
               "flexDirection": ["column", "column", "row"]
             },
             "fields": {

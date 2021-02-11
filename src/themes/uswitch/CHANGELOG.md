@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.34.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.34.5...@uswitch/trustyle.uswitch-theme@2.34.6) (2021-02-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.34.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.34.4...@uswitch/trustyle.uswitch-theme@2.34.5) (2021-02-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.34.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.34.2...@uswitch/trustyle.uswitch-theme@2.34.4) (2021-02-05)
+
+
+### Bug Fixes
+
+* rich text block center-shrink variant styling ([dd9d3a1](https://github.com/uswitch/trustyle/commit/dd9d3a1))
+
+
+
+
+
 ## [2.34.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.34.2...@uswitch/trustyle.uswitch-theme@2.34.3) (2021-02-05)
 
 

@@ -2,8 +2,9 @@
 
 import * as React from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
-import get from '@uswitch/trustyle-utils.get'
 import { Icon } from '@uswitch/trustyle.icon'
+import { Palette, usePalette } from '@uswitch/trustyle-utils.palette'
+import get from '@uswitch/trustyle-utils.get'
 
 const lookup = (variant: string) =>
   variant === 'base'
@@ -15,8 +16,8 @@ interface HomeIconProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const HomeIcon: React.FC<HomeIconProps> = ({ variant = 'base' }) => {
+  const { textColor }: any = usePalette()
   const { theme }: any = useThemeUI()
-
   const iconColor = get(theme, `${lookup(variant)}.homeIcon.color`)
 
   return (
@@ -28,7 +29,7 @@ const HomeIcon: React.FC<HomeIconProps> = ({ variant = 'base' }) => {
         variant: `${lookup(variant)}.homeIcon`
       }}
     >
-      <Icon glyph="home" color={theme.colors[iconColor]} />
+      <Icon glyph="home" color={textColor || iconColor} />
     </div>
   )
 }
@@ -65,7 +66,8 @@ const MobileBreadcrumbs: React.FC<Props> = ({
   }
 
   return (
-    <Styled.a
+    <Palette
+      as={Styled.a}
       sx={{
         display: 'inline-block',
         color: 'inherit',
@@ -74,6 +76,7 @@ const MobileBreadcrumbs: React.FC<Props> = ({
         fontSize: 'xxs',
         variant: `${lookup(variant)}.mobileLink`
       }}
+      px={{ color: 'textColor' }}
       href={href}
     >
       <span
@@ -86,7 +89,7 @@ const MobileBreadcrumbs: React.FC<Props> = ({
       </span>
 
       {backTo}
-    </Styled.a>
+    </Palette>
   )
 }
 
@@ -125,7 +128,9 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
   }
 
   return (
-    <ul
+    <Palette
+      as={Styled.ul}
+      px={{ color: 'textColor' }}
       sx={{
         listStyleType: 'none',
         paddingLeft: 0,
@@ -161,11 +166,15 @@ const DesktopBreadcrumbs: React.FC<Props> = ({
       ))}
 
       {title && (
-        <li sx={{ ...liStyling, variant: `${lookup(variant)}.title` }}>
+        <Palette
+          as={Styled.li}
+          px={{ color: 'textColor' }}
+          sx={{ ...liStyling, variant: `${lookup(variant)}.title` }}
+        >
           {title}
-        </li>
+        </Palette>
       )}
-    </ul>
+    </Palette>
   )
 }
 
