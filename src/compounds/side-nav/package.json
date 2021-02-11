@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.side-nav",
-  "version": "1.0.45",
+  "version": "1.0.46",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -13,6 +13,6 @@
   },
   "dependencies": {
     "@uswitch/trustyle-utils.palette": "^4.0.2",
-    "@uswitch/trustyle.accordion": "^0.13.0"
+    "@uswitch/trustyle.accordion": "^0.14.0"
   }
 }
