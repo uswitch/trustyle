@@ -1408,7 +1408,7 @@
         "content": {
           "mb": "xs"
         },
-        "button": {
+        "btn": {
           "p": "0",
           "pt": 10,
           "pb": 10,
@@ -1425,21 +1425,60 @@
         },
         "caret": {
           "color": "primary"
-        }
-      },
-      "variants": {
+        },
         "isActive": {
-          "button": {
-            "variant": "compounds.accordion.base.button"
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
           },
           "caret": {
             "color": "primary--dark"
           }
-        },
+        }
+      },
+      "variants": {
         "titleIcon": {
           "marginRight": "13px",
           "height": 36,
           "width": 32
+        },
+        "true-speeds": {
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "content": {
+            "variant": "compounds.accordion.base.content"
+          },
+          "isActive": {
+            "btn": {
+              "variant": "compounds.accordion.variants.true-speeds.btn"
+            }
+          }
+        },
+        "reverse": {
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "content": {
+            "variant": "compounds.accordion.base.content"
+          },
+          "isActive": {
+            "btn": {
+              "variant": "compounds.accordion.variants.reverse.btn"
+            }
+          }
+        },
+        "eligibility-criteria": {
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "content": {
+            "variant": "compounds.accordion.base.content"
+          },
+          "isActive": {
+            "btn": {
+              "variant": "compounds.accordion.variants.eligibility-criteria.btn"
+            }
+          }
         }
       }
     },
