@@ -243,8 +243,13 @@ export const LegacyAccordion = () => {
             </li>
           </ul>
         </div>
-        <ButtonLink variant="primary">Loans guides</ButtonLink>
-        <ButtonLink variant="secondary">Who we compare</ButtonLink>
+        {/* Spans are generated from contentful */}
+        <span>
+          <ButtonLink variant="primary">Loans guides</ButtonLink>
+        </span>
+        <span>
+          <ButtonLink variant="secondary">Who we compare</ButtonLink>
+        </span>
       </Accordion>
     </div>
   )

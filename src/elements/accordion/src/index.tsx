@@ -210,7 +210,6 @@ const Accordion: React.FC<Props> & {
   }
   const defaultIconDom = (
     <div sx={{ variant: styles('caret') }}>
-      {console.log(colors[accordionTheme?.base?.caret?.color])}
       <Icon
         color={
           variant === 'eligibility-criteria-redesign'
