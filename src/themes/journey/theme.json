@@ -1213,7 +1213,7 @@
 
     "accordion": {
       "base": {
-        "button": {
+        "btn": {
           "padding": "sm",
           "bg": "uswitch-navy",
           "fontFamily": "base",
@@ -1224,18 +1224,16 @@
         },
         "caret": {
           "color": "light-1"
-        }
-      },
-
-      "isActive": {
-        "button": {
-          "variant": "compounds.accordion.base.button"
         },
-        "caret": {
-          "color": "light-1"
+        "isActive": {
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "caret": {
+            "color": "light-1"
+          }
         }
       },
-
       "variants": {
         "titleIcon": {
           "marginRight": "13px",
