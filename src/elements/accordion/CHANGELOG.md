@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.14.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.12.4...@uswitch/trustyle.accordion@0.14.0) (2021-02-11)
+
+
+### Bug Fixes
+
+* another ts error ([02bacb5](https://github.com/uswitch/trustyle/commit/02bacb5))
+* caret and content styles ([328940c](https://github.com/uswitch/trustyle/commit/328940c))
+* prettier fixes ([44c8655](https://github.com/uswitch/trustyle/commit/44c8655))
+* refactor styles for buttons inside accordion ([a642d18](https://github.com/uswitch/trustyle/commit/a642d18))
+* styles ([a01034c](https://github.com/uswitch/trustyle/commit/a01034c))
+* typescript error ([c3d19c3](https://github.com/uswitch/trustyle/commit/c3d19c3))
+
+
+### Features
+
+* accordion legacy variant ([a8e6348](https://github.com/uswitch/trustyle/commit/a8e6348))
+* add option to invert the direction of the accordion icon + refactored its code a bit to be more readable ([e66c81d](https://github.com/uswitch/trustyle/commit/e66c81d))
+
+
+
+
+
 # [0.13.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.12.2...@uswitch/trustyle.accordion@0.13.0) (2021-02-09)
 
 
