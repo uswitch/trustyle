@@ -31,7 +31,9 @@ const TabLink: React.FC<TabLinkProps> = ({
     >
       <div
         sx={{
-          variant: isActive ? styles('isActive.container') : styles('container')
+          variant: isActive
+            ? makeStyles('isActive')('container')
+            : styles('container')
         }}
       >
         <div>
