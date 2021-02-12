@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.16.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.15.5...@uswitch/trustyle.broadband-deals-theme@1.16.0) (2021-02-11)
+
+
+### Bug Fixes
+
+* prettier issues ([c6f0ae9](https://github.com/uswitch/trustyle/commit/c6f0ae9))
+* refactor styles per percy ([6b3ade2](https://github.com/uswitch/trustyle/commit/6b3ade2))
+
+
+### Features
+
+* accordion legacy variant ([a8e6348](https://github.com/uswitch/trustyle/commit/a8e6348))
+
+
+
+
+
 ## [1.15.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.15.4...@uswitch/trustyle.broadband-deals-theme@1.15.5) (2020-10-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.broadband-deals-theme

@@ -1395,7 +1395,6 @@
               "opacity": 0.8
             }
           },
-
           "fields": {
             "display": "none",
             ">:first-child": {
@@ -1421,7 +1420,6 @@
               }
             }
           },
-
           "heading": {
             "opacity": 0.8,
             "display": "flex",
@@ -1430,7 +1428,6 @@
               "display": "none"
             }
           },
-
           "buttonWrapper": {
             "display": "none",
             "textAlign": "left",
@@ -2011,8 +2008,9 @@
     },
     "accordion": {
       "base": {
-        "marginTop": "sm",
-        "marginBottom": "sm",
+        "wrapper": {
+          "marginY": "sm"
+        },
         "title": {
           "marginTop": "0",
           "marginBottom": "xs"
@@ -2020,8 +2018,7 @@
         "content": {
           "marginBottom": "xs"
         },
-        "button": {
-          "padding": "0",
+        "btn": {
           "paddingTop": 10,
           "paddingBottom": 10,
           "bg": "transparent",
@@ -2038,28 +2035,34 @@
           "width": "100%"
         },
         "caret": {
-          "color": "plum"
-        }
-      },
-      "variants": {
+          "color": "plum",
+          "marginBottom": "xs"
+        },
         "isActive": {
-          "button": {
-            "variant": "compounds.accordion.base.button"
+          "wrapper": {
+            "variant": "compounds.accordion.base.wrapper"
+          },
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
           },
           "caret": {
             "color": "fuschia"
           }
-        },
+        }
+      },
+      "variants": {
         "titleIcon": {
           "marginRight": "13px",
           "height": 36,
           "width": 32
         },
         "eligibility-criteria": {
-          "variant": "compounds.accordion.base",
-          "backgroundColor": "grey-05",
-          "color": "grey-80",
-          "fontSize": "md",
+          "wrapper": {
+            "variant": "compounds.accordion.base.wrapper",
+            "backgroundColor": "grey-05",
+            "color": "grey-80",
+            "fontSize": "md"
+          },
           "title": {
             "textAlign": "center",
             "flex": "none",
@@ -2067,22 +2070,32 @@
             "fontSize": ["xs", "md"],
             "color": ["grey-70", "grey-80"]
           },
-          "button": {
-            "variant": "compounds.accordion.base.button",
+          "btn": {
+            "variant": "compounds.accordion.base.btn",
             "justifyContent": "center",
             "py": ["xs", "md"],
             "mb": ["xxs", 0],
             "borderTopColor": "transparent"
+          },
+          "isActive": {
+            "wrapper": {
+              "variant": "compounds.accordion.variants.eligibility-criteria.wrapper"
+            },
+            "btn": {
+              "variant": "compounds.accordion.variants.eligibility-criteria.btn"
+            }
           }
         },
         "eligibility-criteria-redesign": {
-          "variant": "compounds.accordion.base",
-          "backgroundColor": ["grey-10", "grey-05"],
-          "color": "grey-80",
-          "fontSize": "md",
-          "borderBottom": ["2px dashed", "none"],
-          "borderBottomColor": "grey-40",
-          "marginTop": [0, "xs"],
+          "wrapper": {
+            "variant": "compounds.accordion.base.wrapper",
+            "backgroundColor": ["grey-10", "grey-05"],
+            "color": "grey-80",
+            "fontSize": "md",
+            "borderBottom": ["2px dashed", "none"],
+            "borderBottomColor": "grey-40",
+            "marginTop": [0, "xs"]
+          },
           "title": {
             "textAlign": "center",
             "flex": "none",
@@ -2091,17 +2104,125 @@
             "color": ["button-secondary", "grey-80"],
             "fontWeight": ["base", "bold"]
           },
-          "button": {
-            "variant": "compounds.accordion.base.button",
+          "btn": {
+            "variant": "compounds.accordion.base.btn",
             "justifyContent": "center",
             "pt": ["12px", "md"],
             "pb": ["xxs", "md"],
             "borderTop": "none"
+          },
+          "isActive": {
+            "wrapper": {
+              "variant": "compounds.accordion.variants.eligibility-criteria-redesign.wrapper"
+            },
+            "btn": {
+              "variant": "compounds.accordion.variants.eligibility-criteria-redesign.btn"
+            }
+          }
+        },
+        "legacy": {
+          "wrapper": {
+            "variant": "compounds.accordion.base.wrapper",
+            "bg": "grey-0"
+          },
+          "title": {
+            "padding": "10px 15px"
+          },
+          "btn": {
+            "variant": "compounds.accordion.base.btn",
+            "borderTop": "none",
+            "borderRadius": "5px",
+            "boxShadow": "0 2px 1px rgb(0 0 0 / 20%)",
+            "padding": 0
+          },
+          "caret": {
+            "paddingY": "13px",
+            "paddingX": "14px",
+            "backgroundColor": "fuschia",
+            "borderRadius": "0 3px 3px 0"
+          },
+          "content": {
+            "variant": "compounds.accordion.base.content",
+            "padding": "0 15px",
+            "bg": "#eaeced",
+            "ul": {
+              "list-style": "none",
+              "padding": 0,
+              "a": {
+                "textDecoration": "none",
+                "padding": "0 10px 0 15px",
+                "display": "block",
+                "color": "#4c4c4c"
+              },
+              "a:hover": {
+                "color": "grey-0",
+                "bg": "fuschia"
+              },
+              "li::before": {
+                "content": "none"
+              },
+              "li": {
+                "marginBottom": "sm"
+              }
+            },
+            "p": {
+              "color": "#858f95",
+              "padding-top": "10px"
+            },
+            "a": {
+              "display": "block"
+            },
+            "> span > a": {
+              "marginTop": "md"
+            }
+          },
+          "isActive": {
+            "wrapper": {
+              "variant": "compounds.accordion.variants.legacy.wrapper"
+            },
+            "btn": {
+              "variant": "compounds.accordion.variants.legacy.btn",
+              "borderRadius": "5px 5px 0 0",
+              "boxShadow": "none"
+            }
+          }
+        },
+        "true-speeds": {
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "content": {
+            "variant": "compounds.accordion.base.content"
+          },
+          "isActive": {
+            "btn": {
+              "variant": "compounds.accordion.variants.true-speeds.btn"
+            }
+          }
+        },
+        "reverse": {
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "content": {
+            "variant": "compounds.accordion.base.content"
+          },
+          "isActive": {
+            "btn": {
+              "variant": "compounds.accordion.variants.reverse.btn"
+            }
           }
         }
       }
     },
     "side-nav": {
+      "accordion": {
+        "marginY": 0,
+        "button": {
+          "paddingX": 0,
+          "paddingBottom": 0
+        }
+      },
       "internalLinkList": {
         "listStyle": "none",
         "paddingLeft": 0,
@@ -2318,7 +2439,6 @@
               "compounds.card.variants.horizontal.h3"
             ]
           },
-
           "content": {
             "variant": [
               "compounds.card.variants.vertical.content",
