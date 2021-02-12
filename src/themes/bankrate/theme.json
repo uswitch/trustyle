@@ -1226,7 +1226,7 @@
                 "color": "dark-blue"
               }
             }
-          }, 
+          },
           "minimized": {
             "variant": "elements.navigation.base.nav-item.base",
             ":first-of-type": {
