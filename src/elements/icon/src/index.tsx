@@ -27,6 +27,7 @@ import { FilledArrow } from './filled-arrow'
 import { Filters } from './filters'
 import { Four } from './four'
 import { GasElectricity } from './gas-electricity'
+import { HamburgerSimple } from './hamburger-simple'
 import { Home } from './home'
 import { Info } from './info'
 import { Information } from './information'
@@ -84,6 +85,7 @@ export type Glyph =
   | 'filters'
   | 'four'
   | 'gas-electricity'
+  | 'hamburger-simple'
   | 'home'
   | 'info'
   | 'information'
@@ -120,7 +122,7 @@ export type Glyph =
 
 export type Direction = 'up' | 'down' | 'left' | 'right'
 
-interface Props {
+interface Props extends React.SVGProps<SVGSVGElement> {
   color: string
   direction?: Direction
   glyph: Glyph
@@ -135,7 +137,8 @@ export const Icon: React.FC<Props> = ({
   color,
   direction = 'up',
   glyph,
-  size
+  size,
+  ...props
 }) => {
   switch (glyph) {
     case 'arrow':
@@ -154,7 +157,9 @@ export const Icon: React.FC<Props> = ({
     case 'car':
       return <Car color={color} size={size} />
     case 'caret':
-      return <Caret color={color} direction={direction} size={size} />
+      return (
+        <Caret color={color} direction={direction} size={size} {...props} />
+      )
     case 'caretFinal':
       return <CaretFinal color={color} direction={direction} size={size} />
     case 'check':
@@ -187,6 +192,8 @@ export const Icon: React.FC<Props> = ({
       return <Four color={color} size={size} />
     case 'gas-electricity':
       return <GasElectricity color={color} size={size} />
+    case 'hamburger-simple':
+      return <HamburgerSimple color={color} size={size} />
     case 'home':
       return <Home color={color} size={size} />
     case 'info':
