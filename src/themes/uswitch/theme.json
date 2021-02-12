@@ -2885,10 +2885,12 @@
     "accordion": {
       "iconOpen": "minus",
       "iconClosed": "plus",
-      "borderBottom": "1px solid #C4C4C4",
       "base": {
         "mb": 72,
-        "title": {
+        "wrapper": {
+          "borderBottom": "1px solid #C4C4C4"
+        },
+        "groupTitle": {
           "marginTop": "0",
           "mb": "sm",
           "fontFamily": "heading",
@@ -2907,7 +2909,7 @@
             "mt": "xs"
           }
         },
-        "button": {
+        "btn": {
           "padding": "0",
           "paddingY": [20, 32, 32],
           "bg": "transparent",
@@ -2925,26 +2927,35 @@
         },
         "caret": {
           "color": "primary"
-        }
-      },
-      "variants": {
+        },
         "isActive": {
-          "button": {
-            "variant": "compounds.accordion.base.button",
+          "btn": {
+            "variant": "compounds.accordion.base.btn",
             "borderWidth": "0 0 0 0"
           },
           "caret": {
             "variant": "compounds.accordion.base.caret",
             "color": "primary"
           }
-        },
+        }
+      },
+      "variants": {
         "titleIcon": {
           "marginRight": "13px",
           "height": 36,
           "width": 32
         },
         "true-speeds": {
-          "border": "2px solid #2AAA5B",
+          "wrapper": {
+            "variant": "compounds.accordion.base.wrapper",
+            "border": "2px solid #2AAA5B"
+          },
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "content": {
+            "variant": "compounds.accordion.base.content"
+          },
           "title": {
             "fontSize": ["xs", "sm", "sm"],
             "lineHeight": "sm",
@@ -2956,15 +2967,27 @@
           },
           "caret": {
             "marginRight": "xs"
+          },
+          "isActive": {
+            "wrapper": {
+              "variant": "compounds.accordion.variants.true-speeds.wrapper"
+            },
+            "btn": {
+              "variant": "compounds.accordion.variants.true-speeds.btn"
+            }
           }
         },
         "eligibility-criteria-redesign": {
           "variant": "compounds.accordion.base",
-          "backgroundColor": ["grey-10", "grey-05"],
-          "marginBottom": 15,
-          "color": "grey-80",
-          "fontSize": "xs",
-          "marginTop": "md",
+          "wrapper": {
+            "variant": "compounds.accordion.base.wrapper",
+            "backgroundColor": ["grey-10", "grey-05"],
+            "marginBottom": 15,
+            "color": "grey-80",
+            "fontSize": "xs",
+            "marginTop": "md",
+            "borderBottom": "none"
+          },
           "title": {
             "textAlign": "center",
             "flex": "none",
@@ -2973,18 +2996,31 @@
             "color": "primary",
             "fontWeight": "bold"
           },
-          "button": {
-            "variant": "compounds.accordion.base.button",
+          "btn": {
+            "variant": "compounds.accordion.base.btn",
             "justifyContent": "center",
             "py": "12px !important",
             "borderTop": "none",
             "border": 0
+          },
+          "isActive": {
+            "wrapper": {
+              "variant": "compounds.accordion.variants.eligibility-criteria-redesign.wrapper"
+            },
+            "btn": {
+              "variant": "compounds.accordion.variants.eligibility-criteria-redesign.btn"
+            }
           }
         },
         "reverse": {
-          "display": "flex",
-          "flexFlow": "column",
-          "& > button": {
+          "wrapper": {
+            "variant": "compounds.accordion.base.wrapper",
+            "display": "flex",
+            "flexFlow": "column",
+            "borderBottom": "none"
+          },
+          "btn": {
+            "variant": "compounds.accordion.base.btn",
             "order": 2,
             "display": "block",
             "borderWidth": "1px 0 0 0",
@@ -3000,6 +3036,25 @@
             "marginTop": "xs",
             "svg": {
               "display": "inline-block"
+            }
+          },
+          "isActive": {
+            "wrapper": {
+              "variant": "compounds.accordion.variants.reverse.wrapper"
+            },
+            "btn": {
+              "variant": "compounds.accordion.variants.reverse.btn"
+            }
+          }
+        },
+        "eligibility-criteria": {
+          "variant": "compounds.accordion.base",
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "isActive": {
+            "btn": {
+              "variant": "compounds.accordion.variants.eligibility-criteria.btn"
             }
           }
         }

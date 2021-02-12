@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.24.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.12...@uswitch/trustyle.bankrate-theme@2.24.0) (2021-02-11)
+
+
+### Bug Fixes
+
+* refactor styles per percy ([6b3ade2](https://github.com/uswitch/trustyle/commit/6b3ade2))
+
+
+### Features
+
+* accordion legacy variant ([a8e6348](https://github.com/uswitch/trustyle/commit/a8e6348))
+
+
+
+
+
 ## [2.23.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.11...@uswitch/trustyle.bankrate-theme@2.23.12) (2021-02-05)
 
 

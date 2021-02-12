@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.43.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.42.0...@uswitch/trustyle.money-theme@1.43.0) (2021-02-11)
+
+
+### Bug Fixes
+
+* caret and content styles ([328940c](https://github.com/uswitch/trustyle/commit/328940c))
+* prettier issues ([c6f0ae9](https://github.com/uswitch/trustyle/commit/c6f0ae9))
+* refactor styles for buttons inside accordion ([a642d18](https://github.com/uswitch/trustyle/commit/a642d18))
+* refactor styles per percy ([6b3ade2](https://github.com/uswitch/trustyle/commit/6b3ade2))
+* side-nav accordion ([8a33d71](https://github.com/uswitch/trustyle/commit/8a33d71))
+* styles ([a01034c](https://github.com/uswitch/trustyle/commit/a01034c))
+
+
+### Features
+
+* accordion legacy variant ([a8e6348](https://github.com/uswitch/trustyle/commit/a8e6348))
+
+
+
+
+
 # [1.42.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.41.2...@uswitch/trustyle.money-theme@1.42.0) (2021-01-29)
 
 
