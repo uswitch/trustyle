@@ -94,7 +94,8 @@ export const Tabs: React.FC<TabsProps> = ({ children, className, variant }) => {
   const [showLeftBorder, setShowLeftBorder] = useState(false)
   const [showRightBorder, setShowRightBorder] = useState(false)
   const [scrollEnd, setScrollEnd] = useState(false)
-  const styles = makeStyles(variant)
+  const styles = (style: string) =>
+    variant ? makeStyles(variant)(style) : makeStyles(style)()
 
   useEffect(() => {
     setPadding(tabs?.current?.offsetHeight || 0)
@@ -189,7 +190,7 @@ export const Tabs: React.FC<TabsProps> = ({ children, className, variant }) => {
   return (
     <Container
       className={className}
-      sx={{ variant: makeStyles('containerPadding')() }}
+      sx={{ variant: styles('containerPadding') }}
     >
       <div
         ref={tabWrap}
@@ -198,14 +199,14 @@ export const Tabs: React.FC<TabsProps> = ({ children, className, variant }) => {
           paddingTop: `${padding}px`,
           position: 'relative',
           pointer: 'grab',
-          variant: makeStyles('borderBottom')(),
+          variant: styles('borderBottom'),
           '::after': {
             content: showRightBorder ? '""' : 'none',
-            variant: makeStyles('overflowBorderRight')()
+            variant: styles('overflowBorderRight')
           },
           '::before': {
             content: showLeftBorder ? '""' : 'none',
-            variant: makeStyles('overflowBorderLeft')()
+            variant: styles('overflowBorderLeft')
           }
         }}
       >
@@ -231,7 +232,7 @@ export const Tabs: React.FC<TabsProps> = ({ children, className, variant }) => {
             {React.Children.map(children, (child, index) => (
               <Col
                 sx={{
-                  variant: makeStyles('tabSpacing')()
+                  variant: styles('tabSpacing')
                 }}
                 key={index}
               >
