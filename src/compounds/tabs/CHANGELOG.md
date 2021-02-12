@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.tabs@1.0.10...@uswitch/trustyle.tabs@1.1.0) (2021-02-12)
+
+
+### Bug Fixes
+
+* isActive container styling ([fe9bb8d](https://github.com/uswitch/trustyle/commit/fe9bb8d))
+* simplify styling ([3645f8f](https://github.com/uswitch/trustyle/commit/3645f8f))
+* styles ([5905ae4](https://github.com/uswitch/trustyle/commit/5905ae4))
+
+
+### Features
+
+* finish mobile ([eb42d7f](https://github.com/uswitch/trustyle/commit/eb42d7f))
+
+
+
+
+
 ## [1.0.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.tabs@1.0.9...@uswitch/trustyle.tabs@1.0.10) (2021-01-20)
 
 **Note:** Version bump only for package @uswitch/trustyle.tabs

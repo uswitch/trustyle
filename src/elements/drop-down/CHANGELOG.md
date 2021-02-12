@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.drop-down@2.5.1...@uswitch/trustyle.drop-down@2.5.2) (2021-02-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.drop-down
+
+
+
+
+
 ## [2.5.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.drop-down@2.5.0...@uswitch/trustyle.drop-down@2.5.1) (2021-01-29)
 
 **Note:** Version bump only for package @uswitch/trustyle.drop-down
