@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.21.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.20.0...@uswitch/trustyle.icon@1.21.0) (2021-02-12)
+
+
+### Features
+
+* finish mobile ([eb42d7f](https://github.com/uswitch/trustyle/commit/eb42d7f))
+
+
+
+
+
 # [1.20.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.19.1...@uswitch/trustyle.icon@1.20.0) (2021-01-29)
 
 

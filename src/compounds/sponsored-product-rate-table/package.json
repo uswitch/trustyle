@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.sponsored-product-rate-table",
-  "version": "3.3.18",
+  "version": "3.3.19",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -24,6 +24,6 @@
     "@uswitch/trustyle.usp-tag": "^0.1.6"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.20.0"
+    "@uswitch/trustyle.icon": "^1.21.0"
   }
 }
