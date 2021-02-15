@@ -1647,7 +1647,7 @@
         "pb": 82
       },
       "variants": {
-        "provider": {
+        "secondary": {
           "wrapper": {
             "position": "relative",
             "overflow": "visible",
@@ -1668,15 +1668,16 @@
             "fontFamily": "heading",
             "> div": {
               ":last-of-type": {
-                "display": ["flex", null, "block"],
-                "flexDirection": "column",
+                "display": "flex",
+                "flexDirection": ["column", "column", "row"],
                 "justifyContent": "center",
-                "alignItems": "center"
+                "alignItems": ["center", null, "flex-start"]
               }
             }
           },
           "breadcrumbs": {
             "mb": "md",
+            "mx": "7.5px",
             "div": {
               "display": "block"
             }
@@ -1745,7 +1746,8 @@
           "image": {
             "position": "initial",
             "width": 184,
-            "mb": ["sm", null, 0],
+            "mb": ["sm", null, "lg"],
+            "mx": "7.5px",
             "img": {
               "position": ["initial", "initial", "absolute"]
             }

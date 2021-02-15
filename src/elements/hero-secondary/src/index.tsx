@@ -15,7 +15,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   imageOnTablet?: boolean
   customBgColor?: string
   className?: string
-  variant?: 'secondary'
+  variant?: string
 }
 
 const makeStyles = (variant?: string) => (element?: string) =>
@@ -23,7 +23,9 @@ const makeStyles = (variant?: string) => (element?: string) =>
     element ? `.${element}` : ''
   }`
 
-const DefaultContainer: React.FC = ({ children }) => (
+const DefaultContainer: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
+  children
+}) => (
   <div sx={{ maxWidth: 1024, margin: '0 auto', paddingX: 10 }}>{children}</div>
 )
 
@@ -35,10 +37,9 @@ const HeroSecondary: React.FC<Props> = ({
   imageOnTablet = true,
   customBgColor = '',
   children,
-  variant,
+  variant = 'secondary',
   className
 }) => {
-  console.log('test')
   const { theme }: any = useThemeUI()
   const styles = makeStyles(variant)
   const breadcrumbVariant = get(theme, styles('breadcrumbs.variant'))
@@ -69,29 +70,27 @@ const HeroSecondary: React.FC<Props> = ({
 
           <div
             sx={{
-              position: 'relative',
               paddingTop: ['sm', 'xxl'],
               paddingBottom: ['sm', 'xxl'],
+              display: 'flex',
+              flexDirection: ['row', 'column'],
               variant: styles('content')
             }}
           >
-            <div
-              sx={{
-                position: 'absolute',
-                left: [0, '45%'],
-                right: 0,
-                top: 0,
-                bottom: 0,
-                display: [
-                  imageOnMobile ? 'block' : 'none',
-                  imageOnTablet ? 'block' : 'none',
-                  'block'
-                ],
-                variant: styles('image')
-              }}
-            >
-              {image && <img src={image} role="presentation" />}
-            </div>
+            {image && (
+              <img
+                src={image}
+                role="presentation"
+                sx={{
+                  display: [
+                    imageOnMobile ? 'block' : 'none',
+                    imageOnTablet ? 'block' : 'none',
+                    'block'
+                  ],
+                  variant: styles('image')
+                }}
+              />
+            )}
 
             {children}
           </div>
