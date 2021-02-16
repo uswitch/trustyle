@@ -16,24 +16,27 @@ const SaveForLater: React.FC<Props> = ({
   size = 40
 }) => {
   return (
-    <button
-      sx={{ backgroundColor: 'transparent', outline: '0', border: '0' }}
-      className={className}
-      onClick={onClick}
-    >
-      <div
+    <label sx={{ display: 'block' }}>
+      <input
         sx={{
-          position: 'absolute',
-          width: '50px'
+          marginLeft: '-9000px',
+          appearance: 'none',
+          position: 'absolute'
         }}
+        type="checkbox"
+      />
+      <span
+        sx={{ backgroundColor: 'transparent', outline: '0', border: '0' }}
+        className={className}
+        onClick={onClick}
       >
         {checked ? (
           <Icon glyph="bookmark-filled" color="#91CA50" size={size} />
         ) : (
           <Icon glyph="bookmark" color="#575761" size={size} />
         )}
-      </div>
-    </button>
+      </span>
+    </label>
   )
 }
 
