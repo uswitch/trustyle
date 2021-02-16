@@ -3328,36 +3328,6 @@
             ]
           }
         },
-        "imageCallout": {
-          "display": "flex",
-          "mb": ["md", "md", "xl"],
-          "pb": ["sm", "sm", 0],
-          "heading": {
-            "a": {
-              "borderBottom": "none"
-            },
-            "pb": ["xxs", "xxs", "sm"]
-          },
-          "content": {
-            "p": {
-              "color": "grey-20",
-              "mb": 0,
-              "fontWeight": "bold",
-              "lineHeight": "sm"
-            }
-          },
-          "image": {
-            "mr": ["sm", "sm", "md"],
-            "borderBottom": "none",
-            "color": "white",
-            "img,svg": {
-              "filter": "invert(100%) sepia(0%) saturate(2%) hue-rotate(234deg) brightness(104%) contrast(101%)",
-              "width": "auto",
-              "height": [21, 28, 28],
-              "mt": [4, 3, 3]
-            }
-          }
-        },
         "provider": {
           "display": "flex",
           "position": "relative",
