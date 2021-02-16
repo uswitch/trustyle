@@ -216,193 +216,6 @@ export const CtaCell: React.FC<CtaCellProps> = ({
   )
 }
 
-interface MobileEligibilityProps
-  extends React.MapHTMLAttributes<HTMLDivElement> {
-  href?: string
-  onClickEligibility?: (addon?: object) => void
-  eligibilityAddon?: object
-}
-
-const MobileEligibility: React.FC<MobileEligibilityProps> = ({
-  children,
-  className,
-  href,
-  onClickEligibility,
-  eligibilityAddon
-}) => {
-  const [open, setOpen] = React.useState(false)
-  const onClick = () => {
-    onClickEligibility && onClickEligibility(eligibilityAddon)
-  }
-
-  return (
-    <div className={className} sx={{ display: ['block', 'none'] }}>
-      <div
-        sx={{
-          background: '#f2f3f4',
-          alignItems: 'center',
-          height: open ? 'auto' : '0px',
-          transition: 'height .4s ease-in-out',
-          fontSize: '14px',
-          overflow: 'hidden',
-          boxSizing: 'border-box',
-          display: ['block', 'none']
-        }}
-      >
-        <div
-          sx={{ padding: '15px 20px 20px', lineHeight: ['1.618em', 'inherit'] }}
-        >
-          <div
-            sx={{
-              fontSize: '14px',
-              color: '#858f94',
-              marginBottom: '5px',
-              textAlign: 'left',
-              fontWeight: 300
-            }}
-          >
-            Eligibility
-          </div>
-
-          <div
-            sx={{
-              background: '#fff'
-            }}
-          >
-            {children}
-          </div>
-        </div>
-
-        <CtaCell
-          styles={{
-            width: '-webkit-fill-available',
-            fontSize: '14px',
-            mx: '20px',
-            padding: '.9em 1.85em'
-          }}
-          href={href}
-          onClick={() => onClick()}
-        >
-          See Deal
-        </CtaCell>
-      </div>
-
-      <button
-        sx={{
-          background: '#f2f3f4',
-          border: 'none',
-          borderBottom: '1px dashed #b1b1b1',
-          width: '100%',
-          margin: 'auto',
-          padding: '8px',
-          lineHeight: '1.618em',
-          color: '#34454E',
-          display: ['flex', 'none'],
-          alignItems: 'center',
-          justifyContent: 'center',
-          fontSize: '13px',
-          boxSizing: 'border-box'
-        }}
-        onClick={() => setOpen(!open)}
-      >
-        <div sx={{ pr: '15px' }}>More information</div>
-        <Icon
-          color="#34454E"
-          glyph={'caret'}
-          direction={open ? 'up' : 'down'}
-          size={10}
-        />
-      </button>
-    </div>
-  )
-}
-
-const DesktopEligibility: React.FC<React.HTMLAttributes<HTMLElement>> = ({
-  className,
-  children
-}) => {
-  return (
-    <div
-      className={className}
-      sx={{
-        position: 'absolute',
-        top: '100%',
-        width: '400px',
-        left: '50%',
-        marginLeft: '-200px',
-        marginTop: '10px',
-        border: '1px solid #000',
-        padding: '5px',
-        zIndex: 1,
-        backgroundColor: 'white',
-        '::before': {
-          bottom: '100%',
-          left: '50%',
-          border: 'solid transparent',
-          content: '""',
-          height: '0',
-          width: '0',
-          position: 'absolute',
-          pointerEvents: 'none',
-          borderColor: 'rgba(255, 255, 255, 0)',
-          borderBottomColor: '#fff',
-          borderWidth: '10px',
-          marginLeft: '-10px',
-          zIndex: 1
-        },
-        '::after': {
-          bottom: '100%',
-          left: '50%',
-          border: 'solid transparent',
-          content: '""',
-          height: '0',
-          width: '0',
-          position: 'absolute',
-          pointerEvents: 'none',
-          borderColor: 'rgba(0, 0, 0, 0)',
-          borderBottomColor: '#000',
-          borderWidth: '11px',
-          marginLeft: '-11px'
-        }
-      }}
-    >
-      <div
-        sx={{
-          color: '#924a8b',
-          fontSize: '18px',
-          px: '5px',
-          py: '5px',
-          fontWeight: 400,
-          fontFamily: 'Open Sans,Arial,sans-serif'
-        }}
-      >
-        Before you continue...
-      </div>
-      <div
-        sx={{
-          color: '#333',
-          fontSize: '13px',
-          px: '5px',
-          pb: '10px',
-          fontFamily: 'Open Sans,Arial,sans-serif'
-        }}
-      >
-        Please make sure you meet the following criteria:
-      </div>
-      <div
-        sx={{
-          padding: '5px',
-          '>:nth-child(odd)': {
-            background: '#f2f3f4'
-          }
-        }}
-      >
-        {children}
-      </div>
-    </div>
-  )
-}
-
 interface EligibilityContentRowProps
   extends React.HTMLAttributes<HTMLDivElement> {
   label?: string
@@ -423,11 +236,10 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
       value === 'true'
     ) {
       return <Icon glyph="check" color={'#6bab51'} size={18} />
+    } else {
+      return value
     }
-
-    return value
   }
-
   return (
     <div
       key={key}
@@ -481,26 +293,92 @@ const Eligibility: React.FC<EligibilityProps> = ({
   onClickEligibility,
   eligibilityAddon
 }) => {
+  const [open, setOpen] = React.useState(false)
+  const onClick = () => {
+    onClickEligibility && onClickEligibility(eligibilityAddon)
+  }
+
   return (
     <div>
-      <MobileEligibility
-        sx={{ display: ['block', 'none'] }}
-        href={clickableRow}
-        onClickEligibility={onClickEligibility}
-        eligibilityAddon={eligibilityAddon}
-      >
-        {eligibilityContent.map(item => {
-          return item
-        })}
-      </MobileEligibility>
-      <DesktopEligibility className="desktop-eligibility">
-        {eligibilityContent.map(item => {
-          return item
-        })}
-      </DesktopEligibility>
+      <div sx={{ display: 'block' }}>
+        <div
+          sx={{
+            background: '#f2f3f4',
+            alignItems: 'center',
+            height: open ? 'auto' : '0px',
+            transition: 'height .4s ease-in-out',
+            fontSize: '14px',
+            overflow: 'hidden',
+            boxSizing: 'border-box',
+            display: 'block'
+          }}
+        >
+          <div
+            sx={{
+              padding: '15px 20px 20px',
+              lineHeight: ['1.618em', 'inherit']
+            }}
+          >
+            <div
+              sx={{
+                fontSize: '14px',
+                color: '#858f94',
+                marginBottom: '5px',
+                textAlign: 'left',
+                fontWeight: 300
+              }}
+            >
+              Eligibility
+            </div>
+
+            <div sx={{ background: '#fff' }}>{eligibilityContent}</div>
+          </div>
+
+          <CtaCell
+            styles={{
+              width: '-webkit-fill-available',
+              fontSize: '14px',
+              mx: '20px',
+              padding: '.9em 1.85em'
+            }}
+            href={clickableRow}
+            onClick={onClick}
+          >
+            See Deal
+          </CtaCell>
+        </div>
+
+        <button
+          sx={{
+            background: '#f2f3f4',
+            border: 'none',
+            borderBottom: '1px dashed #b1b1b1',
+            width: '100%',
+            margin: 'auto',
+            padding: '8px',
+            lineHeight: '1.618em',
+            color: '#34454E',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: '13px',
+            boxSizing: 'border-box'
+          }}
+          onClick={() => setOpen(!open)}
+        >
+          <div sx={{ pr: '15px' }}>More information</div>
+          <Icon
+            color="#34454E"
+            glyph={'caret'}
+            direction={open ? 'up' : 'down'}
+            size={10}
+          />
+        </button>
+      </div>
     </div>
   )
 }
+
 interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   representativeExample: string
   repExampleLabel?: string
@@ -538,13 +416,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         ':first-of-type': {
           marginTop: '10px'
         },
-        opacity: disabled ? '0.4' : 1,
-        '.desktop-eligibility': {
-          display: 'none'
-        },
-        ':hover .desktop-eligibility': {
-          display: ['none', 'block']
-        }
+        opacity: disabled ? '0.4' : 1
       }}
       {...props}
     >
