@@ -3948,7 +3948,7 @@
             "height": [null, "100%"],
             "mb": [35, 45, 0],
             "pb": [0],
-            "borderBottom": ["1px solid #C4C4C4", "1px solid #C4C4C4", "none"],
+            "borderBottom": ["1px solid", "1px solid", "none"],
             "borderBottomColor": ["border-medium-grey", "border-medium-grey", null]
           },
           "content": {
