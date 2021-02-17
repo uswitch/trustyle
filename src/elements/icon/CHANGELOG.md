@@ -19,6 +19,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
+* add bookmark icons to the library
+
 * hide description and image in category heading module on mobile ([3af7477](https://github.com/uswitch/trustyle/commit/3af7477))
 
 
