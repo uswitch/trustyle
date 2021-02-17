@@ -3924,6 +3924,60 @@
         }
       },
       "variants": {
+        "borderBottomImageLeft": {
+          "wrapper": {
+            "pb": [74, 100],
+            "px": 0
+          },
+          "inner": {
+            "flexDirection": ["column", "column", "row"],
+            "alignItems": ["center", "center", "flex-start"],
+            "px": 0,
+            "borderBottom": [null, null, "1px solid #C4C4C4"]
+          },
+          "colorBlock": {
+            "display": "none"
+          },
+          "image-container": {
+            "alignSelf": ["auto", "flex-end"],
+            "mt": [-40, 0, 20],
+            "px": 0,
+            "pt": [45, 0],
+            "height": [null, "100%"],
+            "mb": [35, 45, 0],
+            "pb": [0],
+            "borderBottom": ["1px solid #C4C4C4", "1px solid #C4C4C4", "none"]
+          },
+          "content": {
+            "alignSelf": "center",
+            "px": [20, 0, 0],
+            "textAlign": "left",
+            "maxWidth": ["100%", null, "grid.md.8"],
+            "width": "100%",
+            "flexBasis": [null, "45%"],
+            "h4": {
+              "width": "100%"
+            },
+            "h2": {
+              "fontSize": [32, 40],
+              "mb": 72
+            },
+            "span > h3": {
+              "fontSize": [28, 28],
+              "mb": 72
+            },
+            "p": {
+              "color": "grey-60"
+            }
+          },
+          "image": {
+            "mt": [0],
+            "mb": 0,
+            "maxWidth": ["100%", "100%"],
+            "imgixWidth": 768,
+            "height": ["auto, 100%"]
+          }
+        },
         "solidColorImageLeft": {
           "wrapper": {
             "pb": [74, 100],
@@ -3945,7 +3999,10 @@
             "mt": [null, 0, 20],
             "px": 0,
             "py": [45, 0],
-            "height": [null, "100%"]
+            "height": [null, "100%"],
+            "img": {
+              
+            }
           },
           "content": {
             "alignSelf": "center",
