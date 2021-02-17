@@ -11,7 +11,7 @@ interface Props extends React.HTMLAttributes<any> {
 
 const SaveForLater: React.FC<Props> = ({
   checked,
-  onClick,
+  onChange,
   className,
   size = 40
 }) => {
@@ -23,19 +23,20 @@ const SaveForLater: React.FC<Props> = ({
           appearance: 'none',
           position: 'absolute'
         }}
+        checked={checked}
+        onChange={onChange}
         type="checkbox"
       />
-      <span
+      <div
         sx={{ backgroundColor: 'transparent', outline: '0', border: '0' }}
         className={className}
-        onClick={onClick}
       >
         {checked ? (
           <Icon glyph="bookmark-filled" color="#91CA50" size={size} />
         ) : (
           <Icon glyph="bookmark" color="#575761" size={size} />
         )}
-      </span>
+      </div>
     </label>
   )
 }

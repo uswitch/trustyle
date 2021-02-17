@@ -13,7 +13,12 @@ export const ExampleWithKnobs = () => {
 
   return (
     <div>
-      <SaveForLater checked={checked} onClick={() => setChecked(!checked)} />
+      <SaveForLater
+        checked={checked}
+        onChange={() => {
+          setChecked(!checked)
+        }}
+      />
     </div>
   )
 }
