@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.35.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.35.0...@uswitch/trustyle.uswitch-theme@2.35.1) (2021-02-17)
+
+
+### Bug Fixes
+
+* Removed unused property from theme.json ([297e47a](https://github.com/uswitch/trustyle/commit/297e47a))
+* Run Prettier ([a7ccf2e](https://github.com/uswitch/trustyle/commit/a7ccf2e))
+* typo ([3fe16d8](https://github.com/uswitch/trustyle/commit/3fe16d8))
+* Use named colour rather than string (thanks Phil) ([b311e17](https://github.com/uswitch/trustyle/commit/b311e17))
+
+
+
+
+
 # [2.35.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.34.6...@uswitch/trustyle.uswitch-theme@2.35.0) (2021-02-11)
 
 
