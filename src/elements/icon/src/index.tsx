@@ -8,6 +8,8 @@ import { ArrowCircle } from './arrow-circle'
 import { Bill } from './bill'
 import { Book } from './book'
 import { BookClosed } from './book-closed'
+import { Bookmark } from './bookmark'
+import { BookmarkFilled } from './bookmark-filled'
 import { Calendar } from './calendar'
 import { Caret } from './caret'
 import { Car } from './car'
@@ -66,6 +68,8 @@ export type Glyph =
   | 'bill'
   | 'book'
   | 'book-closed'
+  | 'bookmark'
+  | 'bookmark-filled'
   | 'calendar'
   | 'car'
   | 'caret'
@@ -151,6 +155,10 @@ export const Icon: React.FC<Props> = ({
       return <Book color={color} size={size} />
     case 'book-closed':
       return <BookClosed color={color} size={size} />
+    case 'bookmark':
+      return <Bookmark color={color} size={size} />
+    case 'bookmark-filled':
+      return <BookmarkFilled color={color} size={size} />
 
     case 'calendar':
       return <Calendar color={color} size={size} />
