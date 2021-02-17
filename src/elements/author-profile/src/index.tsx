@@ -9,7 +9,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   role: string
   authorImage?: React.ReactElement
   authorUrl: string
-  bio: string
+  bio: string | React.ReactElement
   email?: string
   twitterLink?: string
   linkedInLink?: string
