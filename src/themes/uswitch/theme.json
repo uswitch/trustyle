@@ -3949,7 +3949,11 @@
             "mb": [35, 45, 0],
             "pb": [0],
             "borderBottom": ["1px solid", "1px solid", "none"],
-            "borderBottomColor": ["border-medium-grey", "border-medium-grey", null]
+            "borderBottomColor": [
+              "border-medium-grey",
+              "border-medium-grey",
+              null
+            ]
           },
           "content": {
             "alignSelf": "center",
