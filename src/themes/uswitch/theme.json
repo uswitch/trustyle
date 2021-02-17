@@ -234,6 +234,7 @@
     "light-grey": "#F2F2F6",
     "light-grey-content": "#202020",
     "border-light-grey": "#E9E9EC",
+    "border-medium-grey": "#C4C4C4",
     "primary-yellow-100": "#FFD555",
     "primary-yellow-75": "#FFDF80",
     "primary-yellow-50": "#FFEAAA",
@@ -3330,36 +3331,6 @@
             ]
           }
         },
-        "imageCallout": {
-          "display": "flex",
-          "mb": ["md", "md", "xl"],
-          "pb": ["sm", "sm", 0],
-          "heading": {
-            "a": {
-              "borderBottom": "none"
-            },
-            "pb": ["xxs", "xxs", "sm"]
-          },
-          "content": {
-            "p": {
-              "color": "grey-20",
-              "mb": 0,
-              "fontWeight": "bold",
-              "lineHeight": "sm"
-            }
-          },
-          "image": {
-            "mr": ["sm", "sm", "md"],
-            "borderBottom": "none",
-            "color": "white",
-            "img,svg": {
-              "filter": "invert(100%) sepia(0%) saturate(2%) hue-rotate(234deg) brightness(104%) contrast(101%)",
-              "width": "auto",
-              "height": [21, 28, 28],
-              "mt": [4, 3, 3]
-            }
-          }
-        },
         "provider": {
           "display": "flex",
           "position": "relative",
@@ -3956,6 +3927,66 @@
         }
       },
       "variants": {
+        "borderBottomImageLeft": {
+          "wrapper": {
+            "pb": [74, 100],
+            "px": 0
+          },
+          "inner": {
+            "flexDirection": ["column", "column", "row"],
+            "alignItems": ["center", "center", "flex-start"],
+            "px": 0,
+            "borderBottom": [null, null, "1px solid"],
+            "borderBottomColor": [null, null, "border-medium-grey"]
+          },
+          "colorBlock": {
+            "display": "none"
+          },
+          "image-container": {
+            "alignSelf": ["auto", "flex-end"],
+            "mt": [-40, 0, 20],
+            "px": 0,
+            "pt": [45, 0],
+            "height": [null, "100%"],
+            "mb": [35, 45, 0],
+            "pb": [0],
+            "borderBottom": ["1px solid", "1px solid", "none"],
+            "borderBottomColor": [
+              "border-medium-grey",
+              "border-medium-grey",
+              null
+            ]
+          },
+          "content": {
+            "alignSelf": "center",
+            "px": [20, 0, 0],
+            "textAlign": "left",
+            "maxWidth": ["100%", null, "grid.md.8"],
+            "width": "100%",
+            "flexBasis": [null, "45%"],
+            "h4": {
+              "width": "100%"
+            },
+            "h2": {
+              "fontSize": [32, 40],
+              "mb": 72
+            },
+            "span > h3": {
+              "fontSize": [28, 28],
+              "mb": 72
+            },
+            "p": {
+              "color": "grey-60"
+            }
+          },
+          "image": {
+            "mt": [0],
+            "mb": 0,
+            "maxWidth": ["100%", "100%"],
+            "imgixWidth": 768,
+            "height": ["auto, 100%"]
+          }
+        },
         "solidColorImageLeft": {
           "wrapper": {
             "pb": [74, 100],
