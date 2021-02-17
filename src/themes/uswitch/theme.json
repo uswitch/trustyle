@@ -234,6 +234,7 @@
     "light-grey": "#F2F2F6",
     "light-grey-content": "#202020",
     "border-light-grey": "#E9E9EC",
+    "border-medium-grey": "#C4C4C4",
     "primary-yellow-100": "#FFD555",
     "primary-yellow-75": "#FFDF80",
     "primary-yellow-50": "#FFEAAA",
@@ -3933,7 +3934,8 @@
             "flexDirection": ["column", "column", "row"],
             "alignItems": ["center", "center", "flex-start"],
             "px": 0,
-            "borderBottom": [null, null, "1px solid #C4C4C4"]
+            "borderBottom": [null, null, "1px solid"],
+            "borderBottomColor": [null, null, "border-medium-grey"]
           },
           "colorBlock": {
             "display": "none"
@@ -3946,7 +3948,8 @@
             "height": [null, "100%"],
             "mb": [35, 45, 0],
             "pb": [0],
-            "borderBottom": ["1px solid #C4C4C4", "1px solid #C4C4C4", "none"]
+            "borderBottom": ["1px solid #C4C4C4", "1px solid #C4C4C4", "none"],
+            "borderBottomColor": ["border-medium-grey", "border-medium-grey", null]
           },
           "content": {
             "alignSelf": "center",
