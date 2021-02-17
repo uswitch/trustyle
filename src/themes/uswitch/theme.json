@@ -3999,10 +3999,7 @@
             "mt": [null, 0, 20],
             "px": 0,
             "py": [45, 0],
-            "height": [null, "100%"],
-            "img": {
-              
-            }
+            "height": [null, "100%"]
           },
           "content": {
             "alignSelf": "center",
