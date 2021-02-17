@@ -201,7 +201,6 @@ export const CtaCell: React.FC<CtaCellProps> = ({
         flex: 0,
         flexBasis: 'auto',
         margin: 'auto',
-        marginLeft: ['auto', '15px'],
         visibility: disabled && 'hidden'
       }}
     >
@@ -253,8 +252,8 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
       <label
         sx={{
           width: ['40%', '75%'],
-          borderBottom: ['2px solid #f7f7f7', 'none'],
-          borderRight: ['1px solid #f7f7f7', 'none'],
+          borderBottom: '2px solid #f7f7f7',
+          borderRight: '1px solid #f7f7f7',
           fontFamily: 'Open Sans,Arial,sans-serif',
           fontSize: '13px',
           color: '#333',
@@ -267,7 +266,7 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
       <div
         sx={{
           width: ['60%', '25%'],
-          borderBottom: ['2px solid #f7f7f7', 'none'],
+          borderBottom: '2px solid #f7f7f7',
           color: '#924a8b',
           fontWeight: 600,
           padding: '5px 10px',
@@ -299,8 +298,8 @@ const Eligibility: React.FC<EligibilityProps> = ({
   }
 
   return (
-    <div>
-      <div sx={{ display: 'block' }}>
+    <div sx={{ background: '#f2f3f4' }}>
+      <div sx={{ display: 'block', maxWidth: '420px', margin: 'auto' }}>
         <div
           sx={{
             background: '#f2f3f4',
@@ -334,25 +333,25 @@ const Eligibility: React.FC<EligibilityProps> = ({
             <div sx={{ background: '#fff' }}>{eligibilityContent}</div>
           </div>
 
-          <CtaCell
-            styles={{
-              width: '-webkit-fill-available',
-              fontSize: '14px',
-              mx: '20px',
-              padding: '.9em 1.85em'
-            }}
-            href={clickableRow}
-            onClick={onClick}
-          >
-            See Deal
-          </CtaCell>
+          <div sx={{ padding: ['15px 20px 20px', '0 20px'] }}>
+            <CtaCell
+              styles={{
+                width: '100%',
+                fontSize: '14px'
+              }}
+              href={clickableRow}
+              onClick={onClick}
+            >
+              See Deal
+            </CtaCell>
+          </div>
         </div>
 
         <button
           sx={{
             background: '#f2f3f4',
             border: 'none',
-            borderBottom: '1px dashed #b1b1b1',
+            borderBottom: ['1px dashed #b1b1b1', 'none'],
             width: '100%',
             margin: 'auto',
             padding: '8px',
@@ -362,7 +361,8 @@ const Eligibility: React.FC<EligibilityProps> = ({
             alignItems: 'center',
             justifyContent: 'center',
             fontSize: '13px',
-            boxSizing: 'border-box'
+            boxSizing: 'border-box',
+            outline: 'none'
           }}
           onClick={() => setOpen(!open)}
         >
