@@ -168,6 +168,7 @@ interface CtaCellProps extends React.HTMLAttributes<HTMLDivElement> {
   href?: string
   onClick?: (event?: any) => void
   disabled?: boolean
+  variant?: string
 }
 
 export const CtaCell: React.FC<CtaCellProps> = ({
@@ -175,7 +176,8 @@ export const CtaCell: React.FC<CtaCellProps> = ({
   styles,
   href,
   onClick,
-  disabled
+  disabled,
+  variant
 }) => {
   const props = {
     variant: 'primary',
@@ -201,6 +203,7 @@ export const CtaCell: React.FC<CtaCellProps> = ({
         flex: 0,
         flexBasis: 'auto',
         margin: 'auto',
+        marginLeft: variant === 'eligibility' ? 0 : ['auto', '15px'],
         visibility: disabled && 'hidden'
       }}
     >
@@ -341,6 +344,7 @@ const Eligibility: React.FC<EligibilityProps> = ({
               }}
               href={clickableRow}
               onClick={onClick}
+              variant="eligibility"
             >
               See Deal
             </CtaCell>
