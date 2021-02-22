@@ -389,7 +389,7 @@
         "fontWeight": "bold"
       },
       "updatedAt": { "variant": "elements.author.dates", "mb": "sm" },
-      "withDates": {
+      "articleDates": {
         "imageLink": {
           "variant": "elements.author.imageLink",
           "width": [48, 56],
@@ -1683,7 +1683,7 @@
       },
       "position": "relative",
       "color": "white",
-      "h1,h2,h3,h4,h5,h6,p": {
+      "h1,h2,h3,h4,h5,h6,p,a": {
         "color": "white"
       },
       "height": 420,
