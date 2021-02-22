@@ -3,10 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.22.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.21.0...@uswitch/trustyle.icon@1.22.0) (2021-02-17)
+
+
+### Features
+
+* save for later icon ([82a7011](https://github.com/uswitch/trustyle/commit/82a7011))
+
+
+
+
+
+# [1.21.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.20.0...@uswitch/trustyle.icon@1.21.0) (2021-02-12)
+
+
+### Features
+
+* finish mobile ([eb42d7f](https://github.com/uswitch/trustyle/commit/eb42d7f))
+
+
+
+
+
 # [1.20.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.19.1...@uswitch/trustyle.icon@1.20.0) (2021-01-29)
 
 
 ### Features
+
+* add bookmark icons to the library
 
 * hide description and image in category heading module on mobile ([3af7477](https://github.com/uswitch/trustyle/commit/3af7477))
 

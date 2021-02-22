@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.25.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.24.0...@uswitch/trustyle.bankrate-theme@2.25.0) (2021-02-12)
+
+
+### Bug Fixes
+
+* keep desktop nav dropdown in view ([2a8b0ba](https://github.com/uswitch/trustyle/commit/2a8b0ba))
+* refactor ([a11e9b8](https://github.com/uswitch/trustyle/commit/a11e9b8))
+
+
+### Features
+
+* finish mobile ([eb42d7f](https://github.com/uswitch/trustyle/commit/eb42d7f))
+
+
+
+
+
+# [2.24.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.12...@uswitch/trustyle.bankrate-theme@2.24.0) (2021-02-11)
+
+
+### Bug Fixes
+
+* refactor styles per percy ([6b3ade2](https://github.com/uswitch/trustyle/commit/6b3ade2))
+
+
+### Features
+
+* accordion legacy variant ([a8e6348](https://github.com/uswitch/trustyle/commit/a8e6348))
+
+
+
+
+
 ## [2.23.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.23.11...@uswitch/trustyle.bankrate-theme@2.23.12) (2021-02-05)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.12.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.11.6...@uswitch/trustyle.journey-theme@2.12.0) (2021-02-11)
+
+
+### Features
+
+* accordion legacy variant ([a8e6348](https://github.com/uswitch/trustyle/commit/a8e6348))
+
+
+
+
+
 ## [2.11.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.11.5...@uswitch/trustyle.journey-theme@2.11.6) (2020-11-25)
 
 

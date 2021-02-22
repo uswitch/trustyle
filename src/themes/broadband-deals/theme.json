@@ -297,23 +297,6 @@
       "textDecoration": "none"
     }
   },
-  "accordion": {
-    "iconOpen": "minus",
-    "iconClosed": "plus",
-    "base": {
-      "content": {
-        "mb": "lg",
-        "fontSize": "xs",
-        "lineHeight": "base",
-        "color": "dark-grey",
-        "borderBottom": "1px solid rgba(39, 7, 55, 0.3)",
-        ">p": {
-          "pb": ["lg", "xl"],
-          "mb": "xxs"
-        }
-      }
-    }
-  },
   "elements": {
     "modal": {
       "variants": {
@@ -1295,8 +1278,10 @@
       }
     },
     "accordion": {
+      "iconOpen": "minus",
+      "iconClosed": "plus",
       "base": {
-        "button": {
+        "btn": {
           "svg:hover": {
             "fill": "grape-purple"
           },
@@ -1328,15 +1313,59 @@
           "fontSize": ["lg", "lg"]
         },
         "content": {
-          "borderBottom": "1px solid",
           "borderBottomColor": "pepper-purple-03",
-          "color": "dark-grey"
+          "color": "dark-grey",
+          "lineHeight": "base",
+          "borderBottom": "1px solid rgba(39, 7, 55, 0.3)",
+          ">p": {
+            "pb": ["lg", "xl"],
+            "mb": "xxs"
+          }
+        },
+        "isActive": {
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          }
         }
       },
       "variants": {
-        "isActive": {
-          "button": {
-            "variant": "compounds.accordion.base.button"
+        "true-speeds": {
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "content": {
+            "variant": "compounds.accordion.base.content"
+          },
+          "isActive": {
+            "btn": {
+              "variant": "compounds.accordion.variants.true-speeds.btn"
+            }
+          }
+        },
+        "reverse": {
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "content": {
+            "variant": "compounds.accordion.base.content"
+          },
+          "isActive": {
+            "btn": {
+              "variant": "compounds.accordion.variants.reverse.btn"
+            }
+          }
+        },
+        "eligibility-criteria": {
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "content": {
+            "variant": "compounds.accordion.base.content"
+          },
+          "isActive": {
+            "btn": {
+              "variant": "compounds.accordion.variants.eligibility-criteria.btn"
+            }
           }
         }
       }

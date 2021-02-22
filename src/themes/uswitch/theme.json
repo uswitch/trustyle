@@ -234,6 +234,7 @@
     "light-grey": "#F2F2F6",
     "light-grey-content": "#202020",
     "border-light-grey": "#E9E9EC",
+    "border-medium-grey": "#C4C4C4",
     "primary-yellow-100": "#FFD555",
     "primary-yellow-75": "#FFDF80",
     "primary-yellow-50": "#FFEAAA",
@@ -2971,10 +2972,12 @@
     "accordion": {
       "iconOpen": "minus",
       "iconClosed": "plus",
-      "borderBottom": "1px solid #C4C4C4",
       "base": {
         "mb": 72,
-        "title": {
+        "wrapper": {
+          "borderBottom": "1px solid #C4C4C4"
+        },
+        "groupTitle": {
           "marginTop": "0",
           "mb": "sm",
           "fontFamily": "heading",
@@ -2993,7 +2996,7 @@
             "mt": "xs"
           }
         },
-        "button": {
+        "btn": {
           "padding": "0",
           "paddingY": [20, 32, 32],
           "bg": "transparent",
@@ -3011,26 +3014,35 @@
         },
         "caret": {
           "color": "primary"
-        }
-      },
-      "variants": {
+        },
         "isActive": {
-          "button": {
-            "variant": "compounds.accordion.base.button",
+          "btn": {
+            "variant": "compounds.accordion.base.btn",
             "borderWidth": "0 0 0 0"
           },
           "caret": {
             "variant": "compounds.accordion.base.caret",
             "color": "primary"
           }
-        },
+        }
+      },
+      "variants": {
         "titleIcon": {
           "marginRight": "13px",
           "height": 36,
           "width": 32
         },
         "true-speeds": {
-          "border": "2px solid #2AAA5B",
+          "wrapper": {
+            "variant": "compounds.accordion.base.wrapper",
+            "border": "2px solid #2AAA5B"
+          },
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "content": {
+            "variant": "compounds.accordion.base.content"
+          },
           "title": {
             "fontSize": ["xs", "sm", "sm"],
             "lineHeight": "sm",
@@ -3042,15 +3054,27 @@
           },
           "caret": {
             "marginRight": "xs"
+          },
+          "isActive": {
+            "wrapper": {
+              "variant": "compounds.accordion.variants.true-speeds.wrapper"
+            },
+            "btn": {
+              "variant": "compounds.accordion.variants.true-speeds.btn"
+            }
           }
         },
         "eligibility-criteria-redesign": {
           "variant": "compounds.accordion.base",
-          "backgroundColor": ["grey-10", "grey-05"],
-          "marginBottom": 15,
-          "color": "grey-80",
-          "fontSize": "xs",
-          "marginTop": "md",
+          "wrapper": {
+            "variant": "compounds.accordion.base.wrapper",
+            "backgroundColor": ["grey-10", "grey-05"],
+            "marginBottom": 15,
+            "color": "grey-80",
+            "fontSize": "xs",
+            "marginTop": "md",
+            "borderBottom": "none"
+          },
           "title": {
             "textAlign": "center",
             "flex": "none",
@@ -3059,18 +3083,31 @@
             "color": "primary",
             "fontWeight": "bold"
           },
-          "button": {
-            "variant": "compounds.accordion.base.button",
+          "btn": {
+            "variant": "compounds.accordion.base.btn",
             "justifyContent": "center",
             "py": "12px !important",
             "borderTop": "none",
             "border": 0
+          },
+          "isActive": {
+            "wrapper": {
+              "variant": "compounds.accordion.variants.eligibility-criteria-redesign.wrapper"
+            },
+            "btn": {
+              "variant": "compounds.accordion.variants.eligibility-criteria-redesign.btn"
+            }
           }
         },
         "reverse": {
-          "display": "flex",
-          "flexFlow": "column",
-          "& > button": {
+          "wrapper": {
+            "variant": "compounds.accordion.base.wrapper",
+            "display": "flex",
+            "flexFlow": "column",
+            "borderBottom": "none"
+          },
+          "btn": {
+            "variant": "compounds.accordion.base.btn",
             "order": 2,
             "display": "block",
             "borderWidth": "1px 0 0 0",
@@ -3086,6 +3123,25 @@
             "marginTop": "xs",
             "svg": {
               "display": "inline-block"
+            }
+          },
+          "isActive": {
+            "wrapper": {
+              "variant": "compounds.accordion.variants.reverse.wrapper"
+            },
+            "btn": {
+              "variant": "compounds.accordion.variants.reverse.btn"
+            }
+          }
+        },
+        "eligibility-criteria": {
+          "variant": "compounds.accordion.base",
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "isActive": {
+            "btn": {
+              "variant": "compounds.accordion.variants.eligibility-criteria.btn"
             }
           }
         }
@@ -3357,36 +3413,6 @@
               "compounds.card.variants.vertical.headerChildren",
               "compounds.card.variants.horizontal.headerChildren"
             ]
-          }
-        },
-        "imageCallout": {
-          "display": "flex",
-          "mb": ["md", "md", "xl"],
-          "pb": ["sm", "sm", 0],
-          "heading": {
-            "a": {
-              "borderBottom": "none"
-            },
-            "pb": ["xxs", "xxs", "sm"]
-          },
-          "content": {
-            "p": {
-              "color": "grey-20",
-              "mb": 0,
-              "fontWeight": "bold",
-              "lineHeight": "sm"
-            }
-          },
-          "image": {
-            "mr": ["sm", "sm", "md"],
-            "borderBottom": "none",
-            "color": "white",
-            "img,svg": {
-              "filter": "invert(100%) sepia(0%) saturate(2%) hue-rotate(234deg) brightness(104%) contrast(101%)",
-              "width": "auto",
-              "height": [21, 28, 28],
-              "mt": [4, 3, 3]
-            }
           }
         },
         "provider": {
@@ -3985,6 +4011,66 @@
         }
       },
       "variants": {
+        "borderBottomImageLeft": {
+          "wrapper": {
+            "pb": [74, 100],
+            "px": 0
+          },
+          "inner": {
+            "flexDirection": ["column", "column", "row"],
+            "alignItems": ["center", "center", "flex-start"],
+            "px": 0,
+            "borderBottom": [null, null, "1px solid"],
+            "borderBottomColor": [null, null, "border-medium-grey"]
+          },
+          "colorBlock": {
+            "display": "none"
+          },
+          "image-container": {
+            "alignSelf": ["auto", "flex-end"],
+            "mt": [-40, 0, 20],
+            "px": 0,
+            "pt": [45, 0],
+            "height": [null, "100%"],
+            "mb": [35, 45, 0],
+            "pb": [0],
+            "borderBottom": ["1px solid", "1px solid", "none"],
+            "borderBottomColor": [
+              "border-medium-grey",
+              "border-medium-grey",
+              null
+            ]
+          },
+          "content": {
+            "alignSelf": "center",
+            "px": [20, 0, 0],
+            "textAlign": "left",
+            "maxWidth": ["100%", null, "grid.md.8"],
+            "width": "100%",
+            "flexBasis": [null, "45%"],
+            "h4": {
+              "width": "100%"
+            },
+            "h2": {
+              "fontSize": [32, 40],
+              "mb": 72
+            },
+            "span > h3": {
+              "fontSize": [28, 28],
+              "mb": 72
+            },
+            "p": {
+              "color": "grey-60"
+            }
+          },
+          "image": {
+            "mt": [0],
+            "mb": 0,
+            "maxWidth": ["100%", "100%"],
+            "imgixWidth": 768,
+            "height": ["auto, 100%"]
+          }
+        },
         "solidColorImageLeft": {
           "wrapper": {
             "pb": [74, 100],

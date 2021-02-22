@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.side-drawer",
-  "version": "0.3.7",
+  "version": "0.3.9",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -14,7 +14,7 @@
     "react-transition-group": "^4.2.2"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.20.0",
+    "@uswitch/trustyle.icon": "^1.22.0",
     "typescript": "^3.6.2"
   },
   "peerDependencies": {

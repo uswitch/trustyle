@@ -43,7 +43,7 @@
     "heading": 500
   },
   "space": {
-    "gutter": 14,
+    "gutter": 16,
     "base": 16,
     "xxs": 4,
     "xs": 8,
@@ -102,7 +102,11 @@
     "dark-grey-03": "rgba(104,104,135,0.3)",
     "light-grey": "#F2F2F6",
     "light-grey-content": "#202020",
-    "border-light-grey": "#E9E9EC"
+    "border-light-grey": "#E9E9EC",
+    "dark-blue": "#001C53",
+    "light-blue": "#E5EEFF",
+    "dark-grey-blue": "#3E547D",
+    "light-grey-blue": "#E8E8F6"
   },
   "radii": {
     "sm": 3,
@@ -1155,6 +1159,98 @@
     },
     "landing-page-nav": {
       "width": ["100%", "132px"]
+    },
+    "navigation": {
+      "spacing": 24,
+      "icon": {
+        "menu": {
+          "open": "hamburger-simple",
+          "close": "close",
+          "buttonSize": 32,
+          "iconSize": 24
+        }
+      },
+      "mobile": {
+        "headerHeight": 55
+      },
+      "base": {
+        "backgroundColor": "white",
+        "button": {
+          "border": "none",
+          "background": "none"
+        },
+        "desktop-container": {
+          "list-style": "none",
+          "padding": 0,
+          "margin": 0,
+          "display": "flex"
+        },
+        "content-separator": {
+          "title": {
+            "color": "dark-grey-blue"
+          }
+        },
+        "desktop-selector": {
+          ":hover": {
+            "h4": {
+              "color": "primary"
+            }
+          },
+          "h4": {
+            "fontFamily": "base",
+            "fontSize": "base",
+            "fontWeight": "base",
+            "lineHeight": "20px",
+            "margin": 0
+          }
+        },
+        "nav-dropdown": {
+          "borderRadius": "4px 4px 0px 0px"
+        },
+        "list-styling": {
+          "list-style": "none",
+          "padding": 0,
+          "margin": 0
+        },
+        "nav-tabs": {
+          "transition": "transform .3s ease-in-out"
+        },
+        "nav-item": {
+          "icon": {
+            "color": "dark-grey-blue"
+          },
+          "base": {
+            "title": {
+              "base": {
+                "fontFamily": "base",
+                "color": "dark-blue"
+              }
+            }
+          },
+          "minimized": {
+            "variant": "elements.navigation.base.nav-item.base",
+            ":first-of-type": {
+              "mb": "md",
+              "h5": {
+                "fontWeight": "bold",
+                "mb": 0
+              }
+            },
+            ":last-of-type": {
+              "mb": "md"
+            }
+          }
+        },
+        "selected-nav-item": {
+          "link": {
+            "backgroundColor": "#F3F7FE",
+            "color": "dark-grey-blue",
+            "icon": {
+              "glyph": "caret"
+            }
+          }
+        }
+      }
     }
   },
   "compounds": {
@@ -1312,7 +1408,7 @@
         "content": {
           "mb": "xs"
         },
-        "button": {
+        "btn": {
           "p": "0",
           "pt": 10,
           "pb": 10,
@@ -1329,21 +1425,60 @@
         },
         "caret": {
           "color": "primary"
-        }
-      },
-      "variants": {
+        },
         "isActive": {
-          "button": {
-            "variant": "compounds.accordion.base.button"
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
           },
           "caret": {
             "color": "primary--dark"
           }
-        },
+        }
+      },
+      "variants": {
         "titleIcon": {
           "marginRight": "13px",
           "height": 36,
           "width": 32
+        },
+        "true-speeds": {
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "content": {
+            "variant": "compounds.accordion.base.content"
+          },
+          "isActive": {
+            "btn": {
+              "variant": "compounds.accordion.variants.true-speeds.btn"
+            }
+          }
+        },
+        "reverse": {
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "content": {
+            "variant": "compounds.accordion.base.content"
+          },
+          "isActive": {
+            "btn": {
+              "variant": "compounds.accordion.variants.reverse.btn"
+            }
+          }
+        },
+        "eligibility-criteria": {
+          "btn": {
+            "variant": "compounds.accordion.base.btn"
+          },
+          "content": {
+            "variant": "compounds.accordion.base.content"
+          },
+          "isActive": {
+            "btn": {
+              "variant": "compounds.accordion.variants.eligibility-criteria.btn"
+            }
+          }
         }
       }
     },
@@ -1442,6 +1577,59 @@
         "variant": "compounds.cookie-banner.button-with-checkbox",
         "borderColor": "primary",
         "color": "grey-100"
+      }
+    },
+    "collection-tabs": {
+      "variants": {
+        "menu": {
+          "containerPadding": {
+            "px": 0
+          },
+          "borderBottom": {
+            "borderWidth": "0 0 1px",
+            "borderStyle": "solid",
+            "borderColor": "light-grey-blue",
+            "> div": {
+              "maxHeight": 56,
+              "width": "100%"
+            }
+          },
+          "tabsContainer": {
+            "width": "100%",
+            "mx": 0,
+            "> div": {
+              "margin": 0
+            },
+            "h6": {
+              "variant": "styles.h4",
+              "fontSize": "base",
+              "fontFamily": "base",
+              "fontWeight": "base",
+              "color": "dark-grey-blue"
+            }
+          },
+          "tabSpacing": {
+            "a": {
+              "display": "flex"
+            }
+          },
+          "container": {
+            "display": "flex",
+            "justifyContent": "center",
+            "flex": 1
+          },
+          "isActive": {
+            "container": {
+              "variant": "compounds.collection-tabs.variants.menu.container",
+              "borderBottomWidth": 2,
+              "borderColor": "primary",
+              "borderBottomStyle": "solid",
+              "h6": {
+                "color": "primary"
+              }
+            }
+          }
+        }
       }
     }
   },

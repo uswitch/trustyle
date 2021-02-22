@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.35.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.35.0...@uswitch/trustyle.uswitch-theme@2.35.1) (2021-02-17)
+
+
+### Bug Fixes
+
+* Removed unused property from theme.json ([297e47a](https://github.com/uswitch/trustyle/commit/297e47a))
+* Run Prettier ([a7ccf2e](https://github.com/uswitch/trustyle/commit/a7ccf2e))
+* typo ([3fe16d8](https://github.com/uswitch/trustyle/commit/3fe16d8))
+* Use named colour rather than string (thanks Phil) ([b311e17](https://github.com/uswitch/trustyle/commit/b311e17))
+
+
+
+
+
+# [2.35.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.34.6...@uswitch/trustyle.uswitch-theme@2.35.0) (2021-02-11)
+
+
+### Bug Fixes
+
+* border on eligibility-criteria-redesign on uswitch ([81f9f31](https://github.com/uswitch/trustyle/commit/81f9f31))
+* caret and content styles ([328940c](https://github.com/uswitch/trustyle/commit/328940c))
+* prettier issues ([ecc0c16](https://github.com/uswitch/trustyle/commit/ecc0c16))
+* refactor styles per percy ([6b3ade2](https://github.com/uswitch/trustyle/commit/6b3ade2))
+* uswitch eligibility-criteria ([ab59d65](https://github.com/uswitch/trustyle/commit/ab59d65))
+
+
+### Features
+
+* accordion legacy variant ([a8e6348](https://github.com/uswitch/trustyle/commit/a8e6348))
+
+
+
+
+
 ## [2.34.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.34.5...@uswitch/trustyle.uswitch-theme@2.34.6) (2021-02-09)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
