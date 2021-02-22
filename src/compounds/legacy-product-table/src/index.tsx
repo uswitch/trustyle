@@ -408,12 +408,18 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   eligibilityAddon,
   onRowClick,
   disabled,
+  badges,
   ...props
 }) => {
+  const badge = badges[0] || ''
+
   return (
     <article
       sx={{
-        border: ['none', '1px solid #dadadb'],
+        border: [
+          badge ? '2px solid #34454E' : 'none',
+          `2px solid ${badge ? '#34454E' : '#DADADB'}`
+        ],
         marginBottom: '24px',
         background: '#fff',
         position: 'relative',
@@ -429,6 +435,29 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         onRowClick={onRowClick}
         disabled={disabled}
       >
+        {!!badge && (
+          <div
+            sx={{
+              position: 'absolute',
+              top: 0,
+              transform: 'translateY(-50%)',
+              padding: '0 6px',
+              backgroundColor: '#fff',
+              marginLeft: 'sm'
+            }}
+          >
+            <div
+              sx={{
+                padding: '5.5px 16px',
+                backgroundColor: '#34454E',
+                color: '#fff',
+                borderRadius: '3px'
+              }}
+            >
+              {badge}
+            </div>
+          </div>
+        )}
         <Header>{title}</Header>
 
         <div

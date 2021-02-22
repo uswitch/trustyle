@@ -55,6 +55,7 @@ const ExampleProductTable = () => {
       eligibilityContent={eligibilityContent}
       clickableRow={clickableRow}
       onClickEligibility={onClickEligibility}
+      badges={['Great!', 'Fab!']}
       eligibilityAddon={eligibilityAddon}
     >
       <DataCell
