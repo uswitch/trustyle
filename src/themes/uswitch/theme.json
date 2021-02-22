@@ -640,6 +640,55 @@
             "wrapper": {
               "display": "flex",
               "mb": ["md", "lg"],
+              "width": ["100%", "100%", "100%"],
+              "justifyContent": "space-between",
+              "alignItems": "center",
+              "flexDirection": "column"
+            },
+            "error": {
+              "position": "absolute",
+              "margin": "0"
+            }
+          },
+          "label": {
+            "variant": "styles.h4",
+            "color": "grey-80",
+            "display": "block",
+            ":not(:first-child)": {
+              "mt": "sm"
+            },
+            "variants": {
+              "calculator": {
+                "flex": "1 1 0px",
+                "fontWeight": "600"
+              }
+            }
+          },
+          "button": {
+            "my": "sm",
+            "variants": {
+              "calculator": {}
+            }
+          },
+          "wrapper": {
+            "base": {
+              "pb": 0
+            },
+            "variants": {
+              "calculator": {
+                "pb": ["xs", 0],
+                "flexDirection": "column",
+                "flex": "1 1 0px",
+                "min-width": "176px"
+              }
+            }
+          }
+        },
+        "journey": {
+          "input": {
+            "wrapper": {
+              "display": "flex",
+              "mb": ["md", "lg"],
               "width": ["100%", "100%", "28%"],
               "justifyContent": "space-between",
               "alignItems": "center",
