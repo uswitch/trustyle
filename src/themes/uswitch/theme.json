@@ -405,25 +405,172 @@
   "----------------------------- Variants": "-----------------------------",
   "elements": {
     "author-profile": {
-      "base": {
-        "main": {
-          "span:nth-of-type(1):after": {
-            "content": "', '"
-          }
-        }
-      },
       "variants": {
         "left": {
           "main": {
-            "span:nth-of-type(1):after": {
-              "content": "', '"
+            "a:first-child": { "ml": 0 },
+            "a": {
+              "mb": 0
+            }
+          },
+          "bio": {
+            "width": ["100%", "75%", "60%"],
+            "fontSize": ["xxxs", "xs", "xs"],
+            "color": "grey-60",
+            "p": {
+              "color": "grey-60",
+              "fontSize": ["xxxs", "xs", "xs"],
+              "a": {
+                "color": "grey-60",
+                "fontWeight": "base"
+              }
+            },
+            "pt": "md",
+            "mt": [1, 9, 9]
+          },
+          "image": {
+            "height": [64, 96],
+            "width": [64, 96],
+            "m": 0,
+            "position": "absolute"
+          },
+          "details": {
+            "mt": "md",
+            "display": "flex",
+            "px": 0,
+            "a": {
+              "mx": "sm",
+              "svg": {
+                "stroke": "primary",
+                "fill": "primary",
+                "width": 22,
+                "height": 22
+              }
+            }
+          },
+          "content": {
+            "paddingY": 0,
+            "pt": [1, 9]
+          },
+          "name": {
+            "marginY": 0,
+            "fontSize": ["md", "36px", "36px"],
+            "mb": [0, 0, 0],
+            "a": {
+              "display": "flex",
+              "flexDirection": "column",
+              "fontWeight": "xxbold",
+              "color": "uswitch-navy"
+            },
+            "ml": [72, 112, 112],
+            "pl": ["sm", "xxs", "xxs"]
+          },
+          "role": {
+            "fontSize": ["sm", "sm", "sm"],
+            "mt": "xxs",
+            "mb": 0,
+            "color": "grey-60",
+            "a": {
+              "fontWeight": "xxbold"
+            }
+          }
+        },
+        "centered": {
+          "main": {
+            "display": "flex",
+            "flexDirection": "column",
+            "alignItems": "center",
+            "a": {
+              "mb": 0
+            }
+          },
+          "bio": {
+            "width": ["100%", "75%", "60%"],
+            "fontSize": ["xxxs", "xs", "xs"],
+            "color": "grey-60",
+            "p": {
+              "color": "grey-60",
+              "fontSize": ["xxxs", "xs", "xs"],
+              "a": {
+                "color": "grey-60",
+                "fontWeight": "base"
+              }
+            },
+            "mt": "md",
+            "textAlign": "center"
+          },
+          "image": {
+            "height": [64, 96],
+            "width": [64, 96],
+            "m": 0,
+            "alignSelf": "center",
+            "mx": 0
+          },
+          "content": {
+            "display": "flex",
+            "flexDirection": "column",
+            "alignItems": "center",
+            "pt": "md"
+          },
+          "details": {
+            "mt": "md",
+            "display": "flex",
+            "px": 0,
+            "justifyContent": "center",
+            "a": {
+              "mx": "sm",
+              "svg": {
+                "stroke": "primary",
+                "fill": "primary",
+                "width": 22,
+                "height": 22
+              }
+            }
+          },
+          "name": {
+            "marginY": 0,
+            "fontSize": ["md", "36px", "36px"],
+            "mb": [0, 0, 0],
+            "a": {
+              "display": "flex",
+              "flexDirection": "column",
+              "fontWeight": "xxbold",
+              "color": "uswitch-navy"
+            },
+            "textAlign": "center"
+          },
+          "role": {
+            "fontSize": ["sm", "sm", "sm"],
+            "mt": "xxs",
+            "mb": 0,
+            "color": "grey-60",
+            "a": {
+              "fontWeight": "xxbold"
             }
           }
         }
       },
-      "name": {
-        "a": {
-          "color": "grey-80"
+      "base": {
+        "main": {
+          "variant": "elements.author-profile.variants.centered.main"
+        },
+        "image": {
+          "variant": "elements.author-profile.variants.centered.image"
+        },
+        "name": {
+          "variant": "elements.author-profile.variants.centered.name"
+        },
+        "role": {
+          "variant": "elements.author-profile.variants.centered.role"
+        },
+        "bio": {
+          "variant": "elements.author-profile.variants.centered.bio"
+        },
+        "content": {
+          "variant": "elements.author-profile.variants.centered.content"
+        },
+        "details": {
+          "variant": "elements.author-profile.variants.centered.details"
         }
       }
     },
