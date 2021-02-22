@@ -641,10 +641,8 @@
             "wrapper": {
               "display": "flex",
               "mb": ["md", "lg"],
-              "width": ["100%", "100%", "100%"],
-              "justifyContent": "space-between",
-              "alignItems": "center",
-              "flexDirection": "column"
+              "width": ["100%", "100%", "28%"],
+              "justifyContent": "space-between"
             },
             "error": {
               "position": "absolute",
@@ -690,7 +688,7 @@
             "wrapper": {
               "display": "flex",
               "mb": ["md", "lg"],
-              "width": ["100%", "100%", "28%"],
+              "width": "100%",
               "justifyContent": "space-between",
               "alignItems": "center",
               "flexDirection": "column"
@@ -2399,17 +2397,7 @@
     },
     "form-section": {
       "default": {
-        "elements": {
-          "wrapper": {
-            "display": "none",
-            "submit": {
-              "display": "none"
-            }
-          },
-          "buttonWrapper": {
-            "display": "none"
-          }
-        },
+        "elements": {},
         "states": {
           "isActive": {
             "buttonWrapper": {
@@ -2494,6 +2482,60 @@
             "opacity": 0.4,
             "display": "flex",
             "alignItems": "center"
+          }
+        }
+      },
+      "journey": {
+        "elements": {
+          "wrapper": {
+            "display": "none",
+            "submit": {
+              "display": "none"
+            }
+          },
+          "buttonWrapper": {
+            "display": "none"
+          }
+        },
+        "states": {
+          "isActive": {
+            "buttonWrapper": {
+              "calculator": {
+                "textAlign": "center"
+              }
+            },
+            "wrapper": {
+              "variant": "elements.form-section.panel.elements.wrapper",
+              "paddingY": "md"
+            },
+            "heading": {
+              "variant": "elements.form-section.panel.elements.heading",
+              "display": "none"
+            },
+            "fields": {
+              "display": "block",
+              "textAlign": "center",
+              "calculator": {
+                "display": "flex",
+                "flexWrap": "wrap",
+                "justifyContent": "space-between",
+                "flexDirection": ["column", "row"]
+              }
+            }
+          },
+          "isComplete": {
+            "wrapper": {
+              "variant": "elements.form-section.panel.elements.wrapper",
+              "display": "none"
+            },
+            "heading": {
+              "variant": "elements.form-section.panel.elements.heading",
+              "opacity": 1,
+              "justifyContent": "space-between"
+            },
+            "fields": {
+              "display": "none"
+            }
           }
         }
       }
