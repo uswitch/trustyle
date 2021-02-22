@@ -377,6 +377,39 @@
             "marginBottom": [0, 0]
           }
         }
+      },
+      "dates": {
+        "fontSize": "xxs",
+        "my": 0,
+
+        "lineHeight": "heading"
+      },
+      "publishedAt": {
+        "variant": "elements.author.dates",
+        "fontWeight": "bold"
+      },
+      "updatedAt": { "variant": "elements.author.dates", "mb": "sm" },
+      "withDates": {
+        "imageLink": {
+          "variant": "elements.author.imageLink",
+          "width": [48, 56],
+          "height": [48, 56]
+        },
+        "image": {
+          "variant": "elements.author.image",
+          "width": "100%",
+          "height": "100%",
+          "objectFit": "cover"
+        },
+        "title": {
+          "variant": "elements.author.title",
+          "fontSize": ["md", "xl"],
+          "lineHeight": "heading"
+        },
+        "subtitle": {
+          "fontSize": "sm",
+          "fontWeight": "base"
+        }
       }
     },
     "sponsored-by-tag": {
