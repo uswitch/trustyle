@@ -403,29 +403,130 @@
       }
     },
     "author-profile": {
-      "base": {
-        "main": {
-          "marginBottom": "xl",
-          "span:nth-of-type(1):after": {
-            "content": "', '"
-          },
-          "span": {
-            "color": "black"
-          }
-        }
-      },
       "variants": {
         "left": {
           "main": {
-            "span:nth-of-type(1):after": {
-              "content": "', '"
+            "a:first-child": { "ml": 0 }
+          },
+          "bio": {
+            "width": ["100%", "75%", "60%"],
+            "fontSize": ["xxs", "sm", "sm"],
+            "pt": "md",
+            "mt": ["xxs", 10.5]
+          },
+          "image": {
+            "height": [64, 96],
+            "width": [64, 96],
+            "position": "absolute"
+          },
+          "details": {
+            "mt": "md",
+            "display": "flex",
+            "px": 0,
+            "a": {
+              "mx": "sm"
             }
+          },
+          "content": {
+            "paddingY": 0,
+            "pt": ["xxs", 10.5]
+          },
+          "name": {
+            "fontWeight": ["bold", "bold", "bold"],
+            "marginY": 0,
+            "fontSize": ["xl", "xxxl", "xxxl"],
+            "mb": [0, 0, 0],
+            "a": {
+              "display": "flex",
+              "flexDirection": "column",
+              "color": "grey-100"
+            },
+            "ml": ["xxl", "4xl"],
+            "pl": ["sm", "xs"]
+          },
+          "role": {
+            "fontWeight": [700, 700, 700],
+            "fontSize": ["sm", "lg", "lg"],
+            "mt": "xs",
+            "mb": 0,
+            "color": "plum"
+          }
+        },
+        "centered": {
+          "main": {
+            "display": "flex",
+            "flexDirection": "column",
+            "alignItems": "center"
+          },
+          "bio": {
+            "fontSize": ["xxs", "sm", "sm"],
+            "width": ["100%", "75%", "60%"],
+            "mt": "md",
+            "textAlign": "center"
+          },
+          "image": {
+            "height": [64, 96],
+            "width": [64, 96],
+            "alignSelf": "center",
+            "mx": 0
+          },
+          "content": {
+            "display": "flex",
+            "flexDirection": "column",
+            "alignItems": "center",
+            "pt": "md"
+          },
+          "details": {
+            "mt": "md",
+            "display": "flex",
+            "px": 0,
+            "a": {
+              "mx": "sm"
+            },
+            "justifyContent": "center"
+          },
+          "name": {
+            "fontWeight": ["bold", "bold", "bold"],
+            "marginY": 0,
+            "fontSize": ["xl", "xxxl", "xxxl"],
+            "mb": [0, 0, 0],
+            "a": {
+              "display": "flex",
+              "flexDirection": "column",
+              "color": "grey-100"
+            },
+            "textAlign": "center"
+          },
+          "role": {
+            "fontWeight": [700, 700, 700],
+            "fontSize": ["sm", "lg", "lg"],
+            "mt": "xs",
+            "mb": 0,
+            "color": "plum"
           }
         }
       },
-      "name": {
-        "a": {
-          "color": "grey-80"
+      "base": {
+        "main": {
+          "variant": "elements.author-profile.variants.centered.main"
+        },
+        "image": {
+          "variant": "elements.author-profile.variants.centered.image"
+        },
+        "name": {
+          "variant": "elements.author-profile.variants.centered.name"
+        },
+        "role": {
+          "variant": "elements.author-profile.variants.centered.role"
+        },
+        "bio": {
+          "variant": "elements.author-profile.variants.centered.bio"
+        },
+        "content": {
+          "variant": "elements.author-profile.variants.centered.content"
+        },
+        "details": {
+          "variant": "elements.author-profile.variants.centered.details"
         }
       }
     },
