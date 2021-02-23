@@ -24,7 +24,6 @@ export const AllVariants = () => (
             variant={key}
             href="https://www.uswitch.com"
             target="_blank"
-            afterIcon="arrow"
           >
             {text(`${key} label`, `${key} link button`)}
           </ButtonLink>
