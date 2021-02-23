@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.author-profile@1.2.11...@uswitch/trustyle.author-profile@1.3.0) (2021-02-23)
+
+
+### Features
+
+* allow react elements as bio for author profile ([eea4896](https://github.com/uswitch/trustyle/commit/eea4896))
+
+
+
+
+
 ## [1.2.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.author-profile@1.2.10...@uswitch/trustyle.author-profile@1.2.11) (2021-02-17)
 
 **Note:** Version bump only for package @uswitch/trustyle.author-profile
