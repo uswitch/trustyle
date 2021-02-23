@@ -402,6 +402,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           `2px solid ${badge ? '#34454E' : '#DADADB'}`
         ],
         marginBottom: '24px',
+        marginTop: badge ? '8px' : 0,
         background: '#fff',
         position: 'relative',
         ':first-of-type': {
@@ -451,7 +452,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
               pr: ['15px', 0],
               py: '15px',
               mb: 0,
-              mt: [badge ? '15px' : 0, 0],
+              mt: badge ? ['30px', '15px'] : 0,
               fontSize: '18px',
               fontFamily: 'Varela Round,Arial,sans-serif'
             }}
