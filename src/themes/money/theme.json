@@ -1119,6 +1119,20 @@
       }
     },
     "buttons": {
+      "beforeIcon": {
+        "svg": {
+          "display": "inline",
+          "verticalAlign": "text-bottom",
+          "mr": "xs"
+        }
+      },
+      "afterIcon": {
+        "svg": {
+          "display": "inline",
+          "verticalAlign": "text-bottom",
+          "ml": "xs"
+        }
+      },
       "base": {
         "boxSizing": "border-box",
         "fontWeight": "bold",
@@ -1189,6 +1203,9 @@
           "borderColor": "grey-20",
           "borderRadius": 4,
           "backgroundColor": "white"
+        },
+        "buttonLinkIcons": {
+          
         }
       }
     },

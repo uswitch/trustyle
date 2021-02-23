@@ -24,6 +24,7 @@ export const AllVariants = () => (
             variant={key}
             href="https://www.uswitch.com"
             target="_blank"
+            afterIcon="arrow"
           >
             {text(`${key} label`, `${key} link button`)}
           </ButtonLink>
@@ -54,6 +55,34 @@ export const StyledComponentAsProp = () => (
 )
 
 StyledComponentAsProp.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const WithIcons = () => (
+  <React.Fragment>
+    <ButtonLink
+      variant="primary"
+      href="https://www.uswitch.com"
+      target="_blank"
+      beforeIcon="arrow"
+    >
+      Before icon
+    </ButtonLink>
+    <Spacer />
+    <ButtonLink
+      variant="primary"
+      href="https://www.uswitch.com"
+      target="_blank"
+      afterIcon="arrow"
+    >
+      After icon
+    </ButtonLink>
+  </React.Fragment>
+)
+
+WithIcons.story = {
   parameters: {
     percy: { skip: true }
   }
