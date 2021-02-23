@@ -17,6 +17,7 @@ import { CaretFinal } from './caretFinal'
 import { Check } from './check'
 import { Clock } from './clock'
 import { Close } from './close'
+import { CheckCircle } from './check-circle'
 import { Checkmark } from './checkmark'
 import { Conversation } from './conversation'
 import { Cross } from './cross'
@@ -77,6 +78,7 @@ export type Glyph =
   | 'check'
   | 'clock'
   | 'close'
+  | 'check-circle'
   | 'checkmark'
   | 'conversation'
   | 'cross'
@@ -172,6 +174,8 @@ export const Icon: React.FC<Props> = ({
       return <CaretFinal color={color} direction={direction} size={size} />
     case 'check':
       return <Check color={color} size={size} />
+    case 'check-circle':
+      return <CheckCircle color={color} size={size} />
     case 'clock':
       return <Clock color={color} size={size} />
     case 'close':
