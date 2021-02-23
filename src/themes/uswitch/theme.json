@@ -784,6 +784,24 @@
     "form": {
       "variants": {
         "default": {
+          "simple-radio": {
+            "radioWrapper": {
+              "display": "flex",
+              "flexDirection": ["column", "row"]
+            }
+          },
+          "input": {
+            "wrapper": {
+              "display": "flex",
+              "mb": ["md", "lg"],
+              "width": ["100%", "100%", "28%"],
+              "justifyContent": "space-between"
+            },
+            "error": {
+              "position": "absolute",
+              "margin": "0"
+            }
+          },
           "label": {
             "variant": "styles.h4",
             "color": "grey-80",
@@ -816,18 +834,60 @@
                 "min-width": "176px"
               }
             }
+          }
+        },
+        "journey": {
+          "simple-radio": {
+            "radioWrapper": {
+              "display": "flex",
+              "flexDirection": "column"
+            }
           },
           "input": {
             "wrapper": {
               "display": "flex",
               "mb": ["md", "lg"],
-              "width": ["100%", "100%", "28%"],
+              "width": "100%",
               "justifyContent": "space-between",
-              "alignItems": "center"
+              "alignItems": "center",
+              "flexDirection": "column"
             },
             "error": {
               "position": "absolute",
               "margin": "0"
+            }
+          },
+          "label": {
+            "variant": "styles.h4",
+            "color": "grey-80",
+            "display": "block",
+            ":not(:first-child)": {
+              "mt": "sm"
+            },
+            "variants": {
+              "calculator": {
+                "flex": "1 1 0px",
+                "fontWeight": "600"
+              }
+            }
+          },
+          "button": {
+            "my": "sm",
+            "variants": {
+              "calculator": {}
+            }
+          },
+          "wrapper": {
+            "base": {
+              "pb": 0
+            },
+            "variants": {
+              "calculator": {
+                "pb": ["xs", 0],
+                "flexDirection": "column",
+                "flex": "1 1 0px",
+                "min-width": "176px"
+              }
             }
           }
         },
@@ -2083,6 +2143,7 @@
       },
       "checkbox": {
         "base": {
+          "border": "solid 1px black",
           "variant": "elements.input.radioish.base",
           "&:checked + span": {
             "variant": "elements.input.radioish.base.&:checked + span",
@@ -2163,7 +2224,30 @@
         "borderBottomStyle": "solid"
       }
     },
-
+    "simple-radio": {
+      "span": {
+        "variant": "elements.input.radio.label",
+        "alignItems": "center",
+        "boxSizing": "border-box",
+        "cursor": "pointer",
+        "display": "flex",
+        "padding": "base",
+        "paddingLeft": 0,
+        "width": "100%",
+        "userSelect": "none",
+        "&::before": {
+          "borderRadius": "50%",
+          "borderStyle": "solid",
+          "borderWidth": "2px",
+          "content": "' '",
+          "display": "block",
+          "height": "17px",
+          "marginLeft": "base",
+          "marginRight": "base",
+          "width": "17px"
+        }
+      }
+    },
     "simple-input": {
       "base": {
         "fontFamily": "base",
@@ -2472,6 +2556,7 @@
     },
     "form-section": {
       "default": {
+        "elements": {},
         "states": {
           "isActive": {
             "buttonWrapper": {
@@ -2500,7 +2585,8 @@
           },
           "isComplete": {
             "wrapper": {
-              "variant": "elements.form-section.panel.elements.wrapper"
+              "variant": "elements.form-section.panel.elements.wrapper",
+              "display": "none"
             },
             "heading": {
               "variant": "elements.form-section.panel.elements.heading",
@@ -2555,6 +2641,60 @@
             "opacity": 0.4,
             "display": "flex",
             "alignItems": "center"
+          }
+        }
+      },
+      "journey": {
+        "elements": {
+          "wrapper": {
+            "display": "none",
+            "submit": {
+              "display": "none"
+            }
+          },
+          "buttonWrapper": {
+            "display": "none"
+          }
+        },
+        "states": {
+          "isActive": {
+            "buttonWrapper": {
+              "calculator": {
+                "textAlign": "center"
+              }
+            },
+            "wrapper": {
+              "variant": "elements.form-section.panel.elements.wrapper",
+              "paddingY": "md"
+            },
+            "heading": {
+              "variant": "elements.form-section.panel.elements.heading",
+              "display": "none"
+            },
+            "fields": {
+              "display": "block",
+              "textAlign": "center",
+              "calculator": {
+                "display": "flex",
+                "flexWrap": "wrap",
+                "justifyContent": "space-between",
+                "flexDirection": ["column", "row"]
+              }
+            }
+          },
+          "isComplete": {
+            "wrapper": {
+              "variant": "elements.form-section.panel.elements.wrapper",
+              "display": "none"
+            },
+            "heading": {
+              "variant": "elements.form-section.panel.elements.heading",
+              "opacity": 1,
+              "justifyContent": "space-between"
+            },
+            "fields": {
+              "display": "none"
+            }
           }
         }
       }
