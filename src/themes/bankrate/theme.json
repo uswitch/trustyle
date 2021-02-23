@@ -240,7 +240,13 @@
           "a": { "mx": "sm" }
         },
         "bio": {
-          "mt": "xs"
+          "mt": "xs",
+          "span:first-of-type>*": {
+            "mt": 0
+          },
+          "span>*": {
+            "mb": 0
+          }
         },
         "name": {
           "mb": "md",
