@@ -784,6 +784,12 @@
     "form": {
       "variants": {
         "default": {
+          "simple-radio": {
+            "radioWrapper": {
+              "display": "flex",
+              "flexDirection": ["column", "row"]
+            }
+          },
           "input": {
             "wrapper": {
               "display": "flex",
@@ -831,6 +837,12 @@
           }
         },
         "journey": {
+          "simple-radio": {
+            "radioWrapper": {
+              "display": "flex",
+              "flexDirection": "column"
+            }
+          },
           "input": {
             "wrapper": {
               "display": "flex",

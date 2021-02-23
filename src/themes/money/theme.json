@@ -1268,6 +1268,12 @@
     "form": {
       "variants": {
         "default": {
+          "simple-radio": {
+            "radioWrapper": {
+              "display": "flex",
+              "flexDirection": ["column", "row"]
+            }
+          },
           "label": {
             "variant": "styles.h4",
             "fontWeight": "bold",
