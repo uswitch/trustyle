@@ -608,7 +608,7 @@
         },
         "base": {
           "my": "md",
-          "pt": [0, "xxs"],
+          "pt": ["xxs", "xs"],
           "paddingLeft": [0, 0],
           "li": {
             "paddingLeft": 0,
@@ -621,10 +621,10 @@
             "alignItems": "center",
             "::before": {
               "display": "none"
+            },
+            ":last-of-type": {
+              "marginBottom": "0"
             }
-          },
-          ":last-child": {
-            "marginBottom": "0"
           }
         },
         "icon": {
@@ -673,8 +673,7 @@
         },
         "cons": {
           "title": {
-            "variant": "elements.list.pros-and-cons.title",
-            "mt": ["md", 0]
+            "variant": "elements.list.pros-and-cons.title"
           },
           "base": {
             "variant": "elements.list.pros-and-cons.base",
