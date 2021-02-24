@@ -119,7 +119,8 @@ const ProductTableRow: React.FC<RowProps> = ({
           pointerEvents: disabled ? 'none' : null,
           opacity: disabled ? '0.5' : '1',
           pb: card ? '50px' : '0',
-          overflow: card ? 'hidden' : 'visible'
+          overflow: card ? 'hidden' : 'visible',
+          width: '100%'
         }}
       >
         <RowWrapper link={clickableRow} headerImage={image}>
