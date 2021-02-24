@@ -19,6 +19,7 @@ export const Example = () => (
     <List title="Checklist" variant="checklist" items={arr1} />
     <List title="Pros" variant="pros" items={arr1} />
     <List listType="numeric" items={[...arr1, ...arr2, pTag]} />
+    <List title="Check Circle" variant="check-circle" items={arr1} />
 
     <List title="bullet" items={arr1} />
 
