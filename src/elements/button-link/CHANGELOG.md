@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button-link@3.1.0...@uswitch/trustyle.button-link@3.1.2) (2021-02-24)
+
+**Note:** Version bump only for package @uswitch/trustyle.button-link
+
+
+
+
+
+
+## [3.1.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button-link@3.1.0...@uswitch/trustyle.button-link@3.1.1) (2021-02-23)
+
+**Note:** Version bump only for package @uswitch/trustyle.button-link
+
+
+
+
+
+# [3.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button-link@3.0.4...@uswitch/trustyle.button-link@3.1.0) (2021-02-23)
+
+
+### Bug Fixes
+
+* stories ([ecb0f7a](https://github.com/uswitch/trustyle/commit/ecb0f7a))
+
+
+### Features
+
+* add before and after icons to button-link ([479850a](https://github.com/uswitch/trustyle/commit/479850a))
+
+
+
+
+
 ## [3.0.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button-link@3.0.2...@uswitch/trustyle.button-link@3.0.4) (2021-01-05)
 
 **Note:** Version bump only for package @uswitch/trustyle.button-link

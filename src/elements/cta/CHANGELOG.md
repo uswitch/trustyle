@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.18](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.cta@1.0.16...@uswitch/trustyle.cta@1.0.18) (2021-02-24)
+
+**Note:** Version bump only for package @uswitch/trustyle.cta
+
+
+
+
+
+
+## [1.0.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.cta@1.0.16...@uswitch/trustyle.cta@1.0.17) (2021-02-23)
+
+**Note:** Version bump only for package @uswitch/trustyle.cta
+
+
+
+
+
+## [1.0.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.cta@1.0.15...@uswitch/trustyle.cta@1.0.16) (2021-02-23)
+
+**Note:** Version bump only for package @uswitch/trustyle.cta
+
+
+
+
+
 ## [1.0.15](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.cta@1.0.13...@uswitch/trustyle.cta@1.0.15) (2021-01-05)
 
 **Note:** Version bump only for package @uswitch/trustyle.cta

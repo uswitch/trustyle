@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-drawer@0.3.9...@uswitch/trustyle.side-drawer@0.3.11) (2021-02-24)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-drawer
+
+
+
+
+
+
+## [0.3.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-drawer@0.3.9...@uswitch/trustyle.side-drawer@0.3.10) (2021-02-23)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-drawer
+
+
+
+
+
 ## [0.3.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-drawer@0.3.8...@uswitch/trustyle.side-drawer@0.3.9) (2021-02-17)
 
 **Note:** Version bump only for package @uswitch/trustyle.side-drawer

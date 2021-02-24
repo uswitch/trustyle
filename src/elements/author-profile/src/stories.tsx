@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
-import { text } from '@storybook/addon-knobs'
+import { select, text } from '@storybook/addon-knobs'
 
 import AllThemes from '../../../utils/all-themes'
 
@@ -20,12 +20,23 @@ export const ExampleWithKnobs = () => {
   )
   const bio = text(
     'Author Biography',
-    'This section is used to talk about the author. Here you can explain their background, what they do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
+    'This section is used to talk about the author. It can be either a string or a React element. Here you can explain their background, what they do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
   )
+  const variant = select(
+    'Variant',
+    { left: 'left', centered: 'centered', unset: '' },
+    ''
+  )
+  const email = text('Email', 'mailto:john@doe.com')
+  const twitterLink = text('Twitter URL', 'https://www.jonathanfielding.com/')
+  const linkedInLink = text('LinkedIn URL', 'https://www.jonathanfielding.com/')
 
   return (
     <AuthorProfile
-      variant=""
+      variant={variant}
+      email={email}
+      twitterLink={twitterLink}
+      linkedInLink={linkedInLink}
       name={name}
       role={role}
       authorImage={image}
@@ -54,7 +65,7 @@ export const ExampleWithEmail = () => {
   )
   const bio = text(
     'Author Biography',
-    'This section is used to talk about the author. Here you can explain their background, what they do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
+    'This section is used to talk about the author. It can be either a string or a React element. Here you can explain their background, what they do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
   )
 
   const twitterLink = 'https://www.google.com'
