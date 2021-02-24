@@ -4215,10 +4215,10 @@
           "innerContainer": {
             "border":"1px #000 solid",
             "padding": [16, 24, 32],
-            "width": ["[calc(100vw - 32px)", "66%"],
+            "width": ["100%", "555px", "66%"],
             "marginLeft": ["auto", "auto", 0],
             "marginRight": ["auto", "auto", 0],
-            "max-width": ["555px", "555px", "100%"],
+            "max-width": ["555px", "100%"],
             "boxShadow": "box" 
           },
           "errorAlert": {
