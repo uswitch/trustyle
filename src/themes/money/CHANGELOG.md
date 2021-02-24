@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.43.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.43.2...@uswitch/trustyle.money-theme@1.43.4) (2021-02-24)
+
+
+### Bug Fixes
+
+* add circle-check list variant to all themes ([dec47d4](https://github.com/uswitch/trustyle/commit/dec47d4))
+
+
+
+
+
+
 ## [1.43.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.43.2...@uswitch/trustyle.money-theme@1.43.3) (2021-02-23)
 
 

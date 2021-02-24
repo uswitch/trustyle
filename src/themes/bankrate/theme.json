@@ -246,9 +246,14 @@
           "mb": "md",
           "a": {
             "display": "flex",
-            "flexDirection": "column",
-            "span:last-of-type": { "variant": "styles.h6", "mt": "xs", "mb": 0 }
+            "flexDirection": "column"
           }
+        },
+        "role": {
+          "variant": "styles.h6",
+          "color": "brand",
+          "mt": "xs",
+          "mb": 0
         }
       },
 
@@ -272,6 +277,9 @@
             "variant": "elements.author-profile.base.name",
             "ml": "xxxl",
             "pl": "xs"
+          },
+          "role": {
+            "variant": "elements.author-profile.base.role"
           }
         },
         "centered": {
@@ -301,6 +309,9 @@
           "name": {
             "variant": "elements.author-profile.base.name",
             "textAlign": "center"
+          },
+          "role": {
+            "variant": "elements.author-profile.base.role"
           }
         }
       }
