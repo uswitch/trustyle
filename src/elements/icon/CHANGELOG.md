@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.23.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.22.0...@uswitch/trustyle.icon@1.23.0) (2021-02-23)
+
+
+### Features
+
+* add new check-circle icon ([6f201f2](https://github.com/uswitch/trustyle/commit/6f201f2))
+
+
+
+
+
 # [1.22.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.21.0...@uswitch/trustyle.icon@1.22.0) (2021-02-17)
 
 

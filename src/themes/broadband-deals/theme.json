@@ -510,6 +510,10 @@
         "color": "blue-sky",
         "glyph": "tick"
       },
+      "check-circle": {
+        "glyph": "check-circle",
+        "color": "primary"
+      },
       "pros-and-cons": {
         "base": {
           "backgroundColor": "transparent",
@@ -598,6 +602,21 @@
             "variant": "elements.list.pros-and-cons.base",
             "svg": {
               "variant": "elements.list.pros-and-cons.icon"
+            }
+          }
+        },
+        "check-circle": {
+          "base": {
+            "li": {
+              "pl": 0,
+              "::before": {
+                "content": "none"
+              },
+              "svg": {
+                "display": "inline",
+                "mr": ["sm", "md"],
+                "verticalAlign": "text-bottom"
+              }
             }
           }
         }

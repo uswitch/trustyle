@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.16.0...@uswitch/trustyle.broadband-deals-theme@1.16.1) (2021-02-23)
+
+
+### Bug Fixes
+
+* add circle-check list variant to all themes ([dec47d4](https://github.com/uswitch/trustyle/commit/dec47d4))
+
+
+
+
+
 # [1.16.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.15.5...@uswitch/trustyle.broadband-deals-theme@1.16.0) (2021-02-11)
 
 

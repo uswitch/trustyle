@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.36.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.35.3...@uswitch/trustyle.uswitch-theme@2.36.0) (2021-02-23)
+
+
+### Features
+
+* add circle-check variant to list component ([ddb5497](https://github.com/uswitch/trustyle/commit/ddb5497))
+
+
+
+
+
+## [2.35.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.35.2...@uswitch/trustyle.uswitch-theme@2.35.3) (2021-02-23)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.35.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.35.1...@uswitch/trustyle.uswitch-theme@2.35.2) (2021-02-23)
+
+
+### Bug Fixes
+
+* updated styling for uswitch theme author profile variants ([6f33a46](https://github.com/uswitch/trustyle/commit/6f33a46))
+
+
+
+
+
 ## [2.35.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.35.0...@uswitch/trustyle.uswitch-theme@2.35.1) (2021-02-17)
 
 
