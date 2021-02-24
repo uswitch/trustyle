@@ -4216,8 +4216,7 @@
             "border":"1px #000 solid",
             "padding": [16, 24, 32],
             "width": ["100%", "555px", "66%"],
-            "marginLeft": ["auto", "auto", 0],
-            "marginRight": ["auto", "auto", 0],
+            "mx": "auto",
             "max-width": ["555px", "100%"],
             "boxShadow": "box" 
           },
