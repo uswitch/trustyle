@@ -868,15 +868,16 @@
         },
         "journey": {
           "formWrapper": {
-            "minHeight": ["300px", "680px"],
+            "minHeight": ["500px", "680px"],
             "py": "lg",
-            "px": ["md", "xxl"]
+            "position": "relative"
           },
           "simple-radio": {
             "radioWrapper": {
               "display": "flex",
               "flexDirection": "column",
               "width": "100%",
+
               "mb": "xl"
             },
             "span": {
@@ -884,11 +885,13 @@
             }
           },
           "funnel": {
+            "px": ["md", "xl"],
             "mb": "md"
           },
           "input": {
             "wrapper": {
               "display": "flex",
+              "px": ["md", "xl"],
               "mb": ["md", "lg"],
               "width": "100%",
               "justifyContent": "space-between",
@@ -903,9 +906,7 @@
             "variant": "styles.h6",
             "color": "grey-80",
             "display": "block",
-            ":not(:first-child)": {
-              "mt": "sm"
-            },
+            "mb": "md",
             "variants": {
               "calculator": {
                 "flex": "1 1 0px",
@@ -2712,8 +2713,15 @@
             "buttonWrapper": {
               "display": "flex",
               "justifyContent": "flex-end",
-              "borderTop": "1px solid #E8E8E9",
               "pt": "md",
+              "borderTop": "1px solid #E8E8E9",
+              "position": "absolute",
+              "bottom": ["16px", "16px", "28px"],
+              "width": "100%",
+              "button": {
+                "mr": ["md", "xl"]
+              },
+
               "calculator": {
                 "textAlign": "center"
               }
