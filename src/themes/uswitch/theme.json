@@ -870,7 +870,11 @@
           "simple-radio": {
             "radioWrapper": {
               "display": "flex",
-              "flexDirection": "column"
+              "flexDirection": "column",
+              "width": "100%"
+            },
+            "span": {
+              "mb": "sm"
             }
           },
           "input": {
@@ -879,7 +883,6 @@
               "mb": ["md", "lg"],
               "width": "100%",
               "justifyContent": "space-between",
-              "alignItems": "center",
               "flexDirection": "column"
             },
             "error": {
@@ -888,7 +891,7 @@
             }
           },
           "label": {
-            "variant": "styles.h4",
+            "variant": "styles.h6",
             "color": "grey-80",
             "display": "block",
             ":not(:first-child)": {
@@ -2702,8 +2705,6 @@
               "display": "none"
             },
             "fields": {
-              "display": "block",
-              "textAlign": "center",
               "calculator": {
                 "display": "flex",
                 "flexWrap": "wrap",
