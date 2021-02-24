@@ -3,13 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [2.25.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.25.0...@uswitch/trustyle.bankrate-theme@2.25.1) (2021-02-23)
+## [2.25.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.25.1...@uswitch/trustyle.bankrate-theme@2.25.2) (2021-02-24)
 
 
 ### Bug Fixes
 
 * add circle-check list variant to all themes ([dec47d4](https://github.com/uswitch/trustyle/commit/dec47d4))
 
+
+
+
+
+
+
+## [2.25.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.25.0...@uswitch/trustyle.bankrate-theme@2.25.1) (2021-02-23)
+
+
+### Bug Fixes
+
+* add circle-check list variant to all themes ([dec47d4](https://github.com/uswitch/trustyle/commit/dec47d4))
 
 
 

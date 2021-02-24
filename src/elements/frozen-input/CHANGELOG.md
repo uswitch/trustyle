@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.frozen-input@3.2.4...@uswitch/trustyle.frozen-input@3.2.6) (2021-02-24)
+
+**Note:** Version bump only for package @uswitch/trustyle.frozen-input
+
+
+
+
+
+
 ## [3.2.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.frozen-input@3.2.4...@uswitch/trustyle.frozen-input@3.2.5) (2021-02-23)
 
 **Note:** Version bump only for package @uswitch/trustyle.frozen-input

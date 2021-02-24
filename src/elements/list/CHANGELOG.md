@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.list@1.5.9...@uswitch/trustyle.list@1.7.0) (2021-02-24)
+
+
+### Features
+
+* add circle-check variant to list component ([ddb5497](https://github.com/uswitch/trustyle/commit/ddb5497))
+
+
+
+
+
+
 # [1.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.list@1.5.9...@uswitch/trustyle.list@1.6.0) (2021-02-23)
 
 
