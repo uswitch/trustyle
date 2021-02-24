@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.49](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.48...@uswitch/trustyle.side-nav@1.0.49) (2021-02-23)
+
+**Note:** Version bump only for package @uswitch/trustyle.side-nav
+
+
+
+
+
 ## [1.0.48](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.47...@uswitch/trustyle.side-nav@1.0.48) (2021-02-17)
 
 **Note:** Version bump only for package @uswitch/trustyle.side-nav
