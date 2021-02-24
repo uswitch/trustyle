@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.25.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.25.3...@uswitch/trustyle.bankrate-theme@2.25.6) (2021-02-24)
+
+
+### Bug Fixes
+
+* author with article dates styling ([f2da46f](https://github.com/uswitch/trustyle/commit/f2da46f))
+* hero with backgorund font color update ([edb9c32](https://github.com/uswitch/trustyle/commit/edb9c32))
+
+
+
+
+
+
 ## [2.25.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.25.3...@uswitch/trustyle.bankrate-theme@2.25.5) (2021-02-24)
 
 
