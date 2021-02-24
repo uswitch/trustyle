@@ -38,7 +38,8 @@
     "base": 400,
     "light": 300,
     "semiBold": 500,
-    "bold": 600
+    "bold": 600,
+    "bolder": 700
   },
   "space": {
     "gutter": 16,
@@ -106,6 +107,11 @@
     },
     "label": {
       "width": 280
+    },
+    "list": {
+      "icon": {
+        "sm": 18
+      }
     },
     "input": {
       "height": 58
@@ -1040,30 +1046,34 @@
         "color": "green",
         "glyph": "tick"
       },
-      "check-circle": {
-        "glyph": "check-circle",
-        "color": "primary"
-      },
       "pros-and-cons": {
+        "title": {
+          "fontWeight": "bolder",
+          "mb": ["xs", "sm"]
+        },
         "base": {
           "backgroundColor": "grey-05",
           "padding": "sm",
+          "my": 0,
           "li": {
             "display": "flex",
             "alignItems": "center",
             "paddingLeft": 0,
             "marginBottom": "xs",
+            "color": "grey-80",
             "::before": {
               "display": "none"
+            },
+            ":last-of-type": {
+              "marginBottom": "0"
             }
-          },
-          ":last-child": {
-            "marginBottom": "0"
-          },
-          "icon": {
-            "display": "inline",
-            "marginRight": "xs"
           }
+        },
+        "icon": {
+          "display": "inline",
+          "pr": "xs",
+          "maxWidth": "list.icon.sm",
+          "maxHeight": "list.icon.sm"
         }
       },
       "variants": {
@@ -1105,27 +1115,14 @@
         },
         "cons": {
           "title": {
-            "variant": "elements.list.pros-and-cons.title"
+            "variant": "elements.list.pros-and-cons.title",
+            "mt": ["xs", 0],
+            "mb": ["xs", "sm"]
           },
           "base": {
             "variant": "elements.list.pros-and-cons.base",
             "svg": {
               "variant": "elements.list.pros-and-cons.icon"
-            }
-          }
-        },
-        "check-circle": {
-          "base": {
-            "li": {
-              "pl": 0,
-              "::before": {
-                "content": "none"
-              },
-              "svg": {
-                "display": "inline",
-                "mr": ["sm", "md"],
-                "verticalAlign": "text-bottom"
-              }
             }
           }
         }
