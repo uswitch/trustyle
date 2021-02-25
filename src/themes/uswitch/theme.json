@@ -227,7 +227,9 @@
     "progress-bg": "#E0E9FF",
     "progress-primary": "#84A6FF",
     "error-red": "#D64226",
+    "error-pink": "#FFDDE0",
     "success-green": "#2AAA5B",
+    "success-mint": "rgba(54,173,89,0.25)",
     "frozen-bg": "#F6F6F6",
     "battleshipGrey": "#65717B",
     "veryLightGrey": "#E9EBED",
@@ -4112,8 +4114,119 @@
   "modules": {
     "lead-capture-form": {
       "base": {
-        "margin": ["auto", "auto"],
-        "width": ["100%", "100%"]
+        "container": {
+          "mx": [-15, 0],
+          ".sticky": {
+            "minHeight": ["105px", "172px"]
+          }
+        },
+        "wrapper": {
+          "top": [0, "sm", "sm"],
+          "left": 0,
+          "right": 0,
+          "&.sticky-fixed": {
+            "position": "fixed"
+          },
+          "zIndex": 9999,
+          "display": "flex",
+          "justifyContent": "center",
+          "pt": [0],
+          "mt": [0]
+        },
+        "innerContainer": {
+          ".sticky &": {
+            "width": ["100%", "unset"],
+            "transition": "box-shadow 300ms, border 300ms",
+            "background": "#FFFFFF",
+            "py": [10, "sm"],
+            "px": [10, "xl", "xl"],
+            "borderWidth": 1,
+            "borderStyle": "solid",
+            "borderColor": "transparent"
+          },
+          ".sticky-fixed &": {
+            "borderColor": ["transparent", "grey-20"],
+            "borderBottomColor": ["grey-20"],
+            "boxShadow": "0px 2px 20px rgba(0, 0, 0, 0.1)"
+          },
+          "h3": {
+            "fontSize": [13, "24px", "24px"]
+          }
+        },
+        "copy": {
+          "mb": ["xxs", "sm"],
+          "textAlign": "center"
+        },
+        "inputWrapper": {
+          "width": "100%",
+          "position": "relative",
+          "> svg": {
+            "position": "absolute",
+            "top": "50%",
+            "left": "sm",
+            "transform": "translateY(-50%)"
+          },
+          "&:not(:last-of-type)": {
+            "borderWidth": ["0 0 1px 0", "0 1px 0 0"],
+            "borderStyle": "solid",
+            "borderColor": "grey-20"
+          }
+        },
+        "postcodeWrapper": {
+          "flexGrow": 0,
+          "flexShrink": 1,
+          "svg": {
+            "display": "inline",
+            "left": ["md", "auto"],
+            "ml": 0,
+            "top": [33, 25]
+          }
+        }
+      },
+      "variants": {
+        "emailCapture": {
+          "container": {
+            "mt": [16, 24, 32],
+            "ml": [0],
+            "mr": [0]
+          },
+          "copy": {
+            "textAlign": "left",
+            "h2": {
+              "marginBottom": "xxs",
+              "fontSize": "lg",
+              "fontWeight": "xxbold",
+              "&:first-of-type": {
+                "marginTop": 0
+              }
+            },
+            "p": {
+              "color": "grey-70",
+              "fontSize": "xs",
+              "fontWeight": "xxbold"
+            }
+          },
+          "innerContainer": {
+            "border": "1px #000 solid",
+            "padding": ["base", "md", 32],
+            "width": ["100%", "555px", "66%"],
+            "mx": "auto",
+            "max-width": ["555px", "100%"],
+            "boxShadow": "box"
+          },
+          "errorAlert": {
+            "zIndex": 1,
+            "my": "base",
+            "padding": "base",
+            "backgroundColor": "error-pink"
+          },
+          "notificationAlert": {
+            "zIndex": 1,
+            "my": "base",
+            "padding": "base",
+            "backgroundColor": "success-mint"
+          }
+        }
       },
       "form": {
         "maxWidth": [555, 555, 555]
