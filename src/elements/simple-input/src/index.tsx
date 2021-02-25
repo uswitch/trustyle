@@ -17,6 +17,7 @@ export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   suffix?: string
   inputSize?: InputSize
   uppercase?: boolean
+  onKeyDown?: any
 }
 
 export const SimpleInput = React.forwardRef(
@@ -29,7 +30,8 @@ export const SimpleInput = React.forwardRef(
       prefix,
       suffix,
       inputSize,
-      uppercase
+      uppercase,
+      onKeyDown
     } = props
 
     const [hasFocus, setHasFocus] = useState(false)
@@ -88,6 +90,7 @@ export const SimpleInput = React.forwardRef(
           defaultValue={defaultValue}
           onFocus={() => setHasFocus(true)}
           onBlur={() => setHasFocus(false)}
+          onKeyDown={onKeyDown}
           {...props}
         />
         {suffix && (
