@@ -4208,12 +4208,12 @@
             }
           },
           "innerContainer": {
-            "border":"1px #000 solid",
+            "border": "1px #000 solid",
             "padding": ["base", "mid", 32],
             "width": ["100%", "555px", "66%"],
             "mx": "auto",
             "max-width": ["555px", "100%"],
-            "boxShadow": "box" 
+            "boxShadow": "box"
           },
           "errorAlert": {
             "zIndex": 1,
