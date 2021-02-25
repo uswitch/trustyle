@@ -4199,9 +4199,9 @@
           "copy": {
             "textAlign": "left",
             "h2": {
-              "marginBottom": "0.286em",
+              "marginBottom": "xxs",
               "fontSize": "lg",
-              "fontWeight": "700",
+              "fontWeight": "xxbold",
               "&:first-of-type": {
                 "marginTop": 0
               }
@@ -4209,12 +4209,12 @@
             "p": {
               "color": "grey-70",
               "fontSize": "xs",
-              "fontWeight": "700"
+              "fontWeight": "xxbold"
             }
           },
           "innerContainer": {
             "border":"1px #000 solid",
-            "padding": [16, 24, 32],
+            "padding": ["base", "mid", 32],
             "width": ["100%", "555px", "66%"],
             "mx": "auto",
             "max-width": ["555px", "100%"],
@@ -4222,14 +4222,14 @@
           },
           "errorAlert": {
             "zIndex": 1,
-            "my": 16,
-            "padding": 16,
+            "my": "base",
+            "padding": "base",
             "backgroundColor": "error-pink"
           },
           "notificationAlert": {
             "zIndex": 1,
-            "my": 16,
-            "padding": 16,
+            "my": "base",
+            "padding": "base",
             "backgroundColor": "success-mint"
           }
         }
