@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.38.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.37.2...@uswitch/trustyle.uswitch-theme@2.38.0) (2021-02-25)
+
+
+### Bug Fixes
+
+* mid to md ([5d7bb2b](https://github.com/uswitch/trustyle/commit/5d7bb2b))
+* prettier ([f5d8989](https://github.com/uswitch/trustyle/commit/f5d8989))
+* removed unused code ([09b0a4c](https://github.com/uswitch/trustyle/commit/09b0a4c))
+* Replaced hard coded values with theme variables ([b325e4b](https://github.com/uswitch/trustyle/commit/b325e4b))
+* width: calc(...) causes elements to have flash of unstyled content that breaks unrelated component icons, removed ([af57b88](https://github.com/uswitch/trustyle/commit/af57b88))
+
+
+### Features
+
+* Added styling for email capture variant of lead-capture form, added success and error colours ([56dbce8](https://github.com/uswitch/trustyle/commit/56dbce8))
+* Center the form ([f1a0bf0](https://github.com/uswitch/trustyle/commit/f1a0bf0))
+
+
+
+
+
 ## [2.37.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.37.1...@uswitch/trustyle.uswitch-theme@2.37.2) (2021-02-24)
 
 
