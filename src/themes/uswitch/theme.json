@@ -4209,7 +4209,7 @@
           },
           "innerContainer": {
             "border": "1px #000 solid",
-            "padding": ["base", "mid", 32],
+            "padding": ["base", "md", 32],
             "width": ["100%", "555px", "66%"],
             "mx": "auto",
             "max-width": ["555px", "100%"],
