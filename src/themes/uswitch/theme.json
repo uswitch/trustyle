@@ -1389,7 +1389,7 @@
             "flex": "auto",
             "flexGrow": 0,
             "marginLeft": "sm",
-            "backgroundColor": "white",
+            "backgroundColor": "light-1",
             "borderRadius": "999px",
             "whiteSpace": "nowrap",
             "position": "relative",
@@ -1424,7 +1424,7 @@
             "fontSize": "xs",
             "fontWeight": "bold",
             "lineHeight": "24px",
-            "color": "black",
+            "color": "dark-1",
             "&:first-child": {
               "marginLeft": "0px"
             }
@@ -1434,16 +1434,16 @@
         "phaseIcon": {
           "base": {
             "transition": "background 0.4s, border-color 0.4s, color 0.4s",
-            "background": "white",
+            "background": "light-1",
             "border": "2px solid",
-            "borderColor": "black",
+            "borderColor": "dark-1",
             "borderRadius": "999px",
             "width": "24px",
             "height": "24px",
             "lineHeight": "20px",
             "textAlign": "center",
             "fontWeight": "bold",
-            "color": "black",
+            "color": "dark-1",
             "fontSize": "14px"
           },
 
@@ -1451,15 +1451,15 @@
             "open": {
               "variant": "elements.funnel-progress.base.phaseIcon.base",
               "background": "black",
-              "borderColor": "black",
-              "color": "white"
+              "borderColor": "dark-1",
+              "color": "light-1"
             },
 
             "complete": {
               "variant": "elements.funnel-progress.base.phaseIcon.base",
               "background": "black",
-              "borderColor": "black",
-              "color": "white"
+              "borderColor": "dark-1",
+              "color": "light-1"
             },
 
             "incomplete": {
