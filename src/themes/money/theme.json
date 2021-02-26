@@ -1358,7 +1358,8 @@
           "padding": 16,
           "paddingRight": 48,
           "verticalAlign": "middle",
-          "borderRadius": 0,
+          "borderColor": "grey-40",
+          "borderRadius": 4,
           "width": "100%",
           "&::-ms-expand": {
             "display": "none"
