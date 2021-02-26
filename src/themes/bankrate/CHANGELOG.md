@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.25.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.25.6...@uswitch/trustyle.bankrate-theme@2.25.7) (2021-02-26)
+
+
+### Bug Fixes
+
+* pros and cons list styling ([69b4cd8](https://github.com/uswitch/trustyle/commit/69b4cd8))
+
+
+
+
+
+
 ## [2.25.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.25.3...@uswitch/trustyle.bankrate-theme@2.25.6) (2021-02-24)
 
 
