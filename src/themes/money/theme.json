@@ -1392,7 +1392,13 @@
           "simple-radio": {
             "radioWrapper": {
               "display": "flex",
-              "flexDirection": ["column", "row"]
+              "flexDirection": ["column", "row"],
+              "> label:first-child": {
+                "mt": 0
+              },
+              "> label": {
+                "mt": [16, 0]
+              }
             }
           },
           "label": {
