@@ -3559,11 +3559,7 @@
           "py": 0,
           "mb": "md",
           "h3": {
-            "fontSize": [
-              "20px !important",
-              "24px !important",
-              "24px !important"
-            ],
+            "fontSize": ["20px", "24px", "24px"],
             "fontWeight": "bold",
             "paddingLeft": "0px"
           },
@@ -3578,7 +3574,7 @@
             "a": {
               "fontWeight": "700"
             },
-            "pb": ["8px !important", "16px"]
+            "pb": ["8px", "16px"]
           },
           "image": {
             "box-sizing": "border-box",
