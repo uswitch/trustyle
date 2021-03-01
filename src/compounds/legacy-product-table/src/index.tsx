@@ -48,26 +48,6 @@ const Footer: React.FC<FooterProps> = ({ children, label }) => {
   )
 }
 
-export const Header: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
-  return (
-    <header>
-      <Styled.h5
-        sx={{
-          color: '#069',
-          pl: ['15px', '160px'],
-          pr: ['15px', 0],
-          py: '15px',
-          mb: 0,
-          fontSize: '18px',
-          fontFamily: 'Varela Round,Arial,sans-serif'
-        }}
-      >
-        {children}
-      </Styled.h5>
-    </header>
-  )
-}
-
 const BaseCell: React.FC<React.HTMLAttributes<any>> = ({
   children,
   className
@@ -394,6 +374,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   eligibilityAddon?: object
   onRowClick?: () => void
   disabled?: boolean
+  badges?: string[]
 }
 
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
@@ -408,13 +389,20 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   eligibilityAddon,
   onRowClick,
   disabled,
+  badges = [],
   ...props
 }) => {
+  const badge = badges[0]
+
   return (
     <article
       sx={{
-        border: ['none', '1px solid #dadadb'],
+        border: [
+          badge ? '2px solid #34454E' : 'none',
+          `2px solid ${badge ? '#34454E' : '#DADADB'}`
+        ],
         marginBottom: '24px',
+        marginTop: badge ? '8px' : 0,
         background: '#fff',
         position: 'relative',
         ':first-of-type': {
@@ -429,7 +417,49 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         onRowClick={onRowClick}
         disabled={disabled}
       >
-        <Header>{title}</Header>
+        {!!badge && (
+          <div
+            sx={{
+              position: 'absolute',
+              top: 0,
+              transform: 'translateY(-50%)',
+              padding: '0 6px',
+              backgroundColor: '#fff',
+              marginLeft: ['4px', 'sm']
+            }}
+          >
+            <div
+              sx={{
+                padding: ['2.5px 8px', '5.5px 16px'],
+                backgroundColor: '#34454E',
+                color: '#fff',
+                borderRadius: '3px',
+                fontSize: ['14px', '16px'],
+                lineHeight: ['normal', 'inherit'],
+                fontWeight: [400, 600]
+              }}
+            >
+              {badge}
+            </div>
+          </div>
+        )}
+
+        <header>
+          <Styled.h5
+            sx={{
+              color: '#069',
+              pl: ['15px', '160px'],
+              pr: ['15px', 0],
+              py: '15px',
+              mb: 0,
+              mt: badge ? ['30px', '15px'] : 0,
+              fontSize: '18px',
+              fontFamily: 'Varela Round,Arial,sans-serif'
+            }}
+          >
+            {title}
+          </Styled.h5>
+        </header>
 
         <div
           sx={{

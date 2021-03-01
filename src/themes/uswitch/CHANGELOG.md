@@ -3,375 +3,261 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [2.36.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.35.3...@uswitch/trustyle.uswitch-theme@2.36.0) (2021-02-23)
+## [2.38.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.38.1...@uswitch/trustyle.uswitch-theme@2.38.2) (2021-02-26)
 
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.38.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.38.0...@uswitch/trustyle.uswitch-theme@2.38.1) (2021-02-25)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+# [2.38.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.37.2...@uswitch/trustyle.uswitch-theme@2.38.0) (2021-02-25)
+
+### Bug Fixes
+
+- mid to md ([5d7bb2b](https://github.com/uswitch/trustyle/commit/5d7bb2b))
+- prettier ([f5d8989](https://github.com/uswitch/trustyle/commit/f5d8989))
+- removed unused code ([09b0a4c](https://github.com/uswitch/trustyle/commit/09b0a4c))
+- Replaced hard coded values with theme variables ([b325e4b](https://github.com/uswitch/trustyle/commit/b325e4b))
+- width: calc(...) causes elements to have flash of unstyled content that breaks unrelated component icons, removed ([af57b88](https://github.com/uswitch/trustyle/commit/af57b88))
 
 ### Features
 
-* add circle-check variant to list component ([ddb5497](https://github.com/uswitch/trustyle/commit/ddb5497))
+- Added styling for email capture variant of lead-capture form, added success and error colours ([56dbce8](https://github.com/uswitch/trustyle/commit/56dbce8))
+- Center the form ([f1a0bf0](https://github.com/uswitch/trustyle/commit/f1a0bf0))
 
+## [2.37.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.37.1...@uswitch/trustyle.uswitch-theme@2.37.2) (2021-02-24)
 
+### Bug Fixes
 
+- pros and cons margins update ([e7203f2](https://github.com/uswitch/trustyle/commit/e7203f2))
 
+## [2.37.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.37.0...@uswitch/trustyle.uswitch-theme@2.37.1) (2021-02-24)
+
+### Bug Fixes
+
+- pros and cons list styling ([7e69227](https://github.com/uswitch/trustyle/commit/7e69227))
+
+# [2.37.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.35.3...@uswitch/trustyle.uswitch-theme@2.37.0) (2021-02-24)
+
+### Features
+
+- add circle-check variant to list component ([ddb5497](https://github.com/uswitch/trustyle/commit/ddb5497))
+
+# [2.36.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.35.3...@uswitch/trustyle.uswitch-theme@2.36.0) (2021-02-23)
+
+### Features
+
+- add circle-check variant to list component ([ddb5497](https://github.com/uswitch/trustyle/commit/ddb5497))
 
 ## [2.35.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.35.2...@uswitch/trustyle.uswitch-theme@2.35.3) (2021-02-23)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.35.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.35.1...@uswitch/trustyle.uswitch-theme@2.35.2) (2021-02-23)
-
 
 ### Bug Fixes
 
-* updated styling for uswitch theme author profile variants ([6f33a46](https://github.com/uswitch/trustyle/commit/6f33a46))
-
-
-
-
+- updated styling for uswitch theme author profile variants ([6f33a46](https://github.com/uswitch/trustyle/commit/6f33a46))
 
 ## [2.35.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.35.0...@uswitch/trustyle.uswitch-theme@2.35.1) (2021-02-17)
 
-
 ### Bug Fixes
 
-* Removed unused property from theme.json ([297e47a](https://github.com/uswitch/trustyle/commit/297e47a))
-* Run Prettier ([a7ccf2e](https://github.com/uswitch/trustyle/commit/a7ccf2e))
-* typo ([3fe16d8](https://github.com/uswitch/trustyle/commit/3fe16d8))
-* Use named colour rather than string (thanks Phil) ([b311e17](https://github.com/uswitch/trustyle/commit/b311e17))
-
-
-
-
+- Removed unused property from theme.json ([297e47a](https://github.com/uswitch/trustyle/commit/297e47a))
+- Run Prettier ([a7ccf2e](https://github.com/uswitch/trustyle/commit/a7ccf2e))
+- typo ([3fe16d8](https://github.com/uswitch/trustyle/commit/3fe16d8))
+- Use named colour rather than string (thanks Phil) ([b311e17](https://github.com/uswitch/trustyle/commit/b311e17))
 
 # [2.35.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.34.6...@uswitch/trustyle.uswitch-theme@2.35.0) (2021-02-11)
 
-
 ### Bug Fixes
 
-* border on eligibility-criteria-redesign on uswitch ([81f9f31](https://github.com/uswitch/trustyle/commit/81f9f31))
-* caret and content styles ([328940c](https://github.com/uswitch/trustyle/commit/328940c))
-* prettier issues ([ecc0c16](https://github.com/uswitch/trustyle/commit/ecc0c16))
-* refactor styles per percy ([6b3ade2](https://github.com/uswitch/trustyle/commit/6b3ade2))
-* uswitch eligibility-criteria ([ab59d65](https://github.com/uswitch/trustyle/commit/ab59d65))
-
+- border on eligibility-criteria-redesign on uswitch ([81f9f31](https://github.com/uswitch/trustyle/commit/81f9f31))
+- caret and content styles ([328940c](https://github.com/uswitch/trustyle/commit/328940c))
+- prettier issues ([ecc0c16](https://github.com/uswitch/trustyle/commit/ecc0c16))
+- refactor styles per percy ([6b3ade2](https://github.com/uswitch/trustyle/commit/6b3ade2))
+- uswitch eligibility-criteria ([ab59d65](https://github.com/uswitch/trustyle/commit/ab59d65))
 
 ### Features
 
-* accordion legacy variant ([a8e6348](https://github.com/uswitch/trustyle/commit/a8e6348))
-
-
-
-
+- accordion legacy variant ([a8e6348](https://github.com/uswitch/trustyle/commit/a8e6348))
 
 ## [2.34.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.34.5...@uswitch/trustyle.uswitch-theme@2.34.6) (2021-02-09)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.34.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.34.4...@uswitch/trustyle.uswitch-theme@2.34.5) (2021-02-09)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.34.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.34.2...@uswitch/trustyle.uswitch-theme@2.34.4) (2021-02-05)
-
 
 ### Bug Fixes
 
-* rich text block center-shrink variant styling ([dd9d3a1](https://github.com/uswitch/trustyle/commit/dd9d3a1))
-
-
-
-
+- rich text block center-shrink variant styling ([dd9d3a1](https://github.com/uswitch/trustyle/commit/dd9d3a1))
 
 ## [2.34.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.34.2...@uswitch/trustyle.uswitch-theme@2.34.3) (2021-02-05)
 
-
 ### Bug Fixes
 
-* rich text block center-shrink variant styling ([71991ba](https://github.com/uswitch/trustyle/commit/71991ba))
-
-
-
-
+- rich text block center-shrink variant styling ([71991ba](https://github.com/uswitch/trustyle/commit/71991ba))
 
 ## [2.34.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.34.1...@uswitch/trustyle.uswitch-theme@2.34.2) (2021-01-29)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.34.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.34.0...@uswitch/trustyle.uswitch-theme@2.34.1) (2021-01-29)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 # [2.34.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.33.2...@uswitch/trustyle.uswitch-theme@2.34.0) (2021-01-26)
-
 
 ### Bug Fixes
 
-* add all yellows ([2c756f0](https://github.com/uswitch/trustyle/commit/2c756f0))
-
+- add all yellows ([2c756f0](https://github.com/uswitch/trustyle/commit/2c756f0))
 
 ### Features
 
-* add info card variant ([138b171](https://github.com/uswitch/trustyle/commit/138b171))
-
-
-
-
+- add info card variant ([138b171](https://github.com/uswitch/trustyle/commit/138b171))
 
 ## [2.33.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.33.1...@uswitch/trustyle.uswitch-theme@2.33.2) (2021-01-25)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.33.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.33.0...@uswitch/trustyle.uswitch-theme@2.33.1) (2021-01-25)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 # [2.33.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.18...@uswitch/trustyle.uswitch-theme@2.33.0) (2021-01-25)
-
 
 ### Bug Fixes
 
-* container styling ([f88cf7b](https://github.com/uswitch/trustyle/commit/f88cf7b))
-* labeling ([06ae72b](https://github.com/uswitch/trustyle/commit/06ae72b))
-
+- container styling ([f88cf7b](https://github.com/uswitch/trustyle/commit/f88cf7b))
+- labeling ([06ae72b](https://github.com/uswitch/trustyle/commit/06ae72b))
 
 ### Features
 
-* update hero component with custom variant ([4a6913d](https://github.com/uswitch/trustyle/commit/4a6913d))
-
-
-
-
+- update hero component with custom variant ([4a6913d](https://github.com/uswitch/trustyle/commit/4a6913d))
 
 ## [2.32.18](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.17...@uswitch/trustyle.uswitch-theme@2.32.18) (2021-01-25)
 
-
 ### Bug Fixes
 
-* add rich-text-block hero variant ([cbf2bf0](https://github.com/uswitch/trustyle/commit/cbf2bf0))
-
-
-
-
+- add rich-text-block hero variant ([cbf2bf0](https://github.com/uswitch/trustyle/commit/cbf2bf0))
 
 ## [2.32.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.16...@uswitch/trustyle.uswitch-theme@2.32.17) (2021-01-22)
 
-
 ### Bug Fixes
 
-* lead capture form styling ([0998293](https://github.com/uswitch/trustyle/commit/0998293))
-
-
-
-
-
+- lead capture form styling ([0998293](https://github.com/uswitch/trustyle/commit/0998293))
 
 ## [2.32.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.15...@uswitch/trustyle.uswitch-theme@2.32.16) (2021-01-19)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.32.15](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.14...@uswitch/trustyle.uswitch-theme@2.32.15) (2021-01-18)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
-
-
-
-
 
 ## [2.32.14](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.13...@uswitch/trustyle.uswitch-theme@2.32.14) (2021-01-18)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.32.13](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.12...@uswitch/trustyle.uswitch-theme@2.32.13) (2021-01-18)
-
 
 ### Bug Fixes
 
-* remove margin from h2 and p in image-callout ([f72c016](https://github.com/uswitch/trustyle/commit/f72c016))
-
-
-
-
-
+- remove margin from h2 and p in image-callout ([f72c016](https://github.com/uswitch/trustyle/commit/f72c016))
 
 ## [2.32.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.11...@uswitch/trustyle.uswitch-theme@2.32.12) (2021-01-14)
 
-
 ### Bug Fixes
 
-* accordion heading font size ([0b7aca8](https://github.com/uswitch/trustyle/commit/0b7aca8))
-* carousel margin and padding update ([0e54fa9](https://github.com/uswitch/trustyle/commit/0e54fa9))
-* rich-text-block variants update ([497b55f](https://github.com/uswitch/trustyle/commit/497b55f))
-
-
-
-
+- accordion heading font size ([0b7aca8](https://github.com/uswitch/trustyle/commit/0b7aca8))
+- carousel margin and padding update ([0e54fa9](https://github.com/uswitch/trustyle/commit/0e54fa9))
+- rich-text-block variants update ([497b55f](https://github.com/uswitch/trustyle/commit/497b55f))
 
 ## [2.32.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.10...@uswitch/trustyle.uswitch-theme@2.32.11) (2021-01-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.32.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.9...@uswitch/trustyle.uswitch-theme@2.32.10) (2021-01-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
-
-
-
-
 
 ## [2.32.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.8...@uswitch/trustyle.uswitch-theme@2.32.9) (2021-01-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.32.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.7...@uswitch/trustyle.uswitch-theme@2.32.8) (2021-01-08)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
-
-
-
-
 
 ## [2.32.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.6...@uswitch/trustyle.uswitch-theme@2.32.7) (2021-01-07)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.32.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.5...@uswitch/trustyle.uswitch-theme@2.32.6) (2021-01-07)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
-
-
-
-
 
 ## [2.32.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.4...@uswitch/trustyle.uswitch-theme@2.32.5) (2021-01-06)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.32.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.3...@uswitch/trustyle.uswitch-theme@2.32.4) (2021-01-05)
-
 
 ### Bug Fixes
 
-* provider styling ([c8be337](https://github.com/uswitch/trustyle/commit/c8be337))
-* styling issues ([1a341a7](https://github.com/uswitch/trustyle/commit/1a341a7))
-
-
-
-
+- provider styling ([c8be337](https://github.com/uswitch/trustyle/commit/c8be337))
+- styling issues ([1a341a7](https://github.com/uswitch/trustyle/commit/1a341a7))
 
 ## [2.32.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.2...@uswitch/trustyle.uswitch-theme@2.32.3) (2021-01-05)
 
-
 ### Bug Fixes
 
-* remove min width on dropdown ([5fa26e7](https://github.com/uswitch/trustyle/commit/5fa26e7))
-
-
-
-
+- remove min width on dropdown ([5fa26e7](https://github.com/uswitch/trustyle/commit/5fa26e7))
 
 ## [2.32.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.1...@uswitch/trustyle.uswitch-theme@2.32.2) (2021-01-04)
 
-
 ### Bug Fixes
 
-* transactional feedback ([5db3b9f](https://github.com/uswitch/trustyle/commit/5db3b9f))
-
-
-
-
+- transactional feedback ([5db3b9f](https://github.com/uswitch/trustyle/commit/5db3b9f))
 
 ## [2.32.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.32.0...@uswitch/trustyle.uswitch-theme@2.32.1) (2021-01-04)
 
-
 ### Bug Fixes
 
-* changes padding for hero in uswitch theme to array. ([1bc86ad](https://github.com/uswitch/trustyle/commit/1bc86ad))
-
-
-
-
+- changes padding for hero in uswitch theme to array. ([1bc86ad](https://github.com/uswitch/trustyle/commit/1bc86ad))
 
 # [2.32.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.31.5...@uswitch/trustyle.uswitch-theme@2.32.0) (2020-12-15)
 
-
 ### Bug Fixes
 
-* change class selector ([99bf260](https://github.com/uswitch/trustyle/commit/99bf260))
-* noImage card variant styling ([1d25871](https://github.com/uswitch/trustyle/commit/1d25871))
-* prettier fix ([4762ad7](https://github.com/uswitch/trustyle/commit/4762ad7))
-* provider cards styling ([323d35c](https://github.com/uswitch/trustyle/commit/323d35c))
-* provider link over entire card ([7c367e4](https://github.com/uswitch/trustyle/commit/7c367e4))
-* spacings ([64e5026](https://github.com/uswitch/trustyle/commit/64e5026))
-* vertical cards styling ([f379c63](https://github.com/uswitch/trustyle/commit/f379c63))
-
+- change class selector ([99bf260](https://github.com/uswitch/trustyle/commit/99bf260))
+- noImage card variant styling ([1d25871](https://github.com/uswitch/trustyle/commit/1d25871))
+- prettier fix ([4762ad7](https://github.com/uswitch/trustyle/commit/4762ad7))
+- provider cards styling ([323d35c](https://github.com/uswitch/trustyle/commit/323d35c))
+- provider link over entire card ([7c367e4](https://github.com/uswitch/trustyle/commit/7c367e4))
+- spacings ([64e5026](https://github.com/uswitch/trustyle/commit/64e5026))
+- vertical cards styling ([f379c63](https://github.com/uswitch/trustyle/commit/f379c63))
 
 ### Features
 
-* add featured and featured alternate variations to uswitch ([cee1672](https://github.com/uswitch/trustyle/commit/cee1672))
-
-
-
-
+- add featured and featured alternate variations to uswitch ([cee1672](https://github.com/uswitch/trustyle/commit/cee1672))
 
 ## [2.31.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.31.4...@uswitch/trustyle.uswitch-theme@2.31.5) (2020-12-10)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
-
-
-
-
 
 ## [2.31.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.31.3...@uswitch/trustyle.uswitch-theme@2.31.4) (2020-12-10)
 
