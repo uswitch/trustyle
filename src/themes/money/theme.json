@@ -1518,7 +1518,6 @@
             "color": "plum",
             "paddingX": "lg",
             "paddingY": 0,
-            "opacity": 0.8,
             "submit": {
               "backgroundColor": "white",
               "borderRadius": "4px",
@@ -1558,6 +1557,7 @@
             "opacity": 0.8,
             "display": "flex",
             "alignItems": "center",
+            "fontFamily": "heading",
             "submit": {
               "display": "none"
             }
