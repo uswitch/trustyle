@@ -1046,6 +1046,10 @@
         "color": "green",
         "glyph": "tick"
       },
+      "check-circle": {
+        "glyph": "check-circle",
+        "color": "primary"
+      },
       "pros-and-cons": {
         "title": {
           "fontWeight": "bolder",
