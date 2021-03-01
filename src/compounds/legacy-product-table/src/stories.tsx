@@ -55,6 +55,10 @@ const ExampleProductTable = () => {
       eligibilityContent={eligibilityContent}
       clickableRow={clickableRow}
       onClickEligibility={onClickEligibility}
+      badges={[
+        'Fairer Finance Gold Customer Experience Ribbon Winner Autumn 2020',
+        'Fab!'
+      ]}
       eligibilityAddon={eligibilityAddon}
     >
       <DataCell

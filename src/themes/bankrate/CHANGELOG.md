@@ -3,6 +3,85 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.25.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.25.6...@uswitch/trustyle.bankrate-theme@2.25.7) (2021-02-26)
+
+
+### Bug Fixes
+
+* pros and cons list styling ([69b4cd8](https://github.com/uswitch/trustyle/commit/69b4cd8))
+
+
+
+
+
+
+## [2.25.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.25.3...@uswitch/trustyle.bankrate-theme@2.25.6) (2021-02-24)
+
+
+### Bug Fixes
+
+* author with article dates styling ([f2da46f](https://github.com/uswitch/trustyle/commit/f2da46f))
+* hero with backgorund font color update ([edb9c32](https://github.com/uswitch/trustyle/commit/edb9c32))
+
+
+
+
+
+
+## [2.25.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.25.3...@uswitch/trustyle.bankrate-theme@2.25.5) (2021-02-24)
+
+
+### Bug Fixes
+
+* author with article dates styling ([f2da46f](https://github.com/uswitch/trustyle/commit/f2da46f))
+* hero with backgorund font color update ([edb9c32](https://github.com/uswitch/trustyle/commit/edb9c32))
+
+
+
+
+
+## [2.25.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.25.3...@uswitch/trustyle.bankrate-theme@2.25.4) (2021-02-24)
+
+**Note:** Version bump only for package @uswitch/trustyle.bankrate-theme
+
+
+
+
+
+## [2.25.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.25.2...@uswitch/trustyle.bankrate-theme@2.25.3) (2021-02-24)
+
+
+### Bug Fixes
+
+* rich bio field for author profile on bankrate ([c047906](https://github.com/uswitch/trustyle/commit/c047906))
+
+
+
+
+
+## [2.25.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.25.1...@uswitch/trustyle.bankrate-theme@2.25.2) (2021-02-24)
+
+
+### Bug Fixes
+
+* add circle-check list variant to all themes ([dec47d4](https://github.com/uswitch/trustyle/commit/dec47d4))
+
+
+
+
+
+
+
+## [2.25.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.25.0...@uswitch/trustyle.bankrate-theme@2.25.1) (2021-02-23)
+
+
+### Bug Fixes
+
+* add circle-check list variant to all themes ([dec47d4](https://github.com/uswitch/trustyle/commit/dec47d4))
+
+
+
+
 # [2.25.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.24.0...@uswitch/trustyle.bankrate-theme@2.25.0) (2021-02-12)
 
 

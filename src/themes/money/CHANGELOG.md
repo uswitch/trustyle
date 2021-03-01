@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.43.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.43.4...@uswitch/trustyle.money-theme@1.43.5) (2021-02-26)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.43.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.43.2...@uswitch/trustyle.money-theme@1.43.4) (2021-02-24)
+
+
+### Bug Fixes
+
+* add circle-check list variant to all themes ([dec47d4](https://github.com/uswitch/trustyle/commit/dec47d4))
+
+
+
+
+
+
+## [1.43.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.43.2...@uswitch/trustyle.money-theme@1.43.3) (2021-02-23)
+
+
+### Bug Fixes
+
+* add circle-check list variant to all themes ([dec47d4](https://github.com/uswitch/trustyle/commit/dec47d4))
+
+
+
+
+
+## [1.43.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.43.1...@uswitch/trustyle.money-theme@1.43.2) (2021-02-23)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.43.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.43.0...@uswitch/trustyle.money-theme@1.43.1) (2021-02-23)
+
+
+### Bug Fixes
+
+* updated styling for author profile variants ([661518f](https://github.com/uswitch/trustyle/commit/661518f))
+
+
+
+
+
 # [1.43.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.42.0...@uswitch/trustyle.money-theme@1.43.0) (2021-02-11)
 
 
