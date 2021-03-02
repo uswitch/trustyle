@@ -3,9 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.43.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.43.4...@uswitch/trustyle.money-theme@1.43.6) (2021-03-02)
 
-**Note:** Version bump only for package @uswitch/trustyle.money-theme
+## [1.43.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.43.6...@uswitch/trustyle.money-theme@1.43.7) (2021-03-01)
+
+
+### Bug Fixes
+
+* add check-circle list variant to theme ([5c2f0fe](https://github.com/uswitch/trustyle/commit/5c2f0fe))
+* opacity and font tweaks to conditional form ([b4c7d96](https://github.com/uswitch/trustyle/commit/b4c7d96))
+
+
+
+
+
+## [1.43.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.43.4...@uswitch/trustyle.money-theme@1.43.6) (2021-03-01)
+
+
+### Bug Fixes
+
+* pros and cons styling ([94aa919](https://github.com/uswitch/trustyle/commit/94aa919))
+
 
 
 
