@@ -1394,11 +1394,9 @@
             "radioWrapper": {
               "display": "flex",
               "flexDirection": ["column", "row"],
-              "> label:first-child": {
-                "mt": 0
-              },
-              "> label": {
-                "mt": [16, 0]
+              "> div+div": {
+                "ml": [0, "sm"],
+                "mt": ["sm", 0]
               }
             }
           },
