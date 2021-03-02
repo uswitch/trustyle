@@ -1743,7 +1743,10 @@
       },
       "mb": "xl",
       "pb": "xl",
-      "pt": "xs"
+      "pt": "xs",
+      "[class*='BankrateAuthor']": {
+        "px": 0
+      }
     }
   },
   "layout": {
