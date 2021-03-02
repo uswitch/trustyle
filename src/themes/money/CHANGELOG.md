@@ -12,8 +12,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-
-
 ## [1.43.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.43.6...@uswitch/trustyle.money-theme@1.43.7) (2021-03-01)
 
 
