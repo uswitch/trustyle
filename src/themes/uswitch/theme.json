@@ -4215,7 +4215,8 @@
           "container": {
             "mt": [16, 24, 32],
             "ml": [0],
-            "mr": [0]
+            "mr": [0],
+            "mb": [16, 24, 32]
           },
           "copy": {
             "textAlign": "left",
@@ -4236,8 +4237,8 @@
           "innerContainer": {
             "border": "1px #000 solid",
             "padding": ["base", "md", 32],
-            "width": ["100%", "555px", "66%"],
-            "mx": "auto",
+            "width": ["100%", "555px", "grid.lg.8"],
+            "mx": ["auto", "auto", 0],
             "max-width": ["555px", "100%"],
             "boxShadow": "box"
           },
