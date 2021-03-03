@@ -960,7 +960,7 @@
         }
       },
       "pros": {
-        "color": "green",
+        "color": "#2F75FE",
         "glyph": "tick"
       },
       "cons": {
@@ -978,23 +978,22 @@
       "pros-and-cons": {
         "title": {
           "variant": "styles.h6",
-          "color": "grey-60",
-          "fontSize": "md",
+          "color": "black",
+          "fontSize": "sm",
           "fontWeight": "bolder",
           "lineHeight": "heading",
           "my": 0
         },
         "base": {
-          "py": "md",
-          "px": ["sm", "md"],
+          "p": "sm",
           "my": ["xs", "sm"],
-          "bg": "grey-05--hover",
+          "bg": "grey-05",
           "li": {
             "pl": 0,
-            "fontWeight": "bolder",
             "lineHeight": "heading",
-            "fontSize": "md",
+            "fontSize": "sm",
             "display": "flex",
+            "color": "dark-blue",
             "alignItems": "center",
             "::before": {
               "display": "none"

@@ -3,12 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [2.38.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.38.2...@uswitch/trustyle.uswitch-theme@2.38.3) (2021-03-03)
+
+## [2.39.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.38.2...@uswitch/trustyle.uswitch-theme@2.38.3) (2021-03-03)
 
 
 ### Bug Fixes
 
 * Left align email capture form, use grid value instead of per cent, add margin bottom ([ce347f1](https://github.com/uswitch/trustyle/commit/ce347f1))
+
+# [2.39.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.38.2...@uswitch/trustyle.uswitch-theme@2.39.0) (2021-03-03)
+
+
+### Features
+
+
 
 
 
