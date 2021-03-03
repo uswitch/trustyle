@@ -34,7 +34,13 @@ export const ButtonLink = <
 
   const displayIcon = (type: string, icon: Glyph) => {
     return (
-      <div sx={{ display: 'inline', variant: `elements.buttons.${type}` }}>
+      <div
+        sx={{
+          display: 'inline',
+          variant: `elements.buttons.${type}${variant &&
+            `.variants.${variant}`}`
+        }}
+      >
         <Icon
           glyph={icon}
           color={get(
