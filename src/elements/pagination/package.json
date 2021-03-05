@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.pagination",
-  "version": "1.6.11",
+  "version": "1.6.12",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
