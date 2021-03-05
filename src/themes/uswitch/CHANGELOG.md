@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.41.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.40.0...@uswitch/trustyle.uswitch-theme@2.41.0) (2021-03-05)
+
+
+### Features
+
+* add journey-card variant styling to theme ([18ec67b](https://github.com/uswitch/trustyle/commit/18ec67b))
+
+
+
+
+
 # [2.40.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.38.3...@uswitch/trustyle.uswitch-theme@2.40.0) (2021-03-05)
 
 

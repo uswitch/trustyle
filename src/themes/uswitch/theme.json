@@ -1815,6 +1815,45 @@
           "fontSize": "14px",
           "fontStyle": "normal",
           "lineHeight": "21px"
+        },
+        "journey-card": {
+          "position": "relative",
+          "backgroundColor": "white",
+          "px": "md",
+          "py": "lg",
+          "display": "flex",
+          "flexDirection": "column",
+          "alignItems": "flex-start",
+          "justifyContent": "flex-end",
+          "textAlign": "left",
+          "minHeight": "289px",
+          "border": "none",
+          "boxShadow": "0px 4px 24px rgba(0, 0, 0, 0.16)",
+          "content": {
+            "fontSize": "md",
+            "fontWeight": "800",
+            "order": 2
+          },
+          "beforeIcon": {
+            "position": "absolute",
+            "top": "0",
+            "right": "0",
+            "paddingTop": "lg",
+            "paddingRight": "md",
+            "svg": {
+              "width": 25,
+              "height": 25,
+              "float": "right",
+              "fill": "dark-1"
+            }
+          },
+          "afterIcon": {
+            "svg": {
+              "order": 1,
+              "width": 56,
+              "height": 56
+            }
+          }
         }
       }
     },
