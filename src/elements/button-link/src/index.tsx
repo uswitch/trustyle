@@ -37,8 +37,7 @@ export const ButtonLink = <
       <div
         sx={{
           display: 'inline',
-          variant: `elements.buttons.${type}${variant &&
-            `.variants.${variant}`}`
+          variant: `elements.buttons.variants.${variant}.${type}`
         }}
       >
         <Icon
@@ -88,7 +87,14 @@ export const ButtonLink = <
       {...props}
     >
       {beforeIcon && displayIcon('beforeIcon', beforeIcon)}
-      {children}
+      <div
+        sx={{
+          display: 'inline',
+          variant: `elements.buttons.variants.${variant}.content`
+        }}
+      >
+        {children}
+      </div>
       {afterIcon && displayIcon('afterIcon', afterIcon)}
     </Styled.a>
   )
