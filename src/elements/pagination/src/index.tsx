@@ -182,12 +182,12 @@ const Pagination: React.FC<Props> = ({
     width: '100%',
     height: '100%',
     position: 'absolute',
-    color: 'transparent',
+    py: 'xxs',
+    pl: 'sm',
+    pr: 'lg',
+    overflowY: 'hidden',
     ':focus': {
       outline: 'none'
-    },
-    ':hover': {
-      color: 'transparent'
     }
   }
 
