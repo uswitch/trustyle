@@ -1405,7 +1405,6 @@
             "fontWeight": "bold",
             "color": "grey-80",
             "display": "block",
-            "mt": "sm",
             "mb": "xs",
             "textAlign": "left",
             "variants": {
@@ -1429,6 +1428,12 @@
             "my": "xxs"
           },
           "input": {
+            "wrapper": {
+              "mb": [36, 56],
+              ":last-child": {
+                "mb": 36
+              }
+            },
             "error": {
               "color": "error",
               "mt": "xs",
@@ -1452,9 +1457,6 @@
         }
       },
       "button": {
-        "base": {
-          "mt": "sm"
-        },
         "variants": {
           "calculator": {
             "mb": "sm",
