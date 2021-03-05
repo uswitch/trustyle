@@ -32,6 +32,7 @@ import { Four } from './four'
 import { GasElectricity } from './gas-electricity'
 import { HamburgerSimple } from './hamburger-simple'
 import { Home } from './home'
+import { House } from './house'
 import { Info } from './info'
 import { Information } from './information'
 import { Letter } from './letter'
@@ -45,6 +46,7 @@ import { One } from './one'
 import { Person } from './person'
 import { Phone } from './phone'
 import { Plus } from './plus'
+import { PoundCircle } from './pound-circle'
 import { Twitter } from './twitter'
 import { Question } from './question'
 import { Smile } from './smile'
@@ -59,6 +61,7 @@ import { ThumbDown } from './thumb-down'
 import { StarFilled } from './star-filled'
 import { StarOutlined } from './star-outlined'
 import { StarHalfFilled } from './star-half-filled'
+import { Van } from './van'
 import { Warning } from './warning'
 import { Facebook } from './facebook'
 import { PhoneSimple } from './phone-simple'
@@ -93,6 +96,7 @@ export type Glyph =
   | 'gas-electricity'
   | 'hamburger-simple'
   | 'home'
+  | 'house'
   | 'info'
   | 'information'
   | 'letter'
@@ -107,6 +111,7 @@ export type Glyph =
   | 'phone'
   | 'phone-simple'
   | 'plus'
+  | 'pound-circle'
   | 'question'
   | 'smile'
   | 'sms'
@@ -121,6 +126,7 @@ export type Glyph =
   | 'star-outlined'
   | 'star-filled'
   | 'star-half-filled'
+  | 'van'
   | 'warning'
 
   // temporary icons
@@ -208,6 +214,8 @@ export const Icon: React.FC<Props> = ({
       return <HamburgerSimple color={color} size={size} />
     case 'home':
       return <Home color={color} size={size} />
+    case 'house':
+      return <House color={color} size={size} />
     case 'info':
       return <Info color={color} size={size} />
     case 'information':
@@ -236,6 +244,8 @@ export const Icon: React.FC<Props> = ({
       return <PhoneSimple color={color} size={size} />
     case 'plus':
       return <Plus color={color} size={size} />
+    case 'pound-circle':
+      return <PoundCircle color={color} size={size} />
     case 'question':
       return <Question color={color} size={size} />
     case 'smile':
@@ -264,6 +274,8 @@ export const Icon: React.FC<Props> = ({
       return <StarOutlined color={color} size={size} />
     case 'star-half-filled':
       return <StarHalfFilled color={color} size={size} />
+    case 'van':
+      return <Van color={color} size={size} />
     case 'warning':
       return <Warning color={color} size={size} />
 
