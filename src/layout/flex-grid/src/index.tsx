@@ -44,9 +44,10 @@ export const Container: React.FC<ContainerProps &
   children,
   cols,
   span,
-  className,
+  className = '',
   ...props
 }) => {
+  const classList = ['flex-grid-container', className].filter(x => x)
   const colsArray = castArray(cols)
   const spanArray = castArray(span)
   return (
@@ -66,7 +67,7 @@ export const Container: React.FC<ContainerProps &
         variant: 'compounds.container.flex'
       }}
       {...props}
-      className={`flex-grid-container ${className}`}
+      className={classList.join(' ')}
     >
       {children}
     </div>
