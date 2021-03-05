@@ -87,6 +87,27 @@ WithIcons.story = {
   }
 }
 
+export const JourneyCard = () => (
+  <React.Fragment>
+    <ButtonLink
+      variant="journey-card"
+      href="https://www.uswitch.com"
+      target="_blank"
+      beforeIcon="arrow"
+      afterIcon="home"
+    >
+      Buy my first home
+    </ButtonLink>
+    <Spacer />
+  </React.Fragment>
+)
+
+JourneyCard.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   const permutations = permutationsGenerator({
     variant: ['primary', 'secondary'],
