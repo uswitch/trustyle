@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import { jsx } from 'theme-ui'
+import classNames from 'classnames'
 
 const getGutterSize = (theme: any): any =>
   theme?.layout && theme?.layout['flex-grid'].sizes?.gutter
@@ -47,7 +48,7 @@ export const Container: React.FC<ContainerProps &
   className = '',
   ...props
 }) => {
-  const classList = ['flex-grid-container', className].filter(x => x)
+  const classes = classNames('flex-bar-foo', className)
   const colsArray = castArray(cols)
   const spanArray = castArray(span)
   return (
@@ -67,7 +68,7 @@ export const Container: React.FC<ContainerProps &
         variant: 'compounds.container.flex'
       }}
       {...props}
-      className={classList.join(' ')}
+      className={classes}
     >
       {children}
     </div>
