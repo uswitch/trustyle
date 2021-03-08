@@ -1815,6 +1815,45 @@
           "fontSize": "14px",
           "fontStyle": "normal",
           "lineHeight": "21px"
+        },
+        "journey-card": {
+          "position": "relative",
+          "backgroundColor": "white",
+          "px": "md",
+          "py": "lg",
+          "display": "flex",
+          "flexDirection": "column",
+          "alignItems": "flex-start",
+          "justifyContent": "flex-end",
+          "textAlign": "left",
+          "minHeight": "289px",
+          "border": "none",
+          "boxShadow": "0px 4px 24px rgba(0, 0, 0, 0.16)",
+          "content": {
+            "fontSize": "md",
+            "fontWeight": "800",
+            "order": 2
+          },
+          "beforeIcon": {
+            "position": "absolute",
+            "top": "0",
+            "right": "0",
+            "paddingTop": "lg",
+            "paddingRight": "md",
+            "svg": {
+              "width": 25,
+              "height": 25,
+              "float": "right",
+              "fill": "dark-1"
+            }
+          },
+          "afterIcon": {
+            "svg": {
+              "order": 1,
+              "width": 56,
+              "height": 56
+            }
+          }
         }
       }
     },
@@ -4217,7 +4256,8 @@
           "container": {
             "mt": [16, 24, 32],
             "ml": [0],
-            "mr": [0]
+            "mr": [0],
+            "mb": [16, 24, 32]
           },
           "copy": {
             "textAlign": "left",
@@ -4238,8 +4278,8 @@
           "innerContainer": {
             "border": "1px #000 solid",
             "padding": ["base", "md", 32],
-            "width": ["100%", "555px", "66%"],
-            "mx": "auto",
+            "width": ["100%", "555px", "grid.lg.8"],
+            "mx": ["auto", "auto", 0],
             "max-width": ["555px", "100%"],
             "boxShadow": "box"
           },

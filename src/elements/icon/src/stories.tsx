@@ -33,6 +33,7 @@ const glyphChoices: Glyph[] = [
   'four',
   'gas-electricity',
   'home',
+  'house',
   'info',
   'information',
   'letter',
@@ -46,6 +47,7 @@ const glyphChoices: Glyph[] = [
   'phone',
   'phone-simple',
   'plus',
+  'pound-circle',
   'question',
   'smile',
   'sms',
@@ -61,6 +63,7 @@ const glyphChoices: Glyph[] = [
   'star-outlined',
   'star-filled',
   'star-half-filled',
+  'van',
   'warning'
 ]
 

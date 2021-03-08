@@ -1,6 +1,6 @@
 {
-  "name": "@uswitch/trustyle.call-out",
-  "version": "2.1.17",
+  "name": "@uswitch/trustyle.advert",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -9,13 +9,14 @@
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
-    "@uswitch/trustyle.icon": "^1.17.1",
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle-utils.palette": "^4.0.2"
+    "@uswitch/trustyle.badge": "^2.0.4",
+    "@uswitch/trustyle.button": "^3.0.4",
+    "@uswitch/trustyle.icon": "^1.24.0"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.25.0"
+    "@uswitch/trustyle.hero": "^3.8.2"
   }
 }
