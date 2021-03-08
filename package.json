@@ -50,6 +50,7 @@
     "@storybook/storybook-deployer": "^2.8.6",
     "@styled-system/css": "^5.1.5",
     "@types/body-scroll-lock": "^2.6.1",
+    "@types/classnames": "^2.2.11",
     "@types/facepaint": "^1.2.1",
     "@types/lodash.debounce": "^4.0.6",
     "@types/react": "^16.8.21",
