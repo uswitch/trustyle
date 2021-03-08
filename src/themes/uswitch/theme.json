@@ -870,7 +870,8 @@
         "journey": {
           "formWrapper": {
             "minHeight": ["500px", "680px"],
-            "py": "lg",
+            "pt": "lg",
+            "mb": "-12px",
             "position": "relative"
           },
           "simple-radio": {
@@ -907,7 +908,7 @@
             "variant": "styles.h6",
             "color": "grey-80",
             "display": "block",
-            "mb": "md",
+            "mb": "xs",
             "variants": {
               "calculator": {
                 "flex": "1 1 0px",
@@ -2770,7 +2771,7 @@
             },
             "wrapper": {
               "variant": "elements.form-section.panel.elements.wrapper",
-              "paddingY": "md"
+              "pb": "md"
             },
             "heading": {
               "variant": "elements.form-section.panel.elements.heading",
