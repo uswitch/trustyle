@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.44.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.44.0...@uswitch/trustyle.money-theme@1.44.1) (2021-03-08)
+
+
+### Bug Fixes
+
+* make completed steps fully visible ([e9cd4fc](https://github.com/uswitch/trustyle/commit/e9cd4fc))
+
+
+
+
+
+# [1.44.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.43.9...@uswitch/trustyle.money-theme@1.44.0) (2021-03-05)
+
+
+### Features
+
+* form input spacing ([e84b5fa](https://github.com/uswitch/trustyle/commit/e84b5fa))
+
+
+
+
+
 ## [1.43.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.43.8...@uswitch/trustyle.money-theme@1.43.9) (2021-03-03)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme
