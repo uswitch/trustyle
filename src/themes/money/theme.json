@@ -408,7 +408,7 @@
         },
         "advert": {
           "paddingX": "base",
-          "paddingY": 3,
+          "paddingY": "3px",
           "fontSize": "xs",
           "backgroundColor": "plum",
           "color": "white",
