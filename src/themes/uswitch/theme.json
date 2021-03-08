@@ -2762,7 +2762,8 @@
               "bottom": ["16px", "16px", "28px"],
               "width": "100%",
               "button": {
-                "mr": ["md", "xl"]
+                "mr": ["md", "xl"],
+                "width": "180px"
               },
 
               "calculator": {
