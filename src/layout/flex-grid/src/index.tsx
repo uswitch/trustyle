@@ -48,7 +48,7 @@ export const Container: React.FC<ContainerProps &
   className = '',
   ...props
 }) => {
-  const classes = classNames('flex-bar-foo', className)
+  const classes = classNames('flex-grid-container', className)
   const colsArray = castArray(cols)
   const spanArray = castArray(span)
   return (
