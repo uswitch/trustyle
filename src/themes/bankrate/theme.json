@@ -23,7 +23,9 @@
   },
   "lineHeights": {
     "base": "1.5",
-    "heading": "1.3"
+    "heading": "1.3",
+    "sm": "16px",
+    "md": "32px"
   },
   "fontSizes": {
     "base": 16,
@@ -348,6 +350,7 @@
       },
       "image": {
         "position": "absolute",
+        "cursor": "pointer",
         "top": 0,
         "bottom": 0,
         "right": 0,
@@ -360,9 +363,11 @@
         "fontWeight": "base"
       },
       "title": {
+        "cursor": "pointer",
         "a": {
           "fontWeight": "bold",
-          "fontSize": ["md", "xl"]
+          "fontSize": ["md", "xl"],
+          "lineHeight": "md"
         }
       },
       "subtitle": {
@@ -403,11 +408,11 @@
       "dates": {
         "fontSize": "xxs",
         "my": 0,
-
         "lineHeight": "heading"
       },
       "publishedAt": {
         "variant": "elements.author.dates",
+        "lineHeight": "sm",
         "fontWeight": "bold"
       },
       "updatedAt": { "variant": "elements.author.dates", "mb": "sm" },
@@ -1742,7 +1747,8 @@
       },
       "mb": "xl",
       "pb": "xl",
-      "pt": "xs"
+      "pt": "xs",
+      ".authorContainer": { "px": 0 }
     }
   },
   "layout": {
