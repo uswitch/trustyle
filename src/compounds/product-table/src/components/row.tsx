@@ -28,6 +28,7 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   disabled?: boolean
   card?: boolean
   extraStyles?: {}
+  sectionStyles?: {}
 }
 
 const ProductTableRow: React.FC<RowProps> = ({
