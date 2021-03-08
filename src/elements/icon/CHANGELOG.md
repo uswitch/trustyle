@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.25.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.24.0...@uswitch/trustyle.icon@1.25.0) (2021-03-08)
+
+
+### Features
+
+* add house, van, and pound-circle icons ([51afea3](https://github.com/uswitch/trustyle/commit/51afea3))
+
+
+
+
+
 # [1.24.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.22.0...@uswitch/trustyle.icon@1.24.0) (2021-02-24)
 
 
