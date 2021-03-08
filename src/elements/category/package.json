@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.category",
-  "version": "2.2.9",
+  "version": "2.2.10",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -16,6 +16,6 @@
     "@uswitch/trustyle.icon": "^1.25.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.flex-grid": "^3.5.1"
+    "@uswitch/trustyle.flex-grid": "^3.5.2"
   }
 }
