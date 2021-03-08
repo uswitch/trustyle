@@ -405,6 +405,15 @@
           "variant": "elements.badge.base",
           "backgroundColor": "plum",
           "color": "white"
+        },
+        "advert": {
+          "paddingX": "base",
+          "paddingY": "3px",
+          "fontSize": "xs",
+          "backgroundColor": "plum",
+          "color": "white",
+          "fontWeight": "bold",
+          "borderRadius": "50vh"
         }
       }
     },
@@ -2743,6 +2752,13 @@
         "buttonLink": {
           "mt": ["sm", "xs"]
         }
+      }
+    },
+    "advert": {
+      "> div, a": {
+        "color": "text",
+        "backgroundColor": "white",
+        "textDecoration": "none"
       }
     }
   },
