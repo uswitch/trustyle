@@ -1518,6 +1518,7 @@
             "color": "plum",
             "paddingX": "lg",
             "paddingY": 0,
+            "opacity": 0.8,
             "submit": {
               "backgroundColor": "white",
               "borderRadius": "4px",
@@ -1609,7 +1610,8 @@
           },
           "isComplete": {
             "wrapper": {
-              "variant": "elements.form-section.default.elements.wrapper"
+              "variant": "elements.form-section.default.elements.wrapper",
+              "opacity": 1
             },
             "heading": {
               "variant": "elements.form-section.default.elements.heading",
