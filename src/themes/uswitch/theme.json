@@ -882,7 +882,8 @@
         "journey": {
           "formWrapper": {
             "minHeight": ["500px", "680px"],
-            "py": "lg",
+            "pt": "lg",
+            "mb": "-12px",
             "position": "relative"
           },
           "simple-radio": {
@@ -919,7 +920,7 @@
             "variant": "styles.h6",
             "color": "grey-80",
             "display": "block",
-            "mb": "md",
+            "mb": "xs",
             "variants": {
               "calculator": {
                 "flex": "1 1 0px",
@@ -1839,12 +1840,15 @@
           "justifyContent": "flex-end",
           "textAlign": "left",
           "minHeight": "289px",
+          "maxWidth": "289px",
+          "margin": "auto",
           "border": "none",
           "boxShadow": "0px 4px 24px rgba(0, 0, 0, 0.16)",
           "content": {
             "fontSize": "md",
             "fontWeight": "800",
-            "order": 2
+            "order": 2,
+            "marginTop": "sm"
           },
           "beforeIcon": {
             "position": "absolute",
@@ -1863,7 +1867,8 @@
             "svg": {
               "order": 1,
               "width": 56,
-              "height": 56
+              "height": 56,
+              "fill": "dark-1"
             }
           }
         }
@@ -1874,6 +1879,7 @@
         "checked": {
           "backgroundColor": "dark-1",
           "borderColor": "dark-1",
+          "padding": 0,
           "switch": {
             "backgroundColor": "light-1",
             "borderColor": "darl-1"
@@ -1882,6 +1888,7 @@
         "unchecked": {
           "backgroundColor": "grey-05",
           "borderColor": "grey-40",
+          "padding": 0,
           "switch": {
             "color": "grey-40",
             "backgroundColor": "light-1",
@@ -2531,11 +2538,6 @@
         }
       }
     },
-    "slide-reveal": {
-      "maxHeight": {
-        "max-height": "100%"
-      }
-    },
     "calculator": {
       "default": {
         "container": {
@@ -2773,7 +2775,8 @@
               "bottom": ["16px", "16px", "28px"],
               "width": "100%",
               "button": {
-                "mr": ["md", "xl"]
+                "mr": ["md", "xl"],
+                "width": "180px"
               },
 
               "calculator": {
@@ -2782,7 +2785,7 @@
             },
             "wrapper": {
               "variant": "elements.form-section.panel.elements.wrapper",
-              "paddingY": "md"
+              "pb": "md"
             },
             "heading": {
               "variant": "elements.form-section.panel.elements.heading",
