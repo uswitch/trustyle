@@ -248,11 +248,11 @@
           "a": { "mx": "sm" }
         },
         "bio": {
-          "mt": "xs",
-          "span:first-of-type>*": {
+          "mt": 0,
+          "&>span:first-of-type>*": {
             "mt": 0
           },
-          "span>*": {
+          "&>span:last-of-type>*": {
             "mb": 0
           }
         },
