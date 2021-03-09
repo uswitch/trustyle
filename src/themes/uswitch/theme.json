@@ -433,7 +433,13 @@
               }
             },
             "pt": "md",
-            "mt": [1, 9, 9]
+            "mt": [1, 9, 9],
+            "&>span:first-of-type>*": {
+              "mt": [0, 0, 0]
+            },
+            "&>span:last-of-type>*": {
+              "mb": [0, 0, 0]
+            }
           },
           "image": {
             "height": [64, 96],
@@ -504,7 +510,13 @@
               }
             },
             "mt": "md",
-            "textAlign": "center"
+            "textAlign": "center",
+            "&>span:first-of-type>*": {
+              "mt": [0, 0, 0]
+            },
+            "&>span:last-of-type>*": {
+              "mb": [0, 0, 0]
+            }
           },
           "image": {
             "height": [64, 96],
