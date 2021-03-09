@@ -28,6 +28,7 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   disabled?: boolean
   card?: boolean
   extraStyles?: {}
+  sectionStyles?: {}
 }
 
 const ProductTableRow: React.FC<RowProps> = ({
@@ -42,7 +43,8 @@ const ProductTableRow: React.FC<RowProps> = ({
   image,
   disabled,
   card = false,
-  extraStyles = {}
+  extraStyles = {},
+  sectionStyles = {}
 }) => {
   const forcedMobile = forceMobile(card)
 
@@ -118,9 +120,8 @@ const ProductTableRow: React.FC<RowProps> = ({
             : 'compounds.product-table.row.main',
           pointerEvents: disabled ? 'none' : null,
           opacity: disabled ? '0.5' : '1',
-          pb: card ? '50px' : '0',
-          overflow: card ? 'hidden' : 'visible',
-          width: '100%'
+          width: '100%',
+          ...sectionStyles
         }}
       >
         <RowWrapper link={clickableRow} headerImage={image}>
