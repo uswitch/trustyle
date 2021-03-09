@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.41.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.41.4...@uswitch/trustyle.uswitch-theme@2.41.5) (2021-03-09)
+
+
+### Bug Fixes
+
+* apply padding change in uswitch theme ([0603bfc](https://github.com/uswitch/trustyle/commit/0603bfc))
+
+
+
+
+
 ## [2.41.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.41.3...@uswitch/trustyle.uswitch-theme@2.41.4) (2021-03-09)
 
 
