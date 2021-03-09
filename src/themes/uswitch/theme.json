@@ -2524,11 +2524,6 @@
         }
       }
     },
-    "slide-reveal": {
-      "maxHeight": {
-        "max-height": "100%"
-      }
-    },
     "calculator": {
       "default": {
         "container": {

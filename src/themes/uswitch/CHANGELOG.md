@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.41.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.41.3...@uswitch/trustyle.uswitch-theme@2.41.4) (2021-03-09)
+
+
+### Bug Fixes
+
+* filters being always stuck in open state ([73e72e7](https://github.com/uswitch/trustyle/commit/73e72e7))
+
+
+
+
+
 ## [2.41.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.41.2...@uswitch/trustyle.uswitch-theme@2.41.3) (2021-03-09)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
