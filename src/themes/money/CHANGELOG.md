@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.44.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.44.3...@uswitch/trustyle.money-theme@1.44.4) (2021-03-09)
+
+
+### Bug Fixes
+
+* author profile rich bio p formatting ([ee778c1](https://github.com/uswitch/trustyle/commit/ee778c1))
+
+
+
+
+
 ## [1.44.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.44.0...@uswitch/trustyle.money-theme@1.44.3) (2021-03-08)
 
 
