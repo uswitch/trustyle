@@ -58,7 +58,7 @@ const ToggleSwitch: React.FC<Props> = ({
             : {
                 height: 40,
                 width: 80,
-                padding: 0,
+                padding: 4,
                 borderWidth: 1,
                 borderStyle: 'solid',
                 borderRadius: '50vw',
