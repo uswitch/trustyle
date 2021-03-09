@@ -1863,6 +1863,7 @@
         "checked": {
           "backgroundColor": "dark-1",
           "borderColor": "dark-1",
+          "padding": 0,
           "switch": {
             "backgroundColor": "light-1",
             "borderColor": "darl-1"
@@ -1871,6 +1872,7 @@
         "unchecked": {
           "backgroundColor": "grey-05",
           "borderColor": "grey-40",
+          "padding": 0,
           "switch": {
             "color": "grey-40",
             "backgroundColor": "light-1",
