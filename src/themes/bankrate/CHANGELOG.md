@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.25.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.25.10...@uswitch/trustyle.bankrate-theme@2.25.11) (2021-03-08)
+
+**Note:** Version bump only for package @uswitch/trustyle.bankrate-theme
+
+
+
+
+
+## [2.25.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.25.9...@uswitch/trustyle.bankrate-theme@2.25.10) (2021-03-08)
+
+
+### Bug Fixes
+
+* author dates variant update ([1160acb](https://github.com/uswitch/trustyle/commit/1160acb))
+* remove horizontal padding from author in hero with background ([c453d06](https://github.com/uswitch/trustyle/commit/c453d06))
+
+
+
+
+
+
 ## [2.25.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bankrate-theme@2.25.7...@uswitch/trustyle.bankrate-theme@2.25.9) (2021-03-03)
 
 

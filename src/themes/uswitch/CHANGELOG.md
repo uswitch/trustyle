@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.41.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.41.4...@uswitch/trustyle.uswitch-theme@2.41.5) (2021-03-09)
+
+
+### Bug Fixes
+
+* apply padding change in uswitch theme ([0603bfc](https://github.com/uswitch/trustyle/commit/0603bfc))
+
+
+
+
+
+## [2.41.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.41.3...@uswitch/trustyle.uswitch-theme@2.41.4) (2021-03-09)
+
+
+### Bug Fixes
+
+* filters being always stuck in open state ([73e72e7](https://github.com/uswitch/trustyle/commit/73e72e7))
+
+
+
+
+
+## [2.41.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.41.2...@uswitch/trustyle.uswitch-theme@2.41.3) (2021-03-09)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.41.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.41.1...@uswitch/trustyle.uswitch-theme@2.41.2) (2021-03-08)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.41.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.41.0...@uswitch/trustyle.uswitch-theme@2.41.1) (2021-03-08)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
 # [2.41.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.40.0...@uswitch/trustyle.uswitch-theme@2.41.0) (2021-03-05)
 
 
