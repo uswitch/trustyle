@@ -40,6 +40,84 @@ const AuthorProfile: React.FC<Props> = ({
 
   const styles = makeStyles(variant)
 
+  const BioElement =
+    bio == null || typeof bio === 'string' || bio instanceof String
+      ? Styled.p
+      : Styled.div
+
+  const socials = []
+
+  if (email) {
+    socials.push(
+      <Styled.a
+        key={'eml-' + email}
+        href={'mailto:' + email}
+        sx={{
+          textDecoration: 'none',
+          cursor: 'pointer',
+          borderBottom: 0
+        }}
+      >
+        <div
+          sx={{
+            display: 'flex'
+          }}
+        >
+          <Icon glyph="email-filled" size={22} color="grey-80" />
+          {showDetails && <span>{email}</span>}
+        </div>
+      </Styled.a>
+    )
+  }
+
+  if (twitterLink) {
+    socials.push(
+      <Styled.a
+        key={'twtr-' + twitterLink}
+        href={twitterLink}
+        target={socialsHrefTarget}
+        sx={{
+          textDecoration: 'none',
+          cursor: 'pointer',
+          borderBottom: 0
+        }}
+      >
+        <div
+          sx={{
+            display: 'flex'
+          }}
+        >
+          <Icon glyph="twitter" size={22} color="grey-80" />
+          {showDetails && <span>{twitterLink}</span>}
+        </div>
+      </Styled.a>
+    )
+  }
+
+  if (linkedInLink) {
+    socials.push(
+      <Styled.a
+        key={'lnkd-' + linkedInLink}
+        href={linkedInLink}
+        target={socialsHrefTarget}
+        sx={{
+          textDecoration: 'none',
+          cursor: 'pointer',
+          borderBottom: 0
+        }}
+      >
+        <div
+          sx={{
+            display: 'flex'
+          }}
+        >
+          <Icon glyph="linkedIn" size={22} color="grey-80" />
+          {showDetails && <span>{linkedInLink}</span>}
+        </div>
+      </Styled.a>
+    )
+  }
+
   return (
     <div
       className={className}
@@ -103,7 +181,7 @@ const AuthorProfile: React.FC<Props> = ({
             <span sx={{ variant: styles('role') }}>{role}</span>
           </a>
         </Styled.h2>
-        <Styled.p
+        <BioElement
           sx={{
             fontSize: 'sm',
             marginY: 0,
@@ -112,75 +190,20 @@ const AuthorProfile: React.FC<Props> = ({
           }}
         >
           {bio}
-        </Styled.p>
-        <div
-          sx={{
-            marginTop: 'sm',
-            paddingLeft: 'xs',
-            variant: styles('details')
-          }}
-        >
-          {email && (
-            <Styled.a
-              href={'mailto:' + email}
-              sx={{
-                textDecoration: 'none',
-                cursor: 'pointer',
-                borderBottom: 0
-              }}
-            >
-              <div
-                sx={{
-                  display: 'flex'
-                }}
-              >
-                <Icon glyph="email-filled" size={22} color="grey-80" />
-                {showDetails && <span>{email}</span>}
-              </div>
-            </Styled.a>
-          )}
-
-          {twitterLink && (
-            <Styled.a
-              href={twitterLink}
-              target={socialsHrefTarget}
-              sx={{
-                textDecoration: 'none',
-                cursor: 'pointer',
-                borderBottom: 0
-              }}
-            >
-              <div
-                sx={{
-                  display: 'flex'
-                }}
-              >
-                <Icon glyph="twitter" size={22} color="grey-80" />
-                {showDetails && <span>{twitterLink}</span>}
-              </div>
-            </Styled.a>
-          )}
-          {linkedInLink && (
-            <Styled.a
-              href={linkedInLink}
-              target={socialsHrefTarget}
-              sx={{
-                textDecoration: 'none',
-                cursor: 'pointer',
-                borderBottom: 0
-              }}
-            >
-              <div
-                sx={{
-                  display: 'flex'
-                }}
-              >
-                <Icon glyph="linkedIn" size={22} color="grey-80" />
-                {showDetails && <span>{linkedInLink}</span>}
-              </div>
-            </Styled.a>
-          )}
-        </div>
+        </BioElement>
+        {socials.length === 0 ? (
+          ''
+        ) : (
+          <div
+            sx={{
+              marginTop: 'sm',
+              paddingLeft: 'xs',
+              variant: styles('details')
+            }}
+          >
+            {socials}
+          </div>
+        )}
       </div>
     </div>
   )
