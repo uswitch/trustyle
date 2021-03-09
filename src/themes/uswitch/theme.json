@@ -4186,7 +4186,10 @@
     "lead-capture-form": {
       "base": {
         "container": {
-          "mx": [-15, 0],
+          "mt": [16, 24, 32],
+          "ml": [0],
+          "mr": [0],
+          "mb": [16, 24, 32],
           ".sticky": {
             "minHeight": ["105px", "172px"]
           }
@@ -4255,6 +4258,39 @@
         }
       },
       "variants": {
+        "postRegWithEmail": {
+          "innerContainer": {
+            "width": ["100%"],
+            "maxWidth": ["555px", "100%"],
+            "mx": ["auto", 0],
+            "backgroundColor": "white"
+          },
+          "submit": {
+            "marginTop": "sm",
+            "mx": [0, "md"],
+            "marginBottom": [0, "md"],
+            "width": ["100%", "100%", "260px"]
+          },
+          "postCodeLead": {
+            "height": [null, "86px"],
+            "display": "flex",
+            "justifyContent": "space-between",
+            "padding": ["sm", 0]
+          },
+          "consent-text": { 
+            "textAlign": "left", 
+            "my": 0,
+            "mx": 0,
+            "display": "flex",
+            "alignItems": "baseline",
+            "p" : {
+              "my": 0
+            },
+            "a": {
+              "marginBottom": 0
+            }
+          }
+        },
         "emailCapture": {
           "container": {
             "mt": [16, 24, 32],
@@ -4283,7 +4319,7 @@
             "padding": ["base", "md", 32],
             "width": ["100%", "555px", "grid.lg.8"],
             "mx": ["auto", "auto", 0],
-            "max-width": ["555px", "100%"],
+            "maxWidth": ["555px", "100%"],
             "boxShadow": "box"
           },
           "errorAlert": {
