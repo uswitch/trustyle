@@ -98,7 +98,7 @@ const Advert: React.FC<Props> = ({
                   />
                 </Button>
               </div>
-              <div sx={{ padding: ['8px', '0'] }}>
+              <div sx={{ padding: ['8px 0', '0'] }}>
                 <p sx={{ fontSize: '14px' }}>{body}</p>
                 <Badge variant="advert">{badgeText}</Badge>
               </div>
@@ -108,7 +108,9 @@ const Advert: React.FC<Props> = ({
                 display: 'flex',
                 flexDirection: 'column',
                 flex: '1 1 auto',
-                marginRight: [0, '40px']
+                marginRight: [0, '40px'],
+                marginBottom: ['sm', 0],
+                marginTop: ['xs', 0]
               }}
             >
               <img src={logo} alt={logoAlt} width={imgSize} />
