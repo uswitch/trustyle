@@ -2771,6 +2771,9 @@
         "color": "text",
         "backgroundColor": "white",
         "textDecoration": "none"
+      },
+      "h6": {
+        "fontSize": "base"
       }
     }
   },
