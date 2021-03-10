@@ -1526,6 +1526,9 @@
         },
         "center": {
           "textAlign": "center"
+        },
+        "with-icon": {
+          "display": "flex"
         }
       }
     },
