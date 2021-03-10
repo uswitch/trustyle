@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.45.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.45.0...@uswitch/trustyle.money-theme@1.45.1) (2021-03-10)
+
+
+### Bug Fixes
+
+* alignItems center ([c2e9f43](https://github.com/uswitch/trustyle/commit/c2e9f43))
+
+
+
+
+
 # [1.45.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.44.5...@uswitch/trustyle.money-theme@1.45.0) (2021-03-10)
 
 
