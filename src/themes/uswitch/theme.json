@@ -4277,13 +4277,13 @@
             "justifyContent": "space-between",
             "padding": ["sm", 0]
           },
-          "consent-text": { 
-            "textAlign": "left", 
+          "consent-text": {
+            "textAlign": "left",
             "my": 0,
             "mx": 0,
             "display": "flex",
             "alignItems": "baseline",
-            "p" : {
+            "p": {
               "my": 0
             },
             "a": {
