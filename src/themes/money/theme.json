@@ -1528,7 +1528,8 @@
           "textAlign": "center"
         },
         "with-icon": {
-          "display": "flex"
+          "display": "flex",
+          "alignItems": "center"
         }
       }
     },
