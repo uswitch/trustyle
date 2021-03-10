@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.45.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.44.5...@uswitch/trustyle.money-theme@1.45.0) (2021-03-10)
+
+
+### Features
+
+* make with icon rich text block flex ([36a258b](https://github.com/uswitch/trustyle/commit/36a258b))
+
+
+
+
+
 ## [1.44.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.44.4...@uswitch/trustyle.money-theme@1.44.5) (2021-03-10)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme
