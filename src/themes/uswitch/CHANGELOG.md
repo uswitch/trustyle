@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.42.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.41.7...@uswitch/trustyle.uswitch-theme@2.42.0) (2021-03-10)
+
+
+### Bug Fixes
+
+* prettier ([c5f1ebd](https://github.com/uswitch/trustyle/commit/c5f1ebd))
+
+
+### Features
+
+* styled postcode/registraion with email variant for all breakpoints ([fa2c2b1](https://github.com/uswitch/trustyle/commit/fa2c2b1))
+
+
+
+
+
 ## [2.41.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.41.6...@uswitch/trustyle.uswitch-theme@2.41.7) (2021-03-10)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
