@@ -389,6 +389,10 @@
             "width": "149px",
             "height": "auto"
           }
+        },
+        "centered": {
+          "display": "inline-block",
+          "align-items": "center"
         }
       }
     },
