@@ -1842,8 +1842,14 @@
           "minHeight": "289px",
           "maxWidth": "289px",
           "margin": "auto",
-          "border": "none",
+          "border": "1px solid",
+          "borderColor": "grey-10",
           "boxShadow": "0px 4px 24px rgba(0, 0, 0, 0.16)",
+          "&:hover": {
+            "border": "2px solid",
+            "borderColor": "primary",
+            "color": "inherit"
+          },
           "content": {
             "fontSize": "md",
             "fontWeight": "800",
