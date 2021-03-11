@@ -1845,7 +1845,8 @@
           "border": "1px solid #E8E8E9",
           "boxShadow": "0px 4px 24px rgba(0, 0, 0, 0.16)",
           "&:hover": {
-            "border": "2px solid #141424"
+            "border": "2px solid #141424",
+            "color": "inherit"
           },
           "content": {
             "fontSize": "md",
