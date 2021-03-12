@@ -2211,7 +2211,7 @@
           "&:checked + span": {
             "borderColor": "primary",
             "boxShadow": "inset",
-            "borderWidth": "2px",
+            "borderWidth": "1px",
             "color": "black",
             "&::before": {
               "borderColor": "black"
