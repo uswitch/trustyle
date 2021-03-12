@@ -916,7 +916,10 @@
             }
           },
           "description": {
-            "mt": 0
+            "mt": 0,
+            "fontSize": ["14px", "18px", "18px"],
+            "lineHeight": ["21px", "21px", "27px"],
+            "fontWeight": "400"
           },
           "label": {
             "variant": "styles.h5",
