@@ -1084,6 +1084,15 @@
             "color": "grey-90"
           }
         }
+      },
+      "button": {
+        "variants": {
+          "icon": {
+            "display": "flex",
+            "justifyContent": "space-between",
+            "px": "sm"
+          }
+        }
       }
     },
     "rich-text-block": {
