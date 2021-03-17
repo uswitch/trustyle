@@ -3874,14 +3874,14 @@
           "py": "xxs",
           "a": {
             "borderBottom": "none",
-            "mb": 0
+            "mb": 0,
+            "img": {
+              "width": 14,
+              "mt": 0,
+              "mr": "xxs"
+            }
           },
-          "img": {
-            "width": 14,
-            "mt": 0,
-            "mr": "xxs"
-          },
-          "h3": {
+          "h3[class*='Card']": {
             "fontSize": "xxs",
             "fontWeight": "bold",
             "lineHeight": "base",
