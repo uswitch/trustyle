@@ -4213,10 +4213,7 @@
     "lead-capture-form": {
       "base": {
         "container": {
-          "mt": [16, 24, 32],
-          "ml": [0],
-          "mr": [0],
-          "mb": [16, 24, 32],
+          "margin": 0,
           ".sticky": {
             "minHeight": ["105px", "172px"]
           }
@@ -4320,10 +4317,8 @@
         },
         "emailCapture": {
           "container": {
-            "mt": [16, 24, 32],
-            "ml": [0],
-            "mr": [0],
-            "mb": [16, 24, 32]
+            "my": [16, 24, 32],
+            "mx": [0]
           },
           "copy": {
             "textAlign": "left",
