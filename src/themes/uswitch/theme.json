@@ -1858,7 +1858,7 @@
           },
           "content": {
             "fontSize": "md",
-            "fontWeight": "800",
+            "fontWeight": "700",
             "order": 2,
             "marginTop": "sm"
           },
