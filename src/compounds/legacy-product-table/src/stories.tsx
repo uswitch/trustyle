@@ -33,6 +33,13 @@ const eligibilityContent = [
   <EligibilityContentRow label="Credit Rating Accepted" value="poor" key="3" />
 ]
 
+const ratesContent = [
+  <EligibilityContentRow label="UK resident" value="Yes" key="0" />,
+  <EligibilityContentRow label="Guarantor Required" value="Yes" key="1" />,
+  <EligibilityContentRow label="Minimum age" value="18 years" key="2" />,
+  <EligibilityContentRow label="Credit Rating Accepted" value="poor" key="3" />
+]
+
 const clickableRow = 'https://www.money.co.uk'
 
 const onClickEligibility = (addon?: object) => {
@@ -53,6 +60,7 @@ const ExampleProductTable = () => {
       info={info}
       title={title}
       eligibilityContent={eligibilityContent}
+      ratesContent={ratesContent}
       clickableRow={clickableRow}
       onClickEligibility={onClickEligibility}
       badges={[

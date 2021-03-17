@@ -264,6 +264,7 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
 
 interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
   eligibilityContent: React.ReactNode[]
+  ratesContent: React.ReactNode[]
   clickableRow?: string
   onClickEligibility?: (addon?: object) => void
   eligibilityAddon?: object
@@ -271,6 +272,7 @@ interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Eligibility: React.FC<EligibilityProps> = ({
   eligibilityContent,
+  ratesContent,
   clickableRow,
   onClickEligibility,
   eligibilityAddon
@@ -353,7 +355,7 @@ const Eligibility: React.FC<EligibilityProps> = ({
                 Rates
               </div>
 
-              <div sx={{ background: '#fff' }}>{eligibilityContent}</div>
+              <div sx={{ background: '#fff' }}>{ratesContent}</div>
             </div>
           </div>
         </div>
