@@ -365,7 +365,8 @@ const Eligibility: React.FC<EligibilityProps> = ({
           <CtaCell
             styles={{
               width: '100%',
-              fontSize: '14px'
+              fontSize: '14px',
+              marginBottom: '0'
             }}
             href={clickableRow}
             onClick={onClick}
