@@ -282,83 +282,130 @@ const Eligibility: React.FC<EligibilityProps> = ({
 
   return (
     <div sx={{ background: '#f2f3f4' }}>
-      <div sx={{ display: 'block', maxWidth: '420px', margin: 'auto' }}>
-        <div
-          sx={{
-            background: '#f2f3f4',
-            alignItems: 'center',
-            height: open ? 'auto' : '0px',
-            transition: 'height .4s ease-in-out',
-            fontSize: '14px',
-            overflow: 'hidden',
-            boxSizing: 'border-box',
-            display: 'block'
-          }}
-        >
+      <div
+        sx={{
+          display: 'block',
+          margin: 'auto',
+          height: open ? 'auto' : '0px',
+          transition: 'height .4s ease-in-out',
+          overflow: 'hidden'
+        }}
+      >
+        <div sx={{ display: 'flex', flexDirection: ['column', 'column'] }}>
           <div
             sx={{
-              padding: '15px 20px 20px',
-              lineHeight: ['1.618em', 'inherit']
+              background: '#f2f3f4',
+              alignItems: 'center',
+              fontSize: '14px',
+              boxSizing: 'border-box',
+              display: 'block',
+              width: ['100%', '50%']
             }}
           >
             <div
               sx={{
-                fontSize: '14px',
-                color: '#858f94',
-                marginBottom: '5px',
-                textAlign: 'left',
-                fontWeight: 300
+                padding: '15px 20px 20px',
+                lineHeight: ['1.618em', 'inherit']
               }}
             >
-              Eligibility
-            </div>
+              <div
+                sx={{
+                  fontSize: '14px',
+                  color: '#858f94',
+                  marginBottom: '5px',
+                  textAlign: 'left',
+                  fontWeight: 300
+                }}
+              >
+                Eligibility
+              </div>
 
-            <div sx={{ background: '#fff' }}>{eligibilityContent}</div>
+              <div sx={{ background: '#fff' }}>{eligibilityContent}</div>
+            </div>
           </div>
 
-          <div sx={{ padding: ['15px 20px 20px', '0 20px'] }}>
-            <CtaCell
-              styles={{
-                width: '100%',
-                fontSize: '14px'
+          <div
+            sx={{
+              background: '#f2f3f4',
+              alignItems: 'center',
+              fontSize: '14px',
+              overflow: 'hidden',
+              boxSizing: 'border-box',
+              display: 'block',
+              width: ['100%', '50%']
+            }}
+          >
+            <div
+              sx={{
+                padding: '15px 20px 20px',
+                lineHeight: ['1.618em', 'inherit']
               }}
-              href={clickableRow}
-              onClick={onClick}
-              variant="eligibility"
             >
-              See Deal
-            </CtaCell>
+              <div
+                sx={{
+                  fontSize: '14px',
+                  color: '#858f94',
+                  marginBottom: '5px',
+                  textAlign: 'left',
+                  fontWeight: 300
+                }}
+              >
+                Rates
+              </div>
+
+              <div sx={{ background: '#fff' }}>{eligibilityContent}</div>
+            </div>
           </div>
         </div>
 
-        <button
+        <div
           sx={{
-            background: '#f2f3f4',
-            border: 'none',
-            borderBottom: ['1px dashed #b1b1b1', 'none'],
-            width: '100%',
-            margin: 'auto',
-            padding: '8px',
-            lineHeight: '1.618em',
-            color: '#34454E',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '13px',
-            boxSizing: 'border-box',
-            outline: 'none'
+            padding: ['15px 20px 20px', '0 20px'],
+            maxWidth: '420px',
+            margin: '0 auto'
           }}
-          onClick={() => setOpen(!open)}
         >
-          <div sx={{ pr: '15px' }}>More information</div>
-          <Icon
-            color="#34454E"
-            glyph={'caret'}
-            direction={open ? 'up' : 'down'}
-            size={10}
-          />
-        </button>
+          <CtaCell
+            styles={{
+              width: '100%',
+              fontSize: '14px'
+            }}
+            href={clickableRow}
+            onClick={onClick}
+            variant="eligibility"
+          >
+            See Deal
+          </CtaCell>
+        </div>
       </div>
+
+      <button
+        sx={{
+          background: '#f2f3f4',
+          border: 'none',
+          borderBottom: ['1px dashed #b1b1b1', 'none'],
+          width: '100%',
+          margin: 'auto',
+          padding: '8px',
+          lineHeight: '1.618em',
+          color: '#34454E',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontSize: '13px',
+          boxSizing: 'border-box',
+          outline: 'none'
+        }}
+        onClick={() => setOpen(!open)}
+      >
+        <div sx={{ pr: '15px' }}>More information</div>
+        <Icon
+          color="#34454E"
+          glyph={'caret'}
+          direction={open ? 'up' : 'down'}
+          size={10}
+        />
+      </button>
     </div>
   )
 }
