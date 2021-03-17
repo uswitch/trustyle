@@ -215,13 +215,13 @@ export const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
         fontSize: '14px',
         boxSizing: 'border-box',
         display: 'block',
-        width: ['100%', '50%'],
+        width: ['auto', '50%'],
         marginTop: ['sm'],
-        marginBottom: ['sm'],
+        marginBottom: [0, 'sm'],
         marginLeft: ['sm'],
         marginRight: ['sm'],
         ':nth-child(even)': {
-          marginLeft: ['0']
+          marginLeft: ['sm', '0']
         },
         table: {
           marginBottom: '0'
