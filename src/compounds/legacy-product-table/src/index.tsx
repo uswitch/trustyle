@@ -198,14 +198,67 @@ export const CtaCell: React.FC<CtaCellProps> = ({
   )
 }
 
-interface EligibilityContentRowProps
+interface MoreInformationBlockProps
   extends React.HTMLAttributes<HTMLDivElement> {
+  title: string
+}
+
+export const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
+  title,
+  children
+}) => {
+  return (
+    <div
+      sx={{
+        background: '#fff',
+        alignItems: 'center',
+        fontSize: '14px',
+        boxSizing: 'border-box',
+        display: 'block',
+        width: ['100%', '50%'],
+        marginTop: ['sm'],
+        marginBottom: ['sm'],
+        marginLeft: ['sm'],
+        marginRight: ['sm'],
+        ':nth-child(even)': {
+          marginLeft: ['0']
+        },
+        table: {
+          marginBottom: '0'
+        }
+      }}
+    >
+      <div
+        sx={{
+          padding: '15px 20px 20px',
+          lineHeight: ['1.618em', 'inherit']
+        }}
+      >
+        <div
+          sx={{
+            fontSize: '14px',
+            color: '#858f94',
+            marginBottom: '5px',
+            textAlign: 'left',
+            fontWeight: 300
+          }}
+        >
+          {title}
+        </div>
+
+        <div sx={{ background: '#fff' }}>{children}</div>
+      </div>
+    </div>
+  )
+}
+
+interface MoreInformationRowProps extends React.HTMLAttributes<HTMLDivElement> {
   label?: string
   value?: string
   key?: string
 }
 
-export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
+export const MoreInformationRow: React.FC<MoreInformationRowProps> = ({
   label,
   value,
   key = ''
@@ -263,16 +316,14 @@ export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
 }
 
 interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
-  eligibilityContent: React.ReactNode[]
-  ratesContent: React.ReactNode[]
+  moreInformationPanel: React.ReactNode[]
   clickableRow?: string
   onClickEligibility?: (addon?: object) => void
   eligibilityAddon?: object
 }
 
 const Eligibility: React.FC<EligibilityProps> = ({
-  eligibilityContent,
-  ratesContent,
+  moreInformationPanel,
   clickableRow,
   onClickEligibility,
   eligibilityAddon
@@ -293,71 +344,15 @@ const Eligibility: React.FC<EligibilityProps> = ({
           overflow: 'hidden'
         }}
       >
-        <div sx={{ display: 'flex', flexDirection: ['column', 'column'] }}>
-          <div
-            sx={{
-              background: '#f2f3f4',
-              alignItems: 'center',
-              fontSize: '14px',
-              boxSizing: 'border-box',
-              display: 'block',
-              width: ['100%', '50%']
-            }}
-          >
-            <div
-              sx={{
-                padding: '15px 20px 20px',
-                lineHeight: ['1.618em', 'inherit']
-              }}
-            >
-              <div
-                sx={{
-                  fontSize: '14px',
-                  color: '#858f94',
-                  marginBottom: '5px',
-                  textAlign: 'left',
-                  fontWeight: 300
-                }}
-              >
-                Eligibility
-              </div>
-
-              <div sx={{ background: '#fff' }}>{eligibilityContent}</div>
-            </div>
-          </div>
-
-          <div
-            sx={{
-              background: '#f2f3f4',
-              alignItems: 'center',
-              fontSize: '14px',
-              overflow: 'hidden',
-              boxSizing: 'border-box',
-              display: 'block',
-              width: ['100%', '50%']
-            }}
-          >
-            <div
-              sx={{
-                padding: '15px 20px 20px',
-                lineHeight: ['1.618em', 'inherit']
-              }}
-            >
-              <div
-                sx={{
-                  fontSize: '14px',
-                  color: '#858f94',
-                  marginBottom: '5px',
-                  textAlign: 'left',
-                  fontWeight: 300
-                }}
-              >
-                Rates
-              </div>
-
-              <div sx={{ background: '#fff' }}>{ratesContent}</div>
-            </div>
-          </div>
+        <div
+          sx={{
+            display: 'flex',
+            flexDirection: ['column', 'row'],
+            alignItems: 'stretch',
+            background: '#f2f3f4'
+          }}
+        >
+          {moreInformationPanel}
         </div>
 
         <div
@@ -417,7 +412,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   repExampleLabel?: string
   info: string[]
   title: string
-  eligibilityContent: React.ReactNode[]
+  moreInformationPanel: React.ReactNode[]
   clickableRow?: string
   onClickEligibility?: (addon?: object) => void
   eligibilityAddon?: object
@@ -432,7 +427,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   repExampleLabel,
   info,
   title,
-  eligibilityContent,
+  moreInformationPanel,
   clickableRow,
   onClickEligibility,
   eligibilityAddon,
@@ -534,9 +529,9 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         )}
       </RowWrapper>
 
-      {eligibilityContent.length > 0 && !disabled && (
+      {moreInformationPanel.length > 0 && !disabled && (
         <Eligibility
-          eligibilityContent={eligibilityContent}
+          moreInformationPanel={moreInformationPanel}
           clickableRow={clickableRow}
           onClickEligibility={onClickEligibility}
           eligibilityAddon={eligibilityAddon}
