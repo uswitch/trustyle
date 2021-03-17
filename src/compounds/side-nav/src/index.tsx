@@ -54,6 +54,7 @@ const SideNav: React.FC<Props> = ({
                     as={'a'}
                     px={{ color: 'textColor' }}
                     href={url}
+                    tabindex="0"
                     sx={{ borderBottom: 0 }}
                   >
                     {text}
