@@ -3,13 +3,16 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 
 import AllThemes from '../../../utils/all-themes'
+import Table from '../../../elements/table/src'
 
 import LegacyProductTable, {
   CtaCell,
   DataCell,
-  EligibilityContentRow,
-  ImageCell
+  ImageCell,
+  MoreInformationBlock,
+  MoreInformationRow
 } from '.'
+
 
 export default {
   title: 'Compounds/Legacy Product Table'
@@ -26,12 +29,41 @@ const info = [
 ]
 const title = 'Lowest representative APR'
 
-const eligibilityContent = [
-  <EligibilityContentRow label="UK resident" value="Yes" key="0" />,
-  <EligibilityContentRow label="Guarantor Required" value="Yes" key="1" />,
-  <EligibilityContentRow label="Minimum age" value="18 years" key="2" />,
-  <EligibilityContentRow label="Credit Rating Accepted" value="poor" key="3" />
-]
+const eligibilityContent = (
+  <MoreInformationBlock title="Eligibility">
+    <MoreInformationRow label="UK resident" value="Yes" key="0" />
+    <MoreInformationRow label="Guarantor Required" value="Yes" key="1" />
+    <MoreInformationRow label="Minimum age" value="18 years" key="2" />
+    <MoreInformationRow label="Credit Rating Accepted" value="poor" key="3" />
+  </MoreInformationBlock>
+)
+
+const ratesContent = (
+  <MoreInformationBlock title="Rates">
+    <Table.wrap>
+      <Table.tr>
+        <Table.th>First item</Table.th>
+        <Table.th>Second item</Table.th>
+        <Table.th>Third item</Table.th>
+      </Table.tr>
+      <Table.tr>
+        <Table.td>First item</Table.td>
+        <Table.td>Second item</Table.td>
+        <Table.td>Third item</Table.td>
+      </Table.tr>
+      <Table.tr>
+        <Table.td>First item</Table.td>
+        <Table.td>Second item</Table.td>
+        <Table.td>Third item</Table.td>
+      </Table.tr>
+      <Table.tr>
+        <Table.td>First item</Table.td>
+        <Table.td>Second item</Table.td>
+        <Table.td>Third item</Table.td>
+      </Table.tr>
+    </Table.wrap>
+  </MoreInformationBlock>
+)
 
 const clickableRow = 'https://www.money.co.uk'
 
@@ -52,8 +84,8 @@ const ExampleProductTable = () => {
       repExampleLabel="Representative example: "
       info={info}
       title={title}
-      eligibilityContent={eligibilityContent}
       clickableRow={clickableRow}
+      moreInformationPanel={[eligibilityContent, ratesContent]}
       onClickEligibility={onClickEligibility}
       badges={[
         'Fairer Finance Gold Customer Experience Ribbon Winner Autumn 2020',
