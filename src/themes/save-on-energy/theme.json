@@ -904,7 +904,9 @@
         "svg": {
           "variant": "elements.social-sharing.socialbutton.svg",
           "fill": "#1877f2",
-          "stroke": "#1877f2"
+          "stroke": "#1877f2",
+          "width": "18px",
+          "height": "18px"
         }
       },
       "tw": {

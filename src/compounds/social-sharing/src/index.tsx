@@ -6,7 +6,7 @@ import { Icon } from '@uswitch/trustyle.icon'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   className?: string
-  labelText: string
+  labelText?: string
   shareUrl: string
   twitterMessage?: string
   mailSubject: string
@@ -14,12 +14,12 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 
 const SocialSharing: React.FC<Props> = ({
   className = '',
-  labelText,
+  labelText = 'Share this guide',
   shareUrl,
   twitterMessage,
   mailSubject
 }) => {
-  const styles = (element: string) => `elements.social-sharing.${element}`
+  const styles = (element: string) => `compounds.social-sharing.${element}`
 
   const encodedShareUrl = encodeURIComponent(shareUrl)
 
@@ -70,7 +70,6 @@ const SocialSharing: React.FC<Props> = ({
             variant: styles('tw')
           }}
         >
-          {' '}
           <Icon glyph="twitter" size={20} color="#1d9bf0" />
         </Styled.a>
         <Styled.a
@@ -83,7 +82,6 @@ const SocialSharing: React.FC<Props> = ({
             variant: styles('ln')
           }}
         >
-          {' '}
           <Icon glyph="linkedIn" size={24} color="#2867b2" />
         </Styled.a>
         <Styled.a
@@ -97,7 +95,6 @@ const SocialSharing: React.FC<Props> = ({
             variant: styles('email')
           }}
         >
-          {' '}
           <Icon glyph="email" size={16} color="primary" />
         </Styled.a>
       </Styled.div>
