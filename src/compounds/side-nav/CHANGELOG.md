@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.52](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.51...@uswitch/trustyle.side-nav@1.0.52) (2021-03-18)
+
+
+### Bug Fixes
+
+* add explicit tabindex to sidenav links ([6d83702](https://github.com/uswitch/trustyle/commit/6d83702))
+
+
+
+
+
 ## [1.0.51](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.50...@uswitch/trustyle.side-nav@1.0.51) (2021-03-08)
 
 **Note:** Version bump only for package @uswitch/trustyle.side-nav
