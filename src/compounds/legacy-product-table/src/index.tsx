@@ -251,6 +251,28 @@ export const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
   )
 }
 
+interface MoreInformationTableProps {
+  backgroundColor: string
+  header: string[]
+  rows: string[][]
+}
+
+export const MoreInformationTable = ({backgroundColor, header, rows}: MoreInformationTableProps): JSX.Element => {
+  return (
+    <table>
+      {header && (
+          <tr>
+            {header.map((h: string) => <th sx={{backgroundColor}}>{h}</th>)}
+          </tr>
+        )
+      }
+      {rows.map((row: string[]) => {
+        return <tr>{row.map((data: string) => <td sx={{backgroundColor}}>{data}</td>)}</tr>
+      })}
+    </table>
+  )
+}
+
 interface MoreInformationRowProps extends React.HTMLAttributes<HTMLDivElement> {
   label?: string
   value?: string

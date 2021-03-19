@@ -3,7 +3,6 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 
 import AllThemes from '../../../utils/all-themes'
-import Table from '../../../elements/table/src'
 
 import LegacyProductTable, {
   CtaCell,
@@ -11,9 +10,9 @@ import LegacyProductTable, {
   RepresentativeExample,
   ImageCell,
   MoreInformationBlock,
-  MoreInformationRow
+  MoreInformationRow,
+  MoreInformationTable
 } from '.'
-
 
 export default {
   title: 'Compounds/Legacy Product Table'
@@ -31,6 +30,38 @@ const info = [
 ]
 const title = 'Lowest representative APR'
 
+const clickableRow = 'https://www.money.co.uk'
+
+const productTableContents = [
+  <DataCell
+    backgroundColor="#fef6ed"
+    borderBottomColor="#fcdbb7"
+    label="Loan amount"
+  >
+    £1,000 to £10,000
+  </DataCell>,
+  <DataCell
+    backgroundColor="#fef1ec"
+    borderBottomColor="#fac9b0"
+    label="Representative APR"
+  >
+    29% APR (£1,000 to £10,000)
+  </DataCell>,
+  <DataCell
+    backgroundColor="#fbedf1"
+    borderBottomColor="#f0b9c8"
+    label="Loan term"
+  >
+    1 year to 5 years
+  </DataCell>,
+  <ImageCell>
+    <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
+  </ImageCell>,
+  <CtaCell href={clickableRow} disabled>
+    See Deal
+  </CtaCell>
+]
+
 const eligibilityContent = (
   <MoreInformationBlock title="Eligibility">
     <MoreInformationRow label="UK resident" value="Yes" key="0" />
@@ -41,29 +72,18 @@ const eligibilityContent = (
 )
 
 const ratesContent = (
-  <MoreInformationBlock title="Rates">
-    <Table.wrap>
-      <Table.tr>
-        <Table.th>First item</Table.th>
-        <Table.th>Second item</Table.th>
-        <Table.th>Third item</Table.th>
-      </Table.tr>
-      <Table.tr>
-        <Table.td>First item</Table.td>
-        <Table.td>Second item</Table.td>
-        <Table.td>Third item</Table.td>
-      </Table.tr>
-      <Table.tr>
-        <Table.td>First item</Table.td>
-        <Table.td>Second item</Table.td>
-        <Table.td>Third item</Table.td>
-      </Table.tr>
-      <Table.tr>
-        <Table.td>First item</Table.td>
-        <Table.td>Second item</Table.td>
-        <Table.td>Third item</Table.td>
-      </Table.tr>
-    </Table.wrap>
+  <MoreInformationBlock title="Rate tiers">
+    <MoreInformationTable
+      backgroundColor="white"
+      header={['', 'Gross rate', 'Gross rate', 'AER', 'AER']}
+      rows={[
+        ['', 'Excluding bonus', 'Including bonus', 'Excluding bonus', 'Including bonus'],
+        ['£1', '0.20%', '0.20%', '0.20%', '0.20%'],
+        ['£1000', '0.20%', '0.20%', '0.20%', '0.20%'],
+        ['£10,000', '0.20%', '0.20%', '0.20%', '0.20%'],
+        ['£50,000', '0.20%', '0.20%', '0.20%', '0.20%']
+      ]}
+    />
   </MoreInformationBlock>
 )
 
@@ -83,123 +103,43 @@ export const EligibilityExample = () => {
         'Fab!'
       ]}
     >
-      <DataCell
-        backgroundColor="#fef6ed"
-        borderBottomColor="#fcdbb7"
-        label="Loan amount"
-      >
-        £1,000 to £10,000
-      </DataCell>
-
-      <DataCell
-        backgroundColor="#fef1ec"
-        borderBottomColor="#fac9b0"
-        label="Representative APR"
-      >
-        29% APR (£1,000 to £10,000)
-      </DataCell>
-
-      <DataCell
-        backgroundColor="#fbedf1"
-        borderBottomColor="#f0b9c8"
-        label="Loan term"
-      >
-        1 year to 5 years
-      </DataCell>
-
-      <ImageCell>
-        <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
-      </ImageCell>
-
-      <CtaCell href={''}>See Deal</CtaCell>
-    </LegacyProductTable>
-  )
-}
-
-export const Example = () => {
-  return (
-    <div>
-      <ExampleProductTable />
-      <ExampleProductTable />
-      <ExampleProductTable />
-      <ExampleProductTable />
-      <ExampleProductTable />
-      <ExampleProductTable />
-      <ExampleProductTable />
-    </div>
-  )
-}
-
-Example.story = {
-  parameters: {
-    percy: { skip: true }
-  }
-}
-
-const DisabledProductTable = () => {
-  return (
-    <LegacyProductTable
-      representativeExample={RepExample}
-      info={info}
-      title={title}
-      eligibilityContent={eligibilityContent}
-      clickableRow={clickableRow}
-      disabled
-    >
-      <DataCell
-        backgroundColor="#fef6ed"
-        borderBottomColor="#fcdbb7"
-        label="Loan amount"
-      >
-        £1,000 to £10,000
-      </DataCell>
-
-      <DataCell
-        backgroundColor="#fef1ec"
-        borderBottomColor="#fac9b0"
-        label="Representative APR"
-      >
-        29% APR (£1,000 to £10,000)
-      </DataCell>
-
-      <DataCell
-        backgroundColor="#fbedf1"
-        borderBottomColor="#f0b9c8"
-        label="Loan term"
-      >
-        1 year to 5 years
-      </DataCell>
-
-      <ImageCell>
-        <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
-      </ImageCell>
-
-      <CtaCell href={clickableRow} disabled>
-        See Deal
-      </CtaCell>
+      {productTableContents}
     </LegacyProductTable>
   )
 }
 
 export const DisabledExample = () => {
   return (
-    <div>
-      <DisabledProductTable />
-    </div>
+    <LegacyProductTable
+      representativeExample={RepExample}
+      info={info}
+      title={title}
+      moreInformationPanel={[eligibilityContent, ratesContent]}
+      clickableRow={clickableRow}
+      disabled
+    >
+      {productTableContents}
+    </LegacyProductTable>
   )
 }
 
-DisabledExample.story = {
-  parameters: {
-    percy: { skip: true }
+const examples = [
+  DisabledExample,
+  EligibilityExample
+]
+
+examples.forEach((Example) => {
+  Example.story = {
+    parameters: {
+      percy: { skip: true }
+    }
   }
-}
+})
 
 export const AutomatedTests = () => {
   return (
     <AllThemes>
-      <Example />
-      <DisabledExample />
+      {examples.map((Example) => <Example />)}
     </AllThemes>
   )
 }
