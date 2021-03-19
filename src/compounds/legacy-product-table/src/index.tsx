@@ -24,13 +24,13 @@ const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   )
 }
 
-interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
-  label?: string
+interface RepresentativeExampleProps extends React.HTMLAttributes<HTMLDivElement> {
+  text: string
 }
 
-const Footer: React.FC<FooterProps> = ({ children, label }) => {
+export const RepresentativeExample: React.FC<RepresentativeExampleProps> = ({ text }) => {
   return (
-    <footer
+    <div
       sx={{
         marginTop: '5px',
         padding: ['5px 20px 10px', '5px 40px 10px'],
@@ -42,9 +42,8 @@ const Footer: React.FC<FooterProps> = ({ children, label }) => {
         lineHeight: 'normal'
       }}
     >
-      {label}
-      {children}
-    </footer>
+      Representative Example: {text}
+    </div>
   )
 }
 
@@ -409,10 +408,10 @@ const Eligibility: React.FC<EligibilityProps> = ({
 }
 
 interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
-  representativeExample: string
   repExampleLabel?: string
   info: string[]
   title: string
+  representativeExample?: React.ReactNode
   moreInformationPanel: React.ReactNode[]
   clickableRow?: string
   onClickEligibility?: (addon?: object) => void
@@ -424,10 +423,9 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   children,
-  representativeExample,
-  repExampleLabel,
   info,
   title,
+  representativeExample,
   moreInformationPanel,
   clickableRow,
   onClickEligibility,
@@ -525,9 +523,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           </AdditionalInfo>
         )}
 
-        {representativeExample.length > 0 && (
-          <Footer label={repExampleLabel}>{representativeExample}</Footer>
-        )}
+        {representativeExample}
       </RowWrapper>
 
       {moreInformationPanel.length > 0 && !disabled && (

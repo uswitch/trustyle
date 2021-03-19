@@ -8,6 +8,7 @@ import Table from '../../../elements/table/src'
 import LegacyProductTable, {
   CtaCell,
   DataCell,
+  RepresentativeExample,
   ImageCell,
   MoreInformationBlock,
   MoreInformationRow
@@ -18,10 +19,11 @@ export default {
   title: 'Compounds/Legacy Product Table'
 }
 
-const repExample = `The representative rate is 29% APR (fixed) so
-if you borrow £4,000 over 3 years at a rate of 17% p.a. (fixed) plus a
-service fee of 8.74% p.a. you will repay £160.61 per month & £5,781.96
-in total.`
+const repTextExample = `The representative rate is 29% APR (fixed) so
+if you borrow £4,000 over 3 years at a rate of 17% p.a. (fixed) plus a service
+fee of 8.74% p.a. you will repay £160.61 per month & £5,781.96 in total.`
+
+const RepExample = <RepresentativeExample text={repTextExample} />
 
 const info = [
   'Both applicant and guarantor must be homeowners.',
@@ -71,17 +73,10 @@ const onClickEligibility = (addon?: object) => {
   console.log(addon)
 }
 
-const eligibilityAddon = {
-  action: { value: 'Test Banner Clickout' },
-  category: { value: 'Test Guarantor Loans' },
-  label: { value: 'Test More Information Banner' }
-}
-
-const ExampleProductTable = () => {
+export const EligibilityExample = () => {
   return (
     <LegacyProductTable
-      representativeExample={repExample}
-      repExampleLabel="Representative example: "
+      representativeExample={RepExample}
       info={info}
       title={title}
       clickableRow={clickableRow}
@@ -149,8 +144,7 @@ Example.story = {
 const DisabledProductTable = () => {
   return (
     <LegacyProductTable
-      representativeExample={repExample}
-      repExampleLabel="Representative example: "
+      representativeExample={RepExample}
       info={info}
       title={title}
       eligibilityContent={eligibilityContent}
