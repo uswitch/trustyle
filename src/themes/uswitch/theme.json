@@ -1084,6 +1084,15 @@
             "color": "grey-90"
           }
         }
+      },
+      "button": {
+        "variants": {
+          "icon": {
+            "display": "flex",
+            "justifyContent": "space-between",
+            "px": "sm"
+          }
+        }
       }
     },
     "rich-text-block": {
@@ -1858,7 +1867,7 @@
           },
           "content": {
             "fontSize": "md",
-            "fontWeight": "800",
+            "fontWeight": "700",
             "order": 2,
             "marginTop": "sm"
           },
@@ -4213,10 +4222,7 @@
     "lead-capture-form": {
       "base": {
         "container": {
-          "mt": [16, 24, 32],
-          "ml": [0],
-          "mr": [0],
-          "mb": [16, 24, 32],
+          "margin": 0,
           ".sticky": {
             "minHeight": ["105px", "172px"]
           }
@@ -4320,10 +4326,8 @@
         },
         "emailCapture": {
           "container": {
-            "mt": [16, 24, 32],
-            "ml": [0],
-            "mr": [0],
-            "mb": [16, 24, 32]
+            "my": [16, 24, 32],
+            "mx": [0]
           },
           "copy": {
             "textAlign": "left",
