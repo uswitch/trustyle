@@ -317,20 +317,17 @@ export const MoreInformationRow: React.FC<MoreInformationRowProps> = ({
 interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
   moreInformationPanel: React.ReactNode[]
   clickableRow?: string
-  onClickEligibility?: (addon?: object) => void
+  moreInformationButtonClick?: (addon?: object) => void
   eligibilityAddon?: object
 }
 
 const Eligibility: React.FC<EligibilityProps> = ({
   moreInformationPanel,
   clickableRow,
-  onClickEligibility,
+  moreInformationButtonClick,
   eligibilityAddon
 }) => {
   const [open, setOpen] = React.useState(false)
-  const onClick = () => {
-    onClickEligibility && onClickEligibility(eligibilityAddon)
-  }
 
   return (
     <div sx={{ background: '#f2f3f4' }}>
@@ -368,7 +365,7 @@ const Eligibility: React.FC<EligibilityProps> = ({
               marginBottom: '0'
             }}
             href={clickableRow}
-            onClick={onClick}
+            onClick={moreInformationButtonClick}
             variant="eligibility"
           >
             See Deal
@@ -414,8 +411,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   representativeExample?: React.ReactNode
   moreInformationPanel: React.ReactNode[]
   clickableRow?: string
-  onClickEligibility?: (addon?: object) => void
-  eligibilityAddon?: object
+  moreInformationButtonClick?: (addon?: object) => void
   onRowClick?: () => void
   disabled?: boolean
   badges?: string[]
@@ -428,8 +424,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   representativeExample,
   moreInformationPanel,
   clickableRow,
-  onClickEligibility,
-  eligibilityAddon,
+  moreInformationButtonClick,
   onRowClick,
   disabled,
   badges = [],
@@ -517,9 +512,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
 
         {info.length > 0 && (
           <AdditionalInfo>
-            {info.map((item, key) => {
-              return <div key={key}>{item}</div>
-            })}
+            {info.map((item, key) => <div key={key}>{item}</div>)}
           </AdditionalInfo>
         )}
 
@@ -530,8 +523,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         <Eligibility
           moreInformationPanel={moreInformationPanel}
           clickableRow={clickableRow}
-          onClickEligibility={onClickEligibility}
-          eligibilityAddon={eligibilityAddon}
+          moreInformationButtonClick={moreInformationButtonClick}
         />
       )}
     </article>

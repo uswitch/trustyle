@@ -67,11 +67,7 @@ const ratesContent = (
   </MoreInformationBlock>
 )
 
-const clickableRow = 'https://www.money.co.uk'
-
-const onClickEligibility = (addon?: object) => {
-  console.log(addon)
-}
+const moreInformationButtonClick = () => { console.log('More information clicked') }
 
 export const EligibilityExample = () => {
   return (
@@ -81,12 +77,11 @@ export const EligibilityExample = () => {
       title={title}
       clickableRow={clickableRow}
       moreInformationPanel={[eligibilityContent, ratesContent]}
-      onClickEligibility={onClickEligibility}
+      moreInformationButtonClick={moreInformationButtonClick}
       badges={[
         'Fairer Finance Gold Customer Experience Ribbon Winner Autumn 2020',
         'Fab!'
       ]}
-      eligibilityAddon={eligibilityAddon}
     >
       <DataCell
         backgroundColor="#fef6ed"
@@ -149,8 +144,6 @@ const DisabledProductTable = () => {
       title={title}
       eligibilityContent={eligibilityContent}
       clickableRow={clickableRow}
-      onClickEligibility={onClickEligibility}
-      eligibilityAddon={eligibilityAddon}
       disabled
     >
       <DataCell
