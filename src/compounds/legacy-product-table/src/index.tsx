@@ -6,7 +6,7 @@ import { ButtonLink } from '@uswitch/trustyle.button-link'
 import { Button } from '@uswitch/trustyle.button'
 import { Icon } from '@uswitch/trustyle.icon'
 
-import RowWrapper from './rowWrapper'
+import RowWrapper from './row-wrapper'
 
 const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   return (
