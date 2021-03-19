@@ -245,30 +245,56 @@ export const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
           {title}
         </div>
 
-        <div sx={{ background: '#fff' }}>{children}</div>
+        <div sx={{ background: '#fff', overflow: 'auto' }}>{children}</div>
       </div>
     </div>
   )
 }
 
 interface MoreInformationTableProps {
-  backgroundColor: string
-  header: string[]
+  backgroundColor?: string
   rows: string[][]
+  header?: string[]
 }
 
 export const MoreInformationTable = ({backgroundColor, header, rows}: MoreInformationTableProps): JSX.Element => {
+  const sx = {
+    backgroundColor,
+    borderBottomColor: 'grey-20',
+    borderBottomStyle: 'solid',
+    borderBottomWidth: '1px',
+    fontSize: '13px',
+    fontFamily: 'Open Sans,Arial,sans-serif'
+  }
   return (
-    <table>
-      {header && (
-          <tr>
-            {header.map((h: string) => <th sx={{backgroundColor}}>{h}</th>)}
-          </tr>
+    <table sx={{border: 'none', overflow: 'scroll'}}>
+      {
+        header && (
+          <thead>
+            <tr>
+              {header.map((h: string, i: number) => <th key={i} sx={sx}>{h}</th>)}
+            </tr>
+          </thead>
         )
       }
-      {rows.map((row: string[]) => {
-        return <tr>{row.map((data: string) => <td sx={{backgroundColor}}>{data}</td>)}</tr>
-      })}
+      <tbody>
+        {
+          rows.map((row: string[], rowI: number) => {
+            const borderBottomStyle = rowI === row.length - 1 ? 'none' : 'solid'
+
+            return (
+              <tr>
+                {
+                  row.map((data: string, colI: number) => {
+
+                    return <td key={colI} sx={{...sx, borderBottomStyle}}>{data}</td>
+                  })
+                }
+              </tr>
+            )
+          })
+        }
+      </tbody>
     </table>
   )
 }
@@ -309,13 +335,14 @@ export const MoreInformationRow: React.FC<MoreInformationRowProps> = ({
       <label
         sx={{
           width: ['40%', '75%'],
-          borderBottom: '2px solid #f7f7f7',
-          borderRight: '1px solid #f7f7f7',
+          borderBottomWidth: '1px',
+          borderBottomColor: 'grey-20',
+          borderBottomStyle: 'solid',
           fontFamily: 'Open Sans,Arial,sans-serif',
           fontSize: '13px',
           color: '#333',
           display: 'block',
-          padding: '5px 10px'
+          padding: '16px'
         }}
       >
         {label}
@@ -323,10 +350,12 @@ export const MoreInformationRow: React.FC<MoreInformationRowProps> = ({
       <div
         sx={{
           width: ['60%', '25%'],
-          borderBottom: '2px solid #f7f7f7',
+          borderBottomWidth: '1px',
+          borderBottomColor: 'grey-20',
+          borderBottomStyle: 'solid',
           color: '#924a8b',
           fontWeight: 600,
-          padding: '5px 10px',
+          padding: '16px',
           fontSize: '13px'
         }}
       >
