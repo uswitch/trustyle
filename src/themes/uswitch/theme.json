@@ -1005,7 +1005,14 @@
               "justifyContent": "space-between",
               "alignItems": "center",
               "pb": ["md", "md", 0],
-              "mr": ["0", "md"]
+              "mr": ["0", "md"],
+              "calculator": {
+                "display": ["flex", "flex", "block"],
+                "justifyContent": "space-between",
+                "alignItems": "center",
+                "pb": ["md", "md", 0],
+                "mr": ["0", "md"]
+              }
             },
             "error": {
               "position": "absolute",
