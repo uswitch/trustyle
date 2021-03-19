@@ -891,8 +891,7 @@
             "minHeight": ["calc(100vh - 98px)", "680px", "680px"],
             "pt": "lg",
             "mt": ["sm", "0", "0"],
-            "mb": ["-12px", "-12px", "0"],
-            "position": "relative"
+            "mb": ["-12px", "-12px", "0"]
           },
           "simple-radio": {
             "radioWrapper": {
