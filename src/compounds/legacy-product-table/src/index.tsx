@@ -24,11 +24,14 @@ const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   )
 }
 
-interface RepresentativeExampleProps extends React.HTMLAttributes<HTMLDivElement> {
+interface RepresentativeExampleProps
+  extends React.HTMLAttributes<HTMLDivElement> {
   text: string
 }
 
-export const RepresentativeExample: React.FC<RepresentativeExampleProps> = ({ text }) => {
+export const RepresentativeExample: React.FC<RepresentativeExampleProps> = ({
+  text
+}) => {
   return (
     <div
       sx={{
@@ -210,6 +213,7 @@ export const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
     <div
       sx={{
         background: '#fff',
+        color: '#333',
         alignItems: 'center',
         fontSize: '14px',
         boxSizing: 'border-box',
@@ -255,9 +259,15 @@ interface MoreInformationTableProps {
   backgroundColor?: string
   rows: string[][]
   header?: string[]
+  boldFirstColumn?: boolean
 }
 
-export const MoreInformationTable = ({backgroundColor, header, rows}: MoreInformationTableProps): JSX.Element => {
+export const MoreInformationTable = ({
+  backgroundColor,
+  header,
+  rows,
+  boldFirstColumn = false
+}: MoreInformationTableProps) => {
   const sx = {
     backgroundColor,
     borderBottomColor: 'grey-20',
@@ -266,102 +276,56 @@ export const MoreInformationTable = ({backgroundColor, header, rows}: MoreInform
     fontSize: '13px',
     fontFamily: 'Open Sans,Arial,sans-serif'
   }
-  return (
-    <table sx={{border: 'none', overflow: 'scroll'}}>
-      {
-        header && (
-          <thead>
-            <tr>
-              {header.map((h: string, i: number) => <th key={i} sx={sx}>{h}</th>)}
-            </tr>
-          </thead>
-        )
-      }
-      <tbody>
-        {
-          rows.map((row: string[], rowI: number) => {
-            const borderBottomStyle = rowI === row.length - 1 ? 'none' : 'solid'
-
-            return (
-              <tr>
-                {
-                  row.map((data: string, colI: number) => {
-
-                    return <td key={colI} sx={{...sx, borderBottomStyle}}>{data}</td>
-                  })
-                }
-              </tr>
-            )
-          })
-        }
-      </tbody>
-    </table>
-  )
-}
-
-interface MoreInformationRowProps extends React.HTMLAttributes<HTMLDivElement> {
-  label?: string
-  value?: string
-  key?: string
-}
-
-export const MoreInformationRow: React.FC<MoreInformationRowProps> = ({
-  label,
-  value,
-  key = ''
-}) => {
-  const formatValue = (value: string | boolean | undefined) => {
-    if (
-      value === true ||
-      value === 'Yes' ||
-      value === 'yes' ||
-      value === 'true'
-    ) {
+  const format = (data: string | boolean | undefined) => {
+    if (data === true || data === 'Yes' || data === 'yes' || data === 'true') {
       return <Icon glyph="check" color={'#6bab51'} size={18} />
     } else {
-      return value
+      return data
     }
   }
   return (
-    <div
-      key={key}
-      sx={{
-        fontSize: '13px',
-        display: 'flex',
-        width: '100%',
-        textAlign: 'left'
-      }}
-    >
-      <label
-        sx={{
-          width: ['40%', '75%'],
-          borderBottomWidth: '1px',
-          borderBottomColor: 'grey-20',
-          borderBottomStyle: 'solid',
-          fontFamily: 'Open Sans,Arial,sans-serif',
-          fontSize: '13px',
-          color: '#333',
-          display: 'block',
-          padding: '16px'
-        }}
-      >
-        {label}
-      </label>
-      <div
-        sx={{
-          width: ['60%', '25%'],
-          borderBottomWidth: '1px',
-          borderBottomColor: 'grey-20',
-          borderBottomStyle: 'solid',
-          color: '#924a8b',
-          fontWeight: 600,
-          padding: '16px',
-          fontSize: '13px'
-        }}
-      >
-        {formatValue(value)}
-      </div>
-    </div>
+    <table sx={{ border: 'none', overflow: 'scroll' }}>
+      {header && (
+        <thead>
+          <tr>
+            {header.map((h: string, i: number) => (
+              <th key={i} sx={sx}>
+                {h}
+              </th>
+            ))}
+          </tr>
+        </thead>
+      )}
+      <tbody>
+        {rows.map((row: string[], rowI: number) => {
+          const borderBottomStyle = rowI === rows.length - 1 ? 'none' : 'solid'
+
+          if (row.length === 1 && boldFirstColumn) {
+            return (
+              <tr key={rowI}>
+                <td colSpan={'2'} sx={{ ...sx, borderBottomStyle }}>
+                  {format(row[0])}
+                </td>
+              </tr>
+            )
+          }
+
+          return (
+            <tr key={rowI}>
+              {row.map((data: string, colI: number) => {
+                const fontWeight = boldFirstColumn && colI === 0 ? '600' : ''
+
+                return (
+                  <td key={colI} sx={{ ...sx, borderBottomStyle, fontWeight }}>
+                    {format(data)}
+                  </td>
+                )
+              })}
+            </tr>
+          )
+        })}
+      </tbody>
+    </table>
   )
 }
 
@@ -369,14 +333,12 @@ interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
   moreInformationPanel: React.ReactNode[]
   clickableRow?: string
   moreInformationButtonClick?: (addon?: object) => void
-  eligibilityAddon?: object
 }
 
 const Eligibility: React.FC<EligibilityProps> = ({
   moreInformationPanel,
   clickableRow,
-  moreInformationButtonClick,
-  eligibilityAddon
+  moreInformationButtonClick
 }) => {
   const [open, setOpen] = React.useState(false)
 
@@ -460,7 +422,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   info: string[]
   title: string
   representativeExample?: React.ReactNode
-  moreInformationPanel: React.ReactNode[]
+  moreInformationPanel?: React.ReactNode[]
   clickableRow?: string
   moreInformationButtonClick?: (addon?: object) => void
   onRowClick?: () => void
@@ -563,14 +525,16 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
 
         {info.length > 0 && (
           <AdditionalInfo>
-            {info.map((item, key) => <div key={key}>{item}</div>)}
+            {info.map((item, key) => (
+              <div key={key}>{item}</div>
+            ))}
           </AdditionalInfo>
         )}
 
         {representativeExample}
       </RowWrapper>
 
-      {moreInformationPanel.length > 0 && !disabled && (
+      {moreInformationPanel && moreInformationPanel.length > 0 && !disabled && (
         <Eligibility
           moreInformationPanel={moreInformationPanel}
           clickableRow={clickableRow}

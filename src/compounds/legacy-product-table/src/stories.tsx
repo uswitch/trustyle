@@ -7,11 +7,10 @@ import AllThemes from '../../../utils/all-themes'
 import LegacyProductTable, {
   CtaCell,
   DataCell,
-  RepresentativeExample,
   ImageCell,
   MoreInformationBlock,
-  MoreInformationRow,
-  MoreInformationTable
+  MoreInformationTable,
+  RepresentativeExample
 } from '.'
 
 export default {
@@ -37,6 +36,7 @@ const productTableContents = [
     backgroundColor="#fef6ed"
     borderBottomColor="#fcdbb7"
     label="Loan amount"
+    key="0"
   >
     £1,000 to £10,000
   </DataCell>,
@@ -44,6 +44,7 @@ const productTableContents = [
     backgroundColor="#fef1ec"
     borderBottomColor="#fac9b0"
     label="Representative APR"
+    key="1"
   >
     29% APR (£1,000 to £10,000)
   </DataCell>,
@@ -51,23 +52,31 @@ const productTableContents = [
     backgroundColor="#fbedf1"
     borderBottomColor="#f0b9c8"
     label="Loan term"
+    key="2"
   >
     1 year to 5 years
   </DataCell>,
-  <ImageCell>
+  <ImageCell key="3">
     <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
   </ImageCell>,
-  <CtaCell href={clickableRow} disabled>
+  <CtaCell key="4" href={clickableRow} disabled>
     See Deal
   </CtaCell>
 ]
 
 const eligibilityContent = (
   <MoreInformationBlock title="Eligibility">
-    <MoreInformationRow label="UK resident" value="Yes" key="0" />
-    <MoreInformationRow label="Guarantor Required" value="Yes" key="1" />
-    <MoreInformationRow label="Minimum age" value="18 years" key="2" />
-    <MoreInformationRow label="Credit Rating Accepted" value="poor" key="3" />
+    <MoreInformationTable
+      boldFirstColumn
+      backgroundColor="white"
+      rows={[
+        ['You must meet the following criteria in order to get this loan'],
+        ['UK resident', 'Yes'],
+        ['Guarantor Required', 'Yes'],
+        ['Minimum age', '18 years'],
+        ['Credit Rating Accepted', 'poor']
+      ]}
+    />
   </MoreInformationBlock>
 )
 
@@ -77,7 +86,13 @@ const ratesContent = (
       backgroundColor="white"
       header={['', 'Gross rate', 'Gross rate', 'AER', 'AER']}
       rows={[
-        ['', 'Excluding bonus', 'Including bonus', 'Excluding bonus', 'Including bonus'],
+        [
+          '',
+          'Excluding bonus',
+          'Including bonus',
+          'Excluding bonus',
+          'Including bonus'
+        ],
         ['£1', '0.20%', '0.20%', '0.20%', '0.20%'],
         ['£1000', '0.20%', '0.20%', '0.20%', '0.20%'],
         ['£10,000', '0.20%', '0.20%', '0.20%', '0.20%'],
@@ -87,7 +102,53 @@ const ratesContent = (
   </MoreInformationBlock>
 )
 
-const moreInformationButtonClick = () => { console.log('More information clicked') }
+const feesContent = (
+  <MoreInformationBlock title="Fees">
+    <MoreInformationTable
+      boldFirstColumn
+      backgroundColor="white"
+      rows={[
+        ['Application fee', 'No fee'],
+        ['Arrangement fee', 'No fee'],
+        ['Booking fee', 'No fee'],
+        ['Completion fee', '£1495 with an option to add to the loan'],
+        ['Product fee', 'No fee']
+      ]}
+    />
+  </MoreInformationBlock>
+)
+
+const additionalInformationContent = (
+  <MoreInformationBlock title="Additional information">
+    <h6>Early repayment charge</h6>
+    <p>If you pay all of your mortgage early you will be charged:</p>
+    <p>- 3% of the original loan, in the first year</p>
+    <p>- 2% of the original loan, in the second year</p>
+    <p>Other fees may apply.</p>
+  </MoreInformationBlock>
+)
+
+const moreInformationButtonClick = () => {
+  console.log('More information clicked')
+}
+
+export const BadgeExample = () => {
+  return (
+    <LegacyProductTable
+      representativeExample={RepExample}
+      info={info}
+      title={title}
+      clickableRow={clickableRow}
+      moreInformationButtonClick={moreInformationButtonClick}
+      badges={[
+        'Fairer Finance Gold Customer Experience Ribbon Winner Autumn 2020',
+        'Fab!'
+      ]}
+    >
+      {productTableContents}
+    </LegacyProductTable>
+  )
+}
 
 export const EligibilityExample = () => {
   return (
@@ -98,10 +159,20 @@ export const EligibilityExample = () => {
       clickableRow={clickableRow}
       moreInformationPanel={[eligibilityContent, ratesContent]}
       moreInformationButtonClick={moreInformationButtonClick}
-      badges={[
-        'Fairer Finance Gold Customer Experience Ribbon Winner Autumn 2020',
-        'Fab!'
-      ]}
+    >
+      {productTableContents}
+    </LegacyProductTable>
+  )
+}
+
+export const FeesExample = () => {
+  return (
+    <LegacyProductTable
+      info={info}
+      title={title}
+      clickableRow={clickableRow}
+      moreInformationPanel={[feesContent, additionalInformationContent]}
+      moreInformationButtonClick={moreInformationButtonClick}
     >
       {productTableContents}
     </LegacyProductTable>
@@ -123,12 +194,9 @@ export const DisabledExample = () => {
   )
 }
 
-const examples = [
-  DisabledExample,
-  EligibilityExample
-]
+const examples = [BadgeExample, DisabledExample, EligibilityExample]
 
-examples.forEach((Example) => {
+examples.forEach(Example => {
   Example.story = {
     parameters: {
       percy: { skip: true }
@@ -139,7 +207,9 @@ examples.forEach((Example) => {
 export const AutomatedTests = () => {
   return (
     <AllThemes>
-      {examples.map((Example) => <Example />)}
+      {examples.map((Example, i) => (
+        <Example key={i} />
+      ))}
     </AllThemes>
   )
 }
