@@ -165,6 +165,12 @@ export const EligibilityExample = () => {
   )
 }
 
+EligibilityExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const FeesExample = () => {
   return (
     <LegacyProductTable
@@ -177,6 +183,12 @@ export const FeesExample = () => {
       {productTableContents}
     </LegacyProductTable>
   )
+}
+
+FeesExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const DisabledExample = () => {
@@ -194,22 +206,18 @@ export const DisabledExample = () => {
   )
 }
 
-const examples = [BadgeExample, DisabledExample, EligibilityExample]
-
-examples.forEach(Example => {
-  Example.story = {
-    parameters: {
-      percy: { skip: true }
-    }
+DisabledExample.story = {
+  parameters: {
+    percy: { skip: true }
   }
-})
+}
 
 export const AutomatedTests = () => {
   return (
     <AllThemes>
-      {examples.map((Example, i) => (
-        <Example key={i} />
-      ))}
+      <BadgeExample />
+      <DisabledExample />
+      <EligibilityExample />
     </AllThemes>
   )
 }

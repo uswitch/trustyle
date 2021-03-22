@@ -303,7 +303,7 @@ export const MoreInformationTable = ({
           if (row.length === 1 && boldFirstColumn) {
             return (
               <tr key={rowI}>
-                <td colSpan={'2'} sx={{ ...sx, borderBottomStyle }}>
+                <td colSpan={2} sx={{ ...sx, borderBottomStyle }}>
                   {format(row[0])}
                 </td>
               </tr>

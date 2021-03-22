@@ -838,7 +838,15 @@
               "display": "flex",
               "mb": ["md", "lg"],
               "width": ["100%", "100%", "28%"],
-              "justifyContent": "space-between"
+              "justifyContent": "space-between",
+              "calculator": {
+                "display": "flex",
+                "mb": ["md", "lg"],
+                "width": ["100%", "100%", "28%"],
+                "justifyContent": "space-between",
+                "alignItems": "center",
+                "pb": ["xs", 0]
+              }
             },
             "error": {
               "position": "absolute",
@@ -871,7 +879,6 @@
             },
             "variants": {
               "calculator": {
-                "pb": ["xs", 0],
                 "flexDirection": "column",
                 "flex": "1 1 0px",
                 "min-width": "176px"
@@ -881,7 +888,7 @@
         },
         "journey": {
           "formWrapper": {
-            "minHeight": ["570px", "680px"],
+            "minHeight": ["calc(100vh - 90px)", "680px", "680px"],
             "pt": "lg",
             "mb": ["-12px", "-12px", "0"],
             "position": "relative"
@@ -898,13 +905,13 @@
             }
           },
           "funnel": {
-            "px": ["md", "xxxl"],
+            "px": ["sm", "xxl", "xxxl"],
             "mb": "md"
           },
           "input": {
             "wrapper": {
               "display": "flex",
-              "px": ["md", "xxxl"],
+              "px": ["sm", "xxl", "xxxl"],
               "mb": ["md", "lg"],
               "width": "100%",
               "justifyContent": "space-between",
@@ -917,8 +924,8 @@
           },
           "description": {
             "mt": 0,
-            "fontSize": ["14px", "18px", "18px"],
-            "lineHeight": ["21px", "21px", "27px"],
+            "fontSize": ["14px", "16px", "16px"],
+            "lineHeight": "21px",
             "fontWeight": "400"
           },
           "label": {
@@ -998,7 +1005,14 @@
               "justifyContent": "space-between",
               "alignItems": "center",
               "pb": ["md", "md", 0],
-              "mr": ["0", "md"]
+              "mr": ["0", "md"],
+              "calculator": {
+                "display": ["flex", "flex", "block"],
+                "justifyContent": "space-between",
+                "alignItems": "center",
+                "pb": ["md", "md", 0],
+                "mr": ["0", "md"]
+              }
             },
             "error": {
               "position": "absolute",
@@ -2795,10 +2809,10 @@
               "pt": "md",
               "borderTop": "1px solid #E8E8E9",
               "position": "absolute",
-              "bottom": ["16px", "16px", "28px"],
+              "bottom": ["40px", "16px", "28px"],
               "width": "100%",
               "button": {
-                "mr": ["md", "xxxl"],
+                "mr": ["sm", "xxl", "xxxl"],
                 "width": "180px",
                 "height": "48px"
               },
