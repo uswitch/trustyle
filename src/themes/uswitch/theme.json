@@ -249,7 +249,8 @@
     "secondary-yellow-100": "#F7F146",
     "secondary-yellow-75": "#F9F574",
     "secondary-yellow-50": "#FAF7A2",
-    "secondary-yellow-25": "#FDFBD0"
+    "secondary-yellow-25": "#FDFBD0",
+    "document-bg": "#F7F7FC"
   },
   "radii": {
     "sm": 0,
@@ -4712,6 +4713,68 @@
             },
             "> div": {
               "px": 0
+            }
+          }
+        },
+        "backgroundImageLeft": {
+          "wrapper": {
+            "m": 0,
+            "pb": [0, 0],
+            "pt": [0, 0],
+            "width": ["100%", "grid.md.12", "grid.lg.8"],
+            "bg": "document-bg"
+          },
+          "inner": {
+            "pr": ["md", "lg", "lg"],
+            "pl": ["md", 0, 0],
+            "mr": [0, "xs", "xs"],
+            "display": "flex",
+            "flexDirection": ["column-reverse", "row", "row"]
+          },
+          "image-container": {
+            "flexBasis": ["100%", "grid.md.5", "grid.lg.3"],
+            "my": [0, 0],
+            "position": "relative",
+            "alignSelf": "center",
+            "display": "flex",
+            "overflow": "visible"
+          },
+          "image": {
+            "height": [353, 353, 353],
+            "position": "relative",
+            "objectFit": ["contain", "cover"],
+            "mt": [0, "-28px", "-53px"],
+            "mb": [0, "-25px", "-30px"]
+          },
+          "content": {
+            "textAlign": ["center", "left", "left"],
+            "height": "fit-content",
+            "flexBasis": ["100%", "grid.md.7", "grid.lg.5"],
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "py": ["xs", "xs", 0],
+            "mt": ["lg", "lg", "xxl"],
+            "mb": ["xs", "lg", "xxl"],
+            "h5": {
+              "fontSize": ["sm", "md", "md"],
+              "m": 0,
+              "color": "uswitch-navy",
+              "lineHeight": "sm",
+              "mb": "sm"
+            },
+            "p": {
+              "fontSize": "base"
+            },
+            "div:last-of-type": {
+              "display": "flex",
+              "justifyContent": ["center", "flex-start", "flex-start"],
+              ">div": {
+                "mb": 0,
+                "maxWidth": 136,
+                "width": "100%",
+                "mx": "xxxs"
+              }
             }
           }
         }
