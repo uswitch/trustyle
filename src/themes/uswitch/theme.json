@@ -888,7 +888,7 @@
         },
         "journey": {
           "formWrapper": {
-            "minHeight": ["560px", "680px", "680px"],
+            "minHeight": ["calc(100vh - 55px)", "680px", "680px"],
             "pt": ["xs", "lg", "lg"],
             "mb": "0",
             "position": "relative"
@@ -2806,11 +2806,13 @@
             "buttonWrapper": {
               "display": "flex",
               "justifyContent": "flex-end",
-              "pt": "md",
+              "pt": ["xs", "md", "md"],
+              "pb": ["xs", "0", "0"],
               "borderTop": "1px solid #E8E8E9",
-              "position": "absolute",
+              "position": ["fixed", "absolute", "absolute"],
               "bottom": ["0", "16px", "28px"],
               "width": "100%",
+              "bg": "white",
               "button": {
                 "mr": ["sm", "xxl", "xxxl"],
                 "width": "180px",
