@@ -219,15 +219,12 @@ export const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
         boxSizing: 'border-box',
         display: 'block',
         width: ['auto', '50%'],
-        marginTop: ['sm'],
+        marginTop: 'sm',
         marginBottom: [0, 'sm'],
-        marginLeft: ['sm'],
-        marginRight: ['sm'],
+        marginLeft: 'sm',
+        marginRight: 'sm',
         ':nth-child(even)': {
           marginLeft: ['sm', '0']
-        },
-        table: {
-          marginBottom: '0'
         }
       }}
     >
@@ -284,7 +281,7 @@ export const MoreInformationTable = ({
     }
   }
   return (
-    <table sx={{ border: 'none', overflow: 'scroll' }}>
+    <table sx={{ border: 'none', overflow: 'scroll', margin: 0 }}>
       {header && (
         <thead>
           <tr>
@@ -525,9 +522,9 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
 
         {info.length > 0 && (
           <AdditionalInfo>
-            {info.map((item, key) => (
-              <div key={key}>{item}</div>
-            ))}
+            {info.map((item, key) => {
+              return <div key={key}>{item}</div>
+            })}
           </AdditionalInfo>
         )}
 
