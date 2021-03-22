@@ -1117,7 +1117,7 @@
         "h3": {
           "fontSize": 28
         },
-        "*:first-child": {
+        ":first-child": {
           ":not(hr)": {
             "mt": 0
           }
