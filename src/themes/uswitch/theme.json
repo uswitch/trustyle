@@ -1887,7 +1887,7 @@
             "fontSize": ["sm", "md", "md"],
             "fontWeight": "700",
             "order": 2,
-            "marginTop":["xs", "sm", "sm"]
+            "marginTop": ["xs", "sm", "sm"]
           },
           "beforeIcon": {
             "position": "absolute",
