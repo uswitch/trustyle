@@ -919,7 +919,9 @@
             },
             "error": {
               "position": "absolute",
-              "margin": "0"
+              "width": "100%",
+              "margin": "0",
+              "top": "68px"
             }
           },
           "description": {
@@ -949,6 +951,8 @@
           },
           "wrapper": {
             "base": {
+              "width": "100%",
+              "position": "relative",
               "pb": 0
             },
             "variants": {
