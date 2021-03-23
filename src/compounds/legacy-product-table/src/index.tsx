@@ -24,6 +24,39 @@ const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   )
 }
 
+interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
+  text: string
+}
+
+const Badge: React.FC<BadgeProps> = ({ text }) => {
+  return (
+    <div
+      sx={{
+        position: 'absolute',
+        top: 0,
+        transform: 'translateY(-50%)',
+        padding: '0 6px',
+        backgroundColor: '#fff',
+        marginLeft: ['4px', 'sm']
+      }}
+    >
+      <div
+        sx={{
+          padding: ['2.5px 8px', '5.5px 16px'],
+          backgroundColor: '#34454E',
+          color: '#fff',
+          borderRadius: '3px',
+          fontSize: ['14px', '16px'],
+          lineHeight: ['normal', 'inherit'],
+          fontWeight: [400, 600]
+        }}
+      >
+        {text}
+      </div>
+    </div>
+  )
+}
+
 interface RepresentativeExampleProps
   extends React.HTMLAttributes<HTMLDivElement> {
   text: string
@@ -464,32 +497,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         onRowClick={onRowClick}
         disabled={disabled}
       >
-        {!!badge && (
-          <div
-            sx={{
-              position: 'absolute',
-              top: 0,
-              transform: 'translateY(-50%)',
-              padding: '0 6px',
-              backgroundColor: '#fff',
-              marginLeft: ['4px', 'sm']
-            }}
-          >
-            <div
-              sx={{
-                padding: ['2.5px 8px', '5.5px 16px'],
-                backgroundColor: '#34454E',
-                color: '#fff',
-                borderRadius: '3px',
-                fontSize: ['14px', '16px'],
-                lineHeight: ['normal', 'inherit'],
-                fontWeight: [400, 600]
-              }}
-            >
-              {badge}
-            </div>
-          </div>
-        )}
+        {badge && <Badge text={badge} />}
 
         <header>
           <Styled.h5
