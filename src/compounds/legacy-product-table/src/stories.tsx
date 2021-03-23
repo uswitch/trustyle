@@ -9,19 +9,16 @@ import LegacyProductTable, {
   DataCell,
   ImageCell,
   MoreInformationBlock,
-  MoreInformationTable,
-  RepresentativeExample
+  MoreInformationTable
 } from '.'
 
 export default {
   title: 'Compounds/Legacy Product Table'
 }
 
-const repTextExample = `The representative rate is 29% APR (fixed) so
+const representativeExample = `The representative rate is 29% APR (fixed) so
 if you borrow £4,000 over 3 years at a rate of 17% p.a. (fixed) plus a service
 fee of 8.74% p.a. you will repay £160.61 per month & £5,781.96 in total.`
-
-const RepExample = <RepresentativeExample text={repTextExample} />
 
 const info = [
   'Both applicant and guarantor must be homeowners.',
@@ -135,7 +132,7 @@ const moreInformationButtonClick = () => {
 export const BadgeExample = () => {
   return (
     <LegacyProductTable
-      representativeExample={RepExample}
+      representativeExample={representativeExample}
       info={info}
       title={title}
       clickableRow={clickableRow}
@@ -153,7 +150,7 @@ export const BadgeExample = () => {
 export const EligibilityExample = () => {
   return (
     <LegacyProductTable
-      representativeExample={RepExample}
+      representativeExample={representativeExample}
       info={info}
       title={title}
       clickableRow={clickableRow}
@@ -194,7 +191,7 @@ FeesExample.story = {
 export const DisabledExample = () => {
   return (
     <LegacyProductTable
-      representativeExample={RepExample}
+      representativeExample={representativeExample}
       info={info}
       title={title}
       moreInformationPanel={[eligibilityContent, ratesContent]}

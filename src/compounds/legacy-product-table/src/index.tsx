@@ -29,7 +29,7 @@ interface RepresentativeExampleProps
   text: string
 }
 
-export const RepresentativeExample: React.FC<RepresentativeExampleProps> = ({
+const RepresentativeExample: React.FC<RepresentativeExampleProps> = ({
   text
 }) => {
   return (
@@ -415,10 +415,9 @@ const Eligibility: React.FC<EligibilityProps> = ({
 }
 
 interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
-  repExampleLabel?: string
   info: string[]
   title: string
-  representativeExample?: React.ReactNode
+  representativeExample?: string
   moreInformationPanel?: React.ReactNode[]
   clickableRow?: string
   moreInformationButtonClick?: (addon?: object) => void
@@ -528,7 +527,9 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           </AdditionalInfo>
         )}
 
-        {representativeExample}
+        {representativeExample && (
+          <RepresentativeExample text={representativeExample} />
+        )}
       </RowWrapper>
 
       {moreInformationPanel && moreInformationPanel.length > 0 && !disabled && (
