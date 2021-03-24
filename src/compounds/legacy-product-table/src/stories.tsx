@@ -9,7 +9,8 @@ import LegacyProductTable, {
   DataCell,
   ImageCell,
   MoreInformationBlock,
-  MoreInformationTable
+  MoreInformationTable,
+  MoreInformationText
 } from '.'
 
 export default {
@@ -117,11 +118,16 @@ const feesContent = (
 
 const additionalInformationContent = (
   <MoreInformationBlock title="Additional information">
-    <h6>Early repayment charge</h6>
-    <p>If you pay all of your mortgage early you will be charged:</p>
-    <p>- 3% of the original loan, in the first year</p>
-    <p>- 2% of the original loan, in the second year</p>
-    <p>Other fees may apply.</p>
+    <MoreInformationText
+      content={[
+        'Early repayment charge',
+        'If you pay all of your mortgage early you will be charged:',
+        '- 3% of the original loan, in the first year',
+        '- 2% of the original loan, in the second year',
+        ' ',
+        'Other fees may apply.'
+      ]}
+    />
   </MoreInformationBlock>
 )
 

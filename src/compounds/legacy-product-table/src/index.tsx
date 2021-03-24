@@ -368,6 +368,30 @@ export const MoreInformationTable = ({
   )
 }
 
+interface MoreInformationTextProps {
+  content: string[]
+}
+
+export const MoreInformationText = ({ content }: MoreInformationTextProps) => {
+  const sx = {
+    fontSize: '13px',
+    marginBottom: '8px'
+  }
+
+  return (
+    <>
+      <h6>{content[0]}</h6>
+      {content.slice(1).map((text, key) => {
+        return (
+          <p sx={sx} key={key}>
+            {text}
+          </p>
+        )
+      })}
+    </>
+  )
+}
+
 interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
   moreInformationPanel: React.ReactNode[]
   clickableRow?: string
