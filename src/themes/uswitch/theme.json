@@ -889,10 +889,10 @@
         },
         "journey": {
           "formWrapper": {
-            "minHeight": ["calc(100vh - 90px)", "680px", "680px"],
-            "pt": "lg",
-            "mb": ["-12px", "-12px", "0"],
-            "position": ["static", "relative", "relative"]
+            "minHeight": ["calc(100vh - 55px)", "680px", "680px"],
+            "pt": ["xs", "lg", "lg"],
+            "mb": "0",
+            "position": "relative"
           },
           "simple-radio": {
             "radioWrapper": {
@@ -920,7 +920,9 @@
             },
             "error": {
               "position": "absolute",
-              "margin": "0"
+              "width": "100%",
+              "margin": "0",
+              "top": "68px"
             }
           },
           "description": {
@@ -950,6 +952,8 @@
           },
           "wrapper": {
             "base": {
+              "width": "100%",
+              "position": "relative",
               "pb": 0
             },
             "variants": {
@@ -1863,14 +1867,14 @@
           "position": "relative",
           "backgroundColor": "white",
           "px": "md",
-          "py": "lg",
+          "py": ["md", "lg", "lg"],
           "display": "flex",
           "flexDirection": "column",
           "alignItems": "flex-start",
           "justifyContent": "flex-end",
           "textAlign": "left",
-          "minHeight": "289px",
-          "maxWidth": "289px",
+          "minHeight": ["100px", "289px", "289px"],
+          "maxWidth": ["313px", "289px", "289px"],
           "margin": "auto",
           "border": "1px solid",
           "borderColor": "grey-10",
@@ -1881,20 +1885,20 @@
             "color": "inherit"
           },
           "content": {
-            "fontSize": "md",
+            "fontSize": ["sm", "md", "md"],
             "fontWeight": "700",
             "order": 2,
-            "marginTop": "sm"
+            "marginTop": ["xs", "sm", "sm"]
           },
           "beforeIcon": {
             "position": "absolute",
             "top": "0",
             "right": "0",
-            "paddingTop": "lg",
+            "paddingTop": ["md", "lg", "lg"],
             "paddingRight": "md",
             "svg": {
-              "width": 25,
-              "height": 25,
+              "width": [20, 25, 25],
+              "height": [20, 25, 25],
               "float": "right",
               "fill": "dark-1"
             }
@@ -1902,8 +1906,8 @@
           "afterIcon": {
             "svg": {
               "order": 1,
-              "width": 56,
-              "height": 56,
+              "width": [35, 56, 56],
+              "height": [35, 56, 56],
               "fill": "dark-1"
             }
           }
@@ -2807,11 +2811,13 @@
             "buttonWrapper": {
               "display": "flex",
               "justifyContent": "flex-end",
-              "pt": "md",
+              "pt": ["xs", "md", "md"],
+              "pb": ["xs", "0", "0"],
               "borderTop": "1px solid #E8E8E9",
-              "position": "absolute",
-              "bottom": ["40px", "16px", "28px"],
+              "position": ["fixed", "absolute", "absolute"],
+              "bottom": ["0", "16px", "28px"],
               "width": "100%",
+              "bg": "white",
               "button": {
                 "mr": ["sm", "xxl", "xxxl"],
                 "width": "180px",
