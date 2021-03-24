@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.42.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.16...@uswitch/trustyle.uswitch-theme@2.42.17) (2021-03-24)
+
+
+### Bug Fixes
+
+* add backgroundImageLeft image-ccallout variant ([9c26344](https://github.com/uswitch/trustyle/commit/9c26344))
+* remove overriding selector ([e69f8e3](https://github.com/uswitch/trustyle/commit/e69f8e3))
+
+
+
+
+
+## [2.42.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.15...@uswitch/trustyle.uswitch-theme@2.42.16) (2021-03-23)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.42.15](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.14...@uswitch/trustyle.uswitch-theme@2.42.15) (2021-03-23)
+
+
+### Bug Fixes
+
+* update journey card mobile styling ([e1b80bc](https://github.com/uswitch/trustyle/commit/e1b80bc))
+* update mobile styles on journey-card variant ([857b193](https://github.com/uswitch/trustyle/commit/857b193))
+
+
+
+
+
+## [2.42.14](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.13...@uswitch/trustyle.uswitch-theme@2.42.14) (2021-03-23)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.42.13](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.12...@uswitch/trustyle.uswitch-theme@2.42.13) (2021-03-22)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.42.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.11...@uswitch/trustyle.uswitch-theme@2.42.12) (2021-03-22)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
 ## [2.42.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.10...@uswitch/trustyle.uswitch-theme@2.42.11) (2021-03-19)
 
 

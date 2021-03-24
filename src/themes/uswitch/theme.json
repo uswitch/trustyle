@@ -249,7 +249,8 @@
     "secondary-yellow-100": "#F7F146",
     "secondary-yellow-75": "#F9F574",
     "secondary-yellow-50": "#FAF7A2",
-    "secondary-yellow-25": "#FDFBD0"
+    "secondary-yellow-25": "#FDFBD0",
+    "document-bg": "#F7F7FC"
   },
   "radii": {
     "sm": 0,
@@ -888,10 +889,10 @@
         },
         "journey": {
           "formWrapper": {
-            "minHeight": ["calc(100vh - 90px)", "680px", "680px"],
-            "pt": "lg",
-            "mb": ["-12px", "-12px", "0"],
-            "position": ["static", "relative", "relative"]
+            "minHeight": ["calc(100vh - 55px)", "680px", "680px"],
+            "pt": ["xs", "lg", "lg"],
+            "mb": "0",
+            "position": "relative"
           },
           "simple-radio": {
             "radioWrapper": {
@@ -919,7 +920,9 @@
             },
             "error": {
               "position": "absolute",
-              "margin": "0"
+              "width": "100%",
+              "margin": "0",
+              "top": "68px"
             }
           },
           "description": {
@@ -949,6 +952,8 @@
           },
           "wrapper": {
             "base": {
+              "width": "100%",
+              "position": "relative",
               "pb": 0
             },
             "variants": {
@@ -1117,7 +1122,7 @@
         "h3": {
           "fontSize": 28
         },
-        "*:first-child": {
+        ":first-child": {
           ":not(hr)": {
             "mt": 0
           }
@@ -1862,14 +1867,14 @@
           "position": "relative",
           "backgroundColor": "white",
           "px": "md",
-          "py": "lg",
+          "py": ["md", "lg", "lg"],
           "display": "flex",
           "flexDirection": "column",
           "alignItems": "flex-start",
           "justifyContent": "flex-end",
           "textAlign": "left",
-          "minHeight": "289px",
-          "maxWidth": "289px",
+          "minHeight": ["100px", "289px", "289px"],
+          "maxWidth": ["313px", "289px", "289px"],
           "margin": "auto",
           "border": "1px solid",
           "borderColor": "grey-10",
@@ -1880,20 +1885,20 @@
             "color": "inherit"
           },
           "content": {
-            "fontSize": "md",
+            "fontSize": ["sm", "md", "md"],
             "fontWeight": "700",
             "order": 2,
-            "marginTop": "sm"
+            "marginTop": ["xs", "sm", "sm"]
           },
           "beforeIcon": {
             "position": "absolute",
             "top": "0",
             "right": "0",
-            "paddingTop": "lg",
+            "paddingTop": ["md", "lg", "lg"],
             "paddingRight": "md",
             "svg": {
-              "width": 25,
-              "height": 25,
+              "width": [20, 25, 25],
+              "height": [20, 25, 25],
               "float": "right",
               "fill": "dark-1"
             }
@@ -1901,8 +1906,8 @@
           "afterIcon": {
             "svg": {
               "order": 1,
-              "width": 56,
-              "height": 56,
+              "width": [35, 56, 56],
+              "height": [35, 56, 56],
               "fill": "dark-1"
             }
           }
@@ -2806,11 +2811,13 @@
             "buttonWrapper": {
               "display": "flex",
               "justifyContent": "flex-end",
-              "pt": "md",
+              "pt": ["xs", "md", "md"],
+              "pb": ["xs", "0", "0"],
               "borderTop": "1px solid #E8E8E9",
-              "position": "absolute",
-              "bottom": ["40px", "16px", "28px"],
+              "position": ["fixed", "absolute", "absolute"],
+              "bottom": ["0", "16px", "28px"],
               "width": "100%",
+              "bg": "white",
               "button": {
                 "mr": ["sm", "xxl", "xxxl"],
                 "width": "180px",
@@ -4712,6 +4719,68 @@
             },
             "> div": {
               "px": 0
+            }
+          }
+        },
+        "backgroundImageLeft": {
+          "wrapper": {
+            "m": 0,
+            "pb": [0, 0],
+            "pt": [0, 0],
+            "width": ["100%", "grid.md.12", "grid.lg.8"],
+            "bg": "document-bg"
+          },
+          "inner": {
+            "pr": ["md", "lg", "lg"],
+            "pl": ["md", 0, 0],
+            "mr": [0, "xs", "xs"],
+            "display": "flex",
+            "flexDirection": ["column-reverse", "row", "row"]
+          },
+          "image-container": {
+            "flexBasis": ["100%", "grid.md.5", "grid.lg.3"],
+            "my": [0, 0],
+            "position": "relative",
+            "alignSelf": "center",
+            "display": "flex",
+            "overflow": "visible"
+          },
+          "image": {
+            "height": [353, 353, 353],
+            "position": "relative",
+            "objectFit": ["contain", "cover"],
+            "mt": [0, "-28px", "-53px"],
+            "mb": [0, "-25px", "-30px"]
+          },
+          "content": {
+            "textAlign": ["center", "left", "left"],
+            "height": "fit-content",
+            "flexBasis": ["100%", "grid.md.7", "grid.lg.5"],
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "py": ["xs", "xs", 0],
+            "mt": ["lg", "lg", "xxl"],
+            "mb": ["xs", "lg", "xxl"],
+            "h5": {
+              "fontSize": ["sm", "md", "md"],
+              "m": 0,
+              "color": "uswitch-navy",
+              "lineHeight": "sm",
+              "mb": "sm"
+            },
+            "p": {
+              "fontSize": "base"
+            },
+            "div:last-of-type": {
+              "display": "flex",
+              "justifyContent": ["center", "flex-start", "flex-start"],
+              ">div": {
+                "mb": 0,
+                "maxWidth": 136,
+                "width": "100%",
+                "mx": "xxxs"
+              }
             }
           }
         }
