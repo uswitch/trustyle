@@ -168,6 +168,27 @@ EligibilityExample.story = {
   }
 }
 
+export const SingleMoreInformationExample = () => {
+  return (
+    <LegacyProductTable
+      representativeExample={representativeExample}
+      info={info}
+      title={title}
+      clickableRow={clickableRow}
+      moreInformationPanel={[eligibilityContent]}
+      moreInformationButtonClick={moreInformationButtonClick}
+    >
+      {productTableContents}
+    </LegacyProductTable>
+  )
+}
+
+SingleMoreInformationExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const FeesExample = () => {
   return (
     <LegacyProductTable

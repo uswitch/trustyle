@@ -388,7 +388,8 @@ const Eligibility: React.FC<EligibilityProps> = ({
             display: 'flex',
             flexDirection: ['column', 'row'],
             alignItems: 'stretch',
-            background: '#f2f3f4'
+            background: '#f2f3f4',
+            justifyContent: 'center'
           }}
         >
           {moreInformationPanel}
