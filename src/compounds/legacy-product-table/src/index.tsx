@@ -304,7 +304,8 @@ export const MoreInformationTable = ({
     borderBottomStyle: 'solid',
     borderBottomWidth: '1px',
     fontSize: '13px',
-    fontFamily: 'Open Sans,Arial,sans-serif'
+    fontFamily: 'Open Sans,Arial,sans-serif',
+    padding: '16px'
   }
   const format = (data: string | boolean | undefined) => {
     if (data === true || data === 'Yes' || data === 'yes' || data === 'true') {
@@ -314,7 +315,15 @@ export const MoreInformationTable = ({
     }
   }
   return (
-    <table sx={{ border: 'none', overflow: 'scroll', margin: 0 }}>
+    <table
+      sx={{
+        border: 'none',
+        borderCollapse: 'collapse',
+        overflow: 'scroll',
+        margin: 0,
+        width: '100%'
+      }}
+    >
       {header && (
         <thead>
           <tr>
