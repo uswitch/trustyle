@@ -373,22 +373,21 @@ interface MoreInformationTextProps {
 }
 
 export const MoreInformationText = ({ content }: MoreInformationTextProps) => {
-  const sx = {
-    fontSize: '13px',
-    marginBottom: '8px'
-  }
-
   return (
-    <>
-      <h6>{content[0]}</h6>
+    <React.Fragment>
+      <h4 sx={{ my: 'xs', mx: '0' }}>{content[0]}</h4>
       {content.slice(1).map((text, key) => {
-        return (
-          <p sx={sx} key={key}>
-            {text}
-          </p>
-        )
+        if (text) {
+          return (
+            <p sx={{ fontSize: 'xs', my: 'xxs', mx: '0' }} key={key}>
+              {text}
+            </p>
+          )
+        } else {
+          return <br />
+        }
       })}
-    </>
+    </React.Fragment>
   )
 }
 
