@@ -29,6 +29,7 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   card?: boolean
   extraStyles?: {}
   sectionStyles?: {}
+  onRowClick?: () => void
 }
 
 const ProductTableRow: React.FC<RowProps> = ({
@@ -44,7 +45,8 @@ const ProductTableRow: React.FC<RowProps> = ({
   disabled,
   card = false,
   extraStyles = {},
-  sectionStyles = {}
+  sectionStyles = {},
+  onRowClick
 }) => {
   const forcedMobile = forceMobile(card)
 
@@ -124,7 +126,11 @@ const ProductTableRow: React.FC<RowProps> = ({
           ...sectionStyles
         }}
       >
-        <RowWrapper link={clickableRow} headerImage={image}>
+        <RowWrapper
+          link={clickableRow}
+          headerImage={image}
+          onRowClick={onRowClick}
+        >
           {!!badges.length && (
             <div
               sx={{
