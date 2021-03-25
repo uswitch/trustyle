@@ -72,7 +72,7 @@ const RowWrapper: React.FC<Props> = ({
   headerImage,
   sx = {},
   className,
-  onRowClick,
+  onRowClick
 }) => {
   return link ? (
     linkWrapper({ link, children, headerImage, onRowClick })

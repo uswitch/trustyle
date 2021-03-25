@@ -46,7 +46,7 @@ const ProductTableRow: React.FC<RowProps> = ({
   card = false,
   extraStyles = {},
   sectionStyles = {},
-  onRowClick,
+  onRowClick
 }) => {
   const forcedMobile = forceMobile(card)
 
@@ -126,7 +126,11 @@ const ProductTableRow: React.FC<RowProps> = ({
           ...sectionStyles
         }}
       >
-        <RowWrapper link={clickableRow} headerImage={image} onRowClick={onRowClick}>
+        <RowWrapper
+          link={clickableRow}
+          headerImage={image}
+          onRowClick={onRowClick}
+        >
           {!!badges.length && (
             <div
               sx={{
