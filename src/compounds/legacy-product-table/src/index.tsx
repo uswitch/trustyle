@@ -391,7 +391,7 @@ interface MoreInformationTextProps {
 
 export const MoreInformationText = ({ content }: MoreInformationTextProps) => {
   const lines = content
-    .replaceAll('</p>', '')
+    .replace(/<\/p>/g, '')
     .split('<br/>')
     .map(line => line.split('<p>'))
     .flat()
