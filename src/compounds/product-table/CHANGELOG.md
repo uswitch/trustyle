@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.14.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.14.0...@uswitch/trustyle.product-table@2.14.1) (2021-03-25)
+
+
+### Bug Fixes
+
+* prettier ([711c018](https://github.com/uswitch/trustyle/commit/711c018))
+
+
+
+
+
 # [2.14.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.13.17...@uswitch/trustyle.product-table@2.14.0) (2021-03-25)
 
 
