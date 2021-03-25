@@ -57,6 +57,33 @@ const Badge: React.FC<BadgeProps> = ({ text }) => {
   )
 }
 
+interface MoreInformationButtonProps
+  extends React.HTMLAttributes<HTMLAnchorElement> {
+  onClick: () => void
+  href: string
+}
+
+export const MoreInformationButton: React.FC<MoreInformationButtonProps> = ({
+  onClick,
+  children,
+  href
+}) => {
+  return (
+    <CtaCell
+      styles={{
+        width: '100%',
+        fontSize: '14px',
+        marginBottom: '0'
+      }}
+      href={href}
+      onClick={onClick}
+      variant="eligibility"
+    >
+      {children}
+    </CtaCell>
+  )
+}
+
 interface RepresentativeExampleProps
   extends React.HTMLAttributes<HTMLDivElement> {
   text: string
@@ -393,14 +420,12 @@ export const MoreInformationText = ({ content }: MoreInformationTextProps) => {
 
 interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
   moreInformationPanel: React.ReactNode[]
-  clickableRow?: string
-  moreInformationButtonClick?: (addon?: object) => void
+  moreInformationButton?: React.ReactNode
 }
 
 const Eligibility: React.FC<EligibilityProps> = ({
   moreInformationPanel,
-  clickableRow,
-  moreInformationButtonClick
+  moreInformationButton
 }) => {
   const [open, setOpen] = React.useState(false)
 
@@ -434,18 +459,7 @@ const Eligibility: React.FC<EligibilityProps> = ({
             margin: '0 auto'
           }}
         >
-          <CtaCell
-            styles={{
-              width: '100%',
-              fontSize: '14px',
-              marginBottom: '0'
-            }}
-            href={clickableRow}
-            onClick={moreInformationButtonClick}
-            variant="eligibility"
-          >
-            See Deal
-          </CtaCell>
+          {moreInformationButton}
         </div>
       </div>
 
@@ -486,7 +500,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   representativeExample?: string
   moreInformationPanel?: React.ReactNode[]
   clickableRow?: string
-  moreInformationButtonClick?: (addon?: object) => void
+  moreInformationButton?: React.ReactNode
   onRowClick?: () => void
   disabled?: boolean
   badges?: string[]
@@ -499,7 +513,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   representativeExample,
   moreInformationPanel,
   clickableRow,
-  moreInformationButtonClick,
+  moreInformationButton,
   onRowClick,
   disabled,
   badges = [],
@@ -576,8 +590,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
       {moreInformationPanel && moreInformationPanel.length > 0 && !disabled && (
         <Eligibility
           moreInformationPanel={moreInformationPanel}
-          clickableRow={clickableRow}
-          moreInformationButtonClick={moreInformationButtonClick}
+          moreInformationButton={moreInformationButton}
         />
       )}
     </article>

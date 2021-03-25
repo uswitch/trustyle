@@ -9,6 +9,7 @@ import LegacyProductTable, {
   DataCell,
   ImageCell,
   MoreInformationBlock,
+  MoreInformationButton,
   MoreInformationTable,
   MoreInformationText
 } from '.'
@@ -135,6 +136,15 @@ const moreInformationButtonClick = () => {
   console.log('More information clicked')
 }
 
+const moreInformationButton = (
+  <MoreInformationButton
+    onClick={moreInformationButtonClick}
+    href={clickableRow}
+  >
+    See Deal
+  </MoreInformationButton>
+)
+
 export const BadgeExample = () => {
   return (
     <LegacyProductTable
@@ -142,7 +152,7 @@ export const BadgeExample = () => {
       info={info}
       title={title}
       clickableRow={clickableRow}
-      moreInformationButtonClick={moreInformationButtonClick}
+      moreInformationButton={moreInformationButton}
       badges={[
         'Fairer Finance Gold Customer Experience Ribbon Winner Autumn 2020',
         'Fab!'
@@ -161,7 +171,7 @@ export const EligibilityExample = () => {
       title={title}
       clickableRow={clickableRow}
       moreInformationPanel={[eligibilityContent, ratesContent]}
-      moreInformationButtonClick={moreInformationButtonClick}
+      moreInformationButton={moreInformationButton}
     >
       {productTableContents}
     </LegacyProductTable>
@@ -182,7 +192,7 @@ export const SingleMoreInformationExample = () => {
       title={title}
       clickableRow={clickableRow}
       moreInformationPanel={[eligibilityContent]}
-      moreInformationButtonClick={moreInformationButtonClick}
+      moreInformationButton={moreInformationButton}
     >
       {productTableContents}
     </LegacyProductTable>
@@ -202,7 +212,7 @@ export const FeesExample = () => {
       title={title}
       clickableRow={clickableRow}
       moreInformationPanel={[feesContent, additionalInformationContent]}
-      moreInformationButtonClick={moreInformationButtonClick}
+      moreInformationButton={moreInformationButton}
     >
       {productTableContents}
     </LegacyProductTable>
