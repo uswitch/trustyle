@@ -394,7 +394,7 @@ export const MoreInformationText = ({ content }: MoreInformationTextProps) => {
     .replace(/<\/p>/g, '')
     .split('<br/>')
     .map(line => line.split('<p>'))
-    .flat()
+    .reduce((acc, val) => acc.concat(val), [])
 
   return (
     <React.Fragment>
