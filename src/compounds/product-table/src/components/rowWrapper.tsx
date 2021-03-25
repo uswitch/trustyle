@@ -7,6 +7,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   link?: string
   children?: React.ReactNode
   headerImage?: React.ReactNode
+  onRowClick?: () => void
 }
 
 const checkClickTargetIsAccordion = (n: number, e: any) => {
@@ -28,16 +29,19 @@ const checkClickTargetIsLink = (e: any) => {
   }
 }
 
-const linkWrapper = (
-  link: string,
-  children: React.ReactNode,
+interface LinkWrapperOptions {
+  link: string
+  children: React.ReactNode
   headerImage?: React.ReactNode
-) => {
+  onRowClick?: () => void
+}
+const linkWrapper = (options: LinkWrapperOptions) => {
+  const { link, children, headerImage, onRowClick } = options
   const handleClick = (e: any) => {
     if (checkClickTargetIsAccordion(10, e) && !checkClickTargetIsLink(e)) {
       e.preventDefault()
     }
-
+    if (onRowClick) onRowClick()
     return e
   }
 
@@ -67,10 +71,11 @@ const RowWrapper: React.FC<Props> = ({
   children,
   headerImage,
   sx = {},
-  className
+  className,
+  onRowClick,
 }) => {
   return link ? (
-    linkWrapper(link, children, headerImage)
+    linkWrapper({ link, children, headerImage, onRowClick })
   ) : (
     <div
       sx={{
