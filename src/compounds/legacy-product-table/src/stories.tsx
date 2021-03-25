@@ -10,6 +10,7 @@ import LegacyProductTable, {
   ImageCell,
   MoreInformationBlock,
   MoreInformationButton,
+  MoreInformationList,
   MoreInformationTable,
   MoreInformationText
 } from '.'
@@ -65,15 +66,32 @@ const productTableContents = [
 
 const eligibilityContent = (
   <MoreInformationBlock title="Eligibility">
-    <MoreInformationTable
-      boldFirstColumn
-      backgroundColor="white"
+    <MoreInformationList
       rows={[
-        ['You must meet the following criteria in order to get this loan'],
-        ['UK resident', 'Yes'],
-        ['Guarantor Required', 'Yes'],
-        ['Minimum age', '18 years'],
-        ['Credit Rating Accepted', 'poor']
+        {
+          value:
+            'You must meet the following criteria in order to get this loan:'
+        },
+        {
+          label: 'UK Resident',
+          value: true
+        },
+        {
+          label: 'Guarantor Required',
+          value: true
+        },
+        {
+          label: 'Minimum age',
+          value: 18
+        },
+        {
+          label: 'Maximum age',
+          value: 70
+        },
+        {
+          label: 'Credit Rating Accepted',
+          value: 'Good'
+        }
       ]}
     />
   </MoreInformationBlock>
@@ -82,20 +100,139 @@ const eligibilityContent = (
 const ratesContent = (
   <MoreInformationBlock title="Rate tiers">
     <MoreInformationTable
-      backgroundColor="white"
-      header={['', 'Gross rate', 'Gross rate', 'AER', 'AER']}
       rows={[
         [
-          '',
-          'Excluding bonus',
-          'Including bonus',
-          'Excluding bonus',
-          'Including bonus'
+          {
+            type: 'th',
+            value: ''
+          },
+          {
+            type: 'th',
+            value: 'Gross rate'
+          },
+          {
+            type: 'th',
+            value: 'Gross rate'
+          },
+          {
+            type: 'th',
+            value: 'AER'
+          },
+          {
+            type: 'th',
+            value: 'AER'
+          }
         ],
-        ['£1', '0.20%', '0.20%', '0.20%', '0.20%'],
-        ['£1000', '0.20%', '0.20%', '0.20%', '0.20%'],
-        ['£10,000', '0.20%', '0.20%', '0.20%', '0.20%'],
-        ['£50,000', '0.20%', '0.20%', '0.20%', '0.20%']
+        [
+          {
+            type: 'td',
+            value: ''
+          },
+          {
+            type: 'td',
+            value: 'Excluding bonus'
+          },
+          {
+            type: 'td',
+            value: 'Including bonus'
+          },
+          {
+            type: 'td',
+            value: 'Excluding bonus'
+          },
+          {
+            type: 'td',
+            value: 'Including bonus'
+          }
+        ],
+        [
+          {
+            type: 'td',
+            value: '£1'
+          },
+          {
+            type: 'td',
+            value: '0.20%'
+          },
+          {
+            type: 'td',
+            value: '0.20%'
+          },
+          {
+            type: 'td',
+            value: '0.20%'
+          },
+          {
+            type: 'td',
+            value: '0.20%'
+          }
+        ],
+        [
+          {
+            type: 'td',
+            value: '£1,000'
+          },
+          {
+            type: 'td',
+            value: '0.65%'
+          },
+          {
+            type: 'td',
+            value: '0.65%'
+          },
+          {
+            type: 'td',
+            value: '0.65%'
+          },
+          {
+            type: 'td',
+            value: '0.65%'
+          }
+        ],
+        [
+          {
+            type: 'td',
+            value: '£10,000'
+          },
+          {
+            type: 'td',
+            value: '0.95%'
+          },
+          {
+            type: 'td',
+            value: '0.95%'
+          },
+          {
+            type: 'td',
+            value: '0.95%'
+          },
+          {
+            type: 'td',
+            value: '0.95%'
+          }
+        ],
+        [
+          {
+            type: 'td',
+            value: '£50,000'
+          },
+          {
+            type: 'td',
+            value: '1.00%'
+          },
+          {
+            type: 'td',
+            value: '1.00%'
+          },
+          {
+            type: 'td',
+            value: '1.00%'
+          },
+          {
+            type: 'td',
+            value: '1.00%'
+          }
+        ]
       ]}
     />
   </MoreInformationBlock>
@@ -103,15 +240,16 @@ const ratesContent = (
 
 const feesContent = (
   <MoreInformationBlock title="Fees">
-    <MoreInformationTable
-      boldFirstColumn
-      backgroundColor="white"
+    <MoreInformationList
       rows={[
-        ['Application fee', 'No fee'],
-        ['Arrangement fee', 'No fee'],
-        ['Booking fee', 'No fee'],
-        ['Completion fee', '£1495 with an option to add to the loan'],
-        ['Product fee', 'No fee']
+        { label: 'Application fee', value: 'No fee' },
+        { label: 'Arrangement fee', value: 'No fee' },
+        { label: 'Booking fee', value: 'No fee' },
+        {
+          label: 'Completion fee',
+          value: '£1495 with an option to add to the loan'
+        },
+        { label: 'Product fee', value: 'No fee' }
       ]}
     />
   </MoreInformationBlock>
@@ -120,14 +258,9 @@ const feesContent = (
 const additionalInformationContent = (
   <MoreInformationBlock title="Additional information">
     <MoreInformationText
-      content={[
-        'Early repayment charge',
-        'If you pay all of your mortgage early you will be charged:',
-        '- 3% of the original loan, in the first year',
-        '- 2% of the original loan, in the second year',
-        ' ',
-        'Other fees may apply.'
-      ]}
+      content={
+        '<b>Early repayment charge</b><br/>If you pay all or part of your mortgage early you will be charged: <br/>- 2.00% of amount paid, before 30 Jun 2022<br/>- then 1.00% of amount paid, until 30 Jun 2023<p>Other fees may apply.</p>'
+      }
     />
   </MoreInformationBlock>
 )

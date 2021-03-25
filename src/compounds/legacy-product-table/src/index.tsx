@@ -296,11 +296,13 @@ export const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
       >
         <div
           sx={{
-            fontSize: '14px',
-            color: '#858f94',
+            fontSize: '18px',
+            fontStyle: 'normal',
+            fontWeight: 'bold',
+            fontFamily: 'Nunito',
+            color: '#29335C',
             marginBottom: '5px',
-            textAlign: 'left',
-            fontWeight: 300
+            textAlign: 'left'
           }}
         >
           {title}
@@ -312,33 +314,33 @@ export const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
   )
 }
 
-interface MoreInformationTableProps {
-  backgroundColor?: string
-  rows: string[][]
-  header?: string[]
-  boldFirstColumn?: boolean
+const format = (data: string | boolean | number) => {
+  if (data === true || data === 'Yes' || data === 'yes' || data === 'true') {
+    return (
+      <span sx={{ display: 'inline-block' }}>
+        <Icon glyph="check" color={'#6bab51'} size={18} />
+      </span>
+    )
+  } else {
+    return data
+  }
 }
 
-export const MoreInformationTable = ({
-  backgroundColor,
-  header,
-  rows,
-  boldFirstColumn = false
-}: MoreInformationTableProps) => {
-  const sx = {
-    backgroundColor,
-    borderBottomColor: 'grey-20',
-    borderBottomStyle: 'solid',
-    borderBottomWidth: '1px',
+interface MoreInformationTableProps {
+  rows: any
+}
+
+export const MoreInformationTable = ({ rows }: MoreInformationTableProps) => {
+  const tdSx = {
+    backgroundColor: 'white',
     fontSize: '13px',
     fontFamily: 'Open Sans,Arial,sans-serif',
-    padding: '16px'
-  }
-  const format = (data: string | boolean | undefined) => {
-    if (data === true || data === 'Yes' || data === 'yes' || data === 'true') {
-      return <Icon glyph="check" color={'#6bab51'} size={18} />
-    } else {
-      return data
+    padding: 'sm',
+    ':first-child': {
+      paddingLeft: 0
+    },
+    ':last-child': {
+      paddingRight: 0
     }
   }
   return (
@@ -351,39 +353,27 @@ export const MoreInformationTable = ({
         width: '100%'
       }}
     >
-      {header && (
-        <thead>
-          <tr>
-            {header.map((h: string, i: number) => (
-              <th key={i} sx={sx}>
-                {h}
-              </th>
-            ))}
-          </tr>
-        </thead>
-      )}
       <tbody>
-        {rows.map((row: string[], rowI: number) => {
-          const borderBottomStyle = rowI === rows.length - 1 ? 'none' : 'solid'
-
-          if (row.length === 1 && boldFirstColumn) {
-            return (
-              <tr key={rowI}>
-                <td colSpan={2} sx={{ ...sx, borderBottomStyle }}>
-                  {format(row[0])}
-                </td>
-              </tr>
-            )
-          }
-
+        {rows.map((row: any[], i: number) => {
           return (
-            <tr key={rowI}>
-              {row.map((data: string, colI: number) => {
-                const fontWeight = boldFirstColumn && colI === 0 ? '600' : ''
-
-                return (
-                  <td key={colI} sx={{ ...sx, borderBottomStyle, fontWeight }}>
-                    {format(data)}
+            <tr
+              sx={{
+                borderBottom: '1px solid',
+                borderColor: 'grey-20',
+                ':last-child': {
+                  borderBottom: '0px'
+                }
+              }}
+              key={i}
+            >
+              {row.map((cell: any, j) => {
+                return cell.type === 'th' ? (
+                  <th key={j} colSpan={cell.colspan} sx={{ ...tdSx }}>
+                    {cell.value}
+                  </th>
+                ) : (
+                  <td colSpan={cell.colspan} sx={{ ...tdSx }} key={j}>
+                    {cell.value}
                   </td>
                 )
               })}
@@ -396,25 +386,98 @@ export const MoreInformationTable = ({
 }
 
 interface MoreInformationTextProps {
-  content: string[]
+  content: string
 }
 
 export const MoreInformationText = ({ content }: MoreInformationTextProps) => {
+  const lines = content
+    .replaceAll('</p>', '')
+    .split('<br/>')
+    .map(line => line.split('<p>'))
+    .flat()
+
   return (
     <React.Fragment>
-      <h4 sx={{ my: 'xs', mx: '0' }}>{content[0]}</h4>
-      {content.slice(1).map((text, key) => {
-        if (text) {
-          return (
-            <p sx={{ fontSize: 'xs', my: 'xxs', mx: '0' }} key={key}>
-              {text}
-            </p>
-          )
-        } else {
-          return <br />
-        }
+      {lines.map((line: string, key: number) => {
+        return (
+          <p
+            key={key}
+            sx={{
+              fontSize: 'xs',
+              my: 'xxs',
+              mx: '0'
+            }}
+            dangerouslySetInnerHTML={{ __html: line }}
+          ></p>
+        )
       })}
     </React.Fragment>
+  )
+}
+
+interface MoreInformationListRow {
+  label?: string
+  value: string | boolean | number
+}
+
+interface MoreInformationListProps {
+  rows: MoreInformationListRow[]
+}
+
+export const MoreInformationList: React.FC<MoreInformationListProps> = ({
+  rows
+}) => {
+  const tdSx = {
+    backgroundColor: 'white',
+    fontSize: '13px',
+    fontFamily: 'Open Sans,Arial,sans-serif',
+    px: 0,
+    py: 'xs'
+  }
+
+  const trSx = {
+    borderBottom: '1px solid',
+    borderBottomColor: 'grey-20',
+    ':last-child': {
+      borderBottom: 0
+    }
+  }
+
+  return (
+    <table
+      sx={{
+        border: 'none',
+        borderCollapse: 'collapse',
+        overflow: 'scroll',
+        margin: 0,
+        width: '100%'
+      }}
+    >
+      <tbody>
+        {rows.map(({ label, value }, i: number) => {
+          if (!label) {
+            return (
+              <tr key={i} sx={trSx}>
+                <td sx={{ ...tdSx }} colSpan={2}>
+                  {format(value)}
+                </td>
+              </tr>
+            )
+          }
+
+          return (
+            <tr key={i} sx={trSx}>
+              <td sx={{ ...tdSx, fontWeight: 600, paddingRight: 'xs' }}>
+                {label}
+              </td>
+              <td sx={{ ...tdSx, paddingLeft: 'xs', textAlign: 'right' }}>
+                {format(value)}
+              </td>
+            </tr>
+          )
+        })}
+      </tbody>
+    </table>
   )
 }
 
