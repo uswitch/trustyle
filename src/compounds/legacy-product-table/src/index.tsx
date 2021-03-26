@@ -6,7 +6,7 @@ import { ButtonLink } from '@uswitch/trustyle.button-link'
 import { Button } from '@uswitch/trustyle.button'
 import { Icon } from '@uswitch/trustyle.icon'
 
-import RowWrapper from './rowWrapper'
+import RowWrapper from './row-wrapper'
 
 const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   return (
@@ -24,13 +24,76 @@ const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   )
 }
 
-interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
-  label?: string
+interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
+  text: string
 }
 
-const Footer: React.FC<FooterProps> = ({ children, label }) => {
+const Badge: React.FC<BadgeProps> = ({ text }) => {
   return (
-    <footer
+    <div
+      sx={{
+        position: 'absolute',
+        top: 0,
+        transform: 'translateY(-50%)',
+        padding: '0 6px',
+        backgroundColor: '#fff',
+        marginLeft: ['4px', 'sm']
+      }}
+    >
+      <div
+        sx={{
+          padding: ['2.5px 8px', '5.5px 16px'],
+          backgroundColor: '#34454E',
+          color: '#fff',
+          borderRadius: '3px',
+          fontSize: ['14px', '16px'],
+          lineHeight: ['normal', 'inherit'],
+          fontWeight: [400, 600]
+        }}
+      >
+        {text}
+      </div>
+    </div>
+  )
+}
+
+interface MoreInformationButtonProps
+  extends React.HTMLAttributes<HTMLAnchorElement> {
+  onClick: () => void
+  href: string
+}
+
+export const MoreInformationButton: React.FC<MoreInformationButtonProps> = ({
+  onClick,
+  children,
+  href
+}) => {
+  return (
+    <CtaCell
+      styles={{
+        width: '100%',
+        fontSize: '14px',
+        marginBottom: '0'
+      }}
+      href={href}
+      onClick={onClick}
+      variant="eligibility"
+    >
+      {children}
+    </CtaCell>
+  )
+}
+
+interface RepresentativeExampleProps
+  extends React.HTMLAttributes<HTMLDivElement> {
+  text: string
+}
+
+const RepresentativeExample: React.FC<RepresentativeExampleProps> = ({
+  text
+}) => {
+  return (
+    <div
       sx={{
         marginTop: '5px',
         padding: ['5px 20px 10px', '5px 40px 10px'],
@@ -42,9 +105,8 @@ const Footer: React.FC<FooterProps> = ({ children, label }) => {
         lineHeight: 'normal'
       }}
     >
-      {label}
-      {children}
-    </footer>
+      Representative Example: {text}
+    </div>
   )
 }
 
@@ -198,180 +260,310 @@ export const CtaCell: React.FC<CtaCellProps> = ({
   )
 }
 
-interface EligibilityContentRowProps
+interface MoreInformationBlockProps
   extends React.HTMLAttributes<HTMLDivElement> {
-  label?: string
-  value?: string
-  key?: string
+  title: string
 }
 
-export const EligibilityContentRow: React.FC<EligibilityContentRowProps> = ({
-  label,
-  value,
-  key = ''
+export const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
+  title,
+  children
 }) => {
-  const formatValue = (value: string | boolean | undefined) => {
-    if (
-      value === true ||
-      value === 'Yes' ||
-      value === 'yes' ||
-      value === 'true'
-    ) {
-      return <Icon glyph="check" color={'#6bab51'} size={18} />
-    } else {
-      return value
-    }
-  }
   return (
     <div
-      key={key}
       sx={{
-        fontSize: '13px',
-        display: 'flex',
-        width: '100%',
-        textAlign: 'left'
+        background: '#fff',
+        color: '#333',
+        alignItems: 'center',
+        fontSize: '14px',
+        boxSizing: 'border-box',
+        display: 'block',
+        width: ['auto', '50%'],
+        marginTop: 'sm',
+        marginBottom: [0, 'sm'],
+        marginLeft: 'sm',
+        marginRight: 'sm',
+        ':nth-child(even)': {
+          marginLeft: ['sm', '0']
+        }
       }}
     >
-      <label
-        sx={{
-          width: ['40%', '75%'],
-          borderBottom: '2px solid #f7f7f7',
-          borderRight: '1px solid #f7f7f7',
-          fontFamily: 'Open Sans,Arial,sans-serif',
-          fontSize: '13px',
-          color: '#333',
-          display: 'block',
-          padding: '5px 10px'
-        }}
-      >
-        {label}
-      </label>
       <div
         sx={{
-          width: ['60%', '25%'],
-          borderBottom: '2px solid #f7f7f7',
-          color: '#924a8b',
-          fontWeight: 600,
-          padding: '5px 10px',
-          fontSize: '13px'
+          padding: '15px 20px 20px',
+          lineHeight: ['1.618em', 'inherit']
         }}
       >
-        {formatValue(value)}
+        <div
+          sx={{
+            fontSize: '18px',
+            fontStyle: 'normal',
+            fontWeight: 'bold',
+            fontFamily: 'Nunito',
+            color: '#29335C',
+            marginBottom: '5px',
+            textAlign: 'left'
+          }}
+        >
+          {title}
+        </div>
+
+        <div sx={{ background: '#fff', overflow: 'auto' }}>{children}</div>
       </div>
     </div>
   )
 }
 
-interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
-  eligibilityContent: React.ReactNode[]
-  clickableRow?: string
-  onClickEligibility?: (addon?: object) => void
-  eligibilityAddon?: object
+const format = (data: string | boolean | number) => {
+  if (data === true || data === 'Yes' || data === 'yes' || data === 'true') {
+    return (
+      <span sx={{ display: 'inline-block' }}>
+        <Icon glyph="check" color={'#6bab51'} size={18} />
+      </span>
+    )
+  } else {
+    return data
+  }
 }
 
-const Eligibility: React.FC<EligibilityProps> = ({
-  eligibilityContent,
-  clickableRow,
-  onClickEligibility,
-  eligibilityAddon
+interface MoreInformationTableProps {
+  rows: any
+}
+
+export const MoreInformationTable = ({ rows }: MoreInformationTableProps) => {
+  const tdSx = {
+    backgroundColor: 'white',
+    fontSize: '13px',
+    fontFamily: 'Open Sans,Arial,sans-serif',
+    padding: 'sm',
+    ':first-child': {
+      paddingLeft: 0
+    },
+    ':last-child': {
+      paddingRight: 0
+    }
+  }
+  return (
+    <table
+      sx={{
+        border: 'none',
+        borderCollapse: 'collapse',
+        overflow: 'scroll',
+        margin: 0,
+        width: '100%'
+      }}
+    >
+      <tbody>
+        {rows.map((row: any[], i: number) => {
+          return (
+            <tr
+              sx={{
+                borderBottom: '1px solid',
+                borderColor: 'grey-20',
+                ':last-child': {
+                  borderBottom: '0px'
+                }
+              }}
+              key={i}
+            >
+              {row.map((cell: any, j) => {
+                return cell.type === 'th' ? (
+                  <th key={j} colSpan={cell.colspan} sx={{ ...tdSx }}>
+                    {cell.value}
+                  </th>
+                ) : (
+                  <td colSpan={cell.colspan} sx={{ ...tdSx }} key={j}>
+                    {cell.value}
+                  </td>
+                )
+              })}
+            </tr>
+          )
+        })}
+      </tbody>
+    </table>
+  )
+}
+
+interface MoreInformationTextProps {
+  content: string
+}
+
+export const MoreInformationText = ({ content }: MoreInformationTextProps) => {
+  const lines = content
+    .replace(/<\/p>/g, '')
+    .split('<br/>')
+    .map(line => line.split('<p>'))
+    .reduce((acc, val) => acc.concat(val), [])
+
+  return (
+    <React.Fragment>
+      {lines.map((line: string, key: number) => {
+        return (
+          <p
+            key={key}
+            sx={{
+              fontSize: 'xs',
+              my: 'xxs',
+              mx: '0'
+            }}
+            dangerouslySetInnerHTML={{ __html: line }}
+          ></p>
+        )
+      })}
+    </React.Fragment>
+  )
+}
+
+interface MoreInformationListRow {
+  label?: string
+  value: string | boolean | number
+}
+
+interface MoreInformationListProps {
+  rows: MoreInformationListRow[]
+}
+
+export const MoreInformationList: React.FC<MoreInformationListProps> = ({
+  rows
 }) => {
-  const [open, setOpen] = React.useState(false)
-  const onClick = () => {
-    onClickEligibility && onClickEligibility(eligibilityAddon)
+  const tdSx = {
+    backgroundColor: 'white',
+    fontSize: '13px',
+    fontFamily: 'Open Sans,Arial,sans-serif',
+    px: 0,
+    py: 'xs'
+  }
+
+  const trSx = {
+    borderBottom: '1px solid',
+    borderBottomColor: 'grey-20',
+    ':last-child': {
+      borderBottom: 0
+    }
   }
 
   return (
+    <table
+      sx={{
+        border: 'none',
+        borderCollapse: 'collapse',
+        overflow: 'scroll',
+        margin: 0,
+        width: '100%'
+      }}
+    >
+      <tbody>
+        {rows.map(({ label, value }, i: number) => {
+          if (!label) {
+            return (
+              <tr key={i} sx={trSx}>
+                <td sx={{ ...tdSx }} colSpan={2}>
+                  {format(value)}
+                </td>
+              </tr>
+            )
+          }
+
+          return (
+            <tr key={i} sx={trSx}>
+              <td sx={{ ...tdSx, fontWeight: 600, paddingRight: 'xs' }}>
+                {label}
+              </td>
+              <td sx={{ ...tdSx, paddingLeft: 'xs', textAlign: 'right' }}>
+                {format(value)}
+              </td>
+            </tr>
+          )
+        })}
+      </tbody>
+    </table>
+  )
+}
+
+interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
+  moreInformationPanel: React.ReactNode[]
+  moreInformationButton?: React.ReactNode
+}
+
+const Eligibility: React.FC<EligibilityProps> = ({
+  moreInformationPanel,
+  moreInformationButton
+}) => {
+  const [open, setOpen] = React.useState(false)
+
+  return (
     <div sx={{ background: '#f2f3f4' }}>
-      <div sx={{ display: 'block', maxWidth: '420px', margin: 'auto' }}>
+      <div
+        sx={{
+          display: 'block',
+          margin: 'auto',
+          height: open ? 'auto' : '0px',
+          transition: 'height .4s ease-in-out',
+          overflow: 'hidden'
+        }}
+      >
         <div
           sx={{
+            display: 'flex',
+            flexDirection: ['column', 'row'],
+            alignItems: 'stretch',
             background: '#f2f3f4',
-            alignItems: 'center',
-            height: open ? 'auto' : '0px',
-            transition: 'height .4s ease-in-out',
-            fontSize: '14px',
-            overflow: 'hidden',
-            boxSizing: 'border-box',
-            display: 'block'
+            justifyContent: 'center'
           }}
         >
-          <div
-            sx={{
-              padding: '15px 20px 20px',
-              lineHeight: ['1.618em', 'inherit']
-            }}
-          >
-            <div
-              sx={{
-                fontSize: '14px',
-                color: '#858f94',
-                marginBottom: '5px',
-                textAlign: 'left',
-                fontWeight: 300
-              }}
-            >
-              Eligibility
-            </div>
-
-            <div sx={{ background: '#fff' }}>{eligibilityContent}</div>
-          </div>
-
-          <div sx={{ padding: ['15px 20px 20px', '0 20px'] }}>
-            <CtaCell
-              styles={{
-                width: '100%',
-                fontSize: '14px'
-              }}
-              href={clickableRow}
-              onClick={onClick}
-              variant="eligibility"
-            >
-              See Deal
-            </CtaCell>
-          </div>
+          {moreInformationPanel}
         </div>
 
-        <button
+        <div
           sx={{
-            background: '#f2f3f4',
-            border: 'none',
-            borderBottom: ['1px dashed #b1b1b1', 'none'],
-            width: '100%',
-            margin: 'auto',
-            padding: '8px',
-            lineHeight: '1.618em',
-            color: '#34454E',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '13px',
-            boxSizing: 'border-box',
-            outline: 'none'
+            padding: ['15px 20px 20px', '0 20px'],
+            maxWidth: '420px',
+            margin: '0 auto'
           }}
-          onClick={() => setOpen(!open)}
         >
-          <div sx={{ pr: '15px' }}>More information</div>
-          <Icon
-            color="#34454E"
-            glyph={'caret'}
-            direction={open ? 'up' : 'down'}
-            size={10}
-          />
-        </button>
+          {moreInformationButton}
+        </div>
       </div>
+
+      <button
+        sx={{
+          background: '#f2f3f4',
+          border: 'none',
+          borderBottom: ['1px dashed #b1b1b1', 'none'],
+          width: '100%',
+          margin: 'auto',
+          padding: '8px',
+          lineHeight: '1.618em',
+          color: '#34454E',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontSize: '13px',
+          boxSizing: 'border-box',
+          outline: 'none'
+        }}
+        onClick={() => setOpen(!open)}
+      >
+        <div sx={{ pr: '15px' }}>More information</div>
+        <Icon
+          color="#34454E"
+          glyph={'caret'}
+          direction={open ? 'up' : 'down'}
+          size={10}
+        />
+      </button>
     </div>
   )
 }
 
 interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
-  representativeExample: string
-  repExampleLabel?: string
   info: string[]
   title: string
-  eligibilityContent: React.ReactNode[]
+  representativeExample?: string
+  moreInformationPanel?: React.ReactNode[]
   clickableRow?: string
-  onClickEligibility?: (addon?: object) => void
-  eligibilityAddon?: object
+  moreInformationButton?: React.ReactNode
   onRowClick?: () => void
   disabled?: boolean
   badges?: string[]
@@ -379,14 +571,12 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   children,
-  representativeExample,
-  repExampleLabel,
   info,
   title,
-  eligibilityContent,
+  representativeExample,
+  moreInformationPanel,
   clickableRow,
-  onClickEligibility,
-  eligibilityAddon,
+  moreInformationButton,
   onRowClick,
   disabled,
   badges = [],
@@ -417,32 +607,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         onRowClick={onRowClick}
         disabled={disabled}
       >
-        {!!badge && (
-          <div
-            sx={{
-              position: 'absolute',
-              top: 0,
-              transform: 'translateY(-50%)',
-              padding: '0 6px',
-              backgroundColor: '#fff',
-              marginLeft: ['4px', 'sm']
-            }}
-          >
-            <div
-              sx={{
-                padding: ['2.5px 8px', '5.5px 16px'],
-                backgroundColor: '#34454E',
-                color: '#fff',
-                borderRadius: '3px',
-                fontSize: ['14px', '16px'],
-                lineHeight: ['normal', 'inherit'],
-                fontWeight: [400, 600]
-              }}
-            >
-              {badge}
-            </div>
-          </div>
-        )}
+        {badge && <Badge text={badge} />}
 
         <header>
           <Styled.h5
@@ -480,17 +645,15 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           </AdditionalInfo>
         )}
 
-        {representativeExample.length > 0 && (
-          <Footer label={repExampleLabel}>{representativeExample}</Footer>
+        {representativeExample && (
+          <RepresentativeExample text={representativeExample} />
         )}
       </RowWrapper>
 
-      {eligibilityContent.length > 0 && !disabled && (
+      {moreInformationPanel && moreInformationPanel.length > 0 && !disabled && (
         <Eligibility
-          eligibilityContent={eligibilityContent}
-          clickableRow={clickableRow}
-          onClickEligibility={onClickEligibility}
-          eligibilityAddon={eligibilityAddon}
+          moreInformationPanel={moreInformationPanel}
+          moreInformationButton={moreInformationButton}
         />
       )}
     </article>

@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.8.16...@uswitch/trustyle.legacy-product-table@1.0.0) (2021-03-26)
+
+
+### Bug Fixes
+
+* alignment of single eligibility content table ([82ba94a](https://github.com/uswitch/trustyle/commit/82ba94a))
+* tweaks to table styling ([fb5524a](https://github.com/uswitch/trustyle/commit/fb5524a))
+* use reduce over flat as our node version doesn't support it ([e076643](https://github.com/uswitch/trustyle/commit/e076643))
+* use replace over replaceAll as our node version doesn't support replaceAll ([507edbf](https://github.com/uswitch/trustyle/commit/507edbf))
+
+
+### Features
+
+* add more information table component ([c0edbd8](https://github.com/uswitch/trustyle/commit/c0edbd8))
+* add MoreInformationText component ([10ed198](https://github.com/uswitch/trustyle/commit/10ed198))
+* add rates section ([a1fd311](https://github.com/uswitch/trustyle/commit/a1fd311))
+* allow representative example to be passed as a string ([4651eb9](https://github.com/uswitch/trustyle/commit/4651eb9))
+* new product table schema spec implementation ([9cc9b22](https://github.com/uswitch/trustyle/commit/9cc9b22))
+* pass moreinformationbutton as product table prop ([5d816cd](https://github.com/uswitch/trustyle/commit/5d816cd))
+* replace MoreInformationRow with table implementation ([44e3381](https://github.com/uswitch/trustyle/commit/44e3381))
+
+
+
+
+
 ## [0.8.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.8.15...@uswitch/trustyle.legacy-product-table@0.8.16) (2021-03-08)
 
 **Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
