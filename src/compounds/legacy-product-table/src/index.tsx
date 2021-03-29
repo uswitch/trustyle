@@ -628,9 +628,6 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   ...props
 }) => {
   const badge = badges[0]
-  const {
-    theme: { fontSizes = {}, fonts = {} }
-  }: any = useThemeUI()
   return (
     <article
       sx={{
@@ -661,8 +658,6 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
             display: ['flex'],
             justifyContent: ['space-between'],
             alignItems: 'center',
-            fontSize: fontSizes.sm,
-            fontFamily: fonts.base,
             '@media (max-width: 500px)': {
               flexDirection: 'column'
             }
@@ -675,7 +670,9 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
               pr: ['15px', 0],
               py: '15px',
               mb: 0,
-              mt: badge ? ['30px', '15px'] : 0
+              mt: badge ? ['30px', '15px'] : 0,
+              fontSize: '18px',
+              fontFamily: 'Varela Round,Arial,sans-serif'
             }}
           >
             {title}
