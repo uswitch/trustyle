@@ -563,7 +563,7 @@ interface TelephoneInfoProps {
 
 const TelephoneInfo: React.FC<TelephoneInfoProps> = ({ telephone }) => {
   const {
-    theme: { name, colors = {} }
+    theme: { name, colors = {}, fontWeights = {}, fonts = {}, space = {} }
   }: any = useThemeUI()
 
   const iconColor = name === 'Money' ? colors.fuschia : colors.primary
@@ -572,8 +572,8 @@ const TelephoneInfo: React.FC<TelephoneInfoProps> = ({ telephone }) => {
     <div
       sx={{
         mr: '10px',
-        fontWeight: 600,
-        fontFamily: 'Varela Round,Open Sans,Helvetica Neue,Arial,sans-serif',
+        fontWeight: fontWeights.xbold,
+        fontFamily: fonts.body,
         verticalAlign: 'middle',
         display: 'flex',
         height: '24px',
@@ -587,7 +587,7 @@ const TelephoneInfo: React.FC<TelephoneInfoProps> = ({ telephone }) => {
       <span
         sx={{
           color: colors.text,
-          padding: '4px'
+          padding: space.xxxs
         }}
       >
         {telephone}
@@ -624,7 +624,9 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   ...props
 }) => {
   const badge = badges[0]
-
+  const {
+    theme: { fontSizes = {}, fonts = {} }
+  }: any = useThemeUI()
   return (
     <article
       sx={{
@@ -655,8 +657,8 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
             display: ['flex'],
             justifyContent: ['space-between'],
             alignItems: 'center',
-            fontSize: '18px',
-            fontFamily: 'Varela Round,Arial,sans-serif',
+            fontSize: fontSizes.sm,
+            fontFamily: fonts.base,
             '@media (max-width: 500px)': {
               flexDirection: 'column'
             }
