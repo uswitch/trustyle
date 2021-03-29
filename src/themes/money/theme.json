@@ -392,7 +392,10 @@
         },
         "centered": {
           "display": "inline-block",
-          "align-items": "center",
+          "align-items": "center"
+        },
+        "centered-light": {
+          "variant": "elements.sponsored-by-tag.variants.centered",
           "text": {
             "color": "white"
           }
