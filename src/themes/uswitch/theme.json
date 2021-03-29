@@ -1142,6 +1142,11 @@
             "fontSize": ["sm", "sm", "md"],
             "mb": "sm"
           },
+          "a": {
+            "mt": ["sm", "md"],
+            "fontSize": "base",
+            "margin": "auto"
+          },
           ">div": {
             "&:nth-of-type(2)": {
               "width": "100%",
@@ -2520,16 +2525,12 @@
       "variants": {
         "hero": {
           "wrapper": {
-            "variant": "elements.sponsored-by-tag.base.wrapper",
-            "justifyContent": "flex-start"
+            "display": "inline-flex",
+            "alignItems": "center"
           },
           "text": {
-            "variant": "elements.sponsored-by-tag.base.text"
-          },
-          "image": {
-            "variant": "elements.sponsored-by-tag.base.image",
-            "height": [40, 24],
-            "ml": "xxs"
+            "variant": "elements.sponsored-by-tag.base.text",
+            "mr": 5
           }
         }
       }
