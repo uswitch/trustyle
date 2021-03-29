@@ -572,13 +572,13 @@ const TelephoneInfo: React.FC<TelephoneInfoProps> = ({ telephone }) => {
     <div
       sx={{
         mr: '10px',
+        mb: space.base,
         fontWeight: fontWeights.xbold,
         fontFamily: fonts.body,
         verticalAlign: 'middle',
         display: 'flex',
         height: '24px',
-        lineHeight: '15px',
-        textAlign: 'right'
+        lineHeight: '24px'
       }}
     >
       <span sx={{ mr: '5px', stroke: iconColor }}>
@@ -586,8 +586,7 @@ const TelephoneInfo: React.FC<TelephoneInfoProps> = ({ telephone }) => {
       </span>
       <span
         sx={{
-          color: colors.text,
-          padding: space.xxxs
+          color: colors.text
         }}
       >
         {telephone}
