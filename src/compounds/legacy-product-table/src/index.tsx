@@ -577,13 +577,16 @@ const TelephoneInfo: React.FC<TelephoneInfoProps> = ({ telephone }) => {
     <div
       sx={{
         mr: '10px',
-        mb: space.base,
         fontWeight: fontWeights.xbold,
         fontFamily: fonts.body,
         verticalAlign: 'middle',
         display: 'flex',
         height: '24px',
-        lineHeight: '24px'
+        lineHeight: '24px',
+        '@media (max-width: 500px)': {
+          mb: space.base,
+          pl: space.base
+        }
       }}
     >
       <span sx={{ mr: '5px', stroke: iconColor }}>
@@ -659,7 +662,9 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
             justifyContent: ['space-between'],
             alignItems: 'center',
             '@media (max-width: 500px)': {
-              flexDirection: 'column'
+              flexDirection: 'column',
+              justifyContent: 'flex-start',
+              alignItems: 'flex-start'
             }
           }}
         >
