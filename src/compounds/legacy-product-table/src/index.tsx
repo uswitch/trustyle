@@ -386,7 +386,7 @@ export const MoreInformationTable = ({ rows }: MoreInformationTableProps) => {
 }
 
 interface MoreInformationTextProps {
-  content: string
+  content: string[]
 }
 
 export const MoreInformationText = ({ content }: MoreInformationTextProps) => {
