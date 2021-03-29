@@ -392,7 +392,10 @@
         },
         "centered": {
           "display": "inline-block",
-          "align-items": "center"
+          "align-items": "center",
+          "text": {
+            "color": "white"
+          }
         }
       }
     },
