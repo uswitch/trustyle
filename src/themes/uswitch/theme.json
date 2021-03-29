@@ -1142,6 +1142,11 @@
             "fontSize": ["sm", "sm", "md"],
             "mb": "sm"
           },
+          "a": {
+            "mt": ["sm", "md"],
+            "fontSize": "base",
+            "margin": "auto"
+          },
           ">div": {
             "&:nth-of-type(2)": {
               "width": "100%",
