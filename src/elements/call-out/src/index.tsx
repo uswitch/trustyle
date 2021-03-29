@@ -42,7 +42,7 @@ const CallOut: React.FC<Props> = ({
         sx={{
           marginY: 0,
           variant: 'elements.call-out.text',
-          fontWeight: bold ? 'bold' : 'normal'
+          fontWeight: bold ? '700' : 'normal'
         }}
         px={{
           color: 'accentColorText'
