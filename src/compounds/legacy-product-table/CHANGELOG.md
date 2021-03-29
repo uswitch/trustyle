@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.0.0...@uswitch/trustyle.legacy-product-table@1.0.1) (2021-03-29)
+
+
+### Bug Fixes
+
+* update legacy product table content to be an array ([2b90b5b](https://github.com/uswitch/trustyle/commit/2b90b5b))
+
+
+
+
+
 # [1.0.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.8.16...@uswitch/trustyle.legacy-product-table@1.0.0) (2021-03-26)
 
 

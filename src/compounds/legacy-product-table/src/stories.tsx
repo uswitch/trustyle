@@ -258,9 +258,9 @@ const feesContent = (
 const additionalInformationContent = (
   <MoreInformationBlock title="Additional information">
     <MoreInformationText
-      content={
+      content={[
         '<b>Early repayment charge</b><br/>If you pay all or part of your mortgage early you will be charged: <br/>- 2.00% of amount paid, before 30 Jun 2022<br/>- then 1.00% of amount paid, until 30 Jun 2023<p>Other fees may apply.</p>'
-      }
+      ]}
     />
   </MoreInformationBlock>
 )
