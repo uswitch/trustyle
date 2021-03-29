@@ -379,6 +379,27 @@ DisabledExample.story = {
   }
 }
 
+export const TelephoneExample = () => {
+  return (
+    <LegacyProductTable
+      representativeExample={representativeExample}
+      info={info}
+      title={title}
+      moreInformationPanel={[eligibilityContent, ratesContent]}
+      clickableRow={clickableRow}
+      telephone="0808 296 6568"
+    >
+      {productTableContents}
+    </LegacyProductTable>
+  )
+}
+
+TelephoneExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
     <AllThemes>
