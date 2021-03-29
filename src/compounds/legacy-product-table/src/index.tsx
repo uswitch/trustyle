@@ -390,25 +390,30 @@ interface MoreInformationTextProps {
 }
 
 export const MoreInformationText = ({ content }: MoreInformationTextProps) => {
-  const lines = content
-    .replace(/<\/p>/g, '')
-    .split('<br/>')
-    .map(line => line.split('<p>'))
-    .reduce((acc, val) => acc.concat(val), [])
-
   return (
     <React.Fragment>
-      {lines.map((line: string, key: number) => {
+      {content.map((chunk: string, i: number) => {
         return (
-          <p
-            key={key}
-            sx={{
-              fontSize: 'xs',
-              my: 'xxs',
-              mx: '0'
-            }}
-            dangerouslySetInnerHTML={{ __html: line }}
-          ></p>
+          <React.Fragment key={i}>
+            {chunk
+              .replace(/<\/p>/g, '')
+              .split('<br/>')
+              .map(line => line.split('<p>'))
+              .reduce((acc, val) => acc.concat(val), [])
+              .map((line: string, j: number) => {
+                return (
+                  <p
+                    key={j}
+                    sx={{
+                      fontSize: 'xs',
+                      my: 'xxs',
+                      mx: '0'
+                    }}
+                    dangerouslySetInnerHTML={{ __html: line }}
+                  ></p>
+                )
+              })}
+          </React.Fragment>
         )
       })}
     </React.Fragment>
