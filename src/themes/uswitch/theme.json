@@ -1916,6 +1916,14 @@
               "fill": "dark-1"
             }
           }
+        },
+        "control": {
+          "boxSizing": "border-box",
+          "padding": "sm",
+          "border": "1px solid",
+          "borderColor": "grey-20",
+          "backgroundColor": "white",
+          "lineHeight": 1.33
         }
       }
     },
