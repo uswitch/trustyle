@@ -24,8 +24,10 @@ const linkWrapper = (
             background: '#db4d75'
           },
           header: {
-            textDecoration: 'underline',
-            textDecorationColor: '#069'
+            h5: {
+              textDecoration: 'underline',
+              textDecorationColor: '#069'
+            }
           }
         }
       }}
