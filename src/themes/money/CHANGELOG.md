@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.46.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.46.0...@uswitch/trustyle.money-theme@1.46.1) (2021-03-30)
+
+
+### Bug Fixes
+
+* add centered-light variant ([1324e32](https://github.com/uswitch/trustyle/commit/1324e32))
+* add sponsored by centered variant color to theme ([a44a291](https://github.com/uswitch/trustyle/commit/a44a291))
+
+
+
+
+
 # [1.46.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.45.1...@uswitch/trustyle.money-theme@1.46.0) (2021-03-11)
 
 
