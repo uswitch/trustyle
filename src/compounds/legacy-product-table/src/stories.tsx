@@ -31,7 +31,7 @@ const title = 'Lowest representative APR'
 
 const clickableRow = 'https://www.money.co.uk'
 
-const productTableContents = [
+const baseTableContents = [
   <DataCell
     backgroundColor="#fef6ed"
     borderBottomColor="#fcdbb7"
@@ -58,7 +58,18 @@ const productTableContents = [
   </DataCell>,
   <ImageCell key="3">
     <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
-  </ImageCell>,
+  </ImageCell>
+]
+
+const productTableContents = [
+  ...baseTableContents,
+  <CtaCell key="4" href={clickableRow}>
+    See Deal
+  </CtaCell>
+]
+
+const productTableContentsDisabled = [
+  ...baseTableContents,
   <CtaCell key="4" href={clickableRow} disabled>
     See Deal
   </CtaCell>
@@ -368,7 +379,7 @@ export const DisabledExample = () => {
       clickableRow={clickableRow}
       disabled
     >
-      {productTableContents}
+      {productTableContentsDisabled}
     </LegacyProductTable>
   )
 }

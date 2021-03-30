@@ -563,34 +563,30 @@ const Eligibility: React.FC<EligibilityProps> = ({
 }
 
 interface TelephoneInfoProps {
-  telephone?: string
+  telephone: string
 }
 
 const TelephoneInfo: React.FC<TelephoneInfoProps> = ({ telephone }) => {
   const {
-    theme: { name, colors = {}, fontWeights = {}, fonts = {}, space = {} }
+    theme: { colors = {} }
   }: any = useThemeUI()
-
-  const iconColor = name === 'Money' ? colors.fuschia : colors.primary
 
   return (
     <div
       sx={{
         mr: '10px',
-        fontWeight: fontWeights.xbold,
-        fontFamily: fonts.body,
+        fontWeight: 'bold',
+        fontFamily: 'legacy',
         verticalAlign: 'middle',
         display: 'flex',
         height: '24px',
         lineHeight: '24px',
-        '@media (max-width: 500px)': {
-          mb: space.base,
-          pl: space.base
-        }
+        mb: ['base', '0'],
+        pl: ['base', '0']
       }}
     >
-      <span sx={{ mr: '5px', stroke: iconColor }}>
-        <Icon glyph="phone" color={iconColor} size={24} />
+      <span sx={{ mr: '5px', stroke: colors.fuschia }}>
+        <Icon glyph="phone" color={colors.fuschia} size={24} />
       </span>
       <span
         sx={{
@@ -659,13 +655,9 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         <header
           sx={{
             display: ['flex'],
-            justifyContent: ['space-between'],
-            alignItems: 'center',
-            '@media (max-width: 500px)': {
-              flexDirection: 'column',
-              justifyContent: 'flex-start',
-              alignItems: 'flex-start'
-            }
+            justifyContent: ['flex-start', 'space-between'],
+            alignItems: ['center', 'flex-start'],
+            flexDirection: ['column', 'row']
           }}
         >
           <Styled.h5
