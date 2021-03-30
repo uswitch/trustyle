@@ -656,7 +656,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           sx={{
             display: ['flex'],
             justifyContent: ['flex-start', 'space-between'],
-            alignItems: ['center', 'flex-start'],
+            alignItems: ['flex-start', 'center'],
             flexDirection: ['column', 'row']
           }}
         >
