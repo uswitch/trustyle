@@ -417,6 +417,7 @@ export const AutomatedTests = () => {
       <BadgeExample />
       <DisabledExample />
       <EligibilityExample />
+      <TelephoneExample />
     </AllThemes>
   )
 }
