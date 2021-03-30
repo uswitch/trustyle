@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
 import { Button } from '@uswitch/trustyle.button'
 import { Icon } from '@uswitch/trustyle.icon'
@@ -562,6 +562,43 @@ const Eligibility: React.FC<EligibilityProps> = ({
   )
 }
 
+interface TelephoneInfoProps {
+  telephone: string
+}
+
+const TelephoneInfo: React.FC<TelephoneInfoProps> = ({ telephone }) => {
+  const {
+    theme: { colors = {} }
+  }: any = useThemeUI()
+
+  return (
+    <div
+      sx={{
+        mr: '10px',
+        fontWeight: 'bold',
+        fontFamily: 'legacy',
+        verticalAlign: 'middle',
+        display: 'flex',
+        height: '24px',
+        lineHeight: '24px',
+        mb: ['base', '0'],
+        pl: ['base', '0']
+      }}
+    >
+      <span sx={{ mr: '5px', stroke: colors.fuschia }}>
+        <Icon glyph="phone" color={colors.fuschia} size={24} />
+      </span>
+      <span
+        sx={{
+          color: colors.text
+        }}
+      >
+        {telephone}
+      </span>
+    </div>
+  )
+}
+
 interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   info: string[]
   title: string
@@ -572,6 +609,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   onRowClick?: () => void
   disabled?: boolean
   badges?: string[]
+  telephone?: string
 }
 
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
@@ -585,10 +623,10 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   onRowClick,
   disabled,
   badges = [],
+  telephone,
   ...props
 }) => {
   const badge = badges[0]
-
   return (
     <article
       sx={{
@@ -614,7 +652,14 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
       >
         {badge && <Badge text={badge} />}
 
-        <header>
+        <header
+          sx={{
+            display: ['flex'],
+            justifyContent: ['flex-start', 'space-between'],
+            alignItems: ['flex-start', 'center'],
+            flexDirection: ['column', 'row']
+          }}
+        >
           <Styled.h5
             sx={{
               color: '#069',
@@ -629,6 +674,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           >
             {title}
           </Styled.h5>
+          {telephone && <TelephoneInfo telephone={telephone} />}
         </header>
 
         <div

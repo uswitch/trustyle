@@ -31,7 +31,7 @@ const title = 'Lowest representative APR'
 
 const clickableRow = 'https://www.money.co.uk'
 
-const productTableContents = [
+const baseTableContents = [
   <DataCell
     backgroundColor="#fef6ed"
     borderBottomColor="#fcdbb7"
@@ -58,7 +58,18 @@ const productTableContents = [
   </DataCell>,
   <ImageCell key="3">
     <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
-  </ImageCell>,
+  </ImageCell>
+]
+
+const productTableContents = [
+  ...baseTableContents,
+  <CtaCell key="4" href={clickableRow}>
+    See Deal
+  </CtaCell>
+]
+
+const productTableContentsDisabled = [
+  ...baseTableContents,
   <CtaCell key="4" href={clickableRow} disabled>
     See Deal
   </CtaCell>
@@ -368,12 +379,33 @@ export const DisabledExample = () => {
       clickableRow={clickableRow}
       disabled
     >
-      {productTableContents}
+      {productTableContentsDisabled}
     </LegacyProductTable>
   )
 }
 
 DisabledExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const TelephoneExample = () => {
+  return (
+    <LegacyProductTable
+      representativeExample={representativeExample}
+      info={info}
+      title={title}
+      moreInformationPanel={[eligibilityContent, ratesContent]}
+      clickableRow={clickableRow}
+      telephone="0808 296 6568"
+    >
+      {productTableContents}
+    </LegacyProductTable>
+  )
+}
+
+TelephoneExample.story = {
   parameters: {
     percy: { skip: true }
   }
@@ -385,6 +417,7 @@ export const AutomatedTests = () => {
       <BadgeExample />
       <DisabledExample />
       <EligibilityExample />
+      <TelephoneExample />
     </AllThemes>
   )
 }

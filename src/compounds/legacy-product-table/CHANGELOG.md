@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.0.2...@uswitch/trustyle.legacy-product-table@1.1.0) (2021-03-30)
+
+
+### Bug Fixes
+
+* added telephone to automated tests ([9ea9670](https://github.com/uswitch/trustyle/commit/9ea9670))
+* align-items fixed for header ([7bc0978](https://github.com/uswitch/trustyle/commit/7bc0978))
+* more percy fixes ([5053b1b](https://github.com/uswitch/trustyle/commit/5053b1b))
+* refactor the themeUI usage with cta seen in stories ([34cc056](https://github.com/uswitch/trustyle/commit/34cc056))
+* revert styling changes to product table header ([7b2e099](https://github.com/uswitch/trustyle/commit/7b2e099))
+* visual design changes ([5a42282](https://github.com/uswitch/trustyle/commit/5a42282))
+
+
+### Features
+
+* phone number in product table ([8802523](https://github.com/uswitch/trustyle/commit/8802523))
+
+
+
+
+
 ## [1.0.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.0.1...@uswitch/trustyle.legacy-product-table@1.0.2) (2021-03-29)
 
 
