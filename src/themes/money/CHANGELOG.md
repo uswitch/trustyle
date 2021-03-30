@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.46.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.46.1...@uswitch/trustyle.money-theme@1.46.2) (2021-03-30)
+
+
+### Bug Fixes
+
+* refactor the themeUI usage with cta seen in stories ([34cc056](https://github.com/uswitch/trustyle/commit/34cc056))
+
+
+
+
+
 ## [1.46.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.46.0...@uswitch/trustyle.money-theme@1.46.1) (2021-03-30)
 
 
