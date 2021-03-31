@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.42.21](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.20...@uswitch/trustyle.uswitch-theme@2.42.21) (2021-03-31)
+
+
+### Bug Fixes
+
+* implement app download backgroundImageLeft variant ([6a94b2a](https://github.com/uswitch/trustyle/commit/6a94b2a))
+
+
+
+
+
+
 ## [2.42.20](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.19...@uswitch/trustyle.uswitch-theme@2.42.20) (2021-03-29)
 
 

@@ -4748,18 +4748,17 @@
           },
           "image-container": {
             "flexBasis": ["100%", "grid.md.5", "grid.lg.3"],
-            "my": [0, 0],
             "position": "relative",
             "alignSelf": "center",
             "display": "flex",
-            "overflow": "visible"
+            "overflow": "visible",
+            "mb": [0, "-4%", "-4%"],
+            "mt": ["lg", "-4%", "-4%"]
           },
           "image": {
-            "height": [353, 353, 353],
+            "height": ["auto", 353, 353],
             "position": "relative",
-            "objectFit": ["contain", "cover"],
-            "mt": [0, "-28px", "-53px"],
-            "mb": [0, "-25px", "-30px"]
+            "objectFit": ["contain", "cover"]
           },
           "content": {
             "textAlign": ["center", "left", "left"],
@@ -4768,9 +4767,22 @@
             "display": "flex",
             "flexDirection": "column",
             "justifyContent": "center",
+            "pl": [0, "lg", "lg"],
+            "ml": [0, 0, "xs"],
             "py": ["xs", "xs", 0],
             "mt": ["lg", "lg", "xxl"],
-            "mb": ["xs", "lg", "xxl"],
+            ">div>div": {
+              "mx": 0,
+              "display": "flex",
+              "justifyContent": ["center", "flex-start", "flex-start"],
+              ">div": {
+                "mb": 0,
+                "maxWidth": [125, 135],
+                "width": "100%",
+                "mr": "xxs",
+                "ml": 0
+              }
+            },
             "h5": {
               "fontSize": ["sm", "md", "md"],
               "m": 0,
@@ -4779,17 +4791,8 @@
               "mb": "sm"
             },
             "p": {
-              "fontSize": "base"
-            },
-            "div:last-of-type": {
-              "display": "flex",
-              "justifyContent": ["center", "flex-start", "flex-start"],
-              ">div": {
-                "mb": 0,
-                "maxWidth": 136,
-                "width": "100%",
-                "mx": "xxxs"
-              }
+              "fontSize": "base",
+              "mb": "sm"
             }
           }
         }
