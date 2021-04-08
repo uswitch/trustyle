@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.46.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.46.2...@uswitch/trustyle.money-theme@1.46.3) (2021-04-08)
+
+
+### Bug Fixes
+
+* be more specic for simple drop down border ([bc919d6](https://github.com/uswitch/trustyle/commit/bc919d6))
+
+
+
+
+
 ## [1.46.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.46.1...@uswitch/trustyle.money-theme@1.46.2) (2021-03-30)
 
 
