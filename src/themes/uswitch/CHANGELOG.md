@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.43.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.21...@uswitch/trustyle.uswitch-theme@2.43.0) (2021-04-08)
+
+
+### Features
+
+* add heading styling for journey form ([e61ca37](https://github.com/uswitch/trustyle/commit/e61ca37))
+
+
+
+
+
 ## [2.42.21](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.20...@uswitch/trustyle.uswitch-theme@2.42.21) (2021-03-31)
 
 
