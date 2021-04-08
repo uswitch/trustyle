@@ -2842,8 +2842,28 @@
               "pb": "md"
             },
             "heading": {
-              "variant": "elements.form-section.panel.elements.heading",
-              "display": "none"
+              "opacity": 1,
+              "px": "xxxl",
+              "mr": 0,
+              "mt": 0,
+              "alignItems": "left",
+              "display": "flex",
+              "flexDirection": "column",
+              "h2, h3": {
+                "mr": 0,
+                "mt": 0,
+                "mb": "sm"
+              },
+              "sectionName": {
+                "fontFamily": "heading",
+                "lineHeight": ["sm", "xs", "xs"],
+                "fontWeight": "bold"
+              },
+              "sectionDescription": {
+                "fontFamily": "heading",
+                "fontSize": "xs",
+                "fontWeight": "normal"
+              }
             },
             "fields": {
               "calculator": {
