@@ -1401,7 +1401,10 @@
         "error": {
           "variant": "elements.simple-drop-down.select.base",
           "border": "2px solid",
-          "borderColor": "error",
+          "borderTopColor": "error",
+          "borderBottomColor": "error",
+          "borderRightColor": "error",
+          "borderLeftColor": "error",
           "outlineColor": "error"
         },
         "focus": {
