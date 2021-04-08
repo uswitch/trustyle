@@ -328,7 +328,7 @@ export const VariantsExample = () => {
           }
           linkHref="https://www.uswitch.com"
           linkText="Get started"
-          linkAfterIcon="arrow"
+          linkIcon="arrow"
         />
         <hr />
       </Container>

@@ -16,7 +16,6 @@ interface Props {
   imgSrc?: string
   imageProps?: any
   linkIcon?: Glyph
-  linkAfterIcon?: Glyph
   linkHref: string
   linkText?: string
   superScript?: string
@@ -50,7 +49,6 @@ const Card: React.FC<Props> = ({
   imageProps = {},
   linkHref,
   linkIcon,
-  linkAfterIcon,
   linkText,
   superScript,
   tag,
@@ -76,9 +74,9 @@ const Card: React.FC<Props> = ({
   const JourneyButton = (
     <ButtonLink
       variant="primary-journey"
-      href="https://www.uswitch.com"
+      href={linkHref}
       target="_blank"
-      afterIcon="arrow"
+      afterIcon={linkIcon}
     >
       {linkText}
     </ButtonLink>
@@ -160,7 +158,6 @@ const Card: React.FC<Props> = ({
           >
             {linkIcon && <Icon glyph={linkIcon} color="brand" />}
             {linkText}
-            {linkAfterIcon && <Icon glyph={linkAfterIcon} color="brand" />}
           </Styled.a>
         )}
         {linkText && journeyVariant && JourneyButton}
