@@ -1926,7 +1926,7 @@
           "lineHeight": 1.33
         },
         "primary-journey": {
-          "variant":"elements.buttons.variants.primary",
+          "variant": "elements.buttons.variants.primary",
           "margin": "0px",
           "padding": "16px",
           "textAlign": "left",
@@ -3980,7 +3980,6 @@
           "div": {
             "justifyContent": "space-between"
           },
-          
 
           "link": {
             "variant": "elements.buttons.variants.primary"
@@ -3996,9 +3995,8 @@
               "textDecoration": "none",
               "border": "none"
             }
-            
           },
-          
+
           "description": {
             "color": "#72727C",
             "fontSize": ["18px", "18px", "24px"],
