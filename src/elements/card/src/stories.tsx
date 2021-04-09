@@ -319,6 +319,18 @@ export const VariantsExample = () => {
           linkHref="https://www.uswitch.com"
           variant="assuranceBar"
         />
+        <h2>Journey Card</h2>
+        <Card
+          variant="journey-card"
+          title="Help me find a mortgage"
+          description={
+            'Tell us about yourself and get personalised deals in 2 minutess'
+          }
+          linkHref="https://www.uswitch.com"
+          linkText="Get started"
+          linkIcon="arrow"
+        />
+        <hr />
       </Container>
     </div>
   )

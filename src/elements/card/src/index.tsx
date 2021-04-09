@@ -4,15 +4,16 @@ import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
+import { ButtonLink } from '@uswitch/trustyle.button-link'
 
 interface Props {
   className?: string
   critical?: boolean
   description?: string
   imageSize?: 'cover' | 'contain'
-  imgAlt: string
+  imgAlt?: string
   imgSizes?: string
-  imgSrc: string
+  imgSrc?: string
   imageProps?: any
   linkIcon?: Glyph
   linkHref: string
@@ -29,6 +30,7 @@ interface Props {
     | 'featured-alternate'
     | 'bbdeals-card'
     | 'assuranceBar'
+    | 'journey-card'
   headerChildren?: React.ReactNode
   contentChildren?: React.ReactNode
 }
@@ -66,6 +68,19 @@ const Card: React.FC<Props> = ({
     ) : (
       <React.Fragment>{children}</React.Fragment>
     )
+
+  const journeyVariant = variant === 'journey-card'
+
+  const JourneyButton = (
+    <ButtonLink
+      variant="primary-journey"
+      href={linkHref}
+      target="_blank"
+      afterIcon={linkIcon}
+    >
+      {linkText}
+    </ButtonLink>
+  )
 
   return (
     <div
@@ -131,8 +146,12 @@ const Card: React.FC<Props> = ({
             <Styled.a href={linkHref}>{title}</Styled.a>
           </Styled.h3>
         )}
-        {description && <Styled.p>{description}</Styled.p>}
-        {linkText && (
+        {description && (
+          <Styled.p sx={{ variant: styles('description') }}>
+            {description}
+          </Styled.p>
+        )}
+        {linkText && !journeyVariant && (
           <Styled.a
             href={linkHref}
             sx={{ textDecoration: 'underline', variant: styles('link') }}
@@ -141,6 +160,7 @@ const Card: React.FC<Props> = ({
             {linkText}
           </Styled.a>
         )}
+        {linkText && journeyVariant && JourneyButton}
       </div>
     </div>
   )

@@ -1924,6 +1924,17 @@
           "borderColor": "grey-20",
           "backgroundColor": "white",
           "lineHeight": 1.33
+        },
+        "primary-journey": {
+          "variant": "elements.buttons.variants.primary",
+          "margin": "0px",
+          "padding": "16px",
+          "textAlign": "left",
+          "fontWeight": "400",
+          "lineHeight": "1.3333",
+          "svg": {
+            "float": "right"
+          }
         }
       }
     },
@@ -3949,6 +3960,51 @@
               "fontWeight": "inherit",
               "lineHeight": "inherit"
             }
+          }
+        },
+        "journey-card": {
+          "width": "100%",
+          "margin": "0px",
+          "padding": "16px",
+          "fontWeight": "400",
+          "lineHeight": "1.3333",
+          "display": "flex",
+          "maxWidth": "507px",
+          "paddingX": ["24px", "24px", "40px"],
+          "paddingY": ["24px", "32px", "32px"],
+          "boxShadow": "0px 0px 24px 4px rgb(0 0 0 / 0.16)",
+          "minHeight": ["256px", "288px", "280px"],
+          "textAlign": "left",
+          "marginRight": ["auto", "4.5px", "4.5px"],
+          "flexDirection": "column",
+          "div": {
+            "justifyContent": "space-between"
+          },
+
+          "link": {
+            "variant": "elements.buttons.variants.primary"
+          },
+
+          "heading": {
+            "marginBottom": ["16px", "24px", "24px"],
+            "a": {
+              "marginTop": "0px",
+              "minHeight": ["auto", "64px", "auto"],
+              "fontWeight": "600",
+              "lineHeight": "1.14",
+              "textDecoration": "none",
+              "border": "none"
+            }
+          },
+
+          "description": {
+            "color": "#72727C",
+            "fontSize": ["18px", "18px", "24px"],
+            "marginBottom": ["24px", "32px"]
+          },
+
+          "image": {
+            "display": "none"
           }
         }
       }
