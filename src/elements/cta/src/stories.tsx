@@ -26,7 +26,7 @@ export const Example = () => {
     "Find the best credit card for you, whether you're looking for a 0% card for balance transfers or purchases or day to day spending and rewards."
   )
   const buttonText = text('Button text', 'Compare credit cards')
-  const buttonProps = object('Button Props', {})
+  const buttonProps = object('Button Props', {"target": "_blank"})
 
   return (
     <CTA
