@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from '@emotion/core'
-import { select, text } from '@storybook/addon-knobs'
+import { object, select, text } from '@storybook/addon-knobs'
 
 import AllThemes from '../../../utils/all-themes'
 
@@ -26,6 +26,7 @@ export const Example = () => {
     "Find the best credit card for you, whether you're looking for a 0% card for balance transfers or purchases or day to day spending and rewards."
   )
   const buttonText = text('Button text', 'Compare credit cards')
+  const buttonProps = object('Button Props', { target: '_blank' })
 
   return (
     <CTA
@@ -34,6 +35,7 @@ export const Example = () => {
       buttonText={buttonText}
       buttonLink="https://google.com"
       variant={variant}
+      buttonProps={buttonProps}
     />
   )
 }
