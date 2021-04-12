@@ -49,6 +49,7 @@ const glyphChoices: Glyph[] = [
   'plus',
   'pound-circle',
   'question',
+  'question-filled',
   'smile',
   'sms',
   'sort',
