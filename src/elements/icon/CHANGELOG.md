@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.26.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.25.0...@uswitch/trustyle.icon@1.26.0) (2021-04-12)
+
+
+### Features
+
+* add question-filled icon ([daeb41a](https://github.com/uswitch/trustyle/commit/daeb41a))
+
+
+
+
+
 # [1.25.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.24.0...@uswitch/trustyle.icon@1.25.0) (2021-03-08)
 
 
