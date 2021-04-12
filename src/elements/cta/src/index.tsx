@@ -15,6 +15,7 @@ interface CTAProps extends React.HTMLAttributes<HTMLDivElement> {
   buttonText: string
   variant?: 'base' | 'hero' | 'hero-white-bg'
   className?: string
+  buttonProps?: any
 }
 
 const CTA: React.FC<CTAProps> = ({
@@ -23,7 +24,8 @@ const CTA: React.FC<CTAProps> = ({
   buttonLink,
   buttonText,
   variant = 'base',
-  className
+  className,
+  buttonProps
 }) => {
   const { theme }: any = useThemeUI()
   const buttonVariant = get(theme, `${lookup(variant)}.button.buttonVariant`)
@@ -59,6 +61,7 @@ const CTA: React.FC<CTAProps> = ({
           href={buttonLink}
           variant={buttonVariant || 'primary'}
           sx={{ variant: `${lookup(variant)}.button` }}
+          {...buttonProps}
         >
           {buttonText}
         </ButtonLink>
