@@ -49,6 +49,7 @@ import { Plus } from './plus'
 import { PoundCircle } from './pound-circle'
 import { Twitter } from './twitter'
 import { Question } from './question'
+import { QuestionFilled } from './question-filled'
 import { Smile } from './smile'
 import { Sms } from './sms'
 import { Sort } from './sort'
@@ -113,6 +114,7 @@ export type Glyph =
   | 'plus'
   | 'pound-circle'
   | 'question'
+  | 'question-filled'
   | 'smile'
   | 'sms'
   | 'sort'
@@ -248,6 +250,8 @@ export const Icon: React.FC<Props> = ({
       return <PoundCircle color={color} size={size} />
     case 'question':
       return <Question color={color} size={size} />
+    case 'question-filled':
+      return <QuestionFilled color={color} size={size} />
     case 'smile':
       return <Smile color={color} size={size} />
     case 'sms':
