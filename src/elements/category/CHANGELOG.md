@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.category@2.2.11...@uswitch/trustyle.category@2.2.12) (2021-04-14)
+
+**Note:** Version bump only for package @uswitch/trustyle.category
+
+
+
+
+
 ## [2.2.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.category@2.2.10...@uswitch/trustyle.category@2.2.11) (2021-04-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.category
