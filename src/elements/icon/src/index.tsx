@@ -66,6 +66,9 @@ import { Van } from './van'
 import { Warning } from './warning'
 import { Facebook } from './facebook'
 import { PhoneSimple } from './phone-simple'
+import { PeopleBold } from './people-bold'
+import { PersonBold } from './person-bold'
+import { Pencil } from './pencil'
 
 export type Glyph =
   | 'arrow'
@@ -108,7 +111,10 @@ export type Glyph =
   | 'mobile'
   | 'money-filter'
   | 'one'
+  | 'pencil'
   | 'person'
+  | 'person-bold'
+  | 'people-bold'
   | 'phone'
   | 'phone-simple'
   | 'plus'
@@ -238,8 +244,14 @@ export const Icon: React.FC<Props> = ({
       return <MoneyFilter color={color} size={size} />
     case 'one':
       return <One color={color} size={size} />
+    case 'pencil':
+      return <Pencil color={color} size={size} />
     case 'person':
       return <Person color={color} size={size} />
+    case 'person-bold':
+      return <PersonBold color={color} size={size} />
+    case 'people-bold':
+      return <PeopleBold color={color} size={size} />
     case 'phone':
       return <Phone color={color} size={size} />
     case 'phone-simple':
