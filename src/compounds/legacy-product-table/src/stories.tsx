@@ -29,6 +29,8 @@ const info = [
 ]
 const title = 'Lowest representative APR'
 
+const moreInfoLabel = 'Custom More Info Label'
+
 const clickableRow = 'https://www.money.co.uk'
 
 const baseTableContents = [
@@ -316,6 +318,7 @@ export const EligibilityExample = () => {
       clickableRow={clickableRow}
       moreInformationPanel={[eligibilityContent, ratesContent]}
       moreInformationButton={moreInformationButton}
+      moreInformationLabel={moreInfoLabel}
     >
       {productTableContents}
     </LegacyProductTable>
