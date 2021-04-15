@@ -4006,6 +4006,35 @@
           "image": {
             "display": "none"
           }
+        },
+        "solid": {
+          "variant": "compounds.card.base",
+          "img": {
+            "height": "197px"
+          },
+          "a": {
+            "borderBottom": "none",
+            "mb": 0,
+            "height": 0
+          },
+          "h3": {
+            "mt": "sm",
+            "mb": "30px",
+            "color": "primary",
+            "a": {
+              "borderBottom": "1px solid #141424",
+              "fontSize": "md",
+              "fontWeight": "xxbold",
+              "pb": "xs"
+            }
+          },
+          "content": {
+            "p": {
+              "color": "primary",
+              "fontFamily": "heading",
+              "opacity": ".75"
+            }
+          }
         }
       }
     },
