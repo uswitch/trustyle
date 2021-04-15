@@ -489,11 +489,13 @@ export const MoreInformationList: React.FC<MoreInformationListProps> = ({
 interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
   moreInformationPanel: React.ReactNode[]
   moreInformationButton?: React.ReactNode
+  moreInformationLabel?: string
 }
 
 const Eligibility: React.FC<EligibilityProps> = ({
   moreInformationPanel,
-  moreInformationButton
+  moreInformationButton,
+  moreInformationLabel = 'More information'
 }) => {
   const [open, setOpen] = React.useState(false)
 
@@ -550,7 +552,7 @@ const Eligibility: React.FC<EligibilityProps> = ({
         }}
         onClick={() => setOpen(!open)}
       >
-        <div sx={{ pr: '15px' }}>More information</div>
+        <div sx={{ pr: '15px' }}>{moreInformationLabel}</div>
         <Icon
           color="#34454E"
           glyph={'caret'}
@@ -606,6 +608,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   moreInformationPanel?: React.ReactNode[]
   clickableRow?: string
   moreInformationButton?: React.ReactNode
+  moreInformationLabel?: string
   onRowClick?: () => void
   disabled?: boolean
   badges?: string[]
@@ -618,6 +621,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   title,
   representativeExample,
   moreInformationPanel,
+  moreInformationLabel,
   clickableRow,
   moreInformationButton,
   onRowClick,
@@ -705,6 +709,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         <Eligibility
           moreInformationPanel={moreInformationPanel}
           moreInformationButton={moreInformationButton}
+          moreInformationLabel={moreInformationLabel}
         />
       )}
     </article>

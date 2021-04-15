@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.1.2...@uswitch/trustyle.legacy-product-table@1.2.0) (2021-04-15)
+
+
+### Features
+
+* add custom more info label ([b444668](https://github.com/uswitch/trustyle/commit/b444668))
+
+
+
+
+
 ## [1.1.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.1.1...@uswitch/trustyle.legacy-product-table@1.1.2) (2021-04-14)
 
 **Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
