@@ -1355,6 +1355,9 @@
       }
     },
     "simple-radio": {
+      "label": {
+        "mr": 0
+      },
       "span": {
         "variant": "elements.input.radio.label",
         "alignItems": "center",
