@@ -1431,7 +1431,8 @@
               "display": "flex",
               "flexDirection": ["column", "row"],
               "div": {
-                "display": "flex"
+                "display": "flex",
+                "flex": "1 1 0"
               },
               "label": {
                 "display": "flex"
