@@ -1430,6 +1430,12 @@
             "radioWrapper": {
               "display": "flex",
               "flexDirection": ["column", "row"],
+              "div": {
+                "display": "flex"
+              },
+              "label": {
+                "display": "flex"
+              },
               "> div+div": {
                 "ml": [0, "sm"],
                 "mt": ["sm", 0]
