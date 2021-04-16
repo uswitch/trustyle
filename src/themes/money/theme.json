@@ -1355,9 +1355,6 @@
       }
     },
     "simple-radio": {
-      "label": {
-        "mr": 0
-      },
       "span": {
         "variant": "elements.input.radio.label",
         "alignItems": "center",
@@ -1438,7 +1435,8 @@
                 "flex": "1 1 0"
               },
               "label": {
-                "display": "flex"
+                "display": "flex",
+                "mr": 0
               },
               "> div+div": {
                 "ml": [0, "sm"],
