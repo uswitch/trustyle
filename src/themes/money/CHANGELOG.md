@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.46.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.46.3...@uswitch/trustyle.money-theme@1.46.4) (2021-04-16)
+
+
+### Bug Fixes
+
+* consistent height for radio buttons ([9c2c71d](https://github.com/uswitch/trustyle/commit/9c2c71d))
+* customise radio margin right on label ([97f2b4f](https://github.com/uswitch/trustyle/commit/97f2b4f))
+* make radio buttons same width ([c5b8353](https://github.com/uswitch/trustyle/commit/c5b8353))
+* radio button sizing ([467e5e3](https://github.com/uswitch/trustyle/commit/467e5e3))
+
+
+
+
+
 ## [1.46.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.46.2...@uswitch/trustyle.money-theme@1.46.3) (2021-04-08)
 
 
