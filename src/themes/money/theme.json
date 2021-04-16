@@ -1370,6 +1370,7 @@
           "borderStyle": "solid",
           "borderWidth": "2px",
           "content": "' '",
+          "flex": "none",
           "display": "block",
           "height": "17px",
           "marginLeft": "base",
@@ -1429,6 +1430,14 @@
             "radioWrapper": {
               "display": "flex",
               "flexDirection": ["column", "row"],
+              "div": {
+                "display": "flex",
+                "flex": "1 1 0"
+              },
+              "label": {
+                "display": "flex",
+                "mr": 0
+              },
               "> div+div": {
                 "ml": [0, "sm"],
                 "mt": ["sm", 0]
