@@ -3964,7 +3964,8 @@
         },
         "journey-card": {
           "width": "100%",
-          "margin": "0px",
+          "height": "100%",
+          "margin": "auto",
           "padding": "16px",
           "fontWeight": "400",
           "lineHeight": "1.3333",
@@ -3973,9 +3974,9 @@
           "paddingX": ["24px", "24px", "40px"],
           "paddingY": ["24px", "32px", "32px"],
           "boxShadow": "0px 0px 24px 4px rgb(0 0 0 / 0.16)",
-          "minHeight": ["256px", "288px", "280px"],
+          "minHeight": ["216px", "313px", "280px"],
+          "minWidth": ["100%", "98%"],
           "textAlign": "left",
-          "marginRight": ["auto", "4.5px", "4.5px"],
           "flexDirection": "column",
           "div": {
             "justifyContent": "space-between"
@@ -3991,6 +3992,7 @@
               "marginTop": "0px",
               "minHeight": ["auto", "64px", "auto"],
               "fontWeight": "600",
+              "fontSize": ["md", "lg", "xl"],
               "lineHeight": "1.14",
               "textDecoration": "none",
               "border": "none"
@@ -3999,18 +4001,22 @@
 
           "description": {
             "color": "#72727C",
-            "fontSize": ["18px", "18px", "24px"],
+            "fontSize": ["16px", "18px", "18px"],
             "marginBottom": ["24px", "32px"]
           },
 
           "image": {
+            "display": "none"
+          },
+          "meta": {
             "display": "none"
           }
         },
         "solid": {
           "variant": "compounds.card.base",
           "img": {
-            "height": "197px"
+            "height": "197px",
+            "width": "100%"
           },
           "a": {
             "borderBottom": "none",
@@ -4032,7 +4038,8 @@
             "p": {
               "color": "primary",
               "fontFamily": "heading",
-              "opacity": ".75"
+              "opacity": ".75",
+              "fontSize": "sm"
             }
           }
         }
