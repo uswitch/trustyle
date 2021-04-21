@@ -56,6 +56,7 @@ const glyphChoices: Glyph[] = [
   'smile',
   'sms',
   'sort',
+  'sort-thin',
   'three',
   'tick',
   'tv',
