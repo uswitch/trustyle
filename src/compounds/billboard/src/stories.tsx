@@ -1,11 +1,13 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
+import { select } from '@storybook/addon-knobs'
 
 import Breadcrumbs from '../../../elements/breadcrumbs/src'
 import HeroAd from '../../../compounds/advert/src'
-import LogoCollection from '../../../elements/logo-collection/src'
 import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
+import IconTile, { DisplayVariant } from '../../../elements/icon-tile/src'
+import { Col, Row } from '../../../layout/flex-grid/src'
 
 import Billboard from './'
 
@@ -63,30 +65,48 @@ const primarySlot = (
   />
 )
 
+const icon = select(
+  'Icon',
+  ['carInsurance', 'creditCards', 'loans', 'mortgages'],
+  'carInsurance'
+)
+const displayVariant = select(
+  'Display Variant',
+  DisplayVariant,
+  DisplayVariant.Horizontal
+)
+const iconImg = (
+  <img alt="" src={require(`../../../../static/money-icons/${icon}.svg`)} />
+)
+
 const images = [
-  <img
-    src="https://placekitten.com/200/200?image=9"
-    alt="Salman"
-    key="kitten1"
-  />,
-  <img
-    src="https://placekitten.com/200/200?image=9"
-    alt="Salman"
-    key="kitten2"
-  />,
-  <img
-    src="https://placekitten.com/200/200?image=9"
-    alt="Salman"
-    key="kitten3"
-  />,
-  <img
-    src="https://placekitten.com/200/200?image=9"
-    alt="Salman"
-    key="kitten4"
-  />
+  <Col span={1} key={0}>
+    <IconTile icon={iconImg} displayVariant={displayVariant}>
+      test
+    </IconTile>
+  </Col>,
+  <Col span={1} key={1}>
+    <IconTile icon={iconImg} displayVariant={displayVariant}>
+      test
+    </IconTile>
+  </Col>,
+  <Col span={1} key={2}>
+    <IconTile icon={iconImg} displayVariant={displayVariant}>
+      test
+    </IconTile>
+  </Col>,
+  <Col span={1} key={3}>
+    <IconTile icon={iconImg} displayVariant={displayVariant}>
+      test
+    </IconTile>
+  </Col>
 ]
 
-const fullWidthSlot = <LogoCollection logoImage={images} />
+const fullWidthSlot = (
+  <Row cols={[2, 4]} direction="row" wrap>
+    {images}
+  </Row>
+)
 
 export const ExampleWithPrimarySlot = () => {
   return (
@@ -102,9 +122,9 @@ export const ExampleWithPrimarySlot = () => {
 export const ExampleWithoutPrimarySlot = () => {
   return (
     <Billboard
+      breadcrumbs={breadcrumbs}
       primaryContent={primaryContent}
       fullWidthSlot={fullWidthSlot}
-      breadcrumbs={breadcrumbs}
     />
   )
 }
