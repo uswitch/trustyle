@@ -53,6 +53,7 @@ import { QuestionFilled } from './question-filled'
 import { Smile } from './smile'
 import { Sms } from './sms'
 import { Sort } from './sort'
+import { SortThin } from './sort-thin'
 import { Three } from './three'
 import { Tick } from './tick'
 import { Tv } from './tv'
@@ -124,6 +125,7 @@ export type Glyph =
   | 'smile'
   | 'sms'
   | 'sort'
+  | 'sort-thin'
   | 'three'
   | 'tick'
   | 'tv'
@@ -270,6 +272,8 @@ export const Icon: React.FC<Props> = ({
       return <Sms color={color} size={size} />
     case 'sort':
       return <Sort color={color} size={size} />
+    case 'sort-thin':
+      return <SortThin color={color} size={size} />
     case 'three':
       return <Three color={color} size={size} />
     case 'tick':
