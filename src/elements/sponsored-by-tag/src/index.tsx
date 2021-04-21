@@ -27,7 +27,9 @@ const SponsoredByTag: React.FC<Props> = ({
   <div
     className={className}
     sx={{
-      variant: `${lookup(variant)}.wrapper`
+      variant: `${lookup(variant)}.wrapper`,
+      display: 'flex',
+      alignItems: 'center'
     }}
   >
     <span
