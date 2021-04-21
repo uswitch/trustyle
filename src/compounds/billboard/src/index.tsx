@@ -4,12 +4,14 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
+  breadcrumbs?: any
   primaryContent: any
   primarySlot?: any
   fullWidthSlot?: any
 }
 
 const Billboard: React.FC<Props> = ({
+  breadcrumbs,
   primaryContent,
   primarySlot,
   fullWidthSlot
@@ -23,6 +25,11 @@ const Billboard: React.FC<Props> = ({
         variant: 'compounds.billboard'
       }}
     >
+      {breadcrumbs && (
+        <div sx={{ paddingTop: 'sm' }}>
+          {React.cloneElement(breadcrumbs, { variant: 'light' })}
+        </div>
+      )}
       <div
         sx={{
           display: 'flex',
@@ -37,28 +44,19 @@ const Billboard: React.FC<Props> = ({
         <div
           sx={{
             paddingRight: primarySlot ? ['auto', 'xxl'] : 'auto',
-            paddingTop: ['xxxl'],
+            paddingTop: ['auto', 'xxl'],
             variant: 'compounds.billboard.primaryContent'
           }}
         >
           {primaryContent}
         </div>
         {primarySlot && (
-          <div
-            sx={{
-              paddingLeft: ['auto', 'xxl'],
-              paddingTop: ['lg', 'xxl']
-            }}
-          >
+          <div sx={{ paddingLeft: ['auto', 'xxl'], paddingTop: ['lg', 'md'] }}>
             {primarySlot}
           </div>
         )}
       </div>
-      <div
-        sx={{
-          marginTop: primarySlot ? ['sm', 'md'] : 'auto'
-        }}
-      >
+      <div sx={{ marginTop: primarySlot ? ['sm', 'md'] : 'auto' }}>
         {fullWidthSlot}
       </div>
     </div>

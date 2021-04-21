@@ -2,6 +2,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
+import Breadcrumbs from '../../../elements/breadcrumbs/src'
 import HeroAd from '../../../compounds/advert/src'
 import LogoCollection from '../../../elements/logo-collection/src'
 import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
@@ -11,6 +12,37 @@ import Billboard from './'
 export default {
   title: 'Compounds/Billboard'
 }
+
+const crumbs = [
+  {
+    fields: {
+      path: '/',
+      displayText: 'Home'
+    }
+  },
+  {
+    fields: {
+      path: '/gas-electricity/',
+      displayText: 'Gas & Electricity'
+    }
+  },
+  {
+    fields: {
+      path: '/gas-electricity/guides',
+      displayText: 'Guides'
+    }
+  }
+]
+
+const breadcrumbs = (
+  <Breadcrumbs
+    crumbs={crumbs}
+    title="Understanding energy bills and electricity bills - FAQs and more"
+    sx={{
+      pt: 16
+    }}
+  />
+)
 
 const primaryContent = (
   <div>
@@ -59,6 +91,7 @@ const fullWidthSlot = <LogoCollection logoImage={images} />
 export const ExampleWithPrimarySlot = () => {
   return (
     <Billboard
+      breadcrumbs={breadcrumbs}
       primaryContent={primaryContent}
       primarySlot={primarySlot}
       fullWidthSlot={fullWidthSlot}
@@ -68,7 +101,11 @@ export const ExampleWithPrimarySlot = () => {
 
 export const ExampleWithoutPrimarySlot = () => {
   return (
-    <Billboard primaryContent={primaryContent} fullWidthSlot={fullWidthSlot} />
+    <Billboard
+      primaryContent={primaryContent}
+      fullWidthSlot={fullWidthSlot}
+      breadcrumbs={breadcrumbs}
+    />
   )
 }
 
