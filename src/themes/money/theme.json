@@ -2200,6 +2200,15 @@
         }
       }
     },
+    "billboard": {
+      "backgroundColor": "plum",
+      "primaryContent": {
+        "color": "grey-0",
+        "h3": {
+          "color": "grey-0"
+        }
+      }
+    },
     "accordion": {
       "base": {
         "wrapper": {

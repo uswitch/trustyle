@@ -2971,6 +2971,9 @@
         "paddingX": "md"
       }
     },
+    "billboard": {
+      "backgroundColor": "hero"
+    },
     "container": {
       "flex": {
         "display": "flex",
