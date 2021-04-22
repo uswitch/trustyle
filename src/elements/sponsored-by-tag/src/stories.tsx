@@ -139,6 +139,7 @@ export const AutomatedTests = () => {
       <ExampleWithTextProp />
       <ExampleWithHeroVariant />
       <ExampleWithFormVariant />
+      <ExampleWithCentredLightVariant />
     </AllThemes>
   )
 }
