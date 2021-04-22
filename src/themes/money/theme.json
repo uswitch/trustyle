@@ -397,8 +397,18 @@
         },
         "centered-light": {
           "variant": "elements.sponsored-by-tag.variants.centered",
+          "wrapper": {
+            "display": "inline-flex !important",
+            "alignItems": "center",
+            "justifyContent": "flex-end",
+            "paddingY": "xxs",
+            "pt": "md"
+          },
           "text": {
             "color": "white"
+          },
+          "image": {
+            "ml": "10px"
           }
         }
       }
