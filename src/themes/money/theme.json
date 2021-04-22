@@ -399,6 +399,9 @@
           "variant": "elements.sponsored-by-tag.variants.centered",
           "text": {
             "color": "white"
+          },
+          "image": {
+            "ml": "10px"
           }
         }
       }
