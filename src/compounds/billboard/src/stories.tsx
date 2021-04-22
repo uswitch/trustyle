@@ -8,6 +8,7 @@ import HeroAd from '../../../compounds/advert/src'
 import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
 import IconTile, { DisplayVariant } from '../../../elements/icon-tile/src'
 import { Col, Row } from '../../../layout/flex-grid/src'
+import CTA from '../../../elements/cta/src'
 
 import Billboard from './'
 
@@ -56,12 +57,21 @@ const primaryContent = (
   </div>
 )
 
-const primarySlot = (
+const heroAd = (
   <HeroAd
     headline="Compare business cards & loans"
     body="Indicative offers from 45+ lenders in 3 mins. Never pay more than going direct. Will not affect your credit rating."
     footer="Available to businesses trading for a minimum of 12 months with at least £80,000 turnover."
     badgeText="Exclusive loans deals"
+  />
+)
+
+const callToAction = (
+  <CTA
+    text="Some example text"
+    title="Want free expert mortgage advice?"
+    buttonText="Get started"
+    buttonLink="https://google.com"
   />
 )
 
@@ -113,10 +123,24 @@ export const ExampleWithPrimarySlot = () => {
     <Billboard
       breadcrumbs={breadcrumbs}
       primaryContent={primaryContent}
-      primarySlot={primarySlot}
+      primarySlot={heroAd}
       fullWidthSlot={fullWidthSlot}
     />
   )
+}
+
+export const ExampleWithoutFullWidthSlot = () => {
+  return (
+    <Billboard
+      breadcrumbs={breadcrumbs}
+      primaryContent={primaryContent}
+      primarySlot={callToAction}
+    />
+  )
+}
+
+export const ExampleWithPrimaryContent = () => {
+  return <Billboard breadcrumbs={breadcrumbs} primaryContent={primaryContent} />
 }
 
 export const ExampleWithoutPrimarySlot = () => {
