@@ -336,8 +336,10 @@ export const MoreInformationTable = ({ rows }: MoreInformationTableProps) => {
     fontSize: '13px',
     fontFamily: 'Open Sans,Arial,sans-serif',
     padding: 'sm',
+    textAlign: 'center',
     ':first-child': {
-      paddingLeft: 0
+      paddingLeft: 0,
+      textAlign: 'left'
     },
     ':last-child': {
       paddingRight: 0
