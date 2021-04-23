@@ -652,6 +652,20 @@
           "title": {
             "color": "grey-0"
           }
+        },
+        "billboard": {
+          "main": {
+            "color": "grey-0"
+          },
+          "mobileLink": {
+            "color": "grey-0"
+          },
+          "homeIcon": {
+            "color": "grey-0"
+          },
+          "title": {
+            "color": "grey-0"
+          }
         }
       }
     },
@@ -2201,11 +2215,18 @@
       }
     },
     "billboard": {
-      "backgroundColor": "plum",
+      "wrapper": {
+        "backgroundColor": "plum"
+      },
       "primaryContent": {
         "color": "grey-0",
-        "h3": {
-          "color": "grey-0"
+        "paddingTop": ["auto", "sm"],
+        "h1,h2,h3,h4,h5,h6": {
+          "color": "grey-0",
+          "fontSize": ["xl", "xxxl"]
+        },
+        "p": {
+          "fontSize": ["sm", "md"]
         }
       }
     },

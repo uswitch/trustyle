@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.45.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.44.3...@uswitch/trustyle.uswitch-theme@2.45.0) (2021-04-23)
+
+
+### Features
+
+* added Palette support and changed spacing ([c8459a2](https://github.com/uswitch/trustyle/commit/c8459a2))
+
+
+
+
+
 ## [2.44.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.44.2...@uswitch/trustyle.uswitch-theme@2.44.3) (2021-04-22)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
