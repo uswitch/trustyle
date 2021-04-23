@@ -34,6 +34,7 @@ interface Props {
   headerChildren?: React.ReactNode
   contentChildren?: React.ReactNode
   onClick?: () => void
+  button?: React.ReactNode
 }
 
 const makeStyles = (variant: string) => (element?: string) =>
@@ -57,7 +58,8 @@ const Card: React.FC<Props> = ({
   variant = 'vertical',
   headerChildren,
   contentChildren,
-  onClick
+  onClick,
+  button
 }) => {
   const styles = makeStyles(variant)
 
@@ -163,7 +165,7 @@ const Card: React.FC<Props> = ({
             {linkText}
           </Styled.a>
         )}
-        {linkText && journeyVariant && JourneyButton}
+        {linkText && journeyVariant && ((button && button) || JourneyButton)}
       </div>
     </div>
   )
