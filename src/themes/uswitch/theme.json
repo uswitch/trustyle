@@ -2854,7 +2854,7 @@
             },
             "heading": {
               "opacity": 1,
-              "px": "xxxl",
+              "px": ["sm", "xxxl", "xxxl"],
               "mr": 0,
               "mt": 0,
               "alignItems": "left",
