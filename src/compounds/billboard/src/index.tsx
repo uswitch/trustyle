@@ -33,7 +33,7 @@ const Billboard: React.FC<Props> = ({
           }}
         >
           {breadcrumbs && (
-            <div sx={{ paddingTop: ['xxs', 'sm'] }}>
+            <div sx={{ paddingTop: ['xs', '0'] }}>
               {React.cloneElement(breadcrumbs, { variant: 'billboard' })}
             </div>
           )}
