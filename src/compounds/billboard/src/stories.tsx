@@ -2,6 +2,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { select } from '@storybook/addon-knobs'
+import { PaletteProvider } from '@uswitch/trustyle-utils.palette'
 
 import Breadcrumbs from '../../../elements/breadcrumbs/src'
 import HeroAd from '../../../compounds/advert/src'
@@ -150,6 +151,18 @@ export const ExampleWithoutPrimarySlot = () => {
       primaryContent={primaryContent}
       fullWidthSlot={fullWidthSlot}
     />
+  )
+}
+
+export const ExampleWithPalette = () => {
+  return (
+    <PaletteProvider value={{ backgroundColor: 'berry' }}>
+      <Billboard
+        breadcrumbs={breadcrumbs}
+        primaryContent={primaryContent}
+        fullWidthSlot={fullWidthSlot}
+      />
+    </PaletteProvider>
   )
 }
 
