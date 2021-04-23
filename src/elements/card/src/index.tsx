@@ -33,6 +33,7 @@ interface Props {
     | 'journey-card'
   headerChildren?: React.ReactNode
   contentChildren?: React.ReactNode
+  onClick?: () => void
 }
 
 const makeStyles = (variant: string) => (element?: string) =>
@@ -55,7 +56,8 @@ const Card: React.FC<Props> = ({
   title,
   variant = 'vertical',
   headerChildren,
-  contentChildren
+  contentChildren,
+  onClick
 }) => {
   const styles = makeStyles(variant)
 
@@ -77,6 +79,7 @@ const Card: React.FC<Props> = ({
       href={linkHref}
       target="_blank"
       afterIcon={linkIcon}
+      onClick={onClick}
     >
       {linkText}
     </ButtonLink>
