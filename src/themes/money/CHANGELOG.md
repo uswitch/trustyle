@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.47.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.46.6...@uswitch/trustyle.money-theme@1.47.0) (2021-04-23)
+
+
+### Features
+
+* added Palette support and changed spacing ([c8459a2](https://github.com/uswitch/trustyle/commit/c8459a2))
+
+
+
+
+
 ## [1.46.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.46.5...@uswitch/trustyle.money-theme@1.46.6) (2021-04-22)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme
