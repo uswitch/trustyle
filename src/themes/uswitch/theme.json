@@ -4046,7 +4046,7 @@
             "color": "primary",
             "lineHeight": [2, 2, "base"],
             "a": {
-              "borderBottom": "1px solid #141424",
+              "borderBottom": "2px solid #142424",
               "fontSize": "md",
               "fontWeight": "xxbold",
               "pb": "xs"
