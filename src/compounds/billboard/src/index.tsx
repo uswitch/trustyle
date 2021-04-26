@@ -29,6 +29,7 @@ const Billboard: React.FC<Props> = ({
             display: 'flex',
             flexDirection: 'column',
             paddingX: ['sm', 'xxxl'],
+            paddingTop: 'sm',
             variant: 'compounds.billboard'
           }}
         >
@@ -45,7 +46,7 @@ const Billboard: React.FC<Props> = ({
               marginBottom:
                 primarySlot || !fullWidthSlot ? ['lg', 'xxl'] : ['auto', 'xs'],
               textAlign: primarySlot ? 'auto' : 'center',
-              width: primarySlot ? 'auto' : ['auto', '75%'],
+              width: primarySlot ? 'auto' : ['auto', '100%'],
               marginX: 'auto'
             }}
           >
@@ -53,7 +54,8 @@ const Billboard: React.FC<Props> = ({
               sx={{
                 paddingRight: primarySlot ? ['auto', 'xxl'] : 'auto',
                 alignSelf: 'center',
-                variant: 'compounds.billboard.primaryContent'
+                variant: 'compounds.billboard.primaryContent',
+                margin: 'auto'
               }}
             >
               {primaryContent}
