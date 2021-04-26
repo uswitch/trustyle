@@ -1,0 +1,40 @@
+name: Publish packages
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+        NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Dependencies
+      run: |
+        npm ci
+        npx lerna bootstrap --no-ci
+
+    - name: Build
+      run: npm run build
+
+    # Setup .npmrc file to publish to GitHub Packages
+    - uses: actions/setup-node@v1.4.4
+      with:
+        node-version: 12
+        registry-url: 'https://npm.pkg.github.com'
+        scope: '@uswitch'
+
+    - name: Authenticate with the GitHub Package Registry
+      run:
+        echo "//npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" >
+        ~/.npmrc
+
+    - name: Lerna publish
+      run: npx lerna publish from-package --yes
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
