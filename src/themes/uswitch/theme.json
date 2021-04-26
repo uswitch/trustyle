@@ -3994,6 +3994,7 @@
           "minWidth": ["100%", "98%"],
           "textAlign": "left",
           "flexDirection": "column",
+          "bg": "grey-0",
           "div": {
             "justifyContent": "space-between"
           },
@@ -4043,6 +4044,7 @@
             "mt": "sm",
             "mb": "30px",
             "color": "primary",
+            "lineHeight": [2, 2, "base"],
             "a": {
               "borderBottom": "2px solid #142424",
               "fontSize": "md",
