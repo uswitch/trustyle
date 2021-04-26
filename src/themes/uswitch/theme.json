@@ -4044,7 +4044,7 @@
             "mb": "30px",
             "color": "primary",
             "a": {
-              "borderBottom": "1px solid #141424",
+              "borderBottom": "2px solid #142424",
               "fontSize": "md",
               "fontWeight": "xxbold",
               "pb": "xs"
