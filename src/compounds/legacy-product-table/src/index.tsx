@@ -707,7 +707,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         )}
       </RowWrapper>
 
-      {moreInformationPanel && moreInformationPanel.length > 0 && !disabled && (
+      {moreInformationPanel && moreInformationPanel.length > 0 && (
         <Eligibility
           moreInformationPanel={moreInformationPanel}
           moreInformationButton={moreInformationButton}
