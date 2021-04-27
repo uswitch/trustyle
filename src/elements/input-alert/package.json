@@ -7,9 +7,9 @@
   "publishConfig": {
     "access": "public"
   },
- "repository": {
-    "type" : "git",
-    "url" : "https://npm.pkg.github.com/"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uswitch/trustyle"
   },
   "dependencies": {
     "@uswitch/trustyle-utils.get": "^1.0.9",
