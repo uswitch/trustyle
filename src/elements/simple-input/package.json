@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.simple-input",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -16,6 +16,6 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle-utils.get": "^1.0.9"
+    "@uswitch/trustyle-utils.get": "^1.0.10"
   }
 }
