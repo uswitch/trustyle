@@ -379,6 +379,7 @@ export const DisabledExample = () => {
       info={info}
       title={title}
       moreInformationPanel={[eligibilityContent, ratesContent]}
+      moreInformationButton={moreInformationButton}
       clickableRow={clickableRow}
       disabled
     >
