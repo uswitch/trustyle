@@ -7,6 +7,10 @@
   "publishConfig": {
     "access": "public"
   },
+ "repository": {
+    "type" : "git",
+    "url" : "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "@uswitch/trustyle.frozen-input": "^3.2.10",
     "@uswitch/trustyle.styles": "^0.5.6",

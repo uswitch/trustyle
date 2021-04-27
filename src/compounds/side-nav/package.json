@@ -7,6 +7,10 @@
   "publishConfig": {
     "access": "public"
   },
+ "repository": {
+    "type" : "git",
+    "url" : "https://npm.pkg.github.com/"
+  },
   "peerDependencies": {
     "@emotion/core": "^10.0.10",
     "react": "^16.7.0"

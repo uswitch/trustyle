@@ -7,6 +7,10 @@
   "publishConfig": {
     "access": "public"
   },
+ "repository": {
+    "type" : "git",
+    "url" : "https://npm.pkg.github.com/"
+  },
   "devDependencies": {
     "typescript": "^3.6.2"
   },

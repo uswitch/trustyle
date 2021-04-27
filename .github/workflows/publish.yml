@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - github-registry
 
 jobs:
   publish:

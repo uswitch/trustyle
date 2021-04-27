@@ -7,6 +7,10 @@
   "publishConfig": {
     "access": "public"
   },
+ "repository": {
+    "type" : "git",
+    "url" : "https://npm.pkg.github.com/"
+  },
   "peerDependencies": {
     "@uswitch/trustyle.icon": "^1.17.1",
     "react": "^16.7.0",
