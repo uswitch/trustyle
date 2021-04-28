@@ -2854,7 +2854,8 @@
             },
             "heading": {
               "opacity": 1,
-              "px": ["sm", "xxxl", "xxxl"],
+              "pr": ["sm", "xxxl", "xxxl"],
+              "pl": ["sm", "xxl", "xxxl"],
               "mr": 0,
               "mt": 0,
               "alignItems": "left",
@@ -4032,7 +4033,7 @@
         "solid": {
           "variant": "compounds.card.base",
           "img": {
-            "height": "197px",
+            "height": ["auto", "197px", "197px"],
             "width": "100%"
           },
           "a": {

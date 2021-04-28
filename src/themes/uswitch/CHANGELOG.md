@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.45.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.4...@uswitch/trustyle.uswitch-theme@2.45.5) (2021-04-28)
+
+
+### Bug Fixes
+
+* form heading padding left on tablet ([d77b6bc](https://github.com/uswitch/trustyle/commit/d77b6bc))
+
+
+
+
+
 ## [2.45.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.3...@uswitch/trustyle.uswitch-theme@2.45.4) (2021-04-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
