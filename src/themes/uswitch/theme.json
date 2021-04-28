@@ -4033,7 +4033,7 @@
         "solid": {
           "variant": "compounds.card.base",
           "img": {
-            "height": "197px",
+            "height": ["auto", "197px", "197px"],
             "width": "100%"
           },
           "a": {
