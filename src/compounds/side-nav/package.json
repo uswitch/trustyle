@@ -1,18 +1,22 @@
 {
   "name": "@uswitch/trustyle.side-nav",
-  "version": "1.0.55",
+  "version": "1.0.56",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uswitch/trustyle"
+  },
   "peerDependencies": {
     "@emotion/core": "^10.0.10",
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle-utils.palette": "^4.0.2",
-    "@uswitch/trustyle.accordion": "^0.14.8"
+    "@uswitch/trustyle-utils.palette": "^4.0.3",
+    "@uswitch/trustyle.accordion": "^0.14.9"
   }
 }

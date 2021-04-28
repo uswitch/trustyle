@@ -1,11 +1,15 @@
 {
   "name": "@uswitch/trustyle.global-styles",
-  "version": "0.3.16",
+  "version": "0.3.17",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uswitch/trustyle"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"

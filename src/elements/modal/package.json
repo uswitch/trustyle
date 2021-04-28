@@ -1,11 +1,15 @@
 {
   "name": "@uswitch/trustyle.modal",
-  "version": "2.4.15",
+  "version": "2.4.16",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uswitch/trustyle"
   },
   "peerDependencies": {
     "@uswitch/trustyle.icon": "^1.17.1",
@@ -14,7 +18,7 @@
     "theme-ui": "^0.2.52"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.26.2"
+    "@uswitch/trustyle.icon": "^1.26.3"
   },
   "dependencies": {
     "body-scroll-lock": "^3.0.3",

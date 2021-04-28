@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.broadband-deals-theme",
-  "version": "1.16.2",
+  "version": "1.16.3",
   "description": "Theme file for broadband deals",
   "main": "index.js",
   "scripts": {
@@ -10,5 +10,9 @@
   "license": "ISC",
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uswitch/trustyle"
   }
 }
