@@ -1591,6 +1591,15 @@
           "button": {
             "variant": "elements.cta.base.button"
           }
+        },
+        "billboard": {
+          "main": {
+            "variant": "elements.cta.variants.hero.main",
+            "backgroundColor": "light-1"
+          },
+          "button": {
+            "variant": "elements.cta.base.button"
+          }
         }
       }
     },
@@ -2976,6 +2985,14 @@
       "wrapper": {
         "backgroundColor": "blue-75"
       },
+      "sizes": {
+        "verticalGutter": "md",
+        "gutter": "gutter"
+      },
+      "container": {
+        "maxWidth": 1200,
+        "mx": "auto"
+      },
       "primaryContent": {
         "color": "primary",
         "paddingTop": ["auto", "sm"],
@@ -2985,6 +3002,12 @@
         },
         "p": {
           "fontSize": ["xs", "sm"]
+        }
+      },
+      "primarySlot": {
+        "h1,h2,h3,h4,h5,h6": {
+          "color": "grey-80",
+          "fontSize": ["md"]
         }
       }
     },
