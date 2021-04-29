@@ -1086,6 +1086,20 @@
           "button": {
             "variant": "elements.cta.base.button"
           }
+        },
+        "billboard": {
+          "main": {
+            "backgroundColor": "white"
+          },
+          "title": {
+            "variant": "elements.cta.base.title"
+          },
+          "text": {
+            "variant": "elements.cta.base.text"
+          },
+          "button": {
+            "variant": "elements.cta.base.button"
+          }
         }
       }
     },
@@ -1577,6 +1591,10 @@
         "with-icon": {
           "display": "flex",
           "alignItems": "center"
+        },
+        "billboard": {
+          "variant": "elements.rich-text-block.variants.panel-primary-text-align-center",
+          "color": "grey-0"
         }
       }
     },
@@ -2216,7 +2234,15 @@
     },
     "billboard": {
       "wrapper": {
-        "backgroundColor": "plum"
+        "background": "linear-gradient(172deg, #924A8B 28%, #AF4C83 100%)"
+      },
+      "sizes": {
+        "gutter": "sm",
+        "verticalGutter": ["sm", "md", "md"]
+      },
+      "container": {
+        "maxWidth": 1152,
+        "mx": "auto"
       },
       "primaryContent": {
         "color": "grey-0",
@@ -2227,6 +2253,12 @@
         },
         "p": {
           "fontSize": ["sm", "md"]
+        }
+      },
+      "primarySlot": {
+        "h1,h2,h3,h4,h5,h6": {
+          "color": "grey-80",
+          "fontSize": ["md"]
         }
       }
     },
