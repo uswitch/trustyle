@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.47.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.47.2...@uswitch/trustyle.money-theme@1.47.3) (2021-04-29)
+
+
+### Bug Fixes
+
+* restyled width and color for primary slot ([1752c96](https://github.com/uswitch/trustyle/commit/1752c96))
+
+
+
+
+
 ## [1.47.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.47.1...@uswitch/trustyle.money-theme@1.47.2) (2021-04-29)
 
 
