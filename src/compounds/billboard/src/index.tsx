@@ -29,7 +29,7 @@ const Billboard: React.FC<Props> = ({
             sx={{
               display: 'flex',
               flexDirection: 'column',
-              paddingX: ['sm', 'xxxl'],
+              paddingX: 'sm',
               paddingTop: 'sm',
               variant: 'compounds.billboard'
             }}
@@ -57,7 +57,9 @@ const Billboard: React.FC<Props> = ({
                 sx={{
                   paddingRight: primarySlot ? ['auto', 'xxl'] : 'auto',
                   alignSelf: 'center',
-                  variant: 'compounds.billboard.primaryContent',
+                  variant: primarySlot
+                    ? 'compounds.billboard.withPrimarySlot'
+                    : 'compounds.billboard.primaryContentOnly',
                   margin: 'auto'
                 }}
               >
@@ -68,7 +70,8 @@ const Billboard: React.FC<Props> = ({
                   sx={{
                     paddingLeft: ['auto', 'xxl'],
                     marginTop: ['sm', 'xxs'],
-                    variant: 'compounds.billboard.primarySlot'
+                    variant: 'compounds.billboard.primarySlot',
+                    alignSelf: 'center'
                   }}
                 >
                   {React.cloneElement(primarySlot, { variant: 'billboard' })}

@@ -3003,12 +3003,6 @@
         "p": {
           "fontSize": ["xs", "sm"]
         }
-      },
-      "primarySlot": {
-        "h1,h2,h3,h4,h5,h6": {
-          "color": "grey-80",
-          "fontSize": ["md"]
-        }
       }
     },
     "container": {

@@ -1593,7 +1593,7 @@
           "alignItems": "center"
         },
         "billboard": {
-          "variant": "elements.rich-text-block.variants.panel-primary-text-align-center",
+          "variant": "elements.rich-text-block.variants.center",
           "color": "grey-0"
         }
       }
@@ -2255,11 +2255,19 @@
           "fontSize": ["sm", "md"]
         }
       },
+      "primaryContentOnly": {
+        "variant": "compounds.billboard.primaryContent",
+        "width": ["auto", "60%"]
+      },
+      "withPrimarySlot": {
+        "variant": "compounds.billboard.primaryContent",
+        "width": ["auto", "50%"]
+      },
       "primarySlot": {
         "h1,h2,h3,h4,h5,h6": {
-          "color": "grey-80",
-          "fontSize": ["md"]
-        }
+          "color": "grey-80"
+        },
+        "width": ["auto", "50%"]
       }
     },
     "accordion": {
