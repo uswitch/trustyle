@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.47.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.47.1...@uswitch/trustyle.money-theme@1.47.2) (2021-04-29)
+
+
+### Bug Fixes
+
+* changed spacing and font color ([d169be2](https://github.com/uswitch/trustyle/commit/d169be2))
+
+
+
+
+
 ## [1.47.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.47.0...@uswitch/trustyle.money-theme@1.47.1) (2021-04-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme

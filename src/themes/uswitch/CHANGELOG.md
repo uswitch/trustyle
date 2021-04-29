@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.45.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.5...@uswitch/trustyle.uswitch-theme@2.45.6) (2021-04-29)
+
+
+### Bug Fixes
+
+* changed spacing and font color ([d169be2](https://github.com/uswitch/trustyle/commit/d169be2))
+
+
+
+
+
 ## [2.45.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.4...@uswitch/trustyle.uswitch-theme@2.45.5) (2021-04-28)
 
 
