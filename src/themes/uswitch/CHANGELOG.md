@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.45.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.6...@uswitch/trustyle.uswitch-theme@2.45.7) (2021-04-29)
+
+
+### Bug Fixes
+
+* restyled width and color for primary slot ([1752c96](https://github.com/uswitch/trustyle/commit/1752c96))
+
+
+
+
+
 ## [2.45.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.5...@uswitch/trustyle.uswitch-theme@2.45.6) (2021-04-29)
 
 
