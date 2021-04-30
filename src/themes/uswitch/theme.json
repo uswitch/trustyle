@@ -4030,7 +4030,10 @@
               "fontSize": ["md", "lg", "xl"],
               "lineHeight": "1.14",
               "textDecoration": "none",
-              "border": "none"
+              "border": "none",
+              "&:hover": {
+                "color": "primary"
+              }
             }
           },
 
