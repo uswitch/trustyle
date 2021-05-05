@@ -139,8 +139,8 @@ const PhoneNumberModal: React.FC<Props> = ({
         <div
           sx={{
             textAlign: 'center',
-            paddingX: ['sm', 'lg'],
             paddingY: 'sm',
+            paddingX: ['sm', 'lg'],
             variant: 'compounds.phone-number-modal.compliance-text'
           }}
         >
