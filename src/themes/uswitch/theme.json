@@ -1888,7 +1888,7 @@
           "justifyContent": "flex-end",
           "textAlign": "left",
           "minHeight": ["100px", "289px", "289px"],
-          "maxWidth": ["313px", "289px", "289px"],
+          "width": ["313px", "289px", "289px"],
           "margin": "auto",
           "border": "1px solid",
           "borderColor": "grey-10",
@@ -4040,7 +4040,10 @@
               "fontSize": ["md", "lg", "xl"],
               "lineHeight": "1.14",
               "textDecoration": "none",
-              "border": "none"
+              "border": "none",
+              "&:hover": {
+                "color": "primary"
+              }
             }
           },
 
