@@ -2341,6 +2341,44 @@
         "width": ["auto", "50%"]
       }
     },
+    "phone-number-modal": {
+      "logo-area": {
+        "h1,h2,h3,h4,h5,h6,p": {
+          "marginBottom": "0"
+        }
+      },
+      "phone-number": {
+        "fontSize": ["lg", "xl"],
+        "lineHeight": "120%",
+        "fontWeight": "bolder"
+      },
+      "opening-times": {
+        "fontSize": "sm",
+        "lineHeight": "130%"
+      },
+      "p": {
+        "fontSize": "sm",
+        "lineHeight": "150%"
+      },
+      "url": {
+        "fontSize": "md",
+        "fontWeight": "bold",
+        "lineHeight": "120%",
+        "p": {
+          "color": "plum"
+        },
+        "a": {
+          "color": "grey-80"
+        }
+      },
+      "compliance-text": {
+        "backgroundColor": "grey-10",
+        "p": {
+          "variant": "compounds.phone-number-modal.p",
+          "marginX": "xs"
+        }
+      }
+    },
     "accordion": {
       "base": {
         "wrapper": {

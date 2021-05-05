@@ -1,0 +1,23 @@
+{
+  "name": "@uswitch/trustyle.phone-number-modal",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "ts:main": "src/index.tsx",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uswitch/trustyle"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.27",
+    "react": "^16.7.0"
+  },
+  "dependencies": {
+    "@uswitch/trustyle.icon": "^1.26.3",
+    "@uswitch/trustyle.imgix-image": "^0.1.41",
+    "@uswitch/trustyle.modal": "^2.4.16"
+  }
+}

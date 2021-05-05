@@ -3005,6 +3005,16 @@
         }
       }
     },
+    "phone-number-modal": {
+      "logo-area": {
+        "h1,h2,h3,h4,h5,h6,p": {
+          "marginBottom": "0"
+        }
+      },
+      "compliance-text": {
+        "backgroundColor": "grey-10"
+      }
+    },
     "container": {
       "flex": {
         "display": "flex",
