@@ -4,8 +4,7 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { action } from '@storybook/addon-actions'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
-
-import Modal from '../../../elements/modal/src'
+import Modal from '@uswitch/trustyle.modal'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   logo: string
