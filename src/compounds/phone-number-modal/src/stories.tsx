@@ -32,12 +32,12 @@ const ExamplePhoneNumberWithUrl = {
   ...ExamplePhoneNumberWithoutUrl
 }
 
-const [isOpen, setStateIsOpen] = useState(false)
-const openModal = () => {
-  setStateIsOpen(true)
-}
-
 export const ExampleWithUrl = () => {
+  const [isOpen, setStateIsOpen] = useState(false)
+  const openModal = () => {
+    setStateIsOpen(true)
+  }
+
   return (
     <React.Fragment>
       <button onClick={openModal}>Open Modal</button>
@@ -56,13 +56,23 @@ ExampleWithUrl.story = {
   }
 }
 
-export const ExampleWithoutUrl = () => (
-  <PhoneNumberModal
-    phoneNumber={ExamplePhoneNumberWithoutUrl}
-    isOpen={isOpen}
-    setStateClosed={() => setStateIsOpen(false)}
-  />
-)
+export const ExampleWithoutUrl = () => {
+  const [isOpen, setStateIsOpen] = useState(false)
+  const openModal = () => {
+    setStateIsOpen(true)
+  }
+
+  return (
+    <React.Fragment>
+      <button onClick={openModal}>Open Modal</button>
+      <PhoneNumberModal
+        phoneNumber={ExamplePhoneNumberWithoutUrl}
+        isOpen={isOpen}
+        setStateClosed={() => setStateIsOpen(false)}
+      />
+    </React.Fragment>
+  )
+}
 
 ExampleWithoutUrl.story = {
   parameters: {

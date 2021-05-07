@@ -5,8 +5,7 @@ import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
 import { Button } from '@uswitch/trustyle.button'
 import { Icon } from '@uswitch/trustyle.icon'
-
-import PhoneNumberModal from '../../phone-number-modal/src'
+import PhoneNumberModal from '@uswitch/trustyle.phone-number-modal'
 
 import RowWrapper from './row-wrapper'
 
