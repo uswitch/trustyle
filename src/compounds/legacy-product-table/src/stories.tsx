@@ -395,24 +395,6 @@ DisabledExample.story = {
 }
 
 export const TelephoneExample = () => {
-  const phoneNumber = {
-    phoneNumber: '0808 296 6568',
-    logoUrl: 'https://placekitten.com/200/200?image=9',
-    logoDescription: 'kitten',
-    url: 'https://www.money.co.uk/',
-    termsAndConditions:
-      'Your calls may be recorded for monitoring purposes. You must be a UK resident aged 18+. Terms & Conditions apply. Please see our General Lending Criteria.',
-    complianceText: [
-      'An early repayment charge applies during any fixed or discount rate period.',
-      'Your home may be repossessed if you do not keep up repayments on your mortgage.'
-    ],
-    openingTimes: [
-      'Lines are open:',
-      'Monday to Saturday: 8am-8pm',
-      'Sunday: 9am-8pm'
-    ]
-  }
-
   return (
     <LegacyProductTable
       representativeExample={representativeExample}
@@ -420,7 +402,7 @@ export const TelephoneExample = () => {
       title={title}
       moreInformationPanel={[eligibilityContent, ratesContent]}
       clickableRow={clickableRow}
-      phoneNumber={phoneNumber}
+      telephone="0808 296 6568"
     >
       {productTableContents}
     </LegacyProductTable>

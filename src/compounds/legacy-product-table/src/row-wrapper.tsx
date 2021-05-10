@@ -4,7 +4,6 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  hasModal: boolean
   link?: string
   children?: React.ReactNode
   onRowClick?: () => void
@@ -43,7 +42,6 @@ const linkWrapper = (
 }
 
 const RowWrapper: React.FC<Props> = ({
-  hasModal,
   link,
   children,
   onRowClick,
@@ -52,11 +50,7 @@ const RowWrapper: React.FC<Props> = ({
   if (disabled) {
     return <div>{children}</div>
   }
-  return link && !hasModal ? (
-    linkWrapper(link, children, onRowClick)
-  ) : (
-    <div onClick={onRowClick}>{children}</div>
-  )
+  return link ? linkWrapper(link, children, onRowClick) : <div>{children}</div>
 }
 
 export default RowWrapper
