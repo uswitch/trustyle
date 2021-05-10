@@ -4,8 +4,6 @@ import { jsx } from 'theme-ui'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import Modal from '@uswitch/trustyle.modal'
 
-type setStateClosed = () => void
-
 interface PhoneNumberModalInfo {
   phoneNumber: string
   logoUrl: string
@@ -21,7 +19,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   logoImageCritical?: boolean
   isOpen: boolean
   modalAriaLabel?: string
-  setStateClosed: setStateClosed
+  setStateClosed: () => void
 }
 
 const PhoneNumberModal: React.FC<Props> = ({
@@ -145,7 +143,7 @@ const PhoneNumberModal: React.FC<Props> = ({
               }}
             >
               <p>
-                or to apply online visit
+                or to apply online visit&nbsp;
                 <a
                   href={phoneNumberModalInfo.url}
                   target="_blank"
