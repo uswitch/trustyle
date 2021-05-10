@@ -5,8 +5,7 @@ import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
 import { Button } from '@uswitch/trustyle.button'
 import { Icon } from '@uswitch/trustyle.icon'
-
-import PhoneNumberModal from '../../phone-number-modal/src'
+import PhoneNumberModal from '@uswitch/trustyle.phone-number-modal'
 
 import RowWrapper from './row-wrapper'
 
@@ -606,7 +605,7 @@ const TelephoneInfo: React.FC<TelephoneInfoProps> = ({ telephone }) => {
 }
 
 // Shared type with phone-number-modal
-interface PhoneNumber {
+interface PhoneNumberModalInfo {
   phoneNumber: string
   logoUrl: string
   logoDescription: string
@@ -627,7 +626,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   onRowClick?: () => void
   disabled?: boolean
   badges?: string[]
-  phoneNumber?: PhoneNumber
+  phoneNumber?: PhoneNumberModalInfo
 }
 
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
@@ -668,7 +667,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
     >
       {phoneNumber && (
         <PhoneNumberModal
-          phoneNumber={phoneNumber}
+          phoneNumberModalInfo={phoneNumber}
           isOpen={isModalOpen}
           setStateClosed={() => setPhoneModalOpen(false)}
         />
