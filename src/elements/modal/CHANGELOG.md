@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.modal@2.4.16...@uswitch/trustyle.modal@2.4.17) (2021-05-10)
+
+**Note:** Version bump only for package @uswitch/trustyle.modal
+
+
+
+
+
 ## [2.4.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.modal@2.4.15...@uswitch/trustyle.modal@2.4.16) (2021-04-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.modal
