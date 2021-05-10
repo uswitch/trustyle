@@ -20,7 +20,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   phoneNumberModalInfo: PhoneNumberModalInfo
   logoImageCritical?: boolean
   isOpen: boolean
-  modalAriaLabel: string
+  modalAriaLabel?: string
   setStateClosed: setStateClosed
 }
 
@@ -28,7 +28,7 @@ const PhoneNumberModal: React.FC<Props> = ({
   phoneNumberModalInfo,
   logoImageCritical = true,
   isOpen,
-  modalAriaLabel,
+  modalAriaLabel = 'phone number overlay',
   setStateClosed
 }) => {
   const complianceTextElements = phoneNumberModalInfo.complianceText.map(
