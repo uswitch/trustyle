@@ -1,10 +1,12 @@
 /** @jsx jsx */
 
-import * as React from 'react'
+import React, { useState } from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
 import { Button } from '@uswitch/trustyle.button'
 import { Icon } from '@uswitch/trustyle.icon'
+
+import PhoneNumberModal from '../../phone-number-modal/src'
 
 import RowWrapper from './row-wrapper'
 
@@ -603,6 +605,17 @@ const TelephoneInfo: React.FC<TelephoneInfoProps> = ({ telephone }) => {
   )
 }
 
+// Shared type with phone-number-modal
+interface PhoneNumber {
+  phoneNumber: string
+  logoUrl: string
+  logoDescription: string
+  termsAndConditions: string
+  openingTimes?: string[]
+  url?: string
+  complianceText: string[]
+}
+
 interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   info: string[]
   title: string
@@ -614,7 +627,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   onRowClick?: () => void
   disabled?: boolean
   badges?: string[]
-  telephone?: string
+  phoneNumber?: PhoneNumber
 }
 
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
@@ -629,10 +642,12 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   onRowClick,
   disabled,
   badges = [],
-  telephone,
+  phoneNumber,
   ...props
 }) => {
   const badge = badges[0]
+  const [isModalOpen, setPhoneModalOpen] = useState(false)
+
   return (
     <article
       sx={{
@@ -651,9 +666,24 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
       }}
       {...props}
     >
+      {phoneNumber && (
+        <PhoneNumberModal
+          phoneNumber={phoneNumber}
+          isOpen={isModalOpen}
+          setStateClosed={() => setPhoneModalOpen(false)}
+        />
+      )}
       <RowWrapper
+        hasModal={!!phoneNumber}
         link={clickableRow}
-        onRowClick={onRowClick}
+        onRowClick={() => {
+          if ((!!phoneNumber || clickableRow) && onRowClick) {
+            onRowClick()
+          }
+          if (phoneNumber) {
+            setPhoneModalOpen(true)
+          }
+        }}
         disabled={disabled}
       >
         {badge && <Badge text={badge} />}
@@ -680,7 +710,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           >
             {title}
           </Styled.h5>
-          {telephone && <TelephoneInfo telephone={telephone} />}
+          {phoneNumber && <TelephoneInfo telephone={phoneNumber.phoneNumber} />}
         </header>
 
         <div
