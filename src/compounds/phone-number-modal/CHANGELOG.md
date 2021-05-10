@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.phone-number-modal@0.1.0...@uswitch/trustyle.phone-number-modal@0.1.1) (2021-05-10)
+
+
+### Bug Fixes
+
+* add phone number modal as dev dependency ([0f2c889](https://github.com/uswitch/trustyle/commit/0f2c889))
+* add target and rel to a tags ([ee407d6](https://github.com/uswitch/trustyle/commit/ee407d6))
+* change modal according to phone number schema ([348f456](https://github.com/uswitch/trustyle/commit/348f456))
+* change setStateClosed type ([cb30c13](https://github.com/uswitch/trustyle/commit/cb30c13))
+* make modalAriaLabel optional prop ([e1c99c5](https://github.com/uswitch/trustyle/commit/e1c99c5))
+* rename phoneNumber type and add aria label ([26ac4d2](https://github.com/uswitch/trustyle/commit/26ac4d2))
+
+
+
+
+
 # 0.1.0 (2021-05-05)
 
 

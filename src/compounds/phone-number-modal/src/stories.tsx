@@ -1,7 +1,6 @@
 /** @jsx jsx */
-import * as React from 'react'
+import React, { useState } from 'react'
 import { jsx } from 'theme-ui'
-import { text } from '@storybook/addon-knobs'
 
 import AllThemes from '../../../utils/all-themes'
 
@@ -11,54 +10,48 @@ export default {
   title: 'Compounds/PhoneNumberModal'
 }
 
-const ExampleLogoImage = text(
-  'optional additional image',
-  'https://placekitten.com/200/200?image=9'
-)
+const exampleAriaLabel = 'An example phone number modal'
 
-const ExampleLogoImageTag = text('optional additional image alt tag', 'Salman')
+const ExamplePhoneNumberWithoutUrl = {
+  phoneNumber: '0808 296 6568',
+  logoUrl: 'https://placekitten.com/200/200?image=9',
+  logoDescription: 'kitten',
+  termsAndConditions:
+    'Your calls may be recorded for monitoring purposes. You must be a UK resident aged 18+. Terms & Conditions apply. Please see our General Lending Criteria.',
+  complianceText: [
+    'An early repayment charge applies during any fixed or discount rate period.',
+    'Your home may be repossessed if you do not keep up repayments on your mortgage.'
+  ],
+  openingTimes: [
+    'Lines are open:',
+    'Monday to Saturday: 8am-8pm',
+    'Sunday: 9am-8pm'
+  ]
+}
 
-const ExamplePhoneNumber = text('example phone number', '0808 296 6568')
+const ExamplePhoneNumberWithUrl = {
+  url: 'https://www.money.co.uk/',
+  ...ExamplePhoneNumberWithoutUrl
+}
 
-const ExampleOpeningTimes = (
-  <div>
-    <h5>Lines are open:</h5>
-    <p>Monday to Saturday: 8am-8pm</p>
-    <p>Sunday: 9am-8pm</p>
-  </div>
-)
+export const ExampleWithUrl = () => {
+  const [isOpen, setStateIsOpen] = useState(false)
+  const openModal = () => {
+    setStateIsOpen(true)
+  }
 
-const ExampleTermsAndConditions = text(
-  'example terms and conditions',
-  'Your calls may be recorded for monitoring purposes. You must be a UK resident aged 18+. Terms & Conditions apply. Please see our General Lending Criteria.'
-)
-
-const ExampleUrl = text('example url', 'https://www.money.co.uk/')
-
-const ExampleComplianceText = (
-  <div>
-    <p>
-      An early repayment charge applies during any fixed or discount rate
-      period.
-    </p>
-    <p sx={{ fontWeight: 'bold' }}>
-      Your home may be repossessed if you do not keep up repayments on your
-      mortgage.
-    </p>
-  </div>
-)
-
-export const ExampleWithUrl = () => (
-  <PhoneNumberModal
-    logo={ExampleLogoImage}
-    logoDescription={ExampleLogoImageTag}
-    phoneNumber={ExamplePhoneNumber}
-    openingTimes={ExampleOpeningTimes}
-    termsAndConditions={ExampleTermsAndConditions}
-    url={ExampleUrl}
-    complianceText={ExampleComplianceText}
-  />
-)
+  return (
+    <React.Fragment>
+      <button onClick={openModal}>Open Modal</button>
+      <PhoneNumberModal
+        phoneNumberModalInfo={ExamplePhoneNumberWithUrl}
+        isOpen={isOpen}
+        modalAriaLabel={exampleAriaLabel}
+        setStateClosed={() => setStateIsOpen(false)}
+      />
+    </React.Fragment>
+  )
+}
 
 ExampleWithUrl.story = {
   parameters: {
@@ -66,16 +59,24 @@ ExampleWithUrl.story = {
   }
 }
 
-export const ExampleWithoutUrl = () => (
-  <PhoneNumberModal
-    logo={ExampleLogoImage}
-    logoDescription={ExampleLogoImageTag}
-    phoneNumber={ExamplePhoneNumber}
-    openingTimes={ExampleOpeningTimes}
-    termsAndConditions={ExampleTermsAndConditions}
-    complianceText={ExampleComplianceText}
-  />
-)
+export const ExampleWithoutUrl = () => {
+  const [isOpen, setStateIsOpen] = useState(false)
+  const openModal = () => {
+    setStateIsOpen(true)
+  }
+
+  return (
+    <React.Fragment>
+      <button onClick={openModal}>Open Modal</button>
+      <PhoneNumberModal
+        phoneNumberModalInfo={ExamplePhoneNumberWithoutUrl}
+        isOpen={isOpen}
+        modalAriaLabel={exampleAriaLabel}
+        setStateClosed={() => setStateIsOpen(false)}
+      />
+    </React.Fragment>
+  )
+}
 
 ExampleWithoutUrl.story = {
   parameters: {
