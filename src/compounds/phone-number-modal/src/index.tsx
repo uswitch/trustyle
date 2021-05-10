@@ -18,7 +18,7 @@ interface PhoneNumberModalInfo {
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   phoneNumberModalInfo: PhoneNumberModalInfo
-  imageCritical?: boolean
+  logoImageCritical?: boolean
   isOpen: boolean
   modalAriaLabel: string
   setStateClosed: setStateClosed
@@ -26,7 +26,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 
 const PhoneNumberModal: React.FC<Props> = ({
   phoneNumberModalInfo,
-  imageCritical = true,
+  logoImageCritical = true,
   isOpen,
   modalAriaLabel,
   setStateClosed
@@ -51,14 +51,7 @@ const PhoneNumberModal: React.FC<Props> = ({
 
   if (isOpen) {
     return (
-      <Modal
-        ariaLabel={modalAriaLabel}
-        onClose={setStateClosed}
-        focusLockProps={{
-          whiteList: node =>
-            document.getElementById('app')?.contains(node) ?? false
-        }}
-      >
+      <Modal ariaLabel={modalAriaLabel} onClose={setStateClosed}>
         <div
           sx={{
             display: 'flex',
@@ -94,7 +87,7 @@ const PhoneNumberModal: React.FC<Props> = ({
               imgixParams={{
                 fit: 'fillmax'
               }}
-              critical={imageCritical}
+              critical={logoImageCritical}
             />
             <div sx={{ marginLeft: ['0', 'xs'] }}>
               <div
@@ -112,6 +105,8 @@ const PhoneNumberModal: React.FC<Props> = ({
                   sx={{
                     display: ['inline-block', 'none']
                   }}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {phoneNumberModalInfo.phoneNumber}
                 </a>
@@ -150,8 +145,14 @@ const PhoneNumberModal: React.FC<Props> = ({
               }}
             >
               <p>
-                or to apply online visit{' '}
-                <a href={phoneNumberModalInfo.url}>our site</a>
+                or to apply online visit
+                <a
+                  href={phoneNumberModalInfo.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  our site
+                </a>
               </p>
             </div>
           )}
