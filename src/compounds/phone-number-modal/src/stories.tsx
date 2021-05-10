@@ -10,6 +10,8 @@ export default {
   title: 'Compounds/PhoneNumberModal'
 }
 
+const exampleAriaLabel = 'An example phone number modal'
+
 const ExamplePhoneNumberWithoutUrl = {
   phoneNumber: '0808 296 6568',
   logoUrl: 'https://placekitten.com/200/200?image=9',
@@ -42,8 +44,9 @@ export const ExampleWithUrl = () => {
     <React.Fragment>
       <button onClick={openModal}>Open Modal</button>
       <PhoneNumberModal
-        phoneNumber={ExamplePhoneNumberWithUrl}
+        phoneNumberModalInfo={ExamplePhoneNumberWithUrl}
         isOpen={isOpen}
+        modalAriaLabel={exampleAriaLabel}
         setStateClosed={() => setStateIsOpen(false)}
       />
     </React.Fragment>
@@ -66,8 +69,9 @@ export const ExampleWithoutUrl = () => {
     <React.Fragment>
       <button onClick={openModal}>Open Modal</button>
       <PhoneNumberModal
-        phoneNumber={ExamplePhoneNumberWithoutUrl}
+        phoneNumberModalInfo={ExamplePhoneNumberWithoutUrl}
         isOpen={isOpen}
+        modalAriaLabel={exampleAriaLabel}
         setStateClosed={() => setStateIsOpen(false)}
       />
     </React.Fragment>

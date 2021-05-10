@@ -6,7 +6,7 @@ import Modal from '@uswitch/trustyle.modal'
 
 type setStateClosed = () => void
 
-interface PhoneNumber {
+interface PhoneNumberModalInfo {
   phoneNumber: string
   logoUrl: string
   logoDescription: string
@@ -17,36 +17,42 @@ interface PhoneNumber {
 }
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  phoneNumber: PhoneNumber
+  phoneNumberModalInfo: PhoneNumberModalInfo
   imageCritical?: boolean
   isOpen: boolean
+  modalAriaLabel: string
   setStateClosed: setStateClosed
 }
 
 const PhoneNumberModal: React.FC<Props> = ({
-  phoneNumber,
+  phoneNumberModalInfo,
   imageCritical = true,
   isOpen,
+  modalAriaLabel,
   setStateClosed
 }) => {
-  const complianceTextElements = phoneNumber.complianceText.map((text, i) => {
-    return (
-      <p
-        key={`compliance_text_${i}`}
-        sx={{
-          fontWeight:
-            i === phoneNumber.complianceText.length - 1 ? 'bolder' : 'base'
-        }}
-      >
-        {text}
-      </p>
-    )
-  })
+  const complianceTextElements = phoneNumberModalInfo.complianceText.map(
+    (text, i) => {
+      return (
+        <p
+          key={`compliance_text_${i}`}
+          sx={{
+            fontWeight:
+              i === phoneNumberModalInfo.complianceText.length - 1
+                ? 'bolder'
+                : 'base'
+          }}
+        >
+          {text}
+        </p>
+      )
+    }
+  )
 
   if (isOpen) {
     return (
       <Modal
-        ariaLabel="An example modal element"
+        ariaLabel={modalAriaLabel}
         onClose={setStateClosed}
         focusLockProps={{
           whiteList: node =>
@@ -75,8 +81,8 @@ const PhoneNumberModal: React.FC<Props> = ({
             }}
           >
             <ImgixImage
-              src={phoneNumber.logoUrl}
-              alt={phoneNumber.logoDescription}
+              src={phoneNumberModalInfo.logoUrl}
+              alt={phoneNumberModalInfo.logoDescription}
               sx={{
                 width: 'auto',
                 maxWidth: '100%',
@@ -99,43 +105,43 @@ const PhoneNumberModal: React.FC<Props> = ({
               >
                 <h3>For more information call</h3>
                 <p sx={{ display: ['none', 'inline-block'] }}>
-                  {phoneNumber.phoneNumber}
+                  {phoneNumberModalInfo.phoneNumber}
                 </p>
                 <a
-                  href={`tel:${phoneNumber.phoneNumber}`}
+                  href={`tel:${phoneNumberModalInfo.phoneNumber}`}
                   sx={{
                     display: ['inline-block', 'none']
                   }}
                 >
-                  {phoneNumber.phoneNumber}
+                  {phoneNumberModalInfo.phoneNumber}
                 </a>
               </div>
-              {phoneNumber.openingTimes && (
+              {phoneNumberModalInfo.openingTimes && (
                 <div
                   sx={{
                     textAlign: 'left',
                     variant: 'compounds.phone-number-modal.opening-times'
                   }}
                 >
-                  <h5>{phoneNumber.openingTimes[0]}</h5>
-                  {phoneNumber.openingTimes.slice(1).map((line, i) => (
+                  <h5>{phoneNumberModalInfo.openingTimes[0]}</h5>
+                  {phoneNumberModalInfo.openingTimes.slice(1).map((line, i) => (
                     <p key={`opening_times_${i}`}>{line}</p>
                   ))}
                 </div>
               )}
             </div>
           </div>
-          {phoneNumber.termsAndConditions && (
+          {phoneNumberModalInfo.termsAndConditions && (
             <div
               sx={{
                 marginBottom: ['0', 'xs'],
                 variant: 'compounds.phone-number-modal'
               }}
             >
-              <p>{phoneNumber.termsAndConditions}</p>
+              <p>{phoneNumberModalInfo.termsAndConditions}</p>
             </div>
           )}
-          {phoneNumber.url && (
+          {phoneNumberModalInfo.url && (
             <div
               sx={{
                 textAlign: 'center',
@@ -144,7 +150,8 @@ const PhoneNumberModal: React.FC<Props> = ({
               }}
             >
               <p>
-                or to apply online visit <a href={phoneNumber.url}>our site</a>
+                or to apply online visit{' '}
+                <a href={phoneNumberModalInfo.url}>our site</a>
               </p>
             </div>
           )}
