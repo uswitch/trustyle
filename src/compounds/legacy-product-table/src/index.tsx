@@ -196,7 +196,8 @@ export const DataCell: React.FC<DataCellProps> = ({
         sx={{
           display: 'flex',
           justifyContent: 'center',
-          padding: '5px'
+          padding: '5px',
+          flexDirection: 'column'
         }}
       >
         {children}
