@@ -1365,8 +1365,9 @@
         "paddingLeft": 0,
         "width": "100%",
         "userSelect": "none",
+        "backgroundColor": "grey-0",
         "&::before": {
-          "borderRadius": "50%",
+          "borderRadius": "2px",
           "borderStyle": "solid",
           "borderWidth": "2px",
           "content": "' '",
@@ -1389,6 +1390,7 @@
         "paddingLeft": 0,
         "width": "100%",
         "userSelect": "none",
+        "backgroundColor": "grey-0",
         "&::before": {
           "borderRadius": "50%",
           "borderStyle": "solid",
@@ -1449,6 +1451,88 @@
     },
     "form": {
       "variants": {
+        "field-section": {
+          "wrapper": {
+            "variants": {
+              "calculator": {
+                "marginTop": "xs"
+              }
+            }
+          },
+          "label": {
+            "variants": {
+              "calculator": {
+                "marginBottom": "xs",
+                "color": "grey-80",
+                "fontWeight": "700"
+              }
+            }
+          },
+          "input": {
+            "checkbox": {
+              "wrapper": {
+                "variant": "elements.form.variants.field-section.input.wrapper",
+                "flex": "1 0 100%"
+              }
+            },
+            "radio": {
+              "wrapper": {
+                "variant": "elements.form.variants.field-section.input.wrapper",
+                "flex": "1 0 100%"
+              }
+            },
+            "wrapper": {
+              "flex": "1 0 25%",
+              "marginX": "md",
+              "marginBottom": "xl"
+            }
+          },
+          "checkbox": {
+            "wrapper": {
+              "variants": {
+                "calculator": {
+                  "marginTop": "xs",
+                  "display": "flex",
+                  "flex-wrap": "wrap",
+                  ">:nth-child(3n+1)": {
+                    "marginLeft": 0
+                  }
+                }
+              }
+            },
+            "span": {
+              "variants": {
+                "calculator": {
+                  "flex": "0 0 25%",
+                  "marginX": "md"
+                }
+              }
+            }
+          },
+          "simple-radio": {
+            "radioWrapper": {
+              "variants": {
+                "calculator": {
+                  "marginTop": "xs",
+                  "display": "flex",
+                  "flex-wrap": "wrap",
+                  ">:nth-child(3n+1)": {
+                    "marginLeft": 0
+                  }
+                }
+              } 
+            },
+            "span": {
+              "variants": {
+                "calculator": {
+                  "flex": "0 0 25%",
+                  "marginX": "md",
+                  "marginBottom": "md"
+                }
+              }
+            }
+          }
+        },
         "default": {
           "simple-radio": {
             "radioWrapper": {
@@ -1581,6 +1665,24 @@
       }
     },
     "form-section": {
+      "panel": {
+        "states": {
+          "isActive": {
+            "fields": {
+              "calculator": {
+                "display": "flex",
+                "flex-wrap": "wrap"
+              }
+            },
+            "buttonWrapper": {
+              "calculator": {
+                "display": "flex",
+                "justify-content": "center"
+              }
+            }
+          }
+        }
+      },
       "default": {
         "elements": {
           "wrapper": {
@@ -1747,6 +1849,23 @@
       }
     },
     "calculator": {
+      "panel": {
+        "title": {
+          "variant": "styles.h3",
+          "textAlign": "center",
+          "width": "50%",
+          "marginBottom": "lg",
+          "marginX": "auto",
+          "color": "plum"
+        },
+        "container": {
+          "marginY": 0,
+          "padding": "md",
+          "paddingX": "xxl",
+          "backgroundColor": "grey-05",
+          "borderRadius": 3
+        }
+      },
       "wrapper": {
         "mx": ["0px", "300px"]
       },
