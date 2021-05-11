@@ -159,7 +159,8 @@
     "quick-link-bg": "#F1F1F3",
     "dark-grey-03": "rgba(104,104,135,0.3)",
     "opaque-plum-01": "rgba(146, 73, 139, 0.1)",
-    "opaque-white-01": "rgba(255, 255, 255, 0.7)"
+    "opaque-white-01": "rgba(255, 255, 255, 0.7)",
+    "overlay-bg": "rgba(20, 20, 36, 0.5)"
   },
   "radii": {
     "sm": 3,
@@ -935,6 +936,40 @@
       "alertColor": "none",
       "before": {
         "content": "none"
+      }
+    },
+    "overlay": {
+      "backgroundColor": "overlay-bg"
+    },
+    "modal": {
+      "base": {
+        "backgroundColor": "#FFFFFF"
+      },
+      "variants": {
+        "full": {
+          "variant": "elements.modal.base",
+          "maxWidth": ["none", "30em", "38em"],
+          "margin": ["auto", "100px auto"],
+          "flexGrow": [1, 0]
+        },
+        "partial": {
+          "variant": "elements.modal.base",
+          "maxWidth": ["none", "30em", "38em"],
+          "margin": ["auto", "100px auto"],
+          "flexGrow": "0"
+        }
+      },
+      "closeIcon": {
+        "width": "24px",
+        "height": "24px",
+        "color": "link-2"
+      },
+      "closeButton": {
+        "backgroundColor": "#FFFFFF",
+        "border": 0,
+        "cursor": "pointer",
+        "lineHeight": 0,
+        "padding": "xs"
       }
     },
     "simple-input": {
@@ -2343,8 +2378,11 @@
     },
     "phone-number-modal": {
       "logo-area": {
-        "h1,h2,h3,h4,h5,h6,p": {
+        "h1,h2,h3,h4,h5,h6": {
           "marginBottom": "0"
+        },
+        "p": {
+          "marginY": "0"
         }
       },
       "phone-number": {
@@ -2358,7 +2396,8 @@
       },
       "p": {
         "fontSize": "sm",
-        "lineHeight": "150%"
+        "lineHeight": "150%",
+        "marginBottom": "0"
       },
       "url": {
         "fontSize": "md",
