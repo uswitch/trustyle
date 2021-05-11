@@ -1,18 +1,22 @@
 {
   "name": "@uswitch/trustyle.cta",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uswitch/trustyle"
+  },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle-utils.get": "^1.0.9",
-    "@uswitch/trustyle.button-link": "^3.2.4"
+    "@uswitch/trustyle-utils.get": "^1.0.10",
+    "@uswitch/trustyle.button-link": "^3.2.5"
   }
 }

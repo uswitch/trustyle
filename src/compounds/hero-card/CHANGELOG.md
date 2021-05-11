@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.24](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero-card@2.0.23...@uswitch/trustyle.hero-card@2.0.24) (2021-04-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.hero-card
+
+
+
+
+
 ## [2.0.23](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero-card@2.0.22...@uswitch/trustyle.hero-card@2.0.23) (2021-04-21)
 
 **Note:** Version bump only for package @uswitch/trustyle.hero-card

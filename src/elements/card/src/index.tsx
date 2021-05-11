@@ -79,7 +79,6 @@ const Card: React.FC<Props> = ({
     <ButtonLink
       variant="primary-journey"
       href={linkHref}
-      target="_blank"
       afterIcon={linkIcon}
       onClick={onClick}
     >

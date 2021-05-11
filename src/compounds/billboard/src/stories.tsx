@@ -42,9 +42,6 @@ const breadcrumbs = (
   <Breadcrumbs
     crumbs={crumbs}
     title="Understanding energy bills and electricity bills - FAQs and more"
-    sx={{
-      pt: 16
-    }}
   />
 )
 

@@ -1086,6 +1086,20 @@
           "button": {
             "variant": "elements.cta.base.button"
           }
+        },
+        "billboard": {
+          "main": {
+            "backgroundColor": "white"
+          },
+          "title": {
+            "variant": "elements.cta.base.title"
+          },
+          "text": {
+            "variant": "elements.cta.base.text"
+          },
+          "button": {
+            "variant": "elements.cta.base.button"
+          }
         }
       }
     },
@@ -1606,6 +1620,77 @@
               }
             }
           }
+        },
+        "simple": {
+          "simple-radio": {
+            "radioWrapper": {
+              "display": "flex",
+              "flexDirection": ["column", "row"],
+              "div": {
+                "display": "flex",
+                "flex": "1 1 0"
+              },
+              "label": {
+                "display": "flex",
+                "mr": 0
+              },
+              "> div+div": {
+                "ml": [0, "sm"],
+                "mt": ["sm", 0]
+              }
+            }
+          },
+          "label": {
+            "variant": "styles.h4",
+            "fontWeight": "bold",
+            "color": "grey-80",
+            "display": "block",
+            "mb": "xs",
+            "textAlign": "left",
+            "variants": {
+              "calculator": {
+                "variant": "styles.h6",
+                "fontWeight": "bold",
+                "color": "grey-80",
+                "display": "block",
+                "mb": "xs",
+                "mt": "xl"
+              }
+            }
+          },
+          "description": {
+            "color": "grey-80",
+            "display": "block",
+            "textAlign": "left",
+            "my": "xxs"
+          },
+          "input": {
+            "wrapper": {
+              "mb": "sm",
+              ":last-child": {
+                "mb": 36
+              }
+            },
+            "error": {
+              "color": "error",
+              "mt": "xs",
+              "textAlign": "left",
+              "title": {
+                "fontWeight": "bold",
+                "mb": "xxs"
+              }
+            }
+          },
+          "wrapper": {
+            "base": {
+              "pb": 0
+            },
+            "variants": {
+              "calculator": {
+                "pb": ["xs", 0]
+              }
+            }
+          }
         }
       },
       "button": {
@@ -1661,6 +1746,10 @@
         "with-icon": {
           "display": "flex",
           "alignItems": "center"
+        },
+        "billboard": {
+          "variant": "elements.rich-text-block.variants.center",
+          "color": "grey-0"
         }
       }
     },
@@ -2335,7 +2424,15 @@
     },
     "billboard": {
       "wrapper": {
-        "backgroundColor": "plum"
+        "background": "linear-gradient(172deg, #924A8B 28%, #AF4C83 100%)"
+      },
+      "sizes": {
+        "gutter": "sm",
+        "verticalGutter": ["sm", "md", "md"]
+      },
+      "container": {
+        "maxWidth": 1152,
+        "mx": "auto"
       },
       "primaryContent": {
         "color": "grey-0",
@@ -2346,6 +2443,58 @@
         },
         "p": {
           "fontSize": ["sm", "md"]
+        }
+      },
+      "primaryContentOnly": {
+        "variant": "compounds.billboard.primaryContent",
+        "width": ["auto", "60%"]
+      },
+      "withPrimarySlot": {
+        "variant": "compounds.billboard.primaryContent",
+        "width": ["auto", "50%"]
+      },
+      "primarySlot": {
+        "h1,h2,h3,h4,h5,h6": {
+          "color": "grey-80"
+        },
+        "width": ["auto", "50%"]
+      }
+    },
+    "phone-number-modal": {
+      "logo-area": {
+        "h1,h2,h3,h4,h5,h6,p": {
+          "marginBottom": "0"
+        }
+      },
+      "phone-number": {
+        "fontSize": ["lg", "xl"],
+        "lineHeight": "120%",
+        "fontWeight": "bolder"
+      },
+      "opening-times": {
+        "fontSize": "sm",
+        "lineHeight": "130%"
+      },
+      "p": {
+        "fontSize": "sm",
+        "lineHeight": "150%"
+      },
+      "url": {
+        "fontSize": "md",
+        "fontWeight": "bold",
+        "lineHeight": "120%",
+        "p": {
+          "color": "plum"
+        },
+        "a": {
+          "color": "grey-80"
+        }
+      },
+      "compliance-text": {
+        "backgroundColor": "grey-10",
+        "p": {
+          "variant": "compounds.phone-number-modal.p",
+          "marginX": "xs"
         }
       }
     },

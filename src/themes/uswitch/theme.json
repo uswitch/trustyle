@@ -1591,6 +1591,15 @@
           "button": {
             "variant": "elements.cta.base.button"
           }
+        },
+        "billboard": {
+          "main": {
+            "variant": "elements.cta.variants.hero.main",
+            "backgroundColor": "light-1"
+          },
+          "button": {
+            "variant": "elements.cta.base.button"
+          }
         }
       }
     },
@@ -1879,7 +1888,7 @@
           "justifyContent": "flex-end",
           "textAlign": "left",
           "minHeight": ["100px", "289px", "289px"],
-          "maxWidth": ["313px", "289px", "289px"],
+          "width": ["313px", "289px", "289px"],
           "margin": "auto",
           "border": "1px solid",
           "borderColor": "grey-10",
@@ -2854,7 +2863,8 @@
             },
             "heading": {
               "opacity": 1,
-              "px": ["sm", "xxxl", "xxxl"],
+              "pr": ["sm", "xxxl", "xxxl"],
+              "pl": ["sm", "xxl", "xxxl"],
               "mr": 0,
               "mt": 0,
               "alignItems": "left",
@@ -2975,6 +2985,14 @@
       "wrapper": {
         "backgroundColor": "blue-75"
       },
+      "sizes": {
+        "verticalGutter": "md",
+        "gutter": "gutter"
+      },
+      "container": {
+        "maxWidth": 1200,
+        "mx": "auto"
+      },
       "primaryContent": {
         "color": "primary",
         "paddingTop": ["auto", "sm"],
@@ -2985,6 +3003,16 @@
         "p": {
           "fontSize": ["xs", "sm"]
         }
+      }
+    },
+    "phone-number-modal": {
+      "logo-area": {
+        "h1,h2,h3,h4,h5,h6,p": {
+          "marginBottom": "0"
+        }
+      },
+      "compliance-text": {
+        "backgroundColor": "grey-10"
       }
     },
     "container": {
@@ -3994,6 +4022,7 @@
           "minWidth": ["100%", "98%"],
           "textAlign": "left",
           "flexDirection": "column",
+          "bg": "grey-0",
           "div": {
             "justifyContent": "space-between"
           },
@@ -4011,7 +4040,10 @@
               "fontSize": ["md", "lg", "xl"],
               "lineHeight": "1.14",
               "textDecoration": "none",
-              "border": "none"
+              "border": "none",
+              "&:hover": {
+                "color": "primary"
+              }
             }
           },
 
@@ -4031,7 +4063,7 @@
         "solid": {
           "variant": "compounds.card.base",
           "img": {
-            "height": "197px",
+            "height": ["auto", "197px", "197px"],
             "width": "100%"
           },
           "a": {
@@ -4043,8 +4075,9 @@
             "mt": "sm",
             "mb": "30px",
             "color": "primary",
+            "lineHeight": [2, 2, "base"],
             "a": {
-              "borderBottom": "1px solid #141424",
+              "borderBottom": "2px solid #142424",
               "fontSize": "md",
               "fontWeight": "xxbold",
               "pb": "xs"

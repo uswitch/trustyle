@@ -1,10 +1,14 @@
 {
   "name": "@uswitch/trustyle.funnel-progress",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uswitch/trustyle"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.testimonial-card@0.2.15...@uswitch/trustyle.testimonial-card@0.2.16) (2021-04-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.testimonial-card
+
+
+
+
+
 ## [0.2.15](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.testimonial-card@0.2.14...@uswitch/trustyle.testimonial-card@0.2.15) (2021-04-21)
 
 **Note:** Version bump only for package @uswitch/trustyle.testimonial-card

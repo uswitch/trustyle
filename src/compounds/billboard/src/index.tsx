@@ -24,58 +24,71 @@ const Billboard: React.FC<Props> = ({
         sx={{ overflow: 'hidden', variant: 'compounds.billboard.wrapper' }}
         px={{ backgroundColor: 'backgroundColor' }}
       >
-        <div
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            paddingX: ['sm', 'xxxl'],
-            variant: 'compounds.billboard'
-          }}
-        >
-          {breadcrumbs && (
-            <div sx={{ paddingTop: ['xs', '0'] }}>
-              {React.cloneElement(breadcrumbs, { variant: 'billboard' })}
-            </div>
-          )}
+        <div sx={{ variant: 'compounds.billboard.container' }}>
           <div
             sx={{
               display: 'flex',
-              flexDirection: ['column', 'row'],
-              paddingTop: ['xxs', primarySlot ? 'md' : 'auto'],
-              marginBottom:
-                primarySlot || !fullWidthSlot ? ['lg', 'xxl'] : ['auto', 'xs'],
-              textAlign: primarySlot ? 'auto' : 'center',
-              width: primarySlot ? 'auto' : ['auto', '75%'],
-              marginX: 'auto'
+              flexDirection: 'column',
+              paddingX: 'sm',
+              paddingTop: 'sm',
+              variant: 'compounds.billboard'
             }}
           >
+            {breadcrumbs && (
+              <div sx={{ paddingTop: ['xs', '0'] }}>
+                {React.cloneElement(breadcrumbs, { variant: 'billboard' })}
+              </div>
+            )}
             <div
               sx={{
-                paddingRight: primarySlot ? ['auto', 'xxl'] : 'auto',
-                alignSelf: 'center',
-                variant: 'compounds.billboard.primaryContent'
+                display: 'flex',
+                flexDirection: ['column', 'row'],
+                paddingTop: ['xxs', primarySlot ? 'md' : 'auto'],
+                marginBottom:
+                  primarySlot || !fullWidthSlot
+                    ? ['lg', 'xxl']
+                    : ['auto', 'xs'],
+                textAlign: primarySlot ? 'auto' : 'center',
+                width: primarySlot ? 'auto' : ['auto', '100%'],
+                marginX: 'auto'
               }}
             >
-              {primaryContent}
-            </div>
-            {primarySlot && (
               <div
-                sx={{ paddingLeft: ['auto', 'xxl'], marginTop: ['sm', 'xxs'] }}
+                sx={{
+                  paddingRight: primarySlot ? ['auto', 'xxl'] : 'auto',
+                  alignSelf: 'center',
+                  variant: primarySlot
+                    ? 'compounds.billboard.withPrimarySlot'
+                    : 'compounds.billboard.primaryContentOnly',
+                  margin: 'auto'
+                }}
               >
-                {primarySlot}
+                {primaryContent}
+              </div>
+              {primarySlot && (
+                <div
+                  sx={{
+                    paddingLeft: ['auto', 'xxl'],
+                    marginTop: ['sm', 'xxs'],
+                    variant: 'compounds.billboard.primarySlot',
+                    alignSelf: 'center'
+                  }}
+                >
+                  {React.cloneElement(primarySlot, { variant: 'billboard' })}
+                </div>
+              )}
+            </div>
+            {fullWidthSlot && (
+              <div
+                sx={{
+                  marginTop: primarySlot ? 'xxs' : 'xs',
+                  marginBottom: ['lg', 'xxl']
+                }}
+              >
+                {fullWidthSlot}
               </div>
             )}
           </div>
-          {fullWidthSlot && (
-            <div
-              sx={{
-                marginTop: primarySlot ? 'xxs' : 'xs',
-                marginBottom: ['lg', 'xxl']
-              }}
-            >
-              {fullWidthSlot}
-            </div>
-          )}
         </div>
       </Palette>
     </div>

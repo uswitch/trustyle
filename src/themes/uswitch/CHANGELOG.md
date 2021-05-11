@@ -3,6 +3,90 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.45.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.9...@uswitch/trustyle.uswitch-theme@2.45.10) (2021-05-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.45.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.8...@uswitch/trustyle.uswitch-theme@2.45.9) (2021-05-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.45.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.7...@uswitch/trustyle.uswitch-theme@2.45.8) (2021-04-30)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.45.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.6...@uswitch/trustyle.uswitch-theme@2.45.7) (2021-04-29)
+
+
+### Bug Fixes
+
+* restyled width and color for primary slot ([1752c96](https://github.com/uswitch/trustyle/commit/1752c96))
+
+
+
+
+
+## [2.45.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.5...@uswitch/trustyle.uswitch-theme@2.45.6) (2021-04-29)
+
+
+### Bug Fixes
+
+* changed spacing and font color ([d169be2](https://github.com/uswitch/trustyle/commit/d169be2))
+
+
+
+
+
+## [2.45.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.4...@uswitch/trustyle.uswitch-theme@2.45.5) (2021-04-28)
+
+
+### Bug Fixes
+
+* form heading padding left on tablet ([d77b6bc](https://github.com/uswitch/trustyle/commit/d77b6bc))
+
+
+
+
+
+## [2.45.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.3...@uswitch/trustyle.uswitch-theme@2.45.4) (2021-04-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.45.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.2...@uswitch/trustyle.uswitch-theme@2.45.3) (2021-04-26)
+
+
+### Bug Fixes
+
+* update solid variant border bottom ([359de6c](https://github.com/uswitch/trustyle/commit/359de6c))
+
+
+
+
+
+## [2.45.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.1...@uswitch/trustyle.uswitch-theme@2.45.2) (2021-04-26)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
 ## [2.45.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.0...@uswitch/trustyle.uswitch-theme@2.45.1) (2021-04-23)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
