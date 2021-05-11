@@ -611,6 +611,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   clickableRow?: string
   moreInformationButton?: React.ReactNode
   moreInformationLabel?: string
+  onLinkClick?: () => void
   onRowClick?: () => void
   disabled?: boolean
   badges?: string[]
@@ -626,6 +627,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   moreInformationLabel,
   clickableRow,
   moreInformationButton,
+  onLinkClick,
   onRowClick,
   disabled,
   badges = [],
@@ -653,6 +655,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
     >
       <RowWrapper
         link={clickableRow}
+        onLinkClick={onLinkClick}
         onRowClick={onRowClick}
         disabled={disabled}
       >
