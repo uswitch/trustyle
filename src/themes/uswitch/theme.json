@@ -3009,20 +3009,36 @@
       "text": {
         "variant": "styles.p",
         "fontSize": "sm",
-        "lineHeight": "150%",
+        "lineHeight": "base",
         "fontFamily": "base"
+      },
+      "heading": {
+        "variant": "compounds.phone-number-modal.text"
       },
       "logo-area-text": {
         "fontSize": "lg",
-        "lineHeight": "120%",
+        "lineHeight": "base",
         "fontFamily": "heading",
         "fontWeight": "bolder"
+      },
+      "logo-area-heading": {
+        "variant": "compounds.phone-number-modal.logo-area-text"
+      },
+      "a": {
+        "variant": "styles.a",
+        "color": "grey-80",
+        "logo-area": {
+          "variant": "compounds.phone-number-modal.logo-area-text"
+        },
+        "url": {
+          "variant": "compounds.phone-number-modal.text"
+        }
       },
       "url": {
         "fontSize": "md",
         "fontWeight": "bold",
         "fontFamily": "base",
-        "lineHeight": "120%"
+        "lineHeight": "heading"
       }
     },
     "container": {

@@ -104,8 +104,8 @@ const PhoneNumberModal: React.FC<Props> = ({
             <div sx={{ marginBottom: 'sm' }}>
               <h4
                 sx={{
-                  marginBottom: '0',
-                  variant: 'compounds.phone-number-modal.logo-area-text'
+                  variant: 'compounds.phone-number-modal.logo-area-heading',
+                  marginY: '0'
                 }}
               >
                 For more information call
@@ -124,7 +124,7 @@ const PhoneNumberModal: React.FC<Props> = ({
                 sx={{
                   display: ['inline-block', 'none'],
                   marginY: '0',
-                  variant: 'compounds.phone-number-modal.logo-area-text'
+                  variant: 'compounds.phone-number-modal.a.logo-area'
                 }}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -134,7 +134,12 @@ const PhoneNumberModal: React.FC<Props> = ({
             </div>
             {phoneNumberModalInfo.openingTimes && (
               <div sx={{ textAlign: 'left' }}>
-                <h5 sx={{ marginBottom: '0' }}>
+                <h5
+                  sx={{
+                    variant: 'compounds.phone-number-modal.heading',
+                    marginBottom: '0'
+                  }}
+                >
                   {phoneNumberModalInfo.openingTimes[0]}
                 </h5>
                 {openingTimesInfo}
@@ -162,7 +167,7 @@ const PhoneNumberModal: React.FC<Props> = ({
             <p>
               or to apply online visit&nbsp;
               <a
-                sx={{ variant: 'compounds.phone-number-modal.a' }}
+                sx={{ variant: 'compounds.phone-number-modal.a.url' }}
                 href={phoneNumberModalInfo.url}
                 target="_blank"
                 rel="noopener noreferrer"

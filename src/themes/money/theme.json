@@ -2383,24 +2383,39 @@
       "text": {
         "variant": "styles.p",
         "fontSize": "sm",
-        "lineHeight": "150%",
+        "lineHeight": "base",
         "fontFamily": "base"
+      },
+      "heading": {
+        "variant": "compounds.phone-number-modal.text",
+        "color": "plum"
       },
       "logo-area-text": {
         "fontSize": "lg",
-        "lineHeight": "120%",
+        "lineHeight": "heading",
         "fontFamily": "heading",
         "fontWeight": "bolder"
       },
+      "logo-area-heading": {
+        "variant": "compounds.phone-number-modal.logo-area-text",
+        "color": "plum"
+      },
       "a": {
         "variant": "styles.a",
-        "color": "grey-80"
+        "logo-area": {
+          "variant": "compounds.phone-number-modal.logo-area-text",
+          "color": "grey-80"
+        },
+        "url": {
+          "variant": "compounds.phone-number-modal.text",
+          "color": "grey-80"
+        }
       },
       "url": {
         "fontSize": "md",
         "fontWeight": "bold",
         "fontFamily": "base",
-        "lineHeight": "120%",
+        "lineHeight": "heading",
         "p": {
           "color": "plum"
         }
