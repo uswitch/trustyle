@@ -3006,13 +3006,23 @@
       }
     },
     "phone-number-modal": {
-      "logo-area": {
-        "h1,h2,h3,h4,h5,h6,p": {
-          "marginBottom": "0"
-        }
+      "text": {
+        "variant": "styles.p",
+        "fontSize": "sm",
+        "lineHeight": "150%",
+        "fontFamily": "base"
       },
-      "compliance-text": {
-        "backgroundColor": "grey-10"
+      "logo-area-text": {
+        "fontSize": "lg",
+        "lineHeight": "120%",
+        "fontFamily": "heading",
+        "fontWeight": "bolder"
+      },
+      "url": {
+        "fontSize": "md",
+        "fontWeight": "bold",
+        "fontFamily": "base",
+        "lineHeight": "120%"
       }
     },
     "container": {

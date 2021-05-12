@@ -969,7 +969,10 @@
         "border": 0,
         "cursor": "pointer",
         "lineHeight": 0,
-        "padding": "xs"
+        "padding": "sm",
+        ":focus": {
+          "outline": "none"
+        }
       }
     },
     "simple-input": {
@@ -2377,44 +2380,29 @@
       }
     },
     "phone-number-modal": {
-      "logo-area": {
-        "h1,h2,h3,h4,h5,h6": {
-          "marginBottom": "0"
-        },
-        "p": {
-          "marginY": "0"
-        }
-      },
-      "phone-number": {
-        "fontSize": ["lg", "xl"],
-        "lineHeight": "120%",
-        "fontWeight": "bolder"
-      },
-      "opening-times": {
-        "fontSize": "sm",
-        "lineHeight": "130%"
-      },
-      "p": {
+      "text": {
+        "variant": "styles.p",
         "fontSize": "sm",
         "lineHeight": "150%",
-        "marginBottom": "0"
+        "fontFamily": "base"
+      },
+      "logo-area-text": {
+        "fontSize": "lg",
+        "lineHeight": "120%",
+        "fontFamily": "heading",
+        "fontWeight": "bolder"
+      },
+      "a": {
+        "variant": "styles.a",
+        "color": "grey-80"
       },
       "url": {
         "fontSize": "md",
         "fontWeight": "bold",
+        "fontFamily": "base",
         "lineHeight": "120%",
         "p": {
           "color": "plum"
-        },
-        "a": {
-          "color": "grey-80"
-        }
-      },
-      "compliance-text": {
-        "backgroundColor": "grey-10",
-        "p": {
-          "variant": "compounds.phone-number-modal.p",
-          "marginX": "xs"
         }
       }
     },
