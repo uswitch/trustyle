@@ -394,7 +394,7 @@
         },
         "centered": {
           "display": "inline-block",
-          "align-items": "center"
+          "alignItems": "center"
         },
         "centered-light": {
           "variant": "elements.sponsored-by-tag.variants.centered",
@@ -1366,7 +1366,7 @@
       "variants": {
         "quickLinks": {
           "display": "flex",
-          "flex-direction": "column",
+          "flexDirection": "column",
           "header": {
             "paddingY": ["sm", "md"]
           },
@@ -1545,7 +1545,7 @@
                 "calculator": {
                   "marginTop": "xs",
                   "display": "flex",
-                  "flex-wrap": "wrap",
+                  "flexWrap": "wrap",
                   ">:nth-child(3n+1)": {
                     "marginLeft": 0
                   }
@@ -1567,7 +1567,7 @@
                 "calculator": {
                   "marginTop": "xs",
                   "display": "flex",
-                  "flex-wrap": "wrap",
+                  "flexWrap": "wrap",
                   ">:nth-child(3n+1)": {
                     "marginLeft": 0
                   }
@@ -1798,13 +1798,13 @@
             "fields": {
               "calculator": {
                 "display": "flex",
-                "flex-wrap": "wrap"
+                "flexWrap": "wrap"
               }
             },
             "buttonWrapper": {
               "calculator": {
                 "display": "flex",
-                "justify-content": "center"
+                "justifyContent": "center"
               }
             }
           }
@@ -2047,7 +2047,7 @@
     "eligibility-criteria": {
       "base": {
         "height": "100%",
-        "box-sizing": "border-box",
+        "boxSizing": "border-box",
         "backgroundColor": "grey-0",
         "py": "lg",
         "px": "md"
@@ -2680,7 +2680,7 @@
             "padding": "0 15px",
             "bg": "#eaeced",
             "ul": {
-              "list-style": "none",
+              "listStyle": "none",
               "padding": 0,
               "a": {
                 "textDecoration": "none",
@@ -2701,7 +2701,7 @@
             },
             "p": {
               "color": "#858f95",
-              "padding-top": "10px"
+              "paddingTop": "10px"
             },
             "a": {
               "display": "block"
@@ -2890,7 +2890,7 @@
         "marginRight": "base",
         "meta": {
           "display": "flex",
-          "font-size": 14
+          "fontSize": 14
         },
         "superScript": {
           "mb": "xxs"
@@ -2901,8 +2901,8 @@
           "paddingX": "xs",
           "paddingY": "xxs",
           "mb": "xxs",
-          "font-weight": "bold",
-          "line-height": "150%",
+          "fontWeight": "bold",
+          "lineHeight": "150%",
           "borderRadius": 4
         }
       },
@@ -2938,7 +2938,7 @@
             "fontSize": [16, 18]
           },
           "meta": {
-            "flex-direction": "column",
+            "flexDirection": "column",
             "variant": "compounds.card.base.meta"
           },
           "content": {
@@ -3117,13 +3117,13 @@
     },
     "heroCard": {
       "variants": {
-        "flex-direction": ["column", "row"],
+        "flexDirection": ["column", "row"],
         "background": "linear-gradient(161.42deg, #924A8B 22.95%, #AF4C83 77.05%)",
-        "box-shadow": "0px 9px 19px rgba(92, 36, 87, 0.2)",
+        "boxShadow": "0px 9px 19px rgba(92, 36, 87, 0.2)",
         "paddingX": ["sm", "4xl"],
         "pt": ["md", "xxxl"],
         "pb": ["lg", "xxxl"],
-        "border-radius": ["4px", "8px"],
+        "borderRadius": ["4px", "8px"],
         "h1": {
           "color": "grey-0"
         },
@@ -3134,9 +3134,9 @@
           "width": ["initial", "50%"],
           "mr": [0, "4xl"],
           "display": ["flex"],
-          "flex-direction": "column",
-          "justify-content": "center",
-          "align-items": "flex-start"
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "alignItems": "flex-start"
         },
         "buttonLink": {
           "mt": ["sm", "xs"]
