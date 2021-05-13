@@ -943,7 +943,7 @@
     },
     "modal": {
       "base": {
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "grey-0"
       },
       "variants": {
         "full": {
@@ -965,7 +965,7 @@
         "color": "link-2"
       },
       "closeButton": {
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "grey-0",
         "border": 0,
         "cursor": "pointer",
         "lineHeight": 0,
