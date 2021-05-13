@@ -443,7 +443,7 @@
       "variants": {
         "left": {
           "main": {
-            "a:first-child": { "ml": 0 }
+            "a:first-of-type": { "ml": 0 }
           },
           "bio": {
             "width": ["100%", "75%", "60%"],
@@ -1752,7 +1752,7 @@
     },
     "rich-text-block": {
       "base": {
-        "&:first-child": {
+        "&:first-of-type": {
           "mt": 0
         }
       },
@@ -1832,13 +1832,13 @@
           },
           "fields": {
             "display": "none",
-            ">:first-child": {
+            ">:first-of-type": {
               "label": {
                 "mt": 0
               }
             },
             "calculator": {
-              ">:first-child": {
+              ">:first-of-type": {
                 "label": {
                   "mt": 0
                 }
@@ -1890,7 +1890,7 @@
             },
             "fields": {
               "display": "block",
-              ">:first-child": {
+              ">:first-of-type": {
                 "label": {
                   "mt": 0
                 }
@@ -2793,7 +2793,7 @@
             "top": "0",
             "height": "100%"
           },
-          ":first-child::before": {
+          ":first-of-type::before": {
             "top": "50%",
             "height": "50%"
           },
