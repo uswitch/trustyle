@@ -910,6 +910,17 @@
             "mb": "md"
           },
           "input": {
+            "checkbox": {
+              "wrapper": {
+                "variant": "elements.form.variants.journey.input.wrapper",
+                "flex": "1 0 100%"
+              }
+            },
+            "radio": {
+              "wrapper": {
+                "variant": "elements.form.variants.journey.input.wrapper"
+              }
+            },
             "wrapper": {
               "display": "flex",
               "px": ["sm", "xxl", "xxxl"],
@@ -925,6 +936,7 @@
               "top": "68px"
             }
           },
+
           "description": {
             "mt": 0,
             "fontSize": ["14px", "16px", "16px"],
