@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.48.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.48.3...@uswitch/trustyle.money-theme@1.48.4) (2021-05-13)
+
+
+### Bug Fixes
+
+* update first-child to first-of-type ([b5f0c8b](https://github.com/uswitch/trustyle/commit/b5f0c8b))
+* update kebab case to camel case in money theme ([d1828fa](https://github.com/uswitch/trustyle/commit/d1828fa))
+
+
+
+
+
 ## [1.48.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.48.2...@uswitch/trustyle.money-theme@1.48.3) (2021-05-13)
 
 

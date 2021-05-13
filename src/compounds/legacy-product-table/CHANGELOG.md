@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.2.7...@uswitch/trustyle.legacy-product-table@1.2.8) (2021-05-13)
+
+
+### Bug Fixes
+
+* update first-child to first-of-type ([b5f0c8b](https://github.com/uswitch/trustyle/commit/b5f0c8b))
+
+
+
+
+
 ## [1.2.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.2.6...@uswitch/trustyle.legacy-product-table@1.2.7) (2021-05-13)
 
 **Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
