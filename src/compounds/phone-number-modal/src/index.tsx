@@ -34,6 +34,7 @@ const PhoneNumberModal: React.FC<Props> = ({
           key={`compliance_text_${i}`}
           sx={{
             variant: 'compounds.phone-number-modal.text',
+            paddingX: ['0', 'xs'],
             fontWeight:
               i === phoneNumberModalInfo.complianceText.length - 1
                 ? 'bolder'
@@ -68,7 +69,7 @@ const PhoneNumberModal: React.FC<Props> = ({
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          paddingX: ['sm', 'xl'],
+          marginX: ['sm', 'xl'],
           paddingBottom: 'lg',
           marginBottom: ['0', 'xs']
         }}
@@ -182,8 +183,7 @@ const PhoneNumberModal: React.FC<Props> = ({
             textAlign: 'center',
             paddingTop: 'sm',
             paddingX: ['sm', 'lg'],
-            backgroundColor: 'grey-10',
-            marginX: 'xs'
+            backgroundColor: 'grey-10'
           }}
         >
           {complianceTextElements}
