@@ -3018,13 +3018,39 @@
       }
     },
     "phone-number-modal": {
-      "logo-area": {
-        "h1,h2,h3,h4,h5,h6,p": {
-          "marginBottom": "0"
+      "text": {
+        "variant": "styles.p",
+        "fontSize": "sm",
+        "lineHeight": "base",
+        "fontFamily": "base"
+      },
+      "heading": {
+        "variant": "compounds.phone-number-modal.text"
+      },
+      "logo-area-text": {
+        "fontSize": "lg",
+        "lineHeight": "base",
+        "fontFamily": "heading",
+        "fontWeight": "bolder"
+      },
+      "logo-area-heading": {
+        "variant": "compounds.phone-number-modal.logo-area-text"
+      },
+      "a": {
+        "variant": "styles.a",
+        "color": "grey-80",
+        "logo-area": {
+          "variant": "compounds.phone-number-modal.logo-area-text"
+        },
+        "url": {
+          "variant": "compounds.phone-number-modal.text"
         }
       },
-      "compliance-text": {
-        "backgroundColor": "grey-10"
+      "url": {
+        "fontSize": "md",
+        "fontWeight": "bold",
+        "fontFamily": "base",
+        "lineHeight": "heading"
       }
     },
     "container": {

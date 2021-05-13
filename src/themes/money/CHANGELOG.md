@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.48.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.48.2...@uswitch/trustyle.money-theme@1.48.3) (2021-05-13)
+
+
+### Bug Fixes
+
+* change style for phone number overlay ([235b786](https://github.com/uswitch/trustyle/commit/235b786))
+* change variants for phone number modal ([e1e16c2](https://github.com/uswitch/trustyle/commit/e1e16c2))
+* color naming ([9a77e4f](https://github.com/uswitch/trustyle/commit/9a77e4f))
+
+
+
+
+
 ## [1.48.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.48.1...@uswitch/trustyle.money-theme@1.48.2) (2021-05-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme
