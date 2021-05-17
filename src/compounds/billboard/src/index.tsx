@@ -17,26 +17,14 @@ const Billboard: React.FC<Props> = ({
   primarySlot,
   fullWidthSlot
 }) => {
-  const styles = (cond: string) => {
-    if (cond === 'primarySlot') {
-      return `compounds.billboard.${
-        fullWidthSlot ? 'withFullWidthSlot' : 'withoutFullWidthSlot'
-      }`
+  const styles = () => {
+    if (primarySlot) {
+      return 'compounds.billboard.primaryContent'
     }
 
-    if (cond === 'primaryContent') {
-      if (primarySlot) {
-        return 'compounds.billboard.primaryContent'
-      }
-
-      return `compounds.billboard.${
-        fullWidthSlot
-          ? 'contentWithFullWidthSlot'
-          : 'contentWithoutFullWidthSlot'
-      }`
-    }
-
-    return ''
+    return `compounds.billboard.${
+      fullWidthSlot ? 'contentWithFullWidthSlot' : 'contentWithoutFullWidthSlot'
+    }`
   }
 
   return (
@@ -67,7 +55,11 @@ const Billboard: React.FC<Props> = ({
             )}
             <div
               sx={{
-                marginBottom: ['md', 'lg'],
+                marginBottom: !primarySlot
+                  ? ['md', 'lg']
+                  : fullWidthSlot
+                  ? ['lg', 'xxl']
+                  : ['xl', 'xxl'],
                 display: 'flex',
                 flexDirection: ['column', 'row'],
                 justifyContent: ['center', 'space-between']
@@ -77,7 +69,7 @@ const Billboard: React.FC<Props> = ({
                 sx={{
                   alignSelf: 'center',
                   textAlign: primarySlot ? 'left' : 'center',
-                  variant: styles('primaryContent'),
+                  variant: styles(),
                   marginX: primarySlot ? '0' : 'auto',
                   width: ['auto', '50%']
                 }}
@@ -87,7 +79,7 @@ const Billboard: React.FC<Props> = ({
               {primarySlot && (
                 <div
                   sx={{
-                    variant: styles('primarySlot'),
+                    variant: 'compounds.billboard.primarySlot',
                     width: ['auto', '40%']
                   }}
                 >

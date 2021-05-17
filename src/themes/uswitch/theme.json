@@ -3036,18 +3036,10 @@
           "mb": ["xxs", "xs"]
         }
       },
-      "withPrimarySlot": {
+      "primarySlot": {
         "h1,h2,h3,h4,h5,h6": {
           "color": "grey-80"
         }
-      },
-      "withoutFullWidthSlot": {
-        "variant": "compounds.billboard.withPrimarySlot",
-        "mb": ["xxs", "lg"]
-      },
-      "withFullWidthSlot": {
-        "variant": "compounds.billboard.withPrimarySlot",
-        "mb": ["0", "xxl"]
       },
       "fullWidthSlot": {
         "div": {
