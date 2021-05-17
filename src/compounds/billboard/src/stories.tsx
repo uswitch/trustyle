@@ -41,7 +41,7 @@ const crumbs = [
 const breadcrumbs = (
   <Breadcrumbs
     crumbs={crumbs}
-    title="Understanding energy bills and electricity bills - FAQs and more"
+    title="Understanding energy bills and electricity bills"
   />
 )
 
