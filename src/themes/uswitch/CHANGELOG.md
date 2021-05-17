@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.45.13](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.12...@uswitch/trustyle.uswitch-theme@2.45.13) (2021-05-13)
+
+
+### Bug Fixes
+
+* update first-child to first-of-type ([b5f0c8b](https://github.com/uswitch/trustyle/commit/b5f0c8b))
+
+
+
+
+
+## [2.45.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.11...@uswitch/trustyle.uswitch-theme@2.45.12) (2021-05-13)
+
+
+### Bug Fixes
+
+* change style for phone number overlay ([235b786](https://github.com/uswitch/trustyle/commit/235b786))
+* change variants for phone number modal ([e1e16c2](https://github.com/uswitch/trustyle/commit/e1e16c2))
+
+
+
+
+
 ## [2.45.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.10...@uswitch/trustyle.uswitch-theme@2.45.11) (2021-05-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme

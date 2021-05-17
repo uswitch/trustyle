@@ -276,7 +276,7 @@ const Accordion: React.FC<Props> & {
           marginBottom: isOpen
             ? accordionTheme?.base?.content?.marginBottom
             : '0',
-          '> *:first-child': {
+          '> *:first-of-type': {
             marginTop: 0
           },
           '> *:last-child': {

@@ -416,7 +416,7 @@
       "variants": {
         "left": {
           "main": {
-            "a:first-child": { "ml": 0 },
+            "a:first-of-type": { "ml": 0 },
             "a": {
               "mb": 0
             }
@@ -1134,7 +1134,7 @@
         "h3": {
           "fontSize": 28
         },
-        ":first-child": {
+        ":first-of-type": {
           ":not(hr)": {
             "mt": 0
           }
@@ -1460,7 +1460,7 @@
             "whiteSpace": "nowrap",
             "position": "relative",
             "transition": "flex-grow 0.4s",
-            "&:first-child": {
+            "&:first-of-type": {
               "marginLeft": "0px"
             }
           },
@@ -1491,7 +1491,7 @@
             "fontWeight": "bold",
             "lineHeight": "24px",
             "color": "dark-1",
-            "&:first-child": {
+            "&:first-of-type": {
               "marginLeft": "0px"
             }
           }
@@ -3043,13 +3043,39 @@
       }
     },
     "phone-number-modal": {
-      "logo-area": {
-        "h1,h2,h3,h4,h5,h6,p": {
-          "marginBottom": "0"
+      "text": {
+        "variant": "styles.p",
+        "fontSize": "sm",
+        "lineHeight": "base",
+        "fontFamily": "base"
+      },
+      "heading": {
+        "variant": "compounds.phone-number-modal.text"
+      },
+      "logo-area-text": {
+        "fontSize": "lg",
+        "lineHeight": "base",
+        "fontFamily": "heading",
+        "fontWeight": "bolder"
+      },
+      "logo-area-heading": {
+        "variant": "compounds.phone-number-modal.logo-area-text"
+      },
+      "a": {
+        "variant": "styles.a",
+        "color": "grey-80",
+        "logo-area": {
+          "variant": "compounds.phone-number-modal.logo-area-text"
+        },
+        "url": {
+          "variant": "compounds.phone-number-modal.text"
         }
       },
-      "compliance-text": {
-        "backgroundColor": "grey-10"
+      "url": {
+        "fontSize": "md",
+        "fontWeight": "bold",
+        "fontFamily": "base",
+        "lineHeight": "heading"
       }
     },
     "container": {
@@ -3477,7 +3503,7 @@
           "p:last-of-type": {
             "mb": 32
           },
-          "& > :first-child": {
+          "& > :first-of-type": {
             "mt": "xs"
           }
         },

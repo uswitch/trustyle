@@ -36,19 +36,17 @@ const ExamplePhoneNumberWithUrl = {
 
 export const ExampleWithUrl = () => {
   const [isOpen, setStateIsOpen] = useState(false)
-  const openModal = () => {
-    setStateIsOpen(true)
-  }
 
   return (
     <React.Fragment>
-      <button onClick={openModal}>Open Modal</button>
-      <PhoneNumberModal
-        phoneNumberModalInfo={ExamplePhoneNumberWithUrl}
-        isOpen={isOpen}
-        modalAriaLabel={exampleAriaLabel}
-        setStateClosed={() => setStateIsOpen(false)}
-      />
+      <button onClick={() => setStateIsOpen(true)}>Open Modal</button>
+      {isOpen && (
+        <PhoneNumberModal
+          phoneNumberModalInfo={ExamplePhoneNumberWithUrl}
+          modalAriaLabel={exampleAriaLabel}
+          setStateClosed={() => setStateIsOpen(false)}
+        />
+      )}
     </React.Fragment>
   )
 }
@@ -61,19 +59,17 @@ ExampleWithUrl.story = {
 
 export const ExampleWithoutUrl = () => {
   const [isOpen, setStateIsOpen] = useState(false)
-  const openModal = () => {
-    setStateIsOpen(true)
-  }
 
   return (
     <React.Fragment>
-      <button onClick={openModal}>Open Modal</button>
-      <PhoneNumberModal
-        phoneNumberModalInfo={ExamplePhoneNumberWithoutUrl}
-        isOpen={isOpen}
-        modalAriaLabel={exampleAriaLabel}
-        setStateClosed={() => setStateIsOpen(false)}
-      />
+      <button onClick={() => setStateIsOpen(true)}>Open Modal</button>
+      {isOpen && (
+        <PhoneNumberModal
+          phoneNumberModalInfo={ExamplePhoneNumberWithoutUrl}
+          modalAriaLabel={exampleAriaLabel}
+          setStateClosed={() => setStateIsOpen(false)}
+        />
+      )}
     </React.Fragment>
   )
 }

@@ -762,7 +762,7 @@
 
     "rich-text-block": {
       "base": {
-        "*:first-child": {
+        "*:first-of-type": {
           "mt": 0
         }
       },

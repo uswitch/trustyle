@@ -845,7 +845,7 @@
             "whiteSpace": "nowrap",
             "position": "relative",
             "transition": "flex-grow 0.4s",
-            "&:first-child": {
+            "&:first-of-type": {
               "marginLeft": "0px"
             }
           },
@@ -876,7 +876,7 @@
             "fontWeight": "bold",
             "lineHeight": "24px",
             "color": "black",
-            "&:first-child": {
+            "&:first-of-type": {
               "marginLeft": "0px"
             }
           }
@@ -1170,7 +1170,7 @@
 
     "rich-text-block": {
       "base": {
-        "*:first-child": { "mt": 0 }
+        "*:first-of-type": { "mt": 0 }
       },
       "variants": {
         "panel-primary": {

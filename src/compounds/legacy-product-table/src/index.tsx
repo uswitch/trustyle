@@ -139,7 +139,7 @@ export const ImageCell: React.FC<React.HTMLAttributes<any>> = ({
         margin: 'auto',
         marginRight: ['auto', '15px'],
         py: ['10px', 0],
-        '>:first-child': {
+        '>:first-of-type': {
           margin: 'auto',
           display: 'block',
           maxWidth: '130px',
@@ -338,7 +338,7 @@ export const MoreInformationTable = ({ rows }: MoreInformationTableProps) => {
     fontFamily: 'Open Sans,Arial,sans-serif',
     padding: 'sm',
     textAlign: 'center',
-    ':first-child': {
+    ':first-of-type': {
       paddingLeft: 0,
       textAlign: 'left'
     },
@@ -612,6 +612,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   clickableRow?: string
   moreInformationButton?: React.ReactNode
   moreInformationLabel?: string
+  onLinkClick?: () => void
   onRowClick?: () => void
   disabled?: boolean
   badges?: string[]
@@ -627,6 +628,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   moreInformationLabel,
   clickableRow,
   moreInformationButton,
+  onLinkClick,
   onRowClick,
   disabled,
   badges = [],
@@ -654,6 +656,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
     >
       <RowWrapper
         link={clickableRow}
+        onLinkClick={onLinkClick}
         onRowClick={onRowClick}
         disabled={disabled}
       >
