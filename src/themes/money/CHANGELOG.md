@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.48.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.48.3...@uswitch/trustyle.money-theme@1.48.4) (2021-05-13)
+
+
+### Bug Fixes
+
+* update first-child to first-of-type ([b5f0c8b](https://github.com/uswitch/trustyle/commit/b5f0c8b))
+* update kebab case to camel case in money theme ([d1828fa](https://github.com/uswitch/trustyle/commit/d1828fa))
+
+
+
+
+
+## [1.48.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.48.2...@uswitch/trustyle.money-theme@1.48.3) (2021-05-13)
+
+
+### Bug Fixes
+
+* change style for phone number overlay ([235b786](https://github.com/uswitch/trustyle/commit/235b786))
+* change variants for phone number modal ([e1e16c2](https://github.com/uswitch/trustyle/commit/e1e16c2))
+* color naming ([9a77e4f](https://github.com/uswitch/trustyle/commit/9a77e4f))
+
+
+
+
+
 ## [1.48.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.48.1...@uswitch/trustyle.money-theme@1.48.2) (2021-05-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme

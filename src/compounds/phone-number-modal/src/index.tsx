@@ -17,7 +17,6 @@ interface PhoneNumberModalInfo {
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   phoneNumberModalInfo: PhoneNumberModalInfo
   logoImageCritical?: boolean
-  isOpen: boolean
   modalAriaLabel?: string
   setStateClosed: () => void
 }
@@ -25,7 +24,6 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 const PhoneNumberModal: React.FC<Props> = ({
   phoneNumberModalInfo,
   logoImageCritical = true,
-  isOpen,
   modalAriaLabel = 'phone number overlay',
   setStateClosed
 }) => {
@@ -35,6 +33,8 @@ const PhoneNumberModal: React.FC<Props> = ({
         <p
           key={`compliance_text_${i}`}
           sx={{
+            variant: 'compounds.phone-number-modal.text',
+            paddingX: ['0', 'xs'],
             fontWeight:
               i === phoneNumberModalInfo.complianceText.length - 1
                 ? 'bolder'
@@ -47,129 +47,150 @@ const PhoneNumberModal: React.FC<Props> = ({
     }
   )
 
-  if (isOpen) {
-    return (
-      <Modal ariaLabel={modalAriaLabel} onClose={setStateClosed}>
+  const openingTimesInfo =
+    phoneNumberModalInfo.openingTimes &&
+    phoneNumberModalInfo.openingTimes.slice(1).map((line, i) => {
+      return (
+        <p
+          sx={{
+            variant: 'compounds.phone-number-modal.text',
+            marginY: '0'
+          }}
+          key={`opening_times_${i}`}
+        >
+          {line}
+        </p>
+      )
+    })
+
+  return (
+    <Modal ariaLabel={modalAriaLabel} onClose={setStateClosed}>
+      <div
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          marginX: ['sm', 'xl'],
+          paddingBottom: 'lg',
+          marginBottom: ['0', 'xs']
+        }}
+      >
         <div
           sx={{
+            width: '100%',
             display: 'flex',
-            flexDirection: 'column',
-            paddingX: ['sm', 'xl'],
-            paddingBottom: 'lg',
-            marginBottom: ['0', 'xs']
+            flexDirection: ['column', 'row'],
+            paddingLeft: ['auto', 'lg'],
+            marginBottom: ['xs', 'sm'],
+            textAlign: ['center', 'left']
           }}
         >
-          <div
+          <ImgixImage
+            src={phoneNumberModalInfo.logoUrl}
+            alt={phoneNumberModalInfo.logoDescription}
             sx={{
-              width: '100%',
-              display: 'flex',
-              flexDirection: ['column', 'row'],
-              paddingRight: ['auto', 'xl'],
-              paddingLeft: ['auto', 'lg'],
-              marginBottom: ['xs', 'sm'],
-              textAlign: ['center', 'left'],
-              variant: 'compounds.phone-number-modal.logo-area'
+              width: 'auto',
+              maxWidth: '100%',
+              height: [48, 78],
+              display: ['block', 'inline-block'],
+              alignSelf: 'center',
+              marginRight: ['0', 'xl'],
+              marginBottom: ['sm', '0']
             }}
-          >
-            <ImgixImage
-              src={phoneNumberModalInfo.logoUrl}
-              alt={phoneNumberModalInfo.logoDescription}
-              sx={{
-                width: 'auto',
-                maxWidth: '100%',
-                height: [48, 78],
-                display: ['block', 'inline-block'],
-                alignSelf: 'center',
-                marginRight: ['0', 'xl']
-              }}
-              imgixParams={{
-                fit: 'fillmax'
-              }}
-              critical={logoImageCritical}
-            />
-            <div sx={{ marginLeft: ['0', 'xs'] }}>
-              <div
+            imgixParams={{
+              fit: 'fillmax'
+            }}
+            critical={logoImageCritical}
+          />
+          <div sx={{ marginLeft: ['0', 'xs'] }}>
+            <div sx={{ marginBottom: 'sm' }}>
+              <h4
                 sx={{
-                  marginBottom: 'sm',
-                  variant: 'compounds.phone-number-modal.phone-number'
+                  variant: 'compounds.phone-number-modal.logo-area-heading',
+                  marginY: '0'
                 }}
               >
-                <h3>For more information call</h3>
-                <p sx={{ display: ['none', 'inline-block'] }}>
-                  {phoneNumberModalInfo.phoneNumber}
-                </p>
-                <a
-                  href={`tel:${phoneNumberModalInfo.phoneNumber}`}
-                  sx={{
-                    display: ['inline-block', 'none']
-                  }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {phoneNumberModalInfo.phoneNumber}
-                </a>
-              </div>
-              {phoneNumberModalInfo.openingTimes && (
-                <div
-                  sx={{
-                    textAlign: 'left',
-                    variant: 'compounds.phone-number-modal.opening-times'
-                  }}
-                >
-                  <h5>{phoneNumberModalInfo.openingTimes[0]}</h5>
-                  {phoneNumberModalInfo.openingTimes.slice(1).map((line, i) => (
-                    <p key={`opening_times_${i}`}>{line}</p>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-          {phoneNumberModalInfo.termsAndConditions && (
-            <div
-              sx={{
-                marginBottom: ['0', 'xs'],
-                variant: 'compounds.phone-number-modal'
-              }}
-            >
-              <p>{phoneNumberModalInfo.termsAndConditions}</p>
-            </div>
-          )}
-          {phoneNumberModalInfo.url && (
-            <div
-              sx={{
-                textAlign: 'center',
-                marginBottom: ['0', 'xs'],
-                variant: 'compounds.phone-number-modal.url'
-              }}
-            >
-              <p>
-                or to apply online visit&nbsp;
-                <a
-                  href={phoneNumberModalInfo.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  our site
-                </a>
+                For more information call
+              </h4>
+              <p
+                sx={{
+                  display: ['none', 'inline-block'],
+                  marginY: '0',
+                  variant: 'compounds.phone-number-modal.logo-area-text'
+                }}
+              >
+                {phoneNumberModalInfo.phoneNumber}
               </p>
+              <a
+                href={`tel:${phoneNumberModalInfo.phoneNumber}`}
+                sx={{
+                  display: ['inline-block', 'none'],
+                  marginY: '0',
+                  variant: 'compounds.phone-number-modal.a.logo-area'
+                }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {phoneNumberModalInfo.phoneNumber}
+              </a>
             </div>
-          )}
+            {phoneNumberModalInfo.openingTimes && (
+              <div sx={{ textAlign: 'left' }}>
+                <h5
+                  sx={{
+                    variant: 'compounds.phone-number-modal.heading',
+                    marginBottom: '0'
+                  }}
+                >
+                  {phoneNumberModalInfo.openingTimes[0]}
+                </h5>
+                {openingTimesInfo}
+              </div>
+            )}
+          </div>
+        </div>
+        {phoneNumberModalInfo.termsAndConditions && (
+          <div
+            sx={{ marginBottom: phoneNumberModalInfo.url ? ['0', 'xs'] : 'xs' }}
+          >
+            <p sx={{ variant: 'compounds.phone-number-modal.text' }}>
+              {phoneNumberModalInfo.termsAndConditions}
+            </p>
+          </div>
+        )}
+        {phoneNumberModalInfo.url && (
           <div
             sx={{
               textAlign: 'center',
-              paddingY: 'sm',
-              paddingX: ['sm', 'lg'],
-              variant: 'compounds.phone-number-modal.compliance-text'
+              marginBottom: ['0', 'xs'],
+              variant: 'compounds.phone-number-modal.url'
             }}
           >
-            {complianceTextElements}
+            <p>
+              or to apply online visit&nbsp;
+              <a
+                sx={{ variant: 'compounds.phone-number-modal.a.url' }}
+                href={phoneNumberModalInfo.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                our site
+              </a>
+            </p>
           </div>
+        )}
+        <div
+          sx={{
+            textAlign: 'center',
+            paddingTop: 'sm',
+            paddingX: ['sm', 'lg'],
+            backgroundColor: 'grey-10'
+          }}
+        >
+          {complianceTextElements}
         </div>
-      </Modal>
-    )
-  }
-
-  return null
+      </div>
+    </Modal>
+  )
 }
 
 export default PhoneNumberModal
