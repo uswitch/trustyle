@@ -6,7 +6,7 @@ import { PaletteProvider } from '@uswitch/trustyle-utils.palette'
 
 import Breadcrumbs from '../../../elements/breadcrumbs/src'
 import HeroAd from '../../../compounds/advert/src'
-import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
+import AllThemes from '../../../utils/all-themes'
 import IconTile, { DisplayVariant } from '../../../elements/icon-tile/src'
 import { Col, Row } from '../../../layout/flex-grid/src'
 import CTA from '../../../elements/cta/src'
@@ -41,7 +41,7 @@ const crumbs = [
 const breadcrumbs = (
   <Breadcrumbs
     crumbs={crumbs}
-    title="Understanding energy bills and electricity bills - FAQs and more"
+    title="Understanding energy bills and electricity bills"
   />
 )
 
@@ -78,11 +78,13 @@ const icon = select(
   ['carInsurance', 'creditCards', 'loans', 'mortgages'],
   'carInsurance'
 )
+
 const displayVariant = select(
   'Display Variant',
   DisplayVariant,
   DisplayVariant.Horizontal
 )
+
 const iconImg = (
   <img alt="" src={require(`../../../../static/money-icons/${icon}.svg`)} />
 )
@@ -127,6 +129,12 @@ export const ExampleWithPrimarySlot = () => {
   )
 }
 
+ExampleWithPrimarySlot.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const ExampleWithoutFullWidthSlot = () => {
   return (
     <Billboard
@@ -137,8 +145,20 @@ export const ExampleWithoutFullWidthSlot = () => {
   )
 }
 
+ExampleWithoutFullWidthSlot.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const ExampleWithPrimaryContent = () => {
   return <Billboard breadcrumbs={breadcrumbs} primaryContent={primaryContent} />
+}
+
+ExampleWithPrimaryContent.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const ExampleWithoutPrimarySlot = () => {
@@ -149,6 +169,12 @@ export const ExampleWithoutPrimarySlot = () => {
       fullWidthSlot={fullWidthSlot}
     />
   )
+}
+
+ExampleWithoutPrimarySlot.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const ExampleWithPalette = () => {
@@ -163,22 +189,20 @@ export const ExampleWithPalette = () => {
   )
 }
 
-ExampleWithPrimarySlot.story = {
+ExampleWithPalette.story = {
   parameters: {
     percy: { skip: true }
   }
 }
 
 export const AutomatedTests = () => {
-  const permutations = permutationsGenerator({
-    variant: ['primary', 'secondary']
-  })
-
   return (
     <AllThemes>
-      {permutations.map((p, i) => (
-        <Billboard primaryContent primarySlot key={i} />
-      ))}
+      <ExampleWithPrimarySlot />
+      <ExampleWithoutFullWidthSlot />
+      <ExampleWithPrimaryContent />
+      <ExampleWithoutPrimarySlot />
+      <ExampleWithPalette />
     </AllThemes>
   )
 }
