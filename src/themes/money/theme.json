@@ -2434,30 +2434,60 @@
         "maxWidth": 1152,
         "mx": "auto"
       },
+      "breadcrumbs": {
+        "mb": ["md", "lg"]
+      },
       "primaryContent": {
         "color": "grey-0",
-        "paddingTop": ["auto", "sm"],
         "h1,h2,h3,h4,h5,h6": {
+          "variant": "styles.heading",
           "color": "grey-0",
-          "fontSize": ["xl", "xxxl"]
+          "fontSize": ["xl", "xxxl"],
+          "fontWeight": "bold",
+          "mb": "xs",
+          "mt": "0"
         },
         "p": {
-          "fontSize": ["sm", "md"]
+          "variant": "styles.p",
+          "fontSize": ["sm", "md"],
+          "lineHeight": "base",
+          "fontFamily": "base",
+          "mt": ["0", "xxs"],
+          "mb": ["lg", "0"]
+        },
+        "button": {
+          "mb": ["md", "lg"]
         }
       },
-      "primaryContentOnly": {
+      "contentWithoutFullWidthSlot": {
         "variant": "compounds.billboard.primaryContent",
-        "width": ["auto", "60%"]
+        "p": {
+          "mb": ["md", "lg"]
+        }
+      },
+      "contentWithFullWidthSlot": {
+        "variant": "compounds.billboard.primaryContent",
+        "p": {
+          "mb": "xs"
+        }
       },
       "withPrimarySlot": {
-        "variant": "compounds.billboard.primaryContent",
-        "width": ["auto", "50%"]
-      },
-      "primarySlot": {
         "h1,h2,h3,h4,h5,h6": {
           "color": "grey-80"
-        },
-        "width": ["auto", "50%"]
+        }
+      },
+      "withoutFullWidthSlot": {
+        "variant": "compounds.billboard.withPrimarySlot",
+        "mb": ["md", "lg"]
+      },
+      "withFullWidthSlot": {
+        "variant": "compounds.billboard.withPrimarySlot",
+        "mb": ["xs", "lg"]
+      },
+      "fullWidthSlot": {
+        "div": {
+          "mb": ["sm", "0"]
+        }
       }
     },
     "phone-number-modal": {

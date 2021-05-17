@@ -3002,18 +3002,56 @@
         "gutter": "gutter"
       },
       "container": {
-        "maxWidth": 1200,
+        "variant": "sizes.grid.container",
         "mx": "auto"
+      },
+      "breadcrumbs": {
+        "mb": ["xxs", "md"]
       },
       "primaryContent": {
         "color": "primary",
-        "paddingTop": ["auto", "sm"],
         "h1,h2,h3,h4,h5,h6": {
-          "color": "primary",
-          "fontSize": ["md", "xxl"]
+          "variant": "styles.headings",
+          "fontSize": ["md", "xxl"],
+          "mb": ["xxs", "xs"]
         },
         "p": {
-          "fontSize": ["xs", "sm"]
+          "variant": "styles.p",
+          "fontSize": ["xs", "sm"],
+          "fontFamily": "heading",
+          "lineHeight": "base",
+          "mb": ["md", "0"]
+        },
+        "button": ["md", "lg"]
+      },
+      "contentWithoutFullWidthSlot": {
+        "variant": "compounds.billboard.primaryContent",
+        "p": {
+          "mb": ["md", "xs"]
+        }
+      },
+      "contentWithFullWidthSlot": {
+        "variant": "compounds.billboard.primaryContent",
+        "p": {
+          "mb": ["xxs", "xs"]
+        }
+      },
+      "withPrimarySlot": {
+        "h1,h2,h3,h4,h5,h6": {
+          "color": "grey-80"
+        }
+      },
+      "withoutFullWidthSlot": {
+        "variant": "compounds.billboard.withPrimarySlot",
+        "mb": ["xxs", "lg"]
+      },
+      "withFullWidthSlot": {
+        "variant": "compounds.billboard.withPrimarySlot",
+        "mb": ["0", "xxl"]
+      },
+      "fullWidthSlot": {
+        "div": {
+          "mb": ["md", "0"]
         }
       }
     },
