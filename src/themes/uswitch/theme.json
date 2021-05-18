@@ -3006,7 +3006,8 @@
         "mx": "auto"
       },
       "breadcrumbs": {
-        "mb": ["xxs", "md"]
+        "mb": ["xxs", "md"],
+        "pt": ["xs", "0"]
       },
       "primaryContent": {
         "color": "primary",
@@ -3027,12 +3028,16 @@
       "contentWithoutFullWidthSlot": {
         "variant": "compounds.billboard.primaryContent",
         "p": {
+          "variant": "compounds.billboard.primaryContent.p",
+          "fontSize": ["xs", "sm"],
           "mb": ["md", "xs"]
         }
       },
       "contentWithFullWidthSlot": {
         "variant": "compounds.billboard.primaryContent",
         "p": {
+          "variant": "compounds.billboard.primaryContent.p",
+          "fontSize": ["xs", "sm"],
           "mb": ["xxs", "xs"]
         }
       },
@@ -3040,6 +3045,9 @@
         "h1,h2,h3,h4,h5,h6": {
           "color": "grey-80"
         }
+      },
+      "fullWidthSlot": {
+        "mb": ["md", "lg"]
       }
     },
     "phone-number-modal": {

@@ -40,16 +40,12 @@ const Billboard: React.FC<Props> = ({
               display: 'flex',
               flexDirection: 'column',
               paddingX: 'sm',
-              paddingTop: 'sm'
+              paddingTop: 'sm',
+              marginBottom: fullWidthSlot ? ['0', 'xs'] : '0'
             }}
           >
             {breadcrumbs && (
-              <div
-                sx={{
-                  variant: 'compounds.billboard.breadcrumbs',
-                  paddingTop: ['xs', '0']
-                }}
-              >
+              <div sx={{ variant: 'compounds.billboard.breadcrumbs' }}>
                 {React.cloneElement(breadcrumbs, { variant: 'billboard' })}
               </div>
             )}
@@ -88,7 +84,9 @@ const Billboard: React.FC<Props> = ({
               )}
             </div>
             {fullWidthSlot && (
-              <div sx={{ marginBottom: ['0', 'xl'] }}>{fullWidthSlot}</div>
+              <div sx={{ variant: 'compounds.billboard.fullWidthSlot' }}>
+                {fullWidthSlot}
+              </div>
             )}
           </div>
         </div>
