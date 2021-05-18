@@ -91,6 +91,7 @@ export const SimpleInput = React.forwardRef(
           onFocus={() => setHasFocus(true)}
           onBlur={() => setHasFocus(false)}
           onKeyDown={onKeyDown}
+          {...props}
         />
         {suffix && (
           <span
