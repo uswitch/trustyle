@@ -5,10 +5,10 @@ import { jsx } from 'theme-ui'
 import { Palette } from '@uswitch/trustyle-utils.palette'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  breadcrumbs?: any
-  primaryContent: any
-  primarySlot?: any
-  fullWidthSlot?: any
+  breadcrumbs?: React.ReactElement
+  primaryContent: React.ReactElement
+  primarySlot?: React.ReactElement
+  fullWidthSlot?: React.ReactElement
 }
 
 const Billboard: React.FC<Props> = ({
@@ -17,6 +17,16 @@ const Billboard: React.FC<Props> = ({
   primarySlot,
   fullWidthSlot
 }) => {
+  const styles = () => {
+    if (primarySlot) {
+      return 'compounds.billboard.primaryContent'
+    }
+
+    return `compounds.billboard.${
+      fullWidthSlot ? 'contentWithFullWidthSlot' : 'contentWithoutFullWidthSlot'
+    }`
+  }
+
   return (
     <div>
       <Palette
@@ -30,37 +40,38 @@ const Billboard: React.FC<Props> = ({
               display: 'flex',
               flexDirection: 'column',
               paddingX: 'sm',
-              paddingTop: 'sm',
-              variant: 'compounds.billboard'
+              paddingTop: 'sm'
             }}
           >
             {breadcrumbs && (
-              <div sx={{ paddingTop: ['xs', '0'] }}>
+              <div
+                sx={{
+                  variant: 'compounds.billboard.breadcrumbs',
+                  paddingTop: ['xs', '0']
+                }}
+              >
                 {React.cloneElement(breadcrumbs, { variant: 'billboard' })}
               </div>
             )}
             <div
               sx={{
+                marginBottom: !primarySlot
+                  ? ['md', 'lg']
+                  : fullWidthSlot
+                  ? ['lg', 'xxl']
+                  : ['xl', 'xxl'],
                 display: 'flex',
                 flexDirection: ['column', 'row'],
-                paddingTop: ['xxs', primarySlot ? 'md' : 'auto'],
-                marginBottom:
-                  primarySlot || !fullWidthSlot
-                    ? ['lg', 'xxl']
-                    : ['auto', 'xs'],
-                textAlign: primarySlot ? 'auto' : 'center',
-                width: primarySlot ? 'auto' : ['auto', '100%'],
-                marginX: 'auto'
+                justifyContent: ['center', 'space-between']
               }}
             >
               <div
                 sx={{
-                  paddingRight: primarySlot ? ['auto', 'xxl'] : 'auto',
                   alignSelf: 'center',
-                  variant: primarySlot
-                    ? 'compounds.billboard.withPrimarySlot'
-                    : 'compounds.billboard.primaryContentOnly',
-                  margin: 'auto'
+                  textAlign: primarySlot ? 'left' : 'center',
+                  variant: styles(),
+                  marginX: primarySlot ? '0' : 'auto',
+                  width: ['auto', '50%']
                 }}
               >
                 {primaryContent}
@@ -68,10 +79,8 @@ const Billboard: React.FC<Props> = ({
               {primarySlot && (
                 <div
                   sx={{
-                    paddingLeft: ['auto', 'xxl'],
-                    marginTop: ['sm', 'xxs'],
                     variant: 'compounds.billboard.primarySlot',
-                    alignSelf: 'center'
+                    width: ['auto', '40%']
                   }}
                 >
                   {React.cloneElement(primarySlot, { variant: 'billboard' })}
@@ -79,14 +88,7 @@ const Billboard: React.FC<Props> = ({
               )}
             </div>
             {fullWidthSlot && (
-              <div
-                sx={{
-                  marginTop: primarySlot ? 'xxs' : 'xs',
-                  marginBottom: ['lg', 'xxl']
-                }}
-              >
-                {fullWidthSlot}
-              </div>
+              <div sx={{ marginBottom: ['0', 'xl'] }}>{fullWidthSlot}</div>
             )}
           </div>
         </div>

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.billboard@0.1.4...@uswitch/trustyle.billboard@0.1.5) (2021-05-17)
+
+
+### Bug Fixes
+
+* automated test bug on storybook ([5d8b4d7](https://github.com/uswitch/trustyle/commit/5d8b4d7))
+
+
+
+
+
 ## [0.1.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.billboard@0.1.3...@uswitch/trustyle.billboard@0.1.4) (2021-04-29)
 
 
