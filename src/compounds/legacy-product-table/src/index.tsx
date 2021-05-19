@@ -87,10 +87,12 @@ export const MoreInformationButton: React.FC<MoreInformationButtonProps> = ({
 interface RepresentativeExampleProps
   extends React.HTMLAttributes<HTMLDivElement> {
   text: string
+  label: boolean
 }
 
 const RepresentativeExample: React.FC<RepresentativeExampleProps> = ({
-  text
+  text,
+  label
 }) => {
   return (
     <div
@@ -105,7 +107,8 @@ const RepresentativeExample: React.FC<RepresentativeExampleProps> = ({
         lineHeight: 'normal'
       }}
     >
-      Representative Example: {text}
+      {label && 'Representative Example: '}
+      {text}
     </div>
   )
 }
@@ -608,6 +611,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   info: string[]
   title: string
   representativeExample?: string
+  representativeExampleLabel?: boolean
   moreInformationPanel?: React.ReactNode[]
   clickableRow?: string
   moreInformationButton?: React.ReactNode
@@ -624,6 +628,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   info,
   title,
   representativeExample,
+  representativeExampleLabel = true,
   moreInformationPanel,
   moreInformationLabel,
   clickableRow,
@@ -707,7 +712,10 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         )}
 
         {representativeExample && (
-          <RepresentativeExample text={representativeExample} />
+          <RepresentativeExample
+            text={representativeExample}
+            label={representativeExampleLabel}
+          />
         )}
       </RowWrapper>
 
