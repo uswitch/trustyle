@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.billboard@0.1.6...@uswitch/trustyle.billboard@0.1.7) (2021-05-19)
+
+
+### Bug Fixes
+
+* spacing issues ([91a10aa](https://github.com/uswitch/trustyle/commit/91a10aa))
+
+
+
+
+
 ## [0.1.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.billboard@0.1.5...@uswitch/trustyle.billboard@0.1.6) (2021-05-18)
 
 **Note:** Version bump only for package @uswitch/trustyle.billboard
