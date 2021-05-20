@@ -28,6 +28,7 @@ export const ButtonLink = <
   size = 'large',
   beforeIcon,
   afterIcon,
+  trackInteraction = () => {},
   ...props
 }: Props<T>) => {
   const { theme }: any = useThemeUI()
@@ -83,6 +84,9 @@ export const ButtonLink = <
         display: 'inline-block',
         textDecoration: 'none',
         variant: `elements.buttons.variants.${variant}`
+      }}
+      onClick={(e) => {
+        trackInteraction(e)
       }}
       {...props}
     >
