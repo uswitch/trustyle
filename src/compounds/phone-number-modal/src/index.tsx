@@ -88,9 +88,9 @@ const PhoneNumberModal: React.FC<Props> = ({
             src={phoneNumberModalInfo.logoUrl}
             alt={phoneNumberModalInfo.logoDescription}
             sx={{
-              width: 'auto',
+              width: [100, 160],
               maxWidth: '100%',
-              height: [48, 78],
+              height: 'auto',
               display: ['block', 'inline-block'],
               alignSelf: 'center',
               marginRight: ['0', 'xl'],
