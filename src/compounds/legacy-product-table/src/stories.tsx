@@ -291,6 +291,27 @@ const moreInformationButton = (
   </MoreInformationButton>
 )
 
+export const RepresentativeExampleNoLabel = () => {
+  return (
+    <LegacyProductTable
+      representativeExample={representativeExample}
+      representativeExampleLabel={false}
+      info={info}
+      title={title}
+      clickableRow={clickableRow}
+      moreInformationButton={moreInformationButton}
+    >
+      {productTableContents}
+    </LegacyProductTable>
+  )
+}
+
+RepresentativeExampleNoLabel.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const BadgeExample = () => {
   return (
     <LegacyProductTable
@@ -307,6 +328,12 @@ export const BadgeExample = () => {
       {productTableContents}
     </LegacyProductTable>
   )
+}
+
+BadgeExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const EligibilityExample = () => {
@@ -418,6 +445,7 @@ TelephoneExample.story = {
 export const AutomatedTests = () => {
   return (
     <AllThemes>
+      <RepresentativeExampleNoLabel />
       <BadgeExample />
       <DisabledExample />
       <EligibilityExample />
