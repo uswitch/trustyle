@@ -29,6 +29,7 @@ export const ButtonLink = <
   beforeIcon,
   afterIcon,
   trackInteraction = () => {},
+  onClick = () => {},
   ...props
 }: Props<T>) => {
   const { theme }: any = useThemeUI()
@@ -87,6 +88,7 @@ export const ButtonLink = <
       }}
       onClick={(e) => {
         trackInteraction(e)
+        onClick(e)
       }}
       {...props}
     >
