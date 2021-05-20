@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.phone-number-modal@0.1.3...@uswitch/trustyle.phone-number-modal@0.1.4) (2021-05-20)
+
+
+### Bug Fixes
+
+* width and height issue of logo ([0a13c3b](https://github.com/uswitch/trustyle/commit/0a13c3b))
+
+
+
+
+
 ## [0.1.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.phone-number-modal@0.1.2...@uswitch/trustyle.phone-number-modal@0.1.3) (2021-05-13)
 
 
