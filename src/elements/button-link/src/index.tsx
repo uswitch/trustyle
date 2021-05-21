@@ -86,7 +86,7 @@ export const ButtonLink = <
         textDecoration: 'none',
         variant: `elements.buttons.variants.${variant}`
       }}
-      onClick={(e) => {
+      onClick={e => {
         trackInteraction(e)
         onClick(e)
       }}
