@@ -9,7 +9,7 @@ interface Link {
   text: string
   url: string
   isActive?: boolean
-  onClick?: any
+  onClick?: () => void
 }
 
 interface LinkGroup {
