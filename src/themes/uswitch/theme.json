@@ -1313,7 +1313,7 @@
         "left": {
           "position": "relative",
           "display": "flex",
-          "flex-direction": ["column", "row"],
+          "flexDirection": ["column", "row"],
           "alignItems": "center",
           "::before": {
             "content": "''",
@@ -3837,7 +3837,7 @@
             "pb": ["8px", "16px"]
           },
           "image": {
-            "box-sizing": "border-box",
+            "boxSizing": "border-box",
             "img": {
               "width": [24, 30],
               "mr": ["sm", "md"]
@@ -4018,7 +4018,7 @@
             "mb": ["lg", "xxl"],
             "a": {
               "borderBottom": "none",
-              "font-weight": "inherit"
+              "fontWeight": "inherit"
             }
           },
           "meta": {
