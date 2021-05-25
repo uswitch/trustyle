@@ -70,7 +70,7 @@ const Card: React.FC<Props> = ({
         <span>{children}</span>
       </div>
     ) : (
-      <React.Fragment>{children}</React.Fragment>
+      children
     )
 
   const journeyVariant = variant === 'journey-card'
@@ -87,31 +87,24 @@ const Card: React.FC<Props> = ({
   )
 
   return (
-    <div
-      className={className}
-      sx={{
-        variant: styles()
-      }}
-    >
+    <div className={className} sx={{ variant: styles() }}>
       {HeaderWrapper(
-        <React.Fragment>
-          <Styled.a sx={{ variant: styles('image') }} href={linkHref}>
-            <ImgixImage
-              alt={imgAlt}
-              src={imgSrc}
-              sizes={imgSizes}
-              critical={critical}
-              {...imageProps}
-              imgixParams={{
-                fit: imageSize === 'cover' ? 'crop' : 'fill',
-                crop: 'faces,entropy',
-                ar: '16:9',
-                fill: 'solid',
-                ...(imageProps.imgixParams || {})
-              }}
-            />
-          </Styled.a>
-        </React.Fragment>
+        <Styled.a sx={{ variant: styles('image') }} href={linkHref}>
+          <ImgixImage
+            alt={imgAlt}
+            src={imgSrc}
+            sizes={imgSizes}
+            critical={critical}
+            {...imageProps}
+            imgixParams={{
+              fit: imageSize === 'cover' ? 'crop' : 'fill',
+              crop: 'faces,entropy',
+              ar: '16:9',
+              fill: 'solid',
+              ...(imageProps.imgixParams || {})
+            }}
+          />
+        </Styled.a>
       )}
 
       <div
