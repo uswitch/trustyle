@@ -9,6 +9,7 @@ interface Link {
   text: string
   url: string
   isActive?: boolean
+  onClick?: () => void
 }
 
 interface LinkGroup {
@@ -40,7 +41,7 @@ const SideNav: React.FC<Props> = ({
               variant: 'compounds.side-nav.internalLinkList'
             }}
           >
-            {internalLinks?.links?.map(({ text, url, isActive }) => {
+            {internalLinks?.links?.map(({ text, url, isActive, onClick }) => {
               return (
                 <li
                   key={url}
@@ -49,6 +50,7 @@ const SideNav: React.FC<Props> = ({
                       isActive ? 'isActive' : 'base'
                     }`
                   }}
+                  onClick={onClick}
                 >
                   <Palette
                     as={'a'}
