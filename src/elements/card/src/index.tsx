@@ -109,9 +109,6 @@ const Card: React.FC<Props> = ({
               fill: 'solid',
               ...(imageProps.imgixParams || {})
             }}
-            dataAttributes={{
-              'data-link-target': 'image'
-            }}
           />
         </Styled.a>
       )}
@@ -151,8 +148,6 @@ const Card: React.FC<Props> = ({
           <Styled.h3 sx={{ margin: '0', variant: styles('heading') }}>
             <Styled.a
               href={linkHref}
-              data-link-target="heading"
-              data-link-text={title}
             >
               {title}
             </Styled.a>
@@ -167,8 +162,6 @@ const Card: React.FC<Props> = ({
           <Styled.a
             href={linkHref}
             sx={{ textDecoration: 'underline', variant: styles('link') }}
-            data-link-target="link/button"
-            data-link-text={linkText}
           >
             {linkIcon && <Icon glyph={linkIcon} color="brand" />}
             {linkText}
