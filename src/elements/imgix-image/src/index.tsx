@@ -8,6 +8,7 @@ interface Props extends SharedImigixAndSourceProps {
   alt?: string
   critical?: boolean
   className?: string
+  dataAttributes?: object
 }
 
 // lazysizes needed if you require lazyloading
@@ -20,7 +21,8 @@ const Image: React.FC<Props> = ({
   imgixParams,
   sizes,
   src,
-  width
+  width,
+  dataAttributes
 }) => {
   if (!src) {
     return (
@@ -36,7 +38,10 @@ const Image: React.FC<Props> = ({
   }
   return (
     <Imgix
-      htmlAttributes={{ alt }}
+      htmlAttributes={{
+        alt,
+        ...dataAttributes
+      }}
       attributeConfig={
         !critical
           ? {

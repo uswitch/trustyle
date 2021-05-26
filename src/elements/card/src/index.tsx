@@ -34,6 +34,7 @@ interface Props {
   headerChildren?: React.ReactNode
   contentChildren?: React.ReactNode
   onClick?: () => void
+  trackInteraction?: (_e: React.MouseEvent, _data: object) => void
   button?: React.ReactNode
 }
 
@@ -59,6 +60,7 @@ const Card: React.FC<Props> = ({
   headerChildren,
   contentChildren,
   onClick,
+  trackInteraction,
   button
 }) => {
   const styles = makeStyles(variant)
@@ -87,7 +89,11 @@ const Card: React.FC<Props> = ({
   )
 
   return (
-    <div className={className} sx={{ variant: styles() }}>
+    <div
+      className={className}
+      sx={{ variant: styles() }}
+      onClick={e => trackInteraction(e)}
+    >
       {HeaderWrapper(
         <Styled.a sx={{ variant: styles('image') }} href={linkHref}>
           <ImgixImage
@@ -102,6 +108,9 @@ const Card: React.FC<Props> = ({
               ar: '16:9',
               fill: 'solid',
               ...(imageProps.imgixParams || {})
+            }}
+            dataAttributes={{
+              'data-link-target': 'image'
             }}
           />
         </Styled.a>
@@ -140,7 +149,13 @@ const Card: React.FC<Props> = ({
         </div>
         {title && (
           <Styled.h3 sx={{ margin: '0', variant: styles('heading') }}>
-            <Styled.a href={linkHref}>{title}</Styled.a>
+            <Styled.a
+              href={linkHref}
+              data-link-target="heading"
+              data-link-text={title}
+            >
+              {title}
+            </Styled.a>
           </Styled.h3>
         )}
         {description && (
@@ -152,6 +167,8 @@ const Card: React.FC<Props> = ({
           <Styled.a
             href={linkHref}
             sx={{ textDecoration: 'underline', variant: styles('link') }}
+            data-link-target="link/button"
+            data-link-text={linkText}
           >
             {linkIcon && <Icon glyph={linkIcon} color="brand" />}
             {linkText}
