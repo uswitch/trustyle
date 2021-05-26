@@ -33,8 +33,8 @@ interface Props {
     | 'journey-card'
   headerChildren?: React.ReactNode
   contentChildren?: React.ReactNode
-  onClick?: () => void
-  trackInteraction?: (_e: React.MouseEvent, _data: object) => void
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void
+  trackInteraction?: (e: React.MouseEvent<HTMLAnchorElement>) => void
   button?: React.ReactNode
 }
 
@@ -59,8 +59,8 @@ const Card: React.FC<Props> = ({
   variant = 'vertical',
   headerChildren,
   contentChildren,
-  onClick,
-  trackInteraction,
+  onClick = () => {},
+  trackInteraction = () => {},
   button
 }) => {
   const styles = makeStyles(variant)
@@ -82,20 +82,23 @@ const Card: React.FC<Props> = ({
       variant="primary-journey"
       href={linkHref}
       afterIcon={linkIcon}
-      onClick={onClick}
+      onClick={e => {
+        trackInteraction(e)
+        onClick(e)
+      }}
     >
       {linkText}
     </ButtonLink>
   )
 
   return (
-    <div
-      className={className}
-      sx={{ variant: styles() }}
-      onClick={e => trackInteraction(e)}
-    >
+    <div className={className} sx={{ variant: styles() }}>
       {HeaderWrapper(
-        <Styled.a sx={{ variant: styles('image') }} href={linkHref}>
+        <Styled.a
+          sx={{ variant: styles('image') }}
+          href={linkHref}
+          onClick={trackInteraction}
+        >
           <ImgixImage
             alt={imgAlt}
             src={imgSrc}
@@ -146,9 +149,7 @@ const Card: React.FC<Props> = ({
         </div>
         {title && (
           <Styled.h3 sx={{ margin: '0', variant: styles('heading') }}>
-            <Styled.a
-              href={linkHref}
-            >
+            <Styled.a href={linkHref} onClick={trackInteraction}>
               {title}
             </Styled.a>
           </Styled.h3>
@@ -161,6 +162,7 @@ const Card: React.FC<Props> = ({
         {linkText && !journeyVariant && (
           <Styled.a
             href={linkHref}
+            onClick={trackInteraction}
             sx={{ textDecoration: 'underline', variant: styles('link') }}
           >
             {linkIcon && <Icon glyph={linkIcon} color="brand" />}
