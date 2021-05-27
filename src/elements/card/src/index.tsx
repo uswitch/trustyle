@@ -33,7 +33,8 @@ interface Props {
     | 'journey-card'
   headerChildren?: React.ReactNode
   contentChildren?: React.ReactNode
-  onClick?: () => void
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void
+  trackInteraction?: (e: React.MouseEvent<HTMLAnchorElement>) => void
   button?: React.ReactNode
 }
 
@@ -58,7 +59,8 @@ const Card: React.FC<Props> = ({
   variant = 'vertical',
   headerChildren,
   contentChildren,
-  onClick,
+  onClick = () => {},
+  trackInteraction = () => {},
   button
 }) => {
   const styles = makeStyles(variant)
@@ -70,7 +72,7 @@ const Card: React.FC<Props> = ({
         <span>{children}</span>
       </div>
     ) : (
-      <React.Fragment>{children}</React.Fragment>
+      children
     )
 
   const journeyVariant = variant === 'journey-card'
@@ -80,38 +82,38 @@ const Card: React.FC<Props> = ({
       variant="primary-journey"
       href={linkHref}
       afterIcon={linkIcon}
-      onClick={onClick}
+      onClick={e => {
+        trackInteraction(e)
+        onClick(e)
+      }}
     >
       {linkText}
     </ButtonLink>
   )
 
   return (
-    <div
-      className={className}
-      sx={{
-        variant: styles()
-      }}
-    >
+    <div className={className} sx={{ variant: styles() }}>
       {HeaderWrapper(
-        <React.Fragment>
-          <Styled.a sx={{ variant: styles('image') }} href={linkHref}>
-            <ImgixImage
-              alt={imgAlt}
-              src={imgSrc}
-              sizes={imgSizes}
-              critical={critical}
-              {...imageProps}
-              imgixParams={{
-                fit: imageSize === 'cover' ? 'crop' : 'fill',
-                crop: 'faces,entropy',
-                ar: '16:9',
-                fill: 'solid',
-                ...(imageProps.imgixParams || {})
-              }}
-            />
-          </Styled.a>
-        </React.Fragment>
+        <Styled.a
+          sx={{ variant: styles('image') }}
+          href={linkHref}
+          onClick={trackInteraction}
+        >
+          <ImgixImage
+            alt={imgAlt}
+            src={imgSrc}
+            sizes={imgSizes}
+            critical={critical}
+            {...imageProps}
+            imgixParams={{
+              fit: imageSize === 'cover' ? 'crop' : 'fill',
+              crop: 'faces,entropy',
+              ar: '16:9',
+              fill: 'solid',
+              ...(imageProps.imgixParams || {})
+            }}
+          />
+        </Styled.a>
       )}
 
       <div
@@ -147,7 +149,9 @@ const Card: React.FC<Props> = ({
         </div>
         {title && (
           <Styled.h3 sx={{ margin: '0', variant: styles('heading') }}>
-            <Styled.a href={linkHref}>{title}</Styled.a>
+            <Styled.a href={linkHref} onClick={trackInteraction}>
+              {title}
+            </Styled.a>
           </Styled.h3>
         )}
         {description && (
@@ -158,6 +162,7 @@ const Card: React.FC<Props> = ({
         {linkText && !journeyVariant && (
           <Styled.a
             href={linkHref}
+            onClick={trackInteraction}
             sx={{ textDecoration: 'underline', variant: styles('link') }}
           >
             {linkIcon && <Icon glyph={linkIcon} color="brand" />}
