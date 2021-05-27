@@ -15,6 +15,8 @@ type Props<T extends React.ComponentType<any>> = Overwrite<
     size?: string
     beforeIcon?: Glyph
     afterIcon?: Glyph
+    onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void
+    trackInteraction?: (e: React.MouseEvent<HTMLAnchorElement>) => void
   }
 >
 
