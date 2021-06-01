@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.46.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.16...@uswitch/trustyle.uswitch-theme@2.46.0) (2021-06-01)
+
+
+### Features
+
+* allow centered bullets ([bf60fd6](https://github.com/uswitch/trustyle/commit/bf60fd6))
+
+
+
+
+
 ## [2.45.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.15...@uswitch/trustyle.uswitch-theme@2.45.16) (2021-05-19)
 
 

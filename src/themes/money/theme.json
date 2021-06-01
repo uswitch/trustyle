@@ -1142,6 +1142,10 @@
       }
     },
     "list": {
+      "base": {
+        "display": "inline-block",
+        "textAlign": "left"
+      },
       "pros": {
         "color": "green",
         "glyph": "tick"
