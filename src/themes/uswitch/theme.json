@@ -597,7 +597,9 @@
     "list": {
       "base": {
         "my": 0,
-        "pl": "20px"
+        "pl": "20px",
+        "display": "inline-block",
+        "textAlign": "left"
       },
       "pros": {
         "color": "green",
@@ -713,7 +715,6 @@
           }
         }
       },
-
       "before": {
         "variant": "styles.p",
         "left": "-20px",
