@@ -1340,6 +1340,9 @@
       }
     },
     "drop-down": {
+      "container": {
+        "height": "100%"
+      },
       "placeholder": {
         "border": "1px solid",
         "borderColor": "grey-40",
