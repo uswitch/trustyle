@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.49.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.49.0...@uswitch/trustyle.money-theme@1.49.1) (2021-06-02)
+
+
+### Bug Fixes
+
+* sort and filter product table button sizes ([968e8cd](https://github.com/uswitch/trustyle/commit/968e8cd))
+
+
+
+
+
 # [1.49.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.48.7...@uswitch/trustyle.money-theme@1.49.0) (2021-06-01)
 
 
