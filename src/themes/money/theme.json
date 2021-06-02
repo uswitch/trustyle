@@ -1531,17 +1531,17 @@
             "checkbox": {
               "wrapper": {
                 "variant": "elements.form.variants.field-section.input.wrapper",
-                "flex": "1 0 100%"
+                "flex": ["1 0 100%", "1 0 100%"]
               }
             },
             "radio": {
               "wrapper": {
                 "variant": "elements.form.variants.field-section.input.wrapper",
-                "flex": "1 0 100%"
+                "flex": ["1 0 100%", "1 0 100%"]
               }
             },
             "wrapper": {
-              "flex": "1 0 25%",
+              "flex": ["1 0 50%", "1 0 25%"],
               "marginX": "md",
               "marginBottom": "xl"
             }
@@ -1551,8 +1551,14 @@
               "variants": {
                 "calculator": {
                   "marginTop": "xs",
-                  "display": "flex",
+                  "marginX": 0,
+                  "display": ["block", "flex"],
                   "flexWrap": "wrap",
+                  "flex": "1 0 100%",
+                  ">div": {
+                    "marginLeft": [0, "md"],
+                    "width": ["calc(100% - 48px)", "100%"]
+                  },
                   ">:nth-child(3n+1)": {
                     "marginLeft": 0
                   }
@@ -1575,6 +1581,9 @@
                   "marginTop": "xs",
                   "display": "flex",
                   "flexWrap": "wrap",
+                  ">div": {
+                    "marginLeft": [0, "inherit"]
+                  },
                   ">:nth-child(3n+1)": {
                     "marginLeft": 0
                   }
@@ -1584,7 +1593,7 @@
             "span": {
               "variants": {
                 "calculator": {
-                  "flex": "0 0 25%",
+                  "flex": ["0 0 calc(100% - 48px)", "0 0 25%", "0 0 25%"],
                   "marginX": "md",
                   "marginBottom": "md"
                 }
@@ -1987,7 +1996,7 @@
         "title": {
           "variant": "styles.h3",
           "textAlign": "center",
-          "width": "50%",
+          "width": ["100%", "50%"],
           "marginBottom": "lg",
           "marginX": "auto",
           "color": "plum"
@@ -1995,7 +2004,7 @@
         "container": {
           "marginY": 0,
           "padding": "md",
-          "paddingX": "xxl",
+          "paddingX": [0, "xxl"],
           "backgroundColor": "grey-05",
           "borderRadius": 3
         }
