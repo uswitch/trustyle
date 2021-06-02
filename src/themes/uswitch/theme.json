@@ -900,7 +900,7 @@
               "display": "flex",
               "flexDirection": "column",
               "width": "100%",
-              "mb": "xl"
+              "mb": 0
             },
             "span": {
               "mb": "sm"
@@ -925,7 +925,7 @@
             "wrapper": {
               "display": "flex",
               "px": ["sm", "xxl", "xxxl"],
-              "mb": ["md", "lg"],
+              "mb": ["md", "0px"],
               "width": "100%",
               "justifyContent": "space-between",
               "flexDirection": "column"
@@ -942,7 +942,13 @@
             "mt": 0,
             "fontSize": ["14px", "16px", "16px"],
             "lineHeight": "21px",
-            "fontWeight": "400"
+            "fontWeight": "400",
+            "sectionName": {
+              "mt": "sm",
+              "fontSize": ["14px", "sm", "sm"],
+              "lineHeight": "21px",
+              "fontWeight": "400"
+            }
           },
           "label": {
             "variant": "styles.h5",
@@ -2900,6 +2906,8 @@
               }
             },
             "fields": {
+              "pb": "xl",
+              "mb": [0, "xl", "xl"],
               "calculator": {
                 "display": "flex",
                 "flexWrap": "wrap",
