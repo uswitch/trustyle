@@ -142,6 +142,7 @@ export const DropDown = forwardRef(
               '&::-ms-expand': {
                 display: 'none'
               },
+              height: '100%',
               variant:
                 placeholder && value === undefined
                   ? 'elements.drop-down.placeholder'
