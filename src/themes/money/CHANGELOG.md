@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.49.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.49.3...@uswitch/trustyle.money-theme@1.49.4) (2021-06-03)
+
+
+### Bug Fixes
+
+* radio spacing ([6401751](https://github.com/uswitch/trustyle/commit/6401751))
+
+
+
+
+
 ## [1.49.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.49.1...@uswitch/trustyle.money-theme@1.49.3) (2021-06-03)
 
 
