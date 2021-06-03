@@ -4,7 +4,17 @@ import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
 
 const Table: React.FC = ({ children, ...props }) => {
-  return <Styled.table {...props}>{children}</Styled.table>
+  return (
+    <div
+      sx={{
+        overflowX: ['scroll', 'visible', 'visible'],
+        '&::-webkit-scrollbar': { display: 'none' },
+        '&::-ms-overflow-style': { display: 'none' }
+      }}
+    >
+      <Styled.table {...props}>{children}</Styled.table>
+    </div>
+  )
 }
 
 const TableRow: React.FC = ({ children, ...props }) => {
