@@ -2499,7 +2499,7 @@
           "lineHeight": "base",
           "fontFamily": "base",
           "mt": ["0", "xxs"],
-          "mb": ["lg", "0"]
+          "mb": ["lg", "lg", "0"]
         },
         "button": {
           "my": ["md", "lg"]
