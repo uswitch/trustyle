@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.46.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.46.2...@uswitch/trustyle.uswitch-theme@2.46.3) (2021-06-03)
+
+
+### Bug Fixes
+
+* change tablet layout ([af5aa25](https://github.com/uswitch/trustyle/commit/af5aa25))
+
+
+
+
+
 ## [2.46.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.46.1...@uswitch/trustyle.uswitch-theme@2.46.2) (2021-06-03)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme

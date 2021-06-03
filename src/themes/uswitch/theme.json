@@ -3030,7 +3030,7 @@
           "fontSize": ["xs", "sm"],
           "fontFamily": "heading",
           "lineHeight": "base",
-          "mb": ["md", "0"]
+          "mb": ["md", "md", "0"]
         },
         "button": {
           "my": ["md", "lg"]
@@ -3060,6 +3060,8 @@
         }
       },
       "fullWidthSlot": {
+        "width": ["100%", "70%", "100%"],
+        "marginX": ["0", "auto", "0"],
         "mb": ["md", "lg"]
       }
     },

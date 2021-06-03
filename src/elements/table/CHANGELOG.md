@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.table@0.0.10...@uswitch/trustyle.table@0.0.12) (2021-06-03)
+
+
+### Bug Fixes
+
+* mobile styling overflow ([a5ff3fe](https://github.com/uswitch/trustyle/commit/a5ff3fe))
+
+
+
+
+
 ## [0.0.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.table@0.0.10...@uswitch/trustyle.table@0.0.11) (2021-06-03)
 
 

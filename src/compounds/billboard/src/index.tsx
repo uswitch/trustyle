@@ -53,8 +53,8 @@ const Billboard: React.FC<Props> = ({
               sx={{
                 marginBottom: fullWidthSlot ? ['lg', 'xxl'] : ['xl', 'xxl'],
                 display: 'flex',
-                flexDirection: ['column', 'row'],
-                justifyContent: ['center', 'space-between']
+                flexDirection: ['column', 'column', 'row'],
+                justifyContent: ['center', 'center', 'space-between']
               }}
             >
               <div
@@ -62,8 +62,8 @@ const Billboard: React.FC<Props> = ({
                   alignSelf: 'center',
                   textAlign: primarySlot ? 'left' : 'center',
                   variant: styles(),
-                  marginX: primarySlot ? '0' : 'auto',
-                  width: ['auto', '50%']
+                  marginX: primarySlot ? ['0', 'auto', '0'] : 'auto',
+                  width: ['auto', '70%', '50%']
                 }}
               >
                 {primaryContent}
@@ -72,7 +72,9 @@ const Billboard: React.FC<Props> = ({
                 <div
                   sx={{
                     variant: 'compounds.billboard.primarySlot',
-                    width: ['auto', '40%']
+                    width: ['auto', '70%', '40%'],
+                    marginTop: ['0', 'lg', '0'],
+                    marginX: ['auto', 'auto', '0']
                   }}
                 >
                   {React.cloneElement(primarySlot, { variant: 'billboard' })}
@@ -80,7 +82,13 @@ const Billboard: React.FC<Props> = ({
               )}
             </div>
             {fullWidthSlot && (
-              <div sx={{ variant: 'compounds.billboard.fullWidthSlot' }}>
+              <div
+                sx={{
+                  width: ['100%', '70%', '100%'],
+                  marginX: ['0', 'auto', '0'],
+                  variant: 'compounds.billboard.fullWidthSlot'
+                }}
+              >
                 {fullWidthSlot}
               </div>
             )}
