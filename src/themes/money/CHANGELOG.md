@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.49.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.49.1...@uswitch/trustyle.money-theme@1.49.2) (2021-06-03)
+
+
+### Bug Fixes
+
+* mobile calculator styling ([eca7e97](https://github.com/uswitch/trustyle/commit/eca7e97))
+
+
+
+
+
 ## [1.49.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.49.0...@uswitch/trustyle.money-theme@1.49.1) (2021-06-02)
 
 

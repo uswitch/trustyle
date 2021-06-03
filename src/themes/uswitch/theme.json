@@ -945,7 +945,7 @@
             "fontWeight": "400",
             "sectionName": {
               "mt": "sm",
-              "fontSize": ["14px", "sm", "sm"],
+              "fontSize": ["14px", "xs", "xs"],
               "lineHeight": "21px",
               "fontWeight": "400"
             }
