@@ -1604,6 +1604,7 @@
         "default": {
           "simple-radio": {
             "radioWrapper": {
+              "marginBottom": "lg",
               "display": "flex",
               "flexDirection": ["column", "row"],
               "div": {
