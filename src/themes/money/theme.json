@@ -2519,7 +2519,8 @@
         "variant": "compounds.billboard.primaryContent",
         "p": {
           "variant": "compounds.billboard.primaryContent.p",
-          "fontSize": ["sm", "md"]
+          "fontSize": ["sm", "md"],
+          "mb": "0"
         }
       },
       "contentWithFullWidthSlot": {
