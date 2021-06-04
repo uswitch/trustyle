@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.46.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.46.3...@uswitch/trustyle.uswitch-theme@2.46.4) (2021-06-04)
+
+
+### Bug Fixes
+
+* set mb of text to 0 when there is just text ([75ca38a](https://github.com/uswitch/trustyle/commit/75ca38a))
+
+
+
+
+
 ## [2.46.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.46.2...@uswitch/trustyle.uswitch-theme@2.46.3) (2021-06-03)
 
 
