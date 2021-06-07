@@ -900,10 +900,17 @@
               "display": "flex",
               "flexDirection": "column",
               "width": "100%",
-              "mb": 0
+              "mb": 0,
+              "horizontal": {
+                "flexDirection": "row",
+                "justifyContent": "space-between"
+              }
             },
             "span": {
-              "mb": "sm"
+              "mb": "sm",
+              "horizontal": {
+                "width": "calc(50% - 8px)"
+              }
             }
           },
           "funnel": {
