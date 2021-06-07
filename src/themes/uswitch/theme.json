@@ -1121,6 +1121,77 @@
             },
             "color": "grey-90"
           }
+        },
+        "simple": {
+          "simple-radio": {
+            "radioWrapper": {
+              "display": "flex",
+              "flexDirection": ["column", "row"],
+              "div": {
+                "display": "flex",
+                "flex": "1 1 0"
+              },
+              "label": {
+                "display": "flex",
+                "mr": 0
+              },
+              "> div+div": {
+                "ml": [0, "sm"],
+                "mt": ["sm", 0]
+              }
+            }
+          },
+          "label": {
+            "variant": "styles.h4",
+            "fontWeight": "bold",
+            "color": "grey-80",
+            "display": "block",
+            "mb": "xs",
+            "textAlign": "left",
+            "variants": {
+              "calculator": {
+                "variant": "styles.h6",
+                "fontWeight": "bold",
+                "color": "grey-80",
+                "display": "block",
+                "mb": "xs",
+                "mt": "xl"
+              }
+            }
+          },
+          "description": {
+            "color": "grey-80",
+            "display": "block",
+            "textAlign": "left",
+            "my": "xxs"
+          },
+          "input": {
+            "wrapper": {
+              "mb": "xs",
+              ":last-child": {
+                "mb": "xs"
+              }
+            },
+            "error": {
+              "color": "error",
+              "mt": "xs",
+              "textAlign": "left",
+              "title": {
+                "fontWeight": "bold",
+                "mb": "xxs"
+              }
+            }
+          },
+          "wrapper": {
+            "base": {
+              "pb": 0
+            },
+            "variants": {
+              "calculator": {
+                "pb": ["xs", 0]
+              }
+            }
+          }
         }
       },
       "button": {
@@ -1215,7 +1286,6 @@
         "panel-primary": {
           "padding": "md",
           "textAlign": ["center", "left"],
-          "ml": [0, null, 20],
           "backgroundColor": "grey-0",
           "color": "grey-80",
           "h5": {

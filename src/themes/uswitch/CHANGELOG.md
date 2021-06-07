@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.47.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.46.4...@uswitch/trustyle.uswitch-theme@2.47.0) (2021-06-07)
+
+
+### Features
+
+* simple form on uswitch ([b6a41e4](https://github.com/uswitch/trustyle/commit/b6a41e4))
+
+
+
+
+
 ## [2.46.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.46.3...@uswitch/trustyle.uswitch-theme@2.46.4) (2021-06-04)
 
 
