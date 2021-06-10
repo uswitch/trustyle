@@ -870,6 +870,13 @@
           "lineHeight": "md"
         }
       },
+      "aspect-ratio-wrapper": {
+        "width": "100%",
+        "height": "0",
+        "paddingTop": "calc(189.67 / 336.98 * 100%)",
+        "overflow": "hidden",
+        "position": "relative"
+      },
       "headerChildren": {
         "display": "flex",
         "flexDirection": ["column-reverse", "row-reverse"],

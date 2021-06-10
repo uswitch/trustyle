@@ -871,6 +871,13 @@
           "paddingX": [0, "sm"]
         }
       },
+      "aspect-ratio-wrapper": {
+        "width": "100%",
+        "height": "0",
+        "paddingTop": "calc(208.59 / 370.58 * 100%)",
+        "overflow": "hidden",
+        "position": "relative"
+      },
       "variants": {
         "vertical": {
           "variant": "compounds.card.base",

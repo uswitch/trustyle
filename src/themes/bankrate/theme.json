@@ -1376,6 +1376,13 @@
         },
         "mr": "base"
       },
+      "aspect-ratio-wrapper": {
+        "width": "100%",
+        "height": "0",
+        "paddingTop": "calc(192.69 / 342.33 * 100%)",
+        "overflow": "hidden",
+        "position": "relative"
+      },
       "variants": {
         "vertical": {
           "&:hover": {

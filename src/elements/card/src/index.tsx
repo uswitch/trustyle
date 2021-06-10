@@ -94,26 +94,35 @@ const Card: React.FC<Props> = ({
   return (
     <div className={className} sx={{ variant: styles() }}>
       {HeaderWrapper(
-        <Styled.a
-          sx={{ variant: styles('image') }}
-          href={linkHref}
-          onClick={trackInteraction}
-        >
-          <ImgixImage
-            alt={imgAlt}
-            src={imgSrc}
-            sizes={imgSizes}
-            critical={critical}
-            {...imageProps}
-            imgixParams={{
-              fit: imageSize === 'cover' ? 'crop' : 'fill',
-              crop: 'faces,entropy',
-              ar: '16:9',
-              fill: 'solid',
-              ...(imageProps.imgixParams || {})
-            }}
-          />
-        </Styled.a>
+        <div sx={{ variant: 'compounds.card.aspect-ratio-wrapper' }}>
+          <Styled.a
+            sx={{ variant: styles('image') }}
+            href={linkHref}
+            onClick={trackInteraction}
+          >
+            <ImgixImage
+              alt={imgAlt}
+              src={imgSrc}
+              sizes={imgSizes}
+              critical={critical}
+              {...imageProps}
+              imgixParams={{
+                fit: imageSize === 'cover' ? 'crop' : 'fill',
+                crop: 'faces,entropy',
+                ar: '16:9',
+                fill: 'solid',
+                ...(imageProps.imgixParams || {})
+              }}
+              sx={{
+                position: 'absolute',
+                top: '0',
+                left: '0',
+                width: '100%',
+                height: '100%'
+              }}
+            />
+          </Styled.a>
+        </div>
       )}
 
       <div

@@ -2951,6 +2951,13 @@
           "borderRadius": 4
         }
       },
+      "aspect-ratio-wrapper": {
+        "width": "100%",
+        "height": "0",
+        "paddingTop": "calc(204.16 / 362.66 * 100%)",
+        "overflow": "hidden",
+        "position": "relative"
+      },
       "variants": {
         "vertical": {
           "tag": {
