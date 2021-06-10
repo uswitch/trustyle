@@ -75,6 +75,15 @@ const Card: React.FC<Props> = ({
       children
     )
 
+  const AspectRatioWrapper = (cond: boolean, children: React.ReactNode) =>
+    cond ? (
+      <div sx={{ variant: 'compounds.card.aspectRatioWrapper' }}>
+        {children}
+      </div>
+    ) : (
+      children
+    )
+
   const journeyVariant = variant === 'journey-card'
 
   const JourneyButton = (
@@ -94,27 +103,15 @@ const Card: React.FC<Props> = ({
   return (
     <div className={className} sx={{ variant: styles() }}>
       {HeaderWrapper(
-        <div
-          sx={{
-            variant:
-              variant === 'vertical'
-                ? 'compounds.card.aspect-ratio-wrapper'
-                : ''
-          }}
-        >
+        AspectRatioWrapper(
+          variant === 'vertical',
           <Styled.a
             sx={{ variant: styles('image'), display: 'inline-block' }}
             href={linkHref}
             onClick={trackInteraction}
           >
-            <div
-              sx={{
-                variant:
-                  variant === 'horizontal'
-                    ? 'compounds.card.aspect-ratio-wrapper'
-                    : ''
-              }}
-            >
+            {AspectRatioWrapper(
+              variant === 'horizontal',
               <ImgixImage
                 alt={imgAlt}
                 src={imgSrc}
@@ -128,15 +125,11 @@ const Card: React.FC<Props> = ({
                   fill: 'solid',
                   ...(imageProps.imgixParams || {})
                 }}
-                sx={{
-                  position: 'absolute',
-                  top: '0',
-                  left: '0'
-                }}
+                sx={{ variant: styles('coverImage') }}
               />
-            </div>
+            )}
           </Styled.a>
-        </div>
+        )
       )}
 
       <div

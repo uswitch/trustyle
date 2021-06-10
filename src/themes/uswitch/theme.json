@@ -3813,7 +3813,7 @@
           "padding": 0
         }
       },
-      "aspect-ratio-wrapper": {
+      "aspectRatioWrapper": {
         "height": "0",
         "paddingTop": "calc(203 / 360.66 * 100%)",
         "overflow": "hidden",
@@ -3961,6 +3961,11 @@
           },
           "link": {
             "variant": "compounds.card.base.link"
+          },
+          "coverImage": {
+            "position": "absolute",
+            "top": "0",
+            "left": "0"
           }
         },
         "horizontal": {
@@ -3977,6 +3982,11 @@
           },
           "link": {
             "variant": "compounds.card.base.link"
+          },
+          "coverImage": {
+            "position": "absolute",
+            "top": "0",
+            "left": "0"
           }
         },
         "responsive": {

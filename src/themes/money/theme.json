@@ -2975,6 +2975,11 @@
           "link": {
             "variant": "compounds.card.base.link"
           },
+          "coverImage": {
+            "position": "absolute",
+            "top": "0",
+            "left": "0"
+          },
           "variant": "compounds.card.base"
         },
         "horizontal": {
@@ -3005,6 +3010,11 @@
           },
           "superScript": {
             "variant": "compounds.card.base.superScript"
+          },
+          "coverImage": {
+            "position": "absolute",
+            "top": "0",
+            "left": "0"
           }
         },
         "responsive": {

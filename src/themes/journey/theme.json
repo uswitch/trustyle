@@ -1226,12 +1226,6 @@
       },
       "lg": {
         "image": { "width": 278, "height": 230 }
-      },
-      "aspect-ratio-wrapper": {
-        "height": "0",
-        "paddingTop": "calc(208.59 / 370.58 * 100%)",
-        "overflow": "hidden",
-        "position": "relative"
       }
     },
 
