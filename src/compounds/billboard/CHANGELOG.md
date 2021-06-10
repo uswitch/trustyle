@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.billboard@0.1.8...@uswitch/trustyle.billboard@0.1.9) (2021-06-10)
+
+
+### Bug Fixes
+
+* tablet issues and primarySlot CTA ([67887ed](https://github.com/uswitch/trustyle/commit/67887ed))
+
+
+
+
+
 ## [0.1.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.billboard@0.1.7...@uswitch/trustyle.billboard@0.1.8) (2021-06-03)
 
 

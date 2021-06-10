@@ -1804,7 +1804,15 @@
         },
         "billboard": {
           "variant": "elements.rich-text-block.variants.center",
-          "color": "grey-0"
+          "color": "grey-0",
+          "h1,h2,h3,h4,h5,h6": {
+            "fontSize": ["md", "lg"],
+            "fontWeight": "bolder"
+          },
+          "a, button": {
+            "fontSize": ["sm", "md"],
+            "fontWeight": "bold"
+          }
         }
       }
     },
@@ -2509,7 +2517,7 @@
           "lineHeight": "base",
           "fontFamily": "base",
           "mt": ["0", "xxs"],
-          "mb": ["lg", "lg", "0"]
+          "mb": ["lg", "0"]
         },
         "button": {
           "my": ["md", "lg"]
