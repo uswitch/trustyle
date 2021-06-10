@@ -1228,7 +1228,6 @@
         "image": { "width": 278, "height": 230 }
       },
       "aspect-ratio-wrapper": {
-        "width": "100%",
         "height": "0",
         "paddingTop": "calc(208.59 / 370.58 * 100%)",
         "overflow": "hidden",

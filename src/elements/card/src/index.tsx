@@ -94,33 +94,47 @@ const Card: React.FC<Props> = ({
   return (
     <div className={className} sx={{ variant: styles() }}>
       {HeaderWrapper(
-        <div sx={{ variant: 'compounds.card.aspect-ratio-wrapper' }}>
+        <div
+          sx={{
+            variant:
+              variant === 'vertical'
+                ? 'compounds.card.aspect-ratio-wrapper'
+                : ''
+          }}
+        >
           <Styled.a
-            sx={{ variant: styles('image') }}
+            sx={{ variant: styles('image'), display: 'inline-block' }}
             href={linkHref}
             onClick={trackInteraction}
           >
-            <ImgixImage
-              alt={imgAlt}
-              src={imgSrc}
-              sizes={imgSizes}
-              critical={critical}
-              {...imageProps}
-              imgixParams={{
-                fit: imageSize === 'cover' ? 'crop' : 'fill',
-                crop: 'faces,entropy',
-                ar: '16:9',
-                fill: 'solid',
-                ...(imageProps.imgixParams || {})
-              }}
+            <div
               sx={{
-                position: 'absolute',
-                top: '0',
-                left: '0',
-                width: '100%',
-                height: '100%'
+                variant:
+                  variant === 'horizontal'
+                    ? 'compounds.card.aspect-ratio-wrapper'
+                    : ''
               }}
-            />
+            >
+              <ImgixImage
+                alt={imgAlt}
+                src={imgSrc}
+                sizes={imgSizes}
+                critical={critical}
+                {...imageProps}
+                imgixParams={{
+                  fit: imageSize === 'cover' ? 'crop' : 'fill',
+                  crop: 'faces,entropy',
+                  ar: '16:9',
+                  fill: 'solid',
+                  ...(imageProps.imgixParams || {})
+                }}
+                sx={{
+                  position: 'absolute',
+                  top: '0',
+                  left: '0'
+                }}
+              />
+            </div>
           </Styled.a>
         </div>
       )}
