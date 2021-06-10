@@ -1376,6 +1376,12 @@
         },
         "mr": "base"
       },
+      "aspect-ratio-wrapper": {
+        "height": "0",
+        "paddingTop": "56.27%",
+        "overflow": "hidden",
+        "position": "relative"
+      },
       "variants": {
         "vertical": {
           "&:hover": {
@@ -1399,6 +1405,11 @@
           "link": {
             "variant": "compounds.card.base.link"
           },
+          "coverImage": {
+            "position": "absolute",
+            "top": "0",
+            "left": "0"
+          },
           "variant": "compounds.card.base"
         },
         "horizontal": {
@@ -1419,6 +1430,11 @@
           },
           "link": {
             "variant": "compounds.card.base.link"
+          },
+          "coverImage": {
+            "position": "absolute",
+            "top": "0",
+            "left": "0"
           }
         },
         "responsive": {

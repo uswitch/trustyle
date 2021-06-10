@@ -2953,7 +2953,7 @@
       },
       "aspect-ratio-wrapper": {
         "height": "0",
-        "paddingTop": "calc(204.16 / 362.66 * 100%)",
+        "paddingTop": "56.29%",
         "overflow": "hidden",
         "position": "relative"
       },
