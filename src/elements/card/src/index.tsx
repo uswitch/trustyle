@@ -77,9 +77,7 @@ const Card: React.FC<Props> = ({
 
   const AspectRatioWrapper = (cond: boolean, children: React.ReactNode) =>
     cond ? (
-      <div sx={{ variant: 'compounds.card.aspectRatioWrapper' }}>
-        {children}
-      </div>
+      <div sx={{ variant: styles('aspectRatioWrapper') }}>{children}</div>
     ) : (
       children
     )
@@ -106,7 +104,7 @@ const Card: React.FC<Props> = ({
         AspectRatioWrapper(
           variant === 'vertical',
           <Styled.a
-            sx={{ variant: styles('image'), display: 'inline-block' }}
+            sx={{ display: 'inline-block', variant: styles('image') }}
             href={linkHref}
             onClick={trackInteraction}
           >
