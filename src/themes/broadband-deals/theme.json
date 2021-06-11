@@ -873,7 +873,8 @@
       "aspectRatioWrapper": {
         "position": "relative",
         "overflow": "hidden",
-        "height": "56.27%"
+        "height": "56.27%",
+        "mb": "5px"
       },
       "headerChildren": {
         "display": "flex",

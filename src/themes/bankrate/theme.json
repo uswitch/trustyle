@@ -1380,7 +1380,8 @@
         "height": "0",
         "paddingTop": "56.27%",
         "overflow": "hidden",
-        "position": "relative"
+        "position": "relative",
+        "mb": "5px"
       },
       "variants": {
         "vertical": {
