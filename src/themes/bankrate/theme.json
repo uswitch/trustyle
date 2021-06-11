@@ -1376,7 +1376,7 @@
         },
         "mr": "base"
       },
-      "aspect-ratio-wrapper": {
+      "aspectRatioWrapper": {
         "height": "0",
         "paddingTop": "56.27%",
         "overflow": "hidden",
