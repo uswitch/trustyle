@@ -890,7 +890,7 @@
             "variant": "compounds.card.base.meta"
           },
           "image": {
-            "variant": "compounds.card.base.imge",
+            "variant": "compounds.card.base.image",
             "maxWidth": "none"
           },
           "content": {
@@ -957,7 +957,6 @@
           },
           "image": {
             "variant": "compounds.card.base.image",
-            "width": [132, 384, 474],
             "pr": ["sm", "md"],
             "maxWidth": "40%"
           },
