@@ -1224,8 +1224,15 @@
       "sm": {
         "image": { "width": "100%", "height": "auto" }
       },
+
       "lg": {
         "image": { "width": 278, "height": 230 }
+      },
+
+      "aspectRatioWrapper": {
+        "position": "relative",
+        "overflow": "hidden",
+        "height": "56.27%"
       }
     },
 
