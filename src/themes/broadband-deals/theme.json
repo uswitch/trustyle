@@ -874,7 +874,7 @@
         "position": "relative",
         "overflow": "hidden",
         "height": "56.27%",
-        "mb": "5px"
+        "mb": "8px"
       },
       "headerChildren": {
         "display": "flex",
