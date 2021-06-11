@@ -883,6 +883,9 @@
           },
           "link": {
             "variant": "compounds.card.base.link"
+          },
+          "aspectRatioWrapper": {
+            "variant": "compounds.card.aspectRatioWrapper"
           }
         },
         "horizontal": {
@@ -893,7 +896,9 @@
             "width": 474,
             "mr": 32
           },
-
+          "aspectRatioWrapper": {
+            "variant": "compounds.card.aspectRatioWrapper"
+          },
           "content": {
             "width": 670,
             "variant": "compounds.card.base.content"
