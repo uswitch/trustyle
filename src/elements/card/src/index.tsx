@@ -77,9 +77,7 @@ const Card: React.FC<Props> = ({
 
   const AspectRatioWrapper = (cond: boolean, children: React.ReactNode) =>
     cond ? (
-      <div sx={{ variant: 'compounds.card.aspectRatioWrapper' }}>
-        {children}
-      </div>
+      <div sx={{ variant: styles('aspectRatioWrapper') }}>{children}</div>
     ) : (
       children
     )

@@ -874,7 +874,7 @@
         "height": "0",
         "position": "relative",
         "overflow": "hidden",
-        "pt": "56.27%"
+        "paddingTop": "56.27%"
       },
       "headerChildren": {
         "display": "flex",
@@ -971,6 +971,7 @@
           },
           "image": {
             "variant": "compounds.card.base.image",
+            "width": [132, 384, 474],
             "pr": ["sm", "md"],
             "maxWidth": "40%"
           },
