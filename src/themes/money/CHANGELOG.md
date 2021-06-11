@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.49.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.49.6...@uswitch/trustyle.money-theme@1.49.7) (2021-06-11)
+
+
+### Bug Fixes
+
+* spacing of primary slot cta ([95ec12f](https://github.com/uswitch/trustyle/commit/95ec12f))
+
+
+
+
+
 ## [1.49.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.49.5...@uswitch/trustyle.money-theme@1.49.6) (2021-06-10)
 
 
