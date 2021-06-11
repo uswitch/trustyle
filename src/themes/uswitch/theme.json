@@ -3100,7 +3100,7 @@
           "fontSize": ["xs", "sm"],
           "fontFamily": "heading",
           "lineHeight": "base",
-          "mb": ["md", "md", "0"]
+          "mb": ["md", "0"]
         },
         "button": {
           "my": ["md", "lg"]
