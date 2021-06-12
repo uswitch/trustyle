@@ -2962,6 +2962,17 @@
           "borderRadius": 4
         }
       },
+      "aspectRatioBox": {
+        "position": "relative",
+        "overflow": "hidden",
+        "width": "100%",
+        "height": "0"
+      },
+      "cardImage": {
+        "position": "absolute",
+        "top": "0",
+        "left": "0"
+      },
       "variants": {
         "vertical": {
           "tag": {
@@ -2980,15 +2991,27 @@
           "link": {
             "variant": "compounds.card.base.link"
           },
+          "image": {
+            "display": "inline-block",
+            "width": "100%",
+            "height": "100%"
+          },
+          "aspectRatioWrapper": {
+            "width": "100%"
+          },
+          "aspectRatioBox": {
+            "variant": "compounds.card.aspectRatioBox",
+            "paddingTop": "56.287%"
+          },
+          "cardImage": {
+            "variant": "compounds.card.cardImage"
+          },
           "variant": "compounds.card.base"
         },
         "horizontal": {
           "variant": "compounds.card.base",
           "display": "flex",
           "alignItems": "start",
-          "image": {
-            "width": [168, 192]
-          },
           "h3": {
             "variant": "compounds.card.base.h3",
             "fontSize": [16, 18]
@@ -3010,6 +3033,21 @@
           },
           "superScript": {
             "variant": "compounds.card.base.superScript"
+          },
+          "image": {
+            "display": "inline-block",
+            "width": [168, 192],
+            "height": "100%"
+          },
+          "aspectRatioWrapper": {
+            "width": [168, 192]
+          },
+          "aspectRatioBox": {
+            "variant": "compounds.card.aspectRatioBox",
+            "paddingTop": "56.287%"
+          },
+          "cardImage": {
+            "variant": "compounds.card.cardImage"
           }
         },
         "responsive": {

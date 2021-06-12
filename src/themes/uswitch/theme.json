@@ -3816,6 +3816,17 @@
           "padding": 0
         }
       },
+      "aspectRatioBox": {
+        "position": "relative",
+        "overflow": "hidden",
+        "width": "100%",
+        "height": "0"
+      },
+      "cardImage": {
+        "position": "absolute",
+        "top": "0",
+        "left": "0"
+      },
       "variants": {
         "noImage": {
           "position": "relative",
@@ -3958,22 +3969,53 @@
           },
           "link": {
             "variant": "compounds.card.base.link"
+          },
+          "image": {
+            "display": "inline-block",
+            "width": "100%",
+            "height": "100%",
+            "mb": "0"
+          },
+          "aspectRatioWrapper": {
+            "width": "100%",
+            "mb": "sm"
+          },
+          "aspectRatioBox": {
+            "variant": "compounds.card.aspectRatioBox",
+            "paddingTop": "56.287%"
+          },
+          "cardImage": {
+            "variant": "compounds.card.cardImage"
           }
         },
         "horizontal": {
           "variant": "compounds.card.base",
           "display": "flex",
           "alignItems": "start",
-          "image": {
-            "width": [132, 384, 474],
-            "mr": 32
-          },
           "content": {
             "width": [132, 544, 670],
             "variant": "compounds.card.base.content"
           },
           "link": {
             "variant": "compounds.card.base.link"
+          },
+          "image": {
+            "display": "inline-block",
+            "width": [132, 384, 474],
+            "height": "100%",
+            "mb": "0"
+          },
+          "aspectRatioWrapper": {
+            "width": [132, 384, 474],
+            "mr": 32,
+            "mb": "sm"
+          },
+          "aspectRatioBox": {
+            "variant": "compounds.card.aspectRatioBox",
+            "paddingTop": "56.287%"
+          },
+          "cardImage": {
+            "variant": "compounds.card.cardImage"
           }
         },
         "responsive": {
@@ -4109,10 +4151,30 @@
           "meta": {
             "display": "none"
           },
-          "image": {
+          "image": {            
+            "display": "inline-block",
+            "width": "100%",
+            "overflow": "hidden",
+            "img": {
+              "objectFit": ["contain", "cover"],
+              "width": "100%",
+              "height": "100%"
+            }
+          },
+          "aspectRatioWrapper": {
             "width": ["100%", null, "grid.lg.6"],
             "height": ["auto", null, 658],
-            "flex": 1,
+            "overflow": "hidden",
+            "flex": 1
+          },
+          "aspectRatioBox": {
+            "variant": "compounds.card.aspectRatioBox",
+            "paddingTop": ["56.287%", null, 658]
+          },
+          "cardImage": {
+            "variant": "compounds.card.cardImage",
+            "width": "100%",
+            "height": "100%",
             "overflow": "hidden",
             "img": {
               "objectFit": ["contain", "cover"],

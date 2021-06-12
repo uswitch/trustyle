@@ -94,26 +94,53 @@ const Card: React.FC<Props> = ({
   return (
     <div className={className} sx={{ variant: styles() }}>
       {HeaderWrapper(
-        <Styled.a
-          sx={{ variant: styles('image') }}
-          href={linkHref}
-          onClick={trackInteraction}
-        >
-          <ImgixImage
-            alt={imgAlt}
-            src={imgSrc}
-            sizes={imgSizes}
-            critical={critical}
-            {...imageProps}
-            imgixParams={{
-              fit: imageSize === 'cover' ? 'crop' : 'fill',
-              crop: 'faces,entropy',
-              ar: '16:9',
-              fill: 'solid',
-              ...(imageProps.imgixParams || {})
-            }}
-          />
-        </Styled.a>
+        <div sx={{ variant: styles('aspectRatioWrapper') }}>
+          <div sx={{ variant: styles('aspectRatioBox') }}>
+            <Styled.a
+              sx={{ variant: styles('image') }}
+              href={linkHref}
+              onClick={trackInteraction}
+            >
+              <div sx={{ variant: styles('cardImage') }}>
+                <ImgixImage
+                  alt={imgAlt}
+                  src={imgSrc}
+                  sizes={imgSizes}
+                  critical={critical}
+                  {...imageProps}
+                  imgixParams={{
+                    fit: imageSize === 'cover' ? 'crop' : 'fill',
+                    crop: 'faces,entropy',
+                    ar: '16:9',
+                    fill: 'solid',
+                    ...(imageProps.imgixParams || {})
+                  }}
+                />
+              </div>
+            </Styled.a>
+          </div>
+        </div>
+
+        // <Styled.a
+        //   sx={{ variant: styles('image') }}
+        //   href={linkHref}
+        //   onClick={trackInteraction}
+        // >
+        //   <ImgixImage
+        //     alt={imgAlt}
+        //     src={imgSrc}
+        //     sizes={imgSizes}
+        //     critical={critical}
+        //     {...imageProps}
+        //     imgixParams={{
+        //       fit: imageSize === 'cover' ? 'crop' : 'fill',
+        //       crop: 'faces,entropy',
+        //       ar: '16:9',
+        //       fill: 'solid',
+        //       ...(imageProps.imgixParams || {})
+        //     }}
+        //   />
+        // </Styled.a>
       )}
 
       <div
