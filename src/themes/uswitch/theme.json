@@ -4008,7 +4008,7 @@
           "aspectRatioWrapper": {
             "width": [132, 384, 474],
             "mr": 32,
-            "mb": "22px"
+            "mb": "24px"
           },
           "aspectRatioBox": {
             "variant": "compounds.card.aspectRatioBox",
