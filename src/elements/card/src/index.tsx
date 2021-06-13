@@ -79,15 +79,15 @@ const Card: React.FC<Props> = ({
   const AspectRatioWrapper = (children: React.ReactNode) =>
     isAspectRatioBox ? (
       <div sx={{ variant: styles('aspectRatioWrapper') }}>
-        <div sx={{ variant: styles('aspectRatioBox') }}>
-          <Styled.a
-            sx={{ variant: styles('image') }}
-            href={linkHref}
-            onClick={trackInteraction}
-          >
+        <Styled.a
+          sx={{ variant: styles('image') }}
+          href={linkHref}
+          onClick={trackInteraction}
+        >
+          <div sx={{ variant: styles('aspectRatioBox') }}>
             <div sx={{ variant: styles('cardImage') }}>{children}</div>
-          </Styled.a>
-        </div>
+          </div>
+        </Styled.a>
       </div>
     ) : (
       <Styled.a
