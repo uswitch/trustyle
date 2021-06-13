@@ -931,7 +931,7 @@
           },
           "aspectRatioBox": {
             "variant": "compounds.card.aspectRatioBox",
-            "paddingTop": "56.286%"
+            "paddingTop": "56.291%"
           },
           "cardImage": {
             "variant": "compounds.card.cardImage"
