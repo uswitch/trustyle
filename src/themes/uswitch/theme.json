@@ -4151,30 +4151,10 @@
           "meta": {
             "display": "none"
           },
-          "image": {            
-            "display": "inline-block",
-            "width": "100%",
-            "overflow": "hidden",
-            "img": {
-              "objectFit": ["contain", "cover"],
-              "width": "100%",
-              "height": "100%"
-            }
-          },
-          "aspectRatioWrapper": {
+          "image": {
             "width": ["100%", null, "grid.lg.6"],
             "height": ["auto", null, 658],
-            "overflow": "hidden",
-            "flex": 1
-          },
-          "aspectRatioBox": {
-            "variant": "compounds.card.aspectRatioBox",
-            "paddingTop": ["56.287%", null, 658]
-          },
-          "cardImage": {
-            "variant": "compounds.card.cardImage",
-            "width": "100%",
-            "height": "100%",
+            "flex": 1,
             "overflow": "hidden",
             "img": {
               "objectFit": ["contain", "cover"],

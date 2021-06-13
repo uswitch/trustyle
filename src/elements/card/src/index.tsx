@@ -64,6 +64,7 @@ const Card: React.FC<Props> = ({
   button
 }) => {
   const styles = makeStyles(variant)
+  const isAspectRatioBox = variant === 'vertical' || variant === 'horizontal'
 
   const HeaderWrapper = (children: React.ReactNode) =>
     headerChildren ? (
@@ -73,6 +74,29 @@ const Card: React.FC<Props> = ({
       </div>
     ) : (
       children
+    )
+
+  const AspectRatioWrapper = (children: React.ReactNode) =>
+    isAspectRatioBox ? (
+      <div sx={{ variant: styles('aspectRatioWrapper') }}>
+        <div sx={{ variant: styles('aspectRatioBox') }}>
+          <Styled.a
+            sx={{ variant: styles('image') }}
+            href={linkHref}
+            onClick={trackInteraction}
+          >
+            <div sx={{ variant: styles('cardImage') }}>{children}</div>
+          </Styled.a>
+        </div>
+      </div>
+    ) : (
+      <Styled.a
+        sx={{ variant: styles('image') }}
+        href={linkHref}
+        onClick={trackInteraction}
+      >
+        {children}
+      </Styled.a>
     )
 
   const journeyVariant = variant === 'journey-card'
@@ -94,53 +118,22 @@ const Card: React.FC<Props> = ({
   return (
     <div className={className} sx={{ variant: styles() }}>
       {HeaderWrapper(
-        <div sx={{ variant: styles('aspectRatioWrapper') }}>
-          <div sx={{ variant: styles('aspectRatioBox') }}>
-            <Styled.a
-              sx={{ variant: styles('image') }}
-              href={linkHref}
-              onClick={trackInteraction}
-            >
-              <div sx={{ variant: styles('cardImage') }}>
-                <ImgixImage
-                  alt={imgAlt}
-                  src={imgSrc}
-                  sizes={imgSizes}
-                  critical={critical}
-                  {...imageProps}
-                  imgixParams={{
-                    fit: imageSize === 'cover' ? 'crop' : 'fill',
-                    crop: 'faces,entropy',
-                    ar: '16:9',
-                    fill: 'solid',
-                    ...(imageProps.imgixParams || {})
-                  }}
-                />
-              </div>
-            </Styled.a>
-          </div>
-        </div>
-
-        // <Styled.a
-        //   sx={{ variant: styles('image') }}
-        //   href={linkHref}
-        //   onClick={trackInteraction}
-        // >
-        //   <ImgixImage
-        //     alt={imgAlt}
-        //     src={imgSrc}
-        //     sizes={imgSizes}
-        //     critical={critical}
-        //     {...imageProps}
-        //     imgixParams={{
-        //       fit: imageSize === 'cover' ? 'crop' : 'fill',
-        //       crop: 'faces,entropy',
-        //       ar: '16:9',
-        //       fill: 'solid',
-        //       ...(imageProps.imgixParams || {})
-        //     }}
-        //   />
-        // </Styled.a>
+        AspectRatioWrapper(
+          <ImgixImage
+            alt={imgAlt}
+            src={imgSrc}
+            sizes={imgSizes}
+            critical={critical}
+            {...imageProps}
+            imgixParams={{
+              fit: imageSize === 'cover' ? 'crop' : 'fill',
+              crop: 'faces,entropy',
+              ar: '16:9',
+              fill: 'solid',
+              ...(imageProps.imgixParams || {})
+            }}
+          />
+        )
       )}
 
       <div
