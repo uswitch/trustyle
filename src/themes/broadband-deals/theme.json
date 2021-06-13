@@ -870,6 +870,15 @@
           "lineHeight": "md"
         }
       },
+      "headerChildren": {
+        "display": "flex",
+        "flexDirection": ["column-reverse", "row-reverse"],
+        "justifyContent": "space-between",
+        "alignItems": "center"
+      },
+      "clickWrapper": {
+        "height": "100%"
+      },
       "aspectRatioBox": {
         "position": "relative",
         "overflow": "hidden",
@@ -880,15 +889,6 @@
         "position": "absolute",
         "top": "0",
         "left": "0"
-      },
-      "headerChildren": {
-        "display": "flex",
-        "flexDirection": ["column-reverse", "row-reverse"],
-        "justifyContent": "space-between",
-        "alignItems": "center"
-      },
-      "clickWrapper": {
-        "height": "100%"
       },
       "variants": {
         "vertical": {
@@ -995,7 +995,7 @@
             "variant": "compounds.card.headerChildren"
           },
           "image": {
-            "variant": "compounds.card.base.image",            
+            "variant": "compounds.card.base.image",
             "display": "inline-block",
             "width": "100%",
             "height": "100%"
