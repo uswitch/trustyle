@@ -3978,7 +3978,7 @@
           },
           "aspectRatioWrapper": {
             "width": "100%",
-            "mb": "6px"
+            "mb": "8px"
           },
           "aspectRatioBox": {
             "variant": "compounds.card.aspectRatioBox",
