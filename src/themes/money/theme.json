@@ -2986,7 +2986,7 @@
           },
           "content": {
             "variant": "compounds.card.base.content",
-            "paddingTop": "14px"
+            "paddingTop": "15px"
           },
           "link": {
             "variant": "compounds.card.base.link"

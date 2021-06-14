@@ -892,6 +892,7 @@
       "variants": {
         "vertical": {
           "&:hover": {},
+          "variant": "compounds.card.base",
           "tag": {
             "variant": "compounds.card.base.tag",
             "mb": "sm"
@@ -901,7 +902,7 @@
           },
           "content": {
             "variant": "compounds.card.base.content",
-            "pt": "sm",
+            "pt": "11px !important",
             "px": "sm"
           },
           "link": {
@@ -932,8 +933,7 @@
           },
           "cardImage": {
             "variant": "compounds.card.cardImage"
-          },
-          "variant": "compounds.card.base"
+          }
         },
         "assuranceBar": {
           "display": "flex",
@@ -970,6 +970,7 @@
         },
         "horizontal": {
           "variant": "compounds.card.base",
+          "pb": ["39px", "55px"],
           "display": "flex",
           "flexDirection": "row",
           "alignItems": "start",
