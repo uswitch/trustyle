@@ -902,7 +902,7 @@
           },
           "content": {
             "variant": "compounds.card.base.content",
-            "pt": "11px !important",
+            "pt": "13px !important",
             "px": "sm"
           },
           "link": {
@@ -970,7 +970,7 @@
         },
         "horizontal": {
           "variant": "compounds.card.base",
-          "pb": ["39px", "55px"],
+          "pb": ["41px", "57px"],
           "display": "flex",
           "flexDirection": "row",
           "alignItems": "start",
