@@ -2997,12 +2997,11 @@
             "height": "100%"
           },
           "aspectRatioWrapper": {
-            "width": "100%",
-            "mb": "5px"
+            "width": "100%"
           },
           "aspectRatioBox": {
             "variant": "compounds.card.aspectRatioBox",
-            "paddingTop": "56.291%"
+            "paddingTop": "56.288%"
           },
           "cardImage": {
             "variant": "compounds.card.cardImage"
@@ -3041,8 +3040,7 @@
             "height": "100%"
           },
           "aspectRatioWrapper": {
-            "width": [168, 192],
-            "mb": "6px"
+            "width": [168, 192]
           },
           "aspectRatioBox": {
             "variant": "compounds.card.aspectRatioBox",

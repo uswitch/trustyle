@@ -1416,8 +1416,7 @@
             "height": "100%"
           },
           "aspectRatioWrapper": {
-            "width": "100%",
-            "mb": "3px"
+            "width": "100%"
           },
           "aspectRatioBox": {
             "variant": "compounds.card.aspectRatioBox",
@@ -1451,8 +1450,7 @@
           },
           "aspectRatioWrapper": {
             "width": 250,
-            "pt": "lg",
-            "mb": "7px"
+            "pt": "lg"
           },
           "aspectRatioBox": {
             "variant": "compounds.card.aspectRatioBox",
