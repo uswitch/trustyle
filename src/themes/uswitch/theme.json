@@ -2461,6 +2461,10 @@
             "&:focus + span::before": {
               "variant": "elements.input.focus"
             }
+          },
+          "slide": {
+            "variant": "elements.input.checkbox.base",
+            "p": "sm"
           }
         }
       },
