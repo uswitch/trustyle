@@ -51,7 +51,9 @@ const Billboard: React.FC<Props> = ({
             )}
             <div
               sx={{
-                marginBottom: fullWidthSlot ? ['lg', 'xxl'] : ['xl', 'xxl'],
+                marginBottom: fullWidthSlot
+                  ? ['lg', primarySlot ? 'xxl' : 'lg']
+                  : ['xl', 'xxl'],
                 display: 'flex',
                 flexDirection: ['column', 'column', 'row'],
                 justifyContent: ['center', 'center', 'space-between']

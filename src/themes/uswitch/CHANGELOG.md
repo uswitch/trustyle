@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.47.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.47.1...@uswitch/trustyle.uswitch-theme@2.47.2) (2021-06-11)
+
+
+### Bug Fixes
+
+* spacing of primary slot cta ([95ec12f](https://github.com/uswitch/trustyle/commit/95ec12f))
+
+
+
+
+
+## [2.47.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.47.0...@uswitch/trustyle.uswitch-theme@2.47.1) (2021-06-10)
+
+
+### Bug Fixes
+
+* tablet issues and primarySlot CTA ([67887ed](https://github.com/uswitch/trustyle/commit/67887ed))
+
+
+
+
+
 # [2.47.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.46.4...@uswitch/trustyle.uswitch-theme@2.47.0) (2021-06-07)
 
 
