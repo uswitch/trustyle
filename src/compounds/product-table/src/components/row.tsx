@@ -136,7 +136,8 @@ const ProductTableRow: React.FC<RowProps> = ({
               sx={{
                 position: 'absolute',
                 top: 0,
-                transform: 'translateY(-50%)'
+                transform: 'translateY(-50%)',
+                width: '100%'
               }}
             >
               {badges.map((badge, i) => (
