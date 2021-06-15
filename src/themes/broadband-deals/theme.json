@@ -896,7 +896,7 @@
           "content": {
             "variant": "compounds.card.base.content",
             "px": "sm",
-            "pt": ["12px", "20px !important"]
+            "pt": "sm"
           },
           "link": {
             "variant": "compounds.card.base.link",
