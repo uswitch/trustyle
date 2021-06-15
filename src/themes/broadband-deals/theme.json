@@ -895,7 +895,7 @@
           },
           "content": {
             "variant": "compounds.card.base.content",
-            "pt": "sm",
+            "pt": "20px !important",
             "px": "sm"
           },
           "link": {
@@ -957,7 +957,10 @@
           },
           "image": {
             "variant": "compounds.card.base.image",
-            "pr": ["sm", "md"],
+            "display": "inline-block",
+            "pr": ["sm", "md"]
+          },
+          "aspectRatioWrapper": {
             "maxWidth": "40%"
           },
           "content": {
@@ -1294,7 +1297,7 @@
             "justify-content": "center"
           }
         }
-      }
+      }    
     },
     "accordion": {
       "iconOpen": "minus",
