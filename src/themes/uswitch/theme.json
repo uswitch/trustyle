@@ -1769,10 +1769,7 @@
         "left": {
           "position": "relative",
           "display": "flex",
-          "flex-direction": [
-            "column",
-            "row"
-          ],
+          "flexDirection": ["column", "row"],
           "alignItems": "center",
           "::before": {
             "content": "''",
@@ -4679,6 +4676,17 @@
           "padding": 0
         }
       },
+      "aspectRatioBox": {
+        "position": "relative",
+        "overflow": "hidden",
+        "width": "100%",
+        "height": "0"
+      },
+      "cardImage": {
+        "position": "absolute",
+        "top": "0",
+        "left": "0"
+      },
       "variants": {
         "noImage": {
           "position": "relative",
@@ -4837,6 +4845,22 @@
           },
           "link": {
             "variant": "compounds.card.base.link"
+          },
+          "image": {
+            "display": "inline-block",
+            "width": "100%",
+            "height": "100%",
+            "mb": "0"
+          },
+          "aspectRatioWrapper": {
+            "width": "100%"
+          },
+          "aspectRatioBox": {
+            "variant": "compounds.card.aspectRatioBox",
+            "paddingTop": "56.285%"
+          },
+          "cardImage": {
+            "variant": "compounds.card.cardImage"
           }
         },
         "horizontal": {
@@ -4861,6 +4885,24 @@
           },
           "link": {
             "variant": "compounds.card.base.link"
+          },
+          "image": {
+            "display": "inline-block",
+            "width": [132, 384, 474],
+            "height": "100%",
+            "mb": "0"
+          },
+          "aspectRatioWrapper": {
+            "width": [132, 384, 474],
+            "mr": 32,
+            "mb": "sm"
+          },
+          "aspectRatioBox": {
+            "variant": "compounds.card.aspectRatioBox",
+            "paddingTop": "56.287%"
+          },
+          "cardImage": {
+            "variant": "compounds.card.cardImage"
           }
         },
         "responsive": {
@@ -6065,11 +6107,8 @@
           "position": "relative",
           "zIndex": 2,
           "mt": -64,
-          "maxWidth": [
-            "100%",
-            "grid.md.6",
-            "100%"
-          ],
+          "height": "auto",
+          "maxWidth": ["100%", "grid.md.6", "100%"],
           "imgixWidth": 608,
           "imgixParams": {
             "fill": "fillmax"
@@ -6425,7 +6464,7 @@
               "100%"
             ],
             "imgixWidth": 768,
-            "height": "100%"
+            "height": "auto"
           }
         },
         "solidColorImageRight": {

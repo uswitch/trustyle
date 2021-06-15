@@ -1379,6 +1379,17 @@
         },
         "mr": "base"
       },
+      "aspectRatioBox": {
+        "position": "relative",
+        "overflow": "hidden",
+        "width": "100%",
+        "height": "0"
+      },
+      "cardImage": {
+        "position": "absolute",
+        "top": "0",
+        "left": "0"
+      },
       "variants": {
         "vertical": {
           "&:hover": {
@@ -1402,6 +1413,21 @@
           "link": {
             "variant": "compounds.card.base.link"
           },
+          "image": {
+            "display": "inline-block",
+            "width": "100%",
+            "height": "100%"
+          },
+          "aspectRatioWrapper": {
+            "width": "100%"
+          },
+          "aspectRatioBox": {
+            "variant": "compounds.card.aspectRatioBox",
+            "paddingTop": "56.287%"
+          },
+          "cardImage": {
+            "variant": "compounds.card.cardImage"
+          },
           "variant": "compounds.card.base"
         },
         "horizontal": {
@@ -1412,16 +1438,28 @@
           "display": "flex",
           "flexDirection": "row-reverse",
           "alignItems": "start",
-          "image": {
-            "pt": "lg",
-            "width": 250
-          },
           "content": {
             "width": 670,
             "variant": "compounds.card.base.content"
           },
           "link": {
             "variant": "compounds.card.base.link"
+          },
+          "image": {
+            "display": "inline-block",
+            "width": 250,
+            "height": "100%"
+          },
+          "aspectRatioWrapper": {
+            "width": 250,
+            "pt": "lg"
+          },
+          "aspectRatioBox": {
+            "variant": "compounds.card.aspectRatioBox",
+            "paddingTop": "56.288%"
+          },
+          "cardImage": {
+            "variant": "compounds.card.cardImage"
           }
         },
         "responsive": {
@@ -1837,7 +1875,7 @@
       "> *": {
         "height": "100%",
         "display": "flex",
-        "flex-direction": "column"
+        "flexDirection": "column"
       },
       "mb": "xl",
       "pb": "xl",

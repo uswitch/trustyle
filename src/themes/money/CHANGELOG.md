@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.49.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.49.7...@uswitch/trustyle.money-theme@1.49.8) (2021-06-15)
+
+
+### Bug Fixes
+
+* add styling for aspect ratio divs ([c0515b7](https://github.com/uswitch/trustyle/commit/c0515b7))
+
+
+
+
+
 ## [1.49.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.49.6...@uswitch/trustyle.money-theme@1.49.7) (2021-06-11)
 
 
