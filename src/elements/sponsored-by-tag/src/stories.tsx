@@ -87,6 +87,28 @@ export const ExampleWithFormVariant = () => {
   )
 }
 
+export const ExampleWithCentredLightVariant = () => {
+  const providerName: string = text('Provider name', 'Three')
+  const providerLogo: string = text(
+    'Provider logo url',
+    'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/5eyE4LyswwqIYk0mIsE820/dc0774e3e62d7b39ddeb1729d823a8da/Logo_-_three.png'
+  )
+
+  const providerText: string = text('Text to display', 'You selected:')
+  return (
+    <React.Fragment>
+      <div sx={{ backgroundColor: 'secondary' }}>
+        <SponsoredByTag
+          providerLogoSrc={providerLogo}
+          providerText={providerText}
+          providerName={providerName}
+          variant="centered-light"
+        />
+      </div>
+    </React.Fragment>
+  )
+}
+
 ExampleWithDefaultText.story = {
   parameters: {
     percy: { skip: true }
@@ -117,6 +139,7 @@ export const AutomatedTests = () => {
       <ExampleWithTextProp />
       <ExampleWithHeroVariant />
       <ExampleWithFormVariant />
+      <ExampleWithCentredLightVariant />
     </AllThemes>
   )
 }

@@ -5,6 +5,8 @@ All commands can be run from individual packages, but it is not necessary to do 
 - Run `npm install` at the project root to install the dev dependencies.
 - Run `npx lerna bootstrap` to link package dependencies to each other.
 
+On some systems, `npx lerna bootstrap` may fail with an error `Unexpected end of JSON input while parsing near '...-imports":"^7.7.0","@'` - in this case, try running `npm cache clean --force`
+
 To run storybook locally `npm start`.
 
 The packages are all built using the same build step. Run `npm run build` to build all the packages using `tsc`. All files matching `src/**/*.{ts,tsx}` are included and output is written to the `lib` directory within each package.

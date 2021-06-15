@@ -15,6 +15,8 @@ type Props<T extends React.ComponentType<any>> = Overwrite<
     size?: string
     beforeIcon?: Glyph
     afterIcon?: Glyph
+    onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void
+    trackInteraction?: (e: React.MouseEvent<HTMLAnchorElement>) => void
   }
 >
 
@@ -28,6 +30,8 @@ export const ButtonLink = <
   size = 'large',
   beforeIcon,
   afterIcon,
+  trackInteraction = () => {},
+  onClick = () => {},
   ...props
 }: Props<T>) => {
   const { theme }: any = useThemeUI()
@@ -83,6 +87,10 @@ export const ButtonLink = <
         display: 'inline-block',
         textDecoration: 'none',
         variant: `elements.buttons.variants.${variant}`
+      }}
+      onClick={e => {
+        trackInteraction(e)
+        onClick(e)
       }}
       {...props}
     >

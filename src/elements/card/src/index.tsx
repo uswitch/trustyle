@@ -4,15 +4,16 @@ import * as React from 'react'
 import { jsx, Styled } from 'theme-ui'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
+import { ButtonLink } from '@uswitch/trustyle.button-link'
 
 interface Props {
   className?: string
   critical?: boolean
   description?: string
   imageSize?: 'cover' | 'contain'
-  imgAlt: string
+  imgAlt?: string
   imgSizes?: string
-  imgSrc: string
+  imgSrc?: string
   imageProps?: any
   linkIcon?: Glyph
   linkHref: string
@@ -29,8 +30,12 @@ interface Props {
     | 'featured-alternate'
     | 'bbdeals-card'
     | 'assuranceBar'
+    | 'journey-card'
   headerChildren?: React.ReactNode
   contentChildren?: React.ReactNode
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void
+  trackInteraction?: (e: React.MouseEvent<HTMLAnchorElement>) => void
+  button?: React.ReactNode
 }
 
 const makeStyles = (variant: string) => (element?: string) =>
@@ -53,7 +58,10 @@ const Card: React.FC<Props> = ({
   title,
   variant = 'vertical',
   headerChildren,
-  contentChildren
+  contentChildren,
+  onClick = () => {},
+  trackInteraction = () => {},
+  button
 }) => {
   const styles = makeStyles(variant)
 
@@ -64,35 +72,48 @@ const Card: React.FC<Props> = ({
         <span>{children}</span>
       </div>
     ) : (
-      <React.Fragment>{children}</React.Fragment>
+      children
     )
 
-  return (
-    <div
-      className={className}
-      sx={{
-        variant: styles()
+  const journeyVariant = variant === 'journey-card'
+
+  const JourneyButton = (
+    <ButtonLink
+      variant="primary-journey"
+      href={linkHref}
+      afterIcon={linkIcon}
+      onClick={e => {
+        trackInteraction(e)
+        onClick(e)
       }}
     >
+      {linkText}
+    </ButtonLink>
+  )
+
+  return (
+    <div className={className} sx={{ variant: styles() }}>
       {HeaderWrapper(
-        <React.Fragment>
-          <Styled.a sx={{ variant: styles('image') }} href={linkHref}>
-            <ImgixImage
-              alt={imgAlt}
-              src={imgSrc}
-              sizes={imgSizes}
-              critical={critical}
-              {...imageProps}
-              imgixParams={{
-                fit: imageSize === 'cover' ? 'crop' : 'fill',
-                crop: 'faces,entropy',
-                ar: '16:9',
-                fill: 'solid',
-                ...(imageProps.imgixParams || {})
-              }}
-            />
-          </Styled.a>
-        </React.Fragment>
+        <Styled.a
+          sx={{ variant: styles('image') }}
+          href={linkHref}
+          onClick={trackInteraction}
+        >
+          <ImgixImage
+            alt={imgAlt}
+            src={imgSrc}
+            sizes={imgSizes}
+            critical={critical}
+            {...imageProps}
+            imgixParams={{
+              fit: imageSize === 'cover' ? 'crop' : 'fill',
+              crop: 'faces,entropy',
+              ar: '16:9',
+              fill: 'solid',
+              ...(imageProps.imgixParams || {})
+            }}
+          />
+        </Styled.a>
       )}
 
       <div
@@ -128,19 +149,27 @@ const Card: React.FC<Props> = ({
         </div>
         {title && (
           <Styled.h3 sx={{ margin: '0', variant: styles('heading') }}>
-            <Styled.a href={linkHref}>{title}</Styled.a>
+            <Styled.a href={linkHref} onClick={trackInteraction}>
+              {title}
+            </Styled.a>
           </Styled.h3>
         )}
-        {description && <Styled.p>{description}</Styled.p>}
-        {linkText && (
+        {description && (
+          <Styled.p sx={{ variant: styles('description') }}>
+            {description}
+          </Styled.p>
+        )}
+        {linkText && !journeyVariant && (
           <Styled.a
             href={linkHref}
+            onClick={trackInteraction}
             sx={{ textDecoration: 'underline', variant: styles('link') }}
           >
             {linkIcon && <Icon glyph={linkIcon} color="brand" />}
             {linkText}
           </Styled.a>
         )}
+        {linkText && journeyVariant && ((button && button) || JourneyButton)}
       </div>
     </div>
   )

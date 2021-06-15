@@ -17,7 +17,8 @@
     "body": "'Open Sans', -apple-system, sans-serif",
     "heading": "Nunito, -apple-system, sans-serif",
     "monospace": "Menlo, monospace",
-    "link": "'Open Sans', -apple-system, sans-serif"
+    "link": "'Open Sans', -apple-system, sans-serif",
+    "legacy": "Varela Round,Arial,sans-serif"
   },
   "lineHeights": {
     "base": "1.5",
@@ -158,7 +159,8 @@
     "quick-link-bg": "#F1F1F3",
     "dark-grey-03": "rgba(104,104,135,0.3)",
     "opaque-plum-01": "rgba(146, 73, 139, 0.1)",
-    "opaque-white-01": "rgba(255, 255, 255, 0.7)"
+    "opaque-white-01": "rgba(255, 255, 255, 0.7)",
+    "overlay-bg": "rgba(20, 20, 36, 0.5)"
   },
   "radii": {
     "sm": 3,
@@ -392,7 +394,23 @@
         },
         "centered": {
           "display": "inline-block",
-          "align-items": "center"
+          "alignItems": "center"
+        },
+        "centered-light": {
+          "variant": "elements.sponsored-by-tag.variants.centered",
+          "wrapper": {
+            "display": "inline-flex !important",
+            "alignItems": "center",
+            "justifyContent": "flex-end",
+            "paddingY": "xxs",
+            "pt": "md"
+          },
+          "text": {
+            "color": "white"
+          },
+          "image": {
+            "ml": "10px"
+          }
         }
       }
     },
@@ -425,7 +443,7 @@
       "variants": {
         "left": {
           "main": {
-            "a:first-child": { "ml": 0 }
+            "a:first-of-type": { "ml": 0 }
           },
           "bio": {
             "width": ["100%", "75%", "60%"],
@@ -623,6 +641,20 @@
       },
       "variants": {
         "light": {
+          "main": {
+            "color": "grey-0"
+          },
+          "mobileLink": {
+            "color": "grey-0"
+          },
+          "homeIcon": {
+            "color": "grey-0"
+          },
+          "title": {
+            "color": "grey-0"
+          }
+        },
+        "billboard": {
           "main": {
             "color": "grey-0"
           },
@@ -906,6 +938,43 @@
         "content": "none"
       }
     },
+    "overlay": {
+      "backgroundColor": "overlay-bg"
+    },
+    "modal": {
+      "base": {
+        "backgroundColor": "grey-0"
+      },
+      "variants": {
+        "full": {
+          "variant": "elements.modal.base",
+          "maxWidth": ["none", "30em", "38em"],
+          "margin": ["auto", "100px auto"],
+          "flexGrow": [1, 0]
+        },
+        "partial": {
+          "variant": "elements.modal.base",
+          "maxWidth": ["none", "30em", "38em"],
+          "margin": ["auto", "100px auto"],
+          "flexGrow": "0"
+        }
+      },
+      "closeIcon": {
+        "width": "24px",
+        "height": "24px",
+        "color": "link-2"
+      },
+      "closeButton": {
+        "backgroundColor": "grey-0",
+        "border": 0,
+        "cursor": "pointer",
+        "lineHeight": 0,
+        "padding": "sm",
+        ":focus": {
+          "outline": "none"
+        }
+      }
+    },
     "simple-input": {
       "base": {
         "fontFamily": "base",
@@ -1055,10 +1124,28 @@
           "button": {
             "variant": "elements.cta.base.button"
           }
+        },
+        "billboard": {
+          "main": {
+            "backgroundColor": "white"
+          },
+          "title": {
+            "variant": "elements.cta.base.title"
+          },
+          "text": {
+            "variant": "elements.cta.base.text"
+          },
+          "button": {
+            "variant": "elements.cta.base.button"
+          }
         }
       }
     },
     "list": {
+      "base": {
+        "display": "inline-block",
+        "textAlign": "left"
+      },
       "pros": {
         "color": "green",
         "glyph": "tick"
@@ -1253,6 +1340,9 @@
       }
     },
     "drop-down": {
+      "container": {
+        "height": "100%"
+      },
       "placeholder": {
         "border": "1px solid",
         "borderColor": "grey-40",
@@ -1283,7 +1373,7 @@
       "variants": {
         "quickLinks": {
           "display": "flex",
-          "flex-direction": "column",
+          "flexDirection": "column",
           "header": {
             "paddingY": ["sm", "md"]
           },
@@ -1334,8 +1424,9 @@
         "paddingLeft": 0,
         "width": "100%",
         "userSelect": "none",
+        "backgroundColor": "grey-0",
         "&::before": {
-          "borderRadius": "50%",
+          "borderRadius": "2px",
           "borderStyle": "solid",
           "borderWidth": "2px",
           "content": "' '",
@@ -1358,11 +1449,13 @@
         "paddingLeft": 0,
         "width": "100%",
         "userSelect": "none",
+        "backgroundColor": "grey-0",
         "&::before": {
           "borderRadius": "50%",
           "borderStyle": "solid",
           "borderWidth": "2px",
           "content": "' '",
+          "flex": "none",
           "display": "block",
           "height": "17px",
           "marginLeft": "base",
@@ -1394,7 +1487,10 @@
         "error": {
           "variant": "elements.simple-drop-down.select.base",
           "border": "2px solid",
-          "borderColor": "error",
+          "borderTopColor": "error",
+          "borderBottomColor": "error",
+          "borderRightColor": "error",
+          "borderLeftColor": "error",
           "outlineColor": "error"
         },
         "focus": {
@@ -1414,11 +1510,111 @@
     },
     "form": {
       "variants": {
+        "field-section": {
+          "wrapper": {
+            "variants": {
+              "calculator": {
+                "marginTop": "xs"
+              }
+            }
+          },
+          "label": {
+            "variants": {
+              "calculator": {
+                "marginBottom": "xs",
+                "color": "grey-80",
+                "fontWeight": "700"
+              }
+            }
+          },
+          "input": {
+            "checkbox": {
+              "wrapper": {
+                "variant": "elements.form.variants.field-section.input.wrapper",
+                "flex": ["1 0 100%", "1 0 100%"]
+              }
+            },
+            "radio": {
+              "wrapper": {
+                "variant": "elements.form.variants.field-section.input.wrapper",
+                "flex": ["1 0 100%", "1 0 100%"]
+              }
+            },
+            "wrapper": {
+              "flex": ["1 0 50%", "1 0 25%"],
+              "marginX": "md",
+              "marginBottom": "xl"
+            }
+          },
+          "checkbox": {
+            "wrapper": {
+              "variants": {
+                "calculator": {
+                  "marginTop": "xs",
+                  "marginX": 0,
+                  "display": ["block", "flex"],
+                  "flexWrap": "wrap",
+                  "flex": "1 0 100%",
+                  ">div": {
+                    "marginLeft": [0, "md"],
+                    "width": ["calc(100% - 48px)", "100%"]
+                  },
+                  ">:nth-child(3n+1)": {
+                    "marginLeft": 0
+                  }
+                }
+              }
+            },
+            "span": {
+              "variants": {
+                "calculator": {
+                  "flex": "0 0 25%",
+                  "marginX": "md"
+                }
+              }
+            }
+          },
+          "simple-radio": {
+            "radioWrapper": {
+              "variants": {
+                "calculator": {
+                  "marginTop": "xs",
+                  "display": "flex",
+                  "flexWrap": "wrap",
+                  ">div": {
+                    "marginLeft": [0, "inherit"]
+                  },
+                  ">:nth-child(3n+1)": {
+                    "marginLeft": 0
+                  }
+                }
+              }
+            },
+            "span": {
+              "variants": {
+                "calculator": {
+                  "flex": ["0 0 calc(100% - 48px)", "0 0 25%", "0 0 25%"],
+                  "marginX": "md",
+                  "marginBottom": "md"
+                }
+              }
+            }
+          }
+        },
         "default": {
           "simple-radio": {
             "radioWrapper": {
+              "marginBottom": "lg",
               "display": "flex",
               "flexDirection": ["column", "row"],
+              "div": {
+                "display": "flex",
+                "flex": "1 1 0"
+              },
+              "label": {
+                "display": "flex",
+                "mr": 0
+              },
               "> div+div": {
                 "ml": [0, "sm"],
                 "mt": ["sm", 0]
@@ -1479,6 +1675,77 @@
               }
             }
           }
+        },
+        "simple": {
+          "simple-radio": {
+            "radioWrapper": {
+              "display": "flex",
+              "flexDirection": ["column", "row"],
+              "div": {
+                "display": "flex",
+                "flex": "1 1 0"
+              },
+              "label": {
+                "display": "flex",
+                "mr": 0
+              },
+              "> div+div": {
+                "ml": [0, "sm"],
+                "mt": ["sm", 0]
+              }
+            }
+          },
+          "label": {
+            "variant": "styles.h4",
+            "fontWeight": "bold",
+            "color": "grey-80",
+            "display": "block",
+            "mb": "xs",
+            "textAlign": "left",
+            "variants": {
+              "calculator": {
+                "variant": "styles.h6",
+                "fontWeight": "bold",
+                "color": "grey-80",
+                "display": "block",
+                "mb": "xs",
+                "mt": "xl"
+              }
+            }
+          },
+          "description": {
+            "color": "grey-80",
+            "display": "block",
+            "textAlign": "left",
+            "my": "xxs"
+          },
+          "input": {
+            "wrapper": {
+              "mb": "sm",
+              ":last-child": {
+                "mb": 36
+              }
+            },
+            "error": {
+              "color": "error",
+              "mt": "xs",
+              "textAlign": "left",
+              "title": {
+                "fontWeight": "bold",
+                "mb": "xxs"
+              }
+            }
+          },
+          "wrapper": {
+            "base": {
+              "pb": 0
+            },
+            "variants": {
+              "calculator": {
+                "pb": ["xs", 0]
+              }
+            }
+          }
         }
       },
       "button": {
@@ -1502,7 +1769,7 @@
     },
     "rich-text-block": {
       "base": {
-        "&:first-child": {
+        "&:first-of-type": {
           "mt": 0
         }
       },
@@ -1534,10 +1801,40 @@
         "with-icon": {
           "display": "flex",
           "alignItems": "center"
+        },
+        "billboard": {
+          "variant": "elements.rich-text-block.variants.center",
+          "color": "grey-0",
+          "h1,h2,h3,h4,h5,h6": {
+            "fontSize": ["md", "lg"],
+            "fontWeight": "bolder"
+          },
+          "a, button": {
+            "fontSize": ["sm", "md"],
+            "fontWeight": "bold"
+          }
         }
       }
     },
     "form-section": {
+      "panel": {
+        "states": {
+          "isActive": {
+            "fields": {
+              "calculator": {
+                "display": "flex",
+                "flexWrap": "wrap"
+              }
+            },
+            "buttonWrapper": {
+              "calculator": {
+                "display": "flex",
+                "justifyContent": "center"
+              }
+            }
+          }
+        }
+      },
       "default": {
         "elements": {
           "wrapper": {
@@ -1560,13 +1857,13 @@
           },
           "fields": {
             "display": "none",
-            ">:first-child": {
+            ">:first-of-type": {
               "label": {
                 "mt": 0
               }
             },
             "calculator": {
-              ">:first-child": {
+              ">:first-of-type": {
                 "label": {
                   "mt": 0
                 }
@@ -1618,7 +1915,7 @@
             },
             "fields": {
               "display": "block",
-              ">:first-child": {
+              ">:first-of-type": {
                 "label": {
                   "mt": 0
                 }
@@ -1704,6 +2001,23 @@
       }
     },
     "calculator": {
+      "panel": {
+        "title": {
+          "variant": "styles.h3",
+          "textAlign": "center",
+          "width": ["100%", "50%"],
+          "marginBottom": "lg",
+          "marginX": "auto",
+          "color": "plum"
+        },
+        "container": {
+          "marginY": 0,
+          "padding": "md",
+          "paddingX": [0, "xxl"],
+          "backgroundColor": "grey-05",
+          "borderRadius": 3
+        }
+      },
       "wrapper": {
         "mx": ["0px", "300px"]
       },
@@ -1758,7 +2072,7 @@
     "eligibility-criteria": {
       "base": {
         "height": "100%",
-        "box-sizing": "border-box",
+        "boxSizing": "border-box",
         "backgroundColor": "grey-0",
         "py": "lg",
         "px": "md"
@@ -2171,6 +2485,117 @@
         }
       }
     },
+    "billboard": {
+      "wrapper": {
+        "background": "linear-gradient(172deg, #924A8B 28%, #AF4C83 100%)"
+      },
+      "sizes": {
+        "gutter": "sm",
+        "verticalGutter": ["sm", "md", "md"]
+      },
+      "container": {
+        "maxWidth": 1152,
+        "mx": "auto"
+      },
+      "breadcrumbs": {
+        "mb": ["md", "lg"],
+        "pt": ["xs", "0"]
+      },
+      "primaryContent": {
+        "color": "grey-0",
+        "h1,h2,h3,h4,h5,h6": {
+          "variant": "styles.heading",
+          "color": "grey-0",
+          "fontSize": ["xl", "xxxl"],
+          "fontWeight": "bold",
+          "mb": "xs",
+          "mt": "0"
+        },
+        "p": {
+          "variant": "styles.p",
+          "fontSize": ["sm", "md"],
+          "lineHeight": "base",
+          "fontFamily": "base",
+          "mt": ["0", "xxs"],
+          "mb": ["lg", "0"]
+        },
+        "a": {
+          "mt": ["md", "lg"]
+        },
+        "button": {
+          "my": ["md", "lg"]
+        }
+      },
+      "contentWithoutFullWidthSlot": {
+        "variant": "compounds.billboard.primaryContent",
+        "p": {
+          "variant": "compounds.billboard.primaryContent.p",
+          "fontSize": ["sm", "md"],
+          "mb": "0"
+        }
+      },
+      "contentWithFullWidthSlot": {
+        "variant": "compounds.billboard.primaryContent",
+        "p": {
+          "variant": "compounds.billboard.primaryContent.p",
+          "fontSize": ["sm", "md"],
+          "mb": "xs"
+        }
+      },
+      "primarySlot": {
+        "h1,h2,h3,h4,h5,h6": {
+          "color": "grey-80"
+        },
+        "& > :last-child": {
+          "mb": "0"
+        }
+      },
+      "fullWidthSlot": {
+        "mb": "lg"
+      }
+    },
+    "phone-number-modal": {
+      "text": {
+        "variant": "styles.p",
+        "fontSize": "sm",
+        "lineHeight": "base",
+        "fontFamily": "base"
+      },
+      "heading": {
+        "variant": "compounds.phone-number-modal.text",
+        "color": "plum"
+      },
+      "logo-area-text": {
+        "fontSize": "lg",
+        "lineHeight": "heading",
+        "fontFamily": "heading",
+        "fontWeight": "bolder"
+      },
+      "logo-area-heading": {
+        "variant": "compounds.phone-number-modal.logo-area-text",
+        "color": "plum"
+      },
+      "a": {
+        "variant": "styles.a",
+        "logo-area": {
+          "variant": "compounds.phone-number-modal.logo-area-text",
+          "color": "grey-80"
+        },
+        "url": {
+          "variant": "compounds.phone-number-modal.text",
+          "color": "grey-80"
+        }
+      },
+      "url": {
+        "fontSize": "md",
+        "fontWeight": "bold",
+        "fontFamily": "base",
+        "lineHeight": "heading",
+        "p": {
+          "color": "plum"
+        }
+      }
+    },
     "accordion": {
       "base": {
         "wrapper": {
@@ -2311,7 +2736,7 @@
             "padding": "0 15px",
             "bg": "#eaeced",
             "ul": {
-              "list-style": "none",
+              "listStyle": "none",
               "padding": 0,
               "a": {
                 "textDecoration": "none",
@@ -2332,7 +2757,7 @@
             },
             "p": {
               "color": "#858f95",
-              "padding-top": "10px"
+              "paddingTop": "10px"
             },
             "a": {
               "display": "block"
@@ -2424,7 +2849,7 @@
             "top": "0",
             "height": "100%"
           },
-          ":first-child::before": {
+          ":first-of-type::before": {
             "top": "50%",
             "height": "50%"
           },
@@ -2529,7 +2954,7 @@
         "marginRight": "base",
         "meta": {
           "display": "flex",
-          "font-size": 14
+          "fontSize": 14
         },
         "superScript": {
           "mb": "xxs"
@@ -2540,8 +2965,8 @@
           "paddingX": "xs",
           "paddingY": "xxs",
           "mb": "xxs",
-          "font-weight": "bold",
-          "line-height": "150%",
+          "fontWeight": "bold",
+          "lineHeight": "150%",
           "borderRadius": 4
         }
       },
@@ -2577,7 +3002,7 @@
             "fontSize": [16, 18]
           },
           "meta": {
-            "flex-direction": "column",
+            "flexDirection": "column",
             "variant": "compounds.card.base.meta"
           },
           "content": {
@@ -2756,13 +3181,13 @@
     },
     "heroCard": {
       "variants": {
-        "flex-direction": ["column", "row"],
+        "flexDirection": ["column", "row"],
         "background": "linear-gradient(161.42deg, #924A8B 22.95%, #AF4C83 77.05%)",
-        "box-shadow": "0px 9px 19px rgba(92, 36, 87, 0.2)",
+        "boxShadow": "0px 9px 19px rgba(92, 36, 87, 0.2)",
         "paddingX": ["sm", "4xl"],
         "pt": ["md", "xxxl"],
         "pb": ["lg", "xxxl"],
-        "border-radius": ["4px", "8px"],
+        "borderRadius": ["4px", "8px"],
         "h1": {
           "color": "grey-0"
         },
@@ -2773,9 +3198,9 @@
           "width": ["initial", "50%"],
           "mr": [0, "4xl"],
           "display": ["flex"],
-          "flex-direction": "column",
-          "justify-content": "center",
-          "align-items": "flex-start"
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "alignItems": "flex-start"
         },
         "buttonLink": {
           "mt": ["sm", "xs"]

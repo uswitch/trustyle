@@ -3,6 +3,193 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.2.9...@uswitch/trustyle.legacy-product-table@1.2.10) (2021-05-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+
+
+
+
+## [1.2.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.2.8...@uswitch/trustyle.legacy-product-table@1.2.9) (2021-05-21)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+
+
+
+
+## [1.2.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.2.7...@uswitch/trustyle.legacy-product-table@1.2.8) (2021-05-13)
+
+
+### Bug Fixes
+
+* update first-child to first-of-type ([b5f0c8b](https://github.com/uswitch/trustyle/commit/b5f0c8b))
+
+
+
+
+
+## [1.2.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.2.6...@uswitch/trustyle.legacy-product-table@1.2.7) (2021-05-13)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+
+
+
+
+## [1.2.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.2.5...@uswitch/trustyle.legacy-product-table@1.2.6) (2021-05-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+
+
+
+
+## [1.2.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.2.4...@uswitch/trustyle.legacy-product-table@1.2.5) (2021-04-28)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+
+
+
+
+## [1.2.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.2.2...@uswitch/trustyle.legacy-product-table@1.2.4) (2021-04-27)
+
+
+### Bug Fixes
+
+* disabled more info ([5875275](https://github.com/uswitch/trustyle/commit/5875275))
+
+
+
+
+
+## [1.2.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.2.2...@uswitch/trustyle.legacy-product-table@1.2.3) (2021-04-27)
+
+
+### Bug Fixes
+
+* disabled more info ([5875275](https://github.com/uswitch/trustyle/commit/5875275))
+
+
+
+
+
+## [1.2.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.2.1...@uswitch/trustyle.legacy-product-table@1.2.2) (2021-04-22)
+
+
+### Bug Fixes
+
+* align table cells ([794fec3](https://github.com/uswitch/trustyle/commit/794fec3))
+
+
+
+
+
+## [1.2.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.2.0...@uswitch/trustyle.legacy-product-table@1.2.1) (2021-04-21)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+
+
+
+
+# [1.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.1.2...@uswitch/trustyle.legacy-product-table@1.2.0) (2021-04-15)
+
+
+### Features
+
+* add custom more info label ([b444668](https://github.com/uswitch/trustyle/commit/b444668))
+
+
+
+
+
+## [1.1.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.1.1...@uswitch/trustyle.legacy-product-table@1.1.2) (2021-04-14)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+
+
+
+
+## [1.1.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.1.0...@uswitch/trustyle.legacy-product-table@1.1.1) (2021-04-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+
+
+
+
+# [1.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.0.2...@uswitch/trustyle.legacy-product-table@1.1.0) (2021-03-30)
+
+
+### Bug Fixes
+
+* added telephone to automated tests ([9ea9670](https://github.com/uswitch/trustyle/commit/9ea9670))
+* align-items fixed for header ([7bc0978](https://github.com/uswitch/trustyle/commit/7bc0978))
+* more percy fixes ([5053b1b](https://github.com/uswitch/trustyle/commit/5053b1b))
+* refactor the themeUI usage with cta seen in stories ([34cc056](https://github.com/uswitch/trustyle/commit/34cc056))
+* revert styling changes to product table header ([7b2e099](https://github.com/uswitch/trustyle/commit/7b2e099))
+* visual design changes ([5a42282](https://github.com/uswitch/trustyle/commit/5a42282))
+
+
+### Features
+
+* phone number in product table ([8802523](https://github.com/uswitch/trustyle/commit/8802523))
+
+
+
+
+
+## [1.0.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.0.1...@uswitch/trustyle.legacy-product-table@1.0.2) (2021-03-29)
+
+
+### Bug Fixes
+
+* content type ([c147a18](https://github.com/uswitch/trustyle/commit/c147a18))
+
+
+
+
+
+## [1.0.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.0.0...@uswitch/trustyle.legacy-product-table@1.0.1) (2021-03-29)
+
+
+### Bug Fixes
+
+* update legacy product table content to be an array ([2b90b5b](https://github.com/uswitch/trustyle/commit/2b90b5b))
+
+
+
+
+
+# [1.0.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.8.16...@uswitch/trustyle.legacy-product-table@1.0.0) (2021-03-26)
+
+
+### Bug Fixes
+
+* alignment of single eligibility content table ([82ba94a](https://github.com/uswitch/trustyle/commit/82ba94a))
+* tweaks to table styling ([fb5524a](https://github.com/uswitch/trustyle/commit/fb5524a))
+* use reduce over flat as our node version doesn't support it ([e076643](https://github.com/uswitch/trustyle/commit/e076643))
+* use replace over replaceAll as our node version doesn't support replaceAll ([507edbf](https://github.com/uswitch/trustyle/commit/507edbf))
+
+
+### Features
+
+* add more information table component ([c0edbd8](https://github.com/uswitch/trustyle/commit/c0edbd8))
+* add MoreInformationText component ([10ed198](https://github.com/uswitch/trustyle/commit/10ed198))
+* add rates section ([a1fd311](https://github.com/uswitch/trustyle/commit/a1fd311))
+* allow representative example to be passed as a string ([4651eb9](https://github.com/uswitch/trustyle/commit/4651eb9))
+* new product table schema spec implementation ([9cc9b22](https://github.com/uswitch/trustyle/commit/9cc9b22))
+* pass moreinformationbutton as product table prop ([5d816cd](https://github.com/uswitch/trustyle/commit/5d816cd))
+* replace MoreInformationRow with table implementation ([44e3381](https://github.com/uswitch/trustyle/commit/44e3381))
+
+
+
+
+
 ## [0.8.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@0.8.15...@uswitch/trustyle.legacy-product-table@0.8.16) (2021-03-08)
 
 **Note:** Version bump only for package @uswitch/trustyle.legacy-product-table

@@ -1,14 +1,18 @@
 {
   "name": "@uswitch/trustyle.accordion",
-  "version": "0.14.5",
+  "version": "0.14.11",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uswitch/trustyle"
+  },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.25.0",
+    "@uswitch/trustyle.icon": "^1.26.3",
     "typescript": "^3.6.2"
   },
   "peerDependencies": {
@@ -18,7 +22,7 @@
     "theme-ui": "^0.2.52"
   },
   "dependencies": {
-    "@uswitch/trustyle-utils.palette": "^4.0.2",
-    "@uswitch/trustyle.imgix-image": "^0.1.40"
+    "@uswitch/trustyle-utils.palette": "^4.0.3",
+    "@uswitch/trustyle.imgix-image": "^0.1.41"
   }
 }

@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.3.8...@uswitch/trustyle.breadcrumbs@2.3.9) (2021-04-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.breadcrumbs
+
+
+
+
+
+## [2.3.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.3.7...@uswitch/trustyle.breadcrumbs@2.3.8) (2021-04-21)
+
+**Note:** Version bump only for package @uswitch/trustyle.breadcrumbs
+
+
+
+
+
+## [2.3.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.3.6...@uswitch/trustyle.breadcrumbs@2.3.7) (2021-04-14)
+
+**Note:** Version bump only for package @uswitch/trustyle.breadcrumbs
+
+
+
+
+
+## [2.3.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.3.5...@uswitch/trustyle.breadcrumbs@2.3.6) (2021-04-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.breadcrumbs
+
+
+
+
+
 ## [2.3.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.breadcrumbs@2.3.4...@uswitch/trustyle.breadcrumbs@2.3.5) (2021-03-08)
 
 **Note:** Version bump only for package @uswitch/trustyle.breadcrumbs

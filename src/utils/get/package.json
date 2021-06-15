@@ -1,10 +1,14 @@
 {
   "name": "@uswitch/trustyle-utils.get",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.ts",
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uswitch/trustyle"
   }
 }

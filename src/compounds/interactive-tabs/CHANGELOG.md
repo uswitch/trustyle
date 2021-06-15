@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.18](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.interactive-tabs@2.1.17...@uswitch/trustyle.interactive-tabs@2.1.18) (2021-04-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.interactive-tabs
+
+
+
+
+
+## [2.1.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.interactive-tabs@2.1.16...@uswitch/trustyle.interactive-tabs@2.1.17) (2021-04-21)
+
+**Note:** Version bump only for package @uswitch/trustyle.interactive-tabs
+
+
+
+
+
+## [2.1.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.interactive-tabs@2.1.15...@uswitch/trustyle.interactive-tabs@2.1.16) (2021-04-14)
+
+**Note:** Version bump only for package @uswitch/trustyle.interactive-tabs
+
+
+
+
+
+## [2.1.15](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.interactive-tabs@2.1.14...@uswitch/trustyle.interactive-tabs@2.1.15) (2021-04-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.interactive-tabs
+
+
+
+
+
 ## [2.1.14](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.interactive-tabs@2.1.13...@uswitch/trustyle.interactive-tabs@2.1.14) (2021-03-08)
 
 **Note:** Version bump only for package @uswitch/trustyle.interactive-tabs

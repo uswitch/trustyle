@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.26.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.26.2...@uswitch/trustyle.icon@1.26.3) (2021-04-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.icon
+
+
+
+
+
+## [1.26.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.26.1...@uswitch/trustyle.icon@1.26.2) (2021-04-21)
+
+**Note:** Version bump only for package @uswitch/trustyle.icon
+
+
+
+
+
+## [1.26.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.26.0...@uswitch/trustyle.icon@1.26.1) (2021-04-14)
+
+**Note:** Version bump only for package @uswitch/trustyle.icon
+
+
+
+
+
+# [1.26.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.25.0...@uswitch/trustyle.icon@1.26.0) (2021-04-12)
+
+
+### Features
+
+* add question-filled icon ([daeb41a](https://github.com/uswitch/trustyle/commit/daeb41a))
+
+
+
+
+
 # [1.25.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.24.0...@uswitch/trustyle.icon@1.25.0) (2021-03-08)
 
 

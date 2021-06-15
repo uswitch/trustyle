@@ -132,4 +132,5 @@ const Advert: React.FC<Props> = ({
   )
 }
 
+// had to add this comment to publish a new version of this component - TODO remove later
 export default Advert

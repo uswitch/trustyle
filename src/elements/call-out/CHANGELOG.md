@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.22](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.call-out@2.1.21...@uswitch/trustyle.call-out@2.1.22) (2021-04-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.call-out
+
+
+
+
+
+## [2.1.21](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.call-out@2.1.20...@uswitch/trustyle.call-out@2.1.21) (2021-04-21)
+
+**Note:** Version bump only for package @uswitch/trustyle.call-out
+
+
+
+
+
+## [2.1.20](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.call-out@2.1.19...@uswitch/trustyle.call-out@2.1.20) (2021-04-14)
+
+**Note:** Version bump only for package @uswitch/trustyle.call-out
+
+
+
+
+
+## [2.1.19](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.call-out@2.1.18...@uswitch/trustyle.call-out@2.1.19) (2021-04-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.call-out
+
+
+
+
+
+## [2.1.18](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.call-out@2.1.17...@uswitch/trustyle.call-out@2.1.18) (2021-03-29)
+
+
+### Bug Fixes
+
+* issue where the call out doesnt appear to be bold enough ([abadf64](https://github.com/uswitch/trustyle/commit/abadf64))
+
+
+
+
+
 ## [2.1.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.call-out@2.1.16...@uswitch/trustyle.call-out@2.1.17) (2021-03-08)
 
 **Note:** Version bump only for package @uswitch/trustyle.call-out

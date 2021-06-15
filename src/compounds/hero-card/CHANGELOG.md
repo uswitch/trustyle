@@ -3,6 +3,54 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.26](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero-card@2.0.25...@uswitch/trustyle.hero-card@2.0.26) (2021-05-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.hero-card
+
+
+
+
+
+## [2.0.25](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero-card@2.0.24...@uswitch/trustyle.hero-card@2.0.25) (2021-05-21)
+
+**Note:** Version bump only for package @uswitch/trustyle.hero-card
+
+
+
+
+
+## [2.0.24](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero-card@2.0.23...@uswitch/trustyle.hero-card@2.0.24) (2021-04-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.hero-card
+
+
+
+
+
+## [2.0.23](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero-card@2.0.22...@uswitch/trustyle.hero-card@2.0.23) (2021-04-21)
+
+**Note:** Version bump only for package @uswitch/trustyle.hero-card
+
+
+
+
+
+## [2.0.22](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero-card@2.0.21...@uswitch/trustyle.hero-card@2.0.22) (2021-04-14)
+
+**Note:** Version bump only for package @uswitch/trustyle.hero-card
+
+
+
+
+
+## [2.0.21](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero-card@2.0.20...@uswitch/trustyle.hero-card@2.0.21) (2021-04-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.hero-card
+
+
+
+
+
 ## [2.0.20](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero-card@2.0.19...@uswitch/trustyle.hero-card@2.0.20) (2021-03-08)
 
 **Note:** Version bump only for package @uswitch/trustyle.hero-card

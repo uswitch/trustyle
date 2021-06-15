@@ -3,6 +3,334 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.47.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.47.1...@uswitch/trustyle.uswitch-theme@2.47.2) (2021-06-11)
+
+
+### Bug Fixes
+
+* spacing of primary slot cta ([95ec12f](https://github.com/uswitch/trustyle/commit/95ec12f))
+
+
+
+
+
+## [2.47.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.47.0...@uswitch/trustyle.uswitch-theme@2.47.1) (2021-06-10)
+
+
+### Bug Fixes
+
+* tablet issues and primarySlot CTA ([67887ed](https://github.com/uswitch/trustyle/commit/67887ed))
+
+
+
+
+
+# [2.47.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.46.4...@uswitch/trustyle.uswitch-theme@2.47.0) (2021-06-07)
+
+
+### Features
+
+* simple form on uswitch ([b6a41e4](https://github.com/uswitch/trustyle/commit/b6a41e4))
+
+
+
+
+
+## [2.46.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.46.3...@uswitch/trustyle.uswitch-theme@2.46.4) (2021-06-04)
+
+
+### Bug Fixes
+
+* set mb of text to 0 when there is just text ([75ca38a](https://github.com/uswitch/trustyle/commit/75ca38a))
+
+
+
+
+
+## [2.46.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.46.2...@uswitch/trustyle.uswitch-theme@2.46.3) (2021-06-03)
+
+
+### Bug Fixes
+
+* change tablet layout ([af5aa25](https://github.com/uswitch/trustyle/commit/af5aa25))
+
+
+
+
+
+## [2.46.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.46.1...@uswitch/trustyle.uswitch-theme@2.46.2) (2021-06-03)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.46.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.46.0...@uswitch/trustyle.uswitch-theme@2.46.1) (2021-06-02)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+# [2.46.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.16...@uswitch/trustyle.uswitch-theme@2.46.0) (2021-06-01)
+
+
+### Features
+
+* allow centered bullets ([bf60fd6](https://github.com/uswitch/trustyle/commit/bf60fd6))
+
+
+
+
+
+## [2.45.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.15...@uswitch/trustyle.uswitch-theme@2.45.16) (2021-05-19)
+
+
+### Bug Fixes
+
+* spacing issues ([91a10aa](https://github.com/uswitch/trustyle/commit/91a10aa))
+
+
+
+
+
+## [2.45.15](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.14...@uswitch/trustyle.uswitch-theme@2.45.15) (2021-05-18)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.45.14](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.13...@uswitch/trustyle.uswitch-theme@2.45.14) (2021-05-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.45.13](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.12...@uswitch/trustyle.uswitch-theme@2.45.13) (2021-05-13)
+
+
+### Bug Fixes
+
+* update first-child to first-of-type ([b5f0c8b](https://github.com/uswitch/trustyle/commit/b5f0c8b))
+
+
+
+
+
+## [2.45.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.11...@uswitch/trustyle.uswitch-theme@2.45.12) (2021-05-13)
+
+
+### Bug Fixes
+
+* change style for phone number overlay ([235b786](https://github.com/uswitch/trustyle/commit/235b786))
+* change variants for phone number modal ([e1e16c2](https://github.com/uswitch/trustyle/commit/e1e16c2))
+
+
+
+
+
+## [2.45.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.10...@uswitch/trustyle.uswitch-theme@2.45.11) (2021-05-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.45.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.9...@uswitch/trustyle.uswitch-theme@2.45.10) (2021-05-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.45.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.8...@uswitch/trustyle.uswitch-theme@2.45.9) (2021-05-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.45.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.7...@uswitch/trustyle.uswitch-theme@2.45.8) (2021-04-30)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.45.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.6...@uswitch/trustyle.uswitch-theme@2.45.7) (2021-04-29)
+
+
+### Bug Fixes
+
+* restyled width and color for primary slot ([1752c96](https://github.com/uswitch/trustyle/commit/1752c96))
+
+
+
+
+
+## [2.45.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.5...@uswitch/trustyle.uswitch-theme@2.45.6) (2021-04-29)
+
+
+### Bug Fixes
+
+* changed spacing and font color ([d169be2](https://github.com/uswitch/trustyle/commit/d169be2))
+
+
+
+
+
+## [2.45.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.4...@uswitch/trustyle.uswitch-theme@2.45.5) (2021-04-28)
+
+
+### Bug Fixes
+
+* form heading padding left on tablet ([d77b6bc](https://github.com/uswitch/trustyle/commit/d77b6bc))
+
+
+
+
+
+## [2.45.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.3...@uswitch/trustyle.uswitch-theme@2.45.4) (2021-04-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.45.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.2...@uswitch/trustyle.uswitch-theme@2.45.3) (2021-04-26)
+
+
+### Bug Fixes
+
+* update solid variant border bottom ([359de6c](https://github.com/uswitch/trustyle/commit/359de6c))
+
+
+
+
+
+## [2.45.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.1...@uswitch/trustyle.uswitch-theme@2.45.2) (2021-04-26)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.45.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.45.0...@uswitch/trustyle.uswitch-theme@2.45.1) (2021-04-23)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+# [2.45.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.44.3...@uswitch/trustyle.uswitch-theme@2.45.0) (2021-04-23)
+
+
+### Features
+
+* added Palette support and changed spacing ([c8459a2](https://github.com/uswitch/trustyle/commit/c8459a2))
+
+
+
+
+
+## [2.44.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.44.2...@uswitch/trustyle.uswitch-theme@2.44.3) (2021-04-22)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.44.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.44.1...@uswitch/trustyle.uswitch-theme@2.44.2) (2021-04-19)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.44.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.44.0...@uswitch/trustyle.uswitch-theme@2.44.1) (2021-04-15)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+# [2.44.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.21...@uswitch/trustyle.uswitch-theme@2.44.0) (2021-04-09)
+
+
+### Features
+
+* add heading styling for journey form ([ebbb9eb](https://github.com/uswitch/trustyle/commit/ebbb9eb))
+
+
+
+
+
+# [2.43.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.21...@uswitch/trustyle.uswitch-theme@2.43.0) (2021-04-08)
+
+
+### Features
+
+* add heading styling for journey form ([e61ca37](https://github.com/uswitch/trustyle/commit/e61ca37))
+
+
+
+
+
+## [2.42.21](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.20...@uswitch/trustyle.uswitch-theme@2.42.21) (2021-03-31)
+
+
+### Bug Fixes
+
+* implement app download backgroundImageLeft variant ([6a94b2a](https://github.com/uswitch/trustyle/commit/6a94b2a))
+
+
+
+
+
+
+## [2.42.20](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.19...@uswitch/trustyle.uswitch-theme@2.42.20) (2021-03-29)
+
+
+### Bug Fixes
+
+* filters on uswitch ([43fea25](https://github.com/uswitch/trustyle/commit/43fea25))
+
+
+
+
+
+## [2.42.19](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.18...@uswitch/trustyle.uswitch-theme@2.42.19) (2021-03-29)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.42.18](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.17...@uswitch/trustyle.uswitch-theme@2.42.18) (2021-03-26)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
 ## [2.42.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.42.16...@uswitch/trustyle.uswitch-theme@2.42.17) (2021-03-24)
 
 

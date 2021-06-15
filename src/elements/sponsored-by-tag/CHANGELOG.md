@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-by-tag@2.2.2...@uswitch/trustyle.sponsored-by-tag@2.2.3) (2021-04-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-by-tag
+
+
+
+
+
+## [2.2.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-by-tag@2.2.1...@uswitch/trustyle.sponsored-by-tag@2.2.2) (2021-04-22)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-by-tag
+
+
+
+
+
+## [2.2.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-by-tag@2.2.0...@uswitch/trustyle.sponsored-by-tag@2.2.1) (2021-04-21)
+
+
+### Bug Fixes
+
+* align sponsored by logo with text ([6bf13c3](https://github.com/uswitch/trustyle/commit/6bf13c3))
+* form story ([e8daab3](https://github.com/uswitch/trustyle/commit/e8daab3))
+
+
+
+
+
 # [2.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-by-tag@2.1.2...@uswitch/trustyle.sponsored-by-tag@2.2.0) (2020-12-15)
 
 

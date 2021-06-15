@@ -3,6 +3,279 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.49.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.49.6...@uswitch/trustyle.money-theme@1.49.7) (2021-06-11)
+
+
+### Bug Fixes
+
+* spacing of primary slot cta ([95ec12f](https://github.com/uswitch/trustyle/commit/95ec12f))
+
+
+
+
+
+## [1.49.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.49.5...@uswitch/trustyle.money-theme@1.49.6) (2021-06-10)
+
+
+### Bug Fixes
+
+* tablet issues and primarySlot CTA ([67887ed](https://github.com/uswitch/trustyle/commit/67887ed))
+
+
+
+
+
+## [1.49.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.49.4...@uswitch/trustyle.money-theme@1.49.5) (2021-06-04)
+
+
+### Bug Fixes
+
+* set mb of text to 0 when there is just text ([75ca38a](https://github.com/uswitch/trustyle/commit/75ca38a))
+
+
+
+
+
+## [1.49.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.49.3...@uswitch/trustyle.money-theme@1.49.4) (2021-06-03)
+
+
+### Bug Fixes
+
+* radio spacing ([6401751](https://github.com/uswitch/trustyle/commit/6401751))
+
+
+
+
+
+## [1.49.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.49.1...@uswitch/trustyle.money-theme@1.49.3) (2021-06-03)
+
+
+### Bug Fixes
+
+* change tablet layout ([af5aa25](https://github.com/uswitch/trustyle/commit/af5aa25))
+* mobile calculator styling ([eca7e97](https://github.com/uswitch/trustyle/commit/eca7e97))
+
+
+
+
+
+## [1.49.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.49.1...@uswitch/trustyle.money-theme@1.49.2) (2021-06-03)
+
+
+### Bug Fixes
+
+* mobile calculator styling ([eca7e97](https://github.com/uswitch/trustyle/commit/eca7e97))
+
+
+
+
+
+## [1.49.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.49.0...@uswitch/trustyle.money-theme@1.49.1) (2021-06-02)
+
+
+### Bug Fixes
+
+* sort and filter product table button sizes ([968e8cd](https://github.com/uswitch/trustyle/commit/968e8cd))
+
+
+
+
+
+# [1.49.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.48.7...@uswitch/trustyle.money-theme@1.49.0) (2021-06-01)
+
+
+### Features
+
+* allow centered bullets ([bf60fd6](https://github.com/uswitch/trustyle/commit/bf60fd6))
+
+
+
+
+
+## [1.48.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.48.6...@uswitch/trustyle.money-theme@1.48.7) (2021-05-19)
+
+
+### Bug Fixes
+
+* spacing issues ([91a10aa](https://github.com/uswitch/trustyle/commit/91a10aa))
+
+
+
+
+
+## [1.48.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.48.5...@uswitch/trustyle.money-theme@1.48.6) (2021-05-18)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.48.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.48.4...@uswitch/trustyle.money-theme@1.48.5) (2021-05-17)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.48.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.48.3...@uswitch/trustyle.money-theme@1.48.4) (2021-05-13)
+
+
+### Bug Fixes
+
+* update first-child to first-of-type ([b5f0c8b](https://github.com/uswitch/trustyle/commit/b5f0c8b))
+* update kebab case to camel case in money theme ([d1828fa](https://github.com/uswitch/trustyle/commit/d1828fa))
+
+
+
+
+
+## [1.48.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.48.2...@uswitch/trustyle.money-theme@1.48.3) (2021-05-13)
+
+
+### Bug Fixes
+
+* change style for phone number overlay ([235b786](https://github.com/uswitch/trustyle/commit/235b786))
+* change variants for phone number modal ([e1e16c2](https://github.com/uswitch/trustyle/commit/e1e16c2))
+* color naming ([9a77e4f](https://github.com/uswitch/trustyle/commit/9a77e4f))
+
+
+
+
+
+## [1.48.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.48.1...@uswitch/trustyle.money-theme@1.48.2) (2021-05-11)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.48.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.48.0...@uswitch/trustyle.money-theme@1.48.1) (2021-05-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+# [1.48.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.47.3...@uswitch/trustyle.money-theme@1.48.0) (2021-05-04)
+
+
+### Features
+
+* simple form variant ([687dbcc](https://github.com/uswitch/trustyle/commit/687dbcc))
+
+
+
+
+
+## [1.47.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.47.2...@uswitch/trustyle.money-theme@1.47.3) (2021-04-29)
+
+
+### Bug Fixes
+
+* restyled width and color for primary slot ([1752c96](https://github.com/uswitch/trustyle/commit/1752c96))
+
+
+
+
+
+## [1.47.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.47.1...@uswitch/trustyle.money-theme@1.47.2) (2021-04-29)
+
+
+### Bug Fixes
+
+* changed spacing and font color ([d169be2](https://github.com/uswitch/trustyle/commit/d169be2))
+
+
+
+
+
+## [1.47.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.47.0...@uswitch/trustyle.money-theme@1.47.1) (2021-04-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+# [1.47.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.46.6...@uswitch/trustyle.money-theme@1.47.0) (2021-04-23)
+
+
+### Features
+
+* added Palette support and changed spacing ([c8459a2](https://github.com/uswitch/trustyle/commit/c8459a2))
+
+
+
+
+
+## [1.46.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.46.5...@uswitch/trustyle.money-theme@1.46.6) (2021-04-22)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.46.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.46.4...@uswitch/trustyle.money-theme@1.46.5) (2021-04-22)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.46.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.46.3...@uswitch/trustyle.money-theme@1.46.4) (2021-04-16)
+
+
+### Bug Fixes
+
+* consistent height for radio buttons ([9c2c71d](https://github.com/uswitch/trustyle/commit/9c2c71d))
+* customise radio margin right on label ([97f2b4f](https://github.com/uswitch/trustyle/commit/97f2b4f))
+* make radio buttons same width ([c5b8353](https://github.com/uswitch/trustyle/commit/c5b8353))
+* radio button sizing ([467e5e3](https://github.com/uswitch/trustyle/commit/467e5e3))
+
+
+
+
+
+## [1.46.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.46.2...@uswitch/trustyle.money-theme@1.46.3) (2021-04-08)
+
+
+### Bug Fixes
+
+* be more specic for simple drop down border ([bc919d6](https://github.com/uswitch/trustyle/commit/bc919d6))
+
+
+
+
+
+## [1.46.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.46.1...@uswitch/trustyle.money-theme@1.46.2) (2021-03-30)
+
+
+### Bug Fixes
+
+* refactor the themeUI usage with cta seen in stories ([34cc056](https://github.com/uswitch/trustyle/commit/34cc056))
+
+
+
+
+
+## [1.46.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.46.0...@uswitch/trustyle.money-theme@1.46.1) (2021-03-30)
+
+
+### Bug Fixes
+
+* add centered-light variant ([1324e32](https://github.com/uswitch/trustyle/commit/1324e32))
+* add sponsored by centered variant color to theme ([a44a291](https://github.com/uswitch/trustyle/commit/a44a291))
+
+
+
+
+
 # [1.46.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.45.1...@uswitch/trustyle.money-theme@1.46.0) (2021-03-11)
 
 

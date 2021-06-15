@@ -26,6 +26,7 @@ interface Props {
   onClose?: OnCloseFn
   role?: ModalRole
   focusLockProps?: FocusLockProps
+  backdropBlur?: boolean
 }
 
 interface OverlayProps {
@@ -36,6 +37,7 @@ interface OverlayProps {
   onClose?: OnCloseFn
   role: ModalRole
   focusLockProps: FocusLockProps
+  backdropBlur: boolean
 }
 
 interface OverlayIndexingContext {
@@ -58,7 +60,8 @@ const Overlay: React.FC<OverlayProps> = ({
   closeButtonProps,
   height,
   onClose,
-  role
+  role,
+  backdropBlur
 }) => {
   const holdingRef = useRef<HTMLDivElement>()
   const closeButtonRef = useRef<HTMLButtonElement>()
@@ -132,6 +135,7 @@ const Overlay: React.FC<OverlayProps> = ({
         transform: 'translateZ(0)',
         width: '100%',
         zIndex: 10000,
+        backdropFilter: backdropBlur ? 'blur(6px)' : 'none', // currently unsupported by Firefox & IE
         variant: 'elements.overlay'
       }}
       style={{
@@ -232,12 +236,14 @@ const Modal: React.FC<Props> = ({
   height = 'partial',
   role = 'dialog',
   focusLockProps = {},
+  backdropBlur = false,
   ...props
 }) => (
   <Overlay
     height={height}
     role={role}
     focusLockProps={focusLockProps}
+    backdropBlur={backdropBlur}
     {...props}
   >
     {children}

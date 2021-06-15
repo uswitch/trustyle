@@ -34,6 +34,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   sx?: object
   card?: boolean
   inverted?: boolean // Inverts the direction of the accordion icon
+  onOpen?: () => void
+  onClose?: () => void
 }
 
 type ButtonPropsFn = (args: { open: boolean; title: string }) => object
@@ -67,7 +69,9 @@ const Accordion: React.FC<Props> & {
   buttonProps: buttonPropsFn,
   sx = {},
   card = false,
-  inverted = false
+  inverted = false,
+  onOpen = () => {},
+  onClose = () => {}
 }) => {
   const {
     theme: {
@@ -260,7 +264,13 @@ const Accordion: React.FC<Props> & {
           ) {
             scrollToRef.current.scrollIntoView({ behavior: 'smooth' })
           }
-          setIsOpen(!isOpen)
+          const toggledIsOpen = !isOpen
+          setIsOpen(toggledIsOpen)
+          if (toggledIsOpen) {
+            onOpen()
+          } else {
+            onClose()
+          }
         }}
         {...buttonProps}
       >
@@ -276,7 +286,7 @@ const Accordion: React.FC<Props> & {
           marginBottom: isOpen
             ? accordionTheme?.base?.content?.marginBottom
             : '0',
-          '> *:first-child': {
+          '> *:first-of-type': {
             marginTop: 0
           },
           '> *:last-child': {

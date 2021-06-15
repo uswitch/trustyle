@@ -1,11 +1,15 @@
 {
   "name": "@uswitch/trustyle.flex-grid",
-  "version": "3.5.2",
+  "version": "3.5.3",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uswitch/trustyle"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",

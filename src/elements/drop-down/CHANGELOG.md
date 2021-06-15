@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.drop-down@2.5.10...@uswitch/trustyle.drop-down@2.5.11) (2021-06-02)
+
+
+### Bug Fixes
+
+* sort and filter product table button sizes ([968e8cd](https://github.com/uswitch/trustyle/commit/968e8cd))
+
+
+
+
+
+## [2.5.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.drop-down@2.5.9...@uswitch/trustyle.drop-down@2.5.10) (2021-04-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.drop-down
+
+
+
+
+
+## [2.5.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.drop-down@2.5.8...@uswitch/trustyle.drop-down@2.5.9) (2021-04-21)
+
+**Note:** Version bump only for package @uswitch/trustyle.drop-down
+
+
+
+
+
+## [2.5.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.drop-down@2.5.7...@uswitch/trustyle.drop-down@2.5.8) (2021-04-14)
+
+**Note:** Version bump only for package @uswitch/trustyle.drop-down
+
+
+
+
+
+## [2.5.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.drop-down@2.5.6...@uswitch/trustyle.drop-down@2.5.7) (2021-04-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.drop-down
+
+
+
+
+
 ## [2.5.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.drop-down@2.5.5...@uswitch/trustyle.drop-down@2.5.6) (2021-03-08)
 
 **Note:** Version bump only for package @uswitch/trustyle.drop-down

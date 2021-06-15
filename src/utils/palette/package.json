@@ -1,11 +1,15 @@
 {
   "name": "@uswitch/trustyle-utils.palette",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uswitch/trustyle"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",

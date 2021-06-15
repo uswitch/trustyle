@@ -275,7 +275,7 @@
         "left": {
           "main": {
             "variant": "elements.author-profile.base",
-            "a:first-child": { "ml": 0 }
+            "a:first-of-type": { "ml": 0 }
           },
           "bio": {
             "variant": "elements.author-profile.base.bio",

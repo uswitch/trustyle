@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
+import { Fragment } from 'react'
 import { action } from '@storybook/addon-actions'
 
 import AllThemes from '../../../utils/all-themes'
@@ -109,6 +110,31 @@ export const NestedModals = () => (
 )
 
 NestedModals.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const WithBlurredBackdrop = () => (
+  <Fragment>
+    {[...Array(10)].map((_, i) => (
+      <p key={i}>test</p>
+    ))}
+    <Modal
+      backdropBlur
+      ariaLabel="An example modal element"
+      onClose={action('Clicked close')}
+      focusLockProps={{
+        whiteList: node =>
+          document.getElementById('app')?.contains(node) ?? false
+      }}
+    >
+      Modal content
+    </Modal>
+  </Fragment>
+)
+
+WithBlurredBackdrop.story = {
   parameters: {
     percy: { skip: true }
   }

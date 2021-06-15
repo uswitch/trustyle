@@ -50,9 +50,11 @@ import { Plus } from './plus'
 import { PoundCircle } from './pound-circle'
 import { Twitter } from './twitter'
 import { Question } from './question'
+import { QuestionFilled } from './question-filled'
 import { Smile } from './smile'
 import { Sms } from './sms'
 import { Sort } from './sort'
+import { SortThin } from './sort-thin'
 import { Three } from './three'
 import { Tick } from './tick'
 import { Tv } from './tv'
@@ -66,6 +68,9 @@ import { Van } from './van'
 import { Warning } from './warning'
 import { Facebook } from './facebook'
 import { PhoneSimple } from './phone-simple'
+import { PeopleBold } from './people-bold'
+import { PersonBold } from './person-bold'
+import { Pencil } from './pencil'
 
 export type Glyph =
   | 'arrow'
@@ -109,15 +114,20 @@ export type Glyph =
   | 'mobile'
   | 'money-filter'
   | 'one'
+  | 'pencil'
   | 'person'
+  | 'person-bold'
+  | 'people-bold'
   | 'phone'
   | 'phone-simple'
   | 'plus'
   | 'pound-circle'
   | 'question'
+  | 'question-filled'
   | 'smile'
   | 'sms'
   | 'sort'
+  | 'sort-thin'
   | 'three'
   | 'tick'
   | 'tv'
@@ -240,8 +250,14 @@ export const Icon: React.FC<Props> = ({
       return <MoneyFilter color={color} size={size} />
     case 'one':
       return <One color={color} size={size} />
+    case 'pencil':
+      return <Pencil color={color} size={size} />
     case 'person':
       return <Person color={color} size={size} />
+    case 'person-bold':
+      return <PersonBold color={color} size={size} />
+    case 'people-bold':
+      return <PeopleBold color={color} size={size} />
     case 'phone':
       return <Phone color={color} size={size} />
     case 'phone-simple':
@@ -252,12 +268,16 @@ export const Icon: React.FC<Props> = ({
       return <PoundCircle color={color} size={size} />
     case 'question':
       return <Question color={color} size={size} />
+    case 'question-filled':
+      return <QuestionFilled color={color} size={size} />
     case 'smile':
       return <Smile color={color} size={size} />
     case 'sms':
       return <Sms color={color} size={size} />
     case 'sort':
       return <Sort color={color} size={size} />
+    case 'sort-thin':
+      return <SortThin color={color} size={size} />
     case 'three':
       return <Three color={color} size={size} />
     case 'tick':

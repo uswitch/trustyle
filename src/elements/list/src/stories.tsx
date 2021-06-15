@@ -28,6 +28,14 @@ export const Example = () => (
       <ListItem>Second child</ListItem>
       <ListItem>Third child</ListItem>
     </List>
+
+    <div
+      sx={{
+        textAlign: 'center'
+      }}
+    >
+      <List title="bullet" items={arr1} />
+    </div>
   </div>
 )
 

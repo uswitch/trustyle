@@ -7,18 +7,21 @@ import AllThemes from '../../../utils/all-themes'
 import LegacyProductTable, {
   CtaCell,
   DataCell,
-  EligibilityContentRow,
-  ImageCell
+  ImageCell,
+  MoreInformationBlock,
+  MoreInformationButton,
+  MoreInformationList,
+  MoreInformationTable,
+  MoreInformationText
 } from '.'
 
 export default {
   title: 'Compounds/Legacy Product Table'
 }
 
-const repExample = `The representative rate is 29% APR (fixed) so
-if you borrow £4,000 over 3 years at a rate of 17% p.a. (fixed) plus a
-service fee of 8.74% p.a. you will repay £160.61 per month & £5,781.96
-in total.`
+const representativeExample = `The representative rate is 29% APR (fixed) so
+if you borrow £4,000 over 3 years at a rate of 17% p.a. (fixed) plus a service
+fee of 8.74% p.a. you will repay £160.61 per month & £5,781.96 in total.`
 
 const info = [
   'Both applicant and guarantor must be homeowners.',
@@ -26,147 +29,362 @@ const info = [
 ]
 const title = 'Lowest representative APR'
 
-const eligibilityContent = [
-  <EligibilityContentRow label="UK resident" value="Yes" key="0" />,
-  <EligibilityContentRow label="Guarantor Required" value="Yes" key="1" />,
-  <EligibilityContentRow label="Minimum age" value="18 years" key="2" />,
-  <EligibilityContentRow label="Credit Rating Accepted" value="poor" key="3" />
-]
+const moreInfoLabel = 'Custom More Info Label'
 
 const clickableRow = 'https://www.money.co.uk'
 
-const onClickEligibility = (addon?: object) => {
-  console.log(addon)
+const baseTableContents = [
+  <DataCell
+    backgroundColor="#fef6ed"
+    borderBottomColor="#fcdbb7"
+    label="Loan amount"
+    key="0"
+  >
+    £1,000 to £10,000
+  </DataCell>,
+  <DataCell
+    backgroundColor="#fef1ec"
+    borderBottomColor="#fac9b0"
+    label="Representative APR"
+    key="1"
+  >
+    29% APR (£1,000 to £10,000)
+  </DataCell>,
+  <DataCell
+    backgroundColor="#fbedf1"
+    borderBottomColor="#f0b9c8"
+    label="Loan term"
+    key="2"
+  >
+    1 year to 5 years
+  </DataCell>,
+  <ImageCell key="3">
+    <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
+  </ImageCell>
+]
+
+const productTableContents = [
+  ...baseTableContents,
+  <CtaCell key="4" href={clickableRow}>
+    See Deal
+  </CtaCell>
+]
+
+const productTableContentsDisabled = [
+  ...baseTableContents,
+  <CtaCell key="4" href={clickableRow} disabled>
+    See Deal
+  </CtaCell>
+]
+
+const eligibilityContent = (
+  <MoreInformationBlock title="Eligibility">
+    <MoreInformationList
+      rows={[
+        {
+          value:
+            'You must meet the following criteria in order to get this loan:'
+        },
+        {
+          label: 'UK Resident',
+          value: true
+        },
+        {
+          label: 'Guarantor Required',
+          value: true
+        },
+        {
+          label: 'Minimum age',
+          value: 18
+        },
+        {
+          label: 'Maximum age',
+          value: 70
+        },
+        {
+          label: 'Credit Rating Accepted',
+          value: 'Good'
+        }
+      ]}
+    />
+  </MoreInformationBlock>
+)
+
+const ratesContent = (
+  <MoreInformationBlock title="Rate tiers">
+    <MoreInformationTable
+      rows={[
+        [
+          {
+            type: 'th',
+            value: ''
+          },
+          {
+            type: 'th',
+            value: 'Gross rate'
+          },
+          {
+            type: 'th',
+            value: 'Gross rate'
+          },
+          {
+            type: 'th',
+            value: 'AER'
+          },
+          {
+            type: 'th',
+            value: 'AER'
+          }
+        ],
+        [
+          {
+            type: 'td',
+            value: ''
+          },
+          {
+            type: 'td',
+            value: 'Excluding bonus'
+          },
+          {
+            type: 'td',
+            value: 'Including bonus'
+          },
+          {
+            type: 'td',
+            value: 'Excluding bonus'
+          },
+          {
+            type: 'td',
+            value: 'Including bonus'
+          }
+        ],
+        [
+          {
+            type: 'td',
+            value: '£1'
+          },
+          {
+            type: 'td',
+            value: '0.20%'
+          },
+          {
+            type: 'td',
+            value: '0.20%'
+          },
+          {
+            type: 'td',
+            value: '0.20%'
+          },
+          {
+            type: 'td',
+            value: '0.20%'
+          }
+        ],
+        [
+          {
+            type: 'td',
+            value: '£1,000'
+          },
+          {
+            type: 'td',
+            value: '0.65%'
+          },
+          {
+            type: 'td',
+            value: '0.65%'
+          },
+          {
+            type: 'td',
+            value: '0.65%'
+          },
+          {
+            type: 'td',
+            value: '0.65%'
+          }
+        ],
+        [
+          {
+            type: 'td',
+            value: '£10,000'
+          },
+          {
+            type: 'td',
+            value: '0.95%'
+          },
+          {
+            type: 'td',
+            value: '0.95%'
+          },
+          {
+            type: 'td',
+            value: '0.95%'
+          },
+          {
+            type: 'td',
+            value: '0.95%'
+          }
+        ],
+        [
+          {
+            type: 'td',
+            value: '£50,000'
+          },
+          {
+            type: 'td',
+            value: '1.00%'
+          },
+          {
+            type: 'td',
+            value: '1.00%'
+          },
+          {
+            type: 'td',
+            value: '1.00%'
+          },
+          {
+            type: 'td',
+            value: '1.00%'
+          }
+        ]
+      ]}
+    />
+  </MoreInformationBlock>
+)
+
+const feesContent = (
+  <MoreInformationBlock title="Fees">
+    <MoreInformationList
+      rows={[
+        { label: 'Application fee', value: 'No fee' },
+        { label: 'Arrangement fee', value: 'No fee' },
+        { label: 'Booking fee', value: 'No fee' },
+        {
+          label: 'Completion fee',
+          value: '£1495 with an option to add to the loan'
+        },
+        { label: 'Product fee', value: 'No fee' }
+      ]}
+    />
+  </MoreInformationBlock>
+)
+
+const additionalInformationContent = (
+  <MoreInformationBlock title="Additional information">
+    <MoreInformationText
+      content={[
+        '<b>Early repayment charge</b><br/>If you pay all or part of your mortgage early you will be charged: <br/>- 2.00% of amount paid, before 30 Jun 2022<br/>- then 1.00% of amount paid, until 30 Jun 2023<p>Other fees may apply.</p>'
+      ]}
+    />
+  </MoreInformationBlock>
+)
+
+const moreInformationButtonClick = () => {
+  console.log('More information clicked')
 }
 
-const eligibilityAddon = {
-  action: { value: 'Test Banner Clickout' },
-  category: { value: 'Test Guarantor Loans' },
-  label: { value: 'Test More Information Banner' }
-}
+const moreInformationButton = (
+  <MoreInformationButton
+    onClick={moreInformationButtonClick}
+    href={clickableRow}
+  >
+    See Deal
+  </MoreInformationButton>
+)
 
-const ExampleProductTable = () => {
+export const BadgeExample = () => {
   return (
     <LegacyProductTable
-      representativeExample={repExample}
-      repExampleLabel="Representative example: "
+      representativeExample={representativeExample}
       info={info}
       title={title}
-      eligibilityContent={eligibilityContent}
       clickableRow={clickableRow}
-      onClickEligibility={onClickEligibility}
+      moreInformationButton={moreInformationButton}
       badges={[
         'Fairer Finance Gold Customer Experience Ribbon Winner Autumn 2020',
         'Fab!'
       ]}
-      eligibilityAddon={eligibilityAddon}
     >
-      <DataCell
-        backgroundColor="#fef6ed"
-        borderBottomColor="#fcdbb7"
-        label="Loan amount"
-      >
-        £1,000 to £10,000
-      </DataCell>
-
-      <DataCell
-        backgroundColor="#fef1ec"
-        borderBottomColor="#fac9b0"
-        label="Representative APR"
-      >
-        29% APR (£1,000 to £10,000)
-      </DataCell>
-
-      <DataCell
-        backgroundColor="#fbedf1"
-        borderBottomColor="#f0b9c8"
-        label="Loan term"
-      >
-        1 year to 5 years
-      </DataCell>
-
-      <ImageCell>
-        <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
-      </ImageCell>
-
-      <CtaCell href={''}>See Deal</CtaCell>
+      {productTableContents}
     </LegacyProductTable>
   )
 }
 
-export const Example = () => {
+export const EligibilityExample = () => {
   return (
-    <div>
-      <ExampleProductTable />
-      <ExampleProductTable />
-      <ExampleProductTable />
-      <ExampleProductTable />
-      <ExampleProductTable />
-      <ExampleProductTable />
-      <ExampleProductTable />
-    </div>
+    <LegacyProductTable
+      representativeExample={representativeExample}
+      info={info}
+      title={title}
+      clickableRow={clickableRow}
+      moreInformationPanel={[eligibilityContent, ratesContent]}
+      moreInformationButton={moreInformationButton}
+      moreInformationLabel={moreInfoLabel}
+    >
+      {productTableContents}
+    </LegacyProductTable>
   )
 }
 
-Example.story = {
+EligibilityExample.story = {
   parameters: {
     percy: { skip: true }
   }
 }
 
-const DisabledProductTable = () => {
+export const SingleMoreInformationExample = () => {
   return (
     <LegacyProductTable
-      representativeExample={repExample}
-      repExampleLabel="Representative example: "
+      representativeExample={representativeExample}
       info={info}
       title={title}
-      eligibilityContent={eligibilityContent}
       clickableRow={clickableRow}
-      onClickEligibility={onClickEligibility}
-      eligibilityAddon={eligibilityAddon}
-      disabled
+      moreInformationPanel={[eligibilityContent]}
+      moreInformationButton={moreInformationButton}
     >
-      <DataCell
-        backgroundColor="#fef6ed"
-        borderBottomColor="#fcdbb7"
-        label="Loan amount"
-      >
-        £1,000 to £10,000
-      </DataCell>
-
-      <DataCell
-        backgroundColor="#fef1ec"
-        borderBottomColor="#fac9b0"
-        label="Representative APR"
-      >
-        29% APR (£1,000 to £10,000)
-      </DataCell>
-
-      <DataCell
-        backgroundColor="#fbedf1"
-        borderBottomColor="#f0b9c8"
-        label="Loan term"
-      >
-        1 year to 5 years
-      </DataCell>
-
-      <ImageCell>
-        <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
-      </ImageCell>
-
-      <CtaCell href={clickableRow} disabled>
-        See Deal
-      </CtaCell>
+      {productTableContents}
     </LegacyProductTable>
   )
 }
 
+SingleMoreInformationExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const FeesExample = () => {
+  return (
+    <LegacyProductTable
+      info={info}
+      title={title}
+      clickableRow={clickableRow}
+      moreInformationPanel={[feesContent, additionalInformationContent]}
+      moreInformationButton={moreInformationButton}
+    >
+      {productTableContents}
+    </LegacyProductTable>
+  )
+}
+
+FeesExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const DisabledExample = () => {
   return (
-    <div>
-      <DisabledProductTable />
-    </div>
+    <LegacyProductTable
+      representativeExample={representativeExample}
+      info={info}
+      title={title}
+      moreInformationPanel={[eligibilityContent, ratesContent]}
+      moreInformationButton={moreInformationButton}
+      clickableRow={clickableRow}
+      disabled
+    >
+      {productTableContentsDisabled}
+    </LegacyProductTable>
   )
 }
 
@@ -176,11 +394,34 @@ DisabledExample.story = {
   }
 }
 
+export const TelephoneExample = () => {
+  return (
+    <LegacyProductTable
+      representativeExample={representativeExample}
+      info={info}
+      title={title}
+      moreInformationPanel={[eligibilityContent, ratesContent]}
+      clickableRow={clickableRow}
+      telephone="0808 296 6568"
+    >
+      {productTableContents}
+    </LegacyProductTable>
+  )
+}
+
+TelephoneExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
     <AllThemes>
-      <Example />
+      <BadgeExample />
       <DisabledExample />
+      <EligibilityExample />
+      <TelephoneExample />
     </AllThemes>
   )
 }

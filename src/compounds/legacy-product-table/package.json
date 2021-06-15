@@ -1,11 +1,15 @@
 {
   "name": "@uswitch/trustyle.legacy-product-table",
-  "version": "0.8.16",
+  "version": "1.2.10",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uswitch/trustyle"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
@@ -15,8 +19,8 @@
     "react": "^16.7.0"
   },
   "devDependencies": {
-    "@uswitch/trustyle.button": "^3.0.4",
-    "@uswitch/trustyle.button-link": "^3.2.1",
-    "@uswitch/trustyle.icon": "^1.25.0"
+    "@uswitch/trustyle.button": "^3.0.5",
+    "@uswitch/trustyle.button-link": "^3.2.7",
+    "@uswitch/trustyle.icon": "^1.26.3"
   }
 }
