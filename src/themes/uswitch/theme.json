@@ -1390,7 +1390,7 @@
         "left": {
           "position": "relative",
           "display": "flex",
-          "flex-direction": ["column", "row"],
+          "flexDirection": ["column", "row"],
           "alignItems": "center",
           "::before": {
             "content": "''",
@@ -4828,6 +4828,7 @@
           "position": "relative",
           "zIndex": 2,
           "mt": -64,
+          "height": "auto",
           "maxWidth": ["100%", "grid.md.6", "100%"],
           "imgixWidth": 608,
           "imgixParams": {
@@ -4965,8 +4966,7 @@
             "alignSelf": ["auto", "flex-start", "auto"],
             "mt": [null, 0, 20],
             "px": 0,
-            "py": [45, 0],
-            "height": [null, "100%"]
+            "py": [45, 0]
           },
           "content": {
             "alignSelf": "center",
@@ -4992,9 +4992,9 @@
           },
           "image": {
             "mt": [0, -40, 0],
-            "maxWidth": ["100%", "100%"],
+            "maxWidth": "100%",
             "imgixWidth": 768,
-            "height": "100%"
+            "height": "auto"
           }
         },
         "solidColorImageRight": {
