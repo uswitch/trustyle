@@ -1445,7 +1445,6 @@
           "image": {
             "display": "inline-block",
             "width": 250,
-            "pt": "lg",
             "height": "100%"
           },
           "aspectRatioWrapper": {

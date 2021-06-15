@@ -897,7 +897,7 @@
             "height": "100%"
           },
           "aspectRatioWrapper": {
-            "width": "100%"
+            "width": ["100%", "grid.md.6", "grid.md.5"]
           },
           "aspectRatioBox": {
             "variant": "compounds.card.aspectRatioBox",
