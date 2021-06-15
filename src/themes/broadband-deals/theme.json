@@ -895,8 +895,8 @@
           },
           "content": {
             "variant": "compounds.card.base.content",
-            "pt": "sm",
-            "px": "sm"
+            "px": "sm",
+            "pt": "sm"
           },
           "link": {
             "variant": "compounds.card.base.link",
@@ -955,10 +955,13 @@
             "variant": "compounds.card.base.h3",
             "fontSize": ["lg", "xl"]
           },
+          "aspectRatioWrapper": {
+            "maxWidth": "40%"
+          },
           "image": {
             "variant": "compounds.card.base.image",
             "pr": ["sm", "md"],
-            "maxWidth": "40%"
+            "display": "inline-block"
           },
           "content": {
             "variant": "compounds.card.base.content",
