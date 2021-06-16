@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.accordion",
-  "version": "0.14.11",
+  "version": "0.14.12",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -12,7 +12,7 @@
     "url": "https://github.com/uswitch/trustyle"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.26.3",
+    "@uswitch/trustyle.icon": "^1.27.0",
     "typescript": "^3.6.2"
   },
   "peerDependencies": {

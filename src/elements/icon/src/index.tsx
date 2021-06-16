@@ -26,6 +26,7 @@ import { EditJourney } from './edit-journey'
 import { Email } from './email'
 import { EmailFilled } from './email-filled'
 import { Error as ErrorIcon } from './error'
+import { Facebook2 } from './facebook2'
 import { FilledArrow } from './filled-arrow'
 import { Filters } from './filters'
 import { Four } from './four'
@@ -95,6 +96,7 @@ export type Glyph =
   | 'email-filled'
   | 'error'
   | 'facebook'
+  | 'facebook2'
   | 'filled-arrow'
   | 'filters'
   | 'four'
@@ -212,6 +214,8 @@ export const Icon: React.FC<Props> = ({
       return <ErrorIcon color={color} size={size} />
     case 'facebook':
       return <Facebook color={color} size={size} />
+    case 'facebook2':
+      return <Facebook2 color={color} size={size} />
     case 'filled-arrow':
       return <FilledArrow color={color} size={size} />
     case 'filters':

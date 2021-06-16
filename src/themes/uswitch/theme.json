@@ -416,7 +416,9 @@
       "variants": {
         "left": {
           "main": {
-            "a:first-of-type": { "ml": 0 },
+            "a:first-of-type": {
+              "ml": 0
+            },
             "a": {
               "mb": 0
             }
@@ -937,7 +939,6 @@
               "top": "68px"
             }
           },
-
           "description": {
             "mt": 0,
             "fontSize": ["14px", "16px", "16px"],
@@ -955,7 +956,6 @@
             "color": "primary",
             "display": "block",
             "mb": "sm",
-
             "variants": {
               "calculator": {
                 "flex": "1 1 0px",
@@ -985,7 +985,6 @@
             }
           }
         },
-
         "field-section": {
           "label": {
             "variant": "styles.h4",
@@ -1211,6 +1210,12 @@
         },
         "h3": {
           "fontSize": 28
+        },
+        ">div>span>*:first-child": {
+          "mt": 0
+        },
+        ">div>*:not(span)": {
+          "mt": 0
         },
         ":first-of-type": {
           ":not(hr)": {
@@ -1526,7 +1531,6 @@
         "display": "flex",
         "flexFlow": "row",
         "userSelect": "none",
-
         "phase": {
           "base": {
             "flex": "auto",
@@ -1549,7 +1553,6 @@
             }
           }
         },
-
         "phaseLabel": {
           "base": {
             "position": "relative",
@@ -1558,7 +1561,6 @@
             "textOverflow": "ellipsis"
           }
         },
-
         "phaseLabelPart": {
           "base": {
             "display": "inline-block",
@@ -1573,7 +1575,6 @@
             }
           }
         },
-
         "phaseIcon": {
           "base": {
             "transition": "background 0.4s, border-color 0.4s, color 0.4s",
@@ -1589,7 +1590,6 @@
             "color": "dark-1",
             "fontSize": "14px"
           },
-
           "variants": {
             "open": {
               "variant": "elements.funnel-progress.base.phaseIcon.base",
@@ -1597,20 +1597,17 @@
               "borderColor": "dark-1",
               "color": "light-1"
             },
-
             "complete": {
               "variant": "elements.funnel-progress.base.phaseIcon.base",
               "background": "black",
               "borderColor": "dark-1",
               "color": "light-1"
             },
-
             "incomplete": {
               "variant": "elements.funnel-progress.base.phaseIcon.base"
             }
           }
         },
-
         "phaseCompleteIcon": {
           "base": {
             "width": "12px",
@@ -1620,7 +1617,6 @@
             }
           }
         },
-
         "progress": {
           "base": {
             "position": "absolute",
@@ -2480,7 +2476,6 @@
         }
       }
     },
-
     "input-alert": {
       "padding": 16,
       "notificationColor": "primary",
@@ -2611,7 +2606,6 @@
         }
       }
     },
-
     "logo": {
       "height": ["icon.lg", "icon.xl"],
       "img": {
@@ -2941,7 +2935,6 @@
                 "width": "180px",
                 "height": "48px"
               },
-
               "calculator": {
                 "textAlign": "center"
               }
@@ -3028,7 +3021,6 @@
       }
     }
   },
-
   "compounds": {
     "ad-banner": {
       "wrapper": {
@@ -3791,7 +3783,9 @@
         "fontSize": "md",
         "color": "uswitch-navy"
       },
-      "icon": { "size": "sm" }
+      "icon": {
+        "size": "sm"
+      }
     },
     "card": {
       "itemsPerRow": [1, 2, 3],
@@ -3838,24 +3832,20 @@
           "borderColor": "grey-10",
           "px": "sm",
           "py": ["md", "md"],
-
           "content": {
             "position": "relative",
             "height": "100%",
             "pb": "xl"
           },
-
           "headerChildren": {
             "position": "absolute",
             "width": 22,
             "right": 8,
             "top": 20
           },
-
           "image": {
             "display": "none"
           },
-
           "heading": {
             "mb": "xxs",
             "mr": "lg",
@@ -3869,7 +3859,6 @@
               "textDecoration": "none"
             }
           },
-
           "link": {
             "backgroundColor": "grey-05",
             "color": "uswitch-navy",
@@ -3888,19 +3877,17 @@
               "color": "white"
             }
           },
-
-          "superScript": { "display": "none" },
-
+          "superScript": {
+            "display": "none"
+          },
           "p": {
             "fontSize": "base",
             "color": "grey-60",
             "fontWeight": "base"
           },
-
           "&:hover": {
             "borderColor": "uswitch-navy",
             "borderWidth": 2,
-
             "div > a:last-of-type": {
               "variant": "compounds.card.variants.noImage.link.hovered"
             }
@@ -3991,6 +3978,10 @@
           "variant": "compounds.card.base",
           "display": "flex",
           "alignItems": "start",
+          "image": {
+            "width": [132, 384, 474],
+            "mr": 32
+          },
           "content": {
             "width": [132, 544, 670],
             "variant": "compounds.card.base.content"
@@ -4034,7 +4025,6 @@
               "compounds.card.variants.horizontal.h3"
             ]
           },
-
           "content": {
             "variant": [
               "compounds.card.variants.vertical.content",
@@ -4227,11 +4217,9 @@
           "div": {
             "justifyContent": "space-between"
           },
-
           "link": {
             "variant": "elements.buttons.variants.primary"
           },
-
           "heading": {
             "marginBottom": ["16px", "24px", "24px"],
             "a": {
@@ -4247,13 +4235,11 @@
               }
             }
           },
-
           "description": {
             "color": "#72727C",
             "fontSize": ["16px", "18px", "18px"],
             "marginBottom": ["24px", "32px"]
           },
-
           "image": {
             "display": "none"
           },
@@ -4338,7 +4324,6 @@
         "alignItems": "center"
       }
     },
-
     "supplierRow": {
       "mt": ["32px", "44px"],
       "borderBottomWidth": "1px",
@@ -4375,7 +4360,6 @@
         "order": [1, 2]
       }
     },
-
     "numberedCallouts": {
       "> div": {
         "& svg": {
@@ -4388,7 +4372,6 @@
         "pt": "xs"
       }
     },
-
     "card-award-nominee": {
       "backgroundColor": "light-1",
       "borderTopWidth": 5,
@@ -4415,7 +4398,6 @@
         "lineHeight": "1.25em"
       }
     },
-
     "click-out-form": {
       "my": 0,
       "backgroundColor": "light-1",
@@ -4443,7 +4425,6 @@
         "mb": 0
       }
     },
-
     "click-out-form-responsive": {
       "my": 0,
       "backgroundColor": "light-1",
@@ -4473,12 +4454,10 @@
         "mb": 0
       }
     },
-
     "breadcrumb": {
       "my": "sm",
       "mx": 0
     },
-
     "two-tone-heading": {
       "base": {
         "textAlign": ["left", "center"],
@@ -4491,7 +4470,6 @@
         }
       }
     },
-
     "cookie-banner": {
       "heading": {
         "mt": [0, "md", "md"]
@@ -4521,7 +4499,6 @@
         "borderColor": "primary"
       }
     },
-
     "side-nav": {
       "accordion": {
         "button": {
@@ -4596,7 +4573,6 @@
         }
       }
     },
-
     "article-intro": {
       "base": {
         "heading": {
@@ -4605,11 +4581,108 @@
         },
         "description": {
           "variant": "styles.p"
+        },
+        "social-divider": {
+          "marginLeft": [0, 0, 16],
+          "marginTop": [-16, -16, 0],
+          "borderLeft": [0, 0, "1px solid #D0D0D3"],
+          "paddingLeft": [0, 0, 16],
+          "paddingTop": [0, 0, 8],
+          "paddingBottom": [0, 0, 8]
+        }
+      }
+    },
+    "social-sharing": {
+      "outer-container": {
+        "px": 0,
+        "mb": [48, 48, 48]
+      },
+      "main": {
+        "color": "grey-90",
+        "& *": {
+          "boxSizing": "border-box"
+        }
+      },
+      "label": {
+        "variant": "styles.headings",
+        "fontSize": ["base", "base", "sm"],
+        "fontWeight": "xxbold",
+        "marginBottom": "base",
+        "color": "grey-90"
+      },
+      "buttons": {
+        "whiteSpace": "nowrap"
+      },
+      "socialbutton": {
+        "position": "relative",
+        "display": "inline-block",
+        "verticalAlign": "top",
+        "width": 48,
+        "height": 48,
+        "margin": 0,
+        "borderColor": "grey-20",
+        "borderStyle": "solid solid solid none",
+        "borderWidth": "1px",
+        "&:first-of-type": {
+          "borderStyle": "solid",
+          "svg": {
+            "margin-left": 0
+          }
+        },
+        "svg": {
+          "position": "absolute",
+          "width": "22px",
+          "height": "22px",
+          "margin-left": "-0.5px",
+          "top": "50%",
+          "left": "50%",
+          "transform": "translate(-50%, -50%)"
+        }
+      },
+      "fb": {
+        "variant": "compounds.social-sharing.socialbutton",
+        "svg": {
+          "variant": "compounds.social-sharing.socialbutton.svg",
+          "fill": "#1877f2",
+          "stroke": "#1877f2",
+          "width": "18px",
+          "height": "18px"
+        }
+      },
+      "tw": {
+        "variant": "compounds.social-sharing.socialbutton",
+        "svg": {
+          "variant": "compounds.social-sharing.socialbutton.svg",
+          "marginTop": "-1px",
+          "fill": "#1d9bf0",
+          "stroke": "#1d9bf0"
+        }
+      },
+      "ln": {
+        "variant": "compounds.social-sharing.socialbutton",
+        "svg": {
+          "variant": "compounds.social-sharing.socialbutton.svg",
+          "marginTop": "-3px",
+          "marginLeft": "2px",
+          "fill": "#2867b2",
+          "stroke": "#2867b2",
+          "width": "24px",
+          "height": "24px"
+        }
+      },
+      "email": {
+        "variant": "compounds.social-sharing.socialbutton",
+        "svg": {
+          "variant": "compounds.social-sharing.socialbutton.svg",
+          "marginTop": "1px",
+          "width": "16px",
+          "height": "16px",
+          "fill": "primary",
+          "stroke": "primary"
         }
       }
     }
   },
-
   "modules": {
     "lead-capture-form": {
       "base": {
@@ -4771,7 +4844,6 @@
         "flexDirection": ["column", "row", "row"],
         "border": ["none", "none"]
       },
-
       "field-input": {
         "borderBottom": ["solid 1px rgb(208, 208, 211)", "none"],
         "pt": ["md", "sm"],
@@ -4799,7 +4871,6 @@
         }
       }
     },
-
     "image-callout": {
       "base": {
         "wrapper": {
@@ -4966,7 +5037,8 @@
             "alignSelf": ["auto", "flex-start", "auto"],
             "mt": [null, 0, 20],
             "px": 0,
-            "py": [45, 0]
+            "py": [45, 0],
+            "height": [null, "100%"]
           },
           "content": {
             "alignSelf": "center",
@@ -4992,7 +5064,7 @@
           },
           "image": {
             "mt": [0, -40, 0],
-            "maxWidth": "100%",
+            "maxWidth": ["100%", "100%"],
             "imgixWidth": 768,
             "height": "auto"
           }
@@ -5160,7 +5232,6 @@
         }
       }
     },
-
     "content-hero-module": {
       "p": {
         "width": ["auto", "grid.md.5", "grid.lg.5"],
@@ -5225,7 +5296,6 @@
         }
       }
     },
-
     "collectionGrid": {
       "wrapper": {
         "overflow": "hidden"
@@ -5242,7 +5312,6 @@
         }
       }
     },
-
     "secondary-cta-bar": {
       "col": {
         "position": "relative",
@@ -5264,17 +5333,14 @@
         }
       }
     },
-
     "assuranceBar": {
       "backgroundColor": "brand",
       "color": "light-1"
     },
-
     "assuranceText": {
       "backgroundColor": "brand",
       "color": "light-1"
     },
-
     "profile": {
       "img": {
         "width": "icon.xl",
@@ -5285,7 +5351,6 @@
         "fontWeight": "bold"
       }
     },
-
     "collectionCarousel": {
       "base": {
         "mb": ["lg", "xl", "xxl"],
@@ -5311,7 +5376,6 @@
         "mx": "7.5px"
       }
     },
-
     "collection": {
       "variants": {
         "sidebar": {
@@ -5333,7 +5397,6 @@
       }
     }
   },
-
   "layout": {
     "flex-grid": {
       "sizes": {
@@ -5383,7 +5446,6 @@
       }
     }
   },
-
   "page": {
     "handover-page": {
       "base": {

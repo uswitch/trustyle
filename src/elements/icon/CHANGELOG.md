@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.27.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.26.3...@uswitch/trustyle.icon@1.27.0) (2021-06-16)
+
+
+### Features
+
+* added new fb icon ([d6f706d](https://github.com/uswitch/trustyle/commit/d6f706d))
+
+
+
+
+
 ## [1.26.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.26.2...@uswitch/trustyle.icon@1.26.3) (2021-04-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.icon

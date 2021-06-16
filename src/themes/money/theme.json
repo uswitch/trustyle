@@ -2912,6 +2912,14 @@
         },
         "description": {
           "marginTop": "sm"
+        },
+        "social-divider": {
+          "marginLeft": [0, 0, 16],
+          "marginTop": [-16, -16, 0],
+          "borderLeft": [0, 0, "1px solid #D0D0D3"],
+          "paddingLeft": [0, 0, 16],
+          "paddingTop": [0, 0, 8],
+          "paddingBottom": [0, 0, 8]
         }
       }
     },
@@ -3245,6 +3253,95 @@
       },
       "h6": {
         "fontSize": "base"
+      }
+    },
+    "social-sharing": {
+      "outer-container": {
+        "px": 0,
+        "mb": [48, 48, 48]
+      },
+      "main": {
+        "color": "#2c2c3a",
+        "& *": {
+          "boxSizing": "border-box"
+        }
+      },
+      "label": {
+        "variant": "styles.headings",
+        "fontSize": "sm",
+        "fontWeight": "bolder",
+        "marginBottom": "base"
+      },
+      "buttons": {
+        "whiteSpace": "nowrap"
+      },
+      "socialbutton": {
+        "position": "relative",
+        "display": "inline-block",
+        "verticalAlign": "top",
+        "width": 48,
+        "height": 48,
+        "margin": 0,
+        "borderColor": "#D0D0D3",
+        "borderStyle": "solid solid solid none",
+        "borderWidth": "1px",
+        "&:first-of-type": {
+          "borderStyle": "solid",
+          "svg": {
+            "margin-left": 0
+          }
+        },
+        "svg": {
+          "position": "absolute",
+          "width": "22px",
+          "height": "22px",
+          "margin-left": "-0.5px",
+          "top": "50%",
+          "left": "50%",
+          "transform": "translate(-50%, -50%)"
+        }
+      },
+      "fb": {
+        "variant": "compounds.social-sharing.socialbutton",
+        "svg": {
+          "variant": "compounds.social-sharing.socialbutton.svg",
+          "fill": "#1877f2",
+          "stroke": "#1877f2",
+          "width": "18px",
+          "height": "18px"
+        }
+      },
+      "tw": {
+        "variant": "compounds.social-sharing.socialbutton",
+        "svg": {
+          "variant": "compounds.social-sharing.socialbutton.svg",
+          "marginTop": "-1px",
+          "fill": "#1d9bf0",
+          "stroke": "#1d9bf0"
+        }
+      },
+      "ln": {
+        "variant": "compounds.social-sharing.socialbutton",
+        "svg": {
+          "variant": "compounds.social-sharing.socialbutton.svg",
+          "marginTop": "-3px",
+          "marginLeft": "2px",
+          "fill": "#2867b2",
+          "stroke": "#2867b2",
+          "width": "24px",
+          "height": "24px"
+        }
+      },
+      "email": {
+        "variant": "compounds.social-sharing.socialbutton",
+        "svg": {
+          "variant": "compounds.social-sharing.socialbutton.svg",
+          "marginTop": "1px",
+          "width": "16px",
+          "height": "16px",
+          "fill": "#141424",
+          "stroke": "#141424"
+        }
       }
     }
   },
