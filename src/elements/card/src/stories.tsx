@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
-import { select, text } from '@storybook/addon-knobs'
+import { boolean, date, select, text } from '@storybook/addon-knobs'
 import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
 
 import AllThemes from '../../../utils/all-themes'
@@ -18,6 +18,11 @@ export const VerticalCards = () => {
     'Content',
     'its a card with a picture of a really cute kitten'
   )
+
+  const cardDate = {
+    show: boolean('Display date?', false),
+    value: date('Date', new Date())
+  }
 
   const imageSize = select(
     'Image Size',
@@ -42,6 +47,7 @@ export const VerticalCards = () => {
           imgSizes="(max-width: 1200px) 100vw, 1200px"
           imageSize={imageSize}
           title={title}
+          date={cardDate.show && cardDate.value ? cardDate.value : undefined}
           description={content}
           linkHref="https://www.uswitch.com"
           linkText="Read More"
@@ -59,6 +65,11 @@ export const VerticalCards = () => {
               imgSizes={imgColumnSizes}
               imageSize={imageSize}
               title={title}
+              date={
+                cardDate.show && cardDate.value
+                  ? cardDate.value - 86400000
+                  : undefined
+              }
               description={content}
               linkHref="https://www.uswitch.com"
               linkText="read about cats"
@@ -72,6 +83,11 @@ export const VerticalCards = () => {
               imgSizes={imgColumnSizes}
               imageSize={imageSize}
               title={title}
+              date={
+                cardDate.show && cardDate.value
+                  ? cardDate.value - 186400000
+                  : undefined
+              }
               description={
                 content +
                 ' with some extra words to make the card taller  with some extra words to make the card taller  with some extra words to make the card taller '
@@ -83,12 +99,17 @@ export const VerticalCards = () => {
           </Col>
           <Col span={1}>
             <Card
-              superScript="01 January 2020"
+              superScript="This is a superscript"
               imgSrc={img}
               imgAlt="Picture of a cute kitten"
               imgSizes={imgColumnSizes}
               imageSize={imageSize}
               title={title}
+              date={
+                cardDate.show && cardDate.value
+                  ? cardDate.value - 286400000
+                  : undefined
+              }
               description={content}
               linkHref="https://www.uswitch.com"
               linkText="read about cats"

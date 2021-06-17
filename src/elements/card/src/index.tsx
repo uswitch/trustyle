@@ -5,10 +5,12 @@ import { jsx, Styled } from 'theme-ui'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
+import dayjs from '@uswitch/trustyle.date'
 
 interface Props {
   className?: string
   critical?: boolean
+  date?: number
   description?: string
   imageSize?: 'cover' | 'contain'
   imgAlt?: string
@@ -44,6 +46,7 @@ const makeStyles = (variant: string) => (element?: string) =>
 const Card: React.FC<Props> = ({
   className = '',
   critical = true,
+  date,
   description,
   imageSize = 'cover',
   imgAlt,
@@ -151,16 +154,24 @@ const Card: React.FC<Props> = ({
             variant: styles('meta')
           }}
         >
+          {date && (
+            <Styled.p as="div" sx={{ variant: styles('date') }}>
+              {dayjs(date).format('DD MMMM YYYY')}
+            </Styled.p>
+          )}
+
           {tag && (
             <span sx={{ marginRight: 'sm', variant: styles('tag') }}>
               {tag}
             </span>
           )}
+
           {superScript && (
             <Styled.p as="div" sx={{ variant: styles('superScript') }}>
-              <p>{superScript}</p>
+              {superScript}
             </Styled.p>
           )}
+
           {contentChildren && (
             <div sx={{ variant: styles('contentChildren') }}>
               {contentChildren}

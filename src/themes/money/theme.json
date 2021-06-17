@@ -2954,7 +2954,15 @@
         "marginRight": "base",
         "meta": {
           "display": "flex",
+          "flexWrap": "wrap",
           "fontSize": 14
+        },
+        "date": {
+          "width": "100%",
+          "color": "grey-60",
+          "lineHeight": "24px",
+          "fontWeight": "bold",
+          "mb": "xs"
         },
         "superScript": {
           "mb": "xxs"
@@ -2983,6 +2991,9 @@
       },
       "variants": {
         "vertical": {
+          "date": {
+            "variant": "compounds.card.base.date"
+          },
           "tag": {
             "variant": "compounds.card.base.tag"
           },
