@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.usp-tag@0.1.7...@uswitch/trustyle.usp-tag@0.2.0) (2021-06-17)
+
+
+### Features
+
+* enables react elements to be passed as usp to uspTag ([3f6ed35](https://github.com/uswitch/trustyle/commit/3f6ed35))
+
+
+
+
+
 ## [0.1.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.usp-tag@0.1.6...@uswitch/trustyle.usp-tag@0.1.7) (2021-04-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.usp-tag
