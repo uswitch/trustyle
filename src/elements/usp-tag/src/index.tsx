@@ -4,7 +4,7 @@ import * as React from 'react'
 import { jsx } from 'theme-ui'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  usp?: string
+  usp?: string | React.ReactNode
   backgroundColor?: string
   beforeColor?: string
   className?: string
