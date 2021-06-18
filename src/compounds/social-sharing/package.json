@@ -7,6 +7,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uswitch/trustyle"
+  },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
