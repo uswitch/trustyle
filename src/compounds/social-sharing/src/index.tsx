@@ -59,8 +59,10 @@ const SocialSharing: React.FC<Props> = ({
           <Icon glyph="facebook2" size={20} color="#1877f2" />
         </Styled.a>
         <Styled.a
-          href={`https://twitter.com/intent/tweet?url=${encodedShareUrl}${
-            twitterMessage ? `&text=${encodeURIComponent(twitterMessage)}` : ''
+          href={`https://twitter.com/intent/tweet?${
+            twitterMessage
+              ? `text=${encodeURIComponent(twitterMessage)}`
+              : `url=${encodedShareUrl}`
           }`}
           target="_blank"
           sx={{
