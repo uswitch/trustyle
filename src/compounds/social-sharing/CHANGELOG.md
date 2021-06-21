@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.social-sharing@0.0.3...@uswitch/trustyle.social-sharing@0.0.4) (2021-06-21)
+
+
+### Bug Fixes
+
+* dedupe twitter prepopulated text ([9a738f6](https://github.com/uswitch/trustyle/commit/9a738f6))
+
+
+
+
+
 ## [0.0.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.social-sharing@0.0.2...@uswitch/trustyle.social-sharing@0.0.3) (2021-06-18)
 
 
