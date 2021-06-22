@@ -18,6 +18,10 @@ interface PhaseIconProps {
   step: number
 }
 
+interface PercentageProps {
+  progress: number
+}
+
 interface FunnelPhaseProps {
   step: number
   open: boolean
@@ -31,6 +35,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   currentPhaseKey: string
   progress: number
   hideProgressBar?: boolean
+  variant?: string
 }
 
 const PhaseIcon: React.FC<PhaseIconProps> = ({ variant, step }) => (
@@ -51,6 +56,14 @@ const PhaseIcon: React.FC<PhaseIconProps> = ({ variant, step }) => (
   </div>
 )
 
+const Percentage: React.FC<PercentageProps> = ({ progress }) => {
+  const percentage = `${Math.round((progress + 0.1) * 100)}%`
+  return (
+    <div sx={{ variant: 'elements.funnel-progress.variants.percentage' }}>
+      {percentage}
+    </div>
+  )
+}
 const FunnelPhase: React.FC<FunnelPhaseProps> = ({
   step,
   open,
@@ -89,25 +102,29 @@ const FunnelProgress: React.FC<Props> = ({
   currentPhaseKey,
   progress,
   hideProgressBar,
+  variant,
   ...rest
 }) => {
   const currentPhaseIndex = phases.findIndex(
     ({ key }) => key === currentPhaseKey
   )
+  const percentageVariant = variant === 'percentage'
 
   return (
     <Fragment>
       <div {...rest} sx={{ variant: 'elements.funnel-progress.base' }}>
-        {phases.map((phase, ind) => (
-          <FunnelPhase
-            key={ind}
-            step={ind + 1}
-            open={ind === currentPhaseIndex}
-            complete={ind < currentPhaseIndex}
-            progress={progress}
-            phase={phase}
-          />
-        ))}
+        {!percentageVariant &&
+          phases.map((phase, ind) => (
+            <FunnelPhase
+              key={ind}
+              step={ind + 1}
+              open={ind === currentPhaseIndex}
+              complete={ind < currentPhaseIndex}
+              progress={progress}
+              phase={phase}
+            />
+          ))}
+        {percentageVariant && <Percentage progress={progress} />}
       </div>
       {!hideProgressBar && (
         <div
