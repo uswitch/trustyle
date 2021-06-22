@@ -1531,6 +1531,7 @@
         "display": "flex",
         "flexFlow": "row",
         "userSelect": "none",
+        "justifyContent": "flex-end",
         "phase": {
           "base": {
             "flex": "auto",
@@ -1634,6 +1635,13 @@
             "backgroundColor": "progress-bg",
             "marginTop": "13px"
           }
+        }
+      },
+      "variants": {
+        "percentage": {
+          "variant": "elements.funnel-progress.base",
+          "fontWeight": "600",
+          "lineHeight": "24px"
         }
       }
     },
