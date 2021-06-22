@@ -3811,10 +3811,7 @@
         }
       },
       "aspectRatioBox": {
-        "position": "relative",
-        "overflow": "hidden",
-        "width": "100%",
-        "height": "0"
+        "position": "relative"
       },
       "cardImage": {
         "position": "absolute",
@@ -4002,7 +3999,7 @@
           },
           "aspectRatioBox": {
             "variant": "compounds.card.aspectRatioBox",
-            "paddingTop": "56.287%"
+            "paddingTop": ["xs", "sm"]
           },
           "cardImage": {
             "variant": "compounds.card.cardImage"
