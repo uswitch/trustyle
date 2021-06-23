@@ -855,6 +855,92 @@
           }
         }
       }
+    },
+    "social-sharing": {
+      "main": {
+        "color": "#2c2c3a",
+        "& *": {
+          "boxSizing": "border-box"
+        }
+      },
+      "label": {
+        "variant": "styles.headings",
+        "fontSize": "base",
+        "fontWeight": "500",
+        "marginBottom": "base",
+        "color": "#2c2c3a"
+      },
+      "buttons": {
+        "whiteSpace": "nowrap"
+      },
+      "socialbutton": {
+        "position": "relative",
+        "display": "inline-block",
+        "verticalAlign": "top",
+        "width": 48,
+        "height": 48,
+        "margin": 0,
+        "borderColor": "#d0d0d3",
+        "borderStyle": "solid solid solid none",
+        "borderWidth": "1px",
+        "&:first-of-type": {
+          "borderStyle": "solid",
+          "svg": {
+            "margin-left": 0
+          }
+        },
+        "svg": {
+          "position": "absolute",
+          "width": "22px",
+          "height": "22px",
+          "margin-left": "-0.5px",
+          "top": "50%",
+          "left": "50%",
+          "transform": "translate(-50%, -50%)"
+        }
+      },
+      "fb": {
+        "variant": "elements.social-sharing.socialbutton",
+        "svg": {
+          "variant": "elements.social-sharing.socialbutton.svg",
+          "fill": "#1877f2",
+          "stroke": "#1877f2",
+          "width": "18px",
+          "height": "18px"
+        }
+      },
+      "tw": {
+        "variant": "elements.social-sharing.socialbutton",
+        "svg": {
+          "variant": "elements.social-sharing.socialbutton.svg",
+          "marginTop": "-1px",
+          "fill": "#1d9bf0",
+          "stroke": "#1d9bf0"
+        }
+      },
+      "ln": {
+        "variant": "elements.social-sharing.socialbutton",
+        "svg": {
+          "variant": "elements.social-sharing.socialbutton.svg",
+          "marginTop": "-3px",
+          "marginLeft": "2px",
+          "fill": "#2867b2",
+          "stroke": "#2867b2",
+          "width": "24px",
+          "height": "24px"
+        }
+      },
+      "email": {
+        "variant": "elements.social-sharing.socialbutton",
+        "svg": {
+          "variant": "elements.social-sharing.socialbutton.svg",
+          "marginTop": "1px",
+          "width": "16px",
+          "height": "16px",
+          "fill": "uswitch-navy",
+          "stroke": "uswitch-navy"
+        }
+      }
     }
   },
 
@@ -871,6 +957,17 @@
           "paddingX": [0, "sm"]
         }
       },
+      "aspectRatioBox": {
+        "position": "relative",
+        "overflow": "hidden",
+        "width": "100%",
+        "height": "0"
+      },
+      "cardImage": {
+        "position": "absolute",
+        "top": "0",
+        "left": "0"
+      },
       "variants": {
         "vertical": {
           "variant": "compounds.card.base",
@@ -879,6 +976,21 @@
           },
           "link": {
             "variant": "compounds.card.base.link"
+          },
+          "image": {
+            "display": "inline-block",
+            "width": "100%",
+            "height": "100%"
+          },
+          "aspectRatioWrapper": {
+            "width": ["100%", "grid.md.6", "grid.md.5"]
+          },
+          "aspectRatioBox": {
+            "variant": "compounds.card.aspectRatioBox",
+            "paddingTop": "56.286%"
+          },
+          "cardImage": {
+            "variant": "compounds.card.cardImage"
           }
         },
         "horizontal": {
@@ -886,10 +998,21 @@
           "display": "flex",
           "alignItems": "start",
           "image": {
+            "display": "inline-block",
+            "width": "100%",
+            "height": "100%"
+          },
+          "aspectRatioWrapper": {
             "width": 474,
             "mr": 32
           },
-
+          "aspectRatioBox": {
+            "variant": "compounds.card.aspectRatioBox",
+            "paddingTop": "56.286%"
+          },
+          "cardImage": {
+            "variant": "compounds.card.cardImage"
+          },
           "content": {
             "width": 670,
             "variant": "compounds.card.base.content"

@@ -1,8 +1,9 @@
 {
-  "name": "@uswitch/trustyle.card",
-  "version": "1.12.23",
+  "name": "@uswitch/trustyle.social-sharing",
+  "version": "0.0.4",
   "license": "MIT",
   "main": "lib/index.js",
+  "ts:main": "src/index.tsx",
   "publishConfig": {
     "access": "public"
   },
@@ -12,15 +13,9 @@
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
-    "@uswitch/trustyle.icon": "^1.17.1",
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.button-link": "^3.2.8",
-    "@uswitch/trustyle.flex-grid": "^3.5.3",
-    "@uswitch/trustyle.imgix-image": "^0.1.41"
-  },
-  "devDependencies": {
     "@uswitch/trustyle.icon": "^1.27.0"
   }
 }

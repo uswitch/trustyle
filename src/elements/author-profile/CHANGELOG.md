@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.author-profile@1.3.8...@uswitch/trustyle.author-profile@1.3.9) (2021-06-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.author-profile
+
+
+
+
+
 ## [1.3.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.author-profile@1.3.7...@uswitch/trustyle.author-profile@1.3.8) (2021-04-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.author-profile

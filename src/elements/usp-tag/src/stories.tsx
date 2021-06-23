@@ -24,12 +24,21 @@ const renderExampleUsps = exampleUsps.map((item, index) => (
   </div>
 ))
 
+const reactElement = <span>I am a span</span>
+
 export const ExampleWithKnob = () => {
   const defaultUsp: string = text('usp', '2 months free insurance')
-
   return (
     <div>
       <UspTag usp={defaultUsp} />
+      <div css={css({ marginTop: '24px' })}>
+        <h4> Example with React Element: </h4>
+        <UspTag
+          usp={reactElement}
+          backgroundColor={'#FFE5CB'}
+          beforeColor={'#FFAA55'}
+        />
+      </div>
       <div css={css({ marginTop: '24px' })}>
         <h4> More examples: </h4>
         {renderExampleUsps}

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.13](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.article-intro@1.0.12...@uswitch/trustyle.article-intro@1.0.13) (2021-06-16)
+
+
+### Bug Fixes
+
+* prettier fix ([e87a871](https://github.com/uswitch/trustyle/commit/e87a871))
+
+
+
+
+
 ## [1.0.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.article-intro@1.0.11...@uswitch/trustyle.article-intro@1.0.12) (2021-04-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.article-intro
