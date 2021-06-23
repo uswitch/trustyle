@@ -16,6 +16,7 @@
     "react": "^16.7.0"
   },
   "dependencies": {
+    "@uswitch/spark": "^0.1.16",
     "@uswitch/trustyle.icon": "^1.27.0",
     "@uswitch/trustyle.imgix-image": "^0.1.41",
     "@uswitch/trustyle.modal": "^2.4.18"

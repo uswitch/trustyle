@@ -3,6 +3,7 @@ import React from 'react'
 import { jsx } from 'theme-ui'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import Modal from '@uswitch/trustyle.modal'
+import { Input } from '@uswitch/spark'
 
 interface PhoneNumberModalInfo {
   phoneNumber: string
@@ -65,6 +66,7 @@ const PhoneNumberModal: React.FC<Props> = ({
 
   return (
     <Modal ariaLabel={modalAriaLabel} onClose={setStateClosed}>
+      <Input />
       <div
         sx={{
           display: 'flex',
