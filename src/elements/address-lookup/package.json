@@ -16,6 +16,7 @@
     "react": "^16.7.0"
   },
   "dependencies": {
+    "@uswitch/spark": "^0.1.16",
     "@uswitch/trustyle.button": "^3.0.5",
     "@uswitch/trustyle.drop-down": "^2.5.11",
     "@uswitch/trustyle.input": "^2.1.16"

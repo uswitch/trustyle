@@ -56,14 +56,23 @@ const addresses = [
 ]
 
 export const AddressLookupExample = () => {
-  const lookup = (_postcode, setAddresses) => {
+  const lookup = (
+    _postcode: string,
+    setAddresses: (addresses: object[]) => void
+  ) => {
     setAddresses(addresses)
   }
-  const onSelect = address => {
+  const onSelect = (address: string) => {
     alert(`You've selected: ${address}`)
   }
 
-  return <AddressLookup onSelect={onSelect} lookup={lookup} />
+  return (
+    <AddressLookup
+      onSelect={onSelect}
+      lookup={lookup}
+      placeholder={'Please select your address'}
+    />
+  )
 }
 
 AddressLookupExample.story = {
