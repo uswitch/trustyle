@@ -2205,6 +2205,27 @@
           }
         }
       }
+    },
+    "circle-percentage-bar": {
+      "base": {
+        "text": {
+          "fontFamily": "heading",
+          "fontWeight": "bolder",
+          "color": "grey-100"
+        },
+        "bar": {
+          "border": "0.08em solid #A64470 !important"
+        },
+        "fill": {
+          "border": "0.08em solid #A64470 !important"
+        },
+        "bar-full": {
+          "border": "0.08em solid #DFDFE1 !important"
+        },
+        "fill-full": {
+          "border": "0.08em solid #DFDFE1 !important"
+        }
+      }
     }
   },
   "compounds": {

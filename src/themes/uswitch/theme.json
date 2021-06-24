@@ -3019,6 +3019,27 @@
       "small": {
         "fontSize": ["sm", "md"]
       }
+    },
+    "circle-percentage-bar": {
+      "base": {
+        "text": {
+          "fontFamily": "heading",
+          "fontWeight": "xxbold",
+          "color": "primary"
+        },
+        "bar": {
+          "border": "0.08em solid #141424 !important"
+        },
+        "fill": {
+          "border": "0.08em solid #141424 !important"
+        },
+        "bar-full": {
+          "border": "0.08em solid #F3F3F4 !important"
+        },
+        "fill-full": {
+          "border": "0.08em solid #F3F3F4 !important"
+        }
+      }
     }
   },
   "compounds": {
