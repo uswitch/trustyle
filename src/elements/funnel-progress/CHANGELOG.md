@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.funnel-progress@3.0.6...@uswitch/trustyle.funnel-progress@3.0.7) (2021-06-24)
+
+**Note:** Version bump only for package @uswitch/trustyle.funnel-progress
+
+
+
+
+
+## [3.0.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.funnel-progress@3.0.5...@uswitch/trustyle.funnel-progress@3.0.6) (2021-06-22)
+
+**Note:** Version bump only for package @uswitch/trustyle.funnel-progress
+
+
+
+
+
 ## [3.0.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.funnel-progress@3.0.4...@uswitch/trustyle.funnel-progress@3.0.5) (2021-04-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.funnel-progress
