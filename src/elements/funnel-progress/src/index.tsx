@@ -59,7 +59,12 @@ const PhaseIcon: React.FC<PhaseIconProps> = ({ variant, step }) => (
 const Percentage: React.FC<PercentageProps> = ({ progress }) => {
   const percentage = `${Math.round((progress + 0.1) * 100)}%`
   return (
-    <div sx={{ variant: 'elements.funnel-progress.variants.percentage' }}>
+    <div
+      sx={{
+        variant:
+          'elements.funnel-progress.variants.percentage.displayPercentage'
+      }}
+    >
       {percentage}
     </div>
   )
@@ -110,9 +115,16 @@ const FunnelProgress: React.FC<Props> = ({
   )
   const percentageVariant = variant === 'percentage'
 
+  const variantPath = (additionalPath: string = '') =>
+    `elements.funnel-progress.${
+      variant ? `variants.${variant}` : 'base'
+    }${additionalPath}`
+
+  const minWidth = percentageVariant ? '10%' : '0%'
+
   return (
     <Fragment>
-      <div {...rest} sx={{ variant: 'elements.funnel-progress.base' }}>
+      <div {...rest} sx={{ variant: variantPath() }}>
         {!percentageVariant &&
           phases.map((phase, ind) => (
             <FunnelPhase
@@ -129,7 +141,7 @@ const FunnelProgress: React.FC<Props> = ({
       {!hideProgressBar && (
         <div
           sx={{
-            variant: 'elements.funnel-progress.base.progess.back',
+            variant: variantPath('.progess.back'),
             height: '4px',
             width: '100%',
             position: 'relative',
@@ -141,15 +153,15 @@ const FunnelProgress: React.FC<Props> = ({
             sx={{
               variant:
                 progress !== 0
-                  ? 'elements.funnel-progress.base.progress.base'
-                  : 'elements.funnel-progress.base.progress.variants.start'
+                  ? variantPath('.progress.base')
+                  : variantPath('.progress.variants.start')
             }}
             style={{
               width:
                 progress !== 0
                   ? `${STARTING_PROGRESS * 100 +
                       progress * (1 - STARTING_PROGRESS) * 100}%`
-                  : '0%'
+                  : minWidth
             }}
           />
         </div>
