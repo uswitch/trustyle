@@ -2468,7 +2468,9 @@
           },
           "slide": {
             "variant": "elements.input.checkbox.base",
-            "p": "sm"
+            "p": "sm",
+            "border": "solid 1px",
+            "borderColor": "primary"
           }
         }
       },
