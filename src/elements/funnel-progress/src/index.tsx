@@ -115,17 +115,16 @@ const FunnelProgress: React.FC<Props> = ({
   )
   const percentageVariant = variant === 'percentage'
 
-  const variantPath = (additionalPath?: string) => {
-    return `elements.funnel-progress.${
+  const variantPath = (additionalPath: string = '') =>
+    `elements.funnel-progress.${
       variant ? `variants.${variant}` : 'base'
-    }${additionalPath && additionalPath}`
-  }
+    }${additionalPath}`
 
   const minWidth = percentageVariant ? '10%' : '0%'
 
   return (
     <Fragment>
-      <div {...rest} sx={{ variant: variantPath('') }}>
+      <div {...rest} sx={{ variant: variantPath() }}>
         {!percentageVariant &&
           phases.map((phase, ind) => (
             <FunnelPhase
