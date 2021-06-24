@@ -2962,7 +2962,7 @@
           "color": "grey-60",
           "lineHeight": "24px",
           "fontWeight": "bold",
-          "mb": "xs"
+          "mb": "xxs"
         },
         "superScript": {
           "mb": "xxs",
