@@ -49,6 +49,30 @@ Example.story = {
   }
 }
 
+export const PercentageExample = () => (
+  <FunnelProgress
+    phases={phases}
+    currentPhaseKey={select(
+      'phase',
+      ['currentPlan', 'results', 'apply'],
+      'results'
+    )}
+    variant={'percentage'}
+    progress={number(name, 0.25, {
+      range: true,
+      min: 0,
+      max: 1,
+      step: 0.05
+    })}
+  />
+)
+
+PercentageExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 const Spacer = () => <div css={css({ minHeight: 20 })} />
 
 export const AutomatedTests = () => {

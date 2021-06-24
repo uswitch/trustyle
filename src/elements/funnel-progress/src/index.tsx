@@ -18,6 +18,10 @@ interface PhaseIconProps {
   step: number
 }
 
+interface PercentageProps {
+  progress: number
+}
+
 interface FunnelPhaseProps {
   step: number
   open: boolean
@@ -31,6 +35,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   currentPhaseKey: string
   progress: number
   hideProgressBar?: boolean
+  variant?: string
 }
 
 const PhaseIcon: React.FC<PhaseIconProps> = ({ variant, step }) => (
@@ -51,6 +56,19 @@ const PhaseIcon: React.FC<PhaseIconProps> = ({ variant, step }) => (
   </div>
 )
 
+const Percentage: React.FC<PercentageProps> = ({ progress }) => {
+  const percentage = `${Math.round((progress + 0.1) * 100)}%`
+  return (
+    <div
+      sx={{
+        variant:
+          'elements.funnel-progress.variants.percentage.displayPercentage'
+      }}
+    >
+      {percentage}
+    </div>
+  )
+}
 const FunnelPhase: React.FC<FunnelPhaseProps> = ({
   step,
   open,
@@ -89,30 +107,41 @@ const FunnelProgress: React.FC<Props> = ({
   currentPhaseKey,
   progress,
   hideProgressBar,
+  variant,
   ...rest
 }) => {
   const currentPhaseIndex = phases.findIndex(
     ({ key }) => key === currentPhaseKey
   )
+  const percentageVariant = variant === 'percentage'
+
+  const variantPath = (additionalPath: string = '') =>
+    `elements.funnel-progress.${
+      variant ? `variants.${variant}` : 'base'
+    }${additionalPath}`
+
+  const minWidth = percentageVariant ? '10%' : '0%'
 
   return (
     <Fragment>
-      <div {...rest} sx={{ variant: 'elements.funnel-progress.base' }}>
-        {phases.map((phase, ind) => (
-          <FunnelPhase
-            key={ind}
-            step={ind + 1}
-            open={ind === currentPhaseIndex}
-            complete={ind < currentPhaseIndex}
-            progress={progress}
-            phase={phase}
-          />
-        ))}
+      <div {...rest} sx={{ variant: variantPath() }}>
+        {!percentageVariant &&
+          phases.map((phase, ind) => (
+            <FunnelPhase
+              key={ind}
+              step={ind + 1}
+              open={ind === currentPhaseIndex}
+              complete={ind < currentPhaseIndex}
+              progress={progress}
+              phase={phase}
+            />
+          ))}
+        {percentageVariant && <Percentage progress={progress} />}
       </div>
       {!hideProgressBar && (
         <div
           sx={{
-            variant: 'elements.funnel-progress.base.progess.back',
+            variant: variantPath('.progess.back'),
             height: '4px',
             width: '100%',
             position: 'relative',
@@ -124,15 +153,15 @@ const FunnelProgress: React.FC<Props> = ({
             sx={{
               variant:
                 progress !== 0
-                  ? 'elements.funnel-progress.base.progress.base'
-                  : 'elements.funnel-progress.base.progress.variants.start'
+                  ? variantPath('.progress.base')
+                  : variantPath('.progress.variants.start')
             }}
             style={{
               width:
                 progress !== 0
                   ? `${STARTING_PROGRESS * 100 +
                       progress * (1 - STARTING_PROGRESS) * 100}%`
-                  : '0%'
+                  : minWidth
             }}
           />
         </div>
