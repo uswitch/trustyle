@@ -1642,7 +1642,7 @@
           "justifyContent": "flex-end",
           "displayPercentage": {
             "fontWeight": "600",
-            "lineHeight": "24px"  
+            "lineHeight": "24px"
           },
           "progress": {
             "base": {
