@@ -168,7 +168,7 @@ const Card: React.FC<Props> = ({
 
           {superScript && (
             <Styled.p as="div" sx={{ variant: styles('superScript') }}>
-              {superScript}
+              <p>{superScript}</p>
             </Styled.p>
           )}
 

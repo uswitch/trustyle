@@ -99,7 +99,7 @@ export const VerticalCards = () => {
           </Col>
           <Col span={1}>
             <Card
-              superScript="This is a superscript"
+              superScript="01 January 2020"
               imgSrc={img}
               imgAlt="Picture of a cute kitten"
               imgSizes={imgColumnSizes}

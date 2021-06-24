@@ -2965,7 +2965,10 @@
           "mb": "xs"
         },
         "superScript": {
-          "mb": "xxs"
+          "mb": "xxs",
+          "p": {
+            "mb": 0
+          }
         },
         "tag": {
           "color": "berry",
