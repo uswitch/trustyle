@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.card",
-  "version": "1.12.23",
+  "version": "1.14.0",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
