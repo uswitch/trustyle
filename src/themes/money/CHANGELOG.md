@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.52.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.50.0...@uswitch/trustyle.money-theme@1.52.0) (2021-06-28)
+
+
+### Bug Fixes
+
+* revert superscript changes ([96de11e](https://github.com/uswitch/trustyle/commit/96de11e))
+* spacing ([dfd4548](https://github.com/uswitch/trustyle/commit/dfd4548))
+
+
+### Features
+
+* add date to card component ([9b06522](https://github.com/uswitch/trustyle/commit/9b06522))
+* caveat box on money ([b2398b2](https://github.com/uswitch/trustyle/commit/b2398b2))
+
+
+
+
+
 # [1.51.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.50.0...@uswitch/trustyle.money-theme@1.51.0) (2021-06-28)
 
 

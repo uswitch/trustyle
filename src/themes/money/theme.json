@@ -1802,6 +1802,27 @@
           "display": "flex",
           "alignItems": "center"
         },
+        "assurance-text": {
+          "boxSizing": "border-box",
+          "px": ["lg", "56px"],
+          "py": ["lg", "40px"],
+          "mt": ["md", "lg"],
+          "mb": "md",
+          "mx": "auto",
+          "textAlign": "left",
+          "backgroundColor": "grey-05",
+          "maxWidth": "720px",
+          "&& div": {
+            "backgroundColor": "transparent"
+          },
+          "p": {
+            "fontSize": "xs",
+            "lineHeight": "24px"
+          },
+          "div:last-of-type p": {
+            "mb": 0
+          }
+        },
         "billboard": {
           "variant": "elements.rich-text-block.variants.center",
           "color": "grey-0",
