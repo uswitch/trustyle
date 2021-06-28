@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.12.23...@uswitch/trustyle.card@1.13.0) (2021-06-28)
+
+
+### Bug Fixes
+
+* revert superscript changes ([96de11e](https://github.com/uswitch/trustyle/commit/96de11e))
+
+
+### Features
+
+* add date to card component ([9b06522](https://github.com/uswitch/trustyle/commit/9b06522))
+
+
+
+
+
 ## [1.12.23](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.12.22...@uswitch/trustyle.card@1.12.23) (2021-06-16)
 
 **Note:** Version bump only for package @uswitch/trustyle.card
