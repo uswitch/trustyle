@@ -3855,7 +3855,10 @@
         }
       },
       "aspectRatioBox": {
-        "position": "relative"
+        "position": "relative",
+        "overflow": "hidden",
+        "width": "100%",
+        "height": "0"
       },
       "cardImage": {
         "position": "absolute",
@@ -4019,10 +4022,6 @@
           "variant": "compounds.card.base",
           "display": "flex",
           "alignItems": "start",
-          "image": {
-            "width": [132, 384, 474],
-            "mr": 32
-          },
           "content": {
             "width": [132, 544, 670],
             "variant": "compounds.card.base.content"
@@ -4043,7 +4042,7 @@
           },
           "aspectRatioBox": {
             "variant": "compounds.card.aspectRatioBox",
-            "paddingTop": ["xs", "sm"]
+            "paddingTop": "56.287%"
           },
           "cardImage": {
             "variant": "compounds.card.cardImage"
