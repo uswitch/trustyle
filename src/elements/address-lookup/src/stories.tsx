@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui'
 
 import AllThemes from '../../../utils/all-themes'
 
-import AddressLookup from './'
+import { AddressLookup, Address } from './'
 
 export default {
   title: 'Elements/AddressLookup'
@@ -56,10 +56,10 @@ const addresses = [
 ]
 
 export const AddressLookupExample = () => {
-  const lookup = (_postcode, setAddresses) => {
+  const lookup = (_postcode: string, setAddresses: any) => {
     setAddresses(addresses)
   }
-  const onSelect = address => {
+  const onSelect = (address: string) => {
     alert(`You've selected: ${address}`)
   }
 

@@ -12,7 +12,7 @@ interface Props {
   lookup: (postcode: string, setAddresses: any) => void
 }
 
-interface Address {
+export interface Address {
   summaryline: string
   organisation: string
   number: string
@@ -23,14 +23,29 @@ interface Address {
   postcode: string
 }
 
-const AddressLookup: React.FC<Props> = ({
+export const AddressLookup: React.FC<Props> = ({
   buttonText = 'Find address',
   onSelect,
   lookup
 }) => {
   const [postcode, setPostcode] = React.useState('')
-  const [addresses, setAddresses] = React.useState([])
-  const [addressIndex, setAddressIndex] = React.useState(null)
+  const [addresses, setAddresses] = React.useState<Address[]>([])
+  const [addressIndex, setAddressIndex] = React.useState<number|null>(null)
+
+  const handleAddressSelect = (i: string) => {
+    if (i === '') {
+      setAddressIndex(null)
+      onSelect('')
+    }
+
+    const n = parseInt(i)
+
+    setAddressIndex(n)
+    const address = addresses[n]
+    if (address) {
+      onSelect(address.summaryline)
+    }
+  }
 
   return (
     <div sx={{ variant: 'elements.address-lookup.container'}}>
@@ -52,13 +67,14 @@ const AddressLookup: React.FC<Props> = ({
           name={'addresslist'}
           options={
             [
-              { text: 'My address isn\'t listed', value: -1 },
+              { text: 'Please select your address', value: '' },
+              { text: 'My address isn\'t listed', value: '-1' },
               ...addresses.map((address: Address, i: number) => {
-                return { text: address.summaryline, value: i }
+                return { text: address.summaryline, value: i.toString() }
               })
             ]
           }
-          onChange={(i: any) => setAddressIndex(parseInt(i))}
+          onChange={handleAddressSelect}
           onBlur={() => {}}
           value={null}
         />
@@ -66,5 +82,3 @@ const AddressLookup: React.FC<Props> = ({
     </div>
   )
 }
-
-export default AddressLookup
