@@ -8,11 +8,6 @@ import { CircularPercentageBarStyles } from './percentage-bar-styles'
 const styles = (element?: string) =>
   `elements.circle-percentage-bar.base${element ? `.${element}` : ''}`
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  percentage: number
-  size?: string
-}
-
 const drawCircle = (pct: number, isBackground: boolean = false) => {
   const cls = isBackground ? '-full' : ''
   const deg = (360 / 100) * pct
@@ -40,12 +35,23 @@ const drawCircle = (pct: number, isBackground: boolean = false) => {
   )
 }
 
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
+  percentage: number
+  size?: string
+}
+
 const CircularPercentageBar: React.FC<Props> = ({
   percentage,
   size = 'xs'
 }) => {
   return (
-    <div css={CircularPercentageBarStyles}>
+    <div
+      css={CircularPercentageBarStyles}
+      sx={{
+        display: 'flex',
+        justifyContent: 'center'
+      }}
+    >
       <div
         className={`c100 ${size} ${percentage > 50 ? 'gt50' : ''}`}
         sx={{ variant: styles() }}
