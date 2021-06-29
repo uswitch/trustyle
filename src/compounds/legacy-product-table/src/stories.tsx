@@ -12,7 +12,8 @@ import LegacyProductTable, {
   MoreInformationButton,
   MoreInformationList,
   MoreInformationTable,
-  MoreInformationText
+  MoreInformationText,
+  PercentageCell
 } from '.'
 
 export default {
@@ -75,6 +76,18 @@ const productTableContentsDisabled = [
   <CtaCell key="4" href={clickableRow} disabled>
     See Deal
   </CtaCell>
+]
+
+const percentageTableContents = [
+  ...baseTableContents,
+  <PercentageCell
+    backgroundColor="#F5E9EE"
+    borderBottomColor="#D8ABBD"
+    label="Chance of acceptance"
+    key="4"
+    percentage={70}
+    size="xs"
+  />
 ]
 
 const eligibilityContent = (
@@ -415,6 +428,26 @@ TelephoneExample.story = {
   }
 }
 
+export const PercentageExample = () => {
+  return (
+    <LegacyProductTable
+      representativeExample={representativeExample}
+      info={info}
+      title={title}
+      moreInformationPanel={[eligibilityContent, ratesContent]}
+      clickableRow={clickableRow}
+    >
+      {percentageTableContents}
+    </LegacyProductTable>
+  )
+}
+
+PercentageExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
     <AllThemes>
@@ -422,6 +455,7 @@ export const AutomatedTests = () => {
       <DisabledExample />
       <EligibilityExample />
       <TelephoneExample />
+      <PercentageExample />
     </AllThemes>
   )
 }

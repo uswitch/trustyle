@@ -5,6 +5,7 @@ import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
 import { Button } from '@uswitch/trustyle.button'
 import { Icon } from '@uswitch/trustyle.icon'
+import CirclePercentageBar from '@uswitch/trustyle.circular-percentage-bar'
 
 import RowWrapper from './row-wrapper'
 
@@ -258,6 +259,31 @@ export const CtaCell: React.FC<CtaCellProps> = ({
         <Button {...props}>{children}</Button>
       )}
     </BaseCell>
+  )
+}
+
+interface PercentageCellProps extends DataCellProps {
+  percentage: number
+  size?: string
+}
+
+export const PercentageCell: React.FC<PercentageCellProps> = ({
+  backgroundColor,
+  borderBottomColor,
+  color,
+  label,
+  percentage,
+  size
+}) => {
+  return (
+    <DataCell
+      backgroundColor={backgroundColor}
+      borderBottomColor={borderBottomColor}
+      label={label}
+      color={color}
+    >
+      <CirclePercentageBar percentage={percentage} size={size} align="center" />
+    </DataCell>
   )
 }
 
