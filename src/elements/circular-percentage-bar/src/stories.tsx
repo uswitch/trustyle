@@ -14,10 +14,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   bgColor?: string
 }
 
-export const DrawCircles: React.FC<Props> = ({
-  size = 'xs',
-  bgColor = '#ffffff'
-}) => {
+const DrawCircles: React.FC<Props> = ({ size = 'xs', bgColor = '#ffffff' }) => {
   return (
     <div
       sx={{
@@ -28,12 +25,24 @@ export const DrawCircles: React.FC<Props> = ({
         backgroundColor: bgColor
       }}
     >
-      <CircularPercentageBar size={size} percentage={0} />
-      <CircularPercentageBar size={size} percentage={25} />
-      <CircularPercentageBar size={size} percentage={50} />
-      <CircularPercentageBar size={size} percentage={75} />
-      <CircularPercentageBar size={size} percentage={85} />
-      <CircularPercentageBar size={size} percentage={100} />
+      <div sx={{ margin: '5px' }}>
+        <CircularPercentageBar size={size} percentage={0} />
+      </div>
+      <div sx={{ margin: '5px' }}>
+        <CircularPercentageBar size={size} percentage={25} />
+      </div>
+      <div sx={{ margin: '5px' }}>
+        <CircularPercentageBar size={size} percentage={50} />
+      </div>
+      <div sx={{ margin: '5px' }}>
+        <CircularPercentageBar size={size} percentage={75} />
+      </div>
+      <div sx={{ margin: '5px' }}>
+        <CircularPercentageBar size={size} percentage={85} />
+      </div>
+      <div sx={{ margin: '5px' }}>
+        <CircularPercentageBar size={size} percentage={100} />
+      </div>
     </div>
   )
 }
@@ -60,10 +69,44 @@ ExampleWithPercentages.story = {
   }
 }
 
+export const ExampleWithAlignment = () => {
+  return (
+    <div
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        marginX: 'auto',
+        backgroundColor: '#F5E9EE',
+        width: ['100%', '50%']
+      }}
+    >
+      <div sx={{ width: '100%', marginBottom: '20px' }}>
+        <p>Start</p>
+        <CircularPercentageBar align="start" percentage={50} />
+      </div>
+      <div sx={{ width: '100%', marginBottom: '20px' }}>
+        <p>Center</p>
+        <CircularPercentageBar align="center" percentage={50} />
+      </div>
+      <div sx={{ width: '100%', marginBottom: '20px' }}>
+        <p>End</p>
+        <CircularPercentageBar align="end" percentage={50} />
+      </div>
+    </div>
+  )
+}
+
+ExampleWithAlignment.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
     <AllThemes themes={['uswitch', 'money']}>
       <ExampleWithPercentages />
+      <ExampleWithAlignment />
     </AllThemes>
   )
 }
