@@ -14,5 +14,8 @@
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
+  },
+  "devDependencies": {
+    "@uswitch/trustyle.circular-percentage-bar": "^0.1.1"
   }
 }
