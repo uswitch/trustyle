@@ -34,7 +34,7 @@ const moreInfoLabel = 'Custom More Info Label'
 
 const clickableRow = 'https://www.money.co.uk'
 
-const baseTableContents = [
+const dataContents = [
   <DataCell
     backgroundColor="#fef6ed"
     borderBottomColor="#fcdbb7"
@@ -58,7 +58,11 @@ const baseTableContents = [
     key="2"
   >
     1 year to 5 years
-  </DataCell>,
+  </DataCell>
+]
+
+const baseTableContents = [
+  ...dataContents,
   <ImageCell key="3">
     <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
   </ImageCell>
@@ -79,7 +83,7 @@ const productTableContentsDisabled = [
 ]
 
 const percentageTableContents = [
-  ...baseTableContents,
+  ...dataContents,
   <PercentageCell
     backgroundColor="#F5E9EE"
     borderBottomColor="#D8ABBD"
@@ -87,7 +91,13 @@ const percentageTableContents = [
     key="4"
     percentage={70}
     size="xs"
-  />
+  />,
+  <ImageCell key="3">
+    <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
+  </ImageCell>,
+  <CtaCell key="5" href={clickableRow}>
+    See Deal
+  </CtaCell>
 ]
 
 const eligibilityContent = (
