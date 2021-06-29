@@ -4,7 +4,6 @@ export const CircularPercentageBarStyles = css({
   '.c100': {
     position: 'relative',
     float: 'left',
-    margin: '0 0.1em 0.1em 0',
     width: '1em',
     height: '1em',
     'font-size': '120px',
