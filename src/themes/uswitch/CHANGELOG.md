@@ -3,9 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<<<<<<< HEAD
 ## [2.47.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.47.8...@uswitch/trustyle.uswitch-theme@2.47.9) (2021-06-24)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+=======
+## [2.48.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.0...@uswitch/trustyle.uswitch-theme@2.48.1) (2021-06-28)
+
+
+### Bug Fixes
+
+* revert uswitch horizontal card changes ([154fb27](https://github.com/uswitch/trustyle/commit/154fb27))
+
+
+
+
+
+# [2.48.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.47.8...@uswitch/trustyle.uswitch-theme@2.48.0) (2021-06-28)
+
+
+### Features
+
+* create circle percentage bar element ([eaf6b07](https://github.com/uswitch/trustyle/commit/eaf6b07))
+>>>>>>> 393a5024bf8155eeb81c3dd323d65e831293a36f
 
 
 

@@ -3048,6 +3048,27 @@
       "small": {
         "fontSize": ["sm", "md"]
       }
+    },
+    "circle-percentage-bar": {
+      "base": {
+        "text": {
+          "fontFamily": "heading",
+          "fontWeight": "xxbold",
+          "color": "primary"
+        },
+        "bar": {
+          "border": "0.08em solid #141424 !important"
+        },
+        "fill": {
+          "border": "0.08em solid #141424 !important"
+        },
+        "bar-full": {
+          "border": "0.08em solid #F3F3F4 !important"
+        },
+        "fill-full": {
+          "border": "0.08em solid #F3F3F4 !important"
+        }
+      }
     }
   },
   "compounds": {
@@ -3840,7 +3861,10 @@
         }
       },
       "aspectRatioBox": {
-        "position": "relative"
+        "position": "relative",
+        "overflow": "hidden",
+        "width": "100%",
+        "height": "0"
       },
       "cardImage": {
         "position": "absolute",
@@ -4004,10 +4028,6 @@
           "variant": "compounds.card.base",
           "display": "flex",
           "alignItems": "start",
-          "image": {
-            "width": [132, 384, 474],
-            "mr": 32
-          },
           "content": {
             "width": [132, 544, 670],
             "variant": "compounds.card.base.content"
@@ -4028,7 +4048,7 @@
           },
           "aspectRatioBox": {
             "variant": "compounds.card.aspectRatioBox",
-            "paddingTop": ["xs", "sm"]
+            "paddingTop": "56.287%"
           },
           "cardImage": {
             "variant": "compounds.card.cardImage"

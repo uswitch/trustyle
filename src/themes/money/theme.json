@@ -1802,6 +1802,27 @@
           "display": "flex",
           "alignItems": "center"
         },
+        "assurance-text": {
+          "boxSizing": "border-box",
+          "px": ["lg", "56px"],
+          "py": ["lg", "40px"],
+          "mt": ["md", "lg"],
+          "mb": "md",
+          "mx": "auto",
+          "textAlign": "left",
+          "backgroundColor": "grey-05",
+          "maxWidth": "720px",
+          "&& div": {
+            "backgroundColor": "transparent"
+          },
+          "p": {
+            "fontSize": "xs",
+            "lineHeight": "24px"
+          },
+          "div:last-of-type p": {
+            "mb": 0
+          }
+        },
         "billboard": {
           "variant": "elements.rich-text-block.variants.center",
           "color": "grey-0",
@@ -2203,6 +2224,27 @@
               "mb": "sm"
             }
           }
+        }
+      }
+    },
+    "circle-percentage-bar": {
+      "base": {
+        "text": {
+          "fontFamily": "heading",
+          "fontWeight": "bolder",
+          "color": "grey-100"
+        },
+        "bar": {
+          "border": "0.08em solid #A64470 !important"
+        },
+        "fill": {
+          "border": "0.08em solid #A64470 !important"
+        },
+        "bar-full": {
+          "border": "0.08em solid #DFDFE1 !important"
+        },
+        "fill-full": {
+          "border": "0.08em solid #DFDFE1 !important"
         }
       }
     }
@@ -2954,10 +2996,21 @@
         "marginRight": "base",
         "meta": {
           "display": "flex",
+          "flexWrap": "wrap",
           "fontSize": 14
         },
-        "superScript": {
+        "date": {
+          "width": "100%",
+          "color": "grey-60",
+          "lineHeight": "24px",
+          "fontWeight": "bold",
           "mb": "xxs"
+        },
+        "superScript": {
+          "mb": "xxs",
+          "p": {
+            "mb": 0
+          }
         },
         "tag": {
           "color": "berry",
@@ -2983,6 +3036,9 @@
       },
       "variants": {
         "vertical": {
+          "date": {
+            "variant": "compounds.card.base.date"
+          },
           "tag": {
             "variant": "compounds.card.base.tag"
           },
