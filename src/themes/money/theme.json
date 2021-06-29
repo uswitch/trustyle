@@ -1798,6 +1798,13 @@
         "center": {
           "textAlign": "center"
         },
+        "boxout": {
+          "border": "2px #ADAFB3 solid",
+          "padding": "40px",
+          "div:last-of-type p": {
+            "mb": 0
+          }
+        },
         "with-icon": {
           "display": "flex",
           "alignItems": "center"
