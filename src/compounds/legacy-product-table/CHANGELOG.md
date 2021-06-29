@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.2.11...@uswitch/trustyle.legacy-product-table@1.3.0) (2021-06-29)
+
+
+### Bug Fixes
+
+* add dev dependenct to legacy product table ([fc8dcaa](https://github.com/uswitch/trustyle/commit/fc8dcaa))
+* the legacy product table story ([4d6499c](https://github.com/uswitch/trustyle/commit/4d6499c))
+
+
+### Features
+
+* add circular percentage bar to the tables ([f56fb7d](https://github.com/uswitch/trustyle/commit/f56fb7d))
+
+
+
+
+
 ## [1.2.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.2.10...@uswitch/trustyle.legacy-product-table@1.2.11) (2021-06-16)
 
 **Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
