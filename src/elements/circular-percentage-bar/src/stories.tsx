@@ -60,10 +60,44 @@ ExampleWithPercentages.story = {
   }
 }
 
+export const ExampleWithAlignment = () => {
+  return (
+    <div
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        marginX: 'auto',
+        backgroundColor: '#F5E9EE',
+        width: ['100%', '50%']
+      }}
+    >
+      <div sx={{ width: '100%', marginBottom: '20px' }}>
+        <p>Start</p>
+        <CircularPercentageBar align="start" percentage={50} />
+      </div>
+      <div sx={{ width: '100%', marginBottom: '20px' }}>
+        <p>Center</p>
+        <CircularPercentageBar align="center" percentage={50} />
+      </div>
+      <div sx={{ width: '100%', marginBottom: '20px' }}>
+        <p>End</p>
+        <CircularPercentageBar align="end" percentage={50} />
+      </div>
+    </div>
+  )
+}
+
+ExampleWithAlignment.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
     <AllThemes themes={['uswitch', 'money']}>
       <ExampleWithPercentages />
+      <ExampleWithAlignment />
     </AllThemes>
   )
 }
