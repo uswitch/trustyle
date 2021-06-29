@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.53.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.52.0...@uswitch/trustyle.money-theme@1.53.0) (2021-06-29)
+
+
+### Features
+
+* boxout ([04635e2](https://github.com/uswitch/trustyle/commit/04635e2))
+
+
+
+
+
 # [1.52.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.50.0...@uswitch/trustyle.money-theme@1.52.0) (2021-06-28)
 
 
