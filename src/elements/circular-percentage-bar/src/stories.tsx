@@ -14,10 +14,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   bgColor?: string
 }
 
-export const DrawCircles: React.FC<Props> = ({
-  size = 'xs',
-  bgColor = '#ffffff'
-}) => {
+const DrawCircles: React.FC<Props> = ({ size = 'xs', bgColor = '#ffffff' }) => {
   return (
     <div
       sx={{
@@ -28,12 +25,24 @@ export const DrawCircles: React.FC<Props> = ({
         backgroundColor: bgColor
       }}
     >
-      <CircularPercentageBar size={size} percentage={0} />
-      <CircularPercentageBar size={size} percentage={25} />
-      <CircularPercentageBar size={size} percentage={50} />
-      <CircularPercentageBar size={size} percentage={75} />
-      <CircularPercentageBar size={size} percentage={85} />
-      <CircularPercentageBar size={size} percentage={100} />
+      <div sx={{ margin: '5px' }}>
+        <CircularPercentageBar size={size} percentage={0} />
+      </div>
+      <div sx={{ margin: '5px' }}>
+        <CircularPercentageBar size={size} percentage={25} />
+      </div>
+      <div sx={{ margin: '5px' }}>
+        <CircularPercentageBar size={size} percentage={50} />
+      </div>
+      <div sx={{ margin: '5px' }}>
+        <CircularPercentageBar size={size} percentage={75} />
+      </div>
+      <div sx={{ margin: '5px' }}>
+        <CircularPercentageBar size={size} percentage={85} />
+      </div>
+      <div sx={{ margin: '5px' }}>
+        <CircularPercentageBar size={size} percentage={100} />
+      </div>
     </div>
   )
 }
