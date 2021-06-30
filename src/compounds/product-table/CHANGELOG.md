@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.15.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.14.3...@uswitch/trustyle.product-table@2.15.0) (2021-06-29)
+
+
+### Bug Fixes
+
+* add dev dependency to the product table ([2f51b12](https://github.com/uswitch/trustyle/commit/2f51b12))
+
+
+### Features
+
+* add circular percentage bar to the tables ([f56fb7d](https://github.com/uswitch/trustyle/commit/f56fb7d))
+
+
+
+
+
 ## [2.14.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.14.2...@uswitch/trustyle.product-table@2.14.3) (2021-06-14)
 
 **Note:** Version bump only for package @uswitch/trustyle.product-table

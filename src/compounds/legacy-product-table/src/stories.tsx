@@ -12,7 +12,8 @@ import LegacyProductTable, {
   MoreInformationButton,
   MoreInformationList,
   MoreInformationTable,
-  MoreInformationText
+  MoreInformationText,
+  PercentageCell
 } from '.'
 
 export default {
@@ -33,7 +34,7 @@ const moreInfoLabel = 'Custom More Info Label'
 
 const clickableRow = 'https://www.money.co.uk'
 
-const baseTableContents = [
+const dataContents = [
   <DataCell
     backgroundColor="#fef6ed"
     borderBottomColor="#fcdbb7"
@@ -57,7 +58,11 @@ const baseTableContents = [
     key="2"
   >
     1 year to 5 years
-  </DataCell>,
+  </DataCell>
+]
+
+const baseTableContents = [
+  ...dataContents,
   <ImageCell key="3">
     <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
   </ImageCell>
@@ -73,6 +78,24 @@ const productTableContents = [
 const productTableContentsDisabled = [
   ...baseTableContents,
   <CtaCell key="4" href={clickableRow} disabled>
+    See Deal
+  </CtaCell>
+]
+
+const percentageTableContents = [
+  ...dataContents,
+  <PercentageCell
+    backgroundColor="#F5E9EE"
+    borderBottomColor="#D8ABBD"
+    label="Chance of acceptance"
+    key="4"
+    percentage={70}
+    size="xs"
+  />,
+  <ImageCell key="3">
+    <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
+  </ImageCell>,
+  <CtaCell key="5" href={clickableRow}>
     See Deal
   </CtaCell>
 ]
@@ -415,6 +438,26 @@ TelephoneExample.story = {
   }
 }
 
+export const PercentageExample = () => {
+  return (
+    <LegacyProductTable
+      representativeExample={representativeExample}
+      info={info}
+      title={title}
+      moreInformationPanel={[eligibilityContent, ratesContent]}
+      clickableRow={clickableRow}
+    >
+      {percentageTableContents}
+    </LegacyProductTable>
+  )
+}
+
+PercentageExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
     <AllThemes>
@@ -422,6 +465,7 @@ export const AutomatedTests = () => {
       <DisabledExample />
       <EligibilityExample />
       <TelephoneExample />
+      <PercentageExample />
     </AllThemes>
   )
 }

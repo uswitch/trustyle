@@ -23,6 +23,7 @@ import ProductTableDataTextSubscript, {
 import ProductTableDataAuto, {
   Plain as PlainProductTableDataAuto
 } from './components/data-auto'
+import ProductTableCircularPercentageBar from './components/data-percentage'
 import {
   Addon,
   AddonArg,
@@ -60,7 +61,8 @@ const ProductTable = {
     Range: ProductTableDataRange,
     TextSubscript: ProductTableDataTextSubscript,
     Value: ProductTableDataValue,
-    Auto: ProductTableDataAuto
+    Auto: ProductTableDataAuto,
+    CircularPercentageBar: ProductTableCircularPercentageBar
   }
 }
 
