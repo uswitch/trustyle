@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.circular-percentage-bar@0.1.1...@uswitch/trustyle.circular-percentage-bar@0.1.2) (2021-07-01)
+
+
+### Bug Fixes
+
+* add different alignments for different devices ([52671ae](https://github.com/uswitch/trustyle/commit/52671ae))
+
+
+
+
+
 ## [0.1.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.circular-percentage-bar@0.1.0...@uswitch/trustyle.circular-percentage-bar@0.1.1) (2021-06-29)
 
 
