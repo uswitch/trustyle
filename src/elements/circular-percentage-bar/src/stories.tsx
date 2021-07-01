@@ -81,6 +81,17 @@ export const ExampleWithAlignment = () => {
       }}
     >
       <div sx={{ width: '100%', marginBottom: '20px' }}>
+        <p>Mobile End | Desktop Start</p>
+        <CircularPercentageBar align={['end', 'start']} percentage={50} />
+      </div>
+      <div sx={{ width: '100%', marginBottom: '20px' }}>
+        <p>Mobile End | Tablet Center | Desktop Start</p>
+        <CircularPercentageBar
+          align={['end', 'center', 'start']}
+          percentage={50}
+        />
+      </div>
+      <div sx={{ width: '100%', marginBottom: '20px' }}>
         <p>Start</p>
         <CircularPercentageBar align="start" percentage={50} />
       </div>

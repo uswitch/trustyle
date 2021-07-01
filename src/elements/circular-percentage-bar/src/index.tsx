@@ -41,7 +41,7 @@ const drawCircle = (pct: number, isBackground: boolean = false) => {
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   percentage: number
   size?: string
-  align?: 'center' | 'start' | 'end'
+  align?: string | string[]
 }
 
 const CircularPercentageBar: React.FC<Props> = ({
@@ -54,7 +54,9 @@ const CircularPercentageBar: React.FC<Props> = ({
       css={CircularPercentageBarStyles}
       sx={{
         display: 'flex',
-        justifyContent: alignCircle(align)
+        justifyContent: Array.isArray(align)
+          ? align.map(a => alignCircle(a))
+          : alignCircle(align)
       }}
     >
       <div
