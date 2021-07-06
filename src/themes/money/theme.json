@@ -1438,7 +1438,6 @@
         }
       },
       "base-no-border": {
-        "variant": "elements.input.checkbox.label",
         "mb": "md",
         "alignItems": ["center", "flex-start"],
         "boxSizing": "border-box",
@@ -1459,6 +1458,7 @@
           "display": "block",
           "height": "17px",
           "marginLeft": "0",
+          "marginTop": "0",
           "marginRight": "base",
           "minWidth": "17px",
           "width": "17px"
