@@ -1458,7 +1458,7 @@
           "display": "block",
           "height": "17px",
           "marginLeft": "0",
-          "marginTop": "0",
+          "marginTop": "0px",
           "marginRight": "base",
           "minWidth": "17px",
           "width": "17px"
