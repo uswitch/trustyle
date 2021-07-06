@@ -1711,6 +1711,59 @@
         }
       }
     },
+    "simple-checkbox": {
+      "base": {
+        "variant": "elements.input.checkbox.label",
+        "mb": "md",
+        "alignItems": "center",
+        "boxSizing": "border-box",
+        "cursor": "pointer",
+        "display": "flex",
+        "padding": "base",
+        "paddingLeft": 0,
+        "width": "100%",
+        "userSelect": "none",
+        "backgroundColor": "grey-0",
+        "&::before": {
+          "borderRadius": "2px",
+          "borderStyle": "solid",
+          "borderWidth": "2px",
+          "content": "' '",
+          "display": "block",
+          "height": "17px",
+          "marginLeft": "base",
+          "marginRight": "base",
+          "width": "17px"
+        }
+      },
+      "base-no-border": {
+        "mb": "md",
+        "alignItems": ["center", "flex-start"],
+        "boxSizing": "border-box",
+        "cursor": "pointer",
+        "display": "flex",
+        "padding": "base",
+        "paddingLeft": 0,
+        "width": "100%",
+        "userSelect": "none",
+        "backgroundColor": "grey-0",
+        "border": "none !important",
+        "boxShadow": "none !important",
+        "&::before": {
+          "borderRadius": "2px",
+          "borderStyle": "solid",
+          "borderWidth": "2px",
+          "content": "' '",
+          "display": "block",
+          "height": "17px",
+          "marginLeft": "0",
+          "marginTop": "0px",
+          "marginRight": "base",
+          "minWidth": "17px",
+          "width": "17px"
+        }
+      }
+    },
     "badge": {
       "base": {
         "paddingX": [14, 23],
