@@ -16,6 +16,7 @@ import ProductTableCellImage from './cell-image'
 import { ROWS } from './cell-split'
 import RowWrapper from './rowWrapper'
 import Header from './header'
+import { BannerInfo, ProductTableHeaderBanner } from './header-banner'
 
 export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   badges?: React.ReactNode[]
@@ -27,6 +28,8 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   image?: React.ReactNode
   disabled?: boolean
   card?: boolean
+  preApproved?: boolean
+  bannerInfo?: BannerInfo
   extraStyles?: {}
   sectionStyles?: {}
   onRowClick?: () => void
@@ -44,6 +47,8 @@ const ProductTableRow: React.FC<RowProps> = ({
   image,
   disabled,
   card = false,
+  preApproved = false,
+  bannerInfo,
   extraStyles = {},
   sectionStyles = {},
   onRowClick
@@ -126,6 +131,12 @@ const ProductTableRow: React.FC<RowProps> = ({
           ...sectionStyles
         }}
       >
+        {preApproved && bannerInfo && (
+          <ProductTableHeaderBanner
+            bannerInfo={bannerInfo}
+            badge={!!badges.length}
+          />
+        )}
         <RowWrapper
           link={clickableRow}
           headerImage={image}
