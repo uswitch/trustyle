@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.16.0...@uswitch/trustyle.product-table@2.16.1) (2021-07-07)
+
+
+### Bug Fixes
+
+* variant array bug from new theme-ui version ([f130940](https://github.com/uswitch/trustyle/commit/f130940))
+
 # [2.16.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.15.1...@uswitch/trustyle.product-table@2.16.0) (2021-07-07)
 
 
