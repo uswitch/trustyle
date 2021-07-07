@@ -34,13 +34,8 @@ const ProductTableCellSecondary: React.FC<CellSecondaryProps> = ({
           headerImage ? 'auto' : '1fr'
         ]),
         msGridRows: forcedMobile(['100%', null, headerImage ? 'auto' : '1fr']),
-        variant: forcedMobile([
-          `compounds.product-table.${headerImage &&
-            'variants.redesign.'}cellContent.variants.inSplit.main`,
-          null,
-          `compounds.product-table.${headerImage &&
-            'variants.redesign.'}cellContent.main`
-        ])
+        variant: `compounds.product-table.${headerImage &&
+          'variants.redesign.'}cellContent.variants.inSplit.main`
       }}
       // @ts-ignore
       css={{ display: '-ms-grid' }}
@@ -57,13 +52,8 @@ const ProductTableCellSecondary: React.FC<CellSecondaryProps> = ({
           msGridRowSpan: '1',
           fontSize: 'xs',
           marginTop: headerImage ? 0 : 'sm',
-          variant: forcedMobile([
-            `compounds.product-table.${headerImage &&
-              'variants.redesign.'}cellContent.variants.inSplit.label`,
-            null,
-            `compounds.product-table.${headerImage &&
-              'variants.redesign.'}cellContent.label`
-          ])
+          variant: `compounds.product-table.${headerImage &&
+            'variants.redesign.'}cellContent.variants.inSplit.label`
         }}
       >
         {label}
@@ -85,13 +75,8 @@ const ProductTableCellSecondary: React.FC<CellSecondaryProps> = ({
             fontSize: 'sm'
           },
           lineHeight: 1,
-          variant: forcedMobile([
-            `compounds.product-table.${headerImage &&
-              'variants.redesign.'}cellContent.variants.inSplit.content`,
-            null,
-            `compounds.product-table.${headerImage &&
-              'variants.redesign.'}cellContent.content`
-          ])
+          variant: `compounds.product-table.${headerImage &&
+            'variants.redesign.'}cellContent.variants.inSplit.content`
         }}
       >
         {children}
