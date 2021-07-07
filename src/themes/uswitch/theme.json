@@ -2485,7 +2485,8 @@
             "variant": "elements.input.checkbox.base",
             "p": "sm",
             "border": "solid 1px",
-            "borderColor": "grey-20"
+            "borderColor": "grey-20",
+            "mb": "sm"
           }
         }
       },
