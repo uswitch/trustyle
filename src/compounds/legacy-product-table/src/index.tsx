@@ -37,12 +37,23 @@ const Badge: React.FC<BadgeProps> = ({ text }) => {
         top: 0,
         transform: 'translateY(-50%)',
         padding: '0 6px',
-        backgroundColor: '#fff',
+        backgroundColor: 'transparent',
         marginLeft: ['4px', 'sm']
       }}
     >
+      <span
+        sx={{
+          width: '100%',
+          height: '50%',
+          backgroundColor: '#fff',
+          position: 'fixed',
+          top: '0',
+          left: '0'
+        }}
+      ></span>
       <div
         sx={{
+          position: 'relative',
           padding: ['2.5px 8px', '5.5px 16px'],
           backgroundColor: '#34454E',
           color: '#fff',
@@ -54,6 +65,53 @@ const Badge: React.FC<BadgeProps> = ({ text }) => {
       >
         {text}
       </div>
+    </div>
+  )
+}
+
+interface BannerInfo {
+  text: string
+  link: string
+  linkText: string
+}
+
+interface PreapprovedBannerProps extends React.HTMLAttributes<HTMLDivElement> {
+  bannerInfo: BannerInfo
+  badge?: boolean
+}
+
+const PreapprovedBanner: React.FC<PreapprovedBannerProps> = ({
+  bannerInfo,
+  badge = false
+}) => {
+  return (
+    <div
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'sunshine',
+        padding: 'sm',
+        color: 'experimental-text',
+        lineHeight: 'base',
+        fontSize: 'sm',
+        fontWeight: 'bold'
+      }}
+    >
+      <span sx={{ marginTop: [badge ? '10px' : '0', '10px'] }}>
+        {bannerInfo.text}&nbsp;
+        <a
+          href={bannerInfo.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            fontWeight: 'semiBold',
+            color: 'experimental-text'
+          }}
+        >
+          {bannerInfo.linkText}
+        </a>
+      </span>
     </div>
   )
 }
@@ -642,6 +700,8 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   onRowClick?: () => void
   disabled?: boolean
   badges?: string[]
+  preapproved?: boolean
+  bannerInfo?: BannerInfo
   telephone?: string
 }
 
@@ -658,6 +718,8 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   onRowClick,
   disabled,
   badges = [],
+  preapproved = false,
+  bannerInfo,
   telephone,
   ...props
 }) => {
@@ -680,6 +742,9 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
       }}
       {...props}
     >
+      {preapproved && bannerInfo && (
+        <PreapprovedBanner bannerInfo={bannerInfo} badge={!!badges.length} />
+      )}
       <RowWrapper
         link={clickableRow}
         onLinkClick={onLinkClick}

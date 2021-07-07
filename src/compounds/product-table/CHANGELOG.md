@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.16.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.15.1...@uswitch/trustyle.product-table@2.16.0) (2021-07-07)
+
+
+### Features
+
+* add preapproved banner to product tables ([c253d0d](https://github.com/uswitch/trustyle/commit/c253d0d))
+
+
+
+
+
 ## [2.15.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.15.0...@uswitch/trustyle.product-table@2.15.1) (2021-07-01)
 
 **Note:** Version bump only for package @uswitch/trustyle.product-table

@@ -913,6 +913,111 @@ MoneyRedesignExampleWithPercentage.story = {
   }
 }
 
+export const MoneyRedesignExampleWithBanner = () => {
+  const badgeText =
+    'Fair finance gld customer experience ribbon winner autumn 2020'
+  const badges = badgeText
+    ? [<Badge key="award-winner">{badgeText}</Badge>]
+    : []
+
+  const bannerInfo = {
+    text: 'You’ve been pre-approved for this card and rate today. ',
+    link: 'https://www.money.co.uk/mortgages.htm',
+    linkText: 'What does this mean'
+  }
+
+  return (
+    <ProductTable.Row
+      rowTitle="Santander Standard Loan (Online)"
+      image={
+        <ProductTable.cells.HeaderImage>
+          <img
+            src="https://placekitten.com/200/75?image=9"
+            alt="Salman"
+            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          />
+        </ProductTable.cells.HeaderImage>
+      }
+      addons={[
+        {
+          addon: ProductTable.addons.info,
+          component: (
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontWeight: 'bold', display: ['none', 'block'] }}>
+                Additional information:
+              </div>
+              <div>
+                Here is some extra information. Here is even more extra
+                information. And more extra information.
+              </div>
+            </ProductTable.cells.Base>
+          ),
+          options: {
+            split: true,
+            headerImage: true
+          }
+        },
+        {
+          addon: ProductTable.addons.footer,
+          component: (
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontWeight: 'bold', display: ['inline', 'block'] }}>
+                Representative example:
+              </div>
+              <div>Assumed borrowing of £10,000 over...</div>
+            </ProductTable.cells.Base>
+          ),
+          options: {
+            split: true,
+            headerImage: true
+          }
+        },
+        {
+          addon: ProductTable.addons.accordion,
+          component: (
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontSize: ['xxs', 'xs'] }}>More info</div>
+            </ProductTable.cells.Base>
+          )
+        }
+      ]}
+      badges={badges}
+      preApproved
+      bannerInfo={bannerInfo}
+    >
+      <ProductTable.cells.Content label="Loan Amount" headerImage>
+        <ProductTable.data.Auto text="£1000 to £10000" headerImage />
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Content label="Representative APR" headerImage>
+        <ProductTable.data.Auto
+          text="49.9% APR (£1,000 to £10,000)"
+          headerImage
+        />
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Content label="Loan Term" headerImage>
+        <ProductTable.data.Auto text="1 year to 5 years" headerImage />
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Content label="Chance of acceptance" headerImage>
+        <ProductTable.data.CircularPercentageBar
+          percentage={50}
+          size="xs"
+          align="start"
+        />
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Cta
+        primary={<ButtonLink variant="primary">Apply now</ButtonLink>}
+        headerImage
+      />
+    </ProductTable.Row>
+  )
+}
+
+MoneyRedesignExampleWithBanner.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const DisabledExample = () => {
   return (
     <React.Fragment>
@@ -1007,6 +1112,10 @@ export const AutomatedTests = () => {
       <ExampleStacked />
       <Spacer />
       <MoneyRedesignExample />
+      <Spacer />
+      <MoneyRedesignExampleWithPercentage />
+      <Spacer />
+      <MoneyRedesignExampleWithBanner />
       <Spacer />
       <DisabledExample />
     </AllThemes>
