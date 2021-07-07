@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.48.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.4...@uswitch/trustyle.uswitch-theme@2.48.6) (2021-07-07)
+
+
+### Bug Fixes
+
+* variant array bug from new theme-ui version ([c716b25](https://github.com/uswitch/trustyle/commit/c716b25))
+
+
+
+
+
+
+## [2.48.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.4...@uswitch/trustyle.uswitch-theme@2.48.5) (2021-07-07)
+
+
+### Bug Fixes
+
+* variant array bug from new theme-ui version ([f130940](https://github.com/uswitch/trustyle/commit/f130940))
+
+
+
+
+
+## [2.48.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.3...@uswitch/trustyle.uswitch-theme@2.48.4) (2021-07-07)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
 ## [2.48.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.2...@uswitch/trustyle.uswitch-theme@2.48.3) (2021-06-30)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
