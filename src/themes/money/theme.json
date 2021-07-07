@@ -3428,6 +3428,7 @@
         },
         "content": {
           "pb": ["sm", "sm", 0],
+          "pt": [null, null, "14px"],
           "width": [null, null, "40%"],
           "flexShrink": 0,
           "div": {
