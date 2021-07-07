@@ -2526,7 +2526,7 @@
         "borderBottomStyle": "solid"
       }
     },
-    
+
     "simple-checkbox": {
       "base": {
         "variant": "elements.input.checkbox.label",
