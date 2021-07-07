@@ -3405,9 +3405,9 @@
                 },
                 "content": {
                   "fontWeight": "xbold",
-                  "fontSize": "sm",
+                  "fontSize": ["sm", null, "md"],
                   "fontFamily": "heading",
-                  "textAlign": "right",
+                  "textAlign": ["right", null, "left"],
                   "small": {
                     "fontSize": "xs",
                     "fontFamily": "base"
