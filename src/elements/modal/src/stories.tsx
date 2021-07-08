@@ -140,6 +140,24 @@ WithBlurredBackdrop.story = {
   }
 }
 
+export const WithoutCloseButton = () => (
+  <Modal
+    ariaLabel="An example modal element"
+    focusLockProps={{
+      whiteList: node => document.getElementById('app')?.contains(node) ?? false
+    }}
+  >
+    <h2 tabIndex={0}>Modal content</h2>
+    <button>test</button>
+  </Modal>
+)
+
+WithoutCloseButton.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => (
   <AllThemes themes={['uswitch']}>
     <Modal

@@ -150,7 +150,7 @@ const Overlay: React.FC<OverlayProps> = ({
       <OverlayIndexingContext.Provider
         value={{ index: index + 1, indexes, setIndexes }}
       >
-        <FocusLock autoFocus={!!onClose} returnFocus>
+        <FocusLock autoFocus returnFocus>
           <div
             sx={{
               position: 'fixed',
