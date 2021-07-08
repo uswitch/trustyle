@@ -2942,6 +2942,19 @@
             ":visited": {
               "color": "grey-60"
             }
+          },
+          "&.active-sidenav-item": {
+            "color": "experimental-text",
+            "::after": {
+              "borderColor": "fuschia"
+            },
+            ">a": {
+              "color": "experimental-text",
+              "fontWeight": "bold",
+              ":visited": {
+                "color": "experimental-text"
+              }
+            }
           }
         },
         "isActive": {

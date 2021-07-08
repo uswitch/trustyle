@@ -1306,6 +1306,25 @@
               "color": "uswitch-navy"
             }
           }
+        },
+        "&.active-sidenav-item": {
+          "color": "uswitch-navy",
+          "::after": {
+            "content": "\"\"",
+            "position": "absolute",
+            "top": "0",
+            "left": "0",
+            "display": "block",
+            "width": 4,
+            "height": "100%",
+            "backgroundColor": "uswitch-navy"
+          },
+          ">a": {
+            "color": "uswitch-navy",
+            ":visited": {
+              "color": "uswitch-navy"
+            }
+          }
         }
       },
       "additionalLink": {

@@ -4635,6 +4635,25 @@
             ":focus": {
               "variant": "compounds.side-nav.isActive"
             }
+          },
+          "&.active-sidenav-item": {
+            "color": "primary",
+            "::after": {
+              "content": "\"\"",
+              "position": "absolute",
+              "top": "0",
+              "left": "0",
+              "display": "block",
+              "width": 4,
+              "height": "100%",
+              "backgroundColor": "primary"
+            },
+            ">a": {
+              "color": "primary",
+              ":visited": {
+                "color": "primary"
+              }
+            }
           }
         },
         "isActive": {
