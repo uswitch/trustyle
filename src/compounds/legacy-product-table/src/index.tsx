@@ -77,12 +77,12 @@ interface BannerInfo {
 
 interface PreapprovedBannerProps extends React.HTMLAttributes<HTMLDivElement> {
   bannerInfo: BannerInfo
-  badge?: boolean
+  badge?: string
 }
 
 const PreapprovedBanner: React.FC<PreapprovedBannerProps> = ({
   bannerInfo,
-  badge = false
+  badge
 }) => {
   return (
     <div
@@ -743,7 +743,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
       {...props}
     >
       {preapproved && bannerInfo && (
-        <PreapprovedBanner bannerInfo={bannerInfo} badge={!!badges.length} />
+        <PreapprovedBanner bannerInfo={bannerInfo} badge={badge} />
       )}
       <RowWrapper
         link={clickableRow}
