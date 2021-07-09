@@ -2598,7 +2598,7 @@
           "lineHeight": "base",
           "fontFamily": "base",
           "mt": ["0", "xxs"],
-          "mb": ["lg", "0"]
+          "mb": ["xs", "0"]
         },
         "a": {
           "mt": ["md", "lg"]
