@@ -1467,6 +1467,7 @@
     },
     "simple-radio": {
       "span": {
+        "textAlign": "left",
         "variant": "elements.input.radio.label",
         "alignItems": "center",
         "boxSizing": "border-box",
