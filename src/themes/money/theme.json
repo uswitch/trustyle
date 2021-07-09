@@ -1144,7 +1144,10 @@
     "list": {
       "base": {
         "display": "inline-block",
-        "textAlign": "left"
+        "textAlign": "left",
+        "li:last-child": {
+          "marginBottom": 0
+        }
       },
       "pros": {
         "color": "green",
