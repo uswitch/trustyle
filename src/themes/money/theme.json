@@ -294,6 +294,20 @@
   },
   "----------------------------- Variants": "-----------------------------",
   "elements": {
+    "address-lookup": {
+      "container": "elements.form-section",
+      "postcode-row": {
+        "display": "flex",
+        "justifyContent": "space-between",
+        "marginBottom": "lg",
+        "div": {
+          "width": "45%"
+        },
+        "button": {
+          "width": "45%"
+        }
+      }
+    },
     "author": {
       "link": {
         "fontWeight": "base"

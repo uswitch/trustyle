@@ -14,6 +14,7 @@
   "dependencies": {
     "@uswitch/trustyle.frozen-input": "^3.2.12",
     "@uswitch/trustyle.styles": "^0.5.7",
+    "@uswitch/trustyle.icon": "^1.26.3",
     "react-input-mask": "^2.0.4",
     "tiny-debounce": "^0.1.1"
   },
@@ -23,7 +24,6 @@
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
-    "@uswitch/trustyle.icon": "^1.17.1",
     "react": "^16.7.0"
   }
 }

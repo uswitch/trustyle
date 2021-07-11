@@ -1,0 +1,23 @@
+{
+  "name": "@uswitch/trustyle.address-lookup",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "ts:main": "src/index.tsx",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uswitch/trustyle"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.27",
+    "react": "^16.7.0"
+  },
+  "dependencies": {
+    "@uswitch/trustyle.button": "^3.0.5",
+    "@uswitch/trustyle.drop-down": "^2.5.11",
+    "@uswitch/trustyle.input": "^2.1.16"
+  }
+}
