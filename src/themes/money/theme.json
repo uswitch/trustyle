@@ -945,6 +945,17 @@
       "base": {
         "backgroundColor": "grey-0"
       },
+      "bannerText": {
+        "paddingBottom": "40px",
+        "paddingX": ["sm", "xl"],
+        "marginTop": "0",
+        "textAlign": "center",
+        "fontFamily": "base",
+        "lineHeight": "base",
+        "fontSize": "sm",
+        "fontWeight": "base",
+        "color": "grey-80"
+      },
       "variants": {
         "full": {
           "variant": "elements.modal.base",
