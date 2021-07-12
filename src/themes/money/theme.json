@@ -3475,6 +3475,11 @@
         }
       },
       "variants": {
+        "rootChild": {
+          "inner": {
+            "px": ["gutter", "gutter", "gutter"]
+          }
+        },
         "imageLeft": {
           "inner": {
             "flexDirection": ["column", "column", "row"]
