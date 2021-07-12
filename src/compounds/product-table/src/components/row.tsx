@@ -30,6 +30,7 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   card?: boolean
   preApproved?: boolean
   bannerInfo?: BannerInfo
+  onBannerClick?: () => void
   extraStyles?: {}
   sectionStyles?: {}
   onRowClick?: () => void
@@ -49,6 +50,7 @@ const ProductTableRow: React.FC<RowProps> = ({
   card = false,
   preApproved = false,
   bannerInfo,
+  onBannerClick,
   extraStyles = {},
   sectionStyles = {},
   onRowClick
@@ -135,6 +137,7 @@ const ProductTableRow: React.FC<RowProps> = ({
           <ProductTableHeaderBanner
             bannerInfo={bannerInfo}
             badge={!!badges.length}
+            onClick={() => onBannerClick && onBannerClick()}
           />
         )}
         <RowWrapper
