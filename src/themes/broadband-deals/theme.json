@@ -286,6 +286,28 @@
             "color": "primary"
           }
         }
+      },
+      "&.active-sidenav-item": {
+        "color": "primary",
+        "bg": "rgb(247, 247, 248)",
+        "::after": {
+          "content": "\"\"",
+          "position": "absolute",
+          "top": "0",
+          "left": "0",
+          "display": "block",
+          "width": 4,
+          "height": "100%",
+          "backgroundColor": "primary"
+        },
+        ">a": {
+          "color": "primary",
+          "fontWeight": "bold",
+          "transform": "translateX(8px)",
+          ":visited": {
+            "color": "primary"
+          }
+        }
       }
     },
     "additionalLink": {
