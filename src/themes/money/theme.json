@@ -1155,7 +1155,10 @@
     "list": {
       "base": {
         "display": "inline-block",
-        "textAlign": "left"
+        "textAlign": "left",
+        "li:last-child": {
+          "marginBottom": 0
+        }
       },
       "pros": {
         "color": "green",
@@ -1478,6 +1481,7 @@
     },
     "simple-radio": {
       "span": {
+        "textAlign": "left",
         "variant": "elements.input.radio.label",
         "alignItems": "center",
         "boxSizing": "border-box",
@@ -2605,7 +2609,7 @@
           "lineHeight": "base",
           "fontFamily": "base",
           "mt": ["0", "xxs"],
-          "mb": ["lg", "0"]
+          "mb": ["xs", "0"]
         },
         "a": {
           "mt": ["md", "lg"]
