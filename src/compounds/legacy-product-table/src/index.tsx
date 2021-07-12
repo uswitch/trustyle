@@ -105,7 +105,7 @@ const PreapprovedBanner: React.FC<PreapprovedBannerProps> = ({
           sx={{
             variant: 'styles.a',
             fontWeight: 'semiBold',
-            color: 'experimentspanl-text',
+            color: 'experimental-text',
             cursor: 'pointer'
           }}
           onClick={() => onClick()}
