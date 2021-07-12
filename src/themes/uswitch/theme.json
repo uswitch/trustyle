@@ -801,6 +801,17 @@
       "base": {
         "backgroundColor": "#FFFFFF"
       },
+      "bannerText": {
+        "paddingBottom": "40px",
+        "paddingX": ["sm", "lg"],
+        "marginX": "xs",
+        "marginTop": "0",
+        "textAlign": "center",
+        "fontFamily": "base",
+        "lineHeight": "sm",
+        "fontSize": "xs",
+        "fontWeight": "base"
+      },
       "variants": {
         "full": {
           "variant": "elements.modal.base",
@@ -825,7 +836,10 @@
         "border": 0,
         "cursor": "pointer",
         "lineHeight": 0,
-        "padding": "xs"
+        "padding": "xs",
+        ":focus-visible": {
+          "outline": "none"
+        }
       }
     },
     "form": {
