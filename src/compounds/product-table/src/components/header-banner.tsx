@@ -29,7 +29,7 @@ export const ProductTableHeaderBanner: React.FC<ProductTableHeaderBannerProps> =
         padding: 'sm',
         color: 'primary',
         lineHeight: 'base',
-        fontSize: 'sm',
+        fontSize: 'xs',
         fontWeight: 'bold'
       }}
     >
