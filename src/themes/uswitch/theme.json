@@ -3069,6 +3069,93 @@
           "border": "0.08em solid #F3F3F4 !important"
         }
       }
+    },
+    "tool-tip": {
+      "base": {
+        "wrapper": {
+          "position": "absolute",
+          ":hover": {
+            "span": {
+              "display": ["none", "block"]
+            }
+          },
+          "cursor": "pointer",
+          "transform": ["none", "translateX(+80px)", "translateX(+80px)"]
+        },
+        "content": {
+          "desktop": {
+            "display": "none",
+            "zIndex": 100,
+            "position": "absolute",
+            "width": "232px",
+            "border": "1px solid #141424",
+            "bg": "white",
+            "padding": "sm",
+            "bottom": "32px",
+            "left": "-16px",
+            "arrow": {
+              "position": "absolute",
+              "bottom": "-16px"
+            }
+          },
+          "mobile": {
+            "flexDirection": ["column", "row"],
+            "px": "16px",
+            "pb": "16px",
+            "pt": "40px",
+            "width": "100%",
+            "textAlign": "left"
+          }
+        },
+        "modal": {
+          "wrapper": {
+            "position": "fixed",
+            "backgroundColor": "rgba(0,0,0,0.5)",
+            "top": 0,
+            "right": 0,
+            "left": 0,
+            "bottom": 0,
+            "justifyContent": "center",
+            "alignItems": "center",
+            "p": "sm",
+            "zIndex": 110
+          },
+          "content": {
+            "maxWidth": [500, 1300],
+            "maxHeight": "100%",
+            "backgroundColor": "white",
+            "position": "relative",
+            "overflowY": "auto"
+          },
+          "icon": {
+            "position": "absolute",
+            "top": "md",
+            "right": "md"
+          }
+        }
+      },
+      "variants": {
+        "radio": {
+          "wrapper": {
+            "variant": "elements.tool-tip.base.wrapper",
+            "position": "relative",
+            "transform": "none"
+          },
+          "content": {
+            "desktop": {
+              "variant": "elements.tool-tip.base.content.desktop",
+              "left": "-180px",
+              "arrow": {
+                "variant": "elements.tool-tip.base.content.desktop.arrow",
+                "left": "180px"
+              }
+            },
+            "mobile": {
+              "variant": "elements.tool-tip.base.content.mobile"
+            }
+          }
+        }
+      }
     }
   },
   "compounds": {
