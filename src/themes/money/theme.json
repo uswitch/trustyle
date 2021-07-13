@@ -135,6 +135,7 @@
     "berry": "#A64470",
     "plum": "#924A8B",
     "error": "#D64226",
+    "success": "#3AAC2D",
     "grey-0": "#FFFFFF",
     "grey-05": "#F7F7F7",
     "grey-10": "#F2F2F3",
@@ -1155,7 +1156,16 @@
     "list": {
       "base": {
         "display": "inline-block",
-        "textAlign": "left"
+        "textAlign": "left",
+        "title": {
+          "color": "plum"
+        },
+        "item": {
+          "py": "xxs",
+          "span": {
+            "fontSize": "base"
+          }
+        }
       },
       "pros": {
         "color": "green",
