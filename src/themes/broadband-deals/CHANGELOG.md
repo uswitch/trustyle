@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.16.4...@uswitch/trustyle.broadband-deals-theme@1.16.5) (2021-07-13)
+
+
+### Bug Fixes
+
+* sidenav-fix ([1003a50](https://github.com/uswitch/trustyle/commit/1003a50))
+
+
+
+
+
 ## [1.16.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.broadband-deals-theme@1.16.3...@uswitch/trustyle.broadband-deals-theme@1.16.4) (2021-06-15)
 
 
