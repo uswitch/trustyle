@@ -945,6 +945,17 @@
       "base": {
         "backgroundColor": "grey-0"
       },
+      "bannerText": {
+        "paddingBottom": "40px",
+        "paddingX": ["sm", "xl"],
+        "marginTop": "0",
+        "textAlign": "center",
+        "fontFamily": "base",
+        "lineHeight": "base",
+        "fontSize": "sm",
+        "fontWeight": "base",
+        "color": "grey-80"
+      },
       "variants": {
         "full": {
           "variant": "elements.modal.base",
@@ -1434,6 +1445,33 @@
           "height": "17px",
           "marginLeft": "base",
           "marginRight": "base",
+          "width": "17px"
+        }
+      },
+      "base-no-border": {
+        "variant": "elements.input.checkbox.label",
+        "mb": "md",
+        "alignItems": ["center", "flex-start"],
+        "boxSizing": "border-box",
+        "cursor": "pointer",
+        "display": "flex",
+        "padding": "base",
+        "paddingLeft": 0,
+        "width": "100%",
+        "userSelect": "none",
+        "backgroundColor": "grey-0",
+        "border": "none !important",
+        "boxShadow": "none !important",
+        "&::before": {
+          "borderRadius": "2px",
+          "borderStyle": "solid",
+          "borderWidth": "2px",
+          "content": "' '",
+          "display": "block",
+          "height": "17px",
+          "marginLeft": "0",
+          "marginRight": "base",
+          "minWidth": "17px",
           "width": "17px"
         }
       }
@@ -2915,6 +2953,19 @@
             ":visited": {
               "color": "grey-60"
             }
+          },
+          "&.active-sidenav-item": {
+            "color": "experimental-text",
+            "::after": {
+              "borderColor": "fuschia"
+            },
+            ">a": {
+              "color": "experimental-text",
+              "fontWeight": "bold",
+              ":visited": {
+                "color": "experimental-text"
+              }
+            }
           }
         },
         "isActive": {
@@ -3413,7 +3464,7 @@
     "image-callout": {
       "base": {
         "wrapper": {
-          "pb": [120, 128, 168],
+          "pb": [0, 0, "md"],
           "display": "flex",
           "justifyContent": "space-between",
           "&.image-callout + .image-callout": {
@@ -3423,71 +3474,53 @@
         "inner": {
           "display": "flex",
           "justifyContent": ["flex-start", "flex-start", "space-between"],
-          "alignItems": ["center", "center", "flex-start"],
-          "width": [320, 768, 1200],
-          "mx": "auto",
-          "px": [15, 15, 158]
+          "alignItems": ["stretch", "stretch", "flex-start"],
+          "p": [0, 0, 0]
         },
         "content": {
-          "maxWidth": ["100%", "grid.md.8", "grid.lg.4"],
-          "pt": "xl"
+          "pb": ["sm", "sm", 0],
+          "width": [null, null, "40%"],
+          "flexShrink": 0,
+          "div": {
+            "&>h1:last-child,&>h2:last-child,&>h3:last-child,&>h4:last-child,&>h5:last-child,&>h6:last-child,&>p:last-child": {
+              "mb": 0
+            }
+          }
         },
         "colorBlock": {
-          "width": [63, 89],
-          "height": [63, 89],
-          "position": "absolute",
-          "right": [30, 52, 52],
-          "bottom": [-23, -37, -37],
-          "borderTopLeftRadius": "xl",
-          "borderBottomRightRadius": "xl"
+          "display": "none"
         },
         "image-container": {
-          "position": "relative"
+          "position": "relative",
+          "pb": ["sm", "md", 0]
         },
         "image": {
-          "position": "relative",
-          "mt": -64,
-          "imgixWidth": 477,
-          "imgixParams": {
-            "fill": "fillmax"
-          }
+          "position": "relative"
         }
       },
       "variants": {
-        "left": {
-          "colorBlock": {
-            "bg": "primary--dark"
-          },
-          "image": {
-            "borderTopRightRadius": "xl",
-            "borderBottomLeftRadius": "xl"
-          },
+        "imageLeft": {
           "inner": {
             "flexDirection": ["column", "column", "row"]
+          },
+          "image-container": {
+            "marginRight": [0, 0, "20px"]
+          },
+          "content": {
+            "marginLeft": [0, 0, "20px"]
           }
         },
-        "right": {
-          "colorBlock": {
-            "bg": "secondary"
-          },
-          "image": {
-            "borderTopLeftRadius": "xl",
-            "borderBottomRightRadius": "xl"
-          },
+        "imageRight": {
           "inner": {
             "flexDirection": ["column", "column", "row-reverse"]
+          },
+          "image-container": {
+            "marginLeft": [0, 0, "20px"]
+          },
+          "content": {
+            "marginRight": [0, 0, "20px"]
           }
-        },
-        "dark": {
-          "wrapper": {
-            "bg": "plum",
-            "& h2": {
-              "color": "white"
-            },
-            "color": "white"
-          }
-        },
-        "light": {}
+        }
       }
     },
     "image": {

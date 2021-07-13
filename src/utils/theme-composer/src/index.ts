@@ -21,10 +21,7 @@ const ELEMENTS = [
   '@uswitch/trustyle.pagination',
   '@uswitch/trustyle.toggle-switch'
 ]
-const COMPOUNDS = [
-  '@uswitch/trustyle.article-intro',
-  '@uswitch/trustyle.side-nav'
-]
+const COMPOUNDS = ['@uswitch/trustyle.side-nav']
 
 const getPath = ({ brand, nodeModulesPath, packageName }) =>
   `${nodeModulesPath}/${packageName}/lib/themes/${brand}.js`

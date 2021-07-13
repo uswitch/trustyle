@@ -314,6 +314,12 @@ const moreInformationButton = (
   </MoreInformationButton>
 )
 
+const bannerInfo = {
+  text: 'You’ve been pre-approved for this card and rate today.',
+  link: 'https://www.money.co.uk/mortgages.htm',
+  linkText: 'What does this mean'
+}
+
 export const BadgeExample = () => {
   return (
     <LegacyProductTable
@@ -330,6 +336,54 @@ export const BadgeExample = () => {
       {productTableContents}
     </LegacyProductTable>
   )
+}
+
+export const PreapprovedBannerExample = () => {
+  return (
+    <LegacyProductTable
+      representativeExample={representativeExample}
+      info={info}
+      title={title}
+      clickableRow={clickableRow}
+      moreInformationButton={moreInformationButton}
+      preapproved
+      bannerInfo={bannerInfo}
+    >
+      {productTableContents}
+    </LegacyProductTable>
+  )
+}
+
+PreapprovedBannerExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const PreapprovedBannerWithBadgeExample = () => {
+  return (
+    <LegacyProductTable
+      representativeExample={representativeExample}
+      info={info}
+      title={title}
+      clickableRow={clickableRow}
+      moreInformationButton={moreInformationButton}
+      badges={[
+        'Fairer Finance Gold Customer Experience Ribbon Winner Autumn 2020',
+        'Fab!'
+      ]}
+      preapproved
+      bannerInfo={bannerInfo}
+    >
+      {productTableContents}
+    </LegacyProductTable>
+  )
+}
+
+PreapprovedBannerWithBadgeExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
 }
 
 export const EligibilityExample = () => {
@@ -466,6 +520,8 @@ export const AutomatedTests = () => {
       <EligibilityExample />
       <TelephoneExample />
       <PercentageExample />
+      <PreapprovedBannerExample />
+      <PreapprovedBannerWithBadgeExample />
     </AllThemes>
   )
 }

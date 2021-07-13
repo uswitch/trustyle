@@ -3,6 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.16.3...@uswitch/trustyle.product-table@2.16.4) (2021-07-13)
+
+
+### Bug Fixes
+
+* change margin top when there is no badge ([1a879b5](https://github.com/uswitch/trustyle/commit/1a879b5))
+
+
+
+
+
+## [2.16.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.16.2...@uswitch/trustyle.product-table@2.16.3) (2021-07-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.16.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.16.0...@uswitch/trustyle.product-table@2.16.2) (2021-07-07)
+
+
+### Bug Fixes
+
+* variant array bug from new theme-ui version ([c716b25](https://github.com/uswitch/trustyle/commit/c716b25))
+
+
+
+
+
+
+## [2.16.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.16.0...@uswitch/trustyle.product-table@2.16.1) (2021-07-07)
+
+
+### Bug Fixes
+
+* variant array bug from new theme-ui version ([f130940](https://github.com/uswitch/trustyle/commit/f130940))
+
+# [2.16.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.15.1...@uswitch/trustyle.product-table@2.16.0) (2021-07-07)
+
+
+### Features
+
+* add preapproved banner to product tables ([c253d0d](https://github.com/uswitch/trustyle/commit/c253d0d))
+
+
+
+
+
+## [2.15.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.15.0...@uswitch/trustyle.product-table@2.15.1) (2021-07-01)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
 # [2.15.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.14.3...@uswitch/trustyle.product-table@2.15.0) (2021-06-29)
 
 
