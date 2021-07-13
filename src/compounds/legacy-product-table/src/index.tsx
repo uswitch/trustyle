@@ -71,18 +71,19 @@ const Badge: React.FC<BadgeProps> = ({ text }) => {
 
 interface BannerInfo {
   text: string
-  link: string
   linkText: string
 }
 
 interface PreapprovedBannerProps extends React.HTMLAttributes<HTMLDivElement> {
   bannerInfo: BannerInfo
-  badge?: boolean
+  badge?: string
+  onClick: () => void
 }
 
 const PreapprovedBanner: React.FC<PreapprovedBannerProps> = ({
   bannerInfo,
-  badge = false
+  badge,
+  onClick
 }) => {
   return (
     <div
@@ -98,19 +99,19 @@ const PreapprovedBanner: React.FC<PreapprovedBannerProps> = ({
         fontWeight: 'bold'
       }}
     >
-      <span sx={{ marginTop: [badge ? '10px' : '0', '10px'] }}>
+      <span sx={{ marginTop: badge ? '10px' : '0' }}>
         {bannerInfo.text}&nbsp;
-        <a
-          href={bannerInfo.link}
-          target="_blank"
-          rel="noopener noreferrer"
+        <span
           sx={{
+            variant: 'styles.a',
             fontWeight: 'semiBold',
-            color: 'experimental-text'
+            color: 'experimental-text',
+            cursor: 'pointer'
           }}
+          onClick={() => onClick()}
         >
           {bannerInfo.linkText}
-        </a>
+        </span>
       </span>
     </div>
   )
@@ -702,6 +703,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   badges?: string[]
   preapproved?: boolean
   bannerInfo?: BannerInfo
+  onBannerClick?: () => void
   telephone?: string
 }
 
@@ -720,6 +722,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   badges = [],
   preapproved = false,
   bannerInfo,
+  onBannerClick,
   telephone,
   ...props
 }) => {
@@ -743,7 +746,11 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
       {...props}
     >
       {preapproved && bannerInfo && (
-        <PreapprovedBanner bannerInfo={bannerInfo} badge={!!badges.length} />
+        <PreapprovedBanner
+          bannerInfo={bannerInfo}
+          badge={badge}
+          onClick={() => onBannerClick && onBannerClick()}
+        />
       )}
       <RowWrapper
         link={clickableRow}

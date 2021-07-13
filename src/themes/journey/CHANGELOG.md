@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.12.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.12.4...@uswitch/trustyle.journey-theme@2.12.5) (2021-07-13)
+
+
+### Bug Fixes
+
+* sidenav-fix ([1003a50](https://github.com/uswitch/trustyle/commit/1003a50))
+
+
+
+
+
 ## [2.12.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.journey-theme@2.12.3...@uswitch/trustyle.journey-theme@2.12.4) (2021-05-13)
 
 

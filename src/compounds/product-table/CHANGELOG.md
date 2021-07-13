@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.16.4...@uswitch/trustyle.product-table@2.16.5) (2021-07-13)
+
+
+### Bug Fixes
+
+* font size ([3c8a4a4](https://github.com/uswitch/trustyle/commit/3c8a4a4))
+
+
+
+
+
+## [2.16.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.16.3...@uswitch/trustyle.product-table@2.16.4) (2021-07-13)
+
+
+### Bug Fixes
+
+* change margin top when there is no badge ([1a879b5](https://github.com/uswitch/trustyle/commit/1a879b5))
+
+
+
+
+
+## [2.16.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.16.2...@uswitch/trustyle.product-table@2.16.3) (2021-07-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
 ## [2.16.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.16.0...@uswitch/trustyle.product-table@2.16.2) (2021-07-07)
 
 

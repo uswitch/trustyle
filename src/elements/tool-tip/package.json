@@ -1,6 +1,6 @@
 {
-  "name": "@uswitch/trustyle.product-table",
-  "version": "2.16.5",
+  "name": "@uswitch/trustyle.tool-tip",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -15,7 +15,7 @@
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
   },
-  "devDependencies": {
-    "@uswitch/trustyle.circular-percentage-bar": "^0.1.2"
+  "dependencies": {
+    "@uswitch/trustyle.icon": "^1.27.0"
   }
 }

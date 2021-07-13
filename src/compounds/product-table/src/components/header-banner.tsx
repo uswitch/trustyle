@@ -4,7 +4,6 @@ import { jsx } from 'theme-ui'
 
 export interface BannerInfo {
   text: string
-  link: string
   linkText: string
 }
 
@@ -12,11 +11,13 @@ interface ProductTableHeaderBannerProps
   extends React.HTMLAttributes<HTMLDivElement> {
   bannerInfo: BannerInfo
   badge?: boolean
+  onClick: () => void
 }
 
 export const ProductTableHeaderBanner: React.FC<ProductTableHeaderBannerProps> = ({
   bannerInfo,
-  badge = false
+  badge = false,
+  onClick
 }) => {
   return (
     <div
@@ -28,20 +29,22 @@ export const ProductTableHeaderBanner: React.FC<ProductTableHeaderBannerProps> =
         padding: 'sm',
         color: 'primary',
         lineHeight: 'base',
-        fontSize: 'sm',
+        fontSize: 'xs',
         fontWeight: 'bold'
       }}
     >
-      <span sx={{ marginTop: [badge ? '10px' : '0', '10px'] }}>
+      <span sx={{ marginTop: badge ? '10px' : '0' }}>
         {bannerInfo.text}&nbsp;
-        <a
-          href={bannerInfo.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          sx={{ fontWeight: 'base' }}
+        <span
+          sx={{
+            variant: 'styles.a',
+            fontWeight: 'base',
+            cursor: 'pointer'
+          }}
+          onClick={() => onClick()}
         >
           {bannerInfo.linkText}
-        </a>
+        </span>
       </span>
     </div>
   )

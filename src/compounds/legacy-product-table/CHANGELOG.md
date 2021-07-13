@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.4.2...@uswitch/trustyle.legacy-product-table@1.4.3) (2021-07-13)
+
+
+### Bug Fixes
+
+* change margin top when there is no badge ([1a879b5](https://github.com/uswitch/trustyle/commit/1a879b5))
+
+
+
+
+
+## [1.4.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.4.1...@uswitch/trustyle.legacy-product-table@1.4.2) (2021-07-12)
+
+
+### Bug Fixes
+
+* color value of banner text ([feb7117](https://github.com/uswitch/trustyle/commit/feb7117))
+
+
+
+
+
+## [1.4.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.4.0...@uswitch/trustyle.legacy-product-table@1.4.1) (2021-07-09)
+
+
+### Bug Fixes
+
+* badge prop of the preapproved banner ([f7809b9](https://github.com/uswitch/trustyle/commit/f7809b9))
+
+
+
+
+
 # [1.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.3.1...@uswitch/trustyle.legacy-product-table@1.4.0) (2021-07-07)
 
 

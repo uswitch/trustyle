@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.48.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.8...@uswitch/trustyle.uswitch-theme@2.48.9) (2021-07-13)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.48.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.7...@uswitch/trustyle.uswitch-theme@2.48.8) (2021-07-13)
+
+
+### Bug Fixes
+
+* sidenav-fix ([1003a50](https://github.com/uswitch/trustyle/commit/1003a50))
+
+
+
+
+
+## [2.48.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.6...@uswitch/trustyle.uswitch-theme@2.48.7) (2021-07-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
 ## [2.48.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.4...@uswitch/trustyle.uswitch-theme@2.48.6) (2021-07-07)
 
 
