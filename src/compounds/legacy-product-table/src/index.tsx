@@ -552,6 +552,10 @@ export const MoreInformationList: React.FC<MoreInformationListProps> = ({
     >
       <tbody>
         {rows.map(({ label, value }, i: number) => {
+          if (value === '' || value === null) {
+            return
+          }
+
           if (!label) {
             return (
               <tr key={i} sx={trSx}>
