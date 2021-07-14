@@ -481,6 +481,10 @@ export const MoreInformationText = ({ content }: MoreInformationTextProps) => {
   return (
     <React.Fragment>
       {content.map((chunk: string, i: number) => {
+        if (chunk === null) {
+          return
+        }
+
         return (
           <React.Fragment key={i}>
             {chunk
