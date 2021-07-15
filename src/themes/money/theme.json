@@ -1842,6 +1842,13 @@
           "mb": "base",
           "div:last-of-type p": {
             "mb": 0
+          },
+          "h5": {
+            "> a": {
+              "fontSize": "xs",
+              "fontWeight": "base",
+              "lineHeight": "24px"
+            }
           }
         },
         "with-icon": {
