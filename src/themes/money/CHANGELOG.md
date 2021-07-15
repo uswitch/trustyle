@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.54.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.54.3...@uswitch/trustyle.money-theme@1.54.4) (2021-07-15)
+
+
+### Bug Fixes
+
+* sibling-spacer image caption ([b7a7873](https://github.com/uswitch/trustyle/commit/b7a7873))
+
+
+
+
+
 ## [1.54.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.54.2...@uswitch/trustyle.money-theme@1.54.3) (2021-07-13)
 
 
