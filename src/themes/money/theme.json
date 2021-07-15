@@ -1840,7 +1840,7 @@
           "border": "2px #ADAFB3 solid",
           "padding": "40px",
           "mb": "base",
-          "div:last-of-type p": {
+          "div:last-of-type p:last-of-type": {
             "mb": 0
           },
           "h5": {
