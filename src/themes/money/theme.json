@@ -2125,6 +2125,12 @@
             "variant": "styles.h5"
           }
         }
+      },
+      "result": {
+        "error": {
+          "color": "error",
+          "textAlign": "center"
+        }
       }
     },
     "progress-circle": {
