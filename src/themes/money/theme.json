@@ -2083,6 +2083,10 @@
           "paddingX": [0, "xxl"],
           "backgroundColor": "grey-05",
           "borderRadius": 3
+        },
+        "label": {
+          "textAlign": "center",
+          "mb": "24px"
         }
       },
       "wrapper": {
@@ -2124,6 +2128,12 @@
           "h2": {
             "variant": "styles.h5"
           }
+        }
+      },
+      "result": {
+        "error": {
+          "color": "error",
+          "textAlign": "center"
         }
       }
     },
