@@ -1887,7 +1887,7 @@
           "border": "2px #ADAFB3 solid",
           "padding": "40px",
           "mb": "base",
-          "div:last-of-type p": {
+          "div:last-of-type p:last-of-type": {
             "mb": 0
           }
         },
@@ -2130,6 +2130,10 @@
           "paddingX": [0, "xxl"],
           "backgroundColor": "grey-05",
           "borderRadius": 3
+        },
+        "label": {
+          "textAlign": "center",
+          "mb": "24px"
         }
       },
       "wrapper": {
@@ -2171,6 +2175,12 @@
           "h2": {
             "variant": "styles.h5"
           }
+        }
+      },
+      "result": {
+        "error": {
+          "color": "error",
+          "textAlign": "center"
         }
       }
     },
