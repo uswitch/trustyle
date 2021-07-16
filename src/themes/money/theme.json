@@ -1952,7 +1952,7 @@
       "default": {
         "elements": {
           "wrapper": {
-            "backgroundColor": "green",
+            "backgroundColor": "white",
             "borderRadius": "4px",
             "mb": "lg",
             "color": "plum",
