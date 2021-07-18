@@ -1155,7 +1155,10 @@
     "list": {
       "base": {
         "display": "inline-block",
-        "textAlign": "left"
+        "textAlign": "left",
+        "li:last-child": {
+          "marginBottom": 0
+        }
       },
       "pros": {
         "color": "green",
@@ -1478,6 +1481,7 @@
     },
     "simple-radio": {
       "span": {
+        "textAlign": "left",
         "variant": "elements.input.radio.label",
         "alignItems": "center",
         "boxSizing": "border-box",
@@ -2648,6 +2652,7 @@
       },
       "primaryContent": {
         "color": "grey-0",
+        "marginBottom": ["md", 0],
         "h1,h2,h3,h4,h5,h6": {
           "variant": "styles.heading",
           "color": "grey-0",
@@ -2661,14 +2666,18 @@
           "fontSize": ["sm", "md"],
           "lineHeight": "base",
           "fontFamily": "base",
-          "mt": ["0", "xxs"],
-          "mb": ["lg", "0"]
+          "mt": ["0", "0"],
+          "mb": ["xs", "xs"]
         },
         "a": {
           "mt": ["md", "lg"]
         },
+        "ul": {
+          "marginTop": "0"
+        },
         "button": {
-          "my": ["md", "lg"]
+          "mt": ["md", "lg"],
+          "mb": ["0", "lg"]
         }
       },
       "contentWithoutFullWidthSlot": {
