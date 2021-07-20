@@ -1159,12 +1159,6 @@
         "textAlign": "left",
         "title": {
           "color": "plum"
-        },
-        "item": {
-          "py": "xxs",
-          "span": {
-            "fontSize": "base"
-          }
         }
       },
       "pros": {
