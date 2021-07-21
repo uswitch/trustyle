@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.54.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.54.5...@uswitch/trustyle.money-theme@1.54.6) (2021-07-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.54.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.54.4...@uswitch/trustyle.money-theme@1.54.5) (2021-07-16)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.54.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.54.3...@uswitch/trustyle.money-theme@1.54.4) (2021-07-15)
+
+
+### Bug Fixes
+
+* sibling-spacer image caption ([b7a7873](https://github.com/uswitch/trustyle/commit/b7a7873))
+
+
+
+
+
+## [1.54.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.54.2...@uswitch/trustyle.money-theme@1.54.3) (2021-07-13)
+
+
+### Bug Fixes
+
+* sidenav-fix ([1003a50](https://github.com/uswitch/trustyle/commit/1003a50))
+
+
+
+
+
 ## [1.54.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.54.1...@uswitch/trustyle.money-theme@1.54.2) (2021-07-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme

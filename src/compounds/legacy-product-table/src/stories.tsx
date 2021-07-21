@@ -90,6 +90,7 @@ const percentageTableContents = [
     label="Chance of acceptance"
     key="4"
     percentage={70}
+    alternativeText={'No results found for this'}
     size="xs"
   />,
   <ImageCell key="3">

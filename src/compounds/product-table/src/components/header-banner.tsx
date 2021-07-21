@@ -29,11 +29,11 @@ export const ProductTableHeaderBanner: React.FC<ProductTableHeaderBannerProps> =
         padding: 'sm',
         color: 'primary',
         lineHeight: 'base',
-        fontSize: 'sm',
+        fontSize: 'xs',
         fontWeight: 'bold'
       }}
     >
-      <span sx={{ marginTop: [badge ? '10px' : '0', '10px'] }}>
+      <span sx={{ marginTop: badge ? '10px' : '0' }}>
         {bannerInfo.text}&nbsp;
         <span
           sx={{
