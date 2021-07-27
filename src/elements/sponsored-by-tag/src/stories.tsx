@@ -11,12 +11,38 @@ export default {
   title: 'Elements/Sponsored by tag'
 }
 
-export const ExampleWithDefaultText = () => {
-  const providerName: string = text('Provider name', 'Three')
-  const providerLogo: string = text(
-    'Provider logo url',
-    'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/5eyE4LyswwqIYk0mIsE820/dc0774e3e62d7b39ddeb1729d823a8da/Logo_-_three.png'
+const defaultProviderName = 'Three'
+const defaultProviderLogo =
+  'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/5eyE4LyswwqIYk0mIsE820/dc0774e3e62d7b39ddeb1729d823a8da/Logo_-_three.png'
+const wideProviderLogo =
+  'https://user-images.githubusercontent.com/15983736/127509419-d54cbc11-3d5b-42ed-9902-6e5a178cd2bc.png'
+const defaultProviderText = 'This is example text'
+
+interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+  children: React.ReactNode
+}
+
+const Wrapper: React.FC<Props> = ({ children, sx = {} }) => {
+  return <div sx={{ backgroundColor: 'secondary', ...sx }}>{children}</div>
+}
+
+export const WideExampleWithDefaultText = () => {
+  const providerName = text('Provider name', defaultProviderName)
+  const providerLogo = text('Provider logo url', wideProviderLogo)
+
+  return (
+    <Wrapper>
+      <SponsoredByTag
+        providerLogoSrc={providerLogo}
+        providerName={providerName}
+      />
+    </Wrapper>
   )
+}
+
+export const ExampleWithDefaultText = () => {
+  const providerName = text('Provider name', defaultProviderName)
+  const providerLogo = text('Provider logo url', defaultProviderLogo)
 
   return (
     <SponsoredByTag
@@ -27,85 +53,69 @@ export const ExampleWithDefaultText = () => {
 }
 
 export const ExampleWithTextProp = () => {
-  const providerName: string = text('Provider name', 'Three')
-  const providerLogo: string = text(
-    'Provider logo url',
-    'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/5eyE4LyswwqIYk0mIsE820/dc0774e3e62d7b39ddeb1729d823a8da/Logo_-_three.png'
-  )
+  const providerName = text('Provider name', defaultProviderName)
+  const providerLogo = text('Provider logo url', defaultProviderLogo)
+  const providerText = text('Text to display', defaultProviderText)
 
-  const providerText: string = text('Text to display', 'This is example text')
   return (
-    <React.Fragment>
+    <Wrapper>
       <SponsoredByTag
         providerLogoSrc={providerLogo}
         providerText={providerText}
         providerName={providerName}
       />
-    </React.Fragment>
+    </Wrapper>
   )
 }
 
 export const ExampleWithHeroVariant = () => {
-  const providerName: string = text('Provider name', 'Three')
-  const providerLogo: string = text(
-    'Provider logo url',
-    'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/5eyE4LyswwqIYk0mIsE820/dc0774e3e62d7b39ddeb1729d823a8da/Logo_-_three.png'
-  )
+  const providerName = text('Provider name', defaultProviderName)
+  const providerLogo = text('Provider logo url', defaultProviderLogo)
+  const providerText = text('Text to display', defaultProviderText)
 
-  const providerText: string = text('Text to display', 'This is example text')
   return (
-    <React.Fragment>
+    <Wrapper>
       <SponsoredByTag
         providerLogoSrc={providerLogo}
         providerText={providerText}
         providerName={providerName}
         variant="hero"
       />
-    </React.Fragment>
+    </Wrapper>
   )
 }
 
 export const ExampleWithFormVariant = () => {
-  const providerName: string = text('Provider name', 'Three')
-  const providerLogo: string = text(
-    'Provider logo url',
-    'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/5eyE4LyswwqIYk0mIsE820/dc0774e3e62d7b39ddeb1729d823a8da/Logo_-_three.png'
-  )
+  const providerName = text('Provider name', defaultProviderName)
+  const providerLogo = text('Provider logo url', defaultProviderLogo)
+  const providerText = text('Text to display', 'You selected:')
 
-  const providerText: string = text('Text to display', 'You selected:')
   return (
-    <React.Fragment>
-      <div sx={{ backgroundColor: 'secondary', padding: 'sm', width: '500px' }}>
-        <SponsoredByTag
-          providerLogoSrc={providerLogo}
-          providerText={providerText}
-          providerName={providerName}
-          variant="form"
-        />
-      </div>
-    </React.Fragment>
+    <Wrapper sx={{ padding: 'sm', width: '500px' }}>
+      <SponsoredByTag
+        providerLogoSrc={providerLogo}
+        providerText={providerText}
+        providerName={providerName}
+        variant="form"
+      />
+    </Wrapper>
   )
 }
 
 export const ExampleWithCentredLightVariant = () => {
-  const providerName: string = text('Provider name', 'Three')
-  const providerLogo: string = text(
-    'Provider logo url',
-    'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/5eyE4LyswwqIYk0mIsE820/dc0774e3e62d7b39ddeb1729d823a8da/Logo_-_three.png'
-  )
+  const providerName = text('Provider name', defaultProviderName)
+  const providerLogo = text('Provider logo url', defaultProviderLogo)
+  const providerText = text('Text to display', 'You selected:')
 
-  const providerText: string = text('Text to display', 'You selected:')
   return (
-    <React.Fragment>
-      <div sx={{ backgroundColor: 'secondary' }}>
-        <SponsoredByTag
-          providerLogoSrc={providerLogo}
-          providerText={providerText}
-          providerName={providerName}
-          variant="centered-light"
-        />
-      </div>
-    </React.Fragment>
+    <Wrapper>
+      <SponsoredByTag
+        providerLogoSrc={providerLogo}
+        providerText={providerText}
+        providerName={providerName}
+        variant="centered-light"
+      />
+    </Wrapper>
   )
 }
 
