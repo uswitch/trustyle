@@ -3635,6 +3635,31 @@
           "backgroundPosition": "bottom"
         }
       }
+    },
+    "collectionCarousel": {
+      "base": {
+        "mb": ["lg", "xl", "xxl"],
+        "pb": 0,
+        ".glider-dots": {
+          "mt": "sm",
+          "pt": 0,
+          ".glider-dot": {
+            "backgroundColor": "grey-20",
+            "&.active": {
+              "backgroundColor": "plum"
+            }
+          }
+        }
+      },
+      "container": {
+        "variant": "modules.collectionCarousel.base",
+        "maxWidth": 1200,
+        "mx": "auto",
+        "position": "relative"
+      },
+      "item": {
+        "mx": "7.5px"
+      }
     }
   },
   "layout": {
