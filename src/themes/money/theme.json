@@ -1899,6 +1899,13 @@
           "display": "flex",
           "alignItems": "center"
         },
+        "grey-box": {
+          "variant": "elements.rich-text-block.base",
+          "bg": "grey-10",
+          "py": "md",
+          "px": ["md", "lg"],
+          "boxSizing": "border-box"
+        },
         "assurance-text": {
           "boxSizing": "border-box",
           "px": ["lg", "56px"],
