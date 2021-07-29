@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.55.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.54.6...@uswitch/trustyle.money-theme@1.55.0) (2021-07-29)
+
+
+### Bug Fixes
+
+* add success color ([fb868cb](https://github.com/uswitch/trustyle/commit/fb868cb))
+
+
+### Features
+
+* add collection layout carousel to money theme ([6fd26aa](https://github.com/uswitch/trustyle/commit/6fd26aa))
+* grey-box rich text block on money ([24681da](https://github.com/uswitch/trustyle/commit/24681da))
+
+
+
+
+
 ## [1.54.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.54.5...@uswitch/trustyle.money-theme@1.54.6) (2021-07-16)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme
