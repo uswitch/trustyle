@@ -1902,6 +1902,9 @@
         "grey-box": {
           "variant": "elements.rich-text-block.base",
           "bg": "grey-10",
+          "*, div.palette": {
+            "bg": "grey-10"
+          },
           "py": "md",
           "px": ["md", "lg"],
           "boxSizing": "border-box"
