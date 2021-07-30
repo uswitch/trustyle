@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.55.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.55.0...@uswitch/trustyle.money-theme@1.55.1) (2021-07-30)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
 # [1.55.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.54.6...@uswitch/trustyle.money-theme@1.55.0) (2021-07-29)
 
 
