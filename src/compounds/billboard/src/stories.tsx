@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
-import { select } from '@storybook/addon-knobs'
+import { select, text } from '@storybook/addon-knobs'
 import { PaletteProvider } from '@uswitch/trustyle-utils.palette'
 
 import Breadcrumbs from '../../../elements/breadcrumbs/src'
@@ -118,6 +118,11 @@ const fullWidthSlot = (
   </Row>
 )
 
+const bgImage: string = text(
+  'image source',
+  'https://uswitch-contentful.imgix.net/n36b8lzdmgnp/5xXAFdw1Z8Q5nbxXjmH30n/887ab8ef0564b67cbb09d38bc3420afc/Shot_10_Family_302-v2-edit_1__1_.png?'
+)
+
 export const ExampleWithPrimarySlot = () => {
   return (
     <Billboard
@@ -195,6 +200,22 @@ ExampleWithPalette.story = {
   }
 }
 
+export const ExampleWithBgImage = () => {
+  return (
+    <Billboard
+      breadcrumbs={breadcrumbs}
+      primaryContent={primaryContent}
+      bgImage={bgImage}
+    />
+  )
+}
+
+ExampleWithBgImage.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
     <AllThemes>
@@ -203,6 +224,7 @@ export const AutomatedTests = () => {
       <ExampleWithPrimaryContent />
       <ExampleWithoutPrimarySlot />
       <ExampleWithPalette />
+      <ExampleWithBgImage />
     </AllThemes>
   )
 }
