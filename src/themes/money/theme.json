@@ -2656,8 +2656,15 @@
         "maxWidth": 1152,
         "mx": "auto"
       },
+      "primaryContainer": {
+        "display": "none"
+      },
       "breadcrumbs": {
         "mb": ["md", "lg"],
+        "pt": ["xs", "0"]
+      },
+      "breadcrumbsWithImage": {
+        "mb": ["md", "lg", "0"],
         "pt": ["xs", "0"]
       },
       "primaryContent": {

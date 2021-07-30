@@ -9,13 +9,15 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   primaryContent: React.ReactElement
   primarySlot?: React.ReactElement
   fullWidthSlot?: React.ReactElement
+  bgImage?: string
 }
 
 const Billboard: React.FC<Props> = ({
   breadcrumbs,
   primaryContent,
   primarySlot,
-  fullWidthSlot
+  fullWidthSlot,
+  bgImage
 }) => {
   const styles = () => {
     if (primarySlot) {
@@ -45,16 +47,37 @@ const Billboard: React.FC<Props> = ({
             }}
           >
             {breadcrumbs && (
-              <div sx={{ variant: 'compounds.billboard.breadcrumbs' }}>
+              <div
+                sx={{
+                  variant:
+                    !primarySlot && bgImage
+                      ? 'compounds.billboard.breadcrumbsWithImage'
+                      : 'compounds.billboard.breadcrumbs'
+                }}
+              >
                 {React.cloneElement(breadcrumbs, { variant: 'billboard' })}
               </div>
             )}
+
+            {!bgImage && (
+              <div
+                sx={{ variant: 'compounds.billboard.primaryContainer' }}
+              ></div>
+            )}
+
             <div
               sx={{
                 marginBottom: fullWidthSlot
                   ? ['lg', primarySlot ? 'xxl' : 'lg']
+                  : !primarySlot && bgImage
+                  ? ['xl', 'xxl', '0']
                   : ['xl', 'xxl'],
                 display: 'flex',
+                height: [
+                  'auto',
+                  'auto',
+                  !primarySlot && bgImage ? '402px' : 'auto'
+                ],
                 flexDirection: ['column', 'column', 'row'],
                 justifyContent: ['center', 'center', 'space-between']
               }}
@@ -62,14 +85,15 @@ const Billboard: React.FC<Props> = ({
               <div
                 sx={{
                   alignSelf: 'center',
-                  textAlign: primarySlot ? 'left' : 'center',
+                  textAlign: primarySlot || bgImage ? 'left' : 'center',
                   variant: styles(),
-                  marginX: primarySlot ? ['0', 'auto', '0'] : 'auto',
+                  marginX: primarySlot || bgImage ? ['0', 'auto', '0'] : 'auto',
                   width: ['auto', '70%', '50%']
                 }}
               >
                 {primaryContent}
               </div>
+
               {primarySlot && (
                 <div
                   sx={{
@@ -82,7 +106,21 @@ const Billboard: React.FC<Props> = ({
                   {React.cloneElement(primarySlot, { variant: 'billboard' })}
                 </div>
               )}
+
+              {!primarySlot && bgImage && (
+                <div
+                  sx={{
+                    width: '404px',
+                    height: '416px',
+                    display: ['none', 'none', 'block'],
+                    position: 'relative',
+                    top: '-14px',
+                    background: `url(${bgImage}) no-repeat right bottom / contain`
+                  }}
+                ></div>
+              )}
             </div>
+
             {fullWidthSlot && (
               <div
                 sx={{
