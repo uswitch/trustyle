@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.49.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.10...@uswitch/trustyle.uswitch-theme@2.49.0) (2021-07-30)
+
+
+### Features
+
+* add image support to billboard ([899ce68](https://github.com/uswitch/trustyle/commit/899ce68))
+
+
+
+
+
 ## [2.48.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.9...@uswitch/trustyle.uswitch-theme@2.48.10) (2021-07-14)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
