@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.57.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.56.1...@uswitch/trustyle.money-theme@1.57.0) (2021-08-04)
+
+
+### Features
+
+* add assurance bar styling ([a719fe7](https://github.com/uswitch/trustyle/commit/a719fe7))
+
+
+
+
+
 ## [1.56.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.56.0...@uswitch/trustyle.money-theme@1.56.1) (2021-08-04)
 
 
