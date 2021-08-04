@@ -1481,6 +1481,13 @@
         "backgroundColor": "blue"
       }
     },
+    "sponsored-by-tag": {
+      "base": {
+        "image": {
+          "width": "92px"
+        }
+      }
+    },
     "breadcrumbs": {
       "base": {
         "main": {

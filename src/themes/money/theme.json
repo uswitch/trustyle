@@ -372,7 +372,7 @@
         },
         "image": {
           "maxHeight": "32px",
-          "maxWidth": ["88px", "104px"],
+          "maxWidth": ["88px", "150px"],
           "ml": "xs"
         }
       },
@@ -404,7 +404,9 @@
             "alignItems": "center",
             "justifyContent": "flex-end",
             "paddingY": "xxs",
-            "pt": "md"
+            "pt": "md",
+            "textAlign": "right",
+            "width": "100%"
           },
           "text": {
             "color": "white"

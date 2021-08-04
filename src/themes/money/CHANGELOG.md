@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.56.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.56.0...@uswitch/trustyle.money-theme@1.56.1) (2021-08-04)
+
+
+### Bug Fixes
+
+* max-width for wide sponsored by logos ([3e71c31](https://github.com/uswitch/trustyle/commit/3e71c31))
+
+
+
+
+
 # [1.56.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.55.1...@uswitch/trustyle.money-theme@1.56.0) (2021-07-30)
 
 
