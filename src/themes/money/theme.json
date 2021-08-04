@@ -3302,20 +3302,20 @@
           "py": 0,
           "mb": "md",
           "h3": {
-            "color": "#000",
-            "paddingLeft": "0px",
-            "fontFamily": "Nunito, sans-serif",
-            "fontWeight": 600,
-            "fontSize": 30,
-            "lineHeight": "120%"
+            "color": "grey-100",
+            "paddingLeft": 0,
+            "fontFamily": "heading",
+            "fontWeight": "bold",
+            "fontSize": "xxl",
+            "lineHeight": "heading"
           },
           "p": {
-            "color": "#000",
+            "color": "grey-100",
             "mx": 0,
-            "fontFamily": "SF Pro Text",
+            "fontFamily": "base",
             "fontWeight": "normal",
-            "fontSize": 16,
-            "lineHeight": "150%"
+            "fontSize": "base",
+            "lineHeight": "base"
           },
           "heading": {
             "a": {
