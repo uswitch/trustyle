@@ -372,23 +372,29 @@
         },
         "image": {
           "maxHeight": "32px",
-          "maxWidth": ["88px", "104px"],
+          "maxWidth": ["88px", "150px"],
           "ml": "xs"
         }
       },
       "variants": {
         "form": {
           "wrapper": {
-            "backgroundColor": "grey-05",
+            "backgroundColor": "grey-0",
             "borderRadius": "4px",
             "display": "flex",
             "alignItems": "center",
             "justifyContent": "center",
             "paddingY": "md",
-            "paddingX": "xl"
+            "paddingX": "xl",
+            "img": {
+              "ml": "md",
+              "mr": "0"
+            }
+          },
+          "text": {
+            "color": "black"
           },
           "image": {
-            "ml": "md",
             "width": "149px",
             "height": "auto"
           }
@@ -404,7 +410,9 @@
             "alignItems": "center",
             "justifyContent": "flex-end",
             "paddingY": "xxs",
-            "pt": "md"
+            "pt": "md",
+            "textAlign": "right",
+            "width": "100%"
           },
           "text": {
             "color": "white"
@@ -3291,6 +3299,59 @@
               "compounds.card.variants.vertical.headerChildren",
               "compounds.card.variants.horizontal.headerChildren"
             ]
+          }
+        },
+        "assuranceBar": {
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "alignItems": "flex-start",
+          "textAlign": "left",
+          "py": 0,
+          "mb": "md",
+          "h3": {
+            "color": "grey-100",
+            "paddingLeft": 0,
+            "fontFamily": "heading",
+            "fontWeight": "bold",
+            "fontSize": "xxl",
+            "lineHeight": "heading"
+          },
+          "p": {
+            "color": "grey-100",
+            "mx": 0,
+            "fontFamily": "base",
+            "fontWeight": "normal",
+            "fontSize": "base",
+            "lineHeight": "base"
+          },
+          "heading": {
+            "a": {
+              "fontWeight": "700"
+            },
+            "pb": ["8px", "16px"]
+          },
+          "image": {
+            "box-sizing": "border-box",
+            "img": {
+              "width": 32
+            }
+          },
+          "link": {
+            "variant": "compounds.card.base.link"
+          },
+          "a": {
+            "textDecoration": "none",
+            "borderBottom": "initial",
+            "mb": 0,
+            "width": 32,
+            "height": 32,
+            "mr": "md"
+          },
+          "& a:hover": {
+            "color": "inherit",
+            "stroke": "initial",
+            "opacity": "initial"
           }
         }
       }
