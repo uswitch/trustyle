@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.58.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.57.0...@uswitch/trustyle.money-theme@1.58.0) (2021-08-05)
+
+
+### Features
+
+* fix styling on sponsored by on form ([ef5394e](https://github.com/uswitch/trustyle/commit/ef5394e))
+
+
+
+
+
 # [1.57.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.56.1...@uswitch/trustyle.money-theme@1.57.0) (2021-08-04)
 
 
