@@ -27,7 +27,11 @@ interface WireFrameProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const WireFrame: React.FC<WireFrameProps> = ({ type }) => {
-  const containerStyles = {
+  const containerStyles: {
+    header: object
+    additionalInfo: object
+    representativeExample: object
+  } = {
     header: {
       paddingLeft: ['15px', '160px'],
       paddingRight: ['15px', 0],
@@ -44,7 +48,11 @@ const WireFrame: React.FC<WireFrameProps> = ({ type }) => {
     }
   }
 
-  const defaultStyles = {
+  const defaultStyles: {
+    header: object
+    additionalInfo: object
+    representativeExample: object
+  } = {
     header: {
       width: ['320px', '425px'],
       height: '14px'
@@ -66,7 +74,11 @@ const WireFrame: React.FC<WireFrameProps> = ({ type }) => {
     }
   }
 
-  const rowStyles = {
+  const rowStyles: {
+    header: any[]
+    additionalInfo: any[]
+    representativeExample: any[]
+  } = {
     header: [
       { ...defaultStyles.header },
       {
