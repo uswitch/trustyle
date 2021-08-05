@@ -2772,6 +2772,25 @@
     },
     "accordion": {
       "base": {
+        "integrationWrapper": {
+          "my": "md"
+        },
+        "mainTitle": {
+          "fontSize": ["lg", null, "xl"],
+          "fontWeight": "base",
+          "lineHeight": "heading",
+          "my": "base"
+        },
+        "sectionTitle": {
+          "m": 0,
+          "py": "xs",
+          "fontSize": ["base", null, "base"],
+          "lineHeight": "normal",
+          "fontWeight": "bold",
+          "h3&": {
+            "fontSize": ["base", null, "base"]
+          }
+        },
         "wrapper": {
           "marginY": "sm"
         },

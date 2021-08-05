@@ -3798,6 +3798,23 @@
       "iconClosed": "plus",
       "base": {
         "mb": 72,
+        "integrationWrapper": {
+          "mb": "base"
+        },
+        "mainTitle": {
+          "pb": "base",
+          "mb": "xxl"
+        },
+        "sectionTitle": {
+          "m": 0,
+          "py": "xs",
+          "fontSize": ["base", null, "sm"],
+          "lineHeight": "normal",
+          "fontWeight": "medium",
+          "h3&": {
+            "fontSize": ["base", null, "sm"]
+          }
+        },
         "wrapper": {
           "borderBottom": "1px solid #C4C4C4"
         },
