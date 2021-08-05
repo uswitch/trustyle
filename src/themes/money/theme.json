@@ -379,16 +379,22 @@
       "variants": {
         "form": {
           "wrapper": {
-            "backgroundColor": "grey-05",
+            "backgroundColor": "grey-0",
             "borderRadius": "4px",
             "display": "flex",
             "alignItems": "center",
             "justifyContent": "center",
             "paddingY": "md",
-            "paddingX": "xl"
+            "paddingX": "xl",
+            "img": {
+              "ml": "md",
+              "mr": "0"
+            }
+          },
+          "text": {
+            "color": "black"
           },
           "image": {
-            "ml": "md",
             "width": "149px",
             "height": "auto"
           }
