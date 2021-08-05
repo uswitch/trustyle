@@ -9,6 +9,116 @@ import CirclePercentageBar from '@uswitch/trustyle.circular-percentage-bar'
 
 import RowWrapper from './row-wrapper'
 
+interface WireFrameCellProps extends React.HTMLAttributes<HTMLDivElement> {
+  styles?: any
+}
+
+const WireFrameCell: React.FC<WireFrameCellProps> = ({ styles }) => {
+  const defaultStyles = {
+    backgroundColor: 'grey-20',
+    display: 'block'
+  }
+
+  return <span sx={{ ...defaultStyles, ...styles }}></span>
+}
+
+interface WireFrameProps extends React.HTMLAttributes<HTMLDivElement> {
+  type: 'header' | 'additionalInfo' | 'representativeExample'
+}
+
+const WireFrame: React.FC<WireFrameProps> = ({ type }) => {
+  const containerStyles = {
+    header: {
+      paddingLeft: ['15px', '160px'],
+      paddingRight: ['15px', 0],
+      paddingY: '15px',
+      marginY: 0
+    },
+    additionalInfo: {
+      margin: ['15px', '15px 0']
+    },
+    representativeExample: {
+      marginTop: '5px',
+      padding: ['5px 20px 10px', '5px 40px 10px'],
+      backgroundColor: 'grey-10'
+    }
+  }
+
+  const defaultStyles = {
+    header: {
+      width: ['320px', '425px'],
+      height: '14px'
+    },
+    additionalInfo: {
+      height: '10px',
+      width: '100%',
+      maxWidth: ['326px', '653px'],
+      marginLeft: ['0', 'auto'],
+      marginRight: 'auto',
+      marginTop: '10px'
+    },
+    representativeExample: {
+      height: '11px',
+      width: '100%',
+      maxWidth: ['261px', '785px'],
+      marginX: 'auto',
+      marginTop: '8px'
+    }
+  }
+
+  const rowStyles = {
+    header: [
+      { ...defaultStyles.header },
+      {
+        ...defaultStyles.header,
+        width: '94px',
+        display: ['block', 'none'],
+        marginTop: '11px',
+        marginBottom: '20px'
+      }
+    ],
+    additionalInfo: [
+      {
+        ...defaultStyles.additionalInfo,
+        marginTop: '14px'
+      },
+      { ...defaultStyles.additionalInfo },
+      {
+        ...defaultStyles.additionalInfo,
+        width: '156px',
+        display: ['block', 'none']
+      }
+    ],
+    representativeExample: [
+      { ...defaultStyles.representativeExample },
+      { ...defaultStyles.representativeExample },
+      {
+        ...defaultStyles.representativeExample,
+        maxWidth: '251px',
+        display: ['block', 'none']
+      },
+      {
+        ...defaultStyles.representativeExample,
+        maxWidth: '251px',
+        display: ['block', 'none']
+      },
+      {
+        ...defaultStyles.representativeExample,
+        maxWidth: '69px',
+        display: ['block', 'none']
+      }
+    ]
+  }
+
+  return (
+    <div sx={containerStyles[type]}>
+      {rowStyles[type].map((item: object, key: number) => {
+        return <WireFrameCell key={key} styles={item} />
+      })}
+    </div>
+  )
+}
+
 const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   return (
     <div
@@ -188,9 +298,20 @@ const BaseCell: React.FC<React.HTMLAttributes<any>> = ({
   )
 }
 
-export const ImageCell: React.FC<React.HTMLAttributes<any>> = ({
-  children
+interface ImageCellProps extends React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode
+  isWireFrame?: boolean
+}
+
+export const ImageCell: React.FC<ImageCellProps> = ({
+  children,
+  isWireFrame = false
 }) => {
+  const wireFrameStyles = {
+    width: '118px',
+    height: '74px'
+  }
+
   return (
     <BaseCell
       sx={{
@@ -207,7 +328,8 @@ export const ImageCell: React.FC<React.HTMLAttributes<any>> = ({
         }
       }}
     >
-      {children}
+      {isWireFrame && <WireFrameCell styles={wireFrameStyles} />}
+      {!isWireFrame && children}
     </BaseCell>
   )
 }
@@ -217,6 +339,7 @@ interface DataCellProps extends React.HTMLAttributes<HTMLDivElement> {
   borderBottomColor?: string
   color?: string
   label?: string
+  isWireFrame?: boolean
 }
 
 export const DataCell: React.FC<DataCellProps> = ({
@@ -224,44 +347,83 @@ export const DataCell: React.FC<DataCellProps> = ({
   backgroundColor,
   borderBottomColor,
   color,
-  label
+  label,
+  isWireFrame = false
 }) => {
+  const wireFrameLabelStyles = {
+    width: '100%',
+    maxWidth: ['134px', '84px'],
+    height: '10px'
+  }
+
+  const wireFrameDescriptionStyles = {
+    width: '100%',
+    maxWidth: ['202px', '126px'],
+    height: '17px',
+    marginTop: '5px'
+  }
+
+  const dataCellStyles = {
+    base: {
+      borderWidth: '0 0 5px',
+      borderStyle: 'solid',
+      backgroundColor,
+      borderBottomColor,
+      fontFamily: 'Varela Round,Arial,sans-serif',
+      color: '#191919'
+    },
+    wireframe: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+  }
+
+  const styles = isWireFrame
+    ? { ...dataCellStyles.wireframe }
+    : { ...dataCellStyles.base }
+
   return (
     <BaseCell
       sx={{
-        borderWidth: '0 0 5px',
-        borderStyle: 'solid',
-        backgroundColor,
-        borderBottomColor,
+        ...styles,
         padding: '5px 0px 10px',
         margin: ['4px 0', '2px'],
-        marginX: ['15px', '2px'],
-        fontFamily: 'Varela Round,Arial,sans-serif',
-        color: '#191919'
+        marginX: ['15px', '2px']
       }}
     >
-      <span
-        sx={{
-          fontFamily: 'Open Sans,Arial,sans-serif',
-          fontSize: '11px',
-          display: 'flex',
-          justifyContent: 'center',
-          padding: '5px 5px 0px',
-          color
-        }}
-      >
-        {label}
-      </span>
-      <div
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          padding: '5px',
-          flexDirection: 'column'
-        }}
-      >
-        {children}
-      </div>
+      {isWireFrame && <WireFrameCell styles={wireFrameLabelStyles} />}
+
+      {!isWireFrame && (
+        <span
+          sx={{
+            fontFamily: 'Open Sans,Arial,sans-serif',
+            fontSize: '11px',
+            display: 'flex',
+            justifyContent: 'center',
+            padding: '5px 5px 0px',
+            color
+          }}
+        >
+          {label}
+        </span>
+      )}
+
+      {isWireFrame && <WireFrameCell styles={wireFrameDescriptionStyles} />}
+
+      {!isWireFrame && (
+        <div
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            padding: '5px',
+            flexDirection: 'column'
+          }}
+        >
+          {children}
+        </div>
+      )}
     </BaseCell>
   )
 }
@@ -272,6 +434,7 @@ interface CtaCellProps extends React.HTMLAttributes<HTMLDivElement> {
   onClick?: (event?: any) => void
   disabled?: boolean
   variant?: string
+  isWireFrame?: boolean
 }
 
 export const CtaCell: React.FC<CtaCellProps> = ({
@@ -280,7 +443,8 @@ export const CtaCell: React.FC<CtaCellProps> = ({
   href,
   onClick,
   disabled,
-  variant
+  variant,
+  isWireFrame = false
 }) => {
   const props = {
     variant: 'primary',
@@ -292,6 +456,8 @@ export const CtaCell: React.FC<CtaCellProps> = ({
       color: '#fff',
       fontSize: '16px',
       fontWeight: 300,
+      opacity: isWireFrame ? 0.4 : 1,
+      pointerEvents: isWireFrame && 'none',
       ':hover': {
         opacity: 1
       },
@@ -325,6 +491,7 @@ interface PercentageCellProps extends DataCellProps {
   percentage: number
   alternativeText: string
   size?: string
+  isWireFrame?: boolean
 }
 
 export const PercentageCell: React.FC<PercentageCellProps> = ({
@@ -334,7 +501,8 @@ export const PercentageCell: React.FC<PercentageCellProps> = ({
   label,
   percentage,
   alternativeText,
-  size
+  size,
+  isWireFrame = false
 }) => {
   return (
     <DataCell
@@ -342,6 +510,7 @@ export const PercentageCell: React.FC<PercentageCellProps> = ({
       borderBottomColor={borderBottomColor}
       label={label}
       color={color}
+      isWireFrame={isWireFrame}
     >
       {!isNaN(percentage) && (
         <CirclePercentageBar
@@ -722,6 +891,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   bannerInfo?: BannerInfo
   onBannerClick?: () => void
   telephone?: string
+  isWireFrame?: boolean
 }
 
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
@@ -741,6 +911,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   bannerInfo,
   onBannerClick,
   telephone,
+  isWireFrame = false,
   ...props
 }) => {
   const badge = badges[0]
@@ -758,7 +929,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         ':first-of-type': {
           marginTop: '10px'
         },
-        opacity: disabled ? '0.4' : 1
+        opacity: disabled && !isWireFrame ? '0.4' : 1
       }}
       {...props}
     >
@@ -785,20 +956,23 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
             flexDirection: ['column', 'row']
           }}
         >
-          <Styled.h5
-            sx={{
-              color: '#069',
-              pl: ['15px', '160px'],
-              pr: ['15px', 0],
-              py: '15px',
-              mb: 0,
-              mt: badge ? ['30px', '15px'] : 0,
-              fontSize: '18px',
-              fontFamily: 'Varela Round,Arial,sans-serif'
-            }}
-          >
-            {title}
-          </Styled.h5>
+          {isWireFrame && <WireFrame type="header" />}
+          {!isWireFrame && (
+            <Styled.h5
+              sx={{
+                color: '#069',
+                pl: ['15px', '160px'],
+                pr: ['15px', 0],
+                py: '15px',
+                mb: 0,
+                mt: badge ? ['30px', '15px'] : 0,
+                fontSize: '18px',
+                fontFamily: 'Varela Round,Arial,sans-serif'
+              }}
+            >
+              {title}
+            </Styled.h5>
+          )}
           {telephone && <TelephoneInfo telephone={telephone} />}
         </header>
 
@@ -821,8 +995,16 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           </AdditionalInfo>
         )}
 
+        {info.length === 0 && isWireFrame && (
+          <WireFrame type="additionalInfo" />
+        )}
+
         {representativeExample && (
           <RepresentativeExample text={representativeExample} />
+        )}
+
+        {!representativeExample && isWireFrame && (
+          <WireFrame type="representativeExample" />
         )}
       </RowWrapper>
 
