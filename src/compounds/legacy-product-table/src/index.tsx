@@ -33,13 +33,14 @@ const WireFrame: React.FC<WireFrameProps> = ({ type }) => {
     representativeExample: object
   } = {
     header: {
+      width: '100%',
       paddingLeft: ['15px', '160px'],
       paddingRight: ['15px', 0],
       paddingY: '15px',
       marginY: 0
     },
     additionalInfo: {
-      margin: ['15px', '15px 0']
+      margin: '15px 0'
     },
     representativeExample: {
       marginTop: '5px',
@@ -54,21 +55,19 @@ const WireFrame: React.FC<WireFrameProps> = ({ type }) => {
     representativeExample: object
   } = {
     header: {
-      width: ['320px', '425px'],
+      width: ['93%', '55%'],
       height: '14px'
     },
     additionalInfo: {
       height: '10px',
-      width: '100%',
-      maxWidth: ['326px', '653px'],
+      width: ['95%', '69%'],
       marginLeft: ['0', 'auto'],
       marginRight: 'auto',
       marginTop: '10px'
     },
     representativeExample: {
       height: '11px',
-      width: '100%',
-      maxWidth: ['261px', '785px'],
+      width: ['86%', '90%'],
       marginX: 'auto',
       marginTop: '8px'
     }
@@ -83,7 +82,7 @@ const WireFrame: React.FC<WireFrameProps> = ({ type }) => {
       { ...defaultStyles.header },
       {
         ...defaultStyles.header,
-        width: '94px',
+        width: '28%',
         display: ['block', 'none'],
         marginTop: '11px',
         marginBottom: '20px'
@@ -97,7 +96,7 @@ const WireFrame: React.FC<WireFrameProps> = ({ type }) => {
       { ...defaultStyles.additionalInfo },
       {
         ...defaultStyles.additionalInfo,
-        width: '156px',
+        width: '45%',
         display: ['block', 'none']
       }
     ],
@@ -106,17 +105,17 @@ const WireFrame: React.FC<WireFrameProps> = ({ type }) => {
       { ...defaultStyles.representativeExample },
       {
         ...defaultStyles.representativeExample,
-        maxWidth: '251px',
+        width: '83%',
         display: ['block', 'none']
       },
       {
         ...defaultStyles.representativeExample,
-        maxWidth: '251px',
+        width: '83%',
         display: ['block', 'none']
       },
       {
         ...defaultStyles.representativeExample,
-        maxWidth: '69px',
+        width: '23%',
         display: ['block', 'none']
       }
     ]
@@ -320,8 +319,9 @@ export const ImageCell: React.FC<ImageCellProps> = ({
   isWireFrame = false
 }) => {
   const wireFrameStyles = {
-    width: '118px',
-    height: '74px'
+    width: ['100%', '90%'],
+    height: '74px',
+    borderRadius: '3px'
   }
 
   return (
@@ -363,16 +363,14 @@ export const DataCell: React.FC<DataCellProps> = ({
   isWireFrame = false
 }) => {
   const wireFrameLabelStyles = {
-    width: '100%',
-    maxWidth: ['134px', '84px'],
+    width: '43%',
     height: '10px'
   }
 
   const wireFrameDescriptionStyles = {
-    width: '100%',
-    maxWidth: ['202px', '126px'],
+    width: '65%',
     height: '17px',
-    marginTop: '5px'
+    margin: '5px'
   }
 
   const dataCellStyles = {
