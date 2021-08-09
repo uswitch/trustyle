@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.50.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.49.1...@uswitch/trustyle.uswitch-theme@2.50.0) (2021-08-09)
+
+
+### Features
+
+* spark accordion ([b8f46b1](https://github.com/uswitch/trustyle/commit/b8f46b1))
+
+
+
+
+
 ## [2.49.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.49.0...@uswitch/trustyle.uswitch-theme@2.49.1) (2021-08-04)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
