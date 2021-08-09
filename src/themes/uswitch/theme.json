@@ -2482,6 +2482,12 @@
           }
         },
         "variants": {
+          "consent": {
+            "variant": "elements.input.checkbox.base",
+            "bg": "grey-05",
+            "mb": "0",
+            "pb": "0"
+          },
           "normal": {
             "variant": "elements.input.checkbox.base"
           },
@@ -2600,6 +2606,12 @@
           "minWidth": "17px",
           "width": "17px"
         }
+      },
+      "consent": {
+        "variant": "elements.simple-checkbox.base-no-border",
+        "background": "#F3F3F4",
+        "fontSize": "14px",
+        "padding-left": "16px"
       }
     },
     "simple-radio": {
