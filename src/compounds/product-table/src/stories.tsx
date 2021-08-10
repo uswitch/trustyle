@@ -1068,11 +1068,7 @@ export const MoneyRedesignExampleWithWireframe = () => {
         }
       ]}
     >
-      <ProductTable.cells.Content
-        label="Loan Amount"
-        headerImage
-        isWireFrame
-      >
+      <ProductTable.cells.Content label="Loan Amount" headerImage isWireFrame>
         <ProductTable.data.Auto text="£1000 to £10000" headerImage />
       </ProductTable.cells.Content>
       <ProductTable.cells.Content
@@ -1085,11 +1081,7 @@ export const MoneyRedesignExampleWithWireframe = () => {
           headerImage
         />
       </ProductTable.cells.Content>
-      <ProductTable.cells.Content
-        label="Loan Term"
-        headerImage
-        isWireFrame
-      >
+      <ProductTable.cells.Content label="Loan Term" headerImage isWireFrame>
         <ProductTable.data.Auto text="1 year to 5 years" headerImage />
       </ProductTable.cells.Content>
       <ProductTable.cells.Content
