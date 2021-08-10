@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
+import WireFrameCell from '@uswitch/trustyle.wireframe-cell'
 
 import CellBase from './cell-base'
-import { WireFrame, WireFrameCell } from './wireframe-cell'
+import { WireFrame } from './wireframe-cell'
 
 export interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   badges?: React.ReactNode[]

@@ -1,36 +1,12 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
+import WireFrameCell from '@uswitch/trustyle.wireframe-cell'
 
 import { CellContext } from '../generics'
 import ProductTable from '../index'
 
 import { ROWS } from './cell-split'
-// import { wireFrameCellCss } from '../../../../styles/src/wireframe-animation'
-
-interface WireFrameCellProps extends React.HTMLAttributes<HTMLDivElement> {
-  styles?: any
-}
-
-export const WireFrameCell: React.FC<WireFrameCellProps> = ({ styles }) => (
-  <span
-    // css={wireFrameCellCss}
-    sx={{
-      display: 'block',
-      backgroundColor: 'grey-20',
-      ...styles
-    }}
-  >
-    <span
-      className={'load'}
-      sx={{
-        width: '100%',
-        height: '100%',
-        display: 'block'
-      }}
-    ></span>
-  </span>
-)
 
 interface WireFrameProps extends React.HTMLAttributes<HTMLDivElement> {
   type: 'header' | 'info' | 'example'

@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
+import WireFrameCell from '@uswitch/trustyle.wireframe-cell'
 
 import {
   AddonContext,
@@ -10,7 +11,6 @@ import {
 } from '../generics'
 
 import CellBase from './cell-base'
-import { WireFrameCell } from './wireframe-cell'
 
 const capitalise = (string: string) =>
   string.charAt(0).toUpperCase() + string.slice(1)
