@@ -2483,7 +2483,8 @@
         },
         "variants": {
           "consent": {
-            "bg": "grey-05"
+            "bg": "grey-05",
+            "border": "none"
           },
           "normal": {
             "variant": "elements.input.checkbox.base"
