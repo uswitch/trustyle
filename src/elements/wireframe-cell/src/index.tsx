@@ -13,7 +13,7 @@ const WireFrameCell: React.FC<WireFrameCellProps> = ({ styles }) => (
     css={wireFrameCellCss}
     sx={{
       display: 'block',
-      backgroundColor: 'grey-20',
+      backgroundColor: '#DFDFE1',
       ...styles
     }}
   >
