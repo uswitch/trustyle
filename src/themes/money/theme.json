@@ -894,6 +894,10 @@
           }
         },
         "variants": {
+          "consent": {
+            "bg": "transparent",
+            "border": "none"
+          },
           "normal": {
             "variant": "elements.input.checkbox.base"
           },
