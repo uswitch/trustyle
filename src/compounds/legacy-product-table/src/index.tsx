@@ -6,21 +6,9 @@ import { ButtonLink } from '@uswitch/trustyle.button-link'
 import { Button } from '@uswitch/trustyle.button'
 import { Icon } from '@uswitch/trustyle.icon'
 import CirclePercentageBar from '@uswitch/trustyle.circular-percentage-bar'
+import WireFrameCell from '@uswitch/trustyle.wireframe-cell'
 
 import RowWrapper from './row-wrapper'
-
-interface WireFrameCellProps extends React.HTMLAttributes<HTMLDivElement> {
-  styles?: any
-}
-
-const WireFrameCell: React.FC<WireFrameCellProps> = ({ styles }) => {
-  const defaultStyles = {
-    backgroundColor: 'grey-20',
-    display: 'block'
-  }
-
-  return <span sx={{ ...defaultStyles, ...styles }}></span>
-}
 
 interface WireFrameProps extends React.HTMLAttributes<HTMLDivElement> {
   type: 'header' | 'additionalInfo' | 'representativeExample'
