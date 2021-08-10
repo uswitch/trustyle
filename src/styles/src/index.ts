@@ -3,6 +3,7 @@ import * as inputs from './inputs'
 import * as utils from './utils'
 import * as typography from './typography'
 import { breakpoints, Breakpoints, mq } from './media-queries'
+import { wireFrameCellCss } from './wireframe-animation'
 
 const { pxToRem, spacers } = utils
 
@@ -19,5 +20,6 @@ export {
   typography,
   mq,
   breakpoints,
-  Breakpoints
+  Breakpoints,
+  wireFrameCellCss
 }
