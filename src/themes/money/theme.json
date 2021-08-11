@@ -1849,6 +1849,50 @@
           }
         }
       },
+      "address-lookup": {
+        "postcode-row": {
+          "marginBottom": "sm",
+          "alignItems": "center"
+        },
+        "display": {
+          "color": "grey-80",
+          "backgroundColor": "#eaeced",
+          "padding": "sm",
+          "borderRadius": "4px"
+        },
+        "container": {
+          "marginBottom": ["sm", "lg", "xl"]
+        },
+        "edit-container": {
+          "backgroundColor": "#eaeced",
+          "padding": "sm"
+        },
+        "input-container": {
+          "marginBottom": "sm"
+        },
+        "label": {
+          "marginRight": "sm",
+          "fontSize": "sm",
+          "color": "#2f353a",
+          "display": "block",
+          "marginBottom": "xxs",
+          "fontFamily": "legacy",
+          "fontWeight": "base",
+          "textAlign": "left"
+        },
+        "button": {
+          "color": "grey-80",
+          "fontSize": "sm",
+          "fontStyle": "normal",
+          "fontWeight": "base",
+          "textAlign": "left",
+          "border": "none",
+          "background": "none",
+          "textDecoration": "underline",
+          "padding": "8px 0 0",
+          "cursor": "pointer"
+        }
+      },
       "button": {
         "variants": {
           "calculator": {
