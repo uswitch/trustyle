@@ -12,7 +12,7 @@ export default {
 
 export const ExampleWithKnobs = () => {
   const styles = {
-    width: '180px',
+    width: '1000px',
     height: '20px'
   }
 
