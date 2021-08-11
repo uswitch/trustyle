@@ -1481,6 +1481,13 @@
         "backgroundColor": "blue"
       }
     },
+    "sponsored-by-tag": {
+      "base": {
+        "image": {
+          "width": "92px"
+        }
+      }
+    },
     "breadcrumbs": {
       "base": {
         "main": {
@@ -2475,6 +2482,10 @@
           }
         },
         "variants": {
+          "consent": {
+            "bg": "grey-05",
+            "border": "none"
+          },
           "normal": {
             "variant": "elements.input.checkbox.base"
           },
@@ -3283,8 +3294,15 @@
         "variant": "sizes.grid.container",
         "mx": "auto"
       },
+      "primaryContainer": {
+        "mt": ["0", "0", "xxs"]
+      },
       "breadcrumbs": {
         "mb": ["xxs", "md"],
+        "pt": ["xs", "0"]
+      },
+      "breadcrumbsWithImage": {
+        "mb": ["xxs", "md", "0"],
         "pt": ["xs", "0"]
       },
       "primaryContent": {
@@ -3389,6 +3407,9 @@
       "card-with-badge": {
         "variant": "compounds.product-table.card",
         "mt": "9px"
+      },
+      "product-transfer": {
+        "bg": "white"
       },
       "cta": {},
       "padding": {
@@ -3781,6 +3802,23 @@
       "iconClosed": "plus",
       "base": {
         "mb": 72,
+        "integrationWrapper": {
+          "mb": "base"
+        },
+        "mainTitle": {
+          "pb": "base",
+          "mb": "xxl"
+        },
+        "sectionTitle": {
+          "m": 0,
+          "py": "xs",
+          "fontSize": ["base", null, "sm"],
+          "lineHeight": "normal",
+          "fontWeight": "medium",
+          "h3&": {
+            "fontSize": ["base", null, "sm"]
+          }
+        },
         "wrapper": {
           "borderBottom": "1px solid #C4C4C4"
         },

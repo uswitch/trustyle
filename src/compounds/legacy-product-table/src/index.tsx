@@ -323,6 +323,7 @@ export const CtaCell: React.FC<CtaCellProps> = ({
 
 interface PercentageCellProps extends DataCellProps {
   percentage: number
+  alternativeText: string
   size?: string
 }
 
@@ -332,6 +333,7 @@ export const PercentageCell: React.FC<PercentageCellProps> = ({
   color,
   label,
   percentage,
+  alternativeText,
   size
 }) => {
   return (
@@ -341,7 +343,14 @@ export const PercentageCell: React.FC<PercentageCellProps> = ({
       label={label}
       color={color}
     >
-      <CirclePercentageBar percentage={percentage} size={size} align="center" />
+      {!isNaN(percentage) && (
+        <CirclePercentageBar
+          percentage={percentage}
+          size={size}
+          align="center"
+        />
+      )}
+      {isNaN(percentage) && <span>{alternativeText}</span>}
     </DataCell>
   )
 }
@@ -481,6 +490,10 @@ export const MoreInformationText = ({ content }: MoreInformationTextProps) => {
   return (
     <React.Fragment>
       {content.map((chunk: string, i: number) => {
+        if (chunk === null) {
+          return
+        }
+
         return (
           <React.Fragment key={i}>
             {chunk
@@ -548,6 +561,10 @@ export const MoreInformationList: React.FC<MoreInformationListProps> = ({
     >
       <tbody>
         {rows.map(({ label, value }, i: number) => {
+          if (value === '' || value === null) {
+            return
+          }
+
           if (!label) {
             return (
               <tr key={i} sx={trSx}>

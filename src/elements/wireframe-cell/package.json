@@ -1,6 +1,6 @@
 {
-  "name": "@uswitch/trustyle.sponsored-by-tag",
-  "version": "2.2.4",
+  "name": "@uswitch/trustyle.wireframe-cell",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -14,8 +14,5 @@
   "peerDependencies": {
     "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
-  },
-  "dependencies": {
-    "@uswitch/trustyle.imgix-image": "^0.1.41"
   }
 }
