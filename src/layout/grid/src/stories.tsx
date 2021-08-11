@@ -122,7 +122,7 @@ storiesOf('Layout/Grid', module).add('Example 1 - basics', () => (
         </Column>
       </Row>
       <Row css={exampleRowStyle} topSpacing={[8, 16]}>
-        <Column hide-s m={1 / 4} l={1 / 6} css={exampleColumnStyle}>
+        <Column hide-s="true" m={1 / 4} l={1 / 6} css={exampleColumnStyle}>
           .us-col-md-2
         </Column>
         <Column m={1 / 4} l={1 / 6} css={exampleColumnStyle}>

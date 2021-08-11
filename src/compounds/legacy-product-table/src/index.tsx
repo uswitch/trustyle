@@ -378,7 +378,7 @@ export const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
         marginBottom: [0, 'sm'],
         marginLeft: 'sm',
         marginRight: 'sm',
-        ':nth-child(even)': {
+        ':nth-of-type(even)': {
           marginLeft: ['sm', '0']
         }
       }}

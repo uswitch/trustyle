@@ -13,34 +13,38 @@ export default {
 export const Example = () => (
   <div>
     <Table.wrap>
-      <Table.tr>
-        <Table.td>First item</Table.td>
-        <Table.td>Second item</Table.td>
-        <Table.td>Third item</Table.td>
-      </Table.tr>
-      <Table.tr>
-        <Table.td>First item</Table.td>
-        <Table.td>Second item</Table.td>
-        <Table.td>Third item</Table.td>
-      </Table.tr>
+      <tbody>
+        <Table.tr>
+          <Table.td>First item</Table.td>
+          <Table.td>Second item</Table.td>
+          <Table.td>Third item</Table.td>
+        </Table.tr>
+        <Table.tr>
+          <Table.td>First item</Table.td>
+          <Table.td>Second item</Table.td>
+          <Table.td>Third item</Table.td>
+        </Table.tr>
+      </tbody>
     </Table.wrap>
 
     <Table.wrap>
-      <Table.tr>
-        <Table.th>First title</Table.th>
-        <Table.th>Second title</Table.th>
-        <Table.th>Third title</Table.th>
-      </Table.tr>
-      <Table.tr>
-        <Table.td>First item</Table.td>
-        <Table.td>Second item</Table.td>
-        <Table.td>Third item</Table.td>
-      </Table.tr>
-      <Table.tr>
-        <Table.td>First item</Table.td>
-        <Table.td>Second item</Table.td>
-        <Table.td>Third item</Table.td>
-      </Table.tr>
+      <tbody>
+        <Table.tr>
+          <Table.th>First title</Table.th>
+          <Table.th>Second title</Table.th>
+          <Table.th>Third title</Table.th>
+        </Table.tr>
+        <Table.tr>
+          <Table.td>First item</Table.td>
+          <Table.td>Second item</Table.td>
+          <Table.td>Third item</Table.td>
+        </Table.tr>
+        <Table.tr>
+          <Table.td>First item</Table.td>
+          <Table.td>Second item</Table.td>
+          <Table.td>Third item</Table.td>
+        </Table.tr>
+      </tbody>
     </Table.wrap>
   </div>
 )

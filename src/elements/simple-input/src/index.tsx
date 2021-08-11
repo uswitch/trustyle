@@ -24,8 +24,10 @@ export const SimpleInput = React.forwardRef(
   (props: Props, ref?: React.Ref<HTMLInputElement>) => {
     const {
       hasError,
+      type,
       placeholder,
       onChange,
+      name,
       defaultValue,
       prefix,
       suffix,
@@ -91,6 +93,8 @@ export const SimpleInput = React.forwardRef(
           onFocus={() => setHasFocus(true)}
           onBlur={() => setHasFocus(false)}
           onKeyDown={onKeyDown}
+          name={name}
+          type={type || 'text'}
         />
         {suffix && (
           <span

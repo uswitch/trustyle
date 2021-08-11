@@ -181,8 +181,8 @@
       "fontWeight": "base",
       "lineHeight": "base",
       "color": "grey-80",
-      "-webkit-font-smoothing": "antialiased",
-      "-moz-osx-font-smoothing": "grayscale"
+      "WebkitFontSmoothing": "antialiased",
+      "MozOsxFontSmoothing": "grayscale"
     },
     "a": {
       "color": "brand",
@@ -455,7 +455,7 @@
           "fontStyle": "normal"
         },
         "image": {
-          "margin-top": [null, "10px"]
+          "marginTop": [null, "10px"]
         }
       },
       "pros": {
@@ -652,7 +652,7 @@
           "margin": "1px"
         },
         "&::-webkit-inner-spin-button, -webkit-outer-spin-button": {
-          "-webkit-appearance": "none",
+          "WebkitAppearance": "none",
           "margin": 0
         },
         "&:focus": {
@@ -1080,7 +1080,7 @@
         "variant": "styles.h4",
         "color": "grey-80",
         "display": "block",
-        ":not(:first-child)": {
+        ":not(:first-of-type)": {
           "mt": "sm"
         },
         "variants": {
@@ -1090,7 +1090,7 @@
             "color": "grey-80",
             "display": "block",
             "mb": "xs",
-            ":not(:first-child)": {
+            ":not(:first-of-type)": {
               "mt": "xl"
             }
           }
@@ -1118,7 +1118,7 @@
     },
     "rich-text-block": {
       "base": {
-        ">div>span>*:first-child": {
+        ">div>span>*:first-of-type": {
           "mt": 0
         },
         ">div>*:not(span)": {
@@ -1393,7 +1393,7 @@
       "variants": {
         "vertical": {
           "&:hover": {
-            "box-shadow": "rgba(0,0,72,0.28) 0px 23px 28px -16px, rgba(0,0,72,0.06) 0px -2px 11px 0px",
+            "boxShadow": "rgba(0,0,72,0.28) 0px 23px 28px -16px, rgba(0,0,72,0.06) 0px -2px 11px 0px",
             "opacity": 1
           },
           "tag": {
@@ -1433,7 +1433,7 @@
         "horizontal": {
           "variant": "compounds.card.base",
           "&:hover": {
-            "box-shadow": "none"
+            "boxShadow": "none"
           },
           "display": "flex",
           "flexDirection": "row-reverse",
@@ -1790,14 +1790,14 @@
         "&:first-of-type": {
           "borderStyle": "solid",
           "svg": {
-            "margin-left": 0
+            "marginLeft": 0
           }
         },
         "svg": {
           "position": "absolute",
           "width": "22px",
           "height": "22px",
-          "margin-left": "-0.5px",
+          "marginLeft": "-0.5px",
           "top": "50%",
           "left": "50%",
           "transform": "translate(-50%, -50%)"
@@ -1854,7 +1854,7 @@
     },
     "hero-with-background-image": {
       "::before": {
-        "background-image": "linear-gradient(90deg, rgba(0, 2, 11, 0.75) 0%, rgba(0, 2, 11, 0) 100%)",
+        "backgroundImage": "linear-gradient(90deg, rgba(0, 2, 11, 0.75) 0%, rgba(0, 2, 11, 0) 100%)",
         "position": "absolute",
         "left": 0,
         "top": 0,

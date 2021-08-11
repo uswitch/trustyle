@@ -433,7 +433,7 @@
           "fontStyle": "normal"
         },
         "image": {
-          "margin-top": [null, "10px"]
+          "marginTop": [null, "10px"]
         }
       }
     },
@@ -497,7 +497,7 @@
       },
       "focus": {
         "outline": "2px solid",
-        "outline-color": "orange",
+        "outlineColor": "orange",
         "color": "primary"
       },
       "default": {
@@ -693,7 +693,7 @@
           "margin": "1px"
         },
         "&::-webkit-inner-spin-button, -webkit-outer-spin-button": {
-          "-webkit-appearance": "none",
+          "WebkitAppearance": "none",
           "margin": 0
         },
         "&:focus": {
@@ -924,7 +924,7 @@
             "width": "12px",
             "display": "inline-block",
             "& > svg": {
-              "margin-top": "-50%"
+              "marginTop": "-50%"
             }
           }
         },
@@ -1133,7 +1133,7 @@
         "variant": "styles.h4",
         "color": "grey-80",
         "display": "block",
-        ":not(:first-child)": { "mt": "sm" },
+        ":not(:first-of-type)": { "mt": "sm" },
         "variants": {
           "calculator": {
             "variant": "styles.h6",
@@ -1141,7 +1141,7 @@
             "color": "grey-80",
             "display": "block",
             "mb": "xs",
-            ":not(:first-child)": {
+            ":not(:first-of-type)": {
               "mt": "xl"
             }
           }

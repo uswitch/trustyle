@@ -1020,7 +1020,7 @@
           "margin": "1px"
         },
         "&::-webkit-inner-spin-button, -webkit-outer-spin-button": {
-          "-webkit-appearance": "none",
+          "WebkitAppearance": "none",
           "margin": 0
         },
         "&:focus": {
@@ -1620,7 +1620,7 @@
                     "marginLeft": [0, "md"],
                     "width": ["calc(100% - 48px)", "100%"]
                   },
-                  ">:nth-child(3n+1)": {
+                  ">:nth-of-type(3n+1)": {
                     "marginLeft": 0
                   }
                 }
@@ -1645,7 +1645,7 @@
                   ">div": {
                     "marginLeft": [0, "inherit"]
                   },
-                  ">:nth-child(3n+1)": {
+                  ">:nth-of-type(3n+1)": {
                     "marginLeft": 0
                   }
                 }
@@ -2616,19 +2616,19 @@
               "pl": ["none", "sm"],
               "py": ["12px", "xs"],
               "borderBottom": ["4px solid", "none"],
-              ":nth-child(1)": {
+              ":nth-of-type(1)": {
                 "backgroundColor": ["#FDF6EE", "transparent"],
                 "borderBottomColor": "#F7DCBB",
                 "mb": ["xxs", ""],
                 "color": ["sunshine", "grey-80"]
               },
-              ":nth-child(2)": {
+              ":nth-of-type(2)": {
                 "backgroundColor": ["#FCF1ED", "transparent"],
                 "borderBottomColor": "#F2CBB4",
                 "mb": ["xxs", ""],
                 "color": ["jaffa", "grey-80"]
               },
-              ":nth-child(3)": {
+              ":nth-of-type(3)": {
                 "backgroundColor": ["#F9EDF1", "transparent"],
                 "borderBottomColor": "#E7BBC8",
                 "color": ["fuschia", "grey-80"]
@@ -2646,7 +2646,7 @@
             "variants": {
               "cellImage": {
                 "variant": "compounds.product-table.variants.redesign.cellContext.main",
-                ":nth-child(4)": {
+                ":nth-of-type(4)": {
                   "borderBottom": "none",
                   "display": ["block", "none"]
                 }
@@ -3355,7 +3355,7 @@
             "pb": ["8px", "16px"]
           },
           "image": {
-            "box-sizing": "border-box",
+            "boxSizing": "border-box",
             "img": {
               "width": 32
             }
@@ -3565,14 +3565,14 @@
         "&:first-of-type": {
           "borderStyle": "solid",
           "svg": {
-            "margin-left": 0
+            "marginLeft": 0
           }
         },
         "svg": {
           "position": "absolute",
           "width": "22px",
           "height": "22px",
-          "margin-left": "-0.5px",
+          "marginLeft": "-0.5px",
           "top": "50%",
           "left": "50%",
           "transform": "translate(-50%, -50%)"
