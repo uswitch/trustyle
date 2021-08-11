@@ -17,6 +17,6 @@
   },
   "devDependencies": {
     "@uswitch/trustyle.circular-percentage-bar": "^0.1.2",
-    "@uswitch/trustyle.wireframe-cell": "^0.0.1"
+    "@uswitch/trustyle.wireframe-cell": "^0.0.2"
   }
 }
