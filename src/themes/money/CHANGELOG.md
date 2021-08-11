@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.60.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.59.1...@uswitch/trustyle.money-theme@1.60.0) (2021-08-11)
+
+
+### Features
+
+* add address-lookup styling - taken from eevee-components ([f2e3db1](https://github.com/uswitch/trustyle/commit/f2e3db1))
+
+
+
+
+
 ## [1.59.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.59.0...@uswitch/trustyle.money-theme@1.59.1) (2021-08-10)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme
