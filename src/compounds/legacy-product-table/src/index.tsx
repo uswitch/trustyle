@@ -33,7 +33,7 @@ const WireFrame: React.FC<WireFrameProps> = ({ type }) => {
     representativeExample: {
       marginTop: '5px',
       padding: ['5px 20px 10px', '5px 40px 10px'],
-      backgroundColor: 'grey-10'
+      backgroundColor: 'rgba(242,242,243,0.7)'
     }
   }
 
