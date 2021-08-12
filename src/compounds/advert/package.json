@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.advert",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -18,7 +18,7 @@
   "dependencies": {
     "@uswitch/trustyle.badge": "^2.0.5",
     "@uswitch/trustyle.button": "^3.0.5",
-    "@uswitch/trustyle.icon": "^1.27.0"
+    "@uswitch/trustyle.icon": "^1.27.1"
   },
   "devDependencies": {
     "@uswitch/trustyle.hero": "^3.8.4"
