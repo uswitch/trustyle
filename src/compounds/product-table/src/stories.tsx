@@ -1018,6 +1018,98 @@ MoneyRedesignExampleWithBanner.story = {
   }
 }
 
+export const MoneyRedesignExampleWithWireframe = () => {
+  return (
+    <ProductTable.Row
+      isWireFrame
+      rowTitle="Santander Standard Loan (Online)"
+      image={
+        <ProductTable.cells.HeaderImage>
+          <img
+            src="https://placekitten.com/200/75?image=9"
+            alt="Salman"
+            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          />
+        </ProductTable.cells.HeaderImage>
+      }
+      addons={[
+        {
+          addon: ProductTable.addons.info,
+          component: (
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontWeight: 'bold', display: ['none', 'block'] }}>
+                Additional information:
+              </div>
+              <div>
+                Here is some extra information. Here is even more extra
+                information. And more extra information.
+              </div>
+            </ProductTable.cells.Base>
+          ),
+          options: {
+            split: false,
+            headerImage: true
+          }
+        },
+        {
+          addon: ProductTable.addons.footer,
+          component: (
+            <ProductTable.cells.Base sx={{ display: 'block' }}>
+              <div sx={{ fontWeight: 'bold', display: ['inline', 'block'] }}>
+                Representative example:
+              </div>
+              <div>Assumed borrowing of £10,000 over...</div>
+            </ProductTable.cells.Base>
+          ),
+          options: {
+            split: false,
+            headerImage: true
+          }
+        }
+      ]}
+    >
+      <ProductTable.cells.Content label="Loan Amount" headerImage isWireFrame>
+        <ProductTable.data.Auto text="£1000 to £10000" headerImage />
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Content
+        label="Representative APR"
+        headerImage
+        isWireFrame
+      >
+        <ProductTable.data.Auto
+          text="49.9% APR (£1,000 to £10,000)"
+          headerImage
+        />
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Content label="Loan Term" headerImage isWireFrame>
+        <ProductTable.data.Auto text="1 year to 5 years" headerImage />
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Content
+        label="Chance of acceptance"
+        headerImage
+        isWireFrame
+      >
+        <ProductTable.data.CircularPercentageBar
+          percentage={50}
+          size="xs"
+          align="start"
+        />
+      </ProductTable.cells.Content>
+      <ProductTable.cells.Cta
+        primary={<ButtonLink variant="primary">Apply now</ButtonLink>}
+        headerImage
+        isWireFrame
+      />
+    </ProductTable.Row>
+  )
+}
+
+MoneyRedesignExampleWithWireframe.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const DisabledExample = () => {
   return (
     <React.Fragment>
@@ -1116,6 +1208,8 @@ export const AutomatedTests = () => {
       <MoneyRedesignExampleWithPercentage />
       <Spacer />
       <MoneyRedesignExampleWithBanner />
+      <Spacer />
+      <MoneyRedesignExampleWithWireframe />
       <Spacer />
       <DisabledExample />
     </AllThemes>

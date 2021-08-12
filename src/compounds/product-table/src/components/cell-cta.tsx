@@ -10,11 +10,13 @@ export interface CellCtaProps extends React.HTMLAttributes<HTMLDivElement> {
   primary: React.ReactNode
   secondary?: React.ReactNode
   headerImage?: boolean
+  isWireFrame?: boolean
 }
 const ProductTableCellCta: React.FC<CellCtaProps> = ({
   primary,
   secondary,
-  headerImage
+  headerImage,
+  isWireFrame = false
 }) => {
   const { isCard } = React.useContext(CardContext)
   const forcedMobile = forceMobile(isCard)
@@ -33,6 +35,7 @@ const ProductTableCellCta: React.FC<CellCtaProps> = ({
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: forcedMobile(['column', 'row', 'column']),
+        opacity: isWireFrame ? 0.4 : 1,
         variant: 'compounds.product-table.cta'
       }}
     >

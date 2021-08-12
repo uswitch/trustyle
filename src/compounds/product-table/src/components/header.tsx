@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx, useThemeUI } from 'theme-ui'
+import WireFrameCell from '@uswitch/trustyle.wireframe-cell'
 
 import CellBase from './cell-base'
+import { WireFrame } from './wireframe-cell'
 
 export interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   badges?: React.ReactNode[]
@@ -12,6 +14,7 @@ export interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   addons?: React.ReactNode[]
   image?: React.ReactNode
   card?: React.ReactNode
+  isWireFrame?: boolean
 }
 
 const ProductTableHeader: React.FC<HeaderProps> = ({
@@ -21,7 +24,8 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
   subtitle,
   addons = [],
   image,
-  card = false
+  card = false,
+  isWireFrame = false
 }) => {
   const {
     theme: {
@@ -32,6 +36,19 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
   }: any = useThemeUI()
 
   const pb = paddingBottom || '0'
+
+  const wireFrameStyles = {
+    image: {
+      width: ['45%', '15%'],
+      marginRight: 'xxs',
+      height: '70px',
+      borderRadius: '3px'
+    },
+    title: {
+      width: ['93%', '55%'],
+      height: '14px'
+    }
+  }
 
   return (
     <div
@@ -56,8 +73,10 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
               : null
         }}
       >
-        {image && image}
-        {rowTitle && (
+        {isWireFrame && <WireFrameCell styles={wireFrameStyles.image} />}
+        {!isWireFrame && image && image}
+        {isWireFrame && <WireFrame type="header" />}
+        {!isWireFrame && rowTitle && (
           <CellBase
             sx={{
               marginX: -8,
