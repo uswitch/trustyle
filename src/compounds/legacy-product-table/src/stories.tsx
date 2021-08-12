@@ -61,6 +61,10 @@ const dataContents = [
   </DataCell>
 ]
 
+const emptyDataContents = [
+  [0, 1, 2].map(item => <DataCell isWireFrame key={item} />)
+]
+
 const baseTableContents = [
   ...dataContents,
   <ImageCell key="3">
@@ -97,6 +101,22 @@ const percentageTableContents = [
     <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
   </ImageCell>,
   <CtaCell key="5" href={clickableRow}>
+    See Deal
+  </CtaCell>
+]
+
+const emptyTableContents = [
+  ...emptyDataContents,
+  <PercentageCell
+    key="4"
+    percentage={70}
+    alternativeText={'No results found for this'}
+    isWireFrame
+  />,
+  <ImageCell key="3" isWireFrame>
+    <img src="https://placekitten.com/42/75?image=9" alt="Salman" />
+  </ImageCell>,
+  <CtaCell key="5" href={clickableRow} isWireFrame>
     See Deal
   </CtaCell>
 ]
@@ -513,6 +533,26 @@ PercentageExample.story = {
   }
 }
 
+export const EmptyTableExample = () => {
+  return (
+    <LegacyProductTable
+      info={[]}
+      title={title}
+      clickableRow={clickableRow}
+      isWireFrame
+      disabled
+    >
+      {emptyTableContents}
+    </LegacyProductTable>
+  )
+}
+
+EmptyTableExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
     <AllThemes>
@@ -523,6 +563,7 @@ export const AutomatedTests = () => {
       <PercentageExample />
       <PreapprovedBannerExample />
       <PreapprovedBannerWithBadgeExample />
+      <EmptyTableExample />
     </AllThemes>
   )
 }
