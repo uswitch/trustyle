@@ -189,6 +189,7 @@
     }
   },
   "colors": {
+    "background": "initial",
     "page-background": "transparent",
     "primary": "#141424",
     "heading": "#141424",
