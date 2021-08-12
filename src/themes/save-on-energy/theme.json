@@ -409,7 +409,7 @@
           "fontStyle": "normal"
         },
         "image": {
-          "margin-top": [null, "10px"]
+          "marginTop": [null, "10px"]
         }
       }
     },
@@ -571,7 +571,7 @@
           "margin": "1px"
         },
         "&::-webkit-inner-spin-button, -webkit-outer-spin-button": {
-          "-webkit-appearance": "none",
+          "WebkitAppearance": "none",
           "margin": 0
         },
         "&:focus": {
@@ -723,7 +723,7 @@
         "variant": "styles.h4",
         "color": "grey-80",
         "display": "block",
-        ":not(:first-child)": {
+        ":not(:first-of-type)": {
           "mt": "sm"
         },
         "variants": {
@@ -733,7 +733,7 @@
             "color": "grey-80",
             "display": "block",
             "mb": "xs",
-            ":not(:first-child)": {
+            ":not(:first-of-type)": {
               "mt": "xl"
             }
           }
@@ -886,14 +886,14 @@
         "&:first-of-type": {
           "borderStyle": "solid",
           "svg": {
-            "margin-left": 0
+            "marginLeft": 0
           }
         },
         "svg": {
           "position": "absolute",
           "width": "22px",
           "height": "22px",
-          "margin-left": "-0.5px",
+          "marginLeft": "-0.5px",
           "top": "50%",
           "left": "50%",
           "transform": "translate(-50%, -50%)"
@@ -1096,7 +1096,7 @@
 
   "modules": {
     "hero-with-background-image": {
-      "background-image": {
+      "backgroundImage": {
         "opacity": 0.3
       }
     },

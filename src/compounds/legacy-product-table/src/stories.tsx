@@ -122,7 +122,7 @@ const emptyTableContents = [
 ]
 
 const eligibilityContent = (
-  <MoreInformationBlock title="Eligibility">
+  <MoreInformationBlock title="Eligibility" key="key-1">
     <MoreInformationList
       rows={[
         {
@@ -155,7 +155,7 @@ const eligibilityContent = (
 )
 
 const ratesContent = (
-  <MoreInformationBlock title="Rate tiers">
+  <MoreInformationBlock title="Rate tiers" key="key-2">
     <MoreInformationTable
       rows={[
         [
@@ -296,7 +296,7 @@ const ratesContent = (
 )
 
 const feesContent = (
-  <MoreInformationBlock title="Fees">
+  <MoreInformationBlock title="Fees" key="key-3">
     <MoreInformationList
       rows={[
         { label: 'Application fee', value: 'No fee' },
