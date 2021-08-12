@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.17.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.16.5...@uswitch/trustyle.product-table@2.17.0) (2021-08-12)
+
+
+### Bug Fixes
+
+* bump wireframe cell ([0793818](https://github.com/uswitch/trustyle/commit/0793818))
+* prettier ([120704b](https://github.com/uswitch/trustyle/commit/120704b))
+
+
+### Features
+
+* add wireframe to product table ([4da2ae3](https://github.com/uswitch/trustyle/commit/4da2ae3))
+* import wireframe cell ([d556cf5](https://github.com/uswitch/trustyle/commit/d556cf5))
+
+
+
+
+
 ## [2.16.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.16.4...@uswitch/trustyle.product-table@2.16.5) (2021-07-13)
 
 

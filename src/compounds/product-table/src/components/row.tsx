@@ -17,6 +17,7 @@ import { ROWS } from './cell-split'
 import RowWrapper from './rowWrapper'
 import Header from './header'
 import { BannerInfo, ProductTableHeaderBanner } from './header-banner'
+import { WireFrame } from './wireframe-cell'
 
 export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   badges?: React.ReactNode[]
@@ -34,6 +35,7 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   extraStyles?: {}
   sectionStyles?: {}
   onRowClick?: () => void
+  isWireFrame?: boolean
 }
 
 const ProductTableRow: React.FC<RowProps> = ({
@@ -53,7 +55,8 @@ const ProductTableRow: React.FC<RowProps> = ({
   onBannerClick,
   extraStyles = {},
   sectionStyles = {},
-  onRowClick
+  onRowClick,
+  isWireFrame = false
 }) => {
   const forcedMobile = forceMobile(card)
 
@@ -127,7 +130,7 @@ const ProductTableRow: React.FC<RowProps> = ({
           variant: image
             ? 'compounds.product-table.variants.redesign.row.main'
             : 'compounds.product-table.row.main',
-          pointerEvents: disabled ? 'none' : null,
+          pointerEvents: disabled || isWireFrame ? 'none' : null,
           opacity: disabled ? '0.5' : '1',
           width: '100%',
           ...sectionStyles
@@ -169,6 +172,7 @@ const ProductTableRow: React.FC<RowProps> = ({
             subtitle={subtitle}
             addons={addonsFor('header')}
             card={card}
+            isWireFrame={isWireFrame}
           />
           <div
             sx={{
@@ -243,16 +247,22 @@ const ProductTableRow: React.FC<RowProps> = ({
               </CellContext.Provider>
             ))}
 
-            <CellContext.Provider
-              value={{
-                gridRowStart: 1,
-                gridRowSpan: ROWS,
-                gridColumnStart: 1,
-                gridColumnSpan: cols
-              }}
-            >
-              {addonsFor('body')}
-            </CellContext.Provider>
+            {isWireFrame && <WireFrame type="info" />}
+
+            {isWireFrame && <WireFrame type="example" />}
+
+            {!isWireFrame && (
+              <CellContext.Provider
+                value={{
+                  gridRowStart: 1,
+                  gridRowSpan: ROWS,
+                  gridColumnStart: 1,
+                  gridColumnSpan: cols
+                }}
+              >
+                {addonsFor('body')}
+              </CellContext.Provider>
+            )}
           </div>
         </RowWrapper>
       </section>
