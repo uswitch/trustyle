@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled, useThemeUI } from 'theme-ui'
+import { jsx, Themed, useThemeUI } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
 import { Button } from '@uswitch/trustyle.button'
 import { Icon } from '@uswitch/trustyle.icon'
@@ -785,7 +785,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
             flexDirection: ['column', 'row']
           }}
         >
-          <Styled.h5
+          <Themed.h5
             sx={{
               color: '#069',
               pl: ['15px', '160px'],
@@ -798,7 +798,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
             }}
           >
             {title}
-          </Styled.h5>
+          </Themed.h5>
           {telephone && <TelephoneInfo telephone={telephone} />}
         </header>
 

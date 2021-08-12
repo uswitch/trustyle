@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { RefObject, useEffect, useState } from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
 
 const makeStyles = (variant?: string) => (element?: string) =>
@@ -37,7 +37,7 @@ const TabLink: React.FC<TabLinkProps> = ({
         }}
       >
         <div>
-          <Styled.h6>{title}</Styled.h6>
+          <Themed.h6>{title}</Themed.h6>
         </div>
       </div>
     </a>

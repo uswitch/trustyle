@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
@@ -21,7 +21,7 @@ const TestimonialCard: React.FC<Props> = ({
 }) => (
   <div sx={{ variant: 'compounds.testimonial-card' }} className={className}>
     <ratingImg.type {...ratingImg.props} />
-    <Styled.h5>{quote}</Styled.h5>
+    <Themed.h5>{quote}</Themed.h5>
     <div sx={{ variant: 'compounds.testimonial-card.author' }}>
       <div
         sx={{ variant: 'compounds.testimonial-card.author-image-container' }}
@@ -37,7 +37,7 @@ const TestimonialCard: React.FC<Props> = ({
         )}
       </div>
 
-      <Styled.p>{authorName}</Styled.p>
+      <Themed.p>{authorName}</Themed.p>
     </div>
   </div>
 )

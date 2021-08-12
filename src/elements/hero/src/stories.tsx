@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import { boolean, color, select, text } from '@storybook/addon-knobs'
 import { PaletteProvider } from '@uswitch/trustyle-utils.palette'
 
@@ -107,14 +107,14 @@ export const ExampleWithKnobs = () => {
       >
         <Row>
           <Col span={[12, 5]}>
-            <Styled.h1 sx={{ marginTop: 0, fontSize: ['lg', 'xl', 'xxl'] }}>
+            <Themed.h1 sx={{ marginTop: 0, fontSize: ['lg', 'xl', 'xxl'] }}>
               {headline}
-            </Styled.h1>
+            </Themed.h1>
             <div sx={{ backgroundColor: 'white', padding: 20 }}>
-              <Styled.p sx={{ marginTop: 0 }}>
+              <Themed.p sx={{ marginTop: 0 }}>
                 Lorem ipsum, or lipsum as it is sometimes known, is dummy text
                 used in laying out print, graphic or web designs.
-              </Styled.p>
+              </Themed.p>
               <div sx={{ button: { width: 'auto' } }}>
                 <Button variant="primary">Optional CTA</Button>
               </div>
@@ -162,16 +162,16 @@ export const MoneyHomepageHero = () => {
       >
         <Row>
           <Col span={[12, 6]}>
-            <Styled.h1 sx={{ marginTop: 0 }}>
+            <Themed.h1 sx={{ marginTop: 0 }}>
               Get a headstart on your savings goals and take out an investment
               ISA
-            </Styled.h1>
+            </Themed.h1>
             <Button variant="primary">Compare investment ISAs</Button>
           </Col>
         </Row>
-        <Styled.h2>
+        <Themed.h2>
           Compare and find the deal that&apos;s right for you
-        </Styled.h2>
+        </Themed.h2>
         <Row wrap direction="row">
           <Col span={[6, 3]}>
             <IconPanelHelper icon="creditCards">Credit cards</IconPanelHelper>
@@ -243,10 +243,10 @@ export const BBDealsExample = () => (
           paddingBottom: bottomImageOverflow
         }}
       >
-        <Styled.p sx={{ color: 'pure-white', fontSize: 'base' }}>
+        <Themed.p sx={{ color: 'pure-white', fontSize: 'base' }}>
           13th March 2020
-        </Styled.p>
-        <Styled.h1
+        </Themed.p>
+        <Themed.h1
           sx={{
             fontSize: ['lg', 'xl'],
             color: 'pure-white',
@@ -256,7 +256,7 @@ export const BBDealsExample = () => (
         >
           Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
           laying out print, graphic or web designs.
-        </Styled.h1>
+        </Themed.h1>
         <Author
           variant="primary"
           title="Jane smith"
@@ -329,14 +329,14 @@ export const ExampleWithPalette = () => {
         >
           <Row>
             <Col span={[12, 5]}>
-              <Styled.h1 sx={{ marginTop: 0, fontSize: ['lg', 'xl', 'xxl'] }}>
+              <Themed.h1 sx={{ marginTop: 0, fontSize: ['lg', 'xl', 'xxl'] }}>
                 {headline}
-              </Styled.h1>
+              </Themed.h1>
               <div sx={{ backgroundColor: 'white', padding: 20 }}>
-                <Styled.p sx={{ marginTop: 0 }}>
+                <Themed.p sx={{ marginTop: 0 }}>
                   Lorem ipsum, or lipsum as it is sometimes known, is dummy text
                   used in laying out print, graphic or web designs.
-                </Styled.p>
+                </Themed.p>
                 <div sx={{ button: { width: 'auto' } }}>
                   <Button variant="primary">Optional CTA</Button>
                 </div>

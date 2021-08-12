@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import React, { useContext, useState } from 'react'
-import { jsx, Styled, useThemeUI } from 'theme-ui'
+import { jsx, Themed, useThemeUI } from 'theme-ui'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import { Palette } from '@uswitch/trustyle-utils.palette'
@@ -338,7 +338,7 @@ Accordion.Group = ({ children, iconClosed, iconOpen, className }) => {
 
 Accordion.Title = ({ children, as = 'h2', className }) => {
   return (
-    <Styled.h3
+    <Themed.h3
       as={as}
       sx={{
         variant: 'compounds.accordion.base.groupTitle'
@@ -346,6 +346,6 @@ Accordion.Title = ({ children, as = 'h2', className }) => {
       className={className}
     >
       {children}
-    </Styled.h3>
+    </Themed.h3>
   )
 }

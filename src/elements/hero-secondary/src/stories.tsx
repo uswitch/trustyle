@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import { boolean, select, text } from '@storybook/addon-knobs'
 
 import Breadcrumbs from '../../breadcrumbs/src'
@@ -78,13 +78,13 @@ export const ExampleWithKnobs = () => {
       >
         <Row>
           <Col span={[12, 12, 6]}>
-            <Styled.h1 sx={{ marginTop: 0, fontSize: ['lg', 'xl', 'xxl'] }}>
+            <Themed.h1 sx={{ marginTop: 0, fontSize: ['lg', 'xl', 'xxl'] }}>
               {headline}
-            </Styled.h1>
-            <Styled.p sx={{ marginTop: 0 }}>
+            </Themed.h1>
+            <Themed.p sx={{ marginTop: 0 }}>
               Lorem ipsum, or lipsum as it is sometimes known, is dummy text
               used in laying out print, graphic or web designs.
-            </Styled.p>
+            </Themed.p>
           </Col>
         </Row>
       </HeroSecondary>

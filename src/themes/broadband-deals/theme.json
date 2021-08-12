@@ -74,6 +74,7 @@
     }
   },
   "colors": {
+    "page-background": "transparent",
     "brand": "#520861",
     "text": "#686887",
     "grey-0": "#FFFFFF",
@@ -1855,6 +1856,7 @@
       "color": "dark-grey"
     },
     "root": {
+      "backgroundColor": "page-background",
       "fontFamily": "base",
       "fontSize": "base",
       "fontWeight": "base",

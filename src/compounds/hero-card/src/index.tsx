@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
@@ -22,7 +22,7 @@ const HeroCard: React.FC<Props> = ({ title, ctaText, children }) => {
       }}
     >
       <div sx={{ variant: styles('flexContainer') }}>
-        <Styled.h1>{title}</Styled.h1>
+        <Themed.h1>{title}</Themed.h1>
         <ButtonLink
           variant="primary"
           size="small"

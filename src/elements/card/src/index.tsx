@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
@@ -82,7 +82,7 @@ const Card: React.FC<Props> = ({
   const AspectRatioWrapper = (children: React.ReactNode) =>
     isAspectRatioBox ? (
       <div sx={{ variant: styles('aspectRatioWrapper') }}>
-        <Styled.a
+        <Themed.a
           sx={{ variant: styles('image') }}
           href={linkHref}
           onClick={trackInteraction}
@@ -90,16 +90,16 @@ const Card: React.FC<Props> = ({
           <div sx={{ variant: styles('aspectRatioBox') }}>
             <div sx={{ variant: styles('cardImage') }}>{children}</div>
           </div>
-        </Styled.a>
+        </Themed.a>
       </div>
     ) : (
-      <Styled.a
+      <Themed.a
         sx={{ variant: styles('image') }}
         href={linkHref}
         onClick={trackInteraction}
       >
         {children}
-      </Styled.a>
+      </Themed.a>
     )
 
   const journeyVariant = variant === 'journey-card'
@@ -155,9 +155,9 @@ const Card: React.FC<Props> = ({
           }}
         >
           {date && (
-            <Styled.p as="div" sx={{ variant: styles('date') }}>
+            <Themed.p as="div" sx={{ variant: styles('date') }}>
               {dayjs(date).format('DD MMMM YYYY')}
-            </Styled.p>
+            </Themed.p>
           )}
 
           {tag && (
@@ -167,9 +167,9 @@ const Card: React.FC<Props> = ({
           )}
 
           {superScript && (
-            <Styled.p as="div" sx={{ variant: styles('superScript') }}>
+            <Themed.p as="div" sx={{ variant: styles('superScript') }}>
               <p>{superScript}</p>
-            </Styled.p>
+            </Themed.p>
           )}
 
           {contentChildren && (
@@ -179,26 +179,26 @@ const Card: React.FC<Props> = ({
           )}
         </div>
         {title && (
-          <Styled.h3 sx={{ margin: '0', variant: styles('heading') }}>
-            <Styled.a href={linkHref} onClick={trackInteraction}>
+          <Themed.h3 sx={{ margin: '0', variant: styles('heading') }}>
+            <Themed.a href={linkHref} onClick={trackInteraction}>
               {title}
-            </Styled.a>
-          </Styled.h3>
+            </Themed.a>
+          </Themed.h3>
         )}
         {description && (
-          <Styled.p sx={{ variant: styles('description') }}>
+          <Themed.p sx={{ variant: styles('description') }}>
             {description}
-          </Styled.p>
+          </Themed.p>
         )}
         {linkText && !journeyVariant && (
-          <Styled.a
+          <Themed.a
             href={linkHref}
             onClick={trackInteraction}
             sx={{ textDecoration: 'underline', variant: styles('link') }}
           >
             {linkIcon && <Icon glyph={linkIcon} color="brand" />}
             {linkText}
-          </Styled.a>
+          </Themed.a>
         )}
         {linkText && journeyVariant && ((button && button) || JourneyButton)}
       </div>

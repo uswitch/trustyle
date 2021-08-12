@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled, useThemeUI } from 'theme-ui'
+import { jsx, Themed, useThemeUI } from 'theme-ui'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
 
 type Variant = 'pros' | 'cons' | 'checklist' | 'check-circle'
@@ -112,10 +112,10 @@ export const List: React.FC<ListProps> = ({
   }
 
   const h6 = (
-    <Styled.h6 sx={{ variant: getVariant('title') }}>
+    <Themed.h6 sx={{ variant: getVariant('title') }}>
       <span sx={{ display: 'none' }}>{getTitleIcon(variant)}</span>
       {title}
-    </Styled.h6>
+    </Themed.h6>
   )
 
   const childrenWithProps = () => {

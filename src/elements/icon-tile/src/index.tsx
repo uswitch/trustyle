@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 
 export enum DisplayVariant {
   Horizontal = 'horizontal',
@@ -58,7 +58,7 @@ const IconTile: React.FC<Props> = ({
       >
         {icon}
       </div>
-      <Styled.p
+      <Themed.p
         sx={{
           flex:
             displayVariant === DisplayVariant.Vertical ? null : [null, null, 1],
@@ -68,7 +68,7 @@ const IconTile: React.FC<Props> = ({
         }}
       >
         {children}
-      </Styled.p>
+      </Themed.p>
     </div>
   )
 }

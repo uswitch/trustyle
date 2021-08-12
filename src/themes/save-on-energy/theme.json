@@ -116,6 +116,7 @@
   "useBodyStyles": false,
 
   "colors": {
+    "page-background": "transparent",
     "primary": "#446db5",
     "secondary": "#00aa4e",
     "heading": "#443160",
@@ -160,6 +161,7 @@
 
   "styles": {
     "root": {
+      "backgroundColor": "page-background",
       "fontFamily": "base",
       "fontSize": "base",
       "fontWeight": "base",

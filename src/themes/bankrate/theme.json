@@ -81,6 +81,7 @@
   "useCustomProperties": false,
   "useBodyStyles": false,
   "colors": {
+    "page-background": "transparent",
     "brand": "#0157FF",
     "text": "#4c4c4c",
     "grey-0": "#FFFFFF",
@@ -176,6 +177,7 @@
       "lineHeight": "base"
     },
     "root": {
+      "backgroundColor": "page-background",
       "fontFamily": "base",
       "fontSize": "md",
       "fontWeight": "base",
@@ -544,7 +546,7 @@
           "outline": "none",
           "border": "none",
           "color": "battleshipGrey",
-          "backgroundColor": "veryLightGrey"
+          "transparentdColor": "veryLightGrey"
         }
       },
       "default": {

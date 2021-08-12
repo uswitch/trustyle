@@ -127,6 +127,7 @@
   "useCustomProperties": false,
   "useBodyStyles": false,
   "colors": {
+    "page-background": "transparent",
     "text": "#4c4c4c",
     "sunshine": "#FEC340",
     "burnt": "#FAA73F",
@@ -226,6 +227,7 @@
       "marginBottom": "base"
     },
     "root": {
+      "backgroundColor": "page-background",
       "fontFamily": "base",
       "fontSize": "base",
       "fontWeight": "base",
