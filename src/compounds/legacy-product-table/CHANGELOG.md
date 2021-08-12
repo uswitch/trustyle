@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.4.6...@uswitch/trustyle.legacy-product-table@1.5.0) (2021-08-12)
+
+
+### Bug Fixes
+
+* build fail due to the type issue ([3770ff9](https://github.com/uswitch/trustyle/commit/3770ff9))
+* bump cell and change rep bg color ([ca85aef](https://github.com/uswitch/trustyle/commit/ca85aef))
+* magic width numbers ([ec4f27f](https://github.com/uswitch/trustyle/commit/ec4f27f))
+
+
+### Features
+
+* add new loading design to the legact pt ([c744e9b](https://github.com/uswitch/trustyle/commit/c744e9b))
+* import wireframe cell ([e6eedee](https://github.com/uswitch/trustyle/commit/e6eedee))
+
+
+
+
+
 ## [1.4.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.4.5...@uswitch/trustyle.legacy-product-table@1.4.6) (2021-07-15)
 
 
