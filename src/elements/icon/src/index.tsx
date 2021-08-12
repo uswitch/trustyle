@@ -10,6 +10,7 @@ import { Book } from './book'
 import { BookClosed } from './book-closed'
 import { Bookmark } from './bookmark'
 import { BookmarkFilled } from './bookmark-filled'
+import { Bullet } from './bullet'
 import { Calendar } from './calendar'
 import { Caret } from './caret'
 import { Car } from './car'
@@ -45,6 +46,7 @@ import { Mobile } from './mobile'
 import { MoneyFilter } from './money-filter'
 import { One } from './one'
 import { Person } from './person'
+import { PersonCircle } from './person-circle'
 import { Phone } from './phone'
 import { Plus } from './plus'
 import { PoundCircle } from './pound-circle'
@@ -80,6 +82,7 @@ export type Glyph =
   | 'book-closed'
   | 'bookmark'
   | 'bookmark-filled'
+  | 'bullet'
   | 'calendar'
   | 'car'
   | 'caret'
@@ -117,6 +120,7 @@ export type Glyph =
   | 'pencil'
   | 'person'
   | 'person-bold'
+  | 'person-circle'
   | 'people-bold'
   | 'phone'
   | 'phone-simple'
@@ -179,7 +183,8 @@ export const Icon: React.FC<Props> = ({
       return <Bookmark color={color} size={size} />
     case 'bookmark-filled':
       return <BookmarkFilled color={color} size={size} />
-
+    case 'bullet':
+      return <Bullet color={color} size={size} />
     case 'calendar':
       return <Calendar color={color} size={size} />
     case 'car':
@@ -256,6 +261,8 @@ export const Icon: React.FC<Props> = ({
       return <Person color={color} size={size} />
     case 'person-bold':
       return <PersonBold color={color} size={size} />
+    case 'person-circle':
+      return <PersonCircle color={color} size={size} />
     case 'people-bold':
       return <PeopleBold color={color} size={size} />
     case 'phone':
