@@ -1231,8 +1231,8 @@
         ">div>*:not(span)": {
           "mt": 0
         },
-        ":first-of-type": {
-          ":not(hr)": {
+        "h1,h2,h3,h4,h5,h6,p": {
+          "&:first-of-type": {
             "mt": 0
           }
         }

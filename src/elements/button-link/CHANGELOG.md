@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button-link@3.2.8...@uswitch/trustyle.button-link@3.2.9) (2021-08-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.button-link
+
+
+
+
+
 ## [3.2.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button-link@3.2.7...@uswitch/trustyle.button-link@3.2.8) (2021-06-16)
 
 **Note:** Version bump only for package @uswitch/trustyle.button-link

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.18](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.1.17...@uswitch/trustyle.input@2.1.18) (2021-08-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.input
+
+
+
+
+
 ## [2.1.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.input@2.1.16...@uswitch/trustyle.input@2.1.17) (2021-06-16)
 
 **Note:** Version bump only for package @uswitch/trustyle.input

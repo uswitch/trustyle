@@ -4,7 +4,7 @@ import * as React from 'react'
 import { jsx, Styled, useThemeUI } from 'theme-ui'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
 
-type Variant = 'pros' | 'cons' | 'checklist' | 'check-circle'
+type Variant = 'pros' | 'cons' | 'checklist' | 'check-circle' | 'bullet'
 
 const getTitleIcon = (variant?: Variant) => {
   const { theme }: any = useThemeUI()
