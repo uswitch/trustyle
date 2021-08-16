@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
+import WireFrameCell from '@uswitch/trustyle.wireframe-cell'
 
 import { CardContext, forceMobile } from '../generics'
+
 
 import CellBase from './cell-base'
 
@@ -10,15 +12,30 @@ export interface CellSecondaryProps
   extends React.HTMLAttributes<HTMLDivElement> {
   label: string
   headerImage?: boolean
+  isWireFrame?: boolean
 }
 
 const ProductTableCellSecondary: React.FC<CellSecondaryProps> = ({
   children,
   label,
-  headerImage
+  headerImage,
+  isWireFrame = false
 }) => {
   const { isCard } = React.useContext(CardContext)
   const forcedMobile = forceMobile(isCard)
+
+  const wireFrameStyles = {
+    label: {
+      width: '45%',
+      height: '10px',
+      marginBottom: 'xs'
+    },
+    description: {
+      width: '65%',
+      height: '17px'
+    }
+  }
+
   return (
     <CellBase
       sx={{
@@ -56,7 +73,8 @@ const ProductTableCellSecondary: React.FC<CellSecondaryProps> = ({
             'variants.redesign.'}cellContent.variants.inSplit.label`
         }}
       >
-        {label}
+        {isWireFrame && <WireFrameCell styles={wireFrameStyles.label} />}
+        {!isWireFrame && label}
       </div>
       <div
         sx={{
@@ -79,7 +97,8 @@ const ProductTableCellSecondary: React.FC<CellSecondaryProps> = ({
             'variants.redesign.'}cellContent.variants.inSplit.content`
         }}
       >
-        {children}
+        {isWireFrame && <WireFrameCell styles={wireFrameStyles.description} />}
+        {!isWireFrame && children}
       </div>
     </CellBase>
   )
