@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.17.2...@uswitch/trustyle.product-table@2.17.3) (2021-08-16)
+
+
+### Bug Fixes
+
+* prettier ([2aac3be](https://github.com/uswitch/trustyle/commit/2aac3be))
+* pt cell content ([bfc864e](https://github.com/uswitch/trustyle/commit/bfc864e))
+
+
+
+
+
 ## [2.17.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.17.1...@uswitch/trustyle.product-table@2.17.2) (2021-08-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.product-table
