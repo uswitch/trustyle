@@ -5,7 +5,6 @@ import WireFrameCell from '@uswitch/trustyle.wireframe-cell'
 
 import { CardContext, forceMobile } from '../generics'
 
-
 import CellBase from './cell-base'
 
 export interface CellSecondaryProps
