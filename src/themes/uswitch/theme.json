@@ -3392,6 +3392,68 @@
         "lineHeight": "heading"
       }
     },
+    "information-panel": {
+      "block": {
+        "title": {
+          "fontSize": "sm",
+          "fontStyle": "normal",
+          "fontWeight": "xbold",
+          "fontFamily": "heading",
+          "color": "#29335C",
+          "mb": "5px",
+          "textAlign": "left"
+        }
+      },
+      "text": {
+        "fontSize": "xxs",
+        "my": "xxxs",
+        "mx": "0",
+        "color": "grey-70"
+      },
+      "list": {
+        "tdSx": {
+          "backgroundColor": "white",
+          "fontSize": "13px",
+          "fontFamily": "base",
+          "px": 0,
+          "py": "xxs"
+        },
+        "tdSxWithLabel": {
+          "variant": "compounds.information-panel.list.tdSx",
+          "fontWeight": "xbold",
+          "pr": "xxs"
+        },
+        "tdSxWithValue": {
+          "variant": "compounds.information-panel.list.tdSx",
+          "pl": "xxs",
+          "textAlign": "right"
+        },
+        "trSx": {
+          "borderBottom": "1px solid",
+          "borderBottomColor": "grey-20",
+          ":last-child": {
+            "borderBottom": "0"
+          }
+        }
+      },
+      "table": {
+        "trSx": {
+          "variant": "compounds.information-panel.list.trSx"
+        },
+        "tdSx": {
+          "variant": "compounds.information-panel.list.tdSx",
+          "padding": "sm",
+          "textAlign": "center",
+          ":first-of-type": {
+            "pl": 0,
+            "textAlign": "left"
+          },
+          ":last-child": {
+            "pr": 0
+          }
+        }
+      }
+    },
     "container": {
       "flex": {
         "display": "flex",

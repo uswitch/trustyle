@@ -2818,6 +2818,68 @@
         }
       }
     },
+    "information-panel": {
+      "block": {
+        "title": {
+          "fontSize": "md",
+          "fontStyle": "normal",
+          "fontWeight": "bold",
+          "fontFamily": "heading",
+          "color": "experimental-text",
+          "mb": "5px",
+          "textAlign": "left"
+        }
+      },
+      "text": {
+        "fontSize": "xs",
+        "my": "xxs",
+        "mx": 0,
+        "color": "grey-80"
+      },
+      "list": {
+        "tdSx": {
+          "backgroundColor": "white",
+          "fontSize": "13px",
+          "fontFamily": "base",
+          "px": 0,
+          "py": "xs"
+        },
+        "tdSxWithLabel": {
+          "variant": "compounds.information-panel.list.tdSx",
+          "fontWeight": "bold",
+          "pr": "xs"
+        },
+        "tdSxWithValue": {
+          "variant": "compounds.information-panel.list.tdSx",
+          "pl": "xs",
+          "textAlign": "right"
+        },
+        "trSx": {
+          "borderBottom": "1px solid",
+          "borderBottomColor": "#D0D0D3",
+          ":last-child": {
+            "borderBottom": 0
+          }
+        }
+      },
+      "table": {
+        "trSx": {
+          "variant": "compounds.information-panel.list.trSx"
+        },
+        "tdSx": {
+          "variant": "compounds.information-panel.list.tdSx",
+          "padding": "sm",
+          "textAlign": "center",
+          ":first-of-type": {
+            "pl": 0,
+            "textAlign": "left"
+          },
+          ":last-child": {
+            "pr": 0
+          }
+        }
+      }
+    },
     "accordion": {
       "base": {
         "integrationWrapper": {
