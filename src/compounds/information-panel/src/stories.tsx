@@ -11,7 +11,6 @@ import InformationPanel from './'
 
 const {
   MoreInformationBlock,
-  MoreInformationButton,
   MoreInformationList,
   MoreInformationTable,
   MoreInformationText
@@ -223,13 +222,18 @@ const textContent = (
 )
 
 const moreInformationButton = (
-  <MoreInformationButton
+  <CtaCell
+    styles={{
+      width: '100%',
+      fontSize: '14px',
+      marginBottom: 0
+    }}
     onClick={moreInformationButtonClick}
     href={clickableRow}
-    Wrapper={CtaCell}
+    variant="eligibility"
   >
     See Deal
-  </MoreInformationButton>
+  </CtaCell>
 )
 
 const eligibity = (

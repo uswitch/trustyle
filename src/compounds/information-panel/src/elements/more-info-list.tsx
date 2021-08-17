@@ -77,5 +77,3 @@ export const MoreInformationList: React.FC<MoreInformationListProps> = ({
     </tbody>
   </table>
 )
-
-// export default MoreInformationList

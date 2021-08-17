@@ -81,5 +81,3 @@ export const Eligibility: React.FC<EligibilityProps> = ({
     </div>
   )
 }
-
-// export default Eligibility

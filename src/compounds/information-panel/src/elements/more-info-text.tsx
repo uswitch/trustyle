@@ -37,5 +37,3 @@ export const MoreInformationText: React.FC<MoreInformationTextProps> = ({
     })}
   </React.Fragment>
 )
-
-// export default MoreInformationText

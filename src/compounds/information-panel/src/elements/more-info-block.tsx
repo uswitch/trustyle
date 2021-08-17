@@ -44,5 +44,3 @@ export const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
     </div>
   </div>
 )
-
-// export default MoreInformationBlock

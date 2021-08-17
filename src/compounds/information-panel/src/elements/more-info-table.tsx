@@ -51,5 +51,3 @@ export const MoreInformationTable: React.FC<MoreInformationTableProps> = ({
     </tbody>
   </table>
 )
-
-// export default MoreInformationTable
