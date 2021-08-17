@@ -125,8 +125,8 @@ const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
         margin: ['15px', '15px 0'],
         paddingLeft: [0, '160px'],
         fontSize: '12px',
-        color: '#858f94',
-        fontWeight: '400'
+        color: '#6d7375',
+        fontWeight: '300'
       }}
     >
       {children}
