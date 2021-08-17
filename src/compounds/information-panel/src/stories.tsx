@@ -9,8 +9,8 @@ import {
   Eligibility,
   MoreInformationBlock,
   MoreInformationList,
-  MoreInformationTable
-  // MoreInformationText
+  MoreInformationTable,
+  MoreInformationText
 } from './'
 
 export default {
@@ -192,13 +192,13 @@ const table = (
   />
 )
 
-// const infoText = (
-//   <MoreInformationText
-//     content={[
-//       '<b>Early repayment charge</b><br/>If you pay all or part of your mortgage early you will be charged: <br/>- 2.00% of amount paid, before 30 Jun 2022<br/>- then 1.00% of amount paid, until 30 Jun 2023<p>Other fees may apply.</p>'
-//     ]}
-//   />
-// )
+const infoText = (
+  <MoreInformationText
+    content={[
+      '<b>Early repayment charge</b><br/>If you pay all or part of your mortgage early you will be charged: <br/>- 2.00% of amount paid, before 30 Jun 2022<br/>- then 1.00% of amount paid, until 30 Jun 2023<p>Other fees may apply.</p>'
+    ]}
+  />
+)
 
 const eligibilityContent = (
   <MoreInformationBlock title="Eligibility" key="key-1">
@@ -212,60 +212,63 @@ const ratesContent = (
   </MoreInformationBlock>
 )
 
-// const textContent = (
-//   <MoreInformationBlock title="Repayment" key="key-3">
-//     {infoText}
-//   </MoreInformationBlock>
-// )
+const textContent = (
+  <MoreInformationBlock title="Repayment" key="key-3">
+    {infoText}
+  </MoreInformationBlock>
+)
 
-// const moreInformationButton = (
-//   // <CtaCell
-//   //   styles={{
-//   //     width: '100%',
-//   //     fontSize: '14px',
-//   //     marginBottom: 0
-//   //   }}
-//   //   onClick={moreInformationButtonClick}
-//   //   href={clickableRow}
-//   //   variant="eligibility"
-//   // >
-//   //   See Deal
-//   // </CtaCell>
-// )
+const moreInformationButton = (
+  <button>Hello</button>
+  // <CtaCell
+  //   styles={{
+  //     width: '100%',
+  //     fontSize: '14px',
+  //     marginBottom: 0
+  //   }}
+  //   onClick={moreInformationButtonClick}
+  //   href={clickableRow}
+  //   variant="eligibility"
+  // >
+  //   See Deal
+  // </CtaCell>
+)
 
 const eligibity = (
   <Eligibility
     moreInformationPanel={[eligibilityContent, ratesContent]}
     moreInformationLabel={moreInfoLabel}
+    moreInformationButton={moreInformationButton}
   />
 )
 
-// const eligibityWithText = (
-//   <Eligibility
-//     moreInformationPanel={[eligibilityContent, textContent]}
-//     moreInformationLabel={moreInfoLabel}
-//   />
-// )
+const eligibityWithText = (
+  <Eligibility
+    moreInformationPanel={[eligibilityContent, textContent]}
+    moreInformationLabel={moreInfoLabel}
+    moreInformationButton={moreInformationButton}
+  />
+)
 
 export const ExampleWithEligibility = () => (
   <React.Fragment>{eligibity}</React.Fragment>
 )
 
-// export const ExampleWithText = () => (
-//   <React.Fragment>{eligibityWithText}</React.Fragment>
-// )
+export const ExampleWithText = () => (
+  <React.Fragment>{eligibityWithText}</React.Fragment>
+)
 
-// ExampleWithText.story = {
-//   parameters: {
-//     percy: { skip: true }
-//   }
-// }
+ExampleWithText.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
 
 export const AutomatedTests = () => {
   return (
     <AllThemes>
       <ExampleWithEligibility />
-      {/* <ExampleWithText /> */}
+      <ExampleWithText />
     </AllThemes>
   )
 }
