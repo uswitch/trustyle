@@ -971,7 +971,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
               {title}
             </Styled.h5>
           )}
-          {telephone && <TelephoneInfo telephone={telephone} />}
+          {!isWireFrame && telephone && <TelephoneInfo telephone={telephone} />}
         </header>
 
         <div
@@ -985,7 +985,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           {children}
         </div>
 
-        {info.length > 0 && (
+        {!isWireFrame && info.length > 0 && (
           <AdditionalInfo>
             {info.map((item, key) => {
               return <div key={key}>{item}</div>
@@ -993,26 +993,24 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           </AdditionalInfo>
         )}
 
-        {info.length === 0 && isWireFrame && (
-          <WireFrame type="additionalInfo" />
-        )}
+        {isWireFrame && <WireFrame type="additionalInfo" />}
 
-        {representativeExample && (
+        {!isWireFrame && representativeExample && (
           <RepresentativeExample text={representativeExample} />
         )}
 
-        {!representativeExample && isWireFrame && (
-          <WireFrame type="representativeExample" />
-        )}
+        {isWireFrame && <WireFrame type="representativeExample" />}
       </RowWrapper>
 
-      {moreInformationPanel && moreInformationPanel.length > 0 && (
-        <Eligibility
-          moreInformationPanel={moreInformationPanel}
-          moreInformationButton={moreInformationButton}
-          moreInformationLabel={moreInformationLabel}
-        />
-      )}
+      {!isWireFrame &&
+        moreInformationPanel &&
+        moreInformationPanel.length > 0 && (
+          <Eligibility
+            moreInformationPanel={moreInformationPanel}
+            moreInformationButton={moreInformationButton}
+            moreInformationLabel={moreInformationLabel}
+          />
+        )}
     </article>
   )
 }
