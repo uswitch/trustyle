@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
-import { CtaCell } from '@uswitch/trustyle.legacy-product-table'
 
+import { CtaCell } from '../../../compounds/legacy-product-table/src'
 import AllThemes from '../../../utils/all-themes'
 
 import {
