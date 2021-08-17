@@ -1,4 +1,4 @@
-import { SxStyleProp, Theme } from 'theme-ui'
+import { ThemeUIStyleObject } from 'theme-ui'
 
 const svgSafeColor = (color: string) => color.replace('#', '%23')
 
@@ -11,8 +11,8 @@ interface InputTile {
 }
 
 export const input = (type: 'radio' | 'checkbox') => (
-  theme: Theme & InputTile
-): SxStyleProp => {
+  theme: any & InputTile
+): any => {
   let inputColor = 'black'
 
   if (
@@ -56,7 +56,7 @@ export const input = (type: 'radio' | 'checkbox') => (
   }
 }
 
-export const container = (type: 'radio' | 'checkbox') => (): SxStyleProp => ({
+export const container = (type: 'radio' | 'checkbox'): ThemeUIStyleObject => ({
   boxSizing: 'border-box',
   cursor: 'pointer',
   display: 'block',
@@ -75,7 +75,7 @@ export const container = (type: 'radio' | 'checkbox') => (): SxStyleProp => ({
   variant: 'elements.input.tile'
 })
 
-export const content: SxStyleProp = {
+export const content: ThemeUIStyleObject = {
   position: 'absolute',
   top: 0,
   left: 0,
@@ -93,7 +93,7 @@ export const content: SxStyleProp = {
 }
 
 // Wrapper to prevent flexbox from stretching images with a percentage width
-export const childrenWrapper: SxStyleProp = {
+export const childrenWrapper: ThemeUIStyleObject = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',

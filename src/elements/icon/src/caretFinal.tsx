@@ -25,7 +25,7 @@ export const CaretFinal: React.FC<Props> = ({
       ...st.size(size),
       fill: 'none',
       stroke: color,
-      strokeLinecap: 'square',
+      strokeLinecap: 'square' as const,
       strokeWidth: 2
     }}
     viewBox="0 0 17 13"

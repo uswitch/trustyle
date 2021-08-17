@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 
 export type Variant = 'base' | 'quickLinks'
 
@@ -34,7 +34,7 @@ export const LinkList: React.FC<ListLinkProps> = ({
         >
           {icon}
           {title && (
-            <Styled.h3
+            <Themed.h3
               as="h2"
               sx={{
                 paddingTop: 'xs',
@@ -43,7 +43,7 @@ export const LinkList: React.FC<ListLinkProps> = ({
               }}
             >
               {title}
-            </Styled.h3>
+            </Themed.h3>
           )}
         </header>
       )}
@@ -87,7 +87,7 @@ export const LinkListItem: React.FC<ListLinkItemProps> = ({
       }}
       className={className}
     >
-      <Styled.a
+      <Themed.a
         href={href}
         sx={{
           textDecoration: 'none',
@@ -98,7 +98,7 @@ export const LinkListItem: React.FC<ListLinkItemProps> = ({
         }}
       >
         {children}
-      </Styled.a>
+      </Themed.a>
       {icon}
     </li>
   )

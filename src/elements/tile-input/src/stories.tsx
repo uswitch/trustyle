@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { ChangeEvent, useState } from 'react'
-import { jsx } from '@emotion/core'
+import { jsx } from '@emotion/react'
 import { Column, Container, Row } from '@uswitch/trustyle.grid'
 
 import AllThemes from '../../../utils/all-themes'

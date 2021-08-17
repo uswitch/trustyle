@@ -5,11 +5,13 @@ import { jsx, useThemeUI } from 'theme-ui'
 import get from '@uswitch/trustyle-utils.get'
 import { Palette } from '@uswitch/trustyle-utils.palette'
 
+import { SxStyleProp } from '../../../../types/theme-ui'
+
 type ArrayOrNot<T> = T | T[]
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   breadcrumbs?: React.ReactElement
-  container?: React.FC<any>
+  container?: React.FC & SxStyleProp
   fgImage?: string
   fgImageType?: 'background' | 'img'
   fgImagePosition?:
@@ -37,7 +39,11 @@ const makeStyles = (variant?: string) => (element?: string) =>
     element ? `.${element}` : ''
   }`
 
-const DefaultContainer: React.FC = ({ children }) => (
+const DefaultContainer: React.FC & SxStyleProp = ({
+  children
+}: {
+  children: any
+}) => (
   <div sx={{ maxWidth: 1024, margin: '0 auto', paddingX: 10 }}>{children}</div>
 )
 
@@ -71,7 +77,7 @@ const Hero: React.FC<Props> = ({
       >
         <div
           sx={{
-            position: 'relative',
+            position: 'relative' as const,
             overflow: 'hidden',
             background: customBgColor || undefined
           }}
@@ -85,14 +91,14 @@ const Hero: React.FC<Props> = ({
             )}
             <div
               sx={{
-                position: 'relative',
+                position: 'relative' as const,
                 display: 'block',
-                flexDirection: 'row-reverse'
+                flexDirection: 'row-reverse' as const
               }}
             >
               <div
                 sx={{
-                  position: 'absolute',
+                  position: 'absolute' as const,
                   left: [0, '45%'],
                   right: 0,
                   top: 0,
@@ -116,7 +122,7 @@ const Hero: React.FC<Props> = ({
                   <img
                     sx={{
                       maxWidth: '100%',
-                      position: 'absolute',
+                      position: 'absolute' as const,
                       ...fgImagePosition
                     }}
                     src={fgImage}
@@ -126,7 +132,7 @@ const Hero: React.FC<Props> = ({
               </div>
               <div
                 sx={{
-                  position: 'relative',
+                  position: 'relative' as const,
                   paddingTop: ['sm', 'xxl'],
                   paddingBottom: ['sm', 'xxl'],
                   variant: styles('content')
@@ -142,7 +148,7 @@ const Hero: React.FC<Props> = ({
         <img
           sx={{
             maxWidth: '100%',
-            position: 'relative',
+            position: 'relative' as const,
             display: 'none',
             marginTop: `-${bottomImageOverflow}`,
             marginLeft: 'auto',

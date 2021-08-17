@@ -68,7 +68,7 @@ const PhoneNumberModal: React.FC<Props> = ({
       <div
         sx={{
           display: 'flex',
-          flexDirection: 'column',
+          flexDirection: 'column' as const,
           marginX: ['sm', 'xl'],
           paddingBottom: 'lg',
           marginBottom: ['0', 'xs']
@@ -78,10 +78,10 @@ const PhoneNumberModal: React.FC<Props> = ({
           sx={{
             width: '100%',
             display: 'flex',
-            flexDirection: ['column', 'row'],
+            flexDirection: ['column' as const, 'row' as const],
             paddingLeft: ['auto', 'lg'],
             marginBottom: ['xs', 'sm'],
-            textAlign: ['center', 'left']
+            textAlign: ['center' as const, 'left' as const]
           }}
         >
           <ImgixImage
@@ -134,7 +134,7 @@ const PhoneNumberModal: React.FC<Props> = ({
               </a>
             </div>
             {phoneNumberModalInfo.openingTimes && (
-              <div sx={{ textAlign: 'left' }}>
+              <div sx={{ textAlign: 'left' as const }}>
                 <h5
                   sx={{
                     variant: 'compounds.phone-number-modal.heading',
@@ -160,7 +160,7 @@ const PhoneNumberModal: React.FC<Props> = ({
         {phoneNumberModalInfo.url && (
           <div
             sx={{
-              textAlign: 'center',
+              textAlign: 'center' as const,
               marginBottom: ['0', 'xs'],
               variant: 'compounds.phone-number-modal.url'
             }}
@@ -180,7 +180,7 @@ const PhoneNumberModal: React.FC<Props> = ({
         )}
         <div
           sx={{
-            textAlign: 'center',
+            textAlign: 'center' as const,
             paddingTop: 'sm',
             paddingX: ['sm', 'lg'],
             backgroundColor: 'grey-10'

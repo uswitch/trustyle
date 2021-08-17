@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { css, jsx } from '@emotion/core'
+import { css, jsx } from '@emotion/react'
 import { number, text } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
@@ -47,13 +47,13 @@ const CustomLink: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   </a>
 )
 
-export const StyledComponentAsProp = () => (
+export const ThemedComponentAsProp = () => (
   <ButtonLink variant="primary" as={CustomLink} to="special-url">
     Using <em>as</em> prop
   </ButtonLink>
 )
 
-StyledComponentAsProp.story = {
+ThemedComponentAsProp.story = {
   parameters: {
     percy: { skip: true }
   }

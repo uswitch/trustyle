@@ -1,4 +1,4 @@
-import { css, keyframes, SerializedStyles } from '@emotion/core'
+import { css, keyframes, SerializedStyles } from '@emotion/react'
 
 const loading = keyframes`
   0% {

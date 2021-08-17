@@ -42,6 +42,37 @@ export const SimpleInput = React.forwardRef(
     const prefixRef: RefObject<HTMLDivElement> = React.createRef()
     const suffixRef: RefObject<HTMLDivElement> = React.createRef()
 
+    const additionalProps = (): object => {
+      const defaultProps = [
+        'hasError',
+        'type',
+        'placeholder',
+        'onChange',
+        'name',
+        'defaultValue',
+        'prefix',
+        'suffix',
+        'inputSize',
+        'uppercase',
+        'onKeyDown'
+      ]
+
+      const regex = new RegExp('\\b(' + defaultProps.join('|') + ')\\b', 'g')
+
+      let tempArr: object = {}
+
+      Object.keys(props).forEach(function(key: string) {
+        if (!regex.test(key)) {
+          tempArr = {
+            ...tempArr,
+            [key]: props[key as keyof Props]
+          }
+        }
+      })
+
+      return tempArr
+    }
+
     useEffect(() => {
       setPrefixWidth(prefixRef?.current?.offsetWidth || 0)
       setSuffixWidth(suffixRef?.current?.offsetWidth || 0)
@@ -83,8 +114,9 @@ export const SimpleInput = React.forwardRef(
         <input
           sx={{
             variant: 'elements.simple-input.base',
-            textAlign: inputSize === 'sm' ? 'center' : 'left',
-            textTransform: uppercase && 'uppercase'
+            textAlign:
+              inputSize === 'sm' ? ('center' as const) : ('left' as const),
+            textTransform: uppercase && ('uppercase' as const)
           }}
           placeholder={placeholder}
           ref={ref}
@@ -95,6 +127,7 @@ export const SimpleInput = React.forwardRef(
           onKeyDown={onKeyDown}
           name={name}
           type={type || 'text'}
+          {...additionalProps()}
         />
         {suffix && (
           <span

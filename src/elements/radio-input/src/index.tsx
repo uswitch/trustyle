@@ -28,13 +28,13 @@ export const RadioInput: React.FC<Props> = ({ label, ...inputProps }) => (
     <span
       sx={{
         alignItems: 'center',
-        boxSizing: 'border-box',
+        boxSizing: 'border-box' as const,
         cursor: 'pointer',
         display: 'flex',
         padding: 'base',
         paddingLeft: 0,
         width: '100%',
-        userSelect: 'none',
+        userSelect: 'none' as const,
         '&::before': {
           borderRadius: '50%',
           borderStyle: 'solid',

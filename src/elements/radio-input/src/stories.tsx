@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { number } from '@storybook/addon-knobs'
-import { css, jsx } from '@emotion/core'
+import { css, jsx } from '@emotion/react'
 
 import { RadioInput } from './.'
 

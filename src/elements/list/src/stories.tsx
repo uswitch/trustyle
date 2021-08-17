@@ -31,7 +31,7 @@ export const Example = () => (
 
     <div
       sx={{
-        textAlign: 'center'
+        textAlign: 'center' as const
       }}
     >
       <List title="bullet" items={arr1} />

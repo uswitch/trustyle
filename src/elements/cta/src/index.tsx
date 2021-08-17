@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled, useThemeUI } from 'theme-ui'
+import { jsx, Themed, useThemeUI } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
 import get from '@uswitch/trustyle-utils.get'
 
@@ -43,17 +43,17 @@ const CTA: React.FC<CTAProps> = ({
     >
       <div>
         {title && (
-          <Styled.h3
+          <Themed.h3
             sx={{ marginTop: 0, variant: `${lookup(variant)}.title` }}
             as="h2"
           >
             {title}
-          </Styled.h3>
+          </Themed.h3>
         )}
         {text && (
-          <Styled.p sx={{ variant: `${lookup(variant)}.text` }}>
+          <Themed.p sx={{ variant: `${lookup(variant)}.text` }}>
             {text}
-          </Styled.p>
+          </Themed.p>
         )}
       </div>
       <div sx={{ flexShrink: 0 }}>

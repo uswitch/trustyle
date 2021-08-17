@@ -34,7 +34,7 @@ const selectReducer = (
 function getNumbers(
   currentPage: number,
   totalPages: number,
-  isMinimized: boolean = false
+  isMinimized = false
 ): PaginationNumbers {
   const AROUND_CURRENT = 1
   const END_LENGTH = isMinimized ? 2 : 5 + AROUND_CURRENT * 2
@@ -263,7 +263,7 @@ const Pagination: React.FC<Props> = ({
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                position: 'relative'
+                position: 'relative' as const
               }}
             >
               {number}

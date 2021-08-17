@@ -40,7 +40,7 @@ const Billboard: React.FC<Props> = ({
           <div
             sx={{
               display: 'flex',
-              flexDirection: 'column',
+              flexDirection: 'column' as const,
               paddingX: 'sm',
               paddingTop: 'sm',
               marginBottom: fullWidthSlot ? ['0', 'xs'] : '0'
@@ -78,14 +78,21 @@ const Billboard: React.FC<Props> = ({
                   'auto',
                   !primarySlot && bgImage ? '402px' : 'auto'
                 ],
-                flexDirection: ['column', 'column', 'row'],
+                flexDirection: [
+                  'column' as const,
+                  'column' as const,
+                  'row' as const
+                ],
                 justifyContent: ['center', 'center', 'space-between']
               }}
             >
               <div
                 sx={{
                   alignSelf: 'center',
-                  textAlign: primarySlot || bgImage ? 'left' : 'center',
+                  textAlign:
+                    primarySlot || bgImage
+                      ? ('left' as const)
+                      : ('center' as const),
                   variant: styles(),
                   marginX: primarySlot || bgImage ? ['0', 'auto', '0'] : 'auto',
                   width: ['auto', '70%', '50%']
@@ -113,7 +120,7 @@ const Billboard: React.FC<Props> = ({
                     width: '404px',
                     height: '416px',
                     display: ['none', 'none', 'block'],
-                    position: 'relative',
+                    position: 'relative' as const,
                     top: '-14px',
                     background: `url(${bgImage}) no-repeat right bottom / contain`
                   }}

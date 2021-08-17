@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import React, { useState } from 'react'
-import { jsx, Styled, useThemeUI } from 'theme-ui'
+import { jsx, Themed, useThemeUI } from 'theme-ui'
 import {
   Col,
   Container as DefaultContainer,
@@ -80,7 +80,7 @@ const Category: React.FC<CategoryProps> = ({
         )}
         <Row>
           <Col span={contentSpan} sx={{ marginBottom: [0, 0] }}>
-            <Styled.h1
+            <Themed.h1
               as={text ? 'h1' : 'p'}
               sx={{
                 padding: 0,
@@ -89,9 +89,9 @@ const Category: React.FC<CategoryProps> = ({
               }}
             >
               {title}
-            </Styled.h1>
+            </Themed.h1>
             {text && (
-              <Styled.p
+              <Themed.p
                 sx={{
                   marginBottom: 0,
                   variant: 'elements.category.text',
@@ -101,7 +101,7 @@ const Category: React.FC<CategoryProps> = ({
                 }}
               >
                 {text}
-              </Styled.p>
+              </Themed.p>
             )}
           </Col>
           {Image ? (

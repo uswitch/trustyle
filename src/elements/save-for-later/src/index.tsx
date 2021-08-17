@@ -20,8 +20,8 @@ const SaveForLater: React.FC<Props> = ({
       <input
         sx={{
           marginLeft: '-9000px',
-          appearance: 'none',
-          position: 'absolute'
+          appearance: 'none' as const,
+          position: 'absolute' as const
         }}
         checked={checked}
         onChange={onChange}

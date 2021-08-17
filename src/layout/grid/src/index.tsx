@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx } from '@emotion/core'
+import { jsx } from '@emotion/react'
 import { breakpoints, Breakpoints } from '@uswitch/trustyle.styles'
 
 import * as st from './styles'
@@ -39,10 +39,10 @@ const parseSizeFromProps = (fn: (breakpoint: [string, any]) => any) =>
   Object.entries(breakpoints).map(fn)
 
 const parseDisplay = (props: any): string[] =>
-  parseSizeFromProps(([key, _]) => (props[`hide-${key}`] ? 'none' : 'block'))
+  parseSizeFromProps(([key]) => (props[`hide-${key}`] ? 'none' : 'block'))
 
 const parseSizes = (props: any): number[] =>
-  parseSizeFromProps(([key, _]) => parseFloat(props[key]) || 1)
+  parseSizeFromProps(([key]) => parseFloat(props[key]) || 1)
 
 export const Column: React.FC<ColumnProps> = ({
   children,

@@ -42,7 +42,7 @@ const EmbeddedVideo: React.FC<Props> = ({
   <div className={className}>
     <div
       sx={{
-        position: 'relative',
+        position: 'relative' as const,
         width: '100%',
         height: '0',
         paddingBottom: '56.25%',
@@ -52,7 +52,7 @@ const EmbeddedVideo: React.FC<Props> = ({
     >
       <iframe
         sx={{
-          position: 'absolute',
+          position: 'absolute' as const,
           top: '0',
           left: '0',
           width: '100%',

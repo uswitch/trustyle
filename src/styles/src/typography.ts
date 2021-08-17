@@ -1,4 +1,4 @@
-import { css, SerializedStyles } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/react'
 
 import { black, cerulean, grey70, white } from './colors'
 import { pxToRem } from './utils'

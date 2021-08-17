@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Styled, ThemeProvider, ThemeProviderProps } from 'theme-ui'
+import { Themed, ThemeProvider } from 'theme-ui'
 
 import { themes as themeFiles } from './theme-selector'
 
@@ -25,11 +25,11 @@ const AllThemes: React.FC<Props> = ({ themes = [], children }) => {
       {themeKeys.map((key, index) => {
         const theme = themeFiles[`./${key}/theme.json`]
         return (
-          <ThemeProvider theme={theme as ThemeProviderProps<any>} key={index}>
-            <Styled.root>
+          <ThemeProvider theme={theme} key={index}>
+            <Themed.root>
               <h2>{key}:</h2>
               {children}
-            </Styled.root>
+            </Themed.root>
           </ThemeProvider>
         )
       })}

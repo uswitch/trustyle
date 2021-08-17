@@ -11,7 +11,7 @@ const styles = (element?: string) =>
 const alignCircle = (side: string) =>
   `${side !== 'center' ? `flex-${side}` : 'center'}`
 
-const drawCircle = (pct: number, isBackground: boolean = false) => {
+const drawCircle = (pct: number, isBackground = false) => {
   const cls = isBackground ? '-full' : ''
   const deg = (360 / 100) * pct
 

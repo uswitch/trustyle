@@ -1,12 +1,13 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 
 export enum DisplayVariant {
   Horizontal = 'horizontal',
   Vertical = 'vertical'
 }
+
 interface Props extends React.HTMLAttributes<any> {
   icon: React.ReactNode
   className?: string
@@ -22,12 +23,12 @@ const IconTile: React.FC<Props> = ({
   return (
     <div
       sx={{
-        boxSizing: 'border-box',
+        boxSizing: 'border-box' as const,
         display: 'flex',
         flexDirection:
           displayVariant === DisplayVariant.Vertical
-            ? 'column'
-            : ['column', 'column', 'row'],
+            ? ('column' as const)
+            : ['column' as const, 'column' as const, 'row' as const],
         height:
           displayVariant === DisplayVariant.Vertical ? 136 : [136, 136, 95],
         backgroundColor: 'white',
@@ -36,7 +37,7 @@ const IconTile: React.FC<Props> = ({
             ? 'sm'
             : ['sm', 'sm', 'lg'],
         paddingTop: 0,
-        textAlign: 'center',
+        textAlign: 'center' as const,
         borderRadius: 8,
         color: 'grey-100',
         textDecoration: 'none',
@@ -58,7 +59,7 @@ const IconTile: React.FC<Props> = ({
       >
         {icon}
       </div>
-      <Styled.p
+      <Themed.p
         sx={{
           flex:
             displayVariant === DisplayVariant.Vertical ? null : [null, null, 1],
@@ -68,7 +69,7 @@ const IconTile: React.FC<Props> = ({
         }}
       >
         {children}
-      </Styled.p>
+      </Themed.p>
     </div>
   )
 }
