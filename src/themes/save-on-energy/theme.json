@@ -116,6 +116,7 @@
   "useBodyStyles": false,
 
   "colors": {
+    "background": "initial",
     "primary": "#446db5",
     "secondary": "#00aa4e",
     "heading": "#443160",

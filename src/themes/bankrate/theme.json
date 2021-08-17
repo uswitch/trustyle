@@ -81,6 +81,7 @@
   "useCustomProperties": false,
   "useBodyStyles": false,
   "colors": {
+    "background": "initial",
     "brand": "#0157FF",
     "text": "#4c4c4c",
     "grey-0": "#FFFFFF",

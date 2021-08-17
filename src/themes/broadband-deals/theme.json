@@ -74,6 +74,7 @@
     }
   },
   "colors": {
+    "background": "initial",
     "brand": "#520861",
     "text": "#686887",
     "grey-0": "#FFFFFF",
