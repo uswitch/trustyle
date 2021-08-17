@@ -2,8 +2,8 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-import { CtaCell } from '../../../compounds/legacy-product-table/src'
 import AllThemes from '../../../utils/all-themes'
+import { ButtonLink } from '../../../elements/button-link/src'
 
 import {
   Eligibility,
@@ -219,18 +219,19 @@ const textContent = (
 )
 
 const moreInformationButton = (
-  <CtaCell
-    styles={{
+  <ButtonLink
+    sx={{
       width: '100%',
       fontSize: '14px',
       marginBottom: 0
     }}
-    onClick={moreInformationButtonClick}
+    variant="primary"
     href={clickableRow}
-    variant="eligibility"
+    target="_blank"
+    onClick={moreInformationButtonClick}
   >
     See Deal
-  </CtaCell>
+  </ButtonLink>
 )
 
 const eligibity = (
