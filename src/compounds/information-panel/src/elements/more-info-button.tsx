@@ -9,7 +9,7 @@ interface MoreInformationButtonProps {
   Wrapper: typeof React.Component
 }
 
-const MoreInformationButton: React.FC<MoreInformationButtonProps> = ({
+export const MoreInformationButton: React.FC<MoreInformationButtonProps> = ({
   onClick,
   children,
   href,
@@ -29,4 +29,4 @@ const MoreInformationButton: React.FC<MoreInformationButtonProps> = ({
   </Wrapper>
 )
 
-export default MoreInformationButton
+// export default MoreInformationButton

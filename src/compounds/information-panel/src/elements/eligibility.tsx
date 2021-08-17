@@ -10,7 +10,7 @@ interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
   moreInformationLabel?: string
 }
 
-const Eligibility: React.FC<EligibilityProps> = ({
+export const Eligibility: React.FC<EligibilityProps> = ({
   moreInformationPanel,
   moreInformationButton,
   moreInformationLabel = 'More information'
@@ -82,4 +82,4 @@ const Eligibility: React.FC<EligibilityProps> = ({
   )
 }
 
-export default Eligibility
+// export default Eligibility

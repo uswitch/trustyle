@@ -7,7 +7,9 @@ interface MoreInformationTextProps {
   content: string[]
 }
 
-const MoreInformationText = ({ content }: MoreInformationTextProps) => (
+export const MoreInformationText: React.FC<MoreInformationTextProps> = ({
+  content
+}) => (
   <React.Fragment>
     {content.map((chunk: string, i: number) => {
       if (chunk === null) {
@@ -36,4 +38,4 @@ const MoreInformationText = ({ content }: MoreInformationTextProps) => (
   </React.Fragment>
 )
 
-export default MoreInformationText
+// export default MoreInformationText

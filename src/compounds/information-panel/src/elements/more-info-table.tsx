@@ -7,7 +7,9 @@ interface MoreInformationTableProps {
   rows: any
 }
 
-const MoreInformationTable = ({ rows }: MoreInformationTableProps) => (
+export const MoreInformationTable: React.FC<MoreInformationTableProps> = ({
+  rows
+}) => (
   <table
     sx={{
       border: 'none',
@@ -50,4 +52,4 @@ const MoreInformationTable = ({ rows }: MoreInformationTableProps) => (
   </table>
 )
 
-export default MoreInformationTable
+// export default MoreInformationTable

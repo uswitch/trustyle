@@ -8,7 +8,7 @@ interface MoreInformationBlockProps
   title: string
 }
 
-const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
+export const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
   title,
   children
 }) => (
@@ -45,4 +45,4 @@ const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
   </div>
 )
 
-export default MoreInformationBlock
+// export default MoreInformationBlock

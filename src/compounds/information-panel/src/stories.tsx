@@ -5,7 +5,7 @@ import { jsx } from 'theme-ui'
 import AllThemes from '../../../utils/all-themes'
 import { CtaCell } from '../../legacy-product-table/src'
 
-import Eligibility from './elements/eligibility'
+import { Eligibility } from './elements/eligibility'
 
 import InformationPanel from './'
 

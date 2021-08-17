@@ -25,7 +25,9 @@ const format = (data: string | boolean | number) => {
   }
 }
 
-const MoreInformationList: React.FC<MoreInformationListProps> = ({ rows }) => (
+export const MoreInformationList: React.FC<MoreInformationListProps> = ({
+  rows
+}) => (
   <table
     sx={{
       border: 'none',
@@ -76,4 +78,4 @@ const MoreInformationList: React.FC<MoreInformationListProps> = ({ rows }) => (
   </table>
 )
 
-export default MoreInformationList
+// export default MoreInformationList
