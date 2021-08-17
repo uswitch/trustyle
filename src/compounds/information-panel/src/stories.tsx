@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
+import { CtaCell } from '@uswitch/trustyle.legacy-product-table'
 
 import AllThemes from '../../../utils/all-themes'
-// import { CtaCell } from '../../legacy-product-table/src'
 
 import {
   Eligibility,
@@ -17,11 +17,11 @@ export default {
   title: 'Compounds/InformationPanel'
 }
 
-// const clickableRow = 'https://www.money.co.uk'
+const clickableRow = 'https://www.money.co.uk'
 const moreInfoLabel = 'Custom More Info Label'
-// const moreInformationButtonClick = () => {
-//   console.log('More information clicked')
-// }
+const moreInformationButtonClick = () => {
+  console.log('More information clicked')
+}
 
 const list = (
   <MoreInformationList
@@ -219,19 +219,18 @@ const textContent = (
 )
 
 const moreInformationButton = (
-  <button>Hello</button>
-  // <CtaCell
-  //   styles={{
-  //     width: '100%',
-  //     fontSize: '14px',
-  //     marginBottom: 0
-  //   }}
-  //   onClick={moreInformationButtonClick}
-  //   href={clickableRow}
-  //   variant="eligibility"
-  // >
-  //   See Deal
-  // </CtaCell>
+  <CtaCell
+    styles={{
+      width: '100%',
+      fontSize: '14px',
+      marginBottom: 0
+    }}
+    onClick={moreInformationButtonClick}
+    href={clickableRow}
+    variant="eligibility"
+  >
+    See Deal
+  </CtaCell>
 )
 
 const eligibity = (
