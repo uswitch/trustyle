@@ -8,7 +8,7 @@ interface MoreInformationBlockProps
   title: string
 }
 
-export const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
+const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
   title,
   children
 }) => (
