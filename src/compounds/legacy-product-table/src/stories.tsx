@@ -1,6 +1,12 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
+import {
+  MoreInformationBlock,
+  MoreInformationList,
+  MoreInformationTable,
+  MoreInformationText
+} from '@uswitch/trustyle.information-panel'
 
 import AllThemes from '../../../utils/all-themes'
 
@@ -8,11 +14,7 @@ import LegacyProductTable, {
   CtaCell,
   DataCell,
   ImageCell,
-  MoreInformationBlock,
   MoreInformationButton,
-  MoreInformationList,
-  MoreInformationTable,
-  MoreInformationText,
   PercentageCell
 } from '.'
 
