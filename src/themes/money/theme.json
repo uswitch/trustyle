@@ -4056,14 +4056,16 @@
     "loading-results": {
       "header": {
         "fontSize": ["md", "xl", "xl"],
-        "color": "plum"
+        "color": "plum",
+        "fontFamily": "heading"
       },
       "iconColor": "button-secondary",
       "text": {
         "color": "button-secondary",
         "fontSize": "md",
         "fontWeight": "bolder",
-        "textAlign": ["left", "center", "center"]
+        "textAlign": ["left", "center", "center"],
+        "fontFamily": "base"
       }
     }
   },
