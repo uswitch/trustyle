@@ -1879,8 +1879,9 @@
             }
           },
           "funnel": {
-            "mb": "md"
-
+            "mb": "md",
+            "px": ["sm", "xxl", "xxxl"],
+            "color": "grey-80"
           },
           "input": {
             "checkbox": {
@@ -1897,7 +1898,7 @@
             "wrapper": {
               "display": "flex",
               "mb": ["md", "0px"],
-              "width": "100%",
+              "px": ["sm", "xxl", "xxxl"],
               "justifyContent": "space-between",
               "flexDirection": "column"
             },
@@ -2219,7 +2220,7 @@
               "width": "100%",
               "bg": "white",
               "button": {
-                "mr": ["0", "0", "0"],
+                "mr": ["sm", "xxl", "xxxl"],
                 "width": "180px",
                 "height": "48px",
                 "svg": {
@@ -3859,6 +3860,19 @@
           "fill": "#141424",
           "stroke": "#141424"
         }
+      }
+    },
+    "loading-results": {
+      "header": {
+        "fontSize": ["md", "xl", "xl"],
+        "color": "plum"
+      },
+      "iconColor": "button-secondary",
+      "text": {
+        "color": "button-secondary",
+        "fontSize": "md",
+        "fontWeight": "bolder",
+        "textAlign": ["left", "center", "center"]
       }
     }
   },

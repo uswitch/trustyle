@@ -4913,6 +4913,19 @@
           "stroke": "primary"
         }
       }
+    },
+    "loading-results": {
+      "header": {
+        "fontSize": ["md", "xl", "xl"],
+        "color": "text"
+      },
+      "iconColor": "text",
+      "text": {
+        "color": "text",
+        "fontSize": "md",
+        "fontWeight": "bolder",
+        "textAlign": ["left", "center", "center"]
+      }
     }
   },
   "modules": {
