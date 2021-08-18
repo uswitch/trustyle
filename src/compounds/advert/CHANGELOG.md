@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.advert@0.0.9...@uswitch/trustyle.advert@0.0.10) (2021-08-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.advert
+
+
+
+
+
 ## [0.0.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.advert@0.0.8...@uswitch/trustyle.advert@0.0.9) (2021-07-05)
 
 **Note:** Version bump only for package @uswitch/trustyle.advert

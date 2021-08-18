@@ -127,6 +127,7 @@
   "useCustomProperties": false,
   "useBodyStyles": false,
   "colors": {
+    "background": "initial",
     "text": "#4c4c4c",
     "sunshine": "#FEC340",
     "burnt": "#FAA73F",
@@ -507,23 +508,29 @@
         },
         "image": {
           "maxHeight": "32px",
-          "maxWidth": ["88px", "104px"],
+          "maxWidth": ["88px", "150px"],
           "ml": "xs"
         }
       },
       "variants": {
         "form": {
           "wrapper": {
-            "backgroundColor": "grey-05",
+            "backgroundColor": "grey-0",
             "borderRadius": "4px",
             "display": "flex",
             "alignItems": "center",
             "justifyContent": "center",
             "paddingY": "md",
-            "paddingX": "xl"
+            "paddingX": "xl",
+            "img": {
+              "ml": "md",
+              "mr": "0"
+            }
+          },
+          "text": {
+            "color": "black"
           },
           "image": {
-            "ml": "md",
             "width": "149px",
             "height": "auto"
           }
@@ -539,7 +546,9 @@
             "alignItems": "center",
             "justifyContent": "flex-end",
             "paddingY": "xxs",
-            "pt": "md"
+            "pt": "md",
+            "textAlign": "right",
+            "width": "100%"
           },
           "text": {
             "color": "white"
@@ -1021,6 +1030,10 @@
           }
         },
         "variants": {
+          "consent": {
+            "bg": "transparent",
+            "border": "none"
+          },
           "normal": {
             "variant": "elements.input.checkbox.base"
           },
@@ -1143,7 +1156,7 @@
           "margin": "1px"
         },
         "&::-webkit-inner-spin-button, -webkit-outer-spin-button": {
-          "-webkit-appearance": "none",
+          "WebkitAppearance": "none",
           "margin": 0
         },
         "&:focus": {
@@ -1743,7 +1756,7 @@
                     "marginLeft": [0, "md"],
                     "width": ["calc(100% - 48px)", "100%"]
                   },
-                  ">:nth-child(3n+1)": {
+                  ">:nth-of-type(3n+1)": {
                     "marginLeft": 0
                   }
                 }
@@ -1768,7 +1781,7 @@
                   ">div": {
                     "marginLeft": [0, "inherit"]
                   },
-                  ">:nth-child(3n+1)": {
+                  ">:nth-of-type(3n+1)": {
                     "marginLeft": 0
                   }
                 }
@@ -2067,6 +2080,50 @@
           "wrapper": {
             "variant": "elements.form.variants.default.wrapper"
           }
+        }
+      },
+      "address-lookup": {
+        "postcode-row": {
+          "marginBottom": "sm",
+          "alignItems": "center"
+        },
+        "display": {
+          "color": "grey-80",
+          "backgroundColor": "#eaeced",
+          "padding": "sm",
+          "borderRadius": "4px"
+        },
+        "container": {
+          "marginBottom": ["sm", "lg", "xl"]
+        },
+        "edit-container": {
+          "backgroundColor": "#eaeced",
+          "padding": "sm"
+        },
+        "input-container": {
+          "marginBottom": "sm"
+        },
+        "label": {
+          "marginRight": "sm",
+          "fontSize": "sm",
+          "color": "#2f353a",
+          "display": "block",
+          "marginBottom": "xxs",
+          "fontFamily": "legacy",
+          "fontWeight": "base",
+          "textAlign": "left"
+        },
+        "button": {
+          "color": "grey-80",
+          "fontSize": "sm",
+          "fontStyle": "normal",
+          "fontWeight": "base",
+          "textAlign": "left",
+          "border": "none",
+          "background": "none",
+          "textDecoration": "underline",
+          "padding": "8px 0 0",
+          "cursor": "pointer"
         }
       },
       "button": {
@@ -2929,19 +2986,19 @@
               "pl": ["none", "sm"],
               "py": ["12px", "xs"],
               "borderBottom": ["4px solid", "none"],
-              ":nth-child(1)": {
+              ":nth-of-type(1)": {
                 "backgroundColor": ["#FDF6EE", "transparent"],
                 "borderBottomColor": "#F7DCBB",
                 "mb": ["xxs", ""],
                 "color": ["sunshine", "grey-80"]
               },
-              ":nth-child(2)": {
+              ":nth-of-type(2)": {
                 "backgroundColor": ["#FCF1ED", "transparent"],
                 "borderBottomColor": "#F2CBB4",
                 "mb": ["xxs", ""],
                 "color": ["jaffa", "grey-80"]
               },
-              ":nth-child(3)": {
+              ":nth-of-type(3)": {
                 "backgroundColor": ["#F9EDF1", "transparent"],
                 "borderBottomColor": "#E7BBC8",
                 "color": ["fuschia", "grey-80"]
@@ -2959,7 +3016,7 @@
             "variants": {
               "cellImage": {
                 "variant": "compounds.product-table.variants.redesign.cellContext.main",
-                ":nth-child(4)": {
+                ":nth-of-type(4)": {
                   "borderBottom": "none",
                   "display": ["block", "none"]
                 }
@@ -3087,8 +3144,89 @@
         }
       }
     },
+    "information-panel": {
+      "block": {
+        "title": {
+          "fontSize": "md",
+          "fontStyle": "normal",
+          "fontWeight": "bold",
+          "fontFamily": "heading",
+          "color": "experimental-text",
+          "mb": "5px",
+          "textAlign": "left"
+        }
+      },
+      "text": {
+        "fontSize": "xs",
+        "my": "xxs",
+        "mx": 0,
+        "color": "grey-80"
+      },
+      "list": {
+        "tdSx": {
+          "backgroundColor": "white",
+          "fontSize": "13px",
+          "fontFamily": "base",
+          "px": 0,
+          "py": "xs"
+        },
+        "tdSxWithLabel": {
+          "variant": "compounds.information-panel.list.tdSx",
+          "fontWeight": "bold",
+          "pr": "xs"
+        },
+        "tdSxWithValue": {
+          "variant": "compounds.information-panel.list.tdSx",
+          "pl": "xs",
+          "textAlign": "right"
+        },
+        "trSx": {
+          "borderBottom": "1px solid",
+          "borderBottomColor": "#D0D0D3",
+          ":last-child": {
+            "borderBottom": 0
+          }
+        }
+      },
+      "table": {
+        "trSx": {
+          "variant": "compounds.information-panel.list.trSx"
+        },
+        "tdSx": {
+          "variant": "compounds.information-panel.list.tdSx",
+          "padding": "sm",
+          "textAlign": "center",
+          ":first-of-type": {
+            "pl": 0,
+            "textAlign": "left"
+          },
+          ":last-child": {
+            "pr": 0
+          }
+        }
+      }
+    },
     "accordion": {
       "base": {
+        "integrationWrapper": {
+          "my": "md"
+        },
+        "mainTitle": {
+          "fontSize": ["lg", null, "xl"],
+          "fontWeight": "base",
+          "lineHeight": "heading",
+          "my": "base"
+        },
+        "sectionTitle": {
+          "m": 0,
+          "py": "xs",
+          "fontSize": ["base", null, "base"],
+          "lineHeight": "normal",
+          "fontWeight": "bold",
+          "h3&": {
+            "fontSize": ["base", null, "base"]
+          }
+        },
         "wrapper": {
           "marginY": "sm"
         },
@@ -3617,6 +3755,59 @@
               "compounds.card.variants.horizontal.headerChildren"
             ]
           }
+        },
+        "assuranceBar": {
+          "display": "flex",
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "alignItems": "flex-start",
+          "textAlign": "left",
+          "py": 0,
+          "mb": "md",
+          "h3": {
+            "color": "grey-100",
+            "paddingLeft": 0,
+            "fontFamily": "heading",
+            "fontWeight": "bold",
+            "fontSize": "xxl",
+            "lineHeight": "heading"
+          },
+          "p": {
+            "color": "grey-100",
+            "mx": 0,
+            "fontFamily": "base",
+            "fontWeight": "normal",
+            "fontSize": "base",
+            "lineHeight": "base"
+          },
+          "heading": {
+            "a": {
+              "fontWeight": "700"
+            },
+            "pb": ["8px", "16px"]
+          },
+          "image": {
+            "boxSizing": "border-box",
+            "img": {
+              "width": 32
+            }
+          },
+          "link": {
+            "variant": "compounds.card.base.link"
+          },
+          "a": {
+            "textDecoration": "none",
+            "borderBottom": "initial",
+            "mb": 0,
+            "width": 32,
+            "height": 32,
+            "mr": "md"
+          },
+          "& a:hover": {
+            "color": "inherit",
+            "stroke": "initial",
+            "opacity": "initial"
+          }
         }
       }
     },
@@ -3806,14 +3997,14 @@
         "&:first-of-type": {
           "borderStyle": "solid",
           "svg": {
-            "margin-left": 0
+            "marginLeft": 0
           }
         },
         "svg": {
           "position": "absolute",
           "width": "22px",
           "height": "22px",
-          "margin-left": "-0.5px",
+          "marginLeft": "-0.5px",
           "top": "50%",
           "left": "50%",
           "transform": "translate(-50%, -50%)"

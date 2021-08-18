@@ -3,6 +3,96 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.61.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.60.2...@uswitch/trustyle.money-theme@1.61.0) (2021-08-18)
+
+
+### Features
+
+* add information panel styling ([d870e9a](https://github.com/uswitch/trustyle/commit/d870e9a))
+
+
+
+
+
+## [1.60.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.60.1...@uswitch/trustyle.money-theme@1.60.2) (2021-08-13)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.60.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.60.0...@uswitch/trustyle.money-theme@1.60.1) (2021-08-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+# [1.60.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.59.1...@uswitch/trustyle.money-theme@1.60.0) (2021-08-11)
+
+
+### Features
+
+* add address-lookup styling - taken from eevee-components ([f2e3db1](https://github.com/uswitch/trustyle/commit/f2e3db1))
+
+
+
+
+
+## [1.59.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.59.0...@uswitch/trustyle.money-theme@1.59.1) (2021-08-10)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+# [1.59.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.58.0...@uswitch/trustyle.money-theme@1.59.0) (2021-08-09)
+
+
+### Features
+
+* spark accordion ([b8f46b1](https://github.com/uswitch/trustyle/commit/b8f46b1))
+
+
+
+
+
+# [1.58.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.57.0...@uswitch/trustyle.money-theme@1.58.0) (2021-08-05)
+
+
+### Features
+
+* fix styling on sponsored by on form ([ef5394e](https://github.com/uswitch/trustyle/commit/ef5394e))
+
+
+
+
+
+# [1.57.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.56.1...@uswitch/trustyle.money-theme@1.57.0) (2021-08-04)
+
+
+### Features
+
+* add assurance bar styling ([a719fe7](https://github.com/uswitch/trustyle/commit/a719fe7))
+
+
+
+
+
+## [1.56.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.56.0...@uswitch/trustyle.money-theme@1.56.1) (2021-08-04)
+
+
+### Bug Fixes
+
+* max-width for wide sponsored by logos ([3e71c31](https://github.com/uswitch/trustyle/commit/3e71c31))
+
+
+
+
+
 # [1.56.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.55.1...@uswitch/trustyle.money-theme@1.56.0) (2021-07-30)
 
 

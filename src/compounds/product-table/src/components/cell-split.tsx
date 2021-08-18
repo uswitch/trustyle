@@ -22,7 +22,7 @@ const ProductTableCellSplit: React.FC<React.HTMLAttributes<any>> = ({
         {nonNullChildren.map((child, _index) => {
           return (
             React.isValidElement(child) && (
-              <ProductTableCellSecondary {...child.props} />
+              <ProductTableCellSecondary key={_index} {...child.props} />
             )
           )
         })}

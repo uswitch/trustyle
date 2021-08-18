@@ -60,6 +60,7 @@ storiesOf('Global Styles/Typography', module).add('Types', () => {
     th: null,
     td: null,
     tr: null,
+    headings: null,
     hr: (_: any) => <hr />
   }
 

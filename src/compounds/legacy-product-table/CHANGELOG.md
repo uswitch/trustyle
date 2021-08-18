@@ -3,6 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.5.3...@uswitch/trustyle.legacy-product-table@1.6.0) (2021-08-18)
+
+
+### Features
+
+* implement information panel into legacy pt ([2847e8e](https://github.com/uswitch/trustyle/commit/2847e8e))
+
+
+
+
+
+## [1.5.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.5.2...@uswitch/trustyle.legacy-product-table@1.5.3) (2021-08-16)
+
+
+### Bug Fixes
+
+* legacy pt wireframe ([5f24d3c](https://github.com/uswitch/trustyle/commit/5f24d3c))
+
+
+
+
+
+## [1.5.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.5.1...@uswitch/trustyle.legacy-product-table@1.5.2) (2021-08-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+
+
+
+
+## [1.5.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.5.0...@uswitch/trustyle.legacy-product-table@1.5.1) (2021-08-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+
+
+
+
+# [1.5.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.4.6...@uswitch/trustyle.legacy-product-table@1.5.0) (2021-08-12)
+
+
+### Bug Fixes
+
+* build fail due to the type issue ([3770ff9](https://github.com/uswitch/trustyle/commit/3770ff9))
+* bump cell and change rep bg color ([ca85aef](https://github.com/uswitch/trustyle/commit/ca85aef))
+* magic width numbers ([ec4f27f](https://github.com/uswitch/trustyle/commit/ec4f27f))
+
+
+### Features
+
+* add new loading design to the legact pt ([c744e9b](https://github.com/uswitch/trustyle/commit/c744e9b))
+* import wireframe cell ([e6eedee](https://github.com/uswitch/trustyle/commit/e6eedee))
+
+
+
+
+
 ## [1.4.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.4.5...@uswitch/trustyle.legacy-product-table@1.4.6) (2021-07-15)
 
 

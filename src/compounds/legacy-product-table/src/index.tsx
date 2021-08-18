@@ -6,8 +6,118 @@ import { ButtonLink } from '@uswitch/trustyle.button-link'
 import { Button } from '@uswitch/trustyle.button'
 import { Icon } from '@uswitch/trustyle.icon'
 import CirclePercentageBar from '@uswitch/trustyle.circular-percentage-bar'
+import WireFrameCell from '@uswitch/trustyle.wireframe-cell'
+import { Eligibility } from '@uswitch/trustyle.information-panel'
 
 import RowWrapper from './row-wrapper'
+
+interface WireFrameProps extends React.HTMLAttributes<HTMLDivElement> {
+  type: 'header' | 'additionalInfo' | 'representativeExample'
+}
+
+const WireFrame: React.FC<WireFrameProps> = ({ type }) => {
+  const containerStyles: {
+    header: object
+    additionalInfo: object
+    representativeExample: object
+  } = {
+    header: {
+      width: '100%',
+      paddingLeft: ['15px', '160px'],
+      paddingRight: ['15px', 0],
+      paddingY: '15px',
+      marginY: 0
+    },
+    additionalInfo: {
+      margin: '15px 0'
+    },
+    representativeExample: {
+      marginTop: '5px',
+      padding: ['5px 20px 10px', '5px 40px 10px'],
+      backgroundColor: 'rgba(242,242,243,0.7)'
+    }
+  }
+
+  const defaultStyles: {
+    header: object
+    additionalInfo: object
+    representativeExample: object
+  } = {
+    header: {
+      width: ['93%', '55%'],
+      height: '14px'
+    },
+    additionalInfo: {
+      height: '10px',
+      width: ['95%', '69%'],
+      marginLeft: ['0', 'auto'],
+      marginRight: 'auto',
+      marginTop: '10px'
+    },
+    representativeExample: {
+      height: '11px',
+      width: ['86%', '90%'],
+      marginX: 'auto',
+      marginTop: '8px'
+    }
+  }
+
+  const rowStyles: {
+    header: any[]
+    additionalInfo: any[]
+    representativeExample: any[]
+  } = {
+    header: [
+      { ...defaultStyles.header },
+      {
+        ...defaultStyles.header,
+        width: '28%',
+        display: ['block', 'none'],
+        marginTop: '11px',
+        marginBottom: '20px'
+      }
+    ],
+    additionalInfo: [
+      {
+        ...defaultStyles.additionalInfo,
+        marginTop: '14px'
+      },
+      { ...defaultStyles.additionalInfo },
+      {
+        ...defaultStyles.additionalInfo,
+        width: '45%',
+        display: ['block', 'none']
+      }
+    ],
+    representativeExample: [
+      { ...defaultStyles.representativeExample },
+      { ...defaultStyles.representativeExample },
+      {
+        ...defaultStyles.representativeExample,
+        width: '83%',
+        display: ['block', 'none']
+      },
+      {
+        ...defaultStyles.representativeExample,
+        width: '83%',
+        display: ['block', 'none']
+      },
+      {
+        ...defaultStyles.representativeExample,
+        width: '23%',
+        display: ['block', 'none']
+      }
+    ]
+  }
+
+  return (
+    <div sx={containerStyles[type]}>
+      {rowStyles[type].map((item: object, key: number) => {
+        return <WireFrameCell key={key} styles={item} />
+      })}
+    </div>
+  )
+}
 
 const AdditionalInfo: React.FC<React.HTMLAttributes<any>> = ({ children }) => {
   return (
@@ -188,9 +298,21 @@ const BaseCell: React.FC<React.HTMLAttributes<any>> = ({
   )
 }
 
-export const ImageCell: React.FC<React.HTMLAttributes<any>> = ({
-  children
+interface ImageCellProps extends React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode
+  isWireFrame?: boolean
+}
+
+export const ImageCell: React.FC<ImageCellProps> = ({
+  children,
+  isWireFrame = false
 }) => {
+  const wireFrameStyles = {
+    width: ['100%', '90%'],
+    height: '74px',
+    borderRadius: '3px'
+  }
+
   return (
     <BaseCell
       sx={{
@@ -207,7 +329,8 @@ export const ImageCell: React.FC<React.HTMLAttributes<any>> = ({
         }
       }}
     >
-      {children}
+      {isWireFrame && <WireFrameCell styles={wireFrameStyles} />}
+      {!isWireFrame && children}
     </BaseCell>
   )
 }
@@ -217,6 +340,7 @@ interface DataCellProps extends React.HTMLAttributes<HTMLDivElement> {
   borderBottomColor?: string
   color?: string
   label?: string
+  isWireFrame?: boolean
 }
 
 export const DataCell: React.FC<DataCellProps> = ({
@@ -224,44 +348,81 @@ export const DataCell: React.FC<DataCellProps> = ({
   backgroundColor,
   borderBottomColor,
   color,
-  label
+  label,
+  isWireFrame = false
 }) => {
+  const wireFrameLabelStyles = {
+    width: '43%',
+    height: '10px'
+  }
+
+  const wireFrameDescriptionStyles = {
+    width: '65%',
+    height: '17px',
+    margin: '5px'
+  }
+
+  const dataCellStyles = {
+    base: {
+      borderWidth: '0 0 5px',
+      borderStyle: 'solid',
+      backgroundColor,
+      borderBottomColor,
+      fontFamily: 'Varela Round,Arial,sans-serif',
+      color: '#191919'
+    },
+    wireframe: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+  }
+
+  const styles = isWireFrame
+    ? { ...dataCellStyles.wireframe }
+    : { ...dataCellStyles.base }
+
   return (
     <BaseCell
       sx={{
-        borderWidth: '0 0 5px',
-        borderStyle: 'solid',
-        backgroundColor,
-        borderBottomColor,
+        ...styles,
         padding: '5px 0px 10px',
         margin: ['4px 0', '2px'],
-        marginX: ['15px', '2px'],
-        fontFamily: 'Varela Round,Arial,sans-serif',
-        color: '#191919'
+        marginX: ['15px', '2px']
       }}
     >
-      <span
-        sx={{
-          fontFamily: 'Open Sans,Arial,sans-serif',
-          fontSize: '11px',
-          display: 'flex',
-          justifyContent: 'center',
-          padding: '5px 5px 0px',
-          color
-        }}
-      >
-        {label}
-      </span>
-      <div
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          padding: '5px',
-          flexDirection: 'column'
-        }}
-      >
-        {children}
-      </div>
+      {isWireFrame && <WireFrameCell styles={wireFrameLabelStyles} />}
+
+      {!isWireFrame && (
+        <span
+          sx={{
+            fontFamily: 'Open Sans,Arial,sans-serif',
+            fontSize: '11px',
+            display: 'flex',
+            justifyContent: 'center',
+            padding: '5px 5px 0px',
+            color
+          }}
+        >
+          {label}
+        </span>
+      )}
+
+      {isWireFrame && <WireFrameCell styles={wireFrameDescriptionStyles} />}
+
+      {!isWireFrame && (
+        <div
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            padding: '5px',
+            flexDirection: 'column'
+          }}
+        >
+          {children}
+        </div>
+      )}
     </BaseCell>
   )
 }
@@ -272,6 +433,7 @@ interface CtaCellProps extends React.HTMLAttributes<HTMLDivElement> {
   onClick?: (event?: any) => void
   disabled?: boolean
   variant?: string
+  isWireFrame?: boolean
 }
 
 export const CtaCell: React.FC<CtaCellProps> = ({
@@ -280,7 +442,8 @@ export const CtaCell: React.FC<CtaCellProps> = ({
   href,
   onClick,
   disabled,
-  variant
+  variant,
+  isWireFrame = false
 }) => {
   const props = {
     variant: 'primary',
@@ -292,6 +455,8 @@ export const CtaCell: React.FC<CtaCellProps> = ({
       color: '#fff',
       fontSize: '16px',
       fontWeight: 300,
+      opacity: isWireFrame ? 0.4 : 1,
+      pointerEvents: isWireFrame && 'none',
       ':hover': {
         opacity: 1
       },
@@ -325,6 +490,7 @@ interface PercentageCellProps extends DataCellProps {
   percentage: number
   alternativeText: string
   size?: string
+  isWireFrame?: boolean
 }
 
 export const PercentageCell: React.FC<PercentageCellProps> = ({
@@ -334,7 +500,8 @@ export const PercentageCell: React.FC<PercentageCellProps> = ({
   label,
   percentage,
   alternativeText,
-  size
+  size,
+  isWireFrame = false
 }) => {
   return (
     <DataCell
@@ -342,6 +509,7 @@ export const PercentageCell: React.FC<PercentageCellProps> = ({
       borderBottomColor={borderBottomColor}
       label={label}
       color={color}
+      isWireFrame={isWireFrame}
     >
       {!isNaN(percentage) && (
         <CirclePercentageBar
@@ -352,320 +520,6 @@ export const PercentageCell: React.FC<PercentageCellProps> = ({
       )}
       {isNaN(percentage) && <span>{alternativeText}</span>}
     </DataCell>
-  )
-}
-
-interface MoreInformationBlockProps
-  extends React.HTMLAttributes<HTMLDivElement> {
-  title: string
-}
-
-export const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
-  title,
-  children
-}) => {
-  return (
-    <div
-      sx={{
-        background: '#fff',
-        color: '#333',
-        alignItems: 'center',
-        fontSize: '14px',
-        boxSizing: 'border-box',
-        display: 'block',
-        width: ['auto', '50%'],
-        marginTop: 'sm',
-        marginBottom: [0, 'sm'],
-        marginLeft: 'sm',
-        marginRight: 'sm',
-        ':nth-child(even)': {
-          marginLeft: ['sm', '0']
-        }
-      }}
-    >
-      <div
-        sx={{
-          padding: '15px 20px 20px',
-          lineHeight: ['1.618em', 'inherit']
-        }}
-      >
-        <div
-          sx={{
-            fontSize: '18px',
-            fontStyle: 'normal',
-            fontWeight: 'bold',
-            fontFamily: 'Nunito',
-            color: '#29335C',
-            marginBottom: '5px',
-            textAlign: 'left'
-          }}
-        >
-          {title}
-        </div>
-
-        <div sx={{ background: '#fff', overflow: 'auto' }}>{children}</div>
-      </div>
-    </div>
-  )
-}
-
-const format = (data: string | boolean | number) => {
-  if (data === true || data === 'Yes' || data === 'yes' || data === 'true') {
-    return (
-      <span sx={{ display: 'inline-block' }}>
-        <Icon glyph="check" color={'#6bab51'} size={18} />
-      </span>
-    )
-  } else {
-    return data
-  }
-}
-
-interface MoreInformationTableProps {
-  rows: any
-}
-
-export const MoreInformationTable = ({ rows }: MoreInformationTableProps) => {
-  const tdSx = {
-    backgroundColor: 'white',
-    fontSize: '13px',
-    fontFamily: 'Open Sans,Arial,sans-serif',
-    padding: 'sm',
-    textAlign: 'center',
-    ':first-of-type': {
-      paddingLeft: 0,
-      textAlign: 'left'
-    },
-    ':last-child': {
-      paddingRight: 0
-    }
-  }
-  return (
-    <table
-      sx={{
-        border: 'none',
-        borderCollapse: 'collapse',
-        overflow: 'scroll',
-        margin: 0,
-        width: '100%'
-      }}
-    >
-      <tbody>
-        {rows.map((row: any[], i: number) => {
-          return (
-            <tr
-              sx={{
-                borderBottom: '1px solid',
-                borderColor: 'grey-20',
-                ':last-child': {
-                  borderBottom: '0px'
-                }
-              }}
-              key={i}
-            >
-              {row.map((cell: any, j) => {
-                return cell.type === 'th' ? (
-                  <th key={j} colSpan={cell.colspan} sx={{ ...tdSx }}>
-                    {cell.value}
-                  </th>
-                ) : (
-                  <td colSpan={cell.colspan} sx={{ ...tdSx }} key={j}>
-                    {cell.value}
-                  </td>
-                )
-              })}
-            </tr>
-          )
-        })}
-      </tbody>
-    </table>
-  )
-}
-
-interface MoreInformationTextProps {
-  content: string[]
-}
-
-export const MoreInformationText = ({ content }: MoreInformationTextProps) => {
-  return (
-    <React.Fragment>
-      {content.map((chunk: string, i: number) => {
-        if (chunk === null) {
-          return
-        }
-
-        return (
-          <React.Fragment key={i}>
-            {chunk
-              .replace(/<\/p>/g, '')
-              .split('<br/>')
-              .map(line => line.split('<p>'))
-              .reduce((acc, val) => acc.concat(val), [])
-              .map((line: string, j: number) => {
-                return (
-                  <p
-                    key={j}
-                    sx={{
-                      fontSize: 'xs',
-                      my: 'xxs',
-                      mx: '0'
-                    }}
-                    dangerouslySetInnerHTML={{ __html: line }}
-                  ></p>
-                )
-              })}
-          </React.Fragment>
-        )
-      })}
-    </React.Fragment>
-  )
-}
-
-interface MoreInformationListRow {
-  label?: string
-  value: string | boolean | number
-}
-
-interface MoreInformationListProps {
-  rows: MoreInformationListRow[]
-}
-
-export const MoreInformationList: React.FC<MoreInformationListProps> = ({
-  rows
-}) => {
-  const tdSx = {
-    backgroundColor: 'white',
-    fontSize: '13px',
-    fontFamily: 'Open Sans,Arial,sans-serif',
-    px: 0,
-    py: 'xs'
-  }
-
-  const trSx = {
-    borderBottom: '1px solid',
-    borderBottomColor: 'grey-20',
-    ':last-child': {
-      borderBottom: 0
-    }
-  }
-
-  return (
-    <table
-      sx={{
-        border: 'none',
-        borderCollapse: 'collapse',
-        overflow: 'scroll',
-        margin: 0,
-        width: '100%'
-      }}
-    >
-      <tbody>
-        {rows.map(({ label, value }, i: number) => {
-          if (value === '' || value === null) {
-            return
-          }
-
-          if (!label) {
-            return (
-              <tr key={i} sx={trSx}>
-                <td sx={{ ...tdSx }} colSpan={2}>
-                  {format(value)}
-                </td>
-              </tr>
-            )
-          }
-
-          return (
-            <tr key={i} sx={trSx}>
-              <td sx={{ ...tdSx, fontWeight: 600, paddingRight: 'xs' }}>
-                {label}
-              </td>
-              <td sx={{ ...tdSx, paddingLeft: 'xs', textAlign: 'right' }}>
-                {format(value)}
-              </td>
-            </tr>
-          )
-        })}
-      </tbody>
-    </table>
-  )
-}
-
-interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
-  moreInformationPanel: React.ReactNode[]
-  moreInformationButton?: React.ReactNode
-  moreInformationLabel?: string
-}
-
-const Eligibility: React.FC<EligibilityProps> = ({
-  moreInformationPanel,
-  moreInformationButton,
-  moreInformationLabel = 'More information'
-}) => {
-  const [open, setOpen] = React.useState(false)
-
-  return (
-    <div sx={{ background: '#f2f3f4' }}>
-      <div
-        sx={{
-          display: 'block',
-          margin: 'auto',
-          height: open ? 'auto' : '0px',
-          transition: 'height .4s ease-in-out',
-          overflow: 'hidden'
-        }}
-      >
-        <div
-          sx={{
-            display: 'flex',
-            flexDirection: ['column', 'row'],
-            alignItems: 'stretch',
-            background: '#f2f3f4',
-            justifyContent: 'center'
-          }}
-        >
-          {moreInformationPanel}
-        </div>
-
-        <div
-          sx={{
-            padding: ['15px 20px 20px', '0 20px'],
-            maxWidth: '420px',
-            margin: '0 auto'
-          }}
-        >
-          {moreInformationButton}
-        </div>
-      </div>
-
-      <button
-        sx={{
-          background: '#f2f3f4',
-          border: 'none',
-          borderBottom: ['1px dashed #b1b1b1', 'none'],
-          width: '100%',
-          margin: 'auto',
-          padding: '8px',
-          lineHeight: '1.618em',
-          color: '#34454E',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          fontSize: '13px',
-          boxSizing: 'border-box',
-          outline: 'none'
-        }}
-        onClick={() => setOpen(!open)}
-      >
-        <div sx={{ pr: '15px' }}>{moreInformationLabel}</div>
-        <Icon
-          color="#34454E"
-          glyph={'caret'}
-          direction={open ? 'up' : 'down'}
-          size={10}
-        />
-      </button>
-    </div>
   )
 }
 
@@ -722,6 +576,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   bannerInfo?: BannerInfo
   onBannerClick?: () => void
   telephone?: string
+  isWireFrame?: boolean
 }
 
 const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
@@ -741,6 +596,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   bannerInfo,
   onBannerClick,
   telephone,
+  isWireFrame = false,
   ...props
 }) => {
   const badge = badges[0]
@@ -758,7 +614,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         ':first-of-type': {
           marginTop: '10px'
         },
-        opacity: disabled ? '0.4' : 1
+        opacity: disabled && !isWireFrame ? '0.4' : 1
       }}
       {...props}
     >
@@ -785,21 +641,24 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
             flexDirection: ['column', 'row']
           }}
         >
-          <Styled.h5
-            sx={{
-              color: '#069',
-              pl: ['15px', '160px'],
-              pr: ['15px', 0],
-              py: '15px',
-              mb: 0,
-              mt: badge ? ['30px', '15px'] : 0,
-              fontSize: '18px',
-              fontFamily: 'Varela Round,Arial,sans-serif'
-            }}
-          >
-            {title}
-          </Styled.h5>
-          {telephone && <TelephoneInfo telephone={telephone} />}
+          {isWireFrame && <WireFrame type="header" />}
+          {!isWireFrame && (
+            <Styled.h5
+              sx={{
+                color: '#069',
+                pl: ['15px', '160px'],
+                pr: ['15px', 0],
+                py: '15px',
+                mb: 0,
+                mt: badge ? ['30px', '15px'] : 0,
+                fontSize: '18px',
+                fontFamily: 'Varela Round,Arial,sans-serif'
+              }}
+            >
+              {title}
+            </Styled.h5>
+          )}
+          {!isWireFrame && telephone && <TelephoneInfo telephone={telephone} />}
         </header>
 
         <div
@@ -813,7 +672,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           {children}
         </div>
 
-        {info.length > 0 && (
+        {!isWireFrame && info.length > 0 && (
           <AdditionalInfo>
             {info.map((item, key) => {
               return <div key={key}>{item}</div>
@@ -821,18 +680,24 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           </AdditionalInfo>
         )}
 
-        {representativeExample && (
+        {isWireFrame && <WireFrame type="additionalInfo" />}
+
+        {!isWireFrame && representativeExample && (
           <RepresentativeExample text={representativeExample} />
         )}
+
+        {isWireFrame && <WireFrame type="representativeExample" />}
       </RowWrapper>
 
-      {moreInformationPanel && moreInformationPanel.length > 0 && (
-        <Eligibility
-          moreInformationPanel={moreInformationPanel}
-          moreInformationButton={moreInformationButton}
-          moreInformationLabel={moreInformationLabel}
-        />
-      )}
+      {!isWireFrame &&
+        moreInformationPanel &&
+        moreInformationPanel.length > 0 && (
+          <Eligibility
+            moreInformationPanel={moreInformationPanel}
+            moreInformationButton={moreInformationButton}
+            moreInformationLabel={moreInformationLabel}
+          />
+        )}
     </article>
   )
 }

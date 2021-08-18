@@ -74,6 +74,7 @@
     }
   },
   "colors": {
+    "background": "initial",
     "brand": "#520861",
     "text": "#686887",
     "grey-0": "#FFFFFF",
@@ -193,7 +194,7 @@
     "hero-with-background-image": {
       "backgroundColor": "primary",
       "::before": {
-        "background-image": [
+        "backgroundImage": [
           "linear-gradient(to top, #520861 7%, rgba(196, 196, 196, 0) 94%)",
           null,
           "linear-gradient(to right, #520861 20%, rgba(196, 196, 196, 0) 94%)"
@@ -216,14 +217,14 @@
       "container-child": {
         "height": "auto"
       },
-      "background-position": ["top", null, "center right"],
-      "background-size": ["cover", null, "contain"],
+      "backgroundPosition": ["top", null, "center right"],
+      "backgroundSize": ["cover", null, "contain"],
       "position": "relative",
       "color": "white",
       "h1,h2,h3,h4,h5,h6,p": {
         "color": "pure-white",
         "margin": 0,
-        "line-height": "1.1",
+        "lineHeight": "1.1",
         "width": ["100%", 380, 418]
       },
       "boxSizing": "border-box",
@@ -357,7 +358,7 @@
         "display": "flex",
         "width": "218px",
         "height": "56px",
-        "justify-content": "space-around !important",
+        "justifyContent": "space-around !important",
         "fontWeight": "bold",
         "border": "none",
         "fontFamily": "heading",
@@ -950,7 +951,7 @@
             }
           },
           "image": {
-            "box-sizing": "border-box",
+            "boxSizing": "border-box",
             "img": {
               "width": [24, 30, 30],
               "mr": [26, 0, 28],
@@ -1229,8 +1230,8 @@
           "height": "100%",
           "mb": "sm",
           "border": "1px solid rgba(104, 104, 135, 0.3)",
-          "box-sizing": "border-box",
-          "border-radius": "4px",
+          "boxSizing": "border-box",
+          "borderRadius": "4px",
           "pl": 0,
           "img": {
             "width": "100%"
@@ -1306,7 +1307,7 @@
               "display": "flex",
               "justify-content": ["flex-start", "center"],
               "ml": ["base", 0],
-              "margin-top": "base",
+              "marginTop": "base",
               "mt": "base",
               "mb": ["base", "lg"]
             },
@@ -1915,7 +1916,7 @@
       "fontSize": "xs"
     },
     "tr": {
-      ":nth-child(even)": {
+      ":nth-of-type(even)": {
         "backgroundColor": "grey-05"
       }
     }

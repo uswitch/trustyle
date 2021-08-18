@@ -189,6 +189,7 @@
     }
   },
   "colors": {
+    "background": "initial",
     "page-background": "transparent",
     "primary": "#141424",
     "heading": "#141424",
@@ -875,7 +876,7 @@
             "variant": "styles.h4",
             "color": "grey-80",
             "display": "block",
-            ":not(:first-child)": {
+            ":not(:first-of-type)": {
               "mt": "sm"
             },
             "variants": {
@@ -1004,7 +1005,7 @@
             "variant": "styles.h4",
             "color": "grey-80",
             "display": "block",
-            ":not(:first-child)": {
+            ":not(:first-of-type)": {
               "mt": "sm"
             },
             "variants": {
@@ -1225,14 +1226,14 @@
         "h3": {
           "fontSize": 28
         },
-        ">div>span>*:first-child": {
+        ">div>span>*:first-of-type": {
           "mt": 0
         },
         ">div>*:not(span)": {
           "mt": 0
         },
-        ":first-of-type": {
-          ":not(hr)": {
+        "h1,h2,h3,h4,h5,h6,p": {
+          "&:first-of-type": {
             "mt": 0
           }
         }
@@ -1354,7 +1355,7 @@
           "p": {
             "fontSize": "base",
             "lineHeight": "base",
-            "margin-top": 0,
+            "marginTop": 0,
             "fontWeight": "normal"
           },
           "img": {
@@ -1479,6 +1480,13 @@
       },
       "progress": {
         "backgroundColor": "blue"
+      }
+    },
+    "sponsored-by-tag": {
+      "base": {
+        "image": {
+          "width": "92px"
+        }
       }
     },
     "breadcrumbs": {
@@ -1627,7 +1635,7 @@
             "width": "12px",
             "display": "inline-block",
             "& > svg": {
-              "margin-top": "-50%"
+              "marginTop": "-50%"
             }
           }
         },
@@ -2356,7 +2364,7 @@
       },
       "focus": {
         "outline": "2px solid",
-        "outline-color": "orange",
+        "outlineColor": "orange",
         "color": "primary"
       },
       "default": {
@@ -2475,6 +2483,10 @@
           }
         },
         "variants": {
+          "consent": {
+            "bg": "grey-05",
+            "border": "none"
+          },
           "normal": {
             "variant": "elements.input.checkbox.base"
           },
@@ -2639,7 +2651,7 @@
           "margin": "1px"
         },
         "&::-webkit-inner-spin-button, -webkit-outer-spin-button": {
-          "-webkit-appearance": "none",
+          "WebkitAppearance": "none",
           "margin": 0
         },
         "&:focus": {
@@ -2729,7 +2741,7 @@
           "fontStyle": "normal"
         },
         "image": {
-          "margin-top": [null, "10px"]
+          "marginTop": [null, "10px"]
         }
       },
       "variants": {
@@ -3235,7 +3247,7 @@
         "pb": ["md", "md", "lg"],
         "pt": ["150px", "215px", "lg"]
       },
-      "background-image": {
+      "backgroundImage": {
         "backgroundSize": ["cover", "cover", "contain"],
         "backgroundPosition": ["center", "center", "right"],
         "backgroundRepeat": "no-repeat",
@@ -3379,6 +3391,68 @@
         "fontWeight": "bold",
         "fontFamily": "base",
         "lineHeight": "heading"
+      }
+    },
+    "information-panel": {
+      "block": {
+        "title": {
+          "fontSize": "sm",
+          "fontStyle": "normal",
+          "fontWeight": "xbold",
+          "fontFamily": "heading",
+          "color": "#29335C",
+          "mb": "5px",
+          "textAlign": "left"
+        }
+      },
+      "text": {
+        "fontSize": "xxs",
+        "my": "xxxs",
+        "mx": "0",
+        "color": "grey-70"
+      },
+      "list": {
+        "tdSx": {
+          "backgroundColor": "white",
+          "fontSize": "13px",
+          "fontFamily": "base",
+          "px": 0,
+          "py": "xxs"
+        },
+        "tdSxWithLabel": {
+          "variant": "compounds.information-panel.list.tdSx",
+          "fontWeight": "xbold",
+          "pr": "xxs"
+        },
+        "tdSxWithValue": {
+          "variant": "compounds.information-panel.list.tdSx",
+          "pl": "xxs",
+          "textAlign": "right"
+        },
+        "trSx": {
+          "borderBottom": "1px solid",
+          "borderBottomColor": "grey-20",
+          ":last-child": {
+            "borderBottom": "0"
+          }
+        }
+      },
+      "table": {
+        "trSx": {
+          "variant": "compounds.information-panel.list.trSx"
+        },
+        "tdSx": {
+          "variant": "compounds.information-panel.list.tdSx",
+          "padding": "sm",
+          "textAlign": "center",
+          ":first-of-type": {
+            "pl": 0,
+            "textAlign": "left"
+          },
+          ":last-child": {
+            "pr": 0
+          }
+        }
       }
     },
     "container": {
@@ -3616,7 +3690,7 @@
             "variants": {
               "cellImage": {
                 "variant": "compounds.product-table.variants.redesign.cellContext.main",
-                ":nth-child(4)": {
+                ":nth-of-type(4)": {
                   "display": ["block", "none"]
                 }
               },
@@ -3791,6 +3865,23 @@
       "iconClosed": "plus",
       "base": {
         "mb": 72,
+        "integrationWrapper": {
+          "mb": "base"
+        },
+        "mainTitle": {
+          "pb": "base",
+          "mb": "xxl"
+        },
+        "sectionTitle": {
+          "m": 0,
+          "py": "xs",
+          "fontSize": ["base", null, "sm"],
+          "lineHeight": "normal",
+          "fontWeight": "medium",
+          "h3&": {
+            "fontSize": ["base", null, "sm"]
+          }
+        },
         "wrapper": {
           "borderBottom": "1px solid #C4C4C4"
         },
@@ -4137,7 +4228,7 @@
             "pb": ["8px", "16px"]
           },
           "image": {
-            "box-sizing": "border-box",
+            "boxSizing": "border-box",
             "img": {
               "width": [24, 30],
               "mr": ["sm", "md"]
@@ -4347,7 +4438,7 @@
             "mb": ["lg", "xxl"],
             "a": {
               "borderBottom": "none",
-              "font-weight": "inherit"
+              "fontWeight": "inherit"
             }
           },
           "meta": {
@@ -4858,14 +4949,14 @@
         "&:first-of-type": {
           "borderStyle": "solid",
           "svg": {
-            "margin-left": 0
+            "marginLeft": 0
           }
         },
         "svg": {
           "position": "absolute",
           "width": "22px",
           "height": "22px",
-          "margin-left": "-0.5px",
+          "marginLeft": "-0.5px",
           "top": "50%",
           "left": "50%",
           "transform": "translate(-50%, -50%)"
