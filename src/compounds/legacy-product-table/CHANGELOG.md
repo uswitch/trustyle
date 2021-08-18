@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.5.3...@uswitch/trustyle.legacy-product-table@1.6.0) (2021-08-18)
+
+
+### Features
+
+* implement information panel into legacy pt ([2847e8e](https://github.com/uswitch/trustyle/commit/2847e8e))
+
+
+
+
+
 ## [1.5.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.5.2...@uswitch/trustyle.legacy-product-table@1.5.3) (2021-08-16)
 
 
