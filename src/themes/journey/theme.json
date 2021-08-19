@@ -1,7 +1,8 @@
 {
   "name": "Journey",
-
-  "useLocalStorage": false,
+  "config": {
+    "useLocalStorage": false
+  },
 
   "breakpoints": ["768px", "990px"],
 

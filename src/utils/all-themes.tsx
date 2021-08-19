@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { Themed, ThemeProvider } from 'theme-ui'
 
+import { GlobalStyles } from '../elements/global-styles/src'
+
 import { themes as themeFiles } from './theme-selector'
 
 interface Props extends React.HTMLAttributes<any> {
@@ -26,6 +28,7 @@ const AllThemes: React.FC<Props> = ({ themes = [], children }) => {
         const theme = themeFiles[`./${key}/theme.json`]
         return (
           <ThemeProvider theme={theme} key={index}>
+            <GlobalStyles />
             <Themed.root>
               <h2>{key}:</h2>
               {children}

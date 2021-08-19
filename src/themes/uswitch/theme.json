@@ -1,7 +1,9 @@
 {
   "name": "Uswitch",
-  "useBodyStyles": false,
-  "useCustomProperties": false,
+  "config": {
+    "useBodyStyles": false,
+    "useCustomProperties": false
+  },
   "breakpoints": ["768px", "992px"],
   "zIndices": {
     "min": 0,
