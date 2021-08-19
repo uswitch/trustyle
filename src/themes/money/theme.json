@@ -152,6 +152,7 @@
     "grey-80": "#24262A",
     "grey-90": "#111317",
     "grey-100": "#000000",
+    "progress-bg": "#F2F2F3",
     "primary": "#FEC340",
     "primary--dark": "#F8B31B",
     "primary--light": "#FFF6E2",
@@ -299,6 +300,140 @@
   },
   "----------------------------- Variants": "-----------------------------",
   "elements": {
+    "funnel-progress": {
+      "base": {
+        "display": "flex",
+        "flexFlow": "row",
+        "userSelect": "none",
+        "phase": {
+          "base": {
+            "flex": "auto",
+            "flexGrow": 0,
+            "marginLeft": "sm",
+            "backgroundColor": "light-1",
+            "borderRadius": "999px",
+            "whiteSpace": "nowrap",
+            "position": "relative",
+            "transition": "flex-grow 0.4s",
+            "&:first-of-type": {
+              "marginLeft": "0px"
+            }
+          },
+          "variants": {
+            "open": {
+              "variant": "elements.funnel-progress.base.phase.base",
+              "flexGrow": 1,
+              "overflow": "hidden"
+            }
+          }
+        },
+        "phaseLabel": {
+          "base": {
+            "position": "relative",
+            "whiteSpace": "nowrap",
+            "overflow": "hidden",
+            "textOverflow": "ellipsis"
+          }
+        },
+        "phaseLabelPart": {
+          "base": {
+            "display": "inline-block",
+            "verticalAlign": "top",
+            "marginLeft": "xxs",
+            "fontSize": "xs",
+            "fontWeight": "bold",
+            "lineHeight": "24px",
+            "color": "grey",
+            "&:first-of-type": {
+              "marginLeft": "0px"
+            }
+          }
+        },
+        "phaseIcon": {
+          "base": {
+            "transition": "background 0.4s, border-color 0.4s, color 0.4s",
+            "background": "light-1",
+            "border": "2px solid",
+            "borderColor": "dark-1",
+            "borderRadius": "999px",
+            "width": "24px",
+            "height": "24px",
+            "lineHeight": "20px",
+            "textAlign": "center",
+            "fontWeight": "bold",
+            "color": "dark-1",
+            "fontSize": "14px"
+          },
+          "variants": {
+            "open": {
+              "variant": "elements.funnel-progress.base.phaseIcon.base",
+              "background": "black",
+              "borderColor": "dark-1",
+              "color": "light-1"
+            },
+            "complete": {
+              "variant": "elements.funnel-progress.base.phaseIcon.base",
+              "background": "black",
+              "borderColor": "dark-1",
+              "color": "light-1"
+            },
+            "incomplete": {
+              "variant": "elements.funnel-progress.base.phaseIcon.base"
+            }
+          }
+        },
+        "phaseCompleteIcon": {
+          "base": {
+            "width": "12px",
+            "display": "inline-block",
+            "& > svg": {
+              "margin-top": "-50%"
+            }
+          }
+        },
+        "progress": {
+          "base": {
+            "position": "absolute",
+            "backgroundColor": "secondary",
+            "minWidth": "24px",
+            "top": "0",
+            "bottom": "0",
+            "left": "0",
+            "transition": "width 0.4s"
+          },
+          "back": {
+            "height": "4px",
+            "width": "100%",
+            "position": "relative",
+            "backgroundColor": "secondary",
+            "marginTop": "13px"
+          }
+        }
+      },
+      "variants": {
+        "percentage": {
+          "variant": "elements.funnel-progress.base",
+          "justifyContent": "flex-end",
+          "displayPercentage": {
+            "fontWeight": "600",
+            "lineHeight": "24px"
+          },
+          "progress": {
+            "base": {
+              "variant": "elements.funnel-progress.base.progress.base"
+            },
+            "variants": {
+              "start": {
+                "variant": "elements.funnel-progress.base.progress.base"
+              }
+            },
+            "back": {
+              "variant": "elements.funnel-progress.base.progress.back"
+            }
+          }
+        }
+      }
+    },
     "author": {
       "link": {
         "fontWeight": "base"
@@ -1741,6 +1876,103 @@
             }
           }
         },
+        "journey": {
+          "formWrapper": {
+            "minHeight": ["calc(100vh - 55px)", "680px", "680px"],
+            "pt": ["xs", "lg", "lg"],
+            "mb": "0",
+            "position": "relative"
+          },
+          "simple-radio": {
+            "radioWrapper": {
+              "display": "flex",
+              "flexDirection": "column",
+              "width": "100%",
+              "mb": 0
+            },
+            "span": {
+              "mb": "sm"
+            }
+          },
+          "funnel": {
+            "mb": "md",
+            "px": ["sm", "xxl", "xxxl"],
+            "color": "grey-80"
+          },
+          "input": {
+            "checkbox": {
+              "wrapper": {
+                "variant": "elements.form.variants.journey.input.wrapper",
+                "flex": "1 0 100%"
+              }
+            },
+            "radio": {
+              "wrapper": {
+                "variant": "elements.form.variants.journey.input.wrapper"
+              }
+            },
+            "wrapper": {
+              "display": "flex",
+              "mb": ["md", "0px"],
+              "px": ["sm", "xxl", "xxxl"],
+              "justifyContent": "space-between",
+              "flexDirection": "column"
+            },
+            "error": {
+              "position": "absolute",
+              "width": "100%",
+              "margin": "0",
+              "top": "68px"
+            }
+          },
+          "description": {
+            "mt": 0,
+            "fontSize": ["14px", "16px", "16px"],
+            "lineHeight": "21px",
+            "color": "grey-60",
+            "fontWeight": "400",
+            "sectionName": {
+              "mt": "sm",
+              "fontSize": ["14px", "xs", "xs"],
+              "lineHeight": "21px",
+              "fontWeight": "400"
+            }
+          },
+          "label": {
+            "variant": "styles.h4",
+            "color": "grey-80",
+            "display": "block",
+            "mb": "sm",
+            "variants": {
+              "calculator": {
+                "flex": "1 1 0px",
+                "fontWeight": "600"
+              }
+            }
+          },
+          "button": {
+            "my": "sm",
+            "bg": "red",
+            "variants": {
+              "calculator": {}
+            }
+          },
+          "wrapper": {
+            "base": {
+              "width": "100%",
+              "position": "relative",
+              "pb": 0
+            },
+            "variants": {
+              "calculator": {
+                "pb": ["xs", 0],
+                "flexDirection": "column",
+                "flex": "1 1 0px",
+                "min-width": "176px"
+              }
+            }
+          }
+        },
         "simple": {
           "simple-radio": {
             "radioWrapper": {
@@ -2019,6 +2251,99 @@
                 "display": "flex",
                 "justifyContent": "center"
               }
+            }
+          }
+        }
+      },
+      "journey": {
+        "elements": {
+          "wrapper": {
+            "display": "none",
+            "submit": {
+              "display": "none"
+            }
+          },
+          "buttonWrapper": {
+            "display": "none"
+          }
+        },
+        "states": {
+          "isActive": {
+            "buttonWrapper": {
+              "display": "flex",
+              "justifyContent": "flex-end",
+              "pt": ["xs", "md", "md"],
+              "pb": ["xs", "0", "0"],
+              "borderTop": "1px solid #E8E8E9",
+              "position": ["fixed", "absolute", "absolute"],
+              "bottom": ["0", "16px", "28px"],
+              "width": "100%",
+              "bg": "white",
+              "button": {
+                "mr": ["sm", "xxl", "xxxl"],
+                "width": "180px",
+                "height": "48px",
+                "svg": {
+                  "margin-left": "10px",
+                  "fill": "#29335C"
+                }
+              },
+              "calculator": {
+                "textAlign": "center"
+              }
+            },
+            "wrapper": {
+              "variant": "elements.form-section.panel.elements.wrapper",
+              "pb": "md"
+            },
+            "heading": {
+              "opacity": 1,
+              "pr": ["sm", "xxxl", "xxxl"],
+              "pl": ["sm", "xxl", "xxxl"],
+              "mr": 0,
+              "mt": 0,
+              "alignItems": "left",
+              "display": "flex",
+              "flexDirection": "column",
+              "h2, h3": {
+                "mr": 0,
+                "mt": 0,
+                "mb": "sm"
+              },
+              "sectionName": {
+                "fontFamily": "heading",
+                "lineHeight": ["sm", "xs", "xs"],
+                "fontWeight": "bold"
+              },
+              "sectionDescription": {
+                "fontFamily": "heading",
+                "fontSize": "xs",
+                "fontWeight": "normal"
+              }
+            },
+            "fields": {
+              "pb": "xl",
+              "mb": [0, "xl", "xl"],
+              "calculator": {
+                "display": "flex",
+                "flexWrap": "wrap",
+                "justifyContent": "space-between",
+                "flexDirection": ["column", "row"]
+              }
+            }
+          },
+          "isComplete": {
+            "wrapper": {
+              "variant": "elements.form-section.panel.elements.wrapper",
+              "display": "none"
+            },
+            "heading": {
+              "variant": "elements.form-section.panel.elements.heading",
+              "opacity": 1,
+              "justifyContent": "space-between"
+            },
+            "fields": {
+              "display": "none"
             }
           }
         }
@@ -2819,6 +3144,68 @@
         "lineHeight": "heading",
         "p": {
           "color": "plum"
+        }
+      }
+    },
+    "information-panel": {
+      "block": {
+        "title": {
+          "fontSize": "md",
+          "fontStyle": "normal",
+          "fontWeight": "bold",
+          "fontFamily": "heading",
+          "color": "experimental-text",
+          "mb": "5px",
+          "textAlign": "left"
+        }
+      },
+      "text": {
+        "fontSize": "xs",
+        "my": "xxs",
+        "mx": 0,
+        "color": "grey-80"
+      },
+      "list": {
+        "tdSx": {
+          "backgroundColor": "white",
+          "fontSize": "13px",
+          "fontFamily": "base",
+          "px": 0,
+          "py": "xs"
+        },
+        "tdSxWithLabel": {
+          "variant": "compounds.information-panel.list.tdSx",
+          "fontWeight": "bold",
+          "pr": "xs"
+        },
+        "tdSxWithValue": {
+          "variant": "compounds.information-panel.list.tdSx",
+          "pl": "xs",
+          "textAlign": "right"
+        },
+        "trSx": {
+          "borderBottom": "1px solid",
+          "borderBottomColor": "#D0D0D3",
+          ":last-child": {
+            "borderBottom": 0
+          }
+        }
+      },
+      "table": {
+        "trSx": {
+          "variant": "compounds.information-panel.list.trSx"
+        },
+        "tdSx": {
+          "variant": "compounds.information-panel.list.tdSx",
+          "padding": "sm",
+          "textAlign": "center",
+          ":first-of-type": {
+            "pl": 0,
+            "textAlign": "left"
+          },
+          ":last-child": {
+            "pr": 0
+          }
         }
       }
     },
@@ -3667,6 +4054,21 @@
           "fill": "#141424",
           "stroke": "#141424"
         }
+      }
+    },
+    "loading-results": {
+      "header": {
+        "fontSize": ["md", "xl", "xl"],
+        "color": "plum",
+        "fontFamily": "heading"
+      },
+      "iconColor": "button-secondary",
+      "text": {
+        "color": "button-secondary",
+        "fontSize": "md",
+        "fontWeight": "bolder",
+        "textAlign": ["left", "center", "center"],
+        "fontFamily": "base"
       }
     }
   },

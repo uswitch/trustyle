@@ -1,6 +1,6 @@
 {
-  "name": "@uswitch/trustyle.fieldset",
-  "version": "0.1.9",
+  "name": "@uswitch/trustyle.information-panel",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -11,15 +11,11 @@
     "type": "git",
     "url": "https://github.com/uswitch/trustyle"
   },
-  "dependencies": {
-    "@uswitch/trustyle.styles": "^0.5.7"
-  },
-  "devDependencies": {
-    "@uswitch/trustyle.grid": "^2.0.16",
-    "typescript": "^3.6.2"
-  },
   "peerDependencies": {
-    "@emotion/react": "^11.4.0",
+    "@emotion/core": "^10.0.27",
     "react": "^16.7.0"
+  },
+  "dependencies": {
+    "@uswitch/trustyle.icon": "^1.27.1"
   }
 }
