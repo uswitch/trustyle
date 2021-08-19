@@ -11,6 +11,7 @@ interface Props {
   outerMargin?: string[]
   containerWidths?: (string | number)[]
   gutterWidths?: number[]
+  className?: string
 }
 
 export const Container: React.FC<Props> = ({
@@ -33,6 +34,7 @@ interface ColumnProps extends Breakpoints {
   hasPaddingTop?: boolean
   hasPaddingBottom?: boolean
   gutterWidths?: number[]
+  className?: string
 }
 
 const parseSizeFromProps = (fn: (breakpoint: [string, any]) => any) =>
@@ -75,6 +77,7 @@ interface RowProps {
   topSpacing?: number[]
   bottomSpacing?: number[]
   gutterWidths?: number[]
+  className?: string
 }
 
 export const Row: React.FC<RowProps> = ({
