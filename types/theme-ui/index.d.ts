@@ -15,7 +15,7 @@ import { SystemStyleObject } from '@styled-system/css'
 import * as CSS from 'csstype'
 import * as React from 'react'
 import { Theme as StyledSystemTheme } from 'styled-system'
-import { Interpolation, SerializedStyles } from '@emotion/serialize'
+import { SerializedStyles } from '@emotion/serialize'
 
 export {}
 
@@ -132,9 +132,7 @@ export const jsx: typeof React.createElement
  * 1. https://styled-system.com/css/
  * 2. https://emotion.sh/docs/object-styles#with-css
  */
-export function css(
-  styleObject: Interpolation
-): (theme: Theme) => SerializedStyles
+export function css(styleObject: any): (theme: Theme) => SerializedStyles
 
 /**
  * The `sx` prop accepts a `SxStyleProp` object and properties that are part of
@@ -226,10 +224,12 @@ export function useColorMode<Modes extends string>(
 ): [Modes, React.Dispatch<React.SetStateAction<Modes>>]
 
 export const InitializeColorMode: React.ComponentType
+// eslint-disable-next-line no-redeclare
 export const ColorMode: React.ComponentType
 
 declare module 'react' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   interface DOMAttributes<T> extends SxProps {}
 }
 

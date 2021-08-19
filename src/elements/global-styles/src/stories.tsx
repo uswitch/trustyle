@@ -5,11 +5,10 @@ import { storiesOf } from '@storybook/react'
 import { text } from '@storybook/addon-knobs'
 import { jsx, ThemeUICSSObject } from 'theme-ui'
 import { css } from '@emotion/react'
-import { Interpolation } from '@emotion/serialize'
 
 import theme from '../../../utils/theme-selector'
 
-const swatch: Interpolation & ThemeUICSSObject = {
+const swatch: object & ThemeUICSSObject = {
   padding: '10px',
   display: 'inline-block',
   fontFamily: 'monospace',
@@ -20,7 +19,7 @@ const swatch: Interpolation & ThemeUICSSObject = {
 storiesOf('Global Styles/Colours', module).add('Swatches', () => (
   <div css={css({ margin: '-10px' })}>
     {Object.entries(theme().colors).map(([key, value]) => {
-      const swatchBlock: Interpolation & ThemeUICSSObject = {
+      const swatchBlock: object & ThemeUICSSObject = {
         backgroundColor: String(value),
         width: '100px',
         height: '100px',
