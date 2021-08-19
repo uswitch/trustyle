@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.38](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.5.37...@uswitch/trustyle.sponsored-product@3.5.38) (2021-08-19)
+
+**Note:** Version bump only for package @uswitch/trustyle.sponsored-product
+
+
+
+
+
 ## [3.5.37](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.5.36...@uswitch/trustyle.sponsored-product@3.5.37) (2021-08-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.sponsored-product
