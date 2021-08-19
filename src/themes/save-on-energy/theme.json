@@ -1,7 +1,9 @@
 {
   "name": "saveOnEnergy",
   "config": {
-    "useLocalStorage": false
+    "useLocalStorage": false,
+    "useCustomProperties": false,
+    "useRootStyles": false
   },
 
   "breakpoints": ["768px", "1280px"],
@@ -111,10 +113,6 @@
       "width": 576
     }
   },
-
-  "useCustomProperties": false,
-
-  "useBodyStyles": false,
 
   "colors": {
     "background": "initial",

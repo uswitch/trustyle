@@ -1,7 +1,9 @@
 {
   "name": "Money",
   "config": {
-    "useLocalStorage": false
+    "useLocalStorage": false,
+    "useCustomProperties": false,
+    "useRootStyles": false
   },
   "breakpoints": ["768px", "990px"],
   "zIndices": {
@@ -126,8 +128,7 @@
       "width": 576
     }
   },
-  "useCustomProperties": false,
-  "useBodyStyles": false,
+
   "colors": {
     "background": "initial",
     "text": "#4c4c4c",
