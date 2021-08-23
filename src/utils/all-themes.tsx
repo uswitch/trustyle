@@ -1,7 +1,5 @@
 import * as React from 'react'
-import { Themed, ThemeProvider } from 'theme-ui'
-
-import { GlobalStyles } from '../elements/global-styles/src'
+import { Theme, Themed, ThemeProvider } from 'theme-ui'
 
 import { themes as themeFiles } from './theme-selector'
 
@@ -26,11 +24,11 @@ const AllThemes: React.FC<Props> = ({ themes = [], children }) => {
     <React.Fragment>
       {themeKeys.map((key, index) => {
         const theme = themeFiles[`./${key}/theme.json`]
+
         return (
-          <ThemeProvider theme={theme} key={index}>
-            <GlobalStyles />
+          <ThemeProvider theme={theme as Theme} key={index}>
             <Themed.root>
-              <h2>{key}:</h2>
+              <Themed.h2>{key}:</Themed.h2>
               {children}
             </Themed.root>
           </ThemeProvider>
