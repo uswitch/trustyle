@@ -1,7 +1,7 @@
 {
   "name": "Uswitch",
   "config": {
-    "useRootStyles": false,
+    "useRootStyles": true,
     "useCustomProperties": false
   },
   "breakpoints": ["768px", "992px"],

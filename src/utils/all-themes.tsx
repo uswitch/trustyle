@@ -28,7 +28,7 @@ const AllThemes: React.FC<Props> = ({ themes = [], children }) => {
         return (
           <ThemeProvider theme={theme as Theme} key={index}>
             <Themed.root>
-              <Themed.h2>{key}:</Themed.h2>
+              <h2>{key}:</h2>
               {children}
             </Themed.root>
           </ThemeProvider>
