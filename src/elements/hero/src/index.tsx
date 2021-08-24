@@ -5,13 +5,11 @@ import { jsx, useThemeUI } from 'theme-ui'
 import get from '@uswitch/trustyle-utils.get'
 import { Palette } from '@uswitch/trustyle-utils.palette'
 
-import { SxStyleProp } from '../../../../types/theme-ui'
-
 type ArrayOrNot<T> = T | T[]
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   breadcrumbs?: React.ReactElement
-  container?: React.FC & SxStyleProp
+  container?: React.FC & any
   fgImage?: string
   fgImageType?: 'background' | 'img'
   fgImagePosition?:
@@ -39,11 +37,7 @@ const makeStyles = (variant?: string) => (element?: string) =>
     element ? `.${element}` : ''
   }`
 
-const DefaultContainer: React.FC & SxStyleProp = ({
-  children
-}: {
-  children: any
-}) => (
+const DefaultContainer: React.FC & any = ({ children }: { children: any }) => (
   <div sx={{ maxWidth: 1024, margin: '0 auto', paddingX: 10 }}>{children}</div>
 )
 
