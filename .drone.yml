@@ -11,9 +11,9 @@ pipeline:
       event: push
       branch: master
     image: quay.io/uswitch/aws-cli:1.15.72
-    secrets: [AWS_SECRET_ACCESS_KEY, AWS_ACCESS_KEY_ID]
+    secrets: [ AWS_SECRET_ACCESS_KEY, AWS_ACCESS_KEY_ID ]
     commands:
-      - 'aws s3 cp --region eu-west-1 --recursive ./static/icons s3://trustyle-icons --cache-control max-age=604800 --metadata ''{"x-amz-meta-surrogate-control": "max-age=604800"}'' --acl=public-read'
+      - "aws s3 cp --region eu-west-1 --recursive ./static/icons s3://trustyle-icons --cache-control max-age=604800 --metadata '{\"x-amz-meta-surrogate-control\": \"max-age=604800\"}' --acl=public-read"
 
   install:
     when:
@@ -45,6 +45,14 @@ pipeline:
     group: checks
     commands:
       - npm run prettier:check
+
+  a11y:
+    when:
+      event: [push]
+    image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    group: checks
+    commands:
+      - USE_STATIC_STORYBOOK=true npm run a11y
 
   build:
     when:
@@ -82,14 +90,6 @@ pipeline:
     commands:
       - npm run snapshot
 
-  # a11y:
-  #   when:
-  #     event: [push]
-  #   image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
-  #   group: checks
-  #   commands:
-  #     - USE_STATIC_STORYBOOK=true npm run a11y
-
   check-unpublished:
     when:
       event: [push]
@@ -98,3 +98,4 @@ pipeline:
     secrets: [slack_webhook]
     commands:
       - node ./scripts/slack-unpublished.js
+  
