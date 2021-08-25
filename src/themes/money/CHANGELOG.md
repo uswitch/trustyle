@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.62.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.61.1...@uswitch/trustyle.money-theme@1.62.0) (2021-08-25)
+
+
+### Features
+
+* add secondary cta to legacy pt ([220db84](https://github.com/uswitch/trustyle/commit/220db84))
+
+
+
+
+
 ## [1.61.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.61.0...@uswitch/trustyle.money-theme@1.61.1) (2021-08-19)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme

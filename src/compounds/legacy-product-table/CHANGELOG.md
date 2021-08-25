@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.6.0...@uswitch/trustyle.legacy-product-table@1.7.0) (2021-08-25)
+
+
+### Features
+
+* add secondary cta to legacy pt ([220db84](https://github.com/uswitch/trustyle/commit/220db84))
+
+
+
+
+
 # [1.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.5.3...@uswitch/trustyle.legacy-product-table@1.6.0) (2021-08-18)
 
 
