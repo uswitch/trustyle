@@ -23,8 +23,8 @@ const DebugValue: React.FC<{ value: string | undefined }> = ({ value }) => (
 )
 
 const PostprocessStory: React.FC = () => {
-  const [value1, setValue1] = React.useState()
-  const [value2, setValue2] = React.useState()
+  const [value1, setValue1] = React.useState<string | undefined>()
+  const [value2, setValue2] = React.useState<string | undefined>()
 
   return (
     <div css={css({ padding: number('Padding', 10) })}>

@@ -43,7 +43,7 @@ export const AutomatedTests = () => {
     <AllThemes>
       {permutations.map((p, i) => (
         <SlideReveal open={p.open} key={i}>
-          {open ? 'This should appear' : 'This should not appear'}
+          {p.open ? 'This should appear' : 'This should not appear'}
         </SlideReveal>
       ))}
     </AllThemes>
