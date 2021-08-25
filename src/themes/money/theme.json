@@ -1477,6 +1477,14 @@
           "background": "none",
           "textDecoration": "underline"
         },
+        "secondaryLink": {
+          "variant": "elements.buttons.variants.link",
+          "color": "plum",
+          "fontSize": "xs",
+          "fontWeight": "semiBold",
+          "px": 0,
+          "py": "xs"
+        },
         "control": {
           "boxSizing": "border-box",
           "padding": "sm",
