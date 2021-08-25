@@ -428,6 +428,8 @@ export const DataCell: React.FC<DataCellProps> = ({
 }
 
 interface CtaCellProps extends React.HTMLAttributes<HTMLDivElement> {
+  secondaryHref?: string
+  secondaryText?: string
   styles?: any
   href?: string
   onClick?: (event?: any) => void
@@ -438,6 +440,8 @@ interface CtaCellProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export const CtaCell: React.FC<CtaCellProps> = ({
   children,
+  secondaryHref,
+  secondaryText,
   styles,
   href,
   onClick,
@@ -475,13 +479,32 @@ export const CtaCell: React.FC<CtaCellProps> = ({
         visibility: disabled && 'hidden'
       }}
     >
-      {href ? (
-        <ButtonLink href={href} {...props}>
-          {children}
-        </ButtonLink>
-      ) : (
-        <Button {...props}>{children}</Button>
-      )}
+      <div
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        {href ? (
+          <ButtonLink href={href} {...props}>
+            {children}
+          </ButtonLink>
+        ) : (
+          <Button {...props}>{children}</Button>
+        )}
+
+        {secondaryHref && (
+          <ButtonLink
+            href={secondaryHref}
+            variant="secondaryLink"
+            target="_blank"
+          >
+            {secondaryText}
+          </ButtonLink>
+        )}
+      </div>
     </BaseCell>
   )
 }
