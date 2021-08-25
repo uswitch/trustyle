@@ -11,7 +11,7 @@ module.exports = ({ config }) => {
         '@babel/preset-react',
         '@babel/preset-env'
       ],
-      plugins: ['emotion']
+      plugins: ['@emotion']
     }
   })
   config.resolve.extensions.push('.ts', '.tsx')

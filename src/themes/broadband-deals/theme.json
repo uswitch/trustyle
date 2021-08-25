@@ -3,7 +3,7 @@
   "config": {
     "useLocalStorage": false,
     "useCustomProperties": false,
-    "useRootStyles": true
+    "useRootStyles": false
   },
   "breakpoints": ["768px", "990px"],
   "zIndices": {
