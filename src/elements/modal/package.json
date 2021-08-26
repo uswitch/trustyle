@@ -12,7 +12,6 @@
     "url": "https://github.com/uswitch/trustyle"
   },
   "peerDependencies": {
-    "@uswitch/trustyle.icon": "^1.17.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "theme-ui": "^0.9.1"

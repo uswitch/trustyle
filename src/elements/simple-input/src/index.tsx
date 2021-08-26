@@ -52,19 +52,18 @@ export const SimpleInput = React.forwardRef(
         'defaultValue',
         'prefix',
         'suffix',
-        'inputSize',
         'uppercase',
-        'onKeyDown'
+        'onKeyDown',
+        'inputSize'
       ]
-
-      const regex = new RegExp('\\b(' + defaultProps.join('|') + ')\\b', 'g')
 
       let tempArr: object = {}
 
-      Object.keys(props).forEach(function(key: string) {
-        if (!regex.test(key)) {
+      Object.keys(props).forEach((key: string) => {
+        if (!defaultProps.includes(key)) {
           tempArr = {
             ...tempArr,
+            'aria-label': name,
             [key]: props[key as keyof Props]
           }
         }

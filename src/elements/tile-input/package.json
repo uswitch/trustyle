@@ -11,12 +11,12 @@
     "type": "git",
     "url": "https://github.com/uswitch/trustyle"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@emotion/react": "^11.4.0",
-    "@uswitch/trustyle.styles": "^0.5.7",
-    "react": "^16.7.0"
+    "react": "^16.8.6"
   },
   "devDependencies": {
+    "@uswitch/trustyle.styles": "^0.5.7",
     "@uswitch/trustyle.grid": "^2.0.16",
     "typescript": "^3.6.2"
   }
