@@ -514,6 +514,7 @@ export const SecondaryCTAExample = () => {
       title={title}
       moreInformationPanel={[eligibilityContent, ratesContent]}
       moreInformationButton={moreInformationButton}
+      clickableRow={clickableRow}
     >
       {productTableWithSecondaryLinkContents}
     </LegacyProductTable>
