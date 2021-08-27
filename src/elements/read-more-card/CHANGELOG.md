@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.21](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.read-more-card@1.4.20...@uswitch/trustyle.read-more-card@1.4.21) (2021-08-27)
+
+
+### Bug Fixes
+
+* fixed a11y, removed unnecessary rules, fixed package.json across all dir ([a9e0455](https://github.com/uswitch/trustyle/commit/a9e0455))
+* reveted changes on some packages, fixed some small bugs on themes ([69b8a3d](https://github.com/uswitch/trustyle/commit/69b8a3d))
+
+
+
+
+
 ## [1.4.20](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.read-more-card@1.4.19...@uswitch/trustyle.read-more-card@1.4.20) (2021-08-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.read-more-card

@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.input",
-  "version": "2.1.18",
+  "version": "2.1.19",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -12,13 +12,13 @@
     "url": "https://github.com/uswitch/trustyle"
   },
   "dependencies": {
-    "@uswitch/trustyle.frozen-input": "^3.2.13",
-    "@uswitch/trustyle.styles": "^0.5.7",
+    "@uswitch/trustyle.frozen-input": "^3.2.14",
+    "@uswitch/trustyle.styles": "^0.5.8",
     "react-input-mask": "^2.0.4",
     "tiny-debounce": "^0.1.1"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.27.1",
+    "@uswitch/trustyle.icon": "^1.27.2",
     "typescript": "^3.6.2"
   },
   "peerDependencies": {

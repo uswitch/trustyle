@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero-with-background-image@1.0.10...@uswitch/trustyle.hero-with-background-image@1.0.11) (2021-08-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.hero-with-background-image
+
+
+
+
+
 ## [1.0.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero-with-background-image@1.0.9...@uswitch/trustyle.hero-with-background-image@1.0.10) (2021-04-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.hero-with-background-image
