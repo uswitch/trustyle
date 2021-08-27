@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.22](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.arrangement@2.0.21...@uswitch/trustyle.arrangement@2.0.22) (2021-08-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.arrangement
+
+
+
+
+
 ## [2.0.21](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.arrangement@2.0.20...@uswitch/trustyle.arrangement@2.0.21) (2021-04-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.arrangement

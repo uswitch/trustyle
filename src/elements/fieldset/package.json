@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.fieldset",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -12,10 +12,10 @@
     "url": "https://github.com/uswitch/trustyle"
   },
   "dependencies": {
-    "@uswitch/trustyle.styles": "^0.5.7"
+    "@uswitch/trustyle.styles": "^0.5.8"
   },
   "devDependencies": {
-    "@uswitch/trustyle.grid": "^2.0.16",
+    "@uswitch/trustyle.grid": "^2.0.17",
     "typescript": "^3.6.2"
   },
   "peerDependencies": {

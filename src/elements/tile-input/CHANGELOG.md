@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.tile-input@3.0.9...@uswitch/trustyle.tile-input@3.0.10) (2021-08-27)
+
+
+### Bug Fixes
+
+* added drone.yml to prettierignore, fixed drone formating ([7ceed6b](https://github.com/uswitch/trustyle/commit/7ceed6b))
+* fixed a11y, removed unnecessary rules, fixed package.json across all dir ([a9e0455](https://github.com/uswitch/trustyle/commit/a9e0455))
+
+
+
+
+
 ## [3.0.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.tile-input@3.0.8...@uswitch/trustyle.tile-input@3.0.9) (2021-08-19)
 
 **Note:** Version bump only for package @uswitch/trustyle.tile-input

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.flex-grid@3.5.3...@uswitch/trustyle.flex-grid@3.5.4) (2021-08-27)
+
+**Note:** Version bump only for package @uswitch/trustyle.flex-grid
+
+
+
+
+
 ## [3.5.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.flex-grid@3.5.2...@uswitch/trustyle.flex-grid@3.5.3) (2021-04-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.flex-grid
