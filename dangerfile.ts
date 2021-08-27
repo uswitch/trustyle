@@ -1,13 +1,4 @@
-import { danger, message, warn } from 'danger'
-
-const modifiedMD = danger.git.modified_files.join('- ')
-message('Changed Files in this PR: \n - ' + modifiedMD)
-
-const addedFiles = danger.git.created_files.join(', ')
-message('Added Files in this PR: \n - ' + addedFiles)
-
-const removedFiles = danger.git.deleted_files.join(', ')
-message('Removed files in this PR: \n - ' + removedFiles)
+import { danger, warn } from 'danger'
 
 // Commits should start with feat, fix, major or chore
 danger.git.commits.forEach(commit => {
