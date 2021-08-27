@@ -1240,6 +1240,15 @@
       },
       "variants": {
         "hero": {
+          "boxout": {
+            "border": "2px #E8E8E9 solid",
+            "box-sizing": "border-box",
+            "padding": "40px",
+            "mb": "base",
+            "div:last-of-type p:last-of-type": {
+              "mb": 0
+            }
+          },
           "display": "flex",
           "alignItems": "center",
           "flexDirection": "column",
