@@ -88,6 +88,18 @@ const productTableContentsDisabled = [
   </CtaCell>
 ]
 
+const productTableWithSecondaryLinkContents = [
+  ...baseTableContents,
+  <CtaCell
+    key="4"
+    href={clickableRow}
+    secondaryHref={clickableRow}
+    secondaryText="Can I get this card?"
+  >
+    See Deal
+  </CtaCell>
+]
+
 const percentageTableContents = [
   ...dataContents,
   <PercentageCell
@@ -494,6 +506,27 @@ DisabledExample.story = {
   }
 }
 
+export const SecondaryCTAExample = () => {
+  return (
+    <LegacyProductTable
+      representativeExample={representativeExample}
+      info={info}
+      title={title}
+      moreInformationPanel={[eligibilityContent, ratesContent]}
+      moreInformationButton={moreInformationButton}
+      clickableRow={clickableRow}
+    >
+      {productTableWithSecondaryLinkContents}
+    </LegacyProductTable>
+  )
+}
+
+SecondaryCTAExample.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const TelephoneExample = () => {
   return (
     <LegacyProductTable
@@ -566,6 +599,7 @@ export const AutomatedTests = () => {
       <PreapprovedBannerExample />
       <PreapprovedBannerWithBadgeExample />
       <EmptyTableExample />
+      <SecondaryCTAExample />
     </AllThemes>
   )
 }

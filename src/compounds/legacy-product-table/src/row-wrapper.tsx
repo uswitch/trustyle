@@ -21,7 +21,7 @@ const linkWrapper = (
       sx={{
         textDecoration: 'none',
         ':hover:not(:disabled)': {
-          'a, button': {
+          'a:not(.secondary-link), button:not(.secondary-link)': {
             background: '#db4d75'
           },
           header: {

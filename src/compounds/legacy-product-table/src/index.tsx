@@ -428,22 +428,28 @@ export const DataCell: React.FC<DataCellProps> = ({
 }
 
 interface CtaCellProps extends React.HTMLAttributes<HTMLDivElement> {
+  secondaryHref?: string
+  secondaryText?: string
   styles?: any
   href?: string
   onClick?: (event?: any) => void
   disabled?: boolean
   variant?: string
   isWireFrame?: boolean
+  clickableRow?: any
 }
 
 export const CtaCell: React.FC<CtaCellProps> = ({
   children,
+  secondaryHref,
+  secondaryText,
   styles,
   href,
   onClick,
   disabled,
   variant,
-  isWireFrame = false
+  isWireFrame = false,
+  clickableRow
 }) => {
   const props = {
     variant: 'primary',
@@ -465,6 +471,10 @@ export const CtaCell: React.FC<CtaCellProps> = ({
     onClick
   }
 
+  const onSecondaryClick = (secondaryHref: string) => {
+    window.open(secondaryHref)
+  }
+
   return (
     <BaseCell
       sx={{
@@ -475,13 +485,42 @@ export const CtaCell: React.FC<CtaCellProps> = ({
         visibility: disabled && ('hidden' as const)
       }}
     >
-      {href ? (
-        <ButtonLink href={href} {...props}>
-          {children}
-        </ButtonLink>
-      ) : (
-        <Button {...props}>{children}</Button>
-      )}
+      <div
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        {href ? (
+          <ButtonLink href={href} {...props}>
+            {children}
+          </ButtonLink>
+        ) : (
+          <Button {...props}>{children}</Button>
+        )}
+
+        {secondaryHref &&
+          (clickableRow ? (
+            <Button
+              variant="secondaryLink"
+              onClick={() => onSecondaryClick(secondaryHref)}
+              className="secondary-link"
+            >
+              {secondaryText}
+            </Button>
+          ) : (
+            <ButtonLink
+              href={secondaryHref}
+              variant="secondaryLink"
+              target="_blank"
+              className="secondary-link"
+            >
+              {secondaryText}
+            </ButtonLink>
+          ))}
+      </div>
     </BaseCell>
   )
 }
