@@ -98,7 +98,7 @@ const RowContent: React.FC<ContentRowProps> = ({
           ...grid('column', 2, 1),
           ...grid('row', 1, 1),
           fontSize: 'sm',
-          textAlign: 'right',
+          textAlign: 'right' as const,
           small: {
             fontSize: 'sm'
           },
@@ -177,7 +177,7 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
           ...grid('column', 1, 1),
           ...grid('row', headerImage ? 2 : 1, 1),
           fontSize: isCard ? 'sm' : 'xxl',
-          textAlign: isCard ? 'center' : 'left',
+          textAlign: isCard ? ('center' as const) : ('left' as const),
           small: {
             fontSize: 'sm'
           },

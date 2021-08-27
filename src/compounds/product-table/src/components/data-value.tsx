@@ -17,7 +17,9 @@ const ProductTableDataValue: React.FC<DataValueProps> = ({
 }) => {
   const { isCard } = React.useContext(CardContext)
   const forcedMobile = forceMobile(isCard)
-  const boldNumber = isCard ? { fontWeight: '600', whiteSpace: 'nowrap' } : {}
+  const boldNumber = isCard
+    ? { fontWeight: '600', whiteSpace: 'nowrap' as const }
+    : {}
   const removeBold = isCard ? { fontWeight: '400' } : {}
   return (
     <span sx={boldNumber}>

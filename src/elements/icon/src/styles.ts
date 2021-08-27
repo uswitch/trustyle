@@ -1,11 +1,11 @@
 import { pxToRem } from '@uswitch/trustyle.styles'
-import { SxStyleProp } from 'theme-ui'
+import { ThemeUIStyleObject } from 'theme-ui'
 
 import { Direction } from '.'
 
 export const icon = { display: 'block' }
 
-export const rotate = (direction: Direction): SxStyleProp => {
+export const rotate = (direction: Direction): ThemeUIStyleObject => {
   switch (direction) {
     case 'right':
       return { transform: 'rotate(0.25turn)' }
@@ -18,7 +18,7 @@ export const rotate = (direction: Direction): SxStyleProp => {
   }
 }
 
-export const size = (size: number | undefined): SxStyleProp =>
+export const size = (size: number | undefined): ThemeUIStyleObject =>
   size
     ? {
         height: pxToRem(size),

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled, useThemeUI } from 'theme-ui'
+import { jsx, Themed, ThemeUIStyleObject, useThemeUI } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
 import { Button } from '@uswitch/trustyle.button'
 import { Icon } from '@uswitch/trustyle.icon'
@@ -17,9 +17,9 @@ interface WireFrameProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const WireFrame: React.FC<WireFrameProps> = ({ type }) => {
   const containerStyles: {
-    header: object
-    additionalInfo: object
-    representativeExample: object
+    header: object & ThemeUIStyleObject
+    additionalInfo: object & ThemeUIStyleObject
+    representativeExample: object & ThemeUIStyleObject
   } = {
     header: {
       width: '100%',
@@ -143,7 +143,7 @@ const Badge: React.FC<BadgeProps> = ({ text }) => {
   return (
     <div
       sx={{
-        position: 'absolute',
+        position: 'absolute' as const,
         top: 0,
         transform: 'translateY(-50%)',
         padding: '0 6px',
@@ -156,14 +156,14 @@ const Badge: React.FC<BadgeProps> = ({ text }) => {
           width: '100%',
           height: '50%',
           backgroundColor: '#fff',
-          position: 'fixed',
+          position: 'fixed' as const,
           top: '0',
           left: '0'
         }}
       ></span>
       <div
         sx={{
-          position: 'relative',
+          position: 'relative' as const,
           padding: ['2.5px 8px', '5.5px 16px'],
           backgroundColor: '#34454E',
           color: '#fff',
@@ -271,7 +271,7 @@ const RepresentativeExample: React.FC<RepresentativeExampleProps> = ({
         fontSize: '14px',
         fontWeight: 600,
         color: '#924a8b',
-        textAlign: 'center',
+        textAlign: 'center' as const,
         lineHeight: 'normal'
       }}
     >
@@ -287,7 +287,7 @@ const BaseCell: React.FC<React.HTMLAttributes<any>> = ({
   const styles = {
     flex: 1,
     transition: 'background-color 1s ease',
-    textAlign: 'center',
+    textAlign: 'center' as const,
     order: 2
   }
 
@@ -373,7 +373,7 @@ export const DataCell: React.FC<DataCellProps> = ({
     },
     wireframe: {
       display: 'flex',
-      flexDirection: 'column',
+      flexDirection: 'column' as const,
       alignItems: 'center',
       justifyContent: 'center'
     }
@@ -417,7 +417,7 @@ export const DataCell: React.FC<DataCellProps> = ({
             display: 'flex',
             justifyContent: 'center',
             padding: '5px',
-            flexDirection: 'column'
+            flexDirection: 'column' as const
           }}
         >
           {children}
@@ -482,7 +482,7 @@ export const CtaCell: React.FC<CtaCellProps> = ({
         flexBasis: 'auto',
         margin: 'auto',
         marginLeft: variant === 'eligibility' ? 0 : ['auto', '15px'],
-        visibility: disabled && 'hidden'
+        visibility: disabled && ('hidden' as const)
       }}
     >
       <div
@@ -677,12 +677,12 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
             display: ['flex'],
             justifyContent: ['flex-start', 'space-between'],
             alignItems: ['flex-start', 'center'],
-            flexDirection: ['column', 'row']
+            flexDirection: ['column' as const, 'row' as const]
           }}
         >
           {isWireFrame && <WireFrame type="header" />}
           {!isWireFrame && (
-            <Styled.h5
+            <Themed.h5
               sx={{
                 color: '#069',
                 pl: ['15px', '160px'],
@@ -695,7 +695,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
               }}
             >
               {title}
-            </Styled.h5>
+            </Themed.h5>
           )}
           {!isWireFrame && telephone && <TelephoneInfo telephone={telephone} />}
         </header>
@@ -705,7 +705,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
             display: ['initial', 'flex'],
             width: '100%',
             paddingX: ['0', '15px'],
-            boxSizing: 'border-box'
+            boxSizing: 'border-box' as const
           }}
         >
           {children}

@@ -112,7 +112,7 @@ export const WireFrame: React.FC<WireFrameProps> = ({ type }) => {
   }
 
   return contextProviderWrapper(
-    <div sx={(type !== 'example' && containerStyles[type]) || {}}>
+    <div sx={(type !== 'example' && { ...containerStyles[type] }) || undefined}>
       {rowStyles[type].map((item: object, key: number) => {
         return <WireFrameCell key={key} styles={item} />
       })}

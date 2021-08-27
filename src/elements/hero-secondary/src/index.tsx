@@ -5,8 +5,6 @@ import { jsx, useThemeUI } from 'theme-ui'
 import get from '@uswitch/trustyle-utils.get'
 import { Palette } from '@uswitch/trustyle-utils.palette'
 
-type ArrayOrNot<T> = T | T[]
-
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   breadcrumbs?: React.ReactElement
   container?: React.FC<any>
@@ -55,7 +53,7 @@ const HeroSecondary: React.FC<Props> = ({
     >
       <div
         sx={{
-          position: 'relative',
+          position: 'relative' as const,
           overflow: 'hidden',
           background: customBgColor || undefined
         }}
@@ -73,7 +71,7 @@ const HeroSecondary: React.FC<Props> = ({
               paddingTop: ['sm', 'xxl'],
               paddingBottom: ['sm', 'xxl'],
               display: 'flex',
-              flexDirection: ['row', 'column'],
+              flexDirection: ['row' as const, 'column' as const],
               variant: styles('content')
             }}
           >

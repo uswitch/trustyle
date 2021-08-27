@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, ThemeUICSSObject } from 'theme-ui'
 import { text } from '@storybook/addon-knobs'
 
 import AllThemes from '../../../utils/all-themes'
@@ -20,6 +20,7 @@ const defaultProviderText = 'This is example text'
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   children: React.ReactNode
+  sx?: ThemeUICSSObject
 }
 
 const Wrapper: React.FC<Props> = ({ children, sx = {} }) => {

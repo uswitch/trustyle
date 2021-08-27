@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import React from 'react'
-import { css, jsx } from '@emotion/core'
+import { css, jsx } from '@emotion/react'
 import { storiesOf } from '@storybook/react'
 import { boolean, radios } from '@storybook/addon-knobs'
 import { colors } from '@uswitch/trustyle.styles'

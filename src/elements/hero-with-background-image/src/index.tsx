@@ -28,13 +28,13 @@ const HeroWithBackgroundImage: React.FC<Props> = ({
   // insert pseudo element only if opacity is defined
   const imgSx = opacity
     ? {
-        position: 'relative',
+        position: 'relative' as const,
         '::before': {
           top: 0,
           left: 0,
           right: 0,
           bottom: 0,
-          position: 'absolute',
+          position: 'absolute' as const,
           content: "''",
           opacity,
           zIndex: -100,

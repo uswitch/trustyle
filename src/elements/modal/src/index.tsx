@@ -40,19 +40,21 @@ interface OverlayProps {
   backdropBlur: boolean
 }
 
-interface OverlayIndexingContext {
+interface OverlayIndexingContextProps {
   index: number
   indexes: number[]
   setIndexes: (indexes: number[]) => void
 }
 
-const OverlayIndexingContext = React.createContext<OverlayIndexingContext>({
-  index: 0,
-  indexes: [],
-  setIndexes: () => {
-    throw new Error('Not implemented')
+const OverlayIndexingContext = React.createContext<OverlayIndexingContextProps>(
+  {
+    index: 0,
+    indexes: [],
+    setIndexes: () => {
+      throw new Error('Not implemented')
+    }
   }
-})
+)
 
 const Overlay: React.FC<OverlayProps> = ({
   ariaLabel,
@@ -130,7 +132,7 @@ const Overlay: React.FC<OverlayProps> = ({
       sx={{
         left: 0,
         height: '100%',
-        position: 'fixed',
+        position: 'fixed' as const,
         top: 0,
         transform: 'translateZ(0)',
         width: '100%',
@@ -153,14 +155,14 @@ const Overlay: React.FC<OverlayProps> = ({
         <FocusLock autoFocus returnFocus>
           <div
             sx={{
-              position: 'fixed',
+              position: 'fixed' as const,
               top: 0,
               left: 0,
               right: 0,
               bottom: 0,
-              overflowY: 'auto',
+              overflowY: 'auto' as const,
               // Enable momentum scrolling on Safari (on iOS) <= 12. No longer required in Safari 13.
-              WebkitOverflowScrolling: 'touch',
+              WebkitOverflowScrolling: 'touch' as const,
               display: 'flex',
               flexFlow: 'column'
             }}

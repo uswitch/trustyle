@@ -10,6 +10,7 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "standard",
+    "eslint:recommended",
     "standard-jsx",
     "prettier",
     "prettier/@typescript-eslint",
@@ -17,44 +18,37 @@
     "prettier/standard"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "jest"
-  ],
+  "plugins": ["jest", "@typescript-eslint"],
+
   "rules": {
-    "no-unused-vars": [
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "@typescript-eslint/no-var-requires": 0,
+    "no-undef": 0,
+    "no-use-before-define": 0,
+    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/no-empty-function": 0,
+    "@typescript-eslint/ban-types": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/explicit-function-return-type": [0],
+    "@typescript-eslint/no-explicit-any": 0,
+    "react/prop-types": 0,
+    "react/display-name": 0,
+
+    "sort-imports": [
       "error",
       {
-        "argsIgnorePattern": "^_.*$",
-        "varsIgnorePattern": "^React$"
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true
       }
     ],
-
-
-    "@typescript-eslint/explicit-function-return-type": [
-      "ignore"
-    ],
-    "@typescript-eslint/no-unused-vars": [
+    "import/order": [
       "error",
       {
-        "argsIgnorePattern": "^_.*$",
-        "varsIgnorePattern": "^React$"
+        "newlines-between": "always"
       }
     ],
-    "@typescript-eslint/no-explicit-any": [
-      "ignore"
-    ],
-    "react/prop-types": false,
-    "react/display-name": false,
-
-    "sort-imports": ["error", {
-      "ignoreCase": true,
-      "ignoreDeclarationSort": true
-    }],
-    "import/order": ["error", {
-      "newlines-between": "always"
-    }],
     "import/newline-after-import": "error"
-
   },
   "settings": {
     "react": {

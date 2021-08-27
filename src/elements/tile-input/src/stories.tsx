@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { ChangeEvent, useState } from 'react'
-import { jsx } from '@emotion/core'
+import { jsx } from '@emotion/react'
 import { Column, Container, Row } from '@uswitch/trustyle.grid'
 
 import AllThemes from '../../../utils/all-themes'
 import { Fieldset } from '../../fieldset/src'
 
-import { TileInput } from './.'
+import { TileInput } from './'
 
 const initialValues = {
   a: false,
@@ -15,44 +15,35 @@ const initialValues = {
   d: false
 }
 
-const Form = ({
-  type,
-  useHooks = false
-}: {
+interface Props {
   type: 'radio' | 'checkbox'
   useHooks?: boolean
-}) => {
-  let values: any, changeHandler: any
+}
 
-  if (useHooks) {
-    let setValues: any
-    ;[values, setValues] = useState(initialValues)
+const Form: React.FC<Props> = ({ type, useHooks = false }) => {
+  const [val, setVal] = useState<any>(initialValues)
 
-    changeHandler = (event: ChangeEvent<HTMLInputElement>): void => {
-      console.log(event.target.value)
-      const rest = type === 'radio' ? initialValues : values
-      setValues({ ...rest, [event.target.value]: event.target.checked })
+  const onChange = (event: ChangeEvent<HTMLInputElement>): void => {
+    if (useHooks) {
+      console.log(`${event.target.value} :>> `, event.target.checked)
+      const rest = type === 'radio' ? initialValues : val
+      setVal({ ...rest, [event.target.value]: event.target.checked })
+    } else {
+      setVal({ ...initialValues, b: true })
     }
-  } else {
-    values = {
-      ...initialValues,
-      b: true
-    }
-    changeHandler = () => {}
   }
 
   return (
     <Container css={{ marginTop: '4px' }}>
       <Fieldset label="Example tiles">
-        <Row centerX>
-          {Object.entries(values).map(([value, checked]) => (
+        <Row>
+          {Object.entries(val).map(([value, checked]) => (
             <Column key={value} s={1 / 2} m={1 / 2} l={1 / 2}>
               <TileInput
-                key={value}
                 name="example"
                 type={type}
-                checked={checked as boolean}
-                onChange={changeHandler}
+                checked={Boolean(checked)}
+                onChange={onChange}
                 value={value}
                 label={value.toUpperCase()}
               >
@@ -70,7 +61,9 @@ export default {
   title: 'Elements/TileInput'
 }
 
-export const Radio = () => <Form type="radio" useHooks />
+export const Radio = () => {
+  return <Form type="radio" useHooks />
+}
 
 Radio.story = {
   parameters: {
@@ -78,7 +71,9 @@ Radio.story = {
   }
 }
 
-export const Checkbox = () => <Form type="checkbox" useHooks />
+export const Checkbox = () => {
+  return <Form type="checkbox" useHooks />
+}
 
 Checkbox.story = {
   parameters: {
@@ -94,7 +89,9 @@ RadioSelected.story = {
   }
 }
 
-export const CheckboxSelected = () => <Form type="checkbox" />
+export const CheckboxSelected = () => {
+  return <Form type="checkbox" />
+}
 
 CheckboxSelected.story = {
   parameters: {

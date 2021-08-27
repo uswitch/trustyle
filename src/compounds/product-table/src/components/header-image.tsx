@@ -17,7 +17,7 @@ export const ProductTableHeaderImage: React.FC = ({ children }) => (
   >
     <div
       sx={{
-        position: 'relative',
+        position: 'relative' as const,
         height: '100%',
         width: '100%',
         marginBottom: -6,
@@ -25,7 +25,7 @@ export const ProductTableHeaderImage: React.FC = ({ children }) => (
           maxHeight: 67,
           maxWidth: [121, 174],
           margin: 'auto',
-          objectFit: 'contain'
+          objectFit: 'contain' as const
         }
       }}
     >

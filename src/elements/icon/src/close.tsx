@@ -16,9 +16,9 @@ export const Close: React.FC<Props> = ({ color, size }) => (
       display: 'block',
       ...st.size(size),
       fill: 'none',
-      fillRule: 'evenodd',
+      fillRule: 'evenodd' as const,
       stroke: color,
-      strokeLinecap: 'square',
+      strokeLinecap: 'square' as const,
       strokeWidth: 2
     }}
     viewBox="0 0 18 18"

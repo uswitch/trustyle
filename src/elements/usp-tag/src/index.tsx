@@ -20,12 +20,12 @@ const UspTag: React.FC<Props> = ({
     <div
       sx={{
         background: backgroundColor,
-        textAlign: 'left',
+        textAlign: 'left' as const,
         paddingX: 12,
         paddingY: 4,
         '::before': {
           content: '""',
-          position: 'relative',
+          position: 'relative' as const,
           left: '-.55em',
           borderLeft: `4px solid ${beforeColor}`,
           paddingY: '.2em'

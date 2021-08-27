@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled, useThemeUI } from 'theme-ui'
+import { jsx, Themed, useThemeUI } from 'theme-ui'
 import get from '@uswitch/trustyle-utils.get'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
 
@@ -59,7 +59,7 @@ export const ButtonLink = <
   }
 
   return (
-    <Styled.a
+    <Themed.a
       sx={{
         cursor: 'pointer',
         backgroundImage: 'none',
@@ -104,6 +104,6 @@ export const ButtonLink = <
         {children}
       </div>
       {afterIcon && displayIcon('afterIcon', afterIcon)}
-    </Styled.a>
+    </Themed.a>
   )
 }

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { RefObject, useEffect, useState } from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
 
 const makeStyles = (variant?: string) => (element?: string) =>
@@ -37,7 +37,7 @@ const TabLink: React.FC<TabLinkProps> = ({
         }}
       >
         <div>
-          <Styled.h6>{title}</Styled.h6>
+          <Themed.h6>{title}</Themed.h6>
         </div>
       </div>
     </a>
@@ -197,7 +197,7 @@ export const Tabs: React.FC<TabsProps> = ({ children, className, variant }) => {
         sx={{
           overflow: 'hidden',
           paddingTop: `${padding}px`,
-          position: 'relative',
+          position: 'relative' as const,
           pointer: 'grab',
           variant: styles('borderBottom'),
           '::after': {
@@ -218,7 +218,7 @@ export const Tabs: React.FC<TabsProps> = ({ children, className, variant }) => {
           onTouchMove={onMove}
           onDragStart={onDragStart}
           sx={{
-            position: 'absolute',
+            position: 'absolute' as const,
             left: `${left}px`,
             top: 0,
             maxHeight: '56px'

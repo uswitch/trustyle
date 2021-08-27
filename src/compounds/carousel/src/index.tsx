@@ -6,14 +6,14 @@ import Glider from 'react-glider-carousel'
 import { gliderStyles } from './glider-styles'
 
 interface GliderEventListeners {
-  gliderLoaded?: (event: any) => void
-  gliderRefresh?: (event: any) => void
-  gliderAnimated?: (event: any) => void
-  gliderAdd?: (event: any) => void
-  gliderRemove?: (event: any) => void
-  gliderDestroy?: (event: any) => void
-  gliderSlideVisible?: (event: any) => void
-  gliderSlideHidden?: (event: any) => void
+  gliderLoaded?: (event?: any) => void
+  gliderRefresh?: (event?: any) => void
+  gliderAnimated?: (event?: any) => void
+  gliderAdd?: (event?: any) => void
+  gliderRemove?: (event?: any) => void
+  gliderDestroy?: (event?: any) => void
+  gliderSlideVisible?: (event?: any) => void
+  gliderSlideHidden?: (event?: any) => void
 }
 
 interface GliderSettings {

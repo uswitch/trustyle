@@ -62,15 +62,15 @@ const ProductTableHeader: React.FC<HeaderProps> = ({
           paddingBottom: image ? pb : 'sm',
           marginTop: badges.length ? 0 : -6,
           display: 'flex',
-          alignItems: card ? 'baseline' : 'center',
-          flexDirection: card ? 'column' : 'row',
+          alignItems: card ? ('baseline' as const) : ('center' as const),
+          flexDirection: card ? ('column' as const) : ('row' as const),
           minHeight: card ? ['0', '0', '160px'] : '0',
           variant:
             badges.length && !card
               ? 'compounds.product-table.badge-wrapper'
               : badges.length && card
               ? 'compounds.product-table.badge-wrapper.card'
-              : null
+              : undefined
         }}
       >
         {isWireFrame && <WireFrameCell styles={wireFrameStyles.image} />}

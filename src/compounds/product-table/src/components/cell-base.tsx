@@ -99,7 +99,7 @@ const ProductTableCellBase: React.FC<CellBaseProps> = ({
           flexShrink: 1,
           flexBasis: 'auto',
           height: '100%',
-          boxSizing: 'border-box'
+          boxSizing: 'border-box' as const
         }}
         className={className}
       >
