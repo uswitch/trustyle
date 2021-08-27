@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import Hero from '@uswitch/trustyle.hero'
 
 import { Col, Row } from '../../../layout/flex-grid/src'
@@ -17,13 +17,13 @@ export const ExampleWithKnobs = () => {
     <Hero>
       <Row>
         <Col span={[12, 5]}>
-          <Styled.h1 sx={{ marginTop: 0, fontSize: ['lg', 'xl', 'xxl'] }}>
+          <Themed.h1 sx={{ marginTop: 0, fontSize: ['lg', 'xl', 'xxl'] }}>
             Hero Advert
-          </Styled.h1>
-          <Styled.p sx={{ marginTop: 0 }}>
+          </Themed.h1>
+          <Themed.p sx={{ marginTop: 0 }}>
             Lorem ipsum, or lipsum as it is sometimes known, is dummy text used
             in laying out print, graphic or web designs.
-          </Styled.p>
+          </Themed.p>
         </Col>
         <Col span={[12, 6]}>
           <Advert
@@ -45,13 +45,13 @@ export const hargreaves = () => {
     <Hero>
       <Row>
         <Col span={[12, 5]}>
-          <Styled.h1 sx={{ marginTop: 0, fontSize: ['lg', 'xl', 'xxl'] }}>
+          <Themed.h1 sx={{ marginTop: 0, fontSize: ['lg', 'xl', 'xxl'] }}>
             Hero Advert
-          </Styled.h1>
-          <Styled.p sx={{ marginTop: 0 }}>
+          </Themed.h1>
+          <Themed.p sx={{ marginTop: 0 }}>
             Lorem ipsum, or lipsum as it is sometimes known, is dummy text used
             in laying out print, graphic or web designs.
-          </Styled.p>
+          </Themed.p>
         </Col>
         <Col span={[12, 6]}>
           <Advert

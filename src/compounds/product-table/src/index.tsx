@@ -1,5 +1,3 @@
-import * as React from 'react'
-
 import ProductTableRow from './components/row'
 import ProductTableAddonResponsive from './components/addon-responsive'
 import ProductTableAddonFooter from './components/addon-footer'

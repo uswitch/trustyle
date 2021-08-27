@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { css, jsx } from '@emotion/core'
+import { css, jsx } from '@emotion/react'
 import { number, select } from '@storybook/addon-knobs'
 
 import AllThemes, { permutationsGenerator } from '../../../utils/all-themes'
@@ -34,7 +34,7 @@ export const Example = () => (
       ['currentPlan', 'results', 'apply'],
       'results'
     )}
-    progress={number(name, 0.25, {
+    progress={number('name', 0.25, {
       range: true,
       min: 0,
       max: 1,
@@ -58,7 +58,7 @@ export const PercentageExample = () => (
       'results'
     )}
     variant={'percentage'}
-    progress={number(name, 0.25, {
+    progress={number('name', 0.25, {
       range: true,
       min: 0,
       max: 1,

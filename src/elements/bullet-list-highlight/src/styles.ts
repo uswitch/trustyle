@@ -1,4 +1,4 @@
-import { css, SerializedStyles } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/react'
 import { colors, pxToRem, spacers, typography } from '@uswitch/trustyle.styles'
 
 export const highlights: SerializedStyles = css({

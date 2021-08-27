@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { jsx } from 'theme-ui'
+import { jsx, ThemeUICSSObject } from 'theme-ui'
 
 import CellBase from './cell-base'
 
@@ -25,7 +25,7 @@ export const ProductTableCellImage: React.FC<Props> = ({
   >
     <div
       sx={{
-        position: 'relative',
+        position: 'relative' as const,
         height: '100%',
         width: '100%',
         minHeight: headerImage ? 90 : 75,
@@ -34,7 +34,7 @@ export const ProductTableCellImage: React.FC<Props> = ({
           ? 'compounds.product-table.variants.redesign.cellImage.imageWrapper'
           : 'compounds.product-table.cellImage.imageWrapper',
         img: {
-          position: 'absolute',
+          position: 'absolute' as const,
           top: 0,
           left: 0,
           right: 0,
@@ -42,11 +42,11 @@ export const ProductTableCellImage: React.FC<Props> = ({
           maxWidth: '100%',
           maxHeight: '100%',
           margin: 'auto',
-          objectFit: 'contain',
+          objectFit: 'contain' as const,
           variant: headerImage
             ? 'compounds.product-table.variants.redesign.cellImage.image'
             : 'compounds.product-table.cellImage.image'
-        }
+        } as ThemeUICSSObject
       }}
     >
       {children}

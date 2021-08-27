@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import React, { Fragment, useState } from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import { Col, Container, Row } from '@uswitch/trustyle.flex-grid'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
 import { Carousel } from '@uswitch/trustyle.carousel'
@@ -43,8 +43,8 @@ const InteractiveTabLink: React.FC<InteractiveTabLinkProps> = ({
         )}
 
         <div>
-          <Styled.h5>{title}</Styled.h5>
-          <Styled.p>{description}</Styled.p>
+          <Themed.h5>{title}</Themed.h5>
+          <Themed.p>{description}</Themed.p>
         </div>
       </div>
     </a>
@@ -106,7 +106,10 @@ export const InteractiveTabs: React.FC<InteractiveTabsProps> = ({
           </Col>
           <Col
             span={1}
-            sx={{ display: ['none', 'flex', 'flex'], flexDirection: 'column' }}
+            sx={{
+              display: ['none', 'flex', 'flex'],
+              flexDirection: 'column' as const
+            }}
           >
             {titleElement && (
               <titleElement.type

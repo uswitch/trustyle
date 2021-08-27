@@ -125,7 +125,7 @@ export const Example = () => (
 )
 
 export const ExampleInRow = () => (
-  <div sx={{ display: 'flex', flexDirection: 'row' }}>
+  <div sx={{ display: 'flex', flexDirection: 'row' as const }}>
     <ColourSelect />
     <ColourSelect />
     <ColourSelect />

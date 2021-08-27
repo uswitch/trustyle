@@ -16,7 +16,7 @@
   },
   "peerDependencies": {
     "react": "^16.7.0",
-    "theme-ui": "^0.2.52"
+    "theme-ui": "^0.9.1"
   },
   "dependencies": {
     "@uswitch/trustyle.arrangement": "^2.0.21"

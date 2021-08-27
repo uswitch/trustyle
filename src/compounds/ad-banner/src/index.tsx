@@ -50,14 +50,14 @@ const AdBanner: React.FC<Props> = ({
       className={className}
       sx={{
         color: 'white',
-        position: 'relative',
+        position: 'relative' as const,
         variant: 'compounds.ad-banner.wrapper',
         backgroundColor: backgroundColor || 'black'
       }}
     >
       <div
         sx={{
-          position: 'absolute',
+          position: 'absolute' as const,
           width: ['', '', '50%'],
           top: '0',
           left: ['0', '0', 'auto'],
@@ -72,7 +72,7 @@ const AdBanner: React.FC<Props> = ({
           top: ['sm', 'sm', 'lg'],
           right: ['sm', 'sm', 'lg'],
           fontSize: 'xxs',
-          position: 'absolute'
+          position: 'absolute' as const
         }}
       >
         Sponsored
@@ -80,8 +80,12 @@ const AdBanner: React.FC<Props> = ({
       <div
         sx={{
           display: 'flex',
-          flexDirection: ['column', 'column', 'row'],
-          alignItems: ['center', 'center', 'flex-start'],
+          flexDirection: ['column' as const, 'column' as const, 'row' as const],
+          alignItems: [
+            'center' as const,
+            'center' as const,
+            'flex-start' as const
+          ],
           zIndex: '1'
         }}
       >
@@ -134,7 +138,7 @@ const AdBanner: React.FC<Props> = ({
         <div
           sx={{
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: 'column' as const,
             flexGrow: 1,
             alignItems: ['center', 'center', 'flex-start'],
             px: ['0', '0', 'lg'],

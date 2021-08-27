@@ -1,4 +1,4 @@
-import { css } from 'theme-ui'
+import { css } from '@emotion/react'
 
 export const CircularPercentageBarStyles = css({
   '.c100': {

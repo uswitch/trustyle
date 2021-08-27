@@ -14,7 +14,7 @@ module.exports = api => {
       }
     },
     presets: ['@babel/typescript', '@babel/preset-react'],
-    plugins: ['@babel/plugin-proposal-optional-chaining', 'emotion'],
+    plugins: ['@emotion', '@babel/plugin-proposal-optional-chaining'],
     sourceType: 'unambiguous'
   }
 }

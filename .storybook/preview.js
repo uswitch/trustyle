@@ -2,8 +2,8 @@
 import React from 'react'
 import { addDecorator, addParameters } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
-import { Styled, jsx, ThemeProvider } from 'theme-ui'
-import { Global } from '@emotion/core'
+import { Themed, jsx, ThemeProvider } from 'theme-ui'
+import { Global } from '@emotion/react'
 import theme from '../src/utils/theme-selector'
 import { GlobalStyles } from '../src/elements/global-styles/src'
 
@@ -28,7 +28,7 @@ const withTheme = (story, { name }) => {
   return (
     <ThemeProvider theme={theme()}>
       <GlobalStyles />
-      <Styled.root>{contents}</Styled.root>
+      <Themed.root>{contents}</Themed.root>
     </ThemeProvider>
   )
 }
@@ -98,7 +98,10 @@ addParameters({
     options: {
       runOnly: {
         type: 'tag',
-        values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']
+        values: ['wcag2aa', 'wcag21a', 'wcag21aa']
+      },
+      rules: {
+        'color-contrast': { enabled: false }
       }
     }
   }

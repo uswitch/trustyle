@@ -19,7 +19,7 @@ const PaginationStory = ({ type }: any) => {
     setCurrentPage(number)
   }
 
-  let props: any = {}
+  const props: any = {}
   if (type === 'onClick') {
     props.onPageChange = handlePageChange
   } else {

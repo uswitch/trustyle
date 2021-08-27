@@ -3,13 +3,12 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { text } from '@storybook/addon-knobs'
-import { jsx } from 'theme-ui'
-import { css } from '@emotion/core'
-import { Interpolation } from '@emotion/serialize'
+import { jsx, ThemeUICSSObject } from 'theme-ui'
+import { css } from '@emotion/react'
 
 import theme from '../../../utils/theme-selector'
 
-const swatch: Interpolation = {
+const swatch: object & ThemeUICSSObject = {
   padding: '10px',
   display: 'inline-block',
   fontFamily: 'monospace',
@@ -20,8 +19,8 @@ const swatch: Interpolation = {
 storiesOf('Global Styles/Colours', module).add('Swatches', () => (
   <div css={css({ margin: '-10px' })}>
     {Object.entries(theme().colors).map(([key, value]) => {
-      const swatchBlock: Interpolation = {
-        backgroundColor: value as string,
+      const swatchBlock: object & ThemeUICSSObject = {
+        backgroundColor: String(value),
         width: '100px',
         height: '100px',
         border: '1px #e2e2e2 solid'
@@ -61,7 +60,7 @@ storiesOf('Global Styles/Typography', module).add('Types', () => {
     td: null,
     tr: null,
     headings: null,
-    hr: (_: any) => <hr />
+    hr: () => <hr />
   }
 
   return (

@@ -66,7 +66,7 @@ export const MoreInformationList: React.FC<MoreInformationListProps> = ({
   <table
     sx={{
       border: 'none',
-      borderCollapse: 'collapse',
+      borderCollapse: 'collapse' as const,
       overflow: 'scroll',
       margin: 0,
       width: '100%'
@@ -123,7 +123,7 @@ export const MoreInformationTable: React.FC<MoreInformationTableProps> = ({
   <table
     sx={{
       border: 'none',
-      borderCollapse: 'collapse',
+      borderCollapse: 'collapse' as const,
       overflow: 'scroll',
       margin: 0,
       width: '100%'
@@ -175,9 +175,9 @@ export const MoreInformationBlock: React.FC<MoreInformationBlockProps> = ({
     sx={{
       background: '#fff',
       color: '#333',
-      alignItems: 'center',
+      alignItems: 'center' as const,
       fontSize: '14px',
-      boxSizing: 'border-box',
+      boxSizing: 'border-box' as const,
       display: 'block',
       width: ['auto', '50%'],
       marginTop: 'sm',
@@ -231,7 +231,7 @@ export const Eligibility: React.FC<EligibilityProps> = ({
         <div
           sx={{
             display: 'flex',
-            flexDirection: ['column', 'row'],
+            flexDirection: ['column' as const, 'row' as const],
             alignItems: 'stretch',
             background: '#f2f3f4',
             justifyContent: 'center'
@@ -265,7 +265,7 @@ export const Eligibility: React.FC<EligibilityProps> = ({
           alignItems: 'center',
           justifyContent: 'center',
           fontSize: '13px',
-          boxSizing: 'border-box',
+          boxSizing: 'border-box' as const,
           outline: 'none'
         }}
         onClick={() => setOpen(!open)}

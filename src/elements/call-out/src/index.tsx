@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
 import { Palette } from '@uswitch/trustyle-utils.palette'
 
@@ -22,12 +22,13 @@ const CallOut: React.FC<Props> = ({
   bold = false,
   className
 }) => {
-  const flexDirection = orientation === 'left' ? 'row' : 'column'
+  const flexDirection =
+    orientation === 'left' ? ('row' as const) : ('column' as const)
 
   const mainText = (
     <React.Fragment>
       {title && (
-        <Styled.h3
+        <Themed.h3
           sx={{
             marginTop: '-3px',
             marginBottom: 'xxs',
@@ -35,10 +36,10 @@ const CallOut: React.FC<Props> = ({
           }}
         >
           {title}
-        </Styled.h3>
+        </Themed.h3>
       )}
       <Palette
-        as={Styled.p}
+        as={Themed.p}
         sx={{
           marginY: 0,
           variant: 'elements.call-out.text',

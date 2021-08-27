@@ -120,7 +120,7 @@ const ProductTableRow: React.FC<RowProps> = ({
       <section
         id={id}
         sx={{
-          position: 'relative',
+          position: 'relative' as const,
           border: '1px solid',
           marginTop: badges.length ? [10, 15] : 0,
           marginBottom: 'md',
@@ -130,7 +130,7 @@ const ProductTableRow: React.FC<RowProps> = ({
           variant: image
             ? 'compounds.product-table.variants.redesign.row.main'
             : 'compounds.product-table.row.main',
-          pointerEvents: disabled || isWireFrame ? 'none' : null,
+          pointerEvents: disabled || isWireFrame ? ('none' as const) : null,
           opacity: disabled ? '0.5' : '1',
           width: '100%',
           ...sectionStyles
@@ -151,7 +151,7 @@ const ProductTableRow: React.FC<RowProps> = ({
           {!!badges.length && (
             <div
               sx={{
-                position: 'absolute',
+                position: 'absolute' as const,
                 top: 0,
                 transform: 'translateY(-50%)',
                 width: '100%'
@@ -205,7 +205,7 @@ const ProductTableRow: React.FC<RowProps> = ({
               // Flex in mobile IE11 (?!) as auto-layout for grid isn't supported
               '@media all and (max-width: 990px) and (-ms-high-contrast: none), (-ms-high-contrast: active)': {
                 display: 'flex',
-                flexDirection: 'column'
+                flexDirection: 'column' as const
               }
             }}
             // @ts-ignore

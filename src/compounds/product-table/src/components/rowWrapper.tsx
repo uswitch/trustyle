@@ -8,6 +8,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode
   headerImage?: React.ReactNode
   onRowClick?: () => void
+  sx?: Record<string, any>
 }
 
 const checkClickTargetIsAccordion = (n: number, e: any) => {

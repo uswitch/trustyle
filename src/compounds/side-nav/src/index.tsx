@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import Accordion from '@uswitch/trustyle.accordion'
 import { Palette } from '@uswitch/trustyle-utils.palette'
 
@@ -85,7 +85,7 @@ const SideNav: React.FC<Props> = ({
                   }}
                 >
                   <Palette
-                    as={Styled.a}
+                    as={Themed.a}
                     px={{ color: 'textColor' }}
                     href={url}
                     sx={{ borderBottom: 0 }}

@@ -1,32 +1,32 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 
 const Table: React.FC = ({ children, ...props }) => {
   return (
     <div
       sx={{
-        overflowX: ['scroll', 'visible', 'visible'],
+        overflowX: ['scroll' as const, 'visible' as const, 'visible' as const],
         '&::-webkit-scrollbar': { display: 'none' },
         '&::-ms-overflow-style': { display: 'none' }
       }}
     >
-      <Styled.table {...props}>{children}</Styled.table>
+      <Themed.table {...props}>{children}</Themed.table>
     </div>
   )
 }
 
 const TableRow: React.FC = ({ children, ...props }) => {
-  return <Styled.tr {...props}>{children}</Styled.tr>
+  return <Themed.tr {...props}>{children}</Themed.tr>
 }
 
 const TableCell: React.FC = ({ children, ...props }) => {
-  return <Styled.td {...props}>{children}</Styled.td>
+  return <Themed.td {...props}>{children}</Themed.td>
 }
 
 const TableHeaderCell: React.FC = ({ children, ...props }) => {
-  return <Styled.th {...props}>{children}</Styled.th>
+  return <Themed.th {...props}>{children}</Themed.th>
 }
 
 export default {

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { css, jsx } from '@emotion/core'
+import { css, jsx } from '@emotion/react'
 import { number, select } from '@storybook/addon-knobs'
 
 import AllThemes from '../../../utils/all-themes'

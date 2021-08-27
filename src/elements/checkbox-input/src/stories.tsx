@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { ChangeEvent, useState } from 'react'
-import { jsx } from '@emotion/core'
+import { jsx } from '@emotion/react'
 import { boolean } from '@storybook/addon-knobs'
 import { Stack } from '@uswitch/trustyle.arrangement'
 

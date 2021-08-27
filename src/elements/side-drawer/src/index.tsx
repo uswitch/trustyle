@@ -4,7 +4,7 @@ import { cloneElement, createRef, Fragment, useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Transition, TransitionGroup } from 'react-transition-group'
 import FocusTrap from 'focus-trap-react'
-import { css, jsx } from '@emotion/core'
+import { css, jsx } from '@emotion/react'
 import { Icon } from '@uswitch/trustyle.icon'
 import { colors } from '@uswitch/trustyle.styles'
 

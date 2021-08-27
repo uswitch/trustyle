@@ -21,8 +21,8 @@ export const CheckboxInput: React.FC<Props> = ({
       <input
         sx={{
           marginLeft: '-9000px',
-          appearance: 'none',
-          position: 'absolute',
+          appearance: 'none' as const,
+          position: 'absolute' as const,
           '&:checked + span': {
             '&::before': {
               transition: 'background-color 200ms, border-color 200ms'
@@ -36,13 +36,13 @@ export const CheckboxInput: React.FC<Props> = ({
       <span
         sx={{
           alignItems: 'center',
-          boxSizing: 'border-box',
+          boxSizing: 'border-box' as const,
           cursor: 'pointer',
           display: 'flex',
           padding: 'base',
           paddingLeft: 0,
           width: '100%',
-          userSelect: 'none',
+          userSelect: 'none' as const,
           '&::before': {
             borderRadius: '50%',
             borderStyle: 'solid',

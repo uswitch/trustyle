@@ -169,7 +169,11 @@ export const Input = forwardRef<HTMLInputElement, Props>(
               {...childProps}
             />
           ) : (
-            <input ref={inputRef} {...childProps} />
+            <input
+              aria-label={childProps.name}
+              ref={inputRef}
+              {...childProps}
+            />
           )}
 
           {suffix && (

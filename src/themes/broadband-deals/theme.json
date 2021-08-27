@@ -1,8 +1,10 @@
 {
   "name": "BBDeals",
-  "useLocalStorage": false,
-  "useCustomProperties": false,
-  "useBodyStyles": false,
+  "config": {
+    "useLocalStorage": false,
+    "useCustomProperties": false,
+    "useRootStyles": false
+  },
   "breakpoints": ["768px", "990px"],
   "zIndices": {
     "min": 0,
@@ -1861,8 +1863,8 @@
       "fontWeight": "base",
       "lineHeight": "base",
       "color": "grey-80",
-      "webkitFontSmoothing": "antialiased",
-      "mozOsxFontSmoothing": "grayscale",
+      "WebkitFontSmoothing": "antialiased",
+      "MozOsxFontSmoothing": "grayscale",
       "boxSizing": "border-box",
       "*": {
         "boxSizing": "inherit"

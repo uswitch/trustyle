@@ -115,7 +115,7 @@ const FunnelProgress: React.FC<Props> = ({
   )
   const percentageVariant = variant === 'percentage'
 
-  const variantPath = (additionalPath: string = '') =>
+  const variantPath = (additionalPath = '') =>
     `elements.funnel-progress.${
       variant ? `variants.${variant}` : 'base'
     }${additionalPath}`
@@ -144,7 +144,7 @@ const FunnelProgress: React.FC<Props> = ({
             variant: variantPath('.progess.back'),
             height: '4px',
             width: '100%',
-            position: 'relative',
+            position: 'relative' as const,
             backgroundColor: 'progress-bg',
             marginTop: '13px'
           }}

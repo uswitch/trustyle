@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { css, jsx, useThemeUI } from 'theme-ui'
-import { Global } from '@emotion/core'
+import { Global } from '@emotion/react'
 import 'normalize.css/normalize.css'
 
 export const GlobalStyles: React.FC = () => {
