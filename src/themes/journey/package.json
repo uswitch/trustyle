@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.journey-theme",
-  "version": "2.12.8",
+  "version": "2.12.9",
   "license": "MIT",
   "main": "index.js",
   "publishConfig": {

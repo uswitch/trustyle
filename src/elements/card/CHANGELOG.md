@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.14.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.14.1...@uswitch/trustyle.card@1.14.2) (2021-08-27)
+
+
+### Bug Fixes
+
+* fixed a11y, removed unnecessary rules, fixed package.json across all dir ([a9e0455](https://github.com/uswitch/trustyle/commit/a9e0455))
+* reveted changes on some packages, fixed some small bugs on themes ([69b8a3d](https://github.com/uswitch/trustyle/commit/69b8a3d))
+
+
+
+
+
 ## [1.14.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.14.0...@uswitch/trustyle.card@1.14.1) (2021-08-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.card
