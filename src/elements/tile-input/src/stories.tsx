@@ -35,7 +35,7 @@ const Form: React.FC<Props> = ({ type, useHooks = false }) => {
 
   return (
     <Container css={{ marginTop: '4px' }}>
-      <Fieldset label="Example tile buttons">
+      <Fieldset label="Example tiles">
         <Row>
           {Object.entries(val).map(([value, checked]) => (
             <Column key={value} s={1 / 2} m={1 / 2} l={1 / 2}>

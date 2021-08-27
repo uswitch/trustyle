@@ -6,7 +6,7 @@ pipeline:
     commands:
       - git fetch --tags
 
-publish-icons:
+  publish-icons:
     when:
       event: push
       branch: master
@@ -14,7 +14,7 @@ publish-icons:
     secrets: [ AWS_SECRET_ACCESS_KEY, AWS_ACCESS_KEY_ID ]
     commands:
       - "aws s3 cp --region eu-west-1 --recursive ./static/icons s3://trustyle-icons --cache-control max-age=604800 --metadata '{\"x-amz-meta-surrogate-control\": \"max-age=604800\"}' --acl=public-read"
-      
+
   install:
     when:
       event: [push]
@@ -98,3 +98,4 @@ publish-icons:
     secrets: [slack_webhook]
     commands:
       - node ./scripts/slack-unpublished.js
+  
