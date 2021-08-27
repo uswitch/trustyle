@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react'
-import { css, jsx } from '@emotion/react'
+import { jsx } from 'theme-ui'
 import { text } from '@storybook/addon-knobs'
 
 import { Col, Container, Row } from '../../../layout/flex-grid/src/index'
@@ -72,18 +72,18 @@ export const ExampleWithKnobs = () => {
         />
       </div>
       <Container
-        css={css({
+        sx={{
           backgroundColor: 'blue',
           py: 'sm'
-        })}
+        }}
       >
         <Row
           cols={[4, 8, 8]}
-          css={css({
+          sx={{
             mt: 40,
             pt: 50,
             pb: 70
-          })}
+          }}
         >
           <Col offset={[0.05, 2, 2]} span={[4, 4, 4]}>
             <SponsoredProduct
