@@ -1863,8 +1863,8 @@
       "fontWeight": "base",
       "lineHeight": "base",
       "color": "grey-80",
-      "webkitFontSmoothing": "antialiased",
-      "mozOsxFontSmoothing": "grayscale",
+      "WebkitFontSmoothing": "antialiased",
+      "MozOsxFontSmoothing": "grayscale",
       "boxSizing": "border-box",
       "*": {
         "boxSizing": "inherit"

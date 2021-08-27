@@ -36,9 +36,21 @@ module.exports = {
   ],
   webpackFinal: async config => {
     config.resolve.alias = {
-      '@emotion/core': getPackageDir('@emotion/react'),
-      '@emotion/styled': getPackageDir('@emotion/styled'),
-      'emotion-theming': getPackageDir('@emotion/react')
+      // '@emotion/core': getPackageDir('@emotion/react'),
+      // '@emotion/styled': getPackageDir('@emotion/styled'),
+      // 'emotion-theming': getPackageDir('@emotion/react')
+      '@emotion/core': path.resolve(
+        __dirname,
+        '../node_modules/@emotion/react'
+      ),
+      '@emotion/styled': path.resolve(
+        __dirname,
+        '../node_modules/@emotion/styled'
+      ),
+      'emotion-theming': path.resolve(
+        __dirname,
+        '../node_modules/@emotion/react'
+      )
     }
     return config
   }

@@ -18,6 +18,7 @@
   "peerDependencies": {
     "@emotion/react": "^11.4.0",
     "react": "^16.7.0",
+    "@uswitch/trustyle.icon": "^1.17.1",
     "theme-ui": "^0.9.1"
   },
   "dependencies": {
