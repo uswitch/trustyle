@@ -4057,14 +4057,14 @@
     },
     "link-with-label": {
       "wrapper": {
-        "display": "flex",
+        "display": "inline-flex",
         "flexDirection": ["column", "row"],
         "alignItems": ["flex-start", "center"],
         "height": "100%"
       },
       "column": {
         "flexDirection": "column",
-        "flex": 1,
+        "flex": "0 1 auto",
         "pr": [0, "lg"],
         "& p": {
           "display": ["none", "block"],
@@ -4074,6 +4074,7 @@
       },
       "anchor": {
         "display": "inline-flex",
+        "flexShrink": 0,
         "alignItems": "center",
         "pb": "xxs",
         "borderColor": "grey-50",
