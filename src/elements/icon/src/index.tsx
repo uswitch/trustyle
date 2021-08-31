@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx } from '@emotion/core'
+import { jsx } from '@emotion/react'
 
 import { Arrow } from './arrow'
 import { ArrowCircle } from './arrow-circle'

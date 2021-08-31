@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.19](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bullet-list-highlight@0.4.18...@uswitch/trustyle.bullet-list-highlight@0.4.19) (2021-08-27)
+
+
+### Bug Fixes
+
+* fixed a11y, removed unnecessary rules, fixed package.json across all dir ([a9e0455](https://github.com/uswitch/trustyle/commit/a9e0455))
+* reveted changes on some packages, fixed some small bugs on themes ([69b8a3d](https://github.com/uswitch/trustyle/commit/69b8a3d))
+
+
+
+
+
 ## [0.4.18](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.bullet-list-highlight@0.4.17...@uswitch/trustyle.bullet-list-highlight@0.4.18) (2021-08-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.bullet-list-highlight

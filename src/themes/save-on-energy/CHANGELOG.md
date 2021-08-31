@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.17](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.13.16...@uswitch/trustyle.save-on-energy-theme@1.13.17) (2021-08-27)
+
+
+### Bug Fixes
+
+* themes reverted ([8c71e13](https://github.com/uswitch/trustyle/commit/8c71e13))
+* themes reverted ([361c049](https://github.com/uswitch/trustyle/commit/361c049))
+
+
+
+
+
 ## [1.13.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-on-energy-theme@1.13.15...@uswitch/trustyle.save-on-energy-theme@1.13.16) (2021-08-13)
 
 **Note:** Version bump only for package @uswitch/trustyle.save-on-energy-theme

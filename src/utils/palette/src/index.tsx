@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, SxStyleProp } from 'theme-ui'
+import { jsx, ThemeUIStyleObject } from 'theme-ui'
 import { createContext, useContext } from 'react'
 
 const sw = (cases: Record<string, Function>) => (
@@ -16,7 +16,7 @@ export const PaletteProvider = PaletteContext.Provider
 
 const createSx = (
   palette: { [key: string]: string } = {},
-  obj: SxStyleProp = {}
+  obj: ThemeUIStyleObject = {}
 ) => {
   if (!obj) {
     return {}

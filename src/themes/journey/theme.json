@@ -1,7 +1,10 @@
 {
   "name": "Journey",
-
-  "useLocalStorage": false,
+  "config": {
+    "useLocalStorage": false,
+    "useCustomProperties": false,
+    "useRootStyles": false
+  },
 
   "breakpoints": ["768px", "990px"],
 
@@ -108,11 +111,6 @@
     "button": { "width": 264 },
     "footer": { "width": 576 }
   },
-
-  "useCustomProperties": false,
-
-  "useBodyStyles": false,
-
   "colors": {
     "background": "initial",
     "primary": "#141424",

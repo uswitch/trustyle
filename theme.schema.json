@@ -287,7 +287,7 @@
       "required": [
         "root", "h1", "h2", "h4", "h5", "h6", "pre", "code", "table", "th", "td"
       ],
-      "description": "Base styles for semantic HTML elements to inherit from as a <Styled.tag /> component",
+      "description": "Base styles for semantic HTML elements to inherit from as a <Themed.tag /> component",
       "additionalProperties": false,
       "properties": {
         "root": { "$ref": "#/definitions/GenericTheme" },

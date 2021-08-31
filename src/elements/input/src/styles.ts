@@ -1,6 +1,5 @@
 import { colors, pxToRem } from '@uswitch/trustyle.styles'
-
-import { SxStyleProp } from '../../../../types/theme-ui'
+import { ThemeUIStyleObject } from 'theme-ui'
 
 const { tomato, UswitchNavy } = colors
 
@@ -28,7 +27,7 @@ export const wrapper = (
   hasError: boolean,
   hasFocus: boolean,
   width: 'half' | 'full'
-): SxStyleProp => ({
+): ThemeUIStyleObject => ({
   border: 'solid 1px',
   boxShadow: (theme: any) => boxShadow(theme, hasError, hasFocus),
   borderColor: (theme: any) =>
@@ -40,7 +39,7 @@ export const wrapper = (
   width: width === 'half' ? '50%' : '100%'
 })
 
-const affix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({
+const affix = (hasError: boolean, hasFocus: boolean): ThemeUIStyleObject => ({
   margin: pxToRem(8, 0),
   padding: pxToRem(0, 12),
   borderColor: (theme: any) =>
@@ -57,10 +56,16 @@ const affix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({
       : theme.colors[theme.elements.input?.default?.color] ?? 'text'
 })
 
-export const prefix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({
+export const prefix = (
+  hasError: boolean,
+  hasFocus: boolean
+): ThemeUIStyleObject => ({
   ...affix(hasError, hasFocus)
 })
 
-export const suffix = (hasError: boolean, hasFocus: boolean): SxStyleProp => ({
+export const suffix = (
+  hasError: boolean,
+  hasFocus: boolean
+): ThemeUIStyleObject => ({
   ...affix(hasError, hasFocus)
 })

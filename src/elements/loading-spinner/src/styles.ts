@@ -1,4 +1,4 @@
-import { css, keyframes, SerializedStyles } from '@emotion/core'
+import { css, keyframes, SerializedStyles } from '@emotion/react'
 import { colors, pxToRem, spacers } from '@uswitch/trustyle.styles'
 
 const load = keyframes`

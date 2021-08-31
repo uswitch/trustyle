@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.call-out",
-  "version": "2.1.24",
+  "version": "2.1.25",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -12,14 +12,14 @@
     "url": "https://github.com/uswitch/trustyle"
   },
   "peerDependencies": {
-    "@emotion/core": "^10.0.27",
+    "@emotion/react": "^11.4.0",
     "@uswitch/trustyle.icon": "^1.17.1",
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle-utils.palette": "^4.0.3"
+    "@uswitch/trustyle-utils.palette": "^4.0.4"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.27.1"
+    "@uswitch/trustyle.icon": "^1.27.2"
   }
 }

@@ -1,7 +1,9 @@
 {
   "name": "Uswitch",
-  "useBodyStyles": false,
-  "useCustomProperties": false,
+  "config": {
+    "useRootStyles": false,
+    "useCustomProperties": false
+  },
   "breakpoints": ["768px", "992px"],
   "zIndices": {
     "min": 0,
@@ -1239,6 +1241,16 @@
         }
       },
       "variants": {
+        "boxout": {
+          "border": "2px solid",
+          "borderColor": "#E8E8E9",
+          "padding": "40px",
+          "mb": "base",
+          "boxSizing": "border-box",
+          "div:last-of-type p:last-of-type": {
+            "mb": 0
+          }
+        },
         "hero": {
           "display": "flex",
           "alignItems": "center",

@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.global-styles",
-  "version": "0.3.17",
+  "version": "0.3.18",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -15,8 +15,8 @@
     "normalize.css": "^8.0.1"
   },
   "peerDependencies": {
-    "@emotion/core": "^10.0.27",
+    "@emotion/react": "^11.4.0",
     "@mdx-js/react": "^1.5.3",
-    "theme-ui": "^0.2.52"
+    "theme-ui": "^0.9.1"
   }
 }

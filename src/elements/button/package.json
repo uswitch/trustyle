@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.button",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -16,12 +16,12 @@
     "typescript": "^3.6.2"
   },
   "peerDependencies": {
-    "@emotion/core": "^10.0.27",
+    "@emotion/react": "^11.4.0",
     "@mdx-js/react": "^1.5.3",
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@theme-ui/color": "^0.3.1",
+    "@theme-ui/color": "^0.9.1",
     "@uswitch/trustyle-utils.get": "^1.0.10"
   }
 }

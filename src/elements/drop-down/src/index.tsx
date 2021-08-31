@@ -94,12 +94,15 @@ export const DropDown = forwardRef(
     return (
       <FrozenInput text={frozenText} freezable={freezable} inputRef={inputRef}>
         <div
-          sx={{ position: 'relative', variant: 'elements.drop-down.container' }}
+          sx={{
+            position: 'relative' as const,
+            variant: 'elements.drop-down.container'
+          }}
         >
           {overlay && (
             <div
               sx={{
-                position: 'absolute',
+                position: 'absolute' as const,
                 left: 0,
                 top: 0,
                 right: 0,
@@ -131,9 +134,9 @@ export const DropDown = forwardRef(
               fontFamily: 'base',
               fontSize: 'base',
               lineHeight: '1.33',
-              appearance: 'none',
+              appearance: 'none' as const,
               backgroundColor: 'white',
-              boxSizing: 'border-box',
+              boxSizing: 'border-box' as const,
               padding: 16,
               paddingRight: 48,
               verticalAlign: 'middle',
@@ -171,8 +174,8 @@ export const DropDown = forwardRef(
               sx={{
                 height: 15,
                 width: 15,
-                pointerEvents: 'none',
-                position: 'absolute',
+                pointerEvents: 'none' as const,
+                position: 'absolute' as const,
                 right: 16,
                 top: 'calc(50% - 15px / 2)',
                 variant: 'elements.drop-down.icon'

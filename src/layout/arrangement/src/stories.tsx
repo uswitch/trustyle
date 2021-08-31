@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { css, jsx } from '@emotion/core'
+import { css, jsx } from '@emotion/react'
 import { storiesOf } from '@storybook/react'
 import { colors, typography } from '@uswitch/trustyle.styles'
 

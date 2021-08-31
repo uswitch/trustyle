@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.product-table",
-  "version": "2.17.3",
+  "version": "2.17.4",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -12,11 +12,11 @@
     "url": "https://github.com/uswitch/trustyle"
   },
   "peerDependencies": {
-    "@emotion/core": "^10.0.27",
+    "@emotion/react": "^11.4.0",
     "react": "^16.7.0"
   },
   "devDependencies": {
-    "@uswitch/trustyle.circular-percentage-bar": "^0.1.3",
-    "@uswitch/trustyle.wireframe-cell": "^0.0.2"
+    "@uswitch/trustyle.circular-percentage-bar": "^0.1.4",
+    "@uswitch/trustyle.wireframe-cell": "^0.0.3"
   }
 }

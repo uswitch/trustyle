@@ -92,7 +92,7 @@ const ToolTipContent: React.FC<ToolTipContentProps> = ({ title, content }) => {
           fontSize: '14px',
           lineHeight: '21px',
           fontFamily: 'heading',
-          textAlign: 'left',
+          textAlign: 'left' as const,
           m: '0'
         }}
       >

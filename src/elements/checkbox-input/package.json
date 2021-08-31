@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.checkbox-input",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -16,9 +16,9 @@
   },
   "peerDependencies": {
     "react": "^16.7.0",
-    "theme-ui": "^0.2.52"
+    "theme-ui": "^0.9.1"
   },
   "dependencies": {
-    "@uswitch/trustyle.arrangement": "^2.0.21"
+    "@uswitch/trustyle.arrangement": "^2.0.22"
   }
 }

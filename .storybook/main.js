@@ -1,3 +1,5 @@
+const path = require('path')
+
 let stories = ['../src/**/*.stories.js', '../src/**/stories.tsx']
 
 if (process.env.STORYBOOK_ONLY_CHANGED) {
@@ -14,5 +16,22 @@ module.exports = {
     '@storybook/addon-viewport',
     '@storybook/addon-actions',
     '@storybook/addon-links'
-  ]
+  ],
+  webpackFinal: async config => {
+    config.resolve.alias = {
+      '@emotion/core': path.resolve(
+        __dirname,
+        '../node_modules/@emotion/react'
+      ),
+      '@emotion/styled': path.resolve(
+        __dirname,
+        '../node_modules/@emotion/styled'
+      ),
+      'emotion-theming': path.resolve(
+        __dirname,
+        '../node_modules/@emotion/react'
+      )
+    }
+    return config
+  }
 }

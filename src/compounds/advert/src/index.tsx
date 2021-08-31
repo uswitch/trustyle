@@ -56,13 +56,13 @@ const Advert: React.FC<Props> = ({
           <div
             sx={{
               display: 'flex',
-              flexDirection: ['column', 'row-reverse']
+              flexDirection: ['column' as const, 'row-reverse' as const]
             }}
           >
             <div
               sx={{
                 display: 'flex',
-                flexDirection: 'column',
+                flexDirection: 'column' as const,
                 flex: '2 1 75%',
                 marginBottom: [0, '16px']
               }}
@@ -71,7 +71,7 @@ const Advert: React.FC<Props> = ({
                 sx={{
                   display: 'flex',
                   alignItems: 'center',
-                  flexDirection: 'row',
+                  flexDirection: 'row' as const,
                   justifyContent: 'space-between'
                 }}
               >
@@ -106,7 +106,7 @@ const Advert: React.FC<Props> = ({
             <div
               sx={{
                 display: 'flex',
-                flexDirection: 'column',
+                flexDirection: 'column' as const,
                 flex: '1 1 auto',
                 marginRight: [0, '40px'],
                 marginBottom: ['sm', 0],

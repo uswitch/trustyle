@@ -20,8 +20,8 @@ const DrawCircles: React.FC<Props> = ({ size = 'xs', bgColor = '#ffffff' }) => {
       sx={{
         marginBottom: '20px',
         display: 'flex',
-        flexDirection: 'row',
-        flexWrap: 'wrap',
+        flexDirection: 'row' as const,
+        flexWrap: 'wrap' as const,
         backgroundColor: bgColor
       }}
     >
@@ -52,7 +52,7 @@ export const ExampleWithPercentages = () => {
     <div
       sx={{
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column' as const
       }}
     >
       <DrawCircles size="xs" bgColor="#F5E9EE" />
@@ -74,7 +74,7 @@ export const ExampleWithAlignment = () => {
     <div
       sx={{
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'column' as const,
         marginX: 'auto',
         backgroundColor: '#F5E9EE',
         width: ['100%', '50%']

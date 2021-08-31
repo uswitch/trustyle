@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.7.1...@uswitch/trustyle.legacy-product-table@1.7.2) (2021-08-27)
+
+
+### Bug Fixes
+
+* fixed a11y, removed unnecessary rules, fixed package.json across all dir ([a9e0455](https://github.com/uswitch/trustyle/commit/a9e0455))
+* reveted changes on some packages, fixed some small bugs on themes ([69b8a3d](https://github.com/uswitch/trustyle/commit/69b8a3d))
+
+
+
+
+
+## [1.7.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.7.0...@uswitch/trustyle.legacy-product-table@1.7.1) (2021-08-26)
+
+
+### Bug Fixes
+
+* clickable row with secondary link ([fee0f65](https://github.com/uswitch/trustyle/commit/fee0f65))
+
+
+
+
+
 # [1.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.6.0...@uswitch/trustyle.legacy-product-table@1.7.0) (2021-08-25)
 
 

@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { boolean, number, select, text } from '@storybook/addon-knobs'
-import { Global } from '@emotion/core'
+import { Global } from '@emotion/react'
 
 import { ButtonLink } from '../../../elements/button-link/src'
 import Badge from '../../../elements/badge/src'
@@ -232,7 +232,7 @@ export const Example1 = () => {
         <img
           src="https://placekitten.com/200/75?image=9"
           alt="Salman"
-          sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          sx={{ height: 75, width: '100%', objectFit: 'cover' as const }}
         />
       </ProductTable.cells.Image>
       <ProductTable.cells.Split>
@@ -281,7 +281,7 @@ export const Example2 = () => {
           <img
             src="https://placekitten.com/200/75?image=12"
             alt="Salman"
-            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+            sx={{ height: 75, width: '100%', objectFit: 'cover' as const }}
           />
         </ProductTable.cells.Image>
         <ProductTable.cells.Split>
@@ -322,7 +322,7 @@ export const ExampleWithAddons = () => {
             <ProductTable.cells.Content label="Eligibility">
               <div
                 sx={{
-                  textAlign: 'center',
+                  textAlign: 'center' as const,
                   maxWidth: 300,
                   minWidth: [0, 200],
                   marginLeft: 'auto'
@@ -348,7 +348,11 @@ export const ExampleWithAddons = () => {
               <img
                 src="https://placekitten.com/200/75?image=9"
                 alt="Salman"
-                sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+                sx={{
+                  height: 75,
+                  width: '100%',
+                  objectFit: 'cover' as const
+                }}
               />
             </ProductTable.cells.Image>
           ),
@@ -472,7 +476,7 @@ export const ExampleWithMultipleAccents = () => {
         <img
           src="https://placekitten.com/200/75?image=1"
           alt="Salman"
-          sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          sx={{ height: 75, width: '100%', objectFit: 'cover' as const }}
         />
       </ProductTable.cells.Image>
       <ProductTable.cells.Split>
@@ -511,7 +515,7 @@ export const ExampleStacked = () => {
           <img
             src="https://placekitten.com/200/75?image=1"
             alt="Salman"
-            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+            sx={{ height: 75, width: '100%', objectFit: 'cover' as const }}
           />
         </ProductTable.cells.Image>
         <ProductTable.cells.Split>
@@ -538,7 +542,7 @@ export const ExampleStacked = () => {
           <img
             src="https://placekitten.com/200/75?image=1"
             alt="Salman"
-            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+            sx={{ height: 75, width: '100%', objectFit: 'cover' as const }}
           />
         </ProductTable.cells.Image>
         <ProductTable.cells.Split>
@@ -584,7 +588,7 @@ export const ClickableExample = () => {
           <img
             src="https://placekitten.com/200/75?image=1"
             alt="Salman"
-            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+            sx={{ height: 75, width: '100%', objectFit: 'cover' as const }}
           />
         </ProductTable.cells.Image>
         <ProductTable.cells.Split>
@@ -615,7 +619,7 @@ export const ClickableExample = () => {
           <img
             src="https://placekitten.com/200/75?image=1"
             alt="Salman"
-            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+            sx={{ height: 75, width: '100%', objectFit: 'cover' as const }}
           />
         </ProductTable.cells.Image>
         <ProductTable.cells.Split>
@@ -656,7 +660,7 @@ export const MoneyRedesignExample = () => {
           <img
             src="https://placekitten.com/200/75?image=9"
             alt="Salman"
-            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+            sx={{ height: 75, width: '100%', objectFit: 'cover' as const }}
           />
         </ProductTable.cells.HeaderImage>
       }
@@ -720,7 +724,7 @@ export const MoneyRedesignExample = () => {
         <img
           src="https://placekitten.com/200/75?image=1"
           alt="Salman"
-          sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+          sx={{ height: 75, width: '100%', objectFit: 'cover' as const }}
         />
       </ProductTable.cells.Image>
       <ProductTable.cells.Cta
@@ -746,7 +750,7 @@ export const MoneyRedesignExampleNoImage = () => {
           <img
             src="https://placekitten.com/200/75?image=9"
             alt="Salman"
-            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+            sx={{ height: 75, width: '100%', objectFit: 'cover' as const }}
           />
         </ProductTable.cells.HeaderImage>
       }
@@ -832,7 +836,7 @@ export const MoneyRedesignExampleWithPercentage = () => {
           <img
             src="https://placekitten.com/200/75?image=9"
             alt="Salman"
-            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+            sx={{ height: 75, width: '100%', objectFit: 'cover' as const }}
           />
         </ProductTable.cells.HeaderImage>
       }
@@ -934,7 +938,7 @@ export const MoneyRedesignExampleWithBanner = () => {
           <img
             src="https://placekitten.com/200/75?image=9"
             alt="Salman"
-            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+            sx={{ height: 75, width: '100%', objectFit: 'cover' as const }}
           />
         </ProductTable.cells.HeaderImage>
       }
@@ -1028,7 +1032,7 @@ export const MoneyRedesignExampleWithWireframe = () => {
           <img
             src="https://placekitten.com/200/75?image=9"
             alt="Salman"
-            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+            sx={{ height: 75, width: '100%', objectFit: 'cover' as const }}
           />
         </ProductTable.cells.HeaderImage>
       }
@@ -1122,7 +1126,7 @@ export const DisabledExample = () => {
           <img
             src="https://placekitten.com/200/75?image=1"
             alt="Salman"
-            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+            sx={{ height: 75, width: '100%', objectFit: 'cover' as const }}
           />
         </ProductTable.cells.Image>
         <ProductTable.cells.Split>
@@ -1154,7 +1158,7 @@ export const DisabledExample = () => {
           <img
             src="https://placekitten.com/200/75?image=1"
             alt="Salman"
-            sx={{ height: 75, width: '100%', objectFit: 'cover' }}
+            sx={{ height: 75, width: '100%', objectFit: 'cover' as const }}
           />
         </ProductTable.cells.Image>
         <ProductTable.cells.Split>

@@ -34,7 +34,7 @@ export const container = (
 }
 
 export const row = (
-  centerX: boolean = false,
+  centerX = false,
   topSpacing: number[] = [],
   bottomSpacing: number[] = [],
   gutterWidths: number[] = defaultGutterWidths
@@ -57,8 +57,8 @@ export const row = (
 export const column = (
   sizes: number[] = [],
   display: string[] = [],
-  hasPaddingTop: boolean = false,
-  hasPaddingBottom: boolean = false,
+  hasPaddingTop = false,
+  hasPaddingBottom = false,
   gutterWidths: number[] = defaultGutterWidths
 ): DynamicStyle[] => {
   const paddings = gutterWidths.map(gw => `${gw / 2}px`)

@@ -4,7 +4,7 @@
     "declaration": true,
     "esModuleInterop": true,
     "jsx": "react",
-    "lib": ["es2015", "dom"],
+    "lib": ["es2017", "dom"],
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "lib",
@@ -13,8 +13,10 @@
     "target": "es5",
     "typeRoots": [
       "./node_modules/@types",
-      "./types"
-    ]
+      "./node_modules/theme-ui/dist/declarations/src"
+    ],
+    "types": ["@emotion/core", "@emotion/react", "node", "webpack-env"]
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }

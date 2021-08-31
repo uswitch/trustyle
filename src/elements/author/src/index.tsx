@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import { Palette } from '@uswitch/trustyle-utils.palette'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
@@ -31,13 +31,13 @@ const Author: React.FC<Props> = ({
       sx={{
         display: 'flex',
         alignItems: 'center',
-        flexDirection: 'row',
+        flexDirection: 'row' as const,
         variant: getVariant('base')
       }}
       className={className}
     >
       {authorImage && (
-        <Styled.a
+        <Themed.a
           href={titleUrl}
           sx={{
             flexShrink: 0,
@@ -56,11 +56,11 @@ const Author: React.FC<Props> = ({
               variant: getVariant('image')
             }}
           />
-        </Styled.a>
+        </Themed.a>
       )}
 
       <div>
-        <Styled.h5
+        <Themed.h5
           sx={{
             marginTop: 0,
             fontWeight: 'bold',
@@ -70,7 +70,7 @@ const Author: React.FC<Props> = ({
           }}
         >
           <Palette
-            as={Styled.a}
+            as={Themed.a}
             href={titleUrl}
             sx={{
               color: 'inherit',
@@ -81,10 +81,10 @@ const Author: React.FC<Props> = ({
           >
             {title}
           </Palette>
-        </Styled.h5>
+        </Themed.h5>
 
         {subtitle && (
-          <Styled.p
+          <Themed.p
             sx={{
               fontSize: 'xxs',
               marginY: 0,
@@ -92,7 +92,7 @@ const Author: React.FC<Props> = ({
             }}
           >
             <Palette
-              as={Styled.a}
+              as={Themed.a}
               href={subtitleUrl}
               sx={{
                 textDecoration: 'none',
@@ -102,7 +102,7 @@ const Author: React.FC<Props> = ({
             >
               {subtitle}
             </Palette>
-          </Styled.p>
+          </Themed.p>
         )}
       </div>
     </div>

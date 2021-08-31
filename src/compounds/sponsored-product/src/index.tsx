@@ -208,7 +208,7 @@ const SponsoredProduct: React.FC<Props> = ({
       <div
         sx={{
           display: 'flex',
-          flexDirection: [null, 'column'],
+          flexDirection: [null, 'column' as const],
           width: [null, '45%'],
           justifyContent: 'flex-start'
         }}
@@ -223,7 +223,7 @@ const SponsoredProduct: React.FC<Props> = ({
           <div
             sx={{
               width: imgSrc ? 80 : '100%',
-              position: 'relative',
+              position: 'relative' as const,
               marginLeft: imgSrc ? 'xs' : null,
               marginRight: 'sm',
               display: ['none', 'inline-block'],
@@ -240,7 +240,7 @@ const SponsoredProduct: React.FC<Props> = ({
               height={imgSrc ? 88 : 73}
               critical
               sx={{
-                position: imgSrc ? 'absolute' : 'static',
+                position: imgSrc ? ('absolute' as const) : ('static' as const),
                 margin: 'auto',
                 top: 0,
                 bottom: 0,

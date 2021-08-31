@@ -28,7 +28,7 @@ export default {
 export const BasicExample = () => (
   <React.Fragment>
     <Container sx={{ bg: '#eee', color: 'white' }}>
-      <Row sx={{ textAlign: 'center' }}>
+      <Row sx={{ textAlign: 'center' as const }}>
         <Col sx={colStyling}>Col 1</Col>
         <Col sx={colStyling}>Col 2</Col>
         <Col sx={colStyling}>Col 3</Col>
@@ -46,7 +46,11 @@ BasicExample.story = {
 
 export const ResponsiveNumberOfColums = () => (
   <Container sx={{ bg: '#eee', color: 'white' }}>
-    <Row direction="row" cols={[4, 8, 12]} sx={{ textAlign: 'center' }}>
+    <Row
+      direction="row"
+      cols={[4, 8, 12]}
+      sx={{ textAlign: 'center' as const }}
+    >
       <Col span={[2, 5, 2]} sx={colStyling}>
         Col 1
       </Col>
@@ -74,7 +78,7 @@ export const ChangeFlowColumns = () => (
   <Container sx={{ bg: '#eee', color: 'white' }}>
     <Row
       direction={['column-reverse', 'row', 'row-reverse']}
-      sx={{ textAlign: 'center' }}
+      sx={{ textAlign: 'center' as const }}
     >
       <Col sx={{ ...colStyling, bg: 'red' }}>Col 1</Col>
       <Col sx={{ ...colStyling, bg: 'green' }}>Col 2</Col>
@@ -94,12 +98,16 @@ ChangeFlowColumns.story = {
 export const ContainersBasedOnCols = () => (
   <React.Fragment>
     <Container cols={12} span={8} sx={{ bg: '#eee', color: 'white' }}>
-      <Row sx={{ textAlign: 'center' }}>
+      <Row sx={{ textAlign: 'center' as const }}>
         <Col sx={colStyling}>Container at 8 out of 12 cols width</Col>
       </Row>
     </Container>
     <Container sx={{ bg: '#eee', color: 'white' }}>
-      <Row direction="row" sx={{ textAlign: 'center' }} cols={[4, 12, 12]}>
+      <Row
+        direction="row"
+        sx={{ textAlign: 'center' as const }}
+        cols={[4, 12, 12]}
+      >
         <Col span={1} sx={greyColStyling}>
           x
         </Col>
@@ -151,14 +159,18 @@ ContainersBasedOnCols.story = {
 export const OffsetColumns = () => (
   <React.Fragment>
     <Container sx={{ bg: '#eee', color: 'white' }}>
-      <Row sx={{ textAlign: 'center' }} cols={[4, 12, 12]}>
+      <Row sx={{ textAlign: 'center' as const }} cols={[4, 12, 12]}>
         <Col offset={[1, 3, 3]} span={[2, 6, 6]} sx={colStyling}>
           Offset column
         </Col>
       </Row>
     </Container>
     <Container sx={{ bg: '#eee', color: 'white' }}>
-      <Row direction="row" sx={{ textAlign: 'center' }} cols={[4, 12, 12]}>
+      <Row
+        direction="row"
+        sx={{ textAlign: 'center' as const }}
+        cols={[4, 12, 12]}
+      >
         <Col span={1} sx={greyColStyling}>
           x
         </Col>
@@ -208,7 +220,12 @@ OffsetColumns.story = {
 
 export const GridWithWrapping = () => (
   <Container sx={{ bg: '#eee', color: 'white' }}>
-    <Row direction="row" cols={[4, 8, 12]} sx={{ textAlign: 'center' }} wrap>
+    <Row
+      direction="row"
+      cols={[4, 8, 12]}
+      sx={{ textAlign: 'center' as const }}
+      wrap
+    >
       <Col span={[2, 5, 4]} sx={colStyling}>
         Col 1
       </Col>

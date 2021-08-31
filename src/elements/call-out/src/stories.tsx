@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { Fragment } from 'react'
-import { jsx } from '@emotion/core'
+import { jsx } from '@emotion/react'
 import { boolean, color, select, text } from '@storybook/addon-knobs'
 import { PaletteProvider } from '@uswitch/trustyle-utils.palette'
 

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Themed } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
@@ -42,14 +42,14 @@ const AuthorProfile: React.FC<Props> = ({
 
   const BioElement =
     bio == null || typeof bio === 'string' || bio instanceof String
-      ? Styled.p
-      : Styled.div
+      ? Themed.p
+      : Themed.div
 
   const socials = []
 
   if (email) {
     socials.push(
-      <Styled.a
+      <Themed.a
         key={'eml-' + email}
         href={'mailto:' + email}
         sx={{
@@ -66,13 +66,13 @@ const AuthorProfile: React.FC<Props> = ({
           <Icon glyph="email-filled" size={22} color="grey-80" />
           {showDetails && <span>{email}</span>}
         </div>
-      </Styled.a>
+      </Themed.a>
     )
   }
 
   if (twitterLink) {
     socials.push(
-      <Styled.a
+      <Themed.a
         key={'twtr-' + twitterLink}
         href={twitterLink}
         target={socialsHrefTarget}
@@ -90,13 +90,13 @@ const AuthorProfile: React.FC<Props> = ({
           <Icon glyph="twitter" size={22} color="grey-80" />
           {showDetails && <span>{twitterLink}</span>}
         </div>
-      </Styled.a>
+      </Themed.a>
     )
   }
 
   if (linkedInLink) {
     socials.push(
-      <Styled.a
+      <Themed.a
         key={'lnkd-' + linkedInLink}
         href={linkedInLink}
         target={socialsHrefTarget}
@@ -114,7 +114,7 @@ const AuthorProfile: React.FC<Props> = ({
           <Icon glyph="linkedIn" size={22} color="grey-80" />
           {showDetails && <span>{linkedInLink}</span>}
         </div>
-      </Styled.a>
+      </Themed.a>
     )
   }
 
@@ -124,12 +124,12 @@ const AuthorProfile: React.FC<Props> = ({
       sx={{
         display: 'flex',
         alignItems: 'center',
-        flexDirection: 'row',
+        flexDirection: 'row' as const,
         variant: styles('main')
       }}
     >
       {authorImage && (
-        <Styled.a
+        <Themed.a
           href={authorUrl}
           sx={{
             flexShrink: 0,
@@ -151,7 +151,7 @@ const AuthorProfile: React.FC<Props> = ({
               height: '100%'
             }}
           />
-        </Styled.a>
+        </Themed.a>
       )}
 
       <div
@@ -160,7 +160,7 @@ const AuthorProfile: React.FC<Props> = ({
           variant: styles('content')
         }}
       >
-        <Styled.h2
+        <Themed.h2
           sx={{
             marginTop: 0,
             marginBottom: 'xxs',
@@ -180,7 +180,7 @@ const AuthorProfile: React.FC<Props> = ({
             <span>{name}</span>
             <span sx={{ variant: styles('role') }}>{role}</span>
           </a>
-        </Styled.h2>
+        </Themed.h2>
         <BioElement
           sx={{
             fontSize: 'sm',

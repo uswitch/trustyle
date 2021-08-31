@@ -15,17 +15,19 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 export const TileInput: React.FC<Props> = ({
   children,
   label,
+  name,
   type = 'radio',
   ...inputProps
-}) => (
-  <label>
-    <input sx={st.input(type)} type={type} {...inputProps} />
-    <span sx={st.container(type)}>
-      <span sx={st.content}>
-        <span />
-        <span sx={st.childrenWrapper}>{children}</span>
-        {label}
+}) => {
+  return (
+    <label>
+      <input sx={st.input(type)} type={type} name={name} {...inputProps} />
+      <span sx={st.container(type)}>
+        <span sx={st.content}>
+          <span sx={st.childrenWrapper}>{children}</span>
+          {label}
+        </span>
       </span>
-    </span>
-  </label>
-)
+    </label>
+  )
+}

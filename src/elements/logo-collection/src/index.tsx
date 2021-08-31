@@ -13,7 +13,7 @@ const LogoCollection: React.FC<Props> = ({ logoImage, className }) => {
     <div
       sx={{
         display: 'flex',
-        flexWrap: 'wrap',
+        flexWrap: 'wrap' as const,
         alignItems: 'center',
         justifyContent: 'center',
         variant: 'elements.logo-collection.base.outer'
