@@ -5788,6 +5788,13 @@
           }
         }
       }
+    },
+    "imageModule": {
+      "imageLabel": {
+        "paddingTop": "xxs",
+        "fontSize": "xxxs",
+        "lineHeight": "sm"
+      }
     }
   },
   "layout": {
