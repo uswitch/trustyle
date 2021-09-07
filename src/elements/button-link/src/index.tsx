@@ -98,6 +98,7 @@ export const ButtonLink = <
       <div
         sx={{
           display: 'inline',
+          backgroundColor: 'inherit',
           variant: `elements.buttons.variants.${variant}.content`
         }}
       >

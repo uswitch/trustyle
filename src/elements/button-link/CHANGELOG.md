@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button-link@3.2.10...@uswitch/trustyle.button-link@3.2.11) (2021-09-07)
+
+
+### Bug Fixes
+
+* make the whole btn link the same color inside ([68a3f2e](https://github.com/uswitch/trustyle/commit/68a3f2e))
+
+
+
+
+
 ## [3.2.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button-link@3.2.9...@uswitch/trustyle.button-link@3.2.10) (2021-08-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.button-link
