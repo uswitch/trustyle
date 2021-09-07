@@ -5223,6 +5223,66 @@
             "padding": "base",
             "backgroundColor": "success-mint"
           }
+        },
+        "postcodeSecondary": {
+          "container": {
+            "mt": "md",
+            "mb": "xl",
+            "ml": 0,
+            "mr": 0,
+
+            "form": {
+              "mx": 0,
+              "ml": 0,
+              "maxWidth": ["100%", 555, 555],
+              "background": "white",
+
+              "> div": {
+                "boxShadow": "none",
+                "padding": 0
+              },
+
+              "input": {
+                "border": "1px solid",
+                "borderColor": "grey-40",
+                "mr": [0, "sm"],
+                "mb": ["sm", 0],
+                "py": "sm",
+                "pr": 20,
+                "pl": 48,
+                "height": 56,
+
+                "&:not(:placeholder-shown)": {
+                  "backgroundColor": "grey-05",
+                  "borderWidth": 2,
+                  "borderColor": "primary"
+                }
+              },
+
+              "svg": {
+                "fill": "primary",
+                "stroke": "primary",
+                "ml": [-5, 20],
+                "mt": [-5, 2]
+              },
+
+              "button": {
+                "border": "2px solid",
+                "borderColor": "primary",
+                "px": 42,
+                "margin": 0,
+                "justifyContent": "center",
+
+                ":hover": {
+                  "borderColor": "grey-70"
+                },
+
+                "svg": {
+                  "display": "none"
+                }
+              }
+            }
+          }
         }
       },
       "form": {
