@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.51.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.51.6...@uswitch/trustyle.uswitch-theme@2.51.7) (2021-09-07)
+
+
+### Bug Fixes
+
+* uswitch theme mods for image module ([3cf51d0](https://github.com/uswitch/trustyle/commit/3cf51d0))
+
+
+
+
+
+## [2.51.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.51.5...@uswitch/trustyle.uswitch-theme@2.51.6) (2021-09-06)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.51.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.51.4...@uswitch/trustyle.uswitch-theme@2.51.5) (2021-09-03)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+
 ## [2.51.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.51.2...@uswitch/trustyle.uswitch-theme@2.51.4) (2021-09-01)
 
 
