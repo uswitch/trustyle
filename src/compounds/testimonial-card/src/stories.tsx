@@ -15,14 +15,9 @@ const quote = text(
   'Quote',
   '“Aenean nisl tortor, vestibulum sit amet elit id, pellentesque interdum diam. Mauris eu.”'
 )
-const ratingImg = (
-  <img
-    src="https://uswitch-contentful.imgix.net/n36b8lzdmgnp/2cyASLfTZAjrxhpG4Ri4Pa/a973d543bacf32d6840ad96ef0010227/4.5Stars?auto=format&fit=crop&ixlib=react-8.6.4"
-    alt="4.5 out of 5 stars"
-  />
-)
+const ratingImg = <img src="/contentful/stars-4.svg" alt="4.5 out of 5 stars" />
 const authorImg = (
-  <img src="https://placekitten.com/200/200?image=9" alt="John Smith" />
+  <img src="/contentful/kitten200x200-9.jpeg" alt="John Smith" />
 )
 const authorName = text('Author name', 'John Smith')
 

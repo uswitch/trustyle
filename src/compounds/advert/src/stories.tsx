@@ -31,7 +31,7 @@ export const ExampleWithKnobs = () => {
             body="Indicative offers from 45+ lenders in 3 mins. Never pay more than going direct. Will not affect your credit rating."
             badgeText="Exclusive loans deals"
             footer="Available to businesses trading for a minimum of 12 months with at least £80,000 turnover."
-            logo="https://cdn.money.co.uk/images/logos/129x75/funding-xchange.CDN6038ea49@2x.png"
+            logo="://cdn.money.co.uk/images/logos/129x75/funding-xchange.CDN6038ea49@2x.png"
             link="https://money.co.uk?tracking=false"
           />
         </Col>
@@ -59,7 +59,7 @@ export const hargreaves = () => {
             body="Indicative offers from 45+ lenders in 3 mins. Never pay more than going direct. Will not affect your credit rating."
             badgeText="Exclusive loans deals"
             footer="Available to businesses trading for a minimum of 12 months with at least £80,000 turnover."
-            logo="https://money.imgix.net/uswitch-assets-eu/amp/images/provider/logos/hargreaves-lansdown-logo-11544.png"
+            logo="/contentful/hargreaves-lansdown.png"
             link="https://money.co.uk?tracking=false"
           />
         </Col>
@@ -82,7 +82,7 @@ export const AutomatedTests = () => {
         body="Indicative offers from 45+ lenders in 3 mins. Never pay more than going direct. Will not affect your credit rating."
         badgeText="Exclusive loans deals"
         footer="Available to businesses trading for a minimum of 12 months with at least £80,000 turnover."
-        logo="https://cdn.money.co.uk/images/logos/129x75/funding-xchange.CDN6038ea49@2x.png"
+        logo="/contentful/funding-xchange.png"
       />
     </AllThemes>
   )

@@ -14,7 +14,7 @@ const exampleAriaLabel = 'An example phone number modal'
 
 const ExamplePhoneNumberWithoutUrl = {
   phoneNumber: '0808 296 6568',
-  logoUrl: 'https://placekitten.com/200/200?image=9',
+  logoUrl: '/contentful/kitten200x200-9.jpeg',
   logoDescription: 'kitten',
   termsAndConditions:
     'Your calls may be recorded for monitoring purposes. You must be a UK resident aged 18+. Terms & Conditions apply. Please see our General Lending Criteria.',
