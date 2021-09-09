@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.24](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.ad-banner@2.3.23...@uswitch/trustyle.ad-banner@2.3.24) (2021-09-07)
+
+**Note:** Version bump only for package @uswitch/trustyle.ad-banner
+
+
+
+
+
 ## [2.3.23](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.ad-banner@2.3.22...@uswitch/trustyle.ad-banner@2.3.23) (2021-08-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.ad-banner

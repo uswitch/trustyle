@@ -4639,6 +4639,51 @@
               "fontSize": "sm"
             }
           }
+        },
+        "readMoreCard": {
+          "position": "relative",
+          "itemsPerRow": 4,
+          "image": {
+            "img": {
+              "width": "100%",
+              "borderRadius": "3px"
+            },
+            "variant": "compounds.card.variants.horizontal.image",
+            "borderBottom": "none",
+            "width": "100%",
+            "mb": 19
+          },
+          "link": {
+            "borderBottom": "none",
+            "mb": 0
+          },
+          "heading": {
+            "a": {
+              "fontFamily": "base",
+              "fontSize": "sm",
+              "lineHeight": "32px",
+              "textDecoration": "underline",
+              "borderBottom": "none"
+            },
+            "textDecoration": "none",
+            "lineHeight": "xs",
+            "marginBottom": "sm",
+            "display": "-webkit-box",
+            "WebkitLineClamp": 2,
+            "WebkitBoxOrient": "vertical",
+            "overflow": "hidden"
+          },
+          "description": {
+            "color": "grey-70",
+            "fontFamily": "base",
+            "fontSize": "sm",
+            "lineHeight": "32px",
+            "marginBottom": "md",
+            "display": "-webkit-box",
+            "WebkitLineClamp": 3,
+            "WebkitBoxOrient": "vertical",
+            "overflow": "hidden"
+          }
         }
       }
     },
@@ -5847,6 +5892,13 @@
             "height": "max-content"
           }
         }
+      }
+    },
+    "imageModule": {
+      "imageLabel": {
+        "paddingTop": "xxs",
+        "fontSize": "xxxs",
+        "lineHeight": "sm"
       }
     }
   },
