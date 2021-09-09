@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.53.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.52.0...@uswitch/trustyle.uswitch-theme@2.53.0) (2021-09-09)
+
+
+### Features
+
+* add postcode-secondary styles ([2731f63](https://github.com/uswitch/trustyle/commit/2731f63))
+
+
+
+
+
 # [2.52.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.51.7...@uswitch/trustyle.uswitch-theme@2.52.0) (2021-09-08)
 
 
