@@ -2053,6 +2053,20 @@
             "color": "primary"
           }
         },
+        "clickoutWrapper": {
+          "display": "flex",
+          "flexWrap": "wrap",
+          "flexDirection": ["column", "row", "row"],
+          "> a": {
+            ":first-child": {
+              "mr": ["0", "0", "32px !important"]
+            },
+            ":last-child": {
+              "ml": ["0", "0", "32px !important"]
+            },
+            "mr": ["0 !important", "32px !important", "0 !important"]
+          }
+        },
         "true-speeds": {
           "variant": "elements.buttons.base",
           "padding": 4,
