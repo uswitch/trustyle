@@ -3155,6 +3155,19 @@
         }
       }
     },
+    "expired-modal": {
+      "heading": {
+        "fontSize": "xl",
+        "fontWeight": "bold",
+        "fontFamily": "heading",
+        "color": "plum"
+      },
+      "text": {
+        "fontSize": "xs",
+        "fontWeight": "base",
+        "fontFamily": "body"
+      }
+    },
     "information-panel": {
       "block": {
         "title": {
