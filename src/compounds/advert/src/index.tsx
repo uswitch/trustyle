@@ -100,9 +100,11 @@ const Advert: React.FC<Props> = ({
                   />
                 </Button>
               </div>
-              <div sx={{ variant: 'compounds.advert.complianceText' }}>
-                {complianceText}
-              </div>
+              {complianceText && (
+                <div sx={{ variant: 'compounds.advert.complianceText' }}>
+                  {complianceText}
+                </div>
+              )}
               <div sx={{ padding: ['8px 0', '0'] }}>
                 <p sx={{ fontSize: '14px' }}>{body}</p>
                 <Badge variant="advert">{badgeText}</Badge>
