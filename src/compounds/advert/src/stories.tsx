@@ -118,8 +118,8 @@ export const AutomatedTests = () => {
         badgeText="Exclusive loans deals"
         footer="Available to businesses trading for a minimum of 12 months with at least £80,000 turnover."
         logo="https://cdn.money.co.uk/images/logos/129x75/funding-xchange.CDN6038ea49@2x.png"
-        complianceText="Capital at risk"
       />
+      <ExampleWithComplianceText />
     </AllThemes>
   )
 }
