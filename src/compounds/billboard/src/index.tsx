@@ -73,17 +73,15 @@ const Billboard: React.FC<Props> = ({
                   ? ['xl', 'xxl', '0']
                   : ['xl', 'xxl'],
                 display: 'flex',
-                height: [
-                  'auto',
-                  'auto',
-                  !primarySlot && bgImage ? '402px' : 'auto'
-                ],
+                height: ['auto', 'auto', 'auto'],
                 flexDirection: [
                   'column' as const,
                   'column' as const,
                   'row' as const
                 ],
-                justifyContent: ['center', 'center', 'space-between']
+                justifyContent: ['center', 'center', 'space-between'],
+                position: 'relative',
+                alignItems: 'flex-end'
               }}
             >
               <div
@@ -120,8 +118,6 @@ const Billboard: React.FC<Props> = ({
                     width: '404px',
                     height: '416px',
                     display: ['none', 'none', 'block'],
-                    position: 'relative' as const,
-                    top: '-14px',
                     background: `url(${bgImage}) no-repeat right bottom / contain`
                   }}
                 ></div>
