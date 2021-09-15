@@ -1238,7 +1238,9 @@
         "width": 16
       },
       "icon": {
-        "backgroundColor": "plum"
+        "backgroundColor": "plum",
+        "width": 16,
+        "height": 16
       }
     },
     "cta": {
@@ -3153,6 +3155,19 @@
         "p": {
           "color": "plum"
         }
+      }
+    },
+    "expired-modal": {
+      "heading": {
+        "fontSize": "xl",
+        "fontWeight": "bold",
+        "fontFamily": "heading",
+        "color": "plum"
+      },
+      "text": {
+        "fontSize": "xs",
+        "fontWeight": "base",
+        "fontFamily": "body"
       }
     },
     "information-panel": {
