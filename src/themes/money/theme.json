@@ -1238,7 +1238,9 @@
         "width": 16
       },
       "icon": {
-        "backgroundColor": "plum"
+        "backgroundColor": "plum",
+        "width": 16,
+        "height": 16
       }
     },
     "cta": {
