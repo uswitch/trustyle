@@ -3,229 +3,143 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [2.51.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.51.6...@uswitch/trustyle.uswitch-theme@2.51.7) (2021-09-14)
+## [2.54.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.54.0...@uswitch/trustyle.uswitch-theme@2.54.1) (2021-09-10)
 
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+# [2.54.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.52.0...@uswitch/trustyle.uswitch-theme@2.54.0) (2021-09-10)
+
+### Features
+
+- add postcode-secondary styles ([2731f63](https://github.com/uswitch/trustyle/commit/2731f63))
+
+# [2.53.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.52.0...@uswitch/trustyle.uswitch-theme@2.53.0) (2021-09-10)
+
+### Features
+
+- add postcode-secondary styles ([2731f63](https://github.com/uswitch/trustyle/commit/2731f63))
+
+# [2.52.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.51.7...@uswitch/trustyle.uswitch-theme@2.52.0) (2021-09-08)
+
+### Features
+
+- add read more module styles ([114a745](https://github.com/uswitch/trustyle/commit/114a745))
+
+## [2.51.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.51.6...@uswitch/trustyle.uswitch-theme@2.51.7) (2021-09-07)
 
 ### Bug Fixes
 
-* uswitch theme mods for image module ([3cf51d0](https://github.com/uswitch/trustyle/commit/3cf51d0))
-
-
-
-
-
+- uswitch theme mods for image module ([3cf51d0](https://github.com/uswitch/trustyle/commit/3cf51d0))
 
 ## [2.51.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.51.5...@uswitch/trustyle.uswitch-theme@2.51.6) (2021-09-06)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.51.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.51.4...@uswitch/trustyle.uswitch-theme@2.51.5) (2021-09-03)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
-
 ## [2.51.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.51.2...@uswitch/trustyle.uswitch-theme@2.51.4) (2021-09-01)
-
 
 ### Bug Fixes
 
-* intra-component space for link with label fix ([0932de4](https://github.com/uswitch/trustyle/commit/0932de4))
-* moved to correct spot ([c9dde7c](https://github.com/uswitch/trustyle/commit/c9dde7c))
-
-
-
-
+- intra-component space for link with label fix ([0932de4](https://github.com/uswitch/trustyle/commit/0932de4))
+- moved to correct spot ([c9dde7c](https://github.com/uswitch/trustyle/commit/c9dde7c))
 
 ## [2.51.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.51.1...@uswitch/trustyle.uswitch-theme@2.51.2) (2021-08-27)
 
-
 ### Bug Fixes
 
-* themes reverted ([8c71e13](https://github.com/uswitch/trustyle/commit/8c71e13))
-* themes reverted ([361c049](https://github.com/uswitch/trustyle/commit/361c049))
-
-
-
-
+- themes reverted ([8c71e13](https://github.com/uswitch/trustyle/commit/8c71e13))
+- themes reverted ([361c049](https://github.com/uswitch/trustyle/commit/361c049))
 
 ## [2.51.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.51.0...@uswitch/trustyle.uswitch-theme@2.51.1) (2021-08-19)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 # [2.51.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.50.5...@uswitch/trustyle.uswitch-theme@2.51.0) (2021-08-18)
-
 
 ### Features
 
-* add information panel styling ([d870e9a](https://github.com/uswitch/trustyle/commit/d870e9a))
-
-
-
-
+- add information panel styling ([d870e9a](https://github.com/uswitch/trustyle/commit/d870e9a))
 
 ## [2.50.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.50.4...@uswitch/trustyle.uswitch-theme@2.50.5) (2021-08-13)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.50.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.50.3...@uswitch/trustyle.uswitch-theme@2.50.4) (2021-08-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
-
-
-
-
 
 ## [2.50.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.50.2...@uswitch/trustyle.uswitch-theme@2.50.3) (2021-08-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.50.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.50.1...@uswitch/trustyle.uswitch-theme@2.50.2) (2021-08-10)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
-
-
-
-
 
 ## [2.50.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.50.0...@uswitch/trustyle.uswitch-theme@2.50.1) (2021-08-10)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 # [2.50.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.49.1...@uswitch/trustyle.uswitch-theme@2.50.0) (2021-08-09)
-
 
 ### Features
 
-* spark accordion ([b8f46b1](https://github.com/uswitch/trustyle/commit/b8f46b1))
-
-
-
-
+- spark accordion ([b8f46b1](https://github.com/uswitch/trustyle/commit/b8f46b1))
 
 ## [2.49.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.49.0...@uswitch/trustyle.uswitch-theme@2.49.1) (2021-08-04)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 # [2.49.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.10...@uswitch/trustyle.uswitch-theme@2.49.0) (2021-07-30)
-
 
 ### Features
 
-* add image support to billboard ([899ce68](https://github.com/uswitch/trustyle/commit/899ce68))
-
-
-
-
+- add image support to billboard ([899ce68](https://github.com/uswitch/trustyle/commit/899ce68))
 
 ## [2.48.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.9...@uswitch/trustyle.uswitch-theme@2.48.10) (2021-07-14)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.48.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.8...@uswitch/trustyle.uswitch-theme@2.48.9) (2021-07-13)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.48.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.7...@uswitch/trustyle.uswitch-theme@2.48.8) (2021-07-13)
-
 
 ### Bug Fixes
 
-* sidenav-fix ([1003a50](https://github.com/uswitch/trustyle/commit/1003a50))
-
-
-
-
+- sidenav-fix ([1003a50](https://github.com/uswitch/trustyle/commit/1003a50))
 
 ## [2.48.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.6...@uswitch/trustyle.uswitch-theme@2.48.7) (2021-07-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.48.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.4...@uswitch/trustyle.uswitch-theme@2.48.6) (2021-07-07)
-
 
 ### Bug Fixes
 
-* variant array bug from new theme-ui version ([c716b25](https://github.com/uswitch/trustyle/commit/c716b25))
-
-
-
-
-
+- variant array bug from new theme-ui version ([c716b25](https://github.com/uswitch/trustyle/commit/c716b25))
 
 ## [2.48.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.4...@uswitch/trustyle.uswitch-theme@2.48.5) (2021-07-07)
 
-
 ### Bug Fixes
 
-* variant array bug from new theme-ui version ([f130940](https://github.com/uswitch/trustyle/commit/f130940))
-
-
-
-
+- variant array bug from new theme-ui version ([f130940](https://github.com/uswitch/trustyle/commit/f130940))
 
 ## [2.48.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.3...@uswitch/trustyle.uswitch-theme@2.48.4) (2021-07-07)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.48.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.2...@uswitch/trustyle.uswitch-theme@2.48.3) (2021-06-30)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
 
-
-
-
-
 ## [2.48.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.1...@uswitch/trustyle.uswitch-theme@2.48.2) (2021-06-29)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
-
-
-
-
 
 ## [2.48.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.48.0...@uswitch/trustyle.uswitch-theme@2.48.1) (2021-06-28)
 
