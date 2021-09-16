@@ -3976,15 +3976,14 @@
       },
       "complianceText": {
         "width": "100%",
-        "height": "32px",
+        "p": "8px",
+        "boxSizing": "border-box",
         "backgroundColor": "grey-10",
         "textAlign": "center",
         "fontSize": "xs",
         "fontFamily": "base",
         "fontWeight": "bolder",
-        "lineHeight": "32px",
         "color": "grey-80",
-        "marginBottom": ["xs", "sm"],
         "marginTop": ["sm", 0]
       }
     },
