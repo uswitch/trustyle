@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.advert@0.0.11...@uswitch/trustyle.advert@0.1.0) (2021-09-16)
+
+
+### Bug Fixes
+
+* add additional compliance text conditionally ([bba00eb](https://github.com/uswitch/trustyle/commit/bba00eb))
+* automated tests ([b6a5f57](https://github.com/uswitch/trustyle/commit/b6a5f57))
+
+
+### Features
+
+* add additional compliance text to advert ([7cd9059](https://github.com/uswitch/trustyle/commit/7cd9059))
+
+
+
+
+
 ## [0.0.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.advert@0.0.10...@uswitch/trustyle.advert@0.0.11) (2021-08-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.advert
