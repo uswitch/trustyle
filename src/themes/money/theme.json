@@ -3988,6 +3988,18 @@
       },
       "h6": {
         "fontSize": "base"
+      },
+      "complianceText": {
+        "width": "100%",
+        "p": "8px",
+        "boxSizing": "border-box",
+        "backgroundColor": "grey-10",
+        "textAlign": "center",
+        "fontSize": "xs",
+        "fontFamily": "base",
+        "fontWeight": "bolder",
+        "color": "grey-80",
+        "marginTop": ["sm", 0]
       }
     },
     "social-sharing": {
