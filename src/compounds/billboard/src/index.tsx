@@ -93,10 +93,71 @@ const Billboard: React.FC<Props> = ({
                       : ('center' as const),
                   variant: styles(),
                   marginX: primarySlot || bgImage ? ['0', 'auto', '0'] : 'auto',
-                  width: ['auto', '70%', '50%']
+                  width: ['auto', '70%', '50%'],
+                  '& > ul > li': { fontSize: ['sm', 'md'], paddingY: 10 }
                 }}
               >
                 {primaryContent}
+                <ul className="ev-ukz8iz">
+                  <li className="ev-mz8nie">
+                    <span className="ev-1yfbptl">
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        strokeWidth="0"
+                        viewBox="0 0 12 9"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M4.5 8.667L0 4.083l1.167-1.166L4.5 6.333 10.833 0 12 1.167l-7.5 7.5z"></path>
+                      </svg>
+                    </span>
+                    <span>
+                      <span className="ev-1yr8vp2">
+                        Compare deals from leading private pension providers
+                      </span>
+                    </span>
+                  </li>
+                  <li className="ev-mz8nie">
+                    <span className="ev-1yfbptl">
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        strokeWidth="0"
+                        viewBox="0 0 12 9"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M4.5 8.667L0 4.083l1.167-1.166L4.5 6.333 10.833 0 12 1.167l-7.5 7.5z"></path>
+                      </svg>
+                    </span>
+                    <span>
+                      <span className="ev-1yr8vp2">
+                        See charges and fees at a glance
+                      </span>
+                    </span>
+                  </li>
+                  <li className="ev-mz8nie">
+                    <span className="ev-1yfbptl">
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        strokeWidth="0"
+                        viewBox="0 0 12 9"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M4.5 8.667L0 4.083l1.167-1.166L4.5 6.333 10.833 0 12 1.167l-7.5 7.5z"></path>
+                      </svg>
+                    </span>
+                    <span>
+                      <span className="ev-1yr8vp2">Apply in minutes</span>
+                    </span>
+                  </li>
+                </ul>
               </div>
 
               {primarySlot && (
