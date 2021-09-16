@@ -3353,6 +3353,20 @@
         "paddingX": "md"
       }
     },
+    "advert": {
+      "complianceText": {
+        "width": "100%",
+        "p": "8px",
+        "boxSizing": "border-box",
+        "backgroundColor": "grey-10",
+        "textAlign": "center",
+        "fontSize": "xxs",
+        "fontFamily": "base",
+        "fontWeight": "xxbold",
+        "color": "grey-80",
+        "marginTop": ["sm", 0]
+      }
+    },
     "billboard": {
       "wrapper": {
         "backgroundColor": "blue-75"
