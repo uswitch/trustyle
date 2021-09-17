@@ -1238,7 +1238,9 @@
         "width": 16
       },
       "icon": {
-        "backgroundColor": "plum"
+        "backgroundColor": "plum",
+        "width": 16,
+        "height": 16
       }
     },
     "cta": {
@@ -3155,6 +3157,19 @@
         }
       }
     },
+    "expired-modal": {
+      "heading": {
+        "fontSize": "xl",
+        "fontWeight": "bold",
+        "fontFamily": "heading",
+        "color": "plum"
+      },
+      "text": {
+        "fontSize": "xs",
+        "fontWeight": "base",
+        "fontFamily": "body"
+      }
+    },
     "information-panel": {
       "block": {
         "title": {
@@ -3973,6 +3988,18 @@
       },
       "h6": {
         "fontSize": "base"
+      },
+      "complianceText": {
+        "width": "100%",
+        "p": "8px",
+        "boxSizing": "border-box",
+        "backgroundColor": "grey-10",
+        "textAlign": "center",
+        "fontSize": "xs",
+        "fontFamily": "base",
+        "fontWeight": "bolder",
+        "color": "grey-80",
+        "marginTop": ["sm", 0]
       }
     },
     "social-sharing": {
