@@ -33,10 +33,7 @@ const crumbs = [
   }
 ]
 
-const imageUrl = text(
-  'Image URL',
-  'https://images.unsplash.com/photo-1589112158773-dc125dae5124?w=200&h=200'
-)
+const imageUrl = text('Image URL', '/contentful/category.jpeg')
 
 const ExampleBreadcrumbs = (
   <Breadcrumbs

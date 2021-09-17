@@ -33,10 +33,10 @@ const crumbs = [
 
 const people: any = {
   'Jumping guy': {
-    img: require('../../../../static/hero/money-man.png')
+    img: '/hero/money-man.png'
   },
   Tom: {
-    img: require('../../../../static/hero/tom.png')
+    img: '/hero/tom.png'
   }
 }
 

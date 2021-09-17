@@ -12,10 +12,8 @@ export default {
 }
 
 const defaultProviderName = 'Three'
-const defaultProviderLogo =
-  'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/5eyE4LyswwqIYk0mIsE820/dc0774e3e62d7b39ddeb1729d823a8da/Logo_-_three.png'
-const wideProviderLogo =
-  'https://user-images.githubusercontent.com/15983736/127509419-d54cbc11-3d5b-42ed-9902-6e5a178cd2bc.png'
+const defaultProviderLogo = '/contentful/three.png'
+const wideProviderLogo = '/contentful/responsible-equity.png'
 const defaultProviderText = 'This is example text'
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
