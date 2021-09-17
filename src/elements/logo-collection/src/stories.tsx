@@ -9,21 +9,9 @@ export default {
 }
 
 const images = [
-  <img
-    src="https://placekitten.com/200/200?image=9"
-    alt="Salman"
-    key="kitten1"
-  />,
-  <img
-    src="https://placekitten.com/200/200?image=9"
-    alt="Salman"
-    key="kitten2"
-  />,
-  <img
-    src="https://placekitten.com/200/200?image=9"
-    alt="Salman"
-    key="kitten3"
-  />
+  <img src="/contentful/kitten200x200-9.jpeg" alt="Salman" key="kitten1" />,
+  <img src="/contentful/kitten200x200-9.jpeg" alt="Salman" key="kitten2" />,
+  <img src="/contentful/kitten200x200-9.jpeg" alt="Salman" key="kitten3" />
 ]
 
 export const ExampleWithLogos = () => {

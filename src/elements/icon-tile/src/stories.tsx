@@ -26,9 +26,7 @@ export const ExampleWithKnobs = () => {
     DisplayVariant.Horizontal
   )
 
-  const iconImg = (
-    <img alt="" src={require(`../../../../static/money-icons/${icon}.svg`)} />
-  )
+  const iconImg = <img alt="" src={`/money-icons/${icon}.svg`} />
   const justTile = (
     <IconTile icon={iconImg} displayVariant={displayVariant}>
       {tileText}
@@ -58,7 +56,7 @@ ExampleWithKnobs.story = {
 
 export const AutomatedTests = () => {
   const iconImg = (icon: string) => (
-    <img alt="" src={require(`../../../../static/money-icons/${icon}.svg`)} />
+    <img alt="" src={`/money-icons/${icon}.svg`} />
   )
   const getTile = (icon: string, text: string) => (
     <IconTile icon={iconImg(icon)}>{text}</IconTile>

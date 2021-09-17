@@ -10,8 +10,8 @@ import IconTile from '../../icon-tile/src'
 import HeroWithBackgroundImage from './'
 
 const images = {
-  wallet: require('../../../../static/hero-with-background-image/wallet.png'),
-  bbDeals: require('../../../../static/hero-with-background-image/bb-deals.png')
+  wallet: '/hero-with-background-image/wallet.png',
+  bbDeals: '/hero-with-background-image/bb-deals.png'
 }
 
 export default {
@@ -22,9 +22,7 @@ interface PanelHelperProps extends React.HTMLAttributes<any> {
   icon: string
 }
 const IconPanelHelper: React.FC<PanelHelperProps> = ({ icon, children }) => {
-  const iconImg = (
-    <img src={require(`../../../../static/money-icons/${icon}.svg`)} />
-  )
+  const iconImg = <img src={`/money-icons/${icon}.svg`} />
   return <IconTile icon={iconImg}>{children}</IconTile>
 }
 

@@ -30,9 +30,9 @@ const titleElement = (
 export const Example = () => {
   return (
     <InteractiveTabs>
-      {interactiveTab('https://placekitten.com/200/200?image=1')}
-      {interactiveTab('https://placekitten.com/200/200?image=2')}
-      {interactiveTab('https://placekitten.com/200/200?image=3')}
+      {interactiveTab('/contentful/kitten200x200-1.jpeg')}
+      {interactiveTab('/contentful/kitten200x200-2.jpeg')}
+      {interactiveTab('/contentful/kitten200x200-3.jpeg')}
     </InteractiveTabs>
   )
 }
@@ -40,9 +40,9 @@ export const Example = () => {
 export const ExampleWithTitle = () => {
   return (
     <InteractiveTabs titleElement={titleElement}>
-      {interactiveTab('https://placekitten.com/200/200?image=1')}
-      {interactiveTab('https://placekitten.com/200/200?image=2')}
-      {interactiveTab('https://placekitten.com/200/200?image=3')}
+      {interactiveTab('/contentful/kitten200x200-1.jpeg')}
+      {interactiveTab('/contentful/kitten200x200-2.jpeg')}
+      {interactiveTab('/contentful/kitten200x200-3.jpeg')}
     </InteractiveTabs>
   )
 }
@@ -56,9 +56,9 @@ export const AutomatedTests = () => {
     <AllThemes>
       {permutations.map((p, i) => (
         <InteractiveTabs key={i}>
-          {interactiveTab('https://placekitten.com/200/200?image=1')}
-          {interactiveTab('https://placekitten.com/200/200?image=2')}
-          {interactiveTab('https://placekitten.com/200/200?image=3')}
+          {interactiveTab('/contentful/kitten200x200-1.jpeg')}
+          {interactiveTab('/contentful/kitten200x200-2.jpeg')}
+          {interactiveTab('/contentful/kitten200x200-3.jpeg')}
         </InteractiveTabs>
       ))}
     </AllThemes>

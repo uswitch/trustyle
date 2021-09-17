@@ -16,9 +16,7 @@ export const Example = () => {
   const subtitle = text('Subtitle', 'Job title')
   const titleUrl = text('Title url', 'https://www.jonathanfielding.com/')
   const subtitleUrl = text('Subtitle url', 'https://www.jonathanfielding.com/')
-  const image = (
-    <img src="https://placekitten.com/200/200?image=9" alt="Salman" />
-  )
+  const image = <img src="/contentful/kitten200x200-9.jpeg" alt="Salman" />
 
   return (
     <div>
@@ -47,9 +45,7 @@ export const CondensedExample = () => {
   const subtitle = text('Subtitle', 'Job title')
   const titleUrl = text('Title url', 'https://www.jonathanfielding.com/')
   const subtitleUrl = text('Subtitle url', 'https://www.jonathanfielding.com/')
-  const image = (
-    <img src="https://placekitten.com/200/200?image=9" alt="Salman" />
-  )
+  const image = <img src="/contentful/kitten200x200-9.jpeg" alt="Salman" />
 
   return (
     <div>
@@ -84,9 +80,7 @@ export const VariantsExample = () => {
   const subtitle = text('Subtitle', 'Job title')
   const titleUrl = text('Title url', 'https://www.jonathanfielding.com/')
   const subtitleUrl = text('Subtitle url', 'https://www.jonathanfielding.com/')
-  const image = (
-    <img src="https://placekitten.com/200/200?image=9" alt="Salman" />
-  )
+  const image = <img src="/contentful/kitten200x200-9.jpeg" alt="Salman" />
 
   return (
     <div>
