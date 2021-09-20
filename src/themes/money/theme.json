@@ -1627,6 +1627,7 @@
         "backgroundColor": "grey-0",
         "border": "none !important",
         "boxShadow": "none !important",
+        "pl": "sm",
         "&::before": {
           "borderRadius": "2px",
           "borderStyle": "solid",
@@ -2528,7 +2529,7 @@
         "title": {
           "variant": "styles.h3",
           "textAlign": "center",
-          "width": ["100%", "50%"],
+          "width": "100%",
           "marginBottom": "lg",
           "marginX": "auto",
           "color": "plum"
