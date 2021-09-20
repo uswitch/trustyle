@@ -1627,6 +1627,7 @@
         "backgroundColor": "grey-0",
         "border": "none !important",
         "boxShadow": "none !important",
+        "pl": "sm",
         "&::before": {
           "borderRadius": "2px",
           "borderStyle": "solid",
