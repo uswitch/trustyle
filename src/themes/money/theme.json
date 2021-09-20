@@ -2528,7 +2528,7 @@
         "title": {
           "variant": "styles.h3",
           "textAlign": "center",
-          "width": ["100%", "50%"],
+          "width": "100%",
           "marginBottom": "lg",
           "marginX": "auto",
           "color": "plum"
