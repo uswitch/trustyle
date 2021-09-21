@@ -43,6 +43,7 @@ const Billboard: React.FC<Props> = ({
               flexDirection: 'column' as const,
               paddingX: 'sm',
               paddingTop: 'sm',
+              paddingBottom: 'sm',
               marginBottom: fullWidthSlot ? ['0', 'xs'] : '0'
             }}
           >
@@ -118,6 +119,7 @@ const Billboard: React.FC<Props> = ({
                   sx={{
                     width: '404px',
                     height: '416px',
+                    marginBottom: '-16px',
                     display: ['none', 'none', 'block'],
                     background: `url(${bgImage}) no-repeat right bottom / contain`
                   }}
