@@ -38,9 +38,7 @@ PrimaryVariant.story = {
 export const QuickLinks = () => {
   const icon = select('Icon', ['creditCards', 'loans'], 'creditCards')
 
-  const iconImg = (icon: string) => (
-    <img src={require(`../../../../static/money-icons/${icon}.svg`)} />
-  )
+  const iconImg = (icon: string) => <img src={`/money-icons/${icon}.svg`} />
 
   const arrow = <FilledArrow color="" size={18} />
 

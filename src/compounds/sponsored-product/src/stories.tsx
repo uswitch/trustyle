@@ -14,10 +14,7 @@ export default {
 
 export const ExampleWithKnobs = () => {
   const title = text('Title', 'Apple iPhone XR 64Gb')
-  const imgSrc = text(
-    'Image Url',
-    'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/3PNmGXJpUL26qMX2odn7XI/d0d1311039c02d3e34cd501b9cbfa5ed/iphone-11-grey-front.png'
-  )
+  const imgSrc = text('Image Url', '/contentful/iphone-11-grey-front.png')
   const imgAlt = text('Image Alt', 'iPhone 11')
   const usps = [
     { text: text('USP', 'Free insurance for 2 months') },
@@ -99,9 +96,7 @@ export const ExampleWithKnobs = () => {
               ]}
               boxShadowColor={'#AC96DE'}
               sponsorName={'Sky'}
-              sponsorSrc={
-                'https://uswitch-cms.imgix.net/uswitch-assets-eu/broadband/images/providers/sky.png?auto=compress%2Cformat&amp;fit=clip&amp;ixlib=react-9.0.1&amp;w=120'
-              }
+              sponsorSrc={'/contentful/sky.png'}
               award={award}
               informationDetails={[
                 {

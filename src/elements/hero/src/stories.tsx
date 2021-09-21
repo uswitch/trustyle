@@ -44,14 +44,14 @@ const crumbs = [
 
 const people: any = {
   'Jumping guy': {
-    img: require('../../../../static/hero/money-man.png'),
+    img: '/hero/money-man.png',
     position: {
       backgroundSize: ['auto 125%', 'auto calc(110% + 280px)'],
       backgroundPosition: ['right -130px bottom -150px', 'left 50% top 0']
     }
   },
   Tom: {
-    img: require('../../../../static/hero/tom.png'),
+    img: '/hero/tom.png',
     position: {
       backgroundSize: ['auto 100%', 'auto calc(90% + 100px)'],
       backgroundPosition: [
@@ -136,14 +136,12 @@ interface PanelHelperProps extends React.HTMLAttributes<any> {
   icon: string
 }
 const IconPanelHelper: React.FC<PanelHelperProps> = ({ icon, children }) => {
-  const iconImg = (
-    <img src={require(`../../../../static/money-icons/${icon}.svg`)} />
-  )
+  const iconImg = <img src={`/money-icons/${icon}.svg`} />
   return <IconTile icon={iconImg}>{children}</IconTile>
 }
 
 const moneyHero = {
-  img: require('../../../../static/hero/mTilted.svg'),
+  img: '/hero/mTilted.svg',
   position: {
     bottom: 0,
     right: 0,
@@ -214,7 +212,7 @@ MoneyHomepageHero.story = {
 }
 
 const bbDealsHero = {
-  img: require('../../../../static/hero/mTilted.svg')
+  img: '/hero/mTilted.svg'
 }
 const breadcrumbs = (
   <Breadcrumbs
@@ -223,7 +221,7 @@ const breadcrumbs = (
     variant="light"
   />
 )
-const image = <img src="https://placekitten.com/200/200?image=9" alt="Salman" />
+const image = <img src="/contentful/kitten200x200-9.jpeg" alt="Salman" />
 const bottomImageOverflow = '33%'
 
 export const BBDealsExample = () => (

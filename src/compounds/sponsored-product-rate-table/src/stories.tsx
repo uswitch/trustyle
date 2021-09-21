@@ -16,10 +16,7 @@ export const ExampleWithKnobs = () => {
     'Title',
     '2 months free insurance with an Apple iPhone XR 64Gb'
   )
-  const imgSrc = text(
-    'Image Url',
-    'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/3PNmGXJpUL26qMX2odn7XI/d0d1311039c02d3e34cd501b9cbfa5ed/iphone-11-grey-front.png'
-  )
+  const imgSrc = text('Image Url', '/contentful/iphone-11-grey-front.png')
   const imgAlt = text('Image Alt', 'iPhone 11')
   const usps = [
     { text: text('USP', 'Free insurance for 2 months') },
@@ -34,10 +31,7 @@ export const ExampleWithKnobs = () => {
   const href = text('href', 'https://www.uswitch.com/mobiles/')
   const target = text('target', '_blank')
   const sponsorName = text('Sponsor name', 'Three')
-  const sponsorSrc = text(
-    'Sponsor url',
-    'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/5eyE4LyswwqIYk0mIsE820/dc0774e3e62d7b39ddeb1729d823a8da/Logo_-_three.png'
-  )
+  const sponsorSrc = text('Sponsor url', '/contentful/three.png')
   const award = text('Award', 'Uswitch Manufacturer of the Year')
   const campaignImage = text(
     'Enhanced image url',

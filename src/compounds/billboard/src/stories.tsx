@@ -85,9 +85,7 @@ const displayVariant = select(
   DisplayVariant.Horizontal
 )
 
-const iconImg = (
-  <img alt="" src={require(`../../../../static/money-icons/${icon}.svg`)} />
-)
+const iconImg = <img alt="" src={`/money-icons/${icon}.svg`} />
 
 const images = [
   <Col span={1} key={0}>
@@ -118,10 +116,7 @@ const fullWidthSlot = (
   </Row>
 )
 
-const bgImage: string = text(
-  'image source',
-  'https://uswitch-contentful.imgix.net/n36b8lzdmgnp/5xXAFdw1Z8Q5nbxXjmH30n/887ab8ef0564b67cbb09d38bc3420afc/Shot_10_Family_302-v2-edit_1__1_.png?'
-)
+const bgImage: string = text('image source', '/contentful/family-billboard.png')
 
 export const ExampleWithPrimarySlot = () => {
   return (

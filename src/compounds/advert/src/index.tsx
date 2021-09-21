@@ -15,6 +15,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   link?: string
   logoAlt?: string
   imgSize?: string
+  complianceText?: string
 }
 
 const Advert: React.FC<Props> = ({
@@ -25,7 +26,8 @@ const Advert: React.FC<Props> = ({
   footer,
   badgeText,
   link,
-  imgSize = '120px'
+  imgSize = '120px',
+  complianceText
 }) => {
   return (
     <div sx={{ variant: 'compounds.advert' }}>
@@ -98,6 +100,11 @@ const Advert: React.FC<Props> = ({
                   />
                 </Button>
               </div>
+              {complianceText && (
+                <div sx={{ variant: 'compounds.advert.complianceText' }}>
+                  {complianceText}
+                </div>
+              )}
               <div sx={{ padding: ['8px 0', '0'] }}>
                 <p sx={{ fontSize: '14px' }}>{body}</p>
                 <Badge variant="advert">{badgeText}</Badge>

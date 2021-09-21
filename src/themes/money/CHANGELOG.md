@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.63.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.63.0...@uswitch/trustyle.money-theme@1.63.1) (2021-09-20)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+# [1.63.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.62.3...@uswitch/trustyle.money-theme@1.63.0) (2021-09-16)
+
+
+### Bug Fixes
+
+* style tweaks ([65a3fbf](https://github.com/uswitch/trustyle/commit/65a3fbf))
+
+
+### Features
+
+* add additional compliance text to advert ([7cd9059](https://github.com/uswitch/trustyle/commit/7cd9059))
+
+
+
+
+
+## [1.62.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.62.2...@uswitch/trustyle.money-theme@1.62.3) (2021-09-15)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.62.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.62.1...@uswitch/trustyle.money-theme@1.62.2) (2021-09-15)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
 ## [1.62.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.62.0...@uswitch/trustyle.money-theme@1.62.1) (2021-08-27)
 
 
