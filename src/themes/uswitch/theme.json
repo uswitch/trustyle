@@ -5184,6 +5184,9 @@
       }
     },
     "loading-results": {
+      "li": {
+        "mb": "sm"
+      },
       "header": {
         "fontSize": ["md", "xl", "xl"],
         "color": "text"
@@ -5193,7 +5196,8 @@
         "color": "text",
         "fontSize": "md",
         "fontWeight": "bolder",
-        "textAlign": ["left", "center", "center"]
+        "textAlign": ["left", "center", "center"],
+        "mb": "0"
       }
     }
   },
