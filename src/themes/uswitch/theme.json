@@ -1271,17 +1271,6 @@
         },
         "h3": {
           "fontSize": 28
-        },
-        ">div>span>*:first-of-type": {
-          "mt": 0
-        },
-        ">div>*:not(span)": {
-          "mt": 0
-        },
-        "h1,h2,h3,h4,h5,h6,p": {
-          "&:first-of-type": {
-            "mt": 0
-          }
         }
       },
       "variants": {
@@ -5979,6 +5968,15 @@
         "paddingTop": "xxs",
         "fontSize": "xxxs",
         "lineHeight": "sm"
+      }
+    },
+    "rich-text": {
+      "variants": {
+        "withSidebar": {
+          "> :first-child": {
+            "mt": 0
+          }
+        }
       }
     }
   },
