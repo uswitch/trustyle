@@ -92,6 +92,7 @@ export const SimpleInput = React.forwardRef(
 
     return (
       <div
+        onBlur={() => setHasFocus(false)}
         sx={{
           width: setWidth(inputSize),
           variant:
@@ -121,7 +122,10 @@ export const SimpleInput = React.forwardRef(
           ref={ref}
           onChange={onChange}
           defaultValue={defaultValue}
-          onFocus={() => setHasFocus(true)}
+          onFocus={() => {
+            setHasFocus(false)
+            setHasFocus(true)
+          }}
           onBlur={() => setHasFocus(false)}
           onKeyDown={onKeyDown}
           name={name}

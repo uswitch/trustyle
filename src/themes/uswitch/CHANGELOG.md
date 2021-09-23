@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.56.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.56.0...@uswitch/trustyle.uswitch-theme@2.56.1) (2021-09-21)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+# [2.56.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.55.1...@uswitch/trustyle.uswitch-theme@2.56.0) (2021-09-21)
+
+
+### Features
+
+* add quickLinks styles ([01bec38](https://github.com/uswitch/trustyle/commit/01bec38))
+
+
+
+
+
+## [2.55.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.55.0...@uswitch/trustyle.uswitch-theme@2.55.1) (2021-09-21)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
 # [2.55.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.54.2...@uswitch/trustyle.uswitch-theme@2.55.0) (2021-09-16)
 
 
