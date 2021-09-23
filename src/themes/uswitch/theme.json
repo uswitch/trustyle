@@ -2951,6 +2951,54 @@
             "fontSize": ["base", "base", "sm"],
             "m": 0
           }
+        },
+        "quickLinks": {
+          "display": "flex",
+          "flexDirection": "column",
+          "backgroundColor": "grey-05",
+          "padding": ["md", null, "lg"],
+          "pb": ["xxs", null, 20],
+          "header": {
+            "justifyContent": "center",
+            "mb": ["sm", null, "md"],
+
+            "h3": {
+              "fontSize": ["sm", null, "md"],
+              "lineHeight": "sm",
+              "padding": 0
+            }
+          },
+          "ul": {
+            "display": "flex",
+            "justifyContent": "center",
+            "mb": 0
+          },
+          "li": {
+            "color": "primary",
+            "px": "base",
+            "py": 0,
+            "mb": "sm",
+            "border": "none",
+            "borderRight": "1px solid",
+            "borderColor": "primary",
+
+            ":first-of-type": {
+              "pl": 0
+            },
+
+            ":last-of-type": {
+              "border": "none",
+              "pr": 0
+            },
+
+            "a": {
+              "fontSize": "base",
+              "fontWeight": "base",
+              "lineHeight": "base",
+              "mb": 0,
+              "cursor": "pointer"
+            }
+          }
         }
       }
     },
@@ -5179,6 +5227,9 @@
       }
     },
     "loading-results": {
+      "li": {
+        "mb": "sm"
+      },
       "header": {
         "fontSize": ["md", "xl", "xl"],
         "color": "text"
@@ -5188,7 +5239,8 @@
         "color": "text",
         "fontSize": "md",
         "fontWeight": "bolder",
-        "textAlign": ["left", "center", "center"]
+        "textAlign": ["left", "center", "center"],
+        "mb": "0"
       }
     }
   },
@@ -6011,7 +6063,7 @@
         "mx": "auto",
         "px": "gutter",
         "contentStyle": {
-          "width": ["grid.lg.7", "grid.md.12", "100%", "grid.md.12"],
+          "width": ["100%", "100%", "grid.md.12"],
           "maxWidth": "100%"
         }
       },
