@@ -1,0 +1,21 @@
+{
+  "name": "@uswitch/trustyle.navigation-dropdown",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "ts:main": "src/index.tsx",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uswitch/trustyle"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.4.0",
+    "react": "^16.7.0"
+  },
+  "devDependencies": {
+    "@uswitch/trustyle.icon": "^1.27.2"
+  }
+}
