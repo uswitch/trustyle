@@ -81,7 +81,7 @@ const Billboard: React.FC<Props> = ({
                 ],
                 justifyContent: ['center', 'center', 'space-between'],
                 position: 'relative',
-                alignItems: 'flex-end'
+                alignItems: ['flex-end', 'center']
               }}
             >
               <div
@@ -104,7 +104,7 @@ const Billboard: React.FC<Props> = ({
                 <div
                   sx={{
                     variant: 'compounds.billboard.primarySlot',
-                    width: ['auto', '70%', '40%'],
+                    width: ['100%', '70%', '40%'],
                     marginTop: ['0', 'lg', '0'],
                     marginX: ['auto', 'auto', '0']
                   }}
