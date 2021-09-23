@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.billboard@0.2.4...@uswitch/trustyle.billboard@0.2.5) (2021-09-23)
+
+
+### Bug Fixes
+
+* styling necessary for navigation dropdown ([195ba82](https://github.com/uswitch/trustyle/commit/195ba82))
+
+
+
+
+
 ## [0.2.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.billboard@0.2.3...@uswitch/trustyle.billboard@0.2.4) (2021-09-20)
 
 
