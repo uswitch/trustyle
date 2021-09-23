@@ -90,7 +90,9 @@ const NavigationDropdown: React.FC<DropdownProps> = ({
         sx={{
           width: '100%',
           height: '55px',
-          padding: '16px 48px 16px 16px',
+          py: 'sm',
+          pl: 'sm',
+          pr: 'xl',
           verticalAlign: 'middle',
           position: 'relative',
           fontFamily: 'base',
