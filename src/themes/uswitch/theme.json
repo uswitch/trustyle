@@ -253,7 +253,8 @@
     "secondary-yellow-75": "#F9F574",
     "secondary-yellow-50": "#FAF7A2",
     "secondary-yellow-25": "#FDFBD0",
-    "document-bg": "#F7F7FC"
+    "document-bg": "#F7F7FC",
+    "purple": "#ACAAFF"
   },
   "radii": {
     "sm": 0,
@@ -5394,10 +5395,27 @@
         },
         "postcodeSecondary": {
           "container": {
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "borderColor": "grey-10",
+            "position": "relative",
+            "px": ["md", 32],
+            "pt": 32,
+            "pb": "xl",
             "mt": "md",
             "mb": "xl",
             "ml": 0,
             "mr": 0,
+
+            "::after": {
+              "content": "''",
+              "backgroundColor": "purple",
+              "position": "absolute",
+              "width": 8,
+              "height": "calc(100% + 2px)",
+              "top": -1,
+              "left": -1
+            },
 
             "form": {
               "mx": 0,
@@ -5449,6 +5467,27 @@
                   "display": "none"
                 }
               }
+            }
+          },
+
+          "copy": {
+            "textAlign": "left",
+            "color": "primary",
+            "mx": 0,
+            "mb": [0, "null"],
+
+            "h2": {
+              "mt": 0,
+              "mb": "sm",
+              "fontSize": ["md", null],
+              "lineHeight": "sm"
+            },
+
+            "p": {
+              "fontSize": "base",
+              "lineHeight": "base",
+              "color": "inherit",
+              "mb": "md"
             }
           }
         }
