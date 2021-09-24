@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.64.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.63.2...@uswitch/trustyle.money-theme@1.64.0) (2021-09-23)
+
+
+### Bug Fixes
+
+* review feedbacks ([2092609](https://github.com/uswitch/trustyle/commit/2092609))
+
+
+### Features
+
+* navigation dropdown component ([acd6ce8](https://github.com/uswitch/trustyle/commit/acd6ce8))
+
+
+
+
+
 ## [1.63.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.63.1...@uswitch/trustyle.money-theme@1.63.2) (2021-09-21)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme
