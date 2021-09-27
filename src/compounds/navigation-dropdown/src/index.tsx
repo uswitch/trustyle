@@ -58,27 +58,23 @@ const NavigationDropdown: React.FC<DropdownProps> = ({
 
   const createLinks = (config: NavConfig) =>
     Object.keys(config).map((href, index) =>
-      selection !== config[href]
-        ? React.createElement('a', { href, key: `link${index}` }, [
-            config[href]
-          ])
-        : null
+      selection !== config[href] ? (
+        <a href={href} key={`link${index}`}>
+          {config[href]}
+        </a>
+      ) : null
     )
 
   const createReactList = (config: NavConfig) => {
     const listLinks = createLinks(config)
-    const listItems = listLinks.map((link, index) =>
-      React.createElement(
-        'li',
-        { onClick: (e: Event) => handleItemClick(e), key: `item${index}` },
-        [link]
-      )
-    )
-
-    return React.createElement('ul', {}, [listItems])
+    return listLinks.map((link, index) => (
+      <li onClick={e => handleItemClick(e)} key={`item${index}`}>
+        {link}
+      </li>
+    ))
   }
 
-  const navigationList = createReactList(navConfig)
+  const navigationList = <ul>{navConfig && createReactList(navConfig)}</ul>
 
   return (
     <div
