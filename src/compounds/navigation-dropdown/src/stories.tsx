@@ -12,35 +12,21 @@ export default {
   title: 'Compounds/NavigationDropdown'
 }
 
-const navigationList = (
-  <ul>
-    <li>
-      <a href="#0">Please select</a>
-    </li>
-    <li>
-      <a href="https://www.uswitch.com/mortgages/remortgaging/">Remortgaging</a>
-    </li>
-    <li>
-      <a href="https://www.uswitch.com/mortgages/buy-to-let/">Buy to let</a>
-    </li>
-    <li>
-      <a href="https://www.uswitch.com/mortgages/first-time-buyer/">
-        First time buyer
-      </a>
-    </li>
-    <li>
-      <a href="https://www.uswitch.com/mortgages/moving-home/">Moving home</a>
-    </li>
-  </ul>
-)
+const navConfig = {
+  'http://localhost:3000/current-accounts/': 'Please select',
+  'http://localhost:3000/current-accounts/cashback/': 'Cashback',
+  'http://localhost:3000/current-accounts/high-interest/': 'High Interest',
+  'http://localhost:3000/current-accounts/most-popular/': 'Most popular',
+  'http://localhost:3000/current-accounts/packaged/': 'Packaged',
+  'http://localhost:3000/current-accounts/standard/': 'Standard'
+}
 
 const navigationDropdown = (
   <NavigationDropdown
     title="Why are you looking for a mortgage?"
     pathName="Moving home"
-  >
-    {navigationList}
-  </NavigationDropdown>
+    navConfig={navConfig}
+  />
 )
 
 const crumbs = [

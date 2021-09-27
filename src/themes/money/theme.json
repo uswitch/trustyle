@@ -2765,6 +2765,9 @@
       "button": {
         "boxShadow": "#DFDFE1 0px 0px 0px 1px inset",
         "borderRadius": "4px",
+        "fontSize": "sm",
+        "fontFamily": "base",
+        "fontWeight": "base",
         "&:focus, &:focus-visible": {
           "borderColor": "experimental-text"
         }
@@ -2772,12 +2775,12 @@
       "title": {
         "variant": "compounds.billboard.primaryContent.p",
         "color": "grey-0",
+        "textAlign": "left",
         "mb": "sm"
       },
       "ul": {
         "width": "100%",
         "maxWidth": "400px",
-        "maxHeight": "272px",
         "overflow": "scroll",
         "py": "sm",
         "px": 0,
@@ -2788,10 +2791,20 @@
         "&:hover": {
           "cursor": "pointer"
         },
+        "li, a": {
+          "color": "grey-80",
+          "fontSize": "sm",
+          "fontFamily": "base",
+          "fontWeight": "base"
+        },
         "li": {
           "listStyle": "none",
           "color": "grey-80",
-          "borderBottom": "5px solid #ffffff"
+          "p": 0,
+          "m": 0,
+          "&::before": {
+            "content": "none"
+          }
         },
         "a": {
           "textDecoration": "none",
@@ -2801,7 +2814,8 @@
           "width": "100%",
           "height": "100%",
           "p": "12px 16px",
-          "boxSizing": "border-box"
+          "boxSizing": "border-box",
+          "textAlign": "left"
         },
         "li:hover, li:focus-visible, a:hover, a:focus-visible": {
           "outline": "none",

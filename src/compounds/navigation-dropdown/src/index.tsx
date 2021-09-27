@@ -3,15 +3,20 @@ import React, { useEffect, useRef, useState } from 'react'
 import { jsx } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
 
+interface NavConfig {
+  [key: string]: string
+}
+
 interface DropdownProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string
-  pathName?: string
+  pathName: string
+  navConfig: NavConfig
 }
 
 const NavigationDropdown: React.FC<DropdownProps> = ({
-  children,
   title = '',
-  pathName = ''
+  pathName = '',
+  navConfig = {}
 }) => {
   const ref = useRef<HTMLDivElement>(null)
   const [open, setOpen] = useState(false)
@@ -19,7 +24,13 @@ const NavigationDropdown: React.FC<DropdownProps> = ({
   const [listWidth, setListWidth] = useState(`${ref?.current?.offsetWidth}px`)
 
   const handleClick = () => setOpen(!open)
-  const handleItemClick = (item: any) => setSelection(item.target.innerText)
+  const handleItemClick = (e: any) => {
+    setSelection(e?.target?.innerText || selection)
+
+    if (e.target.innerText === 'Please select') {
+      e.preventDefault()
+    }
+  }
   const handleHideDropdown = (event: KeyboardEvent) => {
     if (event.key === 'Escape') {
       setOpen(false)
@@ -33,6 +44,8 @@ const NavigationDropdown: React.FC<DropdownProps> = ({
   const handleResize = () => setListWidth(`${ref?.current?.offsetWidth}px`)
 
   useEffect(() => {
+    handleResize()
+
     window.addEventListener('keydown', handleHideDropdown, true)
     window.addEventListener('click', handleClickOutside, true)
     window.addEventListener('resize', handleResize)
@@ -43,37 +56,29 @@ const NavigationDropdown: React.FC<DropdownProps> = ({
     }
   })
 
-  const cloneChildren = (children: any) => {
-    return React.Children.map(children, (child, key) => {
-      let nestedChild = child?.props?.children
-      const hasNestedChild = nestedChild && typeof nestedChild !== 'string'
-      let optionValue = ''
-
-      if (!hasNestedChild) {
-        optionValue = nestedChild
-
-        return React.cloneElement(child, { optionvalue: optionValue, key }, [
-          nestedChild
-        ])
-      }
-
-      nestedChild = cloneChildren(nestedChild)
-      optionValue = nestedChild[0]?.props?.optionvalue
-
-      return !(selection === optionValue)
-        ? React.cloneElement(
-            child,
-            {
-              onClick: (e: Event) => child?.type === 'li' && handleItemClick(e),
-              key
-            },
-            [nestedChild]
-          )
+  const createLinks = (config: NavConfig) =>
+    Object.keys(config).map((href, index) =>
+      selection !== config[href]
+        ? React.createElement('a', { href, key: `link${index}` }, [
+            config[href]
+          ])
         : null
-    })
+    )
+
+  const createReactList = (config: NavConfig) => {
+    const listLinks = createLinks(config)
+    const listItems = listLinks.map((link, index) =>
+      React.createElement(
+        'li',
+        { onClick: (e: Event) => handleItemClick(e), key: `item${index}` },
+        [link]
+      )
+    )
+
+    return React.createElement('ul', {}, [listItems])
   }
 
-  const clonedChildren: React.ReactNode[] = cloneChildren(children)
+  const navigationList = createReactList(navConfig)
 
   return (
     <div
@@ -132,11 +137,12 @@ const NavigationDropdown: React.FC<DropdownProps> = ({
       </button>
       <div
         sx={{
-          position: 'fixed',
-          width: listWidth || 'inherit'
+          position: 'absolute',
+          width: listWidth || 'inherit',
+          zIndex: '1000'
         }}
       >
-        {open && clonedChildren}
+        {open && navigationList}
       </div>
     </div>
   )

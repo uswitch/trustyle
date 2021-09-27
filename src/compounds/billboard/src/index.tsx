@@ -33,7 +33,7 @@ const Billboard: React.FC<Props> = ({
     <div>
       <Palette
         as="div"
-        sx={{ overflow: 'hidden', variant: 'compounds.billboard.wrapper' }}
+        sx={{ variant: 'compounds.billboard.wrapper' }}
         px={{ backgroundColor: 'backgroundColor' }}
       >
         <div sx={{ variant: 'compounds.billboard.container' }}>
