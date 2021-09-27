@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.billboard@0.2.5...@uswitch/trustyle.billboard@0.2.6) (2021-09-27)
+
+
+### Bug Fixes
+
+* change margin to padding ([271a730](https://github.com/uswitch/trustyle/commit/271a730))
+* style tweaks and bug fixes ([d52310c](https://github.com/uswitch/trustyle/commit/d52310c))
+
+
+
+
+
 ## [0.2.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.billboard@0.2.4...@uswitch/trustyle.billboard@0.2.5) (2021-09-23)
 
 
