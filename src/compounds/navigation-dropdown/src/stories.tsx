@@ -13,12 +13,17 @@ export default {
 }
 
 const navConfig = {
-  'http://localhost:3000/current-accounts/': 'Please select',
-  'http://localhost:3000/current-accounts/cashback/': 'Cashback',
-  'http://localhost:3000/current-accounts/high-interest/': 'High Interest',
-  'http://localhost:3000/current-accounts/most-popular/': 'Most popular',
-  'http://localhost:3000/current-accounts/packaged/': 'Packaged',
-  'http://localhost:3000/current-accounts/standard/': 'Standard'
+  'https://www.uswitch.com/current-accounts?tracking=false': 'Please select',
+  'https://www.uswitch.com/current-accounts/cashback/?tracking=false':
+    'Cashback',
+  'https://www.uswitch.com/current-accounts/high-interest/?tracking=false':
+    'High Interest',
+  'https://www.uswitch.com/current-accounts/most-popular/?tracking=false':
+    'Most popular',
+  'https://www.uswitch.com/current-accounts/packaged/?tracking=false':
+    'Packaged',
+  'https://www.uswitch.com/current-accounts/standard/?tracking=false':
+    'Standard'
 }
 
 const navigationDropdown = (
