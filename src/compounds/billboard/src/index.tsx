@@ -43,7 +43,7 @@ const Billboard: React.FC<Props> = ({
               flexDirection: 'column' as const,
               paddingX: 'sm',
               paddingTop: 'sm',
-              marginBottom: fullWidthSlot ? ['0', 'xs'] : '0'
+              paddingBottom: fullWidthSlot ? ['0', 'xs'] : '0'
             }}
           >
             {breadcrumbs && (
