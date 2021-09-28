@@ -369,7 +369,7 @@ export const DataCell: React.FC<DataCellProps> = ({
       backgroundColor,
       borderBottomColor,
       fontFamily: 'Varela Round,Arial,sans-serif',
-      color: '#191919'
+      color: '#000000'
     },
     wireframe: {
       display: 'flex',
@@ -398,7 +398,7 @@ export const DataCell: React.FC<DataCellProps> = ({
         <span
           sx={{
             fontFamily: 'Open Sans,Arial,sans-serif',
-            fontSize: '11px',
+            fontSize: '12px',
             display: 'flex',
             justifyContent: 'center',
             padding: '5px 5px 0px',
@@ -490,7 +490,8 @@ export const CtaCell: React.FC<CtaCellProps> = ({
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          alignItems: 'center'
+          alignItems: 'center',
+          paddingBottom: 10
         }}
       >
         {href ? (
@@ -699,7 +700,6 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           )}
           {!isWireFrame && telephone && <TelephoneInfo telephone={telephone} />}
         </header>
-
         <div
           sx={{
             display: ['initial', 'flex'],
