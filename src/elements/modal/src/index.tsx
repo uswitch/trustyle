@@ -68,6 +68,8 @@ const Overlay: React.FC<OverlayProps> = ({
   const holdingRef = useRef<HTMLDivElement>()
   const closeButtonRef = useRef<HTMLButtonElement>()
   const modalRef = useRef<HTMLDivElement | null>(null)
+  const mouseDownTargetRef = useRef<Node | null>(null)
+  const mouseUpTargetRef = useRef<Node | null>(null)
   const scrollRegionRef = useCallback(node => {
     if (node !== null) {
       // @ts-ignore: Read only prop error
@@ -99,18 +101,40 @@ const Overlay: React.FC<OverlayProps> = ({
     }
   }, [])
 
+  const onBackgroundMouseDown = (event: React.MouseEvent<HTMLElement>) => {
+    if (event.target instanceof Node) {
+      mouseDownTargetRef.current = event.target
+    }
+  }
+
+  const onBackgroundMouseUp = (event: React.MouseEvent<HTMLElement>) => {
+    if (event.target instanceof Node) {
+      mouseUpTargetRef.current = event.target
+    }
+  }
+
+  const isNodeWithinModal = (originalNode: Node) => {
+    let withinModal = false
+    let node: Node | null = originalNode
+
+    do {
+      withinModal = withinModal || node === modalRef.current
+      node = node?.parentNode
+    } while (node?.parentNode)
+
+    return withinModal
+  }
+
   const onBackgroundClick =
     onClose &&
     ((event: React.MouseEvent<HTMLElement>): void => {
-      let withinModal = false
-      let node: Node | null = event.target as Node
+      const startingNode = mouseDownTargetRef.current
+      const endingNode = mouseUpTargetRef.current
+      const withinModal =
+        (startingNode && isNodeWithinModal(startingNode)) ||
+        (endingNode && isNodeWithinModal(endingNode))
 
       event.stopPropagation()
-
-      do {
-        withinModal = withinModal || node === modalRef.current
-        node = node?.parentNode
-      } while (node?.parentNode)
 
       if (!withinModal) {
         if (closeButtonRef.current) {
@@ -145,6 +169,8 @@ const Overlay: React.FC<OverlayProps> = ({
       }}
       aria-label={ariaLabel}
       aria-modal="true"
+      onMouseDown={onBackgroundMouseDown}
+      onMouseUp={onBackgroundMouseUp}
       onClick={onBackgroundClick}
       onKeyDown={onKeyDown}
       role={role}
