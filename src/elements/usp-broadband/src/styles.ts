@@ -16,8 +16,19 @@ export const generateBadgeStyle = ({
   color: color === 'black-friday' ? 'white' : 'black',
   border: color === 'black-friday' ? 'none' : `1px solid ${getUspColor(color)}`,
   width: 'auto',
-  height: 32,
+  height: '32px',
   'div svg': {
     size: '20px'
-  }
+  },
+  borderRadius: '100px',
+  padding: '4px 8px',
+  fontSize: '14px',
+  boxSizing: 'border-box',
+  fontFamily:
+    '"Helvetica Now Text", "Helvetica Neue", Helvetica, Arial, sans-serif',
+  display: 'inline-flex',
+  whiteSpace: 'nowrap',
+  alignItems: 'center',
+  justifyContent: 'center',
+  fontWeight: '400'
 })
