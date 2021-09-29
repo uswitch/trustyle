@@ -9,7 +9,7 @@ import { UswReceiptFill } from '@uswitch/spark-icons/usw'
 import { AwardIcon } from './helper'
 import * as st from './styles'
 
-interface UspBroadbandProps {
+export interface UspBroadbandProps {
   label: string
   color: string
   styling?: ThemeUIStyleObject

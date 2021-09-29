@@ -1,17 +1,16 @@
 /** @jsx jsx */
 import * as React from 'react'
 import { jsx } from 'theme-ui'
+import { Story } from '@storybook/react'
 
-import UspBroadband from './'
+import { UspBroadband, UspBroadbandProps } from './'
 
 export default {
   title: 'Elements/UspBroadband'
 }
 
-export const ExampleWithKnobs = () => {
-  return <UspBroadband label="example text" color="award" />
-}
-
-export const AutomatedTests = () => {
-  return <UspBroadband label="Some text" color="award" />
-}
+export const Template: Story<UspBroadbandProps> = () => (
+  <div>
+    <UspBroadband label="example text" color="award" />
+  </div>
+)
