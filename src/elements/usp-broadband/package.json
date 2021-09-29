@@ -20,5 +20,6 @@
   "peerDependencies": {
     "@emotion/react": "^11.4.0",
     "react": "^16.7.0"
-  }
+  },
+  "types": "./index.d.ts"
 }
