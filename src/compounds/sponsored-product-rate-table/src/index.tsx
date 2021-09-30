@@ -2,7 +2,6 @@
 
 import * as React from 'react'
 import { jsx, ThemeUICSSObject } from 'theme-ui'
-import AwardsTag from '@uswitch/trustyle.awards-tag'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
 import { Container } from '@uswitch/trustyle.flex-grid'
 import { Icon } from '@uswitch/trustyle.icon'
@@ -82,17 +81,21 @@ interface Usp {
 
 interface UspTagsProps {
   usps: Usp[]
+  award: string
 }
 
-const UspTags: React.FC<UspTagsProps> = ({ usps }) => (
+const UspTags: React.FC<UspTagsProps> = ({ usps, award }) => (
   <React.Fragment>
     {usps.map((usp, index) => {
       return (
-        <div key={index} sx={{ marginRight: '8px' }}>
+        <div key={index}>
           <UspBroadband label={usp.text} color={usp.color} />
         </div>
       )
     })}
+    <div sx={{ display: [null, 'none'] }}>
+      {award && <UspBroadband label={award} color="award" />}
+    </div>
   </React.Fragment>
 )
 
@@ -285,15 +288,13 @@ const SponsoredRateTable: React.FC<Props> = ({
             <div
               sx={{
                 display: 'flex',
-                gap: '4px',
+                gap: '6px',
                 flexWrap: 'wrap'
               }}
             >
-              <UspTags usps={usps} />
+              <UspTags usps={usps} award={award} />
             </div>
           )}
-
-          <AwardsTag award={award} sx={{ display: [null, 'none'] }} />
 
           <SponsoredByTag
             providerName={sponsorName}
