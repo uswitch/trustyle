@@ -62,7 +62,7 @@ const InformationBlocks: React.FC<InformationBlocksProps> = ({
         suffix={obj.suffix}
         label={obj.label}
         key={index}
-        sx={{ padding: [null, 'xs'], ...infoBlockSx }}
+        sx={{ padding: [null, 'xs'], marginBottom: 'xxs', ...infoBlockSx }}
       />
     ))}
   </React.Fragment>
@@ -70,41 +70,30 @@ const InformationBlocks: React.FC<InformationBlocksProps> = ({
 
 interface UspTagsProps {
   usps: UspBroadbandProps[]
-  uspSx?: object
+  award: string
 }
 
-const UspTags: React.FC<UspTagsProps> = ({ usps, uspSx = {} }) => (
-  <React.Fragment>
-    {usps.map((usp, index) =>
-      usp.color !== 'award' ? (
-        <UspBroadband
-          label={usp.label}
-          color={usp.color}
-          key={index}
-          sx={{ ...usp.sx, ...uspSx }}
-        />
-      ) : (
-        undefined
+const UspTags: React.FC<UspTagsProps> = ({ usps, award }) => (
+  <div
+    sx={{
+      display: 'flex',
+      gap: '6px',
+      flexWrap: 'wrap'
+    }}
+  >
+    {usps.map((usp, index) => {
+      return (
+        <div key={index}>
+          <UspBroadband label={usp.label} color={usp.color} />
+        </div>
       )
+    })}
+    {award && (
+      <div sx={{ display: [null, 'none'] }}>
+        <UspBroadband label={award} color="award" />
+      </div>
     )}
-  </React.Fragment>
-)
-
-const UspAwardTags: React.FC<UspTagsProps> = ({ usps, uspSx = {} }) => (
-  <React.Fragment>
-    {usps.map((usp, index) =>
-      usp.color === 'award' ? (
-        <UspBroadband
-          label={usp.label}
-          color={usp.color}
-          key={index}
-          sx={{ ...usp.sx, ...uspSx }}
-        />
-      ) : (
-        undefined
-      )
-    )}
-  </React.Fragment>
+  </div>
 )
 
 const BrandCaption = ({ text }: { text: string }) => (
@@ -188,7 +177,6 @@ const SponsoredProduct: React.FC<Props> = ({
   backgroundColor = 'white',
   enhancedImgHeight = '144px',
   className,
-  uspSx = {},
   infoBlockSx = {}
 }) => (
   <div
@@ -394,20 +382,24 @@ const SponsoredProduct: React.FC<Props> = ({
               />
             </div>
           )}
-
-          {usps && <UspTags usps={usps} uspSx={uspSx} />}
         </Stack>
 
-        <div sx={{ display: ['block', 'none'] }}>
-          {award && <UspAwardTags usps={usps} uspSx={uspSx} />}
-          {showSponsoredByTag && (
-            <SponsoredByTag
-              providerName={sponsorName}
-              providerLogoSrc={sponsorSrc}
-              sx={{ marginTop: 'xs' }}
-            />
-          )}
+        <div
+          sx={{
+            display: 'flex',
+            gap: '6px',
+            flexWrap: 'wrap'
+          }}
+        >
+          {<UspTags usps={usps} award={award} />}
         </div>
+        {showSponsoredByTag && (
+          <SponsoredByTag
+            providerName={sponsorName}
+            providerLogoSrc={sponsorSrc}
+            sx={{ marginTop: 'xs' }}
+          />
+        )}
       </div>
     </Container>
   </div>
