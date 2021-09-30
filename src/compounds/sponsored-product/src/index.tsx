@@ -70,7 +70,7 @@ const InformationBlocks: React.FC<InformationBlocksProps> = ({
 
 interface UspTagsProps {
   usps: UspBroadbandProps[]
-  award: string
+  award?: string
 }
 
 const UspTags: React.FC<UspTagsProps> = ({ usps, award }) => (
@@ -384,15 +384,8 @@ const SponsoredProduct: React.FC<Props> = ({
           )}
         </Stack>
 
-        <div
-          sx={{
-            display: 'flex',
-            gap: '6px',
-            flexWrap: 'wrap'
-          }}
-        >
-          {<UspTags usps={usps} award={award} />}
-        </div>
+        {usps && <UspTags usps={usps} award={award} />}
+
         {showSponsoredByTag && (
           <SponsoredByTag
             providerName={sponsorName}
