@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.22](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.modal@2.4.21...@uswitch/trustyle.modal@2.4.22) (2021-09-30)
+
+
+### Bug Fixes
+
+* do not close modal if dragging mouse into or out of content ([04245df](https://github.com/uswitch/trustyle/commit/04245df))
+
+
+
+
+
 ## [2.4.21](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.modal@2.4.20...@uswitch/trustyle.modal@2.4.21) (2021-08-27)
 
 

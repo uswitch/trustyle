@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.5.40...@uswitch/trustyle.sponsored-product@3.6.0) (2021-09-30)
+
+
+### Features
+
+* added display for mobile/desktop for sponsored by ([98284d3](https://github.com/uswitch/trustyle/commit/98284d3))
+* removed usp tag ([0b612c9](https://github.com/uswitch/trustyle/commit/0b612c9))
+* removed uspsx ([ddf98fe](https://github.com/uswitch/trustyle/commit/ddf98fe))
+* reverted awards tag ([00d44ff](https://github.com/uswitch/trustyle/commit/00d44ff))
+* ts-ignoring type definitions as temporary ([28c0662](https://github.com/uswitch/trustyle/commit/28c0662))
+* type guards against usptags ([3770bf7](https://github.com/uswitch/trustyle/commit/3770bf7))
+
+
+
+
+
 ## [3.5.40](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.5.39...@uswitch/trustyle.sponsored-product@3.5.40) (2021-09-07)
 
 **Note:** Version bump only for package @uswitch/trustyle.sponsored-product

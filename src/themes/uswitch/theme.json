@@ -946,7 +946,6 @@
               "display": "flex",
               "px": ["sm", "xxl", "xxxl"],
               "mb": ["md", "0px"],
-              "width": "100%",
               "justifyContent": "space-between",
               "flexDirection": "column"
             },
@@ -1000,6 +999,33 @@
                 "flex": "1 1 0px",
                 "min-width": "176px"
               }
+            }
+          },
+          "content": {
+            "display": ["none", "none", "block"],
+            "pl": [0, 0, "50px"],
+            "mx": 0,
+            "h3": {
+              "pb": "0",
+              "fontSize": "21px",
+              "lineHeight": "31px"
+            },
+            "a": {
+              "img": {
+                "mr": "xxs",
+                "width": "md"
+              },
+              "fontSize": "sm"
+            },
+            "h2": {
+              "mb": "md",
+              "mt": "0",
+              "fontSize": "md"
+            },
+            "div p": {
+              "color": "primary",
+              "fontWeight": "base",
+              "lineHeight": "lg"
             }
           }
         },
