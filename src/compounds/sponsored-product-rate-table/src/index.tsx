@@ -82,7 +82,7 @@ interface Usp {
 
 interface UspTagsProps {
   usps: Usp[]
-  award: string
+  award?: string
 }
 
 const UspTags: React.FC<UspTagsProps> = ({ usps, award }) => (
