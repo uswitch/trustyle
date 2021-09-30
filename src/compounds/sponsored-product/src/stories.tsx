@@ -17,8 +17,8 @@ export const ExampleWithKnobs = () => {
   const imgSrc = text('Image Url', '/contentful/iphone-11-grey-front.png')
   const imgAlt = text('Image Alt', 'iPhone 11')
   const usps = [
-    { text: text('USP', 'Free insurance for 2 months') },
-    { text: text('USP2', 'Uswitch Award') }
+    { label: text('USP', 'Free insurance for 2 months') },
+    { label: text('USP2', 'Uswitch Award') }
   ]
   const href = text('href', 'https://www.uswitch.com/mobiles/')
   const target = text('target', '_blank')
@@ -86,12 +86,10 @@ export const ExampleWithKnobs = () => {
             <SponsoredProduct
               title={'Sky Superfast Broadband'}
               usps={[
-                { text: '£22 p/m & no setup cost' },
+                { label: '£22 p/m & no setup cost', color: 'orange' },
                 {
-                  text: 'Superfast Broadband ever',
-                  color: 'linear-gradient(90deg, #C1B0E6 0%, #C1C0FF 100%)',
-                  beforeColor: '#141424',
-                  sx: { span: { color: '#141424' } }
+                  label: 'Uswitch Manufacturer of the Year',
+                  color: 'award'
                 }
               ]}
               boxShadowColor={'#AC96DE'}
@@ -112,11 +110,7 @@ export const ExampleWithKnobs = () => {
                   label: 'per month'
                 }
               ]}
-              uspSx={{
-                '> span': {
-                  fontSize: 12
-                }
-              }}
+              uspSx={{}}
               infoBlockSx={{
                 p: {
                   fontSize: 12
