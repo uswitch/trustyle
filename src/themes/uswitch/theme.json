@@ -4079,8 +4079,7 @@
           "mb": "base"
         },
         "mainTitle": {
-          "pb": "base",
-          "mb": "xxl"
+          "fontSize": ["md", "lg", "xl"]
         },
         "sectionTitle": {
           "m": 0,
