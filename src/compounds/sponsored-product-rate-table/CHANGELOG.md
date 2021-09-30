@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@3.3.39...@uswitch/trustyle.sponsored-product-rate-table@3.4.0) (2021-09-30)
+
+
+### Features
+
+* added display for mobile/desktop for sponsored by ([98284d3](https://github.com/uswitch/trustyle/commit/98284d3))
+* added usp broadband to sponsored product rate table ([f226c3d](https://github.com/uswitch/trustyle/commit/f226c3d))
+* made award optional ([c858008](https://github.com/uswitch/trustyle/commit/c858008))
+* moved flex div into usptags ([fcbba65](https://github.com/uswitch/trustyle/commit/fcbba65))
+* only render award div if award exists ([b1360ce](https://github.com/uswitch/trustyle/commit/b1360ce))
+* reverted awards tag ([00d44ff](https://github.com/uswitch/trustyle/commit/00d44ff))
+* show/hide award usp on mobile/desktop ([49df9ed](https://github.com/uswitch/trustyle/commit/49df9ed))
+* ts-ignoring type definitions as temporary ([28c0662](https://github.com/uswitch/trustyle/commit/28c0662))
+* use usp broadband tags, and put in flexbox ([58e98bc](https://github.com/uswitch/trustyle/commit/58e98bc))
+
+
+
+
+
 ## [3.3.39](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product-rate-table@3.3.38...@uswitch/trustyle.sponsored-product-rate-table@3.3.39) (2021-09-07)
 
 **Note:** Version bump only for package @uswitch/trustyle.sponsored-product-rate-table
