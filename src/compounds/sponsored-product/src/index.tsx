@@ -386,14 +386,15 @@ const SponsoredProduct: React.FC<Props> = ({
         </Stack>
 
         {usps && <UspTags usps={usps} award={award} />}
-
-        {showSponsoredByTag && (
-          <SponsoredByTag
-            providerName={sponsorName}
-            providerLogoSrc={sponsorSrc}
-            sx={{ marginTop: 'xs' }}
-          />
-        )}
+        <div sx={{ display: ['block', 'none'] }}>
+          {showSponsoredByTag && (
+            <SponsoredByTag
+              providerName={sponsorName}
+              providerLogoSrc={sponsorSrc}
+              sx={{ marginTop: 'xs' }}
+            />
+          )}
+        </div>
       </div>
     </Container>
   </div>

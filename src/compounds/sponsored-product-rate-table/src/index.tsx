@@ -1,15 +1,18 @@
 /** @jsx jsx */
 
 import * as React from 'react'
-import { jsx, ThemeUICSSObject } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
 import { Container } from '@uswitch/trustyle.flex-grid'
 import { Icon } from '@uswitch/trustyle.icon'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import PrimaryInfoBlock from '@uswitch/trustyle.primary-info-block'
 import SponsoredByTag from '@uswitch/trustyle.sponsored-by-tag'
-// @ts-ignore
-import UspBroadband from '@uswitch/trustyle.usp-broadband'
+import {
+  UspBroadband,
+  UspBroadbandProps
+  // @ts-ignore
+} from '@uswitch/trustyle.usp-broadband'
 import { Stack } from '@uswitch/trustyle.arrangement'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
@@ -17,7 +20,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   productImgSrc: string
   productImgAlt: string
   informationDetails: Detail[]
-  usps: Usp[]
+  usps: UspBroadband[]
   href: string
   target: string
   sponsorLogoSrc: string
@@ -73,15 +76,8 @@ const ProductImage = ({ src, alt }: { src: string; alt: string }) => (
   </React.Fragment>
 )
 
-interface Usp {
-  text: string
-  color?: string
-  beforeColor?: string
-  uspSx?: (object & ThemeUICSSObject) | undefined
-}
-
 interface UspTagsProps {
-  usps: Usp[]
+  usps: UspBroadbandProps[]
   award?: string
 }
 
