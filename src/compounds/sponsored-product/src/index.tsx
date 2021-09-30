@@ -13,6 +13,7 @@ import { Container } from '@uswitch/trustyle.flex-grid'
 import {
   UspBroadband,
   UspBroadbandProps
+  // @ts-ignore
 } from '@uswitch/trustyle.usp-broadband'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {

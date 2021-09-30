@@ -8,6 +8,7 @@ import { Icon } from '@uswitch/trustyle.icon'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import PrimaryInfoBlock from '@uswitch/trustyle.primary-info-block'
 import SponsoredByTag from '@uswitch/trustyle.sponsored-by-tag'
+// @ts-ignore
 import UspBroadband from '@uswitch/trustyle.usp-broadband'
 import { Stack } from '@uswitch/trustyle.arrangement'
 
