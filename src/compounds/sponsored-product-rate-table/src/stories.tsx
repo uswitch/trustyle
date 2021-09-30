@@ -19,12 +19,10 @@ export const ExampleWithKnobs = () => {
   const imgSrc = text('Image Url', '/contentful/iphone-11-grey-front.png')
   const imgAlt = text('Image Alt', 'iPhone 11')
   const usps = [
-    { text: text('USP', 'Free insurance for 2 months') },
+    { text: text('USP', 'Free insurance for 2 months'), color: 'purple' },
     {
       text: text('USP2', 'Second USP'),
-      color: 'linear-gradient(90deg, #C1B0E6 0%, #C1C0FF 100%)',
-      beforeColor: '#141424',
-      uspSx: { '> span': { color: '#141424' } }
+      color: 'orange'
     }
   ]
   const backgroundColor = text('Background Colour', '#ff55c4')

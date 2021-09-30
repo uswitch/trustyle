@@ -1751,10 +1751,22 @@
                 "flex": ["1 0 100%", "1 0 100%"]
               }
             },
+
+            "dropdown": {
+              "wrapper": {
+                "variant": "elements.form.variants.field-section.input.wrapper"
+              }
+            },
+
             "wrapper": {
-              "flex": ["1 0 50%", "1 0 25%"],
-              "marginX": "md",
-              "marginBottom": "xl"
+              "flex": ["1 0 100%", "1 0 25%"],
+              "justifyContent": "space-between",
+              "alignSelf": "stretch",
+              "display": "flex",
+              "flexDirection": "column",
+              "paddingX": "xs",
+              "paddingBottom": "xl",
+              "boxSizing": " border-box"
             }
           },
           "checkbox": {
