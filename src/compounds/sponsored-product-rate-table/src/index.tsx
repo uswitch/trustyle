@@ -99,9 +99,11 @@ const UspTags: React.FC<UspTagsProps> = ({ usps, award }) => (
         </div>
       )
     })}
-    <div sx={{ display: [null, 'none'] }}>
-      {award && <UspBroadband label={award} color="award" />}
-    </div>
+    {award && (
+      <div sx={{ display: [null, 'none'] }}>
+        <UspBroadband label={award} color="award" />
+      </div>
+    )}
   </div>
 )
 
