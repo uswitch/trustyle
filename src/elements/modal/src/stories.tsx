@@ -8,7 +8,7 @@ import AllThemes from '../../../utils/all-themes'
 import Modal from './'
 
 export default {
-  title: 'Elements|Modal'
+  title: 'Elements/Modal'
 }
 
 export const PartialHeight = () => (
