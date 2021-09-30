@@ -87,16 +87,10 @@ interface UspTagsProps {
 const UspTags: React.FC<UspTagsProps> = ({ usps }) => (
   <React.Fragment>
     {usps.map((usp, index) => {
-      console.log(usp)
       return (
-        <UspBroadband
-          label={usp.text}
-          color={usp.color}
-          // backgroundColor={usp.color}
-          // beforeColor={usp.beforeColor}
-          key={index}
-          // sx={usp.uspSx}
-        />
+        <div key={index} sx={{ marginRight: '8px' }}>
+          <UspBroadband label={usp.text} color={usp.color} />
+        </div>
       )
     })}
   </React.Fragment>
@@ -287,7 +281,17 @@ const SponsoredRateTable: React.FC<Props> = ({
             <InformationBlocks details={informationDetails} />
           </div>
 
-          {usps && <UspTags usps={usps} />}
+          {usps && (
+            <div
+              sx={{
+                display: 'flex',
+                gap: '4px',
+                flexWrap: 'wrap'
+              }}
+            >
+              <UspTags usps={usps} />
+            </div>
+          )}
 
           <AwardsTag award={award} sx={{ display: [null, 'none'] }} />
 
