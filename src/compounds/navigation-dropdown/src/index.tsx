@@ -68,7 +68,6 @@ const NavigationDropdown: React.FC<DropdownProps> = ({
     }
   })
 
-  console.log('children', children)
   return (
     <div
       ref={ref}
