@@ -3,6 +3,7 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 import { ThemeUIStyleObject } from '@theme-ui/css'
+// @ts-ignore
 import { Badge } from '@uswitch/spark.badge'
 import { UswReceiptFill } from '@uswitch/spark-icons/usw'
 
