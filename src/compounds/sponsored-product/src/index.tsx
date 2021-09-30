@@ -33,7 +33,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   enhancedImgHeight?: string
   className?: string
   showSponsoredByTag?: boolean
-  uspSx?: object
+
   infoBlockSx?: object
   boxShadowColor?: string
   badgeVariant?: string
