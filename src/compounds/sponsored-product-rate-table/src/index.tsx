@@ -9,7 +9,7 @@ import { Icon } from '@uswitch/trustyle.icon'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import PrimaryInfoBlock from '@uswitch/trustyle.primary-info-block'
 import SponsoredByTag from '@uswitch/trustyle.sponsored-by-tag'
-import UspTag from '@uswitch/trustyle.usp-tag'
+import UspBroadband from '@uswitch/trustyle.usp-broadband'
 import { Stack } from '@uswitch/trustyle.arrangement'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
@@ -86,15 +86,19 @@ interface UspTagsProps {
 
 const UspTags: React.FC<UspTagsProps> = ({ usps }) => (
   <React.Fragment>
-    {usps.map((usp, index) => (
-      <UspTag
-        usp={usp.text}
-        backgroundColor={usp.color}
-        beforeColor={usp.beforeColor}
-        key={index}
-        sx={usp.uspSx}
-      />
-    ))}
+    {usps.map((usp, index) => {
+      console.log(usp)
+      return (
+        <UspBroadband
+          label={usp.text}
+          color={usp.color}
+          // backgroundColor={usp.color}
+          // beforeColor={usp.beforeColor}
+          key={index}
+          // sx={usp.uspSx}
+        />
+      )
+    })}
   </React.Fragment>
 )
 
