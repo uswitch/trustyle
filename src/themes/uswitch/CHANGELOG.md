@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.59.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.58.2...@uswitch/trustyle.uswitch-theme@2.59.0) (2021-10-01)
+
+
+### Features
+
+* add support for buttons to nav dropdown ([0bd8619](https://github.com/uswitch/trustyle/commit/0bd8619))
+
+
+
+
+
 ## [2.58.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.58.1...@uswitch/trustyle.uswitch-theme@2.58.2) (2021-09-30)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme

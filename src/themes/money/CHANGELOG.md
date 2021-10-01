@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.65.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.64.3...@uswitch/trustyle.money-theme@1.65.0) (2021-10-01)
+
+
+### Features
+
+* add support for buttons to nav dropdown ([0bd8619](https://github.com/uswitch/trustyle/commit/0bd8619))
+
+
+
+
+
 ## [1.64.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.64.2...@uswitch/trustyle.money-theme@1.64.3) (2021-09-30)
 
 
