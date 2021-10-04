@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.65.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.64.3...@uswitch/trustyle.money-theme@1.65.0) (2021-10-01)
+
+
+### Features
+
+* add support for buttons to nav dropdown ([0bd8619](https://github.com/uswitch/trustyle/commit/0bd8619))
+
+
+
+
+
+## [1.64.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.64.2...@uswitch/trustyle.money-theme@1.64.3) (2021-09-30)
+
+
+### Bug Fixes
+
+* fixed calculators forms and inputs ([37c5463](https://github.com/uswitch/trustyle/commit/37c5463))
+
+
+
+
+
+## [1.64.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.64.1...@uswitch/trustyle.money-theme@1.64.2) (2021-09-27)
+
+
+### Bug Fixes
+
+* input alert spacing incorrect ([07e05fe](https://github.com/uswitch/trustyle/commit/07e05fe))
+
+
+
+
+
+## [1.64.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.64.0...@uswitch/trustyle.money-theme@1.64.1) (2021-09-27)
+
+
+### Bug Fixes
+
+* style tweaks and bug fixes ([d52310c](https://github.com/uswitch/trustyle/commit/d52310c))
+
+
+
+
+
 # [1.64.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.63.2...@uswitch/trustyle.money-theme@1.64.0) (2021-09-23)
 
 

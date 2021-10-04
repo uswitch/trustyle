@@ -3,15 +3,21 @@ import React, { useEffect, useRef, useState } from 'react'
 import { jsx } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
 
+interface NavConfig {
+  [key: string]: string
+}
+
 interface DropdownProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string
-  pathName?: string
+  pathName: string
+  navConfig: NavConfig
 }
 
 const NavigationDropdown: React.FC<DropdownProps> = ({
   children,
   title = '',
-  pathName = ''
+  pathName = '',
+  navConfig = {}
 }) => {
   const ref = useRef<HTMLDivElement>(null)
   const [open, setOpen] = useState(false)
@@ -19,7 +25,24 @@ const NavigationDropdown: React.FC<DropdownProps> = ({
   const [listWidth, setListWidth] = useState(`${ref?.current?.offsetWidth}px`)
 
   const handleClick = () => setOpen(!open)
-  const handleItemClick = (item: any) => setSelection(item.target.innerText)
+  const handleItemClick = (e: any) => {
+    const childContent = e?.target?.children
+    if (
+      childContent?.length &&
+      childContent[0]?.innerText &&
+      Object.values(navConfig).includes(childContent[0]?.innerText)
+    ) {
+      if (
+        childContent[0]?.innerText === 'Please select' ||
+        childContent[0]?.innerText === selection
+      ) {
+        e.preventDefault()
+        return
+      }
+
+      return setSelection(childContent[0]?.innerText || selection)
+    }
+  }
   const handleHideDropdown = (event: KeyboardEvent) => {
     if (event.key === 'Escape') {
       setOpen(false)
@@ -33,6 +56,8 @@ const NavigationDropdown: React.FC<DropdownProps> = ({
   const handleResize = () => setListWidth(`${ref?.current?.offsetWidth}px`)
 
   useEffect(() => {
+    handleResize()
+
     window.addEventListener('keydown', handleHideDropdown, true)
     window.addEventListener('click', handleClickOutside, true)
     window.addEventListener('resize', handleResize)
@@ -43,49 +68,17 @@ const NavigationDropdown: React.FC<DropdownProps> = ({
     }
   })
 
-  const cloneChildren = (children: any) => {
-    return React.Children.map(children, (child, key) => {
-      let nestedChild = child?.props?.children
-      const hasNestedChild = nestedChild && typeof nestedChild !== 'string'
-      let optionValue = ''
-
-      if (!hasNestedChild) {
-        optionValue = nestedChild
-
-        return React.cloneElement(child, { optionvalue: optionValue, key }, [
-          nestedChild
-        ])
-      }
-
-      nestedChild = cloneChildren(nestedChild)
-      optionValue = nestedChild[0]?.props?.optionvalue
-
-      return !(selection === optionValue)
-        ? React.cloneElement(
-            child,
-            {
-              onClick: (e: Event) => child?.type === 'li' && handleItemClick(e),
-              key
-            },
-            [nestedChild]
-          )
-        : null
-    })
-  }
-
-  const clonedChildren: React.ReactNode[] = cloneChildren(children)
-
   return (
     <div
       ref={ref}
       sx={{
-        variant: 'elements.navigation-dropdown',
+        variant: 'compounds.navigation-dropdown',
         width: '100%',
         maxWidth: '400px'
       }}
       onClick={handleClick}
     >
-      <p sx={{ variant: 'elements.navigation-dropdown.title' }}>{title}</p>
+      <p sx={{ variant: 'compounds.navigation-dropdown.title' }}>{title}</p>
       <button
         sx={{
           width: '100%',
@@ -130,14 +123,20 @@ const NavigationDropdown: React.FC<DropdownProps> = ({
           <Icon glyph="caret" color="black" direction={open ? 'up' : 'down'} />
         </span>
       </button>
-      <div
-        sx={{
-          position: 'fixed',
-          width: listWidth || 'inherit'
-        }}
-      >
-        {open && clonedChildren}
-      </div>
+      {open && (
+        <div
+          sx={{
+            variant: 'compounds.navigation-dropdown.container',
+            position: 'absolute',
+            width: listWidth || 'inherit',
+            zIndex: '1000',
+            boxSizing: 'border-box'
+          }}
+          onClick={e => handleItemClick(e)}
+        >
+          {children}
+        </div>
+      )}
     </div>
   )
 }

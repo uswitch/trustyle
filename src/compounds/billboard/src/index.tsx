@@ -33,7 +33,7 @@ const Billboard: React.FC<Props> = ({
     <div>
       <Palette
         as="div"
-        sx={{ overflow: 'hidden', variant: 'compounds.billboard.wrapper' }}
+        sx={{ variant: 'compounds.billboard.wrapper' }}
         px={{ backgroundColor: 'backgroundColor' }}
       >
         <div sx={{ variant: 'compounds.billboard.container' }}>
@@ -43,7 +43,7 @@ const Billboard: React.FC<Props> = ({
               flexDirection: 'column' as const,
               paddingX: 'sm',
               paddingTop: 'sm',
-              marginBottom: fullWidthSlot ? ['0', 'xs'] : '0'
+              paddingBottom: fullWidthSlot ? ['0', 'xs'] : '0'
             }}
           >
             {breadcrumbs && (
