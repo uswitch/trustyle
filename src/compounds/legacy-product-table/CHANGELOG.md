@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.7.3...@uswitch/trustyle.legacy-product-table@1.7.6) (2021-10-04)
+
+
+### Bug Fixes
+
+* credit card image alignment ([1245489](https://github.com/uswitch/trustyle/commit/1245489))
+
+
+
+
+
 ## [1.7.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.7.3...@uswitch/trustyle.legacy-product-table@1.7.5) (2021-10-01)
 
 
