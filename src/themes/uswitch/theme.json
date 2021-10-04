@@ -3523,8 +3523,8 @@
           "marginY": "sm"
         },
         "button": {
-          "fontSize": "sm",
           "fontFamily": "base",
+          "fontSize": "sm",
           "fontWeight": "base",
           "boxShadow": "#141424 0px 0px 0px 1px inset",
           "&:focus, &:focus-visible": {

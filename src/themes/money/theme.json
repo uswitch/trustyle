@@ -3203,8 +3203,8 @@
         "button": {
           "boxShadow": "#DFDFE1 0px 0px 0px 1px inset",
           "borderRadius": "4px",
-          "fontSize": "sm",
           "fontFamily": "base",
+          "fontSize": "sm",
           "fontWeight": "base",
           "&:focus, &:focus-visible": {
             "borderColor": "experimental-text"
