@@ -910,7 +910,7 @@
         },
         "journey": {
           "formWrapper": {
-            "minHeight": ["calc(100vh - 55px)", "680px", "680px"],
+            "minHeight": ["calc(100vh - 100px)", "680px", "680px"],
             "pt": ["xs", "lg", "lg"],
             "mb": "0",
             "position": "relative"
