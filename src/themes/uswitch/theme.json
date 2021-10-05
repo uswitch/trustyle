@@ -3514,6 +3514,29 @@
         "backgroundColor": "light-2",
         "boxShadow": "0px 8px 16px 0px rgba(0,0,0,0.2)",
         "mt": 0,
+        "h1, h2, h3, h4, h5, h6": {
+          "variant": "styles.h6",
+          "textAlign": "left",
+          "fontFamily": "base",
+          "fontSize": "xxs",
+          "fontWeight": "bold",
+          "marginY": "sm"
+        },
+        "button": {
+          "fontFamily": "base",
+          "fontSize": "sm",
+          "fontWeight": "base",
+          "boxShadow": "#141424 0px 0px 0px 1px inset",
+          "&:focus, &:focus-visible": {
+            "borderColor": "primary"
+          }
+        },
+        "a": {
+          "width": ["100%", "75%", "75%"],
+          "mt": "sm",
+          "fontSize": "base",
+          "float": "left"
+        },
         "> div:last-child > a": {
           "mb": "sm"
         },
@@ -3521,32 +3544,12 @@
           "cursor": "pointer"
         }
       },
-      "h1, h2, h3, h4, h5, h6": {
-        "variant": "styles.h6",
-        "textAlign": "left",
-        "fontFamily": "base",
-        "fontSize": "xxs",
-        "fontWeight": "bold",
-        "marginY": "sm"
-      },
-      "button": {
-        "fontSize": "sm",
-        "fontFamily": "base",
-        "fontWeight": "base",
-        "boxShadow": "#141424 0px 0px 0px 1px inset",
-        "&:focus, &:focus-visible": {
-          "borderColor": "primary"
-        }
-      },
-      "a": {
-        "width": ["100%", "75%", "75%"],
-        "mt": "sm",
-        "fontSize": "base",
-        "float": "left"
-      },
       "title": {
         "variant": "compounds.billboard.primaryContent.p",
         "mb": "sm"
+      },
+      "button": {
+        "my": "0 !important"
       },
       "ul": {
         "width": "100%",

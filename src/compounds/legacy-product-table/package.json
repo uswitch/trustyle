@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.legacy-product-table",
-  "version": "1.7.6",
+  "version": "1.7.7",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -27,7 +27,7 @@
     "@uswitch/trustyle.button-link": "^3.2.11",
     "@uswitch/trustyle.circular-percentage-bar": "^0.1.4",
     "@uswitch/trustyle.icon": "^1.27.2",
-    "@uswitch/trustyle.information-panel": "^0.1.1",
+    "@uswitch/trustyle.information-panel": "^0.1.2",
     "@uswitch/trustyle.wireframe-cell": "^0.0.3"
   }
 }

@@ -3,12 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.59.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.59.1...@uswitch/trustyle.uswitch-theme@2.59.3) (2021-10-04)
+
+
+### Bug Fixes
+
+* minor change ([8f5984d](https://github.com/uswitch/trustyle/commit/8f5984d))
+* rich-text-module spacing ([20a2562](https://github.com/uswitch/trustyle/commit/20a2562))
+* visual bugs on safari ([96ca9f3](https://github.com/uswitch/trustyle/commit/96ca9f3))
+
+
+
+
+
 ## [2.59.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.59.1...@uswitch/trustyle.uswitch-theme@2.59.2) (2021-10-04)
 
 
 ### Bug Fixes
 
 * rich-text-module spacing ([20a2562](https://github.com/uswitch/trustyle/commit/20a2562))
+* visual bugs on safari ([96ca9f3](https://github.com/uswitch/trustyle/commit/96ca9f3))
 
 
 
