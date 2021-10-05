@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.15](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.drop-down@2.5.14...@uswitch/trustyle.drop-down@2.5.15) (2021-10-05)
+
+
+### Bug Fixes
+
+* infinite loop in DropDown ([ead67da](https://github.com/uswitch/trustyle/commit/ead67da))
+
+
+
+
+
 ## [2.5.14](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.drop-down@2.5.13...@uswitch/trustyle.drop-down@2.5.14) (2021-08-27)
 
 

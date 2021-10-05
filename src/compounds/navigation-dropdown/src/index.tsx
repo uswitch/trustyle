@@ -14,6 +14,7 @@ interface DropdownProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const NavigationDropdown: React.FC<DropdownProps> = ({
+  children,
   title = '',
   pathName = '',
   navConfig = {}
@@ -25,10 +26,21 @@ const NavigationDropdown: React.FC<DropdownProps> = ({
 
   const handleClick = () => setOpen(!open)
   const handleItemClick = (e: any) => {
-    setSelection(e?.target?.innerText || selection)
+    const childContent = e?.target?.children
+    if (
+      childContent?.length &&
+      childContent[0]?.innerText &&
+      Object.values(navConfig).includes(childContent[0]?.innerText)
+    ) {
+      if (
+        childContent[0]?.innerText === 'Please select' ||
+        childContent[0]?.innerText === selection
+      ) {
+        e.preventDefault()
+        return
+      }
 
-    if (e.target.innerText === 'Please select') {
-      e.preventDefault()
+      return setSelection(childContent[0]?.innerText || selection)
     }
   }
   const handleHideDropdown = (event: KeyboardEvent) => {
@@ -56,37 +68,17 @@ const NavigationDropdown: React.FC<DropdownProps> = ({
     }
   })
 
-  const createLinks = (config: NavConfig) =>
-    Object.keys(config).map((href, index) =>
-      selection !== config[href] ? (
-        <a href={href} key={`link${index}`}>
-          {config[href]}
-        </a>
-      ) : null
-    )
-
-  const createReactList = (config: NavConfig) => {
-    const listLinks = createLinks(config)
-    return listLinks.map((link, index) => (
-      <li onClick={e => handleItemClick(e)} key={`item${index}`}>
-        {link}
-      </li>
-    ))
-  }
-
-  const navigationList = <ul>{navConfig && createReactList(navConfig)}</ul>
-
   return (
     <div
       ref={ref}
       sx={{
-        variant: 'elements.navigation-dropdown',
+        variant: 'compounds.navigation-dropdown',
         width: '100%',
         maxWidth: '400px'
       }}
       onClick={handleClick}
     >
-      <p sx={{ variant: 'elements.navigation-dropdown.title' }}>{title}</p>
+      <p sx={{ variant: 'compounds.navigation-dropdown.title' }}>{title}</p>
       <button
         sx={{
           width: '100%',
@@ -131,15 +123,20 @@ const NavigationDropdown: React.FC<DropdownProps> = ({
           <Icon glyph="caret" color="black" direction={open ? 'up' : 'down'} />
         </span>
       </button>
-      <div
-        sx={{
-          position: 'absolute',
-          width: listWidth || 'inherit',
-          zIndex: '1000'
-        }}
-      >
-        {open && navigationList}
-      </div>
+      {open && (
+        <div
+          sx={{
+            variant: 'compounds.navigation-dropdown.container',
+            position: 'absolute',
+            width: listWidth || 'inherit',
+            zIndex: '1000',
+            boxSizing: 'border-box'
+          }}
+          onClick={e => handleItemClick(e)}
+        >
+          {children}
+        </div>
+      )}
     </div>
   )
 }
