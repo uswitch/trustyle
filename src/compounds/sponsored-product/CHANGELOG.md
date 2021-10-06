@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.6.0...@uswitch/trustyle.sponsored-product@3.7.0) (2021-10-06)
+
+
+### Features
+
+* updated sponsored product stories ([db715c3](https://github.com/uswitch/trustyle/commit/db715c3))
+
+
+
+
+
 # [3.6.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.5.40...@uswitch/trustyle.sponsored-product@3.6.0) (2021-09-30)
 
 
