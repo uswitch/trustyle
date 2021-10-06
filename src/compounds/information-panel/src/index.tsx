@@ -17,6 +17,16 @@ export const MoreInformationText: React.FC<MoreInformationTextProps> = ({
         return
       }
 
+      if (chunk.includes('<ul>')) {
+        return (
+          <div
+            key={i}
+            sx={{ variant: 'compounds.information-panel.text' }}
+            dangerouslySetInnerHTML={{ __html: chunk }}
+          ></div>
+        )
+      }
+
       return (
         <React.Fragment key={i}>
           {chunk

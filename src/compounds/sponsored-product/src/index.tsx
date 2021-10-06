@@ -5,27 +5,23 @@ import { jsx } from 'theme-ui'
 import { Icon } from '@uswitch/trustyle.icon'
 import { ButtonLink } from '@uswitch/trustyle.button-link'
 import PrimaryInfoBlock from '@uswitch/trustyle.primary-info-block'
-import UspTag from '@uswitch/trustyle.usp-tag'
 import SponsoredByTag from '@uswitch/trustyle.sponsored-by-tag'
-import AwardsTag from '@uswitch/trustyle.awards-tag'
 import Badge from '@uswitch/trustyle.badge'
 import { Stack } from '@uswitch/trustyle.arrangement'
 import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import { Container } from '@uswitch/trustyle.flex-grid'
-
-interface Usp {
-  text: string
-  color?: string
-  beforeColor?: string
-  sx?: object
-}
+import {
+  UspBroadband,
+  UspBroadbandProps
+  // @ts-ignore
+} from '@uswitch/trustyle.usp-broadband'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   imgSrc?: string
   imgAlt?: string
   informationDetails?: Detail[]
-  usps?: Usp[]
+  usps?: UspBroadbandProps[]
   href?: string
   target?: string
   sponsorSrc: string
@@ -37,7 +33,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   enhancedImgHeight?: string
   className?: string
   showSponsoredByTag?: boolean
-  uspSx?: object
+
   infoBlockSx?: object
   boxShadowColor?: string
   badgeVariant?: string
@@ -67,29 +63,38 @@ const InformationBlocks: React.FC<InformationBlocksProps> = ({
         suffix={obj.suffix}
         label={obj.label}
         key={index}
-        sx={{ padding: [null, 'xs'], ...infoBlockSx }}
+        sx={{ padding: [null, 'xs'], marginBottom: 'xxs', ...infoBlockSx }}
       />
     ))}
   </React.Fragment>
 )
 
 interface UspTagsProps {
-  usps: Usp[]
-  uspSx?: object
+  usps: UspBroadbandProps[]
+  award?: string
 }
 
-const UspTags: React.FC<UspTagsProps> = ({ usps, uspSx = {} }) => (
-  <React.Fragment>
-    {usps.map((usp, index) => (
-      <UspTag
-        usp={usp.text}
-        backgroundColor={usp.color}
-        beforeColor={usp.beforeColor}
-        key={index}
-        sx={{ ...usp.sx, ...uspSx }}
-      />
-    ))}
-  </React.Fragment>
+const UspTags: React.FC<UspTagsProps> = ({ usps, award }) => (
+  <div
+    sx={{
+      display: 'flex',
+      gap: '6px',
+      flexWrap: 'wrap'
+    }}
+  >
+    {usps.map((usp, index) => {
+      return (
+        <div key={index}>
+          <UspBroadband label={usp.label} color={usp.color} />
+        </div>
+      )
+    })}
+    {award && (
+      <div sx={{ display: [null, 'none'] }}>
+        <UspBroadband label={award} color="award" />
+      </div>
+    )}
+  </div>
 )
 
 const BrandCaption = ({ text }: { text: string }) => (
@@ -173,7 +178,6 @@ const SponsoredProduct: React.FC<Props> = ({
   backgroundColor = 'white',
   enhancedImgHeight = '144px',
   className,
-  uspSx = {},
   infoBlockSx = {}
 }) => (
   <div
@@ -379,12 +383,10 @@ const SponsoredProduct: React.FC<Props> = ({
               />
             </div>
           )}
-
-          {usps && <UspTags usps={usps} uspSx={uspSx} />}
         </Stack>
 
+        {usps && <UspTags usps={usps} award={award} />}
         <div sx={{ display: ['block', 'none'] }}>
-          {award && <AwardsTag award={award} sx={{ marginTop: 'xs' }} />}
           {showSponsoredByTag && (
             <SponsoredByTag
               providerName={sponsorName}
