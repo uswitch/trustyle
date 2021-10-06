@@ -404,7 +404,7 @@ export const DataCell: React.FC<DataCellProps> = ({
             display: 'flex',
             justifyContent: 'center',
             padding: '5px 5px 0px',
-            color
+            color: variant === 'WhiteLegacy' ? '#000000' : color
           }}
         >
           {label}
@@ -454,7 +454,7 @@ export const CtaCell: React.FC<CtaCellProps> = ({
   clickableRow
 }) => {
   const props = {
-    variant: variant ?? 'primary',
+    variant: 'primary',
     target: '_blank',
     rel: 'noopener noreferrer',
     size: 'small',
@@ -493,6 +493,7 @@ export const CtaCell: React.FC<CtaCellProps> = ({
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
+          marginTop: variant === 'WhiteLegacy' ? 20 : 0,
           paddingBottom: 10
         }}
       >
