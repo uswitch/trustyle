@@ -341,6 +341,7 @@ interface DataCellProps extends React.HTMLAttributes<HTMLDivElement> {
   color?: string
   label?: string
   isWireFrame?: boolean
+  variant?: string
 }
 
 export const DataCell: React.FC<DataCellProps> = ({
@@ -349,6 +350,7 @@ export const DataCell: React.FC<DataCellProps> = ({
   borderBottomColor,
   color,
   label,
+  variant,
   isWireFrame = false
 }) => {
   const wireFrameLabelStyles = {
@@ -369,7 +371,7 @@ export const DataCell: React.FC<DataCellProps> = ({
       backgroundColor,
       borderBottomColor,
       fontFamily: 'Varela Round,Arial,sans-serif',
-      color: '#000000'
+      color: variant === 'WhiteLegacy' ? '#000000' : '#191919'
     },
     wireframe: {
       display: 'flex',
@@ -398,7 +400,7 @@ export const DataCell: React.FC<DataCellProps> = ({
         <span
           sx={{
             fontFamily: 'Open Sans,Arial,sans-serif',
-            fontSize: '12px',
+            fontSize: variant === 'WhiteLegacy' ? '12px' : '11px',
             display: 'flex',
             justifyContent: 'center',
             padding: '5px 5px 0px',
@@ -452,7 +454,7 @@ export const CtaCell: React.FC<CtaCellProps> = ({
   clickableRow
 }) => {
   const props = {
-    variant: 'primary',
+    variant: variant ?? 'primary',
     target: '_blank',
     rel: 'noopener noreferrer',
     size: 'small',
