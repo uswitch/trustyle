@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.59.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.59.3...@uswitch/trustyle.uswitch-theme@2.59.4) (2021-10-06)
+
+
+### Bug Fixes
+
+* spacing between title and accordion ([ed8e652](https://github.com/uswitch/trustyle/commit/ed8e652))
+
+
+
+
+
 ## [2.59.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.59.1...@uswitch/trustyle.uswitch-theme@2.59.3) (2021-10-04)
 
 
