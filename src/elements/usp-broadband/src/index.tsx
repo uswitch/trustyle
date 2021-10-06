@@ -15,7 +15,6 @@ export interface UspBroadbandProps {
   color: string
   styling?: ThemeUIStyleObject
   hideIcon?: boolean
-  sx?: any
 }
 
 export const UspBroadband: React.FC<UspBroadbandProps> = ({
@@ -27,7 +26,7 @@ export const UspBroadband: React.FC<UspBroadbandProps> = ({
 
   React.useEffect(() => {
     if (color === 'black-friday') {
-      setIcon(<UswReceiptFill color="orange" />)
+      setIcon(<UswReceiptFill color="#ffd555" />)
     }
     if (color === 'award') {
       setIcon(<AwardIcon />)
@@ -40,7 +39,7 @@ export const UspBroadband: React.FC<UspBroadbandProps> = ({
       size="medium"
       sx={st.generateBadgeStyle({ color })}
     >
-      {label}
+      <div className="usp-label">{label}</div>
     </Badge>
   )
 }
