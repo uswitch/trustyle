@@ -17,7 +17,8 @@ export const ExampleWithKnobs = () => {
   const imgSrc = text('Image Url', '/contentful/iphone-11-grey-front.png')
   const imgAlt = text('Image Alt', 'iPhone 11')
   const usps = [
-    { label: text('USP', 'Free insurance for 2 months'), color: 'orange' }
+    { label: text('USP', 'Free insurance for 2 months'), color: 'orange' },
+    { label: text('USP2', 'Black Friday USP'), color: 'black-friday' }
   ]
   const href = text('href', 'https://www.uswitch.com/mobiles/')
   const target = text('target', '_blank')
@@ -84,7 +85,10 @@ export const ExampleWithKnobs = () => {
           <Col offset={[0.05, 2, 2]} span={[4, 4, 4]}>
             <SponsoredProduct
               title={'Sky Superfast Broadband'}
-              usps={[{ label: '£22 p/m & no setup cost', color: 'orange' }]}
+              usps={[
+                { label: '£22 p/m & no setup cost', color: 'orange' },
+                { label: 'Black Friday Special', color: 'black-friday' }
+              ]}
               boxShadowColor={'#AC96DE'}
               sponsorName={'Sky'}
               sponsorSrc={'/contentful/sky.png'}
