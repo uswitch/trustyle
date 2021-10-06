@@ -23,6 +23,10 @@ export const ExampleWithKnobs = () => {
     {
       text: text('USP2', 'Second USP'),
       color: 'orange'
+    },
+    {
+      text: text('USP3', 'Black Friday USP'),
+      color: 'black-friday'
     }
   ]
   const backgroundColor = text('Background Colour', '#ff55c4')

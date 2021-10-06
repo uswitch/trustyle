@@ -15,10 +15,10 @@ export const Template: Story<UspBroadbandProps> = () => (
   <div
     style={{
       display: 'flex',
+      gap: 8,
       flexDirection: 'row',
       width: 800,
       flexWrap: 'wrap',
-      height: 300,
       alignItems: 'space-around',
       justifyContent: 'space-between'
     }}
@@ -31,5 +31,15 @@ export const Template: Story<UspBroadbandProps> = () => (
         styling={{ marginRight: 8 }}
       />
     ))}
+
+    <UspBroadband
+      label="Super super super super super super super super  super super super super super super super super super super super super super super super super super super super super super super super super super super super super super super super super super long award"
+      color="award"
+    />
+
+    <UspBroadband
+      label="Super super super super super super super super super super super super super super super super super super super super super super super super super super super super super super super super super super super super super super long deal for black friday"
+      color="black-friday"
+    />
   </div>
 )
