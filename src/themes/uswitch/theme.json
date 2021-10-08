@@ -912,7 +912,6 @@
             }
           }
         },
-
         "journey": {
           "formWrapper": {
             "minHeight": ["calc(100vh - 100px)", "680px", "680px"],
@@ -1055,7 +1054,7 @@
           },
           "funnel": {
             "px": ["sm", "xxl", "xxxl"],
-            "mb": "md"
+            "my": "md"
           },
           "input": {
             "checkbox": {
@@ -1099,7 +1098,9 @@
             "variant": "styles.h5",
             "color": "primary",
             "display": "block",
-            "mb": "sm",
+            "mt": "md",
+            "mb": "xl",
+            "fontSize": "28px",
             "variants": {
               "calculator": {
                 "flex": "1 1 0px",
@@ -3531,11 +3532,12 @@
             "buttonWrapper": {
               "display": "flex",
               "position": ["fixed", "absolute", "absolute"],
-              "bottom": ["16px", "16px", "28px"],
+              "bottom": ["32px", "16px", "28px"],
               "width": "100%",
               "bg": "#E5E5E5",
+              "mx": "8px",
               "button": {
-                "width": "90%",
+                "width": "86%",
                 "height": "48px"
               },
               "calculator": {
