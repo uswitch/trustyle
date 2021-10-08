@@ -870,6 +870,10 @@
                 "pb": ["xs", 0]
               }
             },
+            "singleRow": {
+              "variant": "elements.form.variants.default.input.wrapper",
+              "mb": 0
+            },
             "error": {
               "position": "absolute",
               "margin": "0"
@@ -1266,13 +1270,11 @@
                 "flex": ["1 0 100%", "1 0 100%"]
               }
             },
-
             "dropdown": {
               "wrapper": {
                 "variant": "elements.form.variants.slide.input.wrapper"
               }
             },
-
             "wrapper": {
               "flex": ["1 0 100%", "1 0 25%"],
               "justifyContent": "space-between",
@@ -3162,6 +3164,29 @@
         "right": 16,
         "top": "calc(50% - 15px / 2)",
         "variant": "elements.drop-down.icon"
+      },
+      "singleRow": {
+        "select": {
+          "base": {
+            "variant": "elements.simple-drop-down.select.base",
+            "paddingX": 12
+          },
+          "error": {
+            "variant": "elements.simple-drop-down.select.error",
+            "paddingX": 12
+          },
+          "focus": {
+            "variant": "elements.simple-drop-down.select.focus",
+            "paddingX": 12
+          }
+        },
+        "span": {
+          "variant": "elements.simple-drop-down.span",
+          "top": "calc(50% - 12px / 2)",
+          "height": 12,
+          "width": 12,
+          "right": 12
+        }
       }
     },
     "form-section": {
