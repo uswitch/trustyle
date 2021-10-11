@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.advert@0.1.0...@uswitch/trustyle.advert@0.2.0) (2021-10-11)
+
+
+### Bug Fixes
+
+* fixed path in advert ([fd2ad16](https://github.com/uswitch/trustyle/commit/fd2ad16))
+
+
+### Features
+
+* add content field to advert ([d410f4a](https://github.com/uswitch/trustyle/commit/d410f4a))
+
+
+
+
+
 # [0.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.advert@0.0.11...@uswitch/trustyle.advert@0.1.0) (2021-09-16)
 
 
