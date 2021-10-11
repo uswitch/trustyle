@@ -8,7 +8,8 @@ import { Icon } from '@uswitch/trustyle.icon'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   headline: string
-  body: string
+  body?: string
+  content?: React.ReactElement
   logo?: string
   footer: string
   badgeText: string
@@ -21,6 +22,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 const Advert: React.FC<Props> = ({
   headline,
   body,
+  content,
   logo,
   logoAlt,
   footer,
@@ -106,7 +108,8 @@ const Advert: React.FC<Props> = ({
                 </div>
               )}
               <div sx={{ padding: ['8px 0', '0'] }}>
-                <p sx={{ fontSize: '14px' }}>{body}</p>
+                {content && <div sx={{ fontSize: '14px' }}>{content}</div>}
+                {!content && body && <p sx={{ fontSize: '14px' }}>{body}</p>}
                 <Badge variant="advert">{badgeText}</Badge>
               </div>
             </div>
