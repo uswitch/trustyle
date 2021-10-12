@@ -5665,6 +5665,7 @@
     }
   },
   "modules": {
+    "categoryGuide": { "title": { "color": "dark-2" } },
     "lead-capture-form": {
       "base": {
         "container": {
