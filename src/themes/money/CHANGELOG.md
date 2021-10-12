@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.65.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.65.5...@uswitch/trustyle.money-theme@1.65.6) (2021-10-12)
+
+
+### Bug Fixes
+
+* balance transfer calculator ([15a273d](https://github.com/uswitch/trustyle/commit/15a273d))
+
+
+
+
+
 ## [1.65.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.65.4...@uswitch/trustyle.money-theme@1.65.5) (2021-10-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme
