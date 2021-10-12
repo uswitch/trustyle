@@ -7,7 +7,7 @@ import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import { Palette } from '@uswitch/trustyle-utils.palette'
 
 interface ContextProps {
-  open: number
+  open: number | null
   setOpenId: React.Dispatch<number>
   iconClosed?: Glyph
   iconOpen?: Glyph
@@ -324,6 +324,8 @@ Accordion.Group = ({
 
     return child
   })
+
+  React.useEffect(() => setOpenId(initiallyOpenedId), [initiallyOpenedId])
 
   return (
     <div
