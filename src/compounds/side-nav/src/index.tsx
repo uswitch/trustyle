@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
-import * as React from 'react'
-import { jsx, Themed } from 'theme-ui'
+import React from 'react'
+import { jsx, Themed, useThemeUI } from 'theme-ui'
 import Accordion from '@uswitch/trustyle.accordion'
 import { Palette } from '@uswitch/trustyle-utils.palette'
 
@@ -27,9 +27,13 @@ const SideNav: React.FC<Props> = ({
   additionalLinks = [],
   className
 }) => {
+  const { theme }: any = useThemeUI()
+  const mobileBreakpoint = theme?.breakpoints?.[1] | 1000
+  const isMobile = window.innerWidth <= mobileBreakpoint
+
   return (
     <nav className={className}>
-      <Accordion.Group>
+      <Accordion.Group initiallyOpenedId={isMobile ? null : 0}>
         <Accordion
           title={internalLinks.title}
           sx={{
