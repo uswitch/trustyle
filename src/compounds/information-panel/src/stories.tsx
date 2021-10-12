@@ -200,6 +200,14 @@ const infoText = (
   />
 )
 
+const infoTextWithList = (
+  <MoreInformationText
+    content={[
+      '<ul><li>Earn 0.25% cashback on the first £4,000 of purchases per calendar year. Earn 0.5% cashback on further purchases once you have made over £4,000 of purchases per calendar year</li><li>There is no limit to the amount of cashback you can earn in a year</li><li>Cashback will be paid automatically into the credit card account every January</li><li>New Customers : £20 cashback bonus on your balance, if you make £1,000 of purchases within 90 days of the account opening</li></ul>'
+    ]}
+  />
+)
+
 const eligibilityContent = (
   <MoreInformationBlock title="Eligibility" key="key-1">
     {list}
@@ -215,6 +223,12 @@ const ratesContent = (
 const textContent = (
   <MoreInformationBlock title="Repayment" key="key-3">
     {infoText}
+  </MoreInformationBlock>
+)
+
+const textContentWithBulletPoints = (
+  <MoreInformationBlock title="Repayment" key="key-3">
+    {infoTextWithList}
   </MoreInformationBlock>
 )
 
@@ -234,7 +248,7 @@ const moreInformationButton = (
   </ButtonLink>
 )
 
-const eligibity = (
+const eligibility = (
   <Eligibility
     moreInformationPanel={[eligibilityContent, ratesContent]}
     moreInformationLabel={moreInfoLabel}
@@ -242,7 +256,7 @@ const eligibity = (
   />
 )
 
-const eligibityWithText = (
+const eligibilityWithText = (
   <Eligibility
     moreInformationPanel={[eligibilityContent, textContent]}
     moreInformationLabel={moreInfoLabel}
@@ -250,15 +264,32 @@ const eligibityWithText = (
   />
 )
 
+const eligibilityWithBulletPoints = (
+  <Eligibility
+    moreInformationPanel={[textContentWithBulletPoints, textContent]}
+    moreInformationLabel={moreInfoLabel}
+  />
+)
+
 export const ExampleWithEligibility = () => (
-  <React.Fragment>{eligibity}</React.Fragment>
+  <React.Fragment>{eligibility}</React.Fragment>
 )
 
 export const ExampleWithText = () => (
-  <React.Fragment>{eligibityWithText}</React.Fragment>
+  <React.Fragment>{eligibilityWithText}</React.Fragment>
 )
 
 ExampleWithText.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const ExampleWithBulletPoints = () => (
+  <React.Fragment>{eligibilityWithBulletPoints}</React.Fragment>
+)
+
+ExampleWithBulletPoints.story = {
   parameters: {
     percy: { skip: true }
   }
@@ -269,6 +300,7 @@ export const AutomatedTests = () => {
     <AllThemes>
       <ExampleWithEligibility />
       <ExampleWithText />
+      <ExampleWithBulletPoints />
     </AllThemes>
   )
 }

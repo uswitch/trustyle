@@ -317,14 +317,13 @@ export const ImageCell: React.FC<ImageCellProps> = ({
     <BaseCell
       sx={{
         order: 1,
-        maxWidth: ['120px', '130px'],
+        maxWidth: 130,
         margin: 'auto',
         marginRight: ['auto', '15px'],
         py: ['10px', 0],
         '>:first-of-type': {
           margin: 'auto',
           display: 'block',
-          maxWidth: '130px',
           maxHeight: '90px'
         }
       }}

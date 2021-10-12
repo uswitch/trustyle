@@ -94,7 +94,8 @@ const Billboard: React.FC<Props> = ({
                   variant: styles(),
                   marginX: primarySlot || bgImage ? ['0', 'auto', '0'] : 'auto',
                   width: ['auto', '70%', '50%'],
-                  '& > ul > li': { fontSize: ['sm', 'md'], paddingY: 10 }
+                  'ul > li': { fontSize: ['sm', 'md'], paddingY: 10 },
+                  'ul > li *': { fontSize: ['sm', 'md'] }
                 }}
               >
                 {primaryContent}

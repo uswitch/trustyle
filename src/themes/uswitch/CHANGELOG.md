@@ -3,6 +3,115 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.60.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.59.7...@uswitch/trustyle.uswitch-theme@2.60.0) (2021-10-12)
+
+
+### Features
+
+* merged with master ([d25b4ff](https://github.com/uswitch/trustyle/commit/d25b4ff))
+
+
+
+
+
+## [2.59.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.59.6...@uswitch/trustyle.uswitch-theme@2.59.7) (2021-10-08)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.59.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.59.5...@uswitch/trustyle.uswitch-theme@2.59.6) (2021-10-08)
+
+
+### Bug Fixes
+
+* styling for fiels that are on one line ([743f9ed](https://github.com/uswitch/trustyle/commit/743f9ed))
+
+
+
+
+
+## [2.59.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.59.4...@uswitch/trustyle.uswitch-theme@2.59.5) (2021-10-07)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.59.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.59.3...@uswitch/trustyle.uswitch-theme@2.59.4) (2021-10-06)
+
+
+### Bug Fixes
+
+* spacing between title and accordion ([ed8e652](https://github.com/uswitch/trustyle/commit/ed8e652))
+
+
+
+
+
+## [2.59.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.59.1...@uswitch/trustyle.uswitch-theme@2.59.3) (2021-10-04)
+
+
+### Bug Fixes
+
+* minor change ([8f5984d](https://github.com/uswitch/trustyle/commit/8f5984d))
+* rich-text-module spacing ([20a2562](https://github.com/uswitch/trustyle/commit/20a2562))
+* visual bugs on safari ([96ca9f3](https://github.com/uswitch/trustyle/commit/96ca9f3))
+
+
+
+
+
+## [2.59.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.59.1...@uswitch/trustyle.uswitch-theme@2.59.2) (2021-10-04)
+
+
+### Bug Fixes
+
+* rich-text-module spacing ([20a2562](https://github.com/uswitch/trustyle/commit/20a2562))
+* visual bugs on safari ([96ca9f3](https://github.com/uswitch/trustyle/commit/96ca9f3))
+
+
+
+
+
+## [2.59.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.59.0...@uswitch/trustyle.uswitch-theme@2.59.1) (2021-10-04)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+# [2.59.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.58.2...@uswitch/trustyle.uswitch-theme@2.59.0) (2021-10-01)
+
+
+### Features
+
+* add support for buttons to nav dropdown ([0bd8619](https://github.com/uswitch/trustyle/commit/0bd8619))
+
+
+
+
+
+## [2.58.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.58.1...@uswitch/trustyle.uswitch-theme@2.58.2) (2021-09-30)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.58.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.58.0...@uswitch/trustyle.uswitch-theme@2.58.1) (2021-09-29)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
 # [2.58.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.57.0...@uswitch/trustyle.uswitch-theme@2.58.0) (2021-09-27)
 
 
