@@ -887,6 +887,7 @@
             },
             "error": {
               "color": "white",
+              "paddingX": 10,
               "mt": "xs",
               "textAlign": "left",
               "title": {
@@ -3494,6 +3495,12 @@
               "submit": {
                 "variant": "elements.form-section.default.elements.wrapper.submit",
                 "opacity": 1
+              },
+              "calculator": {
+                "variant": "elements.form-section.default.elements.wrapper",
+                "backgroundColor": "transparent",
+                "paddingTop": "md",
+                "paddingBottom": 8
               }
             },
             "heading": {
@@ -3508,7 +3515,6 @@
                 }
               },
               "calculator": {
-                "backgroundColor": "red",
                 "textAlign": "center",
                 "display": "flex",
                 "flexWrap": "wrap",
