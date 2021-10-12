@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.advert@0.2.0...@uswitch/trustyle.advert@0.2.2) (2021-10-12)
+
+
+### Bug Fixes
+
+* build ([1c48c0a](https://github.com/uswitch/trustyle/commit/1c48c0a))
+
+
+
+
+
 # [0.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.advert@0.1.0...@uswitch/trustyle.advert@0.2.0) (2021-10-11)
 
 
