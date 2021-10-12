@@ -1787,7 +1787,17 @@
               "flexDirection": "column",
               "paddingX": "xs",
               "paddingBottom": "xl",
-              "boxSizing": " border-box"
+              "boxSizing": " border-box",
+              "calculator": {
+                "flex": ["1 0 100%", "1 0 25%"],
+                "justifyContent": "space-between",
+                "alignSelf": "stretch",
+                "display": "flex",
+                "flexDirection": "column",
+                "paddingX": "xs",
+                "paddingBottom": "xl",
+                "boxSizing": " border-box"
+              }
             }
           },
           "checkbox": {
