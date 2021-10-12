@@ -1779,7 +1779,7 @@
                 "variant": "elements.form.variants.field-section.input.wrapper"
               }
             },
-            "wrapper": {
+            "inputWrapper": {
               "flex": ["1 0 100%", "1 0 25%"],
               "justifyContent": "space-between",
               "alignSelf": "stretch",
@@ -1787,7 +1787,13 @@
               "flexDirection": "column",
               "paddingX": "xs",
               "paddingBottom": "xl",
-              "boxSizing": " border-box"
+              "boxSizing": "border-box"
+            },
+            "wrapper": {
+              "variant": "elements.form.variants.field-section.input.inputWrapper",
+              "calculator": {
+                "variant": "elements.form.variants.field-section.input.inputWrapper"
+              }
             }
           },
           "checkbox": {
