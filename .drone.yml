@@ -27,6 +27,7 @@ pipeline:
     when:
       event: [push]
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    group: build-checks
     commands:
       - npm run build-storybook
 
@@ -34,7 +35,7 @@ pipeline:
     when:
       event: [push]
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
-    group: checks
+    group: build-checks
     commands:
       - npm run eslint:check
 
@@ -42,7 +43,7 @@ pipeline:
     when:
       event: [push]
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
-    group: checks
+    group: build-checks
     commands:
       - npm run prettier:check
 
@@ -50,7 +51,7 @@ pipeline:
     when:
       event: [push]
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
-    group: checks
+    group: build-checks
     commands:
       - USE_STATIC_STORYBOOK=true npm run a11y
 
@@ -58,6 +59,7 @@ pipeline:
     when:
       event: [push]
     image: registry.usw.co/cloud/node-12-puppeteer:03228dd2d438979e8973ec16351c4d7bc88f552e
+    group: build-checks
     commands:
       - NODE_ENV=production npm run build
 
