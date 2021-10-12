@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { jsx } from 'theme-ui'
-import css from '@emotion/css'
+import { css } from '@emotion/react'
 import { colors } from '@uswitch/trustyle.styles'
 
 import * as st from './styles'
