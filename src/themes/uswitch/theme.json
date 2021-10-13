@@ -877,7 +877,6 @@
                 "mb": ["md", "lg"],
                 "width": ["100%", "100%", "28%"],
                 "justifyContent": "space-between",
-                "alignItems": "center",
                 "pb": ["xs", 0]
               }
             },
@@ -897,17 +896,16 @@
             }
           },
           "label": {
-            "variant": "styles.h4",
+            "variant": "styles.h5",
             "color": "grey-80",
-            "fontWeight": "bold",
             "display": "block",
             "mb": "xs",
-            "textAlign": "left",
             ":not(:first-of-type)": {
               "mt": "sm"
             },
             "variants": {
               "calculator": {
+                "mb": 0,
                 "flex": "1 1 0px",
                 "fontWeight": "600"
               }
@@ -1005,7 +1003,7 @@
             }
           },
           "label": {
-            "variant": "styles.h4",
+            "variant": "styles.h5",
             "color": "primary",
             "display": "block",
             "mb": "sm",
@@ -1548,7 +1546,7 @@
           },
           "calculator": {
             "mb": "sm",
-            "mt": "lg"
+            "mt": [0, "lg"]
           },
           "loading": {
             "variant": "elements.form.button.base",
@@ -3425,7 +3423,7 @@
             "borderRadius": "4px",
             "mb": "lg",
             "color": "heading",
-            "paddingX": "lg",
+            "paddingX": [0, "lg"],
             "paddingY": 0,
             "opacity": 0.8,
             "submit": {
@@ -3515,7 +3513,7 @@
                 }
               },
               "calculator": {
-                "textAlign": "center",
+                "textAlign": ["left", "center"],
                 "display": "flex",
                 "flexWrap": "wrap",
                 "justifyContent": "space-between",
@@ -3576,7 +3574,7 @@
               "alignItems": "center",
               "border": "1px solid",
               "borderColor": "grey-20",
-              "p": ["24px", "24px 56px"],
+              "p": ["24px", "56px"],
               "mb": ["0", "sm", "xxl"],
               "flexDirection": ["column", "column", "row"]
             },
