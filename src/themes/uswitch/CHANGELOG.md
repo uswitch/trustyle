@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.60.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.60.3...@uswitch/trustyle.uswitch-theme@2.60.4) (2021-10-13)
+
+
+### Bug Fixes
+
+* fixed issues with calc form styles ([bd89026](https://github.com/uswitch/trustyle/commit/bd89026))
+* fixed theme for uswitch ([a856cfd](https://github.com/uswitch/trustyle/commit/a856cfd))
+* fixed theme for uswitch, added some new calc variants ([c4afbf7](https://github.com/uswitch/trustyle/commit/c4afbf7))
+
+
+
+
+
 ## [2.60.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.60.2...@uswitch/trustyle.uswitch-theme@2.60.3) (2021-10-13)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
