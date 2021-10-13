@@ -432,6 +432,7 @@ interface CtaCellProps extends React.HTMLAttributes<HTMLDivElement> {
   styles?: any
   href?: string
   onClick?: (event?: any) => void
+  onSecondaryClick?: (event?: any) => void
   disabled?: boolean
   variant?: string
   isWireFrame?: boolean
@@ -445,6 +446,7 @@ export const CtaCell: React.FC<CtaCellProps> = ({
   styles,
   href,
   onClick,
+  onSecondaryClick,
   disabled,
   variant,
   isWireFrame = false,
@@ -470,7 +472,9 @@ export const CtaCell: React.FC<CtaCellProps> = ({
     onClick
   }
 
-  const onSecondaryClick = (secondaryHref: string) => {
+  const redirectToSecondaryHref = (secondaryHref: string) => {
+    onSecondaryClick && onSecondaryClick()
+
     window.open(secondaryHref)
   }
 
@@ -504,7 +508,7 @@ export const CtaCell: React.FC<CtaCellProps> = ({
           (clickableRow ? (
             <Button
               variant="secondaryLink"
-              onClick={() => onSecondaryClick(secondaryHref)}
+              onClick={() => redirectToSecondaryHref(secondaryHref)}
               className="secondary-link"
             >
               {secondaryText}
@@ -515,6 +519,7 @@ export const CtaCell: React.FC<CtaCellProps> = ({
               variant="secondaryLink"
               target="_blank"
               className="secondary-link"
+              onClick={onSecondaryClick}
             >
               {secondaryText}
             </ButtonLink>
