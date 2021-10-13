@@ -13,6 +13,7 @@ type Props<T extends React.ComponentType<any>> = Overwrite<
     variant: string
     children: React.ReactNode
     size?: string
+    width?: string
     beforeIcon?: Glyph
     afterIcon?: Glyph
     onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void
@@ -30,6 +31,7 @@ export const ButtonLink = <
   size = 'large',
   beforeIcon,
   afterIcon,
+  width = 'auto',
   trackInteraction = () => {},
   onClick = () => {},
   ...props
@@ -61,6 +63,7 @@ export const ButtonLink = <
   return (
     <Themed.a
       sx={{
+        width,
         cursor: 'pointer',
         backgroundImage: 'none',
         fontFamily: 'base',
