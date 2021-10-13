@@ -1060,7 +1060,11 @@
             "checkbox": {
               "wrapper": {
                 "variant": "elements.form.variants.journey.input.wrapper",
-                "flex": "1 0 100%"
+
+                "flex": "1 0 100%",
+                "span": {
+                  "pl": "sm"
+                }
               }
             },
             "radio": {
