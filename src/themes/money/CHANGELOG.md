@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.66.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.65.7...@uswitch/trustyle.money-theme@1.66.0) (2021-10-15)
+
+
+### Features
+
+* updated form variant with new one - dropdown, added label aligment for calculator forms ([90beb52](https://github.com/uswitch/trustyle/commit/90beb52))
+
+
+
+
+
 ## [1.65.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.65.6...@uswitch/trustyle.money-theme@1.65.7) (2021-10-13)
 
 **Note:** Version bump only for package @uswitch/trustyle.money-theme

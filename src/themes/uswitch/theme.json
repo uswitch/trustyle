@@ -873,11 +873,18 @@
             "wrapper": {
               "mb": ["md", "lg"],
               "calculator": {
+                "textAlign": "left",
                 "display": "flex",
                 "mb": ["md", "lg"],
                 "width": ["100%", "100%", "28%"],
                 "justifyContent": "space-between",
                 "pb": ["xs", 0]
+              }
+            },
+            "calculator": {
+              "dropdown": {
+                "variant": "elements.form.variants.default.input.wrapper.calculator",
+                "alignItems": "center"
               }
             },
             "singleRow": {
