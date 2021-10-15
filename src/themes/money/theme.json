@@ -1905,6 +1905,11 @@
                 "mb": 36
               }
             },
+            "calculator": {
+              "dropdown": {
+                "variant": "elements.form.variants.default.input.wrapper"
+              }
+            },
             "singleRow": {
               "mb": [0, 56]
             },
