@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.60.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.60.4...@uswitch/trustyle.uswitch-theme@2.60.5) (2021-10-15)
+
+
+### Bug Fixes
+
+* fixed issues with padding on calculators, fixed font on address lookup, fixed aligment ([00806a3](https://github.com/uswitch/trustyle/commit/00806a3))
+
+
+
+
+
 ## [2.60.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.60.3...@uswitch/trustyle.uswitch-theme@2.60.4) (2021-10-13)
 
 
