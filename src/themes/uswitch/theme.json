@@ -986,7 +986,8 @@
               "position": "absolute",
               "width": "100%",
               "margin": "0",
-              "top": "68px"
+              "top": "68px",
+              "paddingX": 10
             }
           },
           "description": {
@@ -1420,6 +1421,7 @@
             },
             "error": {
               "color": "error",
+              "paddingX": 10,
               "mt": "xs",
               "textAlign": "left",
               "title": {
@@ -1591,7 +1593,7 @@
           "color": "#2f353a",
           "display": "block",
           "marginBottom": "xxs",
-          "fontFamily": "legacy",
+          "fontFamily": "base",
           "fontWeight": "base",
           "textAlign": "left"
         },
@@ -3427,7 +3429,7 @@
             "borderRadius": "4px",
             "mb": "lg",
             "color": "heading",
-            "paddingX": [0, "lg"],
+            "paddingX": [10, "lg"],
             "paddingY": 0,
             "opacity": 0.8,
             "submit": {
@@ -3501,6 +3503,7 @@
               "calculator": {
                 "variant": "elements.form-section.default.elements.wrapper",
                 "backgroundColor": "transparent",
+                "paddingX": 0,
                 "paddingTop": "md",
                 "paddingBottom": 8
               }
