@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.61.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.60.5...@uswitch/trustyle.uswitch-theme@2.61.0) (2021-10-15)
+
+
+### Features
+
+* updated form variant with new one - dropdown, added label aligment for calculator forms ([90beb52](https://github.com/uswitch/trustyle/commit/90beb52))
+
+
+
+
+
 ## [2.60.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.60.4...@uswitch/trustyle.uswitch-theme@2.60.5) (2021-10-15)
 
 
