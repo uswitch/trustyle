@@ -15,10 +15,17 @@ import CellBase from './cell-base'
 const capitalise = (string: string) =>
   string.charAt(0).toUpperCase() + string.slice(1)
 
-const grid = (rowOrCol: 'row' | 'column', start: number, span: number) => {
+const grid = (
+  rowOrCol: 'row' | 'column',
+  start: number,
+  span: number,
+  singleLine = false
+) => {
   const rowOrColCap = capitalise(rowOrCol)
   return {
-    [`grid${rowOrColCap}`]: `${start} / span ${span}`,
+    [`grid${rowOrColCap}`]: singleLine
+      ? forceMobile()([`1 / span ${span}`, `${start} / span ${span}`])
+      : `${start} / span ${span}`,
     [`msGrid${rowOrColCap}`]: `${start}`,
     [`msGrid${rowOrColCap}Span`]: `${span}`
   }
@@ -32,6 +39,7 @@ export interface CellPrimaryProps extends React.HTMLAttributes<HTMLDivElement> {
   isCard?: boolean
   isWireFrame?: boolean
   wireFrameStyles?: object
+  singleLine?: boolean
 }
 
 export interface ContentRowProps extends CellPrimaryProps {
@@ -120,7 +128,8 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
   children,
   headerImage,
   isCard,
-  isWireFrame = false
+  isWireFrame = false,
+  singleLine = false
 }) => {
   const wireFrameStyles = {
     label: {
@@ -164,7 +173,12 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
           msGridRowSpan: forceMobile(isCard)(['2', '1']),
           alignSelf: forceMobile(isCard)(['baseline', 'auto']),
           fontSize: 'xs',
-          marginTop: headerImage ? 0 : forceMobile(isCard)(['xl', 'sm']),
+          marginTop: singleLine
+            ? 'auto'
+            : headerImage
+            ? 0
+            : forceMobile(isCard)(['xl', 'sm']),
+          marginBottom: 'auto',
           variant: `compounds.product-table.${headerImage &&
             'variants.redesign.'}cellContent.label`
         }}
@@ -175,7 +189,7 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
       <div
         sx={{
           ...grid('column', 1, 1),
-          ...grid('row', headerImage ? 2 : 1, 1),
+          ...grid('row', headerImage ? 2 : 1, 1, singleLine),
           fontSize: isCard ? 'sm' : 'xxl',
           textAlign: isCard ? ('center' as const) : ('left' as const),
           small: {
@@ -196,6 +210,7 @@ const BlockContent: React.FC<CellPrimaryProps> = ({
 const ProductTableCellContent: React.FC<CellPrimaryProps> = ({
   children,
   isWireFrame,
+  singleLine,
   ...props
 }) => {
   const { inSplit } = React.useContext(CellContext)
@@ -216,7 +231,12 @@ const ProductTableCellContent: React.FC<CellPrimaryProps> = ({
   }
 
   return (
-    <BlockContent isCard={isCard} isWireFrame={isWireFrame} {...props}>
+    <BlockContent
+      isCard={isCard}
+      isWireFrame={isWireFrame}
+      singleLine={singleLine}
+      {...props}
+    >
       {children}
     </BlockContent>
   )
