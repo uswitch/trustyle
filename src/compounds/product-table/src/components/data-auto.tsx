@@ -48,7 +48,6 @@ const hasSubscript = (text: string) => {
 export interface DataAutoProps extends React.HTMLAttributes<HTMLDivElement> {
   text: string
   headerImage?: boolean
-  variant?: string
 }
 const ProductTableDataAuto: React.FC<DataAutoProps> = ({
   text,
