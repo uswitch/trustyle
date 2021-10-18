@@ -713,7 +713,7 @@ export const MoneyRedesignExample = () => {
       </ProductTable.cells.Content>
       <ProductTable.cells.Content label="Representative APR" headerImage>
         <ProductTable.data.Auto
-          text="0% for 29 months with a 2% fee (£3 min.)"
+          text="49.9% APR (£1,000 to £10,000)"
           headerImage
         />
       </ProductTable.cells.Content>
