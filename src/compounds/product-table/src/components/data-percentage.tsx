@@ -7,7 +7,7 @@ export interface CircularPercentageBarProps
   extends React.HTMLAttributes<HTMLDivElement> {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   percentage: number
-  align?: 'center' | 'start' | 'end'
+  align?: string | string[]
 }
 
 const CircularPercentageBar: React.FC<CircularPercentageBarProps> = ({

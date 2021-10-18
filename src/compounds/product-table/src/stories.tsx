@@ -896,11 +896,15 @@ export const MoneyRedesignExampleWithPercentage = () => {
       <ProductTable.cells.Content label="Loan Term" headerImage>
         <ProductTable.data.Auto text="1 year to 5 years" headerImage />
       </ProductTable.cells.Content>
-      <ProductTable.cells.Content label="Chance of acceptance" headerImage>
+      <ProductTable.cells.Content
+        label="Chance of acceptance"
+        headerImage
+        singleLine
+      >
         <ProductTable.data.CircularPercentageBar
           percentage={50}
           size="xs"
-          align="start"
+          align={['end', 'start']}
         />
       </ProductTable.cells.Content>
       <ProductTable.cells.Cta

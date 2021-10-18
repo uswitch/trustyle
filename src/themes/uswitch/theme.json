@@ -3822,10 +3822,10 @@
           "color": "primary"
         },
         "bar": {
-          "border": "0.08em solid #141424 !important"
+          "border": "0.08em solid #84A6FF !important"
         },
         "fill": {
-          "border": "0.08em solid #141424 !important"
+          "border": "0.08em solid #84A6FF !important"
         },
         "bar-full": {
           "border": "0.08em solid #F3F3F4 !important"
