@@ -3417,7 +3417,8 @@
             "fields": {
               "calculator": {
                 "display": "flex",
-                "flexWrap": "wrap"
+                "flexWrap": "wrap",
+                "justifyContent": "space-between"
               }
             },
             "buttonWrapper": {
