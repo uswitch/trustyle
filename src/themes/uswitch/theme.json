@@ -4094,8 +4094,10 @@
         }
       },
       "title": {
-        "variant": "compounds.billboard.primaryContent.p",
-        "mb": "sm"
+        "p": {
+          "variant": "compounds.billboard.primaryContent.p",
+          "mb": "sm"
+        }
       },
       "button": {
         "my": "0 !important"

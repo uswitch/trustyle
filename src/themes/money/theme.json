@@ -3259,10 +3259,12 @@
         }
       },
       "title": {
-        "variant": "compounds.billboard.primaryContent.p",
-        "color": "grey-0",
-        "textAlign": "left",
-        "mb": "sm"
+        "p": {
+          "variant": "compounds.billboard.primaryContent.p",
+          "color": "grey-0",
+          "textAlign": "left",
+          "mb": "sm"
+        }
       },
       "button": {
         "my": "0 !important"
