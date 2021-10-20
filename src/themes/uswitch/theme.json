@@ -3417,7 +3417,8 @@
             "fields": {
               "calculator": {
                 "display": "flex",
-                "flexWrap": "wrap"
+                "flexWrap": "wrap",
+                "justifyContent": "space-between"
               }
             },
             "buttonWrapper": {
@@ -4094,8 +4095,10 @@
         }
       },
       "title": {
-        "variant": "compounds.billboard.primaryContent.p",
-        "mb": "sm"
+        "p": {
+          "variant": "compounds.billboard.primaryContent.p",
+          "mb": "sm"
+        }
       },
       "button": {
         "my": "0 !important"
