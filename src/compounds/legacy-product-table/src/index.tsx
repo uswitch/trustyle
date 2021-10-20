@@ -340,6 +340,7 @@ interface DataCellProps extends React.HTMLAttributes<HTMLDivElement> {
   color?: string
   label?: string
   isWireFrame?: boolean
+  variant?: string
 }
 
 export const DataCell: React.FC<DataCellProps> = ({
@@ -348,6 +349,7 @@ export const DataCell: React.FC<DataCellProps> = ({
   borderBottomColor,
   color,
   label,
+  variant,
   isWireFrame = false
 }) => {
   const wireFrameLabelStyles = {
@@ -368,7 +370,7 @@ export const DataCell: React.FC<DataCellProps> = ({
       backgroundColor,
       borderBottomColor,
       fontFamily: 'Varela Round,Arial,sans-serif',
-      color: '#191919'
+      color: variant === 'LegacyMobileCards' ? '#000000' : '#191919'
     },
     wireframe: {
       display: 'flex',
@@ -397,11 +399,11 @@ export const DataCell: React.FC<DataCellProps> = ({
         <span
           sx={{
             fontFamily: 'Open Sans,Arial,sans-serif',
-            fontSize: '11px',
+            fontSize: variant === 'LegacyMobileCards' ? '12px' : '11px',
             display: 'flex',
             justifyContent: 'center',
             padding: '5px 5px 0px',
-            color
+            color: variant === 'LegacyMobileCards' ? '#000000' : color
           }}
         >
           {label}
@@ -493,7 +495,9 @@ export const CtaCell: React.FC<CtaCellProps> = ({
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          alignItems: 'center'
+          alignItems: 'center',
+          marginTop: variant === 'LegacyMobileCards' ? 20 : 0,
+          paddingBottom: variant === 'LegacyMobileCards' ? 10 : 0
         }}
       >
         {href ? (
@@ -703,7 +707,6 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           )}
           {!isWireFrame && telephone && <TelephoneInfo telephone={telephone} />}
         </header>
-
         <div
           sx={{
             display: ['initial', 'flex'],
