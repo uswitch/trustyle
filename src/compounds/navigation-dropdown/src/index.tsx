@@ -78,7 +78,9 @@ const NavigationDropdown: React.FC<DropdownProps> = ({
       }}
       onClick={handleClick}
     >
-      <p sx={{ variant: 'compounds.navigation-dropdown.title' }}>{title}</p>
+      <div sx={{ variant: 'compounds.navigation-dropdown.title' }}>
+        <p>{title}</p>
+      </div>
       <button
         sx={{
           width: '100%',

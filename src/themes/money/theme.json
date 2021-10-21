@@ -1779,7 +1779,7 @@
                 "variant": "elements.form.variants.field-section.input.wrapper"
               }
             },
-            "wrapper": {
+            "inputWrapper": {
               "flex": ["1 0 100%", "1 0 25%"],
               "justifyContent": "space-between",
               "alignSelf": "stretch",
@@ -1787,7 +1787,13 @@
               "flexDirection": "column",
               "paddingX": "xs",
               "paddingBottom": "xl",
-              "boxSizing": " border-box"
+              "boxSizing": "border-box"
+            },
+            "wrapper": {
+              "variant": "elements.form.variants.field-section.input.inputWrapper",
+              "calculator": {
+                "variant": "elements.form.variants.field-section.input.inputWrapper"
+              }
             }
           },
           "checkbox": {
@@ -1897,6 +1903,11 @@
               "mb": [36, 56],
               ":last-child": {
                 "mb": 36
+              }
+            },
+            "calculator": {
+              "dropdown": {
+                "variant": "elements.form.variants.default.input.wrapper"
               }
             },
             "singleRow": {
@@ -3248,10 +3259,12 @@
         }
       },
       "title": {
-        "variant": "compounds.billboard.primaryContent.p",
-        "color": "grey-0",
-        "textAlign": "left",
-        "mb": "sm"
+        "p": {
+          "variant": "compounds.billboard.primaryContent.p",
+          "color": "grey-0",
+          "textAlign": "left",
+          "mb": "sm"
+        }
       },
       "button": {
         "my": "0 !important"
@@ -4236,6 +4249,14 @@
     }
   },
   "modules": {
+    "categoryGuide": {
+      "title": { "color": "text" },
+      "link": {
+        "textDecoration": "none",
+        "color": "plum",
+        "lineHeight": "1.75"
+      }
+    },
     "image-callout": {
       "base": {
         "wrapper": {

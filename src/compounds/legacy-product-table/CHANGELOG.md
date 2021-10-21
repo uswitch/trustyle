@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.7.10...@uswitch/trustyle.legacy-product-table@1.7.11) (2021-10-20)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+
+
+
+
+## [1.7.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.7.9...@uswitch/trustyle.legacy-product-table@1.7.10) (2021-10-15)
+
+**Note:** Version bump only for package @uswitch/trustyle.legacy-product-table
+
+
+
+
+
+## [1.7.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.7.7...@uswitch/trustyle.legacy-product-table@1.7.9) (2021-10-13)
+
+
+### Bug Fixes
+
+* added secondary click handler to cell cta ([bd46a52](https://github.com/uswitch/trustyle/commit/bd46a52))
+
+
+
+
+
+## [1.7.8](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.7.7...@uswitch/trustyle.legacy-product-table@1.7.8) (2021-10-13)
+
+
+### Bug Fixes
+
+* added secondary click handler to cell cta ([bd46a52](https://github.com/uswitch/trustyle/commit/bd46a52))
+
+
+
+
+
 ## [1.7.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.legacy-product-table@1.7.6...@uswitch/trustyle.legacy-product-table@1.7.7) (2021-10-05)
 
 **Note:** Version bump only for package @uswitch/trustyle.legacy-product-table

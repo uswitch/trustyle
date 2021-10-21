@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.navigation-dropdown@0.2.0...@uswitch/trustyle.navigation-dropdown@0.2.1) (2021-10-19)
+
+
+### Bug Fixes
+
+* label spacing ([dc945ca](https://github.com/uswitch/trustyle/commit/dc945ca))
+
+
+
+
+
 # [0.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.navigation-dropdown@0.1.1...@uswitch/trustyle.navigation-dropdown@0.2.0) (2021-10-01)
 
 

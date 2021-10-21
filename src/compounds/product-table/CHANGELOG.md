@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.17.5...@uswitch/trustyle.product-table@2.17.6) (2021-10-18)
+
+**Note:** Version bump only for package @uswitch/trustyle.product-table
+
+
+
+
+
+## [2.17.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.17.4...@uswitch/trustyle.product-table@2.17.5) (2021-10-18)
+
+
+### Bug Fixes
+
+* changed color and alignment ([d405b55](https://github.com/uswitch/trustyle/commit/d405b55))
+
+
+
+
+
 ## [2.17.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.17.3...@uswitch/trustyle.product-table@2.17.4) (2021-08-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.product-table
