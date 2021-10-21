@@ -2568,10 +2568,12 @@
         }
       },
       "title": {
-        "variant": "compounds.billboard.primaryContent.p",
-        "color": "grey-0",
-        "textAlign": "left",
-        "mb": "sm"
+        "p": {
+          "variant": "compounds.billboard.primaryContent.p",
+          "color": "grey-0",
+          "textAlign": "left",
+          "mb": "sm"
+        }
       },
       "button": {
         "my": "0 !important"
@@ -3197,6 +3199,14 @@
     }
   },
   "modules": {
+    "categoryGuide": {
+      "title": { "color": "text" },
+      "link": {
+        "textDecoration": "none",
+        "color": "plum",
+        "lineHeight": "1.75"
+      }
+    },
     "image": {
       "contentCols": 12,
       "contentSpan": 10
