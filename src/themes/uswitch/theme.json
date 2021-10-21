@@ -4092,6 +4092,99 @@
         "borderColor": "primary"
       }
     },
+    "side-nav": {
+      "accordion": {
+        "button": {
+          "fontSize": "sm",
+          "backgroundColor": "grey-05",
+          "p": "sm",
+          "border": "none"
+        }
+      },
+      "internalLinkList": {
+        "listStyle": "none",
+        "paddingLeft": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "margin": 0
+      },
+      "internalLinkListItem": {
+        "base": {
+          "mb": 0,
+          "position": "relative",
+          ">a": {
+            "display": "block",
+            "color": "grey-70",
+            "textDecoration": "none",
+            "fontSize": "xs",
+            "pt": "xs",
+            "pb": "xs",
+            "px": "sm",
+            ":visited": {
+              "color": "grey-70"
+            },
+            ":focus": {
+              "variant": "compounds.side-nav.isActive"
+            }
+          },
+          "&.active-sidenav-item": {
+            "color": "primary",
+            "::after": {
+              "content": "\"\"",
+              "position": "absolute",
+              "top": "0",
+              "left": "0",
+              "display": "block",
+              "width": 4,
+              "height": "100%",
+              "backgroundColor": "primary"
+            },
+            ">a": {
+              "color": "primary",
+              ":visited": {
+                "color": "primary"
+              }
+            }
+          }
+        },
+        "isActive": {
+          "variant": "compounds.side-nav.internalLinkListItem.base",
+          "color": "primary",
+          "::after": {
+            "variant": "compounds.side-nav.internalLinkListItem.base.::after",
+            "content": "\"\"",
+            "position": "absolute",
+            "top": "0",
+            "left": "0",
+            "display": "block",
+            "width": 4,
+            "height": "100%",
+            "backgroundColor": "primary"
+          },
+          ">a": {
+            "variant": "compounds.side-nav.internalLinkListItem.base.>a",
+            "color": "primary",
+            ":visited": {
+              "color": "primary"
+            }
+          }
+        }
+      },
+      "additionalLink": {
+        "display": "block",
+        "color": "grey-80",
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "paddingLeft": "0",
+        "borderWidth": "1px 0 0 0",
+        "borderStyle": "solid",
+        "borderColor": "grey-20",
+        "fontSize": "sm",
+        "a": {
+          "textDecoration": "none"
+        }
+      }
+    },
     "social-sharing": {
       "outer-container": {
         "px": 0,
