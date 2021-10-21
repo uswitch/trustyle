@@ -768,10 +768,7 @@
       },
       "bannerText": {
         "paddingBottom": "40px",
-        "paddingX": [
-          "sm",
-          "lg"
-        ],
+        "paddingX": ["sm", "lg"],
         "marginX": "xs",
         "marginTop": "0",
         "textAlign": "center",
@@ -783,31 +780,14 @@
       "variants": {
         "full": {
           "variant": "elements.modal.base",
-          "maxWidth": [
-            "none",
-            "30em",
-            "38em"
-          ],
-          "margin": [
-            "auto",
-            "100px auto"
-          ],
-          "flexGrow": [
-            1,
-            0
-          ]
+          "maxWidth": ["none", "30em", "38em"],
+          "margin": ["auto", "100px auto"],
+          "flexGrow": [1, 0]
         },
         "partial": {
           "variant": "elements.modal.base",
-          "maxWidth": [
-            "none",
-            "30em",
-            "38em"
-          ],
-          "margin": [
-            "auto",
-            "100px auto"
-          ],
+          "maxWidth": ["none", "30em", "38em"],
+          "margin": ["auto", "100px auto"],
           "flexGrow": "0"
         }
       },
