@@ -340,6 +340,7 @@ interface DataCellProps extends React.HTMLAttributes<HTMLDivElement> {
   color?: string
   label?: string
   isWireFrame?: boolean
+  variant?: string
 }
 
 export const DataCell: React.FC<DataCellProps> = ({
@@ -348,6 +349,7 @@ export const DataCell: React.FC<DataCellProps> = ({
   borderBottomColor,
   color,
   label,
+  variant,
   isWireFrame = false
 }) => {
   const wireFrameLabelStyles = {
@@ -368,7 +370,7 @@ export const DataCell: React.FC<DataCellProps> = ({
       backgroundColor,
       borderBottomColor,
       fontFamily: 'Varela Round,Arial,sans-serif',
-      color: '#191919'
+      color: variant === 'LegacyMobileCards' ? '#000000' : '#191919'
     },
     wireframe: {
       display: 'flex',
@@ -397,11 +399,11 @@ export const DataCell: React.FC<DataCellProps> = ({
         <span
           sx={{
             fontFamily: 'Open Sans,Arial,sans-serif',
-            fontSize: '11px',
+            fontSize: variant === 'LegacyMobileCards' ? '12px' : '11px',
             display: 'flex',
             justifyContent: 'center',
             padding: '5px 5px 0px',
-            color
+            color: variant === 'LegacyMobileCards' ? '#000000' : color
           }}
         >
           {label}
@@ -432,6 +434,7 @@ interface CtaCellProps extends React.HTMLAttributes<HTMLDivElement> {
   styles?: any
   href?: string
   onClick?: (event?: any) => void
+  onSecondaryClick?: (event?: any) => void
   disabled?: boolean
   variant?: string
   isWireFrame?: boolean
@@ -445,6 +448,7 @@ export const CtaCell: React.FC<CtaCellProps> = ({
   styles,
   href,
   onClick,
+  onSecondaryClick,
   disabled,
   variant,
   isWireFrame = false,
@@ -470,7 +474,9 @@ export const CtaCell: React.FC<CtaCellProps> = ({
     onClick
   }
 
-  const onSecondaryClick = (secondaryHref: string) => {
+  const redirectToSecondaryHref = (secondaryHref: string) => {
+    onSecondaryClick && onSecondaryClick()
+
     window.open(secondaryHref)
   }
 
@@ -489,7 +495,9 @@ export const CtaCell: React.FC<CtaCellProps> = ({
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          alignItems: 'center'
+          alignItems: 'center',
+          marginTop: variant === 'LegacyMobileCards' ? 20 : 0,
+          paddingBottom: variant === 'LegacyMobileCards' ? 10 : 0
         }}
       >
         {href ? (
@@ -504,7 +512,7 @@ export const CtaCell: React.FC<CtaCellProps> = ({
           (clickableRow ? (
             <Button
               variant="secondaryLink"
-              onClick={() => onSecondaryClick(secondaryHref)}
+              onClick={() => redirectToSecondaryHref(secondaryHref)}
               className="secondary-link"
             >
               {secondaryText}
@@ -515,6 +523,7 @@ export const CtaCell: React.FC<CtaCellProps> = ({
               variant="secondaryLink"
               target="_blank"
               className="secondary-link"
+              onClick={onSecondaryClick}
             >
               {secondaryText}
             </ButtonLink>
@@ -698,7 +707,6 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
           )}
           {!isWireFrame && telephone && <TelephoneInfo telephone={telephone} />}
         </header>
-
         <div
           sx={{
             display: ['initial', 'flex'],

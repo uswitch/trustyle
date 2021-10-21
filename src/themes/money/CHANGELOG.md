@@ -3,6 +3,74 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.66.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.66.0...@uswitch/trustyle.money-theme@1.66.1) (2021-10-19)
+
+
+### Bug Fixes
+
+* update themes ([6ec7629](https://github.com/uswitch/trustyle/commit/6ec7629))
+
+
+
+
+
+# [1.66.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.65.7...@uswitch/trustyle.money-theme@1.66.0) (2021-10-15)
+
+
+### Features
+
+* updated form variant with new one - dropdown, added label aligment for calculator forms ([90beb52](https://github.com/uswitch/trustyle/commit/90beb52))
+
+
+
+
+
+## [1.65.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.65.6...@uswitch/trustyle.money-theme@1.65.7) (2021-10-13)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.65.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.65.5...@uswitch/trustyle.money-theme@1.65.6) (2021-10-12)
+
+
+### Bug Fixes
+
+* balance transfer calculator ([15a273d](https://github.com/uswitch/trustyle/commit/15a273d))
+
+
+
+
+
+## [1.65.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.65.4...@uswitch/trustyle.money-theme@1.65.5) (2021-10-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.65.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.65.3...@uswitch/trustyle.money-theme@1.65.4) (2021-10-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.money-theme
+
+
+
+
+
+## [1.65.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.65.2...@uswitch/trustyle.money-theme@1.65.3) (2021-10-08)
+
+
+### Bug Fixes
+
+* styling for fiels that are on one line ([743f9ed](https://github.com/uswitch/trustyle/commit/743f9ed))
+
+
+
+
+
 ## [1.65.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.65.1...@uswitch/trustyle.money-theme@1.65.2) (2021-10-04)
 
 

@@ -2,8 +2,6 @@
 import * as React from 'react'
 import { jsx } from 'theme-ui'
 
-import ProductTable from '../index'
-
 interface FormattedText {
   size: 'big' | 'small'
   word: string
@@ -22,11 +20,14 @@ function autoFormat(text?: string): FormattedText[] {
 
   return text
     .replace(/\b\//g, ' /')
-    .split(' ')
+    .split(/(?!\(.*)\s(?![^(]*?\))/g)
     .map(
       (word): FormattedText => ({
         word,
-        size: /\d/.test(word) || word === '-' ? 'big' : 'small'
+        size:
+          !hasSubscript(word) && (/\d/.test(word) || word === '-')
+            ? 'big'
+            : 'small'
       })
     )
     .reduce((words, word, i) => {
@@ -44,23 +45,6 @@ const hasSubscript = (text: string) => {
   return subscript
 }
 
-function formatSubscript(text: string, headerImage?: boolean) {
-  const subscript = /\(([^)]+)\)/.exec(text)
-  if (subscript === null) {
-    return [{ size: 'big', word: text }]
-  }
-
-  const subscriptText = subscript[0]
-
-  return (
-    <ProductTable.data.TextSubscript
-      text={text.replace(subscriptText, '').trim()}
-      subscript={subscriptText}
-      headerImage={headerImage}
-    />
-  )
-}
-
 export interface DataAutoProps extends React.HTMLAttributes<HTMLDivElement> {
   text: string
   headerImage?: boolean
@@ -71,24 +55,22 @@ const ProductTableDataAuto: React.FC<DataAutoProps> = ({
 }) => {
   return (
     <div>
-      {hasSubscript(text)
-        ? formatSubscript(text, headerImage)
-        : autoFormat(text).map(({ word, size }, index) =>
-            size === 'small' ? (
-              <span
-                sx={{
-                  margin: '0 5px',
-                  variant: `compounds.product-table.${headerImage &&
-                    'variants.redesign.'}cellContent.content.small`
-                }}
-                key={index}
-              >
-                {word}
-              </span>
-            ) : (
-              word
-            )
-          )}
+      {autoFormat(text).map(({ word, size }, index) =>
+        size === 'small' ? (
+          <span
+            sx={{
+              margin: '0 5px',
+              variant: `compounds.product-table.${headerImage &&
+                'variants.redesign.'}cellContent.content.small`
+            }}
+            key={index}
+          >
+            {word}
+          </span>
+        ) : (
+          word
+        )
+      )}
     </div>
   )
 }

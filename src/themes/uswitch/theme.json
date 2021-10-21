@@ -2270,6 +2270,7 @@
           "fontStyle": "normal"
         },
         "image": {
+          "width": "92px",
           "marginTop": [null, "10px"]
         }
       },

@@ -3,6 +3,136 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.61.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.61.2...@uswitch/trustyle.uswitch-theme@2.61.3) (2021-10-19)
+
+
+### Bug Fixes
+
+* calculator space between ([73de731](https://github.com/uswitch/trustyle/commit/73de731))
+
+
+
+
+
+## [2.61.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.61.1...@uswitch/trustyle.uswitch-theme@2.61.2) (2021-10-19)
+
+
+### Bug Fixes
+
+* update themes ([6ec7629](https://github.com/uswitch/trustyle/commit/6ec7629))
+
+
+
+
+
+## [2.61.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.61.0...@uswitch/trustyle.uswitch-theme@2.61.1) (2021-10-18)
+
+
+### Bug Fixes
+
+* changed color and alignment ([d405b55](https://github.com/uswitch/trustyle/commit/d405b55))
+
+
+
+
+
+# [2.61.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.60.5...@uswitch/trustyle.uswitch-theme@2.61.0) (2021-10-15)
+
+
+### Features
+
+* updated form variant with new one - dropdown, added label aligment for calculator forms ([90beb52](https://github.com/uswitch/trustyle/commit/90beb52))
+
+
+
+
+
+## [2.60.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.60.4...@uswitch/trustyle.uswitch-theme@2.60.5) (2021-10-15)
+
+
+### Bug Fixes
+
+* fixed issues with padding on calculators, fixed font on address lookup, fixed aligment ([00806a3](https://github.com/uswitch/trustyle/commit/00806a3))
+
+
+
+
+
+## [2.60.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.60.3...@uswitch/trustyle.uswitch-theme@2.60.4) (2021-10-13)
+
+
+### Bug Fixes
+
+* fixed issues with calc form styles ([bd89026](https://github.com/uswitch/trustyle/commit/bd89026))
+* fixed theme for uswitch ([a856cfd](https://github.com/uswitch/trustyle/commit/a856cfd))
+* fixed theme for uswitch, added some new calc variants ([c4afbf7](https://github.com/uswitch/trustyle/commit/c4afbf7))
+
+
+
+
+
+## [2.60.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.60.2...@uswitch/trustyle.uswitch-theme@2.60.3) (2021-10-13)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.60.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.60.1...@uswitch/trustyle.uswitch-theme@2.60.2) (2021-10-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.60.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.60.0...@uswitch/trustyle.uswitch-theme@2.60.1) (2021-10-12)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+# [2.60.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.59.7...@uswitch/trustyle.uswitch-theme@2.60.0) (2021-10-12)
+
+
+### Features
+
+* merged with master ([d25b4ff](https://github.com/uswitch/trustyle/commit/d25b4ff))
+
+
+
+
+
+## [2.59.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.59.6...@uswitch/trustyle.uswitch-theme@2.59.7) (2021-10-08)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
+## [2.59.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.59.5...@uswitch/trustyle.uswitch-theme@2.59.6) (2021-10-08)
+
+
+### Bug Fixes
+
+* styling for fiels that are on one line ([743f9ed](https://github.com/uswitch/trustyle/commit/743f9ed))
+
+
+
+
+
+## [2.59.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.59.4...@uswitch/trustyle.uswitch-theme@2.59.5) (2021-10-07)
+
+**Note:** Version bump only for package @uswitch/trustyle.uswitch-theme
+
+
+
+
+
 ## [2.59.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.59.3...@uswitch/trustyle.uswitch-theme@2.59.4) (2021-10-06)
 
 
