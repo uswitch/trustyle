@@ -1090,13 +1090,6 @@
         "backgroundColor": "blue"
       }
     },
-    "sponsored-by-tag": {
-      "base": {
-        "image": {
-          "width": "92px"
-        }
-      }
-    },
     "breadcrumbs": {
       "base": {
         "main": {
@@ -2408,10 +2401,10 @@
           "color": "primary"
         },
         "bar": {
-          "border": "0.08em solid #141424 !important"
+          "border": "0.08em solid #84A6FF !important"
         },
         "fill": {
-          "border": "0.08em solid #141424 !important"
+          "border": "0.08em solid #84A6FF !important"
         },
         "bar-full": {
           "border": "0.08em solid #F3F3F4 !important"
@@ -2680,8 +2673,10 @@
         }
       },
       "title": {
-        "variant": "compounds.billboard.primaryContent.p",
-        "mb": "sm"
+        "p": {
+          "variant": "compounds.billboard.primaryContent.p",
+          "mb": "sm"
+        }
       },
       "button": {
         "my": "0 !important"

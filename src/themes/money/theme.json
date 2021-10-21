@@ -3199,14 +3199,6 @@
     }
   },
   "modules": {
-    "categoryGuide": {
-      "title": { "color": "text" },
-      "link": {
-        "textDecoration": "none",
-        "color": "plum",
-        "lineHeight": "1.75"
-      }
-    },
     "image": {
       "contentCols": 12,
       "contentSpan": 10
