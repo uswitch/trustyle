@@ -5,9 +5,8 @@ import { jsx } from 'theme-ui'
 import { ThemeUIStyleObject } from '@theme-ui/css'
 // @ts-ignore
 import { Badge } from '@uswitch/spark.badge'
-import { UswReceiptFill } from '@uswitch/spark-icons/usw'
 
-import { AwardIcon } from './helper'
+import { AwardIcon, ReceiptFill } from './helper'
 import * as st from './styles'
 
 export interface UspBroadbandProps {
@@ -26,7 +25,7 @@ export const UspBroadband: React.FC<UspBroadbandProps> = ({
 
   React.useEffect(() => {
     if (color === 'black-friday') {
-      setIcon(<UswReceiptFill color="#ffd555" />)
+      setIcon(<ReceiptFill />)
     }
     if (color === 'award') {
       setIcon(<AwardIcon />)
