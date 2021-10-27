@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@uswitch/spark": "^0.2.6",
-    "@uswitch/spark-icons": "0.0.11",
     "@uswitch/spark.badge": "0.3.2",
     "@uswitch/spark.utils": "^0.2.6"
   },
