@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.68.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.67.0...@uswitch/trustyle.money-theme@1.68.0) (2021-10-29)
+
+
+### Features
+
+* added full-width size to button-link component ([90cd165](https://github.com/uswitch/trustyle/commit/90cd165))
+
+
+
+
+
 # [1.67.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.66.1...@uswitch/trustyle.money-theme@1.67.0) (2021-10-21)
 
 

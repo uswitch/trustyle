@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button-link@3.2.11...@uswitch/trustyle.button-link@3.3.0) (2021-10-29)
+
+
+### Features
+
+* added full-width size to button-link component ([90cd165](https://github.com/uswitch/trustyle/commit/90cd165))
+
+
+
+
+
 ## [3.2.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.button-link@3.2.10...@uswitch/trustyle.button-link@3.2.11) (2021-09-07)
 
 
