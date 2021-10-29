@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.14.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.14.4...@uswitch/trustyle.card@1.14.5) (2021-10-29)
+
+**Note:** Version bump only for package @uswitch/trustyle.card
+
+
+
+
+
 ## [1.14.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.14.3...@uswitch/trustyle.card@1.14.4) (2021-10-12)
 
 **Note:** Version bump only for package @uswitch/trustyle.card

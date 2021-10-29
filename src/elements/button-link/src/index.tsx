@@ -84,6 +84,10 @@ export const ButtonLink = <
           `elements.buttons.base.btnSize.${size}.height`,
           'base'
         ),
+        width:
+          size === 'fullWidth'
+            ? get(theme, `elements.buttons.base.btnSize.${size}.width`, 'base')
+            : 'unset',
         display: 'inline-block',
         textDecoration: 'none',
         variant: `elements.buttons.variants.${variant}`
