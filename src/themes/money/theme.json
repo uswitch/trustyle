@@ -1435,6 +1435,12 @@
             "paddingY": "base",
             "fontSize": "md"
           },
+          "fullWidth": {
+            "paddingX": "lg",
+            "paddingY": "base",
+            "fontSize": "md",
+            "width": "100%"
+          },
           "small": {
             "paddingX": "lg",
             "paddingY": 13,

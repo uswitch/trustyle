@@ -1404,6 +1404,12 @@
             "paddingY": "sm",
             "fontSize": "18px"
           },
+          "fullWidth": {
+            "paddingX": "sm",
+            "paddingY": "sm",
+            "fontSize": "18px",
+            "width": "100%"
+          },
           "small": {
             "paddingX": 40,
             "paddingY": "xs",
