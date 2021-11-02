@@ -201,7 +201,6 @@ export const ExampleWithBgImage = () => {
       breadcrumbs={breadcrumbs}
       primaryContent={primaryContent}
       bgImage={bgImage}
-      verticalAlign={'bottom'}
     />
   )
 }
