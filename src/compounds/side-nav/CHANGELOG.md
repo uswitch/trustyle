@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.64...@uswitch/trustyle.side-nav@1.1.0) (2021-11-02)
+
+
+### Features
+
+* sidenav feedback updates ([f3ec40b](https://github.com/uswitch/trustyle/commit/f3ec40b))
+* use match-media for responsivne values ([db44750](https://github.com/uswitch/trustyle/commit/db44750))
+
+
+
+
+
 ## [1.0.64](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.side-nav@1.0.63...@uswitch/trustyle.side-nav@1.0.64) (2021-08-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.side-nav
