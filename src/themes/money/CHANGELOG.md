@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.68.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.68.0...@uswitch/trustyle.money-theme@1.68.2) (2021-11-02)
+
+
+### Bug Fixes
+
+* removed billboard variant prop. added theme variant that defines background-position for both money and uswitch ([340e6e4](https://github.com/uswitch/trustyle/commit/340e6e4))
+
+
+
+
+
 ## [1.68.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.68.0...@uswitch/trustyle.money-theme@1.68.1) (2021-11-02)
 
 
