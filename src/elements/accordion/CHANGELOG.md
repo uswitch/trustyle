@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.14.14...@uswitch/trustyle.accordion@0.15.0) (2021-11-02)
+
+
+### Features
+
+* sidenav feedback updates ([f3ec40b](https://github.com/uswitch/trustyle/commit/f3ec40b))
+* use match-media for responsivne values ([db44750](https://github.com/uswitch/trustyle/commit/db44750))
+
+
+
+
+
 ## [0.14.14](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.14.13...@uswitch/trustyle.accordion@0.14.14) (2021-08-27)
 
 
