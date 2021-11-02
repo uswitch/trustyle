@@ -4112,7 +4112,9 @@
         "paddingLeft": 0,
         "paddingTop": 0,
         "paddingBottom": 0,
-        "margin": 0
+        "margin": 0,
+        "maxHeight": "calc(100vh - 580px)",
+        "overflowY": "auto"
       },
       "internalLinkListItem": {
         "base": {

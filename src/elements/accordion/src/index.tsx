@@ -7,7 +7,7 @@ import { ImgixImage } from '@uswitch/trustyle.imgix-image'
 import { Palette } from '@uswitch/trustyle-utils.palette'
 
 interface ContextProps {
-  open: number
+  open: number | null
   setOpenId: React.Dispatch<number>
   iconClosed?: Glyph
   iconOpen?: Glyph
@@ -49,6 +49,7 @@ interface GroupProps {
   iconClosed?: Glyph
   iconOpen?: Glyph
   className?: string
+  initiallyOpenedId?: number | null
 }
 
 const Accordion: React.FC<Props> & {
@@ -307,8 +308,14 @@ const Accordion: React.FC<Props> & {
 
 export default Accordion
 
-Accordion.Group = ({ children, iconClosed, iconOpen, className }) => {
-  const [openId, setOpenId] = useState(0)
+Accordion.Group = ({
+  children,
+  iconClosed,
+  iconOpen,
+  initiallyOpenedId = 0,
+  className
+}) => {
+  const [openId, setOpenId] = useState(initiallyOpenedId)
 
   const childrenWithIndexes = React.Children.map(children, (child, index) => {
     if (React.isValidElement(child)) {
@@ -317,6 +324,8 @@ Accordion.Group = ({ children, iconClosed, iconOpen, className }) => {
 
     return child
   })
+
+  React.useEffect(() => setOpenId(initiallyOpenedId), [initiallyOpenedId])
 
   return (
     <div
