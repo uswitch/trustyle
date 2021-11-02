@@ -2618,6 +2618,9 @@
         "width": ["100%", "70%", "100%"],
         "marginX": ["0", "auto", "0"],
         "mb": ["md", "lg"]
+      },
+      "bgImagePosition": {
+        "backgroundPosition": "right bottom"
       }
     },
     "navigation-dropdown": {

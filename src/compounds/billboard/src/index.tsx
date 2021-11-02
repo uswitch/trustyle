@@ -10,7 +10,6 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   primarySlot?: React.ReactElement
   fullWidthSlot?: React.ReactElement
   bgImage?: string
-  verticalAlign?: string
 }
 
 const Billboard: React.FC<Props> = ({
@@ -18,8 +17,7 @@ const Billboard: React.FC<Props> = ({
   primaryContent,
   primarySlot,
   fullWidthSlot,
-  bgImage,
-  verticalAlign = 'bottom'
+  bgImage
 }) => {
   const styles = () => {
     if (primarySlot) {
@@ -122,7 +120,8 @@ const Billboard: React.FC<Props> = ({
                     width: '404px',
                     height: '416px',
                     display: ['none', 'none', 'block'],
-                    background: `url(${bgImage}) no-repeat right ${verticalAlign.toLowerCase()} / contain`
+                    background: `url(${bgImage}) no-repeat right bottom / contain`,
+                    variant: 'compounds.billboard.bgImagePosition'
                   }}
                 ></div>
               )}
