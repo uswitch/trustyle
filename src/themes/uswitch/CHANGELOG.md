@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.63.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.62.0...@uswitch/trustyle.uswitch-theme@2.63.0) (2021-10-29)
+
+
+### Features
+
+* added full-width size to button-link component ([90cd165](https://github.com/uswitch/trustyle/commit/90cd165))
+
+
+
+
+
+# [2.62.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.61.3...@uswitch/trustyle.uswitch-theme@2.62.0) (2021-10-21)
+
+
+### Bug Fixes
+
+* restore side-nav ([5ef1309](https://github.com/uswitch/trustyle/commit/5ef1309))
+
+
+### Features
+
+* move component styles to eevee ([197c6f8](https://github.com/uswitch/trustyle/commit/197c6f8))
+* update uswitch theme and move categoryGuide to eevee ([c8d51d7](https://github.com/uswitch/trustyle/commit/c8d51d7))
+
+
+
+
+
 ## [2.61.3](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.61.2...@uswitch/trustyle.uswitch-theme@2.61.3) (2021-10-19)
 
 

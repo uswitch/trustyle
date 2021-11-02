@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.68.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.67.0...@uswitch/trustyle.money-theme@1.68.0) (2021-10-29)
+
+
+### Features
+
+* added full-width size to button-link component ([90cd165](https://github.com/uswitch/trustyle/commit/90cd165))
+
+
+
+
+
+# [1.67.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.66.1...@uswitch/trustyle.money-theme@1.67.0) (2021-10-21)
+
+
+### Bug Fixes
+
+* restore side-nav ([5ef1309](https://github.com/uswitch/trustyle/commit/5ef1309))
+
+
+### Features
+
+* move component styles to eevee ([197c6f8](https://github.com/uswitch/trustyle/commit/197c6f8))
+* update money theme ([b216e1c](https://github.com/uswitch/trustyle/commit/b216e1c))
+* update uswitch theme and move categoryGuide to eevee ([c8d51d7](https://github.com/uswitch/trustyle/commit/c8d51d7))
+
+
+
+
+
 ## [1.66.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.66.0...@uswitch/trustyle.money-theme@1.66.1) (2021-10-19)
 
 
