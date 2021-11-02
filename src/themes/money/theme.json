@@ -2586,6 +2586,9 @@
       },
       "fullWidthSlot": {
         "mb": "lg"
+      },
+      "bgImagePosition": {
+        "backgroundPosition": "right center"
       }
     },
     "phone-number-modal": {
