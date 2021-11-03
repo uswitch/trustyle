@@ -431,6 +431,7 @@ export const EligibilityExample = () => {
       moreInformationPanel={[eligibilityContent, ratesContent]}
       moreInformationButton={moreInformationButton}
       moreInformationLabel={moreInfoLabel}
+      variant={'LegacyMobileCards'}
     >
       {productTableContents}
     </LegacyProductTable>

@@ -257,25 +257,29 @@ export const MoreInformationButton: React.FC<MoreInformationButtonProps> = ({
 interface RepresentativeExampleProps
   extends React.HTMLAttributes<HTMLDivElement> {
   text: string
+  variant?: string
 }
 
 const RepresentativeExample: React.FC<RepresentativeExampleProps> = ({
-  text
+  text,
+  variant
 }) => {
   return (
-    <div
-      sx={{
-        marginTop: '5px',
-        padding: ['5px 20px 10px', '5px 40px 10px'],
-        backgroundColor: '#f7f7f7',
-        fontSize: '14px',
-        fontWeight: 600,
-        color: '#924a8b',
-        textAlign: 'center' as const,
-        lineHeight: 'normal'
-      }}
-    >
-      Representative Example: {text}
+    <div sx={{ padding: [variant === 'LegacyMobileCards' ? '0 15px' : 0, 0] }}>
+      <div
+        sx={{
+          marginTop: '5px',
+          padding: ['5px 20px 10px', '5px 40px 10px'],
+          backgroundColor: '#f7f7f7',
+          fontSize: '14px',
+          fontWeight: 600,
+          color: '#924a8b',
+          textAlign: 'center' as const,
+          lineHeight: 'normal'
+        }}
+      >
+        Representative Example: {text}
+      </div>
     </div>
   )
 }
@@ -623,6 +627,7 @@ interface LegacyProductTableProps extends React.HTMLAttributes<HTMLDivElement> {
   bannerInfo?: BannerInfo
   onBannerClick?: () => void
   telephone?: string
+  variant?: string
   isWireFrame?: boolean
 }
 
@@ -644,6 +649,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
   onBannerClick,
   telephone,
   isWireFrame = false,
+  variant,
   ...props
 }) => {
   const badge = badges[0]
@@ -729,7 +735,10 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
         {isWireFrame && <WireFrame type="additionalInfo" />}
 
         {!isWireFrame && representativeExample && (
-          <RepresentativeExample text={representativeExample} />
+          <RepresentativeExample
+            text={representativeExample}
+            variant={variant}
+          />
         )}
 
         {isWireFrame && <WireFrame type="representativeExample" />}
@@ -742,6 +751,7 @@ const LegacyProductTable: React.FC<LegacyProductTableProps> = ({
             moreInformationPanel={moreInformationPanel}
             moreInformationButton={moreInformationButton}
             moreInformationLabel={moreInformationLabel}
+            variant={variant}
           />
         )}
     </article>
