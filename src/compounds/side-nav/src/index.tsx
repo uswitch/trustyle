@@ -1,9 +1,10 @@
 /** @jsx jsx */
 
-import * as React from 'react'
-import { jsx, Themed } from 'theme-ui'
+import React from 'react'
+import { jsx, Themed, useThemeUI } from 'theme-ui'
 import Accordion from '@uswitch/trustyle.accordion'
 import { Palette } from '@uswitch/trustyle-utils.palette'
+import { useResponsiveValue } from '@theme-ui/match-media'
 
 interface Link {
   text: string
@@ -27,9 +28,17 @@ const SideNav: React.FC<Props> = ({
   additionalLinks = [],
   className
 }) => {
+  const { theme } = useThemeUI()
+  const breakpoints = theme?.breakpoints?.map((breakpoint, i, arr) =>
+    arr.length === i + 1 ? 0 : null
+  ) || [null, 0]
+  const initiallyOpenedId = useResponsiveValue(breakpoints, {
+    defaultIndex: breakpoints?.length - 1
+  })
+
   return (
     <nav className={className}>
-      <Accordion.Group>
+      <Accordion.Group initiallyOpenedId={initiallyOpenedId}>
         <Accordion
           title={internalLinks.title}
           sx={{

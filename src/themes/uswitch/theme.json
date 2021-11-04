@@ -2618,6 +2618,9 @@
         "width": ["100%", "70%", "100%"],
         "marginX": ["0", "auto", "0"],
         "mb": ["md", "lg"]
+      },
+      "bgImagePosition": {
+        "backgroundPosition": "right bottom"
       }
     },
     "navigation-dropdown": {
@@ -4112,7 +4115,9 @@
         "paddingLeft": 0,
         "paddingTop": 0,
         "paddingBottom": 0,
-        "margin": 0
+        "margin": 0,
+        "maxHeight": "calc(100vh - 580px)",
+        "overflowY": "auto"
       },
       "internalLinkListItem": {
         "base": {
