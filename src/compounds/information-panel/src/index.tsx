@@ -218,20 +218,28 @@ interface EligibilityProps extends React.HTMLAttributes<HTMLDivElement> {
   moreInformationPanel: React.ReactNode[]
   moreInformationButton?: React.ReactNode
   moreInformationLabel?: string
+  variant?: string
 }
 
 export const Eligibility: React.FC<EligibilityProps> = ({
   moreInformationPanel,
   moreInformationButton,
-  moreInformationLabel = 'More information'
+  moreInformationLabel = 'More information',
+  variant = ''
 }) => {
   const [open, setOpen] = React.useState(false)
 
   return (
-    <div sx={{ background: '#f2f3f4' }}>
+    <div
+      sx={{
+        marginTop: [variant === 'LegacyMobileCards' ? 2 : 0, 0],
+        padding: [variant === 'LegacyMobileCards' ? '0 15px' : 0, 0]
+      }}
+    >
       <div
         sx={{
           display: 'block',
+          background: '#f2f3f4',
           margin: 'auto',
           height: open ? 'auto' : '0px',
           transition: 'height .4s ease-in-out',
@@ -265,9 +273,13 @@ export const Eligibility: React.FC<EligibilityProps> = ({
         sx={{
           background: '#f2f3f4',
           border: 'none',
-          borderBottom: ['1px dashed #b1b1b1', 'none'],
+          borderBottom: [
+            variant === 'LegacyMobileCards' ? 'none' : '1px dashed #b1b1b1',
+            'none'
+          ],
           width: '100%',
           margin: 'auto',
+          marginBottom: [variant === 'LegacyMobileCards' ? '15px' : '0', '0'],
           padding: '8px',
           lineHeight: '1.618em',
           color: '#34454E',
