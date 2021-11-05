@@ -32,6 +32,22 @@ export const ExampleWithKnobs = () => {
   )
 }
 
+export const ExampleWithKnobsAndImage = () => {
+  return (
+    <HeroCard
+      type="seasonal"
+      title={title}
+      bgImage="https://i.ibb.co/6wLLV1C/shopping-vector-square.png"
+    >
+      <LinkList variant="quickLinks">
+        <LinkListItem icon={arrow}>Car Insurance</LinkListItem>
+        <LinkListItem icon={arrow}>Home Insurance</LinkListItem>
+        <LinkListItem icon={arrow}>Income Protection Insurance</LinkListItem>
+      </LinkList>
+    </HeroCard>
+  )
+}
+
 ExampleWithKnobs.story = {
   parameters: {
     percy: { skip: true }

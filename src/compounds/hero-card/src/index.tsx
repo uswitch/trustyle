@@ -6,45 +6,73 @@ import { ButtonLink } from '@uswitch/trustyle.button-link'
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
-  ctaText: string
+  ctaText?: string
   children: React.ReactNode
+  type?: 'default' | 'seasonal'
+  bgImage?: string
 }
 
 const styles = (element?: string) =>
   `compounds.heroCard.variants${element ? `.${element}` : ''}`
 
-const HeroCard: React.FC<Props> = ({ title, ctaText, children }) => {
+const HeroCard: React.FC<Props> = ({
+  title,
+  ctaText,
+  children,
+  bgImage,
+  type = 'default'
+}) => {
   return (
     <div
       sx={{
         display: 'flex',
-        variant: styles()
+        variant: styles(type === 'seasonal' ? 'seasonal' : '')
       }}
     >
       <div sx={{ variant: styles('flexContainer') }}>
         <Themed.h1>{title}</Themed.h1>
-        <ButtonLink
-          variant="primary"
-          size="small"
-          sx={{ variant: styles('buttonLink'), display: ['none', 'initial'] }}
+        {type === 'seasonal' && (
+          <div
+            sx={{
+              variant: styles('links.seasonal')
+            }}
+          >
+            {children}
+          </div>
+        )}
+        {ctaText && (
+          <ButtonLink
+            variant="primary"
+            size={children && type === 'seasonal' ? 'fullWidth' : 'small'}
+            sx={{
+              variant: styles('buttonLink'),
+              display: ['none', 'initial']
+            }}
+          >
+            {ctaText}
+          </ButtonLink>
+        )}
+      </div>
+      {type === 'default' && (
+        <div
+          sx={{
+            variant: styles('links')
+          }}
         >
-          {ctaText}
-        </ButtonLink>
-      </div>
-      <div
-        sx={{
-          variant: styles('links')
-        }}
-      >
-        {children}
-      </div>
-      <ButtonLink
-        variant="primary"
-        size="small"
-        sx={{ variant: styles('buttonLink'), display: ['initial', 'none'] }}
-      >
-        {ctaText}
-      </ButtonLink>
+          {children}
+        </div>
+      )}
+
+      {bgImage && (
+        <div
+          sx={{
+            display: ['none', 'none', 'block'],
+            background: `url(${bgImage}) no-repeat right center / contain`,
+            width: '404px',
+            height: '416px'
+          }}
+        ></div>
+      )}
     </div>
   )
 }
