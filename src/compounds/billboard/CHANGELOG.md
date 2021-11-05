@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.billboard@0.2.10...@uswitch/trustyle.billboard@0.2.11) (2021-11-05)
+
+**Note:** Version bump only for package @uswitch/trustyle.billboard
+
+
+
+
+
 ## [0.2.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.billboard@0.2.8...@uswitch/trustyle.billboard@0.2.10) (2021-11-02)
 
 
