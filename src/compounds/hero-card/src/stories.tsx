@@ -40,9 +40,11 @@ export const ExampleWithKnobsAndImage = () => {
       bgImage="https://i.ibb.co/6wLLV1C/shopping-vector-square.png"
     >
       <LinkList variant="quickLinks">
-        <LinkListItem icon={arrow}>Car Insurance</LinkListItem>
-        <LinkListItem icon={arrow}>Home Insurance</LinkListItem>
-        <LinkListItem icon={arrow}>Income Protection Insurance</LinkListItem>
+        <LinkListItem icon="filled-arrow">Car Insurance</LinkListItem>
+        <LinkListItem icon="filled-arrow">Home Insurance</LinkListItem>
+        <LinkListItem icon="filled-arrow">
+          Income Protection Insurance
+        </LinkListItem>
       </LinkList>
     </HeroCard>
   )

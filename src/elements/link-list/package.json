@@ -11,6 +11,9 @@
     "type": "git",
     "url": "https://github.com/uswitch/trustyle"
   },
+  "dependencies": {
+    "@uswitch/trustyle.icon": "^1.27.2"
+  },
   "devDependencies": {
     "typescript": "^3.6.2"
   },

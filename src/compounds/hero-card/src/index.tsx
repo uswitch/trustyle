@@ -7,6 +7,7 @@ import { ButtonLink } from '@uswitch/trustyle.button-link'
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   ctaText?: string
+  ctaLink?: string
   children: React.ReactNode
   type?: 'default' | 'seasonal'
   bgImage?: string
@@ -18,6 +19,7 @@ const styles = (element?: string) =>
 const HeroCard: React.FC<Props> = ({
   title,
   ctaText,
+  ctaLink,
   children,
   bgImage,
   type = 'default'
@@ -43,6 +45,7 @@ const HeroCard: React.FC<Props> = ({
         {ctaText && (
           <ButtonLink
             variant="primary"
+            href={ctaLink}
             size={children && type === 'seasonal' ? 'fullWidth' : 'small'}
             sx={{
               variant: styles('buttonLink'),
