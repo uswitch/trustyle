@@ -32,12 +32,18 @@ export const ExampleWithKnobs = () => {
   )
 }
 
+ExampleWithKnobs.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const ExampleWithKnobsAndImage = () => {
   return (
     <HeroCard
       type="seasonal"
       title={title}
-      bgImage="https://i.ibb.co/6wLLV1C/shopping-vector-square.png"
+      bgImage="https://i.ibb.co/db3dBQK/shopping-vector-square.png"
     >
       <LinkList variant="quickLinks">
         <LinkListItem icon="filled-arrow">Car Insurance</LinkListItem>
@@ -50,9 +56,9 @@ export const ExampleWithKnobsAndImage = () => {
   )
 }
 
-ExampleWithKnobs.story = {
+ExampleWithKnobsAndImage.story = {
   parameters: {
-    percy: { skip: true }
+    percy: { skip: false }
   }
 }
 

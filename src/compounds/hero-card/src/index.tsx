@@ -66,6 +66,20 @@ const HeroCard: React.FC<Props> = ({
         </div>
       )}
 
+      {ctaText && (
+        <ButtonLink
+          variant="primary"
+          href={ctaLink}
+          size={children && type === 'seasonal' ? 'fullWidth' : 'small'}
+          sx={{
+            variant: styles('buttonLink'),
+            display: ['initial', 'none']
+          }}
+        >
+          {ctaText}
+        </ButtonLink>
+      )}
+
       {bgImage && (
         <div
           sx={{
