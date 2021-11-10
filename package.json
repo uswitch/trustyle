@@ -121,6 +121,7 @@
     ]
   },
   "dependencies": {
+    "@theme-ui/match-media": "^0.12.0",
     "@uswitch/trustyle-utils.palette": "^4.0.2"
   }
 }

@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import { jsx, Themed } from 'theme-ui'
+import { Glyph, Icon } from '@uswitch/trustyle.icon'
 
 export type Variant = 'base' | 'quickLinks'
 
@@ -63,7 +64,7 @@ export const LinkList: React.FC<ListLinkProps> = ({
 interface ListLinkItemProps extends React.HTMLAttributes<HTMLDivElement> {
   href?: string
   className?: string
-  icon?: React.ReactNode
+  icon?: React.ReactNode | string
 }
 
 export const LinkListItem: React.FC<ListLinkItemProps> = ({
@@ -72,6 +73,9 @@ export const LinkListItem: React.FC<ListLinkItemProps> = ({
   className,
   icon
 }) => {
+  const IconComponent =
+    typeof icon === 'string' ? <Icon glyph={icon as Glyph} color="" /> : icon
+
   return (
     <li
       sx={{
@@ -99,7 +103,7 @@ export const LinkListItem: React.FC<ListLinkItemProps> = ({
       >
         {children}
       </Themed.a>
-      {icon}
+      {IconComponent}
     </li>
   )
 }

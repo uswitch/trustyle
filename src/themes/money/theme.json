@@ -3174,8 +3174,27 @@
         "h1": {
           "color": "grey-0"
         },
+        "seasonal": {
+          "flexDirection": ["column", "row"],
+          "background": "linear-gradient(161.42deg, #924A8B 22.95%, #AF4C83 77.05%)",
+          "boxShadow": "0px 9px 19px rgba(92, 36, 87, 0.2)",
+          "paddingX": ["sm", "4xl"],
+          "pt": ["lg", "sm"],
+          "pb": ["lg", "sm"],
+          "borderRadius": ["4px", "8px"],
+          "h1": {
+            "color": "grey-0"
+          },
+          "svg": {
+            "fill": "#FEC340 !important"
+          }
+        },
         "links": {
-          "width": ["initial", "50%"]
+          "width": ["initial", "50%"],
+          "seasonal": {
+            "my": "sm",
+            "width": ["100%"]
+          }
         },
         "flexContainer": {
           "width": ["initial", "50%"],

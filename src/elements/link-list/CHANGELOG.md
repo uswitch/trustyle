@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.link-list@1.0.6...@uswitch/trustyle.link-list@1.1.0) (2021-11-10)
+
+
+### Features
+
+* added icon support with string option to linkList ([1a03357](https://github.com/uswitch/trustyle/commit/1a03357))
+
+
+
+
+
 ## [1.0.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.link-list@1.0.5...@uswitch/trustyle.link-list@1.0.6) (2021-08-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.link-list

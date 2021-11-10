@@ -38,6 +38,30 @@ ExampleWithKnobs.story = {
   }
 }
 
+export const ExampleWithKnobsAndImage = () => {
+  return (
+    <HeroCard
+      type="seasonal"
+      title={title}
+      bgImage="https://i.ibb.co/db3dBQK/shopping-vector-square.png"
+    >
+      <LinkList variant="quickLinks">
+        <LinkListItem icon="filled-arrow">Car Insurance</LinkListItem>
+        <LinkListItem icon="filled-arrow">Home Insurance</LinkListItem>
+        <LinkListItem icon="filled-arrow">
+          Income Protection Insurance
+        </LinkListItem>
+      </LinkList>
+    </HeroCard>
+  )
+}
+
+ExampleWithKnobsAndImage.story = {
+  parameters: {
+    percy: { skip: false }
+  }
+}
+
 export const AutomatedTests = () => {
   const permutations = permutationsGenerator({
     variant: ['primary']
