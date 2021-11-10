@@ -2533,6 +2533,14 @@
       }
     },
     "advert": {
+      "> div, a": {
+        "color": "text",
+        "backgroundColor": "white",
+        "textDecoration": "none"
+      },
+      "h6": {
+        "fontSize": "base"
+      },
       "complianceText": {
         "width": "100%",
         "p": "8px",
