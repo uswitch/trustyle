@@ -2533,6 +2533,9 @@
       }
     },
     "advert": {
+      "icon": {
+        "fill": "white"
+      },
       "> div, a": {
         "color": "text",
         "backgroundColor": "white",

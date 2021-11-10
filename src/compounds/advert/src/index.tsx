@@ -95,6 +95,7 @@ const Advert: React.FC<Props> = ({
                   size="small"
                 >
                   <Icon
+                    sx={{ variant: 'compounds.advert.icon' }}
                     glyph="caret"
                     direction="right"
                     color="black"
