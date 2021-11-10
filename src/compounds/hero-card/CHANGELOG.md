@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero-card@2.0.31...@uswitch/trustyle.hero-card@2.1.0) (2021-11-10)
+
+
+### Bug Fixes
+
+* fixed missing  button on mobile ([6acce21](https://github.com/uswitch/trustyle/commit/6acce21))
+
+
+### Features
+
+* added icon support with string option to linkList ([1a03357](https://github.com/uswitch/trustyle/commit/1a03357))
+* added seasonal card for hero-card component ([381a2bf](https://github.com/uswitch/trustyle/commit/381a2bf))
+
+
+
+
+
 ## [2.0.31](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero-card@2.0.30...@uswitch/trustyle.hero-card@2.0.31) (2021-10-29)
 
 **Note:** Version bump only for package @uswitch/trustyle.hero-card

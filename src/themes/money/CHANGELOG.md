@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.69.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.68.2...@uswitch/trustyle.money-theme@1.69.0) (2021-11-10)
+
+
+### Features
+
+* added seasonal card for hero-card component ([381a2bf](https://github.com/uswitch/trustyle/commit/381a2bf))
+
+
+
+
+
 ## [1.68.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.68.0...@uswitch/trustyle.money-theme@1.68.2) (2021-11-02)
 
 
