@@ -1355,6 +1355,14 @@
           "variant": "elements.badge.base",
           "border": "2px solid black",
           "bg": "white"
+        },
+        "advert": {
+          "paddingX": "base",
+          "paddingY": "3px",
+          "fontSize": "xs",
+          "backgroundColor": "primary",
+          "color": "white",
+          "fontWeight": "bold"
         }
       }
     },
