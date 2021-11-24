@@ -1591,6 +1591,37 @@
             "mt": ["sm", 40],
             "width": ["100%", "unset"]
           }
+        },
+        "linkBlock": {
+          "boxShadow": "0px 0px 15px #0004",
+          "borderRadius": "10px",
+          "display": "inline-block",
+          "padding": "md",
+          "minWidth": ["180px", "250px", "250px"],
+          "header": {
+            "flexDirection": "column",
+            "alignItems": "start"
+          },
+          "h3": {
+            "color": "text"
+          },
+          "a": {
+            "marginBottom": 0,
+            "textDecoration": "underline"
+          },
+          "li": {
+            "borderTop": "none"
+          },
+          "icon": {
+            "backgroundColor": "transparent",
+            "borderRadius": 0,
+            "padding": 0,
+            "mr": [20, 20, 28],
+            "> svg": {
+              "width": [32, 32, 42],
+              "height": [34, 34, 42]
+            }
+          }
         }
       }
     },

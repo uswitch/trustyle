@@ -1,11 +1,12 @@
 /** @jsx jsx */
-import * as React from 'react'
 import { css, jsx } from '@emotion/react'
 import { number, select } from '@storybook/addon-knobs'
+import { Glyph, Icon } from '@uswitch/trustyle.icon'
 
 import AllThemes from '../../../utils/all-themes'
 import { FilledArrow } from '../../call-out/node_modules/@uswitch/trustyle.icon/src/filled-arrow'
 import { ButtonLink } from '../../button-link/src'
+import themeSelector from '../../../utils/theme-selector'
 
 import { LinkList, LinkListItem } from './'
 
@@ -67,6 +68,54 @@ export const QuickLinks = () => {
 }
 
 QuickLinks.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+export const LinkBlock = () => {
+  const theme = themeSelector()
+  const iconName = select(
+    'Icon',
+    [
+      'banking',
+      'car-insurance',
+      'credit-card',
+      'current-account',
+      'piggy-bank',
+      'investments',
+      'loans',
+      'mortgages',
+      'travel-money'
+    ],
+    'credit-card'
+  )
+  const color = select('Icon Color', theme.colors, theme.colors['primary'])
+
+  return (
+    <div css={css({ padding: number('Padding', 10) })}>
+      <LinkList
+        title="Credit Cards"
+        icon={<Icon glyph={iconName as Glyph} color={color} />}
+        variant="linkBlock"
+        subtitle="Compare all cards"
+        subtitleUrl="https://money.co.uk"
+      >
+        <LinkListItem href="https://money.co.uk">
+          0% balance transfer
+        </LinkListItem>
+        <LinkListItem href="https://money.co.uk">
+          0% purchase cards
+        </LinkListItem>
+        <LinkListItem href="https://money.co.uk">
+          Cards for bad credit
+        </LinkListItem>
+      </LinkList>
+    </div>
+  )
+}
+
+LinkBlock.story = {
   parameters: {
     percy: { skip: true }
   }
