@@ -48,7 +48,9 @@ export interface AddonArg {
   options?: { [key: string]: any }
 }
 
-const formatters: { [unit: string]: (value: number) => string } = {
+const formatters: {
+  [unit: string]: (value: number, count?: number) => string
+} = {
   pounds: value =>
     value % 1 === 0 ? `£${value}` : `£${Number(value).toFixed(2)}`,
 
@@ -76,6 +78,16 @@ const formatters: { [unit: string]: (value: number) => string } = {
     if (megabytes >= 1000) return `${Math.floor(megabytes / 1000)}GB`
 
     return `${megabytes || 0}MB`
+  },
+
+  'exchange-rate': (value, count = 4) => {
+    const regex = new RegExp(`^-?\\d+(?:\\.\\d{0,${count}})?`)
+    const matches = value.toString().match(regex)
+    const withDecimals = matches?.length ? matches[0] : ''
+    const [before = '', after = ''] = withDecimals.split('.')
+    const val = `${before}.${after.padEnd(count, '0')}`
+
+    return val
   }
 }
 
