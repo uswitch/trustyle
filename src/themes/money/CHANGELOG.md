@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.70.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.69.0...@uswitch/trustyle.money-theme@1.70.0) (2021-11-25)
+
+
+### Features
+
+* add styling for money consent capture ([5e9f8bc](https://github.com/uswitch/trustyle/commit/5e9f8bc))
+
+
+
+
+
 # [1.69.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.68.2...@uswitch/trustyle.money-theme@1.69.0) (2021-11-10)
 
 
