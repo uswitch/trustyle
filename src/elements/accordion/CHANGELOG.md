@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.15.0...@uswitch/trustyle.accordion@0.15.1) (2021-11-25)
+
+**Note:** Version bump only for package @uswitch/trustyle.accordion
+
+
+
+
+
 # [0.15.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.accordion@0.14.14...@uswitch/trustyle.accordion@0.15.0) (2021-11-02)
 
 
