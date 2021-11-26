@@ -1012,6 +1012,13 @@
         }
       },
       "consent": {
+        "wrapper": {
+          "bg": "grey-10",
+          "label:focus-visible": {
+            "outline-color": "transparent !important",
+            "outline-width": "0px"
+          }
+        },
         "question": {
           "color": "grey-80",
           "fontWeight": "bold",
@@ -1046,8 +1053,9 @@
         },
         "variants": {
           "consent": {
-            "bg": "transparent",
-            "border": "none"
+            "bg": "transparent !important",
+            "border": "none !important",
+            "box-shadow": "none !important"
           },
           "normal": {
             "variant": "elements.input.checkbox.base"
