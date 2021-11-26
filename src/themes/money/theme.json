@@ -1014,8 +1014,9 @@
       "consent": {
         "wrapper": {
           "bg": "grey-10",
-          "&:hover": {
-            "bg": "white"
+          "label:focus-visible": {
+            "outline-color": "transparent !important",
+            "outline-width": "0px"
           }
         },
         "question": {
@@ -1052,8 +1053,9 @@
         },
         "variants": {
           "consent": {
-            "bg": "transparent",
-            "border": "none"
+            "bg": "transparent !important",
+            "border": "none !important",
+            "box-shadow": "none !important"
           },
           "normal": {
             "variant": "elements.input.checkbox.base"
