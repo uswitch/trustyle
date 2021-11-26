@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.70.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.70.0...@uswitch/trustyle.money-theme@1.70.1) (2021-11-26)
+
+
+### Bug Fixes
+
+* remove background from wrapper for consent checkbox ([b046a46](https://github.com/uswitch/trustyle/commit/b046a46))
+* stop spark checkbox from changing styling ([e54f5ca](https://github.com/uswitch/trustyle/commit/e54f5ca))
+
+
+
+
+
 # [1.70.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.69.0...@uswitch/trustyle.money-theme@1.70.0) (2021-11-25)
 
 
