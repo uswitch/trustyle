@@ -1615,6 +1615,7 @@
         "linkBlock": {
           "boxShadow": "0px 0px 15px #0004",
           "borderRadius": "10px",
+          "boxSizing": "border-box",
           "display": "inline-block",
           "padding": "md",
           "width": ["220px", "296px", "296px"],
