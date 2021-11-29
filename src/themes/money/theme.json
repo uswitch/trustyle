@@ -1011,6 +1011,25 @@
           }
         }
       },
+      "consent": {
+        "wrapper": {
+          "bg": "grey-10",
+          "label:focus-visible": {
+            "outline-color": "transparent !important",
+            "outline-width": "0px"
+          }
+        },
+        "question": {
+          "color": "grey-80",
+          "fontWeight": "bold",
+          "pt": "sm",
+          "ml": "sm",
+          "textAlign": "left !important"
+        },
+        "text": {
+          "textAlign": "left !important"
+        }
+      },
       "checkbox": {
         "base": {
           "variant": "elements.input.radioish.base",
@@ -1034,8 +1053,9 @@
         },
         "variants": {
           "consent": {
-            "bg": "transparent",
-            "border": "none"
+            "bg": "transparent !important",
+            "border": "none !important",
+            "box-shadow": "none !important"
           },
           "normal": {
             "variant": "elements.input.checkbox.base"

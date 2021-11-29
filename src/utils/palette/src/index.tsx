@@ -26,7 +26,23 @@ const createSx = (
     return sw({
       object: () => ({ ...acc, [key]: createSx(palette, value) }),
       function: () => ({ ...acc, [key]: value(palette) }),
-      default: () => (palette[value] ? { ...acc, [key]: palette[value] } : acc)
+      default: () => {
+        const { mobileBackgroundColor, backgroundColor } = palette
+        if (mobileBackgroundColor && key === 'backgroundColor') {
+          return palette[value]
+            ? {
+                ...acc,
+                backgroundColor: [
+                  mobileBackgroundColor,
+                  backgroundColor,
+                  backgroundColor
+                ]
+              }
+            : acc
+        } else {
+          return palette[value] ? { ...acc, [key]: palette[value] } : acc
+        }
+      }
     })(typeof value)
   }, {})
 }
