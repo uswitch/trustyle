@@ -2385,7 +2385,7 @@
         },
         "linkBlock": {
           "boxShadow": "0px 0px 8px rgba(0, 0, 0, 0.45)",
-          "minWidth": ["180px", "250px", "250px"],
+          "width": ["220px", "296px", "296px"],
           "display": "inline-block",
           "padding": "md",
           "header": {
