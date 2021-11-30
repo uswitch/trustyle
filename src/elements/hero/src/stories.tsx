@@ -41,7 +41,6 @@ const crumbs = [
     }
   }
 ]
-
 const people: any = {
   'Jumping guy': {
     img: '/hero/money-man.png',
@@ -348,6 +347,81 @@ export const ExampleWithPalette = () => {
 }
 
 ExampleWithPalette.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
+const creditCards: any = {
+  'Barclays platinum': {
+    img:
+      'https://money.imgix.net/uswitch-assets-eu/amp/images/product/credit-cards/barclaycard_platinum_2021.png'
+  }
+}
+
+export const PromoBannerExample = () => {
+  const headline = text(
+    'Headline',
+    'Barclays Platinum 22 month 0% Purchase and 20 month 0% Balance Transfer Card Exclusive'
+  )
+  const fgImageKey = select(
+    'Foreground image',
+    Object.keys(creditCards),
+    'Barclays platinum'
+  )
+
+  const bgColor = text('Custom Color', '')
+  const fgImage = creditCards[fgImageKey]
+  const imageOnMobile = boolean('Display foreground image on mobile?', true)
+  const imageOnTablet = boolean('Display foreground image on Tablet?', true)
+
+  const applyPalette = boolean('Apply palette?', false, 'Palette')
+  const backgroundColor = color(
+    'accentColor',
+    theme().elements['hero']?.wrapper?.backgroundColor,
+    'Palette'
+  )
+
+  return (
+    <div sx={{ margin: 0 }}>
+      <PaletteProvider
+        value={{
+          backgroundColor: applyPalette ? backgroundColor : null
+        }}
+      >
+        <Hero
+          container={Container}
+          fgImage={fgImage.img}
+          fgImagePosition={fgImage.position}
+          fgImageOnMobile={imageOnMobile}
+          fgImageOnTablet={imageOnTablet}
+          customBgColor={bgColor}
+          fgImageType={'img'}
+          advertisment
+        >
+          <Row>
+            <Col span={[12, 5]}>
+              <Themed.h1 sx={{ marginTop: 0, fontSize: ['lg', 'xl', 'xxl'] }}>
+                {headline}
+              </Themed.h1>
+              <div sx={{}}>
+                <Themed.p sx={{ marginTop: 0 }}>
+                  Get interest free purchases for 22 months & 0% interest on
+                  balance transfers for 20 months.
+                </Themed.p>
+                <div sx={{ button: { width: 'auto', marginTop: 15 } }}>
+                  <Button variant="primary">Optional CTA</Button>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Hero>
+      </PaletteProvider>
+    </div>
+  )
+}
+
+PromoBannerExample.story = {
   parameters: {
     percy: { skip: true }
   }

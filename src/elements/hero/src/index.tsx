@@ -30,6 +30,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   className?: string
   variant?: 'provider'
   bottomImageOverflow?: number | string
+  advertisment?: boolean
 }
 
 const makeStyles = (variant?: string) => (element?: string) =>
@@ -53,7 +54,8 @@ const Hero: React.FC<Props> = ({
   children,
   variant,
   bottomImageOverflow = '-33%',
-  className
+  className,
+  advertisment = false
 }) => {
   const { theme }: any = useThemeUI()
   const styles = makeStyles(variant)
@@ -83,6 +85,7 @@ const Hero: React.FC<Props> = ({
                 {breadcrumbWithVariant}
               </div>
             )}
+
             <div
               sx={{
                 position: 'relative' as const,
@@ -90,40 +93,42 @@ const Hero: React.FC<Props> = ({
                 flexDirection: 'row-reverse' as const
               }}
             >
-              <div
-                sx={{
-                  position: 'absolute' as const,
-                  left: [0, '45%'],
-                  right: 0,
-                  top: 0,
-                  bottom: 0,
-                  display: [
-                    fgImageOnMobile ? 'block' : 'none',
-                    fgImageOnTablet ? 'block' : 'none',
-                    'block'
-                  ],
-                  ...(fgImage && fgImageType === 'background'
-                    ? {
-                        backgroundImage: `url(${fgImage})`,
-                        backgroundRepeat: 'no-repeat',
+              {!advertisment ? (
+                <div
+                  sx={{
+                    position: 'absolute' as const,
+                    left: [0, '45%'],
+                    right: 0,
+                    top: 0,
+                    bottom: 0,
+                    display: [
+                      fgImageOnMobile ? 'block' : 'none',
+                      fgImageOnTablet ? 'block' : 'none',
+                      'block'
+                    ],
+                    ...(fgImage && fgImageType === 'background'
+                      ? {
+                          backgroundImage: `url(${fgImage})`,
+                          backgroundRepeat: 'no-repeat',
+                          ...fgImagePosition
+                        }
+                      : undefined),
+                    variant: styles('image')
+                  }}
+                >
+                  {fgImage && fgImageType === 'img' && (
+                    <img
+                      sx={{
+                        maxWidth: '100%',
+                        position: 'absolute' as const,
                         ...fgImagePosition
-                      }
-                    : undefined),
-                  variant: styles('image')
-                }}
-              >
-                {fgImage && fgImageType === 'img' && (
-                  <img
-                    sx={{
-                      maxWidth: '100%',
-                      position: 'absolute' as const,
-                      ...fgImagePosition
-                    }}
-                    src={fgImage}
-                    role="presentation"
-                  />
-                )}
-              </div>
+                      }}
+                      src={fgImage}
+                      role="presentation"
+                    />
+                  )}
+                </div>
+              ) : null}
               <div
                 sx={{
                   position: 'relative' as const,
@@ -132,8 +137,41 @@ const Hero: React.FC<Props> = ({
                   variant: styles('content')
                 }}
               >
+                {advertisment ? (
+                  <div
+                    sx={{
+                      fontSize: '14px',
+                      fontWeight: 700,
+                      display: 'inline-block',
+                      paddingX: '16px',
+                      paddingY: '4px',
+                      marginBottom: '16px',
+                      backgroundColor: 'white',
+                      border: '1px solid',
+                      color: 'black'
+                    }}
+                  >
+                    Advertisement
+                  </div>
+                ) : null}
                 {children}
               </div>
+
+              {advertisment && fgImage && fgImageType === 'img' && (
+                <img
+                  sx={{
+                    display: 'block',
+                    maxWidth: ['270px', '360px'],
+                    margin: ['0 auto 45px', 0],
+                    position: ['static', 'absolute'],
+                    top: '50%',
+                    left: [0, '55%'],
+                    transform: ['translateY(0)', 'translateY(-50%)']
+                  }}
+                  src={fgImage}
+                  role="presentation"
+                />
+              )}
             </div>
           </Container>
         </div>
