@@ -30,7 +30,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   className?: string
   variant?: 'provider'
   bottomImageOverflow?: number | string
-  advertisment?: boolean
+  advertisement?: boolean
 }
 
 const makeStyles = (variant?: string) => (element?: string) =>
@@ -55,7 +55,7 @@ const Hero: React.FC<Props> = ({
   variant,
   bottomImageOverflow = '-33%',
   className,
-  advertisment = false
+  advertisement = false
 }) => {
   const { theme }: any = useThemeUI()
   const styles = makeStyles(variant)
@@ -93,7 +93,7 @@ const Hero: React.FC<Props> = ({
                 flexDirection: 'row-reverse' as const
               }}
             >
-              {!advertisment ? (
+              {!advertisement && (
                 <div
                   sx={{
                     position: 'absolute' as const,
@@ -128,7 +128,7 @@ const Hero: React.FC<Props> = ({
                     />
                   )}
                 </div>
-              ) : null}
+              )}
               <div
                 sx={{
                   position: 'relative' as const,
@@ -137,7 +137,7 @@ const Hero: React.FC<Props> = ({
                   variant: styles('content')
                 }}
               >
-                {advertisment ? (
+                {advertisement && (
                   <div
                     sx={{
                       fontSize: '14px',
@@ -153,11 +153,11 @@ const Hero: React.FC<Props> = ({
                   >
                     Advertisement
                   </div>
-                ) : null}
+                )}
                 {children}
               </div>
 
-              {advertisment && fgImage && fgImageType === 'img' && (
+              {advertisement && fgImage && fgImageType === 'img' && (
                 <img
                   sx={{
                     display: 'block',

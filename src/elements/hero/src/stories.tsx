@@ -397,7 +397,7 @@ export const PromoBannerExample = () => {
           fgImageOnTablet={imageOnTablet}
           customBgColor={bgColor}
           fgImageType={'img'}
-          advertisment
+          advertisement
         >
           <Row>
             <Col span={[12, 5]}>
