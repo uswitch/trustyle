@@ -5,6 +5,7 @@ import { jsx } from '@emotion/react'
 
 import { Arrow } from './arrow'
 import { ArrowCircle } from './arrow-circle'
+import { Banking } from './banking'
 import { Bill } from './bill'
 import { Book } from './book'
 import { BookClosed } from './book-closed'
@@ -15,13 +16,16 @@ import { Calendar } from './calendar'
 import { Caret } from './caret'
 import { Car } from './car'
 import { CaretFinal } from './caretFinal'
+import { CarInsurance } from './car-insurance'
 import { Check } from './check'
 import { Clock } from './clock'
 import { Close } from './close'
 import { CheckCircle } from './check-circle'
 import { Checkmark } from './checkmark'
 import { Conversation } from './conversation'
+import { CreditCard } from './credit-card'
 import { Cross } from './cross'
+import { CurrentAccount } from './current-account'
 import { Edit } from './edit'
 import { EditJourney } from './edit-journey'
 import { Email } from './email'
@@ -37,17 +41,21 @@ import { Home } from './home'
 import { House } from './house'
 import { Info } from './info'
 import { Information } from './information'
+import { Investments } from './investments'
 import { Letter } from './letter'
 import { LinkedIn } from './linkedIn'
+import { Loans } from './loans'
 import { Location } from './location'
 import { Magnifier } from './magnifier'
 import { Minus } from './minus'
 import { Mobile } from './mobile'
 import { MoneyFilter } from './money-filter'
+import { Mortgages } from './mortgages'
 import { One } from './one'
 import { Person } from './person'
 import { PersonCircle } from './person-circle'
 import { Phone } from './phone'
+import { PiggyBank } from './piggy-bank'
 import { Plus } from './plus'
 import { PoundCircle } from './pound-circle'
 import { Twitter } from './twitter'
@@ -59,6 +67,7 @@ import { Sort } from './sort'
 import { SortThin } from './sort-thin'
 import { Three } from './three'
 import { Tick } from './tick'
+import { TravelMoney } from './travel-money'
 import { Tv } from './tv'
 import { Two } from './two'
 import { ThumbUp } from './thumb-up'
@@ -77,6 +86,7 @@ import { Pencil } from './pencil'
 export type Glyph =
   | 'arrow'
   | 'arrow-circle'
+  | 'banking'
   | 'bill'
   | 'book'
   | 'book-closed'
@@ -87,13 +97,16 @@ export type Glyph =
   | 'car'
   | 'caret'
   | 'caretFinal'
+  | 'car-insurance'
   | 'check'
   | 'clock'
   | 'close'
   | 'check-circle'
   | 'checkmark'
   | 'conversation'
+  | 'credit-card'
   | 'cross'
+  | 'current-account'
   | 'edit'
   | 'email'
   | 'email-filled'
@@ -109,13 +122,16 @@ export type Glyph =
   | 'house'
   | 'info'
   | 'information'
+  | 'investments'
   | 'letter'
   | 'linkedIn'
+  | 'loans'
   | 'location'
   | 'magnifier'
   | 'minus'
   | 'mobile'
   | 'money-filter'
+  | 'mortgages'
   | 'one'
   | 'pencil'
   | 'person'
@@ -124,6 +140,7 @@ export type Glyph =
   | 'people-bold'
   | 'phone'
   | 'phone-simple'
+  | 'piggy-bank'
   | 'plus'
   | 'pound-circle'
   | 'question'
@@ -134,6 +151,7 @@ export type Glyph =
   | 'sort-thin'
   | 'three'
   | 'tick'
+  | 'travel-money'
   | 'tv'
   | 'two'
   | 'thumb-up'
@@ -173,6 +191,8 @@ export const Icon: React.FC<Props> = ({
       return <Arrow color={color} direction={direction} size={size} />
     case 'arrow-circle':
       return <ArrowCircle color={color} size={size} />
+    case 'banking':
+      return <Banking color={color} size={size} />
     case 'bill':
       return <Bill color={color} size={size} />
     case 'book':
@@ -195,6 +215,8 @@ export const Icon: React.FC<Props> = ({
       )
     case 'caretFinal':
       return <CaretFinal color={color} direction={direction} size={size} />
+    case 'car-insurance':
+      return <CarInsurance color={color} size={size} />
     case 'check':
       return <Check color={color} size={size} />
     case 'check-circle':
@@ -207,8 +229,12 @@ export const Icon: React.FC<Props> = ({
       return <Checkmark color={color} size={size} />
     case 'conversation':
       return <Conversation color={color} size={size} />
+    case 'credit-card':
+      return <CreditCard color={color} size={size} />
     case 'cross':
       return <Cross color={color} size={size} />
+    case 'current-account':
+      return <CurrentAccount color={color} size={size} />
     case 'edit':
       return <Edit color={color} size={size} />
     case 'email':
@@ -239,12 +265,16 @@ export const Icon: React.FC<Props> = ({
       return <Info color={color} size={size} />
     case 'information':
       return <Information color={color} size={size} />
+    case 'investments':
+      return <Investments color={color} size={size} />
     case 'letter':
       return <Letter color={color} size={size} />
     case 'linkedIn':
       return <LinkedIn color={color} size={size} />
     case 'location':
       return <Location color={color} size={size} />
+    case 'loans':
+      return <Loans color={color} size={size} />
     case 'magnifier':
       return <Magnifier color={color} size={size} />
     case 'minus':
@@ -253,6 +283,8 @@ export const Icon: React.FC<Props> = ({
       return <Mobile color={color} size={size} />
     case 'money-filter':
       return <MoneyFilter color={color} size={size} />
+    case 'mortgages':
+      return <Mortgages color={color} size={size} />
     case 'one':
       return <One color={color} size={size} />
     case 'pencil':
@@ -269,6 +301,8 @@ export const Icon: React.FC<Props> = ({
       return <Phone color={color} size={size} />
     case 'phone-simple':
       return <PhoneSimple color={color} size={size} />
+    case 'piggy-bank':
+      return <PiggyBank color={color} size={size} />
     case 'plus':
       return <Plus color={color} size={size} />
     case 'pound-circle':
@@ -297,6 +331,8 @@ export const Icon: React.FC<Props> = ({
       return <ThumbUp color={color} size={size} />
     case 'thumb-down':
       return <ThumbDown color={color} size={size} />
+    case 'travel-money':
+      return <TravelMoney color={color} size={size} />
     case 'twitter':
       return <Twitter color={color} size={size} />
     case 'star-filled':

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.71.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.70.1...@uswitch/trustyle.money-theme@1.71.0) (2021-11-29)
+
+
+### Bug Fixes
+
+* money theme box sizing for link list ([9f02cae](https://github.com/uswitch/trustyle/commit/9f02cae))
+
+
+### Features
+
+* add link block variant for link-list component ([825e809](https://github.com/uswitch/trustyle/commit/825e809))
+
+
+
+
+
 ## [1.70.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.70.0...@uswitch/trustyle.money-theme@1.70.1) (2021-11-26)
 
 
