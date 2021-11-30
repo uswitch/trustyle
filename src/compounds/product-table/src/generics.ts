@@ -57,6 +57,11 @@ const formatters: {
   // Alternative version of the pounds formatter that takes care of adding 0 as needed
   'full-pounds': value => `£${value.toFixed(2)}`,
 
+  'pounds-with-commas': value =>
+    Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(
+      value
+    ),
+
   percent: value => `${value}%`,
 
   /**
