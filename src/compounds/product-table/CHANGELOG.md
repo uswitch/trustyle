@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.18.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.17.7...@uswitch/trustyle.product-table@2.18.0) (2021-11-30)
+
+
+### Features
+
+* adds formatter for pounds with commas ([6e3b6ab](https://github.com/uswitch/trustyle/commit/6e3b6ab))
+
+
+
+
+
 ## [2.17.7](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.product-table@2.17.6...@uswitch/trustyle.product-table@2.17.7) (2021-11-23)
 
 **Note:** Version bump only for package @uswitch/trustyle.product-table
