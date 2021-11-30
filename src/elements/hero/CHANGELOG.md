@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.8.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero@3.8.5...@uswitch/trustyle.hero@3.8.6) (2021-11-25)
+
+**Note:** Version bump only for package @uswitch/trustyle.hero
+
+
+
+
+
 ## [3.8.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.hero@3.8.4...@uswitch/trustyle.hero@3.8.5) (2021-08-27)
 
 **Note:** Version bump only for package @uswitch/trustyle.hero
