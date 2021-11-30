@@ -76,7 +76,7 @@ QuickLinks.story = {
 export const LinkBlock = () => {
   const theme = themeSelector()
   const iconName = select(
-    'Icon',
+    'Link Block Icon',
     [
       'banking',
       'car-insurance',
@@ -126,6 +126,7 @@ export const AutomatedTests = () => {
     <AllThemes>
       <PrimaryVariant />
       <QuickLinks />
+      <LinkBlock />
     </AllThemes>
   )
 }
