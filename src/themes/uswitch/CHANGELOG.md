@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.65.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.64.4...@uswitch/trustyle.uswitch-theme@2.65.0) (2021-11-29)
+
+
+### Features
+
+* add link block variant for link-list component ([825e809](https://github.com/uswitch/trustyle/commit/825e809))
+
+
+
+
+
 ## [2.64.4](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.64.3...@uswitch/trustyle.uswitch-theme@2.64.4) (2021-11-11)
 
 **Note:** Version bump only for package @uswitch/trustyle.uswitch-theme

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.10](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.phone-number-modal@0.1.9...@uswitch/trustyle.phone-number-modal@0.1.10) (2021-11-29)
+
+**Note:** Version bump only for package @uswitch/trustyle.phone-number-modal
+
+
+
+
+
 ## [0.1.9](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.phone-number-modal@0.1.8...@uswitch/trustyle.phone-number-modal@0.1.9) (2021-09-30)
 
 **Note:** Version bump only for package @uswitch/trustyle.phone-number-modal

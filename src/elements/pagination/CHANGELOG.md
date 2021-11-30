@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.21](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.pagination@1.6.20...@uswitch/trustyle.pagination@1.6.21) (2021-11-29)
+
+**Note:** Version bump only for package @uswitch/trustyle.pagination
+
+
+
+
+
 ## [1.6.20](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.pagination@1.6.19...@uswitch/trustyle.pagination@1.6.20) (2021-08-27)
 
 

@@ -4,14 +4,18 @@ import * as React from 'react'
 import { jsx, Themed } from 'theme-ui'
 import { Glyph, Icon } from '@uswitch/trustyle.icon'
 
-export type Variant = 'base' | 'quickLinks'
+export type Variant = 'base' | 'quickLinks' | 'linkBlock'
 
 interface ListLinkProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string
   icon?: React.ReactNode
+  subtitle?: string
+  subtitleUrl?: string
   variant?: Variant
   className?: string
 }
+
+const VariantContext = React.createContext('base')
 
 const styles = (variant: Variant, element?: string) =>
   `elements.link-list.variants.${variant}${element ? `.${element}` : ''}`
@@ -20,44 +24,68 @@ export const LinkList: React.FC<ListLinkProps> = ({
   children,
   title,
   icon,
+  subtitle,
+  subtitleUrl,
   variant = 'base',
   className
 }) => {
+  const IconComponent =
+    typeof icon === 'string' ? <Icon glyph={icon as Glyph} color="" /> : icon
+
   return (
-    <div className={className} sx={{ variant: styles(variant) }}>
-      {(title || icon) && (
-        <header
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            variant: styles(variant, 'header')
-          }}
-        >
-          {icon}
-          {title && (
-            <Themed.h3
-              as="h2"
+    <VariantContext.Provider value={variant}>
+      <div className={className} sx={{ variant: styles(variant) }}>
+        {(title || icon) && (
+          <section>
+            <header
               sx={{
-                paddingTop: 'xs',
-                paddingBottom: 'xs',
-                margin: 0
+                display: 'flex',
+                alignItems: 'center',
+                variant: styles(variant, 'header')
               }}
             >
-              {title}
-            </Themed.h3>
-          )}
-        </header>
-      )}
-      <ul
-        sx={{
-          padding: 0,
-          listStyle: 'none',
-          marginTop: '0'
-        }}
-      >
-        {children}
-      </ul>
-    </div>
+              {variant === 'linkBlock' && (
+                <div
+                  sx={{
+                    variant: styles(variant, 'icon')
+                  }}
+                >
+                  {IconComponent}
+                </div>
+              )}
+              {variant !== 'linkBlock' && IconComponent}
+              {title && (
+                <Themed.h3
+                  as="h2"
+                  sx={{
+                    paddingTop: 'xs',
+                    paddingBottom: 'xs',
+                    margin: 0,
+                    variant: styles(variant, 'h3')
+                  }}
+                >
+                  {title}
+                </Themed.h3>
+              )}
+            </header>
+            {subtitle && subtitleUrl && (
+              <LinkListItem href={subtitleUrl}>
+                <strong style={{ backgroundColor: 'unset' }}>{subtitle}</strong>
+              </LinkListItem>
+            )}
+          </section>
+        )}
+        <ul
+          sx={{
+            padding: 0,
+            listStyle: 'none',
+            marginTop: '0'
+          }}
+        >
+          {children}
+        </ul>
+      </div>
+    </VariantContext.Provider>
   )
 }
 
@@ -76,18 +104,20 @@ export const LinkListItem: React.FC<ListLinkItemProps> = ({
   const IconComponent =
     typeof icon === 'string' ? <Icon glyph={icon as Glyph} color="" /> : icon
 
+  const variant = React.useContext(VariantContext) as Variant
+
   return (
     <li
       sx={{
-        borderTopWidth: '1px',
-        borderTopStyle: 'solid',
+        borderTop: '1px solid',
         borderTopColor: 'grey-20',
         paddingTop: 'xs',
         paddingBottom: 'xs',
         marginBottom: '0',
         display: 'flex',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        variant: styles(variant, 'li')
       }}
       className={className}
     >

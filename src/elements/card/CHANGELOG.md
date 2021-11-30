@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.14.5...@uswitch/trustyle.card@1.15.0) (2021-11-29)
+
+
+### Features
+
+* add link block variant for link-list component ([825e809](https://github.com/uswitch/trustyle/commit/825e809))
+
+
+
+
+
 ## [1.14.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.card@1.14.4...@uswitch/trustyle.card@1.14.5) (2021-10-29)
 
 **Note:** Version bump only for package @uswitch/trustyle.card

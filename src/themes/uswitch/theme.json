@@ -2382,6 +2382,33 @@
               "cursor": "pointer"
             }
           }
+        },
+        "linkBlock": {
+          "boxShadow": "0px 0px 8px rgba(0, 0, 0, 0.45)",
+          "width": ["220px", "296px", "296px"],
+          "display": "inline-block",
+          "padding": "md",
+          "header": {
+            "flexDirection": "column",
+            "alignItems": "start"
+          },
+          "a": {
+            "marginBottom": 0,
+            "textDecoration": "underline"
+          },
+          "li": {
+            "borderTop": "none"
+          },
+          "icon": {
+            "backgroundColor": "transparent",
+            "borderRadius": 0,
+            "padding": 0,
+            "mr": [20, 20, 28],
+            "> svg": {
+              "width": [32, 32, 42],
+              "height": [34, 34, 42]
+            }
+          }
         }
       }
     },
