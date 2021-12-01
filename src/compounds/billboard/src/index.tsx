@@ -10,6 +10,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   primarySlot?: React.ReactElement
   fullWidthSlot?: React.ReactElement
   bgImage?: string
+  showImageOnMobile?: boolean
+  imagePosition?: string
 }
 
 const Billboard: React.FC<Props> = ({
@@ -17,7 +19,9 @@ const Billboard: React.FC<Props> = ({
   primaryContent,
   primarySlot,
   fullWidthSlot,
-  bgImage
+  bgImage,
+  showImageOnMobile = false,
+  imagePosition
 }) => {
   const styles = () => {
     if (primarySlot) {
@@ -112,15 +116,26 @@ const Billboard: React.FC<Props> = ({
                   {React.cloneElement(primarySlot, { variant: 'billboard' })}
                 </div>
               )}
-
               {!primarySlot && bgImage && (
                 <div
                   sx={{
-                    width: '404px',
-                    height: '416px',
-                    display: ['none', 'none', 'block'],
-                    background: `url(${bgImage}) no-repeat right bottom / contain`,
-                    variant: 'compounds.billboard.bgImagePosition'
+                    width: ['90%', '404px', '404px'],
+                    height: ['0', '255px', '416px'],
+                    margin: ['30px auto 0', '30px auto 0', '0'],
+                    paddingTop: ['60%', '0', '0'],
+                    display: [
+                      showImageOnMobile ? 'block' : 'none',
+                      showImageOnMobile ? 'block' : 'none',
+                      'block'
+                    ],
+                    backgroundImage: `url(${bgImage})`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'contain',
+                    backgroundPosition: imagePosition || 'right bottom',
+                    variant:
+                      imagePosition === undefined
+                        ? 'compounds.billboard.bgImagePosition'
+                        : ''
                   }}
                 ></div>
               )}

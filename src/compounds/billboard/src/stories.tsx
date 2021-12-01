@@ -10,6 +10,7 @@ import AllThemes from '../../../utils/all-themes'
 import IconTile, { DisplayVariant } from '../../../elements/icon-tile/src'
 import { Col, Row } from '../../../layout/flex-grid/src'
 import CTA from '../../../elements/cta/src'
+import { ButtonLink } from '../../../elements/button-link/src'
 
 import Billboard from './'
 
@@ -211,6 +212,39 @@ ExampleWithBgImage.story = {
   }
 }
 
+const primaryPromoContent = (
+  <div>
+    <h3>Compare 10 year fixed rate mortgages</h3>
+    <p>
+      You could find a low fixed rate mortgage deal that offers you peace of
+      mind by fixing your repayments for 10 years.
+    </p>
+    <ButtonLink variant={'primary'} href="https://www.uswitch.com">
+      See more
+    </ButtonLink>
+  </div>
+)
+
+export const ExamplePromoBanner = () => {
+  return (
+    <Billboard
+      breadcrumbs={breadcrumbs}
+      primaryContent={primaryPromoContent}
+      bgImage={
+        'https://money.imgix.net/uswitch-assets-eu/amp/images/product/credit-cards/barclaycard_platinum_2021.png'
+      }
+      showImageOnMobile
+      imagePosition={'center center'}
+    />
+  )
+}
+
+ExamplePromoBanner.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}
+
 export const AutomatedTests = () => {
   return (
     <AllThemes>
@@ -220,6 +254,7 @@ export const AutomatedTests = () => {
       <ExampleWithoutPrimarySlot />
       <ExampleWithPalette />
       <ExampleWithBgImage />
+      <ExamplePromoBanner />
     </AllThemes>
   )
 }
