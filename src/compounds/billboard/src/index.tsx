@@ -21,7 +21,7 @@ const Billboard: React.FC<Props> = ({
   fullWidthSlot,
   bgImage,
   showImageOnMobile = false,
-  imagePosition = 'right bottom'
+  imagePosition
 }) => {
   const styles = () => {
     if (primarySlot) {
@@ -128,7 +128,10 @@ const Billboard: React.FC<Props> = ({
                       showImageOnMobile ? 'block' : 'none',
                       'block'
                     ],
-                    background: `url(${bgImage}) no-repeat ${imagePosition} / contain`,
+                    backgroundImage: `url(${bgImage})`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'contain',
+                    backgroundPosition: imagePosition || 'right bottom',
                     variant:
                       imagePosition === undefined
                         ? 'compounds.billboard.bgImagePosition'
