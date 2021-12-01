@@ -129,9 +129,10 @@ const Billboard: React.FC<Props> = ({
                       'block'
                     ],
                     background: `url(${bgImage}) no-repeat ${imagePosition} / contain`,
-                    variant: !imagePosition
-                      ? 'compounds.billboard.bgImagePosition'
-                      : ''
+                    variant:
+                      imagePosition === undefined
+                        ? 'compounds.billboard.bgImagePosition'
+                        : ''
                   }}
                 ></div>
               )}
