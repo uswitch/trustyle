@@ -17,8 +17,19 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   logoAlt?: string
   imgSize?: string
   complianceText?: string
+  telephoneNumber?: string
 }
-
+const AdvertWrapper = ({
+  telephoneNumber,
+  children,
+  link
+}: {
+  telephoneNumber: string | undefined
+  children: React.ReactNode
+  link: string | undefined
+}) => {
+  return telephoneNumber ? <div>{children}</div> : <a href={link}>{children}</a>
+}
 const Advert: React.FC<Props> = ({
   headline,
   body,
@@ -29,7 +40,8 @@ const Advert: React.FC<Props> = ({
   badgeText,
   link,
   imgSize = '120px',
-  complianceText
+  complianceText,
+  telephoneNumber
 }) => {
   return (
     <div sx={{ variant: 'compounds.advert' }}>
@@ -47,7 +59,7 @@ const Advert: React.FC<Props> = ({
       >
         Ad
       </div>
-      <a href={link}>
+      <AdvertWrapper telephoneNumber={telephoneNumber} link={link}>
         <div
           sx={{
             borderRadius: '4px',
@@ -111,7 +123,7 @@ const Advert: React.FC<Props> = ({
               <div sx={{ padding: ['8px 0', '0'] }}>
                 {content && <div sx={{ fontSize: '14px' }}>{content}</div>}
                 {!content && body && <p sx={{ fontSize: '14px' }}>{body}</p>}
-                <Badge variant="advert">{badgeText}</Badge>
+                <Badge variant="advert">{telephoneNumber || badgeText}</Badge>
               </div>
             </div>
             <div
@@ -138,7 +150,7 @@ const Advert: React.FC<Props> = ({
             {footer}
           </p>
         </div>
-      </a>
+      </AdvertWrapper>
     </div>
   )
 }
