@@ -19,7 +19,15 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   complianceText?: string
   telephoneNumber?: string
 }
-const AdvertWrapper = ({ telephoneNumber, children, link }) => {
+const AdvertWrapper = ({
+  telephoneNumber,
+  children,
+  link
+}: {
+  telephoneNumber: string | undefined
+  children: React.ReactNode
+  link: string | undefined
+}) => {
   return telephoneNumber ? <div>{children}</div> : <a href={link}>{children}</a>
 }
 const Advert: React.FC<Props> = ({
