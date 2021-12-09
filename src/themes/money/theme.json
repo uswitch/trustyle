@@ -1627,7 +1627,7 @@
           },
           "h3": {
             "color": "text",
-            "fontSize": "sm"
+            "fontSize": "md"
           },
           "a": {
             "marginBottom": 0,
