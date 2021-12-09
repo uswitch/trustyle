@@ -115,6 +115,71 @@ export const LinkBlock = () => {
   )
 }
 
+export const LinkBlockGroup = () => {
+  const LinkListWrapper = () => (
+    <div
+      css={css({
+        boxSizing: 'border-box',
+        marginRight: '7.5px',
+        marginBottom: '24px',
+        flex: '0 0 auto',
+        marginLeft: '7.5px',
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'flex-start',
+        width: 'calc(25% - 15px)'
+      })}
+    >
+      <LinkList
+        title="Credit Cards"
+        icon={<Icon glyph="travel-money" color="000" />}
+        variant="linkBlock"
+        subtitle="Compare all cards"
+        subtitleUrl="https://money.co.uk"
+      >
+        <LinkListItem href="https://money.co.uk">
+          0% balance transfer
+        </LinkListItem>
+        <LinkListItem href="https://money.co.uk">
+          0% purchase cards
+        </LinkListItem>
+        <LinkListItem href="https://money.co.uk">
+          Cards for bad credit
+        </LinkListItem>
+      </LinkList>
+    </div>
+  )
+
+  return (
+    <div
+      css={css({
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        boxSizing: 'border-box',
+        paddingLeft: '15px',
+        paddingRight: '15px',
+        maxWidth: '1200px',
+        display: 'flex',
+        flexDirection: 'column'
+      })}
+    >
+      <div
+        css={css({
+          marginLeft: '-7.5px',
+          marginRight: '-7.5px',
+          display: 'flex',
+          flexFlow: 'row wrap'
+        })}
+      >
+        <LinkListWrapper />
+        <LinkListWrapper />
+        <LinkListWrapper />
+        <LinkListWrapper />
+      </div>
+    </div>
+  )
+}
+
 LinkBlock.story = {
   parameters: {
     percy: { skip: true }
@@ -127,6 +192,7 @@ export const AutomatedTests = () => {
       <PrimaryVariant />
       <QuickLinks />
       <LinkBlock />
+      <LinkBlockGroup />
     </AllThemes>
   )
 }
