@@ -2385,7 +2385,6 @@
         },
         "linkBlock": {
           "boxShadow": "0px 0px 8px rgba(0, 0, 0, 0.45)",
-          "maxWidth": ["220px", "296px", "296px"],
           "width": "100%",
           "display": "inline-block",
           "padding": "md",
@@ -2409,8 +2408,7 @@
             "borderTop": "none",
             "paddingTop": "0px",
             "paddingBottom": "0px",
-            "marginTop": "12px",
-            "marginBottom": "12px"
+            "marginY": "12px"
           },
           "icon": {
             "backgroundColor": "transparent",

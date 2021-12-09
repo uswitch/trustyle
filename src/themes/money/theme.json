@@ -1619,7 +1619,6 @@
           "display": "inline-block",
           "padding": "md",
           "paddingBottom": "6px",
-          "maxWidth": ["220px", "296px", "296px"],
           "width": "100%",
           "header": {
             "flexDirection": "column",
@@ -1638,10 +1637,8 @@
               "marginTop": "4px"
             },
             "borderTop": "none",
-            "paddingTop": "0px",
-            "paddingBottom": "0px",
-            "marginTop": "12px",
-            "marginBottom": "12px"
+            "paddingY": "0px",
+            "marginY": "12px"
           },
           "icon": {
             "backgroundColor": "transparent",
