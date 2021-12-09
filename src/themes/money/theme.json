@@ -1618,6 +1618,7 @@
           "boxSizing": "border-box",
           "display": "inline-block",
           "padding": "md",
+          "paddingBottom": "6px",
           "maxWidth": ["220px", "296px", "296px"],
           "width": "100%",
           "header": {
@@ -1625,14 +1626,22 @@
             "alignItems": "start"
           },
           "h3": {
-            "color": "text"
+            "color": "text",
+            "fontSize": "sm"
           },
           "a": {
             "marginBottom": 0,
             "textDecoration": "underline"
           },
           "li": {
-            "borderTop": "none"
+            ":first-of-type": {
+              "marginTop": "4px"
+            },
+            "borderTop": "none",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "marginTop": "12px",
+            "marginBottom": "12px"
           },
           "icon": {
             "backgroundColor": "transparent",

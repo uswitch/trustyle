@@ -32,6 +32,16 @@ export const LinkList: React.FC<ListLinkProps> = ({
   const IconComponent =
     typeof icon === 'string' ? <Icon glyph={icon as Glyph} color="" /> : icon
 
+  const titleProps = {
+    as: 'h2',
+    sx: {
+      paddingTop: 'xs',
+      paddingBottom: 'xs',
+      margin: 0,
+      variant: styles(variant, 'h3')
+    }
+  }
+
   return (
     <VariantContext.Provider value={variant}>
       <div className={className} sx={{ variant: styles(variant) }}>
@@ -54,19 +64,16 @@ export const LinkList: React.FC<ListLinkProps> = ({
                 </div>
               )}
               {variant !== 'linkBlock' && IconComponent}
-              {title && (
-                <Themed.h3
-                  as="h2"
-                  sx={{
-                    paddingTop: 'xs',
-                    paddingBottom: 'xs',
-                    margin: 0,
-                    variant: styles(variant, 'h3')
-                  }}
-                >
-                  {title}
-                </Themed.h3>
-              )}
+              {title &&
+                (variant === 'linkBlock' ? (
+                  // @ts-ignore - ts does not seem to recognize "as" when in object form
+                  <Themed.h6 {...titleProps}>
+                    <strong>{title}</strong>
+                  </Themed.h6>
+                ) : (
+                  // @ts-ignore
+                  <Themed.h3 {...titleProps}>{title}</Themed.h3>
+                ))}
             </header>
             {subtitle && subtitleUrl && (
               <LinkListItem href={subtitleUrl}>
