@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.71.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.71.0...@uswitch/trustyle.money-theme@1.71.1) (2021-12-10)
+
+
+### Bug Fixes
+
+* **link-list/linkBlock:** make money title font a bit larger ([6b402c5](https://github.com/uswitch/trustyle/commit/6b402c5))
+* **link-list/linkBlock:** rm maxWidths ([4e939a1](https://github.com/uswitch/trustyle/commit/4e939a1))
+* link blocks having fixed widths, resulting in overlap ([70c9da7](https://github.com/uswitch/trustyle/commit/70c9da7))
+* styling adjustments for linkBlock ([4a12504](https://github.com/uswitch/trustyle/commit/4a12504))
+
+
+
+
+
 # [1.71.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.70.1...@uswitch/trustyle.money-theme@1.71.0) (2021-11-29)
 
 
