@@ -1626,7 +1626,8 @@
           },
           "h3": {
             "color": "text",
-            "fontSize": "md"
+            "fontSize": "md",
+            "fontWeight": "xbold"
           },
           "a": {
             "marginBottom": 0,

@@ -67,9 +67,7 @@ export const LinkList: React.FC<ListLinkProps> = ({
               {title &&
                 (variant === 'linkBlock' ? (
                   // @ts-ignore - ts does not seem to recognize "as" when in object form
-                  <Themed.h6 {...titleProps}>
-                    <strong>{title}</strong>
-                  </Themed.h6>
+                  <Themed.h6 {...titleProps}>{title}</Themed.h6>
                 ) : (
                   // @ts-ignore
                   <Themed.h3 {...titleProps}>{title}</Themed.h3>

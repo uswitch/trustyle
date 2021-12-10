@@ -2391,7 +2391,8 @@
           "paddingBottom": "6px",
           "h3": {
             "color": "primary",
-            "fontSize": "sm"
+            "fontSize": "sm",
+            "fontWeight": "xbold"
           },
           "header": {
             "flexDirection": "column",
