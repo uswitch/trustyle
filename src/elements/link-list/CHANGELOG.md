@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.link-list@1.2.0...@uswitch/trustyle.link-list@1.2.1) (2021-12-10)
+
+
+### Bug Fixes
+
+* link blocks having fixed widths, resulting in overlap ([70c9da7](https://github.com/uswitch/trustyle/commit/70c9da7))
+* styling adjustments for linkBlock ([4a12504](https://github.com/uswitch/trustyle/commit/4a12504))
+
+
+
+
+
 # [1.2.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.link-list@1.1.0...@uswitch/trustyle.link-list@1.2.0) (2021-11-29)
 
 
