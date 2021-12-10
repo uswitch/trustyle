@@ -1618,20 +1618,28 @@
           "boxSizing": "border-box",
           "display": "inline-block",
           "padding": "md",
-          "width": ["220px", "296px", "296px"],
+          "paddingBottom": "6px",
+          "width": "100%",
           "header": {
             "flexDirection": "column",
             "alignItems": "start"
           },
           "h3": {
-            "color": "text"
+            "color": "text",
+            "fontSize": "md",
+            "fontWeight": "xbold"
           },
           "a": {
             "marginBottom": 0,
             "textDecoration": "underline"
           },
           "li": {
-            "borderTop": "none"
+            ":first-of-type": {
+              "marginTop": "4px"
+            },
+            "borderTop": "none",
+            "paddingY": "0px",
+            "marginY": "12px"
           },
           "icon": {
             "backgroundColor": "transparent",
