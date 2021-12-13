@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.navigation-dropdown",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -16,6 +16,6 @@
     "react": "^16.7.0"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.28.0"
+    "@uswitch/trustyle.icon": "^1.29.0"
   }
 }
