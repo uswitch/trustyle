@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.65.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.65.1...@uswitch/trustyle.uswitch-theme@2.65.2) (2021-12-13)
+
+
+### Bug Fixes
+
+* fs-core product table stories ([4884854](https://github.com/uswitch/trustyle/commit/4884854))
+
+
+
+
+
 ## [2.65.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.uswitch-theme@2.65.0...@uswitch/trustyle.uswitch-theme@2.65.1) (2021-12-10)
 
 
