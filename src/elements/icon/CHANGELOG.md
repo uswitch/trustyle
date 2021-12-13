@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.29.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.28.0...@uswitch/trustyle.icon@1.29.0) (2021-12-13)
+
+
+### Features
+
+* **icon:** add new 4 new outline icons with configurable color ([8399579](https://github.com/uswitch/trustyle/commit/8399579))
+
+
+
+
+
 # [1.28.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.icon@1.27.2...@uswitch/trustyle.icon@1.28.0) (2021-11-29)
 
 

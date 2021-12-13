@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.card",
-  "version": "1.15.0",
+  "version": "1.15.1",
   "license": "MIT",
   "main": "lib/index.js",
   "publishConfig": {
@@ -16,12 +16,12 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.button-link": "^3.3.1",
+    "@uswitch/trustyle.button-link": "^3.3.2",
     "@uswitch/trustyle.date": "^0.0.14",
     "@uswitch/trustyle.flex-grid": "^3.5.5",
     "@uswitch/trustyle.imgix-image": "^0.1.42"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.28.0"
+    "@uswitch/trustyle.icon": "^1.29.0"
   }
 }

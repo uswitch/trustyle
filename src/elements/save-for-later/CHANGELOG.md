@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.12](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-for-later@1.1.11...@uswitch/trustyle.save-for-later@1.1.12) (2021-12-13)
+
+**Note:** Version bump only for package @uswitch/trustyle.save-for-later
+
+
+
+
+
 ## [1.1.11](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.save-for-later@1.1.10...@uswitch/trustyle.save-for-later@1.1.11) (2021-11-29)
 
 **Note:** Version bump only for package @uswitch/trustyle.save-for-later
