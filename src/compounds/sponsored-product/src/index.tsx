@@ -239,7 +239,11 @@ const SponsoredProduct: React.FC<Props> = ({
             <ImgixImage
               src={sponsorSrc}
               alt={sponsorName}
-              imgixParams={{ fit: 'clip', trim: 'color' }}
+              imgixParams={{
+                fit: 'clip',
+                trim: 'color',
+                'trim-color': 'white'
+              }}
               width={imgSrc ? 44 : 120}
               height={imgSrc ? 88 : 73}
               critical
