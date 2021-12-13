@@ -24,6 +24,7 @@ import { CheckCircle } from './check-circle'
 import { Checkmark } from './checkmark'
 import { Conversation } from './conversation'
 import { CreditCard } from './credit-card'
+import { CreditCardOutline } from './credit-card-outline'
 import { Cross } from './cross'
 import { CurrentAccount } from './current-account'
 import { Edit } from './edit'
@@ -51,13 +52,16 @@ import { Minus } from './minus'
 import { Mobile } from './mobile'
 import { MoneyFilter } from './money-filter'
 import { Mortgages } from './mortgages'
+import { MortgagesOutline } from './mortgages-outline'
 import { One } from './one'
 import { Person } from './person'
 import { PersonCircle } from './person-circle'
 import { Phone } from './phone'
 import { PiggyBank } from './piggy-bank'
+import { PiggyBankOutline } from './piggy-bank-outline'
 import { Plus } from './plus'
 import { PoundCircle } from './pound-circle'
+import { ReceiptOutline } from './receipt-outline'
 import { Twitter } from './twitter'
 import { Question } from './question'
 import { QuestionFilled } from './question-filled'
@@ -105,6 +109,7 @@ export type Glyph =
   | 'checkmark'
   | 'conversation'
   | 'credit-card'
+  | 'credit-card-outline'
   | 'cross'
   | 'current-account'
   | 'edit'
@@ -132,6 +137,7 @@ export type Glyph =
   | 'mobile'
   | 'money-filter'
   | 'mortgages'
+  | 'mortgages-outline'
   | 'one'
   | 'pencil'
   | 'person'
@@ -141,8 +147,10 @@ export type Glyph =
   | 'phone'
   | 'phone-simple'
   | 'piggy-bank'
+  | 'piggy-bank-outline'
   | 'plus'
   | 'pound-circle'
+  | 'receipt-outline'
   | 'question'
   | 'question-filled'
   | 'smile'
@@ -231,6 +239,8 @@ export const Icon: React.FC<Props> = ({
       return <Conversation color={color} size={size} />
     case 'credit-card':
       return <CreditCard color={color} size={size} />
+    case 'credit-card-outline':
+      return <CreditCardOutline color={color} size={size} />
     case 'cross':
       return <Cross color={color} size={size} />
     case 'current-account':
@@ -285,6 +295,8 @@ export const Icon: React.FC<Props> = ({
       return <MoneyFilter color={color} size={size} />
     case 'mortgages':
       return <Mortgages color={color} size={size} />
+    case 'mortgages-outline':
+      return <MortgagesOutline color={color} size={size} />
     case 'one':
       return <One color={color} size={size} />
     case 'pencil':
@@ -303,10 +315,14 @@ export const Icon: React.FC<Props> = ({
       return <PhoneSimple color={color} size={size} />
     case 'piggy-bank':
       return <PiggyBank color={color} size={size} />
+    case 'piggy-bank-outline':
+      return <PiggyBankOutline color={color} size={size} />
     case 'plus':
       return <Plus color={color} size={size} />
     case 'pound-circle':
       return <PoundCircle color={color} size={size} />
+    case 'receipt-outline':
+      return <ReceiptOutline color={color} size={size} />
     case 'question':
       return <Question color={color} size={size} />
     case 'question-filled':

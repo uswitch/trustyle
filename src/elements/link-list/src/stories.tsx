@@ -81,12 +81,16 @@ export const LinkBlock = () => {
       'banking',
       'car-insurance',
       'credit-card',
+      'credit-card-outline',
       'current-account',
       'piggy-bank',
+      'piggy-bank-outline',
       'investments',
       'loans',
       'mortgages',
-      'travel-money'
+      'mortgages-outline',
+      'travel-money',
+      'receipt-outline'
     ],
     'credit-card'
   )
