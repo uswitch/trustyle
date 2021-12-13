@@ -1316,6 +1316,7 @@
     },
     "badge": {
       "base": {
+        "fontFamily": "heading",
         "paddingX": [14, 23],
         "paddingY": [3, 7],
         "fontSize": "xs",
@@ -1402,6 +1403,7 @@
         }
       },
       "base": {
+        "boxSizing": "border-box",
         "paddingX": "lg",
         "textAlign": "center",
         "fontWeight": "bold",
@@ -2904,6 +2906,7 @@
           "borderBottomColor": "grey-20"
         },
         "pretitle": {
+          "fontFamily": "heading",
           "color": "grey-80"
         },
         "subtitle": {
@@ -2949,12 +2952,18 @@
         }
       },
       "cellContent": {
-        "main": {},
+        "main": {
+          "fontFamily": "heading"
+        },
         "label": {
+          "fontFamily": "heading",
           "color": "grey-80"
         },
-        "content": {},
+        "content": {
+          "fontFamily": "heading"
+        },
         "accent": {
+          "fontFamily": "heading",
           "backgroundColor": "grey-05"
         },
         "subscript": {
@@ -2962,16 +2971,21 @@
         },
         "variants": {
           "inSplit": {
-            "main": {},
+            "main": {
+              "fontFamily": "heading"
+            },
             "label": {
+              "fontFamily": "heading",
               "color": "grey-80"
             },
             "content": {
+              "fontFamily": "heading",
               "small": {
                 "fontSize": ["xs", "md"]
               }
             },
             "accent": {
+              "fontFamily": "heading",
               "backgroundColor": "grey-05"
             }
           }
