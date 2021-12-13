@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.9.0...@uswitch/trustyle.sponsored-product@3.10.0) (2021-12-13)
+
+
+### Features
+
+* bumped other deps ([6ad178d](https://github.com/uswitch/trustyle/commit/6ad178d))
+
+
+
+
+
+# [3.9.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.7.5...@uswitch/trustyle.sponsored-product@3.9.0) (2021-12-13)
+
+
+### Features
+
+* added trim color to be white ([07cccfb](https://github.com/uswitch/trustyle/commit/07cccfb))
+
+
+
+
+
+# [3.8.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.7.5...@uswitch/trustyle.sponsored-product@3.8.0) (2021-12-13)
+
+
+### Features
+
+* added trim color to be white ([07cccfb](https://github.com/uswitch/trustyle/commit/07cccfb))
+
+
+
+
+
 ## [3.7.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.sponsored-product@3.7.4...@uswitch/trustyle.sponsored-product@3.7.5) (2021-12-13)
 
 **Note:** Version bump only for package @uswitch/trustyle.sponsored-product
