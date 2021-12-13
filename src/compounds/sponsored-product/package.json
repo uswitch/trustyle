@@ -19,7 +19,7 @@
   "dependencies": {
     "@uswitch/trustyle.arrangement": "^2.0.22",
     "@uswitch/trustyle.badge": "^2.0.6",
-    "@uswitch/trustyle.button-link": "^3.3.1",
+    "@uswitch/trustyle.button-link": "^3.3.2",
     "@uswitch/trustyle.flex-grid": "^0.2.1",
     "@uswitch/trustyle.grid": "^2.0.17",
     "@uswitch/trustyle.imgix-image": "^0.1.42",
@@ -28,6 +28,6 @@
     "@uswitch/trustyle.usp-broadband": "^0.2.1"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.28.0"
+    "@uswitch/trustyle.icon": "^1.29.0"
   }
 }
