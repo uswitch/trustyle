@@ -2393,8 +2393,8 @@
           "paddingBottom": "6px",
           "h3": {
             "color": "primary",
-            "fontSize": "sm",
-            "fontWeight": "xbold"
+            "fontSize": ["18px", "18px", "18px"],
+            "fontWeight": ["600", "600", "600"]
           },
           "header": {
             "flexDirection": "column",
