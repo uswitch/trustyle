@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.embedded-video",
-  "version": "0.4.66",
+  "version": "0.4.67",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -21,6 +21,6 @@
     "theme-ui": "^0.9.1"
   },
   "dependencies": {
-    "@uswitch/trustyle.accordion": "^0.15.3"
+    "@uswitch/trustyle.accordion": "^0.15.4"
   }
 }
