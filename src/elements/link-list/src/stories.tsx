@@ -6,7 +6,6 @@ import { Glyph, Icon } from '@uswitch/trustyle.icon'
 import AllThemes from '../../../utils/all-themes'
 import { FilledArrow } from '../../call-out/node_modules/@uswitch/trustyle.icon/src/filled-arrow'
 import { ButtonLink } from '../../button-link/src'
-import themeSelector from '../../../utils/theme-selector'
 
 import { LinkList, LinkListItem } from './'
 
@@ -74,7 +73,6 @@ QuickLinks.story = {
 }
 
 export const LinkBlock = () => {
-  const theme = themeSelector()
   const iconName = select(
     'Link Block Icon',
     [
@@ -94,13 +92,12 @@ export const LinkBlock = () => {
     ],
     'credit-card'
   )
-  const color = select('Icon Color', theme.colors, theme.colors['primary'])
 
   return (
     <div css={css({ padding: number('Padding', 10) })}>
       <LinkList
         title="Credit Cards"
-        icon={<Icon glyph={iconName as Glyph} color={color} />}
+        icon={<Icon glyph={iconName as Glyph} color="" />}
         variant="linkBlock"
         subtitle="Compare all cards"
         subtitleUrl="https://money.co.uk"
