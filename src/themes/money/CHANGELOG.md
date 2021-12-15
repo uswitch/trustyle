@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.71.2](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.71.1...@uswitch/trustyle.money-theme@1.71.2) (2021-12-15)
+
+
+### Bug Fixes
+
+* **link-list/linkBlock:** specify explicit font size and weight ([06b341f](https://github.com/uswitch/trustyle/commit/06b341f))
+
+
+
+
+
 ## [1.71.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.money-theme@1.71.0...@uswitch/trustyle.money-theme@1.71.1) (2021-12-10)
 
 
