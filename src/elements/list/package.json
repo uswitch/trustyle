@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.list",
-  "version": "1.8.5",
+  "version": "1.8.6",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -12,7 +12,7 @@
     "url": "https://github.com/uswitch/trustyle"
   },
   "devDependencies": {
-    "@uswitch/trustyle.icon": "^1.29.1",
+    "@uswitch/trustyle.icon": "^1.30.0",
     "typescript": "^3.6.2"
   },
   "peerDependencies": {
