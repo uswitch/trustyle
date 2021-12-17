@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle.phone-number-modal",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
@@ -16,8 +16,8 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@uswitch/trustyle.icon": "^1.29.1",
+    "@uswitch/trustyle.icon": "^1.30.0",
     "@uswitch/trustyle.imgix-image": "^0.1.42",
-    "@uswitch/trustyle.modal": "^2.4.25"
+    "@uswitch/trustyle.modal": "^2.4.26"
   }
 }

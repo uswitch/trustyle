@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.link-list@1.3.1...@uswitch/trustyle.link-list@1.4.0) (2021-12-17)
+
+
+### Features
+
+* **icon:** add two new icons ([33fe686](https://github.com/uswitch/trustyle/commit/33fe686))
+
+
+
+
+
 ## [1.3.1](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.link-list@1.3.0...@uswitch/trustyle.link-list@1.3.1) (2021-12-15)
 
 

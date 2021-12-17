@@ -38,6 +38,7 @@ import { Filters } from './filters'
 import { Four } from './four'
 import { GasElectricity } from './gas-electricity'
 import { HamburgerSimple } from './hamburger-simple'
+import { HeartOutline } from './heart-outline'
 import { Home } from './home'
 import { House } from './house'
 import { Info } from './info'
@@ -54,6 +55,7 @@ import { MoneyFilter } from './money-filter'
 import { Mortgages } from './mortgages'
 import { MortgagesOutline } from './mortgages-outline'
 import { One } from './one'
+import { OtherOutline } from './other-outline'
 import { Person } from './person'
 import { PersonCircle } from './person-circle'
 import { Phone } from './phone'
@@ -123,6 +125,7 @@ export type Glyph =
   | 'four'
   | 'gas-electricity'
   | 'hamburger-simple'
+  | 'heart-outline'
   | 'home'
   | 'house'
   | 'info'
@@ -139,6 +142,7 @@ export type Glyph =
   | 'mortgages'
   | 'mortgages-outline'
   | 'one'
+  | 'other-outline'
   | 'pencil'
   | 'person'
   | 'person-bold'
@@ -267,6 +271,8 @@ export const Icon: React.FC<Props> = ({
       return <GasElectricity color={color} size={size} />
     case 'hamburger-simple':
       return <HamburgerSimple color={color} size={size} />
+    case 'heart-outline':
+      return <HeartOutline color={color} size={size} />
     case 'home':
       return <Home color={color} size={size} />
     case 'house':
@@ -299,6 +305,8 @@ export const Icon: React.FC<Props> = ({
       return <MortgagesOutline color={color} size={size} />
     case 'one':
       return <One color={color} size={size} />
+    case 'other-outline':
+      return <OtherOutline color={color} size={size} />
     case 'pencil':
       return <Pencil color={color} size={size} />
     case 'person':
