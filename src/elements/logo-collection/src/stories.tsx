@@ -23,3 +23,23 @@ ExampleWithLogos.story = {
     percy: { skip: true }
   }
 }
+
+const largeLogoImages = Array(5)
+  .fill(null)
+  .map((_el, i) => (
+    <img
+      src="/contentful/kitten200x200-9.jpeg"
+      alt="Salman"
+      key={`kitten-${i}`}
+    />
+  ))
+
+export const LargeLogosVariant = () => (
+  <LogoCollection logoImage={largeLogoImages} variant="large" />
+)
+
+LargeLogosVariant.story = {
+  parameters: {
+    percy: { skip: true }
+  }
+}

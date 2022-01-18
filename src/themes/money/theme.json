@@ -737,6 +737,26 @@
             "maxHeight": "64px"
           }
         }
+      },
+      "variants": {
+        "large": {
+          "outer": {
+            "display": "grid",
+            "gridTemplateColumns": [
+              "repeat(2, 1fr)",
+              "repeat(5, 1fr)"
+            ],
+            "gridGap": ["sm", "sm", "md"]
+          },
+          "inner": {
+            "display": "flex",
+            "justifyContent": "center",
+            "alignItems": "center",
+            "img": {
+              "maxWidth": "100%"
+            }
+          }
+        }
       }
     },
     "toggle-switch": {
