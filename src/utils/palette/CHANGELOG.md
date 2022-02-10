@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.6](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle-utils.palette@4.0.5...@uswitch/trustyle-utils.palette@4.0.6) (2022-02-10)
+
+**Note:** Version bump only for package @uswitch/trustyle-utils.palette
+
+
+
+
+
 ## [4.0.5](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle-utils.palette@4.0.4...@uswitch/trustyle-utils.palette@4.0.5) (2021-11-25)
 
 **Note:** Version bump only for package @uswitch/trustyle-utils.palette
