@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, ThemeUIStyleObject } from 'theme-ui'
-import { createContext, useContext } from 'react'
+import { createContext, useContext, forwardRef } from 'react'
 
 const sw = (cases: Record<string, Function>) => (
   prop: string,
@@ -65,12 +65,12 @@ export const usePalette = () => {
    <style>.palette{padding-top:0.05px;padding-bottom:0.05px}</style>
  */
 
-export const Palette = ({
+export const Palette = forwardRef(({
   children,
   className = '',
   px = {},
   ...props
-}: any) => {
+}: any, ref: any) => {
   const palette = usePalette()
   const sx = createSx(palette, px)
 
@@ -79,8 +79,10 @@ export const Palette = ({
       {...props}
       sx={{ '&.palette': sx }}
       className={`palette ${className}`}
+      ref={ref}
     >
       {children}
     </props.as>
   )
 }
+)
