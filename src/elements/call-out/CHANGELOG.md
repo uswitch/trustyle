@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.31](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.call-out@2.1.30...@uswitch/trustyle.call-out@2.1.31) (2022-02-10)
+
+**Note:** Version bump only for package @uswitch/trustyle.call-out
+
+
+
+
+
 ## [2.1.30](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.call-out@2.1.29...@uswitch/trustyle.call-out@2.1.30) (2021-12-17)
 
 **Note:** Version bump only for package @uswitch/trustyle.call-out

@@ -1,6 +1,6 @@
 {
   "name": "@uswitch/trustyle-utils.palette",
-  "version": "4.0.5",
+  "version": "4.0.6",
   "license": "MIT",
   "main": "lib/index.js",
   "ts:main": "src/index.tsx",
