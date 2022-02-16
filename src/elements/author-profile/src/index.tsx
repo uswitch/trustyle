@@ -160,7 +160,7 @@ const AuthorProfile: React.FC<Props> = ({
           variant: styles('content')
         }}
       >
-        <Themed.h2
+        <Themed.h1
           sx={{
             marginTop: 0,
             marginBottom: 'xxs',
@@ -168,7 +168,7 @@ const AuthorProfile: React.FC<Props> = ({
             paddingBottom: 0,
             variant: styles('name')
           }}
-          as="h2"
+          as="h1"
         >
           <a
             href={authorUrl}
@@ -180,7 +180,7 @@ const AuthorProfile: React.FC<Props> = ({
             <span>{name}</span>
             <span sx={{ variant: styles('role') }}>{role}</span>
           </a>
-        </Themed.h2>
+        </Themed.h1>
         <BioElement
           sx={{
             fontSize: 'sm',
