@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.16](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.author-profile@1.3.15...@uswitch/trustyle.author-profile@1.3.16) (2022-02-16)
+
+
+### Bug Fixes
+
+* update author name to use h1 instead of h2 ([47ecbaf](https://github.com/uswitch/trustyle/commit/47ecbaf4dc17bd264f6fc100bc01a7fea3b43804))
+
+
+
+
+
 ## [1.3.15](https://github.com/uswitch/trustyle/compare/@uswitch/trustyle.author-profile@1.3.14...@uswitch/trustyle.author-profile@1.3.15) (2021-12-17)
 
 **Note:** Version bump only for package @uswitch/trustyle.author-profile
