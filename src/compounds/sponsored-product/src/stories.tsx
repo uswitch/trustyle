@@ -25,7 +25,7 @@ export const ExampleWithKnobs = () => {
   const sponsorName = text('Sponsor name', 'Three')
   const sponsorSrc = text(
     'Sponsor url',
-    'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/5eyE4LyswwqIYk0mIsE820/dc0774e3e62d7b39ddeb1729d823a8da/Logo_-_three.png'
+    'https://img.uswitch.com/kf81nsuntxeb/5eyE4LyswwqIYk0mIsE820/dc0774e3e62d7b39ddeb1729d823a8da/Logo_-_three.png'
   )
   const award = text('Award', 'Uswitch Manufacturer of the Year')
   const enhanced = text(

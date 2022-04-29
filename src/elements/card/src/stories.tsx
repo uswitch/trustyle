@@ -31,7 +31,7 @@ export const VerticalCards = () => {
   )
 
   const img =
-    'https://uswitch-contentful.imgix.net/t014ej9w3ur1/YPnGDSG9aTIPmg1rlWsZu/94483e7cec0dd6ac947e1f974650210f/800.jpg'
+    'https://img.uswitch.com/t014ej9w3ur1/YPnGDSG9aTIPmg1rlWsZu/94483e7cec0dd6ac947e1f974650210f/800.jpg'
 
   const imgColumnSizes =
     '(max-width: 768px) 100vw, (max-width: 992px) 50vw, 400px'
@@ -136,7 +136,7 @@ export const HorizontalCards = () => {
   )
 
   const img =
-    'https://uswitch-contentful.imgix.net/t014ej9w3ur1/YPnGDSG9aTIPmg1rlWsZu/94483e7cec0dd6ac947e1f974650210f/800.jpg'
+    'https://img.uswitch.com/t014ej9w3ur1/YPnGDSG9aTIPmg1rlWsZu/94483e7cec0dd6ac947e1f974650210f/800.jpg'
 
   return (
     <div>
@@ -195,7 +195,7 @@ export const BBDealsCard = () => {
   )
 
   const img =
-    'https://uswitch-contentful.imgix.net/t014ej9w3ur1/YPnGDSG9aTIPmg1rlWsZu/94483e7cec0dd6ac947e1f974650210f/800.jpg'
+    'https://img.uswitch.com/t014ej9w3ur1/YPnGDSG9aTIPmg1rlWsZu/94483e7cec0dd6ac947e1f974650210f/800.jpg'
 
   return (
     <div>
@@ -229,7 +229,7 @@ export const HeaderChildrenExample = () => {
   )
 
   const img =
-    'https://uswitch-contentful.imgix.net/t014ej9w3ur1/YPnGDSG9aTIPmg1rlWsZu/94483e7cec0dd6ac947e1f974650210f/800.jpg'
+    'https://img.uswitch.com/t014ej9w3ur1/YPnGDSG9aTIPmg1rlWsZu/94483e7cec0dd6ac947e1f974650210f/800.jpg'
 
   return (
     <div>
@@ -272,7 +272,7 @@ export const VariantsExample = () => {
   )
 
   const img =
-    'https://uswitch-contentful.imgix.net/t014ej9w3ur1/YPnGDSG9aTIPmg1rlWsZu/94483e7cec0dd6ac947e1f974650210f/800.jpg'
+    'https://img.uswitch.com/t014ej9w3ur1/YPnGDSG9aTIPmg1rlWsZu/94483e7cec0dd6ac947e1f974650210f/800.jpg'
 
   return (
     <div>

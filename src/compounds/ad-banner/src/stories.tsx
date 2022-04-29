@@ -19,7 +19,7 @@ export const ExampleWithKnobs = () => {
   )
 
   const url =
-    'https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/3OTEiajt8kWEUm8QcWI8w8/aab828afa135b4591375dc71d6a6584d/Logo_-_samsung.png?auto=compress&trim=color&invert=true&sat=-100&con=100'
+    'https://img.uswitch.com/kf81nsuntxeb/3OTEiajt8kWEUm8QcWI8w8/aab828afa135b4591375dc71d6a6584d/Logo_-_samsung.png?auto=compress&trim=color&invert=true&sat=-100&con=100'
 
   const usp = text('usp', 'Free Galaxy Buds+ worth £159')
   const sponsorLogo = text('Sponsor Logo', url)
