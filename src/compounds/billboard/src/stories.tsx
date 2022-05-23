@@ -231,7 +231,7 @@ export const ExamplePromoBanner = () => {
       breadcrumbs={breadcrumbs}
       primaryContent={primaryPromoContent}
       bgImage={
-        'https://money.imgix.net/uswitch-assets-eu/amp/images/product/credit-cards/barclaycard_platinum_2021.png'
+        'https://img.money.co.uk/s3/uswitch-assets-eu/amp/images/product/credit-cards/barclaycard_platinum_2021.png'
       }
       showImageOnMobile
       imagePosition={'center center'}
