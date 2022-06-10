@@ -100,7 +100,7 @@
     "react": "^16.8.6",
     "react-imgix": "^8.6.1",
     "react-test-renderer": "^16.8.6",
-    "semantic-release": "^17.1.1",
+    "semantic-release": "^19.0.3",
     "styled-system": "^5.1.5",
     "svg-sprite-loader": "^5.0.0",
     "svg-transform-loader": "^2.0.13",
