@@ -38,6 +38,7 @@ const getValueFromBreakpointIndex = (arr: number[], index: number): number => {
 interface ContainerProps {
   cols?: number
   span?: number
+  ref?: React.MutableRefObject<HTMLDivElement | null>
 }
 
 export const Container: React.FC<ContainerProps &
@@ -45,6 +46,7 @@ export const Container: React.FC<ContainerProps &
   children,
   cols,
   span,
+  ref,
   className = '',
   ...props
 }) => {
@@ -67,6 +69,7 @@ export const Container: React.FC<ContainerProps &
           ),
         variant: 'compounds.container.flex'
       }}
+      ref={ref}
       {...props}
       className={classes}
     >
