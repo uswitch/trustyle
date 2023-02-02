@@ -93,7 +93,7 @@
     "husky": "^4.2.1",
     "ignore": "^5.1.6",
     "jest": "^24.8.0",
-    "lerna": "^3.16.4",
+    "lerna": "^6.4.1",
     "lint-staged": "^10.1.6",
     "prettier": "^1.19.1",
     "puppeteer": "^4.0.1",
