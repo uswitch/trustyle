@@ -89,7 +89,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "execa": "^4.0.2",
     "glob-gitignore": "^1.0.14",
-    "got": "^11.0.2",
+    "got": "^12.5.3",
     "husky": "^4.2.1",
     "ignore": "^5.1.6",
     "jest": "^24.8.0",
