@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@uswitch/spark": "^0.2.6",
-    "@uswitch/spark.badge": "0.3.2",
+    "@uswitch/spark.badge": "0.8.2",
     "@uswitch/spark.utils": "^0.2.6"
   },
   "peerDependencies": {
